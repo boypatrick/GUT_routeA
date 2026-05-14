@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{PatiSalam1974}
 Jogesh~C. Pati and Abdus Salam.
@@ -15,6 +15,11 @@ Howard Georgi.
 Harald Fritzsch and Peter Minkowski.
 \newblock Unified interactions of leptons and hadrons.
 \newblock {\em Annals Phys.}, 93:193--266, 1975.
+
+\bibitem{Slansky1981}
+Richard Slansky.
+\newblock Group theory for unified model building.
+\newblock {\em Phys. Rept.}, 79:1--128, 1981.
 
 \bibitem{Minkowski1977}
 Peter Minkowski.
@@ -42,5 +47,21 @@ Marie~E. Machacek and Michael~T. Vaughn.
 \newblock Two loop renormalization group equations in a general quantum field
   theory. 1. wave function renormalization.
 \newblock {\em Nucl. Phys. B}, 222:83--103, 1983.
+
+\bibitem{LawsonMichelsohn1989}
+H.~Blaine Lawson and Marie-Louise Michelsohn.
+\newblock {\em Spin Geometry}.
+\newblock Princeton University Press, 1989.
+
+\bibitem{GriffithsHarris1978}
+Phillip Griffiths and Joseph Harris.
+\newblock {\em Principles of Algebraic Geometry}.
+\newblock Wiley, 1978.
+
+\bibitem{FultonHarris1991}
+William Fulton and Joe Harris.
+\newblock {\em Representation Theory: A First Course}, volume 129 of {\em
+  Graduate Texts in Mathematics}.
+\newblock Springer, 1991.
 
 \end{thebibliography}

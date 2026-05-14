@@ -17057,3 +17057,103 @@ next recommendation:
     representation branching,
     and add a minimal reproducibility manifest pointing to the D5 verifier and
     any surviving companion-audit artifacts.
+
+## 2026-05-15 Taipei Route-A final polish
+
+status:
+  Completed the requested Route-A final polish after pushing the D5 baseline
+  commit to `https://github.com/boypatrick/GUT_routeA`.
+
+baseline push:
+  - Initialized this workspace as a git repository.
+  - Added a lean `.gitignore` so the GitHub repository keeps the paper/source,
+    roadmap, code, and minimal D5/hidden-zeta outputs while excluding local
+    backups, uploads, tmp caches, and LaTeX auxiliary files.
+  - Committed and pushed:
+      `cab54736dae3204bae1247db23a3c47c309c8f4c`
+      `Route A D5 appendix baseline`
+    to `origin/main`.
+
+backup:
+  - `backups/2026-05-15_routeA_final_polish/gut_framework.before_routeA_final_polish.tex`
+  - `backups/2026-05-15_routeA_final_polish/gut_framework.before_routeA_final_polish.pdf`
+  - `backups/2026-05-15_routeA_final_polish/refs.before_routeA_final_polish.bib`
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `paper/gut_framework.bbl`
+  - `paper/refs.bib`
+  - `REPRODUCIBILITY.md`
+  - `roadmap.md`
+
+TeX changes:
+  - Updated draft date to 2026-05-15.
+  - Added a new "Scope of the Lean Route-A Note" section immediately after the
+    abstract.  It explicitly limits theorem-level claims to:
+      (i) six faces from Spin(10) half-spin restriction,
+      (ii) three copies from the Spin^c(CP1,O(2)) index,
+      (iii) K_tr as the unique second-transvectant direction.
+    It also states that full CKM/PMNS fitting, d=5 Wilson tensors, threshold
+    matching, and source-sector UV completion remain companion-audit problems.
+  - Added standard references for:
+      Spin(10)/Pati-Salam and branching: Slansky;
+      representation theory/Clebsch-Gordan: Fulton-Harris;
+      Spin geometry / Spin^c Dirac: Lawson-Michelsohn;
+      Riemann-Roch / algebraic geometry: Griffiths-Harris.
+  - Added a "Minimal Reproducibility Manifest" section in the TeX draft.
+    It lists only the lean-note reproducibility surface:
+      paper source and PDF,
+      D5 half-spin verifier and outputs,
+      Route-B algebra verifier and output,
+      roadmap status log.
+  - Added a short conclusion that restates the theorem boundary:
+      the lean Route-A stack gives the six-face representation, three-family
+      index, and unique contact direction, but not the microscopic source
+      sector, zeta phase/radial dynamics, full flavor fit, or proton Wilson
+      tensors.
+  - Updated Appendix A citation line so the D5 half-spin calculation is tied to
+    standard branching / representation references.
+
+manifest:
+  - Added `REPRODUCIBILITY.md`.
+  - It gives the build command sequence:
+      pdflatex, bibtex, pdflatex, pdflatex
+    and the two retained lean-note numerical checks:
+      `python3 code/verify_d5_half_spin_hypercube.py`
+      `python3 code/verify_hidden_zeta_origin.py`.
+  - It explicitly says the manifest does not reproduce deferred full
+    flavor/proton/threshold/source-sector audits.
+
+verification:
+  - Rebuilt the bibliography with BibTeX and recompiled the PDF.
+  - Current `paper/gut_framework.pdf` length is 14 pages.
+  - `pdfinfo` reports file size 341978 bytes.
+  - Log scan:
+      `rg "Warning|undefined|Overfull|Underfull|Error|Fatal|Rerun|does not exist|referenced but does not exist"`
+      reports only the normal `rerunfilecheck` package line.
+  - Reran `code/verify_d5_half_spin_hypercube.py`:
+      16 half-spin weights;
+      Pati-Salam counts (4,2,1):8 and (bar4,1,2):8;
+      field multiplicities Q:6, L:2, u^c:3, d^c:3, nu^c:1, e^c:1;
+      Tr Y^2 = 10/3, Tr T3L^2 = 2, k_Y = 5/3.
+  - Reran `code/verify_hidden_zeta_origin.py`:
+      sqrt_zeta_squared_error = 1.3877787807814457e-17;
+      messenger_contact_error = 1.2018516789897274e-17;
+      K_tr inverse check = 3.8459253727671276e-16;
+      delta_b_visible = [0,0,0].
+
+current strategic state:
+  The Route-A paper is now a coherent lean note with:
+    explicit theorem boundary at the front,
+    explicit status ledger and manifest near the end,
+    standard mathematical/physics references,
+    and a short conclusion that prevents overclaiming.
+
+next recommendation:
+  The next step should be a final read-through for prose only:
+    remove any remaining "benchmark audit passes" phrasing that sounds stronger
+    than the manifest supports,
+    then either submit Route A as a short conditional note or start a separate
+    Route-B companion focused on hidden phase/radial dynamics and canonical
+    replay.

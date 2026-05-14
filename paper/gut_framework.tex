@@ -34,7 +34,7 @@
 \title{A Face-Projection \(\Spin(10)\) Effective Framework:\\
 Rubik Covariance, \(O(2)\) Family Geometry, and the Conditional GUT Boundary}
 \author{Working draft}
-\date{2026-05-13}
+\date{2026-05-15}
 
 \begin{document}
 \maketitle
@@ -65,6 +65,27 @@ for flavor, proton decay, thresholds, and source-sector UV origin.  Detailed
 machine-audit and scan appendices have been removed from this version until it
 is clear which of them truly belong to the face-projection framework.
 \end{abstract}
+
+\section{Scope of the Lean Route-A Note}
+
+This version is deliberately a Route-A paper skeleton.  Its theorem-level
+claims are limited to three representation-geometric statements:
+\[
+\begin{array}{ll}
+\text{six faces} & \Spin(10)\text{ half-spinor restriction gives one SM
+family plus }\nu^c,\\
+\text{three copies} & \Spin^c(\CP^1,\cO(2))\text{ Dolbeault index gives
+three protected sections},\\
+\text{contact direction} & K_{\rm tr}\text{ is the unique }SL(2)\text{
+second-transvectant direction}.
+\end{array}
+\]
+Route B is kept only as a conditional candidate mechanism for the complex
+coefficient \(\zeta\).  Full CKM/PMNS fitting, dimension-five proton-decay
+Wilson tensors, threshold matching, and source-sector UV completion are not
+claimed in this lean note; they remain companion-audit problems.  Thus the
+paper should be read as a conditional face-projection \(\Spin(10)\) EFT note,
+not as a completed first-principles derivation of a unique GUT.
 
 \section{Face Projection}
 
@@ -114,7 +135,7 @@ chambers, gauge-basis rotations, and symmetry-breaking projections.
 
 The concrete grand-unification branch used below follows the standard
 Pati--Salam and \(\Spin(10)\) route
-\cite{PatiSalam1974,Georgi1975,FritzschMinkowski1975}.  The conditional
+\cite{PatiSalam1974,Georgi1975,FritzschMinkowski1975,Slansky1981}.  The conditional
 neutrino sector uses the usual type-I seesaw logic
 \cite{Minkowski1977,GellMannRamondSlansky1979,Yanagida1979}, while the
 threshold language is the conventional perturbative RGE language
@@ -248,7 +269,10 @@ example, by proton decay.
 \section{\texorpdfstring{Three Families from an \(O(2)\) Index}{Three Families from an O(2) Index}}
 
 The family number is not produced by rotating the six-face object.  It is a
-separate index statement.
+separate index statement.  The analytic input is the standard
+\(\Spin^c\) Dolbeault--Dirac/cohomology identification and the
+Riemann--Roch--Serre-duality calculation on \(\CP^1\)
+\cite{LawsonMichelsohn1989,GriffithsHarris1978}.
 
 \begin{theorem}[Conditional \(\Spin^c\) index theorem for three protected families]
 Assume that the protected internal family carrier is the \(\Spin^c\)
@@ -367,7 +391,8 @@ orthonormal basis, the induced matrix obeys
 
 \begin{proof}
 This is the Clebsch--Gordan decomposition for
-\(\mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)\).  The scalar summand has
+\(\mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)\)
+\cite{FultonHarris1991}.  The scalar summand has
 multiplicity one, so any invariant symmetric contact tensor is proportional to
 the displayed second-transvectant matrix.
 \end{proof}
@@ -878,6 +903,41 @@ PSLT-only unique GUT proof.\\
 \end{tabular}
 \end{center}
 
+\section{Minimal Reproducibility Manifest}
+
+The lean note has a small, explicit reproducibility surface.  It does not
+include the deferred full flavor/proton/threshold scans.
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}p{0.27\linewidth}p{0.58\linewidth}@{}}
+\toprule
+\textbf{item} & \textbf{artifact or command}\\
+\midrule
+paper source &
+\texttt{paper/gut\_framework.tex}, \texttt{paper/refs.bib}\\
+compiled note &
+\texttt{paper/gut\_framework.pdf}\\
+D5 appendix check &
+\texttt{python3 code/verify\_d5\_half\_spin\_hypercube.py}\\
+D5 outputs &
+D5 summary, weights, and report in
+\texttt{output/d5\_half\_spin/}\\
+Route-B algebra check &
+\texttt{python3 code/verify\_hidden\_zeta\_origin.py}\\
+Route-B output &
+verification JSON in \texttt{output/hidden\_zeta\_origin/}\\
+status log &
+\texttt{roadmap.md}\\
+\bottomrule
+\end{tabular}
+\end{center}
+The reproducible numerical claims inside this TeX draft are therefore only the
+D5 half-spin branching check, the hypercharge normalization check, and the
+Route-B algebraic \(\zeta K_{\rm tr}\) matching check.  All publication-grade
+phenomenology remains outside this manifest until the companion audits are
+restored.
+
 \section{Deferred Calculations}
 
 The previous version contained detailed scan and audit material for Yukawa
@@ -905,13 +965,25 @@ rule and canonical-normalization replay.  In short,
 \end{array}
 \]
 
+\section{Conclusion}
+
+The clean result of the rewrite is a bounded theorem stack.  A \(\Spin(10)\)
+half-spinor supplies a standard minimal six-face object; the
+\(\Spin^c(\CP^1,\cO(2))\) carrier supplies three protected copies; and the
+second-transvectant singlet supplies the unique Majorana contact direction.
+These are mathematical inputs and consequences inside a conditional EFT
+branch.  They do not by themselves determine the microscopic source sector,
+the complex hidden coefficient \(\zeta\), the full flavor fit, or the
+proton-decay Wilson tensors.  Keeping this boundary explicit is the point of
+the lean Route-A version.
+
 \appendix
 \section{\texorpdfstring{\(D_5\) Half-Spin Weight Hypercube}{D5 Half-Spin Weight Hypercube}}
 
 This appendix records the compact representation-theoretic calculation behind
 the six-face statement.  It is not a new uniqueness theorem; it is the
 weight-level explanation of the standard \(\Spin(10)\) half-spinor branch used
-in the main text.
+in the main text \cite{Slansky1981,FultonHarris1991}.
 
 Let \(e_1,\ldots,e_5\) be an orthonormal basis for the \(D_5\) weight space.
 The roots of \(D_5\) are
