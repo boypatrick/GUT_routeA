@@ -1,0 +1,30 @@
+{
+  "num_half_spin_weights": 16,
+  "chirality": "even-minus D5 half-spin sector",
+  "pati_salam_counts": {
+    "(4,2,1)": 8,
+    "(bar4,1,2)": 8
+  },
+  "field_counts": {
+    "L": 2,
+    "d^c": 3,
+    "u^c": 3,
+    "Q": 6,
+    "e^c": 1,
+    "nu^c": 1
+  },
+  "expected_field_counts": {
+    "Q": 6,
+    "L": 2,
+    "u^c": 3,
+    "d^c": 3,
+    "nu^c": 1,
+    "e^c": 1
+  },
+  "field_counts_match": true,
+  "pati_salam_counts_match": true,
+  "unmatched_fields": [],
+  "trace_Y2": "10/3",
+  "trace_T3L2": "2",
+  "kY": "5/3"
+}

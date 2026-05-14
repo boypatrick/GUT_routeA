@@ -1,0 +1,1030 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{bm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\GeV}{\mathrm{GeV}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Res}{Res}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{datum}[theorem]{Benchmark Datum}
+\newtheorem{observation}[theorem]{Observation}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{A Face-Projection \(\Spin(10)\) Effective Framework:\\
+Rubik Covariance, \(O(2)\) Family Geometry, and the Conditional GUT Boundary}
+\author{Working draft}
+\date{2026-05-13}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft rewrites the theory around a face-projection principle.  Low-energy
+Standard-Model labels are not treated as primitive entries in a table; they are
+the projections of a higher-dimensional internal representation under a chosen
+symmetry-breaking face.  In this language, one \(\Spin(10)\) half-spinor
+\(16\) is the standard minimal six-face realization whose Standard-Model
+projection displays
+\[
+  Q,\quad L,\quad u^c,\quad d^c,\quad \nu^c,\quad e^c .
+\]
+Three families are protected separately by the index
+\[
+  H^0(\CP^1,\cO(2)),\qquad \dim H^0(\CP^1,\cO(2))=3 .
+\]
+The result is not an unconditional PSLT-only derivation of a unique grand
+unified theory.  It is a conditional \(\Spin(10)\) effective framework.  The
+Majorana contact tensor direction is no longer left arbitrary: it is the unique
+\(SL(2)\)-invariant second-transvectant direction \(K_{\rm tr}\).  The paper
+also records a Route-B candidate: a visible-singlet sterile transvectant
+messenger can generate the \(\zeta K_{\rm tr}\) contact by a Schur complement
+when \(\lambda^2=\zeta\).  The remaining open datum is the hidden phase/radial
+sector that supplies this complex coefficient, together with companion audits
+for flavor, proton decay, thresholds, and source-sector UV origin.  Detailed
+machine-audit and scan appendices have been removed from this version until it
+is clear which of them truly belong to the face-projection framework.
+\end{abstract}
+
+\section{Face Projection}
+
+The organizing idea is that the visible particle table is a projection table,
+not a table of fundamental labels.  Let \(G\) be a high-energy compact group,
+let \(R\) be a complex representation of \(G\), and let a vacuum orientation
+\(\theta\) select a broken subgroup
+\[
+  H_\theta\simeq \SU(3)_C\times\SU(2)_L\times\U(1)_Y .
+\]
+The face projection is the restriction functor
+\[
+  \Pi_\theta(R):=\Res^{G}_{H_\theta}R
+  =\bigoplus_\alpha m_{\alpha,\theta}\,r_{\alpha,\theta},
+\]
+where the irreducible \(H_\theta\)-summands \(r_{\alpha,\theta}\) are the
+visible multiplet types.  If \(g\in G\), then the embedded subgroup changes by
+conjugation,
+\[
+  H_\theta\longmapsto H_{g\theta}=gH_\theta g^{-1}.
+\]
+The same high-energy representation can therefore display different visible
+labels under a different face:
+\[
+  \Pi_{g\theta}(R)
+  =
+  \Res^{G}_{gH_\theta g^{-1}}R .
+\]
+This is the representation-theoretic version of the intuitive statement that
+the same internal object can look different after a legal internal rotation.
+
+\begin{definition}[Rubik covariance]
+A unified model is face-covariant if the visible low-energy multiplet types are
+irreducible summands in restrictions of a common high-energy representation,
+and if every allowed change of face is a conjugation of the broken-subgroup
+embedding preserving anomaly cancellation, index, chirality, charge
+normalization, and representation dimension.  The principle does not allow
+arbitrary transmutation of low-energy particles.  It says that different
+low-energy labels can be different visible faces of the same high-energy
+object.
+\end{definition}
+
+The Rubik-cube image is useful only in this precise sense.  A chemical element
+is still defined by nuclear charge; it does not become another element because
+one rotates a drawing.  The analogy points instead to root lattices, Weyl
+chambers, gauge-basis rotations, and symmetry-breaking projections.
+
+The concrete grand-unification branch used below follows the standard
+Pati--Salam and \(\Spin(10)\) route
+\cite{PatiSalam1974,Georgi1975,FritzschMinkowski1975}.  The conditional
+neutrino sector uses the usual type-I seesaw logic
+\cite{Minkowski1977,GellMannRamondSlansky1979,Yanagida1979}, while the
+threshold language is the conventional perturbative RGE language
+\cite{Jones1982,MachacekVaughn1983}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=8mm and 8mm,
+  box/.style={draw, rounded corners, align=center, minimum width=30mm, minimum height=9mm},
+  arrow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[box] (internal) {internal object\\\(\Spin(10)\ 16\)};
+\node[box, right=of internal] (ps) {Pati--Salam face\\\(Y=T_{3R}+(B-L)/2\)};
+\node[box, right=of ps] (sm) {six visible faces\\\(Q,L,u^c,d^c,\nu^c,e^c\)};
+\node[box, below=of ps] (fam) {family carrier\\\(H^0(\CP^1,\cO(2))\)};
+\node[box, right=of fam] (three) {three copies\\\(16_1\oplus16_2\oplus16_3\)};
+\draw[arrow] (internal) -- (ps);
+\draw[arrow] (ps) -- (sm);
+\draw[arrow] (fam) -- (three);
+\draw[arrow, dashed] (internal) to[bend right=20] (fam);
+\end{tikzpicture}
+\caption{Face-projection picture.  The six Standard-Model multiplet types are
+visible faces of one \(\Spin(10)\) half-spinor, while the family number is an
+independent protected index.}
+\label{fig:face-projection}
+\end{figure}
+
+\section{\texorpdfstring{The Six-Face \(\Spin(10)\) Object}{The Six-Face Spin(10) Object}}
+
+\begin{proposition}[Standard minimal six-face realization]
+Among standard simple compact GUT candidates, if the six chiral
+Standard-Model multiplet types
+\[
+  Q,\quad L,\quad u^c,\quad d^c,\quad \nu^c,\quad e^c
+\]
+are required to arise from one irreducible complex chiral representation whose
+restriction contains exactly one SM family plus \(\nu^c\), with no chiral SM
+exotics and with minimal representation dimension, the standard minimal
+single-object realization is the \(\Spin(10)\) half-spinor \(16\).
+\end{proposition}
+
+\begin{proof}
+The Pati--Salam subgroup of \(\Spin(10)\) gives
+\[
+  16\to (4,2,1)\oplus(\bar 4,1,2).
+\]
+Breaking
+\[
+  \SU(4)_C\to \SU(3)_C\times \U(1)_{B-L}
+\]
+gives
+\[
+  4\to (3,1/3)\oplus(1,-1),\qquad
+  \bar4\to(\bar3,-1/3)\oplus(1,+1).
+\]
+With
+\[
+  Y=T_{3R}+\frac{B-L}{2},
+\]
+the restriction to the Standard-Model face is
+\[
+  \Res^{\Spin(10)}_{G_{\rm SM}}16
+  =
+  Q\oplus L\oplus u^c\oplus d^c\oplus\nu^c\oplus e^c,
+\]
+where the six projected Standard-Model multiplet types are
+\[
+\begin{array}{c|c}
+\text{field} & \SU(3)_C\times\SU(2)_L\times\U(1)_Y\\
+\hline
+Q & (3,2)_{1/6}\\
+L & (1,2)_{-1/2}\\
+u^c & (\bar3,1)_{-2/3}\\
+d^c & (\bar3,1)_{1/3}\\
+\nu^c & (1,1)_0\\
+e^c & (1,1)_1 .
+\end{array}
+\]
+The \(SU(5)\) alternative uses \(10\oplus\bar5\oplus1\), which is not one
+irreducible chiral object.  Pati--Salam is natural but not simple.  \(E_6\)
+contains this structure inside a larger \(27\), usually bringing extra matter
+that must be lifted.  Therefore \(\Spin(10)\) with a \(16\) is the standard
+minimal single-object realization.
+\end{proof}
+
+\begin{proposition}[Hypercharge normalization]
+The face projection
+\[
+  Y=T_{3R}+\frac{B-L}{2}
+\]
+has the GUT normalization
+\[
+  \frac{\Tr Y^2}{\Tr T_{3L}^2}=\frac53 .
+\]
+\end{proposition}
+
+\begin{proof}
+The trace is over one left-handed \(16\) after Standard-Model decomposition.
+For one family,
+\[
+\Tr Y^2=
+6\left(\frac16\right)^2
++2\left(-\frac12\right)^2
++3\left(-\frac23\right)^2
++3\left(\frac13\right)^2
++1(1)^2
++1(0)^2
+=\frac{10}{3}.
+\]
+The \(SU(2)_L\) doublets are \(Q\) and \(L\), and the doublet normalization is
+\(\Tr_{\bf 2}T_3^2=1/2\).  Hence
+\[
+  \Tr T_{3L}^2=3\cdot\frac12+1\cdot\frac12=2.
+\]
+Thus
+\[
+  \frac{\Tr Y^2}{\Tr T_{3L}^2}=\frac{10/3}{2}=\frac53.
+\]
+\end{proof}
+
+\begin{remark}[What rotation can and cannot mean]
+At low energy \(Q\) cannot be freely rotated into \(e^c\).  The Standard-Model
+gauge symmetry has already selected superselection-like labels.  The
+face-projection statement is about the high-energy representation and its
+broken-subgroup projection.  Any physical process that changes the visible
+face must be mediated by legitimate high-energy fields and is constrained, for
+example, by proton decay.
+\end{remark}
+
+\section{\texorpdfstring{Three Families from an \(O(2)\) Index}{Three Families from an O(2) Index}}
+
+The family number is not produced by rotating the six-face object.  It is a
+separate index statement.
+
+\begin{theorem}[Conditional \(\Spin^c\) index theorem for three protected families]
+Assume that the protected internal family carrier is the \(\Spin^c\)
+Dolbeault bundle on
+\[
+  C=\CP^1
+\]
+twisted by a two-center divisor
+\[
+  R=p_+ + p_-,
+  \qquad
+  L_R=\cO(R)\simeq \cO(2).
+\]
+Assume also that all other SM-charged internal sectors are absent, gapped, or
+vectorlike, so they contribute no additional unpaired chiral zero modes.  Let
+\[
+  D_R=\sqrt2\left(\bar\partial_{L_R}+\bar\partial_{L_R}^\dagger\right)
+\]
+be the corresponding \(\Spin^c\) Dolbeault--Dirac operator.  Then
+\[
+  \ker D_R^+\simeq H^0(\CP^1,\cO(2)),\qquad
+  \ker D_R^-\simeq H^1(\CP^1,\cO(2)),
+\]
+with
+\[
+  \dim H^0(\CP^1,\cO(2))=3,
+\]
+and \(H^1(\CP^1,\cO(2))=0\).  Thus the protected sector contributes exactly
+three positive-chirality family zero modes.
+\end{theorem}
+
+\begin{proof}
+Hodge theory identifies the positive and negative \(\Spin^c\)
+Dolbeault--Dirac kernels with the Dolbeault cohomology groups displayed above.
+Riemann--Roch on \(\CP^1\) gives
+\[
+  h^0(\CP^1,\cO(2))-h^1(\CP^1,\cO(2))=2+1=3.
+\]
+Serre duality gives
+\[
+  h^1(\CP^1,\cO(2))
+  =h^0(\CP^1,K_{\CP^1}\otimes\cO(-2))
+  =h^0(\CP^1,\cO(-4))=0.
+\]
+Therefore \(h^0=3\).
+\end{proof}
+
+\begin{corollary}[Projected chiral state space]
+Under the six-face \(\Spin(10)\) assumption and the \(O(2)\) family carrier,
+the low-energy chiral state space is
+\[
+  {\cal S}_{\rm chiral}^{4D}
+  =
+  16\otimes H^0(\CP^1,\cO(2))
+  \simeq
+  16_1\oplus16_2\oplus16_3 .
+\]
+\end{corollary}
+
+\begin{remark}[Why this is still conditional]
+This theorem does not derive \(C=\CP^1\), the two-center divisor \(R\), the
+\(\Spin^c\) carrier, or the no-extra-unpaired-sector condition.
+Those are branch assumptions.  The theorem says that once those inputs are
+chosen, the family count is protected and is not a tunable scan output.
+\end{remark}
+
+\section{Conditional EFT Data}
+
+The face-projection and index principles supply the representational skeleton.
+They do not by themselves determine the full action.  The current conditional
+branch retains the following action-level data:
+\[
+\begin{array}{ll}
+{\rm A1} & \Spin(10)\text{ face-projection EFT with complete }16_i,\\
+{\rm A2} & H^0(\CP^1,\cO(2))\text{ protects three copies of the }16,\\
+{\rm A3} & \text{type-I seesaw with a source-fixed Majorana contact},\\
+{\rm A4} & \text{proton bounds and two-loop threshold matching},\\
+{\rm A5} & \text{constrained/composite }54/210\text{ source order parameters},\\
+{\rm A6} & \text{auxiliary/composite conormal multipliers},\\
+{\rm A7} & \text{a Schur lock with singlet auxiliaries and sterile completion}.
+\end{array}
+\]
+
+\begin{lemma}[Unique \(SL(2)\)-invariant contact direction]
+Let
+\[
+  V=H^0(\CP^1,\cO(2))\simeq \mathrm{Sym}^2\mathbb C^2.
+\]
+Then
+\[
+  \mathrm{Sym}^2 V
+  \simeq
+  \mathrm{Sym}^4\mathbb C^2\oplus \mathrm{Sym}^0\mathbb C^2.
+\]
+The Veronese moment sector is the \(\mathrm{Sym}^4\mathbb C^2\) summand,
+while the orthogonal singlet contact sector is unique up to phase.  In the
+normalized \((\psi_0,\psi_1,\psi_2)\) basis used for the family carrier, this
+singlet can be represented as
+\[
+  K_{\rm tr}
+  =
+  \frac1{\sqrt3}
+  \begin{pmatrix}
+    0&0&-1\\
+    0&1&0\\
+    -1&0&0
+  \end{pmatrix}.
+\]
+Coordinate-free, \(K_{\rm tr}\in \mathrm{Sym}^2V^\vee\) and its inverse
+bilinear form is \(K_{\rm tr}^{-1}\in \mathrm{Sym}^2V\).  In the displayed
+orthonormal basis, the induced matrix obeys
+\[
+  K_{\rm tr}^2=\frac13 I,\qquad K_{\rm tr}^{-1}=3K_{\rm tr}.
+\]
+\end{lemma}
+
+\begin{proof}
+This is the Clebsch--Gordan decomposition for
+\(\mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)\).  The scalar summand has
+multiplicity one, so any invariant symmetric contact tensor is proportional to
+the displayed second-transvectant matrix.
+\end{proof}
+
+\begin{datum}[Majorana contact decomposition of the current benchmark]
+The source-consistent Majorana matrix in the current benchmark is not a pure
+\((\CP^1,\cO(2))\) Veronese matrix.  It requires the unique orthogonal
+second-transvectant contact component
+\[
+  \frac{M_R}{M_*}=M_V+\zeta K_{\rm tr},
+\]
+with
+\[
+  \zeta=0.1076472949+0.0736514853\,i.
+\]
+The contact fraction is
+\[
+  \frac{\|\zeta K_{\rm tr}\|}{\|M_R/M_*\|}
+  =1.304275\times10^{-1}.
+\]
+\end{datum}
+
+The companion machine audit that produced the previous long draft decomposes
+the inverse-seesaw reconstructed \(M_R\)
+into the Veronese subspace plus the orthogonal trace/contact direction.  The
+Veronese-plus-contact residual is at machine precision, whereas the
+Veronese-only residual equals the displayed contact fraction.  This means the
+contact is not a negligible correction to the present PMNS-compatible branch.
+The lean note records the datum and the geometrically fixed tensor direction;
+the full matrices, basis cards, and norm conventions are deferred to companion
+artifacts.
+
+\begin{observation}[Negative scan for simple hidden-sector origins of \(\zeta\)]
+Within the currently tested simple hidden-quotient and small monomial
+clockwork classes, \(\zeta\) is a conditional datum rather than a derived
+number.
+\end{observation}
+
+The scan evidence is limited but sharp within that tested class.  The
+contact-sensitivity scan gives the loose PMNS-compatible windows
+\[
+  \Delta s=3.208798\times10^{-5},\qquad
+  \Delta\delta=5.424119\times10^{-5}\ {\rm rad}.
+\]
+Removing the contact spoils the PMNS and mass-splitting replay.  A minimal
+hidden \(D\)-quotient leaves modulus and phase flat directions.  A small
+real-coefficient monomial or clockwork phase with denominator \(N\le6\) misses
+the target phase by at least
+\[
+  4.471595\times10^{-1}\ {\rm rad},
+\]
+and the first root of unity inside the loose phase window appears only at
+\[
+  N=178.
+\]
+Thus no small hidden quotient or small monomial clockwork mechanism in the
+current evidence set predicts the complex value of \(\zeta\).  A future
+non-minimal hidden sector may still do so, but it would be a new assumption
+that must be audited with its threshold and UV cost.
+
+\section{\texorpdfstring{Route B: Hidden Transvectant Origin for \(\zeta\)}{Route B: Hidden Transvectant Origin for zeta}}
+
+The negative scan above does not forbid a hidden origin for \(\zeta\).  It only
+says that the currently tested small hidden quotients and small monomial
+clockwork classes do not predict it.  The conservative Route-B move is
+therefore to add a new hidden-sector theorem: derive the tensor direction from
+the unique transvectant \(K_{\rm tr}\), and isolate the remaining burden in a
+hidden phase/radial sector that supplies the complex number.
+
+\begin{theorem}[Post-\(B-L\) sterile transvectant messenger]
+Let
+\[
+  V=H^0(\CP^1,\cO(2)).
+\]
+After \(B-L\) breaking, let
+\[
+  N_i=P_{\nu^c}(16_i),\qquad N\in V,
+\]
+be the right-handed neutrino family vector selected by the Majorana source
+projector.  Let
+\[
+  X\in V^\vee
+\]
+be a visible-singlet sterile family messenger.  At the post-\(B-L\) matching
+scale, consider the coordinate-free superpotential
+\[
+  \frac{W_R}{M_*}
+  =
+  \frac12 M_V(N,N)
+  +\lambda X(N)
+  -\frac12 K_{\rm tr}^{-1}(X,X),
+\]
+where
+\[
+  M_V\in\mathrm{Sym}^2V^\vee,\qquad
+  K_{\rm tr}\in\mathrm{Sym}^2V^\vee,\qquad
+  K_{\rm tr}^{-1}\in\mathrm{Sym}^2V.
+\]
+In a chosen basis this is
+\[
+  \frac{W_R}{M_*}
+  =
+  \frac12 N^T M_V N
+  +\lambda X^T N
+  -\frac12 X^T K_{\rm tr}^{-1}X,
+\]
+where \(K_{\rm tr}\) is the unique \(SL(2)\)-invariant contact direction from
+Lemma 4.1.  Integrating out \(X\) gives
+\[
+  \frac{W_R^{\rm eff}}{M_*}
+  =
+  \frac12\left(M_V+\lambda^2K_{\rm tr}\right)(N,N).
+\]
+Thus the benchmark contact is generated if
+\[
+  \lambda^2=\zeta.
+\]
+\end{theorem}
+
+\begin{proof}
+The \(X\)-F-term is the equality in \(V\)
+\[
+  \frac{\partial W_R}{\partial X}
+  =
+  M_*\left(\lambda N-K_{\rm tr}^{-1}X\right)=0.
+\]
+Here \(K_{\rm tr}^{-1}:V^\vee\to V\) is the inverse map induced by the
+non-degenerate bilinear form \(K_{\rm tr}\).  Thus
+\[
+  X=\lambda K_{\rm tr}N,
+\]
+where \(K_{\rm tr}:V\to V^\vee\).  Substitution gives, in any basis,
+\[
+\begin{aligned}
+  \frac{W_R^{\rm eff}}{M_*}
+  &=
+  \frac12 M_V(N,N)
+  +\lambda X(N)
+  -\frac12 K_{\rm tr}^{-1}(X,X)\\
+  &=
+  \frac12 M_V(N,N)
+  +\lambda^2K_{\rm tr}(N,N)
+  -\frac12\lambda^2K_{\rm tr}(N,N)\\
+  &=
+  \frac12\left(M_V+\lambda^2K_{\rm tr}\right)(N,N).
+\end{aligned}
+\]
+Equivalently, in matrix notation,
+\[
+  \frac{W_R^{\rm eff}}{M_*}
+  =
+  \frac12 N^T M_V N+\frac12\lambda^2N^TK_{\rm tr}N .
+\]
+This is exactly the displayed effective Majorana matrix.
+\end{proof}
+
+\begin{remark}[Scope of the projector]
+The field \(N_i=P_{\nu^c}(16_i)\) is a post-\(B-L\)-breaking EFT variable.
+Before symmetry breaking, a \(\Spin(10)\)-singlet messenger cannot select
+\(\nu^c\) from the \(16_i\) without an additional Majorana source or
+projector.  Route B therefore assumes such a post-breaking projector, for
+example from a \((B-L)=-2\) Majorana source sector, rather than deriving it
+from face projection alone.  In this lean note \(P_{\nu^c}\) is therefore an
+input of the post-\(B-L\) EFT matching problem, not a result of the
+face-projection principle.
+\end{remark}
+
+\begin{datum}[Target coefficient and square-root coupling]
+For the current benchmark,
+\[
+  \zeta_{\rm tar}=0.1076472949+0.0736514853\,i.
+\]
+Its polar data are
+\[
+  |\zeta_{\rm tar}|=0.13043190325293763,\qquad
+  \arg\zeta_{\rm tar}=0.600038020318215.
+\]
+One square-root coupling is
+\[
+  \lambda=\sqrt{\zeta_{\rm tar}}
+  =
+  0.34502115743308964
+  +0.10673473744038917\,i,
+\]
+with
+\[
+  |\lambda|=0.3611535729477664.
+\]
+This is a moderate hidden coupling; it is not a high-power clockwork
+suppression.
+\end{datum}
+
+\begin{observation}[\(\mathbb Z_{178}\) phase diagnostic]
+A discrete phase can approximate the benchmark phase by
+\[
+  \zeta_{178}
+  =
+  |\zeta_{\rm tar}|\exp\left(\frac{2\pi i\,17}{178}\right).
+\]
+Since
+\[
+  \frac{2\pi\,17}{178}=0.6000794956295111,
+\]
+the phase error is
+\[
+  4.1475311296\times10^{-5}\ {\rm rad},
+\]
+which lies inside the loose phase window
+\[
+  5.424119\times10^{-5}\ {\rm rad}.
+\]
+The direct complex error is
+\[
+  |\zeta_{178}-\zeta_{\rm tar}|
+  =
+  5.4097037899\times10^{-6}.
+\]
+This does not make \(\zeta\) an exact prediction.  It supplies a precise
+discrete-phase candidate; exact equality would require either a small axion
+shift or a continuous hidden phase.  The Route-B hidden-messenger theorem uses
+only \(\lambda^2=\zeta\); the \(\mathbb Z_{178}\) value is kept as a side
+diagnostic, not as a premise of the benchmark branch.
+\end{observation}
+
+\begin{observation}[Nonperturbative hidden-spurion option]
+An alternative is
+\[
+  \zeta=Ae^{-S_H+i\theta_H}.
+\]
+For \(A=1\),
+\[
+  S_H=-\log|\zeta_{\rm tar}|=2.0369040025655094,\qquad
+  \theta_H=\arg\zeta_{\rm tar}.
+\]
+This is naturally interpreted as a nonperturbative hidden-sector spurion.  It
+is a conditional physical origin, not a weak-coupling derivation from
+face-projection alone.
+\end{observation}
+
+\begin{lemma}[Minimal post-\(B-L\) \(R\)-selection rule]
+\label{lem:routeb-r-selection}
+At the post-\(B-L\) matching scale, take the superpotential to have
+\(R(W)=2\).  A minimal selection rule that keeps the sterile messenger
+Majorana-only is
+\[
+\begin{array}{c|c|c}
+\text{object} & \text{role} & U(1)_R\\
+\hline
+16_i\text{ components} & \text{matter multiplets, including }N_i & 1\\
+H,T,\bar T & \text{Higgs doublet/triplet fields} & 0\\
+X\in V^\vee & \text{sterile transvectant messenger} & 1\\
+\lambda,\ M_V,\ K_{\rm tr}^{-1} & \text{matching tensors/spurions} & 0
+\end{array}
+\]
+together with the post-breaking projector
+\[
+  N_i=P_{\nu^c}(16_i).
+\]
+Then the Route-B Majorana terms
+\[
+  X(N),\qquad K_{\rm tr}^{-1}(X,X),\qquad M_V(N,N)
+\]
+all have \(R=2\), while ordinary Dirac and triplet Yukawa terms
+\[
+  16_i16_jH,\qquad 16_i16_jT
+\]
+also have \(R=2\).  However any superpotential operator with at least one
+additional \(X\) inserted into a Dirac or colored-triplet operator has
+\[
+  R=2+m,\qquad m\ge1,
+\]
+and is therefore forbidden if the \(R\)-selection rule is exact at the
+matching scale.
+\end{lemma}
+
+\begin{proof}
+The allowed Route-B terms have
+\[
+  R(X)+R(N)=1+1=2,\qquad
+  2R(X)=2,\qquad
+  2R(N)=2.
+\]
+The baseline Dirac and triplet Yukawa terms have
+\[
+  R(16_i)+R(16_j)+R(H\text{ or }T)=1+1+0=2.
+\]
+Adding \(m\ge1\) sterile messengers to such an operator shifts the
+superpotential charge to \(2+m\), so the operator is not allowed.  This proves
+the selection rule at the holomorphic matching level.  If later \(R\)-breaking
+spurions are introduced, they must be charged so that these forbidden
+operators remain absent to the order being audited.
+\end{proof}
+
+\begin{remark}[Status of the \(R\)-selection rule]
+The \(U(1)_R\) assignment in Lemma~\ref{lem:routeb-r-selection} is used here as
+a holomorphic EFT matching selection rule.  It is not yet claimed to be an
+anomaly-free microscopic symmetry.  A UV implementation would require either
+an anomaly-free continuous or discrete \(R\)-symmetry, or a spurionic origin
+whose \(R\)-breaking insertions do not regenerate \(X\)-decorated Dirac or
+colored-triplet operators within the audited order.
+\end{remark}
+
+\begin{theorem}[Tree-level canonical matching silence of Majorana-only hidden contact]
+In a canonical-normalized post-\(B-L\) EFT at the matching scale, use Route B
+as a post-\(B-L\)-breaking matching theorem, with
+\[
+  N_i=P_{\nu^c}(16_i)
+\]
+as above.  Assume the hidden messenger sector obeys the \(R\)-selection rule of
+Lemma~\ref{lem:routeb-r-selection}:
+\[
+  X\ \text{is a visible singlet},\qquad
+  X\ \text{couples only to the Majorana channel }K_{\rm tr}(N,N),
+\]
+and \(X\) has no couplings to Dirac Yukawa operators or colored-triplet
+operators.  If integrating out \(X\) gives
+\[
+  \Delta M_R/M_*=\zeta K_{\rm tr},
+\]
+then the visible one-loop threshold vector, the Dirac Yukawa matrices, and the
+dimension-five colored-triplet Wilson tensors are unchanged relative to the
+benchmark.
+\end{theorem}
+
+\begin{proof}
+Since \(X\) is a visible singlet,
+\[
+  \Delta b_1^X=\Delta b_2^X=\Delta b_3^X=0,
+\]
+so it contributes no non-universal visible one-loop threshold.  The
+Majorana-only selection rule gives
+\[
+  \delta Y_u=\delta Y_d=\delta Y_e=\delta Y_{\nu D}=0.
+\]
+The same rule forbids hidden insertions in the colored-triplet Yukawa
+couplings and inverse triplet propagator, so
+\[
+  \delta C_{5L}=\delta C_{5R}=0.
+\]
+If \(\zeta\) equals the benchmark value, then \(M_R\) is the benchmark
+Majorana matrix and the type-I seesaw replay is unchanged.  Thus the hidden
+contact can generate the missing Majorana tensor without moving the visible
+flavor, proton-decay, or one-loop threshold audits.
+\end{proof}
+
+\begin{observation}[Canonical basis caveat]
+The previous theorem is a tree-level matching statement in a
+canonical-normalized EFT basis.  A microscopic completion with a finite
+messenger interval can generate a right-handed-neutrino wave-function
+correction of order
+\[
+  \delta Z_N\sim
+  \frac{|\lambda|^2}{16\pi^2}
+  \log\frac{M_*}{M_X}.
+\]
+For the benchmark value,
+\[
+  \frac{|\lambda|^2}{16\pi^2}
+  =
+  8.259697\times10^{-4}.
+\]
+This is small, but not automatically smaller than the narrow
+contact-sensitivity windows.  Therefore the benchmark matrices in this lean
+note are defined after canonical normalization.  If a microscopic model
+predicts a non-negligible \(\delta Z_N\), the companion seesaw replay must use
+\[
+  Y_{\nu D}\mapsto Y_{\nu D}\left(1-\frac12\delta Z_N\right),
+\]
+\[
+  M_R\mapsto
+  M_R-\frac12\left(\delta Z_N^T M_R+M_R\delta Z_N\right),
+\]
+before comparing to the PMNS benchmark.
+\end{observation}
+
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{p{0.35\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
+\toprule
+\textbf{check} & \textbf{value} & \textbf{role}\\
+\midrule
+\(|\zeta_{\rm tar}|\) &
+\(0.13043190325293763\) &
+target modulus\\
+\(\arg\zeta_{\rm tar}\) &
+\(0.600038020318215\) &
+target phase\\
+\(\sqrt{\zeta_{\rm tar}}\) &
+\(0.345021+0.106735\,i\) &
+hidden messenger coupling\\
+\(|\lambda|\) &
+\(0.3611535729477664\) &
+moderate coupling\\
+\(\|\lambda^2K_{\rm tr}-\zeta K_{\rm tr}\|_F\) &
+\(1.20185\times10^{-17}\) &
+Schur-complement match\\
+\(\|K_{\rm tr}(3K_{\rm tr})-I\|_F\) &
+\(3.84593\times10^{-16}\) &
+inverse convention\\
+\(2\pi(17/178)-\arg\zeta\) &
+\(4.14753\times10^{-5}\ {\rm rad}\) &
+side phase diagnostic\\
+\(|\zeta_{178}-\zeta_{\rm tar}|\) &
+\(5.40970\times10^{-6}\) &
+discrete approximation\\
+\(-\log|\zeta|\) &
+\(2.0369040025655094\) &
+instanton-spurion option\\
+\(|\lambda|^2/(16\pi^2)\) &
+\(8.25970\times10^{-4}\) &
+canonical-basis audit scale\\
+\(\Delta b_{\rm vis}^{X}\) &
+\((0,0,0)\) &
+visible threshold silence\\
+\bottomrule
+\end{tabular}
+\caption{Compact Route-B numerical verification.  The table records only the
+algebraic checks used in the lean hidden-\(\zeta\) section; it is not a
+replacement for the deferred full flavor/proton/threshold companion audits.}
+\label{tab:routeb-zeta-checks}
+\end{table}
+
+\section{Theorem Boundary}
+
+\begin{theorem}[Conditional benchmark boundary]
+Given the face-projection data, the \(O(2)\) index data, the companion
+benchmark audits, and either a benchmark-specified Majorana datum
+\(\mathcal D_\zeta\) or a Route-B hidden messenger producing
+\(\mathcal D_{\rm hidden\ zeta}\), the current construction defines one
+internally checked conditional EFT branch:
+\[
+\begin{array}{c}
+\mathcal D_{\rm face}
+\, +\, \mathcal D_{\rm index}
+\, +\, (\mathcal D_{\zeta}\ \text{or}\ \mathcal D_{\rm hidden\ zeta})
+\, +\, \mathcal D_{\mathrm{companion\ audits}}\\
+\hline
+\leadsto\ \text{one conditional benchmark branch}.
+\end{array}
+\]
+This does not support the stronger implication
+\[
+  \text{PSLT/Another Physics alone}
+  \Longrightarrow
+  \text{a unique GUT with predicted }\zeta .
+\]
+\end{theorem}
+
+\begin{proof}
+A complete microscopic GUT requires an explicit gauge group, chiral matter
+representations, anomaly cancellation, a breaking potential, Yukawa and
+Majorana sectors, baryon-violating operators, and threshold matching.
+Face projection motivates the \(\Spin(10)\) representation geometry.
+The \(O(2)\) index protects the family count.  Neither supplies all
+action-level data.  The remaining branch data A1--A7 and the benchmark-level
+checks are conditional inputs or companion artifacts, and they are required
+whether \(\zeta\) is supplied as a benchmark datum or generated through Route
+B.  The Route-B messenger derives \(\zeta K_{\rm tr}\) only after adding a
+hidden sterile messenger, phase/radial data, and Majorana-only selection
+rules.  It therefore improves the conditional EFT explanation of \(\zeta\),
+but it is still not a PSLT-only prediction and it does not replace the
+companion phenomenological audits.
+\end{proof}
+
+\begin{corollary}[Status of the rewritten theory]
+The complete claim of this lean version is
+\[
+\boxed{
+\begin{gathered}
+\text{face-projection motivation}
++\text{ conditional }\Spin(10)\text{ EFT}\\
+\neq
+\text{unconditional PSLT-only GUT proof}.
+\end{gathered}
+}
+\]
+The rewrite is nevertheless useful: it gives a coherent representation-level
+reason why \(\Spin(10)\) is the natural minimal six-face family object and why
+three families are protected by an independent \(O(2)\) index.
+\end{corollary}
+
+\section{Lean-Note Status Ledger}
+
+The logical status of this version is deliberately narrower than a complete
+GUT construction:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
+\toprule
+\textbf{status} & \textbf{content}\\
+\midrule
+proved/constructed &
+\(\Spin(10)\) face skeleton; \(\Spin^c(\CP^1,\cO(2))\) index;
+\(K_{\rm tr}\) uniqueness; Route-B Schur complement.\\
+conditional inputs &
+\(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
+no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
+hidden phase/radial sector.\\
+deferred audits &
+full flavor fit; \(d=5\) proton-decay Wilson tensors;
+threshold/proton companion audits; source-sector UV origin.\\
+not claimed &
+PSLT-only unique GUT proof.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Deferred Calculations}
+
+The previous version contained detailed scan and audit material for Yukawa
+textures, \(d=5\) proton decay, threshold corrections, source sectors,
+clockwork rescue, no-web provenance, and theorem ledgers.  Those calculations
+are not deleted from the project history: they are preserved in the backup
+made before this rewrite and in the corresponding output artifacts.  They are
+omitted from this TeX draft because their status relative to the
+face-projection principle is not yet settled.  This lean note defines the
+representation-level and index-level skeleton; benchmark-level numerical checks
+are deferred to companion artifacts.  The only numerical Route-B checks kept in
+this draft are the algebraic \(\zeta\), \(K_{\rm tr}\), and phase-spurion
+checks needed to support the hidden messenger theorem.
+
+The conservative paper strategy is Route A as the main note: keep the proved
+representation and index skeleton in the foreground, and treat Route B as a
+candidate hidden-sector mechanism or companion-paper seed.  Promoting Route B
+to the main line would require restoring only those flavor, proton-decay,
+threshold, and source-sector calculations that survive the \(R\)-selection
+rule and canonical-normalization replay.  In short,
+\[
+\begin{array}{ll}
+\text{Route A} & \text{main paper: conditional face-projection model note},\\
+\text{Route B} & \text{candidate mechanism or companion: hidden origin for }\zeta .
+\end{array}
+\]
+
+\appendix
+\section{\texorpdfstring{\(D_5\) Half-Spin Weight Hypercube}{D5 Half-Spin Weight Hypercube}}
+
+This appendix records the compact representation-theoretic calculation behind
+the six-face statement.  It is not a new uniqueness theorem; it is the
+weight-level explanation of the standard \(\Spin(10)\) half-spinor branch used
+in the main text.
+
+Let \(e_1,\ldots,e_5\) be an orthonormal basis for the \(D_5\) weight space.
+The roots of \(D_5\) are
+\[
+  \pm e_a\pm e_b,\qquad a\ne b.
+\]
+Choose the positive-chirality half-spin representation to have weights
+\[
+  \Lambda_{16}
+  =
+  \left\{
+  \frac12\sum_{a=1}^5 s_a e_a:
+  s_a=\pm1,\quad
+  \#\{a:s_a=-1\}\equiv0\pmod2
+  \right\}.
+\]
+There are \(2^{5-1}=16\) such weights.  The Pati--Salam face is the split
+\[
+  D_5\supset D_3\oplus D_2,
+  \qquad
+  \Spin(6)\times\Spin(4)
+  \simeq
+  \SU(4)_C\times\SU(2)_L\times\SU(2)_R.
+\]
+Use \(s_1,s_2,s_3\) for the \(D_3\) spinor weights and \(s_4,s_5\) for the
+\(D_2\) spinor weights.  Define
+\[
+  m_C=\#\{a\le3:s_a=-1\},\qquad
+  m_W=\#\{a=4,5:s_a=-1\}.
+\]
+The chirality condition says \(m_C+m_W\) is even, so \(m_C\) and \(m_W\) have
+the same parity.  Therefore the weights split into exactly two blocks:
+\[
+\begin{array}{c|c|c|c}
+m_C\ {\rm parity} & m_W\ {\rm parity} & \text{number of weights}
+& \text{Pati--Salam block}\\
+\hline
+{\rm even} & {\rm even} & 4\cdot2=8 & (4,2,1)\\
+{\rm odd} & {\rm odd} & 4\cdot2=8 & (\bar4,1,2).
+\end{array}
+\]
+Thus
+\[
+  16\to (4,2,1)\oplus(\bar4,1,2).
+\]
+
+One convenient convention for the \(\SU(4)_C\) component is
+\[
+\begin{array}{c|c|c}
+\text{first three signs} & \SU(3)_C & B-L\\
+\hline
+\text{zero minus signs} & 1 & -1\\
+\text{two minus signs} & 3 & 1/3\\
+\text{one minus sign} & \bar3 & -1/3\\
+\text{three minus signs} & 1 & 1 .
+\end{array}
+\]
+For the weak \(D_2\) signs, take
+\[
+  (s_4,s_5)=(+,+),(-,-)
+  \quad\Longrightarrow\quad
+  \SU(2)_L\text{ doublet},\quad
+  T_{3L}=\frac{s_4+s_5}{4},\quad T_{3R}=0,
+\]
+and
+\[
+  (s_4,s_5)=(+,-),(-,+)
+  \quad\Longrightarrow\quad
+  \SU(2)_R\text{ doublet},\quad
+  T_{3R}=\frac{s_4-s_5}{4},\quad T_{3L}=0.
+\]
+Applying
+\[
+  Y=T_{3R}+\frac{B-L}{2}
+\]
+then gives the six visible Standard-Model faces:
+\[
+\begin{array}{c|c|c|c}
+\text{field} & \SU(3)_C\times\SU(2)_L & Y & \text{multiplicity}\\
+\hline
+Q & (3,2) & 1/6 & 6\\
+L & (1,2) & -1/2 & 2\\
+u^c & (\bar3,1) & -2/3 & 3\\
+d^c & (\bar3,1) & 1/3 & 3\\
+\nu^c & (1,1) & 0 & 1\\
+e^c & (1,1) & 1 & 1 .
+\end{array}
+\]
+The multiplicities sum to \(16\), so this is a complete half-spinor, not a
+collection of separately chosen low-energy fragments.
+
+The appendix calculation is reproduced by
+\[
+  \texttt{code/verify\_d5\_half\_spin\_hypercube.py}.
+\]
+The generated summary reports
+\[
+  \#\Lambda_{16}=16,\qquad
+  (4,2,1):8,\qquad
+  (\bar4,1,2):8,
+\]
+the six field multiplicities
+\[
+  (Q,L,u^c,d^c,\nu^c,e^c)=(6,2,3,3,1,1),
+\]
+and the same normalization check as in the main text,
+\[
+  \Tr Y^2=\frac{10}{3},\qquad
+  \Tr T_{3L}^2=2,\qquad
+  k_Y=\frac53.
+\]
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+\end{document}

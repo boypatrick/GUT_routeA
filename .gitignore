@@ -1,0 +1,31 @@
+.DS_Store
+
+# Python/cache scratch
+__pycache__/
+.pycache_tmp/
+tmp/
+
+# Local upload/backups are retained on disk but not part of the lean Route-A repo.
+upload/
+backups/
+
+# LaTeX generated files
+*.aux
+*.log
+*.out
+*.blg
+*.synctex.gz
+
+# Root-level legacy build products
+/gut_framework.*
+
+# Unused local visual drafts in paper/
+/paper/Gemini_Generated_Image_*.png
+/paper/Spin(10)_Geometric_Blueprint.pdf
+
+# Keep the lean reproducibility outputs only.
+/output/*
+!/output/d5_half_spin/
+!/output/d5_half_spin/**
+!/output/hidden_zeta_origin/
+!/output/hidden_zeta_origin/**

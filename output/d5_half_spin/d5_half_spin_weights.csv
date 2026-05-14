@@ -1,0 +1,17 @@
+signs,minus_total,color_minus,weak_minus,pati_salam,su4_component,su3,weak,B_minus_L,T3L,T3R,Y,field
++++++,0,0,0,"(4,2,1)",lepton in 4,1,2_L,-1,1/2,0,-1/2,L
++++--,2,0,2,"(4,2,1)",lepton in 4,1,2_L,-1,-1/2,0,-1/2,L
+++-+-,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,1/2,1/3,d^c
+++--+,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,-1/2,-2/3,u^c
++-++-,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,1/2,1/3,d^c
++-+-+,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,-1/2,-2/3,u^c
++--++,2,2,0,"(4,2,1)",quark in 4,3,2_L,1/3,1/2,0,1/6,Q
++----,4,2,2,"(4,2,1)",quark in 4,3,2_L,1/3,-1/2,0,1/6,Q
+-+++-,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,1/2,1/3,d^c
+-++-+,2,1,1,"(bar4,1,2)",anti-quark in bar4,bar3,2_R,-1/3,0,-1/2,-2/3,u^c
+-+-++,2,2,0,"(4,2,1)",quark in 4,3,2_L,1/3,1/2,0,1/6,Q
+-+---,4,2,2,"(4,2,1)",quark in 4,3,2_L,1/3,-1/2,0,1/6,Q
+--+++,2,2,0,"(4,2,1)",quark in 4,3,2_L,1/3,1/2,0,1/6,Q
+--+--,4,2,2,"(4,2,1)",quark in 4,3,2_L,1/3,-1/2,0,1/6,Q
+---+-,4,3,1,"(bar4,1,2)",anti-lepton in bar4,1,2_R,1,0,1/2,1,e^c
+----+,4,3,1,"(bar4,1,2)",anti-lepton in bar4,1,2_R,1,0,-1/2,0,nu^c
