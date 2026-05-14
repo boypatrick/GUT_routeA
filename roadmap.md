@@ -17157,3 +17157,62 @@ next recommendation:
     then either submit Route A as a short conditional note or start a separate
     Route-B companion focused on hidden phase/radial dynamics and canonical
     replay.
+
+## 2026-05-15 Taipei Route-B optionalization polish
+
+status:
+  Applied the final Route-A boundary refinements suggested by the latest
+  assessment.  The paper now presents Route B explicitly as an optional
+  conditional extension, keeps its numerical table out of the main theorem
+  flow, and places the claim-status ledger immediately before the conclusion.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+TeX changes:
+  - Abstract:
+      Reworded Route B as an optional hidden-messenger mechanism for
+      `zeta K_tr`, explicitly not part of the Route-A theorem core.
+  - Section title:
+      Renamed the Route-B section to
+      "Optional Route B: Hidden Transvectant Origin for zeta".
+      Added a first-paragraph warning that the section is an optional
+      conditional extension.
+  - Main text:
+      Removed the Route-B numerical table from the main body and replaced it
+      with a pointer to Appendix B.
+  - Appendix:
+      Added "Optional Route-B Algebraic Checks" as a separate appendix section.
+      The table caption and surrounding text now state that these are only
+      algebraic Schur-complement checks, not deferred phenomenology audits.
+  - Status ledger:
+      Moved the Lean-Note Status Ledger to immediately before the conclusion.
+      Changed the first row to "optional Route-B Schur complement" so it is not
+      read as part of the Route-A theorem core.
+
+verification:
+  - Recompiled `paper/gut_framework.pdf`.
+  - Current PDF length is 14 pages.
+  - `pdfinfo` reports file size 342620 bytes.
+  - Log scan:
+      `rg "Warning|undefined|Overfull|Underfull|Error|Fatal|Rerun|does not exist|referenced but does not exist"`
+      reports only the normal `rerunfilecheck` package line.
+  - Reran `code/verify_d5_half_spin_hypercube.py`:
+      all field counts match and k_Y = 5/3.
+  - Reran `code/verify_hidden_zeta_origin.py`:
+      messenger_contact_error = 1.2018516789897274e-17,
+      K_tr inverse check = 3.8459253727671276e-16,
+      delta_b_visible = [0,0,0].
+
+current strategic state:
+  Route A is now the unmistakable main note.  Route B remains present, but as
+  an optional conditional extension and appendix-backed algebraic check.
+
+next recommendation:
+  This is now ready for a final human read-through for style and notation.
+  Scientific next work should be separated into either:
+    Route A submission cleanup, or
+    a distinct Route-B companion on hidden phase/radial dynamics and canonical
+    replay.

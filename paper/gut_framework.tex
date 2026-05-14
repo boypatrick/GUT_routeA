@@ -56,12 +56,11 @@ Three families are protected separately by the index
 The result is not an unconditional PSLT-only derivation of a unique grand
 unified theory.  It is a conditional \(\Spin(10)\) effective framework.  The
 Majorana contact tensor direction is no longer left arbitrary: it is the unique
-\(SL(2)\)-invariant second-transvectant direction \(K_{\rm tr}\).  The paper
-also records a Route-B candidate: a visible-singlet sterile transvectant
-messenger can generate the \(\zeta K_{\rm tr}\) contact by a Schur complement
-when \(\lambda^2=\zeta\).  The remaining open datum is the hidden phase/radial
-sector that supplies this complex coefficient, together with companion audits
-for flavor, proton decay, thresholds, and source-sector UV origin.  Detailed
+\(SL(2)\)-invariant second-transvectant direction \(K_{\rm tr}\).  An optional
+Route-B hidden-messenger mechanism for \(\zeta K_{\rm tr}\) is recorded as a
+conditional extension, but it is not part of the Route-A theorem core.  The
+hidden phase/radial sector and the companion audits for flavor, proton decay,
+thresholds, and source-sector UV origin remain open.  Detailed
 machine-audit and scan appendices have been removed from this version until it
 is clear which of them truly belong to the face-projection framework.
 \end{abstract}
@@ -453,11 +452,12 @@ current evidence set predicts the complex value of \(\zeta\).  A future
 non-minimal hidden sector may still do so, but it would be a new assumption
 that must be audited with its threshold and UV cost.
 
-\section{\texorpdfstring{Route B: Hidden Transvectant Origin for \(\zeta\)}{Route B: Hidden Transvectant Origin for zeta}}
+\section{\texorpdfstring{Optional Route B: Hidden Transvectant Origin for \(\zeta\)}{Optional Route B: Hidden Transvectant Origin for zeta}}
 
 The negative scan above does not forbid a hidden origin for \(\zeta\).  It only
 says that the currently tested small hidden quotients and small monomial
-clockwork classes do not predict it.  The conservative Route-B move is
+clockwork classes do not predict it.  This section is an optional conditional
+extension, not part of the Route-A theorem core.  The conservative Route-B move is
 therefore to add a new hidden-sector theorem: derive the tensor direction from
 the unique transvectant \(K_{\rm tr}\), and isolate the remaining burden in a
 hidden phase/radial sector that supplies the complex number.
@@ -768,54 +768,9 @@ predicts a non-negligible \(\delta Z_N\), the companion seesaw replay must use
 before comparing to the PMNS benchmark.
 \end{observation}
 
-\begin{table}[t]
-\centering
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{p{0.35\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
-\toprule
-\textbf{check} & \textbf{value} & \textbf{role}\\
-\midrule
-\(|\zeta_{\rm tar}|\) &
-\(0.13043190325293763\) &
-target modulus\\
-\(\arg\zeta_{\rm tar}\) &
-\(0.600038020318215\) &
-target phase\\
-\(\sqrt{\zeta_{\rm tar}}\) &
-\(0.345021+0.106735\,i\) &
-hidden messenger coupling\\
-\(|\lambda|\) &
-\(0.3611535729477664\) &
-moderate coupling\\
-\(\|\lambda^2K_{\rm tr}-\zeta K_{\rm tr}\|_F\) &
-\(1.20185\times10^{-17}\) &
-Schur-complement match\\
-\(\|K_{\rm tr}(3K_{\rm tr})-I\|_F\) &
-\(3.84593\times10^{-16}\) &
-inverse convention\\
-\(2\pi(17/178)-\arg\zeta\) &
-\(4.14753\times10^{-5}\ {\rm rad}\) &
-side phase diagnostic\\
-\(|\zeta_{178}-\zeta_{\rm tar}|\) &
-\(5.40970\times10^{-6}\) &
-discrete approximation\\
-\(-\log|\zeta|\) &
-\(2.0369040025655094\) &
-instanton-spurion option\\
-\(|\lambda|^2/(16\pi^2)\) &
-\(8.25970\times10^{-4}\) &
-canonical-basis audit scale\\
-\(\Delta b_{\rm vis}^{X}\) &
-\((0,0,0)\) &
-visible threshold silence\\
-\bottomrule
-\end{tabular}
-\caption{Compact Route-B numerical verification.  The table records only the
-algebraic checks used in the lean hidden-\(\zeta\) section; it is not a
-replacement for the deferred full flavor/proton/threshold companion audits.}
-\label{tab:routeb-zeta-checks}
-\end{table}
+The compact numerical checks for this optional Route-B extension are recorded
+separately in Appendix~\ref{app:routeb-checks}; they are algebraic matching
+checks, not companion phenomenology audits.
 
 \section{Theorem Boundary}
 
@@ -875,33 +830,6 @@ The rewrite is nevertheless useful: it gives a coherent representation-level
 reason why \(\Spin(10)\) is the natural minimal six-face family object and why
 three families are protected by an independent \(O(2)\) index.
 \end{corollary}
-
-\section{Lean-Note Status Ledger}
-
-The logical status of this version is deliberately narrower than a complete
-GUT construction:
-\begin{center}
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
-\toprule
-\textbf{status} & \textbf{content}\\
-\midrule
-proved/constructed &
-\(\Spin(10)\) face skeleton; \(\Spin^c(\CP^1,\cO(2))\) index;
-\(K_{\rm tr}\) uniqueness; Route-B Schur complement.\\
-conditional inputs &
-\(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
-no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
-hidden phase/radial sector.\\
-deferred audits &
-full flavor fit; \(d=5\) proton-decay Wilson tensors;
-threshold/proton companion audits; source-sector UV origin.\\
-not claimed &
-PSLT-only unique GUT proof.\\
-\bottomrule
-\end{tabular}
-\end{center}
 
 \section{Minimal Reproducibility Manifest}
 
@@ -964,6 +892,33 @@ rule and canonical-normalization replay.  In short,
 \text{Route B} & \text{candidate mechanism or companion: hidden origin for }\zeta .
 \end{array}
 \]
+
+\section{Lean-Note Status Ledger}
+
+The logical status of this version is deliberately narrower than a complete
+GUT construction:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
+\toprule
+\textbf{status} & \textbf{content}\\
+\midrule
+proved/constructed &
+\(\Spin(10)\) face skeleton; \(\Spin^c(\CP^1,\cO(2))\) index;
+\(K_{\rm tr}\) uniqueness; optional Route-B Schur complement.\\
+conditional inputs &
+\(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
+no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
+hidden phase/radial sector.\\
+deferred audits &
+full flavor fit; \(d=5\) proton-decay Wilson tensors;
+threshold/proton companion audits; source-sector UV origin.\\
+not claimed &
+PSLT-only unique GUT proof.\\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \section{Conclusion}
 
@@ -1095,6 +1050,60 @@ and the same normalization check as in the main text,
   \Tr T_{3L}^2=2,\qquad
   k_Y=\frac53.
 \]
+
+\section{\texorpdfstring{Optional Route-B Algebraic Checks}{Optional Route-B Algebraic Checks}}
+\label{app:routeb-checks}
+
+This table checks only the optional Route-B Schur-complement algebra.  It is
+not a substitute for the deferred full flavor, proton-decay, threshold, or
+source-sector audits.
+
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{p{0.35\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
+\toprule
+\textbf{check} & \textbf{value} & \textbf{role}\\
+\midrule
+\(|\zeta_{\rm tar}|\) &
+\(0.13043190325293763\) &
+target modulus\\
+\(\arg\zeta_{\rm tar}\) &
+\(0.600038020318215\) &
+target phase\\
+\(\sqrt{\zeta_{\rm tar}}\) &
+\(0.345021+0.106735\,i\) &
+hidden messenger coupling\\
+\(|\lambda|\) &
+\(0.3611535729477664\) &
+moderate coupling\\
+\(\|\lambda^2K_{\rm tr}-\zeta K_{\rm tr}\|_F\) &
+\(1.20185\times10^{-17}\) &
+Schur-complement match\\
+\(\|K_{\rm tr}(3K_{\rm tr})-I\|_F\) &
+\(3.84593\times10^{-16}\) &
+inverse convention\\
+\(2\pi(17/178)-\arg\zeta\) &
+\(4.14753\times10^{-5}\ {\rm rad}\) &
+side phase diagnostic\\
+\(|\zeta_{178}-\zeta_{\rm tar}|\) &
+\(5.40970\times10^{-6}\) &
+discrete approximation\\
+\(-\log|\zeta|\) &
+\(2.0369040025655094\) &
+instanton-spurion option\\
+\(|\lambda|^2/(16\pi^2)\) &
+\(8.25970\times10^{-4}\) &
+canonical-basis audit scale\\
+\(\Delta b_{\rm vis}^{X}\) &
+\((0,0,0)\) &
+visible threshold silence\\
+\bottomrule
+\end{tabular}
+\caption{Optional Route-B algebraic verification.}
+\label{tab:routeb-zeta-checks}
+\end{table}
 
 \bibliographystyle{unsrt}
 \bibliography{refs}
