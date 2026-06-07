@@ -1,0 +1,506 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\bml}{B-L}
+\newcommand{\uc}{u^c}
+\newcommand{\dc}{d^c}
+\newcommand{\nuc}{\nu^c}
+\newcommand{\ec}{e^c}
+
+\title{Route C Bootstrap Derivation Ledger through P6}
+\author{BoYu Chen}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note records the derivations generated in Route C stages P1--P6.
+It is a derivation ledger, not a claim that on-shell consistency has already
+derived a complete GUT.  The current Route C program uses the one-family
+Standard Model spectrum with a right-handed neutrino as baseline, builds
+charge-filtered symbolic four-point pole components, checks conditional
+residue factorization/positivity, marks Ward-identity completion requirements,
+compares anomaly/chiral consistency across $\SU(5)$, Pati--Salam,
+$\Spin(10)$, $E_6$, and superstring-derived completions, and classifies
+the first controlled high-energy-growth completion requirements.
+\end{abstract}
+
+\section{Boundary of the Ledger}
+
+Route C tests whether
+\begin{equation}
+\begin{split}
+  &\text{Lorentz}
+  + \text{unitarity}
+  + \text{factorization}
+  + \text{Ward identities} \\
+  &\qquad
+  + \text{anomaly cancellation}
+  + \text{controlled high-energy behavior}
+\end{split}
+\end{equation}
+can filter conditional GUT branches.  It must not be read as
+\begin{equation}
+  \text{four axioms} \Longrightarrow \text{the full GUT}.
+\end{equation}
+The honest statement is instead
+\begin{equation}
+  \text{on-shell consistency} \Longrightarrow
+  \text{filters on allowed action-level GUT branches}.
+\end{equation}
+
+The baseline external spectrum is one left-handed family plus a
+right-handed-neutrino conjugate field,
+\begin{equation}
+  \mathcal F_{\rm SM+\nu^c}
+  =
+  Q \oplus L \oplus \uc \oplus \dc \oplus \nuc \oplus \ec .
+\end{equation}
+All fields are written as left-handed Weyl fields.
+
+\section{P1: External-State Charges and Anomalies}
+
+\subsection{Charge Table}
+
+The P1 charge ledger fixes the Standard Model face conventions shown in
+Table~\ref{tab:p1-charges}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c c c c c}
+\toprule
+state & $\SU(3)_C$ & $\SU(2)_L$ & $Y$ & $\bml$ & multiplicity \\
+\midrule
+$Q$    & $3$        & $2$ & $1/6$   & $1/3$  & $6$ \\
+$L$    & $1$        & $2$ & $-1/2$  & $-1$   & $2$ \\
+$\uc$  & $\bar 3$   & $1$ & $-2/3$  & $-1/3$ & $3$ \\
+$\dc$  & $\bar 3$   & $1$ & $1/3$   & $-1/3$ & $3$ \\
+$\nuc$ & $1$        & $1$ & $0$     & $1$    & $1$ \\
+$\ec$  & $1$        & $1$ & $1$     & $1$    & $1$ \\
+\bottomrule
+\end{tabular}
+\caption{P1 baseline spectrum.  The fields $\uc,\dc,\nuc,\ec$ are
+left-handed conjugate Weyl fields, so the listed charges are the charges
+of those conjugate fields.}
+\label{tab:p1-charges}
+\end{table}
+
+\subsection{Hypercharge Normalization}
+
+For one full family plus $\nuc$, the hypercharge trace is
+\begin{align}
+  \Tr Y^2
+  &=
+  6\left(\frac{1}{6}\right)^2
+  +2\left(-\frac{1}{2}\right)^2
+  +3\left(-\frac{2}{3}\right)^2
+  +3\left(\frac{1}{3}\right)^2
+  +1\cdot 0^2
+  +1\cdot 1^2                                              \notag\\
+  &=\frac{10}{3}.
+\end{align}
+With $\Tr_{\mathbf 2}T_{3L}^2=1/2$, the weak trace is
+\begin{equation}
+  \Tr T_{3L}^2
+  =
+  3\cdot \frac{1}{2}
+  +1\cdot \frac{1}{2}
+  =2.
+\end{equation}
+Therefore
+\begin{equation}
+  \frac{\Tr Y^2}{\Tr T_{3L}^2}=\frac{5}{3},
+\end{equation}
+which is the standard GUT hypercharge normalization.
+
+\subsection{Perturbative and Global Anomaly Checks}
+
+With the conventions of Table~\ref{tab:p1-charges}, the exact rational
+ledger verifies
+\begin{equation}
+  \mathcal A_{\SU(3)^3}
+  =
+  2A(3)+A(\bar 3)+A(\bar 3)
+  =
+  2-1-1=0 .
+\end{equation}
+The mixed color-hypercharge anomaly is
+\begin{equation}
+  \mathcal A_{\SU(3)^2U(1)_Y}
+  =
+  2T(3)\frac{1}{6}
+  +T(\bar 3)\left(-\frac{2}{3}\right)
+  +T(\bar 3)\frac{1}{3}
+  =
+  \frac{1}{6}-\frac{1}{3}+\frac{1}{6}=0,
+\end{equation}
+where $T(3)=T(\bar 3)=1/2$.  The weak-hypercharge anomaly is
+\begin{equation}
+  \mathcal A_{\SU(2)^2U(1)_Y}
+  =
+  3T(2)\frac{1}{6}
+  +T(2)\left(-\frac{1}{2}\right)
+  =
+  \frac{1}{4}-\frac{1}{4}=0.
+\end{equation}
+The gravitational and cubic hypercharge anomalies are
+\begin{align}
+  \mathcal A_{\mathrm{grav}^2U(1)_Y}
+  &=
+  6\frac{1}{6}
+  +2\left(-\frac{1}{2}\right)
+  +3\left(-\frac{2}{3}\right)
+  +3\frac{1}{3}
+  +0+1
+  =0,                                                        \\
+  \mathcal A_{U(1)_Y^3}
+  &=
+  6\left(\frac{1}{6}\right)^3
+  +2\left(-\frac{1}{2}\right)^3
+  +3\left(-\frac{2}{3}\right)^3
+  +3\left(\frac{1}{3}\right)^3
+  +0^3+1^3
+  =0.
+\end{align}
+The same exact ledger verifies the analogous $\bml$ and mixed
+$Y$--$\bml$ anomalies,
+\begin{equation}
+  \SU(3)^2(\bml),\quad
+  \SU(2)^2(\bml),\quad
+  \mathrm{grav}^2(\bml),\quad
+  (\bml)^3,\quad
+  Y^2(\bml),\quad
+  Y(\bml)^2,
+\end{equation}
+all vanish.  The Witten $\SU(2)$ check passes because one family contains
+three $Q$ doublets and one $L$ doublet, hence four left-handed doublets.
+
+\section{P2: Symbolic Four-Point Pole Ansatz}
+
+The first pole ansatz is an all-incoming chiral-bilinear seed,
+\begin{equation}
+  \mathcal A_4(12|34)
+  =
+  \sum_X\frac{R_s(X)}{s-M_X^2}+C_6(12|34),
+  \qquad
+  R_s(X)=g_{12X}g_{34\bar X}.
+\end{equation}
+P2 does not declare the mediator spectrum.  It only computes which
+symbolic pole components are not forbidden by the P1 charges and by
+non-Abelian conjugacy of pair products.
+
+The generated P2 ledger gives the numerical summary
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value} \\
+\hline
+\text{pair types} & 21\\
+\text{pair-product components} & 31\\
+\text{tested pair-component pairings} & 496\\
+\text{allowed symbolic pole components} & 18\\
+\text{forbidden by Abelian charge} & 455\\
+\text{forbidden after Abelian pass by non-Abelian conjugacy} & 23
+\end{array}
+\end{equation}
+The proton-operator seeds retained at this purely symbolic level are
+\begin{equation}
+  QQQL:\ 2 \ \text{allowed pole components},\qquad
+  \uc\uc\dc\ec:\ 2 \ \text{allowed pole components}.
+\end{equation}
+The entries
+\begin{equation}
+  QQ\uc\ec,\qquad QL\uc\dc
+\end{equation}
+have zero allowed pole components in this first all-incoming symbolic
+seed.  These zeros are not no-go theorems for full models; they are
+bookkeeping results for the declared P2 ansatz and charge conventions.
+
+\section{P3: Residue Factorization and Positivity}
+
+For a declared mediator sector $X$, let $\alpha$ label all two-particle
+channels that can couple to $X$.  Near a positive-norm simple pole,
+tree-level factorization requires
+\begin{equation}
+  \Res_X \mathcal A_{\alpha\beta}
+  =
+  g_{\alpha X}g_{\beta X}^\ast .
+\end{equation}
+Thus the residue matrix is a Gram matrix,
+\begin{equation}
+  R_X = g_X g_X^\dagger,
+\end{equation}
+and is positive semidefinite in a positive-metric Hilbert space:
+\begin{equation}
+  v^\dagger R_X v = |g_X^\dagger v|^2\ge 0.
+\end{equation}
+A wrong-sign mediator metric reverses the sign and fails the unit-coupling
+stress test.
+
+The P3 machine ledger checks the P2-allowed poles and reports
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value} \\
+\hline
+\text{mediator sectors} & 26\\
+\text{total vertex channels} & 31\\
+\text{P2 allowed poles checked} & 18\\
+\text{factorization checks passed} & 18\\
+\text{PSD blocks under positive metric} & 26\\
+\text{largest channel-block size} & 3
+\end{array}
+\end{equation}
+For a unit-coupling block with $n$ channels, the stress spectrum is
+\begin{equation}
+  \mathrm{spec}(R_X)=\{n,0,\ldots,0\},
+  \qquad
+  \mathrm{spec}(-R_X)=\{-n,0,\ldots,0\},
+\end{equation}
+which is the numerical pattern seen in the P3 output.
+
+\section{P4: Ward-Identity Bookkeeping}
+
+For an unbroken massless gauge boson, the target Ward check is
+\begin{equation}
+  \epsilon_\mu\rightarrow p_\mu,\qquad p_\mu\mathcal M^\mu=0.
+\end{equation}
+For a broken massive vector, the target relation is the generalized
+Ward/Slavnov--Taylor form
+\begin{equation}
+  p_\mu\mathcal M^\mu(V_X)=M_X\mathcal M(\phi_X),
+\end{equation}
+so a Goldstone/Higgs/source completion is required before a true Ward
+identity proof can be claimed.
+
+The P4 ledger separates unbroken SM currents from broken/off-face
+currents:
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value} \\
+\hline
+\text{unbroken SM current sectors} & 3\\
+\text{current transitions checked} & 36\\
+\text{massless diagonal transitions ready} & 6\\
+\text{broken/off-face transitions needing completion} & 30\\
+\text{mediator sectors inspected} & 26\\
+\text{mediator sectors needing completion if vector} & 26
+\end{array}
+\end{equation}
+The bookkeeping-ready unbroken sectors are
+\begin{equation}
+  \SU(3)_C,\qquad \SU(2)_L,\qquad U(1)_Y.
+\end{equation}
+All off-face $\Spin(10)$, Pati--Salam leptoquark, and $\SU(2)_R$
+charged-current transitions are flagged as needing explicit generator
+matrices, massive-vector data, and Goldstone/Higgs/source completion.
+
+\section{P5: Anomaly and Chiral-Consistency Candidate Ledger}
+
+P5 compares candidate branches against the P1 baseline.  The structural
+filter used for the minimal Route C field-theory comparison is
+\begin{equation}
+\begin{split}
+  &\text{simple group}
+  +\text{one irreducible family object}
+  +\text{contains }\nuc  \\
+  &\qquad
+  +\text{no chiral SM exotics}
+  +\text{minimal standard realization}.
+\end{split}
+\end{equation}
+
+\subsection{SU(5)}
+
+One family plus $\nuc$ is realized as
+\begin{equation}
+  10\oplus \bar 5\oplus 1.
+\end{equation}
+The cubic anomaly cancels:
+\begin{equation}
+  A(10)+A(\bar 5)+A(1)=1-1+0=0.
+\end{equation}
+Also $\pi_4(\SU(5))=0$ in the standard four-dimensional global-anomaly
+check.  However, the family is not one irreducible object; therefore
+$\SU(5)$ is anomaly-consistent but fails the single-object filter.
+
+\subsection{Pati--Salam}
+
+The standard Pati--Salam family is
+\begin{equation}
+  (4,2,1)\oplus(\bar 4,1,2)
+  \quad\text{under}\quad
+  \SU(4)_C\times\SU(2)_L\times\SU(2)_R .
+\end{equation}
+The $\SU(4)_C^3$ anomaly cancels because
+\begin{equation}
+  2A(4)+2A(\bar 4)=2-2=0.
+\end{equation}
+The Witten checks pass because $\dim(4)=4$ gives four $\SU(2)_L$
+doublets and four $\SU(2)_R$ doublets.  Pati--Salam is physically natural
+and anomaly-consistent, but it is a product group and not a single
+irreducible family object under a simple group.
+
+\subsection{Spin(10)}
+
+The standard $\Spin(10)$ family is the half-spinor
+\begin{equation}
+  16.
+\end{equation}
+It contains the full
+\begin{equation}
+  Q\oplus L\oplus\uc\oplus\dc\oplus\nuc\oplus\ec
+\end{equation}
+after restriction to the Standard Model face.  The $D_5$ algebra has no
+independent cubic gauge-anomaly invariant in this standard check, and
+$\pi_4(\Spin(10))=0$.  Therefore $\Spin(10):16$ is anomaly-safe and is the
+standard minimal single-object survivor under the stated Route C
+pre-filter.
+
+\subsection{E6}
+
+The $E_6$ fundamental representation restricts as
+\begin{equation}
+  27\longrightarrow 16\oplus 10\oplus 1
+  \qquad \text{under } \Spin(10).
+\end{equation}
+It contains a $\Spin(10)$ family, but also contains extra $10\oplus 1$
+states.  Since $E_6$ has no independent cubic gauge-anomaly invariant for
+the standard $27$, the anomaly status is acceptable, but the branch
+requires an explicit lifting/vectorlike audit for the extra states.  It is
+therefore not the minimal Route C survivor.
+
+\subsection{Superstring-Derived Completions}
+
+Superstring-derived completions are not a single four-dimensional
+field-theory group.  They form a UV-completion class.  A string-derived
+branch must supply compactification-specific data:
+\begin{equation}
+  \text{Green--Schwarz/tadpole/modular consistency},
+  \qquad
+  \text{massless spectrum},
+  \qquad
+  \text{chiral index},
+\end{equation}
+together with exotics lifting and matching to the Route-A
+representation/index skeleton.  Such branches may provide stronger
+high-energy softness or tower structure, but P5 does not treat them as a
+single fixed four-dimensional candidate.
+
+\subsection{P5 Numerical Summary}
+
+The generated P5 ledger reports
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value}\\
+\hline
+\text{candidates inspected} & 5\\
+\text{field-theory candidates} & 4\\
+\text{UV-completion classes} & 1\\
+\text{P1 baseline anomalies pass} & \text{true}\\
+\text{minimal single-object survivor} & \Spin(10)
+\end{array}
+\end{equation}
+This result should be read narrowly: passing anomaly checks alone does not
+select a GUT.  The selection of $\Spin(10)$ occurs only after imposing the
+Route C minimal single-object family filter.
+
+\section{P6: Controlled High-Energy-Growth Audit}
+
+P6 consumes the P3 residue blocks and the P4 Ward-completion ledger.  Its
+purpose is not to compute a full four-point amplitude.  Its purpose is to
+classify which symbolic branches would have uncontrolled high-energy growth
+if treated as isolated finite broken-vector exchange.
+
+For a finite massive vector, the dangerous contribution is the longitudinal
+propagator term.  A conservative schematic form is
+\begin{equation}
+  \mathcal A_L
+  \sim
+  \frac{(J\cdot p)(J'\cdot p)}{M_X^2(s-M_X^2)}.
+\end{equation}
+If the broken current is not completed by the corresponding Goldstone/Higgs
+sector, this can scale as
+\begin{equation}
+  \mathcal A_L \sim \frac{s}{M_X^2}
+  \quad\text{or worse}
+\end{equation}
+in the high-energy regime.  Therefore the required broken-vector target is
+again the generalized Ward/Slavnov--Taylor identity
+\begin{equation}
+  p_\mu\mathcal M^\mu(V_X)=M_X\mathcal M(\phi_X).
+\end{equation}
+
+The generated P6 ledger reports
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value}\\
+\hline
+\text{mediator sectors inspected} & 26\\
+\text{finite-vector branches needing completion} & 26\\
+\text{unbroken-vector branches bookkeeping-ready} & 0\\
+\text{scalar/auxiliary branches without longitudinal-vector risk} & 26\\
+\text{contact-only components needing UV completion} & 18\\
+\text{broken transitions needing completion} & 30\\
+\text{tower-like UV forced now} & \text{false}
+\end{array}
+\end{equation}
+Thus every current P3 mediator sector, if interpreted as a finite broken
+vector, needs explicit finite-completion data:
+\begin{equation}
+  \{\text{broken generator},\ M_X,\ \phi_X,\ \text{Higgs/source sector},
+  \ \text{symmetry-fixed contact/numerator terms}\}.
+\end{equation}
+
+If a symbolic mediator is instead interpreted as scalar or auxiliary
+exchange, the longitudinal-vector Ward problem is absent.  This is only a
+bookkeeping statement; spin-statistics, action existence, low-energy
+matching, and perturbative unitarity remain separate checks.
+
+A contact-only four-fermion EFT normalization generically scales like
+\begin{equation}
+  \mathcal A_{\rm contact}\sim \frac{s}{\Lambda^2},
+\end{equation}
+so contact terms may encode low-energy matching but cannot by themselves
+serve as high-energy softness proofs.
+
+Finally, P6 does not force a string or tower completion.  It states the
+conditional comparison rule:
+\begin{equation}
+\begin{split}
+  \text{finite Goldstone/Higgs/source completion fails}
+  \quad\Longrightarrow\quad\\
+  \text{tower-like UV completion becomes a serious comparison class}.
+\end{split}
+\end{equation}
+Superstring-derived completions therefore remain comparison branches, not
+P6 conclusions.
+
+\section{Current Status and Next Check}
+
+The P1--P6 chain currently establishes:
+\begin{enumerate}
+\item the exact P1 charge/anomaly baseline for one $SM+\nuc$ family;
+\item the P2 charge-filtered symbolic pole components;
+\item the P3 conditional residue-factorization and PSD statement;
+\item the P4 Ward-identity completion ledger for broken/off-face sectors;
+\item the P5 anomaly/chiral-consistency comparison across candidate branches.
+\item the P6 high-energy-growth ledger for finite-vector, scalar/auxiliary,
+contact-only, and tower-like comparison branches.
+\end{enumerate}
+The next natural stage is P7: low-energy matching and proton-bound reporting.
+It should use the P2/P3 symbolic pole components only after the P6 completion
+status is respected, and it must mark all pre-flavor-audit Wilson
+coefficients as conditional.
+
+\end{document}

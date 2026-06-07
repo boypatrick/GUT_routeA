@@ -1,0 +1,1107 @@
+{
+  "description": "Route-C P4 Ward-identity bookkeeping ledger",
+  "boundary": "This is a Ward-identity readiness ledger, not a complete amplitude cancellation proof.",
+  "ward_targets": {
+    "unbroken": "epsilon_mu -> p_mu gives p_mu M^mu = 0",
+    "broken_massive_vector": "p_mu M^mu(V_X)=M_X M(phi_X)"
+  },
+  "summary": {
+    "unbroken_sm_current_sectors": 3,
+    "current_transitions_checked": 36,
+    "massless_diagonal_transitions_ready": 6,
+    "broken_transitions_needing_completion": 30,
+    "mediator_sectors_inspected": 26,
+    "mediator_sectors_needing_completion_if_vector": 26,
+    "all_broken_transitions_flagged": true
+  },
+  "unbroken_current_checks": [
+    {
+      "name": "SU(3)_C current",
+      "representative_current": "bar(psi) gamma_mu T_C psi",
+      "acts_on": [
+        "Q",
+        "u^c",
+        "d^c"
+      ],
+      "ward_replacement": "epsilon_mu -> p_mu",
+      "bookkeeping_pass": true,
+      "full_component_ward_proved": false,
+      "status": "bookkeeping-ready: preserves multiplet label and acts inside color components; full check needs component-level SU(3) generators"
+    },
+    {
+      "name": "SU(2)_L current",
+      "representative_current": "bar(psi) gamma_mu T_L psi",
+      "acts_on": [
+        "Q",
+        "L"
+      ],
+      "ward_replacement": "epsilon_mu -> p_mu",
+      "bookkeeping_pass": true,
+      "full_component_ward_proved": false,
+      "status": "bookkeeping-ready: preserves multiplet label and acts inside weak doublets; full check needs component-level SU(2) generators"
+    },
+    {
+      "name": "U(1)_Y current",
+      "representative_current": "sum_i Y_i bar(psi_i) gamma_mu psi_i",
+      "acts_on": [
+        "Q",
+        "L",
+        "u^c",
+        "d^c",
+        "nu^c",
+        "e^c"
+      ],
+      "ward_replacement": "epsilon_mu -> p_mu",
+      "bookkeeping_pass": true,
+      "full_component_ward_proved": false,
+      "status": "bookkeeping-ready: diagonal hypercharge current with exact P1 charge conservation"
+    }
+  ],
+  "transition_checks": [
+    {
+      "current": "(Q)^dagger -> Q",
+      "source": "Q",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    },
+    {
+      "current": "(Q)^dagger -> L",
+      "source": "Q",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(Q)^dagger -> u^c",
+      "source": "Q",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(Q)^dagger -> d^c",
+      "source": "Q",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(Q)^dagger -> nu^c",
+      "source": "Q",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(Q)^dagger -> e^c",
+      "source": "Q",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(L)^dagger -> Q",
+      "source": "L",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(L)^dagger -> L",
+      "source": "L",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    },
+    {
+      "current": "(L)^dagger -> u^c",
+      "source": "L",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(L)^dagger -> d^c",
+      "source": "L",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(L)^dagger -> nu^c",
+      "source": "L",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(L)^dagger -> e^c",
+      "source": "L",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "3/2",
+          "numerator": 3,
+          "denominator": 2,
+          "float": 1.5
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(u^c)^dagger -> Q",
+      "source": "u^c",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(u^c)^dagger -> L",
+      "source": "u^c",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(u^c)^dagger -> u^c",
+      "source": "u^c",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    },
+    {
+      "current": "(u^c)^dagger -> d^c",
+      "source": "u^c",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "broken SU(2)_R charged current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires SU(2)_R-breaking vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(u^c)^dagger -> nu^c",
+      "source": "u^c",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(u^c)^dagger -> e^c",
+      "source": "u^c",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/3",
+          "numerator": 5,
+          "denominator": 3,
+          "float": 1.6666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(d^c)^dagger -> Q",
+      "source": "d^c",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(d^c)^dagger -> L",
+      "source": "d^c",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(d^c)^dagger -> u^c",
+      "source": "d^c",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "broken SU(2)_R charged current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires SU(2)_R-breaking vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(d^c)^dagger -> d^c",
+      "source": "d^c",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    },
+    {
+      "current": "(d^c)^dagger -> nu^c",
+      "source": "d^c",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(d^c)^dagger -> e^c",
+      "source": "d^c",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(nu^c)^dagger -> Q",
+      "source": "nu^c",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(nu^c)^dagger -> L",
+      "source": "nu^c",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(nu^c)^dagger -> u^c",
+      "source": "nu^c",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(nu^c)^dagger -> d^c",
+      "source": "nu^c",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(nu^c)^dagger -> nu^c",
+      "source": "nu^c",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    },
+    {
+      "current": "(nu^c)^dagger -> e^c",
+      "source": "nu^c",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "broken SU(2)_R charged current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires SU(2)_R-breaking vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> Q",
+      "source": "e^c",
+      "target": "Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> L",
+      "source": "e^c",
+      "target": "L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-3/2",
+          "numerator": -3,
+          "denominator": 2,
+          "float": -1.5
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> u^c",
+      "source": "e^c",
+      "target": "u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/3",
+          "numerator": -5,
+          "denominator": 3,
+          "float": -1.6666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "broken Spin(10) off-face current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires declared D5 generator and broken-sector completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> d^c",
+      "source": "e^c",
+      "target": "d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "broken Pati-Salam leptoquark current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires massive leptoquark vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> nu^c",
+      "source": "e^c",
+      "target": "nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "broken SU(2)_R charged current",
+      "requires_broken_sector_completion": true,
+      "massless_ward_bookkeeping_pass": false,
+      "status": "requires SU(2)_R-breaking vector plus Goldstone/Higgs completion before Ward test"
+    },
+    {
+      "current": "(e^c)^dagger -> e^c",
+      "source": "e^c",
+      "target": "e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "unbroken diagonal SM-face current",
+      "requires_broken_sector_completion": false,
+      "massless_ward_bookkeeping_pass": true,
+      "status": "epsilon_mu -> p_mu Ward check is bookkeeping-ready in the massless/canonical current limit"
+    }
+  ],
+  "mediator_ward_requirements": [
+    {
+      "mediator": "X[(1,1);Y=-1;B-L=-2]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,1);Y=-2;B-L=-2]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,1);Y=0;B-L=-2]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "channel_count": 2,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "channel_count": 2,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(1,3);Y=1;B-L=2]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "channel_count": 3,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,1);Y=-4/3;B-L=-2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,2);Y=1/6;B-L=4/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,2);Y=7/6;B-L=4/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(6,1);Y=-2/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(6,1);Y=1/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(6,1);Y=4/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(8,2);Y=-1/2;B-L=0]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,1);Y=-2/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "channel_count": 2,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar3,3);Y=1/3;B-L=2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    },
+    {
+      "mediator": "X[(bar6,3);Y=-1/3;B-L=-2/3]",
+      "channel_count": 1,
+      "vector_interpretation": "broken or non-adjoint mediator sector",
+      "requires_goldstone_higgs_completion_if_vector": true,
+      "ward_identity_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "if interpreted as a vector mediator, requires massive-vector Goldstone/Higgs completion and a generalized Ward identity"
+    }
+  ],
+  "missing_action_level_data": [
+    "component-level SU(3)_C and SU(2)_L generator matrices",
+    "explicit broken Spin(10)/Pati-Salam generator matrices",
+    "mass matrix for broken vector mediators",
+    "Goldstone/Higgs/source sector defining p_mu M^mu(V)=M M(phi)",
+    "spin-statistics and numerator structures for the actual amplitudes"
+  ]
+}

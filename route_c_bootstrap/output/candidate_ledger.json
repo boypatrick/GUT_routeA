@@ -1,0 +1,59 @@
+{
+  "description": "Route-C representation-level candidate pre-ledger",
+  "filter": [
+    "simple group",
+    "one irreducible family object",
+    "contains nu^c",
+    "no chiral SM exotics",
+    "minimal single-object realization"
+  ],
+  "survivors": [
+    "Spin(10)"
+  ],
+  "candidates": [
+    {
+      "name": "SU(5)",
+      "simple": true,
+      "single_irrep_family": false,
+      "visible_family": "10 + bar5 + 1",
+      "contains_nu_c": "requires singlet 1",
+      "chiral_sm_exotics": false,
+      "minimal_single_object": false,
+      "route_c_status": "fails single-object criterion",
+      "survives_minimal_single_object_filter": false
+    },
+    {
+      "name": "Pati-Salam",
+      "simple": false,
+      "single_irrep_family": false,
+      "visible_family": "(4,2,1) + (bar4,1,2)",
+      "contains_nu_c": true,
+      "chiral_sm_exotics": false,
+      "minimal_single_object": false,
+      "route_c_status": "natural face, but not simple",
+      "survives_minimal_single_object_filter": false
+    },
+    {
+      "name": "Spin(10)",
+      "simple": true,
+      "single_irrep_family": true,
+      "visible_family": "16",
+      "contains_nu_c": true,
+      "chiral_sm_exotics": false,
+      "minimal_single_object": true,
+      "route_c_status": "standard minimal survivor",
+      "survives_minimal_single_object_filter": true
+    },
+    {
+      "name": "E6",
+      "simple": true,
+      "single_irrep_family": true,
+      "visible_family": "27 -> 16 + 10 + 1 under Spin(10)",
+      "contains_nu_c": true,
+      "chiral_sm_exotics": "requires lifting extra states",
+      "minimal_single_object": false,
+      "route_c_status": "allowed only with extra-state audit",
+      "survives_minimal_single_object_filter": false
+    }
+  ]
+}

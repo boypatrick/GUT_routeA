@@ -1,0 +1,4057 @@
+{
+  "description": "Route-C P2 symbolic four-point pole ansatz ledger",
+  "boundary": "Allowed poles are charge-filtered symbolic candidates only; mediator existence, residue positivity, and Ward identities are deferred.",
+  "ansatz": {
+    "formula": "A4(12|34)=sum_X R_s(X)/(s-M_X^2)+C6(12|34)",
+    "residue": "R_s(X)=g_12X g_34Xbar",
+    "contact_operator_dimension": 6
+  },
+  "summary": {
+    "pair_types": 21,
+    "pair_product_components": 31,
+    "allowed_symbolic_pole_components": 18,
+    "pair_component_pair_tests": 496,
+    "forbidden_by_abelian_charge": 455,
+    "forbidden_by_nonabelian_conjugacy_after_abelian_pass": 23
+  },
+  "pair_components": [
+    {
+      "pair": [
+        "Q",
+        "Q"
+      ],
+      "pair_product": {
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "Q"
+      ],
+      "pair_product": {
+        "SU3_C": "6",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar6",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "Q"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "Q"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "L"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "L"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "u^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "u^c"
+      ],
+      "pair_product": {
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "nu^c"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      }
+    },
+    {
+      "pair": [
+        "Q",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "7/6",
+          "numerator": 7,
+          "denominator": 6,
+          "float": 1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-7/6",
+          "numerator": -7,
+          "denominator": 6,
+          "float": -1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "L"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "L"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "u^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-7/6",
+          "numerator": -7,
+          "denominator": 6,
+          "float": -1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "7/6",
+          "numerator": 7,
+          "denominator": 6,
+          "float": 1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "nu^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "L",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "u^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "u^c"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "nu^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "u^c",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "d^c",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "d^c",
+        "d^c"
+      ],
+      "pair_product": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "d^c",
+        "nu^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "d^c",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      }
+    },
+    {
+      "pair": [
+        "nu^c",
+        "nu^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "nu^c",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      }
+    },
+    {
+      "pair": [
+        "e^c",
+        "e^c"
+      ],
+      "pair_product": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "mediator_for_chiral_vertex": {
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      }
+    }
+  ],
+  "allowed_poles": [
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "Q"
+        ],
+        "pair_product": {
+          "SU3_C": "6",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar6",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "u^c",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar6",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "6",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": {
+        "label": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar6,1);Y=-1/3;B-L=-2/3]]/(s-M_X[(bar6,1);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_u^cd^c_barX",
+      "contact_term": "C6(Q+Q;u^c+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "Q"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "Q",
+          "L"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "L Q Q Q",
+      "mediator": {
+        "label": "X[(3,1);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(3,1);Y=-1/3;B-L=-2/3]]/(s-M_X[(3,1);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_QL_barX",
+      "contact_term": "C6(Q+Q;Q+L)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "Q"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "u^c",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": {
+        "label": "X[(3,1);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(3,1);Y=-1/3;B-L=-2/3]]/(s-M_X[(3,1);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_u^cd^c_barX",
+      "contact_term": "C6(Q+Q;u^c+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "Q"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "3",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "3",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "Q",
+          "L"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "3",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "3",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "L Q Q Q",
+      "mediator": {
+        "label": "X[(3,3);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(3,3);Y=-1/3;B-L=-2/3]]/(s-M_X[(3,3);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_QL_barX",
+      "contact_term": "C6(Q+Q;Q+L)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "L"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "u^c",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "L Q e^c u^c",
+      "mediator": {
+        "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,1);Y=1/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=1/3;B-L=2/3]^2), R_s = g_QL g_u^ce^c_barX",
+      "contact_term": "C6(Q+L;u^c+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "L"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "d^c",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": {
+        "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,1);Y=1/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=1/3;B-L=2/3]^2), R_s = g_QL g_d^cnu^c_barX",
+      "contact_term": "C6(Q+L;d^c+nu^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "u^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "Q",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": {
+        "label": "X[(1,2);Y=1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(1,2);Y=1/2;B-L=0]]/(s-M_X[(1,2);Y=1/2;B-L=0]^2), R_s = g_Qu^c g_Qd^c_barX",
+      "contact_term": "C6(Q+u^c;Q+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "u^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "L",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "external_multiset": "L Q e^c u^c",
+      "mediator": {
+        "label": "X[(1,2);Y=1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(1,2);Y=1/2;B-L=0]]/(s-M_X[(1,2);Y=1/2;B-L=0]^2), R_s = g_Qu^c g_Le^c_barX",
+      "contact_term": "C6(Q+u^c;L+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "u^c"
+        ],
+        "pair_product": {
+          "SU3_C": "8",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "8",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "Q",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "8",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "8",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": {
+        "label": "X[(8,2);Y=1/2;B-L=0]",
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(8,2);Y=1/2;B-L=0]]/(s-M_X[(8,2);Y=1/2;B-L=0]^2), R_s = g_Qu^c g_Qd^c_barX",
+      "contact_term": "C6(Q+u^c;Q+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "L",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": {
+        "label": "X[(1,2);Y=-1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(1,2);Y=-1/2;B-L=0]]/(s-M_X[(1,2);Y=-1/2;B-L=0]^2), R_s = g_Qd^c g_Lnu^c_barX",
+      "contact_term": "C6(Q+d^c;L+nu^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/6",
+            "numerator": 1,
+            "denominator": 6,
+            "float": 0.16666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/6",
+            "numerator": -1,
+            "denominator": 6,
+            "float": -0.16666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "L",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/6",
+            "numerator": -1,
+            "denominator": 6,
+            "float": -0.16666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/6",
+            "numerator": 1,
+            "denominator": 6,
+            "float": 0.16666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          }
+        }
+      },
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": {
+        "label": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,2);Y=-1/6;B-L=-4/3]]/(s-M_X[(bar3,2);Y=-1/6;B-L=-4/3]^2), R_s = g_Qnu^c g_Ld^c_barX",
+      "contact_term": "C6(Q+nu^c;L+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "Q",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "7/6",
+            "numerator": 7,
+            "denominator": 6,
+            "float": 1.1666666666666667
+          },
+          "B_minus_L": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-7/6",
+            "numerator": -7,
+            "denominator": 6,
+            "float": -1.1666666666666667
+          },
+          "B_minus_L": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "L",
+          "u^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-7/6",
+            "numerator": -7,
+            "denominator": 6,
+            "float": -1.1666666666666667
+          },
+          "B_minus_L": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "7/6",
+            "numerator": 7,
+            "denominator": 6,
+            "float": 1.1666666666666667
+          },
+          "B_minus_L": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          }
+        }
+      },
+      "external_multiset": "L Q e^c u^c",
+      "mediator": {
+        "label": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-7/6",
+          "numerator": -7,
+          "denominator": 6,
+          "float": -1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,2);Y=-7/6;B-L=-4/3]]/(s-M_X[(bar3,2);Y=-7/6;B-L=-4/3]^2), R_s = g_Qe^c g_Lu^c_barX",
+      "contact_term": "C6(Q+e^c;L+u^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "L",
+          "L"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1",
+            "numerator": -1,
+            "denominator": 1,
+            "float": -1.0
+          },
+          "B_minus_L": {
+            "fraction": "-2",
+            "numerator": -2,
+            "denominator": 1,
+            "float": -2.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1",
+            "numerator": 1,
+            "denominator": 1,
+            "float": 1.0
+          },
+          "B_minus_L": {
+            "fraction": "2",
+            "numerator": 2,
+            "denominator": 1,
+            "float": 2.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "nu^c",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1",
+            "numerator": 1,
+            "denominator": 1,
+            "float": 1.0
+          },
+          "B_minus_L": {
+            "fraction": "2",
+            "numerator": 2,
+            "denominator": 1,
+            "float": 2.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1",
+            "numerator": -1,
+            "denominator": 1,
+            "float": -1.0
+          },
+          "B_minus_L": {
+            "fraction": "-2",
+            "numerator": -2,
+            "denominator": 1,
+            "float": -2.0
+          }
+        }
+      },
+      "external_multiset": "L L e^c nu^c",
+      "mediator": {
+        "label": "X[(1,1);Y=1;B-L=2]",
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(1,1);Y=1;B-L=2]]/(s-M_X[(1,1);Y=1;B-L=2]^2), R_s = g_LL g_nu^ce^c_barX",
+      "contact_term": "C6(L+L;nu^c+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "L",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "L",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "1/2",
+            "numerator": 1,
+            "denominator": 2,
+            "float": 0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "1",
+          "SU2_L": "2",
+          "Y": {
+            "fraction": "-1/2",
+            "numerator": -1,
+            "denominator": 2,
+            "float": -0.5
+          },
+          "B_minus_L": {
+            "fraction": "0",
+            "numerator": 0,
+            "denominator": 1,
+            "float": 0.0
+          }
+        }
+      },
+      "external_multiset": "L L e^c nu^c",
+      "mediator": {
+        "label": "X[(1,2);Y=1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "symbolic_pole": "R_s[X[(1,2);Y=1/2;B-L=0]]/(s-M_X[(1,2);Y=1/2;B-L=0]^2), R_s = g_Lnu^c g_Le^c_barX",
+      "contact_term": "C6(L+nu^c;L+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "u^c",
+          "u^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "d^c",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-4/3",
+            "numerator": -4,
+            "denominator": 3,
+            "float": -1.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "d^c e^c u^c u^c",
+      "mediator": {
+        "label": "X[(bar3,1);Y=4/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,1);Y=4/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=4/3;B-L=2/3]^2), R_s = g_u^cu^c g_d^ce^c_barX",
+      "contact_term": "C6(u^c+u^c;d^c+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "u^c",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "u^c",
+          "e^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "d^c e^c u^c u^c",
+      "mediator": {
+        "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,1);Y=1/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=1/3;B-L=2/3]^2), R_s = g_u^cd^c g_u^ce^c_barX",
+      "contact_term": "C6(u^c+d^c;u^c+e^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "u^c",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "d^c",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "d^c d^c nu^c u^c",
+      "mediator": {
+        "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(bar3,1);Y=1/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=1/3;B-L=2/3]^2), R_s = g_u^cd^c g_d^cnu^c_barX",
+      "contact_term": "C6(u^c+d^c;d^c+nu^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    },
+    {
+      "left_pair": {
+        "pair": [
+          "u^c",
+          "nu^c"
+        ],
+        "pair_product": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        }
+      },
+      "right_pair": {
+        "pair": [
+          "d^c",
+          "d^c"
+        ],
+        "pair_product": {
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "mediator_for_chiral_vertex": {
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        }
+      },
+      "external_multiset": "d^c d^c nu^c u^c",
+      "mediator": {
+        "label": "X[(3,1);Y=2/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "symbolic_pole": "R_s[X[(3,1);Y=2/3;B-L=-2/3]]/(s-M_X[(3,1);Y=2/3;B-L=-2/3]^2), R_s = g_u^cnu^c g_d^cd^c_barX",
+      "contact_term": "C6(u^c+nu^c;d^c+d^c)",
+      "operator_dimension": 6,
+      "filter_status": "allowed by SM-face charge and conjugacy only"
+    }
+  ],
+  "diagnostic_seeds": {
+    "Q Q Q L": [
+      {
+        "left_pair": {
+          "pair": [
+            "Q",
+            "Q"
+          ],
+          "pair_product": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        },
+        "right_pair": {
+          "pair": [
+            "Q",
+            "L"
+          ],
+          "pair_product": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        },
+        "external_multiset": "L Q Q Q",
+        "mediator": {
+          "label": "X[(3,1);Y=-1/3;B-L=-2/3]",
+          "SU3_C": "3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "symbolic_pole": "R_s[X[(3,1);Y=-1/3;B-L=-2/3]]/(s-M_X[(3,1);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_QL_barX",
+        "contact_term": "C6(Q+Q;Q+L)",
+        "operator_dimension": 6,
+        "filter_status": "allowed by SM-face charge and conjugacy only"
+      },
+      {
+        "left_pair": {
+          "pair": [
+            "Q",
+            "Q"
+          ],
+          "pair_product": {
+            "SU3_C": "bar3",
+            "SU2_L": "3",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "3",
+            "SU2_L": "3",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        },
+        "right_pair": {
+          "pair": [
+            "Q",
+            "L"
+          ],
+          "pair_product": {
+            "SU3_C": "3",
+            "SU2_L": "3",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "bar3",
+            "SU2_L": "3",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        },
+        "external_multiset": "L Q Q Q",
+        "mediator": {
+          "label": "X[(3,3);Y=-1/3;B-L=-2/3]",
+          "SU3_C": "3",
+          "SU2_L": "3",
+          "Y": {
+            "fraction": "-1/3",
+            "numerator": -1,
+            "denominator": 3,
+            "float": -0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "-2/3",
+            "numerator": -2,
+            "denominator": 3,
+            "float": -0.6666666666666666
+          }
+        },
+        "symbolic_pole": "R_s[X[(3,3);Y=-1/3;B-L=-2/3]]/(s-M_X[(3,3);Y=-1/3;B-L=-2/3]^2), R_s = g_QQ g_QL_barX",
+        "contact_term": "C6(Q+Q;Q+L)",
+        "operator_dimension": 6,
+        "filter_status": "allowed by SM-face charge and conjugacy only"
+      }
+    ],
+    "u^c u^c d^c e^c": [
+      {
+        "left_pair": {
+          "pair": [
+            "u^c",
+            "u^c"
+          ],
+          "pair_product": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        },
+        "right_pair": {
+          "pair": [
+            "d^c",
+            "e^c"
+          ],
+          "pair_product": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        },
+        "external_multiset": "d^c e^c u^c u^c",
+        "mediator": {
+          "label": "X[(bar3,1);Y=4/3;B-L=2/3]",
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "4/3",
+            "numerator": 4,
+            "denominator": 3,
+            "float": 1.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "symbolic_pole": "R_s[X[(bar3,1);Y=4/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=4/3;B-L=2/3]^2), R_s = g_u^cu^c g_d^ce^c_barX",
+        "contact_term": "C6(u^c+u^c;d^c+e^c)",
+        "operator_dimension": 6,
+        "filter_status": "allowed by SM-face charge and conjugacy only"
+      },
+      {
+        "left_pair": {
+          "pair": [
+            "u^c",
+            "d^c"
+          ],
+          "pair_product": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        },
+        "right_pair": {
+          "pair": [
+            "u^c",
+            "e^c"
+          ],
+          "pair_product": {
+            "SU3_C": "bar3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "1/3",
+              "numerator": 1,
+              "denominator": 3,
+              "float": 0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          "mediator_for_chiral_vertex": {
+            "SU3_C": "3",
+            "SU2_L": "1",
+            "Y": {
+              "fraction": "-1/3",
+              "numerator": -1,
+              "denominator": 3,
+              "float": -0.3333333333333333
+            },
+            "B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        },
+        "external_multiset": "d^c e^c u^c u^c",
+        "mediator": {
+          "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+          "SU3_C": "bar3",
+          "SU2_L": "1",
+          "Y": {
+            "fraction": "1/3",
+            "numerator": 1,
+            "denominator": 3,
+            "float": 0.3333333333333333
+          },
+          "B_minus_L": {
+            "fraction": "2/3",
+            "numerator": 2,
+            "denominator": 3,
+            "float": 0.6666666666666666
+          }
+        },
+        "symbolic_pole": "R_s[X[(bar3,1);Y=1/3;B-L=2/3]]/(s-M_X[(bar3,1);Y=1/3;B-L=2/3]^2), R_s = g_u^cd^c g_u^ce^c_barX",
+        "contact_term": "C6(u^c+d^c;u^c+e^c)",
+        "operator_dimension": 6,
+        "filter_status": "allowed by SM-face charge and conjugacy only"
+      }
+    ],
+    "Q Q u^c e^c": [],
+    "Q L u^c d^c": []
+  },
+  "current_transition_seed": [
+    {
+      "current": "(Q)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    },
+    {
+      "current": "(Q)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(Q)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(Q)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(Q)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(Q)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(L)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(L)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    },
+    {
+      "current": "(L)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(L)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(L)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(L)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "3/2",
+          "numerator": 3,
+          "denominator": 2,
+          "float": 1.5
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(u^c)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/6",
+          "numerator": 5,
+          "denominator": 6,
+          "float": 0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(u^c)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(u^c)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    },
+    {
+      "current": "(u^c)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(u^c)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(u^c)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "5/3",
+          "numerator": 5,
+          "denominator": 3,
+          "float": 1.6666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(d^c)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(d^c)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(d^c)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(d^c)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    },
+    {
+      "current": "(d^c)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(d^c)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(nu^c)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(nu^c)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(nu^c)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(nu^c)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(nu^c)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    },
+    {
+      "current": "(nu^c)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> Q",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/6",
+          "numerator": -5,
+          "denominator": 6,
+          "float": -0.8333333333333334
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> L",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-3/2",
+          "numerator": -3,
+          "denominator": 2,
+          "float": -1.5
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> u^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-5/3",
+          "numerator": -5,
+          "denominator": 3,
+          "float": -1.6666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> d^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> nu^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "off-diagonal candidate current; requires declared GUT generator"
+    },
+    {
+      "current": "(e^c)^dagger -> e^c",
+      "charge_carried_by_current": {
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "classification": "diagonal SM-face or Cartan current"
+    }
+  ]
+}

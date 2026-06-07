@@ -17080,6 +17080,7 @@ backup:
   - `backups/2026-05-15_routeA_final_polish/refs.before_routeA_final_polish.bib`
 
 files changed:
+  - `.gitignore`
   - `paper/gut_framework.tex`
   - `paper/gut_framework.pdf`
   - `paper/gut_framework.bbl`
@@ -17216,3 +17217,719 @@ next recommendation:
     Route A submission cleanup, or
     a distinct Route-B companion on hidden phase/radial dynamics and canonical
     replay.
+
+## 2026-05-16 Taipei Route-A Figure 2 geometry pass
+
+status:
+  Started the reader-facing topology figure set with the highest-value Route-A
+  image: the two-center `CP1` divisor geometry behind the `O(2)` family index.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `roadmap.md`
+
+TeX changes:
+  - Added Figure 2 inside the "Three Families from an O(2) Index" section,
+    before the index theorem.
+  - The figure is embedded directly as TikZ, so it introduces no external
+    image dependency.
+  - The image shows:
+      `CP1` as a Riemann sphere,
+      marked divisor points `p_+` and `p_-`,
+      the degree-two divisor `R=p_+ + p_-`,
+      the line bundle `L_R = O(R) = O(2)`,
+      and the three protected holomorphic sections
+      `{1, zeta, zeta^2}`.
+  - The caption explicitly states the intended theorem-level message:
+      two centers set the degree of the line bundle, while
+      Riemann-Roch/Serre duality give three protected sections; the two
+      centers are not being counted as two families.
+
+verification:
+  - Recompiled `paper/gut_framework.tex`; current PDF length is 15 pages.
+  - Log scan reports no undefined references, overfull/underfull boxes, or
+    errors; only the normal `rerunfilecheck` package line appears.
+  - Rendered page 4 for visual inspection.  The figure now sits after the
+    section-opening paragraph and before Theorem 4.1, with no label overlap.
+
+## 2026-05-16 Taipei Route-A Figure 1 face-projection geometry pass
+
+status:
+  Replaced the original Figure 1 flowchart with a representation-geometric
+  topology image for the face-projection idea.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `roadmap.md`
+
+TeX changes:
+  - Figure 1 now shows a single projected high-dimensional half-spin object on
+    the left and a Standard-Model face `H_theta` on the right.
+  - The SM face carries the six visible multiplet labels:
+      `Q, L, u^c, d^c, nu^c, e^c`.
+  - The projection arrow is labelled by the restriction functor
+      `Pi_theta = Res^G_{H_theta}`.
+  - The caption explicitly states that this is a representation-geometric
+    visualization, not a dynamical particle-conversion process.
+
+verification:
+  - Recompiled `paper/gut_framework.tex`; current PDF length remains 15 pages.
+  - Log scan reports no undefined references, overfull/underfull boxes, or
+    errors; only the normal `rerunfilecheck` package line appears.
+
+  - Rendered page 2 for visual inspection.  Figure 1 now reads as a projected
+    half-spin geometry rather than a process diagram, and the caption preserves
+    the non-dynamical interpretation.
+
+## 2026-05-16 Taipei Route-A Figure 3 Veronese-contact pass
+
+status:
+  Added the third reader-facing topology image: the Veronese/moment sector and
+  the unique transverse contact direction `K_tr`.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `roadmap.md`
+
+TeX changes:
+  - Added Figure 3 in the "Conditional EFT Data" section, immediately before
+    the unique `SL(2)`-invariant contact-direction lemma.
+  - The figure draws a curved Veronese sheet labelled
+    `Sym^4 C^2` and a transverse direction labelled
+    `K_tr in Sym^0`.
+  - The caption ties the picture directly to the decomposition
+      `Sym^2(Sym^2 C^2) = Sym^4 C^2 + Sym^0 C^2`
+    and states that `K_tr` is not an arbitrary patch but the unique invariant
+    direction outside the visible Veronese sector.
+
+verification:
+  - Recompiled `paper/gut_framework.tex`; current PDF length remains 15 pages.
+  - Log scan reports no undefined references, overfull/underfull boxes, or
+    errors; only the normal `rerunfilecheck` package line appears.
+  - Rendered page 5 for visual inspection.  Figure 3 appears as a curved
+    Veronese sheet with a transverse contact direction and remains visually
+    geometric rather than phenomenology/process-oriented.
+
+## 2026-05-16 Taipei D5 appendix hypercube figure pass
+
+status:
+  Added the technical appendix figure showing the actual projected `D5`
+  half-spin weight geometry behind the simplified main-text face-projection
+  image.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `roadmap.md`
+
+TeX changes:
+  - Added an appendix figure in the `D5 Half-Spin Weight Hypercube` section.
+  - The figure draws the 16 even-parity half-spin weights as a projected
+    demihypercube, with faint sign-flip-pair edges.
+  - Nodes are colored by Standard-Model multiplet type:
+      `Q, L, u^c, d^c, nu^c, e^c`.
+  - The legend records the multiplicities
+      `(Q,L,u^c,d^c,nu^c,e^c) = (6,2,3,3,1,1)`,
+    matching the verifier output.
+
+verification:
+  - Recompiled `paper/gut_framework.tex`; current PDF length remains 15 pages.
+  - Log scan reports no undefined references, overfull/underfull boxes, or
+    errors; only the normal `rerunfilecheck` package line appears.
+  - Rendered pages 13--14 for visual inspection.  The D5 appendix figure lands
+    on page 14, with readable node colors, faint hypercube edges, and a clear
+    multiplicity legend.
+  - Reran `code/verify_d5_half_spin_hypercube.py`; it reports 16 half-spin
+    weights, Pati--Salam counts `(4,2,1): 8` and `(bar4,1,2): 8`, SM field
+    counts `(Q,L,u^c,d^c,nu^c,e^c) = (6,2,3,3,1,1)`, and `k_Y = 5/3`.
+
+## 2026-05-16 Taipei Route-A final-polish wording pass
+
+status:
+  Applied the small pre-submission wording pass recommended after the
+  2026-05-15 review.  This was intentionally not a structural rewrite.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+TeX changes:
+  - Shortened the abstract by replacing the internal "machine-audit and scan
+    appendices removed" sentence with the publication-facing sentence:
+      "Full phenomenological audits are deferred to companion work."
+  - Trimmed the Scope section by removing a repeated theorem-boundary sentence
+    while preserving the Route-A skeleton and companion-audit boundary.
+  - Compressed "Deferred Calculations" into a short paragraph plus a strategy
+    table separating Route A, Route B, and companion audits.
+  - Added an explicit final boundary sentence to the Conclusion:
+      "This note establishes the representation/index/contact skeleton; it
+      does not claim full GUT phenomenology."
+
+verification:
+  - Recompiled `paper/gut_framework.tex`; current PDF length remains 15 pages.
+  - Log scan reports no undefined references, overfull/underfull boxes, or
+    errors; only the normal `rerunfilecheck` package line appears.
+
+## 2026-05-22 Taipei PRD/REVTeX formatting pass
+
+status:
+  Converted the Route-A manuscript to APS/PRD REVTeX 4.2 submission style while
+  preserving the current theorem boundary and optional Route-B status.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `paper/gut_framework.bbl`
+  - `paper/refs.bib`
+  - `roadmap.md`
+
+TeX changes:
+  - Switched the manuscript to `revtex4-2` with APS/PRD preprint options.
+  - Added the PRD-style front matter for BoYu Chen, Independent Researcher,
+    Hsinchu, Taiwan, with the contact email `boypatrick.tw@gmail.com`.
+  - Replaced article-only packages/environments with REVTeX-compatible theorem,
+    proof, table, figure, and bibliography formatting.
+  - Updated the bibliography to `apsrev4-2` and enabled article-title output
+    through the APS REVTeX control entry.
+  - Converted broad figures and the optional Route-B algebraic table to
+    REVTeX-compatible float forms.
+  - Tightened a few theorem titles, long numerical displays, and figure labels
+    to remove visible overfull issues in the PRD layout.
+
+verification:
+  - Ran the BibTeX/LaTeX cycle with `pdflatex`, `bibtex`, and final `pdflatex`;
+    the current PDF length is 22 pages.
+  - Rendered the latest PDF pages to PNG with `pdftoppm` under
+    `tmp/pdfs/prd_format/`.
+  - Visually inspected the title/abstract pages, Figures 1--3, the D5 appendix
+    figure, the optional Route-B table, and the references pages.
+  - No clipping, overlapping body text, unreadable tables, or broken figures
+    were found.  Remaining log noise is limited to harmless underfull boxes,
+    the standard `nameref` package warning, and the APS REVTeX bibliography
+    control citation warning for `apsrev42Control`.
+
+## 2026-06-07 Taipei Route-C GUT amplitude-bootstrap roadmap entry
+
+status:
+  Added a future consistency-bootstrap route inspired by modern scattering
+  amplitude bootstrap work.  This is explicitly not part of the completed
+  Route-A theorem core and not a claim that four axioms already derive the
+  full GUT.  It is a proposed action-level audit for narrowing or refuting
+  conditional GUT branches after the Route-A representation/index skeleton.
+
+scope:
+  Route C asks whether candidate GUT branches can be reconstructed or ruled out
+  from on-shell consistency constraints on amplitudes rather than from a fully
+  assumed Lagrangian.
+
+bootstrap inputs:
+  - Lorentz invariance of four-dimensional scattering amplitudes.
+  - Unitarity and positive residues at physical poles.
+  - Factorization on massive GUT mediator poles.
+  - Crossing symmetry where applicable.
+  - Gauge Ward identities for unbroken and broken generators.
+  - Anomaly cancellation for chiral matter representations.
+  - Controlled high-energy behavior of longitudinal and broken-sector
+    amplitudes.
+
+first nontrivial test amplitudes:
+  - Four-point amplitudes with external SM-plus-`nu^c` states inside one
+    candidate family object:
+      `A(16_i 16_j -> 16_k 16_l)`.
+  - Heavy mediator pole factorization:
+      `A_4 ~ g_{ijX} g_{klX} / (s - M_X^2) + regular`.
+  - Ward-identity checks under polarization replacement
+      `epsilon_mu -> p_mu`.
+  - Low-energy matching to baryon-violating operators such as
+      `(g_GUT^2/M_X^2) qqql`.
+
+candidate comparison set:
+  - `SU(5)`: economical, but one family is not a single irreducible object
+    without the usual `10 + bar5 + 1` split.
+  - Pati-Salam: natural quark-lepton unification, but not simple.
+  - `Spin(10)`: standard minimal single irreducible six-face object via the
+    half-spinor `16`.
+  - `E6`: contains the `Spin(10)` structure but usually adds extra states in
+    the `27`.
+
+verification plan:
+  - Build a symbolic amplitude ansatz with free residues for the candidate
+    mediator poles.
+  - Enforce pole factorization, Ward identities, and anomaly constraints.
+  - Check whether high-energy growth cancels without adding unaudited states.
+  - Match the surviving low-energy operators to proton-decay bounds.
+  - Record whether the bootstrap prefers `Spin(10)`, allows several branches,
+    or refutes the current conditional action-level assumptions.
+
+boundary:
+  Route C is a consistency filter and possible derivation program for
+  action-level data.  It should not be written as a completed proof that
+  PSLT/Another Physics alone uniquely implies the Route-A GUT.
+
+## 2026-06-07 Taipei Route-C workspace scaffold
+
+status:
+  Opened a separate Route-C bootstrap workspace so the amplitude-bootstrap
+  experiment can develop without contaminating the Route-A PRD manuscript.
+
+files changed:
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/SCATTERING_BOOTSTRAP.md`
+  - `route_c_bootstrap/code/bootstrap_candidate_ledger.py`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/output/candidate_ledger.json`
+  - `route_c_bootstrap/output/candidate_ledger.md`
+  - `roadmap.md`
+
+content:
+  - Defined Route C as an on-shell consistency/amplitude-bootstrap program,
+    not as a completed GUT derivation.
+  - Wrote the first scattering-bootstrap skeleton: external `SM + nu^c`
+    family states, heavy mediator pole factorization, Ward identities,
+    high-energy behavior, and low-energy `qqql` matching.
+  - Added a reproducible pre-amplitude candidate ledger for `SU(5)`,
+    Pati-Salam, `Spin(10)`, and `E6`.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/bootstrap_candidate_ledger.py`.
+  - The minimal single-object filter keeps only `Spin(10)` as the standard
+    minimal survivor, while recording why `SU(5)`, Pati-Salam, and `E6` are
+    not eliminated as mathematical ideas but fail this specific filter.
+
+next:
+  - Add the first symbolic pole-residue ansatz and Ward-identity checker.
+  - Decide whether to model the first mediator as a generic broken GUT gauge
+    boson or specialize immediately to the `Spin(10)` broken-generator sector.
+
+## 2026-06-07 Taipei Route-C staged workplan
+
+status:
+  Added a complete staged Route-C workplan before implementing the next
+  amplitude scripts.  The plan keeps Route C as a separate consistency-audit
+  program rather than a new claim inside the Route-A manuscript.
+
+files changed:
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `roadmap.md`
+
+content:
+  - Defined the core Route-C question: whether the Route-A
+    representation/index skeleton can be extended to an action-level GUT branch
+    by on-shell consistency.
+  - Listed the required bootstrap checks: Lorentz invariance, unitarity,
+    factorization, crossing, Ward identities, anomaly cancellation, controlled
+    high-energy behavior, low-energy matching, and proton bounds.
+  - Ordered the work into P0--P8:
+      P0 candidate ledger,
+      P1 external state and charge table,
+      P2 symbolic pole ansatz,
+      P3 factorization/positivity checker,
+      P4 Ward-identity checker,
+      P5 anomaly ledger,
+      P6 high-energy growth audit,
+      P7 low-energy matching/proton report,
+      P8 comparative theory scorecard.
+  - Added the final comparison set:
+      `SU(5)`, Pati-Salam, `Spin(10)`, `E6`, and superstring-derived
+      completions.
+  - Added a superstring comparison section treating superstrings as a
+    UV-completion class with infinite tower factorization, Regge softness,
+    modular/anomaly constraints, and compactification/exotics requirements.
+
+next:
+  - Implement P1: a machine-readable external state and charge table for
+    `Q, L, u^c, d^c, nu^c, e^c`, with hypercharge-normalization verification.
+
+## 2026-06-07 Taipei Route-C P1 external-state charge ledger
+
+status:
+  Implemented P1 for the Route-C bootstrap workspace.  This fixes the
+  left-handed Weyl external-state conventions and anomaly bookkeeping before
+  any four-point amplitude ansatz is introduced.
+
+files changed:
+  - `route_c_bootstrap/code/external_state_charge_table.py`
+  - `route_c_bootstrap/output/external_state_charges.json`
+  - `route_c_bootstrap/output/external_state_charges.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `roadmap.md`
+
+content:
+  - Added a machine-readable one-family state table for
+    `Q, L, u^c, d^c, nu^c, e^c` using left-handed Weyl conventions.
+  - Recorded `SU(3)_C`, `SU(2)_L`, `Y`, `B-L`, multiplicities, electric-charge
+    components, chirality convention, and Pati-Salam origin for each state.
+  - Added a schematic current-sector ledger separating SM-preserving currents
+    from broken-GUT currents that need massive mediator and Goldstone/Higgs
+    completion data in later stages.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/external_state_charge_table.py`.
+  - Verified exactly:
+      `Tr Y^2 = 10/3`,
+      `Tr T_3L^2 = 2`,
+      `Tr Y^2 / Tr T_3L^2 = 5/3`.
+  - Verified exact cancellation of:
+      `SU(3)^3`,
+      `SU(3)^2 U(1)_Y`,
+      `SU(2)^2 U(1)_Y`,
+      `grav^2 U(1)_Y`,
+      `U(1)_Y^3`,
+      `SU(3)^2(B-L)`,
+      `SU(2)^2(B-L)`,
+      `grav^2(B-L)`,
+      `(B-L)^3`,
+      `U(1)_Y^2(B-L)`,
+      `U(1)_Y(B-L)^2`.
+  - Verified the Witten `SU(2)` condition: four left-handed doublets, hence an
+    even doublet count.
+
+next:
+  - Implement P2: construct the first symbolic four-point pole ansatz with
+    charge-conservation filters and declared mediator representations.
+
+## 2026-06-07 Taipei Route-C P2 symbolic pole ansatz ledger
+
+status:
+  Implemented P2 for the Route-C bootstrap workspace.  The new script builds
+  the first symbolic four-point pole ledger from the P1 external-state table.
+  This remains a charge/conjugacy filter only; it is not yet a unitarity,
+  residue-positivity, Ward-identity, or proton-bound audit.
+
+files changed:
+  - `route_c_bootstrap/code/four_point_pole_ansatz.py`
+  - `route_c_bootstrap/output/four_point_pole_ansatz.json`
+  - `route_c_bootstrap/output/four_point_pole_ansatz.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `roadmap.md`
+
+content:
+  - Built an all-incoming left-handed chiral-bilinear seed ansatz:
+      `A_4(12|34) = sum_X R_s(X)/(s-M_X^2) + C6(12|34)`,
+      with symbolic residue
+      `R_s(X)=g_12X g_34Xbar`.
+  - Generated all two-external-state pair products from
+      `Q, L, u^c, d^c, nu^c, e^c`.
+  - Declared each possible mediator representation by conjugating the pair
+    product and flipping the additive `Y` and `B-L` charges.
+  - Added a schematic current-transition charge ledger for later vector
+    exchange and Ward-identity checks, without claiming explicit GUT generator
+    matrices yet.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/four_point_pole_ansatz.py`.
+  - Generated:
+      pair types = 21,
+      pair-product components = 31,
+      tested pair-component pairings = 496,
+      allowed symbolic pole components = 18,
+      forbidden by Abelian charge = 455,
+      forbidden by non-Abelian conjugacy after Abelian pass = 23.
+  - Diagnostic proton-operator seeds:
+      `Q Q Q L`: 2 allowed symbolic pole components,
+      `u^c u^c d^c e^c`: 2 allowed symbolic pole components,
+      `Q Q u^c e^c`: 0,
+      `Q L u^c d^c`: 0.
+  - Fixed a representation-matching issue during implementation: exchange
+    symmetry suffixes such as antisymmetric/symmetric should not be used as
+    representation labels for pair-product conjugacy.  Symmetry constraints are
+    deferred to the residue and spin-statistics stages.
+  - Fixed a second conjugation-convention issue: `SU(2)` triplets are real, so
+    `3` must conjugate to `3` rather than `bar3`.  This adds the expected
+    triplet contraction in the `Q Q Q L` seed and changes the P2 count from
+    the earlier draft value `17` to `18`.
+
+boundary:
+  A P2-allowed pole means only that the SM-face charge table and non-Abelian
+  pair-product conjugacy do not forbid the symbolic term.  It does not imply
+  mediator existence, positive residue norm, Ward-identity cancellation, or
+  proton-safety.
+
+next:
+  - Implement P3: convert the 18 allowed symbolic pole components into residue
+    matrices over two-particle channels and test positive semidefiniteness
+    under declared mediator assumptions.
+
+## 2026-06-07 Taipei Route-C P3 residue positivity ledger
+
+status:
+  Implemented P3 for the Route-C bootstrap workspace.  The new script turns
+  the P2 charge-allowed symbolic poles into mediator-sector channel blocks and
+  records the conditional Gram-matrix positivity test.
+
+files changed:
+  - `route_c_bootstrap/code/residue_positivity_checker.py`
+  - `route_c_bootstrap/output/residue_positivity.json`
+  - `route_c_bootstrap/output/residue_positivity.md`
+  - `route_c_bootstrap/code/four_point_pole_ansatz.py`
+  - `route_c_bootstrap/output/four_point_pole_ansatz.json`
+  - `route_c_bootstrap/output/four_point_pole_ansatz.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `roadmap.md`
+
+content:
+  - For each declared mediator sector `X`, built a two-particle channel block
+    with formal residue:
+      `R_{alpha beta}^{(X)} = g_{alpha X} g^*_{beta X}`.
+  - Recorded the unit-coupling positive-metric spectrum for each block.  A
+    block with `n` channels has spectrum `[n,0,...,0]`, hence is PSD under the
+    positive-norm mediator assumption.
+  - Added a wrong-sign mediator stress test.  The same unit-coupling block has
+    spectrum `[-n,0,...,0]` with a ghost or wrong-sign metric, so unitarity
+    would fail.
+  - Checked every P2 pole for the factorized form
+      `g_leftX g_rightXbar`.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/residue_positivity_checker.py`.
+  - Generated:
+      mediator sectors = 26,
+      total vertex channels = 31,
+      P2 allowed poles checked = 18,
+      factorization checks passed = 18,
+      PSD blocks under positive metric = 26,
+      largest channel-block size = 3.
+  - Verified all factorization checks pass and all mediator blocks are PSD
+    under the stated positive-norm condition.
+
+boundary:
+  P3 is a conditional residue-positivity ledger, not a complete unitarity proof.
+  It assumes the declared mediator exists with positive Hilbert-space norm and
+  canonical normalization.  It does not yet check explicit GUT generator
+  algebra, spin-statistics projections, Ward identities, high-energy growth,
+  or proton bounds.
+
+next:
+  - Implement P4: start Ward-identity checks for unbroken SM currents and
+    identify which broken-generator amplitudes require explicit
+    Goldstone/Higgs-sector completion.
+
+## 2026-06-07 Taipei Route-C P4 Ward-identity readiness ledger
+
+status:
+  Implemented P4 for the Route-C bootstrap workspace.  The new script separates
+  unbroken SM current sectors from broken/off-face current sectors and records
+  which amplitudes require massive-vector plus Goldstone/Higgs/source
+  completion before a true Ward-identity cancellation can be claimed.
+
+files changed:
+  - `route_c_bootstrap/code/ward_identity_ledger.py`
+  - `route_c_bootstrap/output/ward_identity_ledger.json`
+  - `route_c_bootstrap/output/ward_identity_ledger.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `roadmap.md`
+
+content:
+  - Added the unbroken Ward target:
+      `epsilon_mu -> p_mu`, with `p_mu M^mu = 0`.
+  - Added the broken massive-vector target:
+      `p_mu M^mu(V_X) = M_X M(phi_X)`.
+  - Classified the 36 multiplet-level current transitions from the P2 current
+    ledger into unbroken diagonal SM-face currents, broken Pati-Salam
+    leptoquark currents, broken `SU(2)_R` charged currents, and broken
+    `Spin(10)` off-face currents.
+  - Inspected the 26 P3 mediator sectors and marked all as requiring
+    Goldstone/Higgs/source completion if interpreted as vector mediators,
+    because none is an unbroken SM adjoint sector in the current pole ledger.
+  - Recorded missing action-level data rather than hiding it:
+      component-level `SU(3)_C` and `SU(2)_L` generators,
+      explicit broken `Spin(10)`/Pati-Salam generator matrices,
+      broken-vector mass matrix,
+      Goldstone/Higgs/source sector,
+      spin-statistics and numerator structures.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/ward_identity_ledger.py`.
+  - Generated:
+      unbroken SM current sectors = 3,
+      current transitions checked = 36,
+      massless diagonal transitions ready = 6,
+      broken/off-face transitions needing completion = 30,
+      mediator sectors inspected = 26,
+      mediator sectors needing completion if vector = 26,
+      all broken transitions flagged = true.
+
+boundary:
+  P4 is a Ward-identity readiness ledger, not a complete Ward-identity proof.
+  It reports where the unbroken checks can begin and where broken-sector
+  completion data are missing.  Actual cancellations are deferred to later P4
+  refinements and the P6 high-energy-growth audit.
+
+next:
+  - Implement P5: consolidate anomaly and chiral-consistency ledgers for
+    `SU(5)`, Pati-Salam, `Spin(10)`, `E6`, and superstring-derived
+    completions, using P1 as the SM-family baseline.
+
+## 2026-06-07 Taipei Route-C P5 anomaly and chiral-consistency ledger
+
+status:
+  Implemented P5 for the Route-C bootstrap workspace.  The new script compares
+  `SU(5)`, Pati-Salam, `Spin(10)`, `E6`, and superstring-derived completions
+  against the P1 one-family `SM + nu^c` anomaly baseline.
+
+files changed:
+  - `route_c_bootstrap/code/anomaly_chiral_consistency_ledger.py`
+  - `route_c_bootstrap/output/anomaly_chiral_consistency.json`
+  - `route_c_bootstrap/output/anomaly_chiral_consistency.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `roadmap.md`
+
+content:
+  - Used the P1 exact SM-family baseline:
+      `Q + L + u^c + d^c + nu^c + e^c`,
+      `Tr Y^2 / Tr T3L^2 = 5/3`,
+      all listed SM, `B-L`, mixed Abelian, and Witten `SU(2)` anomaly checks
+      passing.
+  - Recorded standard anomaly-index checks for:
+      `SU(5): A(10)+A(bar5)+A(1)=1-1+0=0`,
+      Pati-Salam: `2 A(4)+2 A(bar4)=0` plus even `SU(2)_L` and `SU(2)_R`
+      doublet counts,
+      `Spin(10)`: anomaly-safe half-spinor `16`,
+      `E6`: anomaly-consistent `27` but with extra `10 + 1` lifting audit.
+  - Added superstring-derived completions as a UV-completion class rather than
+    a single four-dimensional candidate.  Required checks include
+    Green-Schwarz/tadpole/modular consistency, massless spectrum, chiral index,
+    and exotics-lifting audits.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/anomaly_chiral_consistency_ledger.py`.
+  - Generated:
+      candidates inspected = 5,
+      field-theory candidates = 4,
+      UV-completion classes = 1,
+      Route-C minimal single-object survivors = [`Spin(10)`],
+      baseline all anomalies pass = true.
+
+candidate status:
+  - `SU(5)`: anomaly-consistent as `10 + bar5 + 1`, but fails the single
+    irreducible family-object criterion.
+  - Pati-Salam: anomaly-consistent and natural, but product group and not a
+    single object.
+  - `Spin(10)`: standard minimal anomaly-safe single-object survivor via `16`.
+  - `E6`: anomaly-consistent but requires extra-state lifting for `10 + 1`.
+  - Superstring-derived completions: not directly comparable as one group;
+    compactification-dependent UV-completion class.
+
+boundary:
+  P5 separates anomaly consistency from Route-C structural filters.  Passing
+  anomaly checks is necessary but not sufficient; it does not replace Ward,
+  high-energy, proton, threshold, compactification, or exotics-lifting audits.
+
+next:
+  - Implement P6: controlled high-energy-growth audit, starting from the P4
+    broken-vector completion requirements and checking which symbolic branches
+    would need Higgs/Goldstone/source data or tower-like UV completion.
+
+## 2026-06-07 Taipei Route-C P1-P5 TeX derivation ledger
+
+status:
+  Added a standalone TeX derivation ledger so the Route-C bootstrap derivations
+  do not live only in generated Markdown/JSON outputs and scripts.
+
+files changed:
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Recorded the P1 one-family `SM + nu^c` charge table, exact
+    `Tr Y^2 / Tr T3L^2 = 5/3` derivation, perturbative anomaly cancellations,
+    `B-L`/mixed-Abelian anomaly checks, and Witten `SU(2)` even-doublet
+    condition.
+  - Recorded the P2 four-point symbolic pole ansatz
+      `A_4(12|34)=sum_X R_s(X)/(s-M_X^2)+C6`
+    and the machine-verified counts:
+      21 pair types, 31 pair-product components, 18 allowed symbolic poles.
+  - Recorded the P3 residue-factorization statement
+      `Res_X A_{alpha beta}=g_{alpha X}g^*_{beta X}`
+    as a Gram-matrix positivity check, including the 26 PSD mediator blocks and
+    18 passed factorization checks.
+  - Recorded the P4 Ward-identity boundary:
+      unbroken `p_mu M^mu=0` checks are bookkeeping-ready, while broken-vector
+      channels require the generalized
+      `p_mu M^mu(V_X)=M_X M(phi_X)` Goldstone/Higgs/source completion.
+  - Recorded the P5 candidate comparison:
+      `SU(5)` anomaly-consistent but not one irreducible family object,
+      Pati-Salam natural but product-group/non-single-object,
+      `Spin(10):16` standard minimal anomaly-safe single-object survivor,
+      `E6` anomaly-consistent with `10 + 1` lifting audit,
+      superstring-derived completions as compactification-dependent UV class.
+
+boundary:
+  The TeX ledger is a derivation record for Route C P1-P5.  It is not a claim
+  that the bootstrap has derived a full GUT or full phenomenology.
+
+next:
+  - Use `route_c_bootstrap/tex/route_c_derivation_ledger.tex` as the source
+    appendix/note when P6 extends the chain to controlled high-energy growth.
+
+## 2026-06-07 Taipei Route-C P6 controlled high-energy-growth audit
+
+status:
+  Implemented P6 for the Route-C bootstrap workspace.  The new script consumes
+  the P3 residue-factorization ledger and P4 Ward-completion ledger, then
+  classifies high-energy-growth risks for finite broken-vector, scalar or
+  auxiliary, contact-only, and tower-like UV comparison branches.
+
+files changed:
+  - `route_c_bootstrap/code/high_energy_growth_audit.py`
+  - `route_c_bootstrap/output/high_energy_growth_audit.json`
+  - `route_c_bootstrap/output/high_energy_growth_audit.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added the high-energy target that finite massive-vector branches must avoid
+    uncancelled longitudinal growth such as `A ~ s/M_X^2` or `A ~ s^2/M_X^4`.
+  - Used the P4 generalized broken-vector Ward target
+      `p_mu M^mu(V_X)=M_X M(phi_X)`
+    as the finite-completion requirement.
+  - Classified all 26 P3 mediator sectors as requiring explicit
+    Goldstone/Higgs/source completion if interpreted as finite broken vectors.
+  - Recorded that scalar/auxiliary interpretations avoid the longitudinal
+    vector Ward problem at this bookkeeping level, while still requiring
+    spin-statistics, action-existence, low-energy matching, and perturbative
+    unitarity checks.
+  - Recorded that contact-only four-fermion EFT data are not UV softness
+    proofs because they generically scale like `A_contact ~ s/Lambda^2`.
+  - Kept superstring/tower-like UV completion as a comparison class, not a
+    P6 conclusion.  It becomes motivated only if finite
+    Goldstone/Higgs/source completions fail.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/high_energy_growth_audit.py`.
+  - Generated:
+      mediator sectors inspected = 26,
+      finite-vector branches needing completion = 26,
+      unbroken-vector branches bookkeeping-ready = 0,
+      scalar/auxiliary interpretations without longitudinal-vector risk = 26,
+      contact-only components needing UV completion = 18,
+      broken transitions needing completion = 30,
+      tower-like UV forced now = false.
+
+boundary:
+  P6 is not a full high-energy amplitude proof.  It is a completion-requirement
+  and growth-risk ledger.  It does not claim that superstring theory is
+  required; it only defines when a tower-like UV completion becomes a serious
+  comparison class.
+
+next:
+  - Implement P7: low-energy matching and proton-bound reporting, using the
+    P2/P3 symbolic pole components only after respecting the P6 completion
+    status and marking pre-flavor-audit Wilson coefficients as conditional.

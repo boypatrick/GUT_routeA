@@ -1,0 +1,1324 @@
+{
+  "description": "Route-C P3 residue factorization and positivity ledger",
+  "boundary": "This is a conditional Gram-matrix PSD check.  It does not prove mediator existence, Ward identities, high-energy softness, or proton safety.",
+  "summary": {
+    "mediator_sectors": 26,
+    "total_vertex_channels": 31,
+    "p2_allowed_poles_checked": 18,
+    "factorization_checks_passed": 18,
+    "all_factorization_checks_pass": true,
+    "psd_blocks_under_positive_metric": 26,
+    "all_psd_blocks_pass_under_positive_metric": true,
+    "largest_channel_block_size": 3
+  },
+  "mediator_blocks": [
+    {
+      "mediator": {
+        "label": "X[(1,1);Y=-1;B-L=-2]",
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "nu^c+e^c_(1,1;Y=1;B-L=2)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_nucec_X_1_1_Ym1_BmLm2 g_nucec_X_1_1_Ym1_BmLm2^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,1);Y=-2;B-L=-2]",
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "e^c+e^c_(1,1;Y=2;B-L=2)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_ecec_X_1_1_Ym2_BmLm2 g_ecec_X_1_1_Ym2_BmLm2^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,1);Y=0;B-L=-2]",
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "-2",
+          "numerator": -2,
+          "denominator": 1,
+          "float": -2.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "nu^c+nu^c_(1,1;Y=0;B-L=2)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_nucnuc_X_1_1_Y0_BmLm2 g_nucnuc_X_1_1_Y0_BmLm2^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,1);Y=1;B-L=2]",
+        "SU3_C": "1",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "L+L_(1,1;Y=-1;B-L=-2)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_LL_X_1_1_Y1_BmL2 g_LL_X_1_1_Y1_BmL2^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,2);Y=-1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "channel_count": 2,
+      "channel_basis": [
+        "Q+d^c_(1,2;Y=1/2;B-L=0)",
+        "L+e^c_(1,2;Y=1/2;B-L=0)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Qdc_X_1_2_Ym1over2_BmL0 g_Qdc_X_1_2_Ym1over2_BmL0^*",
+          "g_Qdc_X_1_2_Ym1over2_BmL0 g_Lec_X_1_2_Ym1over2_BmL0^*"
+        ],
+        [
+          "g_Lec_X_1_2_Ym1over2_BmL0 g_Qdc_X_1_2_Ym1over2_BmL0^*",
+          "g_Lec_X_1_2_Ym1over2_BmL0 g_Lec_X_1_2_Ym1over2_BmL0^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        2,
+        0
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -2,
+          0
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,2);Y=1/2;B-L=0]",
+        "SU3_C": "1",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "channel_count": 2,
+      "channel_basis": [
+        "Q+u^c_(1,2;Y=-1/2;B-L=0)",
+        "L+nu^c_(1,2;Y=-1/2;B-L=0)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Quc_X_1_2_Y1over2_BmL0 g_Quc_X_1_2_Y1over2_BmL0^*",
+          "g_Quc_X_1_2_Y1over2_BmL0 g_Lnuc_X_1_2_Y1over2_BmL0^*"
+        ],
+        [
+          "g_Lnuc_X_1_2_Y1over2_BmL0 g_Quc_X_1_2_Y1over2_BmL0^*",
+          "g_Lnuc_X_1_2_Y1over2_BmL0 g_Lnuc_X_1_2_Y1over2_BmL0^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        2,
+        0
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -2,
+          0
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(1,3);Y=1;B-L=2]",
+        "SU3_C": "1",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "2",
+          "numerator": 2,
+          "denominator": 1,
+          "float": 2.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "L+L_(1,3;Y=-1;B-L=-2)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_LL_X_1_3_Y1_BmL2 g_LL_X_1_3_Y1_BmL2^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,1);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 3,
+      "channel_basis": [
+        "Q+Q_(bar3,1;Y=1/3;B-L=2/3)",
+        "u^c+e^c_(bar3,1;Y=1/3;B-L=2/3)",
+        "d^c+nu^c_(bar3,1;Y=1/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QQ_X_3_1_Ym1over3_BmLm2over3 g_QQ_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_QQ_X_3_1_Ym1over3_BmLm2over3 g_ucec_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_QQ_X_3_1_Ym1over3_BmLm2over3 g_dcnuc_X_3_1_Ym1over3_BmLm2over3^*"
+        ],
+        [
+          "g_ucec_X_3_1_Ym1over3_BmLm2over3 g_QQ_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_ucec_X_3_1_Ym1over3_BmLm2over3 g_ucec_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_ucec_X_3_1_Ym1over3_BmLm2over3 g_dcnuc_X_3_1_Ym1over3_BmLm2over3^*"
+        ],
+        [
+          "g_dcnuc_X_3_1_Ym1over3_BmLm2over3 g_QQ_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_dcnuc_X_3_1_Ym1over3_BmLm2over3 g_ucec_X_3_1_Ym1over3_BmLm2over3^*",
+          "g_dcnuc_X_3_1_Ym1over3_BmLm2over3 g_dcnuc_X_3_1_Ym1over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        3,
+        0,
+        0
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -3,
+          0,
+          0
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,1);Y=-4/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "d^c+e^c_(bar3,1;Y=4/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_dcec_X_3_1_Ym4over3_BmLm2over3 g_dcec_X_3_1_Ym4over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,1);Y=2/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "u^c+nu^c_(bar3,1;Y=-2/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_ucnuc_X_3_1_Y2over3_BmLm2over3 g_ucnuc_X_3_1_Y2over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,2);Y=1/6;B-L=4/3]",
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "L+d^c_(bar3,2;Y=-1/6;B-L=-4/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Ldc_X_3_2_Y1over6_BmL4over3 g_Ldc_X_3_2_Y1over6_BmL4over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,2);Y=7/6;B-L=4/3]",
+        "SU3_C": "3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "7/6",
+          "numerator": 7,
+          "denominator": 6,
+          "float": 1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "L+u^c_(bar3,2;Y=-7/6;B-L=-4/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Luc_X_3_2_Y7over6_BmL4over3 g_Luc_X_3_2_Y7over6_BmL4over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(3,3);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+Q_(bar3,3;Y=1/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QQ_X_3_3_Ym1over3_BmLm2over3 g_QQ_X_3_3_Ym1over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(6,1);Y=-2/3;B-L=2/3]",
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "d^c+d^c_(bar6,1;Y=2/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_dcdc_X_6_1_Ym2over3_BmL2over3 g_dcdc_X_6_1_Ym2over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(6,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "u^c+d^c_(bar6,1;Y=-1/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_ucdc_X_6_1_Y1over3_BmL2over3 g_ucdc_X_6_1_Y1over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(6,1);Y=4/3;B-L=2/3]",
+        "SU3_C": "6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "u^c+u^c_(bar6,1;Y=-4/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_ucuc_X_6_1_Y4over3_BmL2over3 g_ucuc_X_6_1_Y4over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(8,2);Y=-1/2;B-L=0]",
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+d^c_(8,2;Y=1/2;B-L=0)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Qdc_X_8_2_Ym1over2_BmL0 g_Qdc_X_8_2_Ym1over2_BmL0^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(8,2);Y=1/2;B-L=0]",
+        "SU3_C": "8",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+u^c_(8,2;Y=-1/2;B-L=0)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Quc_X_8_2_Y1over2_BmL0 g_Quc_X_8_2_Y1over2_BmL0^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,1);Y=-2/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "d^c+d^c_(3,1;Y=2/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_dcdc_X_bar3_1_Ym2over3_BmL2over3 g_dcdc_X_bar3_1_Ym2over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 2,
+      "channel_basis": [
+        "Q+L_(3,1;Y=-1/3;B-L=-2/3)",
+        "u^c+d^c_(3,1;Y=-1/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QL_X_bar3_1_Y1over3_BmL2over3 g_QL_X_bar3_1_Y1over3_BmL2over3^*",
+          "g_QL_X_bar3_1_Y1over3_BmL2over3 g_ucdc_X_bar3_1_Y1over3_BmL2over3^*"
+        ],
+        [
+          "g_ucdc_X_bar3_1_Y1over3_BmL2over3 g_QL_X_bar3_1_Y1over3_BmL2over3^*",
+          "g_ucdc_X_bar3_1_Y1over3_BmL2over3 g_ucdc_X_bar3_1_Y1over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        2,
+        0
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -2,
+          0
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,1);Y=4/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "4/3",
+          "numerator": 4,
+          "denominator": 3,
+          "float": 1.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "u^c+u^c_(3,1;Y=-4/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_ucuc_X_bar3_1_Y4over3_BmL2over3 g_ucuc_X_bar3_1_Y4over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-1/6",
+          "numerator": -1,
+          "denominator": 6,
+          "float": -0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+nu^c_(3,2;Y=1/6;B-L=4/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Qnuc_X_bar3_2_Ym1over6_BmLm4over3 g_Qnuc_X_bar3_2_Ym1over6_BmLm4over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "2",
+        "Y": {
+          "fraction": "-7/6",
+          "numerator": -7,
+          "denominator": 6,
+          "float": -1.1666666666666667
+        },
+        "B_minus_L": {
+          "fraction": "-4/3",
+          "numerator": -4,
+          "denominator": 3,
+          "float": -1.3333333333333333
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+e^c_(3,2;Y=7/6;B-L=4/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_Qec_X_bar3_2_Ym7over6_BmLm4over3 g_Qec_X_bar3_2_Ym7over6_BmLm4over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar3,3);Y=1/3;B-L=2/3]",
+        "SU3_C": "bar3",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "2/3",
+          "numerator": 2,
+          "denominator": 3,
+          "float": 0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+L_(3,3;Y=-1/3;B-L=-2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QL_X_bar3_3_Y1over3_BmL2over3 g_QL_X_bar3_3_Y1over3_BmL2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "bar6",
+        "SU2_L": "1",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+Q_(6,1;Y=1/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QQ_X_bar6_1_Ym1over3_BmLm2over3 g_QQ_X_bar6_1_Ym1over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    },
+    {
+      "mediator": {
+        "label": "X[(bar6,3);Y=-1/3;B-L=-2/3]",
+        "SU3_C": "bar6",
+        "SU2_L": "3",
+        "Y": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        }
+      },
+      "channel_count": 1,
+      "channel_basis": [
+        "Q+Q_(6,3;Y=1/3;B-L=2/3)"
+      ],
+      "formal_residue_matrix": [
+        [
+          "g_QQ_X_bar6_3_Ym1over3_BmLm2over3 g_QQ_X_bar6_3_Ym1over3_BmLm2over3^*"
+        ]
+      ],
+      "unit_coupling_positive_metric_spectrum": [
+        1
+      ],
+      "unit_coupling_positive_metric_rank": 1,
+      "positive_semidefinite_if_positive_norm_mediator": true,
+      "wrong_sign_metric_stress_test": {
+        "unit_coupling_spectrum": [
+          -1
+        ],
+        "passes_unitarity": false,
+        "interpretation": "a ghost or wrong-sign mediator metric would violate residue positivity"
+      },
+      "boundary": "PSD is conditional on positive mediator norm and canonical unitarity normalization; spin numerators and Ward identities are deferred."
+    }
+  ],
+  "factorization_checks": [
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "left_channel": "Q+Q_(6,1;Y=1/3;B-L=2/3)",
+      "right_channel": "u^c+d^c_(bar6,1;Y=-1/3;B-L=-2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(6,1);Y=1/3;B-L=2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q Q Q",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "left_channel": "Q+Q_(bar3,1;Y=1/3;B-L=2/3)",
+      "right_channel": "Q+L_(3,1;Y=-1/3;B-L=-2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "left_channel": "Q+Q_(bar3,1;Y=1/3;B-L=2/3)",
+      "right_channel": "u^c+d^c_(3,1;Y=-1/3;B-L=-2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q Q Q",
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "left_channel": "Q+Q_(bar3,3;Y=1/3;B-L=2/3)",
+      "right_channel": "Q+L_(3,3;Y=-1/3;B-L=-2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(bar3,3);Y=1/3;B-L=2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_channel": "Q+L_(3,1;Y=-1/3;B-L=-2/3)",
+      "right_channel": "u^c+e^c_(bar3,1;Y=1/3;B-L=2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_channel": "Q+L_(3,1;Y=-1/3;B-L=-2/3)",
+      "right_channel": "d^c+nu^c_(bar3,1;Y=1/3;B-L=2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_channel": "Q+u^c_(1,2;Y=-1/2;B-L=0)",
+      "right_channel": "Q+d^c_(1,2;Y=1/2;B-L=0)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(1,2);Y=-1/2;B-L=0]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_channel": "Q+u^c_(1,2;Y=-1/2;B-L=0)",
+      "right_channel": "L+e^c_(1,2;Y=1/2;B-L=0)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(1,2);Y=-1/2;B-L=0]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "left_channel": "Q+u^c_(8,2;Y=-1/2;B-L=0)",
+      "right_channel": "Q+d^c_(8,2;Y=1/2;B-L=0)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(8,2);Y=-1/2;B-L=0]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "left_channel": "Q+d^c_(1,2;Y=1/2;B-L=0)",
+      "right_channel": "L+nu^c_(1,2;Y=-1/2;B-L=0)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(1,2);Y=1/2;B-L=0]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "left_channel": "Q+nu^c_(3,2;Y=1/6;B-L=4/3)",
+      "right_channel": "L+d^c_(bar3,2;Y=-1/6;B-L=-4/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,2);Y=1/6;B-L=4/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "left_channel": "Q+e^c_(3,2;Y=7/6;B-L=4/3)",
+      "right_channel": "L+u^c_(bar3,2;Y=-7/6;B-L=-4/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,2);Y=7/6;B-L=4/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L L e^c nu^c",
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "left_channel": "L+L_(1,1;Y=-1;B-L=-2)",
+      "right_channel": "nu^c+e^c_(1,1;Y=1;B-L=2)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(1,1);Y=-1;B-L=-2]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "L L e^c nu^c",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_channel": "L+nu^c_(1,2;Y=-1/2;B-L=0)",
+      "right_channel": "L+e^c_(1,2;Y=1/2;B-L=0)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(1,2);Y=-1/2;B-L=0]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "d^c e^c u^c u^c",
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "left_channel": "u^c+u^c_(3,1;Y=-4/3;B-L=-2/3)",
+      "right_channel": "d^c+e^c_(bar3,1;Y=4/3;B-L=2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,1);Y=-4/3;B-L=-2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "d^c e^c u^c u^c",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_channel": "u^c+d^c_(3,1;Y=-1/3;B-L=-2/3)",
+      "right_channel": "u^c+e^c_(bar3,1;Y=1/3;B-L=2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "d^c d^c nu^c u^c",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_channel": "u^c+d^c_(3,1;Y=-1/3;B-L=-2/3)",
+      "right_channel": "d^c+nu^c_(bar3,1;Y=1/3;B-L=2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "conjugacy_cross_check": true
+    },
+    {
+      "external_multiset": "d^c d^c nu^c u^c",
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "left_channel": "u^c+nu^c_(bar3,1;Y=-2/3;B-L=2/3)",
+      "right_channel": "d^c+d^c_(3,1;Y=2/3;B-L=-2/3)",
+      "left_vertex_uses_declared_mediator": true,
+      "right_pair_is_conjugate_product_for_declared_mediator": true,
+      "factorizes_as_g_leftX_g_rightXbar": true,
+      "right_vertex_couples_to": "X[(bar3,1);Y=-2/3;B-L=2/3]",
+      "conjugacy_cross_check": true
+    }
+  ]
+}
