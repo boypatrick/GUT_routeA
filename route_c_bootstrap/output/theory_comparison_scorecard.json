@@ -1,0 +1,260 @@
+{
+  "description": "Route-C P8 comparative theory scorecard",
+  "boundary": "P8 is a hard-gate scorecard over existing Route-C ledgers.  It does not upgrade conditional branches into completed GUTs.",
+  "summary": {
+    "candidates_compared": 5,
+    "p1_p7_gates_used": [
+      "C0 representation pre-filter",
+      "P1 charge/anomaly baseline",
+      "P2 charge-filtered pole ledger",
+      "P3 residue factorization/PSD",
+      "P4 Ward-completion readiness",
+      "P5 anomaly/chiral/exotics ledger",
+      "P6 high-energy-growth completion gate",
+      "P7 proton-bound readiness"
+    ],
+    "final_status_counts": {
+      "conditional_branch_if_single_object_filter_is_relaxed": 1,
+      "conditional_intermediate_face_not_final_simple_object": 1,
+      "leading_conditional_route_c_branch": 1,
+      "conditional_branch_with_exotics_lifting_debt": 1,
+      "uv_completion_class_not_forced_by_p1_p7": 1
+    },
+    "leading_conditional_field_theory_branch": "Spin(10)",
+    "tower_like_uv_forced_now": false
+  },
+  "scorecard": [
+    {
+      "candidate": "SU(5)",
+      "category": "four-dimensional field-theory GUT candidate",
+      "family_realization": "10 + bar5 + 1",
+      "gates": {
+        "C0_representation_filter": {
+          "status": "fail_or_relax",
+          "note": "anomaly-consistent but fails the single irreducible family object criterion"
+        },
+        "P1_sm_family_baseline": {
+          "status": "pass",
+          "note": "one-family SM + nu^c charge/anomaly baseline passes exactly"
+        },
+        "P2_charge_filtered_poles": {
+          "status": "shared_prebranch_ledger",
+          "note": "18 SM-face symbolic pole components are available before candidate-specific generator data"
+        },
+        "P3_residue_factorization": {
+          "status": "conditional_pass",
+          "note": "18 symbolic poles factorize with PSD residues if mediators have positive norm"
+        },
+        "P4_ward_completion": {
+          "status": "completion_required",
+          "note": "30 broken/off-face transitions need Goldstone/Higgs/source completion"
+        },
+        "P5_anomaly_chiral": {
+          "status": "pass",
+          "note": "anomaly-consistent but fails the single irreducible family object criterion"
+        },
+        "P6_high_energy_growth": {
+          "status": "completion_required",
+          "note": "26 finite-vector branches need completion; tower-like UV is not forced now"
+        },
+        "P7_proton_bound_readiness": {
+          "status": "not_evaluable_yet",
+          "note": "6 BNV symbolic poles found; 0 physical proton bounds evaluable without completion/flavor/hadronic inputs"
+        }
+      },
+      "final_status": "conditional_branch_if_single_object_filter_is_relaxed",
+      "final_note": "Anomaly-consistent and simple, but the family is split as 10 + bar5 + 1 rather than one irreducible six-face object.",
+      "next_required_audits": [
+        "explicit statement that Route-A single-object criterion is relaxed",
+        "SU(5)-specific broken-vector completion",
+        "classic X/Y proton matching and thresholds"
+      ]
+    },
+    {
+      "candidate": "Pati-Salam",
+      "category": "four-dimensional field-theory GUT-like candidate",
+      "family_realization": "(4,2,1) + (bar4,1,2)",
+      "gates": {
+        "C0_representation_filter": {
+          "status": "fail_or_relax",
+          "note": "anomaly-consistent and physically natural, but fails the simple-group and single-object filters"
+        },
+        "P1_sm_family_baseline": {
+          "status": "pass",
+          "note": "one-family SM + nu^c charge/anomaly baseline passes exactly"
+        },
+        "P2_charge_filtered_poles": {
+          "status": "shared_prebranch_ledger",
+          "note": "18 SM-face symbolic pole components are available before candidate-specific generator data"
+        },
+        "P3_residue_factorization": {
+          "status": "conditional_pass",
+          "note": "18 symbolic poles factorize with PSD residues if mediators have positive norm"
+        },
+        "P4_ward_completion": {
+          "status": "completion_required",
+          "note": "30 broken/off-face transitions need Goldstone/Higgs/source completion"
+        },
+        "P5_anomaly_chiral": {
+          "status": "pass",
+          "note": "anomaly-consistent and physically natural, but fails the simple-group and single-object filters"
+        },
+        "P6_high_energy_growth": {
+          "status": "completion_required",
+          "note": "26 finite-vector branches need completion; tower-like UV is not forced now"
+        },
+        "P7_proton_bound_readiness": {
+          "status": "not_evaluable_yet",
+          "note": "6 BNV symbolic poles found; 0 physical proton bounds evaluable without completion/flavor/hadronic inputs"
+        }
+      },
+      "final_status": "conditional_intermediate_face_not_final_simple_object",
+      "final_note": "Anomaly-consistent and physically natural, but product-group rather than simple single-object unification.",
+      "next_required_audits": [
+        "explicit product-group bootstrap branch",
+        "Pati-Salam leptoquark and SU(2)_R broken Ward completion",
+        "proton and threshold audit if used as more than an intermediate face"
+      ]
+    },
+    {
+      "candidate": "Spin(10)",
+      "category": "four-dimensional field-theory GUT candidate",
+      "family_realization": "16 half-spinor",
+      "gates": {
+        "C0_representation_filter": {
+          "status": "pass",
+          "note": "passes minimal single-object filter"
+        },
+        "P1_sm_family_baseline": {
+          "status": "pass",
+          "note": "one-family SM + nu^c charge/anomaly baseline passes exactly"
+        },
+        "P2_charge_filtered_poles": {
+          "status": "shared_prebranch_ledger",
+          "note": "18 SM-face symbolic pole components are available before candidate-specific generator data"
+        },
+        "P3_residue_factorization": {
+          "status": "conditional_pass",
+          "note": "18 symbolic poles factorize with PSD residues if mediators have positive norm"
+        },
+        "P4_ward_completion": {
+          "status": "completion_required",
+          "note": "30 broken/off-face transitions need Goldstone/Higgs/source completion"
+        },
+        "P5_anomaly_chiral": {
+          "status": "pass",
+          "note": "standard minimal anomaly-safe single-object survivor under the stated Route-C pre-filter"
+        },
+        "P6_high_energy_growth": {
+          "status": "completion_required",
+          "note": "26 finite-vector branches need completion; tower-like UV is not forced now"
+        },
+        "P7_proton_bound_readiness": {
+          "status": "not_evaluable_yet",
+          "note": "6 BNV symbolic poles found; 0 physical proton bounds evaluable without completion/flavor/hadronic inputs"
+        }
+      },
+      "final_status": "leading_conditional_route_c_branch",
+      "final_note": "Only field-theory candidate passing the current minimal single-object filter, but still blocked from physical high-energy/proton claims by P6/P7 completion debt.",
+      "next_required_audits": [
+        "explicit broken D5 generator matrices",
+        "Spin(10)-breaking Higgs/Goldstone/source sector",
+        "mediator masses and couplings",
+        "flavor-basis Wilson tensors and proton bounds"
+      ]
+    },
+    {
+      "candidate": "E6",
+      "category": "four-dimensional field-theory GUT candidate",
+      "family_realization": "27 -> 16 + 10 + 1 under Spin(10)",
+      "gates": {
+        "C0_representation_filter": {
+          "status": "fail_or_relax",
+          "note": "anomaly-consistent, but not minimal and requires an extra-state lifting audit"
+        },
+        "P1_sm_family_baseline": {
+          "status": "pass",
+          "note": "one-family SM + nu^c charge/anomaly baseline passes exactly"
+        },
+        "P2_charge_filtered_poles": {
+          "status": "shared_prebranch_ledger",
+          "note": "18 SM-face symbolic pole components are available before candidate-specific generator data"
+        },
+        "P3_residue_factorization": {
+          "status": "conditional_pass",
+          "note": "18 symbolic poles factorize with PSD residues if mediators have positive norm"
+        },
+        "P4_ward_completion": {
+          "status": "completion_required",
+          "note": "30 broken/off-face transitions need Goldstone/Higgs/source completion"
+        },
+        "P5_anomaly_chiral": {
+          "status": "conditional",
+          "note": "anomaly-consistent, but not minimal and requires an extra-state lifting audit"
+        },
+        "P6_high_energy_growth": {
+          "status": "completion_required",
+          "note": "26 finite-vector branches need completion; tower-like UV is not forced now"
+        },
+        "P7_proton_bound_readiness": {
+          "status": "not_evaluable_yet",
+          "note": "6 BNV symbolic poles found; 0 physical proton bounds evaluable without completion/flavor/hadronic inputs"
+        }
+      },
+      "final_status": "conditional_branch_with_exotics_lifting_debt",
+      "final_note": "Simple and contains a Spin(10) 16 inside 27, but the extra 10 + 1 states must be lifted or audited.",
+      "next_required_audits": [
+        "mass/lifting mechanism for 10 + 1",
+        "check no light chiral exotics remain",
+        "E6 threshold/proton audit including lifted states"
+      ]
+    },
+    {
+      "candidate": "Superstring-derived completions",
+      "category": "UV-completion class, not a single four-dimensional group",
+      "family_realization": "model-dependent; may realize SU(5), Pati-Salam, Spin(10), E6, or other quiver/brane/heterotic branches",
+      "gates": {
+        "C0_representation_filter": {
+          "status": "not_applicable",
+          "note": "UV class, not directly comparable as one finite group"
+        },
+        "P1_sm_family_baseline": {
+          "status": "pass",
+          "note": "one-family SM + nu^c charge/anomaly baseline passes exactly"
+        },
+        "P2_charge_filtered_poles": {
+          "status": "shared_prebranch_ledger",
+          "note": "18 SM-face symbolic pole components are available before candidate-specific generator data"
+        },
+        "P3_residue_factorization": {
+          "status": "conditional_pass",
+          "note": "18 symbolic poles factorize with PSD residues if mediators have positive norm"
+        },
+        "P4_ward_completion": {
+          "status": "completion_required",
+          "note": "30 broken/off-face transitions need Goldstone/Higgs/source completion"
+        },
+        "P5_anomaly_chiral": {
+          "status": "conditional",
+          "note": "UV-completion class with stronger high-energy softness/tower structure, but requires compactification-specific spectrum and exotics audits"
+        },
+        "P6_high_energy_growth": {
+          "status": "completion_required",
+          "note": "26 finite-vector branches need completion; tower-like UV is not forced now"
+        },
+        "P7_proton_bound_readiness": {
+          "status": "not_evaluable_yet",
+          "note": "6 BNV symbolic poles found; 0 physical proton bounds evaluable without completion/flavor/hadronic inputs"
+        }
+      },
+      "final_status": "uv_completion_class_not_forced_by_p1_p7",
+      "final_note": "Not a single finite four-dimensional GUT candidate.  Relevant as a comparison class if finite-pole GUT completions fail high-energy softness or require a tower.",
+      "next_required_audits": [
+        "explicit compactification and massless spectrum",
+        "Green-Schwarz/tadpole/modular consistency",
+        "chiral index, exotics lifting, and matching to the Route-A skeleton"
+      ]
+    }
+  ],
+  "route_c_decision": "Spin(10) is the leading conditional finite field-theory branch under the current minimal single-object filter.  This is not yet a full action-level or phenomenological proof.  Superstring-derived completions remain a UV comparison class, not a P8 conclusion."
+}

@@ -154,7 +154,21 @@ claim conditional until P6 completion, flavor rotations, mediator masses and
 couplings, RG factors, hadronic matrix elements, and experimental channel
 limits are supplied.
 
-The P1--P7 derivations are also consolidated in a standalone TeX ledger:
+P8 adds the comparative theory scorecard:
+
+```text
+code/theory_comparison_scorecard.py
+output/theory_comparison_scorecard.json
+output/theory_comparison_scorecard.md
+```
+
+It compares `SU(5)`, Pati-Salam, `Spin(10)`, `E6`, and superstring-derived
+completions using explicit P1--P7 gates.  It reports `Spin(10)` as the leading
+conditional finite field-theory branch under the current minimal single-object
+filter, while keeping all action-level and phenomenological completion debts
+visible.
+
+The P1--P8 derivations are also consolidated in a standalone TeX ledger:
 
 ```text
 tex/route_c_derivation_ledger.tex

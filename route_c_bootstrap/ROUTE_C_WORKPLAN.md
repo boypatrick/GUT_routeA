@@ -683,6 +683,21 @@ therefore records bound readiness rather than quoting lifetimes.
 
 ## Stage C8: Candidate-Theory Comparison
 
+### Status
+
+Implemented as a comparative theory scorecard.  P8 compares `SU(5)`,
+Pati-Salam, `Spin(10)`, `E6`, and superstring-derived completions using the
+explicit P1--P7 gates rather than anomaly cancellation or minimality alone.
+It is a hard-gate ledger, not a weighted score.
+
+### Current artifacts
+
+```text
+code/theory_comparison_scorecard.py
+output/theory_comparison_scorecard.json
+output/theory_comparison_scorecard.md
+```
+
 The final comparison should happen only after Stages C1-C7 produce concrete
 outputs.
 
@@ -693,6 +708,40 @@ outputs.
 | `Spin(10)` | one `16` contains all six faces plus `nu^c` | action-level Higgs/source/proton data still conditional | preferred if amplitudes close without unaudited exotics |
 | `E6` | larger simple unification; contains `Spin(10)` | `27` brings extra states | survives only with explicit lifting and threshold audit |
 | superstring theory | UV-soft amplitudes, infinite tower, anomaly/modular consistency | compactification choices, moduli, exotics, landscape non-uniqueness | relevant if finite-pole GUT bootstrap needs a tower or if string compactification yields the Route-A skeleton |
+
+### Current result
+
+The generated P8 scorecard reports:
+
+```text
+candidates compared = 5,
+leading conditional field-theory branch = Spin(10),
+tower-like UV forced now = false.
+```
+
+Final status counts:
+
+```text
+conditional_branch_if_single_object_filter_is_relaxed = 1,
+conditional_intermediate_face_not_final_simple_object = 1,
+leading_conditional_route_c_branch = 1,
+conditional_branch_with_exotics_lifting_debt = 1,
+uv_completion_class_not_forced_by_p1_p7 = 1.
+```
+
+Candidate verdicts:
+
+```text
+SU(5): conditional branch if the single-object filter is relaxed.
+Pati-Salam: conditional intermediate face, not a final simple object.
+Spin(10): leading conditional Route-C finite field-theory branch.
+E6: conditional branch with exotics-lifting debt.
+Superstring-derived completions: UV-completion class, not forced by P1-P7.
+```
+
+P8 therefore closes the first Route-C pass as a comparative filter.  It does
+not convert `Spin(10)` into a completed action-level GUT; it identifies it as
+the leading conditional finite field-theory branch under the current gates.
 
 ## Superstring-Theory Comparison
 
@@ -834,6 +883,8 @@ output/low_energy_matching_proton_report.md
 Deliverables:
 
 ```text
+code/theory_comparison_scorecard.py
+output/theory_comparison_scorecard.json
 output/theory_comparison_scorecard.md
 ```
 

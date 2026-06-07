@@ -20,8 +20,10 @@ The first generated files are expected to be:
 - `high_energy_growth_audit.md`
 - `low_energy_matching_proton_report.json`
 - `low_energy_matching_proton_report.md`
+- `theory_comparison_scorecard.json`
+- `theory_comparison_scorecard.md`
 
-The paper-facing derivation consolidation for P1--P7 is not generated in this
+The paper-facing derivation consolidation for P1--P8 is not generated in this
 directory.  It lives at:
 
 ```text

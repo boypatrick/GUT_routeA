@@ -18,7 +18,7 @@
 \newcommand{\nuc}{\nu^c}
 \newcommand{\ec}{e^c}
 
-\title{Route C Bootstrap Derivation Ledger through P7}
+\title{Route C Bootstrap Derivation Ledger through P8}
 \author{BoYu Chen}
 \date{\today}
 
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-This note records the derivations generated in Route C stages P1--P7.
+This note records the derivations generated in Route C stages P1--P8.
 It is a derivation ledger, not a claim that on-shell consistency has already
 derived a complete GUT.  The current Route C program uses the one-family
 Standard Model spectrum with a right-handed neutrino as baseline, builds
@@ -35,7 +35,7 @@ residue factorization/positivity, marks Ward-identity completion requirements,
 compares anomaly/chiral consistency across $\SU(5)$, Pati--Salam,
 $\Spin(10)$, $E_6$, and superstring-derived completions, and classifies
 controlled high-energy-growth and low-energy proton-bound readiness
-requirements.
+requirements, and closes the first pass with a comparative theory scorecard.
 \end{abstract}
 
 \section{Boundary of the Ledger}
@@ -573,9 +573,70 @@ lifetimes require:
 Thus P7 is a proton-bound readiness report, not a proton-lifetime
 calculation.
 
+\section{P8: Comparative Theory Scorecard}
+
+P8 compares candidate branches using the explicit P1--P7 gates.  It is a
+hard-gate ledger, not a subjective weighted score.  The gates are:
+\begin{center}
+\small
+\begin{tabular}{
+  >{\raggedright\arraybackslash}p{0.12\linewidth}
+  >{\raggedright\arraybackslash}p{0.72\linewidth}}
+C0 & representation pre-filter\\
+P1 & charge/anomaly baseline\\
+P2 & charge-filtered pole ledger\\
+P3 & residue factorization/PSD\\
+P4 & Ward-completion readiness\\
+P5 & anomaly/chiral/exotics ledger\\
+P6 & high-energy-growth completion gate\\
+P7 & proton-bound readiness
+\end{tabular}
+\end{center}
+
+The generated P8 scorecard compares five candidates.  Its leading conditional
+finite field-theory branch is $\Spin(10)$, and it does not yet force a
+tower-like UV completion.
+The candidate verdicts are:
+\begin{center}
+\small
+\begin{tabular}{
+  >{\raggedright\arraybackslash}p{0.24\linewidth}
+  >{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+candidate & P8 verdict \\
+\midrule
+$\SU(5)$ &
+conditional branch if the single-object filter is relaxed; anomaly-consistent
+but family-split as $10\oplus\bar 5\oplus 1$ \\
+Pati--Salam &
+conditional intermediate face; natural and anomaly-consistent, but product
+group and not one simple single-object branch \\
+$\Spin(10)$ &
+leading conditional finite field-theory branch under the current minimal
+single-object filter; still has action-level and proton-bound completion debt\\
+$E_6$ &
+conditional branch with exotics-lifting debt from $27\to16\oplus10\oplus1$ \\
+superstring-derived completions &
+UV-completion class, not forced by P1--P7; serious comparison branch if
+finite-pole completions fail \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus P8 closes the first Route C pass as a comparative filter:
+\begin{equation}
+  \Spin(10)
+  =
+  \text{leading conditional finite branch},
+  \qquad
+  \text{not a completed GUT proof}.
+\end{equation}
+Superstring-derived completions remain comparison branches, not P8
+conclusions.
+
 \section{Current Status and Next Check}
 
-The P1--P7 chain currently establishes:
+The P1--P8 chain currently establishes:
 \begin{enumerate}
 \item the exact P1 charge/anomaly baseline for one $SM+\nuc$ family;
 \item the P2 charge-filtered symbolic pole components;
@@ -586,10 +647,11 @@ The P1--P7 chain currently establishes:
 contact-only, and tower-like comparison branches.
 \item the P7 conditional low-energy matching and proton-bound readiness
 ledger.
+\item the P8 comparative scorecard across $\SU(5)$, Pati--Salam, $\Spin(10)$,
+$E_6$, and superstring-derived completions.
 \end{enumerate}
-The next natural stage is P8: a candidate-theory comparison scorecard.  It
-should compare $\SU(5)$, Pati--Salam, $\Spin(10)$, $E_6$, and
-superstring-derived completions using the explicit P1--P7 gates, rather than
-using anomaly cancellation or minimality alone.
+The next natural stage is no longer another broad comparison.  It is to choose
+one surviving conditional branch, most naturally $\Spin(10)$, and supply the
+missing action-level completion data needed by P4--P7.
 
 \end{document}
