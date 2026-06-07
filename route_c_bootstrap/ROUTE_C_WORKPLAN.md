@@ -597,6 +597,22 @@ Goldstone/Higgs/source completions cannot cancel the high-energy growth.
 
 ## Stage C7: Low-Energy Matching and Proton Bounds
 
+### Status
+
+Implemented as a low-energy matching and proton-bound readiness report.  P7
+uses P2/P3 symbolic pole components only after attaching the P6 completion
+status.  It classifies operator `B` and `L` content, writes symbolic
+dimension-six matching coefficients, and marks physical proton bounds as
+conditional until the missing completion/flavor/hadronic inputs are supplied.
+
+### Current artifacts
+
+```text
+code/low_energy_matching_proton_report.py
+output/low_energy_matching_proton_report.json
+output/low_energy_matching_proton_report.md
+```
+
 ### Work items
 
 Integrate out heavy GUT mediators to obtain effective operators:
@@ -632,6 +648,38 @@ p -> K^+ anti-nu
 - Flavor rotations are missing but the result is presented as physical.
 
 - A cancellation is asserted before Wilson tensors are computed.
+
+### Current result
+
+The generated P7 ledger reports:
+
+```text
+allowed symbolic poles processed = 18,
+B and L conserving poles = 12,
+standard BNV seed poles = 4,
+BNV-with-sterile-neutrino poles = 2,
+baryon-violating symbolic poles = 6,
+BNV vector poles blocked by P6 completion = 6,
+physical proton bounds evaluable now = 0,
+all physical bounds conditional = true.
+```
+
+The symbolic matching template is
+
+```text
+C6[operator; X] = g_leftX g_rightX^*/M_X^2.
+```
+
+The physical proton-bound interface is only a template at this stage:
+
+```text
+Gamma(p -> channel a) = sum_ij C_i^phys C_j^{phys *} H_ij^(a).
+```
+
+Numerical bounds require a P6-completed high-energy branch, mediator masses and
+couplings, physical flavor rotations, RG factors, lattice/chiral matrix
+elements, and the experimental lifetime limit for the selected channel.  P7
+therefore records bound readiness rather than quoting lifetimes.
 
 ## Stage C8: Candidate-Theory Comparison
 
@@ -776,8 +824,9 @@ output/high_energy_growth_audit.md
 Deliverables:
 
 ```text
-code/match_low_energy_operators.py
-output/proton_matching_report.md
+code/low_energy_matching_proton_report.py
+output/low_energy_matching_proton_report.json
+output/low_energy_matching_proton_report.md
 ```
 
 ### P8. Comparative theory scorecard

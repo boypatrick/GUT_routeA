@@ -18,7 +18,7 @@
 \newcommand{\nuc}{\nu^c}
 \newcommand{\ec}{e^c}
 
-\title{Route C Bootstrap Derivation Ledger through P6}
+\title{Route C Bootstrap Derivation Ledger through P7}
 \author{BoYu Chen}
 \date{\today}
 
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-This note records the derivations generated in Route C stages P1--P6.
+This note records the derivations generated in Route C stages P1--P7.
 It is a derivation ledger, not a claim that on-shell consistency has already
 derived a complete GUT.  The current Route C program uses the one-family
 Standard Model spectrum with a right-handed neutrino as baseline, builds
@@ -34,7 +34,8 @@ charge-filtered symbolic four-point pole components, checks conditional
 residue factorization/positivity, marks Ward-identity completion requirements,
 compares anomaly/chiral consistency across $\SU(5)$, Pati--Salam,
 $\Spin(10)$, $E_6$, and superstring-derived completions, and classifies
-the first controlled high-energy-growth completion requirements.
+controlled high-energy-growth and low-energy proton-bound readiness
+requirements.
 \end{abstract}
 
 \section{Boundary of the Ledger}
@@ -486,9 +487,95 @@ conditional comparison rule:
 Superstring-derived completions therefore remain comparison branches, not
 P6 conclusions.
 
+\section{P7: Low-Energy Matching and Proton-Bound Readiness}
+
+P7 converts the P2/P3 symbolic pole data into conditional low-energy
+dimension-six matching rows.  It respects the P6 gate: a vector interpretation
+of a broken mediator cannot be promoted to a physical Wilson coefficient until
+the finite Goldstone/Higgs/source completion has been supplied.
+
+For a symbolic pole with mediator $X$, P7 records the matching template
+\begin{equation}
+  C_6[\mathcal O;X]
+  =
+  \frac{g_{\mathrm{left},X}g_{\mathrm{right},X}^\ast}{M_X^2}.
+\end{equation}
+This is only a gauge-basis symbolic coefficient.  It is not yet a physical
+proton-decay Wilson coefficient.
+
+Using the left-handed Weyl charge convention, the global bookkeeping assigns
+\begin{equation}
+  B(Q)=\frac13,\quad B(\uc)=B(\dc)=-\frac13,\quad
+  L(L)=1,\quad L(\nuc)=L(\ec)=-1.
+\end{equation}
+The generated P7 ledger reports
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity} & \text{value}\\
+\hline
+\text{allowed symbolic poles processed} & 18\\
+\text{B and L conserving poles} & 12\\
+\text{standard BNV seed poles} & 4\\
+\text{BNV-with-sterile-neutrino poles} & 2\\
+\text{baryon-violating symbolic poles} & 6\\
+\text{BNV vector poles blocked by P6 completion} & 6\\
+\text{physical proton bounds evaluable now} & 0\\
+\text{all physical bounds conditional} & \text{true}
+\end{array}
+\end{equation}
+
+The standard baryon-violating seeds include
+\begin{equation}
+  QQQL,\qquad \uc\uc\dc\ec,
+\end{equation}
+and the sterile-neutrino branch includes
+\begin{equation}
+  \uc\dc\dc\nuc.
+\end{equation}
+All of these preserve $B-L$ in the P1 bookkeeping.
+
+The physical proton-bound interface is recorded as
+\begin{equation}
+  \Gamma(p\to a)
+  =
+  \sum_{i,j}
+  C_i^{\rm phys}\,
+  C_j^{\rm phys\,\ast}\,
+  H_{ij}^{(a)},
+\end{equation}
+where $H_{ij}^{(a)}$ contains phase space, RG evolution, chiral reduction, and
+hadronic matrix elements for channel $a$.  A lifetime lower bound implies
+\begin{equation}
+  (C^{\rm phys})^\dagger H^{(a)} C^{\rm phys}
+  <
+  \frac{1}{\tau_a^{\rm exp}}.
+\end{equation}
+For a single coefficient this reduces schematically to
+\begin{equation}
+  |C_i^{\rm phys}|
+  <
+  \sqrt{\frac{1}{\tau_a^{\rm exp}H_{ii}^{(a)}}}.
+\end{equation}
+
+P7 deliberately does not insert numerical proton limits.  Numerical
+lifetimes require:
+\begin{equation}
+\begin{gathered}
+  \text{P6-completed high-energy branch},\quad
+  \text{mediator masses and couplings},\quad
+  \text{physical flavor rotations},\\
+  \text{operator basis and chiral contractions},\quad
+  \text{RG factors},\quad
+  \text{lattice/chiral matrix elements},\quad
+  \tau_a^{\rm exp}.
+\end{gathered}
+\end{equation}
+Thus P7 is a proton-bound readiness report, not a proton-lifetime
+calculation.
+
 \section{Current Status and Next Check}
 
-The P1--P6 chain currently establishes:
+The P1--P7 chain currently establishes:
 \begin{enumerate}
 \item the exact P1 charge/anomaly baseline for one $SM+\nuc$ family;
 \item the P2 charge-filtered symbolic pole components;
@@ -497,10 +584,12 @@ The P1--P6 chain currently establishes:
 \item the P5 anomaly/chiral-consistency comparison across candidate branches.
 \item the P6 high-energy-growth ledger for finite-vector, scalar/auxiliary,
 contact-only, and tower-like comparison branches.
+\item the P7 conditional low-energy matching and proton-bound readiness
+ledger.
 \end{enumerate}
-The next natural stage is P7: low-energy matching and proton-bound reporting.
-It should use the P2/P3 symbolic pole components only after the P6 completion
-status is respected, and it must mark all pre-flavor-audit Wilson
-coefficients as conditional.
+The next natural stage is P8: a candidate-theory comparison scorecard.  It
+should compare $\SU(5)$, Pati--Salam, $\Spin(10)$, $E_6$, and
+superstring-derived completions using the explicit P1--P7 gates, rather than
+using anomaly cancellation or minimality alone.
 
 \end{document}

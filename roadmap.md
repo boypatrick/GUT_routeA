@@ -17933,3 +17933,66 @@ next:
   - Implement P7: low-energy matching and proton-bound reporting, using the
     P2/P3 symbolic pole components only after respecting the P6 completion
     status and marking pre-flavor-audit Wilson coefficients as conditional.
+
+## 2026-06-07 Taipei Route-C P7 low-energy matching/proton-bound readiness
+
+status:
+  Implemented P7 for the Route-C bootstrap workspace.  The new script consumes
+  the P2 symbolic pole ledger, P3 factorization ledger, and P6 high-energy
+  completion ledger.  It converts allowed symbolic poles into conditional
+  dimension-six matching rows and marks physical proton bounds as unevaluable
+  until completion/flavor/hadronic inputs are supplied.
+
+files changed:
+  - `route_c_bootstrap/code/low_energy_matching_proton_report.py`
+  - `route_c_bootstrap/output/low_energy_matching_proton_report.json`
+  - `route_c_bootstrap/output/low_energy_matching_proton_report.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added global `B` and `L` bookkeeping for the P1 left-handed Weyl
+    convention:
+      `B(Q)=1/3`,
+      `B(u^c)=B(d^c)=-1/3`,
+      `L(L)=1`,
+      `L(nu^c)=L(e^c)=-1`.
+  - Classified all 18 P2 allowed symbolic poles into:
+      12 `B_and_L_conserving`,
+      4 `standard_BNV_seed`,
+      2 `BNV_with_sterile_neutrino`.
+  - Added the symbolic matching template
+      `C6[operator; X] = g_leftX g_rightX^*/M_X^2`.
+  - Attached the P6 matching gate to each BNV row.  All 6 BNV vector-pole
+    branches remain blocked by P6 finite broken-vector completion.
+  - Added a proton-bound interface:
+      `Gamma(p -> channel a) = sum_ij C_i^phys C_j^{phys *} H_ij^(a)`,
+    with the single-coefficient schematic
+      `|C_i^phys| < sqrt(1/(tau_a^exp H_ii^(a)))`.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/low_energy_matching_proton_report.py`.
+  - Generated:
+      allowed symbolic poles processed = 18,
+      B and L conserving poles = 12,
+      standard BNV seed poles = 4,
+      BNV-with-sterile-neutrino poles = 2,
+      baryon-violating symbolic poles = 6,
+      BNV vector poles blocked by P6 completion = 6,
+      physical proton bounds evaluable now = 0,
+      all physical bounds conditional = true.
+
+boundary:
+  P7 is a bound-readiness ledger, not a proton lifetime calculation.  It does
+  not insert numerical experimental lifetime limits.  Physical bounds require a
+  P6-completed high-energy branch, mediator masses/couplings, physical flavor
+  rotations, RG factors, lattice/chiral matrix elements, and the experimental
+  lifetime limit for the selected channel.
+
+next:
+  - Implement P8: candidate-theory comparison scorecard for `SU(5)`,
+    Pati-Salam, `Spin(10)`, `E6`, and superstring-derived completions using the
+    explicit P1-P7 gates rather than anomaly cancellation or minimality alone.

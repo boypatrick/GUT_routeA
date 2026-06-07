@@ -140,7 +140,21 @@ Contact-only components are treated as low-energy EFT data, not UV softness
 proofs.  Tower-like UV completion is not forced by P6; it is retained as a
 comparison class if finite-pole completions fail.
 
-The P1--P6 derivations are also consolidated in a standalone TeX ledger:
+P7 adds the low-energy matching and proton-bound readiness report:
+
+```text
+code/low_energy_matching_proton_report.py
+output/low_energy_matching_proton_report.json
+output/low_energy_matching_proton_report.md
+```
+
+It converts P2/P3 symbolic poles into conditional dimension-six matching rows,
+classifies their `B` and `L` content, and keeps every physical proton-bound
+claim conditional until P6 completion, flavor rotations, mediator masses and
+couplings, RG factors, hadronic matrix elements, and experimental channel
+limits are supplied.
+
+The P1--P7 derivations are also consolidated in a standalone TeX ledger:
 
 ```text
 tex/route_c_derivation_ledger.tex

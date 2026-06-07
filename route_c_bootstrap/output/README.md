@@ -18,8 +18,10 @@ The first generated files are expected to be:
 - `anomaly_chiral_consistency.md`
 - `high_energy_growth_audit.json`
 - `high_energy_growth_audit.md`
+- `low_energy_matching_proton_report.json`
+- `low_energy_matching_proton_report.md`
 
-The paper-facing derivation consolidation for P1--P6 is not generated in this
+The paper-facing derivation consolidation for P1--P7 is not generated in this
 directory.  It lives at:
 
 ```text

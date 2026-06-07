@@ -1,0 +1,1258 @@
+{
+  "description": "Route-C P7 low-energy matching and proton-bound readiness report",
+  "boundary": "P7 is a conditional matching ledger.  It does not compute physical proton lifetimes because P6 completion, flavor rotations, mediator masses/couplings, RG factors, and hadronic matrix elements are not yet supplied.",
+  "summary": {
+    "allowed_symbolic_poles_processed": 18,
+    "operator_status_counts": {
+      "B_and_L_conserving": 12,
+      "standard_BNV_seed": 4,
+      "BNV_with_sterile_neutrino": 2
+    },
+    "baryon_violating_symbolic_poles": 6,
+    "baryon_violating_vector_poles_blocked_by_p6_completion": 6,
+    "physical_proton_bounds_evaluable_now": 0,
+    "all_physical_bounds_conditional": true
+  },
+  "operator_groups": [
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 4,
+      "mediators": [
+        "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+        "X[(3,1);Y=-1/3;B-L=-2/3]",
+        "X[(1,2);Y=1/2;B-L=0]",
+        "X[(8,2);Y=1/2;B-L=0]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "global_charges": {
+        "B": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "L": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 2,
+      "mediators": [
+        "X[(3,1);Y=-1/3;B-L=-2/3]",
+        "X[(3,3);Y=-1/3;B-L=-2/3]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 3,
+      "mediators": [
+        "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "X[(1,2);Y=1/2;B-L=0]",
+        "X[(bar3,2);Y=-7/6;B-L=-4/3]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 3,
+      "mediators": [
+        "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "X[(1,2);Y=-1/2;B-L=0]",
+        "X[(bar3,2);Y=-1/6;B-L=-4/3]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 2,
+      "mediators": [
+        "X[(1,1);Y=1;B-L=2]",
+        "X[(1,2);Y=1/2;B-L=0]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 2,
+      "mediators": [
+        "X[(bar3,1);Y=4/3;B-L=2/3]",
+        "X[(bar3,1);Y=1/3;B-L=2/3]"
+      ],
+      "physical_bound_evaluable": false
+    },
+    {
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "symbolic_pole_count": 2,
+      "mediators": [
+        "X[(bar3,1);Y=1/3;B-L=2/3]",
+        "X[(3,1);Y=2/3;B-L=-2/3]"
+      ],
+      "physical_bound_evaluable": false
+    }
+  ],
+  "matching_rows": [
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(bar6,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_X[(bar6,1);Y=-1/3;B-L=-2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q Q Q",
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "operator_interpretation": "B and L violating but B-L conserving; can seed proton-decay Wilson operators after completion and flavor rotation",
+      "global_charges": {
+        "B": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "L": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "Q",
+        "L"
+      ],
+      "symbolic_matching_coefficient": "C6[QQQL; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_X[(3,1);Y=-1/3;B-L=-2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 3,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "completion status",
+        "mediator mass/couplings",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_X[(3,1);Y=-1/3;B-L=-2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 3,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q Q Q",
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "operator_interpretation": "B and L violating but B-L conserving; can seed proton-decay Wilson operators after completion and flavor rotation",
+      "global_charges": {
+        "B": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "L": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "Q",
+        "L"
+      ],
+      "symbolic_matching_coefficient": "C6[QQQL; X[(3,3);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_X[(3,3);Y=-1/3;B-L=-2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "completion status",
+        "mediator mass/couplings",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_pair": [
+        "Q",
+        "L"
+      ],
+      "right_pair": [
+        "u^c",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{u^ce^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_pair": [
+        "Q",
+        "L"
+      ],
+      "right_pair": [
+        "d^c",
+        "nu^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{d^cnu^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "Q",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "L",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Le^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "Q Q d^c u^c",
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "Q",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(8,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_X[(8,2);Y=1/2;B-L=0]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "left_pair": [
+        "Q",
+        "d^c"
+      ],
+      "right_pair": [
+        "L",
+        "nu^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(1,2);Y=-1/2;B-L=0]] = g_{Qd^cX} g_{Lnu^cX}^*/M_X[(1,2);Y=-1/2;B-L=0]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q d^c nu^c",
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "left_pair": [
+        "Q",
+        "nu^c"
+      ],
+      "right_pair": [
+        "L",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,2);Y=-1/6;B-L=-4/3]] = g_{Qnu^cX} g_{Ld^cX}^*/M_X[(bar3,2);Y=-1/6;B-L=-4/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L Q e^c u^c",
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "left_pair": [
+        "Q",
+        "e^c"
+      ],
+      "right_pair": [
+        "L",
+        "u^c"
+      ],
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(bar3,2);Y=-7/6;B-L=-4/3]] = g_{Qe^cX} g_{Lu^cX}^*/M_X[(bar3,2);Y=-7/6;B-L=-4/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L L e^c nu^c",
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "left_pair": [
+        "L",
+        "L"
+      ],
+      "right_pair": [
+        "nu^c",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[LL e^c nu^c; X[(1,1);Y=1;B-L=2]] = g_{LLX} g_{nu^ce^cX}^*/M_X[(1,1);Y=1;B-L=2]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "L L e^c nu^c",
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "operator_interpretation": "not a proton-decay seed at the four-fermion level",
+      "global_charges": {
+        "B": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": false,
+        "violates_L": false,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "left_pair": [
+        "L",
+        "nu^c"
+      ],
+      "right_pair": [
+        "L",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[LL e^c nu^c; X[(1,2);Y=1/2;B-L=0]] = g_{Lnu^cX} g_{Le^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "not_a_proton_seed",
+      "physical_proton_bound_status": "not_applicable",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "ordinary EFT matching only if phenomenologically needed",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "d^c e^c u^c u^c",
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "operator_interpretation": "B and L violating but B-L conserving; can seed proton-decay Wilson operators after completion and flavor rotation",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "left_pair": [
+        "u^c",
+        "u^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=4/3;B-L=2/3]] = g_{u^cu^cX} g_{d^ce^cX}^*/M_X[(bar3,1);Y=4/3;B-L=2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "completion status",
+        "mediator mass/couplings",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "d^c e^c u^c u^c",
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "operator_interpretation": "B and L violating but B-L conserving; can seed proton-decay Wilson operators after completion and flavor rotation",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "right_pair": [
+        "u^c",
+        "e^c"
+      ],
+      "symbolic_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{u^ce^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "completion status",
+        "mediator mass/couplings",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "d^c d^c nu^c u^c",
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "operator_interpretation": "B and L violating but B-L conserving; requires nu^c mass/seesaw or light-sterile treatment before proton-channel interpretation",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "left_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "nu^c"
+      ],
+      "symbolic_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{d^cnu^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 2,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "sterile-neutrino treatment",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    },
+    {
+      "external_multiset": "d^c d^c nu^c u^c",
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "operator_interpretation": "B and L violating but B-L conserving; requires nu^c mass/seesaw or light-sterile treatment before proton-channel interpretation",
+      "global_charges": {
+        "B": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "B_minus_L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "violates_B": true,
+        "violates_L": true,
+        "preserves_B_minus_L": true
+      },
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "left_pair": [
+        "u^c",
+        "nu^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "d^c"
+      ],
+      "symbolic_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(3,1);Y=2/3;B-L=-2/3]] = g_{u^cnu^cX} g_{d^cd^cX}^*/M_X[(3,1);Y=2/3;B-L=-2/3]^2",
+      "operator_dimension": 6,
+      "p3_factorization_available": true,
+      "p3_channel_count_for_mediator": 1,
+      "p6_vector_completion_status": "finite_vector_incomplete",
+      "p6_matching_gate": "blocked_as_vector_until_completion",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "physical_bound_evaluable": false,
+      "missing_inputs_before_physical_bound": [
+        "sterile-neutrino treatment",
+        "flavor basis",
+        "hadronic/RG inputs",
+        "P6 finite-vector completion if using vector interpretation",
+        "physical Wilson basis",
+        "RG evolution",
+        "lattice/chiral hadronic matrix elements",
+        "experimental lifetime limit for the selected channel"
+      ]
+    }
+  ],
+  "proton_bound_interface": {
+    "dimension_six_width_template": "Gamma(p -> channel a) = sum_ij C_i^phys C_j^{phys *} H_ij^(a)",
+    "bound_template": "tau_a^exp > 1/Gamma_a implies C^phys dagger H^(a) C^phys < 1/tau_a^exp",
+    "single_coefficient_schematic": "|C_i^phys| < sqrt(1/(tau_a^exp H_ii^(a)))",
+    "required_inputs": [
+      "completed high-energy branch passing P6",
+      "mediator masses and couplings",
+      "flavor rotations to physical fermion basis",
+      "operator basis and chiral contractions",
+      "RG factors from matching scale to hadronic scale",
+      "lattice/chiral matrix elements",
+      "current experimental lower limit for the selected proton channel"
+    ],
+    "boundary": "P7 records the interface to proton bounds.  It does not insert numerical experimental limits in this bootstrap ledger."
+  }
+}
