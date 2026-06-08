@@ -1,0 +1,421 @@
+{
+  "description": "Route-C P11 P6/P7 replay with staged Spin(10) masses",
+  "boundary": "P11 attaches P10 staged mass blocks to the matching gates.  It does not convert chiral-pair symbolic poles into adjoint-vector exchange unless the mediator quantum numbers pass the adjoint-current gate, and it does not compute numerical proton lifetimes.",
+  "mass_replacement_dictionary": {
+    "M_(6,2,2)": "sqrt(kappa_PS) g_10 v_PS",
+    "M_LQ": "sqrt(2/3) g_4 v_4",
+    "M_WR": "g_R v_R",
+    "M_Zprime": "0.5 v_Y sqrt(g_R^2+g_BL^2)"
+  },
+  "current_vector_replay": [
+    {
+      "mass_block": "M_(6,2,2)",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "map_count": 24,
+      "transition_signature_count": 6,
+      "matching_template": "C_current[M_(6,2,2)] = g_10^2 T_X T_X^*/M_(6,2,2)^2 after Goldstone/Higgs Ward completion",
+      "p6_status_after_p10": "mass_denominator_supplied; Goldstone/Higgs amplitude and spin numerator still required for a full high-energy check"
+    },
+    {
+      "mass_block": "M_LQ",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "map_count": 6,
+      "transition_signature_count": 6,
+      "matching_template": "C_current[M_LQ] = g_10^2 T_X T_X^*/M_LQ^2 after Goldstone/Higgs Ward completion",
+      "p6_status_after_p10": "mass_denominator_supplied; Goldstone/Higgs amplitude and spin numerator still required for a full high-energy check"
+    },
+    {
+      "mass_block": "M_WR",
+      "generator_family": "broken SU(2)_R charged current",
+      "map_count": 2,
+      "transition_signature_count": 4,
+      "matching_template": "C_current[M_WR] = g_10^2 T_X T_X^*/M_WR^2 after Goldstone/Higgs Ward completion",
+      "p6_status_after_p10": "mass_denominator_supplied; Goldstone/Higgs amplitude and spin numerator still required for a full high-energy check"
+    },
+    {
+      "mass_block": "M_Zprime",
+      "generator_family": "neutral U(1)_{T3R} x U(1)_{B-L} broken vector",
+      "map_count": 1,
+      "transition_signature_count": 1,
+      "matching_template": "C_current[M_Zprime] = g_Zprime^2 Q_Zprime Q_Zprime^*/M_Zprime^2",
+      "p6_status_after_p10": "neutral mass denominator supplied; physical charges and normalization must be chosen before low-energy matching"
+    }
+  ],
+  "adjoint_current_charge_signatures": {
+    "Y=-1,B-L=0": [
+      "M_WR"
+    ],
+    "Y=-1/6,B-L=2/3": [
+      "M_(6,2,2)"
+    ],
+    "Y=-2/3,B-L=-4/3": [
+      "M_LQ"
+    ],
+    "Y=-5/6,B-L=-2/3": [
+      "M_(6,2,2)"
+    ],
+    "Y=1,B-L=0": [
+      "M_WR"
+    ],
+    "Y=1/6,B-L=-2/3": [
+      "M_(6,2,2)"
+    ],
+    "Y=2/3,B-L=4/3": [
+      "M_LQ"
+    ],
+    "Y=5/6,B-L=2/3": [
+      "M_(6,2,2)"
+    ]
+  },
+  "p7_mass_gate_rows": [
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar6",
+        "su2": "1",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(bar6,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_X[(bar6,1);Y=-1/3;B-L=-2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQ u^c d^c; X[(bar6,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_source[X[(bar6,1);Y=-1/3;B-L=-2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "3",
+        "su2": "1",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QQQL; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_X[(3,1);Y=-1/3;B-L=-2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQQL; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_source[X[(3,1);Y=-1/3;B-L=-2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "3",
+        "su2": "1",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_X[(3,1);Y=-1/3;B-L=-2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQ u^c d^c; X[(3,1);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{u^cd^cX}^*/M_source[X[(3,1);Y=-1/3;B-L=-2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "3",
+        "su2": "3",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QQQL; X[(3,3);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_X[(3,3);Y=-1/3;B-L=-2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQQL; X[(3,3);Y=-1/3;B-L=-2/3]] = g_{QQX} g_{QLX}^*/M_source[X[(3,3);Y=-1/3;B-L=-2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "1/3",
+        "BL": "2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{u^ce^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL u^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{u^ce^cX}^*/M_source[X[(bar3,1);Y=1/3;B-L=2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "1/3",
+        "BL": "2/3"
+      },
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{d^cnu^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{QLX} g_{d^cnu^cX}^*/M_source[X[(bar3,1);Y=1/3;B-L=2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "mediator_quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQ u^c d^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_source[X[(1,2);Y=1/2;B-L=0]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "mediator_quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Le^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL u^c e^c; X[(1,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Le^cX}^*/M_source[X[(1,2);Y=1/2;B-L=0]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "mediator_quantum_numbers": {
+        "su3": "8",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "symbolic_matching_coefficient": "C6[QQ u^c d^c; X[(8,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_X[(8,2);Y=1/2;B-L=0]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QQ u^c d^c; X[(8,2);Y=1/2;B-L=0]] = g_{Qu^cX} g_{Qd^cX}^*/M_source[X[(8,2);Y=1/2;B-L=0]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "mediator_quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "-1/2",
+        "BL": "0"
+      },
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(1,2);Y=-1/2;B-L=0]] = g_{Qd^cX} g_{Lnu^cX}^*/M_X[(1,2);Y=-1/2;B-L=0]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL d^c nu^c; X[(1,2);Y=-1/2;B-L=0]] = g_{Qd^cX} g_{Lnu^cX}^*/M_source[X[(1,2);Y=-1/2;B-L=0]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "2",
+        "Y": "-1/6",
+        "BL": "-4/3"
+      },
+      "symbolic_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,2);Y=-1/6;B-L=-4/3]] = g_{Qnu^cX} g_{Ld^cX}^*/M_X[(bar3,2);Y=-1/6;B-L=-4/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL d^c nu^c; X[(bar3,2);Y=-1/6;B-L=-4/3]] = g_{Qnu^cX} g_{Ld^cX}^*/M_source[X[(bar3,2);Y=-1/6;B-L=-4/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "2",
+        "Y": "-7/6",
+        "BL": "-4/3"
+      },
+      "symbolic_matching_coefficient": "C6[QL u^c e^c; X[(bar3,2);Y=-7/6;B-L=-4/3]] = g_{Qe^cX} g_{Lu^cX}^*/M_X[(bar3,2);Y=-7/6;B-L=-4/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[QL u^c e^c; X[(bar3,2);Y=-7/6;B-L=-4/3]] = g_{Qe^cX} g_{Lu^cX}^*/M_source[X[(bar3,2);Y=-7/6;B-L=-4/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "mediator_quantum_numbers": {
+        "su3": "1",
+        "su2": "1",
+        "Y": "1",
+        "BL": "2"
+      },
+      "symbolic_matching_coefficient": "C6[LL e^c nu^c; X[(1,1);Y=1;B-L=2]] = g_{LLX} g_{nu^ce^cX}^*/M_X[(1,1);Y=1;B-L=2]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[LL e^c nu^c; X[(1,1);Y=1;B-L=2]] = g_{LLX} g_{nu^ce^cX}^*/M_source[X[(1,1);Y=1;B-L=2]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "mediator_quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "symbolic_matching_coefficient": "C6[LL e^c nu^c; X[(1,2);Y=1/2;B-L=0]] = g_{Lnu^cX} g_{Le^cX}^*/M_X[(1,2);Y=1/2;B-L=0]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[LL e^c nu^c; X[(1,2);Y=1/2;B-L=0]] = g_{Lnu^cX} g_{Le^cX}^*/M_source[X[(1,2);Y=1/2;B-L=0]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "4/3",
+        "BL": "2/3"
+      },
+      "symbolic_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=4/3;B-L=2/3]] = g_{u^cu^cX} g_{d^ce^cX}^*/M_X[(bar3,1);Y=4/3;B-L=2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=4/3;B-L=2/3]] = g_{u^cu^cX} g_{d^ce^cX}^*/M_source[X[(bar3,1);Y=4/3;B-L=2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "1/3",
+        "BL": "2/3"
+      },
+      "symbolic_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{u^ce^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[u^c u^c d^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{u^ce^cX}^*/M_source[X[(bar3,1);Y=1/3;B-L=2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "1/3",
+        "BL": "2/3"
+      },
+      "symbolic_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{d^cnu^cX}^*/M_X[(bar3,1);Y=1/3;B-L=2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = g_{u^cd^cX} g_{d^cnu^cX}^*/M_source[X[(bar3,1);Y=1/3;B-L=2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    },
+    {
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "mediator_quantum_numbers": {
+        "su3": "3",
+        "su2": "1",
+        "Y": "2/3",
+        "BL": "-2/3"
+      },
+      "symbolic_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(3,1);Y=2/3;B-L=-2/3]] = g_{u^cnu^cX} g_{d^cd^cX}^*/M_X[(3,1);Y=2/3;B-L=-2/3]^2",
+      "p10_adjoint_mass_gate": "not_an_adjoint_current_mass_match",
+      "candidate_adjoint_mass_blocks": [],
+      "candidate_mass_replacements": [],
+      "p11_matching_coefficient": "C6[u^c d^c d^c nu^c; X[(3,1);Y=2/3;B-L=-2/3]] = g_{u^cnu^cX} g_{d^cd^cX}^*/M_source[X[(3,1);Y=2/3;B-L=-2/3]]^2",
+      "physical_proton_bound_status_after_p11": "not_evaluable_yet",
+      "reason_physical_bound_not_evaluable": "P11 supplies staged vector mass gates, but physical bounds still require a completed spin/channel assignment, flavor rotations, RG factors, hadronic matrix elements, and experimental channel limits."
+    }
+  ],
+  "summary": {
+    "current_vector_mass_blocks_available": 4,
+    "p7_rows_replayed": 18,
+    "p7_operator_status_counts": {
+      "B_and_L_conserving": 12,
+      "standard_BNV_seed": 4,
+      "BNV_with_sterile_neutrino": 2
+    },
+    "p7_adjoint_mass_gate_counts": {
+      "not_an_adjoint_current_mass_match": 18
+    },
+    "p7_rows_with_candidate_adjoint_mass_blocks": 0,
+    "p7_rows_remaining_scalar_or_source_mass_debt": 18,
+    "baryon_violating_or_sterile_bnv_rows": 6,
+    "physical_proton_bounds_evaluable_now": 0
+  },
+  "p11_interpretation": {
+    "what_improved": "The adjoint current-vector sectors now carry explicit staged Spin(10) mass denominators M_(6,2,2), M_LQ, M_WR, and M_Zprime.",
+    "what_did_not_improve": "The P7 chiral-pair pole rows do not automatically become adjoint current-vector exchanges.  Rows failing the adjoint gate remain scalar/source mass debt.",
+    "next_required_step": "Either rewrite the relevant BNV amplitudes in a completed current-current vector basis, or choose scalar/source masses for the chiral-pair pole rows and then supply flavor/RG/hadronic inputs."
+  },
+  "next_stage": {
+    "recommended": "P12_choose_vector_current_or_scalar_source_proton_branch",
+    "required_decision": "Decide whether proton matching proceeds through completed Spin(10) current-vector exchange or through scalar/source chiral-pair poles; the two branches require different Wilson basis maps."
+  }
+}

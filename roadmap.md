@@ -18064,3 +18064,263 @@ next:
     by P4-P7: broken `D5` generator matrices, broken-vector mass/Goldstone
     sector, Higgs/source completion, mediator masses/couplings, physical
     flavor rotations, and proton-bound inputs.
+
+## 2026-06-07 Taipei Route-C P9 Spin(10)-locked action-completion ledger
+
+status:
+  Implemented P9 for the Route-C bootstrap workspace.  The branch is now locked
+  to the P8-leading finite field-theory candidate, `Spin(10)`, for the next
+  action-level completion pass.  P9 is a sparse generator and interface ledger,
+  not a completed spectrum, flavor fit, or proton-lifetime calculation.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_action_completion_ledger.py`
+  - `route_c_bootstrap/output/spin10_action_completion_ledger.json`
+  - `route_c_bootstrap/output/spin10_action_completion_ledger.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added a 16-state Pati-Salam/SM-face basis for the `Spin(10)` half-spinor:
+      `16 -> (4,2,1) + (bar4,1,2)`.
+  - Added sparse broken-generator transition maps:
+      6 `SU(4)_C` leptoquark root maps,
+      2 broken `SU(2)_R` charged root maps,
+      24 `Spin(10)`/Pati-Salam `(6,2,2)` Clebsch maps.
+  - Added Goldstone/Higgs completion templates for:
+      `Spin(10) -> Pati-Salam`,
+      `SU(4)_C -> SU(3)_C x U(1)_{B-L}`,
+      `SU(2)_R -> U(1)_{T3R}`.
+  - Added symbolic mediator/coupling inputs:
+      `g_10`,
+      `M_{(6,2,2)}`,
+      `M_{LQ}`,
+      `M_{W_R}`,
+      and optional scalar-triplet data `M_T, Y_T`.
+  - Added physical flavor rotation and proton-bound input interfaces without
+    inserting numerical flavor or lifetime claims.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_action_completion_ledger.py`.
+  - Generated:
+      basis dimension = 16,
+      broken generator sparse maps = 32,
+      P4 broken transition pairs = 30,
+      `Spin(10)` adjoint vector transition pairs = 22,
+      non-adjoint P4 completion pairs = 8,
+      generated pairs are subset of P4 broken pairs = true,
+      P9 generator layer passes = true.
+
+boundary:
+  P9 deliberately does not force every P4 charge-bookkeeping transition to be a
+  `Spin(10)` adjoint gauge vector.  The 8 non-adjoint P4 pairs remain
+  scalar/source/auxiliary completion candidates if a later branch activates
+  them.  P9 also does not choose a Higgs potential, diagonalize mediator
+  masses, fit flavor rotations, insert current experimental proton-lifetime
+  limits, or compute proton lifetimes.
+
+next:
+  - Implement P10: choose a concrete `Spin(10)` breaking order-parameter/source
+    branch, diagonalize the broken-vector mass matrix, and replay P6/P7 with
+    explicit masses, couplings, and flavor rotations.
+
+## 2026-06-08 Taipei Route-C P10 Spin(10) staged breaking mass matrix
+
+status:
+  Implemented P10 for the Route-C bootstrap workspace.  The branch is now a
+  concrete staged/source `Spin(10)` breaking mass-matrix ledger:
+    `staged_orthogonal_source_branch`.
+  This promotes the P9 symbolic inputs
+    `M_(6,2,2)`,
+    `M_LQ`,
+    `M_WR`
+  into a diagonalizable block mass matrix while preserving the hypercharge zero
+  mode.  It is still not a full Higgs potential, threshold spectrum, flavor
+  fit, or proton-lifetime calculation.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_breaking_mass_matrix.py`
+  - `route_c_bootstrap/output/spin10_breaking_mass_matrix.json`
+  - `route_c_bootstrap/output/spin10_breaking_mass_matrix.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Chose the staged breaking chain:
+      `Spin(10) -> SU(4)_C x SU(2)_L x SU(2)_R`,
+      `SU(4)_C -> SU(3)_C x U(1)_{B-L}`,
+      `SU(2)_R -> U(1)_{T3R}`,
+      `U(1)_{T3R} x U(1)_{B-L} -> U(1)_Y`.
+  - Added the block mass matrix:
+      `diag(M_(6,2,2)^2 I_24, M_LQ^2 I_6, M_WR^2 I_2, M_neutral^2)`.
+  - Added symbolic mass formulae:
+      `M_(6,2,2)^2 = kappa_PS g_10^2 v_PS^2`,
+      `M_LQ^2 = (2/3) g_4^2 v_4^2`,
+      `M_WR^2 = g_R^2 v_R^2`.
+  - Added neutral mixing block:
+      `M_neutral^2 = v_Y^2/4 [[g_R^2, -g_R g_BL],[-g_R g_BL, g_BL^2]]`
+    in the `(W_R^3, B_{B-L})` basis.
+  - Recorded the hypercharge zero mode:
+      `B_Y proportional to g_BL W_R^3 + g_R B_{B-L}`,
+      `g_Y = g_R g_BL / sqrt(g_R^2 + g_BL^2)`.
+  - Recorded the origin of the leptoquark coefficient:
+      normalized `T_BL = sqrt(3/8) diag(1/3,1/3,1/3,-1)`,
+      hence `Delta T_BL^2 = (4/3)^2 (3/8) = 2/3`.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_breaking_mass_matrix.py`.
+  - Generated:
+      active matrix dimension including hypercharge zero mode = 34,
+      positive broken eigenvalue count = 33,
+      zero eigenvalue count = 1,
+      all P9 generator maps assigned to mass blocks = true,
+      P10 mass matrix layer passes = true.
+  - The count matches:
+      `dim Spin(10) - dim G_SM = 45 - 12 = 33`.
+
+boundary:
+  P10 supplies a diagonalizable source-level mass matrix.  It does not choose
+  numerical scales, compute threshold corrections, fit physical flavor
+  rotations, activate the scalar/source branch for the 8 non-adjoint P4 pairs,
+  insert RG or hadronic matrix elements, or evaluate numerical proton
+  lifetimes.
+
+next:
+  - Implement P11: replay P6/P7 with the staged `Spin(10)` mass blocks, either
+    symbolically or over declared ranges for `v_PS`, `v_4`, `v_R`, `v_Y`, and
+    the gauge couplings.
+
+## 2026-06-08 Taipei Route-C P11 staged Spin(10) mass replay gate
+
+status:
+  Implemented P11 for the Route-C bootstrap workspace.  P11 uses the P10
+  staged `Spin(10)` mass blocks to replay the P6/P7 matching gates.  It supplies
+  explicit adjoint-vector mass denominators but conservatively refuses to
+  identify the P7 all-incoming chiral-pair pole rows with adjoint current-vector
+  exchange unless they pass the adjoint-current gate.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_mass_replay_matching_gate.py`
+  - `route_c_bootstrap/output/spin10_mass_replay_matching_gate.json`
+  - `route_c_bootstrap/output/spin10_mass_replay_matching_gate.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added the P10 mass replacement dictionary:
+      `M_(6,2,2) -> sqrt(kappa_PS) g_10 v_PS`,
+      `M_LQ -> sqrt(2/3) g_4 v_4`,
+      `M_WR -> g_R v_R`,
+      `M_Zprime -> 0.5 v_Y sqrt(g_R^2 + g_BL^2)`.
+  - Added current-vector replay rows for:
+      `M_(6,2,2)`,
+      `M_LQ`,
+      `M_WR`,
+      `M_Zprime`.
+  - Applied an adjoint-current mass gate to all 18 P7 chiral-pair pole rows.
+  - Recorded that no P7 chiral-pair row currently matches an adjoint
+    current-vector mass block; all 18 remain scalar/source mass debt.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_mass_replay_matching_gate.py`.
+  - Generated:
+      current vector mass blocks available = 4,
+      P7 rows replayed = 18,
+      P7 rows with candidate adjoint mass blocks = 0,
+      P7 rows remaining scalar/source mass debt = 18,
+      baryon-violating or sterile-BNV rows = 6,
+      physical proton bounds evaluable now = 0.
+
+boundary:
+  P11 improves the adjoint current-vector side of the matching problem, but it
+  does not turn the P7 chiral-pair pole ledger into adjoint-vector exchange and
+  does not unlock numerical proton bounds.  Physical proton limits still
+  require a completed Wilson-basis choice, flavor rotations, RG factors,
+  hadronic matrix elements, and experimental channel limits.
+
+next:
+  - Implement P12: choose whether proton matching proceeds through completed
+    `Spin(10)` current-current vector exchange or through scalar/source
+    chiral-pair poles.  The two branches require different Wilson-basis maps.
+  - Record both branches as required future attempts:
+      Branch V: completed `Spin(10)` current-current vector exchange using
+        P10 adjoint masses and an explicit current Wilson basis.
+      Branch S: scalar/source chiral-pair poles using the P7 all-incoming
+        chiral-pair ledger and scalar/source mass denominators.
+    Try Branch S first.
+
+## 2026-06-08 Taipei Route-C P12-S scalar/source chiral-pair branch
+
+status:
+  Implemented the first P12 branch for the Route-C bootstrap workspace.  Both
+  post-P11 directions are now recorded as required future attempts:
+    Branch V = completed `Spin(10)` current-current vector exchange using P10
+      adjoint masses and an explicit current Wilson basis;
+    Branch S = scalar/source chiral-pair poles using the P7 all-incoming
+      chiral-pair ledger and scalar/source mass denominators.
+  The branch activated first is Branch S, because P11 showed that all 18 P7
+  chiral-pair pole rows remain scalar/source mass debt rather than adjoint
+  current-vector matches.
+
+files changed:
+  - `route_c_bootstrap/code/scalar_source_chiral_pair_branch.py`
+  - `route_c_bootstrap/output/scalar_source_chiral_pair_branch.json`
+  - `route_c_bootstrap/output/scalar_source_chiral_pair_branch.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added the scalar/source ansatz:
+      `L ⊃ lambda_{ab,R} psi_a psi_b S_R + h.c. + M_{S_R}^2 |S_R|^2`,
+      `C6(12|34;R)=lambda_{12,R} lambda^*_{34,R}/M_{S_R}^2`,
+      with `M_{S_R}^2 > 0`.
+  - Converted all 18 P7 chiral-pair pole rows into scalar/source matching rows.
+  - Grouped them into 12 unique scalar/source sectors with symbolic mass
+    denominators.
+  - Recorded the 6 baryon-violating or sterile-BNV rows:
+      two `QQQL`,
+      two `u^c u^c d^c e^c`,
+      two `u^c d^c d^c nu^c`.
+  - Kept physical proton bounds unevaluable, because scalar/source flavor
+    tensors, a chiral/Fierz Wilson basis, physical flavor rotations, RG
+    evolution, hadronic matrix elements, and experimental channel limits are
+    not yet supplied.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/scalar_source_chiral_pair_branch.py`.
+  - Generated:
+      P7 rows converted to scalar/source rows = 18,
+      unique scalar/source sectors = 12,
+      B and L conserving rows = 12,
+      standard BNV seed rows = 4,
+      BNV-with-sterile-neutrino rows = 2,
+      baryon-violating or sterile-BNV rows = 6,
+      physical proton bounds evaluable now = 0.
+  - Pass flags:
+      all P11 scalar/source debt rows accounted for = true,
+      every scalar/source row has a mass symbol = true,
+      every source sector has a positive mass condition = true,
+      P12 scalar/source layer passes = true.
+
+boundary:
+  P12-S removes the P11 ambiguity by explicitly treating the P7 chiral-pair
+  rows as scalar/source exchanges, not adjoint-vector exchanges.  It does not
+  compute proton lifetimes and does not close Branch V.  Branch V must still be
+  attempted later before making any final statement about proton matching.
+
+next:
+  - Implement P13-S: choose scalar/source flavor tensors and a chiral/Fierz
+    Wilson basis for the six BNV or sterile-BNV rows; alternatively return to
+    Branch V before inserting numerical proton limits.

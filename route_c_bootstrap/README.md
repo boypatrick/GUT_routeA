@@ -168,7 +168,126 @@ conditional finite field-theory branch under the current minimal single-object
 filter, while keeping all action-level and phenomenological completion debts
 visible.
 
-The P1--P8 derivations are also consolidated in a standalone TeX ledger:
+P9 locks the branch to the P8-leading `Spin(10)` option and starts the
+action-level completion ledger:
+
+```text
+code/spin10_action_completion_ledger.py
+output/spin10_action_completion_ledger.json
+output/spin10_action_completion_ledger.md
+```
+
+It builds a 16-state Pati-Salam/SM-face basis and sparse broken-generator maps
+for the `Spin(10)` half-spinor.  The ledger supplies:
+
+- 6 `SU(4)_C` leptoquark root maps;
+- 2 broken `SU(2)_R` charged root maps;
+- 24 `Spin(10)`/Pati-Salam `(6,2,2)` Clebsch maps.
+
+The P9 check finds that these maps generate 22 `Spin(10)` adjoint-vector
+transition pairs.  P4 has 30 charge-bookkeeping broken pairs, so the remaining
+8 are recorded as non-adjoint scalar/source/auxiliary completion candidates
+rather than being misidentified as `D5` gauge generators.
+
+P10 chooses the first concrete staged/source breaking branch and turns the P9
+symbolic mass inputs into a diagonalizable mass-matrix ledger:
+
+```text
+code/spin10_breaking_mass_matrix.py
+output/spin10_breaking_mass_matrix.json
+output/spin10_breaking_mass_matrix.md
+```
+
+The branch is:
+
+```text
+Spin(10) -> SU(4)_C x SU(2)_L x SU(2)_R
+SU(4)_C -> SU(3)_C x U(1)_{B-L}
+SU(2)_R -> U(1)_{T3R}
+U(1)_{T3R} x U(1)_{B-L} -> U(1)_Y
+```
+
+It produces the block form
+
+```text
+diag(M_(6,2,2)^2 I_24, M_LQ^2 I_6, M_WR^2 I_2, M_neutral^2),
+```
+
+with
+
+```text
+M_(6,2,2)^2 = kappa_PS g_10^2 v_PS^2,
+M_LQ^2 = (2/3) g_4^2 v_4^2,
+M_WR^2 = g_R^2 v_R^2,
+M_neutral^2 = v_Y^2/4 [[g_R^2, -g_R g_BL],[-g_R g_BL, g_BL^2]].
+```
+
+The demo diagonalization has 33 positive broken eigenvalues and one
+hypercharge zero mode.
+
+P11 replays the P6/P7 matching gates with the staged `Spin(10)` mass blocks:
+
+```text
+code/spin10_mass_replay_matching_gate.py
+output/spin10_mass_replay_matching_gate.json
+output/spin10_mass_replay_matching_gate.md
+```
+
+It supplies the mass replacement dictionary
+
+```text
+M_(6,2,2) -> sqrt(kappa_PS) g_10 v_PS
+M_LQ      -> sqrt(2/3) g_4 v_4
+M_WR      -> g_R v_R
+M_Zprime  -> 0.5 v_Y sqrt(g_R^2+g_BL^2)
+```
+
+and then applies an adjoint-current gate to the 18 P7 chiral-pair rows.  The
+result is conservative:
+
+```text
+current-vector mass blocks available = 4,
+P7 rows replayed = 18,
+P7 rows with candidate adjoint mass blocks = 0,
+P7 rows remaining scalar/source mass debt = 18,
+physical proton bounds evaluable now = 0.
+```
+
+Thus P11 improves the vector-current side but does not unlock proton bounds for
+the P7 chiral-pair pole ledger.  The next decision is whether proton matching
+continues in a completed current-current vector basis or in a scalar/source
+chiral-pair basis.
+
+P12 records both post-P11 branch directions and activates the scalar/source
+chiral-pair branch first:
+
+```text
+code/scalar_source_chiral_pair_branch.py
+output/scalar_source_chiral_pair_branch.json
+output/scalar_source_chiral_pair_branch.md
+```
+
+The two required future attempts are:
+
+```text
+Branch V: completed Spin(10) current-current vector exchange
+Branch S: scalar/source chiral-pair poles
+```
+
+P12-S assigns scalar/source denominators to all 18 P7 chiral-pair rows:
+
+```text
+L ⊃ lambda_{ab,R} psi_a psi_b S_R + h.c. + M_{S_R}^2 |S_R|^2
+C6(12|34;R)=lambda_{12,R} lambda^*_{34,R}/M_{S_R}^2
+```
+
+The generated scalar/source ledger has 12 source sectors, converts all 18 P7
+rows, and keeps 6 baryon-violating or sterile-BNV rows conditional.  Physical
+proton bounds remain unevaluable because scalar masses, flavor tensors, Fierz
+and chiral contractions, RG factors, hadronic matrix elements, and experimental
+channel limits are still missing.
+
+The P1--P12 derivations are also consolidated in a standalone TeX ledger:
 
 ```text
 tex/route_c_derivation_ledger.tex

@@ -18,7 +18,7 @@
 \newcommand{\nuc}{\nu^c}
 \newcommand{\ec}{e^c}
 
-\title{Route C Bootstrap Derivation Ledger through P8}
+\title{Route C Bootstrap Derivation Ledger through P12-S}
 \author{BoYu Chen}
 \date{\today}
 
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-This note records the derivations generated in Route C stages P1--P8.
+This note records the derivations generated in Route C stages P1--P12-S.
 It is a derivation ledger, not a claim that on-shell consistency has already
 derived a complete GUT.  The current Route C program uses the one-family
 Standard Model spectrum with a right-handed neutrino as baseline, builds
@@ -36,6 +36,16 @@ compares anomaly/chiral consistency across $\SU(5)$, Pati--Salam,
 $\Spin(10)$, $E_6$, and superstring-derived completions, and classifies
 controlled high-energy-growth and low-energy proton-bound readiness
 requirements, and closes the first pass with a comparative theory scorecard.
+P9 then locks the branch to $\Spin(10)$ and supplies the first sparse
+action-completion ledger for the half-spinor broken-generator maps and the
+remaining Goldstone/Higgs, mediator, flavor, and proton-bound inputs.
+P10 chooses a staged source branch and converts the symbolic vector masses into
+a diagonalizable mass matrix with one hypercharge zero mode.
+P11 replays the P6/P7 matching gates with those staged masses and separates
+adjoint current-vector matching from scalar/source chiral-pair mass debt.
+P12-S records both post-P11 directions, activates the scalar/source
+chiral-pair branch first, and assigns symbolic scalar/source mass denominators
+to all P7 chiral-pair rows while leaving physical proton bounds conditional.
 \end{abstract}
 
 \section{Boundary of the Ledger}
@@ -634,9 +644,267 @@ Thus P8 closes the first Route C pass as a comparative filter:
 Superstring-derived completions remain comparison branches, not P8
 conclusions.
 
+\section{P9: Spin(10)-Locked Action-Completion Data}
+
+P9 stops broadening the candidate comparison and locks the finite
+field-theory branch to the P8-leading $\Spin(10)$ option.  The generated
+ledger uses the Pati--Salam decomposition
+\begin{equation}
+  16
+  \longrightarrow
+  (4,2,1)\oplus(\bar 4,1,2),
+\end{equation}
+and builds a sparse sixteen-state basis for
+\begin{equation}
+  Q\oplus L\oplus\uc\oplus\dc\oplus\nuc\oplus\ec .
+\end{equation}
+The broken-generator data are represented as sparse transition maps rather
+than as a completed Lagrangian.  P9 reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.58\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+basis dimension & 16\\
+broken generator sparse maps & 32\\
+$\SU(4)_C$ leptoquark root maps & 6\\
+broken $\SU(2)_R$ charged root maps & 2\\
+$\Spin(10)/$Pati--Salam $(6,2,2)$ Clebsch maps & 24\\
+P4 broken transition pairs & 30\\
+$\Spin(10)$ adjoint vector transition pairs & 22\\
+non-adjoint P4 completion pairs & 8\\
+P9 generator layer passes & true\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The important refinement is that not every P4 charge-bookkeeping transition
+is a $\Spin(10)$ adjoint gauge vector.  The eight non-adjoint P4 pairs are
+not generator failures; they remain scalar, source, or auxiliary completion
+candidates if a later branch activates them.  P9 therefore supplies the
+generator layer without pretending that charge-allowed transitions are
+automatically $D_5$ gauge generators.
+
+For every broken vector, the action-level Ward target remains
+\begin{equation}
+  p_\mu{\cal M}^\mu(V_X)=M_X{\cal M}(\phi_X).
+\end{equation}
+P9 records the corresponding completion templates for
+\begin{equation}
+  \Spin(10)\to \text{Pati--Salam},\qquad
+  \SU(4)_C\to\SU(3)_C\times U(1)_{B-L},\qquad
+  \SU(2)_R\to U(1)_{T3R}.
+\end{equation}
+It also records the still-symbolic inputs
+\begin{equation}
+  g_{10},\quad M_{(6,2,2)},\quad M_{\rm LQ},\quad M_{W_R},
+\end{equation}
+plus the physical flavor rotations and proton-bound interface.  Thus P9 is
+an action-completion interface, not yet a spectrum choice, flavor fit, or
+proton-lifetime calculation.
+
+\section{P10: Spin(10) Breaking Mass Matrix}
+
+P10 chooses the conservative staged branch
+\begin{equation}
+\begin{gathered}
+  \Spin(10)\to \SU(4)_C\times\SU(2)_L\times\SU(2)_R,\\
+  \SU(4)_C\to \SU(3)_C\times U(1)_{B-L},\qquad
+  \SU(2)_R\to U(1)_{T3R},\\
+  U(1)_{T3R}\times U(1)_{B-L}\to U(1)_Y .
+\end{gathered}
+\end{equation}
+The branch is a source-level mass model, not a complete Higgs potential.  It
+is chosen because it turns the P9 symbolic inputs into positive blocks while
+preserving the hypercharge zero mode.
+
+The resulting active vector mass matrix has the block form
+\begin{equation}
+  M^2_{\rm active}
+  =
+  \diag\left(
+    M_{(6,2,2)}^2 I_{24},
+    M_{\rm LQ}^2 I_6,
+    M_{W_R}^2 I_2,
+    M_{\rm neutral}^2
+  \right),
+\end{equation}
+where
+\begin{equation}
+  M_{(6,2,2)}^2=\kappa_{\rm PS}g_{10}^2v_{\rm PS}^2,
+  \qquad
+  M_{\rm LQ}^2=\frac23 g_4^2v_4^2,
+  \qquad
+  M_{W_R}^2=g_R^2v_R^2.
+\end{equation}
+The leptoquark coefficient follows from the normalized generator
+\begin{equation}
+  T_{B-L}
+  =
+  \sqrt{\frac38}\,
+  \diag\left(\frac13,\frac13,\frac13,-1\right),
+  \qquad
+  (\Delta T_{B-L})^2=\frac23 .
+\end{equation}
+For the neutral sector, a $Y=0$ $\nuc$-like source with charges
+$q_R=-1/2$ and $q_{B-L}/2=+1/2$ gives
+\begin{equation}
+  M_{\rm neutral}^2
+  =
+  \frac{v_Y^2}{4}
+  \begin{pmatrix}
+    g_R^2 & -g_Rg_{BL}\\
+    -g_Rg_{BL} & g_{BL}^2
+  \end{pmatrix}_{(W_R^3,B_{B-L})}.
+\end{equation}
+This matrix has eigenvalues
+\begin{equation}
+  0,\qquad
+  \frac{v_Y^2}{4}(g_R^2+g_{BL}^2),
+\end{equation}
+with massless hypercharge direction
+\begin{equation}
+  B_Y\propto g_{BL}W_R^3+g_RB_{B-L},
+  \qquad
+  g_Y=\frac{g_Rg_{BL}}{\sqrt{g_R^2+g_{BL}^2}}.
+\end{equation}
+In the unit demo point
+\begin{equation}
+  g_{10}=g_4=g_R=g_{BL}=v_{\rm PS}=v_4=v_R=v_Y=1,
+  \qquad
+  \kappa_{\rm PS}=1,
+\end{equation}
+P10 finds a $34$-dimensional active matrix, $33$ positive broken eigenvalues,
+and one zero eigenvalue.  This is the expected count for
+\begin{equation}
+  \dim\Spin(10)-\dim G_{\rm SM}=45-12=33.
+\end{equation}
+The remaining physical inputs are the scale choices, scalar/source branch for
+the eight non-adjoint P4 pairs if activated, physical flavor rotations, RG
+factors, hadronic matrix elements, and experimental proton lifetime limits.
+
+\section{P11: Replay with Staged Spin(10) Masses}
+
+P11 attaches the P10 mass blocks to the matching gates:
+\begin{equation}
+\begin{gathered}
+  M_{(6,2,2)}\to \sqrt{\kappa_{\rm PS}}\,g_{10}v_{\rm PS},\\
+  M_{\rm LQ}\to \sqrt{\frac23}\,g_4v_4,\qquad
+  M_{W_R}\to g_Rv_R,\\
+  M_{Z'}\to \frac12 v_Y\sqrt{g_R^2+g_{BL}^2}.
+\end{gathered}
+\end{equation}
+The current-vector side is therefore improved: the adjoint-vector sectors now
+carry explicit staged denominators.  However, P11 also checks the P7
+chiral-pair pole rows against the adjoint-current charge signatures.  The
+result is:
+\begin{center}
+\small
+\begin{tabular}{p{0.62\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+current-vector mass blocks available & 4\\
+P7 rows replayed & 18\\
+P7 rows with candidate adjoint mass blocks & 0\\
+P7 rows remaining scalar/source mass debt & 18\\
+baryon-violating or sterile-BNV rows & 6\\
+physical proton bounds evaluable now & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+This is a negative but useful gate: the P7 all-incoming chiral-pair pole
+ledger is not automatically the same as adjoint current-vector exchange.  Thus
+P11 does not unlock proton bounds.  It says that the next Wilson-basis choice
+is unavoidable:
+\begin{equation}
+  \text{current-current vector branch}
+  \quad\text{or}\quad
+  \text{scalar/source chiral-pair branch}.
+\end{equation}
+The two branches require different spin/channel maps before numerical proton
+limits can be inserted.
+
+\section{P12-S: Scalar/Source Chiral-Pair Branch}
+
+P12 records both post-P11 directions:
+\begin{equation}
+  \text{Branch V}=\text{completed }\Spin(10)\text{ current-current vector exchange},
+\end{equation}
+and
+\begin{equation}
+  \text{Branch S}=\text{scalar/source chiral-pair poles}.
+\end{equation}
+Both directions remain part of the Route C program.  The first activated
+direction is Branch S, because P11 found that all P7 chiral-pair rows remain
+scalar/source mass debt rather than adjoint-vector matches.
+
+The scalar/source ansatz is
+\begin{equation}
+  \mathcal L
+  \supset
+  \lambda_{ab,R}\psi_a\psi_b S_R
+  +\mathrm{h.c.}
+  +M_{S_R}^2 |S_R|^2,
+  \qquad M_{S_R}^2>0 .
+\end{equation}
+Integrating out the scalar/source field at tree level gives the symbolic
+dimension-six coefficient
+\begin{equation}
+  C_6(12|34;R)
+  =
+  \frac{\lambda_{12,R}\lambda_{34,R}^{\ast}}{M_{S_R}^2}.
+\end{equation}
+This avoids the longitudinal broken-vector Ward problem, but it does not
+prove a UV completion or a physical proton lifetime.
+
+The generated P12-S ledger reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.64\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+P11 scalar/source debt rows converted & 18\\
+unique scalar/source sectors & 12\\
+$B$ and $L$ conserving rows & 12\\
+standard BNV seed rows & 4\\
+BNV-with-sterile-neutrino rows & 2\\
+baryon-violating or sterile-BNV rows & 6\\
+physical proton bounds evaluable now & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The six baryon-violating or sterile-BNV scalar/source rows are the two
+$QQQL$ rows, the two $\uc\uc\dc\ec$ rows, and the two
+$\uc\dc\dc\nuc$ rows.  Their coefficients remain symbolic because P12-S has
+not chosen the scalar/source flavor tensors or the physical Wilson basis.
+
+The verification checks are:
+\begin{center}
+\small
+\begin{tabular}{p{0.68\linewidth}c}
+\toprule
+check & result\\
+\midrule
+all P11 scalar/source debt rows accounted for & true\\
+every scalar/source row has a mass symbol & true\\
+every source sector has a positive mass condition & true\\
+P12 scalar/source layer passes & true\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The next scalar/source stage is therefore not a proton-bound insertion.  It is
+the construction of scalar/source flavor tensors and a chiral/Fierz Wilson
+basis for the BNV rows.  The parallel completed current-current vector branch
+also remains open and should be tried before any final proton-bound claim is
+made.
+
 \section{Current Status and Next Check}
 
-The P1--P8 chain currently establishes:
+The P1--P12-S chain currently establishes:
 \begin{enumerate}
 \item the exact P1 charge/anomaly baseline for one $SM+\nuc$ family;
 \item the P2 charge-filtered symbolic pole components;
@@ -649,9 +917,19 @@ contact-only, and tower-like comparison branches.
 ledger.
 \item the P8 comparative scorecard across $\SU(5)$, Pati--Salam, $\Spin(10)$,
 $E_6$, and superstring-derived completions.
+\item the P9 $\Spin(10)$-locked sparse generator ledger and action-completion
+interface.
+\item the P10 staged $\Spin(10)$ breaking mass matrix with $33$ positive
+broken-vector eigenvalues and one hypercharge zero mode.
+\item the P11 replay gate showing that P10 supplies adjoint-vector mass
+denominators, while the P7 chiral-pair rows remain scalar/source mass debt.
+\item the P12-S scalar/source branch that assigns symbolic scalar/source
+denominators to all 18 P7 chiral-pair rows, with 12 source sectors and 6 BNV
+or sterile-BNV rows still awaiting flavor/Wilson-basis data.
 \end{enumerate}
-The next natural stage is no longer another broad comparison.  It is to choose
-one surviving conditional branch, most naturally $\Spin(10)$, and supply the
-missing action-level completion data needed by P4--P7.
+The next natural stage is P13: choose scalar/source flavor tensors and a
+chiral/Fierz Wilson basis for the six BNV or sterile-BNV rows, or return to
+the parallel completed current-current vector branch before inserting proton
+limits.
 
 \end{document}

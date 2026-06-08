@@ -1,0 +1,2739 @@
+{
+  "description": "Route-C P9 Spin(10)-locked action-completion ledger",
+  "boundary": "P9 starts action-level completion for the P8-leading Spin(10) branch.  It supplies generator and interface data, but it does not yet choose a full Higgs potential, mediator spectrum, flavor fit, or numerical proton-bound evaluation.",
+  "spin10_lock": {
+    "source": "P8 comparative scorecard",
+    "leading_conditional_field_theory_branch": "Spin(10)",
+    "broad_comparison_closed_for_this_pass": true
+  },
+  "basis": {
+    "dimension": 16,
+    "decomposition": "16 -> (4,2,1) + (bar4,1,2) under Pati-Salam",
+    "states": [
+      {
+        "index": 0,
+        "label": "Q_r_u",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "r",
+        "su2l_index": "u",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "r",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 1,
+        "label": "Q_r_d",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "r",
+        "su2l_index": "d",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "r",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 2,
+        "label": "Q_g_u",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "g",
+        "su2l_index": "u",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "g",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 3,
+        "label": "Q_g_d",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "g",
+        "su2l_index": "d",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "g",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 4,
+        "label": "Q_b_u",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "b",
+        "su2l_index": "u",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "b",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 5,
+        "label": "Q_b_d",
+        "multiplet": "Q",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "b",
+        "su2l_index": "d",
+        "su2r_index": "singlet",
+        "SU3_C": "3",
+        "color": "b",
+        "Y": {
+          "fraction": "1/6",
+          "numerator": 1,
+          "denominator": 6,
+          "float": 0.16666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 6,
+        "label": "L_u",
+        "multiplet": "L",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "ell",
+        "su2l_index": "u",
+        "su2r_index": "singlet",
+        "SU3_C": "1",
+        "color": "1",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "T3L": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 7,
+        "label": "L_d",
+        "multiplet": "L",
+        "ps_irrep": "(4,2,1)",
+        "su4_index": "ell",
+        "su2l_index": "d",
+        "su2r_index": "singlet",
+        "SU3_C": "1",
+        "color": "1",
+        "Y": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "B_minus_L": {
+          "fraction": "-1",
+          "numerator": -1,
+          "denominator": 1,
+          "float": -1.0
+        },
+        "T3L": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        },
+        "T3R": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        }
+      },
+      {
+        "index": 8,
+        "label": "u^c_r",
+        "multiplet": "u^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "r",
+        "su2l_index": "singlet",
+        "su2r_index": "minus",
+        "SU3_C": "bar3",
+        "color": "r",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        }
+      },
+      {
+        "index": 9,
+        "label": "d^c_r",
+        "multiplet": "d^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "r",
+        "su2l_index": "singlet",
+        "su2r_index": "plus",
+        "SU3_C": "bar3",
+        "color": "r",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        }
+      },
+      {
+        "index": 10,
+        "label": "u^c_g",
+        "multiplet": "u^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "g",
+        "su2l_index": "singlet",
+        "su2r_index": "minus",
+        "SU3_C": "bar3",
+        "color": "g",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        }
+      },
+      {
+        "index": 11,
+        "label": "d^c_g",
+        "multiplet": "d^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "g",
+        "su2l_index": "singlet",
+        "su2r_index": "plus",
+        "SU3_C": "bar3",
+        "color": "g",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        }
+      },
+      {
+        "index": 12,
+        "label": "u^c_b",
+        "multiplet": "u^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "b",
+        "su2l_index": "singlet",
+        "su2r_index": "minus",
+        "SU3_C": "bar3",
+        "color": "b",
+        "Y": {
+          "fraction": "-2/3",
+          "numerator": -2,
+          "denominator": 3,
+          "float": -0.6666666666666666
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        }
+      },
+      {
+        "index": 13,
+        "label": "d^c_b",
+        "multiplet": "d^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "b",
+        "su2l_index": "singlet",
+        "su2r_index": "plus",
+        "SU3_C": "bar3",
+        "color": "b",
+        "Y": {
+          "fraction": "1/3",
+          "numerator": 1,
+          "denominator": 3,
+          "float": 0.3333333333333333
+        },
+        "B_minus_L": {
+          "fraction": "-1/3",
+          "numerator": -1,
+          "denominator": 3,
+          "float": -0.3333333333333333
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        }
+      },
+      {
+        "index": 14,
+        "label": "nu^c",
+        "multiplet": "nu^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "ell",
+        "su2l_index": "singlet",
+        "su2r_index": "minus",
+        "SU3_C": "1",
+        "color": "1",
+        "Y": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "B_minus_L": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "-1/2",
+          "numerator": -1,
+          "denominator": 2,
+          "float": -0.5
+        }
+      },
+      {
+        "index": 15,
+        "label": "e^c",
+        "multiplet": "e^c",
+        "ps_irrep": "(bar4,1,2)",
+        "su4_index": "ell",
+        "su2l_index": "singlet",
+        "su2r_index": "plus",
+        "SU3_C": "1",
+        "color": "1",
+        "Y": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "B_minus_L": {
+          "fraction": "1",
+          "numerator": 1,
+          "denominator": 1,
+          "float": 1.0
+        },
+        "T3L": {
+          "fraction": "0",
+          "numerator": 0,
+          "denominator": 1,
+          "float": 0.0
+        },
+        "T3R": {
+          "fraction": "1/2",
+          "numerator": 1,
+          "denominator": 2,
+          "float": 0.5
+        }
+      }
+    ]
+  },
+  "broken_generator_maps": {
+    "map_count": 32,
+    "su4_leptoquark_root_maps": 6,
+    "su2r_charged_root_maps": 2,
+    "spin10_off_face_clebsch_maps": 24,
+    "maps": [
+      {
+        "label": "SU4/E_SM leptoquark E_ellr",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 6,
+            "target_label": "L_u",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 7,
+            "target_label": "L_d",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 14,
+            "source_label": "nu^c",
+            "source_multiplet": "nu^c",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 15,
+            "source_label": "e^c",
+            "source_multiplet": "e^c",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "One complex broken SU(4) root; its conjugate is E_color,ell."
+      },
+      {
+        "label": "SU4/E_SM leptoquark E_rell",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 0,
+            "target_label": "Q_r_u",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 1,
+            "target_label": "Q_r_d",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 8,
+            "source_label": "u^c_r",
+            "source_multiplet": "u^c",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 9,
+            "source_label": "d^c_r",
+            "source_multiplet": "d^c",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Conjugate complex broken SU(4) root."
+      },
+      {
+        "label": "SU4/E_SM leptoquark E_ellg",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 6,
+            "target_label": "L_u",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 7,
+            "target_label": "L_d",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 14,
+            "source_label": "nu^c",
+            "source_multiplet": "nu^c",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 15,
+            "source_label": "e^c",
+            "source_multiplet": "e^c",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "One complex broken SU(4) root; its conjugate is E_color,ell."
+      },
+      {
+        "label": "SU4/E_SM leptoquark E_gell",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 2,
+            "target_label": "Q_g_u",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 3,
+            "target_label": "Q_g_d",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 10,
+            "source_label": "u^c_g",
+            "source_multiplet": "u^c",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 11,
+            "source_label": "d^c_g",
+            "source_multiplet": "d^c",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Conjugate complex broken SU(4) root."
+      },
+      {
+        "label": "SU4/E_SM leptoquark E_ellb",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 6,
+            "target_label": "L_u",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 7,
+            "target_label": "L_d",
+            "target_multiplet": "L",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 14,
+            "source_label": "nu^c",
+            "source_multiplet": "nu^c",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          },
+          {
+            "source_index": 15,
+            "source_label": "e^c",
+            "source_multiplet": "e^c",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-4/3",
+              "numerator": -4,
+              "denominator": 3,
+              "float": -1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "One complex broken SU(4) root; its conjugate is E_color,ell."
+      },
+      {
+        "label": "SU4/E_SM leptoquark E_bell",
+        "generator_family": "Pati-Salam SU(4)_C leptoquark",
+        "sparse_transition_entries": [
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 4,
+            "target_label": "Q_b_u",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 5,
+            "target_label": "Q_b_d",
+            "target_multiplet": "Q",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 12,
+            "source_label": "u^c_b",
+            "source_multiplet": "u^c",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          },
+          {
+            "source_index": 13,
+            "source_label": "d^c_b",
+            "source_multiplet": "d^c",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "-1",
+            "delta_Y": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "4/3",
+              "numerator": 4,
+              "denominator": 3,
+              "float": 1.3333333333333333
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Conjugate complex broken SU(4) root."
+      },
+      {
+        "label": "SU2_R T_R^+",
+        "generator_family": "broken SU(2)_R charged current",
+        "sparse_transition_entries": [
+          {
+            "source_index": 8,
+            "source_label": "u^c_r",
+            "source_multiplet": "u^c",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "1",
+              "numerator": 1,
+              "denominator": 1,
+              "float": 1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 10,
+            "source_label": "u^c_g",
+            "source_multiplet": "u^c",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "1",
+              "numerator": 1,
+              "denominator": 1,
+              "float": 1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 12,
+            "source_label": "u^c_b",
+            "source_multiplet": "u^c",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "1",
+              "numerator": 1,
+              "denominator": 1,
+              "float": 1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 14,
+            "source_label": "nu^c",
+            "source_multiplet": "nu^c",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "1",
+              "numerator": 1,
+              "denominator": 1,
+              "float": 1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Raises T3R and carries SM hypercharge +1 after SU(2)_R breaking."
+      },
+      {
+        "label": "SU2_R T_R^-",
+        "generator_family": "broken SU(2)_R charged current",
+        "sparse_transition_entries": [
+          {
+            "source_index": 9,
+            "source_label": "d^c_r",
+            "source_multiplet": "d^c",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-1",
+              "numerator": -1,
+              "denominator": 1,
+              "float": -1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 11,
+            "source_label": "d^c_g",
+            "source_multiplet": "d^c",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-1",
+              "numerator": -1,
+              "denominator": 1,
+              "float": -1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 13,
+            "source_label": "d^c_b",
+            "source_multiplet": "d^c",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-1",
+              "numerator": -1,
+              "denominator": 1,
+              "float": -1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          },
+          {
+            "source_index": 15,
+            "source_label": "e^c",
+            "source_multiplet": "e^c",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1",
+            "delta_Y": {
+              "fraction": "-1",
+              "numerator": -1,
+              "denominator": 1,
+              "float": -1.0
+            },
+            "delta_B_minus_L": {
+              "fraction": "0",
+              "numerator": 0,
+              "denominator": 1,
+              "float": 0.0
+            }
+          }
+        ],
+        "entry_count": 4,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Lowers T3R and carries SM hypercharge -1 after SU(2)_R breaking."
+      },
+      {
+        "label": "(6,2,2) C_[rg],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rg],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rg],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rg],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rb],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rb],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rb],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rb],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rell],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rell],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 0,
+            "source_label": "Q_r_u",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rell],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 8,
+            "target_label": "u^c_r",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[rell],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 1,
+            "source_label": "Q_r_d",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 9,
+            "target_label": "d^c_r",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gb],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gb],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gb],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-5/6",
+              "numerator": -5,
+              "denominator": 6,
+              "float": -0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gb],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          },
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "1/6",
+              "numerator": 1,
+              "denominator": 6,
+              "float": 0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "-2/3",
+              "numerator": -2,
+              "denominator": 3,
+              "float": -0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gell],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gell],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 2,
+            "source_label": "Q_g_u",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gell],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 10,
+            "target_label": "u^c_g",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[gell],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 3,
+            "source_label": "Q_g_d",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 11,
+            "target_label": "d^c_g",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[bell],u,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[bell],u,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 4,
+            "source_label": "Q_b_u",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 6,
+            "source_label": "L_u",
+            "source_multiplet": "L",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[bell],d,minus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 14,
+            "target_label": "nu^c",
+            "target_multiplet": "nu^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 12,
+            "target_label": "u^c_b",
+            "target_multiplet": "u^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "-1/6",
+              "numerator": -1,
+              "denominator": 6,
+              "float": -0.16666666666666666
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      },
+      {
+        "label": "(6,2,2) C_[bell],d,plus",
+        "generator_family": "Spin(10)/Pati-Salam off-face generator",
+        "sparse_transition_entries": [
+          {
+            "source_index": 5,
+            "source_label": "Q_b_d",
+            "source_multiplet": "Q",
+            "target_index": 15,
+            "target_label": "e^c",
+            "target_multiplet": "e^c",
+            "coefficient": "1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          },
+          {
+            "source_index": 7,
+            "source_label": "L_d",
+            "source_multiplet": "L",
+            "target_index": 13,
+            "target_label": "d^c_b",
+            "target_multiplet": "d^c",
+            "coefficient": "-1/sqrt(2)",
+            "delta_Y": {
+              "fraction": "5/6",
+              "numerator": 5,
+              "denominator": 6,
+              "float": 0.8333333333333334
+            },
+            "delta_B_minus_L": {
+              "fraction": "2/3",
+              "numerator": 2,
+              "denominator": 3,
+              "float": 0.6666666666666666
+            }
+          }
+        ],
+        "entry_count": 2,
+        "normalization": "sparse Clebsch map; hermitian vector generators are obtained by adding the conjugate map and its i-rotated partner when appropriate",
+        "note": "Antisymmetric SU(4) Clebsch map from (4,2,1) to (bar4,1,2).  The conjugate map gives the reverse chirality-block transition."
+      }
+    ]
+  },
+  "verification": {
+    "basis_dimension_is_16": true,
+    "expected_map_count_is_32": true,
+    "p4_transition_coverage": {
+      "p4_broken_transition_pairs": 30,
+      "transition_pairs_generated_by_spin10_maps": 22,
+      "missing_p4_pairs": [
+        {
+          "source": "L",
+          "target": "e^c"
+        },
+        {
+          "source": "L",
+          "target": "nu^c"
+        },
+        {
+          "source": "d^c",
+          "target": "nu^c"
+        },
+        {
+          "source": "e^c",
+          "target": "L"
+        },
+        {
+          "source": "e^c",
+          "target": "u^c"
+        },
+        {
+          "source": "nu^c",
+          "target": "L"
+        },
+        {
+          "source": "nu^c",
+          "target": "d^c"
+        },
+        {
+          "source": "u^c",
+          "target": "e^c"
+        }
+      ],
+      "missing_p4_pair_interpretation": "These P4 bookkeeping transitions are not generated by the Spin(10) adjoint gauge-vector maps in the 16.  They remain possible scalar/source/auxiliary completion channels if a later branch activates them, but P9 must not misidentify them as D5 gauge generators.",
+      "extra_generated_pairs": [],
+      "covers_all_p4_broken_pairs": false,
+      "generated_pairs_are_subset_of_p4_broken_pairs": true,
+      "spin10_adjoint_vector_pair_count": 22
+    },
+    "p6_tower_like_uv_forced_before_p9": false,
+    "p7_physical_proton_bounds_evaluable_before_p9": 0,
+    "p9_generator_layer_passes": true
+  },
+  "goldstone_higgs_completion_templates": [
+    {
+      "sector": "Spin(10) -> Pati-Salam",
+      "broken_generators": "(6,2,2)",
+      "candidate_order_parameters": [
+        "45_H",
+        "210_H",
+        "adjoint/source spurion"
+      ],
+      "mass_formula": "M_X^2 = g_10^2 <v| T_X T_X |v> after diagonalizing the broken-generator mass matrix",
+      "goldstone_formula": "phi_X proportional to T_X v",
+      "ward_target": "p_mu M^mu(V_X)=M_X M(phi_X)",
+      "status": "template_only_order_parameter_not_chosen"
+    },
+    {
+      "sector": "SU(4)_C -> SU(3)_C x U(1)_{B-L}",
+      "broken_generators": "SU(4) leptoquark roots E_{ell a}, E_{a ell}",
+      "candidate_order_parameters": [
+        "45_H/210_H direction",
+        "Pati-Salam breaking source"
+      ],
+      "mass_formula": "M_LQ^2 = g_4^2 <v_4| T_LQ T_LQ |v_4>",
+      "goldstone_formula": "phi_LQ proportional to T_LQ v_4",
+      "ward_target": "p_mu M^mu(V_LQ)=M_LQ M(phi_LQ)",
+      "status": "template_only_order_parameter_not_chosen"
+    },
+    {
+      "sector": "SU(2)_R -> U(1)_{T3R}",
+      "broken_generators": "T_R^+, T_R^-",
+      "candidate_order_parameters": [
+        "126_H or 16_H B-L breaking branch",
+        "right-handed doublet/triplet source"
+      ],
+      "mass_formula": "M_WR^2 = g_R^2 <v_R| T_R^- T_R^+ |v_R>",
+      "goldstone_formula": "phi_R^+ proportional to T_R^+ v_R and conjugate",
+      "ward_target": "p_mu M^mu(W_R)=M_WR M(phi_R)",
+      "status": "template_only_order_parameter_not_chosen"
+    }
+  ],
+  "mediator_mass_and_coupling_inputs": [
+    {
+      "symbol": "g_10",
+      "meaning": "Spin(10) unified gauge coupling at matching scale",
+      "required_for": [
+        "all gauge-vector Wilson coefficients",
+        "threshold matching"
+      ],
+      "status": "symbolic_required"
+    },
+    {
+      "symbol": "M_{(6,2,2)}",
+      "meaning": "mass eigenvalues for Spin(10)/Pati-Salam broken vectors",
+      "required_for": [
+        "P6 high-energy completion",
+        "P7 dimension-six matching"
+      ],
+      "status": "symbolic_required"
+    },
+    {
+      "symbol": "M_{LQ}",
+      "meaning": "Pati-Salam SU(4) leptoquark vector masses",
+      "required_for": [
+        "proton/leptoquark matching",
+        "threshold matching"
+      ],
+      "status": "symbolic_required"
+    },
+    {
+      "symbol": "M_{W_R}",
+      "meaning": "broken SU(2)_R vector mass",
+      "required_for": [
+        "right-current matching",
+        "Ward completion"
+      ],
+      "status": "symbolic_required"
+    },
+    {
+      "symbol": "M_{T}, Y_T",
+      "meaning": "colored Higgs/scalar triplet masses and Yukawa couplings if scalar branches are activated",
+      "required_for": [
+        "dimension-five proton audit",
+        "scalar/auxiliary P6 branches"
+      ],
+      "status": "not_supplied_in_p9"
+    }
+  ],
+  "physical_flavor_rotation_inputs": {
+    "gauge_to_mass_basis": "f_gauge_i = (U_f)_{i a} f_mass_a for f in {Q,L,u^c,d^c,nu^c,e^c}",
+    "unitary_matrices_required": [
+      "U_Q",
+      "U_L",
+      "U_uc",
+      "U_dc",
+      "U_nuc",
+      "U_ec"
+    ],
+    "observable_constraints": {
+      "CKM": "built from the left quark rotations after electroweak breaking",
+      "PMNS": "built from charged-lepton and light-neutrino rotations after seesaw/majorana matching"
+    },
+    "wilson_rotation_template": "C_phys[a b c d] = U_f1[i a] U_f2[j b] U_f3[k c] U_f4[l d] C_gauge[i j k l]",
+    "status": "template_only_no_numeric_flavor_fit"
+  },
+  "proton_bound_inputs": {
+    "p7_current_status": {
+      "allowed_symbolic_poles_processed": 18,
+      "operator_status_counts": {
+        "B_and_L_conserving": 12,
+        "standard_BNV_seed": 4,
+        "BNV_with_sterile_neutrino": 2
+      },
+      "baryon_violating_symbolic_poles": 6,
+      "baryon_violating_vector_poles_blocked_by_p6_completion": 6,
+      "physical_proton_bounds_evaluable_now": 0,
+      "all_physical_bounds_conditional": true
+    },
+    "required_external_inputs": [
+      "current experimental lower lifetime limit tau_exp for each proton channel",
+      "completed P6 branch and mediator spectrum",
+      "physical Wilson basis and chiral contractions",
+      "flavor rotations from gauge basis to mass basis",
+      "RG evolution factors from matching scale to hadronic scale",
+      "lattice/chiral hadronic matrix H_ij^(channel)"
+    ],
+    "bound_template": "Gamma(p -> a)=C_phys^dagger H^(a) C_phys, tau_exp(a) > 1/Gamma(p -> a)",
+    "p9_boundary": "P9 supplies the interface and Spin(10) generator data.  It does not insert numerical current experimental limits or compute lifetimes."
+  },
+  "p9_status": {
+    "broken_generator_matrices": "sparse transition maps supplied and checked against P4",
+    "goldstone_higgs_completion": "formulae supplied; order parameter branch not chosen",
+    "mediator_masses_couplings": "symbolic inputs listed; no spectrum fixed",
+    "physical_flavor_rotations": "interface supplied; no flavor benchmark inserted",
+    "proton_bound_inputs": "input interface supplied; no numerical lifetime claim"
+  },
+  "next_stage": {
+    "recommended": "P10_choose_spin10_breaking_branch_and_mass_spectrum",
+    "required_decision": "Choose a concrete Spin(10)-breaking order parameter/source branch, then diagonalize broken-vector masses and replay P6/P7 with explicit masses, couplings, and flavor rotations."
+  }
+}

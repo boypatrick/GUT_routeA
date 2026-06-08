@@ -1,0 +1,803 @@
+{
+  "description": "Route-C P12-S scalar/source chiral-pair branch",
+  "branch_decision": {
+    "both_branches_to_try": [
+      "completed_current_current_vector_branch",
+      "scalar_source_chiral_pair_branch"
+    ],
+    "activated_first": "scalar_source_chiral_pair_branch",
+    "reason": "P11 showed that all 18 P7 chiral-pair pole rows remain scalar/source mass debt rather than adjoint-vector mass matches."
+  },
+  "boundary": "P12-S assigns scalar/source mass denominators to the P7 chiral-pair poles.  It does not compute physical proton lifetimes, and it does not close the separate current-current vector branch.",
+  "ansatz": {
+    "lagrangian_template": "L \u2283 lambda_{ab,R} psi_a psi_b S_R + h.c. + M_{S_R}^2 |S_R|^2",
+    "integrated_out_template": "C6(12|34;R)=lambda_{12,R} lambda^*_{34,R}/M_{S_R}^2",
+    "positivity_condition": "M_{S_R}^2 > 0 for every activated source sector",
+    "ward_boundary": "No broken-vector longitudinal Ward problem is introduced by scalar/source exchange."
+  },
+  "scalar_source_sectors": [
+    {
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "source_field": "S_1_1_Y1_BL2",
+      "mass_symbol": "M_S_1_1_Y1_BL2",
+      "quantum_numbers": {
+        "su3": "1",
+        "su2": "1",
+        "Y": "1",
+        "BL": "2"
+      },
+      "operators_supported": [
+        "LL e^c nu^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_1_1_Y1_BL2^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "source_field": "S_1_2_Y1o2_BL0",
+      "mass_symbol": "M_S_1_2_Y1o2_BL0",
+      "quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "operators_supported": [
+        "LL e^c nu^c",
+        "QL u^c e^c",
+        "QQ u^c d^c"
+      ],
+      "row_count": 3,
+      "operator_status_counts": {
+        "B_and_L_conserving": 3
+      },
+      "positivity_condition": "M_S_1_2_Y1o2_BL0^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "source_field": "S_1_2_Ym1o2_BL0",
+      "mass_symbol": "M_S_1_2_Ym1o2_BL0",
+      "quantum_numbers": {
+        "su3": "1",
+        "su2": "2",
+        "Y": "-1/2",
+        "BL": "0"
+      },
+      "operators_supported": [
+        "QL d^c nu^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_1_2_Ym1o2_BL0^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "source_field": "S_3_1_Y2o3_BLm2o3",
+      "mass_symbol": "M_S_3_1_Y2o3_BLm2o3",
+      "quantum_numbers": {
+        "su3": "3",
+        "su2": "1",
+        "Y": "2/3",
+        "BL": "-2/3"
+      },
+      "operators_supported": [
+        "u^c d^c d^c nu^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "BNV_with_sterile_neutrino": 1
+      },
+      "positivity_condition": "M_S_3_1_Y2o3_BLm2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_3_1_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_3_1_Ym1o3_BLm2o3",
+      "quantum_numbers": {
+        "su3": "3",
+        "su2": "1",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "operators_supported": [
+        "QQ u^c d^c",
+        "QQQL"
+      ],
+      "row_count": 2,
+      "operator_status_counts": {
+        "standard_BNV_seed": 1,
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_3_1_Ym1o3_BLm2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_3_3_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_3_3_Ym1o3_BLm2o3",
+      "quantum_numbers": {
+        "su3": "3",
+        "su2": "3",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "operators_supported": [
+        "QQQL"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "standard_BNV_seed": 1
+      },
+      "positivity_condition": "M_S_3_3_Ym1o3_BLm2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "source_field": "S_8_2_Y1o2_BL0",
+      "mass_symbol": "M_S_8_2_Y1o2_BL0",
+      "quantum_numbers": {
+        "su3": "8",
+        "su2": "2",
+        "Y": "1/2",
+        "BL": "0"
+      },
+      "operators_supported": [
+        "QQ u^c d^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_8_2_Y1o2_BL0^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y1o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y1o3_BL2o3",
+      "quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "1/3",
+        "BL": "2/3"
+      },
+      "operators_supported": [
+        "QL d^c nu^c",
+        "QL u^c e^c",
+        "u^c d^c d^c nu^c",
+        "u^c u^c d^c e^c"
+      ],
+      "row_count": 4,
+      "operator_status_counts": {
+        "B_and_L_conserving": 2,
+        "standard_BNV_seed": 1,
+        "BNV_with_sterile_neutrino": 1
+      },
+      "positivity_condition": "M_S_b3_1_Y1o3_BL2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y4o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y4o3_BL2o3",
+      "quantum_numbers": {
+        "su3": "bar3",
+        "su2": "1",
+        "Y": "4/3",
+        "BL": "2/3"
+      },
+      "operators_supported": [
+        "u^c u^c d^c e^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "standard_BNV_seed": 1
+      },
+      "positivity_condition": "M_S_b3_1_Y4o3_BL2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "source_field": "S_b3_2_Ym1o6_BLm4o3",
+      "mass_symbol": "M_S_b3_2_Ym1o6_BLm4o3",
+      "quantum_numbers": {
+        "su3": "bar3",
+        "su2": "2",
+        "Y": "-1/6",
+        "BL": "-4/3"
+      },
+      "operators_supported": [
+        "QL d^c nu^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_b3_2_Ym1o6_BLm4o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "source_field": "S_b3_2_Ym7o6_BLm4o3",
+      "mass_symbol": "M_S_b3_2_Ym7o6_BLm4o3",
+      "quantum_numbers": {
+        "su3": "bar3",
+        "su2": "2",
+        "Y": "-7/6",
+        "BL": "-4/3"
+      },
+      "operators_supported": [
+        "QL u^c e^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_b3_2_Ym7o6_BLm4o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    },
+    {
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_b6_1_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_b6_1_Ym1o3_BLm2o3",
+      "quantum_numbers": {
+        "su3": "bar6",
+        "su2": "1",
+        "Y": "-1/3",
+        "BL": "-2/3"
+      },
+      "operators_supported": [
+        "QQ u^c d^c"
+      ],
+      "row_count": 1,
+      "operator_status_counts": {
+        "B_and_L_conserving": 1
+      },
+      "positivity_condition": "M_S_b6_1_Ym1o3_BLm2o3^2 > 0",
+      "branch_status": "activated_symbolically_no_numeric_mass"
+    }
+  ],
+  "scalar_source_matching_rows": [
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar6,1);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_b6_1_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_b6_1_Ym1o3_BLm2o3",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQ u^c d^c; X[(bar6,1);Y=-1/3;B-L=-2/3]] = lambda_QQ_b6_1_Ym1o3_BLm2o3 lambda_ucdc_b6_1_Ym1o3_BLm2o3^*/M_S_b6_1_Ym1o3_BLm2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_3_1_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_3_1_Ym1o3_BLm2o3",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "Q",
+        "L"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQQL; X[(3,1);Y=-1/3;B-L=-2/3]] = lambda_QQ_3_1_Ym1o3_BLm2o3 lambda_QL_3_1_Ym1o3_BLm2o3^*/M_S_3_1_Ym1o3_BLm2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(3,1);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_3_1_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_3_1_Ym1o3_BLm2o3",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQ u^c d^c; X[(3,1);Y=-1/3;B-L=-2/3]] = lambda_QQ_3_1_Ym1o3_BLm2o3 lambda_ucdc_3_1_Ym1o3_BLm2o3^*/M_S_3_1_Ym1o3_BLm2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QQQL",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(3,3);Y=-1/3;B-L=-2/3]",
+      "source_field": "S_3_3_Ym1o3_BLm2o3",
+      "mass_symbol": "M_S_3_3_Ym1o3_BLm2o3",
+      "left_pair": [
+        "Q",
+        "Q"
+      ],
+      "right_pair": [
+        "Q",
+        "L"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQQL; X[(3,3);Y=-1/3;B-L=-2/3]] = lambda_QQ_3_3_Ym1o3_BLm2o3 lambda_QL_3_3_Ym1o3_BLm2o3^*/M_S_3_3_Ym1o3_BLm2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y1o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y1o3_BL2o3",
+      "left_pair": [
+        "Q",
+        "L"
+      ],
+      "right_pair": [
+        "u^c",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL u^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = lambda_QL_b3_1_Y1o3_BL2o3 lambda_ucec_b3_1_Y1o3_BL2o3^*/M_S_b3_1_Y1o3_BL2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y1o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y1o3_BL2o3",
+      "left_pair": [
+        "Q",
+        "L"
+      ],
+      "right_pair": [
+        "d^c",
+        "nu^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = lambda_QL_b3_1_Y1o3_BL2o3 lambda_dcnuc_b3_1_Y1o3_BL2o3^*/M_S_b3_1_Y1o3_BL2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "source_field": "S_1_2_Y1o2_BL0",
+      "mass_symbol": "M_S_1_2_Y1o2_BL0",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "Q",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQ u^c d^c; X[(1,2);Y=1/2;B-L=0]] = lambda_Quc_1_2_Y1o2_BL0 lambda_Qdc_1_2_Y1o2_BL0^*/M_S_1_2_Y1o2_BL0^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "source_field": "S_1_2_Y1o2_BL0",
+      "mass_symbol": "M_S_1_2_Y1o2_BL0",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "L",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL u^c e^c; X[(1,2);Y=1/2;B-L=0]] = lambda_Quc_1_2_Y1o2_BL0 lambda_Lec_1_2_Y1o2_BL0^*/M_S_1_2_Y1o2_BL0^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QQ u^c d^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(8,2);Y=1/2;B-L=0]",
+      "source_field": "S_8_2_Y1o2_BL0",
+      "mass_symbol": "M_S_8_2_Y1o2_BL0",
+      "left_pair": [
+        "Q",
+        "u^c"
+      ],
+      "right_pair": [
+        "Q",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QQ u^c d^c; X[(8,2);Y=1/2;B-L=0]] = lambda_Quc_8_2_Y1o2_BL0 lambda_Qdc_8_2_Y1o2_BL0^*/M_S_8_2_Y1o2_BL0^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=-1/2;B-L=0]",
+      "source_field": "S_1_2_Ym1o2_BL0",
+      "mass_symbol": "M_S_1_2_Ym1o2_BL0",
+      "left_pair": [
+        "Q",
+        "d^c"
+      ],
+      "right_pair": [
+        "L",
+        "nu^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL d^c nu^c; X[(1,2);Y=-1/2;B-L=0]] = lambda_Qdc_1_2_Ym1o2_BL0 lambda_Lnuc_1_2_Ym1o2_BL0^*/M_S_1_2_Ym1o2_BL0^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL d^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,2);Y=-1/6;B-L=-4/3]",
+      "source_field": "S_b3_2_Ym1o6_BLm4o3",
+      "mass_symbol": "M_S_b3_2_Ym1o6_BLm4o3",
+      "left_pair": [
+        "Q",
+        "nu^c"
+      ],
+      "right_pair": [
+        "L",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL d^c nu^c; X[(bar3,2);Y=-1/6;B-L=-4/3]] = lambda_Qnuc_b3_2_Ym1o6_BLm4o3 lambda_Ldc_b3_2_Ym1o6_BLm4o3^*/M_S_b3_2_Ym1o6_BLm4o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "QL u^c e^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(bar3,2);Y=-7/6;B-L=-4/3]",
+      "source_field": "S_b3_2_Ym7o6_BLm4o3",
+      "mass_symbol": "M_S_b3_2_Ym7o6_BLm4o3",
+      "left_pair": [
+        "Q",
+        "e^c"
+      ],
+      "right_pair": [
+        "L",
+        "u^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[QL u^c e^c; X[(bar3,2);Y=-7/6;B-L=-4/3]] = lambda_Qec_b3_2_Ym7o6_BLm4o3 lambda_Luc_b3_2_Ym7o6_BLm4o3^*/M_S_b3_2_Ym7o6_BLm4o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,1);Y=1;B-L=2]",
+      "source_field": "S_1_1_Y1_BL2",
+      "mass_symbol": "M_S_1_1_Y1_BL2",
+      "left_pair": [
+        "L",
+        "L"
+      ],
+      "right_pair": [
+        "nu^c",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[LL e^c nu^c; X[(1,1);Y=1;B-L=2]] = lambda_LL_1_1_Y1_BL2 lambda_nucec_1_1_Y1_BL2^*/M_S_1_1_Y1_BL2^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "LL e^c nu^c",
+      "operator_status": "B_and_L_conserving",
+      "mediator": "X[(1,2);Y=1/2;B-L=0]",
+      "source_field": "S_1_2_Y1o2_BL0",
+      "mass_symbol": "M_S_1_2_Y1o2_BL0",
+      "left_pair": [
+        "L",
+        "nu^c"
+      ],
+      "right_pair": [
+        "L",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[LL e^c nu^c; X[(1,2);Y=1/2;B-L=0]] = lambda_Lnuc_1_2_Y1o2_BL0 lambda_Lec_1_2_Y1o2_BL0^*/M_S_1_2_Y1o2_BL0^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(bar3,1);Y=4/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y4o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y4o3_BL2o3",
+      "left_pair": [
+        "u^c",
+        "u^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[u^c u^c d^c e^c; X[(bar3,1);Y=4/3;B-L=2/3]] = lambda_ucuc_b3_1_Y4o3_BL2o3 lambda_dcec_b3_1_Y4o3_BL2o3^*/M_S_b3_1_Y4o3_BL2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "u^c u^c d^c e^c",
+      "operator_status": "standard_BNV_seed",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y1o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y1o3_BL2o3",
+      "left_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "right_pair": [
+        "u^c",
+        "e^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[u^c u^c d^c e^c; X[(bar3,1);Y=1/3;B-L=2/3]] = lambda_ucdc_b3_1_Y1o3_BL2o3 lambda_ucec_b3_1_Y1o3_BL2o3^*/M_S_b3_1_Y1o3_BL2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "mediator": "X[(bar3,1);Y=1/3;B-L=2/3]",
+      "source_field": "S_b3_1_Y1o3_BL2o3",
+      "mass_symbol": "M_S_b3_1_Y1o3_BL2o3",
+      "left_pair": [
+        "u^c",
+        "d^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "nu^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[u^c d^c d^c nu^c; X[(bar3,1);Y=1/3;B-L=2/3]] = lambda_ucdc_b3_1_Y1o3_BL2o3 lambda_dcnuc_b3_1_Y1o3_BL2o3^*/M_S_b3_1_Y1o3_BL2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    },
+    {
+      "canonical_operator": "u^c d^c d^c nu^c",
+      "operator_status": "BNV_with_sterile_neutrino",
+      "mediator": "X[(3,1);Y=2/3;B-L=-2/3]",
+      "source_field": "S_3_1_Y2o3_BLm2o3",
+      "mass_symbol": "M_S_3_1_Y2o3_BLm2o3",
+      "left_pair": [
+        "u^c",
+        "nu^c"
+      ],
+      "right_pair": [
+        "d^c",
+        "d^c"
+      ],
+      "scalar_source_matching_coefficient": "C6_S[u^c d^c d^c nu^c; X[(3,1);Y=2/3;B-L=-2/3]] = lambda_ucnuc_3_1_Y2o3_BLm2o3 lambda_dcdc_3_1_Y2o3_BLm2o3^*/M_S_3_1_Y2o3_BLm2o3^2",
+      "p6_longitudinal_vector_problem": false,
+      "p6_scalar_auxiliary_status": "longitudinal_vector_growth_absent",
+      "physical_bound_evaluable_now": false,
+      "missing_inputs_before_physical_bound": [
+        "numeric scalar/source masses or scan ranges",
+        "coupling flavor tensors lambda_{ab,R}",
+        "physical flavor rotations",
+        "operator basis and Fierz/chiral contractions",
+        "RG evolution",
+        "hadronic matrix elements",
+        "experimental proton lifetime limit for selected channel"
+      ]
+    }
+  ],
+  "summary": {
+    "p12_branch_choice": "scalar_source_chiral_pair_branch",
+    "other_required_future_branch": "completed_current_current_vector_branch",
+    "p11_p7_rows_remaining_scalar_source_debt": 18,
+    "p7_rows_converted_to_scalar_source_rows": 18,
+    "unique_scalar_source_sectors": 12,
+    "operator_status_counts": {
+      "B_and_L_conserving": 12,
+      "standard_BNV_seed": 4,
+      "BNV_with_sterile_neutrino": 2
+    },
+    "standard_bnv_seed_rows": 4,
+    "sterile_bnv_rows": 2,
+    "baryon_violating_or_sterile_bnv_rows": 6,
+    "physical_proton_bounds_evaluable_now": 0,
+    "all_scalar_source_masses_symbolic": true
+  },
+  "verification": {
+    "all_p11_scalar_source_debt_rows_accounted_for": true,
+    "every_scalar_row_has_mass_symbol": true,
+    "every_source_sector_has_positive_mass_condition": true,
+    "physical_proton_bounds_evaluable_now": 0,
+    "p12_scalar_source_layer_passes": true
+  },
+  "next_stage": {
+    "recommended": "P13_scalar_source_flavor_tensor_and_operator_basis",
+    "required_decision": "Choose scalar/source flavor tensors and a chiral/Fierz Wilson basis for the BNV rows, or return to the parallel current-vector branch before inserting proton limits."
+  }
+}

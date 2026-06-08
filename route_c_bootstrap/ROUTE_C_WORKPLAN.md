@@ -894,6 +894,260 @@ The comparison must include at least:
 SU(5), Pati-Salam, Spin(10), E6, superstring-derived completions.
 ```
 
+### P9. Spin(10)-locked action-completion ledger
+
+Status: done.
+
+Deliverables:
+
+```text
+code/spin10_action_completion_ledger.py
+output/spin10_action_completion_ledger.json
+output/spin10_action_completion_ledger.md
+```
+
+P9 stops broadening the comparison and locks the finite field-theory branch to
+the P8-leading `Spin(10)` option.  It supplies the first action-completion data
+requested by P4--P7:
+
+```text
+16 -> (4,2,1) + (bar4,1,2),
+```
+
+with a 16-state Pati-Salam/SM-face basis and sparse broken-generator maps.
+
+Current generated data:
+
+```text
+basis dimension = 16,
+broken generator sparse maps = 32,
+SU(4)_C leptoquark root maps = 6,
+SU(2)_R charged root maps = 2,
+Spin(10)/Pati-Salam (6,2,2) Clebsch maps = 24.
+```
+
+Verification:
+
+```text
+P4 broken transition pairs = 30,
+Spin(10) adjoint vector transition pairs generated = 22,
+non-adjoint P4 completion pairs = 8,
+generated pairs are subset of P4 broken pairs = true,
+P9 generator layer passes = true.
+```
+
+Boundary:
+
+P9 does not turn every P4 charge-bookkeeping transition into a `D5` gauge
+generator.  The 8 non-adjoint pairs remain possible scalar/source/auxiliary
+completion channels.  P9 also supplies Goldstone/Higgs completion formulae,
+mediator mass/coupling symbols, physical flavor rotation templates, and the
+proton-bound input interface, but it does not choose a Higgs potential,
+mediator spectrum, flavor fit, or numerical proton lifetime.
+
+Next:
+
+```text
+P10_choose_spin10_breaking_branch_and_mass_spectrum
+```
+
+Choose a concrete `Spin(10)` breaking order-parameter/source branch, diagonalize
+the broken-vector mass matrix, and replay P6/P7 with explicit masses,
+couplings, and flavor rotations.
+
+### P10. Spin(10) staged breaking mass-matrix ledger
+
+Status: done.
+
+Deliverables:
+
+```text
+code/spin10_breaking_mass_matrix.py
+output/spin10_breaking_mass_matrix.json
+output/spin10_breaking_mass_matrix.md
+```
+
+P10 chooses the conservative `staged_orthogonal_source_branch`.  It is not a
+full Higgs potential.  It is the first concrete source branch that promotes the
+P9 symbolic mass inputs to a diagonalizable broken-vector mass matrix while
+preserving the hypercharge zero mode.
+
+Chosen breaking chain:
+
+```text
+Spin(10) -> SU(4)_C x SU(2)_L x SU(2)_R
+SU(4)_C -> SU(3)_C x U(1)_{B-L}
+SU(2)_R -> U(1)_{T3R}
+U(1)_{T3R} x U(1)_{B-L} -> U(1)_Y
+```
+
+Mass blocks:
+
+```text
+M_(6,2,2)^2 = kappa_PS g_10^2 v_PS^2        dimension 24
+M_LQ^2      = (2/3) g_4^2 v_4^2             dimension 6
+M_WR^2      = g_R^2 v_R^2                   dimension 2
+M_neutral^2 = v_Y^2/4 [[g_R^2, -g_R g_BL],
+                       [-g_R g_BL, g_BL^2]] dimension 2
+```
+
+The `2/3` leptoquark coefficient follows from
+
+```text
+T_BL = sqrt(3/8) diag(1/3,1/3,1/3,-1),
+Delta T_BL^2 = (4/3)^2 (3/8) = 2/3.
+```
+
+Verification:
+
+```text
+active matrix dimension including hypercharge zero mode = 34,
+positive broken eigenvalue count = 33,
+zero eigenvalue count = 1,
+all P9 generator maps assigned to mass blocks = true,
+P10 mass matrix layer passes = true.
+```
+
+Boundary:
+
+P10 does not choose numerical scales, threshold spectrum, physical flavor
+rotations, RG factors, hadronic matrix elements, current proton lifetime
+limits, or the scalar/source branch for the 8 non-adjoint P4 pairs.
+
+Next:
+
+```text
+P11_replay_P6_P7_with_staged_spin10_masses
+```
+
+Choose symbolic or numerical ranges for `v_PS`, `v_4`, `v_R`, `v_Y`, and the
+couplings, then replay the P6/P7 matching gates with these explicit mass
+blocks.
+
+### P11. P6/P7 replay with staged Spin(10) mass blocks
+
+Status: done.
+
+Deliverables:
+
+```text
+code/spin10_mass_replay_matching_gate.py
+output/spin10_mass_replay_matching_gate.json
+output/spin10_mass_replay_matching_gate.md
+```
+
+P11 attaches the P10 staged mass blocks to the matching gates:
+
+```text
+M_(6,2,2) -> sqrt(kappa_PS) g_10 v_PS
+M_LQ      -> sqrt(2/3) g_4 v_4
+M_WR      -> g_R v_R
+M_Zprime  -> 0.5 v_Y sqrt(g_R^2+g_BL^2)
+```
+
+It then checks whether the 18 P7 chiral-pair pole rows can legitimately use
+those adjoint-current vector mass blocks.
+
+Verification:
+
+```text
+current vector mass blocks available = 4,
+P7 rows replayed = 18,
+P7 rows with candidate adjoint mass blocks = 0,
+P7 rows remaining scalar/source mass debt = 18,
+baryon-violating or sterile-BNV rows = 6,
+physical proton bounds evaluable now = 0.
+```
+
+Boundary:
+
+P11 improves the adjoint current-vector side of the matching problem, but it
+does not turn the P7 chiral-pair pole ledger into adjoint-vector exchange.  The
+P7 rows remain scalar/source mass debt unless a later branch supplies the
+appropriate scalar/source masses and Wilson-basis map.
+
+Next:
+
+```text
+P12_choose_vector_current_or_scalar_source_proton_branch
+```
+
+Decide whether proton matching proceeds through completed `Spin(10)`
+current-vector exchange or through scalar/source chiral-pair poles.  The two
+branches require different Wilson-basis maps.
+
+### P12-S. Scalar/source chiral-pair branch
+
+Status: done for the first scalar/source bookkeeping layer.
+
+Deliverables:
+
+```text
+code/scalar_source_chiral_pair_branch.py
+output/scalar_source_chiral_pair_branch.json
+output/scalar_source_chiral_pair_branch.md
+```
+
+P12 records both required post-P11 directions:
+
+```text
+Branch V: completed Spin(10) current-current vector exchange using P10
+          adjoint masses and an explicit current Wilson basis.
+Branch S: scalar/source chiral-pair poles using the P7 all-incoming
+          chiral-pair ledger and scalar/source mass denominators.
+```
+
+The branch activated first is Branch S, because P11 showed that all 18 P7
+chiral-pair rows remain scalar/source mass debt rather than adjoint-vector
+matches.
+
+Scalar/source ansatz:
+
+```text
+L ⊃ lambda_{ab,R} psi_a psi_b S_R + h.c. + M_{S_R}^2 |S_R|^2
+C6(12|34;R)=lambda_{12,R} lambda^*_{34,R}/M_{S_R}^2
+M_{S_R}^2 > 0
+```
+
+Generated summary:
+
+```text
+P7 rows converted to scalar/source rows = 18,
+unique scalar/source sectors = 12,
+B and L conserving rows = 12,
+standard BNV seed rows = 4,
+BNV-with-sterile-neutrino rows = 2,
+baryon-violating or sterile-BNV rows = 6,
+physical proton bounds evaluable now = 0.
+```
+
+Verification:
+
+```text
+all P11 scalar/source debt rows accounted for = true,
+every scalar row has a mass symbol = true,
+every source sector has a positive mass condition = true,
+P12 scalar/source layer passes = true.
+```
+
+Boundary:
+
+P12-S removes the ambiguity that the P7 chiral-pair rows were secretly adjoint
+vector rows.  It does not compute proton lifetimes.  Numerical proton limits
+still require scalar/source flavor tensors, a chiral/Fierz Wilson basis,
+physical flavor rotations, RG evolution, hadronic matrix elements, and
+experimental channel limits.  Branch V remains a required future attempt and
+must not be discarded.
+
+Next:
+
+```text
+P13_scalar_source_flavor_tensor_and_operator_basis
+```
+
+Choose scalar/source flavor tensors and an operator basis for the six BNV or
+sterile-BNV rows, or return to Branch V before inserting proton limits.
+
 ## First Decision Point
 
 After P2-P4, decide whether the first mediator is modeled as:
@@ -903,3 +1157,9 @@ After P2-P4, decide whether the first mediator is modeled as:
 
 The safer path is option 1 first.  It avoids assuming the answer before the
 bootstrap filter has done any work.
+
+Status after P12-S: the first broad comparison pass is complete, P9 locked the
+finite field-theory branch to `Spin(10)`, P10/P11 supplied staged adjoint-vector
+mass gates, and P12-S activated the scalar/source chiral-pair interpretation for
+the P7 rows.  This is still a conditional branch, not a completed GUT proof or a
+proton-lifetime calculation.
