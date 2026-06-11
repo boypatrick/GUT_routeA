@@ -287,7 +287,119 @@ proton bounds remain unevaluable because scalar masses, flavor tensors, Fierz
 and chiral contractions, RG factors, hadronic matrix elements, and experimental
 channel limits are still missing.
 
-The P1--P12 derivations are also consolidated in a standalone TeX ledger:
+P13-S chooses the first symbolic scalar/source flavor-tensor and chiral Wilson
+basis:
+
+```text
+code/scalar_source_flavor_wilson_basis.py
+output/scalar_source_flavor_wilson_basis.json
+output/scalar_source_flavor_wilson_basis.md
+```
+
+It maps the six BNV or sterile-BNV rows to four canonical all-left Weyl
+operator classes:
+
+```text
+O_QQQL_S, O_QQQL_T, O_UUDE, O_UDDN.
+```
+
+The P13-S ledger introduces 11 symbolic flavor tensors, marks 4 rows as direct
+source-channel rows, marks 2 rows as needing chiral/color Fierz recoupling, and
+marks 1 direct `O_UDDN` row as needing the explicit antisymmetric projection on
+the two `d^c` family indices.  Branch V remains open and physical proton bounds
+are still not evaluable.
+
+P14-V returns to the parallel current-current vector branch before proton
+limits:
+
+```text
+code/spin10_vector_branch_matching_gate.py
+output/spin10_vector_branch_matching_gate.json
+output/spin10_vector_branch_matching_gate.md
+```
+
+It builds the vector-current matching gate
+
+```text
+J_X^mu = sum_a c_a psi_target(a)^dagger bar_sigma^mu psi_source(a)
+L_eff[X] = - g_X^2 J_X^mu J_X,mu^dagger / M_X^2
+```
+
+from the P9 broken-generator maps and P10 staged mass denominators.  The ledger
+contains 32 broken vector maps, 80 current transitions, and 72 current-pair
+rows.  It does not reuse the 18 P7 scalar/source chiral-pair rows as adjoint
+vectors, and physical proton bounds remain unevaluable until the vector-current
+rows are recoupled to an all-left basis with physical flavor rotations, RG
+running, hadronic matrix elements, and channel limits.
+
+P15-V fixes the first current-current to all-left Fierz/crossing convention for
+Branch V:
+
+```text
+code/spin10_vector_all_left_fierz_gate.py
+output/spin10_vector_all_left_fierz_gate.json
+output/spin10_vector_all_left_fierz_gate.md
+```
+
+It uses
+
+```text
+(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi)
+  = 2 (chi^dagger eta^dagger)(psi xi)
+```
+
+and maps the P14 rows to the crossed skeleton
+
+```text
+(psi_s1 psi_t2)(bar(psi_t1) bar(psi_s2)).
+```
+
+All 72 P14 current-pair rows are mapped and charge-audited, but under the
+current sparse-map pairing all 72 are `B_and_L_conserving_crossed_skeleton`
+rows.  Thus Branch V is now in a fixed crossed all-left bookkeeping basis, but
+it still has zero canonical BNV proton rows and zero physical proton bounds
+evaluable.  The next vector task is to assemble physical hermitian vector
+multiplets and cross-root Clebsch phases, or return to the scalar/source
+recoupling path.
+
+P16-V assembles charge-conjugate root maps into symbolic physical Hermitian
+vector multiplets:
+
+```text
+code/spin10_vector_physical_multiplet_assembly.py
+output/spin10_vector_physical_multiplet_assembly.json
+output/spin10_vector_physical_multiplet_assembly.md
+```
+
+It replaces the P15 same-map product by the cross-root physical product
+
+```text
+J_q^mu J_-q,mu,
+```
+
+with an undetermined Clebsch/phase convention.  After the same all-left Fierz
+map, the generated ledger reports:
+
+```text
+P15 same-map canonical BNV rows = 0,
+physical cross-root rows = 448,
+Pati-Salam SU(4)_C leptoquark rows = 144,
+Spin(10)/Pati-Salam off-face rows = 288,
+broken SU(2)_R charged-current rows = 16,
+canonical vector BNV candidates = 144,
+O_V_QQ_DbarNbar candidates = 72,
+O_V_QQ_UbarEbar candidates = 72,
+physical proton bounds evaluable now = 0.
+```
+
+The canonical vector BNV candidates all come from the off-face
+`M_(6,2,2)` block.  Pati-Salam leptoquark and `W_R` physical pairs remain
+`B,L` conserving in this bookkeeping gate.  P16 is still not a proton-lifetime
+calculation: cross-root Clebsch phases, Hermitian generator normalization,
+physical flavor rotations, RG factors, hadronic matrix elements, and channel
+limits remain P17+ data.  Branch S remains available.
+
+The P1--P16 derivations are also consolidated in a standalone TeX ledger:
 
 ```text
 tex/route_c_derivation_ledger.tex

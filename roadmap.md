@@ -18324,3 +18324,561 @@ next:
   - Implement P13-S: choose scalar/source flavor tensors and a chiral/Fierz
     Wilson basis for the six BNV or sterile-BNV rows; alternatively return to
     Branch V before inserting numerical proton limits.
+
+## 2026-06-08 Taipei Route-C P13-S scalar/source flavor tensors and Wilson basis
+
+status:
+  Implemented P13-S for the Route-C bootstrap workspace.  The scalar/source
+  branch now has a symbolic flavor-tensor basis and a chiral all-left Wilson
+  basis for the six P12-S baryon-violating or sterile-BNV rows.  Branch V is
+  still explicitly retained as a required future attempt.
+
+files changed:
+  - `route_c_bootstrap/code/scalar_source_flavor_wilson_basis.py`
+  - `route_c_bootstrap/output/scalar_source_flavor_wilson_basis.json`
+  - `route_c_bootstrap/output/scalar_source_flavor_wilson_basis.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Chose four canonical all-left chiral Wilson basis classes:
+      `O_QQQL_S`,
+      `O_QQQL_T`,
+      `O_UUDE`,
+      `O_UDDN`.
+  - Introduced generic symbolic scalar/source flavor tensors
+      `Lambda_{ab,R}^{ij}`
+    with pair-exchange symmetry fixed by the source channel:
+      `QQ` singlet source symmetric,
+      `QQ` triplet source antisymmetric,
+      `u^c u^c` antisymmetric,
+      `d^c d^c` antisymmetric,
+      distinct-field pairs general `3x3`.
+  - Mapped the two `QQQL` rows to `O_QQQL_S` and `O_QQQL_T`.
+  - Mapped the two `u^c u^c d^c e^c` rows to `O_UUDE`.
+  - Mapped the two `u^c d^c d^c nu^c` rows to `O_UDDN`.
+  - Marked two rows as requiring chiral/color Fierz recoupling before
+    numerical Wilson coefficients can be inserted.
+  - Marked one direct `O_UDDN` row as requiring the explicit antisymmetric
+    projection on the two `d^c` family indices.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/scalar_source_flavor_wilson_basis.py`.
+  - Generated:
+      BNV or sterile-BNV rows processed = 6,
+      canonical Wilson basis count = 4,
+      direct source-channel rows = 4,
+      Fierz/color recoupling required rows = 2,
+      canonical family projection required rows = 1,
+      flavor tensors introduced = 11,
+      independent complex vertex components = 78,
+      physical proton bounds evaluable now = 0.
+  - Pass flags:
+      all P12 BNV rows mapped = true,
+      every row has a basis id = true,
+      every row has left and right flavor tensors = true,
+      Branch V retained = true,
+      P13 scalar/source basis layer passes = true.
+
+boundary:
+  P13-S chooses symbolic flavor tensors and the chiral/Fierz Wilson-basis
+  bookkeeping layer only.  It does not choose numerical couplings, physical
+  flavor rotations, RG factors, hadronic matrix elements, experimental proton
+  lifetime limits, or the still-open Branch V current-current vector branch.
+
+next:
+  - Implement P14-S: compute the two non-direct scalar/source chiral/color
+    Fierz recoupling matrices and the direct `O_UDDN` antisymmetric family
+    projection, or return to Branch V before inserting numerical proton
+    limits.
+
+## 2026-06-11 Taipei Route-C P14-V vector-branch matching gate before proton limits
+
+status:
+  Returned to Branch V before inserting proton limits.  Implemented a
+  current-current Spin(10) vector matching gate from the P9 broken-generator
+  maps and P10 staged vector mass denominators, while preserving the P11 result
+  that the P7 chiral-pair rows are scalar/source mass debt rather than adjoint
+  vector exchange rows.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_vector_branch_matching_gate.py`
+  - `route_c_bootstrap/output/spin10_vector_branch_matching_gate.json`
+  - `route_c_bootstrap/output/spin10_vector_branch_matching_gate.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Defined the vector-current matching template:
+      `J_X^mu = sum_a c_a psi_target(a)^dagger bar_sigma^mu psi_source(a)`.
+  - Defined the tree-level Branch-V gate:
+      `L_eff[X] = - g_X^2 J_X^mu J_X,mu^dagger / M_X^2`.
+  - Attached P10 staged mass denominators:
+      `M_(6,2,2) = sqrt(kappa_PS) g_10 v_PS`,
+      `M_LQ = sqrt(2/3) g_4 v_4`,
+      `M_WR = g_R v_R`,
+      `M_Zprime = 0.5 v_Y sqrt(g_R^2+g_BL^2)`.
+  - Generated vector current-pair rows directly from P9 broken-generator maps,
+    rather than reusing P7 scalar/source poles.
+  - Kept P13-S as a parallel scalar/source Wilson-basis branch.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_vector_branch_matching_gate.py`.
+  - Generated:
+      broken vector maps = 32,
+      current transition entries = 80,
+      current pair rows = 72,
+      Pati-Salam SU(4)_C leptoquark pair rows = 36,
+      Spin(10)/Pati-Salam off-face pair rows = 24,
+      broken SU(2)_R charged-current pair rows = 12,
+      physical proton bounds evaluable now = 0.
+  - Gate counts:
+      Pati-Salam leptoquark mixed pairs requiring crossing/Fierz = 24,
+      Pati-Salam leptoquark same-sector noncanonical pairs = 12,
+      off-face diquark-like pairs requiring crossing/Fierz = 12,
+      off-face mixed pairs requiring crossing/Fierz = 12,
+      SU(2)_R charged-current non-proton-seed rows = 12.
+  - Preserved P11 boundary:
+      P7 rows with candidate adjoint mass blocks = 0,
+      P7 rows remaining scalar/source mass debt = 18.
+  - Pass flag:
+      Branch V matching gate passes = true.
+
+boundary:
+  P14-V is a matching-gate layer, not a proton-lifetime calculation.  It gives
+  explicit `J_X J_X^\dagger/M_X^2` rows for Branch V, but physical proton
+  limits remain blocked by current-current to all-left Fierz recoupling,
+  physical flavor rotations, numerical masses/couplings, RG running, hadronic
+  matrix elements, and experimental channel limits.
+
+next:
+  - Implement `P15_V_current_to_all_left_fierz_and_flavor_gate`, or return to
+    the P13-S scalar/source recoupling matrix path.  Do not insert numerical
+    proton limits until one branch has flavor, RG, and hadronic inputs.
+
+## 2026-06-11 Taipei Route-C P15-V vector current to all-left Fierz/flavor gate
+
+status:
+  Implemented P15-V for Branch V.  The vector-current rows from P14-V are now
+  mapped through a fixed two-component Weyl Fierz/crossing convention into a
+  crossed all-left bookkeeping skeleton.  This stage does not produce proton
+  lifetimes and does not discard the P13-S scalar/source branch.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_vector_all_left_fierz_gate.py`
+  - `route_c_bootstrap/output/spin10_vector_all_left_fierz_gate.json`
+  - `route_c_bootstrap/output/spin10_vector_all_left_fierz_gate.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Fixed the input current product:
+      `(psi_t1^dagger bar_sigma^mu psi_s1)
+       (psi_s2^dagger bar_sigma_mu psi_t2)`.
+  - Fixed the two-component Fierz identity:
+      `(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi)
+       = 2 (chi^dagger eta^dagger)(psi xi)`.
+  - Chose the crossed all-left skeleton:
+      `(psi_s1 psi_t2)(bar(psi_t1) bar(psi_s2))`.
+  - Assigned the symbolic vector coefficient prefactor:
+      `-2 g_X^2 c1 c2^*/M_X^2`.
+  - Audited the crossed skeleton's `B`, `L`, and `B-L` charges for every
+    Branch-V row.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_vector_all_left_fierz_gate.py`.
+  - Generated:
+      P14 current-pair rows consumed = 72,
+      P15 rows generated = 72,
+      all-left status counts = `{B_and_L_conserving_crossed_skeleton: 72}`,
+      canonical BNV basis counts = `{none: 72}`,
+      canonical BNV rows evaluable now = 0,
+      physical proton bounds evaluable now = 0,
+      all rows have crossed fields = true,
+      all rows have charge audit = true,
+      Branch V all-left gate passes = true.
+
+boundary:
+  P15-V gives Branch V a fixed crossed all-left bookkeeping convention.  Under
+  the current sparse-map pairing, it does not generate a canonical BNV proton
+  operator.  This means proton limits remain blocked; it is not a proton-decay
+  exclusion or proof.  The vector branch still needs physical Hermitian vector
+  multiplet assembly, cross-root Clebsch phases, external-state crossing
+  conventions, projection to canonical BNV Wilson basis if available, physical
+  flavor rotations, RG running, hadronic matrix elements, and experimental
+  channel limits.  Branch S / P13-S remains a separate scalar/source Wilson
+  basis branch and must not be discarded.
+
+next:
+  - Implement `P16_choose_vector_physical_multiplet_or_return_to_scalar_source`.
+    Either assemble physical Hermitian vector multiplets and cross-root Clebsch
+    phases to search for canonical BNV vector operators, or return to the
+    P13-S scalar/source recoupling path.  Do not insert proton limits yet.
+
+## 2026-06-11 Taipei Route-C P16-V physical Hermitian vector multiplet assembly
+
+status:
+  Implemented P16-V for Branch V.  The P15 same-map current-current gate found
+  no canonical vector BNV rows; P16-V now assembles charge-conjugate root maps
+  into symbolic physical Hermitian vector multiplets and audits the cross-root
+  products `J_q^mu J_-q,mu`.  This produces canonical vector BNV skeletons, but
+  does not yet produce proton lifetime bounds.
+
+files changed:
+  - `route_c_bootstrap/code/spin10_vector_physical_multiplet_assembly.py`
+  - `route_c_bootstrap/output/spin10_vector_physical_multiplet_assembly.json`
+  - `route_c_bootstrap/output/spin10_vector_physical_multiplet_assembly.md`
+  - `route_c_bootstrap/tex/route_c_derivation_ledger.tex`
+  - `route_c_bootstrap/README.md`
+  - `route_c_bootstrap/output/README.md`
+  - `route_c_bootstrap/ROUTE_C_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Replaced the P15 same-map product by the physical cross-root vector product:
+      `J_q^mu J_-q,mu`.
+  - Kept the relative physical Clebsch phase symbolic:
+      `xi_{root,minus_root}`.
+  - Used the same two-component all-left Fierz convention as P15:
+      `C_phys = -2 g_X^2 xi c_q c_-q / M_X^2`.
+  - Added a canonical vector BNV basis detector for:
+      `O_V_QQ_UbarEbar ~ Q Q bar(u^c) bar(e^c)`,
+      `O_V_QQ_DbarNbar ~ Q Q bar(d^c) bar(nu^c)`.
+  - Kept Branch S / P13-S as a parallel scalar/source Wilson-basis branch.
+
+verification:
+  - Ran `python3 route_c_bootstrap/code/spin10_vector_physical_multiplet_assembly.py`.
+  - Generated:
+      P15 same-map canonical BNV rows = 0,
+      physical cross-root rows = 448,
+      Pati-Salam SU(4)_C leptoquark rows = 144,
+      Spin(10)/Pati-Salam off-face rows = 288,
+      broken SU(2)_R charged-current rows = 16,
+      B,L conserving physical pairs = 160,
+      B-L preserving BNV noncanonical pairs = 144,
+      canonical vector BNV basis candidates = 144,
+      `O_V_QQ_DbarNbar` candidates = 72,
+      `O_V_QQ_UbarEbar` candidates = 72,
+      physical proton bounds evaluable now = 0,
+      Branch V physical multiplet gate passes = true.
+  - Checked family/mass origin:
+      `M_LQ` physical pairs are B,L conserving,
+      `M_WR` physical pairs are B,L conserving,
+      all canonical vector BNV candidates come from the off-face `M_(6,2,2)`
+      Hermitian cross-root block.
+
+boundary:
+  P16-V changes the Branch-V readiness status but remains pre-flavor,
+  pre-RG, and pre-hadronic.  Proton bounds cannot be inserted yet.  The missing
+  vector-side data are physical Hermitian generator normalization, cross-root
+  Clebsch phases, color/weak projection to the canonical vector BNV basis,
+  physical flavor rotations, numerical masses/couplings, RG running, hadronic
+  matrix elements, and experimental channel limits.  Branch S remains active.
+
+next:
+  - Implement `P17_vector_clebsch_projection_and_flavor_interface`.
+    Fix a Hermitian generator normalization and cross-root Clebsch convention
+    for the 144 canonical vector BNV candidates, then export the flavor-rotation
+    interface.  Do not insert proton limits until RG and hadronic inputs are
+    supplied.
+
+## 2026-06-11 Taipei Route-D workspace scaffold
+
+status:
+  Opened a new independent Route-D workspace.  Route D is currently unscoped
+  and should not be cited as support for the Route-A paper, Route-B hidden-zeta
+  mechanism, or Route-C amplitude-bootstrap audit until D0--D2 are completed.
+
+files changed:
+  - `route_d/README.md`
+  - `route_d/ROUTE_D_WORKPLAN.md`
+  - `route_d/code/README.md`
+  - `route_d/output/README.md`
+  - `route_d/tex/README.md`
+  - `roadmap.md`
+
+content:
+  - Added a Route-D boundary statement and promotion criteria.
+  - Added a workplan with D0--D4 milestones:
+      D0 scope/boundary,
+      D1 first object and assumptions,
+      D2 first nontrivial derivation or refutation,
+      D3 reproducibility artifact,
+      D4 promote, keep independent, or retire.
+  - Added placeholder README files for code, output, and TeX notes.
+
+next:
+  - Choose the Route-D scope before writing derivations.  Candidate scopes
+    include entanglement/operator-algebra interpretation,
+    energy-spectrum/PSLT formalization, topology/geometry refinement, or an
+    entirely separate branch.
+
+## 2026-06-11 Taipei Route-D string-constrained lift scoping
+
+status:
+  Scoped Route D as a string-derived or string-constrained lift of the Route-A
+  framework.  The goal is not to make the GUT unconditional, but to test whether
+  standard string structures can explain or constrain the current conditional
+  inputs: the `Spin(10)` local origin, the `O(2)` family carrier, the
+  Majorana-only selection rule, the hidden phase/radial sector for `zeta`, and
+  possible modular flavor data.
+
+files changed:
+  - `route_d/README.md`
+  - `route_d/ROUTE_D_WORKPLAN.md`
+  - `route_d/STRING_GRAFT_ASSESSMENT.md`
+  - `roadmap.md`
+
+assessment:
+  - High-value grafts:
+      F-theory local `D5 -> E6` enhancement for the `16` matter curve,
+      matter-curve index `K_{P1}^{1/2} tensor O(3) = O(2)`,
+      E3-instanton origin `zeta ~ A exp(2 pi i tau_Gamma)` with
+      Green-Schwarz/charged-zero-mode Majorana-only selection.
+  - Medium-value comparison:
+      heterotic standard embedding and `SU(4)` bundle branch as a separate
+      string comparison, not automatically the same compactification as the
+      F-theory picture.
+  - Speculative but testable:
+      modular/flavor identification via benchmark elliptic data `(I,J)` and
+      `j(E_M)`.
+
+boundary:
+  Route D must not claim a unique string vacuum, a ten-digit prediction of
+  `zeta`, a completed full phenomenology closure, or a PSLT-only derivation.
+  The safe paper use is currently an Outlook paragraph or, after D1-F and
+  D2-E3 checks, a short string-embedding appendix.
+
+next:
+  - D1-F: write the F-theory local placement audit:
+      `78 = 45_0 + 1_0 + 16_-3 + bar16_+3`,
+      `K_{P1}^{1/2} tensor O(3) = O(2)`,
+      `h0(P1,O(2))=3`, `h1=0`.
+  - D2-E3: write the E3-instanton `zeta K_tr` audit with exact caveats:
+      zero-mode selection required, no ten-digit `zeta` prediction, and
+      family-blind instanton data only imply the invariant contact direction
+      under explicit equivariance/locality assumptions.
+
+## 2026-06-11 Taipei Route-D D1-F local F-theory placement audit
+
+status:
+  Completed the first Route-D execution step: a local F-theory placement audit
+  for the Route-A skeleton.  The audit supports a conservative appendix-level
+  statement that the `Spin(10):16` object and the `O(2)` family carrier have a
+  standard local F-theory interpretation, while preserving the global
+  compactification and hypercharge-flux boundary.
+
+files changed:
+  - `route_d/README.md`
+  - `route_d/ROUTE_D_WORKPLAN.md`
+  - `route_d/code/verify_d1_f_theory_local_placement.py`
+  - `route_d/output/d1_f_theory_local_placement.json`
+  - `route_d/output/d1_f_theory_local_placement.md`
+  - `route_d/tex/d1_f_theory_local_placement.tex`
+  - `route_d/tex/d1_f_theory_local_placement.pdf`
+  - `roadmap.md`
+
+verified:
+  - Katz-Vafa-style local branching:
+      `E6 -> SO(10) x U(1)`,
+      `78 = 45_0 + 1_0 + 16_-3 + bar16_+3`,
+      dimension check `45+1+16+16=78`.
+  - Matter-curve carrier arithmetic:
+      `Sigma=P1`,
+      `K_{P1}^{1/2}=O(-1)`,
+      `L_flux=O(3)`,
+      `K_{P1}^{1/2} tensor L_flux=O(2)`,
+      `h0(P1,O(2))=3`, `h1(P1,O(2))=0`.
+  - The standalone note compiles with `pdflatex`.
+
+boundary:
+  This is a local placement and index audit only.  It does not construct a
+  global F-theory compactification, does not prove net chirality or absence of
+  exotics beyond the selected flux datum, and does not verify the global
+  topological condition required for massless hypercharge flux.
+
+next:
+  - D2-E3: audit the E3-instanton interpretation of `zeta K_tr`, especially
+    the charged-zero-mode/Green-Schwarz Majorana-only selection rule and the
+    caveat that no ten-digit prediction of `zeta` follows from this route.
+
+## 2026-06-11 Taipei Route-D D2-E3 E3-instanton zeta audit
+
+status:
+  Completed the second Route-D execution step: a conditional E3-instanton and
+  Green-Schwarz selection-rule audit for the Route-B coefficient
+  `zeta K_tr`.  The result supports a conservative string-origin
+  interpretation of the hidden phase/radial sector and Majorana-only selection
+  rule, while explicitly preserving the zero-mode/global-compactification
+  caveats.
+
+files changed:
+  - `route_d/README.md`
+  - `route_d/ROUTE_D_WORKPLAN.md`
+  - `route_d/code/verify_d2_e3_instanton_zeta.py`
+  - `route_d/output/d2_e3_instanton_zeta.json`
+  - `route_d/output/d2_e3_instanton_zeta.md`
+  - `route_d/tex/d2_e3_instanton_zeta_audit.tex`
+  - `route_d/tex/d2_e3_instanton_zeta_audit.pdf`
+  - `roadmap.md`
+
+verified:
+  - Benchmark coefficient:
+      `zeta = 0.1076472949 + 0.0736514853 i`,
+      `|zeta| = 0.13043190325293763`,
+      `arg(zeta) = 0.600038020318215`.
+  - Unit-prefactor instanton interpretation:
+      `S_eff = -log|zeta| = 2.0369040025655094`.
+  - In the convention `zeta = A exp(2 pi i T_Gamma)`, unit prefactor gives
+      `Im(T_Gamma) = 0.3241833406119675`.
+  - Toy GS charge bookkeeping:
+      if `q(N)=+1`, then `q(NN)=+2`, and an instanton factor with charge `-2`
+      makes `exp(-S+i phi) N N` neutral.
+  - Correction-size warning:
+      `|zeta|^2 = 0.01701248138618368`,
+      `|zeta|^2 / Delta_s = 530.1823731560442` for
+      `Delta_s = 3.208798e-5`, so this route cannot justify a ten-digit
+      prediction without a concrete compactification and correction audit.
+  - The standalone note compiles with `pdflatex`.
+
+boundary:
+  D2-E3 does not construct an E3 divisor, does not count universal or charged
+  zero modes in a global compactification, does not prove the absence of
+  unwanted instanton-generated operators, and does not predict the benchmark
+  `zeta` to high precision.  It supports only the conditional statement that
+  `zeta K_tr` has a standard string-instanton interpretation under the stated
+  zero-mode and locality/equivariance assumptions.
+
+next:
+  - D5-P promotion decision: decide whether D1-F + D2-E3 should become
+    (i) an Outlook paragraph, (ii) a short appendix in the Route-A manuscript,
+    or (iii) a separate Route-D companion note.
+  - If promoting beyond outlook, draft a compact appendix that includes only
+    the local F-theory branching/index result and the conditional E3/GS
+    instanton interpretation, with all global caveats retained.
+
+## 2026-06-11 Taipei Route-D D5-P promotion decision
+
+status:
+  Decided and implemented promotion path for Route D.  D1-F and D2-E3 are now
+  included in the Route-A PRD manuscript as a short optional appendix, not as
+  part of the theorem core.
+
+decision:
+  Promote D1-F + D2-E3 to a short appendix rather than only an Outlook
+  paragraph.  The appendix is titled "Optional Route-D String-Constrained
+  Placement" and keeps the local/global boundary explicit.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `paper/gut_framework.bbl`
+  - `paper/refs.bib`
+  - `route_d/ROUTE_D_WORKPLAN.md`
+  - `roadmap.md`
+
+content:
+  - Added a Route-D appendix with:
+      local `D5 -> E6` F-theory placement,
+      `78 = 45_0 + 1_0 + 16_-3 + bar16_+3`,
+      `K_{P1}^{1/2} tensor O(3) = O(2)`,
+      `h0(P1,O(2))=3`, `h1=0`,
+      E3-instanton interpretation
+      `zeta_Gamma = A_Gamma exp(2 pi i T_Gamma)`,
+      GS/Stueckelberg toy charge ledger for Majorana-only insertion,
+      and the precision caveat from `|zeta|^2 / Delta_s`.
+  - Added string/F-theory/instanton references to `paper/refs.bib`.
+  - Updated the minimal reproducibility manifest to include the two Route-D
+    verification scripts and outputs.
+  - Updated the status ledger to classify Route D as optional UV
+    interpretation with caveats.
+
+verified:
+  - `python3 route_d/code/verify_d1_f_theory_local_placement.py`
+  - `python3 route_d/code/verify_d2_e3_instanton_zeta.py`
+  - Main manuscript rebuild:
+      `pdflatex`,
+      `bibtex`,
+      `pdflatex`,
+      `pdflatex`
+    in `paper/`.
+  - Rendered pages 21--26 of `paper/gut_framework.pdf` with `pdftoppm` and
+    visually spot-checked the Route-D appendix, Route-B table, and references.
+
+boundary:
+  The appendix does not claim a global F-theory compactification, a verified
+  massless-hypercharge flux, a counted E3 charged-zero-mode spectrum, absence
+  of all unwanted instanton operators, or a ten-digit string prediction of
+  `zeta`.  It is a conservative string-constrained interpretation only.
+
+next:
+  - Optional cleanup before commit: decide whether to keep the Route-D appendix
+    in the main manuscript or move it to a companion note if the paper needs to
+    be shorter.
+  - Do not expand Route D further until a concrete global compactification or a
+    modular/flavor audit is supplied.
+
+## 2026-06-12 Taipei Route-A external-review polish pass
+
+status:
+  Accepted the low-risk 2026-06-11/12 external-review suggestions and applied
+  them as a manuscript polish pass.  This pass strengthens notation hygiene,
+  theorem cross-references, and claim-boundary wording without changing the
+  Route-A theorem core.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+content:
+  - Renamed the Figure 2 local family-curve coordinate from `\zeta` to `\xi`,
+    avoiding conflict with the Majorana contact coefficient `\zeta`.
+  - Added a conditional tangent-bundle remark:
+    `T_{\CP^1} \simeq \mathcal O(2)` and
+    `H^0(\CP^1,T_{\CP^1}) \simeq \mathfrak{sl}_2(\mathbb C)`, while
+    explicitly retaining `C=\CP^1` and `L_R\simeq\mathcal O(2)` as branch
+    inputs.
+  - Labeled the transvectant-contact lemma and replaced the stale
+    `Lemma 4.1` Route-B cross-reference with `Lemma~\ref{lem:ktr-contact}`.
+  - Added an `SL(2)` covariance caveat: the family-geometry language is
+    spurionic/coordinate covariance, not an exact fundamental global symmetry.
+  - Updated the minimal reproducibility manifest to name the exact Route-B
+    algebraic verification output:
+    `output/hidden_zeta_origin/routeB_hidden_zeta_verification.json`.
+  - Added float-placement control around Figure 3 so the Veronese/contact
+    figure no longer interrupts the `K_{\rm tr}` uniqueness lemma.
+
+verified:
+  - Rebuilt `paper/gut_framework.pdf` with `pdflatex -interaction=nonstopmode`.
+  - Final LaTeX log has no `LaTeX Error`, no undefined references, and no
+    overfull boxes; remaining warnings are a benign `nameref` warning and two
+    underfull-box notices.
+  - Rendered pages 7--10 of the rebuilt PDF with `pdftoppm` and visually
+    spot-checked the tangent-bundle remark, Figure 3 placement, the
+    `K_{\rm tr}` lemma, and the new `SL(2)` caveat.
+  - Text search found no remaining stale `Lemma 4.1` reference and no remaining
+    Figure 2 `\zeta` coordinate labels.
+
+boundary:
+  This polish does not promote Route B or Route D into the theorem core and
+  does not add full flavor, proton-decay, threshold, or global string
+  compactification claims.  It only sharpens the Route-A manuscript and its
+  optional-extension caveats.
+
+next:
+  - Optional final rhetoric pass: decide whether to rename Proposition III.1
+    as an "Observation" or "Standard minimality lemma" if an even softer
+    comparison with `SU(5)`, Pati-Salam, and `E_6` is desired.
+  - The next substantive scientific milestone remains a minimal benchmark-card
+    or companion-audit package, not another expansion of Route D without new
+    global compactification data.

@@ -1,0 +1,18 @@
+{
+  "e6_adjoint_dimension_sum": 78,
+  "e6_dimension_check_pass": true,
+  "e6_to_so10_u1_branching": {
+    "16_-3": 16,
+    "1_0": 1,
+    "45_0": 45,
+    "bar16_+3": 16
+  },
+  "effective_carrier": "O(2)",
+  "flux_degree": 3,
+  "global_f_theory_claim": "not_checked",
+  "h0_P1_effective_carrier": 3,
+  "h1_P1_effective_carrier": 0,
+  "hypercharge_flux_masslessness": "conditional_global_topology_required",
+  "p1_spin_half_degree": -1,
+  "three_family_index_check_pass": true
+}

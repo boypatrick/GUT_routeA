@@ -1,0 +1,2519 @@
+{
+  "boundary": "P14-V returns to Branch V and builds a current-current vector matching gate before proton limits.  It does not reuse the P7 scalar/source chiral-pair poles, and it does not compute physical proton lifetimes.",
+  "current_pair_rows": [
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_r_u) (L_d^dagger bar_sigma_mu Q_r_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 0,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_d",
+        "target": "L_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_r_u) (u^c_r^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 1,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_r"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_r_u) (d^c_r^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 2,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_r"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_r_d) (u^c_r^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 3,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_r"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_r_d) (d^c_r^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 4,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_r_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_r"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (u^c_r^dagger bar_sigma_mu nu^c) (d^c_r^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 5,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_r"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_r"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_r_u^dagger bar_sigma_mu L_u) (Q_r_d^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 6,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_r_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_r_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_r_u^dagger bar_sigma_mu L_u) (nu^c^dagger bar_sigma_mu u^c_r)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 7,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_r_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_r",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_r_u^dagger bar_sigma_mu L_u) (e^c^dagger bar_sigma_mu d^c_r)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 8,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_r_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_r",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_r_d^dagger bar_sigma_mu L_d) (nu^c^dagger bar_sigma_mu u^c_r)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 9,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_r_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_r",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_r_d^dagger bar_sigma_mu L_d) (e^c^dagger bar_sigma_mu d^c_r)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 10,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_r_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_r",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (nu^c^dagger bar_sigma_mu u^c_r) (e^c^dagger bar_sigma_mu d^c_r)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 11,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_r",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_r",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_g_u) (L_d^dagger bar_sigma_mu Q_g_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 12,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_d",
+        "target": "L_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_g_u) (u^c_g^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 13,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_g"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_g_u) (d^c_g^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 14,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_g"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_g_d) (u^c_g^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 15,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_g"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_g_d) (d^c_g^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 16,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_g_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_g"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (u^c_g^dagger bar_sigma_mu nu^c) (d^c_g^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 17,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_g"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_g"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_g_u^dagger bar_sigma_mu L_u) (Q_g_d^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 18,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_g_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_g_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_g_u^dagger bar_sigma_mu L_u) (nu^c^dagger bar_sigma_mu u^c_g)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 19,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_g_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_g",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_g_u^dagger bar_sigma_mu L_u) (e^c^dagger bar_sigma_mu d^c_g)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 20,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_g_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_g",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_g_d^dagger bar_sigma_mu L_d) (nu^c^dagger bar_sigma_mu u^c_g)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 21,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_g_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_g",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_g_d^dagger bar_sigma_mu L_d) (e^c^dagger bar_sigma_mu d^c_g)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 22,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_g_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_g",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (nu^c^dagger bar_sigma_mu u^c_g) (e^c^dagger bar_sigma_mu d^c_g)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 23,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_g",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_g",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_b_u) (L_d^dagger bar_sigma_mu Q_b_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 24,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_d",
+        "target": "L_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_b_u) (u^c_b^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 25,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_b"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_u^dagger bar_sigma_mu Q_b_u) (d^c_b^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 26,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_u",
+        "target": "L_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_b"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_b_d) (u^c_b^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 27,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_b"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (L_d^dagger bar_sigma_mu Q_b_d) (d^c_b^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 28,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "Q->L",
+        "source": "Q_b_d",
+        "target": "L_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_b"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (u^c_b^dagger bar_sigma_mu nu^c) (d^c_b^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 29,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "nu^c->u^c",
+        "source": "nu^c",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "-4/3",
+        "delta_Y": "-2/3",
+        "signature": "e^c->d^c",
+        "source": "e^c",
+        "target": "d^c_b"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_b_u^dagger bar_sigma_mu L_u) (Q_b_d^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 30,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_b_u"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_b_d"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_b_u^dagger bar_sigma_mu L_u) (nu^c^dagger bar_sigma_mu u^c_b)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 31,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_b_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_b",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_b_u^dagger bar_sigma_mu L_u) (e^c^dagger bar_sigma_mu d^c_b)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 32,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_u",
+        "target": "Q_b_u"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_b",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_b_d^dagger bar_sigma_mu L_d) (nu^c^dagger bar_sigma_mu u^c_b)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 33,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_b_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_b",
+        "target": "nu^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (Q_b_d^dagger bar_sigma_mu L_d) (e^c^dagger bar_sigma_mu d^c_b)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 34,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "L->Q",
+        "source": "L_d",
+        "target": "Q_b_d"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_b",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_LQ^2 (nu^c^dagger bar_sigma_mu u^c_b) (e^c^dagger bar_sigma_mu d^c_b)^dagger",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "mass_block": "M_LQ",
+      "mass_expression": "sqrt(2/3) g_4 v_4",
+      "matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 35,
+      "transition_1": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "u^c->nu^c",
+        "source": "u^c_b",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1",
+        "delta_B_minus_L": "4/3",
+        "delta_Y": "2/3",
+        "signature": "d^c->e^c",
+        "source": "d^c_b",
+        "target": "e^c"
+      },
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_r^dagger bar_sigma_mu u^c_r) (d^c_g^dagger bar_sigma_mu u^c_g)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 36,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_r",
+        "target": "d^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_g",
+        "target": "d^c_g"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_r^dagger bar_sigma_mu u^c_r) (d^c_b^dagger bar_sigma_mu u^c_b)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 37,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_r",
+        "target": "d^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_b",
+        "target": "d^c_b"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_r^dagger bar_sigma_mu u^c_r) (e^c^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 38,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_r",
+        "target": "d^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "nu^c->e^c",
+        "source": "nu^c",
+        "target": "e^c"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_g^dagger bar_sigma_mu u^c_g) (d^c_b^dagger bar_sigma_mu u^c_b)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 39,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_g",
+        "target": "d^c_g"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_b",
+        "target": "d^c_b"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_g^dagger bar_sigma_mu u^c_g) (e^c^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 40,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_g",
+        "target": "d^c_g"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "nu^c->e^c",
+        "source": "nu^c",
+        "target": "e^c"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (d^c_b^dagger bar_sigma_mu u^c_b) (e^c^dagger bar_sigma_mu nu^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 41,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "u^c->d^c",
+        "source": "u^c_b",
+        "target": "d^c_b"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "1",
+        "signature": "nu^c->e^c",
+        "source": "nu^c",
+        "target": "e^c"
+      },
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_r^dagger bar_sigma_mu d^c_r) (u^c_g^dagger bar_sigma_mu d^c_g)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 42,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_r",
+        "target": "u^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_g",
+        "target": "u^c_g"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_r^dagger bar_sigma_mu d^c_r) (u^c_b^dagger bar_sigma_mu d^c_b)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 43,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_r",
+        "target": "u^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_b",
+        "target": "u^c_b"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_r^dagger bar_sigma_mu d^c_r) (nu^c^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 44,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_r",
+        "target": "u^c_r"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "e^c->nu^c",
+        "source": "e^c",
+        "target": "nu^c"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_g^dagger bar_sigma_mu d^c_g) (u^c_b^dagger bar_sigma_mu d^c_b)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 45,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_g",
+        "target": "u^c_g"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_b",
+        "target": "u^c_b"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_g^dagger bar_sigma_mu d^c_g) (nu^c^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 46,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_g",
+        "target": "u^c_g"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "e^c->nu^c",
+        "source": "e^c",
+        "target": "nu^c"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_WR^2 (u^c_b^dagger bar_sigma_mu d^c_b) (nu^c^dagger bar_sigma_mu e^c)^dagger",
+      "generator_family": "broken SU(2)_R charged current",
+      "mass_block": "M_WR",
+      "mass_expression": "g_R v_R",
+      "matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 47,
+      "transition_1": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "d^c->u^c",
+        "source": "d^c_b",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "1",
+        "delta_B_minus_L": "0",
+        "delta_Y": "-1",
+        "signature": "e^c->nu^c",
+        "source": "e^c",
+        "target": "nu^c"
+      },
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_g^dagger bar_sigma_mu Q_r_u) (u^c_r^dagger bar_sigma_mu Q_g_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 48,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_r_u",
+        "target": "u^c_g"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_g_u",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rg],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_g^dagger bar_sigma_mu Q_r_u) (d^c_r^dagger bar_sigma_mu Q_g_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 49,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_r_u",
+        "target": "d^c_g"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_g_u",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rg],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_g^dagger bar_sigma_mu Q_r_d) (u^c_r^dagger bar_sigma_mu Q_g_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 50,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_r_d",
+        "target": "u^c_g"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_g_d",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rg],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_g^dagger bar_sigma_mu Q_r_d) (d^c_r^dagger bar_sigma_mu Q_g_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 51,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_r_d",
+        "target": "d^c_g"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_g_d",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rg],d,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_b^dagger bar_sigma_mu Q_r_u) (u^c_r^dagger bar_sigma_mu Q_b_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 52,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_r_u",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_b_u",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rb],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_b^dagger bar_sigma_mu Q_r_u) (d^c_r^dagger bar_sigma_mu Q_b_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 53,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_r_u",
+        "target": "d^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_b_u",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rb],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_b^dagger bar_sigma_mu Q_r_d) (u^c_r^dagger bar_sigma_mu Q_b_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 54,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_r_d",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_b_d",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rb],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_b^dagger bar_sigma_mu Q_r_d) (d^c_r^dagger bar_sigma_mu Q_b_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 55,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_r_d",
+        "target": "d^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_b_d",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rb],d,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_r_u) (u^c_r^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 56,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_r_u",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_u",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rell],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_r_u) (d^c_r^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 57,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_r_u",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_u",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rell],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_r_d) (u^c_r^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 58,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_r_d",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_d",
+        "target": "u^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rell],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_r_d) (d^c_r^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 59,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_r_d",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_d",
+        "target": "d^c_r"
+      },
+      "vector_label": "(6,2,2) C_[rell],d,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_b^dagger bar_sigma_mu Q_g_u) (u^c_g^dagger bar_sigma_mu Q_b_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 60,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_g_u",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_b_u",
+        "target": "u^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gb],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_b^dagger bar_sigma_mu Q_g_u) (d^c_g^dagger bar_sigma_mu Q_b_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 61,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_g_u",
+        "target": "d^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_b_u",
+        "target": "d^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gb],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (u^c_b^dagger bar_sigma_mu Q_g_d) (u^c_g^dagger bar_sigma_mu Q_b_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 62,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_g_d",
+        "target": "u^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "-5/6",
+        "signature": "Q->u^c",
+        "source": "Q_b_d",
+        "target": "u^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gb],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (d^c_b^dagger bar_sigma_mu Q_g_d) (d^c_g^dagger bar_sigma_mu Q_b_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 63,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_g_d",
+        "target": "d^c_b"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "-2/3",
+        "delta_Y": "1/6",
+        "signature": "Q->d^c",
+        "source": "Q_b_d",
+        "target": "d^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gb],d,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_g_u) (u^c_g^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 64,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_g_u",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_u",
+        "target": "u^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gell],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_g_u) (d^c_g^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 65,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_g_u",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_u",
+        "target": "d^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gell],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_g_d) (u^c_g^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 66,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_g_d",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_d",
+        "target": "u^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gell],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_g_d) (d^c_g^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 67,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_g_d",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_d",
+        "target": "d^c_g"
+      },
+      "vector_label": "(6,2,2) C_[gell],d,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_b_u) (u^c_b^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 68,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_b_u",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_u",
+        "target": "u^c_b"
+      },
+      "vector_label": "(6,2,2) C_[bell],u,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_b_u) (d^c_b^dagger bar_sigma_mu L_u)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 69,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_b_u",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_u",
+        "target": "d^c_b"
+      },
+      "vector_label": "(6,2,2) C_[bell],u,plus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (nu^c^dagger bar_sigma_mu Q_b_d) (u^c_b^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 70,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "Q->nu^c",
+        "source": "Q_b_d",
+        "target": "nu^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "-1/6",
+        "signature": "L->u^c",
+        "source": "L_d",
+        "target": "u^c_b"
+      },
+      "vector_label": "(6,2,2) C_[bell],d,minus"
+    },
+    {
+      "canonical_proton_operator_status": "not_yet_in_all_left_basis",
+      "current_current_template": "- g_X^2/M_(6,2,2)^2 (e^c^dagger bar_sigma_mu Q_b_d) (d^c_b^dagger bar_sigma_mu L_d)^dagger",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "mass_block": "M_(6,2,2)",
+      "mass_expression": "sqrt(kappa_PS) g_10 v_PS",
+      "matching_gate": "off_face_mixed_pair_crossing_required",
+      "required_before_proton_limit": [
+        "fix vector-current to all-left Fierz and crossing convention",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run to hadronic scale",
+        "contract with lattice or chiral hadronic matrix elements",
+        "choose experimental proton channel limit"
+      ],
+      "row_id": 71,
+      "transition_1": {
+        "coefficient": "1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "Q->e^c",
+        "source": "Q_b_d",
+        "target": "e^c"
+      },
+      "transition_2": {
+        "coefficient": "-1/sqrt(2)",
+        "delta_B_minus_L": "2/3",
+        "delta_Y": "5/6",
+        "signature": "L->d^c",
+        "source": "L_d",
+        "target": "d^c_b"
+      },
+      "vector_label": "(6,2,2) C_[bell],d,plus"
+    }
+  ],
+  "description": "Route-C P14-V Spin(10) vector-branch matching gate",
+  "gate_interpretation": {
+    "off_face_diquark_like_pair_crossing_required": "Spin(10)/Pati-Salam off-face vector current pair containing two Q-to-u^c or Q-to-d^c transitions.  It is not a P7 scalar pole; it needs current-current Fierz matching.",
+    "off_face_mixed_pair_crossing_required": "Spin(10)/Pati-Salam off-face mixed quark/lepton current pair. It remains a vector-current matching candidate, not yet a physical proton-width row.",
+    "ps_leptoquark_mixed_pair_crossing_required": "Pati-Salam leptoquark vector current pair with one Q/L transition and one conjugate quark/lepton transition.  It is a vector-branch candidate, but still needs an all-left Fierz map and flavor rotations before proton limits.",
+    "right_current_B_and_L_conserving_not_proton_seed": "Broken SU(2)_R charged current exchange is tracked for completeness but is not by itself a proton-decay seed."
+  },
+  "next_stage": {
+    "recommended": "P15_V_current_to_all_left_fierz_and_flavor_gate",
+    "required_decision": "Choose the convention-fixed current-current to all-left operator map for the vector branch, or keep P13-S scalar/source recoupling as the active proton-matching path.  Do not insert proton limits until one branch has flavor, RG, and hadronic inputs."
+  },
+  "parallel_branch_status": {
+    "scalar_source_branch": "P13-S retained as a separate scalar/source Wilson-basis branch",
+    "vector_branch": "Branch V current-current matching gate is now explicit"
+  },
+  "proton_limit_blockers": [
+    "current-current to all-left chiral Wilson basis recoupling",
+    "physical flavor rotations",
+    "numerical vector masses and couplings",
+    "RG running from matching scale to hadronic scale",
+    "lattice or chiral hadronic matrix elements",
+    "experimental channel selection and lifetime limit"
+  ],
+  "summary": {
+    "branch_v_matching_gate_passes": true,
+    "broken_vector_maps": 32,
+    "broken_vector_maps_by_family": {
+      "Pati-Salam SU(4)_C leptoquark": 6,
+      "Spin(10)/Pati-Salam off-face generator": 24,
+      "broken SU(2)_R charged current": 2
+    },
+    "current_pair_rows": 72,
+    "current_pair_rows_by_family": {
+      "Pati-Salam SU(4)_C leptoquark": 36,
+      "Spin(10)/Pati-Salam off-face generator": 24,
+      "broken SU(2)_R charged current": 12
+    },
+    "current_transition_entries": 80,
+    "current_transition_entries_by_family": {
+      "Pati-Salam SU(4)_C leptoquark": 24,
+      "Spin(10)/Pati-Salam off-face generator": 48,
+      "broken SU(2)_R charged current": 8
+    },
+    "matching_gate_counts": {
+      "off_face_diquark_like_pair_crossing_required": 12,
+      "off_face_mixed_pair_crossing_required": 12,
+      "ps_leptoquark_mixed_pair_crossing_required": 24,
+      "ps_leptoquark_same-sector_pair_noncanonical_until_fierz": 12,
+      "right_current_B_and_L_conserving_not_proton_seed": 12
+    },
+    "p10_mass_matrix_layer_passes": true,
+    "p11_p7_rows_remaining_scalar_or_source_mass_debt": 18,
+    "p11_p7_rows_with_candidate_adjoint_mass_blocks": 0,
+    "physical_proton_bounds_evaluable_now": 0,
+    "vector_branch_does_not_reuse_p7_scalar_source_poles": true
+  },
+  "vector_matching_formula": {
+    "current": "J_X^mu = sum_a c_a psi_target(a)^dagger bar_sigma^mu psi_source(a)",
+    "mass_blocks": {
+      "M_(6,2,2)": "sqrt(kappa_PS) g_10 v_PS",
+      "M_LQ": "sqrt(2/3) g_4 v_4",
+      "M_WR": "g_R v_R",
+      "M_Zprime": "0.5 v_Y sqrt(g_R^2+g_BL^2)"
+    },
+    "tree_level_effective_lagrangian": "L_eff[X] = - g_X^2 J_X^mu J_X,mu^dagger / M_X^2"
+  }
+}

@@ -1,0 +1,251 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\cO}{\mathcal{O}}
+
+\title{Route D2-E3: E3-Instanton and Green--Schwarz Audit for \(\zeta K_{\rm tr}\)}
+\author{BoYu Chen}
+\date{June 11, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+
+This note tests the second Route-D string-constrained graft: whether the
+Route-B Majorana contact
+\begin{equation}
+  \frac{M_R}{M_*}=M_V+\zeta K_{\rm tr}
+\end{equation}
+can be interpreted as an Euclidean D3-brane instanton effect in a Type IIB/F
+theory compactification.  The goal is not to derive the benchmark value of
+\(\zeta\) to many digits.  The goal is to check whether the structure
+\(\zeta K_{\rm tr}\), the hidden phase/radial language, and the
+Majorana-only selection rule have a standard string-theory interpretation.
+
+The answer is conditionally yes: an E3 instanton can supply a holomorphic
+factor
+\begin{equation}
+  \zeta_\Gamma=A_\Gamma \exp(2\pi i T_\Gamma),
+  \qquad
+  T_\Gamma=\theta_\Gamma+i\,t_\Gamma,
+  \label{eq:e3-factor}
+\end{equation}
+with modulus controlled by the volume-like variable \(t_\Gamma\) and phase
+controlled by the axion-like variable \(\theta_\Gamma\).  Charged zero modes
+and Green--Schwarz/Stueckelberg selection rules can allow a perturbatively
+forbidden Majorana operator while forbidding other perturbative operators.
+However, the existence of the required instanton and its zero-mode spectrum is
+global compactification data.
+
+\section{Instanton coefficient as hidden phase/radial data}
+
+In Type IIB/F-theory language, an E3 instanton wrapping a suitable divisor or
+cycle \(\Gamma\) contributes to the superpotential with a holomorphic factor
+of the schematic form
+\begin{equation}
+  A_\Gamma\,e^{-S_\Gamma+i\varphi_\Gamma}.
+\end{equation}
+Equivalently, with the complexified modulus convention
+\begin{equation}
+  T_\Gamma=\theta_\Gamma+i\,t_\Gamma,
+\end{equation}
+one may write Eq.~\eqref{eq:e3-factor}.  The two descriptions are related by
+\begin{equation}
+  S_\Gamma-\log|A_\Gamma|=2\pi t_\Gamma,\qquad
+  \varphi_\Gamma=\arg A_\Gamma+2\pi\theta_\Gamma .
+\end{equation}
+Thus the Route-B phrase ``hidden phase/radial sector'' maps directly to an
+axion-volume pair:
+\begin{equation}
+  \text{phase}\leftrightarrow \theta_\Gamma,\qquad
+  \text{radial suppression}\leftrightarrow t_\Gamma.
+\end{equation}
+
+For the current benchmark,
+\begin{equation}
+  \zeta_{\rm tar}=0.1076472949+0.0736514853\,i,
+\end{equation}
+so
+\begin{align}
+  |\zeta_{\rm tar}|&=0.13043190325293763,\\
+  \arg\zeta_{\rm tar}&=0.600038020318215.
+\end{align}
+If the instanton prefactor has unit modulus, the effective action needed to
+produce the modulus is
+\begin{equation}
+  S_{\rm eff}=-\log|\zeta_{\rm tar}|
+  =
+  2.0369040025655094.
+  \label{eq:seff}
+\end{equation}
+In the convention \(\zeta=\exp(2\pi iT_\Gamma)\), this corresponds to
+\begin{equation}
+  \operatorname{Im}T_\Gamma
+  =
+  \frac{S_{\rm eff}}{2\pi}
+  =
+  0.3241833406119675
+\end{equation}
+if \(|A_\Gamma|=1\).  These are moderate nonperturbative data; they should not
+be confused with a small discrete clockwork prediction.
+
+\section{Majorana-only selection rule}
+
+Perturbative D-brane/F-theory vacua often contain abelian symmetries that act
+as selection rules on the superpotential.  Some of these \(\U(1)\) symmetries
+can become massive through a Green--Schwarz/Stueckelberg mechanism, yet remain
+as perturbative selection rules.  An instanton factor can transform under the
+same \(\U(1)\) because its axion shifts.  This allows a perturbatively
+forbidden charged operator to appear nonperturbatively if the total charge of
+the instanton factor and the inserted fields is zero.
+
+For the right-handed-neutrino Majorana operator, a minimal charge bookkeeping
+model is
+\begin{equation}
+  q(N)=+1,\qquad q(NN)=+2,\qquad q(e^{-S_\Gamma+i\varphi_\Gamma})=-2.
+\end{equation}
+Then
+\begin{equation}
+  q\left(e^{-S_\Gamma+i\varphi_\Gamma}NN\right)=0,
+\end{equation}
+while \(NN\) alone is perturbatively forbidden.  In a microscopic instanton
+calculation, this charge bookkeeping is implemented by charged fermionic zero
+modes at the intersections of the instanton with the seven-brane stack.  The
+zero modes must be soaked up by insertions of the desired fields.  If the only
+available charged-zero-mode saturation pattern inserts \(N_iN_j\), the
+instanton generates a Majorana mass but not a Dirac Yukawa or colored-triplet
+operator.
+
+This is the string-theory version of the Route-B Majorana-only matching rule.
+It is stronger than an arbitrary EFT prohibition, but it remains conditional:
+the divisor \(\Gamma\), its orientifold/F-theory lift, its universal zero
+modes, and its charged zero modes must be checked in a concrete
+compactification.
+
+\section{Direction in family space}
+
+Route B separates the tensor direction from the complex coefficient:
+\begin{equation}
+  \Delta M_R/M_*=\zeta K_{\rm tr}.
+\end{equation}
+The E3 instanton naturally explains the coefficient as
+\begin{equation}
+  \zeta=\zeta_\Gamma=A_\Gamma\exp(2\pi iT_\Gamma).
+\end{equation}
+The tensor direction \(K_{\rm tr}\) requires an additional locality or
+equivariance assumption.  If the instanton data are blind to the detailed
+coordinate on the family curve and respect the same local \(SL(2)\)-covariant
+structure used in the Route-A carrier
+\begin{equation}
+  V=H^0(\mathbb{CP}^1,\cO(2))\simeq \mathrm{Sym}^2\mathbb C^2,
+\end{equation}
+then the only invariant symmetric tensor direction in the contact sector is
+the second transvectant:
+\begin{equation}
+  K_{\rm tr}\in\mathrm{Sym}^0
+  \subset
+  \mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)
+  =
+  \mathrm{Sym}^4\mathbb C^2\oplus\mathrm{Sym}^0.
+\end{equation}
+Thus a family-blind instanton can consistently land on \(K_{\rm tr}\).  This
+is not a proof from exact global \(SL(2)\) flavor symmetry.  Quantum gravity
+does not allow exact ungauged global symmetries.  The correct statement is
+local and spurionic: if the instanton is insensitive to the Veronese coordinate
+data except through the contact pairing, the unique available invariant
+contact direction is \(K_{\rm tr}\).
+
+\section{Why no ten-digit prediction follows}
+
+The instanton interpretation naturally explains the form, selection rule, and
+order of magnitude of \(\zeta\), but it does not compute the benchmark complex
+number to high precision.  Multi-instanton or multi-cover corrections are
+expected at relative scales set by powers of the one-instanton suppression.
+For the benchmark,
+\begin{equation}
+  |\zeta|^2=0.01701248138618368.
+\end{equation}
+The contact-sensitivity window recorded in the Route-B benchmark scan was
+\begin{equation}
+  \Delta s=3.208798\times10^{-5}.
+\end{equation}
+The ratio is
+\begin{equation}
+  \frac{|\zeta|^2}{\Delta s}=530.1823731560442.
+\end{equation}
+Therefore, unless a concrete compactification shows that the prefactor and
+higher instanton corrections are exceptionally controlled, the E3 picture
+cannot justify a ten-digit prediction of \(\zeta\).  It can justify the
+conditional structure
+\begin{equation}
+  \zeta K_{\rm tr}
+  =
+  A_\Gamma e^{2\pi iT_\Gamma}K_{\rm tr}
+\end{equation}
+and a moderate effective action \(S_{\rm eff}\simeq2.04\).
+
+\section{Result}
+
+The D2-E3 graft is viable as a conditional string-origin statement:
+\begin{align}
+  \text{E3 instanton on }\Gamma
+  &\leadsto
+  \zeta_\Gamma=A_\Gamma e^{2\pi iT_\Gamma},\\
+  T_\Gamma=\theta_\Gamma+i t_\Gamma
+  &\leadsto
+  \text{hidden phase/radial data},\\
+  \text{GS/Stueckelberg charge shift plus charged zero modes}
+  &\leadsto
+  \text{possible Majorana-only selection},\\
+  \text{family-blind contact locality}
+  &\leadsto
+  K_{\rm tr}\text{ as the unique contact direction}.
+\end{align}
+It is not a completed global model.  To promote this from an appendix-level
+interpretation to a UV completion, one must construct the instanton divisor,
+count universal and charged zero modes, check that unwanted operators are
+absent, and replay the Route-B canonical-normalization audit.
+
+\begin{thebibliography}{9}
+
+\bibitem{Witten1996}
+E.~Witten,
+``Non-perturbative superpotentials in string theory,''
+\href{https://arxiv.org/abs/hep-th/9604030}{arXiv:hep-th/9604030}.
+
+\bibitem{BlumenhagenCveticWeigand2006}
+R.~Blumenhagen, M.~Cvetic, and T.~Weigand,
+``Spacetime instanton corrections in 4D string vacua: The seesaw mechanism
+for D-brane models,''
+\href{https://arxiv.org/abs/hep-th/0609191}{arXiv:hep-th/0609191}.
+
+\bibitem{IbanezUranga2006}
+L.~E.~Ibanez and A.~M.~Uranga,
+``Neutrino Majorana masses from string theory instanton effects,''
+\href{https://arxiv.org/abs/hep-th/0609213}{arXiv:hep-th/0609213}.
+
+\bibitem{CveticRichterWeigand2007}
+M.~Cvetic, R.~Richter, and T.~Weigand,
+``Computation of D-brane instanton induced superpotential couplings:
+Majorana masses from string theory,''
+\href{https://arxiv.org/abs/hep-th/0703028}{arXiv:hep-th/0703028}.
+
+\bibitem{BianchiCollinucciMartucci2011}
+M.~Bianchi, A.~Collinucci, and L.~Martucci,
+``Magnetized E3-brane instantons in F-theory,''
+\href{https://arxiv.org/abs/1107.3732}{arXiv:1107.3732}.
+
+\bibitem{CveticDonagiHalversonMarsano2012}
+M.~Cvetic, R.~Donagi, J.~Halverson, and J.~Marsano,
+``On seven-brane dependent instanton prefactors in F-theory,''
+\href{https://arxiv.org/abs/1209.4906}{arXiv:1209.4906}.
+
+\end{thebibliography}
+
+\end{document}

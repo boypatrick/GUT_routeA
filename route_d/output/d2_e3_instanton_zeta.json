@@ -1,0 +1,19 @@
+{
+  "abs_zeta": 0.13043190325293763,
+  "arg_zeta_rad": 0.600038020318215,
+  "charge_neutral_majorana_toy_check_pass": true,
+  "delta_phase_window_rad": 5.424119e-05,
+  "delta_s_window": 3.208798e-05,
+  "effective_action_if_prefactor_one": 2.0369040025655094,
+  "global_e3_divisor_constructed": false,
+  "im_T_if_zeta_equals_exp_2pi_i_T_and_prefactor_one": 0.3241833406119675,
+  "q_NN_toy": 2,
+  "q_N_toy": 1,
+  "q_instanton_factor_required": -2,
+  "ten_digit_zeta_prediction_claimed": false,
+  "two_instanton_scale_abs_zeta_squared": 0.01701248138618368,
+  "two_instanton_scale_over_delta_s_window": 530.1823731560442,
+  "zero_mode_spectrum_checked": false,
+  "zeta_imag": 0.0736514853,
+  "zeta_real": 0.1076472949
+}

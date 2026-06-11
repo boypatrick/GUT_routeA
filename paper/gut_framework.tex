@@ -1,11 +1,18 @@
-\documentclass[11pt]{article}
+\documentclass[
+  aps,
+  prd,
+  preprint,
+  nofootinbib,
+  superscriptaddress,
+  longbibliography
+]{revtex4-2}
 
-\usepackage[a4paper,margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{bm}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usepackage{placeins}
 \usepackage[hidelinks]{hyperref}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 
@@ -23,21 +30,22 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{datum}[theorem]{Benchmark Datum}
 \newtheorem{observation}[theorem]{Observation}
-\theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-
-\title{A Face-Projection \(\Spin(10)\) Effective Framework:\\
-Rubik Covariance, \(O(2)\) Family Geometry, and the Conditional GUT Boundary}
-\author{Working draft}
-\date{2026-05-15}
+\newenvironment{proof}{\par\noindent\textit{Proof.}\ }{\hfill\(\square\)\par}
 
 \begin{document}
-\maketitle
+
+\title{\texorpdfstring{A Face-Projection \(\Spin(10)\) Effective Framework:\\
+Rubik Covariance, \(O(2)\) Family Geometry, and the Conditional GUT Boundary}
+{A Face-Projection Spin(10) Effective Framework: Rubik Covariance, O(2) Family Geometry, and the Conditional GUT Boundary}}
+\author{BoYu Chen}
+\email{boypatrick.tw@gmail.com}
+\affiliation{Independent Researcher, Hsinchu, Taiwan}
+\date{May 22, 2026}
 
 \begin{abstract}
 This draft rewrites the theory around a face-projection principle.  Low-energy
@@ -60,10 +68,11 @@ Majorana contact tensor direction is no longer left arbitrary: it is the unique
 Route-B hidden-messenger mechanism for \(\zeta K_{\rm tr}\) is recorded as a
 conditional extension, but it is not part of the Route-A theorem core.  The
 hidden phase/radial sector and the companion audits for flavor, proton decay,
-thresholds, and source-sector UV origin remain open.  Detailed
-machine-audit and scan appendices have been removed from this version until it
-is clear which of them truly belong to the face-projection framework.
+thresholds, and source-sector UV origin remain open.  Full phenomenological
+audits are deferred to companion work.
 \end{abstract}
+
+\maketitle
 
 \section{Scope of the Lean Route-A Note}
 
@@ -82,9 +91,7 @@ second-transvectant direction}.
 Route B is kept only as a conditional candidate mechanism for the complex
 coefficient \(\zeta\).  Full CKM/PMNS fitting, dimension-five proton-decay
 Wilson tensors, threshold matching, and source-sector UV completion are not
-claimed in this lean note; they remain companion-audit problems.  Thus the
-paper should be read as a conditional face-projection \(\Spin(10)\) EFT note,
-not as a completed first-principles derivation of a unique GUT.
+claimed in this lean note; they remain companion-audit problems.
 
 \section{Face Projection}
 
@@ -140,28 +147,87 @@ neutrino sector uses the usual type-I seesaw logic
 threshold language is the conventional perturbative RGE language
 \cite{Jones1982,MachacekVaughn1983}.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \begin{tikzpicture}[
-  node distance=8mm and 8mm,
-  box/.style={draw, rounded corners, align=center, minimum width=30mm, minimum height=9mm},
-  arrow/.style={-{Latex[length=2mm]}, thick}
+  scale=0.95,
+  every node/.style={font=\small},
+  vertex/.style={circle, fill=blue!60!black, draw=white, line width=0.35pt,
+    minimum size=3.6pt, inner sep=0pt},
+  smpt/.style={circle, fill=orange!85!black, draw=white, line width=0.35pt,
+    minimum size=4pt, inner sep=0pt},
+  edge/.style={blue!55!black, line width=0.7pt},
+  ghost/.style={blue!35!black, line width=0.45pt, dashed},
+  proj/.style={-{Latex[length=2.2mm]}, thick, blue!55!black}
 ]
-\node[box] (internal) {internal object\\\(\Spin(10)\ 16\)};
-\node[box, right=of internal] (ps) {Pati--Salam face\\\(Y=T_{3R}+(B-L)/2\)};
-\node[box, right=of ps] (sm) {six visible faces\\\(Q,L,u^c,d^c,\nu^c,e^c\)};
-\node[box, below=of ps] (fam) {family carrier\\\(H^0(\CP^1,\cO(2))\)};
-\node[box, right=of fam] (three) {three copies\\\(16_1\oplus16_2\oplus16_3\)};
-\draw[arrow] (internal) -- (ps);
-\draw[arrow] (ps) -- (sm);
-\draw[arrow] (fam) -- (three);
-\draw[arrow, dashed] (internal) to[bend right=20] (fam);
+% A projected high-dimensional half-spin object.
+\coordinate (a) at (-4.35,1.05);
+\coordinate (b) at (-3.03,1.38);
+\coordinate (c) at (-2.12,0.58);
+\coordinate (d) at (-3.43,0.24);
+\coordinate (e) at (-4.35,-0.55);
+\coordinate (f) at (-3.03,-0.22);
+\coordinate (g) at (-2.12,-1.02);
+\coordinate (h) at (-3.43,-1.36);
+\coordinate (aa) at (-3.98,0.53);
+\coordinate (bb) at (-2.66,0.86);
+\coordinate (cc) at (-1.75,0.06);
+\coordinate (dd) at (-3.06,-0.28);
+\coordinate (ee) at (-3.98,-1.07);
+\coordinate (ff) at (-2.66,-0.74);
+\coordinate (gg) at (-1.75,-1.54);
+\coordinate (hh) at (-3.06,-1.88);
+\fill[blue!15, opacity=0.40] (a)--(b)--(c)--(d)--cycle;
+\fill[blue!20, opacity=0.28] (e)--(f)--(g)--(h)--cycle;
+\fill[blue!12, opacity=0.28] (aa)--(bb)--(cc)--(dd)--cycle;
+\fill[blue!10, opacity=0.22] (ee)--(ff)--(gg)--(hh)--cycle;
+\draw[edge] (a)--(b)--(c)--(d)--cycle;
+\draw[edge] (e)--(f)--(g)--(h)--cycle;
+\draw[edge] (a)--(e) (b)--(f) (c)--(g) (d)--(h);
+\draw[ghost] (aa)--(bb)--(cc)--(dd)--cycle;
+\draw[ghost] (ee)--(ff)--(gg)--(hh)--cycle;
+\draw[ghost] (aa)--(ee) (bb)--(ff) (cc)--(gg) (dd)--(hh);
+\draw[ghost] (a)--(aa) (b)--(bb) (c)--(cc) (d)--(dd)
+  (e)--(ee) (f)--(ff) (g)--(gg) (h)--(hh);
+\foreach \p in {a,b,c,d,e,f,g,h,aa,bb,cc,dd,ee,ff,gg,hh}
+  \node[vertex] at (\p) {};
+\node[align=center] at (-3.05,-2.35)
+  {one irreducible\\\(\Spin(10)\) half-spinor \(16\)};
+
+% Projection arrow.
+\draw[proj] (-1.45,-0.25) -- (0.70,-0.25)
+  node[midway, above, align=center] {\(\Pi_\theta\)\\[-1mm]\(\Res^G_{H_\theta}\)};
+
+% The Standard-Model face.
+\coordinate (p1) at (1.05,1.10);
+\coordinate (p2) at (5.28,0.75);
+\coordinate (p3) at (4.62,-1.50);
+\coordinate (p4) at (0.52,-1.12);
+\fill[green!10, opacity=0.72] (p1)--(p2)--(p3)--(p4)--cycle;
+\draw[green!45!black, line width=0.8pt] (p1)--(p2)--(p3)--(p4)--cycle;
+\node[align=center, green!35!black] at (2.95,1.33)
+  {SM face \(H_\theta\)};
+
+\node[smpt, label=above:\(Q\)] at (2.02,0.42) {};
+\node[smpt, label=above:\(L\)] at (3.72,0.30) {};
+\node[smpt, label=right:\(u^c\)] at (4.25,-0.45) {};
+\node[smpt, label=below:\(d^c\)] at (3.36,-1.02) {};
+\node[smpt, label=below:\(\nu^c\)] at (1.68,-0.90) {};
+\node[smpt, label=left:\(e^c\)] at (1.37,-0.16) {};
+\draw[orange!60!black, line width=0.45pt]
+  (2.02,0.42)--(3.72,0.30)--(4.25,-0.45)--(3.36,-1.02)
+  --(1.68,-0.90)--(1.37,-0.16)--cycle;
+\node[align=center] at (2.95,-2.10)
+  {six visible multiplet types\\
+  \(Q,\ L,\ u^c,\ d^c,\ \nu^c,\ e^c\)};
 \end{tikzpicture}
-\caption{Face-projection picture.  The six Standard-Model multiplet types are
-visible faces of one \(\Spin(10)\) half-spinor, while the family number is an
-independent protected index.}
+\caption{Face-projection geometry.  The \(16\) is visualized as a single
+higher-dimensional internal object whose Standard-Model face displays the six
+visible multiplet types \(Q,L,u^c,d^c,\nu^c,e^c\).  The figure is a
+representation-geometric visualization, not a dynamical particle-conversion
+process.}
 \label{fig:face-projection}
-\end{figure}
+\end{figure*}
 
 \section{\texorpdfstring{The Six-Face \(\Spin(10)\) Object}{The Six-Face Spin(10) Object}}
 
@@ -256,13 +322,13 @@ Thus
 \]
 \end{proof}
 
-\begin{remark}[What rotation can and cannot mean]
+\begin{remark}[Allowed meaning of rotation]
 At low energy \(Q\) cannot be freely rotated into \(e^c\).  The Standard-Model
-gauge symmetry has already selected superselection-like labels.  The
-face-projection statement is about the high-energy representation and its
-broken-subgroup projection.  Any physical process that changes the visible
-face must be mediated by legitimate high-energy fields and is constrained, for
-example, by proton decay.
+gauge symmetry has already selected fixed visible labels.  The face-projection
+statement is about the high-energy representation and its broken-subgroup
+projection.  Any physical process that changes the visible face must be
+mediated by legitimate high-energy fields and is constrained, for example, by
+proton decay.
 \end{remark}
 
 \section{\texorpdfstring{Three Families from an \(O(2)\) Index}{Three Families from an O(2) Index}}
@@ -272,6 +338,64 @@ separate index statement.  The analytic input is the standard
 \(\Spin^c\) Dolbeault--Dirac/cohomology identification and the
 Riemann--Roch--Serre-duality calculation on \(\CP^1\)
 \cite{LawsonMichelsohn1989,GriffithsHarris1978}.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  scale=0.96,
+  every node/.style={font=\small},
+  marked/.style={circle, fill=red!70!black, draw=white, line width=0.4pt,
+    minimum size=4.6pt, inner sep=0pt},
+  section/.style={line width=1.1pt, rounded corners=3pt}
+]
+% Riemann sphere with two divisor points.
+\shade[ball color=blue!7, opacity=0.92] (0,0) circle (1.7);
+\draw[blue!45!black, line width=0.65pt] (0,0) circle (1.7);
+\draw[blue!35!black, line width=0.45pt] (-1.7,0) arc[start angle=180,end angle=0,
+  x radius=1.7, y radius=0.42];
+\draw[blue!35!black, dashed, line width=0.45pt] (-1.7,0)
+  arc[start angle=180,end angle=360, x radius=1.7, y radius=0.42];
+\draw[blue!30!black, line width=0.35pt] (0,-1.7) arc[start angle=-90,end angle=90,
+  x radius=0.55, y radius=1.7];
+\draw[blue!30!black, dashed, line width=0.35pt] (0,-1.7)
+  arc[start angle=-90,end angle=-270, x radius=0.55, y radius=1.7];
+\node[font=\normalsize] at (0,2.12) {\(\CP^1\)};
+\node[marked, label={[xshift=2pt,yshift=1pt]above right:\(p_+\)}] at (0.78,0.88) {};
+\node[marked, label={[xshift=-1pt,yshift=-1pt]below left:\(p_-\)}] at (-0.72,-0.58) {};
+\draw[red!70!black, line width=0.65pt] (0.78,0.88) to[bend left=10] (-0.72,-0.58);
+\node[align=center] at (0,-2.25) {two-center divisor\\[-1mm]
+  \(R=p_+ + p_-\), \(\deg R=2\)};
+
+% Bundle label and protected sections.
+\draw[-{Latex[length=2mm]}, thick, blue!55!black] (2.15,0.72) -- (2.95,0.72);
+\node[align=center, blue!45!black] at (4.35,1.18)
+  {\(L_R=\cO(R)\simeq\cO(2)\)};
+\node[align=center] at (4.35,0.65)
+  {\(H^0(\CP^1,\cO(2))\)};
+
+% Three section profiles, drawn as geometric modes rather than boxes.
+\draw[section, green!45!black] (3.10,-0.42) -- (5.22,-0.42);
+\draw[section, orange!80!black] (3.10,-1.00) -- (5.22,-0.68);
+\draw[section, purple!75!black]
+  plot[smooth] coordinates {(3.10,-1.58) (3.63,-1.30) (4.16,-1.22)
+  (4.69,-1.30) (5.22,-1.58)};
+\node[right] at (5.38,-0.42) {\(s_0=1\)};
+\node[right] at (5.38,-0.78) {\(s_1=\xi\)};
+\node[right] at (5.38,-1.58) {\(s_2=\xi^2\)};
+\node[align=center] at (4.35,-2.25) {three protected\\holomorphic sections};
+\end{tikzpicture}
+\caption{Two-center geometry of the family carrier.  The two marked points
+define a degree-two divisor \(R=p_++p_-\), hence the line bundle
+\(L_R\simeq\cO(2)\).  The family count comes from the protected section space
+\(H^0(\CP^1,\cO(2))=\mathrm{span}\{1,\xi,\xi^2\}\), not from treating the
+two centers as two families.  This is a topology/complex-geometry picture, not
+a dynamical flow diagram.}
+\label{fig:two-center-o2}
+\end{figure*}
+
+Figure~\ref{fig:two-center-o2} is the geometric picture behind the theorem:
+the two centers set the degree of the line bundle, while Riemann--Roch and
+Serre duality fix the number of protected sections.
 
 \begin{theorem}[Conditional \(\Spin^c\) index theorem for three protected families]
 Assume that the protected internal family carrier is the \(\Spin^c\)
@@ -338,6 +462,23 @@ Those are branch assumptions.  The theorem says that once those inputs are
 chosen, the family count is protected and is not a tunable scan output.
 \end{remark}
 
+\begin{remark}[Tangent-bundle reading of the same carrier]
+On the rational family curve,
+\[
+  T_{\CP^1}\simeq \cO(2),
+  \qquad
+  H^0(\CP^1,T_{\CP^1})\simeq \mathfrak{sl}_2(\mathbb C).
+\]
+Thus, after the branch choice \(L_R\simeq\cO(2)\), the protected three-section
+space can also be read as the holomorphic vector-field algebra of the
+rational curve.  This does not derive the curve \(C=\CP^1\) or the divisor
+input; it only shows that the \(\cO(2)\) carrier, the three protected modes,
+and the \(SL(2)\) family covariance are three views of the same rational-curve
+geometry.
+\end{remark}
+
+\FloatBarrier
+
 \section{Conditional EFT Data}
 
 The face-projection and index principles supply the representational skeleton.
@@ -355,7 +496,79 @@ branch retains the following action-level data:
 \end{array}
 \]
 
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[
+  scale=0.95,
+  every node/.style={font=\small},
+  surface/.style={green!45!black, line width=0.7pt},
+  contact/.style={-{Latex[length=2.4mm]}, purple!80!black, line width=1.2pt},
+  moment/.style={circle, fill=green!45!black, draw=white, line width=0.35pt,
+    minimum size=4pt, inner sep=0pt}
+]
+% Ambient symmetric tensor space.
+\node[align=center, gray!70!black] at (0,2.42)
+  {ambient symmetric family tensors\\[-1mm]
+  \(\mathrm{Sym}^2V\), \(V=H^0(\CP^1,\cO(2))\)};
+
+% Veronese/moment sector as a curved sheet.
+\fill[green!12, opacity=0.86]
+  (-3.55,-0.72) .. controls (-2.75,0.18) and (-1.30,0.48) .. (0.30,0.24)
+  .. controls (1.72,0.02) and (2.82,-0.38) .. (3.48,-0.95)
+  .. controls (2.36,-1.38) and (0.70,-1.52) .. (-0.92,-1.34)
+  .. controls (-2.36,-1.18) and (-3.14,-1.02) .. (-3.55,-0.72);
+\draw[surface]
+  (-3.55,-0.72) .. controls (-2.75,0.18) and (-1.30,0.48) .. (0.30,0.24)
+  .. controls (1.72,0.02) and (2.82,-0.38) .. (3.48,-0.95);
+\draw[surface]
+  (-3.55,-0.72) .. controls (-2.36,-1.18) and (-0.92,-1.34) .. (0.70,-1.52)
+  .. controls (2.36,-1.38) and (3.10,-1.14) .. (3.48,-0.95);
+\draw[surface, opacity=0.75]
+  (-2.85,-0.76) .. controls (-1.42,-0.40) and (0.62,-0.34) .. (2.70,-0.84);
+\draw[surface, opacity=0.55]
+  (-2.42,-1.02) .. controls (-0.82,-0.82) and (0.95,-0.84) .. (2.36,-1.12);
+\draw[surface, opacity=0.55]
+  (-1.95,-0.32) .. controls (-0.92,-0.72) and (-0.48,-1.02) .. (-0.24,-1.30);
+\draw[surface, opacity=0.55]
+  (0.48,0.17) .. controls (0.76,-0.38) and (0.82,-0.92) .. (0.70,-1.48);
+
+\node[moment, label=above:\(\text{Veronese moments}\)] at (-1.32,-0.60) {};
+\node[moment] at (0.28,-0.67) {};
+\node[moment] at (1.68,-0.96) {};
+\node[align=center, green!35!black] at (-0.05,-1.95)
+  {Veronese / visible sector\\[-1mm]\(\mathrm{Sym}^4\mathbb C^2\)};
+
+% Unique transverse singlet contact direction.
+\coordinate (base) at (0.12,-0.62);
+\draw[purple!80!black, dashed, line width=0.55pt] (base) -- (0.12,-1.40);
+\draw[contact] (base) -- (0.12,1.36);
+\node[purple!80!black, align=left, anchor=west] at (0.60,0.82)
+  {\(K_{\rm tr}\in\mathrm{Sym}^0\)\\unique invariant\\contact direction};
+\draw[purple!70!black, line width=0.6pt] (0.12,-0.62) -- (0.42,-0.62) -- (0.42,-0.32);
+
+% Decomposition statement.
+\node[align=center] at (0,-2.78)
+  {\(\mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)
+  \simeq
+  \mathrm{Sym}^4\mathbb C^2\oplus\mathrm{Sym}^0\mathbb C^2\)};
+\end{tikzpicture}
+\caption{Veronese sector and contact direction.  The curved sheet visualizes
+the \(\mathrm{Sym}^4\mathbb C^2\) Veronese/moment sector inside
+\(\mathrm{Sym}^2V\), while the transverse direction is the unique scalar
+summand \(K_{\rm tr}\in\mathrm{Sym}^0\).  The contact tensor is therefore not
+an arbitrary patch; it is the unique invariant direction outside the visible
+Veronese sector.}
+\label{fig:veronese-contact}
+\end{figure}
+
+\FloatBarrier
+
+Figure~\ref{fig:veronese-contact} summarizes the representation-theoretic
+split used in the next lemma: the tensor direction of the Majorana contact is
+fixed, while its complex coefficient is separate conditional data.
+
 \begin{lemma}[Unique \(SL(2)\)-invariant contact direction]
+\label{lem:ktr-contact}
 Let
 \[
   V=H^0(\CP^1,\cO(2))\simeq \mathrm{Sym}^2\mathbb C^2.
@@ -396,10 +609,18 @@ multiplicity one, so any invariant symmetric contact tensor is proportional to
 the displayed second-transvectant matrix.
 \end{proof}
 
-\begin{datum}[Majorana contact decomposition of the current benchmark]
-The source-consistent Majorana matrix in the current benchmark is not a pure
-\((\CP^1,\cO(2))\) Veronese matrix.  It requires the unique orthogonal
-second-transvectant contact component
+\begin{remark}[Meaning of the \(SL(2)\) covariance]
+The \(SL(2)\) language in Lemma~\ref{lem:ktr-contact} is used as
+family-geometry covariance, or equivalently as spurionic bookkeeping for the
+rational curve.  It is not claimed to be an exact fundamental global symmetry.
+Any microscopic or quantum-gravity completion must realize this covariance
+geometrically, locally, or through spurions rather than as an unbroken global
+selection rule.
+\end{remark}
+
+\begin{datum}[Majorana contact]
+The benchmark Majorana matrix is not purely Veronese.  It requires the unique
+orthogonal second-transvectant contact component
 \[
   \frac{M_R}{M_*}=M_V+\zeta K_{\rm tr},
 \]
@@ -424,10 +645,9 @@ The lean note records the datum and the geometrically fixed tensor direction;
 the full matrices, basis cards, and norm conventions are deferred to companion
 artifacts.
 
-\begin{observation}[Negative scan for simple hidden-sector origins of \(\zeta\)]
-Within the currently tested simple hidden-quotient and small monomial
-clockwork classes, \(\zeta\) is a conditional datum rather than a derived
-number.
+\begin{observation}[Hidden-origin scan]
+Tested simple hidden-quotient and small monomial clockwork classes do not
+derive \(\zeta\).  In those classes, it remains a conditional datum.
 \end{observation}
 
 The scan evidence is limited but sharp within that tested class.  The
@@ -500,7 +720,7 @@ In a chosen basis this is
   -\frac12 X^T K_{\rm tr}^{-1}X,
 \]
 where \(K_{\rm tr}\) is the unique \(SL(2)\)-invariant contact direction from
-Lemma 4.1.  Integrating out \(X\) gives
+Lemma~\ref{lem:ktr-contact}.  Integrating out \(X\) gives
 \[
   \frac{W_R^{\rm eff}}{M_*}
   =
@@ -560,15 +780,17 @@ input of the post-\(B-L\) EFT matching problem, not a result of the
 face-projection principle.
 \end{remark}
 
-\begin{datum}[Target coefficient and square-root coupling]
+\begin{datum}[Target coefficient]
 For the current benchmark,
 \[
   \zeta_{\rm tar}=0.1076472949+0.0736514853\,i.
 \]
 Its polar data are
 \[
-  |\zeta_{\rm tar}|=0.13043190325293763,\qquad
-  \arg\zeta_{\rm tar}=0.600038020318215.
+  \begin{aligned}
+  |\zeta_{\rm tar}|&=0.13043190325293763,\\
+  \arg\zeta_{\rm tar}&=0.600038020318215 .
+  \end{aligned}
 \]
 One square-root coupling is
 \[
@@ -695,7 +917,7 @@ whose \(R\)-breaking insertions do not regenerate \(X\)-decorated Dirac or
 colored-triplet operators within the audited order.
 \end{remark}
 
-\begin{theorem}[Tree-level canonical matching silence of Majorana-only hidden contact]
+\begin{theorem}[Tree-level matching silence]
 In a canonical-normalized post-\(B-L\) EFT at the matching scale, use Route B
 as a post-\(B-L\)-breaking matching theorem, with
 \[
@@ -739,10 +961,9 @@ flavor, proton-decay, or one-loop threshold audits.
 \end{proof}
 
 \begin{observation}[Canonical basis caveat]
-The previous theorem is a tree-level matching statement in a
-canonical-normalized EFT basis.  A microscopic completion with a finite
-messenger interval can generate a right-handed-neutrino wave-function
-correction of order
+The theorem above holds at tree level after canonical normalization.  A
+microscopic completion with a finite messenger interval can generate a
+right-handed-neutrino wave-function correction of order
 \[
   \delta Z_N\sim
   \frac{|\lambda|^2}{16\pi^2}
@@ -835,61 +1056,56 @@ three families are protected by an independent \(O(2)\) index.
 
 The lean note has a small, explicit reproducibility surface.  It does not
 include the deferred full flavor/proton/threshold scans.
-\begin{center}
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}p{0.27\linewidth}p{0.58\linewidth}@{}}
-\toprule
-\textbf{item} & \textbf{artifact or command}\\
-\midrule
-paper source &
-\texttt{paper/gut\_framework.tex}, \texttt{paper/refs.bib}\\
-compiled note &
-\texttt{paper/gut\_framework.pdf}\\
-D5 appendix check &
-\texttt{python3 code/verify\_d5\_half\_spin\_hypercube.py}\\
-D5 outputs &
-D5 summary, weights, and report in
-\texttt{output/d5\_half\_spin/}\\
-Route-B algebra check &
-\texttt{python3 code/verify\_hidden\_zeta\_origin.py}\\
-Route-B output &
-verification JSON in \texttt{output/hidden\_zeta\_origin/}\\
-status log &
-\texttt{roadmap.md}\\
-\bottomrule
-\end{tabular}
-\end{center}
+\begin{itemize}
+\item Paper source: \texttt{paper/gut\_framework.tex} and
+\texttt{paper/refs.bib}.
+\item Compiled note: \texttt{paper/gut\_framework.pdf}.
+\item D5 appendix check:
+\texttt{python3 code/verify\_d5\_half\_spin\_hypercube.py}.
+\item D5 outputs: summary, weights, and report in
+\texttt{output/d5\_half\_spin/}.
+\item Optional Route-B algebra check:
+\texttt{python3 code/verify\_hidden\_zeta\_origin.py}.
+\item Optional Route-B output: verification JSON in
+\texttt{output/hidden\_zeta\_origin/}\\
+\texttt{routeB\_hidden\_zeta\_verification.json}.
+\item Optional Route-D local string checks:
+\texttt{python3 route\_d/code/}\\
+\texttt{verify\_d1\_f\_theory\_local\_placement.py}
+and\\
+\texttt{python3 route\_d/code/}\\
+\texttt{verify\_d2\_e3\_instanton\_zeta.py}.
+\item Optional Route-D outputs:
+\texttt{route\_d/output/d1\_f\_theory\_local\_placement.*} and
+\texttt{route\_d/output/d2\_e3\_instanton\_zeta.*}.
+\item Status log: \texttt{roadmap.md}.
+\end{itemize}
 The reproducible numerical claims inside this TeX draft are therefore only the
-D5 half-spin branching check, the hypercharge normalization check, and the
-Route-B algebraic \(\zeta K_{\rm tr}\) matching check.  All publication-grade
+D5 half-spin branching check, the hypercharge normalization check, the
+Route-B algebraic \(\zeta K_{\rm tr}\) matching check, and the appendix-level
+Route-D local string-placement/instanton arithmetic.  All publication-grade
 phenomenology remains outside this manifest until the companion audits are
 restored.
 
 \section{Deferred Calculations}
 
-The previous version contained detailed scan and audit material for Yukawa
-textures, \(d=5\) proton decay, threshold corrections, source sectors,
-clockwork rescue, no-web provenance, and theorem ledgers.  Those calculations
-are not deleted from the project history: they are preserved in the backup
-made before this rewrite and in the corresponding output artifacts.  They are
-omitted from this TeX draft because their status relative to the
-face-projection principle is not yet settled.  This lean note defines the
-representation-level and index-level skeleton; benchmark-level numerical checks
-are deferred to companion artifacts.  The only numerical Route-B checks kept in
-this draft are the algebraic \(\zeta\), \(K_{\rm tr}\), and phase-spurion
-checks needed to support the hidden messenger theorem.
+Earlier drafts contained detailed scan and audit material for Yukawa textures,
+\(d=5\) proton decay, threshold corrections, source sectors, clockwork rescue,
+and theorem ledgers.  Those artifacts are preserved in the project history,
+but they are omitted from this lean TeX draft because their status relative to
+the face-projection principle is not yet settled.  The only numerical Route-B
+checks kept here are the algebraic \(\zeta\), \(K_{\rm tr}\), and
+phase-spurion checks needed for the optional hidden messenger theorem.
 
-The conservative paper strategy is Route A as the main note: keep the proved
-representation and index skeleton in the foreground, and treat Route B as a
-candidate hidden-sector mechanism or companion-paper seed.  Promoting Route B
-to the main line would require restoring only those flavor, proton-decay,
-threshold, and source-sector calculations that survive the \(R\)-selection
-rule and canonical-normalization replay.  In short,
+The paper strategy is therefore:
 \[
 \begin{array}{ll}
-\text{Route A} & \text{main paper: conditional face-projection model note},\\
-\text{Route B} & \text{candidate mechanism or companion: hidden origin for }\zeta .
+\text{Route A} &
+\text{main paper: representation/index/contact skeleton},\\
+\text{Route B} &
+\text{optional extension or companion: hidden origin for }\zeta,\\
+\text{companion audits} &
+\text{full flavor, }d=5\text{ proton decay, thresholds, source-sector UV}.
 \end{array}
 \]
 
@@ -897,28 +1113,23 @@ rule and canonical-normalization replay.  In short,
 
 The logical status of this version is deliberately narrower than a complete
 GUT construction:
-\begin{center}
-\small
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.67\linewidth}@{}}
-\toprule
-\textbf{status} & \textbf{content}\\
-\midrule
-proved/constructed &
+\begin{description}
+\item[Proved/constructed.]
 \(\Spin(10)\) face skeleton; \(\Spin^c(\CP^1,\cO(2))\) index;
-\(K_{\rm tr}\) uniqueness; optional Route-B Schur complement.\\
-conditional inputs &
+\(K_{\rm tr}\) uniqueness; optional Route-B Schur complement.
+\item[Conditional inputs.]
 \(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
 no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
-hidden phase/radial sector.\\
-deferred audits &
-full flavor fit; \(d=5\) proton-decay Wilson tensors;
-threshold/proton companion audits; source-sector UV origin.\\
-not claimed &
-PSLT-only unique GUT proof.\\
-\bottomrule
-\end{tabular}
-\end{center}
+hidden phase/radial sector.
+\item[Deferred audits.]
+Full flavor fit; \(d=5\) proton-decay Wilson tensors;
+threshold/proton companion audits; source-sector UV origin.
+\item[Optional UV interpretations.]
+Route-D local F-theory placement and E3-instanton interpretation of
+\(\zeta K_{\rm tr}\), both with global compactification and zero-mode caveats.
+\item[Not claimed.]
+PSLT-only unique GUT proof.
+\end{description}
 
 \section{Conclusion}
 
@@ -930,7 +1141,9 @@ These are mathematical inputs and consequences inside a conditional EFT
 branch.  They do not by themselves determine the microscopic source sector,
 the complex hidden coefficient \(\zeta\), the full flavor fit, or the
 proton-decay Wilson tensors.  Keeping this boundary explicit is the point of
-the lean Route-A version.
+the lean Route-A version.  This note establishes the
+representation/index/contact skeleton; it does not claim full GUT
+phenomenology.
 
 \appendix
 \section{\texorpdfstring{\(D_5\) Half-Spin Weight Hypercube}{D5 Half-Spin Weight Hypercube}}
@@ -1030,6 +1243,166 @@ e^c & (1,1) & 1 & 1 .
 The multiplicities sum to \(16\), so this is a complete half-spinor, not a
 collection of separately chosen low-energy fragments.
 
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  scale=1.03,
+  every node/.style={font=\small},
+  spinEdge/.style={gray!45, opacity=0.16, line width=0.28pt},
+  weight/.style={circle, draw=white, line width=0.45pt, minimum size=7pt,
+    inner sep=0pt},
+  weightQ/.style={weight, fill=orange!85!black},
+  weightL/.style={weight, fill=blue!70!black},
+  weightU/.style={weight, fill=red!75!black},
+  weightD/.style={weight, fill=purple!75!black},
+  weightNu/.style={weight, fill=teal!70!black},
+  weightE/.style={weight, fill=black!70},
+  legendText/.style={anchor=west, font=\scriptsize}
+]
+\node[align=center] at (0,2.72)
+  {projected even-minus \(D_5\) half-spin weights
+  \(\frac12(s_1,\ldots,s_5)\)};
+
+\coordinate (w0) at (0.35,0.05); % +++++ L
+\coordinate (w1) at (0.66,2.08); % +++-- L
+\coordinate (w2) at (2.25,0.30); % ++-+- d^c
+\coordinate (w3) at (1.26,0.52); % ++--+ u^c
+\coordinate (w4) at (0.46,-0.52); % +-++- d^c
+\coordinate (w5) at (-0.54,-0.30); % +-+-+ u^c
+\coordinate (w6) at (1.05,-2.08); % +--++ Q
+\coordinate (w7) at (1.37,-0.05); % +---- Q
+\coordinate (w8) at (-0.71,0.96); % -+++- d^c
+\coordinate (w9) at (-1.71,1.18); % -++-+ u^c
+\coordinate (w10) at (-0.12,-0.60); % -+-++ Q
+\coordinate (w11) at (0.19,1.43); % -+--- Q
+\coordinate (w12) at (-1.91,-1.43); % --+++ Q
+\coordinate (w13) at (-1.60,0.60); % --+-- Q
+\coordinate (w14) at (-0.01,-1.18); % ---+- e^c
+\coordinate (w15) at (-1.01,-0.96); % ----+ nu^c
+
+% Demihypercube edges: pairs of even-parity sign words differing in two signs.
+\draw[spinEdge] (w0) -- (w1);
+\draw[spinEdge] (w0) -- (w2);
+\draw[spinEdge] (w0) -- (w3);
+\draw[spinEdge] (w0) -- (w4);
+\draw[spinEdge] (w0) -- (w5);
+\draw[spinEdge] (w0) -- (w6);
+\draw[spinEdge] (w0) -- (w8);
+\draw[spinEdge] (w0) -- (w9);
+\draw[spinEdge] (w0) -- (w10);
+\draw[spinEdge] (w0) -- (w12);
+\draw[spinEdge] (w1) -- (w2);
+\draw[spinEdge] (w1) -- (w3);
+\draw[spinEdge] (w1) -- (w4);
+\draw[spinEdge] (w1) -- (w5);
+\draw[spinEdge] (w1) -- (w7);
+\draw[spinEdge] (w1) -- (w8);
+\draw[spinEdge] (w1) -- (w9);
+\draw[spinEdge] (w1) -- (w11);
+\draw[spinEdge] (w1) -- (w13);
+\draw[spinEdge] (w2) -- (w3);
+\draw[spinEdge] (w2) -- (w4);
+\draw[spinEdge] (w2) -- (w6);
+\draw[spinEdge] (w2) -- (w7);
+\draw[spinEdge] (w2) -- (w8);
+\draw[spinEdge] (w2) -- (w10);
+\draw[spinEdge] (w2) -- (w11);
+\draw[spinEdge] (w2) -- (w14);
+\draw[spinEdge] (w3) -- (w5);
+\draw[spinEdge] (w3) -- (w6);
+\draw[spinEdge] (w3) -- (w7);
+\draw[spinEdge] (w3) -- (w9);
+\draw[spinEdge] (w3) -- (w10);
+\draw[spinEdge] (w3) -- (w11);
+\draw[spinEdge] (w3) -- (w15);
+\draw[spinEdge] (w4) -- (w5);
+\draw[spinEdge] (w4) -- (w6);
+\draw[spinEdge] (w4) -- (w7);
+\draw[spinEdge] (w4) -- (w8);
+\draw[spinEdge] (w4) -- (w12);
+\draw[spinEdge] (w4) -- (w13);
+\draw[spinEdge] (w4) -- (w14);
+\draw[spinEdge] (w5) -- (w6);
+\draw[spinEdge] (w5) -- (w7);
+\draw[spinEdge] (w5) -- (w9);
+\draw[spinEdge] (w5) -- (w12);
+\draw[spinEdge] (w5) -- (w13);
+\draw[spinEdge] (w5) -- (w15);
+\draw[spinEdge] (w6) -- (w7);
+\draw[spinEdge] (w6) -- (w10);
+\draw[spinEdge] (w6) -- (w12);
+\draw[spinEdge] (w6) -- (w14);
+\draw[spinEdge] (w6) -- (w15);
+\draw[spinEdge] (w7) -- (w11);
+\draw[spinEdge] (w7) -- (w13);
+\draw[spinEdge] (w7) -- (w14);
+\draw[spinEdge] (w7) -- (w15);
+\draw[spinEdge] (w8) -- (w9);
+\draw[spinEdge] (w8) -- (w10);
+\draw[spinEdge] (w8) -- (w11);
+\draw[spinEdge] (w8) -- (w12);
+\draw[spinEdge] (w8) -- (w13);
+\draw[spinEdge] (w8) -- (w14);
+\draw[spinEdge] (w9) -- (w10);
+\draw[spinEdge] (w9) -- (w11);
+\draw[spinEdge] (w9) -- (w12);
+\draw[spinEdge] (w9) -- (w13);
+\draw[spinEdge] (w9) -- (w15);
+\draw[spinEdge] (w10) -- (w11);
+\draw[spinEdge] (w10) -- (w12);
+\draw[spinEdge] (w10) -- (w14);
+\draw[spinEdge] (w10) -- (w15);
+\draw[spinEdge] (w11) -- (w13);
+\draw[spinEdge] (w11) -- (w14);
+\draw[spinEdge] (w11) -- (w15);
+\draw[spinEdge] (w12) -- (w13);
+\draw[spinEdge] (w12) -- (w14);
+\draw[spinEdge] (w12) -- (w15);
+\draw[spinEdge] (w13) -- (w14);
+\draw[spinEdge] (w13) -- (w15);
+\draw[spinEdge] (w14) -- (w15);
+
+\node[weightL] at (w0) {};
+\node[weightL] at (w1) {};
+\node[weightD] at (w2) {};
+\node[weightU] at (w3) {};
+\node[weightD] at (w4) {};
+\node[weightU] at (w5) {};
+\node[weightQ] at (w6) {};
+\node[weightQ] at (w7) {};
+\node[weightD] at (w8) {};
+\node[weightU] at (w9) {};
+\node[weightQ] at (w10) {};
+\node[weightQ] at (w11) {};
+\node[weightQ] at (w12) {};
+\node[weightQ] at (w13) {};
+\node[weightE] at (w14) {};
+\node[weightNu] at (w15) {};
+
+% Color legend.
+\node[weightQ] at (3.20,1.38) {};
+\node[legendText] at (3.38,1.38) {\(Q\) \((6)\)};
+\node[weightL] at (3.20,1.02) {};
+\node[legendText] at (3.38,1.02) {\(L\) \((2)\)};
+\node[weightU] at (3.20,0.66) {};
+\node[legendText] at (3.38,0.66) {\(u^c\) \((3)\)};
+\node[weightD] at (3.20,0.30) {};
+\node[legendText] at (3.38,0.30) {\(d^c\) \((3)\)};
+\node[weightNu] at (3.20,-0.06) {};
+\node[legendText] at (3.38,-0.06) {\(\nu^c\) \((1)\)};
+\node[weightE] at (3.20,-0.42) {};
+\node[legendText] at (3.38,-0.42) {\(e^c\) \((1)\)};
+\node[align=left, font=\scriptsize] at (3.55,-1.18)
+  {colors are SM\\multiplet types};
+\end{tikzpicture}
+\caption{Projected \(D_5\) half-spin weight hypercube.  The \(16\) even-parity
+half-spin weights are shown as one projected demihypercube and colored by
+their Standard-Model multiplet type after the Pati--Salam face projection.
+The multiplicities reproduce
+\((Q,L,u^c,d^c,\nu^c,e^c)=(6,2,3,3,1,1)\).}
+\label{fig:d5-half-spin-hypercube}
+\end{figure*}
+
 The appendix calculation is reproduced by
 \[
   \texttt{code/verify\_d5\_half\_spin\_hypercube.py}.
@@ -1051,6 +1424,178 @@ and the same normalization check as in the main text,
   k_Y=\frac53.
 \]
 
+\section{Optional Route-D String-Constrained Placement}
+\label{app:route-d-string}
+
+This appendix records the promotion decision for Route D.  The local
+F-theory placement audit and the E3-instanton audit are included only as a
+string-constrained interpretation of the Route-A/Route-B data.  They are not
+part of the Route-A theorem core and do not constitute a global F-theory
+compactification.
+
+\subsection{Local \texorpdfstring{\(D_5\to E_6\)}{D5 to E6} placement}
+
+In local F-theory GUT models, a gauge algebra is engineered on a divisor by
+the singular fiber type.  A \(D_5\) singularity realizes
+\(\mathfrak{so}(10)\), while charged matter can localize on curves where the
+singularity enhances in codimension two.  The Katz--Vafa local rule identifies
+the matter from the adjoint branching of the enhanced algebra
+\cite{KatzVafa1996,BeasleyHeckmanVafa2008I}.  For a \(D_5\to E_6\)
+enhancement,
+\[
+  E_6\supset \SO(10)\times\U(1),
+\]
+and
+\[
+  \mathbf{78}
+  =
+  \mathbf{45}_0
+  \oplus
+  \mathbf{1}_0
+  \oplus
+  \mathbf{16}_{-3}
+  \oplus
+  \overline{\mathbf{16}}_{+3}.
+\]
+The dimension check is
+\[
+  45+1+16+16=78.
+\]
+Thus the six-face \(\Spin(10)\) object used in the main text has a standard
+local string interpretation: the \(\mathbf{16}\) appears as one irreducible
+matter curve representation, rather than as six separately chosen
+Standard-Model fragments.
+
+The same local picture can reproduce the \(O(2)\) family carrier.  On a
+matter curve \(\Sigma=\CP^1\), the zero-mode carrier is represented as
+\[
+  K_\Sigma^{1/2}\otimes L_{\rm flux}.
+\]
+Since
+\[
+  K_{\CP^1}^{1/2}=\cO(-1),
+\]
+a flux bundle with degree three gives
+\[
+  K_{\CP^1}^{1/2}\otimes \cO(3)
+  =
+  \cO(-1)\otimes\cO(3)
+  =
+  \cO(2).
+\]
+Consequently
+\[
+  h^0(\CP^1,\cO(2))=3,\qquad
+  h^1(\CP^1,\cO(2))=0.
+\]
+This does not eliminate conditional input; it replaces the abstract
+\(\cO(2)\) assumption by the flux-quantized matter-curve datum
+\[
+  2=3_{\rm flux}-1_{\rm spin}.
+\]
+
+\begin{remark}[Global caveat]
+The local \(D_5\to E_6\) branching and the \(\CP^1\) index do not verify a
+global F-theory compactification.  Hypercharge flux or Wilson-line breaking
+must still satisfy the global massless-hypercharge condition and avoid chiral
+exotics and uncontrolled threshold corrections
+\cite{BeasleyHeckmanVafa2008II,MayrhoferPaltiWeigand2013}.
+\end{remark}
+
+\subsection{E3-instanton interpretation of \texorpdfstring{\(\zeta K_{\rm tr}\)}{zeta Ktr}}
+
+The optional Route-B hidden messenger isolates the complex coefficient
+\(\zeta\) from the tensor direction \(K_{\rm tr}\).  A standard Type IIB/F
+theory interpretation of this coefficient is an Euclidean D3-brane instanton
+factor
+\cite{Witten1996,BlumenhagenCveticWeigand2006,IbanezUranga2006,CveticRichterWeigand2007}
+\[
+  \zeta_\Gamma=A_\Gamma e^{2\pi iT_\Gamma},
+  \qquad
+  T_\Gamma=\theta_\Gamma+i\,t_\Gamma.
+\]
+Thus the hidden phase/radial sector becomes an axion-volume pair.  For the
+benchmark value
+\[
+  \zeta_{\rm tar}=0.1076472949+0.0736514853\,i,
+\]
+one has
+\[
+  |\zeta_{\rm tar}|=0.13043190325293763,
+  \qquad
+  \arg\zeta_{\rm tar}=0.600038020318215.
+\]
+For unit prefactor modulus,
+\[
+  S_{\rm eff}=-\log|\zeta_{\rm tar}|
+  =
+  2.0369040025655094,
+\]
+or, in the convention \(\zeta=\exp(2\pi iT_\Gamma)\),
+\[
+  \operatorname{Im}T_\Gamma=0.3241833406119675.
+\]
+
+The Majorana-only selection rule also has a standard instanton interpretation.
+Perturbative abelian symmetries can survive as selection rules even when the
+corresponding gauge bosons become massive by a Green--Schwarz/Stueckelberg
+mechanism.  An instanton factor can transform under such a symmetry because
+its axion shifts.  In a minimal charge ledger,
+\[
+  q(N)=+1,\qquad q(NN)=+2,\qquad q(e^{-S_\Gamma+i\varphi_\Gamma})=-2,
+\]
+so the instanton-dressed Majorana insertion is neutral:
+\[
+  q\!\left(e^{-S_\Gamma+i\varphi_\Gamma}NN\right)=0.
+\]
+In an actual compactification this bookkeeping must be realized by universal
+and charged instanton zero modes, whose saturation pattern inserts \(N_iN_j\)
+and does not generate the forbidden Dirac or colored-triplet operators
+\cite{BianchiCollinucciMartucci2011,CveticDonagiHalversonMarsano2012}.
+
+Finally, landing specifically on \(K_{\rm tr}\) requires the same locality or
+equivariance assumption used in the Route-B discussion.  If the instanton data
+are blind to detailed family coordinates on
+\[
+  V=H^0(\CP^1,\cO(2))\simeq \mathrm{Sym}^2\mathbb C^2
+\]
+except through the contact pairing, then the unique invariant contact
+direction is the scalar second-transvectant summand
+\[
+  K_{\rm tr}\in\mathrm{Sym}^0
+  \subset
+  \mathrm{Sym}^2(\mathrm{Sym}^2\mathbb C^2)
+  =
+  \mathrm{Sym}^4\mathbb C^2\oplus\mathrm{Sym}^0.
+\]
+
+\begin{remark}[Precision caveat]
+The instanton interpretation explains the form, selection rule, and moderate
+scale of \(\zeta\).  It does not predict the benchmark value to many digits.
+For the benchmark,
+\[
+  |\zeta|^2=0.01701248138618368,
+\]
+which is about
+\[
+  \frac{|\zeta|^2}{3.208798\times10^{-5}}
+  =
+  530.1823731560442
+\]
+times the recorded contact-sensitivity window.  Multi-instanton, multi-cover,
+prefactor, and moduli-stabilization effects therefore cannot be ignored in any
+claim of high-precision prediction.
+\end{remark}
+
+The appendix-level checks are reproduced by
+\[
+  \texttt{route\_d/code/verify\_d1\_f\_theory\_local\_placement.py}
+\]
+and
+\[
+  \texttt{route\_d/code/verify\_d2\_e3\_instanton\_zeta.py}.
+\]
+
 \section{\texorpdfstring{Optional Route-B Algebraic Checks}{Optional Route-B Algebraic Checks}}
 \label{app:routeb-checks}
 
@@ -1058,11 +1603,11 @@ This table checks only the optional Route-B Schur-complement algebra.  It is
 not a substitute for the deferred full flavor, proton-decay, threshold, or
 source-sector audits.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{p{0.35\linewidth}p{0.27\linewidth}p{0.27\linewidth}}
+\begin{tabular}{lll}
 \toprule
 \textbf{check} & \textbf{value} & \textbf{role}\\
 \midrule
@@ -1103,9 +1648,9 @@ visible threshold silence\\
 \end{tabular}
 \caption{Optional Route-B algebraic verification.}
 \label{tab:routeb-zeta-checks}
-\end{table}
+\end{table*}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{apsrev4-2}
 \bibliography{refs}
 
 \end{document}

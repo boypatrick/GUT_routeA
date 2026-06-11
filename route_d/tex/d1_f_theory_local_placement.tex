@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\cO}{\mathcal{O}}
+
+\title{Route D1-F: F-theory Local Placement Audit}
+\author{BoYu Chen}
+\date{June 11, 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose}
+
+This note tests the first Route-D string-constrained graft: whether the
+Route-A skeleton can be reproduced as a standard local F-theory GUT structure.
+The target is deliberately local.  The note checks a codimension-one
+\(D_5\) singularity for the \(\Spin(10)\) gauge algebra, a codimension-two
+\(D_5\to E_6\) enhancement for a \(16\) matter curve, and a
+\(\CP^1\) matter-curve index giving the same \(\cO(2)\) family carrier used in
+the Route-A paper.  It does not construct a global compactification and does
+not claim a unique string vacuum.
+
+\section{Local F-theory placement}
+
+In local F-theory GUT models, a gauge algebra is engineered on a complex
+surface or divisor \(S\) by the singular fiber type over \(S\).  A \(D_5\)
+singularity realizes the algebra \(\mathfrak{so}(10)\), whose simply connected
+group is \(\Spin(10)\).  Charged matter is localized on curves where the
+singularity enhances in codimension two.  The Katz--Vafa local rule determines
+the localized matter by decomposing the adjoint of the enhanced algebra under
+the lower-rank gauge algebra and its commutant.
+
+For a \(D_5\to E_6\) enhancement, the relevant branching is
+\begin{equation}
+  E_6 \supset \SO(10)\times \U(1),
+\end{equation}
+and
+\begin{equation}
+  \mathbf{78}
+  =
+  \mathbf{45}_0
+  \oplus
+  \mathbf{1}_0
+  \oplus
+  \mathbf{16}_{-3}
+  \oplus
+  \overline{\mathbf{16}}_{+3}.
+  \label{eq:e6-so10-branch}
+\end{equation}
+The dimension check is
+\begin{equation}
+  45+1+16+16=78.
+\end{equation}
+Thus the extra local degrees of freedom away from the
+\(\mathfrak{so}(10)\oplus\mathfrak u(1)\) adjoint are a single \(16\) and its
+conjugate.  In this sense the Route-A ``six-face'' object has a standard
+string-local origin: the matter curve carries one irreducible \(\Spin(10)\)
+half-spin representation, not six unrelated low-energy fragments.
+
+\paragraph{Boundary.}
+Equation~\eqref{eq:e6-so10-branch} is a local representation statement.  It
+does not by itself determine net chirality, family number, Yukawa ranks, or
+absence of exotics.  Those require flux data, global geometry, and a
+compactification-specific spectrum computation.
+
+\section{\texorpdfstring{Matter-curve index and the \(\cO(2)\) carrier}{Matter-curve index and the O(2) carrier}}
+
+On a matter curve \(\Sigma\), the chiral zero-mode carrier in the local
+twisted seven-brane theory is conventionally represented as a spin bundle on
+\(\Sigma\) tensored with a flux line bundle:
+\begin{equation}
+  K_\Sigma^{1/2}\otimes L_{\rm flux}.
+  \label{eq:spin-flux-carrier}
+\end{equation}
+For the Route-D test, choose
+\begin{equation}
+  \Sigma=\CP^1,\qquad
+  K_{\CP^1}=\cO(-2),\qquad
+  K_{\CP^1}^{1/2}=\cO(-1).
+\end{equation}
+If the restriction of the flux line bundle to the matter curve has degree
+three,
+\begin{equation}
+  L_{\rm flux}|_\Sigma\simeq \cO(3),
+\end{equation}
+then
+\begin{equation}
+  K_{\CP^1}^{1/2}\otimes L_{\rm flux}
+  =
+  \cO(-1)\otimes\cO(3)
+  =
+  \cO(2).
+  \label{eq:o2-from-flux}
+\end{equation}
+Therefore the Route-A family carrier is reproduced exactly, but with a
+string-local decomposition of the degree:
+\begin{equation}
+  2=3_{\rm flux}-1_{\rm spin}.
+\end{equation}
+The cohomology on \(\CP^1\) is
+\begin{equation}
+  h^0(\CP^1,\cO(n))=
+  \begin{cases}
+    n+1,& n\ge0,\\
+    0,& n<0,
+  \end{cases}
+  \qquad
+  h^1(\CP^1,\cO(n))=
+  \begin{cases}
+    0,& n\ge -1,\\
+    -n-1,& n\le -2.
+  \end{cases}
+\end{equation}
+For \(n=2\),
+\begin{equation}
+  h^0(\CP^1,\cO(2))=3,\qquad
+  h^1(\CP^1,\cO(2))=0.
+\end{equation}
+Thus the F-theory matter-curve audit recovers the same protected
+three-section carrier used in Route A.
+
+\paragraph{Boundary.}
+The integer \(\deg L_{\rm flux}=3\) is still compactification data.  Route D
+does not eliminate conditional input; it changes the input from an abstract
+\(\cO(2)\) assumption into a flux-quantized matter-curve datum.
+
+\section{Hypercharge flux and breaking caveat}
+
+The face projection in the Route-A paper breaks the high-energy
+\(\Spin(10)\) representation to the Standard-Model face.  In F-theory, this
+kind of breaking can be implemented by internal fluxes or Wilson-line data,
+but the hypercharge direction is constrained.  A viable hypercharge flux must
+avoid giving the \(\U(1)_Y\) gauge boson a Stueckelberg mass; equivalently,
+the corresponding flux must satisfy the relevant global topological
+triviality condition after pushforward to the base.  It must also avoid
+unwanted chiral exotics and keep threshold corrections under control.
+
+Consequently, the D1-F audit supports the local origin of the
+\(\Spin(10):16\) matter object and the \(\cO(2)\) carrier, but it does not
+certify the full Standard-Model breaking sector.  Hypercharge flux is a
+separate global audit, not an automatic consequence of the local
+\(D_5\to E_6\) enhancement.
+
+\section{Result}
+
+The D1-F graft is viable in the limited Route-D sense:
+\begin{align}
+  D_5\text{ singularity on }S
+  &\leadsto
+  \Spin(10)\text{ gauge algebra},\\
+  D_5\to E_6\text{ enhancement on }\Sigma
+  &\leadsto
+  \mathbf{16}\text{ matter curve},\\
+  \Sigma=\CP^1,\quad
+  K_\Sigma^{1/2}\otimes \cO(3)
+  &=
+  \cO(2),\\
+  h^0(\CP^1,\cO(2))=3,\quad h^1(\CP^1,\cO(2))&=0.
+\end{align}
+This is strong enough for a conservative Route-D appendix paragraph, provided
+the text keeps the global compactification and hypercharge-flux caveats.
+
+\begin{thebibliography}{9}
+
+\bibitem{KatzVafa1996}
+S.~Katz and C.~Vafa,
+``Matter from geometry,''
+\href{https://arxiv.org/abs/hep-th/9606086}{arXiv:hep-th/9606086}.
+
+\bibitem{BeasleyHeckmanVafa2008I}
+C.~Beasley, J.~J.~Heckman, and C.~Vafa,
+``GUTs and exceptional branes in F-theory I,''
+\href{https://arxiv.org/abs/0802.3391}{arXiv:0802.3391}.
+
+\bibitem{BeasleyHeckmanVafa2008II}
+C.~Beasley, J.~J.~Heckman, and C.~Vafa,
+``GUTs and exceptional branes in F-theory II: Experimental predictions,''
+\href{https://arxiv.org/abs/0806.0102}{arXiv:0806.0102}.
+
+\bibitem{MayrhoferPaltiWeigand2013}
+C.~Mayrhofer, E.~Palti, and T.~Weigand,
+``Hypercharge flux in IIB and F-theory: Anomalies and gauge coupling
+unification,''
+\href{https://arxiv.org/abs/1303.3589}{arXiv:1303.3589}.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,2419 @@
+{
+  "all_left_rows": [
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_0] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "L",
+        "bar(L)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 0,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_1] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 1,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_2] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 2,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_3] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 3,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_4] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 4,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_5] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "nu^c",
+        "d^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 5,
+      "vector_label": "SU4/E_SM leptoquark E_ellr"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_6] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "Q",
+        "bar(Q)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 6,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_7] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 7,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_8] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 8,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_9] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 9,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_10] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 10,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_11] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(nu^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 11,
+      "vector_label": "SU4/E_SM leptoquark E_rell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_12] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "L",
+        "bar(L)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 12,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_13] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 13,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_14] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 14,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_15] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 15,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_16] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 16,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_17] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "nu^c",
+        "d^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 17,
+      "vector_label": "SU4/E_SM leptoquark E_ellg"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_18] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "Q",
+        "bar(Q)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 18,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_19] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 19,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_20] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 20,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_21] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 21,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_22] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 22,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_23] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(nu^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 23,
+      "vector_label": "SU4/E_SM leptoquark E_gell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_24] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "L",
+        "bar(L)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 24,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_25] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 25,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_26] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 26,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_27] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(L)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 27,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_28] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(L)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 28,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_29] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "nu^c",
+        "d^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 29,
+      "vector_label": "SU4/E_SM leptoquark E_ellb"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_30] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "Q",
+        "bar(Q)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 30,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_31] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 31,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_32] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 32,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_33] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "nu^c",
+        "bar(Q)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 33,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_34] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "L",
+        "e^c",
+        "bar(Q)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 34,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_35] = -2 g_X^2 c1 c2^*/M_LQ^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(nu^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Pati-Salam SU(4)_C leptoquark",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_LQ",
+      "p14_matching_gate": "ps_leptoquark_same-sector_pair_noncanonical_until_fierz",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 35,
+      "vector_label": "SU4/E_SM leptoquark E_bell"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_36] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "d^c",
+        "bar(d^c)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 36,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_37] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "d^c",
+        "bar(d^c)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 37,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_38] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(d^c)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 38,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_39] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "d^c",
+        "bar(d^c)",
+        "bar(u^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 39,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_40] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(d^c)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 40,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_41] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "u^c",
+        "e^c",
+        "bar(d^c)",
+        "bar(nu^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 41,
+      "vector_label": "SU2_R T_R^+"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_42] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "u^c",
+        "bar(u^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 42,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_43] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "u^c",
+        "bar(u^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 43,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_44] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "nu^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 44,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_45] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "u^c",
+        "bar(u^c)",
+        "bar(d^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 45,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_46] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "nu^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 46,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_47] = -2 g_X^2 c1 c2^*/M_WR^2",
+      "crossed_all_left_fields": [
+        "d^c",
+        "nu^c",
+        "bar(u^c)",
+        "bar(e^c)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "broken SU(2)_R charged current",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_WR",
+      "p14_matching_gate": "right_current_B_and_L_conserving_not_proton_seed",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 47,
+      "vector_label": "SU2_R T_R^-"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_48] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 48,
+      "vector_label": "(6,2,2) C_[rg],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_49] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 49,
+      "vector_label": "(6,2,2) C_[rg],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_50] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 50,
+      "vector_label": "(6,2,2) C_[rg],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_51] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 51,
+      "vector_label": "(6,2,2) C_[rg],d,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_52] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 52,
+      "vector_label": "(6,2,2) C_[rb],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_53] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 53,
+      "vector_label": "(6,2,2) C_[rb],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_54] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 54,
+      "vector_label": "(6,2,2) C_[rb],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_55] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 55,
+      "vector_label": "(6,2,2) C_[rb],d,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_56] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 56,
+      "vector_label": "(6,2,2) C_[rell],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_57] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 57,
+      "vector_label": "(6,2,2) C_[rell],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_58] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 58,
+      "vector_label": "(6,2,2) C_[rell],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_59] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 59,
+      "vector_label": "(6,2,2) C_[rell],d,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_60] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 60,
+      "vector_label": "(6,2,2) C_[gb],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_61] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 61,
+      "vector_label": "(6,2,2) C_[gb],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_62] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(u^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 62,
+      "vector_label": "(6,2,2) C_[gb],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_63] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(d^c)",
+        "bar(Q)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_diquark_like_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 63,
+      "vector_label": "(6,2,2) C_[gb],d,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_64] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 64,
+      "vector_label": "(6,2,2) C_[gell],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_65] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 65,
+      "vector_label": "(6,2,2) C_[gell],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_66] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 66,
+      "vector_label": "(6,2,2) C_[gell],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_67] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 67,
+      "vector_label": "(6,2,2) C_[gell],d,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_68] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 68,
+      "vector_label": "(6,2,2) C_[bell],u,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_69] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 69,
+      "vector_label": "(6,2,2) C_[bell],u,plus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_70] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "u^c",
+        "bar(nu^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 70,
+      "vector_label": "(6,2,2) C_[bell],d,minus"
+    },
+    {
+      "all_left_status": "B_and_L_conserving_crossed_skeleton",
+      "canonical_bnv_basis_id": null,
+      "coefficient_template": "C_crossed[row_71] = -2 g_X^2 c1 c2^*/M_(6,2,2)^2",
+      "crossed_all_left_fields": [
+        "Q",
+        "d^c",
+        "bar(e^c)",
+        "bar(L)"
+      ],
+      "fierz_convention": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+      "flavor_gate_status": "symbolic_family_indices_unrotated",
+      "generator_family": "Spin(10)/Pati-Salam off-face generator",
+      "global_charges": {
+        "B": "0",
+        "B_minus_L": "0",
+        "L": "0"
+      },
+      "mass_block": "M_(6,2,2)",
+      "p14_matching_gate": "off_face_mixed_pair_crossing_required",
+      "physical_proton_bound_status": "not_evaluable_yet",
+      "remaining_requirements": [
+        "assemble physical hermitian vector multiplets and Clebsch phases",
+        "map crossed conjugate fields to the chosen external-state convention",
+        "project to a canonical all-left Wilson basis if applicable",
+        "apply physical flavor rotations",
+        "insert numerical masses and couplings",
+        "run Wilson coefficients to the hadronic scale",
+        "contract with hadronic matrix elements and channel limits"
+      ],
+      "row_id": 71,
+      "vector_label": "(6,2,2) C_[bell],d,plus"
+    }
+  ],
+  "boundary": "P15-V fixes a two-component Fierz/crossing convention for Branch V and audits the crossed all-left skeletons.  It does not compute physical proton lifetimes, and it does not override the scalar/source Branch S.",
+  "description": "Route-C P15-V vector-current to all-left Fierz/flavor gate",
+  "fixed_convention": {
+    "coefficient_prefactor": "-2 g_X^2 c1 c2^*/M_X^2",
+    "crossed_all_left_skeleton": "(psi_s1 psi_t2)(bar(psi_t1) bar(psi_s2))",
+    "fierz_identity": "(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi) = 2 (chi^dagger eta^dagger)(psi xi)",
+    "input_current_product": "(psi_t1^dagger bar_sigma^mu psi_s1)(psi_s2^dagger bar_sigma_mu psi_t2)"
+  },
+  "interpretation": {
+    "branch_s_status": "P13-S remains a separate scalar/source Wilson-basis branch and must not be discarded.",
+    "branch_v_status": "Branch V is now in an all-left crossed-skeleton bookkeeping basis.  Under the current sparse-map pairing, no row is yet a canonical BNV proton operator.",
+    "why_no_proton_limit_yet": "The gate fixes the Fierz convention and global-charge audit, but physical proton limits require a canonical external-state crossing convention, physical flavor rotations, RG factors, hadronic matrix elements, and channel limits."
+  },
+  "next_stage": {
+    "recommended": "P16_choose_vector_physical_multiplet_or_return_to_scalar_source",
+    "required_decision": "Either assemble physical hermitian vector multiplets and their cross-root Clebsch phases to search for canonical BNV vector operators, or return to the P13-S scalar/source recoupling path. Do not insert proton limits yet."
+  },
+  "summary": {
+    "all_left_status_counts": {
+      "B_and_L_conserving_crossed_skeleton": 72
+    },
+    "all_rows_have_charge_audit": true,
+    "all_rows_have_crossed_fields": true,
+    "branch_v_all_left_gate_passes": true,
+    "canonical_bnv_basis_counts": {
+      "none": 72
+    },
+    "canonical_bnv_rows_evaluable_now": 0,
+    "p14_current_pair_rows_consumed": 72,
+    "p14_gate_counts_replayed": {
+      "off_face_diquark_like_pair_crossing_required": 12,
+      "off_face_mixed_pair_crossing_required": 12,
+      "ps_leptoquark_mixed_pair_crossing_required": 24,
+      "ps_leptoquark_same-sector_pair_noncanonical_until_fierz": 12,
+      "right_current_B_and_L_conserving_not_proton_seed": 12
+    },
+    "p15_rows_generated": 72,
+    "physical_proton_bounds_evaluable_now": 0
+  }
+}

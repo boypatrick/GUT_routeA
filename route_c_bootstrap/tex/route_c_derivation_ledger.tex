@@ -18,7 +18,7 @@
 \newcommand{\nuc}{\nu^c}
 \newcommand{\ec}{e^c}
 
-\title{Route C Bootstrap Derivation Ledger through P12-S}
+\title{Route C Bootstrap Derivation Ledger through P16-V}
 \author{BoYu Chen}
 \date{\today}
 
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-This note records the derivations generated in Route C stages P1--P12-S.
+This note records the derivations generated in Route C stages P1--P16-V.
 It is a derivation ledger, not a claim that on-shell consistency has already
 derived a complete GUT.  The current Route C program uses the one-family
 Standard Model spectrum with a right-handed neutrino as baseline, builds
@@ -46,6 +46,17 @@ adjoint current-vector matching from scalar/source chiral-pair mass debt.
 P12-S records both post-P11 directions, activates the scalar/source
 chiral-pair branch first, and assigns symbolic scalar/source mass denominators
 to all P7 chiral-pair rows while leaving physical proton bounds conditional.
+P13-S chooses a symbolic scalar/source flavor-tensor basis and maps the BNV
+rows to an all-left chiral Wilson basis, while retaining the Fierz/color
+recoupling and physical-flavor debts.
+P14-V returns to the parallel $\Spin(10)$ current-current vector branch and
+builds the vector matching gate before any proton-limit insertion.
+P15-V fixes the first two-component Fierz/crossing convention for that vector
+branch and audits the crossed all-left skeletons.
+P16-V assembles physical Hermitian cross-root vector multiplets and finds the
+first canonical vector BNV skeletons in the off-face $M_{(6,2,2)}$ block, while
+leaving Clebsch phases, flavor, RG, hadronic, and proton-limit inputs
+conditional.
 \end{abstract}
 
 \section{Boundary of the Ledger}
@@ -902,9 +913,324 @@ basis for the BNV rows.  The parallel completed current-current vector branch
 also remains open and should be tried before any final proton-bound claim is
 made.
 
+\section{P13-S: Scalar/Source Flavor Tensors and Wilson Basis}
+
+P13-S chooses a conservative symbolic flavor-tensor basis for the P12-S
+scalar/source branch.  It does not choose numerical couplings.  For every
+scalar/source vertex, the flavor tensor is a complex family tensor
+\begin{equation}
+  \Lambda_{ab,R}^{ij},
+  \qquad i,j=1,2,3,
+\end{equation}
+with pair-exchange symmetry fixed by the source channel.  The selected rules
+are:
+\begin{center}
+\small
+\begin{tabular}{p{0.36\linewidth}p{0.30\linewidth}p{0.18\linewidth}}
+\toprule
+pair/source channel & family symmetry & components\\
+\midrule
+$QQ$ weak-singlet source & symmetric pair & 6\\
+$QQ$ weak-triplet source & antisymmetric pair & 3\\
+$\uc\uc$ source & antisymmetric pair & 3\\
+$\dc\dc$ source & antisymmetric pair & 3\\
+distinct-field pair & general $3\times3$ matrix & 9\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The canonical all-left chiral Wilson basis chosen by P13-S is
+\begin{align}
+  O_{QQQL,S}^{prst}
+  &=
+  \epsilon_{abc}\epsilon_{ij}\epsilon_{kl}
+  (Q_p^{ai}Q_r^{bj})(Q_s^{ck}L_t^l),\\
+  O_{QQQL,T}^{prst}
+  &=
+  \epsilon_{abc}(\tau^A\epsilon)_{ij}(\tau^A\epsilon)_{kl}
+  (Q_p^{ai}Q_r^{bj})(Q_s^{ck}L_t^l),\\
+  O_{UUDE}^{prst}
+  &=
+  \epsilon_{abc}
+  (\uc_{p,a}\uc_{r,b})(\dc_{s,c}\ec_t),\\
+  O_{UDDN}^{prst}
+  &=
+  \epsilon_{abc}
+  (\uc_{p,a}\dc_{r,b})(\dc_{s,c}\nuc_t).
+\end{align}
+The first two operators separate the weak-singlet and weak-triplet $QQQL$
+source contractions.  The last operator is a sterile-neutrino BNV basis element
+and cannot be interpreted as a physical proton channel without specifying the
+$\nuc$ mass/seesaw or light-sterile treatment.
+
+The generated P13-S ledger reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.66\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+BNV or sterile-BNV rows processed & 6\\
+canonical Wilson basis count & 4\\
+direct source-channel rows & 4\\
+Fierz/color recoupling required rows & 2\\
+canonical family projection required rows & 1\\
+flavor tensors introduced & 11\\
+independent complex vertex components & 78\\
+physical proton bounds evaluable now & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The two non-direct rows need explicit two-component-spinor Fierz and color
+recoupling matrices before their coefficients can be added to the canonical
+basis.  In addition, the direct $O_{UDDN}$ row needs the explicit
+antisymmetric projection on the two $\dc$ family indices:
+\begin{equation}
+  C_{UDDN}^{prst}
+  \;\longleftarrow\;
+  \Pi^{(d)}_{\rm asym,rs}
+  \left[
+  \frac{\Lambda_{\uc\dc,R}^{pr}
+  \Lambda_{\dc\nuc,R}^{st\,\ast}}{M_{S_R}^2}
+  \right].
+\end{equation}
+
+Thus P13-S has chosen the tensor and Wilson-basis bookkeeping layer, but it has
+not made proton bounds numerical.  The remaining scalar/source tasks are the
+two recoupling matrices, the $d$-pair antisymmetrization projection, physical
+flavor rotations, RG evolution, hadronic matrix elements, and experimental
+channel limits.  The parallel Branch V remains open.
+
+\section{P14-V: Vector-Branch Matching Gate}
+
+P14-V returns to the $\Spin(10)$ current-current vector branch before inserting
+proton limits.  It does not reinterpret the P7 chiral-pair poles as adjoint
+vectors.  Instead it starts from the P9 broken-generator maps and the P10
+staged vector mass denominators.  For a broken vector $X$, define
+\begin{equation}
+  J_X^\mu
+  =
+  \sum_{a\in E_X}
+  c_a\,\psi_{t(a)}^\dagger\bar\sigma^\mu\psi_{s(a)} ,
+\end{equation}
+where $E_X$ is the set of sparse transition entries in the broken-generator
+map.  The tree-level vector matching gate is
+\begin{equation}
+  \mathcal L_{\rm eff}^{(X)}
+  =
+  -\,\frac{g_X^2}{M_X^2}\,
+  J_X^\mu J_{X,\mu}^\dagger .
+\end{equation}
+The mass replacements inherited from P10 are
+\begin{center}
+\small
+\begin{tabular}{ll}
+\toprule
+block & mass\\
+\midrule
+$M_{(6,2,2)}$ & $\sqrt{\kappa_{\rm PS}}\,g_{10}v_{\rm PS}$\\
+$M_{\rm LQ}$ & $\sqrt{2/3}\,g_4v_4$\\
+$M_{W_R}$ & $g_Rv_R$\\
+$M_{Z'}$ & $\frac12 v_Y\sqrt{g_R^2+g_{BL}^2}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The generated P14-V ledger reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.64\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+broken vector maps & 32\\
+current transition entries & 80\\
+current-pair rows & 72\\
+Pati--Salam leptoquark pair rows & 36\\
+$\Spin(10)$/Pati--Salam off-face pair rows & 24\\
+broken $\SU(2)_R$ charged-current pair rows & 12\\
+P7 rows with candidate adjoint mass blocks & 0\\
+P7 rows remaining scalar/source mass debt & 18\\
+physical proton bounds evaluable now & 0\\
+Branch V matching gate passes & true\\
+\bottomrule
+\end{tabular}
+\end{center}
+The current-pair gates are:
+\begin{center}
+\small
+\begin{tabular}{p{0.68\linewidth}r}
+\toprule
+gate & rows\\
+\midrule
+Pati--Salam leptoquark mixed pair requiring crossing/Fierz & 24\\
+Pati--Salam leptoquark same-sector noncanonical pair & 12\\
+off-face diquark-like pair requiring crossing/Fierz & 12\\
+off-face mixed pair requiring crossing/Fierz & 12\\
+$\SU(2)_R$ charged-current non-proton-seed row & 12\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus Branch V is now an explicit current-current matching gate:
+\begin{equation}
+  \boxed{
+  \text{P14-V supplies }J_XJ_X^\dagger/M_X^2\text{ rows, not proton lifetimes.}
+  }
+\end{equation}
+Before any numerical proton limit can be inserted, one must still choose a
+convention-fixed current-current to all-left chiral Wilson-basis map, physical
+flavor rotations, numerical masses and couplings, RG evolution, hadronic matrix
+elements, and experimental channel limits.  The P13-S scalar/source branch
+therefore remains a parallel branch, while Branch V has its own matching gate.
+
+\section{P15-V: Current to All-Left Fierz Gate}
+
+P15-V fixes one explicit two-component Weyl Fierz convention for Branch V.  The
+input current product is
+\begin{equation}
+  (\psi_{t_1}^\dagger\bar\sigma^\mu\psi_{s_1})
+  (\psi_{s_2}^\dagger\bar\sigma_\mu\psi_{t_2}),
+\end{equation}
+where the second factor is the Hermitian-conjugate current in
+$J_X^\mu J_{X,\mu}^\dagger$.  We use
+\begin{equation}
+  (\chi^\dagger\bar\sigma^\mu\psi)
+  (\eta^\dagger\bar\sigma_\mu\xi)
+  =
+  2(\chi^\dagger\eta^\dagger)(\psi\xi).
+\end{equation}
+Thus the crossed all-left bookkeeping skeleton is
+\begin{equation}
+  (\psi_{s_1}\psi_{t_2})
+  \bigl(\overline{\psi_{t_1}}\,\overline{\psi_{s_2}}\bigr),
+\end{equation}
+with symbolic coefficient prefactor
+\begin{equation}
+  -\,\frac{2g_X^2 c_1c_2^\ast}{M_X^2}.
+\end{equation}
+This is a convention gate.  It is not yet a physical amplitude, since the
+crossed conjugate fields still need a chosen external-state convention and
+physical flavor basis.
+
+The generated P15-V ledger reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.66\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+P14 current-pair rows consumed & 72\\
+P15 crossed all-left rows generated & 72\\
+$B,L$ conserving crossed skeletons & 72\\
+canonical BNV basis rows & 0\\
+physical proton bounds evaluable now & 0\\
+all rows have crossed fields & true\\
+all rows have $B,L,B-L$ charge audit & true\\
+Branch V all-left gate passes & true\\
+\bottomrule
+\end{tabular}
+\end{center}
+Equivalently, under the current sparse-map pairing,
+\begin{equation}
+  \boxed{
+  \text{P15-V finds no canonical BNV proton operator in Branch V yet.}
+  }
+\end{equation}
+This does not close Branch V; it identifies the next missing datum.  A physical
+vector-proton branch still needs Hermitian vector multiplet assembly, cross-root
+Clebsch phases, an external-state crossing convention, projection to a
+canonical BNV Wilson basis if such a projection exists, physical flavor
+rotations, RG running, hadronic matrix elements, and experimental channel
+limits.  The scalar/source Branch S from P13-S remains a parallel branch and is
+not discarded.
+
+\section{P16-V: Physical Hermitian Vector Multiplet Assembly}
+
+P15-V used the same-map sparse-current product $J_XJ_X^\dagger$ and found no
+canonical BNV vector operator.  P16-V tests the next missing vector datum:
+physical Hermitian vector multiplets are assembled from charge-conjugate root
+maps.  At the symbolic level this permits cross-root products
+\begin{equation}
+  J_q^\mu J_{-q,\mu},
+\end{equation}
+where the relative physical Clebsch phase is still left as a symbolic
+parameter $\xi$.  Applying the same two-component all-left Fierz convention as
+in P15-V gives the coefficient template
+\begin{equation}
+  C_{\rm phys}
+  =
+  -\,\frac{2g_X^2}{M_X^2}\,
+  \xi\,c_q c_{-q}.
+\end{equation}
+The canonical vector BNV skeletons searched at this gate are
+\begin{equation}
+  O_{V,QQ\bar U\bar E}\sim
+  QQ\,\overline{\uc}\,\overline{\ec},
+  \qquad
+  O_{V,QQ\bar D\bar N}\sim
+  QQ\,\overline{\dc}\,\overline{\nuc}.
+\end{equation}
+These are pre-flavor and pre-hadronic skeletons, not proton-lifetime
+coefficients.
+
+The generated P16-V ledger reports:
+\begin{center}
+\small
+\begin{tabular}{p{0.66\linewidth}r}
+\toprule
+quantity & value\\
+\midrule
+P15 same-map canonical BNV rows & 0\\
+physical cross-root rows & 448\\
+Pati--Salam $\SU(4)_C$ leptoquark rows & 144\\
+$\Spin(10)$/Pati--Salam off-face rows & 288\\
+broken $\SU(2)_R$ charged-current rows & 16\\
+$B,L$ conserving physical pairs & 160\\
+$B-L$ preserving BNV noncanonical pairs & 144\\
+canonical vector BNV basis candidates & 144\\
+$O_{V,QQ\bar D\bar N}$ candidates & 72\\
+$O_{V,QQ\bar U\bar E}$ candidates & 72\\
+physical proton bounds evaluable now & 0\\
+Branch V physical multiplet gate passes & true\\
+\bottomrule
+\end{tabular}
+\end{center}
+The status by physical vector family is especially important:
+\begin{equation}
+\begin{array}{c|c|c}
+\text{block} & \text{status} & \text{rows}\\
+\hline
+M_{\rm LQ} & B,L\text{-conserving physical pair} & 144\\
+M_{W_R} & B,L\text{-conserving physical pair} & 16\\
+M_{(6,2,2)} & \text{canonical vector BNV candidate} & 144\\
+M_{(6,2,2)} & B-L\text{-preserving noncanonical BNV pair} & 144
+\end{array}
+\end{equation}
+Thus the canonical vector BNV candidates arise only from the off-face
+$M_{(6,2,2)}$ Hermitian cross-root block.  The Pati--Salam leptoquark and
+$W_R$ physical pairs remain $B,L$ conserving at this bookkeeping gate.
+
+P16-V changes the Branch-V readiness status but does not make proton limits
+numerical.  The remaining vector-side data are
+\begin{equation}
+\begin{split}
+  &\text{Hermitian generator normalization},\quad
+  \text{cross-root Clebsch phases},\\
+  &\text{color/weak projection to the canonical BNV basis},\quad
+  \text{physical flavor rotations},\\
+  &\text{numerical masses and couplings},\quad
+  \text{RG factors},\quad
+  \text{hadronic matrix elements},\quad
+  \text{channel limits}.
+\end{split}
+\end{equation}
+The scalar/source Branch S from P13-S remains a parallel branch and is not
+discarded.
+
 \section{Current Status and Next Check}
 
-The P1--P12-S chain currently establishes:
+The P1--P16-V chain currently establishes:
 \begin{enumerate}
 \item the exact P1 charge/anomaly baseline for one $SM+\nuc$ family;
 \item the P2 charge-filtered symbolic pole components;
@@ -926,10 +1252,24 @@ denominators, while the P7 chiral-pair rows remain scalar/source mass debt.
 \item the P12-S scalar/source branch that assigns symbolic scalar/source
 denominators to all 18 P7 chiral-pair rows, with 12 source sectors and 6 BNV
 or sterile-BNV rows still awaiting flavor/Wilson-basis data.
+\item the P13-S scalar/source flavor/Wilson-basis layer, mapping those 6 rows
+to four canonical all-left chiral operators with 11 symbolic flavor tensors,
+2 Fierz/color recoupling debts, and 1 direct family-projection debt.
+\item the P14-V current-current vector matching gate, with 32 broken vector
+maps, 80 transition entries, 72 current-pair rows, and zero physical proton
+bounds evaluable before current/Fierz, flavor, RG, hadronic, and channel-limit
+inputs.
+\item the P15-V all-left Fierz/crossing convention gate, mapping all 72 Branch
+V current-pair rows to crossed skeletons and finding 72 $B,L$ conserving rows
+and zero canonical BNV rows under the present sparse-map pairing.
+\item the P16-V physical Hermitian cross-root vector assembly gate, generating
+448 physical cross-root rows and finding 144 canonical vector BNV skeletons in
+the $M_{(6,2,2)}$ off-face block before flavor, RG, hadronic, or proton-limit
+inputs.
 \end{enumerate}
-The next natural stage is P13: choose scalar/source flavor tensors and a
-chiral/Fierz Wilson basis for the six BNV or sterile-BNV rows, or return to
-the parallel completed current-current vector branch before inserting proton
-limits.
+The next natural stage is P17: fix the physical Hermitian generator
+normalization and cross-root Clebsch phase convention for the canonical vector
+BNV rows, then export a flavor-rotation interface.  Proton limits should still
+not be inserted until RG and hadronic inputs are supplied.
 
 \end{document}

@@ -14,6 +14,7 @@ backups/
 *.log
 *.out
 *.blg
+*Notes.bib
 *.synctex.gz
 
 # Root-level legacy build products

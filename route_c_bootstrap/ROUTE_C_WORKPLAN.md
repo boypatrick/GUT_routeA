@@ -1148,6 +1148,324 @@ P13_scalar_source_flavor_tensor_and_operator_basis
 Choose scalar/source flavor tensors and an operator basis for the six BNV or
 sterile-BNV rows, or return to Branch V before inserting proton limits.
 
+### P13-S. Scalar/source flavor tensors and Wilson basis
+
+Status: done for the first symbolic flavor/Wilson-basis layer.
+
+Deliverables:
+
+```text
+code/scalar_source_flavor_wilson_basis.py
+output/scalar_source_flavor_wilson_basis.json
+output/scalar_source_flavor_wilson_basis.md
+```
+
+P13-S chooses a conservative symbolic flavor tensor basis rather than a numeric
+flavor fit.  It maps the six P12-S BNV or sterile-BNV rows to four all-left
+chiral operator classes:
+
+```text
+O_QQQL_S,
+O_QQQL_T,
+O_UUDE,
+O_UDDN.
+```
+
+The chosen flavor tensors are generic complex family tensors subject only to
+the pair-exchange symmetries forced by the source channel:
+
+```text
+QQ singlet source: symmetric family pair,
+QQ triplet source: antisymmetric family pair,
+u^c u^c source: antisymmetric family pair,
+d^c d^c source: antisymmetric family pair,
+distinct-field pairs: general 3x3 family matrix.
+```
+
+Generated summary:
+
+```text
+BNV or sterile-BNV rows processed = 6,
+canonical Wilson basis count = 4,
+direct source-channel rows = 4,
+Fierz/color recoupling required rows = 2,
+canonical family projection required rows = 1,
+flavor tensors introduced = 11,
+independent complex vertex components = 78,
+physical proton bounds evaluable now = 0.
+```
+
+Verification:
+
+```text
+all P12 BNV rows mapped = true,
+every row has a basis id = true,
+every row has left and right flavor tensors = true,
+Branch V retained = true,
+P13 scalar/source basis layer passes = true.
+```
+
+Boundary:
+
+P13-S chooses the symbolic Wilson basis and tensor shapes only.  It does not
+compute Fierz/color recoupling matrices, physical flavor rotations, RG factors,
+hadronic matrix elements, or proton lifetimes.  Branch V remains open and must
+still be tried before any final proton-matching conclusion.
+
+Next:
+
+```text
+P14_vector_branch_matching_gate_or_scalar_source_recoupling
+```
+
+Either return to the completed current-current vector Branch V before inserting
+proton limits, or compute the two non-direct scalar/source chiral/color Fierz
+recoupling matrices and the direct `O_UDDN` antisymmetric family projection.
+
+### P14-V. Vector-branch matching gate before proton limits
+
+Status: done for the first Branch V current-current matching gate.
+
+Deliverables:
+
+```text
+code/spin10_vector_branch_matching_gate.py
+output/spin10_vector_branch_matching_gate.json
+output/spin10_vector_branch_matching_gate.md
+```
+
+P14-V returns to the Spin(10) current-current vector branch instead of
+continuing directly to proton limits.  It consumes the P9 broken-generator maps,
+the P10 staged vector mass blocks, and the P11 replay gate.  The matching
+template is
+
+```text
+J_X^mu = sum_a c_a psi_target(a)^dagger bar_sigma^mu psi_source(a),
+L_eff[X] = - g_X^2 J_X^mu J_X,mu^dagger / M_X^2.
+```
+
+Generated summary:
+
+```text
+broken vector maps = 32,
+current transition entries = 80,
+current pair rows = 72,
+Pati-Salam SU(4)_C leptoquark pair rows = 36,
+Spin(10)/Pati-Salam off-face pair rows = 24,
+broken SU(2)_R charged-current pair rows = 12,
+physical proton bounds evaluable now = 0,
+Branch V matching gate passes = true.
+```
+
+Gate counts:
+
+```text
+Pati-Salam leptoquark mixed pairs requiring crossing/Fierz = 24,
+Pati-Salam leptoquark same-sector noncanonical pairs = 12,
+off-face diquark-like pairs requiring crossing/Fierz = 12,
+off-face mixed pairs requiring crossing/Fierz = 12,
+SU(2)_R charged-current non-proton-seed rows = 12.
+```
+
+Boundary:
+
+P14-V does not reuse the P7 scalar/source chiral-pair rows as adjoint vectors.
+It explicitly keeps the P11 result:
+
+```text
+P7 rows with candidate adjoint mass blocks = 0,
+P7 rows remaining scalar/source mass debt = 18.
+```
+
+Thus Branch V is now an explicit current-current matching gate, not a physical
+proton lifetime calculation.  Numerical proton limits remain blocked by:
+
+```text
+current-current to all-left chiral Wilson basis recoupling,
+physical flavor rotations,
+numerical vector masses and couplings,
+RG running,
+hadronic matrix elements,
+experimental channel limits.
+```
+
+Next:
+
+```text
+P15_V_current_to_all_left_fierz_and_flavor_gate
+```
+
+Choose the convention-fixed current-current to all-left operator map for the
+vector branch, or keep P13-S scalar/source recoupling as the active
+proton-matching path.  Do not insert proton limits until one branch has flavor,
+RG, and hadronic inputs.
+
+### P15-V. Vector current to all-left Fierz/flavor gate
+
+Status: done for the first fixed Fierz/crossing convention gate.
+
+Deliverables:
+
+```text
+code/spin10_vector_all_left_fierz_gate.py
+output/spin10_vector_all_left_fierz_gate.json
+output/spin10_vector_all_left_fierz_gate.md
+```
+
+P15-V fixes the two-component Weyl identity
+
+```text
+(chi^dagger bar_sigma^mu psi)(eta^dagger bar_sigma_mu xi)
+  = 2 (chi^dagger eta^dagger)(psi xi)
+```
+
+and applies it to the P14-V vector-current product
+
+```text
+(psi_t1^dagger bar_sigma^mu psi_s1)
+(psi_s2^dagger bar_sigma_mu psi_t2)
+```
+
+using the crossed all-left skeleton
+
+```text
+(psi_s1 psi_t2)(bar(psi_t1) bar(psi_s2))
+```
+
+with symbolic coefficient prefactor
+
+```text
+-2 g_X^2 c1 c2^*/M_X^2.
+```
+
+Generated summary:
+
+```text
+P14 current-pair rows consumed = 72,
+P15 rows generated = 72,
+all-left status counts = {B_and_L_conserving_crossed_skeleton: 72},
+canonical BNV basis counts = {none: 72},
+canonical BNV rows evaluable now = 0,
+physical proton bounds evaluable now = 0,
+all rows have crossed fields = true,
+all rows have charge audit = true,
+Branch V all-left gate passes = true.
+```
+
+Boundary:
+
+P15-V does not produce a canonical BNV proton operator from the current sparse
+P9/P14 vector-map pairing.  It means Branch V is now in a fixed crossed
+all-left bookkeeping basis, but physical proton limits are still blocked.  The
+missing vector-side data are:
+
+```text
+physical hermitian vector multiplet assembly,
+cross-root Clebsch phases,
+external-state crossing convention,
+projection to canonical BNV Wilson basis if applicable,
+physical flavor rotations,
+RG running,
+hadronic matrix elements,
+experimental channel limits.
+```
+
+P13-S / Branch S remains a separate scalar/source Wilson-basis branch and must
+not be discarded.
+
+Next:
+
+```text
+P16_choose_vector_physical_multiplet_or_return_to_scalar_source
+```
+
+Either assemble physical hermitian vector multiplets and their cross-root
+Clebsch phases to search for canonical BNV vector operators, or return to the
+P13-S scalar/source recoupling path.  Do not insert proton limits yet.
+
+### P16-V. Physical Hermitian vector multiplet assembly
+
+Status: done for the first cross-root physical vector assembly gate.
+
+Deliverables:
+
+```text
+code/spin10_vector_physical_multiplet_assembly.py
+output/spin10_vector_physical_multiplet_assembly.json
+output/spin10_vector_physical_multiplet_assembly.md
+```
+
+P16-V tests the missing vector-side datum identified by P15-V.  Instead of
+using the same-map product `J_X J_X^\dagger`, it assembles charge-conjugate
+root maps into symbolic physical Hermitian vector multiplets.  The physical
+product is
+
+```text
+J_q^mu J_-q,mu
+```
+
+with an unfixed cross-root Clebsch/phase convention `xi`.  Applying the same
+two-component all-left Fierz gate gives the symbolic coefficient template
+
+```text
+C_phys = -2 g_X^2 xi c_q c_-q / M_X^2.
+```
+
+Generated summary:
+
+```text
+P15 same-map canonical BNV rows = 0,
+physical cross-root rows = 448,
+Pati-Salam SU(4)_C leptoquark rows = 144,
+Spin(10)/Pati-Salam off-face rows = 288,
+broken SU(2)_R charged-current rows = 16,
+B,L conserving physical pairs = 160,
+B-L preserving BNV noncanonical pairs = 144,
+canonical vector BNV basis candidates = 144,
+O_V_QQ_DbarNbar candidates = 72,
+O_V_QQ_UbarEbar candidates = 72,
+physical proton bounds evaluable now = 0,
+Branch V physical multiplet gate passes = true.
+```
+
+Interpretation:
+
+P16-V changes the Branch-V status.  The same-map sparse-current gate in P15
+found no canonical BNV operator.  The physical Hermitian cross-root gate does
+generate canonical vector BNV skeletons, but only in the
+`Spin(10)/Pati-Salam` off-face `M_(6,2,2)` block.  The Pati-Salam leptoquark
+and broken `SU(2)_R` physical pairs remain `B,L` conserving in this gate.
+
+Boundary:
+
+P16-V is still not a proton-limit calculation.  The canonical vector BNV rows
+are pre-flavor, pre-RG, and pre-hadronic.  The following data remain missing:
+
+```text
+physical Hermitian generator normalization,
+cross-root Clebsch phase convention,
+color and weak projection to the canonical vector BNV basis,
+physical flavor rotations,
+numerical masses and couplings,
+RG running,
+hadronic matrix elements,
+experimental channel limits.
+```
+
+P13-S / Branch S remains a separate scalar/source Wilson-basis branch and must
+not be discarded.
+
+Next:
+
+```text
+P17_vector_clebsch_projection_and_flavor_interface
+```
+
+Fix the Hermitian generator normalization and cross-root Clebsch phase
+convention for the 144 canonical vector BNV candidates, then export a
+flavor-rotation interface.  Do not insert proton limits until RG and hadronic
+inputs are supplied.
+
 ## First Decision Point
 
 After P2-P4, decide whether the first mediator is modeled as:
@@ -1158,8 +1476,15 @@ After P2-P4, decide whether the first mediator is modeled as:
 The safer path is option 1 first.  It avoids assuming the answer before the
 bootstrap filter has done any work.
 
-Status after P12-S: the first broad comparison pass is complete, P9 locked the
+Status after P16-V: the first broad comparison pass is complete, P9 locked the
 finite field-theory branch to `Spin(10)`, P10/P11 supplied staged adjoint-vector
-mass gates, and P12-S activated the scalar/source chiral-pair interpretation for
-the P7 rows.  This is still a conditional branch, not a completed GUT proof or a
-proton-lifetime calculation.
+mass gates, P12-S activated the scalar/source chiral-pair interpretation for
+the P7 rows, P13-S selected the symbolic scalar/source flavor/Wilson basis, and
+P14-V returned to Branch V with an explicit current-current matching gate.
+P15-V then fixed the first all-left Fierz/crossing convention and found that the
+current sparse-map pairing gives only B/L-conserving crossed skeletons.  This is
+not the end of Branch V: P16-V assembled physical Hermitian cross-root vector
+pairs and found 144 canonical vector BNV skeletons in the `M_(6,2,2)` off-face
+block.  Physical proton bounds remain unavailable until Clebsch phases, flavor,
+RG, hadronic, and channel-limit data are supplied.  This is still a conditional
+branch, not a completed GUT proof or a proton-lifetime calculation.
