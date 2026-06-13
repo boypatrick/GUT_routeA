@@ -9,7 +9,7 @@
     "name": "CMSGUT-like 210+126+overline126+10",
     "reason": "literature-compatible source-sector fallback with a 126bar_H post-B-L source for P_nu^c"
   },
-  "card_sha256": "fc6bfdddb5de973a469f0e1b00d8f5c82f9dae2c9f8335f35c4c76843ed4bb78",
+  "card_sha256": "8aaa5979c5dc0832ee7edecfd7531ded34a0dadd9c6118406487502880a240ff",
   "conventions_to_resolve": [
     {
       "item": "normalization_of_p_a_omega",
@@ -23,18 +23,18 @@
     },
     {
       "item": "branch_variable_x_and_xi",
-      "status": "placeholder; exact definitions must be imported before any special-point pass",
+      "status": "fixed to Aulakh-Girdhar 2005: x=-lambda*omega/m, xi=lambda*M/(eta*m)",
       "why_it_matters": "The literature cubic P3(x;xi)=0 has multiple equivalent definitions."
     },
     {
       "item": "cubic_polynomial_coefficients",
-      "status": "not fixed in this scaffold",
+      "status": "fixed to 8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
       "why_it_matters": "Acceptance depends on reproducing enhanced-symmetry limits, not on a custom cubic."
     },
     {
       "item": "special_point_values",
-      "status": "required from literature table; no pass claimed here",
-      "why_it_matters": "SU(5), flipped SU(5), and Pati-Salam limits are the stage-1 validation anchors."
+      "status": "source-named SU(5), flipped SU(5), and G_LR points validated; no full-Pati-Salam point claimed",
+      "why_it_matters": "SU(5), flipped SU(5), and left-right/Pati-Salam-related limits are the stage-1 validation anchors."
     },
     {
       "item": "BMSV_vs_Aulakh_symbol_map",
@@ -42,54 +42,106 @@
       "why_it_matters": "Historical spectrum tables differ by signs and normalizations."
     }
   ],
-  "created_utc": "2026-06-13T12:30:10+00:00",
+  "created_utc": "2026-06-13T16:27:15+00:00",
   "d_flatness_contract": {
     "claim_boundary": "recorded convention only; no solved F/D-flat vacuum claimed",
     "condition": "|sigma| = |bar_sigma|",
     "stage1_gauge_choice": "sigma = bar_sigma may be used after fixing the conjugate source phase"
   },
+  "literature_convention_map": {
+    "abmsv_2003_sign_note": "The 2003 short note writes omega with the opposite sign; p and a formulas match after omega_ABMSV=-omega_AG.",
+    "branch_variable": "x = -lambda*omega/m",
+    "coupling_ratio": "xi = lambda*M/(eta*m)",
+    "crosscheck_source": {
+      "arxiv": "hep-ph/0306242",
+      "journal": "Phys. Lett. B588:196-202,2004",
+      "key": "AulakhBajcMelfoSenjanovicVissani2004",
+      "scope": "minimal SUSY SO(10) setup and compact cubic/vev summary"
+    },
+    "cubic_equation": "8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
+    "dimensionless_vevs": {
+      "a_tilde": "(x^2+2*x-1)/(1-x)",
+      "eta_sigma_bar_sigma_tilde": "2*x*(1-3*x)*(1+x^2)/(1-x)^2",
+      "omega_tilde": "-x",
+      "p_tilde": "x*(5*x^2-1)/(1-x)^2"
+    },
+    "primary_source": {
+      "arxiv": "hep-ph/0405074",
+      "journal": "Nucl. Phys. B711:275-313,2005",
+      "key": "AulakhGirdhar2005",
+      "scope": "Pati-Salam decomposition, vev dictionary, F-term equations, cubic, spectra/couplings"
+    }
+  },
   "literature_special_point_contract": [
     {
-      "enhanced_little_group": "SU(5)-type enhanced symmetry limit",
-      "point_label": "SU5_unflipped",
-      "required_fields": [
-        "point_label",
-        "x_value",
-        "xi_value",
-        "enhanced_little_group",
-        "source_reference",
-        "convention_map",
-        "pass_fail"
-      ],
-      "stage1_status": "not evaluated; literature value required"
+      "dimensionless_vevs": {
+        "a_tilde": "1/2",
+        "eta_sigma_bar_sigma_tilde": "-5/2",
+        "omega_tilde": "-1/2",
+        "p_tilde": "1/2"
+      },
+      "expected_vev_relation": "p_tilde=a_tilde=-omega_tilde=1/2",
+      "pass_fail": true,
+      "point_label": "SU5_x_half",
+      "polynomial_residual": "0",
+      "source_name": "SU(5)",
+      "x_value": "1/2",
+      "xi_value": "-5"
     },
     {
-      "enhanced_little_group": "flipped SU(5)-type enhanced symmetry limit",
-      "point_label": "flipped_SU5",
-      "required_fields": [
-        "point_label",
-        "x_value",
-        "xi_value",
-        "enhanced_little_group",
-        "source_reference",
-        "convention_map",
-        "pass_fail"
-      ],
-      "stage1_status": "not evaluated; literature value required"
+      "dimensionless_vevs": {
+        "a_tilde": "-1",
+        "eta_sigma_bar_sigma_tilde": "-4",
+        "omega_tilde": "1",
+        "p_tilde": "-1"
+      },
+      "expected_vev_relation": "p_tilde=a_tilde=-omega_tilde=-1",
+      "pass_fail": true,
+      "point_label": "SU5_x_minus_one",
+      "polynomial_residual": "0",
+      "source_name": "SU(5)",
+      "x_value": "-1",
+      "xi_value": "10"
     },
     {
-      "enhanced_little_group": "Pati-Salam enhanced or unbroken-limit anchor",
-      "point_label": "Pati_Salam",
-      "required_fields": [
-        "point_label",
-        "x_value",
-        "xi_value",
-        "enhanced_little_group",
-        "source_reference",
-        "convention_map",
-        "pass_fail"
-      ],
-      "stage1_status": "not evaluated; literature value required"
+      "dimensionless_vevs": {
+        "a_tilde": "-1",
+        "eta_sigma_bar_sigma_tilde": "0",
+        "omega_tilde": "0",
+        "p_tilde": "0"
+      },
+      "expected_vev_relation": "p_tilde=omega_tilde=eta_sigma_bar_sigma_tilde=0, a_tilde=-1",
+      "pass_fail": true,
+      "point_label": "GLR_x_zero",
+      "polynomial_residual": "0",
+      "source_name": "G_LR",
+      "warning": "Primary source labels xi=3 as G_LR, not full Pati-Salam SU(4)_C x SU(2)_L x SU(2)_R.",
+      "x_value": "0",
+      "xi_value": "3"
+    },
+    {
+      "dimensionless_vevs": {
+        "a_tilde": "-1/3",
+        "eta_sigma_bar_sigma_tilde": "0",
+        "omega_tilde": "-1/3",
+        "p_tilde": "-1/3"
+      },
+      "expected_vev_relation": "p_tilde=a_tilde=omega_tilde=-1/3 and eta_sigma_bar_sigma_tilde=0",
+      "pass_fail": true,
+      "point_label": "flipped_SU5_x_third",
+      "polynomial_residual": "0",
+      "source_name": "flipped SU(5) x U(1)",
+      "x_value": "1/3",
+      "xi_value": "-2/3"
+    },
+    {
+      "pass_fail": null,
+      "point_label": "full_Pati_Salam_requested_anchor",
+      "polynomial_residual": null,
+      "source_name": "full Pati-Salam",
+      "stage1_status": "not claimed: primary source names xi=3 as G_LR rather than full Pati-Salam",
+      "x_value": null,
+      "xi_value": null
     }
   ],
   "ps_singlet_vevs": [
@@ -118,7 +170,7 @@
       "symbol": "omega"
     },
     {
-      "ps_block": "(10,1,3)",
+      "ps_block": "(overline{10},1,3)",
       "role": "B-L breaking source direction",
       "sm_status": "SM singlet after right-handed alignment",
       "spin10_field": "126_H",
@@ -126,7 +178,7 @@
       "symbol": "sigma"
     },
     {
-      "ps_block": "(overline{10},1,3)",
+      "ps_block": "(10,1,3)",
       "role": "post-B-L P_nu^c source and D-flat conjugate",
       "sm_status": "SM singlet conjugate source direction",
       "spin10_field": "overline{126}_H",
@@ -135,11 +187,10 @@
     }
   ],
   "publication_boundary": {
-    "claim": "The PS singlet-vev dictionary and acceptance contract for CMSGUT stage 1 are fixed.",
+    "claim": "The PS singlet-vev dictionary, Aulakh-Girdhar cubic convention, and source-named special-point validator for CMSGUT stage 1 are fixed.",
     "not_claimed": [
       "F/D-flat solution",
-      "literature cubic reproduction",
-      "enhanced-symmetry special-point pass",
+      "full Pati-Salam special point",
       "Goldstone count",
       "complete heavy spectrum",
       "doublet-triplet fine tuning",
@@ -153,8 +204,8 @@
       "exists": true,
       "label": "audit4a1_builder",
       "path": "code/audit4a1_cmsgut_vacuum_branches.py",
-      "sha256": "73e71cb3758d741283d7a8300b38f1643b01809982f77fedc4567fc40b48b87f",
-      "size_bytes": 13862
+      "sha256": "dbf51377b51ab2003f4bc094c4b8bb3beb5f71540cb6f6e4f7f629d8dc682f36",
+      "size_bytes": 18381
     },
     {
       "exists": true,
@@ -172,13 +223,14 @@
     }
   ],
   "stage_gates": {
-    "cubic_coefficients_fixed_from_literature": false,
+    "cubic_coefficients_fixed_from_literature": true,
     "d_flatness_condition_recorded": true,
     "doublet_mass_matrix_exported": false,
+    "full_pati_salam_special_point_claimed": false,
     "goldstone_count_33_exported": false,
     "heavy_spectrum_json_nonplaceholder": false,
     "ps_singlet_vev_registry_complete": true,
-    "special_points_reproduced": false,
+    "source_named_special_points_reproduced": true,
     "symbolic_mass_matrices_exported": false,
     "triplet_inverse_block_exported": false
   },
@@ -194,10 +246,10 @@
   "upstream_audit0_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
   "upstream_audit4a_sha256": "be735ff9f65a62f53a7cd1cbf504b4113d0f65dcaec553a4f6bb55e410471fbc",
   "vacuum_cubic_contract": {
-    "coefficients_status": "not fixed in this scaffold; must be imported from a specified convention table",
+    "coefficients_status": "fixed from Aulakh-Girdhar 2005 / ABMSV 2004",
     "dimensionless_branch_variable": "x",
     "dimensionless_coupling_ratio": "xi",
-    "literature_template": "P3(x; xi)=0",
-    "why_not_filled_here": "the stage-1 acceptance test is literature reproduction, not an invented polynomial"
+    "literature_template": "8*x^3 - 15*x^2 + 14*x - 3 + xi*(1-x)^2 = 0",
+    "why_not_filled_here": "now filled for vacuum branch only; mass matrices remain future work"
   }
 }

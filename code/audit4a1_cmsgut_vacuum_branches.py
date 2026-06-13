@@ -12,6 +12,7 @@ from __future__ import annotations
 import hashlib
 import json
 from datetime import datetime, timezone
+from fractions import Fraction
 from pathlib import Path
 from typing import Any
 
@@ -89,7 +90,7 @@ def ps_singlet_vevs() -> list[dict[str, Any]]:
         {
             "symbol": "sigma",
             "spin10_field": "126_H",
-            "ps_block": "(10,1,3)",
+            "ps_block": "(overline{10},1,3)",
             "sm_status": "SM singlet after right-handed alignment",
             "role": "B-L breaking source direction",
             "stage1_status": "registered",
@@ -97,12 +98,87 @@ def ps_singlet_vevs() -> list[dict[str, Any]]:
         {
             "symbol": "bar_sigma",
             "spin10_field": "overline{126}_H",
-            "ps_block": "(overline{10},1,3)",
+            "ps_block": "(10,1,3)",
             "sm_status": "SM singlet conjugate source direction",
             "role": "post-B-L P_nu^c source and D-flat conjugate",
             "stage1_status": "registered",
         },
     ]
+
+
+def frac(value: int | tuple[int, int]) -> Fraction:
+    if isinstance(value, tuple):
+        return Fraction(value[0], value[1])
+    return Fraction(value, 1)
+
+
+def fstr(value: Fraction) -> str:
+    if value.denominator == 1:
+        return str(value.numerator)
+    return f"{value.numerator}/{value.denominator}"
+
+
+def cubic_residual(x: Fraction, xi: Fraction) -> Fraction:
+    return 8 * x**3 - 15 * x**2 + 14 * x - 3 + xi * (1 - x) ** 2
+
+
+def vevs_for_x(x: Fraction) -> dict[str, Fraction]:
+    return {
+        "omega_tilde": -x,
+        "a_tilde": (x**2 + 2 * x - 1) / (1 - x),
+        "p_tilde": x * (5 * x**2 - 1) / (1 - x) ** 2,
+        "eta_sigma_bar_sigma_tilde": 2 * x * (1 - 3 * x) * (1 + x**2) / (1 - x) ** 2,
+    }
+
+
+def special_point_rows() -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = [
+        {
+            "point_label": "SU5_x_half",
+            "source_name": "SU(5)",
+            "x": frac((1, 2)),
+            "xi": frac(-5),
+            "expected_vev_relation": "p_tilde=a_tilde=-omega_tilde=1/2",
+        },
+        {
+            "point_label": "SU5_x_minus_one",
+            "source_name": "SU(5)",
+            "x": frac(-1),
+            "xi": frac(10),
+            "expected_vev_relation": "p_tilde=a_tilde=-omega_tilde=-1",
+        },
+        {
+            "point_label": "GLR_x_zero",
+            "source_name": "G_LR",
+            "x": frac(0),
+            "xi": frac(3),
+            "expected_vev_relation": "p_tilde=omega_tilde=eta_sigma_bar_sigma_tilde=0, a_tilde=-1",
+            "warning": "Primary source labels xi=3 as G_LR, not full Pati-Salam SU(4)_C x SU(2)_L x SU(2)_R.",
+        },
+        {
+            "point_label": "flipped_SU5_x_third",
+            "source_name": "flipped SU(5) x U(1)",
+            "x": frac((1, 3)),
+            "xi": frac((-2, 3)),
+            "expected_vev_relation": "p_tilde=a_tilde=omega_tilde=-1/3 and eta_sigma_bar_sigma_tilde=0",
+        },
+    ]
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        x = row["x"]
+        xi = row["xi"]
+        residual = cubic_residual(x, xi)
+        out.append(
+            {
+                **{k: v for k, v in row.items() if k not in {"x", "xi"}},
+                "x_value": fstr(x),
+                "xi_value": fstr(xi),
+                "polynomial_residual": fstr(residual),
+                "pass_fail": residual == 0,
+                "dimensionless_vevs": {k: fstr(v) for k, v in vevs_for_x(x).items()},
+            }
+        )
+    return out
 
 
 def convention_items() -> list[dict[str, Any]]:
@@ -120,17 +196,17 @@ def convention_items() -> list[dict[str, Any]]:
         {
             "item": "branch_variable_x_and_xi",
             "why_it_matters": "The literature cubic P3(x;xi)=0 has multiple equivalent definitions.",
-            "status": "placeholder; exact definitions must be imported before any special-point pass",
+            "status": "fixed to Aulakh-Girdhar 2005: x=-lambda*omega/m, xi=lambda*M/(eta*m)",
         },
         {
             "item": "cubic_polynomial_coefficients",
             "why_it_matters": "Acceptance depends on reproducing enhanced-symmetry limits, not on a custom cubic.",
-            "status": "not fixed in this scaffold",
+            "status": "fixed to 8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
         },
         {
             "item": "special_point_values",
-            "why_it_matters": "SU(5), flipped SU(5), and Pati-Salam limits are the stage-1 validation anchors.",
-            "status": "required from literature table; no pass claimed here",
+            "why_it_matters": "SU(5), flipped SU(5), and left-right/Pati-Salam-related limits are the stage-1 validation anchors.",
+            "status": "source-named SU(5), flipped SU(5), and G_LR points validated; no full-Pati-Salam point claimed",
         },
         {
             "item": "BMSV_vs_Aulakh_symbol_map",
@@ -141,43 +217,28 @@ def convention_items() -> list[dict[str, Any]]:
 
 
 def special_point_contract() -> list[dict[str, Any]]:
-    required_fields = [
-        "point_label",
-        "x_value",
-        "xi_value",
-        "enhanced_little_group",
-        "source_reference",
-        "convention_map",
-        "pass_fail",
-    ]
-    return [
+    rows = special_point_rows()
+    rows.append(
         {
-            "point_label": "SU5_unflipped",
-            "enhanced_little_group": "SU(5)-type enhanced symmetry limit",
-            "required_fields": required_fields,
-            "stage1_status": "not evaluated; literature value required",
-        },
-        {
-            "point_label": "flipped_SU5",
-            "enhanced_little_group": "flipped SU(5)-type enhanced symmetry limit",
-            "required_fields": required_fields,
-            "stage1_status": "not evaluated; literature value required",
-        },
-        {
-            "point_label": "Pati_Salam",
-            "enhanced_little_group": "Pati-Salam enhanced or unbroken-limit anchor",
-            "required_fields": required_fields,
-            "stage1_status": "not evaluated; literature value required",
-        },
-    ]
+            "point_label": "full_Pati_Salam_requested_anchor",
+            "source_name": "full Pati-Salam",
+            "x_value": None,
+            "xi_value": None,
+            "polynomial_residual": None,
+            "pass_fail": None,
+            "stage1_status": "not claimed: primary source names xi=3 as G_LR rather than full Pati-Salam",
+        }
+    )
+    return rows
 
 
 def stage_gates() -> dict[str, Any]:
     return {
         "ps_singlet_vev_registry_complete": True,
         "d_flatness_condition_recorded": True,
-        "cubic_coefficients_fixed_from_literature": False,
-        "special_points_reproduced": False,
+        "cubic_coefficients_fixed_from_literature": True,
+        "source_named_special_points_reproduced": True,
+        "full_pati_salam_special_point_claimed": False,
         "symbolic_mass_matrices_exported": False,
         "goldstone_count_33_exported": False,
         "doublet_mass_matrix_exported": False,
@@ -221,14 +282,20 @@ def write_conventions_diff(card: dict[str, Any]) -> None:
         "",
         "## Literature Special-Point Acceptance",
         "",
-        "Stage 1 must reproduce the enhanced-symmetry special points from the",
-        "chosen literature convention before any CMSGUT spectrum is accepted.",
+        "Stage 1 reproduces the source-named enhanced-symmetry special points",
+        "of the chosen Aulakh-Girdhar convention.  The source labels `xi=3` as",
+        "`G_LR`; this scaffold therefore does not claim a full Pati-Salam",
+        "special point.",
         "",
-        "| point | required status |",
-        "| --- | --- |",
+        "| point | source name | x | xi | residual | pass |",
+        "| --- | --- | --- | --- | --- | --- |",
     ]
     for item in card["literature_special_point_contract"]:
-        lines.append(f"| `{item['point_label']}` | {item['stage1_status']} |")
+        lines.append(
+            f"| `{item['point_label']}` | {item.get('source_name')} | "
+            f"{item.get('x_value')} | {item.get('xi_value')} | "
+            f"{item.get('polynomial_residual')} | {item.get('pass_fail')} |"
+        )
 
     lines += [
         "",
@@ -274,12 +341,36 @@ def main() -> None:
             "stage1_gauge_choice": "sigma = bar_sigma may be used after fixing the conjugate source phase",
             "claim_boundary": "recorded convention only; no solved F/D-flat vacuum claimed",
         },
+        "literature_convention_map": {
+            "primary_source": {
+                "key": "AulakhGirdhar2005",
+                "arxiv": "hep-ph/0405074",
+                "journal": "Nucl. Phys. B711:275-313,2005",
+                "scope": "Pati-Salam decomposition, vev dictionary, F-term equations, cubic, spectra/couplings",
+            },
+            "crosscheck_source": {
+                "key": "AulakhBajcMelfoSenjanovicVissani2004",
+                "arxiv": "hep-ph/0306242",
+                "journal": "Phys. Lett. B588:196-202,2004",
+                "scope": "minimal SUSY SO(10) setup and compact cubic/vev summary",
+            },
+            "branch_variable": "x = -lambda*omega/m",
+            "coupling_ratio": "xi = lambda*M/(eta*m)",
+            "cubic_equation": "8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
+            "dimensionless_vevs": {
+                "omega_tilde": "-x",
+                "a_tilde": "(x^2+2*x-1)/(1-x)",
+                "p_tilde": "x*(5*x^2-1)/(1-x)^2",
+                "eta_sigma_bar_sigma_tilde": "2*x*(1-3*x)*(1+x^2)/(1-x)^2",
+            },
+            "abmsv_2003_sign_note": "The 2003 short note writes omega with the opposite sign; p and a formulas match after omega_ABMSV=-omega_AG.",
+        },
         "vacuum_cubic_contract": {
             "dimensionless_branch_variable": "x",
             "dimensionless_coupling_ratio": "xi",
-            "literature_template": "P3(x; xi)=0",
-            "coefficients_status": "not fixed in this scaffold; must be imported from a specified convention table",
-            "why_not_filled_here": "the stage-1 acceptance test is literature reproduction, not an invented polynomial",
+            "literature_template": "8*x^3 - 15*x^2 + 14*x - 3 + xi*(1-x)^2 = 0",
+            "coefficients_status": "fixed from Aulakh-Girdhar 2005 / ABMSV 2004",
+            "why_not_filled_here": "now filled for vacuum branch only; mass matrices remain future work",
         },
         "literature_special_point_contract": special_point_contract(),
         "conventions_to_resolve": convention_items(),
@@ -289,11 +380,10 @@ def main() -> None:
             "Audit2_d5_proton": "blocked until triplet inverse-propagator block and physical flavor rotations are exported",
         },
         "publication_boundary": {
-            "claim": "The PS singlet-vev dictionary and acceptance contract for CMSGUT stage 1 are fixed.",
+            "claim": "The PS singlet-vev dictionary, Aulakh-Girdhar cubic convention, and source-named special-point validator for CMSGUT stage 1 are fixed.",
             "not_claimed": [
                 "F/D-flat solution",
-                "literature cubic reproduction",
-                "enhanced-symmetry special-point pass",
+                "full Pati-Salam special point",
                 "Goldstone count",
                 "complete heavy spectrum",
                 "doublet-triplet fine tuning",
@@ -330,6 +420,29 @@ def main() -> None:
     ]
     for row in card["ps_singlet_vevs"]:
         report_lines.append(f"| `{row['symbol']}` | `{row['spin10_field']}` | `{row['ps_block']}` | {row['role']} |")
+
+    report_lines += [
+        "",
+        "## Cubic Convention",
+        "",
+        "- Primary convention: Aulakh-Girdhar 2005 (`hep-ph/0405074`).",
+        "- `x = -lambda*omega/m`.",
+        "- `xi = lambda*M/(eta*m)`.",
+        "- Cubic: `8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2`.",
+        "- Cross-check: ABMSV 2004 (`hep-ph/0306242`) matches after the noted",
+        "  omega-sign convention change.",
+        "",
+        "## Source-Named Special Points",
+        "",
+        "| point | source name | x | xi | residual | pass |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for row in card["literature_special_point_contract"]:
+        report_lines.append(
+            f"| `{row['point_label']}` | {row.get('source_name')} | "
+            f"{row.get('x_value')} | {row.get('xi_value')} | "
+            f"{row.get('polynomial_residual')} | {row.get('pass_fail')} |"
+        )
 
     report_lines += [
         "",

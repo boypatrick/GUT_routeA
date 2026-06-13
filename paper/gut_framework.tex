@@ -1276,10 +1276,18 @@ aligned tensors with tensor-by-tensor residual reporting.  Audit 4a currently
 fixes only the source-sector heavy-spectrum schema and records that no
 non-placeholder \texttt{heavy\_spectrum.json} has yet been exported.  Audit
 4a.1 opens a CMSGUT-like \(210\oplus126\oplus\overline{126}\oplus10\)
-stage-1 scaffold in Pati--Salam blocks: it records the singlet-vev dictionary,
-the \(D\)-flatness convention \(|\sigma|=|\bar\sigma|\), the unresolved
-literature-cubic convention map, and the SU(5)/flipped-SU(5)/Pati--Salam
-special-point acceptance gates.  It does not solve the F/D-flat vacuum or
+stage-1 scaffold in Pati--Salam blocks.  It fixes the Aulakh--Girdhar vacuum
+convention
+\[
+  x=-\lambda\omega/m,\qquad
+  \xi=\lambda M/(\eta m),\qquad
+  8x^3-15x^2+14x-3=-\xi(1-x)^2,
+\]
+and cross-checks it against the ABMSV convention after the corresponding
+\(\omega\)-sign change \cite{AulakhGirdhar2005,AulakhBajcMelfoSenjanovicVissani2004}.
+The validator reproduces the source-named \(SU(5)\), flipped
+\(SU(5)\times U(1)\), and \(G_{LR}\) special points; it does not claim a full
+Pati--Salam special point.  It still does not solve the F/D-flat vacuum or
 export symbolic heavy masses, Goldstone counts, doublet/triplet matrices, or
 the triplet inverse block.  Thus
 Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked on

@@ -19232,12 +19232,14 @@ Audit 4a.1 stage-1 technical package:
   - Stage 1 should implement the five SM-singlet vevs:
       `p,a,omega` in `210` Pati-Salam blocks
       `(1,1,1),(15,1,1),(15,1,3)`, plus
-      `sigma,bar_sigma` in
-      `(10,1,3),(\overline{10},1,3)`.
+      `sigma` in `(\overline{10},1,3)` for `126_H` and
+      `bar_sigma` in `(10,1,3)` for `\overline{126}_H`.
   - Acceptance is not a custom smoke test: reproduce the literature special
     points where the vacuum cubic has enhanced-symmetry limits such as SU(5),
-    flipped SU(5), and Pati-Salam.  Record all sign/normalization differences
-    against BMSV/Aulakh-style tables in a conventions-diff file.
+    flipped SU(5), and the source-named `G_LR` limit.  Do not claim a full
+    Pati-Salam point unless a primary-source convention map explicitly supplies
+    one.  Record all sign/normalization differences against BMSV/Aulakh-style
+    tables in a conventions-diff file.
 
 verified:
   - Ran `python3 code/audit05_phase_transfer_test.py`.
@@ -19308,7 +19310,7 @@ next:
     matrices may be used only as warm-start material unless their family basis
     is fixed relative to `K_tr`.
 
-## 2026-06-13 Taipei Audit 4a.1 CMSGUT vacuum-branch scaffold
+## 2026-06-13 Taipei Audit 4a.1 CMSGUT vacuum-branch validator
 
 implemented:
   - Added `code/audit4a1_cmsgut_vacuum_branches.py`.
@@ -19327,41 +19329,41 @@ Audit 4a.1 content:
       `p` in `(1,1,1)`,
       `a` in `(15,1,1)`,
       `omega` in `(15,1,3)`,
-      `sigma` in `(10,1,3)`,
-      `bar_sigma` in `(\overline{10},1,3)`.
+      `sigma` in `(\overline{10},1,3)` for `126_H`,
+      `bar_sigma` in `(10,1,3)` for `\overline{126}_H`.
   - Records the stage-1 D-flatness convention:
       `|sigma| = |bar_sigma|`,
       with `sigma = bar_sigma` allowed after gauge/source phase fixing.
-  - Creates the conventions-diff file for:
-      normalization of `p,a,omega`,
-      `sigma bar_sigma` phase,
-      branch-variable definitions `x,xi`,
-      literature cubic coefficients,
-      SU(5)/flipped-SU(5)/Pati-Salam special-point values,
-      and BMSV/Aulakh-style sign/normalization maps.
-  - Defines special-point acceptance fields:
-      `point_label`, `x_value`, `xi_value`, `enhanced_little_group`,
-      `source_reference`, `convention_map`, `pass_fail`.
+  - Fixes the Aulakh-Girdhar 2005 vacuum convention:
+      `x=-lambda*omega/m`,
+      `xi=lambda*M/(eta*m)`,
+      `8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2`.
+  - Cross-checks the cubic against ABMSV 2004 after the noted
+    `omega`-sign convention change.
+  - Validates the source-named special points:
+      `SU5_x_half`: `x=1/2`, `xi=-5`;
+      `SU5_x_minus_one`: `x=-1`, `xi=10`;
+      `flipped_SU5_x_third`: `x=1/3`, `xi=-2/3`;
+      `GLR_x_zero`: `x=0`, `xi=3`.
+  - Explicitly does not claim a full Pati-Salam special point: the primary
+    source labels `xi=3` as `G_LR`, not full
+    `SU(4)_C x SU(2)_L x SU(2)_R`.
 
 verified:
   - Ran `python3 code/audit4a1_cmsgut_vacuum_branches.py`.
   - Parsed `output/audit4a1/vacuum_branches.json` with
     `python3 -m json.tool`.
   - Audit 4a.1 digest:
-    `fc6bfdddb5de973a469f0e1b00d8f5c82f9dae2c9f8335f35c4c76843ed4bb78`.
+    `8aaa5979c5dc0832ee7edecfd7531ded34a0dadd9c6118406487502880a240ff`.
 
 boundary:
-  Audit 4a.1 is only a stage-1 vacuum-branch scaffold.  It does not claim an
-  F/D-flat solution, literature cubic reproduction, enhanced-symmetry
-  special-point pass, Goldstone count, complete heavy spectrum, doublet-triplet
-  fine tuning, colored-triplet inverse block, threshold closure, or proton
-  safety.
+  Audit 4a.1 is now a stage-1 vacuum-cubic and source-named special-point
+  validator.  It does not claim an F/D-flat solution, full Pati-Salam special
+  point, Goldstone count, complete heavy spectrum, doublet-triplet fine tuning,
+  colored-triplet inverse block, threshold closure, or proton safety.
 
 next:
-  - Fill the literature convention map for the CMSGUT vacuum cubic
-    `P3(x;xi)=0` from the chosen BMSV/Aulakh-style source table.
-  - Add the three enhanced-symmetry special-point values and make their
-    validator executable.
-  - Only after the special-point validator passes, proceed to symbolic mass
-    matrices, Goldstone-count check `33`, and the triplet inverse block needed
-    by Audit 2.
+  - Proceed to symbolic mass matrices in the same convention.
+  - Add the Goldstone-count check `33`.
+  - Export the doublet/triplet mass matrices and the colored-triplet inverse
+    block needed by Audit 2.

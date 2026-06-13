@@ -2,11 +2,11 @@
 %Control: key (0)
 %Control: author (72) initials jnrlst
 %Control: editor formatted (1) identically to author
-%Control: production of article title (1) required
+%Control: production of article title (-1) disabled
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{22}%
+\begin{thebibliography}{24}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -55,82 +55,70 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
   {Pati}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Salam}},\
-  }\bibfield  {title} {\bibinfo {title} {Lepton number as the fourth color},\
   }\href {https://doi.org/10.1103/PhysRevD.10.275} {\bibfield  {journal}
   {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {10}},\
   \bibinfo {pages} {275} (\bibinfo {year} {1974})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Georgi}(1975)}]{Georgi1975}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Georgi}},\ }\bibfield  {title} {\bibinfo {title} {The state of the art:
-  Gauge theories},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Particles
-  and Fields}}}\ (\bibinfo  {publisher} {AIP},\ \bibinfo {year} {1975})\
-  \bibinfo {note} {proceedings of the Williamsburg meeting}\BibitemShut
-  {NoStop}%
+  {Georgi}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Particles and
+  Fields}}}\ (\bibinfo  {publisher} {AIP},\ \bibinfo {year} {1975})\ \bibinfo
+  {note} {proceedings of the Williamsburg meeting}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fritzsch}\ and\ \citenamefont
   {Minkowski}(1975)}]{FritzschMinkowski1975}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
   {Fritzsch}}\ and\ \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Minkowski}},\ }\bibfield  {title} {\bibinfo {title} {Unified interactions of
-  leptons and hadrons},\ }\href {https://doi.org/10.1016/0003-4916(75)90211-0}
+  {Minkowski}},\ }\href {https://doi.org/10.1016/0003-4916(75)90211-0}
   {\bibfield  {journal} {\bibinfo  {journal} {Annals Phys.}\ }\textbf {\bibinfo
   {volume} {93}},\ \bibinfo {pages} {193} (\bibinfo {year} {1975})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Slansky}(1981)}]{Slansky1981}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
-  {Slansky}},\ }\bibfield  {title} {\bibinfo {title} {Group theory for unified
-  model building},\ }\href {https://doi.org/10.1016/0370-1573(81)90092-2}
-  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rept.}\ }\textbf {\bibinfo
-  {volume} {79}},\ \bibinfo {pages} {1} (\bibinfo {year} {1981})}\BibitemShut
-  {NoStop}%
+  {Slansky}},\ }\href {https://doi.org/10.1016/0370-1573(81)90092-2} {\bibfield
+   {journal} {\bibinfo  {journal} {Phys. Rept.}\ }\textbf {\bibinfo {volume}
+  {79}},\ \bibinfo {pages} {1} (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Minkowski}(1977)}]{Minkowski1977}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
-  {Minkowski}},\ }\bibfield  {title} {\bibinfo {title} {mu to e gamma at a rate
-  of one out of 1-billion muon decays?},\ }\href
-  {https://doi.org/10.1016/0370-2693(77)90435-X} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Lett. B}\ }\textbf {\bibinfo {volume} {67}},\
-  \bibinfo {pages} {421} (\bibinfo {year} {1977})}\BibitemShut {NoStop}%
+  {Minkowski}},\ }\href {https://doi.org/10.1016/0370-2693(77)90435-X}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Lett. B}\ }\textbf
+  {\bibinfo {volume} {67}},\ \bibinfo {pages} {421} (\bibinfo {year}
+  {1977})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Gell-Mann}\ \emph {et~al.}(1979)\citenamefont
   {Gell-Mann}, \citenamefont {Ramond},\ and\ \citenamefont
   {Slansky}}]{GellMannRamondSlansky1979}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Gell-Mann}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Ramond}},\
-  and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Slansky}},\
-  }\bibfield  {title} {\bibinfo {title} {Complex spinors and unified
-  theories},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Supergravity}}}\
-  (\bibinfo  {publisher} {North-Holland},\ \bibinfo {year} {1979})\ pp.\
-  \bibinfo {pages} {315--321}\BibitemShut {NoStop}%
+  and\ \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Slansky}},\ }in\
+  \href@noop {} {\emph {\bibinfo {booktitle} {Supergravity}}}\ (\bibinfo
+  {publisher} {North-Holland},\ \bibinfo {year} {1979})\ pp.\ \bibinfo {pages}
+  {315--321}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Yanagida}(1979)}]{Yanagida1979}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Yanagida}},\ }\bibfield  {title} {\bibinfo {title} {Horizontal symmetry and
-  masses of neutrinos},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle}
-  {Proceedings of the Workshop on Unified Theory and the Baryon Number of the
-  Universe}}}\ (\bibinfo  {publisher} {KEK},\ \bibinfo {year} {1979})\ pp.\
-  \bibinfo {pages} {95--99}\BibitemShut {NoStop}%
+  {Yanagida}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Proceedings of
+  the Workshop on Unified Theory and the Baryon Number of the Universe}}}\
+  (\bibinfo  {publisher} {KEK},\ \bibinfo {year} {1979})\ pp.\ \bibinfo {pages}
+  {95--99}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Jones}(1982)}]{Jones1982}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~R.~T.}\
-  \bibnamefont {Jones}},\ }\bibfield  {title} {\bibinfo {title} {The two loop
-  beta function for a g(1) x g(2) gauge theory},\ }\href
-  {https://doi.org/10.1103/PhysRevD.25.581} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {25}},\ \bibinfo
-  {pages} {581} (\bibinfo {year} {1982})}\BibitemShut {NoStop}%
+  \bibnamefont {Jones}},\ }\href {https://doi.org/10.1103/PhysRevD.25.581}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo
+  {volume} {25}},\ \bibinfo {pages} {581} (\bibinfo {year} {1982})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Machacek}\ and\ \citenamefont
   {Vaughn}(1983)}]{MachacekVaughn1983}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~E.}\ \bibnamefont
   {Machacek}}\ and\ \bibinfo {author} {\bibfnamefont {M.~T.}\ \bibnamefont
-  {Vaughn}},\ }\bibfield  {title} {\bibinfo {title} {Two loop renormalization
-  group equations in a general quantum field theory. 1. wave function
-  renormalization},\ }\href {https://doi.org/10.1016/0550-3213(83)90610-7}
-  {\bibfield  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf
-  {\bibinfo {volume} {222}},\ \bibinfo {pages} {83} (\bibinfo {year}
-  {1983})}\BibitemShut {NoStop}%
+  {Vaughn}},\ }\href {https://doi.org/10.1016/0550-3213(83)90610-7} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume}
+  {222}},\ \bibinfo {pages} {83} (\bibinfo {year} {1983})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Lawson}\ and\ \citenamefont
   {Michelsohn}(1989)}]{LawsonMichelsohn1989}%
   \BibitemOpen
@@ -156,13 +144,36 @@
   First Course}}},\ \bibinfo {series} {Graduate Texts in Mathematics}, Vol.\
   \bibinfo {volume} {129}\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
   {1991})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aulakh}\ and\ \citenamefont
+  {Girdhar}(2005)}]{AulakhGirdhar2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont
+  {Aulakh}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Girdhar}},\ }\href {https://doi.org/10.1016/j.nuclphysb.2005.01.008}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf
+  {\bibinfo {volume} {711}},\ \bibinfo {pages} {275} (\bibinfo {year}
+  {2005})},\ \Eprint {https://arxiv.org/abs/hep-ph/0405074}
+  {arXiv:hep-ph/0405074} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Aulakh}\ \emph {et~al.}(2004)\citenamefont {Aulakh},
+  \citenamefont {Bajc}, \citenamefont {Melfo}, \citenamefont {Senjanovic},\
+  and\ \citenamefont {Vissani}}]{AulakhBajcMelfoSenjanovicVissani2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont
+  {Aulakh}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Bajc}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Melfo}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Senjanovic}},\ and\ \bibinfo
+  {author} {\bibfnamefont {F.}~\bibnamefont {Vissani}},\ }\href
+  {https://doi.org/10.1016/j.physletb.2004.03.031} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Lett. B}\ }\textbf {\bibinfo {volume} {588}},\
+  \bibinfo {pages} {196} (\bibinfo {year} {2004})},\ \Eprint
+  {https://arxiv.org/abs/hep-ph/0306242} {arXiv:hep-ph/0306242} \BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Katz}\ and\ \citenamefont
   {Vafa}(1997)}]{KatzVafa1996}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
   {Katz}}\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Vafa}},\
-  }\bibfield  {title} {\bibinfo {title} {Matter from geometry},\ }\href
-  {https://doi.org/10.1016/S0550-3213(97)00280-0} {\bibfield  {journal}
+  }\href {https://doi.org/10.1016/S0550-3213(97)00280-0} {\bibfield  {journal}
   {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume} {497}},\
   \bibinfo {pages} {146} (\bibinfo {year} {1997})},\ \Eprint
   {https://arxiv.org/abs/hep-th/9606086} {arXiv:hep-th/9606086} \BibitemShut
@@ -174,12 +185,10 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
   {Beasley}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
   {Heckman}},\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Vafa}},\ }\bibfield  {title} {\bibinfo {title} {Guts and exceptional branes
-  in f-theory. i},\ }\href {https://doi.org/10.1088/1126-6708/2009/01/058}
-  {\bibfield  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo
-  {volume} {01}},\ \bibinfo {pages} {058}},\ \Eprint
-  {https://arxiv.org/abs/0802.3391} {arXiv:0802.3391 [hep-th]} \BibitemShut
-  {NoStop}%
+  {Vafa}},\ }\href {https://doi.org/10.1088/1126-6708/2009/01/058} {\bibfield
+  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {01}},\
+  \bibinfo {pages} {058}},\ \Eprint {https://arxiv.org/abs/0802.3391}
+  {arXiv:0802.3391 [hep-th]} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Beasley}\ \emph
   {et~al.}(2009{\natexlab{b}})\citenamefont {Beasley}, \citenamefont
   {Heckman},\ and\ \citenamefont {Vafa}}]{BeasleyHeckmanVafa2008II}%
@@ -187,21 +196,17 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
   {Beasley}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
   {Heckman}},\ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
-  {Vafa}},\ }\bibfield  {title} {\bibinfo {title} {Guts and exceptional branes
-  in f-theory. ii: Experimental predictions},\ }\href
-  {https://doi.org/10.1088/1126-6708/2009/01/059} {\bibfield  {journal}
-  {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {01}},\ \bibinfo
-  {pages} {059}},\ \Eprint {https://arxiv.org/abs/0806.0102} {arXiv:0806.0102
-  [hep-th]} \BibitemShut {NoStop}%
+  {Vafa}},\ }\href {https://doi.org/10.1088/1126-6708/2009/01/059} {\bibfield
+  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {01}},\
+  \bibinfo {pages} {059}},\ \Eprint {https://arxiv.org/abs/0806.0102}
+  {arXiv:0806.0102 [hep-th]} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Mayrhofer}\ \emph {et~al.}(2013)\citenamefont
   {Mayrhofer}, \citenamefont {Palti},\ and\ \citenamefont
   {Weigand}}]{MayrhoferPaltiWeigand2013}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
   {Mayrhofer}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Palti}},\
-  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Weigand}},\
-  }\bibfield  {title} {\bibinfo {title} {Hypercharge flux in iib and f-theory:
-  Anomalies and gauge coupling unification},\ }\href
+  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Weigand}},\ }\href
   {https://doi.org/10.1007/JHEP09(2013)082} {\bibfield  {journal} {\bibinfo
   {journal} {JHEP}\ }\textbf {\bibinfo {volume} {09}},\ \bibinfo {pages}
   {082}},\ \Eprint {https://arxiv.org/abs/1303.3589} {arXiv:1303.3589 [hep-th]}
@@ -209,11 +214,9 @@
 \bibitem [{\citenamefont {Witten}(1996)}]{Witten1996}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Witten}},\ }\bibfield  {title} {\bibinfo {title} {Non-perturbative
-  superpotentials in string theory},\ }\href
-  {https://doi.org/10.1016/0550-3213(96)00283-0} {\bibfield  {journal}
-  {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume} {474}},\
-  \bibinfo {pages} {343} (\bibinfo {year} {1996})},\ \Eprint
+  {Witten}},\ }\href {https://doi.org/10.1016/0550-3213(96)00283-0} {\bibfield
+  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume}
+  {474}},\ \bibinfo {pages} {343} (\bibinfo {year} {1996})},\ \Eprint
   {https://arxiv.org/abs/hep-th/9604030} {arXiv:hep-th/9604030} \BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Blumenhagen}\ \emph {et~al.}(2007)\citenamefont
@@ -223,23 +226,19 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
   {Blumenhagen}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Cvetic}},\ and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
-  {Weigand}},\ }\bibfield  {title} {\bibinfo {title} {Spacetime instanton
-  corrections in 4d string vacua: The seesaw mechanism for d-brane models},\
-  }\href {https://doi.org/10.1016/j.nuclphysb.2007.02.016} {\bibfield
-  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf {\bibinfo {volume}
-  {771}},\ \bibinfo {pages} {113} (\bibinfo {year} {2007})},\ \Eprint
-  {https://arxiv.org/abs/hep-th/0609191} {arXiv:hep-th/0609191} \BibitemShut
-  {NoStop}%
+  {Weigand}},\ }\href {https://doi.org/10.1016/j.nuclphysb.2007.02.016}
+  {\bibfield  {journal} {\bibinfo  {journal} {Nucl. Phys. B}\ }\textbf
+  {\bibinfo {volume} {771}},\ \bibinfo {pages} {113} (\bibinfo {year}
+  {2007})},\ \Eprint {https://arxiv.org/abs/hep-th/0609191}
+  {arXiv:hep-th/0609191} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ibanez}\ and\ \citenamefont
   {Uranga}(2007)}]{IbanezUranga2006}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~E.}\ \bibnamefont
   {Ibanez}}\ and\ \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
-  {Uranga}},\ }\bibfield  {title} {\bibinfo {title} {Neutrino majorana masses
-  from string theory instanton effects},\ }\href
-  {https://doi.org/10.1088/1126-6708/2007/03/052} {\bibfield  {journal}
-  {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {03}},\ \bibinfo
-  {pages} {052}},\ \Eprint {https://arxiv.org/abs/hep-th/0609213}
+  {Uranga}},\ }\href {https://doi.org/10.1088/1126-6708/2007/03/052} {\bibfield
+   {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {03}},\
+  \bibinfo {pages} {052}},\ \Eprint {https://arxiv.org/abs/hep-th/0609213}
   {arXiv:hep-th/0609213} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cvetic}\ \emph {et~al.}(2007)\citenamefont {Cvetic},
   \citenamefont {Richter},\ and\ \citenamefont
@@ -247,12 +246,10 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Cvetic}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Richter}},\
-  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Weigand}},\
-  }\bibfield  {title} {\bibinfo {title} {Computation of d-brane instanton
-  induced superpotential couplings: Majorana masses from string theory},\
-  }\href {https://doi.org/10.1103/PhysRevD.76.086002} {\bibfield  {journal}
-  {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {76}},\
-  \bibinfo {pages} {086002} (\bibinfo {year} {2007})},\ \Eprint
+  and\ \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Weigand}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.76.086002} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo
+  {pages} {086002} (\bibinfo {year} {2007})},\ \Eprint
   {https://arxiv.org/abs/hep-th/0703028} {arXiv:hep-th/0703028} \BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Bianchi}\ \emph {et~al.}(2011)\citenamefont
@@ -262,12 +259,10 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Bianchi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
   {Collinucci}},\ and\ \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
-  {Martucci}},\ }\bibfield  {title} {\bibinfo {title} {Magnetized e3-brane
-  instantons in f-theory},\ }\href {https://doi.org/10.1007/JHEP12(2011)045}
-  {\bibfield  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo
-  {volume} {12}},\ \bibinfo {pages} {045}},\ \Eprint
-  {https://arxiv.org/abs/1107.3732} {arXiv:1107.3732 [hep-th]} \BibitemShut
-  {NoStop}%
+  {Martucci}},\ }\href {https://doi.org/10.1007/JHEP12(2011)045} {\bibfield
+  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {12}},\
+  \bibinfo {pages} {045}},\ \Eprint {https://arxiv.org/abs/1107.3732}
+  {arXiv:1107.3732 [hep-th]} \BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Cvetic}\ \emph {et~al.}(2012)\citenamefont {Cvetic},
   \citenamefont {Donagi}, \citenamefont {Halverson},\ and\ \citenamefont
   {Marsano}}]{CveticDonagiHalversonMarsano2012}%
@@ -275,10 +270,9 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Cvetic}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Donagi}},
   \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Halverson}},\ and\
-  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Marsano}},\ }\bibfield
-  {title} {\bibinfo {title} {On seven-brane dependent instanton prefactors in
-  f-theory},\ }\href {https://doi.org/10.1007/JHEP11(2012)004} {\bibfield
-  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {11}},\
-  \bibinfo {pages} {004}},\ \Eprint {https://arxiv.org/abs/1209.4906}
-  {arXiv:1209.4906 [hep-th]} \BibitemShut {NoStop}%
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Marsano}},\ }\href
+  {https://doi.org/10.1007/JHEP11(2012)004} {\bibfield  {journal} {\bibinfo
+  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages}
+  {004}},\ \Eprint {https://arxiv.org/abs/1209.4906} {arXiv:1209.4906 [hep-th]}
+  \BibitemShut {NoStop}%
 \end{thebibliography}%
