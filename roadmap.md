@@ -19307,3 +19307,61 @@ next:
     residuals for the available companion tensors; published minimal-SO(10)
     matrices may be used only as warm-start material unless their family basis
     is fixed relative to `K_tr`.
+
+## 2026-06-13 Taipei Audit 4a.1 CMSGUT vacuum-branch scaffold
+
+implemented:
+  - Added `code/audit4a1_cmsgut_vacuum_branches.py`.
+  - Generated `output/audit4a1/vacuum_branches.json`,
+    `output/audit4a1/vacuum_branch_report.md`, and
+    `output/audit4a1/conventions_diff.md`.
+  - Added `output/audit4a1/` to the lean reproducibility output whitelist.
+  - Updated the TeX reproducibility manifest and deferred-audit boundary to
+    include Audit 4a.1.
+
+Audit 4a.1 content:
+  - CMSGUT-like first branch:
+      `210\oplus126\oplus\overline{126}\oplus10`.
+  - Uses Pati-Salam block language, not raw SO(10) tensor components.
+  - Registers the five SM-singlet vevs:
+      `p` in `(1,1,1)`,
+      `a` in `(15,1,1)`,
+      `omega` in `(15,1,3)`,
+      `sigma` in `(10,1,3)`,
+      `bar_sigma` in `(\overline{10},1,3)`.
+  - Records the stage-1 D-flatness convention:
+      `|sigma| = |bar_sigma|`,
+      with `sigma = bar_sigma` allowed after gauge/source phase fixing.
+  - Creates the conventions-diff file for:
+      normalization of `p,a,omega`,
+      `sigma bar_sigma` phase,
+      branch-variable definitions `x,xi`,
+      literature cubic coefficients,
+      SU(5)/flipped-SU(5)/Pati-Salam special-point values,
+      and BMSV/Aulakh-style sign/normalization maps.
+  - Defines special-point acceptance fields:
+      `point_label`, `x_value`, `xi_value`, `enhanced_little_group`,
+      `source_reference`, `convention_map`, `pass_fail`.
+
+verified:
+  - Ran `python3 code/audit4a1_cmsgut_vacuum_branches.py`.
+  - Parsed `output/audit4a1/vacuum_branches.json` with
+    `python3 -m json.tool`.
+  - Audit 4a.1 digest:
+    `fc6bfdddb5de973a469f0e1b00d8f5c82f9dae2c9f8335f35c4c76843ed4bb78`.
+
+boundary:
+  Audit 4a.1 is only a stage-1 vacuum-branch scaffold.  It does not claim an
+  F/D-flat solution, literature cubic reproduction, enhanced-symmetry
+  special-point pass, Goldstone count, complete heavy spectrum, doublet-triplet
+  fine tuning, colored-triplet inverse block, threshold closure, or proton
+  safety.
+
+next:
+  - Fill the literature convention map for the CMSGUT vacuum cubic
+    `P3(x;xi)=0` from the chosen BMSV/Aulakh-style source table.
+  - Add the three enhanced-symmetry special-point values and make their
+    validator executable.
+  - Only after the special-point validator passes, proceed to symbolic mass
+    matrices, Goldstone-count check `33`, and the triplet inverse block needed
+    by Audit 2.

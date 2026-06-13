@@ -1,0 +1,203 @@
+{
+  "audit": "audit4a1_cmsgut_vacuum_branches",
+  "blocked_downstream_audits": {
+    "Audit2_d5_proton": "blocked until triplet inverse-propagator block and physical flavor rotations are exported",
+    "Audit3_thresholds": "blocked until symbolic or numerical heavy_spectrum.json exports masses and beta vectors"
+  },
+  "branch": {
+    "language": "Pati-Salam blocks, not raw SO(10) tensor components",
+    "name": "CMSGUT-like 210+126+overline126+10",
+    "reason": "literature-compatible source-sector fallback with a 126bar_H post-B-L source for P_nu^c"
+  },
+  "card_sha256": "fc6bfdddb5de973a469f0e1b00d8f5c82f9dae2c9f8335f35c4c76843ed4bb78",
+  "conventions_to_resolve": [
+    {
+      "item": "normalization_of_p_a_omega",
+      "status": "unresolved; must be mapped to the chosen BMSV/Aulakh-style table",
+      "why_it_matters": "F-term cubic coefficients and mass matrices are convention-sensitive."
+    },
+    {
+      "item": "sigma_bar_sigma_phase",
+      "status": "stage-1 convention: record |sigma|=|bar_sigma| and allow sigma=bar_sigma after gauge fixing",
+      "why_it_matters": "D-flatness fixes magnitudes, while the relative phase is a gauge/source convention."
+    },
+    {
+      "item": "branch_variable_x_and_xi",
+      "status": "placeholder; exact definitions must be imported before any special-point pass",
+      "why_it_matters": "The literature cubic P3(x;xi)=0 has multiple equivalent definitions."
+    },
+    {
+      "item": "cubic_polynomial_coefficients",
+      "status": "not fixed in this scaffold",
+      "why_it_matters": "Acceptance depends on reproducing enhanced-symmetry limits, not on a custom cubic."
+    },
+    {
+      "item": "special_point_values",
+      "status": "required from literature table; no pass claimed here",
+      "why_it_matters": "SU(5), flipped SU(5), and Pati-Salam limits are the stage-1 validation anchors."
+    },
+    {
+      "item": "BMSV_vs_Aulakh_symbol_map",
+      "status": "conventions-diff file created; unresolved until dual-source comparison is filled",
+      "why_it_matters": "Historical spectrum tables differ by signs and normalizations."
+    }
+  ],
+  "created_utc": "2026-06-13T12:30:10+00:00",
+  "d_flatness_contract": {
+    "claim_boundary": "recorded convention only; no solved F/D-flat vacuum claimed",
+    "condition": "|sigma| = |bar_sigma|",
+    "stage1_gauge_choice": "sigma = bar_sigma may be used after fixing the conjugate source phase"
+  },
+  "literature_special_point_contract": [
+    {
+      "enhanced_little_group": "SU(5)-type enhanced symmetry limit",
+      "point_label": "SU5_unflipped",
+      "required_fields": [
+        "point_label",
+        "x_value",
+        "xi_value",
+        "enhanced_little_group",
+        "source_reference",
+        "convention_map",
+        "pass_fail"
+      ],
+      "stage1_status": "not evaluated; literature value required"
+    },
+    {
+      "enhanced_little_group": "flipped SU(5)-type enhanced symmetry limit",
+      "point_label": "flipped_SU5",
+      "required_fields": [
+        "point_label",
+        "x_value",
+        "xi_value",
+        "enhanced_little_group",
+        "source_reference",
+        "convention_map",
+        "pass_fail"
+      ],
+      "stage1_status": "not evaluated; literature value required"
+    },
+    {
+      "enhanced_little_group": "Pati-Salam enhanced or unbroken-limit anchor",
+      "point_label": "Pati_Salam",
+      "required_fields": [
+        "point_label",
+        "x_value",
+        "xi_value",
+        "enhanced_little_group",
+        "source_reference",
+        "convention_map",
+        "pass_fail"
+      ],
+      "stage1_status": "not evaluated; literature value required"
+    }
+  ],
+  "ps_singlet_vevs": [
+    {
+      "ps_block": "(1,1,1)",
+      "role": "Pati-Salam singlet vev",
+      "sm_status": "SM singlet",
+      "spin10_field": "210_H",
+      "stage1_status": "registered",
+      "symbol": "p"
+    },
+    {
+      "ps_block": "(15,1,1)",
+      "role": "B-L-like adjoint vev",
+      "sm_status": "SM singlet in the SU(4)_C adjoint",
+      "spin10_field": "210_H",
+      "stage1_status": "registered",
+      "symbol": "a"
+    },
+    {
+      "ps_block": "(15,1,3)",
+      "role": "right-triplet-aligned adjoint vev",
+      "sm_status": "SM singlet in the SU(2)_R triplet-aligned block",
+      "spin10_field": "210_H",
+      "stage1_status": "registered",
+      "symbol": "omega"
+    },
+    {
+      "ps_block": "(10,1,3)",
+      "role": "B-L breaking source direction",
+      "sm_status": "SM singlet after right-handed alignment",
+      "spin10_field": "126_H",
+      "stage1_status": "registered",
+      "symbol": "sigma"
+    },
+    {
+      "ps_block": "(overline{10},1,3)",
+      "role": "post-B-L P_nu^c source and D-flat conjugate",
+      "sm_status": "SM singlet conjugate source direction",
+      "spin10_field": "overline{126}_H",
+      "stage1_status": "registered",
+      "symbol": "bar_sigma"
+    }
+  ],
+  "publication_boundary": {
+    "claim": "The PS singlet-vev dictionary and acceptance contract for CMSGUT stage 1 are fixed.",
+    "not_claimed": [
+      "F/D-flat solution",
+      "literature cubic reproduction",
+      "enhanced-symmetry special-point pass",
+      "Goldstone count",
+      "complete heavy spectrum",
+      "doublet-triplet fine tuning",
+      "colored-triplet inverse block",
+      "threshold closure",
+      "proton safety"
+    ]
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit4a1_builder",
+      "path": "code/audit4a1_cmsgut_vacuum_branches.py",
+      "sha256": "73e71cb3758d741283d7a8300b38f1643b01809982f77fedc4567fc40b48b87f",
+      "size_bytes": 13862
+    },
+    {
+      "exists": true,
+      "label": "audit4a_schema",
+      "path": "output/audit4a/source_spectrum_schema.json",
+      "sha256": "947708959735d0f42fa49bc1f4c260b611a7afe1b0e992a4a84ffcd0446df7c1",
+      "size_bytes": 12838
+    },
+    {
+      "exists": true,
+      "label": "audit0_card",
+      "path": "output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    }
+  ],
+  "stage_gates": {
+    "cubic_coefficients_fixed_from_literature": false,
+    "d_flatness_condition_recorded": true,
+    "doublet_mass_matrix_exported": false,
+    "goldstone_count_33_exported": false,
+    "heavy_spectrum_json_nonplaceholder": false,
+    "ps_singlet_vev_registry_complete": true,
+    "special_points_reproduced": false,
+    "symbolic_mass_matrices_exported": false,
+    "triplet_inverse_block_exported": false
+  },
+  "status": "stage-1 CMSGUT vacuum-branch scaffold only; no heavy spectrum is claimed",
+  "superpotential_data_required_later": [
+    "m_210",
+    "m_126",
+    "m_10",
+    "lambda_210",
+    "eta_210_126_126bar",
+    "10-sector Yukawa/mixing couplings if doublet-triplet blocks are added"
+  ],
+  "upstream_audit0_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "upstream_audit4a_sha256": "be735ff9f65a62f53a7cd1cbf504b4113d0f65dcaec553a4f6bb55e410471fbc",
+  "vacuum_cubic_contract": {
+    "coefficients_status": "not fixed in this scaffold; must be imported from a specified convention table",
+    "dimensionless_branch_variable": "x",
+    "dimensionless_coupling_ratio": "xi",
+    "literature_template": "P3(x; xi)=0",
+    "why_not_filled_here": "the stage-1 acceptance test is literature reproduction, not an invented polynomial"
+  }
+}
