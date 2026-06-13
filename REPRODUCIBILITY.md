@@ -53,6 +53,33 @@ Expected output artifact:
 This verifies only the algebraic Schur-complement matching data for
 `zeta K_tr`; it is not a full phenomenology audit.
 
+## Deferred Audit Scaffold Cards
+
+These files are reproducible scaffolds for future companion audits. They are
+not publication-grade flavor, proton-decay, threshold, or source-sector
+phenomenology results.
+
+```sh
+python3 code/audit4a1_cmsgut_vacuum_branches.py
+python3 code/audit4a1_cmsgut_mass_export.py
+```
+
+Expected output artifacts:
+
+- `output/audit4a1/vacuum_branches.json`
+- `output/audit4a1/vacuum_branch_report.md`
+- `output/audit4a1/conventions_diff.md`
+- `output/audit4a1/mass_export_schema.json`
+- `output/audit4a1/mass_export_schema.md`
+
+Core scaffold checks:
+
+- Aulakh-Girdhar vacuum cubic convention is fixed.
+- Source-named SU(5), flipped-SU(5), and `G_LR` special points pass.
+- The generic `Spin(10) -> G_SM` broken-generator count is `45-(8+3+1)=33`.
+- Doublet/triplet mass-block schemas are exported, but the actual mass entries
+  and triplet inverse block remain pending literature import.
+
 ## Status Log
 
 - Roadmap and task ledger: `roadmap.md`

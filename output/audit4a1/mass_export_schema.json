@@ -1,0 +1,274 @@
+{
+  "audit": "audit4a1_cmsgut_mass_export",
+  "card_sha256": "94f14ed3cb2eac9cfa582a59dd938e9aeca9b1d2d728f453294e9faa4e4ebea1",
+  "created_utc": "2026-06-13T17:16:49+00:00",
+  "goldstone_count": {
+    "broken_dimension_from_difference": 33,
+    "broken_dimension_from_sector_sum": 33,
+    "claim_boundary": "group-theoretic eaten-generator count only; no scalar Hessian or chiral Goldstone mass matrix is exported here",
+    "parent_dimension": 45,
+    "parent_group": "Spin(10)",
+    "pass_fail": true,
+    "sectors": [
+      {
+        "interpretation": "color-B-L off-diagonal broken generators",
+        "real_generator_count": 6,
+        "sector_id": "SU4C_over_SU3C_U1BL_offdiagonal",
+        "sm_representations": [
+          "(3,1,2/3)",
+          "(bar3,1,-2/3)"
+        ],
+        "source_ps_block": "(15,1,1) subset of adjoint 45"
+      },
+      {
+        "interpretation": "charged right-handed weak generators",
+        "real_generator_count": 2,
+        "sector_id": "SU2R_charged",
+        "sm_representations": [
+          "(1,1,1)",
+          "(1,1,-1)"
+        ],
+        "source_ps_block": "(1,1,3) subset of adjoint 45"
+      },
+      {
+        "interpretation": "neutral Cartan direction orthogonal to hypercharge",
+        "real_generator_count": 1,
+        "sector_id": "orthogonal_U1R_BL",
+        "sm_representations": [
+          "(1,1,0)_orthogonal_to_Y"
+        ],
+        "source_ps_block": "(15,1,1)+(1,1,3) Cartan mixture"
+      },
+      {
+        "interpretation": "leptoquark-like bidoublet broken generators",
+        "real_generator_count": 24,
+        "sector_id": "PS_broken_bidoublet",
+        "sm_representations": [
+          "(3,2,1/6)",
+          "(bar3,2,-1/6)",
+          "(3,2,-5/6)",
+          "(bar3,2,5/6)"
+        ],
+        "source_ps_block": "(6,2,2) subset of adjoint 45"
+      }
+    ],
+    "unbroken_dimension": 12,
+    "unbroken_dimension_by_factor": {
+      "SU2L": 3,
+      "SU3C": 8,
+      "U1Y": 1
+    },
+    "unbroken_group": "SU(3)_C x SU(2)_L x U(1)_Y"
+  },
+  "mass_block_schema": {
+    "doublet_mass_matrix": {
+      "block_id": "M_D",
+      "column_basis": [
+        "Dbar_10_from_(1,2,2)",
+        "Dbar_126_from_(15,2,2)",
+        "Dbar_overline126_from_(15,2,2)",
+        "Dbar_210_from_(10+overline10_or_equivalent_doublet_slot)"
+      ],
+      "entry_status": "schema_placeholder_pending_literature_import",
+      "normalization_convention": "Aulakh-Girdhar vacuum convention fixed by Audit 4a.1; matrix-entry signs and field normalizations still require dual-source import",
+      "row_basis": [
+        "D_10_from_(1,2,2)",
+        "D_126_from_(15,2,2)",
+        "D_overline126_from_(15,2,2)",
+        "D_210_from_(10+overline10_or_equivalent_doublet_slot)"
+      ],
+      "shape": [
+        4,
+        4
+      ],
+      "symbolic_entries": [
+        [
+          "M_D_11",
+          "M_D_12",
+          "M_D_13",
+          "M_D_14"
+        ],
+        [
+          "M_D_21",
+          "M_D_22",
+          "M_D_23",
+          "M_D_24"
+        ],
+        [
+          "M_D_31",
+          "M_D_32",
+          "M_D_33",
+          "M_D_34"
+        ],
+        [
+          "M_D_41",
+          "M_D_42",
+          "M_D_43",
+          "M_D_44"
+        ]
+      ]
+    },
+    "heavy_spectrum_export": {
+      "reason": "full symbolic mass matrices and SM beta-vector decomposition are not yet imported",
+      "status": "not_exported"
+    },
+    "triplet_inverse_block": {
+      "basis_inherited_from": "triplet_mass_matrix",
+      "block_id": "M_T_inverse",
+      "entry_status": "blocked_until_triplet_mass_entries_imported_and_inverted",
+      "required_for": "Audit 2 dimension-five Wilson tensors",
+      "shape": [
+        5,
+        5
+      ]
+    },
+    "triplet_mass_matrix": {
+      "block_id": "M_T",
+      "column_basis": [
+        "Tbar_10",
+        "Tbar_126",
+        "Tbar_overline126",
+        "Tbar_210_slot_A",
+        "Tbar_210_slot_B"
+      ],
+      "entry_status": "schema_placeholder_pending_literature_import",
+      "normalization_convention": "Aulakh-Girdhar vacuum convention fixed by Audit 4a.1; matrix-entry signs and field normalizations still require dual-source import",
+      "row_basis": [
+        "T_10",
+        "T_126",
+        "T_overline126",
+        "T_210_slot_A",
+        "T_210_slot_B"
+      ],
+      "shape": [
+        5,
+        5
+      ],
+      "symbolic_entries": [
+        [
+          "M_T_11",
+          "M_T_12",
+          "M_T_13",
+          "M_T_14",
+          "M_T_15"
+        ],
+        [
+          "M_T_21",
+          "M_T_22",
+          "M_T_23",
+          "M_T_24",
+          "M_T_25"
+        ],
+        [
+          "M_T_31",
+          "M_T_32",
+          "M_T_33",
+          "M_T_34",
+          "M_T_35"
+        ],
+        [
+          "M_T_41",
+          "M_T_42",
+          "M_T_43",
+          "M_T_44",
+          "M_T_45"
+        ],
+        [
+          "M_T_51",
+          "M_T_52",
+          "M_T_53",
+          "M_T_54",
+          "M_T_55"
+        ]
+      ]
+    }
+  },
+  "next_required_steps": [
+    "Import doublet and triplet mass-matrix entries in the inherited Aulakh-Girdhar convention.",
+    "Verify scalar/chiral Goldstone directions against the mass matrices, not only generator dimensions.",
+    "Invert the triplet block and export the entries needed by Audit 2.",
+    "Decompose all heavy states into SM beta-vector rows for Audit 3."
+  ],
+  "publication_boundary": {
+    "claim": "The generic Spin(10)->G_SM branch has 33 broken generators, and the Audit-2-relevant mass-block schema is fixed.",
+    "not_claimed": [
+      "scalar Hessian Goldstone eigenvectors",
+      "Aulakh-Girdhar/BMSV mass-matrix entries",
+      "doublet fine-tuning solution",
+      "triplet inverse propagator entries",
+      "non-placeholder heavy_spectrum.json",
+      "threshold closure",
+      "dimension-five proton safety"
+    ]
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit4a1_mass_export_builder",
+      "path": "code/audit4a1_cmsgut_mass_export.py",
+      "sha256": "b98c34dd77e3a760ef60c887129378d36c704d8d49128c54c4979b3b88c3f55d",
+      "size_bytes": 11801
+    },
+    {
+      "exists": true,
+      "label": "audit4a1_vacuum_card",
+      "path": "output/audit4a1/vacuum_branches.json",
+      "sha256": "0e3b411f4067e49130952aefda234a9ac0dde1fb2c8dd818fc48200b14bd0534",
+      "size_bytes": 9507
+    },
+    {
+      "exists": true,
+      "label": "audit4a_schema",
+      "path": "output/audit4a/source_spectrum_schema.json",
+      "sha256": "947708959735d0f42fa49bc1f4c260b611a7afe1b0e992a4a84ffcd0446df7c1",
+      "size_bytes": 12838
+    },
+    {
+      "exists": true,
+      "label": "audit0_card",
+      "path": "output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    }
+  ],
+  "stage_gates": {
+    "doublet_mass_matrix_entries_imported": false,
+    "doublet_mass_matrix_schema_exported": true,
+    "goldstone_count_33_exported": true,
+    "heavy_spectrum_json_nonplaceholder": false,
+    "symbolic_mass_matrix_schema_exported": true,
+    "threshold_beta_vectors_exported": false,
+    "triplet_inverse_block_entries_exported": false,
+    "triplet_inverse_block_schema_exported": true,
+    "triplet_mass_matrix_entries_imported": false,
+    "triplet_mass_matrix_schema_exported": true
+  },
+  "status": "stage-2 schema: Goldstone count plus doublet/triplet block contract; no full CMSGUT mass entries",
+  "upstream_audit0_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "upstream_audit4a1_vacuum_sha256": "8aaa5979c5dc0832ee7edecfd7531ded34a0dadd9c6118406487502880a240ff",
+  "upstream_audit4a_sha256": "be735ff9f65a62f53a7cd1cbf504b4113d0f65dcaec553a4f6bb55e410471fbc",
+  "vacuum_convention_inherited": {
+    "abmsv_2003_sign_note": "The 2003 short note writes omega with the opposite sign; p and a formulas match after omega_ABMSV=-omega_AG.",
+    "branch_variable": "x = -lambda*omega/m",
+    "coupling_ratio": "xi = lambda*M/(eta*m)",
+    "crosscheck_source": {
+      "arxiv": "hep-ph/0306242",
+      "journal": "Phys. Lett. B588:196-202,2004",
+      "key": "AulakhBajcMelfoSenjanovicVissani2004",
+      "scope": "minimal SUSY SO(10) setup and compact cubic/vev summary"
+    },
+    "cubic_equation": "8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
+    "dimensionless_vevs": {
+      "a_tilde": "(x^2+2*x-1)/(1-x)",
+      "eta_sigma_bar_sigma_tilde": "2*x*(1-3*x)*(1+x^2)/(1-x)^2",
+      "omega_tilde": "-x",
+      "p_tilde": "x*(5*x^2-1)/(1-x)^2"
+    },
+    "primary_source": {
+      "arxiv": "hep-ph/0405074",
+      "journal": "Nucl. Phys. B711:275-313,2005",
+      "key": "AulakhGirdhar2005",
+      "scope": "Pati-Salam decomposition, vev dictionary, F-term equations, cubic, spectra/couplings"
+    }
+  }
+}

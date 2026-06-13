@@ -19367,3 +19367,65 @@ next:
   - Add the Goldstone-count check `33`.
   - Export the doublet/triplet mass matrices and the colored-triplet inverse
     block needed by Audit 2.
+
+## 2026-06-14 Taipei Audit 4a.1 CMSGUT mass-export stage-2 schema
+
+implemented:
+  - Added `code/audit4a1_cmsgut_mass_export.py`.
+  - Generated `output/audit4a1/mass_export_schema.json` and
+    `output/audit4a1/mass_export_schema.md`.
+  - The new artifact inherits the Audit 4a.1 Aulakh-Girdhar vacuum convention
+    from `output/audit4a1/vacuum_branches.json`.
+  - Added the script and output to the TeX reproducibility manifest and
+    updated the deferred-audit boundary.
+
+Goldstone gate:
+  - Generic CMSGUT branch target:
+      `Spin(10) -> SU(3)_C x SU(2)_L x U(1)_Y`.
+  - Dimension count:
+      `dim Spin(10)=45`,
+      `dim G_SM=8+3+1=12`,
+      broken/eaten generator count `45-12=33`.
+  - Sector decomposition exported:
+      `SU4C_over_SU3C_U1BL_offdiagonal`: `6`,
+      `SU2R_charged`: `2`,
+      `orthogonal_U1R_BL`: `1`,
+      `PS_broken_bidoublet`: `24`.
+  - Sector sum:
+      `6+2+1+24=33`.
+
+mass-block schema:
+  - Exported a `4x4` doublet mass-matrix placeholder.
+  - Exported a `5x5` triplet mass-matrix placeholder.
+  - Exported a `5x5` triplet inverse-block placeholder required by Audit 2.
+  - All matrix entries are explicitly marked
+    `schema_placeholder_pending_literature_import` or blocked until imported
+    and inverted.  No Aulakh-Girdhar/BMSV mass entries are claimed yet.
+
+verified:
+  - Ran `python3 code/audit4a1_cmsgut_mass_export.py`.
+  - Parsed `output/audit4a1/mass_export_schema.json` with
+    `python3 -m json.tool`.
+  - Audit 4a.1 mass-export digest:
+    `94f14ed3cb2eac9cfa582a59dd938e9aeca9b1d2d728f453294e9faa4e4ebea1`.
+  - Stage gates now pass for:
+      `goldstone_count_33_exported`,
+      `symbolic_mass_matrix_schema_exported`,
+      `doublet_mass_matrix_schema_exported`,
+      `triplet_mass_matrix_schema_exported`,
+      `triplet_inverse_block_schema_exported`.
+
+boundary:
+  Audit 4a.1 stage 2 proves only the group-theoretic eaten-generator count and
+  fixes the mass-block export schema.  It does not claim scalar-Hessian
+  Goldstone eigenvectors, Aulakh-Girdhar/BMSV mass-matrix entries, doublet
+  fine tuning, triplet inverse-propagator entries, non-placeholder
+  `heavy_spectrum.json`, threshold closure, or proton safety.
+
+next:
+  - Import the literature doublet/triplet mass-matrix entries in the inherited
+    Aulakh-Girdhar convention.
+  - Verify scalar/chiral Goldstone directions against the mass matrices, not
+    only by generator-dimension counting.
+  - Invert the triplet mass block and export the entries needed by Audit 2.
+  - Decompose all heavy states into SM beta-vector rows for Audit 3.

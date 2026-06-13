@@ -1229,6 +1229,9 @@ and\\
 \item Audit 4a.1 CMSGUT vacuum-branch scaffold:
 \path{code/audit4a1_cmsgut_vacuum_branches.py}; output
 \path{output/audit4a1/}.
+\item Audit 4a.1 CMSGUT mass-export schema:
+\path{code/audit4a1_cmsgut_mass_export.py}; output
+\path{output/audit4a1/mass\_export\_schema.*}.
 \item Status log: \texttt{roadmap.md}.
 \end{itemize}
 The reproducible numerical claims inside this TeX draft are therefore only the
@@ -1287,9 +1290,12 @@ and cross-checks it against the ABMSV convention after the corresponding
 \(\omega\)-sign change \cite{AulakhGirdhar2005,AulakhBajcMelfoSenjanovicVissani2004}.
 The validator reproduces the source-named \(SU(5)\), flipped
 \(SU(5)\times U(1)\), and \(G_{LR}\) special points; it does not claim a full
-Pati--Salam special point.  It still does not solve the F/D-flat vacuum or
-export symbolic heavy masses, Goldstone counts, doublet/triplet matrices, or
-the triplet inverse block.  Thus
+Pati--Salam special point.  A follow-up Audit 4a.1 mass-export card verifies
+the group-theoretic Goldstone count \(45-(8+3+1)=33\) and exports the
+doublet/triplet mass-block schema, including the required \(5\times5\) triplet
+inverse-block placeholder.  It still does not solve the F/D-flat vacuum,
+import the Aulakh--Girdhar/BMSV mass-matrix entries, export scalar-Hessian
+Goldstone eigenvectors, or provide a non-placeholder heavy spectrum.  Thus
 Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked on
 both physical flavor rotations and triplet inverse data.
 
