@@ -1,0 +1,151 @@
+{
+  "audit": "audit05_phase_transfer_test",
+  "audit0_card_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "candidate_table": [
+    {
+      "abs_delta_rad": 0.5372532875264819,
+      "candidate": "arg_I",
+      "distance_mode": "mod_pi",
+      "hits_loose_window": false,
+      "hits_tight_window": false,
+      "phase_rad": 1.137291307844697,
+      "signed_delta_rad": 0.5372532875264819,
+      "target_arg_zeta_rad": 0.600038020318215
+    },
+    {
+      "abs_delta_rad": 1.6745445953711788,
+      "candidate": "two_arg_I",
+      "distance_mode": "mod_2pi",
+      "hits_loose_window": false,
+      "hits_tight_window": false,
+      "phase_rad": 2.274582615689394,
+      "signed_delta_rad": 1.6745445953711788,
+      "target_arg_zeta_rad": 0.600038020318215
+    },
+    {
+      "abs_delta_rad": 1.113645779520018,
+      "candidate": "arg_J",
+      "distance_mode": "mod_pi",
+      "hits_loose_window": false,
+      "hits_tight_window": false,
+      "phase_rad": 1.713683799838233,
+      "signed_delta_rad": 1.113645779520018,
+      "target_arg_zeta_rad": 0.600038020318215
+    },
+    {
+      "abs_delta_rad": 0.8906555662250781,
+      "candidate": "arg_I_plus_arg_J",
+      "distance_mode": "mod_pi",
+      "hits_loose_window": false,
+      "hits_tight_window": false,
+      "phase_rad": 2.85097510768293,
+      "signed_delta_rad": -0.8906555662250781,
+      "target_arg_zeta_rad": 0.600038020318215
+    }
+  ],
+  "card_sha256": "cb8f3b3dbec52185b7facffcfa4cd1567fc3a40c983bbf74fe62fe1f8cf97506",
+  "closest_candidate": {
+    "abs_delta_rad": 0.5372532875264819,
+    "candidate": "arg_I",
+    "distance_mode": "mod_pi",
+    "hits_loose_window": false,
+    "hits_tight_window": false,
+    "phase_rad": 1.137291307844697,
+    "signed_delta_rad": 0.5372532875264819,
+    "target_arg_zeta_rad": 0.600038020318215
+  },
+  "created_utc": "2026-06-13T02:02:31+00:00",
+  "diagnostic_definitions": {
+    "mod_2pi_rows": "For 2 arg I, the signed phase distance is measured modulo 2 pi because the diagnostic is lambda=cI followed by zeta=lambda^2 with c^2>0.",
+    "mod_pi_rows": "For arg I, arg J, and arg I+arg J, the signed phase distance is minimized modulo pi because a real coefficient may be positive or negative.",
+    "single_real_parameter_no_hit": "No row in the finite table lands inside the selected phase window under the row-specific distance convention.",
+    "two_real_parameter_fit_boundary": "The two-term real fit zeta=c1 I+c2 J is generally solvable and is reported only with cost indices."
+  },
+  "inputs": {
+    "I": {
+      "im": 0.01877942350836842,
+      "re": 0.008692433865329871
+    },
+    "J": {
+      "im": 0.0005604303361357293,
+      "re": -8.062794522963046e-05
+    },
+    "arg_zeta_rad": 0.600038020318215,
+    "normalization_caveat": "I and J are binary-quartic invariants in the recorded coefficient convention and normalized CP1/O(2) basis. Raw fitted c1,c2 values are convention-dependent.",
+    "phase_loose_half_width_rad": 5.424119231661329e-05,
+    "phase_tight_half_width_rad": 1.799256517286863e-06,
+    "quartic_basis": "(x^2, sqrt(2) x y, y^2)",
+    "quartic_invariant_scheme": "a x^4 + 4 b x^3 y + 6 c x^2 y^2 + 4 d x y^3 + e y^4",
+    "scheme_labels": {
+      "M_star_definition": "benchmark/source-sector scale; must be tied to v_R or source UV in Audit 4a",
+      "matrix_basis": "CP1/O(2) normalized family basis psi=(x^2, sqrt(2)xy, y^2)",
+      "precision_policy": "long decimals are reproducibility anchors; physical claims should be limited to a few significant figures until UV replay",
+      "quartic_invariant_scheme": "binary quartic coefficients (a,b,c,d,e) with combinatorial weights 1,4,6,4,1",
+      "rge_scheme": "UNSET_FOR_PUBLICATION: follow-up audits must explicitly choose DRbar/MSbar and scale thresholds",
+      "tan_beta_convention": "UNSET_FOR_PUBLICATION: required by Audit 1 and Audit 3"
+    },
+    "zeta": {
+      "im": 0.0736514853,
+      "re": 0.1076472949
+    }
+  },
+  "loose_hit_count": 0,
+  "publication_boundary": {
+    "claim": "Audit 0.5 only tests a finite visible-spurion phase-transfer table against the local benchmark.",
+    "not_claimed": [
+      "derivation of zeta",
+      "global hidden-sector phase model",
+      "flavor fit",
+      "proton or threshold closure"
+    ]
+  },
+  "real_two_term_fit_zeta_equals_c1I_plus_c2J": {
+    "c1_real": 10.377514892155295,
+    "c2_real": -216.31994916639124,
+    "cancellation_index_sum_terms_over_abs_zeta": 2.585476554588683,
+    "determinant": 6.38564996306118e-06,
+    "diagnostic_definitions": {
+      "cancellation_index_sum_terms_over_abs_zeta": "(|c1 I|+|c2 J|)/|zeta|",
+      "coefficient_normalization_caveat": "The raw sizes of c1 and c2 are not invariant under rescaling I or J. Interpret c1,c2 only together with the quartic invariant convention, basis, and term magnitudes recorded in this card.",
+      "naturalness_index_max_term_over_abs_zeta": "max(|c1 I|, |c2 J|)/|zeta|",
+      "residual_abs": "|c1 I + c2 J - zeta|"
+    },
+    "interpretation": "A two-real-coefficient combination can fit the phase by construction. The cancellation index is mild at O(1) for this card, so the class is not excluded as a possibility, but it is an unconstrained fit rather than a phase prediction.",
+    "naturalness_index_max_term_over_abs_zeta": 1.6464389086032931,
+    "residual_abs": 1.3877787807814457e-17,
+    "status": "solved",
+    "term_c1I": {
+      "abs": 0.21474816043881695,
+      "im": 0.19488374712418452,
+      "re": 0.09020586188653576
+    },
+    "term_c2J": {
+      "abs": 0.1224804673920327,
+      "im": -0.1212322618241845,
+      "re": 0.01744143301346424
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit05_builder",
+      "path": "code/audit05_phase_transfer_test.py",
+      "sha256": "48327e5ba4cf5d07c02a537be50562f46360032c09f9a4d5d02deb0be6765d26",
+      "size_bytes": 13595
+    },
+    {
+      "exists": true,
+      "label": "audit0_card",
+      "path": "output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    }
+  ],
+  "status": "finite phase-transfer diagnostic only; not a hidden-sector derivation",
+  "tight_hit_count": 0,
+  "verdict": {
+    "interpretation": "No candidate in {arg I, 2 arg I, arg J, arg I+arg J} lands inside the selected window under the stated mod-pi/mod-2pi distance rules; this falsifies only the simplest zero-parameter and single-real-parameter visible-spurion phase-transfer table for the current local benchmark.",
+    "simple_visible_spurion_phase_transfer_passes_loose": false,
+    "simple_visible_spurion_phase_transfer_passes_tight": false
+  }
+}

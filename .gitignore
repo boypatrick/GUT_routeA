@@ -30,3 +30,7 @@ backups/
 !/output/d5_half_spin/**
 !/output/hidden_zeta_origin/
 !/output/hidden_zeta_origin/**
+!/output/audit05/
+!/output/audit05/**
+!/output/audit1b/
+!/output/audit1b/**

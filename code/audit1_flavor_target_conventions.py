@@ -21,6 +21,7 @@ OUT = ROOT / "output" / "audit1"
 SOURCES = {
     "audit1_builder": ROOT / "code" / "audit1_flavor_target_conventions.py",
     "audit0_card": ROOT / "output" / "audit0" / "invariant_card.json",
+    "audit05_phase_transfer_test": ROOT / "output" / "audit05" / "phase_transfer_test.json",
     "flavor_benchmark_card": ROOT / "output" / "flavor_benchmark" / "flavor_benchmark_card.json",
     "no_web_input_convention_ledger": ROOT / "output" / "no_web_input_convention_ledger" / "summary.json",
 }
@@ -90,6 +91,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
 
     audit0 = read_json(SOURCES["audit0_card"])
+    audit05 = read_json(SOURCES["audit05_phase_transfer_test"]) if SOURCES["audit05_phase_transfer_test"].exists() else None
     flavor = read_json(SOURCES["flavor_benchmark_card"])
     no_web = read_json(SOURCES["no_web_input_convention_ledger"])
 
@@ -116,6 +118,34 @@ def main() -> None:
             ],
             "publication_refresh_required": True,
             "publication_refresh_note": "This scaffold uses local legacy anchors only. A paper-grade fit must refresh quark/lepton/neutrino target values and uncertainties from cited PDG/nuFIT-like sources.",
+        },
+        "target_table_version_policy": {
+            "required_fields": [
+                "target_table_version",
+                "zeta_role",
+            ],
+            "zeta_role_allowed_values": [
+                "fixed_benchmark",
+                "free_parameter",
+            ],
+            "target_table_v1_regression": {
+                "status": "frozen_local_regression_anchor",
+                "zeta_role": "fixed_benchmark",
+                "purpose": "Replay the existing local benchmark and protect the pipeline against accidental convention drift.",
+                "source": "output/no_web_input_convention_ledger/summary.json plus output/flavor_benchmark/flavor_benchmark_card.json",
+            },
+            "target_table_v2_publication": {
+                "status": "requires_publication_refresh",
+                "zeta_role": "free_parameter",
+                "purpose": "Publication-grade fit against refreshed PDG/nuFIT-like targets, with arg(zeta) treated as an independent hidden CP parameter.",
+                "required_version_tags": [
+                    "PDG_or_equivalent_source_version",
+                    "nuFIT_or_equivalent_source_version",
+                    "RGE_scheme",
+                    "target_scale",
+                    "cosmology_prior_policy",
+                ],
+            },
         },
         "local_legacy_anchors": {
             "flavor_targets_from_no_web_ledger": local_flavor_targets,
@@ -162,6 +192,21 @@ def main() -> None:
         },
         "parameter_policy": {
             "baseline_covariant_ansatz": "Use the CP1/O(2) covariant basis inherited from the Route-A note; do not add 120_H or a second spurion unless the failure gate is triggered.",
+            "arg_zeta_policy": {
+                "publication_fit_role": "free hidden CP parameter",
+                "tree_level_locking_forbidden": [
+                    "Do not lock arg(zeta) to CKM or PMNS phases at tree level.",
+                    "Do not lock arg(zeta) to arg(I), 2 arg(I), arg(J), or arg(I)+arg(J) at tree level.",
+                ],
+                "audit05_basis": (
+                    "Audit 0.5 found no loose/tight hit in the finite visible-spurion phase-transfer table."
+                    if audit05 is not None
+                    else "Audit 0.5 output was not present when this card was built."
+                ),
+                "audit05_card_sha256": audit05.get("card_sha256") if audit05 is not None else None,
+                "audit05_closest_candidate": audit05.get("closest_candidate") if audit05 is not None else None,
+                "audit05_real_two_term_fit": audit05.get("real_two_term_fit_zeta_equals_c1I_plus_c2J") if audit05 is not None else None,
+            },
             "fallback_price": "Adding a 120_H antisymmetric channel or second spurion must be recorded as +6 real parameters per added channel.",
             "do_not_do": "Do not tune d=5 proton decay in Audit 1; Audit 1 only exports rotations/tensors consumed by Audit 2.",
         },
@@ -199,6 +244,18 @@ def main() -> None:
         "- 19 fit observables: 6 quark Yukawas, 3 charged-lepton Yukawas, 4 CKM quantities, 6 PMNS/neutrino quantities.",
         "- Pure predictions: lightest mass, two Majorana phases, m_beta_beta, and heavy-neutrino spectrum.",
         "- Publication targets are intentionally marked `REQUIRES_PUBLICATION_REFRESH`.",
+        "",
+        "## Target Table Version Policy",
+        "",
+        "- `target_table_v1_regression`: frozen local regression anchor; `zeta_role = fixed_benchmark`.",
+        "- `target_table_v2_publication`: refreshed publication target table; `zeta_role = free_parameter`.",
+        "- Every future fit output must state both `target_table_version` and `zeta_role`.",
+        "",
+        "## Zeta Phase Policy",
+        "",
+        "- Audit 0.5 found no hit in the finite visible-spurion phase-transfer table.",
+        "- Publication fits should treat `arg(zeta)` as an independent hidden CP parameter unless a later UV mechanism predicts it before seeing the fit.",
+        "- Tree-level locking to CKM/PMNS phases or to the visible invariants `I,J` is forbidden by default.",
         "",
         "## Local Anchors",
         "",

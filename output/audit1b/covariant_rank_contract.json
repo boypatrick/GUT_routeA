@@ -1,0 +1,202 @@
+{
+  "all_rank_checks_pass": true,
+  "audit": "audit1b_covariant_rank_contract",
+  "card_sha256": "1bd7d80dd8cd4896bbfa51960c6d3301d09acf581226726e58ab7786bac3154b",
+  "created_utc": "2026-06-13T02:05:00+00:00",
+  "design_implications": {
+    "empty_test_to_avoid": {
+      "interpretation": "Do not use a literature (h,f) two-tensor test with unknown U(3) orientation as a pass/fail result.",
+      "net_real_constraints_after_unknown_U3_basis": -3,
+      "tensor_count_k": 2,
+      "unknown_basis_real_dimension": 9,
+      "verdict": "hollow_without_fixed_basis",
+      "visible_complex_constraints": 3,
+      "visible_real_constraints": 6
+    },
+    "internal_companion_tests_with_teeth": [
+      {
+        "net_real_constraints": 9,
+        "residual_basis_real_dimension_after_K_contact": 3,
+        "tensor_count_k": 3,
+        "visible_complex_constraints": 6,
+        "visible_real_constraints": 12
+      },
+      {
+        "net_real_constraints": 15,
+        "residual_basis_real_dimension_after_K_contact": 3,
+        "tensor_count_k": 4,
+        "visible_complex_constraints": 9,
+        "visible_real_constraints": 18
+      }
+    ],
+    "required_reporting": [
+      "Report residuals tensor-by-tensor rather than only a pooled residual.",
+      "Each added aligned tensor should add 3 complex / 6 real constraints before residual basis subtraction.",
+      "Only use literature matrices as a non-binding warm start unless their family basis is fixed relative to K_tr."
+    ]
+  },
+  "map_definition": {
+    "ambient": "k Veronese-sector binary quartics, dimension 5k over C",
+    "coefficient_convention": "a x^4 + 4 b x^3 y + 6 c x^2 y^2 + 4 d x y^3 + e y^4",
+    "hessian_convention": "H(Phi) = f_xx f_yy - f_xy^2, returned in the same binary-quartic coefficient convention",
+    "shared_spurion_map": "T_a = alpha_a Phi + beta_a H(Phi)"
+  },
+  "publication_boundary": {
+    "claim": "Audit 1b rank contract fixes which covariant-subspace projection tests are meaningful.",
+    "not_claimed": [
+      "global flavor fit",
+      "projection residual for real benchmark matrices",
+      "RGE or target-table freshness"
+    ]
+  },
+  "rank_rows": [
+    {
+      "ambient_complex_dimension": 5,
+      "constraint_complex_dimension": 0,
+      "constraint_matches": true,
+      "expected_constraint_complex_dimension": 0,
+      "expected_fiber_complex_dimension": 2,
+      "expected_rank_complex": 5,
+      "fiber_complex_dimension": 2,
+      "k_tensor_count": 1,
+      "rank_complex": 5,
+      "rank_matches": true,
+      "rank_tolerance": 1.9351617708229354e-06,
+      "raw_parameter_complex_dimension": 7,
+      "seed": 20260614,
+      "singular_values": [
+        19.351617708229355,
+        11.947042287082407,
+        7.9409974272122605,
+        5.258082664832552,
+        3.018088216557316
+      ]
+    },
+    {
+      "ambient_complex_dimension": 10,
+      "constraint_complex_dimension": 3,
+      "constraint_matches": true,
+      "expected_constraint_complex_dimension": 3,
+      "expected_fiber_complex_dimension": 2,
+      "expected_rank_complex": 7,
+      "fiber_complex_dimension": 2,
+      "k_tensor_count": 2,
+      "rank_complex": 7,
+      "rank_matches": true,
+      "rank_tolerance": 4.750488399007179e-06,
+      "raw_parameter_complex_dimension": 9,
+      "seed": 20260615,
+      "singular_values": [
+        47.50488399007179,
+        31.02922884790597,
+        23.511997537198887,
+        16.306895241757317,
+        5.6823277492339335,
+        1.4670506432279031,
+        0.5691543710903109,
+        1.7529331915587203e-09,
+        3.751936462229476e-10
+      ]
+    },
+    {
+      "ambient_complex_dimension": 15,
+      "constraint_complex_dimension": 6,
+      "constraint_matches": true,
+      "expected_constraint_complex_dimension": 6,
+      "expected_fiber_complex_dimension": 2,
+      "expected_rank_complex": 9,
+      "fiber_complex_dimension": 2,
+      "k_tensor_count": 3,
+      "rank_complex": 9,
+      "rank_matches": true,
+      "rank_tolerance": 5.668887563001362e-06,
+      "raw_parameter_complex_dimension": 11,
+      "seed": 20260616,
+      "singular_values": [
+        56.68887563001362,
+        36.22295562510547,
+        27.912527539855198,
+        27.911223898936164,
+        15.521028343196331,
+        10.835545741647492,
+        0.880574897356746,
+        0.5664607987291506,
+        0.5503789448307721,
+        1.0505186543828177e-07,
+        3.227016386885658e-09
+      ]
+    },
+    {
+      "ambient_complex_dimension": 20,
+      "constraint_complex_dimension": 9,
+      "constraint_matches": true,
+      "expected_constraint_complex_dimension": 9,
+      "expected_fiber_complex_dimension": 2,
+      "expected_rank_complex": 11,
+      "fiber_complex_dimension": 2,
+      "k_tensor_count": 4,
+      "rank_complex": 11,
+      "rank_matches": true,
+      "rank_tolerance": 4.492721883297369e-06,
+      "raw_parameter_complex_dimension": 13,
+      "seed": 20260617,
+      "singular_values": [
+        44.927218832973686,
+        36.40089178020351,
+        36.39582278500134,
+        36.395822783360636,
+        26.346049170460184,
+        12.04903187433264,
+        6.869761121900004,
+        2.0814917699084607,
+        0.7843697294675227,
+        0.6250222595027969,
+        0.6250222589780787,
+        7.438540307760168e-08,
+        2.663785761864941e-09
+      ]
+    },
+    {
+      "ambient_complex_dimension": 25,
+      "constraint_complex_dimension": 12,
+      "constraint_matches": true,
+      "expected_constraint_complex_dimension": 12,
+      "expected_fiber_complex_dimension": 2,
+      "expected_rank_complex": 13,
+      "fiber_complex_dimension": 2,
+      "k_tensor_count": 5,
+      "rank_complex": 13,
+      "rank_matches": true,
+      "rank_tolerance": 9.786222613045245e-06,
+      "raw_parameter_complex_dimension": 15,
+      "seed": 20260618,
+      "singular_values": [
+        97.86222613045246,
+        66.28807927745447,
+        42.92985377880299,
+        24.265749229438125,
+        24.260834897254423,
+        24.260834896232513,
+        24.260834895785596,
+        20.51394577676516,
+        9.668302576380954,
+        0.7720309215119903,
+        0.7494492152722824,
+        0.7494492139267965,
+        0.7494492130982225,
+        1.2775028699849337e-08,
+        2.0867827308769203e-09
+      ]
+    }
+  ],
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit1b_builder",
+      "path": "code/audit1b_covariant_rank_contract.py",
+      "sha256": "f25d46017ca4a000949ac72c5f0f8879ae311400b873c3a72099368e59e53d09",
+      "size_bytes": 9952
+    }
+  ],
+  "status": "rank/design contract only; not a flavor fit"
+}

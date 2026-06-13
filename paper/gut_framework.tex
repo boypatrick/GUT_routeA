@@ -910,6 +910,65 @@ stringy axion-volume option in Appendix~\ref{app:route-d-string} is the more
 physical way to interpret a continuous hidden phase.
 \end{observation}
 
+\begin{observation}[Audit 0.5 visible-spurion phase-transfer no-hit]
+\label{obs:audit05-phase-transfer}
+Audit 0.5 is a finite phase-transfer diagnostic.  It asks whether the
+benchmark contact phase can be inherited from visible spurion invariants in
+\(M_V\).  In the local invariant card,
+\[
+  \begin{aligned}
+  I&=0.008692433865+0.018779423508\,i,\\
+  J&=-8.062794523\times10^{-5}
+     +5.604303361\times10^{-4}\,i .
+  \end{aligned}
+\]
+The finite table
+\[
+  \arg I,\qquad 2\arg I,\qquad \arg J,\qquad \arg I+\arg J
+\]
+has no hit in either the loose or tight phase window.  Real single-coefficient
+monomials are compared modulo \(\pi\), since the real coefficient may have
+either sign; the \(2\arg I\) row is compared modulo \(2\pi\), corresponding to
+\(\lambda=cI\) followed by \(\zeta=\lambda^2\) with \(c^2>0\).  The closest
+candidate is \(\arg I\), with
+\[
+  |\Delta\phi|=0.5372532875265\ {\rm rad},
+\]
+far outside the loose window
+\[
+  5.424119231661\times10^{-5}\ {\rm rad}.
+\]
+Thus the simplest zero-parameter and single-real-parameter visible-spurion
+phase-transfer mechanisms are excluded for the current benchmark.
+
+This does not exclude a two-real-coefficient fit
+\[
+  \zeta=c_1 I+c_2J,\qquad c_1,c_2\in\mathbb R,
+\]
+because the corresponding real \(2\times2\) system is generically solvable.
+The raw sizes of \(c_1,c_2\) are convention-dependent because they scale with
+the normalization of \(I,J\); the meaningful quantities are the term
+magnitudes in the recorded invariant convention.  For the current card,
+\[
+  c_1=10.37751489216,\qquad c_2=-216.3199491664,
+\]
+with residual \(1.39\times10^{-17}\).  The fit-cost diagnostics are
+\[
+  \frac{\max(|c_1I|,|c_2J|)}{|\zeta|}
+  =1.646438908603,\qquad
+  \frac{|c_1I|+|c_2J|}{|\zeta|}
+  =2.585476554589 .
+\]
+The cancellation index is only \(O(1)\), so this two-coefficient class is not
+excluded as a possibility and is not evidence of a contrived cancellation.
+It is nevertheless an unconstrained fit rather than a phase prediction.  The
+surviving minimal interpretations are a complex hidden coupling, an
+axion/radial hidden phase, or an instanton prefactor depending on data beyond
+the visible spurion.  Consequently, in Audit 1 the phase \(\arg\zeta\) is
+treated as an independent hidden CP parameter unless a later UV mechanism
+predicts it before the flavor fit is performed.
+\end{observation}
+
 \begin{observation}[Nonperturbative hidden-spurion option]
 An alternative is
 \[
@@ -1155,19 +1214,28 @@ and\\
 \item Deferred-audit convention card:
 \path{code/audit0_conventions_card.py}, with local output
 \path{output/audit0/invariant_card.*}.
-\item Deferred-audit scaffolds:
-\path{code/audit1_flavor_target_conventions.py} and\\
-\path{code/audit4a_source_spectrum_schema.py}, with local outputs in\\
-\path{output/audit1/} and \path{output/audit4a/}.
+\item Optional phase-transfer diagnostic:
+\path{code/audit05_phase_transfer_test.py}, with local output
+\path{output/audit05/phase_transfer_test.*}.
+\item Audit 1 target-table scaffold:
+\path{code/audit1_flavor_target_conventions.py}; output
+\path{output/audit1/}.
+\item Audit 1b rank-contract scaffold:
+\path{code/audit1b_covariant_rank_contract.py}; output
+\path{output/audit1b/}.
+\item Audit 4a source-spectrum scaffold:
+\path{code/audit4a_source_spectrum_schema.py}; output
+\path{output/audit4a/}.
 \item Status log: \texttt{roadmap.md}.
 \end{itemize}
 The reproducible numerical claims inside this TeX draft are therefore only the
 D5 half-spin branching check, the hypercharge normalization check, the
 Route-B algebraic \(\zeta K_{\rm tr}\) matching check, and the appendix-level
-Route-D local string-placement/instanton arithmetic.  The Audit 0/1/4a files
-are convention and schema cards for future work, not phenomenology results.
-All publication-grade phenomenology remains outside this manifest until the
-companion audits are restored.
+Route-D local string-placement/instanton arithmetic.  The Audit 0/1/1b/4a
+files are convention, rank-contract, and schema cards for future work, while
+Audit 0.5 is only a finite phase-transfer diagnostic.  None of these files is
+a publication-grade phenomenology result.  All publication-grade phenomenology
+remains outside this manifest until the companion audits are restored.
 
 \section{Deferred Calculations}
 
@@ -1198,11 +1266,14 @@ The companion-audit dependency graph is fixed in the generated Audit 0 card as
 \]
 with \(4b\) as an optional Route-D/global-geometry track.  Audit 1 currently
 fixes only the flavor/seesaw target-table contract and marks publication
-targets as requiring refresh.  Audit 4a currently fixes only the source-sector
-heavy-spectrum schema and records that no non-placeholder
-\texttt{heavy\_spectrum.json} has yet been exported.  Thus Audit 3 remains
-blocked on a source spectrum, and Audit 2 remains blocked on both physical
-flavor rotations and triplet inverse data.
+targets as requiring refresh.  Audit 1b fixes only the covariant-subspace
+rank contract: it rules out a hollow two-tensor literature pass/fail test with
+unknown family basis and requires future projections to use at least three
+aligned tensors with tensor-by-tensor residual reporting.  Audit 4a currently
+fixes only the source-sector heavy-spectrum schema and records that no
+non-placeholder \texttt{heavy\_spectrum.json} has yet been exported.  Thus
+Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked on
+both physical flavor rotations and triplet inverse data.
 
 \section{Lean-Note Status Ledger}
 

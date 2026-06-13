@@ -19124,3 +19124,186 @@ boundary:
 next:
   - Continue with Audit 1a target refresh/freeze or Audit 4a.1
     `heavy_spectrum.json`, not additional manuscript narrative.
+
+## 2026-06-13 Taipei reviewer triage and Audit 0.5 phase-transfer test
+
+status:
+  Accepted the latest reviewer triage as the working execution order.  The
+  manuscript side is now essentially closed except for small typo/boundary
+  fixes; progress should move to companion-audit artifacts.  Also implemented
+  the cheap Audit 0.5 phase-transfer diagnostic.
+
+files changed:
+  - `code/audit05_phase_transfer_test.py`
+  - `code/audit1_flavor_target_conventions.py`
+  - `code/audit1b_covariant_rank_contract.py`
+  - `output/audit05/phase_transfer_test.json`
+  - `output/audit05/phase_transfer_test.md`
+  - `output/audit1/target_table_conventions.json`
+  - `output/audit1/target_table_conventions.md`
+  - `output/audit1b/covariant_rank_contract.json`
+  - `output/audit1b/covariant_rank_contract.md`
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+paper-side triage:
+  - Checked the Appendix-B local `E_6` branching in `paper/gut_framework.tex`.
+    The source already has
+    `\overline{\mathbf{16}}_{+3}` in
+    `\mathbf{78}=\mathbf{45}_0\oplus\mathbf{1}_0\oplus
+    \mathbf{16}_{-3}\oplus\overline{\mathbf{16}}_{+3}`.  No TeX correction
+    was needed; the earlier concern appears to be PDF/text-extraction related.
+  - Added Audit 0.5 to the minimal reproducibility manifest as an optional
+    phase-transfer diagnostic, explicitly not a phenomenology result.
+
+Audit 0.5 content:
+  - Added `code/audit05_phase_transfer_test.py`.
+  - Compared `arg(\zeta)` against the finite visible-spurion phase table:
+      `arg I`, `2 arg I`, `arg J`, and `arg I + arg J`,
+      where `(I,J)` are the Audit-0 binary-quartic invariants of the Veronese
+      Majorana component.
+  - The distance rule is now explicit: real single-coefficient monomials are
+    measured modulo `pi`, while the `2 arg I` row is measured modulo `2 pi`
+    when interpreted as `lambda=cI`, `\zeta=lambda^2` with `c^2>0`.
+  - Used the Audit-0 phase windows:
+      loose `5.424119231661329e-05` rad and tight
+      `1.799256517286863e-06` rad.
+  - Result: no loose or tight hit.  The closest candidate is `arg I` with
+      absolute phase error `5.372532875265e-01` rad.
+  - The JSON now embeds the full `I,J,\zeta` numerical data, scheme labels,
+    quartic invariant convention, phase-distance definitions, and the
+    coefficient-normalization caveat.  `output/audit05/` is now part of the
+    tracked reproducibility surface.
+  - Solved the diagnostic two-real-coefficient system
+      `\zeta=c1 I+c2 J`:
+      `c1=1.037751489216e+01`, `c2=-2.163199491664e+02`,
+      residual `1.387778780781e-17`, naturalness index
+      `1.646438908603`, cancellation index `2.585476554589`.
+      This is a priced fit, not a phase prediction.  The `O(1)` cancellation
+      index is mild: it does not exclude the two-coefficient class as a
+      possibility, but it confirms that the class is unconstrained rather than
+      predictive.
+  - Interpretation: the zero-parameter and single-real-parameter visible
+    spurion phase-transfer table is falsified for the current local benchmark.
+    This supports treating `arg(\zeta)` as an independent hidden CP phase at
+    lowest order, while leaving continuous axion/radial hidden phases,
+    instanton-prefactor dependence, and explicitly priced multi-spurion fits
+    alive.
+
+Audit 1a contract update:
+  - Updated `code/audit1_flavor_target_conventions.py` so every future flavor
+    fit must state both `target_table_version` and
+    `zeta_role in {fixed_benchmark, free_parameter}`.
+  - Added a dual target-table policy:
+      `target_table_v1_regression` is the frozen local regression anchor with
+      `zeta_role=fixed_benchmark`;
+      `target_table_v2_publication` requires refreshed PDG/nuFIT-like source
+      labels and uses `zeta_role=free_parameter`.
+  - Added the phase policy inherited from Audit 0.5:
+      do not lock `arg(\zeta)` at tree level to CKM/PMNS phases or to the
+      visible invariant phases `{arg I, 2arg I, arg J, arg I+arg J}`.
+
+Audit 1b rank-contract correction:
+  - Added `code/audit1b_covariant_rank_contract.py` and tracked
+    `output/audit1b/covariant_rank_contract.*`.
+  - The contract checks the shared-spurion Veronese-sector map
+      `T_a = alpha_a Phi + beta_a H(Phi)`
+    in the binary-quartic convention
+      `a x^4 + 4 b x^3 y + 6 c x^2 y^2 + 4 d x y^3 + e y^4`.
+  - Numerical complex-Jacobian ranks at generic points verify
+      `rank = 2k + 3`, `fiber = 2C`, and
+      `constraints = 3(k-1)C = 6(k-1)R`
+    for `k=1,...,5`.
+  - Consequence: the original literature `(h,f)` two-tensor projection idea is
+    hollow when the family basis is unknown, because `k=2` gives only `6R`
+    visible constraints while scanning a full `U(3)` costs `9R`.
+  - Correct 1b design: use internal companion tensors whose basis is fixed by
+    the `K_tr` contact direction up to residual `O(3)`.  With `k=3` aligned
+    tensors the net test has `9R` constraints; with `k=4`, `15R`.
+  - Future 1b projection must report residuals tensor-by-tensor; a pooled
+    residual can hide whether each added tensor contributes the expected
+    `6R` constraints.
+
+Audit 4a.1 stage-1 technical package:
+  - Use Pati-Salam block language rather than raw SO(10) tensor components.
+  - First branch remains CMSGUT-like
+      `210\oplus126\oplus\overline{126}\oplus10`.
+  - Stage 1 should implement the five SM-singlet vevs:
+      `p,a,omega` in `210` Pati-Salam blocks
+      `(1,1,1),(15,1,1),(15,1,3)`, plus
+      `sigma,bar_sigma` in
+      `(10,1,3),(\overline{10},1,3)`.
+  - Acceptance is not a custom smoke test: reproduce the literature special
+    points where the vacuum cubic has enhanced-symmetry limits such as SU(5),
+    flipped SU(5), and Pati-Salam.  Record all sign/normalization differences
+    against BMSV/Aulakh-style tables in a conventions-diff file.
+
+verified:
+  - Ran `python3 code/audit05_phase_transfer_test.py`.
+  - Parsed `output/audit05/phase_transfer_test.json` with
+    `python3 -m json.tool`.
+  - Audit 0.5 digest:
+    `cb8f3b3dbec52185b7facffcfa4cd1567fc3a40c983bbf74fe62fe1f8cf97506`.
+  - Ran `python3 code/audit1_flavor_target_conventions.py`.
+  - Audit 1 target-table convention digest:
+    `fa582e4c56abcc5f04e167fd28cac75f684d9d5417aab1315d5284b4a7fd19f9`.
+  - Ran `python3 code/audit1b_covariant_rank_contract.py`.
+  - Audit 1b covariant-rank contract digest:
+    `1bd7d80dd8cd4896bbfa51960c6d3301d09acf581226726e58ab7786bac3154b`.
+  - Rebuilt `paper/gut_framework.pdf` with
+    `pdflatex -interaction=nonstopmode`.
+  - Final LaTeX log has no `LaTeX Error`, no undefined references, no rerun
+    request, and no overfull boxes; remaining messages are the existing benign
+    `nameref` warning and three underfull-box notices.
+  - Rendered page 19 with `pdftoppm` and visually checked the manifest update.
+
+adopted execution order:
+  1. Audit 1a is a short decision layer:
+       keep `target_table_v1` frozen as the regression table that reproduces
+       the current benchmark, and create `target_table_v2` as the publication
+       target table with explicit source/version labels.
+  2. Audit 1a must add two mandatory fields:
+       `target_table_version` and
+       `zeta_role in {fixed_benchmark, free_parameter}`.  The publication fit
+       must not silently freeze a `\zeta` value that was reverse-engineered
+       from a previous PMNS target.
+  3. Audit 1a should decide now:
+       target scale/scheme, light-quark theory-error floor, NO/IO and
+       `\Delta m^2_{3\ell}` convention, and whether cosmological
+       `\Sigma m_\nu` is included as a prior or reported in a parallel
+       no-cosmology run.  `m_{\beta\beta}` remains an output, not a target.
+  4. Audit 4a.1 is the critical path:
+       instantiate the first non-placeholder `heavy_spectrum.json`.  The
+       preferred first branch is a CMSGUT-like
+       `210\oplus126\oplus\overline{126}\oplus10` chain because it has known
+       literature spectra, a finite one-complex-parameter vacuum branch, a
+       natural `\overline{126}` source for `P_{\nu^c}`, and known perturbativity
+       stress points that Audit 3 can quantify.
+  5. Audit 4a.1 schema must store symbolic masses as functions of couplings and
+       vacuum branch, not only one numerical spectrum.  It must also store
+       `goldstone_count == 33`, doublet/triplet mass matrices, and the relevant
+       triplet inverse-propagator block for Audit 2.
+  6. Audit 1b is a fail-fast side test only in the corrected internal form:
+       do not treat a literature `(h,f)` two-tensor projection with unknown
+       `U(3)` orientation as a pass/fail result.  Use at least three aligned
+       internal companion tensors after `K_tr` fixes the family basis up to
+       residual `O(3)`.
+  7. Add a later `verify_all.py` entry point that reruns the local verify/scaffold
+       scripts and checks digests.  Also record an explicit RGE-tool decision:
+       external package convenience versus self-contained reproducibility.
+
+boundary:
+  Audit 0.5 is not a derivation of `\zeta`.  The new priority list does not
+  claim updated PDG/nuFIT targets, a full flavor posterior, a full CMSGUT
+  spectrum, threshold closure, proton safety, or a global string compactification.
+
+next:
+  - Main critical path: begin Audit 4a.1 with a symbolic CMSGUT-spectrum schema
+    and a Pati-Salam conventions-diff/literature-special-point stage-1
+    validator; do not run Audit 3 or Audit 2 until that spectrum exports real
+    masses and triplet inverse data.
+  - Cheap side path: implement the corrected Audit 1b internal projection
+    residuals for the available companion tensors; published minimal-SO(10)
+    matrices may be used only as warm-start material unless their family basis
+    is fixed relative to `K_tr`.

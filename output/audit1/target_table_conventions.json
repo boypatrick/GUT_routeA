@@ -136,8 +136,8 @@
       "trace_lift_residual_lt_1e-10": true
     }
   },
-  "card_sha256": "2016f2bc8a353261bd29c57109bf10df225709209226cdffbb66ef63946a0676",
-  "created_utc": "2026-06-12T17:06:34+00:00",
+  "card_sha256": "fa582e4c56abcc5f04e167fd28cac75f684d9d5417aab1315d5284b4a7fd19f9",
+  "created_utc": "2026-06-13T02:02:38+00:00",
   "delta_ZN_replay_protocol": {
     "MR_replay": "M_R -> M_R - 1/2 (deltaZ_N^T M_R + M_R deltaZ_N)",
     "Y_nuD_replay": "Y_nuD -> Y_nuD (I - 1/2 deltaZ_N)",
@@ -289,6 +289,51 @@
     ]
   },
   "parameter_policy": {
+    "arg_zeta_policy": {
+      "audit05_basis": "Audit 0.5 found no loose/tight hit in the finite visible-spurion phase-transfer table.",
+      "audit05_card_sha256": "cb8f3b3dbec52185b7facffcfa4cd1567fc3a40c983bbf74fe62fe1f8cf97506",
+      "audit05_closest_candidate": {
+        "abs_delta_rad": 0.5372532875264819,
+        "candidate": "arg_I",
+        "distance_mode": "mod_pi",
+        "hits_loose_window": false,
+        "hits_tight_window": false,
+        "phase_rad": 1.137291307844697,
+        "signed_delta_rad": 0.5372532875264819,
+        "target_arg_zeta_rad": 0.600038020318215
+      },
+      "audit05_real_two_term_fit": {
+        "c1_real": 10.377514892155295,
+        "c2_real": -216.31994916639124,
+        "cancellation_index_sum_terms_over_abs_zeta": 2.585476554588683,
+        "determinant": 6.38564996306118e-06,
+        "diagnostic_definitions": {
+          "cancellation_index_sum_terms_over_abs_zeta": "(|c1 I|+|c2 J|)/|zeta|",
+          "coefficient_normalization_caveat": "The raw sizes of c1 and c2 are not invariant under rescaling I or J. Interpret c1,c2 only together with the quartic invariant convention, basis, and term magnitudes recorded in this card.",
+          "naturalness_index_max_term_over_abs_zeta": "max(|c1 I|, |c2 J|)/|zeta|",
+          "residual_abs": "|c1 I + c2 J - zeta|"
+        },
+        "interpretation": "A two-real-coefficient combination can fit the phase by construction. The cancellation index is mild at O(1) for this card, so the class is not excluded as a possibility, but it is an unconstrained fit rather than a phase prediction.",
+        "naturalness_index_max_term_over_abs_zeta": 1.6464389086032931,
+        "residual_abs": 1.3877787807814457e-17,
+        "status": "solved",
+        "term_c1I": {
+          "abs": 0.21474816043881695,
+          "im": 0.19488374712418452,
+          "re": 0.09020586188653576
+        },
+        "term_c2J": {
+          "abs": 0.1224804673920327,
+          "im": -0.1212322618241845,
+          "re": 0.01744143301346424
+        }
+      },
+      "publication_fit_role": "free hidden CP parameter",
+      "tree_level_locking_forbidden": [
+        "Do not lock arg(zeta) to CKM or PMNS phases at tree level.",
+        "Do not lock arg(zeta) to arg(I), 2 arg(I), arg(J), or arg(I)+arg(J) at tree level."
+      ]
+    },
     "baseline_covariant_ansatz": "Use the CP1/O(2) covariant basis inherited from the Route-A note; do not add 120_H or a second spurion unless the failure gate is triggered.",
     "do_not_do": "Do not tune d=5 proton decay in Audit 1; Audit 1 only exports rotations/tensors consumed by Audit 2.",
     "fallback_price": "Adding a 120_H antisymmetric channel or second spurion must be recorded as +6 real parameters per added channel."
@@ -329,8 +374,8 @@
       "exists": true,
       "label": "audit1_builder",
       "path": "code/audit1_flavor_target_conventions.py",
-      "sha256": "4311aa0d829d8d655c6a58933dcfa7fec225e2b9beaf9429396cddd23f2a9b0d",
-      "size_bytes": 9790
+      "sha256": "71e62514cc4361ada50b3c9c5619207bd09a1c8f109c901b24976ff4844b9438",
+      "size_bytes": 13147
     },
     {
       "exists": true,
@@ -338,6 +383,13 @@
       "path": "output/audit0/invariant_card.json",
       "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
       "size_bytes": 10028
+    },
+    {
+      "exists": true,
+      "label": "audit05_phase_transfer_test",
+      "path": "output/audit05/phase_transfer_test.json",
+      "sha256": "827bf277423fee4c47080f20b9eecf8fdae1d11829e1bf29952383b3fc5a4947",
+      "size_bytes": 6685
     },
     {
       "exists": true,
@@ -354,5 +406,33 @@
       "size_bytes": 17822
     }
   ],
-  "status": "target-table and fit-contract scaffold only; not a global flavor fit"
+  "status": "target-table and fit-contract scaffold only; not a global flavor fit",
+  "target_table_version_policy": {
+    "required_fields": [
+      "target_table_version",
+      "zeta_role"
+    ],
+    "target_table_v1_regression": {
+      "purpose": "Replay the existing local benchmark and protect the pipeline against accidental convention drift.",
+      "source": "output/no_web_input_convention_ledger/summary.json plus output/flavor_benchmark/flavor_benchmark_card.json",
+      "status": "frozen_local_regression_anchor",
+      "zeta_role": "fixed_benchmark"
+    },
+    "target_table_v2_publication": {
+      "purpose": "Publication-grade fit against refreshed PDG/nuFIT-like targets, with arg(zeta) treated as an independent hidden CP parameter.",
+      "required_version_tags": [
+        "PDG_or_equivalent_source_version",
+        "nuFIT_or_equivalent_source_version",
+        "RGE_scheme",
+        "target_scale",
+        "cosmology_prior_policy"
+      ],
+      "status": "requires_publication_refresh",
+      "zeta_role": "free_parameter"
+    },
+    "zeta_role_allowed_values": [
+      "fixed_benchmark",
+      "free_parameter"
+    ]
+  }
 }
