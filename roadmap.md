@@ -18882,3 +18882,245 @@ next:
   - The next substantive scientific milestone remains a minimal benchmark-card
     or companion-audit package, not another expansion of Route D without new
     global compactification data.
+
+## 2026-06-12 Taipei P4 theory-stitch polish pass
+
+status:
+  Accepted the follow-up external-review suggestions that were low-risk and
+  compatible with the Route-A/optional-extension boundary.  Implemented them
+  as short remarks and cross-references rather than as new theorem-core claims.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+content:
+  - Added Route-D visibility in the abstract, Route-A scope, strategy table,
+    and conclusion while keeping it explicitly optional and local.
+  - Extended the tangent-bundle reading with:
+      `\xi\partial_\xi` vanishing at `0` and `\infty`, so the two marked
+      points can be viewed as a Cartan choice on the rational curve;
+      and the genus cap
+      `h^0(\Sigma_g,T_{\Sigma_g}) = 3,1,0` for `g=0,1,>=2`.
+  - Added a `K_{\rm tr}` Killing-form remark:
+      using `V\simeq H^0(\CP^1,T_{\CP^1})\simeq \mathfrak{sl}_2(\mathbb C)`,
+      the invariant contact line is the Killing-form line up to basis, sign,
+      and normalization.
+  - Added cross-references from the `SL(2)` covariance caveat, hidden-spurion
+    option, and `R`-selection-rule status to the optional Route-D appendix.
+  - Strengthened the `P_{\nu^c}` projector caveat with an optional
+    `\overline{126}_H`/Pati-Salam source-sector interpretation, explicitly not
+    a completed UV model.
+  - Added a printed-precision caveat:
+      long decimal values are reproducibility anchors, not ten-digit physical
+      predictions; only a few significant figures should be treated as
+      physically meaningful before concrete UV replay.
+  - Reframed the `Z_{178}` phase observation as a Diophantine diagnostic,
+    noting that tighter phase windows force higher-denominator approximants
+    such as the continued-fraction convergents `70/733` and `87/911`.
+
+verified:
+  - Rebuilt `paper/gut_framework.pdf` twice with
+    `pdflatex -interaction=nonstopmode` after adding the new appendix label and
+    cross-references.
+  - Final LaTeX log has no `LaTeX Error`, no undefined references, no rerun
+    request, and no overfull boxes; remaining output is a benign `nameref`
+    warning plus three underfull-box notices.
+  - Rendered pages 7--11, 14--16, and 23--25 with `pdftoppm`.
+  - Visually spot-checked the new genus cap, Killing-form remark, Route-B
+    precision/Diophantine caveats, and Route-D appendix opening.
+
+boundary:
+  This pass does not turn Route D into a string-derived proof, does not make
+  `Z_{178}` a phase prediction, does not promote `SL(2)` to an exact global
+  symmetry, and does not claim full source-sector, flavor, proton-decay,
+  threshold, or global compactification closure.
+
+next:
+  - If another polish pass is needed, keep it rhetorical only: e.g. soften
+    Proposition III.1 to an Observation/standard-minimality statement.
+  - Do not add more UV narrative until the deferred companion audits or a
+    concrete compactification/source-sector construction exists.
+
+## 2026-06-13 Taipei Audit 0 convention-card launch
+
+status:
+  Started the deferred companion-audit package with an explicit Audit 0
+  convention/invariant card.  This is the common data layer for later flavor,
+  source-sector, threshold, and proton-decay audits; it is not itself a
+  phenomenology closure.
+
+files changed:
+  - `code/audit0_conventions_card.py`
+  - `output/audit0/invariant_card.json`
+  - `output/audit0/invariant_card.md`
+  - `roadmap.md`
+
+content:
+  - Added a reproducible builder for
+    `output/audit0/invariant_card.json`, with a stable digest that excludes
+    timestamp-only metadata.
+  - Recorded the deferred-audit dependency graph:
+    `0 -> (1 || 4a) -> 3 -> 2`, with `4b` as an optional parallel
+    Route-D/string-geometry track.
+  - Fixed the convention anchors for follow-up audits:
+      `K_{\rm tr}` matrix, inverse convention, D5 half-spin counts,
+      hypercharge trace normalization, `\zeta`, `\sqrt{\zeta}`, contact
+      fraction, Veronese-plus-contact residual, and local binary-quartic
+      invariants `(I,J)` for the Veronese Majorana component.
+  - Added the canonical `\delta Z_N` replay protocol:
+      `\delta Z_N \sim |\lambda|^2/(16\pi^2)\log(M_*/M_X)`,
+      `Y_{\nu D}\to Y_{\nu D}(I-\delta Z_N/2)`, and
+      `M_R\to M_R-\frac12(\delta Z_N^T M_R+M_R\delta Z_N)`.
+  - Recorded the precision policy: long decimals are reproducibility anchors,
+    while physical claims should stay at a few significant figures until a
+    concrete UV/source-sector replay justifies more.
+  - Preserved the `Z_{178}` item as a Diophantine side diagnostic only, with
+    selected continued-fraction approximants `17/178`, `70/733`, `87/911`,
+    and `157/1644`.
+
+verified:
+  - Ran `python3 code/audit0_conventions_card.py`.
+  - Parsed `output/audit0/invariant_card.json` with `python3 -m json.tool`.
+  - Re-ran the builder and confirmed the stable card digest stayed
+    `a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc`.
+  - Confirmed all seven source artifacts in the Audit 0 manifest are present.
+
+boundary:
+  Audit 0 does not claim a full CKM/PMNS fit, a `d=5` proton lifetime bound,
+  threshold closure, source-sector UV completion, global F-theory
+  compactification, or a ten-digit physical prediction of `\zeta`.
+
+next:
+  - Audit 1: build the final target-table and convention layer for the full
+    flavor/seesaw fit.
+  - Audit 4a: in parallel, decide the field-theory source-sector/heavy-spectrum
+    schema needed before any paper-grade threshold audit.
+  - Audit 3 must wait for an Audit 4a spectrum; Audit 2 must wait for flavor
+    rotations, source spectrum, and threshold-fixed scales.
+
+## 2026-06-13 Taipei Audit 1 / Audit 4a parallel scaffolds
+
+status:
+  Opened the two parallel post-Audit-0 workstreams as executable convention
+  cards.  Audit 1 fixes the flavor/seesaw target-table and fit-output contract;
+  Audit 4a fixes the source-sector/heavy-spectrum schema required before
+  threshold and proton-decay audits can be final.  Neither card is a completed
+  numerical fit or UV model.
+
+files changed:
+  - `code/audit1_flavor_target_conventions.py`
+  - `output/audit1/target_table_conventions.json`
+  - `output/audit1/target_table_conventions.md`
+  - `code/audit4a_source_spectrum_schema.py`
+  - `output/audit4a/source_spectrum_schema.json`
+  - `output/audit4a/source_spectrum_schema.md`
+  - `roadmap.md`
+
+Audit 1 content:
+  - Recorded the 19-observable fit contract:
+      6 quark Yukawas, 3 charged-lepton Yukawas, 4 CKM quantities, and
+      6 neutrino/PMNS quantities.
+  - Marked all publication target values as `REQUIRES_PUBLICATION_REFRESH`.
+    The local `no_web_input_convention_ledger` values are retained only as
+    reproducibility anchors.
+  - Recorded pure predictions that must not be fit targets:
+      lightest neutrino mass, two Majorana phases, `m_{\beta\beta}`, and the
+      heavy-neutrino spectrum.
+  - Carried forward the CP1/O(2) family basis, PMNS convention, charged-lepton
+    rotation convention, local seesaw checks, and `\delta Z_N` replay protocol.
+  - Fixed downstream exports needed by Audit 2:
+      physical flavor rotations, physical Yukawa eigenvalues, and triplet
+      flavor tensors in the physical basis.
+
+Audit 4a content:
+  - Selected the constrained 54/210 field-theory source-sector interface as the
+    near-term default track, while retaining a CMSGUT-like
+    `210+\overline{126}+10` spectrum import as a fallback and Route D as an
+    optional parallel 4b geometry track.
+  - Defined the required heavy-spectrum schema fields:
+      `state_id`, sector, Spin(10)/Pati-Salam/SM representation, multiplicity,
+      mass, mass expression, one-loop threshold beta vector, `d=5` role,
+      source artifact, and status.
+  - Imported local evidence from constrained 54/210, combined conormal,
+    drive-sector, completed-120 partner, and no-web RGE artifacts.
+  - Recorded acceptance gates:
+      correct vacuum little group, no unpaired SM-charged exotics,
+      pseudo-Goldstone control, Landau control, threshold export, proton export,
+      and a post-`B-L` source for `P_{\nu^c}`.
+
+verified:
+  - Ran `python3 code/audit1_flavor_target_conventions.py`.
+  - Parsed `output/audit1/target_table_conventions.json` with
+    `python3 -m json.tool`.
+  - Re-ran the Audit 1 builder and confirmed stable digest
+    `2016f2bc8a353261bd29c57109bf10df225709209226cdffbb66ef63946a0676`.
+  - Ran `python3 code/audit4a_source_spectrum_schema.py`.
+  - Parsed `output/audit4a/source_spectrum_schema.json` with
+    `python3 -m json.tool`.
+  - Re-ran the Audit 4a builder and confirmed stable digest
+    `be735ff9f65a62f53a7cd1cbf504b4113d0f65dcaec553a4f6bb55e410471fbc`.
+
+boundary:
+  Audit 1 does not claim current PDG/nuFIT freshness, a global CKM/PMNS fit,
+  posterior uncertainty, proton safety, or threshold closure.  Audit 4a does
+  not claim a complete Spin(10) source-sector UV action, a full heavy spectrum,
+  threshold closure, `d=5` proton safety, or a global F-theory compactification.
+
+next:
+  - Audit 1a: refresh or explicitly freeze the publication target table with
+    cited quark/lepton/neutrino inputs and uncertainties.
+  - Audit 4a.1: instantiate the first non-placeholder
+    `heavy_spectrum.json` candidate for the constrained 54/210 track.
+  - Only after Audit 4a.1 exists should Audit 3 compute threshold/unification
+    bands.  Audit 2 remains blocked until Audit 1 exports physical flavor
+    rotations and Audit 4a exports triplet inverse data.
+
+## 2026-06-13 Taipei TeX sync for Audit 0/1/4a scaffolds
+
+status:
+  Synchronized the Route-A manuscript with the new deferred-audit convention
+  cards.  The update is intentionally small: it makes the generated cards
+  visible in the reproducibility/deferred-calculation surface without promoting
+  them to theorem-core results or completed phenomenology.
+
+files changed:
+  - `paper/gut_framework.tex`
+  - `paper/gut_framework.pdf`
+  - `roadmap.md`
+
+content:
+  - Added Audit 0 to the minimal reproducibility manifest:
+    `code/audit0_conventions_card.py` and `output/audit0/invariant_card.*`.
+  - Added Audit 1 and Audit 4a scaffolds to the same manifest:
+    `code/audit1_flavor_target_conventions.py`,
+    `code/audit4a_source_spectrum_schema.py`, and local outputs under
+    `output/audit1/` and `output/audit4a/`.
+  - Clarified that Audit 0/1/4a files are convention/schema cards for future
+    work, not phenomenology results.
+  - Added the companion-audit dependency graph to the Deferred Calculations
+    section:
+      `0 -> (1 || 4a) -> 3 -> 2`, with `4b` optional.
+  - Explicitly stated the current blockers:
+      Audit 3 is blocked until a source spectrum exists; Audit 2 is blocked
+      until Audit 1 exports physical flavor rotations and Audit 4a exports
+      triplet inverse data.
+
+verified:
+  - Rebuilt `paper/gut_framework.pdf` with
+    `pdflatex -interaction=nonstopmode`.
+  - Final LaTeX log has no `LaTeX Error`, no undefined references, no rerun
+    request, and no overfull boxes; remaining messages are the existing benign
+    `nameref` warning and three underfull-box notices.
+  - Rendered pages 19--20 with `pdftoppm` and visually checked the updated
+    manifest/deferred-calculation text.
+
+boundary:
+  This pass does not add target-table freshness, a global flavor fit, a source
+  UV model, threshold closure, proton safety, or any new Route-B/Route-D
+  theorem claim.
+
+next:
+  - Continue with Audit 1a target refresh/freeze or Audit 4a.1
+    `heavy_spectrum.json`, not additional manuscript narrative.

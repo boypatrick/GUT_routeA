@@ -1,0 +1,305 @@
+{
+  "audit": "audit0_conventions_card",
+  "card_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "created_utc": "2026-06-12T16:34:11+00:00",
+  "deferred_audit_dependency_graph": {
+    "fallback_prices": {
+      "d5_fail": "raise triplet masses within threshold band, use flux doublet-triplet mechanism, or move to non-SUSY branch with rewritten beta/superpotential language",
+      "flavor_fit_fail": "add 120_H antisymmetric channel or second spurion; record +6 real-parameter cost per added channel",
+      "source_uv_fail": "switch breaking chain or demote source-sector origin to benchmark datum",
+      "threshold_fail": "change breaking chain, open intermediate scale, or compute Route-D flux threshold; record threshold naturalness cost"
+    },
+    "nodes": {
+      "0": "convention/invariant card",
+      "1": "full flavor and seesaw fit",
+      "2": "d=5 proton Wilson/lifetime audit consuming flavor+source+threshold outputs",
+      "3": "threshold and unification audit using source spectrum",
+      "4a": "field-theory source-sector UV/heavy-spectrum interface",
+      "4b": "optional Route-D global/string geometry track"
+    },
+    "order": "0 -> (1 || 4a) -> 3 -> 2; 4b optional parallel"
+  },
+  "delta_ZN_replay_protocol": {
+    "MR_replay": "M_R -> M_R - 1/2 (deltaZ_N^T M_R + M_R deltaZ_N)",
+    "Y_nuD_replay": "Y_nuD -> Y_nuD (I - 1/2 deltaZ_N)",
+    "coefficient_without_log": 0.000825969676394408,
+    "estimate": "delta Z_N ~ |lambda|^2/(16 pi^2) log(M_*/M_X)",
+    "status": "must be applied in Audit 1 if a finite messenger interval is specified"
+  },
+  "legacy_local_conventions_index": {
+    "contact_sensitivity": {
+      "phase_loose_half_width_rad": 5.424119231661329e-05,
+      "phase_tight_half_width_rad": 1.799256517286863e-06,
+      "real_scale_loose_half_width": 3.2087975865957574e-05,
+      "real_scale_tight_half_width": 9.93792673542604e-07
+    },
+    "flavor_basis": {
+      "chi_m": "sqrt(5*binom(4,m))*exp(i*m*phi)*sin(theta/2)^m*cos(theta/2)^(4-m)",
+      "psi": [
+        "sqrt(3) cos^2(theta/2)",
+        "sqrt(6) exp(i phi) sin(theta/2) cos(theta/2)",
+        "sqrt(3) exp(2 i phi) sin^2(theta/2)"
+      ]
+    },
+    "flavor_card_all_checks_ok": true,
+    "no_web_constant_row_count": 78,
+    "no_web_constant_rows_sha256": "f3a354855dc9983fe62c3b9b7434b516e0ddd9f88828844bf2af5381c6f4db04"
+  },
+  "majorana_invariant_anchors": {
+    "MR_condition_number": 164949.2734578605,
+    "MR_normalized_digest": "07ee0a23c2844a7d9efb24e0d953a5a6d9301eeb5f8b1eb0e51328a8a1abad11",
+    "MR_singular_values_GeV": [
+      3926531008378318.5,
+      32203796829930.51,
+      23804475921.995663
+    ],
+    "M_V_quartic_invariants": {
+      "I": {
+        "im": 0.01877942350836842,
+        "re": 0.008692433865329871
+      },
+      "J": {
+        "im": 0.0005604303361357293,
+        "re": -8.062794522963046e-05
+      },
+      "basis": "(x^2, sqrt(2) x y, y^2)",
+      "coefficients": {
+        "a": {
+          "im": -0.37369633816037107,
+          "re": -0.38516446679415584
+        },
+        "b": {
+          "im": -0.03554546985609264,
+          "re": -0.3255842928497002
+        },
+        "c": {
+          "im": 0.12700335316375427,
+          "re": -0.13860500532436248
+        },
+        "d": {
+          "im": 0.10861703943235672,
+          "re": 0.029006820579040193
+        },
+        "e": {
+          "im": -0.0013680141573771901,
+          "re": 0.05808977566985232
+        }
+      },
+      "discriminant_like_I3_minus_27J2": {
+        "im": 7.401444916553719e-08,
+        "re": -2.3511568594437876e-07
+      },
+      "j_like_I3_over_discriminant": {
+        "im": 19.55913203221098,
+        "re": 30.164522068731397
+      },
+      "quartic_coefficients_convention": "a x^4 + 4 b x^3 y + 6 c x^2 y^2 + 4 d x y^3 + e y^4",
+      "veronese_constraint_M11_minus_2M02": {
+        "im": 1.1102230246251565e-16,
+        "re": 1.1102230246251565e-16
+      },
+      "veronese_constraint_abs": 1.5700924586837752e-16
+    },
+    "instanton_action_minus_log_abs_zeta": 2.0369040025655094,
+    "lambda_loop_prefactor_abs_lambda_sq_over_16pi2": 0.000825969676394408,
+    "source_rank_contact_coefficient": {
+      "im": 0.0736514853303382,
+      "re": 0.10764729490120745
+    },
+    "source_rank_contact_fraction": 0.1304275166688152,
+    "sqrt_zeta": {
+      "im": 0.10673473744038917,
+      "re": 0.34502115743308964
+    },
+    "sqrt_zeta_abs": 0.3611535729477664,
+    "veronese_only_relative_residual": 0.1304275166688152,
+    "veronese_plus_contact_relative_residual": 2.6873316714356584e-17,
+    "zeta_abs": 0.13043190325293763,
+    "zeta_arg_rad": 0.600038020318215,
+    "zeta_tar": {
+      "im": 0.0736514853,
+      "re": 0.1076472949
+    }
+  },
+  "publication_boundary": {
+    "claim": "Audit 0 fixes conventions and invariant anchors only.",
+    "not_claimed_by_audit0": [
+      "full CKM/PMNS fit",
+      "d=5 proton lifetime bound",
+      "threshold closure",
+      "source-sector UV completion",
+      "global F-theory compactification",
+      "ten-digit physical prediction of zeta"
+    ]
+  },
+  "routeA_invariant_anchors": {
+    "d5_expected_counts_match": true,
+    "d5_half_spin_counts": {
+      "L": 2,
+      "Q": 6,
+      "d^c": 3,
+      "e^c": 1,
+      "nu^c": 1,
+      "u^c": 3
+    },
+    "hypercharge_trace": {
+      "TrT3L2": "2",
+      "TrY2": "10/3",
+      "kY": "5/3"
+    },
+    "k_tr": {
+      "eigenvalues": [
+        {
+          "im": 6.162975822039155e-33,
+          "re": 0.5773502691896258
+        },
+        {
+          "im": 6.162975822039155e-33,
+          "re": -0.5773502691896258
+        },
+        {
+          "im": 0.0,
+          "re": 0.5773502691896258
+        }
+      ],
+      "frobenius_norm": 1.0,
+      "inverse_check_norm_K_times_3K_minus_I": 3.8459253727671276e-16,
+      "matrix": [
+        [
+          {
+            "im": 0.0,
+            "re": 0.0
+          },
+          {
+            "im": 0.0,
+            "re": 0.0
+          },
+          {
+            "im": 0.0,
+            "re": -0.5773502691896258
+          }
+        ],
+        [
+          {
+            "im": 0.0,
+            "re": 0.0
+          },
+          {
+            "im": 0.0,
+            "re": 0.5773502691896258
+          },
+          {
+            "im": 0.0,
+            "re": 0.0
+          }
+        ],
+        [
+          {
+            "im": 0.0,
+            "re": -0.5773502691896258
+          },
+          {
+            "im": 0.0,
+            "re": 0.0
+          },
+          {
+            "im": 0.0,
+            "re": 0.0
+          }
+        ]
+      ],
+      "meaning": "unique second-transvectant/Killing-form line up to basis, sign, and normalization",
+      "symmetric_error": 0.0
+    }
+  },
+  "scheme_labels": {
+    "M_star_definition": "benchmark/source-sector scale; must be tied to v_R or source UV in Audit 4a",
+    "matrix_basis": "CP1/O(2) normalized family basis psi=(x^2, sqrt(2)xy, y^2)",
+    "precision_policy": "long decimals are reproducibility anchors; physical claims should be limited to a few significant figures until UV replay",
+    "quartic_invariant_scheme": "binary quartic coefficients (a,b,c,d,e) with combinatorial weights 1,4,6,4,1",
+    "rge_scheme": "UNSET_FOR_PUBLICATION: follow-up audits must explicitly choose DRbar/MSbar and scale thresholds",
+    "tan_beta_convention": "UNSET_FOR_PUBLICATION: required by Audit 1 and Audit 3"
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit0_builder",
+      "path": "code/audit0_conventions_card.py",
+      "sha256": "0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81",
+      "size_bytes": 15657
+    },
+    {
+      "exists": true,
+      "label": "routeB_hidden_zeta",
+      "path": "output/hidden_zeta_origin/routeB_hidden_zeta_verification.json",
+      "sha256": "8f765d05e669f4d60e88aff01e83ded35f1b36db196bcf523ce57615bde497b8",
+      "size_bytes": 1063
+    },
+    {
+      "exists": true,
+      "label": "source_majorana_texture_rank",
+      "path": "output/source_majorana_texture_rank/summary.json",
+      "sha256": "a47cc169e7724c0ccdd93a9ff412b04b5ccd7af9495e3e99abeb32e5d73e1dcf",
+      "size_bytes": 5495
+    },
+    {
+      "exists": true,
+      "label": "d5_half_spin",
+      "path": "output/d5_half_spin/d5_half_spin_summary.json",
+      "sha256": "538df722a444a0c765813f5c2553d60dec90c91d6de7aa13e25ed9f3026b045a",
+      "size_bytes": 518
+    },
+    {
+      "exists": true,
+      "label": "majorana_contact_sensitivity",
+      "path": "output/majorana_contact_sensitivity/summary.json",
+      "sha256": "d39c0aeea9c5ad973be34a471393c06fec98cdce8dbf782432ac8a89b1ecfacb",
+      "size_bytes": 8315
+    },
+    {
+      "exists": true,
+      "label": "no_web_input_convention_ledger",
+      "path": "output/no_web_input_convention_ledger/summary.json",
+      "sha256": "07328573e23fa85af9a29553028fc43d3e6153aff88f0c52eaaa9459deb3524f",
+      "size_bytes": 17822
+    },
+    {
+      "exists": true,
+      "label": "flavor_benchmark_card",
+      "path": "output/flavor_benchmark/flavor_benchmark_card.json",
+      "sha256": "895f2686174b53a028f6eca23c05cdaa568578668b8fe47dee7bb6aef0aa0e42",
+      "size_bytes": 34036
+    }
+  ],
+  "status": "foundation card for deferred companion audits; not a flavor/proton/threshold closure",
+  "z178_diagnostic": {
+    "continued_fraction_convergents_selected": [
+      {
+        "p": 17,
+        "phase_error_rad": 4.147531129616855e-05,
+        "q": 178
+      },
+      {
+        "p": 70,
+        "phase_error_rad": 6.681296972121942e-06,
+        "q": 733
+      },
+      {
+        "p": 87,
+        "phase_error_rad": 2.7280073876534416e-06,
+        "q": 911
+      },
+      {
+        "p": 157,
+        "phase_error_rad": 1.4672603104726178e-06,
+        "q": 1644
+      }
+    ],
+    "phase_fraction_arg_zeta_over_2pi": 0.09549901697671904,
+    "policy": "Diophantine side diagnostic only; not a phase prediction or benchmark premise",
+    "z178_complex_error": 5.409703789992232e-06,
+    "z178_order": 178,
+    "z178_phase_error_rad": 4.147531129616855e-05,
+    "z178_power": 17
+  }
+}

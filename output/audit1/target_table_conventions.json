@@ -1,0 +1,358 @@
+{
+  "audit": "audit1_flavor_target_conventions",
+  "audit0_card_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "basis_and_rotation_conventions": {
+    "charged_lepton_left_rotation": "U_e diagonalizes Y_e Y_e^dagger with ascending singular values",
+    "family_basis": "CP1/O(2) normalized family basis psi=(x^2, sqrt(2)xy, y^2)",
+    "flavor_basis_functions": {
+      "chi_m": "sqrt(5*binom(4,m))*exp(i*m*phi)*sin(theta/2)^m*cos(theta/2)^(4-m)",
+      "psi": [
+        "sqrt(3) cos^2(theta/2)",
+        "sqrt(6) exp(i phi) sin(theta/2) cos(theta/2)",
+        "sqrt(3) exp(2 i phi) sin^2(theta/2)"
+      ]
+    },
+    "pmns_definition": "U_PMNS = U_e^dagger U_nu",
+    "seesaw_basis_convention": {
+      "charged_lepton_left_rotation": "U_e diagonalizes Y_e Y_e^dagger with ascending singular values",
+      "family_basis": "normalized CP1 O(2) holomorphic basis psi_0,psi_1,psi_2",
+      "majorana_convention": "m_light = U_nu^* diag(m_i) U_nu^dagger",
+      "pmns_definition": "U_PMNS = U_e^dagger U_nu"
+    }
+  },
+  "benchmark_matrix_summary": {
+    "MR_condition_number": 119448.2137331531,
+    "flavor_card_all_checks_ok": true,
+    "heavy_neutrino_masses_GeV": [
+      25997762361.53098,
+      91447890269119.23,
+      3105386275143875.5
+    ],
+    "light_mass_residual": 2.0128878681540157e-12,
+    "sector_summaries": {
+      "charged_lepton": {
+        "checks": {
+          "direct_vs_dual_normalized_max_abs": 1.554395059990205e-15,
+          "direct_vs_dual_raw_max_abs": 7.633160599648936e-17,
+          "veronese_relation_abs_normalized": 5.701542859207485e-17
+        },
+        "normalization": {
+          "Y_matrix_is_normalized_to_largest_singular_value_one": true,
+          "largest_singular_value_raw": 0.049961094774657794
+        },
+        "normalized_singular_values": [
+          1.0,
+          0.06385068062896644,
+          0.0002897264362831135
+        ],
+        "target": {
+          "higgs_label": "H_d/e",
+          "left_field": "L",
+          "name": "charged_lepton",
+          "right_field": "e^c",
+          "target_mid_over_large": 0.06,
+          "target_small_over_large": 0.0003
+        }
+      },
+      "down": {
+        "checks": {
+          "direct_vs_dual_normalized_max_abs": 1.1114420827879991e-15,
+          "direct_vs_dual_raw_max_abs": 1.6671631241819988e-16,
+          "veronese_relation_abs_normalized": 1.1150912609939193e-16
+        },
+        "normalization": {
+          "Y_matrix_is_normalized_to_largest_singular_value_one": true,
+          "largest_singular_value_raw": 0.14829631092112727
+        },
+        "normalized_singular_values": [
+          1.0,
+          0.018916842456181665,
+          0.000930672181315372
+        ],
+        "target": {
+          "higgs_label": "H_d",
+          "left_field": "Q",
+          "name": "down",
+          "right_field": "d^c",
+          "target_mid_over_large": 0.02,
+          "target_small_over_large": 0.001
+        }
+      },
+      "neutrino_dirac": {
+        "checks": {
+          "direct_vs_dual_normalized_max_abs": 1.2253829271716091e-15,
+          "direct_vs_dual_raw_max_abs": 5.222209201006511e-18,
+          "veronese_relation_abs_normalized": 1.1364755910069911e-16
+        },
+        "normalization": {
+          "Y_matrix_is_normalized_to_largest_singular_value_one": true,
+          "largest_singular_value_raw": 0.0043091160659288865
+        },
+        "normalized_singular_values": [
+          1.0,
+          0.18323652498963686,
+          0.00978180474030172
+        ],
+        "target": {
+          "higgs_label": "H_u/nu",
+          "left_field": "L",
+          "name": "neutrino_dirac",
+          "right_field": "nu^c",
+          "target_mid_over_large": 0.2,
+          "target_small_over_large": 0.01
+        }
+      },
+      "up": {
+        "checks": {
+          "direct_vs_dual_normalized_max_abs": 1.887764950850363e-15,
+          "direct_vs_dual_raw_max_abs": 1.3185681524099577e-16,
+          "veronese_relation_abs_normalized": 4.163336342344337e-17
+        },
+        "normalization": {
+          "Y_matrix_is_normalized_to_largest_singular_value_one": true,
+          "largest_singular_value_raw": 0.06709537867056979
+        },
+        "normalized_singular_values": [
+          1.0,
+          0.0068880418897265235,
+          1.233030192264976e-05
+        ],
+        "target": {
+          "higgs_label": "H_u",
+          "left_field": "Q",
+          "name": "up",
+          "right_field": "u^c",
+          "target_mid_over_large": 0.007,
+          "target_small_over_large": 1e-05
+        }
+      }
+    },
+    "seesaw_checks": {
+      "MR_symmetric": true,
+      "light_mass_residual_lt_1e-10": true,
+      "pmns_angle_max_residual_lt_1e-10": true,
+      "seesaw_matrix_residual_lt_1e-10": true,
+      "theta_norm_lt_1e-10": true,
+      "trace_lift_residual_lt_1e-10": true
+    }
+  },
+  "card_sha256": "2016f2bc8a353261bd29c57109bf10df225709209226cdffbb66ef63946a0676",
+  "created_utc": "2026-06-12T17:06:34+00:00",
+  "delta_ZN_replay_protocol": {
+    "MR_replay": "M_R -> M_R - 1/2 (deltaZ_N^T M_R + M_R deltaZ_N)",
+    "Y_nuD_replay": "Y_nuD -> Y_nuD (I - 1/2 deltaZ_N)",
+    "coefficient_without_log": 0.000825969676394408,
+    "estimate": "delta Z_N ~ |lambda|^2/(16 pi^2) log(M_*/M_X)",
+    "status": "must be applied in Audit 1 if a finite messenger interval is specified"
+  },
+  "local_legacy_anchors": {
+    "flavor_gates_from_no_web_ledger": {
+      "LOOSE_MASS": 0.2,
+      "SEESAW_RESIDUAL_MAX": 1e-10,
+      "STRICT_CKM": 0.001,
+      "TOL": 1e-10
+    },
+    "flavor_targets_from_no_web_ledger": {
+      "J": 3.097061593767482e-05,
+      "Vcb": 0.04099971935403949,
+      "Vub": 0.0037,
+      "Vus": 0.22499845986972888,
+      "charged_lepton_mid": 0.06,
+      "charged_lepton_small": 0.0003,
+      "down_mid": 0.02,
+      "down_small": 0.001,
+      "neutrino_dirac_mid": 0.2,
+      "neutrino_dirac_small": 0.01,
+      "up_mid": 0.007,
+      "up_small": 1e-05
+    },
+    "local_target_warning": "No web lookup is used here; values are local reproducibility anchors, not final publication targets.",
+    "seesaw_benchmark_from_no_web_ledger": {
+      "alpha21_rad": 1.0995574287564276,
+      "alpha31_rad": 3.455751918948773,
+      "delta_cp_rad": 3.7699111843077517,
+      "dm21_eV2": 7.42e-05,
+      "dm31_eV2": 0.002517,
+      "m1_eV": 0.001,
+      "sin2_theta12": 0.304,
+      "sin2_theta13": 0.0222,
+      "sin2_theta23": 0.573
+    }
+  },
+  "observable_contract": {
+    "fit_observable_count": 19,
+    "fit_observables": [
+      {
+        "block": "quark_yukawas",
+        "observable": "y_u",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "quark_yukawas",
+        "observable": "y_c",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "quark_yukawas",
+        "observable": "y_t",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "quark_yukawas",
+        "observable": "y_d",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "quark_yukawas",
+        "observable": "y_s",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "quark_yukawas",
+        "observable": "y_b",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "charged_lepton_yukawas",
+        "observable": "y_e",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "charged_lepton_yukawas",
+        "observable": "y_mu",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "charged_lepton_yukawas",
+        "observable": "y_tau",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "ckm",
+        "observable": "V_us",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "ckm",
+        "observable": "V_cb",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "ckm",
+        "observable": "V_ub",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "ckm",
+        "observable": "J_CKM",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "Delta_m21_sq",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "Delta_m31_sq",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "sin2_theta12",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "sin2_theta13",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "sin2_theta23",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      },
+      {
+        "block": "neutrino_pmns",
+        "observable": "delta_CP",
+        "target_status": "REQUIRES_PUBLICATION_REFRESH"
+      }
+    ],
+    "publication_refresh_note": "This scaffold uses local legacy anchors only. A paper-grade fit must refresh quark/lepton/neutrino target values and uncertainties from cited PDG/nuFIT-like sources.",
+    "publication_refresh_required": true,
+    "pure_predictions_not_fit_targets": [
+      "m_lightest",
+      "Majorana_alpha21",
+      "Majorana_alpha31",
+      "m_beta_beta",
+      "heavy_neutrino_masses"
+    ]
+  },
+  "parameter_policy": {
+    "baseline_covariant_ansatz": "Use the CP1/O(2) covariant basis inherited from the Route-A note; do not add 120_H or a second spurion unless the failure gate is triggered.",
+    "do_not_do": "Do not tune d=5 proton decay in Audit 1; Audit 1 only exports rotations/tensors consumed by Audit 2.",
+    "fallback_price": "Adding a 120_H antisymmetric channel or second spurion must be recorded as +6 real parameters per added channel."
+  },
+  "publication_boundary": {
+    "claim": "Audit 1 scaffold fixes the target-table and fit-output contract.",
+    "not_claimed": [
+      "current PDG/nuFIT target freshness",
+      "global CKM/PMNS fit",
+      "posterior uncertainty",
+      "proton lifetime safety",
+      "threshold closure"
+    ]
+  },
+  "required_fit_outputs_for_downstream_audits": {
+    "for_Audit2_d5": [
+      "U_uL",
+      "U_dL",
+      "U_eL",
+      "U_nu",
+      "physical Yukawa eigenvalues",
+      "triplet-sector flavor tensors in physical basis"
+    ],
+    "for_Audit3_thresholds": [
+      "matching scale choices",
+      "tan_beta convention",
+      "RGE scheme"
+    ],
+    "posterior_contract": [
+      "best-fit parameter card",
+      "pull table for all 19 observables",
+      "covariance or scan cloud",
+      "failure-gate report"
+    ]
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit1_builder",
+      "path": "code/audit1_flavor_target_conventions.py",
+      "sha256": "4311aa0d829d8d655c6a58933dcfa7fec225e2b9beaf9429396cddd23f2a9b0d",
+      "size_bytes": 9790
+    },
+    {
+      "exists": true,
+      "label": "audit0_card",
+      "path": "output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    },
+    {
+      "exists": true,
+      "label": "flavor_benchmark_card",
+      "path": "output/flavor_benchmark/flavor_benchmark_card.json",
+      "sha256": "895f2686174b53a028f6eca23c05cdaa568578668b8fe47dee7bb6aef0aa0e42",
+      "size_bytes": 34036
+    },
+    {
+      "exists": true,
+      "label": "no_web_input_convention_ledger",
+      "path": "output/no_web_input_convention_ledger/summary.json",
+      "sha256": "07328573e23fa85af9a29553028fc43d3e6153aff88f0c52eaaa9459deb3524f",
+      "size_bytes": 17822
+    }
+  ],
+  "status": "target-table and fit-contract scaffold only; not a global flavor fit"
+}

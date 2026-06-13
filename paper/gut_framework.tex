@@ -66,10 +66,11 @@ unified theory.  It is a conditional \(\Spin(10)\) effective framework.  The
 Majorana contact tensor direction is no longer left arbitrary: it is the unique
 \(SL(2)\)-invariant second-transvectant direction \(K_{\rm tr}\).  An optional
 Route-B hidden-messenger mechanism for \(\zeta K_{\rm tr}\) is recorded as a
-conditional extension, but it is not part of the Route-A theorem core.  The
-hidden phase/radial sector and the companion audits for flavor, proton decay,
-thresholds, and source-sector UV origin remain open.  Full phenomenological
-audits are deferred to companion work.
+conditional extension, but it is not part of the Route-A theorem core.  An
+optional Route-D appendix records local string-constrained interpretations of
+the same skeleton.  The hidden phase/radial sector and the companion audits
+for flavor, proton decay, thresholds, and source-sector UV origin remain open.
+Full phenomenological audits are deferred to companion work.
 \end{abstract}
 
 \maketitle
@@ -89,9 +90,11 @@ second-transvectant direction}.
 \end{array}
 \]
 Route B is kept only as a conditional candidate mechanism for the complex
-coefficient \(\zeta\).  Full CKM/PMNS fitting, dimension-five proton-decay
-Wilson tensors, threshold matching, and source-sector UV completion are not
-claimed in this lean note; they remain companion-audit problems.
+coefficient \(\zeta\).  Route D is kept only as a local string-constrained
+interpretation of some of the same conditional data, not as a global
+compactification.  Full CKM/PMNS fitting, dimension-five proton-decay Wilson
+tensors, threshold matching, and source-sector UV completion are not claimed
+in this lean note; they remain companion-audit problems.
 
 \section{Face Projection}
 
@@ -474,7 +477,29 @@ space can also be read as the holomorphic vector-field algebra of the
 rational curve.  This does not derive the curve \(C=\CP^1\) or the divisor
 input; it only shows that the \(\cO(2)\) carrier, the three protected modes,
 and the \(SL(2)\) family covariance are three views of the same rational-curve
-geometry.
+geometry.  In an affine coordinate \(\xi\), the vector field
+\(\xi\partial_\xi\) vanishes at \(0\) and \(\infty\); in this reading the two
+marked points \(p_\pm\) can be viewed as a Cartan choice on the rational
+curve, up to \(PGL(2)\) conjugation.
+\end{remark}
+
+\begin{remark}[Genus cap for the tangent reading]
+The tangent-bundle reading is special to the rational curve.  For a compact
+Riemann surface \(\Sigma_g\),
+\[
+  h^0(\Sigma_g,T_{\Sigma_g})
+  =
+  \begin{cases}
+  3,& g=0,\\
+  1,& g=1,\\
+  0,& g\ge2.
+  \end{cases}
+\]
+Indeed, \(T_{\Sigma_g}\simeq K_{\Sigma_g}^{-1}\) has degree \(2-2g\); for
+\(g=0\) it is \(\cO(2)\), for \(g=1\) it is trivial, and for \(g\ge2\) it has
+negative degree.  Thus, within this tangent interpretation, three protected
+holomorphic vector fields are the rational-curve maximum, not a generic curve
+feature.
 \end{remark}
 
 \FloatBarrier
@@ -609,13 +634,28 @@ multiplicity one, so any invariant symmetric contact tensor is proportional to
 the displayed second-transvectant matrix.
 \end{proof}
 
+\begin{remark}[Killing-form reading]
+Using the tangent-bundle identification
+\[
+  V=H^0(\CP^1,\cO(2))\simeq H^0(\CP^1,T_{\CP^1})
+  \simeq \mathfrak{sl}_2(\mathbb C),
+\]
+the same invariant line can be read as the Killing-form line on the
+automorphism algebra of the rational family curve.  The displayed
+\(K_{\rm tr}\) differs from the conventional Killing matrix only by the chosen
+\(SU(2)\)-orthonormal basis, sign, and overall normalization.  This gives the
+contact direction a geometric pairing interpretation, but it still does not
+turn \(SL(2)\) into a fundamental global symmetry.
+\end{remark}
+
 \begin{remark}[Meaning of the \(SL(2)\) covariance]
 The \(SL(2)\) language in Lemma~\ref{lem:ktr-contact} is used as
 family-geometry covariance, or equivalently as spurionic bookkeeping for the
 rational curve.  It is not claimed to be an exact fundamental global symmetry.
 Any microscopic or quantum-gravity completion must realize this covariance
 geometrically, locally, or through spurions rather than as an unbroken global
-selection rule.
+selection rule.  Appendix~\ref{app:route-d-string} records one local
+string-constrained interpretation of this kind of geometric realization.
 \end{remark}
 
 \begin{datum}[Majorana contact]
@@ -777,7 +817,11 @@ projector.  Route B therefore assumes such a post-breaking projector, for
 example from a \((B-L)=-2\) Majorana source sector, rather than deriving it
 from face projection alone.  In this lean note \(P_{\nu^c}\) is therefore an
 input of the post-\(B-L\) EFT matching problem, not a result of the
-face-projection principle.
+face-projection principle.  In conventional \(\SO(10)\) language, one
+possible source of this post-breaking projection is a \(\overline{126}_H\)
+Majorana source: its Pati--Salam \((10,1,3)\) component contains an
+SM-singlet direction that pairs with the \(\nu^c\nu^c\) bilinear.  This is
+only a source-sector interpretation here, not a completed UV model.
 \end{remark}
 
 \begin{datum}[Target coefficient]
@@ -806,6 +850,18 @@ with
 This is a moderate hidden coupling; it is not a high-power clockwork
 suppression.
 \end{datum}
+
+\begin{remark}[Printed precision versus physical precision]
+The many digits in \(\zeta_{\rm tar}\), \(|\zeta_{\rm tar}|\), and
+\(\lambda\) are kept as reproducibility anchors for the benchmark files.  They
+should not be read as ten-digit physical predictions.  The optional
+instanton interpretation in Appendix~\ref{app:route-d-string} already has
+expected higher-order corrections of order \(|\zeta|^2\simeq1.7\times10^{-2}\),
+and the finite-messenger canonical-normalization estimate below gives
+\(|\lambda|^2/(16\pi^2)\simeq8.26\times10^{-4}\).  Until the companion
+flavor/proton/threshold audits are replayed in a concrete UV completion, only
+the first few significant figures should be treated as physically meaningful.
+\end{remark}
 
 \begin{observation}[\(\mathbb Z_{178}\) phase diagnostic]
 A discrete phase can approximate the benchmark phase by
@@ -836,7 +892,22 @@ This does not make \(\zeta\) an exact prediction.  It supplies a precise
 discrete-phase candidate; exact equality would require either a small axion
 shift or a continuous hidden phase.  The Route-B hidden-messenger theorem uses
 only \(\lambda^2=\zeta\); the \(\mathbb Z_{178}\) value is kept as a side
-diagnostic, not as a premise of the benchmark branch.
+diagnostic, not as a premise of the benchmark branch.  Diophantine
+approximations of this kind are generic for any real phase.  For
+\(\arg\zeta/(2\pi)=0.09549901697671904\), the continued-fraction convergents
+include
+\[
+  \frac{17}{178},\qquad \frac{70}{733},\qquad \frac{87}{911},
+\]
+with phase errors
+\[
+  4.15\times10^{-5},\qquad 6.68\times10^{-6},\qquad
+  2.73\times10^{-6}\ {\rm rad}.
+\]
+Thus if the admissible phase window is tightened below the \(178\)-denominator
+error, the diagnostic must move to higher-denominator approximants.  The
+stringy axion-volume option in Appendix~\ref{app:route-d-string} is the more
+physical way to interpret a continuous hidden phase.
 \end{observation}
 
 \begin{observation}[Nonperturbative hidden-spurion option]
@@ -851,7 +922,8 @@ For \(A=1\),
 \]
 This is naturally interpreted as a nonperturbative hidden-sector spurion.  It
 is a conditional physical origin, not a weak-coupling derivation from
-face-projection alone.
+face-projection alone.  Appendix~\ref{app:route-d-string} records the local
+E3-instanton/Green--Schwarz version of this interpretation.
 \end{observation}
 
 \begin{lemma}[Minimal post-\(B-L\) \(R\)-selection rule]
@@ -914,7 +986,9 @@ a holomorphic EFT matching selection rule.  It is not yet claimed to be an
 anomaly-free microscopic symmetry.  A UV implementation would require either
 an anomaly-free continuous or discrete \(R\)-symmetry, or a spurionic origin
 whose \(R\)-breaking insertions do not regenerate \(X\)-decorated Dirac or
-colored-triplet operators within the audited order.
+colored-triplet operators within the audited order.  Appendix~\ref{app:route-d-string}
+gives a local Green--Schwarz/Stueckelberg interpretation of the same kind of
+selection-rule bookkeeping, again without claiming a global compactification.
 \end{remark}
 
 \begin{theorem}[Tree-level matching silence]
@@ -1078,14 +1152,22 @@ and\\
 \item Optional Route-D outputs:
 \texttt{route\_d/output/d1\_f\_theory\_local\_placement.*} and
 \texttt{route\_d/output/d2\_e3\_instanton\_zeta.*}.
+\item Deferred-audit convention card:
+\path{code/audit0_conventions_card.py}, with local output
+\path{output/audit0/invariant_card.*}.
+\item Deferred-audit scaffolds:
+\path{code/audit1_flavor_target_conventions.py} and\\
+\path{code/audit4a_source_spectrum_schema.py}, with local outputs in\\
+\path{output/audit1/} and \path{output/audit4a/}.
 \item Status log: \texttt{roadmap.md}.
 \end{itemize}
 The reproducible numerical claims inside this TeX draft are therefore only the
 D5 half-spin branching check, the hypercharge normalization check, the
 Route-B algebraic \(\zeta K_{\rm tr}\) matching check, and the appendix-level
-Route-D local string-placement/instanton arithmetic.  All publication-grade
-phenomenology remains outside this manifest until the companion audits are
-restored.
+Route-D local string-placement/instanton arithmetic.  The Audit 0/1/4a files
+are convention and schema cards for future work, not phenomenology results.
+All publication-grade phenomenology remains outside this manifest until the
+companion audits are restored.
 
 \section{Deferred Calculations}
 
@@ -1104,10 +1186,23 @@ The paper strategy is therefore:
 \text{main paper: representation/index/contact skeleton},\\
 \text{Route B} &
 \text{optional extension or companion: hidden origin for }\zeta,\\
+\text{Route D} &
+\text{optional appendix: local string-constrained interpretation},\\
 \text{companion audits} &
 \text{full flavor, }d=5\text{ proton decay, thresholds, source-sector UV}.
 \end{array}
 \]
+The companion-audit dependency graph is fixed in the generated Audit 0 card as
+\[
+  0 \longrightarrow (1\parallel 4a)\longrightarrow 3\longrightarrow 2,
+\]
+with \(4b\) as an optional Route-D/global-geometry track.  Audit 1 currently
+fixes only the flavor/seesaw target-table contract and marks publication
+targets as requiring refresh.  Audit 4a currently fixes only the source-sector
+heavy-spectrum schema and records that no non-placeholder
+\texttt{heavy\_spectrum.json} has yet been exported.  Thus Audit 3 remains
+blocked on a source spectrum, and Audit 2 remains blocked on both physical
+flavor rotations and triplet inverse data.
 
 \section{Lean-Note Status Ledger}
 
@@ -1140,8 +1235,10 @@ second-transvectant singlet supplies the unique Majorana contact direction.
 These are mathematical inputs and consequences inside a conditional EFT
 branch.  They do not by themselves determine the microscopic source sector,
 the complex hidden coefficient \(\zeta\), the full flavor fit, or the
-proton-decay Wilson tensors.  Keeping this boundary explicit is the point of
-the lean Route-A version.  This note establishes the
+proton-decay Wilson tensors.  The optional Route-D appendix gives local
+string-constrained interpretations of some conditional inputs, not a global
+string compactification.  Keeping this boundary explicit is the point of the
+lean Route-A version.  This note establishes the
 representation/index/contact skeleton; it does not claim full GUT
 phenomenology.
 
