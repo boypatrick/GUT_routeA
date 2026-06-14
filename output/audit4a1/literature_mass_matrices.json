@@ -1,0 +1,903 @@
+{
+  "audit": "audit4a1_cmsgut_literature_mass_import",
+  "card_sha256": "8c5af27aeb06d7d094c8f7d1d22d9032c11bfe1bca8e0b2bbe41cfea90d5e2f2",
+  "convention": {
+    "BMSV_status": "local hep-ph/0306242 note records qualitative triplet-mixing/proton-decay ingredients but no doublet/triplet entry table; AG source states compatibility with BMSV up to normalizations/phases",
+    "inherited_vacuum_map": {
+      "abmsv_2003_sign_note": "The 2003 short note writes omega with the opposite sign; p and a formulas match after omega_ABMSV=-omega_AG.",
+      "branch_variable": "x = -lambda*omega/m",
+      "coupling_ratio": "xi = lambda*M/(eta*m)",
+      "crosscheck_source": {
+        "arxiv": "hep-ph/0306242",
+        "journal": "Phys. Lett. B588:196-202,2004",
+        "key": "AulakhBajcMelfoSenjanovicVissani2004",
+        "scope": "minimal SUSY SO(10) setup and compact cubic/vev summary"
+      },
+      "cubic_equation": "8*x^3 - 15*x^2 + 14*x - 3 = -xi*(1-x)^2",
+      "dimensionless_vevs": {
+        "a_tilde": "(x^2+2*x-1)/(1-x)",
+        "eta_sigma_bar_sigma_tilde": "2*x*(1-3*x)*(1+x^2)/(1-x)^2",
+        "omega_tilde": "-x",
+        "p_tilde": "x*(5*x^2-1)/(1-x)^2"
+      },
+      "primary_source": {
+        "arxiv": "hep-ph/0405074",
+        "journal": "Nucl. Phys. B711:275-313,2005",
+        "key": "AulakhGirdhar2005",
+        "scope": "Pati-Salam decomposition, vev dictionary, F-term equations, cubic, spectra/couplings"
+      }
+    },
+    "matrix_row_rule": "barred irreps label rows, unbarred irreps label columns",
+    "primary": "Aulakh-Girdhar hep-ph/0405074 appendix convention"
+  },
+  "created_utc": "2026-06-14T16:17:34+00:00",
+  "matrix_blocks": [
+    {
+      "basis_columns": [
+        "h1 = H_{alpha dot1}",
+        "h2 = overlineSigma^{(15)}_{alpha dot1}",
+        "h3 = Sigma^{(15)}_{alpha dot1}",
+        "h4 = phi^{44 dot1}_{alpha}/sqrt(2)"
+      ],
+      "basis_rows": [
+        "bar_h1 = H^{alpha}_{dot2}",
+        "bar_h2 = overlineSigma^{(15) alpha}_{dot2}",
+        "bar_h3 = Sigma^{(15) alpha}_{dot2}",
+        "bar_h4 = phi_{44}^{dot2 alpha}/sqrt(2)"
+      ],
+      "block_id": "H_doublet_4x4",
+      "entries": [
+        [
+          "-M_H",
+          "bar_gamma*sqrt(3)*(omega-a)",
+          "-gamma*sqrt(3)*(omega+a)",
+          "-bar_gamma*bar_sigma"
+        ],
+        [
+          "-bar_gamma*sqrt(3)*(omega+a)",
+          "0",
+          "-(2*M+4*eta*(a+omega))",
+          "0"
+        ],
+        [
+          "gamma*sqrt(3)*(omega-a)",
+          "-(2*M+4*eta*(a-omega))",
+          "0",
+          "-2*eta*bar_sigma*sqrt(3)"
+        ],
+        [
+          "-sigma*gamma",
+          "-2*eta*sigma*sqrt(3)",
+          "0",
+          "-2*m+6*lambda*(omega-a)"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "electroweak_doublet_mass_matrix",
+      "shape": [
+        4,
+        4
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "line_range": "2601-2624",
+        "notes": "Rows are barred doublets and columns are unbarred doublets; source states Det H=0 is the MSSM one-pair fine-tuning condition.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "audit2_required_inverse_entries_1_indexed": [
+        "S_1^1",
+        "S_1^2",
+        "S_2^1",
+        "S_2^2",
+        "S_1^4",
+        "S_2^4"
+      ],
+      "basis_columns": [
+        "t1 = H_4",
+        "t2 = overlineSigma_{(a)4}",
+        "t3 = Sigma_{4(a)}",
+        "t4 = overlineSigma_{4(R0)}",
+        "t5 = phi_{(R-)}^4"
+      ],
+      "basis_rows": [
+        "bar_t1 = H^4",
+        "bar_t2 = overlineSigma_{(a)}^4",
+        "bar_t3 = Sigma_{(a)}^4",
+        "bar_t4 = Sigma^4_{R0}",
+        "bar_t5 = phi_{4(R+)}"
+      ],
+      "block_id": "T_triplet_5x5",
+      "entries": [
+        [
+          "M_H",
+          "bar_gamma*(a+p)",
+          "gamma*(p-a)",
+          "2*sqrt(2)*I*omega*bar_gamma",
+          "I*bar_sigma*bar_gamma"
+        ],
+        [
+          "bar_gamma*(p-a)",
+          "0",
+          "2*M",
+          "0",
+          "0"
+        ],
+        [
+          "gamma*(p+a)",
+          "2*M",
+          "0",
+          "4*sqrt(2)*I*omega*eta",
+          "2*I*eta*bar_sigma"
+        ],
+        [
+          "-2*sqrt(2)*I*omega*gamma",
+          "-4*sqrt(2)*I*omega*eta",
+          "0",
+          "2*M+2*eta*p+2*eta*a",
+          "-2*sqrt(2)*eta*bar_sigma"
+        ],
+        [
+          "I*sigma*gamma",
+          "2*I*eta*sigma",
+          "0",
+          "2*sqrt(2)*eta*sigma",
+          "-2*m-2*lambda*(a+p-4*omega)"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "proton_decay_triplet_mass_matrix",
+      "shape": [
+        5,
+        5
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "line_range": "2629-2648",
+        "notes": "Rows are barred [bar3,1,2/3] triplets and columns are unbarred [3,1,-2/3] triplets.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "basis_columns": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6_gaugino"
+      ],
+      "basis_rows": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6_gaugino"
+      ],
+      "block_id": "G_mixed_neutral_6x6",
+      "chiral_subblock_shape": [
+        5,
+        5
+      ],
+      "entries": [
+        [
+          "2*m",
+          "0",
+          "2*sqrt(6)*lambda*omega",
+          "2*I*eta*bar_sigma/sqrt(2)",
+          "-2*I*eta*sigma/sqrt(2)",
+          "0"
+        ],
+        [
+          "0",
+          "2*(m+2*lambda*a)",
+          "4*sqrt(2)*lambda*omega",
+          "2*I*eta*bar_sigma*sqrt(3/2)",
+          "-2*I*eta*sigma*sqrt(3/2)",
+          "0"
+        ],
+        [
+          "2*sqrt(6)*lambda*omega",
+          "4*sqrt(2)*lambda*omega",
+          "2*(m+lambda*(p+2*a))",
+          "-2*I*eta*sqrt(3)*bar_sigma",
+          "2*I*sqrt(3)*eta*sigma",
+          "0"
+        ],
+        [
+          "2*I*eta*bar_sigma/sqrt(2)",
+          "2*I*eta*bar_sigma*sqrt(3/2)",
+          "-2*I*eta*sqrt(3)*bar_sigma",
+          "0",
+          "2*(M+eta*(p+3*a-6*omega))",
+          "sqrt(5)*g*conj(sigma)"
+        ],
+        [
+          "-2*I*eta*sigma/sqrt(2)",
+          "-2*I*eta*sigma*sqrt(3/2)",
+          "2*I*sqrt(3)*eta*sigma",
+          "2*(M+eta*(p+3*a-6*omega))",
+          "0",
+          "sqrt(5)*g*conj(bar_sigma)"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "sqrt(5)*g*conj(sigma)",
+          "sqrt(5)*g*conj(bar_sigma)",
+          "0"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "mixed_chiral_gauge_matrix",
+      "shape": [
+        6,
+        6
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "description_line_range": "1203-1214",
+        "line_range": "2654-2669",
+        "notes": "Upper-left 5x5 chiral block has null left/right eigenvectors from the sixth row/column; full 6x6 matrix is generically non-singular.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "basis_columns": [
+        "E2",
+        "E3",
+        "E4",
+        "E5_gaugino"
+      ],
+      "basis_rows": [
+        "bar_E2",
+        "bar_E3",
+        "bar_E4",
+        "bar_E5_gaugino"
+      ],
+      "block_id": "E_mixed_4x4",
+      "chiral_subblock_shape": [
+        3,
+        3
+      ],
+      "entries": [
+        [
+          "-2*(M+eta*(a-3*omega))",
+          "-2*sqrt(2)*I*eta*sigma",
+          "2*I*eta*sigma",
+          "I*g*sqrt(2)*conj(bar_sigma)"
+        ],
+        [
+          "2*I*sqrt(2)*eta*bar_sigma",
+          "-2*(m+lambda*(a-omega))",
+          "-2*sqrt(2)*lambda*omega",
+          "2*g*(conj(a)-conj(omega))"
+        ],
+        [
+          "-2*I*eta*bar_sigma",
+          "-2*sqrt(2)*lambda*omega",
+          "-2*(m-lambda*omega)",
+          "sqrt(2)*g*(conj(omega)-conj(p))"
+        ],
+        [
+          "-I*g*sqrt(2)*conj(sigma)",
+          "2*g*(conj(a)-conj(omega))",
+          "g*sqrt(2)*(conj(omega)-conj(p))",
+          "0"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "mixed_chiral_gauge_matrix",
+      "shape": [
+        4,
+        4
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "description_line_range": "1219-1244",
+        "line_range": "2671-2685",
+        "notes": "Upper-left 3x3 chiral block has null left/right eigenvectors from the fourth row/column; full 4x4 matrix is generically non-singular.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "basis_columns": [
+        "F1",
+        "F2",
+        "F3_gaugino"
+      ],
+      "basis_rows": [
+        "bar_F1",
+        "bar_F2",
+        "bar_F3_gaugino"
+      ],
+      "block_id": "F_mixed_3x3",
+      "chiral_subblock_shape": [
+        2,
+        2
+      ],
+      "entries": [
+        [
+          "2*(M+eta*(p+3*a))",
+          "-2*I*sqrt(3)*eta*sigma",
+          "-g*sqrt(2)*conj(bar_sigma)"
+        ],
+        [
+          "2*I*sqrt(3)*eta*bar_sigma",
+          "2*(m+lambda*(p+2*a))",
+          "sqrt(24)*I*g*conj(omega)"
+        ],
+        [
+          "-g*sqrt(2)*conj(sigma)",
+          "-sqrt(24)*I*g*conj(omega)",
+          "0"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "mixed_chiral_gauge_matrix",
+      "shape": [
+        3,
+        3
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "description_line_range": "1273-1293",
+        "line_range": "2688-2699",
+        "notes": "Mixed charged singlet block; full matrix separates gaugino mode and residual chiral Dirac mode.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "basis_columns": [
+        "J1",
+        "J2",
+        "J3",
+        "J4_gaugino"
+      ],
+      "basis_rows": [
+        "bar_J1",
+        "bar_J2",
+        "bar_J3",
+        "bar_J4_gaugino"
+      ],
+      "block_id": "J_mixed_4x4",
+      "chiral_subblock_shape": [
+        3,
+        3
+      ],
+      "entries": [
+        [
+          "2*(M+eta*(a+p-2*omega))",
+          "-2*eta*bar_sigma",
+          "2*sqrt(2)*eta*bar_sigma",
+          "-I*g*sqrt(2)*conj(sigma)"
+        ],
+        [
+          "2*eta*sigma",
+          "-2*(m+lambda*a)",
+          "-2*sqrt(2)*lambda*omega",
+          "-2*I*g*sqrt(2)*conj(a)"
+        ],
+        [
+          "-2*sqrt(2)*eta*sigma",
+          "-2*sqrt(2)*lambda*omega",
+          "-2*(m+lambda*(a+p))",
+          "-4*I*g*conj(omega)"
+        ],
+        [
+          "-I*g*sqrt(2)*conj(bar_sigma)",
+          "2*sqrt(2)*I*g*conj(a)",
+          "4*I*g*conj(omega)",
+          "0"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "mixed_chiral_gauge_matrix",
+      "shape": [
+        4,
+        4
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "description_line_range": "1295-1308",
+        "line_range": "2701-2714",
+        "notes": "Upper-left 3x3 chiral block has null left/right eigenvectors from the fourth row/column; full 4x4 matrix is generically non-singular.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    },
+    {
+      "basis_columns": [
+        "X1",
+        "X2",
+        "X3_gaugino"
+      ],
+      "basis_rows": [
+        "bar_X1",
+        "bar_X2",
+        "bar_X3_gaugino"
+      ],
+      "block_id": "X_mixed_3x3",
+      "chiral_subblock_shape": [
+        2,
+        2
+      ],
+      "entries": [
+        [
+          "2*(m+lambda*(a+omega))",
+          "-2*sqrt(2)*lambda*omega",
+          "-2*g*(conj(a)+conj(omega))"
+        ],
+        [
+          "-2*sqrt(2)*lambda*omega",
+          "2*(m+lambda*omega)",
+          "sqrt(2)*g*(conj(omega)+conj(p))"
+        ],
+        [
+          "-2*g*(conj(a)+conj(omega))",
+          "sqrt(2)*g*(conj(omega)+conj(p))",
+          "0"
+        ]
+      ],
+      "entry_status": "transcribed_from_aulakh_girdhar_appendix",
+      "kind": "mixed_chiral_gauge_matrix",
+      "shape": [
+        3,
+        3
+      ],
+      "source_anchor": {
+        "arxiv": "hep-ph/0405074",
+        "description_line_range": "1313-1328",
+        "line_range": "2718-2731",
+        "notes": "Symmetric mixed matrix; upper-left 2x2 chiral block has null vector from the third row/column; full 3x3 matrix is generically non-singular.",
+        "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+      }
+    }
+  ],
+  "next_required_steps": [
+    "Expand the adjugate/cofactor contract into CAS-backed symbolic inverse entries for the 5x5 triplet matrix.",
+    "Export scalar Hessian Goldstone directions and then the non-placeholder heavy spectrum.",
+    "Feed the symbolic triplet inverse block into Audit 2 Wilson-tensor construction."
+  ],
+  "numeric_gates": {
+    "mixed_chiral_goldstone_numeric_gates": {
+      "all_pass": true,
+      "boundary": "verifies mixed chiral/gauge Goldstone blocks numerically on one F-flat sample; scalar Hessian Goldstone directions remain pending",
+      "gates": {
+        "E_mixed_4x4": {
+          "chiral_block_shape": [
+            3,
+            3
+          ],
+          "chiral_block_singular_values": [
+            4.017490372029846,
+            1.7726330847602774,
+            3.1941996188263576e-16
+          ],
+          "chiral_null_ratio": 7.950733724378489e-17,
+          "full_block_singular_values": [
+            4.0174903720298465,
+            1.7726330847602778,
+            1.164924167405552,
+            1.1649241674055515
+          ],
+          "full_det": {
+            "im": 0.0,
+            "re": -9.664268911298
+          },
+          "full_min_ratio": 0.2899631510048824,
+          "full_shape": [
+            4,
+            4
+          ],
+          "pass_fail": true,
+          "source_anchor": {
+            "arxiv": "hep-ph/0405074",
+            "description_line_range": "1219-1244",
+            "line_range": "2671-2685",
+            "notes": "Upper-left 3x3 chiral block has null left/right eigenvectors from the fourth row/column; full 4x4 matrix is generically non-singular.",
+            "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+          }
+        },
+        "F_mixed_3x3": {
+          "chiral_block_shape": [
+            2,
+            2
+          ],
+          "chiral_block_singular_values": [
+            2.9456790123456797,
+            0.0
+          ],
+          "chiral_null_ratio": 0.0,
+          "full_block_singular_values": [
+            2.9456790123456793,
+            0.5372862767741946,
+            0.5372862767741945
+          ],
+          "full_det": {
+            "im": 0.0,
+            "re": 0.85034843469
+          },
+          "full_min_ratio": 0.18239810737095452,
+          "full_shape": [
+            3,
+            3
+          ],
+          "pass_fail": true,
+          "source_anchor": {
+            "arxiv": "hep-ph/0405074",
+            "description_line_range": "1273-1293",
+            "line_range": "2688-2699",
+            "notes": "Mixed charged singlet block; full matrix separates gaugino mode and residual chiral Dirac mode.",
+            "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+          }
+        },
+        "G_mixed_neutral_6x6": {
+          "chiral_block_shape": [
+            5,
+            5
+          ],
+          "chiral_block_singular_values": [
+            3.1926172553772014,
+            2.908808725357429,
+            2.112677190155879,
+            1.1396955967188624,
+            1.743152798421049e-32
+          ],
+          "chiral_null_ratio": 5.459949185844699e-33,
+          "full_block_singular_values": [
+            3.1926172553772014,
+            2.908808725357429,
+            2.112677190155879,
+            1.1396955967188624,
+            0.9248690264298958,
+            0.9248690264298954
+          ],
+          "full_det": {
+            "im": 0.0,
+            "re": 19.126896386195
+          },
+          "full_min_ratio": 0.28968991659497373,
+          "full_shape": [
+            6,
+            6
+          ],
+          "pass_fail": true,
+          "source_anchor": {
+            "arxiv": "hep-ph/0405074",
+            "description_line_range": "1203-1214",
+            "line_range": "2654-2669",
+            "notes": "Upper-left 5x5 chiral block has null left/right eigenvectors from the sixth row/column; full 6x6 matrix is generically non-singular.",
+            "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+          }
+        },
+        "J_mixed_4x4": {
+          "chiral_block_shape": [
+            3,
+            3
+          ],
+          "chiral_block_singular_values": [
+            3.40140179133619,
+            0.4359696925707577,
+            7.024546108807471e-17
+          ],
+          "chiral_null_ratio": 2.0651915121288813e-17,
+          "full_block_singular_values": [
+            3.4014017913361903,
+            1.8082622447197791,
+            1.8082622447197787,
+            0.43596969257075785
+          ],
+          "full_det": {
+            "im": 0.0,
+            "re": -4.848831190909
+          },
+          "full_min_ratio": 0.12817353529983697,
+          "full_shape": [
+            4,
+            4
+          ],
+          "pass_fail": true,
+          "source_anchor": {
+            "arxiv": "hep-ph/0405074",
+            "description_line_range": "1295-1308",
+            "line_range": "2701-2714",
+            "notes": "Upper-left 3x3 chiral block has null left/right eigenvectors from the fourth row/column; full 4x4 matrix is generically non-singular.",
+            "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+          }
+        },
+        "X_mixed_3x3": {
+          "chiral_block_shape": [
+            2,
+            2
+          ],
+          "chiral_block_singular_values": [
+            1.8444444444444448,
+            3.446800736856361e-17
+          ],
+          "chiral_null_ratio": 1.8687473874522437e-17,
+          "full_block_singular_values": [
+            1.8444444444444446,
+            1.3856856999389848,
+            1.3856856999389846
+          ],
+          "full_det": {
+            "im": 0.0,
+            "re": -3.541563628851
+          },
+          "full_min_ratio": 0.7512753794849916,
+          "full_shape": [
+            3,
+            3
+          ],
+          "pass_fail": true,
+          "source_anchor": {
+            "arxiv": "hep-ph/0405074",
+            "description_line_range": "1313-1328",
+            "line_range": "2718-2731",
+            "notes": "Symmetric mixed matrix; upper-left 2x2 chiral block has null vector from the third row/column; full 3x3 matrix is generically non-singular.",
+            "source": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex"
+          }
+        }
+      }
+    },
+    "sample_parameters": {
+      "M": 2.150617283951,
+      "M_H": 0.67,
+      "a": -0.877777777778,
+      "bar_gamma": {
+        "im": 0.11,
+        "re": -0.23
+      },
+      "bar_sigma": 0.417813237266,
+      "eta": 1.0,
+      "f_flat_M_eta_p_3a_minus_6omega": 0.0,
+      "g": 0.7,
+      "gamma": {
+        "im": 0.07,
+        "re": 0.31
+      },
+      "lambda": 1.0,
+      "m": 1.0,
+      "omega": -0.1,
+      "p": -0.117283950617,
+      "sigma": 0.417813237266,
+      "x": 0.1,
+      "xi": 2.150617283951
+    },
+    "triplet_inverse_numeric_gate": {
+      "audit2_required_entries_1_indexed": {
+        "S_1^1": {
+          "im": 0.047498160261,
+          "re": 1.239746430932
+        },
+        "S_1^2": {
+          "im": -0.017947220088,
+          "re": -0.06736333461
+        },
+        "S_1^4": {
+          "im": 0.375375135201,
+          "re": 0.162173968105
+        },
+        "S_2^1": {
+          "im": 0.067035685527,
+          "re": 0.251612633761
+        },
+        "S_2^2": {
+          "im": -0.006788367186,
+          "re": -0.012961357573
+        },
+        "S_2^4": {
+          "im": -0.326618671218,
+          "re": 0.015848221077
+        }
+      },
+      "boundary": "numeric smoke inversion only; symbolic rational inverse remains a CAS-dependent follow-up",
+      "condition_number": 40.36622476789253,
+      "inverse_residual_norm": 2.242837501662494e-15,
+      "numeric_inverse": [
+        [
+          {
+            "im": 0.047498160261,
+            "re": 1.239746430932
+          },
+          {
+            "im": -0.017947220088,
+            "re": -0.06736333461
+          },
+          {
+            "im": 0.08284638233,
+            "re": -0.191759949709
+          },
+          {
+            "im": 0.375375135201,
+            "re": 0.162173968105
+          },
+          {
+            "im": -0.895395516883,
+            "re": -0.386839271915
+          }
+        ],
+        [
+          {
+            "im": 0.067035685527,
+            "re": 0.251612633761
+          },
+          {
+            "im": -0.006788367186,
+            "re": -0.012961357573
+          },
+          {
+            "im": 0.00809604524,
+            "re": 0.325800961651
+          },
+          {
+            "im": -0.326618671218,
+            "re": 0.015848221077
+          },
+          {
+            "im": 0.779095007937,
+            "re": -0.037803319325
+          }
+        ],
+        [
+          {
+            "im": -0.022180160394,
+            "re": 0.051339193362
+          },
+          {
+            "im": 0.000580303505,
+            "re": 0.229402944638
+          },
+          {
+            "im": 0.007098544673,
+            "re": -0.006186819405
+          },
+          {
+            "im": 0.012110861388,
+            "re": 0.013895587532
+          },
+          {
+            "im": -0.028888463768,
+            "re": -0.033145633831
+          }
+        ],
+        [
+          {
+            "im": 0.492538335349,
+            "re": -0.131224114087
+          },
+          {
+            "im": -0.02537219768,
+            "re": 0.013288406959
+          },
+          {
+            "im": 0.326618671218,
+            "re": -0.015848221077
+          },
+          {
+            "im": 0.031023308769,
+            "re": 1.997117929948
+          },
+          {
+            "im": -0.074000989905,
+            "re": -3.185265027322
+          }
+        ],
+        [
+          {
+            "im": 1.174869020367,
+            "re": -0.313013496211
+          },
+          {
+            "im": -0.060521195802,
+            "re": 0.031697304648
+          },
+          {
+            "im": 0.779095007937,
+            "re": -0.037803319325
+          },
+          {
+            "im": 0.074000989905,
+            "re": 3.185265027322
+          },
+          {
+            "im": -0.17651716481,
+            "re": -6.529323154274
+          }
+        ]
+      ],
+      "pass_fail": true,
+      "triplet_det": {
+        "im": -0.170970710232,
+        "re": 4.462495529056
+      }
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "this_script",
+      "path": "code/audit4a1_cmsgut_literature_mass_import.py",
+      "sha256": "ee66876db456c6a5a347c1ac5d692e6db3a066e53b3cefe7407cf13178064809",
+      "size_bytes": 27539
+    },
+    {
+      "exists": true,
+      "label": "mass_export_schema",
+      "path": "output/audit4a1/mass_export_schema.json",
+      "sha256": "39afb22e8beae2f377bd838b8accffa980e7313f032fe9fa3a78bbf5ca5c22f4",
+      "size_bytes": 8774
+    },
+    {
+      "exists": true,
+      "label": "vacuum_branches",
+      "path": "output/audit4a1/vacuum_branches.json",
+      "sha256": "0e3b411f4067e49130952aefda234a9ac0dde1fb2c8dd818fc48200b14bd0534",
+      "size_bytes": 9507
+    },
+    {
+      "exists": true,
+      "label": "aulakh_girdhar_tex",
+      "path": "/private/tmp/cmsgut_refs/0405074/msgtfrvnew.tex",
+      "sha256": "02dda7abfa510f8d569e14edc2e86ee406741be963e12fc0b6fa99a78f66207a",
+      "size_bytes": 124826
+    },
+    {
+      "exists": true,
+      "label": "bmsv_note_tex",
+      "path": "/private/tmp/cmsgut_refs/0306242/abmsv.tex",
+      "sha256": "f07e9fda16b986c5e640b2ae9d3459b6f084f3d489cfb6b689cba1e7080c38f9",
+      "size_bytes": 31979
+    }
+  ],
+  "stage_gates": {
+    "all_mixed_chiral_gauge_blocks_imported": true,
+    "audit2_required_numeric_entries_exported": true,
+    "doublet_mass_matrix_entries_imported": true,
+    "mixed_chiral_goldstone_numeric_gates_passed": true,
+    "nonplaceholder_heavy_spectrum_exported": false,
+    "scalar_hessian_goldstone_directions_verified": false,
+    "triplet_inverse_numeric_smoke_passed": true,
+    "triplet_inverse_symbolic_entries_exported": false,
+    "triplet_mass_matrix_entries_imported": true
+  },
+  "status": "Aulakh-Girdhar doublet/triplet entries transcribed; neutral chiral Goldstone and triplet inverse numeric gates run",
+  "symbolic_triplet_inverse_contract": {
+    "audit2_required_entries": [
+      {
+        "entry": "S_1^1",
+        "minor": "remove row 1, column 1"
+      },
+      {
+        "entry": "S_1^2",
+        "minor": "remove row 2, column 1"
+      },
+      {
+        "entry": "S_2^1",
+        "minor": "remove row 1, column 2"
+      },
+      {
+        "entry": "S_2^2",
+        "minor": "remove row 2, column 2"
+      },
+      {
+        "entry": "S_1^4",
+        "minor": "remove row 4, column 1"
+      },
+      {
+        "entry": "S_2^4",
+        "minor": "remove row 4, column 2"
+      }
+    ],
+    "cas_status": "sympy_not_available_in_current_runtime; numeric inverse gate is exported, symbolic expansion remains pending",
+    "cofactor_formula_1_indexed": "S_i^j = (-1)^(i+j) det(T with row j and column i removed) / det(T)",
+    "definition": "S = T^{-1}",
+    "matrix": "T_triplet_5x5",
+    "status": "hand_audit_ready_adjugate_contract"
+  },
+  "upstream_mass_export_schema_sha256": "94f14ed3cb2eac9cfa582a59dd938e9aeca9b1d2d728f453294e9faa4e4ebea1",
+  "upstream_vacuum_branch_sha256": "8aaa5979c5dc0832ee7edecfd7531ded34a0dadd9c6118406487502880a240ff"
+}

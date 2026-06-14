@@ -1232,16 +1232,21 @@ and\\
 \item Audit 4a.1 CMSGUT mass-export schema:
 \path{code/audit4a1_cmsgut_mass_export.py}; output
 \path{output/audit4a1/mass\_export\_schema.*}.
+\item Audit 4a.1 CMSGUT literature mass import:
+\path{code/audit4a1_cmsgut_literature_mass_import.py}; output
+\path{output/audit4a1/literature\_mass\_matrices.*}.
 \item Status log: \texttt{roadmap.md}.
 \end{itemize}
 The reproducible numerical claims inside this TeX draft are therefore only the
 D5 half-spin branching check, the hypercharge normalization check, the
 Route-B algebraic \(\zeta K_{\rm tr}\) matching check, and the appendix-level
-Route-D local string-placement/instanton arithmetic.  The Audit 0/1/1b/4a
-files are convention, rank-contract, and schema cards for future work, while
-Audit 0.5 is only a finite phase-transfer diagnostic.  None of these files is
-a publication-grade phenomenology result.  All publication-grade phenomenology
-remains outside this manifest until the companion audits are restored.
+Route-D local string-placement/instanton arithmetic, together with the
+Audit 4a.1 vacuum-cubic, Goldstone-count, mixed chiral/gauge Goldstone smoke,
+and numeric triplet-inverse smoke gates.  The Audit 0/1/1b/4a files are convention,
+rank-contract, and schema cards for future work, while Audit 0.5 is only a
+finite phase-transfer diagnostic.  None of these files is a publication-grade
+phenomenology result.  All publication-grade phenomenology remains outside
+this manifest until the companion audits are restored.
 
 \section{Deferred Calculations}
 
@@ -1292,12 +1297,23 @@ The validator reproduces the source-named \(SU(5)\), flipped
 \(SU(5)\times U(1)\), and \(G_{LR}\) special points; it does not claim a full
 Pati--Salam special point.  A follow-up Audit 4a.1 mass-export card verifies
 the group-theoretic Goldstone count \(45-(8+3+1)=33\) and exports the
-doublet/triplet mass-block schema, including the required \(5\times5\) triplet
-inverse-block placeholder.  It still does not solve the F/D-flat vacuum,
-import the Aulakh--Girdhar/BMSV mass-matrix entries, export scalar-Hessian
-Goldstone eigenvectors, or provide a non-placeholder heavy spectrum.  Thus
-Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked on
-both physical flavor rotations and triplet inverse data.
+doublet/triplet mass-block schema.  The literature-import card then
+transcribes the Aulakh--Girdhar \(4\times4\) doublet matrix and \(5\times5\)
+triplet matrix from Appendix I of Ref.~\cite{AulakhGirdhar2005}.  The local
+BMSV note is used only as a qualitative cross-reference because it does not
+contain a second entry table for these matrices.  The same card transcribes
+the mixed chiral/gauge blocks \(G,E,F,J,X\).  On a generic F-flat sample their
+upper-left chiral subblocks have null singular-value ratios
+\(5.46\times10^{-33}\), \(7.95\times10^{-17}\), \(0\),
+\(2.07\times10^{-17}\), and \(1.87\times10^{-17}\), respectively, while the
+full Dirac/gaugino blocks are non-singular.  The card also numerically inverts
+the triplet block with residual norm \(2.24\times10^{-15}\) and specifies the
+hand-audit adjugate/cofactor contract for a symbolic inverse.  These are smoke
+gates, not a completed source audit: scalar-Hessian Goldstone eigenvectors, a
+CAS-expanded symbolic triplet inverse, and a non-placeholder heavy spectrum
+remain pending.  Thus Audit 3 remains blocked on a source spectrum, and Audit
+2 remains blocked on physical flavor rotations and on symbolic triplet inverse
+entries.
 
 \section{Lean-Note Status Ledger}
 

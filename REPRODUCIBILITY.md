@@ -62,6 +62,7 @@ phenomenology results.
 ```sh
 python3 code/audit4a1_cmsgut_vacuum_branches.py
 python3 code/audit4a1_cmsgut_mass_export.py
+python3 code/audit4a1_cmsgut_literature_mass_import.py
 ```
 
 Expected output artifacts:
@@ -71,14 +72,21 @@ Expected output artifacts:
 - `output/audit4a1/conventions_diff.md`
 - `output/audit4a1/mass_export_schema.json`
 - `output/audit4a1/mass_export_schema.md`
+- `output/audit4a1/literature_mass_matrices.json`
+- `output/audit4a1/literature_mass_matrices.md`
 
 Core scaffold checks:
 
 - Aulakh-Girdhar vacuum cubic convention is fixed.
 - Source-named SU(5), flipped-SU(5), and `G_LR` special points pass.
 - The generic `Spin(10) -> G_SM` broken-generator count is `45-(8+3+1)=33`.
-- Doublet/triplet mass-block schemas are exported, but the actual mass entries
-  and triplet inverse block remain pending literature import.
+- Aulakh-Girdhar doublet/triplet mass entries are transcribed with source-line
+  anchors.  The local BMSV note is recorded as qualitative cross-reference
+  rather than a second matrix-entry table.
+- All mixed chiral/gauge Goldstone smoke gates `G,E,F,J,X` and a numerical
+  triplet inverse gate pass on a generic F-flat sample.  Scalar-Hessian
+  Goldstone directions, symbolic triplet inverse expansion, and the
+  non-placeholder heavy spectrum remain pending.
 
 ## Status Log
 

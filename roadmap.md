@@ -19429,3 +19429,65 @@ next:
     only by generator-dimension counting.
   - Invert the triplet mass block and export the entries needed by Audit 2.
   - Decompose all heavy states into SM beta-vector rows for Audit 3.
+
+## 2026-06-14 Taipei Audit 4a.1 CMSGUT literature mass-matrix import
+
+implemented:
+  - Added `code/audit4a1_cmsgut_literature_mass_import.py`.
+  - Generated `output/audit4a1/literature_mass_matrices.json` and
+    `output/audit4a1/literature_mass_matrices.md`.
+  - Transcribed the Aulakh-Girdhar Appendix I electroweak doublet matrix
+    `H_doublet_4x4` from source lines `2601-2624`.
+  - Transcribed the Aulakh-Girdhar Appendix I proton-decay triplet matrix
+    `T_triplet_5x5` from source lines `2629-2648`.
+  - Transcribed all Aulakh-Girdhar Appendix I mixed chiral/gauge matrices:
+      `G_mixed_neutral_6x6` from source lines `2654-2669`;
+      `E_mixed_4x4` from source lines `2671-2685`;
+      `F_mixed_3x3` from source lines `2688-2699`;
+      `J_mixed_4x4` from source lines `2701-2714`;
+      `X_mixed_3x3` from source lines `2718-2731`.
+  - Recorded the local BMSV note as a qualitative cross-reference only: the
+    workspace copy discusses triplet mixings/proton decay but does not provide
+    a second doublet/triplet matrix-entry table.
+  - Added a hand-audit-ready adjugate/cofactor contract for the symbolic
+    triplet inverse:
+      `S_i^j = (-1)^(i+j) det(T with row j and column i removed)/det(T)`.
+
+numeric gates:
+  - Mixed chiral/gauge Goldstone smoke gates on F-flat sample `x=0.1`:
+      `G_mixed_neutral_6x6`: null ratio `5.459949185844699e-33`,
+      full determinant `19.126896386195`, pass;
+      `E_mixed_4x4`: null ratio `7.950733724378489e-17`,
+      full determinant `-9.664268911298`, pass;
+      `F_mixed_3x3`: null ratio `0.0`,
+      full determinant `0.85034843469`, pass;
+      `J_mixed_4x4`: null ratio `2.0651915121288813e-17`,
+      full determinant `-4.848831190909`, pass;
+      `X_mixed_3x3`: null ratio `1.8687473874522437e-17`,
+      full determinant `-3.541563628851`, pass.
+  - Triplet inverse smoke gate:
+      full `5x5` triplet inverse residual norm `2.242837501662494e-15`;
+      condition number `40.37`;
+      pass.
+  - Audit-2-required numeric inverse entries exported for the smoke sample:
+      `S_1^1`, `S_1^2`, `S_2^1`, `S_2^2`, `S_1^4`, `S_2^4`.
+
+verified:
+  - Ran `python3 code/audit4a1_cmsgut_literature_mass_import.py`.
+  - Parsed `output/audit4a1/literature_mass_matrices.json` with
+    `python3 -m json.tool`.
+  - Audit 4a.1 literature-import digest:
+    `8c5af27aeb06d7d094c8f7d1d22d9032c11bfe1bca8e0b2bbe41cfea90d5e2f2`.
+
+boundary:
+  This is the first source-anchored mass-matrix import and numeric smoke gate.
+  It does not yet export a scalar-Hessian Goldstone check, an expanded
+  symbolic rational triplet inverse, a non-placeholder `heavy_spectrum.json`,
+  threshold closure, or proton safety.
+
+next:
+  - Expand the adjugate/cofactor contract into CAS-backed or hand-audited
+    symbolic inverse entries for the `5x5` triplet matrix.
+  - Export scalar Hessian Goldstone directions and the non-placeholder heavy
+    spectrum.
+  - Feed the symbolic triplet inverse into Audit 2 Wilson-tensor construction.
