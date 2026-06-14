@@ -19487,7 +19487,55 @@ boundary:
 
 next:
   - Expand the adjugate/cofactor contract into CAS-backed or hand-audited
-    symbolic inverse entries for the `5x5` triplet matrix.
+    symbolic inverse entries for the `5x5` triplet matrix.  Completed by the
+    2026-06-15 symbolic inverse ledger below.
   - Export scalar Hessian Goldstone directions and the non-placeholder heavy
     spectrum.
   - Feed the symbolic triplet inverse into Audit 2 Wilson-tensor construction.
+
+## 2026-06-15 Taipei Audit 4a.1 triplet symbolic inverse ledger
+
+implemented:
+  - Added `code/audit4a1_triplet_symbolic_inverse.py`.
+  - Generated `output/audit4a1/triplet_symbolic_inverse.json` and
+    `output/audit4a1/triplet_symbolic_inverse.md`.
+  - Promoted the previous adjugate/cofactor contract
+      `S_i^j = (-1)^(i+j) det(T with row j and column i removed)/det(T)`
+    into explicit hand-audited Leibniz expansions.
+  - Exported the Audit-2-required source-basis inverse entries:
+      `S_1^1`, `S_1^2`, `S_2^1`, `S_2^2`, `S_1^4`, `S_2^4`.
+
+symbolic content:
+  - `det(T)` is exported as the full `5! = 120` signed product terms.
+  - Each required cofactor minor is exported as `4! = 24` signed product
+    terms, with the removed row/column and retained minor matrix recorded.
+  - The formulas are exact unexpanded rational expressions in the
+    source-anchored `T_ij` entries, not CAS-simplified polynomials.
+
+numeric gate:
+  - Reused the generic F-flat sample `x=0.1` from the literature-import card.
+  - Determinant expansion versus `numpy.linalg.det(T)` absolute error:
+      `7.994039446406413e-15`.
+  - Maximum error between the cofactor formulae and `numpy.linalg.inv(T)` for
+    the six required entries:
+      `1.0103182026100664e-15`.
+  - Gate pass: `true`.
+
+verified:
+  - Ran `python3 code/audit4a1_triplet_symbolic_inverse.py`.
+  - Parsed `output/audit4a1/triplet_symbolic_inverse.json` with
+    `python3 -m json.tool`.
+  - Audit 4a.1 symbolic inverse digest:
+    `177df81d1f6a9fed2cb284aed989f28401261831fdba0d97f9e2d77252bd6801`.
+
+boundary:
+  This closes the source-basis symbolic triplet inverse blocker for Audit 2.
+  It does not yet construct physical flavor rotations, Wilson tensors,
+  scalar-Hessian Goldstone eigenvectors, a non-placeholder
+  `heavy_spectrum.json`, threshold closure, or proton safety.
+
+next:
+  - Thread these symbolic `S_i^j` rational entries into the Audit 2
+    Wilson-tensor source-basis builder.
+  - Continue Audit 4a with scalar-Hessian Goldstone directions and the
+    non-placeholder heavy spectrum.

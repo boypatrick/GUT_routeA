@@ -1308,12 +1308,17 @@ upper-left chiral subblocks have null singular-value ratios
 \(2.07\times10^{-17}\), and \(1.87\times10^{-17}\), respectively, while the
 full Dirac/gaugino blocks are non-singular.  The card also numerically inverts
 the triplet block with residual norm \(2.24\times10^{-15}\) and specifies the
-hand-audit adjugate/cofactor contract for a symbolic inverse.  These are smoke
-gates, not a completed source audit: scalar-Hessian Goldstone eigenvectors, a
-CAS-expanded symbolic triplet inverse, and a non-placeholder heavy spectrum
-remain pending.  Thus Audit 3 remains blocked on a source spectrum, and Audit
-2 remains blocked on physical flavor rotations and on symbolic triplet inverse
-entries.
+hand-audit adjugate/cofactor contract for a symbolic inverse.  A follow-up
+symbolic-inverse card expands the Audit-2-required entries
+\((S_1^{\,1},S_1^{\,2},S_2^{\,1},S_2^{\,2},S_1^{\,4},S_2^{\,4})\) as explicit
+Leibniz cofactor rational functions: \(\det T\) has \(120\) signed product
+terms, each required minor has \(24\) terms, and the numerical reconstruction
+matches the direct inverse with maximum entry error \(1.01\times10^{-15}\).
+These are still smoke gates, not a completed source audit: scalar-Hessian
+Goldstone eigenvectors and a non-placeholder heavy spectrum remain pending.
+Thus Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked
+on physical flavor rotations, but no longer on the source-basis symbolic
+triplet-inverse entries.
 
 \section{Lean-Note Status Ledger}
 
