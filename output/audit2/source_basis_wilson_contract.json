@@ -1,0 +1,217 @@
+{
+  "audit": "audit2_source_basis_wilson_builder",
+  "card_sha256": "ed7f07bd2fdfdec51982cbfa9461f007cb2f809d8f8e33cf248fb999c83703e1",
+  "created_utc": "2026-06-28T08:16:56+00:00",
+  "formal_wilson_contract": {
+    "C5L": "C5L_{ab,cd}=sum_{(i,j)} S_i^j (Y_QQ^i)_{ab} (Y_QL^j)_{cd}",
+    "C5R": "C5R_{ab,cd}=sum_{(i,j)} S_i^j (Y_UE^i)_{ab} (Y_UD^j)_{cd}",
+    "LLLL_tensor_symmetry_assumption": "Y_QQ^i is treated as symmetric in the random numerical gate only; the formal contract keeps the tensor label explicit.",
+    "RRRR_tensor_symmetry_assumption": "Y_UE^i is treated as symmetric in the random numerical gate only; the formal contract keeps the tensor label explicit.",
+    "family_index_range": "a,b,c,d=1..3",
+    "summed_source_entries": [
+      "S_1^1",
+      "S_1^2",
+      "S_2^1",
+      "S_2^2",
+      "S_1^4",
+      "S_2^4"
+    ]
+  },
+  "input_digests": {
+    "literature_mass_matrix_card_sha256": "8c5af27aeb06d7d094c8f7d1d22d9032c11bfe1bca8e0b2bbe41cfea90d5e2f2",
+    "triplet_symbolic_inverse_card_sha256": "177df81d1f6a9fed2cb284aed989f28401261831fdba0d97f9e2d77252bd6801"
+  },
+  "next_required_steps": [
+    "Attach Audit 1 physical flavor rotations and triplet Yukawa maps.",
+    "Promote the source-basis C5L/C5R tensors to mass-basis Wilson tensors.",
+    "Only after the mass-basis tensors exist, add SUSY dressing and channel widths."
+  ],
+  "numeric_gate": {
+    "C5L_symbolic_vs_direct_max_abs_error": 0.0,
+    "C5R_symbolic_vs_direct_max_abs_error": 0.0,
+    "S_entry_max_abs_error": 1.0103182026100664e-15,
+    "pass_fail": true,
+    "random_seed": 20260616,
+    "random_tensor_role": "checks symbolic S entries against direct inverse entries in source-basis C5 contractions; not a phenomenological flavor point"
+  },
+  "source_entries": [
+    {
+      "cofactor_definition": "S_1^1 = (1)*M_remove_r1_c1/det_T",
+      "direct_inverse_numeric_value": {
+        "im": 0.047498160261,
+        "re": 1.239746430932
+      },
+      "entry": "S_1^1",
+      "entry_abs_error": 2.2591401799415137e-16,
+      "inverse_indices_1_indexed": {
+        "col_j": 1,
+        "row_i": 1
+      },
+      "left_triplet_source_column": "t1 = H_4",
+      "minor_formula_unexpanded": "M_remove_r1_c1 = T_22*T_33*T_44*T_55 - T_22*T_33*T_45*T_54 - T_22*T_34*T_43*T_55 + T_22*T_34*T_45*T_53 + T_22*T_35*T_43*T_54 - T_22*T_35*T_44*T_53 - T_23*T_32*T_44*T_55 + T_23*T_32*T_45*T_54 + T_23*T_34*T_42*T_55 - T_23*T_34*T_45*T_52 - T_23*T_35*T_42*T_54 + T_23*T_35*T_44*T_52 + T_24*T_32*T_43*T_55 - T_24*T_32*T_45*T_53 - T_24*T_33*T_42*T_55 + T_24*T_33*T_45*T_52 + T_24*T_35*T_42*T_53 - T_24*T_35*T_43*T_52 - T_25*T_32*T_43*T_54 + T_25*T_32*T_44*T_53 + T_25*T_33*T_42*T_54 - T_25*T_33*T_44*T_52 - T_25*T_34*T_42*T_53 + T_25*T_34*T_43*T_52",
+      "right_triplet_source_row": "bar_t1 = H^4",
+      "symbolic_numeric_value": {
+        "im": 0.047498160261,
+        "re": 1.239746430932
+      }
+    },
+    {
+      "cofactor_definition": "S_1^2 = (-1)*M_remove_r2_c1/det_T",
+      "direct_inverse_numeric_value": {
+        "im": -0.017947220088,
+        "re": -0.06736333461
+      },
+      "entry": "S_1^2",
+      "entry_abs_error": 4.163336342344337e-17,
+      "inverse_indices_1_indexed": {
+        "col_j": 2,
+        "row_i": 1
+      },
+      "left_triplet_source_column": "t1 = H_4",
+      "minor_formula_unexpanded": "M_remove_r2_c1 = T_12*T_33*T_44*T_55 - T_12*T_33*T_45*T_54 - T_12*T_34*T_43*T_55 + T_12*T_34*T_45*T_53 + T_12*T_35*T_43*T_54 - T_12*T_35*T_44*T_53 - T_13*T_32*T_44*T_55 + T_13*T_32*T_45*T_54 + T_13*T_34*T_42*T_55 - T_13*T_34*T_45*T_52 - T_13*T_35*T_42*T_54 + T_13*T_35*T_44*T_52 + T_14*T_32*T_43*T_55 - T_14*T_32*T_45*T_53 - T_14*T_33*T_42*T_55 + T_14*T_33*T_45*T_52 + T_14*T_35*T_42*T_53 - T_14*T_35*T_43*T_52 - T_15*T_32*T_43*T_54 + T_15*T_32*T_44*T_53 + T_15*T_33*T_42*T_54 - T_15*T_33*T_44*T_52 - T_15*T_34*T_42*T_53 + T_15*T_34*T_43*T_52",
+      "right_triplet_source_row": "bar_t2 = overlineSigma_{(a)}^4",
+      "symbolic_numeric_value": {
+        "im": -0.017947220088,
+        "re": -0.06736333461
+      }
+    },
+    {
+      "cofactor_definition": "S_2^1 = (-1)*M_remove_r1_c2/det_T",
+      "direct_inverse_numeric_value": {
+        "im": 0.067035685527,
+        "re": 0.251612633761
+      },
+      "entry": "S_2^1",
+      "entry_abs_error": 2.8609792490763985e-16,
+      "inverse_indices_1_indexed": {
+        "col_j": 1,
+        "row_i": 2
+      },
+      "left_triplet_source_column": "t2 = overlineSigma_{(a)4}",
+      "minor_formula_unexpanded": "M_remove_r1_c2 = T_21*T_33*T_44*T_55 - T_21*T_33*T_45*T_54 - T_21*T_34*T_43*T_55 + T_21*T_34*T_45*T_53 + T_21*T_35*T_43*T_54 - T_21*T_35*T_44*T_53 - T_23*T_31*T_44*T_55 + T_23*T_31*T_45*T_54 + T_23*T_34*T_41*T_55 - T_23*T_34*T_45*T_51 - T_23*T_35*T_41*T_54 + T_23*T_35*T_44*T_51 + T_24*T_31*T_43*T_55 - T_24*T_31*T_45*T_53 - T_24*T_33*T_41*T_55 + T_24*T_33*T_45*T_51 + T_24*T_35*T_41*T_53 - T_24*T_35*T_43*T_51 - T_25*T_31*T_43*T_54 + T_25*T_31*T_44*T_53 + T_25*T_33*T_41*T_54 - T_25*T_33*T_44*T_51 - T_25*T_34*T_41*T_53 + T_25*T_34*T_43*T_51",
+      "right_triplet_source_row": "bar_t1 = H^4",
+      "symbolic_numeric_value": {
+        "im": 0.067035685527,
+        "re": 0.251612633761
+      }
+    },
+    {
+      "cofactor_definition": "S_2^2 = (1)*M_remove_r2_c2/det_T",
+      "direct_inverse_numeric_value": {
+        "im": -0.006788367186,
+        "re": -0.012961357573
+      },
+      "entry": "S_2^2",
+      "entry_abs_error": 1.6365348541700844e-17,
+      "inverse_indices_1_indexed": {
+        "col_j": 2,
+        "row_i": 2
+      },
+      "left_triplet_source_column": "t2 = overlineSigma_{(a)4}",
+      "minor_formula_unexpanded": "M_remove_r2_c2 = T_11*T_33*T_44*T_55 - T_11*T_33*T_45*T_54 - T_11*T_34*T_43*T_55 + T_11*T_34*T_45*T_53 + T_11*T_35*T_43*T_54 - T_11*T_35*T_44*T_53 - T_13*T_31*T_44*T_55 + T_13*T_31*T_45*T_54 + T_13*T_34*T_41*T_55 - T_13*T_34*T_45*T_51 - T_13*T_35*T_41*T_54 + T_13*T_35*T_44*T_51 + T_14*T_31*T_43*T_55 - T_14*T_31*T_45*T_53 - T_14*T_33*T_41*T_55 + T_14*T_33*T_45*T_51 + T_14*T_35*T_41*T_53 - T_14*T_35*T_43*T_51 - T_15*T_31*T_43*T_54 + T_15*T_31*T_44*T_53 + T_15*T_33*T_41*T_54 - T_15*T_33*T_44*T_51 - T_15*T_34*T_41*T_53 + T_15*T_34*T_43*T_51",
+      "right_triplet_source_row": "bar_t2 = overlineSigma_{(a)}^4",
+      "symbolic_numeric_value": {
+        "im": -0.006788367186,
+        "re": -0.012961357573
+      }
+    },
+    {
+      "cofactor_definition": "S_1^4 = (-1)*M_remove_r4_c1/det_T",
+      "direct_inverse_numeric_value": {
+        "im": 0.375375135201,
+        "re": 0.162173968105
+      },
+      "entry": "S_1^4",
+      "entry_abs_error": 1.0103182026100664e-15,
+      "inverse_indices_1_indexed": {
+        "col_j": 4,
+        "row_i": 1
+      },
+      "left_triplet_source_column": "t1 = H_4",
+      "minor_formula_unexpanded": "M_remove_r4_c1 = T_12*T_23*T_34*T_55 - T_12*T_23*T_35*T_54 - T_12*T_24*T_33*T_55 + T_12*T_24*T_35*T_53 + T_12*T_25*T_33*T_54 - T_12*T_25*T_34*T_53 - T_13*T_22*T_34*T_55 + T_13*T_22*T_35*T_54 + T_13*T_24*T_32*T_55 - T_13*T_24*T_35*T_52 - T_13*T_25*T_32*T_54 + T_13*T_25*T_34*T_52 + T_14*T_22*T_33*T_55 - T_14*T_22*T_35*T_53 - T_14*T_23*T_32*T_55 + T_14*T_23*T_35*T_52 + T_14*T_25*T_32*T_53 - T_14*T_25*T_33*T_52 - T_15*T_22*T_33*T_54 + T_15*T_22*T_34*T_53 + T_15*T_23*T_32*T_54 - T_15*T_23*T_34*T_52 - T_15*T_24*T_32*T_53 + T_15*T_24*T_33*T_52",
+      "right_triplet_source_row": "bar_t4 = Sigma^4_{R0}",
+      "symbolic_numeric_value": {
+        "im": 0.375375135201,
+        "re": 0.162173968105
+      }
+    },
+    {
+      "cofactor_definition": "S_2^4 = (1)*M_remove_r4_c2/det_T",
+      "direct_inverse_numeric_value": {
+        "im": -0.326618671218,
+        "re": 0.015848221077
+      },
+      "entry": "S_2^4",
+      "entry_abs_error": 7.228449307508887e-16,
+      "inverse_indices_1_indexed": {
+        "col_j": 4,
+        "row_i": 2
+      },
+      "left_triplet_source_column": "t2 = overlineSigma_{(a)4}",
+      "minor_formula_unexpanded": "M_remove_r4_c2 = T_11*T_23*T_34*T_55 - T_11*T_23*T_35*T_54 - T_11*T_24*T_33*T_55 + T_11*T_24*T_35*T_53 + T_11*T_25*T_33*T_54 - T_11*T_25*T_34*T_53 - T_13*T_21*T_34*T_55 + T_13*T_21*T_35*T_54 + T_13*T_24*T_31*T_55 - T_13*T_24*T_35*T_51 - T_13*T_25*T_31*T_54 + T_13*T_25*T_34*T_51 + T_14*T_21*T_33*T_55 - T_14*T_21*T_35*T_53 - T_14*T_23*T_31*T_55 + T_14*T_23*T_35*T_51 + T_14*T_25*T_31*T_53 - T_14*T_25*T_33*T_51 - T_15*T_21*T_33*T_54 + T_15*T_21*T_34*T_53 + T_15*T_23*T_31*T_54 - T_15*T_23*T_34*T_51 - T_15*T_24*T_31*T_53 + T_15*T_24*T_33*T_51",
+      "right_triplet_source_row": "bar_t4 = Sigma^4_{R0}",
+      "symbolic_numeric_value": {
+        "im": -0.326618671218,
+        "re": 0.015848221077
+      }
+    }
+  ],
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "this_script",
+      "path": "code/audit2_source_basis_wilson_builder.py",
+      "sha256": "80ece4500f0fd44b568b02ed72a983237ac842677306c08b8492cd43f0d9c9a8"
+    },
+    {
+      "exists": true,
+      "label": "triplet_symbolic_inverse",
+      "path": "output/audit4a1/triplet_symbolic_inverse.json",
+      "sha256": "dcb88c26f448e4d23dad134402f4c000ea6ecd3adde8974f9fe1a02c5655b279"
+    },
+    {
+      "exists": true,
+      "label": "literature_mass_matrices",
+      "path": "output/audit4a1/literature_mass_matrices.json",
+      "sha256": "962637df165f32bdd3cf714693f9a324d23720918a6b35f4994364acc51496bb"
+    }
+  ],
+  "stage_gates": {
+    "channel_dressing_or_widths_computed": false,
+    "physical_flavor_rotations_attached": false,
+    "publication_level_d5_proton_decay": false,
+    "random_tensor_numeric_gate_passed": true,
+    "source_basis_C5L_contract_exported": true,
+    "source_basis_C5R_contract_exported": true,
+    "triplet_symbolic_inverse_consumed": true
+  },
+  "status": "source-basis C5L/C5R Wilson-tensor contract built from Audit 4a.1 symbolic triplet inverse entries",
+  "triplet_index_convention": {
+    "column_basis_unbarred_sources": [
+      "t1 = H_4",
+      "t2 = overlineSigma_{(a)4}",
+      "t3 = Sigma_{4(a)}",
+      "t4 = overlineSigma_{4(R0)}",
+      "t5 = phi_{(R-)}^4"
+    ],
+    "inverse_orientation": "S_i^j=(T^{-1})_{i,j}=(-1)^(i+j) det(T remove row j, column i)/det(T)",
+    "left_source_indices_used": [
+      1,
+      2
+    ],
+    "matrix": "T_triplet_5x5",
+    "orientation_boundary": "This card is a source-basis contract.  The final assignment of source labels to physical QQ, QL, UE, and UD Yukawa tensors is deferred to Audit 1 physical flavor rotations and the triplet Yukawa map.",
+    "right_source_indices_used": [
+      1,
+      2,
+      4
+    ],
+    "row_basis_barred_sources": [
+      "bar_t1 = H^4",
+      "bar_t2 = overlineSigma_{(a)}^4",
+      "bar_t3 = Sigma_{(a)}^4",
+      "bar_t4 = Sigma^4_{R0}",
+      "bar_t5 = phi_{4(R+)}"
+    ]
+  }
+}

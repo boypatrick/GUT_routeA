@@ -76,6 +76,8 @@ Expected output artifacts:
 - `output/audit4a1/literature_mass_matrices.md`
 - `output/audit4a1/triplet_symbolic_inverse.json`
 - `output/audit4a1/triplet_symbolic_inverse.md`
+- `output/audit2/source_basis_wilson_contract.json`
+- `output/audit2/source_basis_wilson_contract.md`
 
 Core scaffold checks:
 
@@ -86,7 +88,6 @@ Core scaffold checks:
   anchors.  The local BMSV note is recorded as qualitative cross-reference
   rather than a second matrix-entry table.
 - All mixed chiral/gauge Goldstone smoke gates `G,E,F,J,X` and a numerical
-- All mixed chiral/gauge Goldstone smoke gates `G,E,F,J,X` and a numerical
   triplet inverse gate pass on a generic F-flat sample.
 - The Audit-2-required triplet inverse entries
   `S_1^1`, `S_1^2`, `S_2^1`, `S_2^2`, `S_1^4`, and `S_2^4` are exported as
@@ -94,6 +95,10 @@ Core scaffold checks:
   `120` terms, each required minor has `24` terms, and the numeric gate gives
   det error `7.994039446406413e-15` with max inverse-entry error
   `1.0103182026100664e-15`.
+- Audit 2 now has a source-basis `C5L/C5R` Wilson-tensor contract consuming
+  those six symbolic inverse entries.  The random-tensor gate gives
+  `C5L` and `C5R` symbolic/direct max errors `0.0`; physical flavor rotations,
+  dressing, lattice matrix elements, and channel widths remain deferred.
 - Scalar-Hessian Goldstone directions and the non-placeholder heavy spectrum
   remain pending.
 

@@ -1316,9 +1316,19 @@ terms, each required minor has \(24\) terms, and the numerical reconstruction
 matches the direct inverse with maximum entry error \(1.01\times10^{-15}\).
 These are still smoke gates, not a completed source audit: scalar-Hessian
 Goldstone eigenvectors and a non-placeholder heavy spectrum remain pending.
-Thus Audit 3 remains blocked on a source spectrum, and Audit 2 remains blocked
-on physical flavor rotations, but no longer on the source-basis symbolic
-triplet-inverse entries.
+The source-basis symbolic entries have also been threaded into a first Audit 2
+Wilson-builder contract,
+\[
+  C_{5L\,ab,cd}=\sum_{(i,j)}S_i^{\,j}(Y_{QQ}^{i})_{ab}(Y_{QL}^{j})_{cd},
+  \qquad
+  C_{5R\,ab,cd}=\sum_{(i,j)}S_i^{\,j}(Y_{UE}^{i})_{ab}(Y_{UD}^{j})_{cd},
+\]
+with a deterministic random-tensor gate giving zero symbolic/direct
+contraction error at the exported precision.  This is a source-basis algebra
+handoff only.  Thus Audit 3 remains blocked on a source spectrum, and Audit 2
+remains blocked on physical flavor rotations, triplet Yukawa maps, dressing,
+and channel-width reduction, but no longer on the source-basis symbolic
+triplet-inverse or source-basis Wilson-contract entries.
 
 \section{Lean-Note Status Ledger}
 

@@ -19536,6 +19536,52 @@ boundary:
 
 next:
   - Thread these symbolic `S_i^j` rational entries into the Audit 2
-    Wilson-tensor source-basis builder.
+    Wilson-tensor source-basis builder.  Completed by the 2026-06-16 Audit 2
+    source-basis contract ledger below.
   - Continue Audit 4a with scalar-Hessian Goldstone directions and the
     non-placeholder heavy spectrum.
+
+## 2026-06-16 Taipei Audit 2 source-basis Wilson contract ledger
+
+implemented:
+  - Added `code/audit2_source_basis_wilson_builder.py`.
+  - Generated `output/audit2/source_basis_wilson_contract.json` and
+    `output/audit2/source_basis_wilson_contract.md`.
+  - Consumed `output/audit4a1/triplet_symbolic_inverse.json`.
+  - Exported formal source-basis Wilson contracts:
+      `C5L_{ab,cd}=sum_{(i,j)} S_i^j (Y_QQ^i)_{ab} (Y_QL^j)_{cd}`;
+      `C5R_{ab,cd}=sum_{(i,j)} S_i^j (Y_UE^i)_{ab} (Y_UD^j)_{cd}`.
+  - Recorded the inherited source-index convention:
+      left/unbarred source columns `i in {1,2}`;
+      right/barred source rows `j in {1,2,4}`;
+      summed entries `S_1^1`, `S_1^2`, `S_2^1`, `S_2^2`, `S_1^4`, `S_2^4`.
+
+numeric gate:
+  - Deterministic random tensor seed: `20260616`.
+  - The random tensors only test source-basis algebra; they are not a
+    phenomenological flavor point.
+  - `C5L` symbolic/direct max absolute error: `0.0`.
+  - `C5R` symbolic/direct max absolute error: `0.0`.
+  - Max source `S_i^j` entry error inherited from the symbolic inverse card:
+      `1.0103182026100664e-15`.
+  - Gate pass: `true`.
+
+verified:
+  - Ran `python3 code/audit2_source_basis_wilson_builder.py`.
+  - Parsed `output/audit2/source_basis_wilson_contract.json` with
+    `python3 -m json.tool`.
+  - Audit 2 source-basis contract digest:
+    `ed7f07bd2fdfdec51982cbfa9461f007cb2f809d8f8e33cf248fb999c83703e1`.
+
+boundary:
+  This closes the algebraic handoff from the Audit 4a.1 symbolic triplet
+  inverse to an Audit 2 source-basis Wilson contract.  It does not attach
+  Audit 1 physical flavor rotations, construct mass-basis Wilson tensors,
+  apply SUSY dressing, include lattice matrix elements, compute channel
+  widths, or prove proton safety.
+
+next:
+  - Attach Audit 1 physical flavor rotations and the triplet Yukawa map.
+  - Promote the source-basis `C5L/C5R` tensors to mass-basis Wilson tensors.
+  - Continue the separate Audit 4a scalar-Hessian Goldstone and
+    non-placeholder heavy-spectrum gates.
