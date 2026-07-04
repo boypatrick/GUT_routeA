@@ -342,11 +342,44 @@ Standing discipline for every DYN item:
   (lambda, eta, gamma, complex xi) cancellation-region scan -- opened as
   the DYN-2b extension below.  Secondary: exact 3-parameter solve at
   x = 0.1 wants M_S ~ 5.6e7 GeV (outside [1,10] TeV, disclosed).
-- **DYN-2b [extension, open]: viability scan.**  Scan (lambda, eta,
+- **DYN-2b [extension]: viability scan.**  Scan (lambda, eta,
   gamma, bar_gamma, complex xi/x) for regions where BOTH the alpha_3 pull
   is small AND M_X stays >= 1e16 GeV (proton-safe), using the DYN-2
   machinery as-is; joint with the DYN-3 tau_p floor once available.
   This is AG's "cancellation regions" question made reproducible.
+  Status: **DYN-2b/4c-alpha done** (2026-07-05;
+  `code/audit3_dyn2b_rescue_scan.py`, 6/6 checks; ledgers
+  `output/audit3/dyn2b_rescue_scan.{json,md}`).
+  Joint (x, eta, M_S) scan, 10 x 6 x 4 grid, three survival functions
+  (|pull| < 3; tau_d5 > Super-K; tau_d6 > Super-K -- the d=6 trap):
+  **ZERO living points**.  131 cells solved, 109 have no physical
+  exact-matching solution (dead by construction); binding census:
+  pull kills 101, d=6 kills all 30 unification-compatible cells; best
+  margin -9.5 orders.  The gamma lever is BOUNDED OUT analytically
+  (gamma never enters the E/X vector masses that set M_X; its h+t
+  threshold weight (3.8, 3.0, 5.0) of 127 caps the indirect ln M_X
+  shift at ~1.3 orders vs the 2-3 needed).  STRUCTURAL CONCLUSION: the
+  spectrum SHAPE of the minimal 210+126+126b+10 slice family forces
+  exact-matching unification down to M_X ~ 1e13-1e14 GeV, and d=6 then
+  kills every unification-compatible cell independent of the mini-split
+  d=5 rescue.  In-slice levers exhausted: x (DYN-2), zeta/Majorana
+  (DYN-4), eta + M_S (this scan), gamma (bounded).  Surviving escapes
+  are MODEL-LEVEL: (i) non-SUSY SO(10) with an intermediate Pati-Salam
+  scale -- no higgsino d=5 at all, two-step unification raises M_X
+  (opened below as DYN-9); (ii) extra Higgs content (120-plet; archival
+  audits exist); (iii) proper split-spectrum running (refinement only;
+  cannot lift M_X by 2-3 orders).
+- **DYN-9 [new lane, open]: non-SUSY / intermediate-scale variant.**
+  Rebuild DYN-2 for a non-supersymmetric SO(10) chain
+  (SO(10) -> Pati-Salam or G_LR at M_I -> SM), where d=5 proton decay is
+  absent (no higgsinos) and two-step running decouples M_I from M_X.
+  Requires: non-SUSY beta coefficients, the non-SUSY scalar spectrum of
+  the same 210+126+126b(+10) system (the AG-derived blocks carry over at
+  the superpotential level but the potential and spectrum differ), and
+  the d=6-only proton constraint.  This is the last structurally
+  distinct rescue inside the face-projection framework's source-sector
+  choices; a negative result here would push the pressure onto the
+  Higgs-content choice itself.
 
 - **DYN-3 [Audit 2: d=5 proton-decay pipeline] (2-3 sessions).**
   Goal: physical C_5L / C_5R Wilson tensors and channel widths.
