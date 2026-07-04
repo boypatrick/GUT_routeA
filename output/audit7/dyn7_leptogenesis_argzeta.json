@@ -1,0 +1,152 @@
+{
+  "all_pass": true,
+  "archival_vu_100GeV_convention": true,
+  "arg_zeta_windows": {
+    "benchmark_phase_inside_conditioned_95": true,
+    "leptogenesis_conditioned_68": [
+      0.22311148512829726,
+      0.7767390138723027
+    ],
+    "leptogenesis_conditioned_95": [
+      0.12408269407194944,
+      1.135811397747314
+    ],
+    "unconditioned_68": [
+      0.4669435901906802,
+      0.7535311384997931
+    ],
+    "unconditioned_95": [
+      0.13832815638932772,
+      1.0941712463471742
+    ],
+    "width_reduction_68": -0.2670399804348925
+  },
+  "audit": "audit7_dyn7_leptogenesis_argzeta",
+  "boost_sensitivity": {
+    "P_success_x10": 0.4545,
+    "P_success_x3": 0.33675,
+    "P_success_x30": 0.153,
+    "P_success_x5": 0.4095
+  },
+  "bottleneck": {
+    "boost_needed_new": 67.89575932175265,
+    "boost_needed_old": 50.25563197780625,
+    "eps1_over_DI_old": 0.0038522662043280055,
+    "kappa_old": 0.006004064816022593,
+    "washout_regime": "strong (m_tilde = 0.045 eV >> m_* ~ 1e-3 eV)"
+  },
+  "central_chains": {
+    "old_benchmark": {
+      "M_GeV": [
+        23804475922.303894,
+        32203796829930.633,
+        3926531008378342.5
+      ],
+      "eps1": 2.1058551310744026e-07,
+      "eps_DI_max": 5.466535850270376e-05,
+      "eta_B": -1.2137943072119488e-11,
+      "kappa": 0.006004064816022593,
+      "m_tilde_eV": 0.04522014099037914
+    },
+    "refreshed_central": {
+      "M_GeV": [
+        24896985285.809128,
+        29422567304942.29,
+        4093366820674128.0
+      ],
+      "eps1": 1.535330876777812e-07,
+      "eps_DI_max": 5.7147777647797495e-05,
+      "eta_B": -8.98436082155379e-12,
+      "kappa": 0.006095565021632072,
+      "m_tilde_eV": 0.044633879800066924
+    }
+  },
+  "checks": [
+    {
+      "name": "Takagi self-test: V unitary, V^T M V real diagonal ascending (50 random symmetric matrices)",
+      "pass": true
+    },
+    {
+      "name": "old-benchmark chain computed and Davidson-Ibarra bound respected",
+      "pass": true
+    },
+    {
+      "name": "refreshed-central chain computed and DI bound respected",
+      "pass": true
+    },
+    {
+      "name": "sign convention stated: eta_B = -0.96e-2 eps1 kappa; matter needs eps1 < 0",
+      "pass": true
+    },
+    {
+      "name": "BOTTLENECK ANALYSIS disclosed: the central slices underproduce |eta_B| -- strong washout times phase-suppressed epsilon_1; the required enhancement factor is quantified",
+      "pass": true
+    },
+    {
+      "name": "posterior scan completed on >= 3800/4000 draws",
+      "pass": true
+    },
+    {
+      "name": "Davidson-Ibarra bound respected across the whole posterior (consistency of the epsilon_1 implementation)",
+      "pass": true
+    },
+    {
+      "name": "sign and magnitude statistics published: P(eta_B > 0), P(|eta_B| within half a decade of 6.1e-10), P(success = both)",
+      "pass": true
+    },
+    {
+      "name": "the success set is nonempty but RARE: on this slice thermal unflavored leptogenesis succeeds only in posterior tails",
+      "pass": true
+    },
+    {
+      "name": "boost sensitivity: P(success) under a uniform O(1)-O(10) enhancement (flavor effects, resonance, convention) is quantified -- how far the slice sits from viability",
+      "pass": true
+    },
+    {
+      "name": "THE RESULT (honest form): the conditioned window is published, but the anchor's bite is on SLICE VIABILITY, not the phase -- success correlates with none of the scanned variables strongly and the 14-sample window carries large statistical noise (flagged)",
+      "pass": true
+    },
+    {
+      "name": "position of the old benchmark phase arg zeta = 0.6000 relative to the conditioned window DISCLOSED",
+      "pass": true
+    },
+    {
+      "name": "success drivers DISCLOSED (correlations with cos a21, log10 m1, log10 M_1)",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "conditioned_window_small_sample_caveat": true,
+  "constraint_is_empirical_anchor_not_principle": true,
+  "created_utc": "2026-07-04T17:42:58+00:00",
+  "derivation_log": {
+    "chain": "M_R --Takagi--> (M_i, V); h = Y_nu V (v_u = 100 GeV); eps1 = (1/8pi) sum Im[(h^dag h)_{1j}^2] f_SUSY(x_j) / (h^dag h)_{11}; f_SUSY(x) = sqrt(x)[2/(1-x) - ln((1+x)/x)]; m_tilde = (h^dag h)_11 v_u^2/M_1; 1/kappa = 3.3e-3/m_tilde + (m_tilde/0.55e-3)^1.16 (eV); eta_B = -0.96e-2 eps1 kappa",
+    "priors": "identical to DYN-4b (NuFit-6.0 IC24 gaussians x uniform Majorana phases x log-uniform m1)",
+    "sign_convention": "eps1 > 0 = lepton excess; sphalerons give negative B; matter requires eps1 < 0",
+    "success_definition": "eta_B > 0 AND |eta_B| within half a decade of 6.1e-10"
+  },
+  "dyn_item": "DYN-7",
+  "finding": "on the archival Dirac slice, thermal unflavored leptogenesis is MARGINAL: central chains give the wrong sign and |eta_B| ~ 1e-11 (30-70x short); P(success) ~ 0.4% (tails only); the required O(30-70) enhancement exceeds typical O(few) flavor corrections -> a soft kill-criterion entry for DYN-8, escapable by a modified Dirac sector (DYN-4c) or non-thermal production; arg zeta itself is NOT the lever on this slice",
+  "gravitino_reheating_tension_disclosed_not_resolved": true,
+  "order_of_magnitude_only": true,
+  "posterior_statistics": {
+    "P_band": 0.007,
+    "P_sign": 0.502,
+    "P_success": 0.0035,
+    "log10_abs_etaB_16_50_84": [
+      -10.489135576014712,
+      -10.052318866190909,
+      -9.877433774404588
+    ],
+    "n_samples": 4000
+  },
+  "success_drivers": {
+    "corr_cos_a21": -0.023584741444686728,
+    "corr_log10_M1": 0.034338861591628675,
+    "corr_log10_m1": 0.08165192205785743
+  },
+  "thermal_N1_dominance_assumed": true,
+  "unflavored_estimate_two_flavor_regime_O1": true,
+  "zeta_value_derived": false
+}

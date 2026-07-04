@@ -56,3 +56,7 @@ backups/
 /route_E/code/*
 !/route_E/code/verify_route_e_first_principles.py
 !/route_E/code/verify_route_e_dependency_closure.py
+
+# Whitelist for the dynamics-lane DYN-7 ledgers (cosmology lane).
+!/output/audit7/
+!/output/audit7/**

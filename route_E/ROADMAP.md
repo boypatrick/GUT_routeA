@@ -409,6 +409,28 @@ Standing discipline for every DYN item:
   VII.4); it is the first observational constraint on the otherwise-free
   phase, and a kill criterion if incompatible across the whole window.
   Gates: order-of-magnitude flags explicit; sign check explicit.
+  Status: **done** (2026-07-05; `code/audit7_dyn7_leptogenesis_argzeta.py`,
+  13/13 checks; ledgers `output/audit7/dyn7_leptogenesis_argzeta.{json,md}`;
+  whitelist extended for `output/audit7/`).
+  Chain: Takagi (self-tested) -> h = Y_nu V -> epsilon_1 with the SUSY
+  loop function (Davidson-Ibarra respected point-wise) -> BDP-type
+  washout -> eta_B = -0.96e-2 eps1 kappa (sign convention explicit).
+  FINDINGS (honest form): on the archival Dirac slice thermal unflavored
+  leptogenesis is MARGINAL -- central chains give the WRONG SIGN
+  (antimatter) and |eta_B| ~ 1e-11 (boost x50-68 needed); bottleneck =
+  strong washout (m_tilde ~ 0.05 eV, kappa ~ 6e-3) times phase-suppressed
+  epsilon_1 (0.4% of the DI ceiling); posterior P(success) = 0.4% (tails
+  only); BUT the boost sensitivity shows the slice is only ONE order of
+  magnitude from typical viability (x3 -> P = 34%, x5 -> 41%, x10 -> 45%),
+  within reach of flavored-leptogenesis enhancements or a modified Dirac
+  sector (DYN-4c).  arg zeta itself is NOT the lever on this slice
+  (success nearly uncorrelated with the scanned variables; the
+  14-sample conditioned window is noisy and flagged).  Soft kill-criterion
+  entry recorded for DYN-8: thermal unflavored leptogenesis on this slice
+  underproduces eta_B by ~1.5 orders and prefers the wrong sign at the
+  central phase convention; escape routes = flavor effects (O(few)),
+  Dirac-sector refit, or non-thermal production.  Gravitino/reheating
+  tension disclosed, not resolved.
 
 - **DYN-8 [falsifiability section] (1 session; collects all lanes).**
   Add a Falsifiability section to the reconstruction paper + a ledger,
