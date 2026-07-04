@@ -1,0 +1,1103 @@
+{
+  "accidental_zero_loci_disclosed": [
+    {
+      "sector": "C2",
+      "x_zero_near": [
+        0.3002
+      ]
+    },
+    {
+      "sector": "D1",
+      "x_zero_near": [
+        0.2243
+      ]
+    },
+    {
+      "sector": "D2",
+      "x_zero_near": [
+        0.1872
+      ]
+    },
+    {
+      "sector": "E1",
+      "x_zero_near": [
+        0.273
+      ]
+    },
+    {
+      "sector": "K",
+      "x_zero_near": [
+        0.1832
+      ]
+    },
+    {
+      "sector": "L",
+      "x_zero_near": [
+        0.2982
+      ]
+    },
+    {
+      "sector": "M",
+      "x_zero_near": [
+        0.2677
+      ]
+    },
+    {
+      "sector": "P",
+      "x_zero_near": [
+        0.278
+      ]
+    },
+    {
+      "sector": "S",
+      "x_zero_near": [
+        0.2263
+      ]
+    }
+  ],
+  "audit": "audit4a_heavy_spectrum",
+  "benchmark_point": {
+    "M_H_star": [
+      -0.6258212476364382,
+      0.14259218300577065
+    ],
+    "bar_gamma": [
+      -0.23,
+      0.11
+    ],
+    "eta": 1,
+    "g": 0.7,
+    "gamma": [
+      0.31,
+      0.07
+    ],
+    "lambda": 1,
+    "m": 1,
+    "x": 0.1
+  },
+  "coverage": {
+    "derivation_log_in": "output/audit4a/dyn1b_full_spectrum.json",
+    "is_partial": false,
+    "sectors_included": "ALL 26 AG sector types (complete)",
+    "sectors_pending": null
+  },
+  "created_utc": "2026-07-04T16:38:54+00:00",
+  "no_unique_vacuum_claimed": true,
+  "physical_normalization_deferred_to_DYN2": true,
+  "states": [
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.4000000000000004,
+      "mass_expression": "|2(M+eta(p+3a+6w))| (AG Table I, lines 2444-2448)",
+      "multiplicity": 1,
+      "ps_representation": "Sigma^44_(R+)/sqrt2, Sigmabar_44(R-)/sqrt2 (126b/126, (10,1,3)-type)",
+      "sector": "unmixed_A",
+      "sm_representation": "(1,1,+2) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_A",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        4.8,
+        0,
+        0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 6.25679012345679,
+      "mass_expression": "|2(-M+eta(a+w))| (AG Table I, lines 2449-2452)",
+      "multiplicity": 1,
+      "ps_representation": "sigma/Sigmabar (15,2,2) octet doublets",
+      "sector": "unmixed_C1",
+      "sm_representation": "(8,2,+0.5) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_C1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        4.8,
+        8,
+        12
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 5.85679012345679,
+      "mass_expression": "|2(-M+eta(a-w))| (AG Table I, lines 2454-2457)",
+      "multiplicity": 1,
+      "ps_representation": "sigma/Sigmabar (15,2,2) octet doublets",
+      "sector": "unmixed_C2",
+      "sm_representation": "(8,2,+0.5) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_C2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        4.8,
+        8,
+        12
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.3456790123456788,
+      "mass_expression": "|2(M+eta(a+w))| (AG Table I, lines 2458-2461)",
+      "multiplicity": 1,
+      "ps_representation": "Sigmabar/sigma (15,2,2) triplet doublets",
+      "sector": "unmixed_D1",
+      "sm_representation": "(3,2,+1.16667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_D1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        9.8,
+        3.0,
+        2
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.9456790123456789,
+      "mass_expression": "|2(M+eta(a+3w))| (AG Table I, lines 2463-2466)",
+      "multiplicity": 1,
+      "ps_representation": "sigma/Sigmabar (15,2,2) triplet doublets",
+      "sector": "unmixed_D2",
+      "sm_representation": "(3,2,+1.16667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_D2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        9.8,
+        3.0,
+        2
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.745679012345679,
+      "mass_expression": "|-2(M+eta(a-w))| (AG Table I, lines 2468-2471)",
+      "multiplicity": 1,
+      "ps_representation": "Sigmabar/sigma (15,2,2): the unmixed E pair",
+      "sector": "unmixed_E1",
+      "sm_representation": "(3,2,+0.166667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_E1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.2,
+        3.0,
+        2
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.911111111111111,
+      "mass_expression": "|2(M+eta(a+p+2w))| (AG Table I, lines 2472-2475)",
+      "multiplicity": 1,
+      "ps_representation": "Sigmabar_(R-)/sigma_(R+) color triplets",
+      "sector": "unmixed_K",
+      "sm_representation": "(3,1,-1.33333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_K",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        6.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 5.822222222222222,
+      "mass_expression": "|2(M+eta(p-a))| (AG Table I, lines 2477-2483)",
+      "multiplicity": 1,
+      "ps_representation": "primed sextets (R0)",
+      "sector": "unmixed_L",
+      "sm_representation": "(6,1,+0.333333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_L",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.8,
+        0,
+        5.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 5.4222222222222225,
+      "mass_expression": "|2(M+eta(p-a+2w))| (AG Table I, lines 2485-2488)",
+      "multiplicity": 1,
+      "ps_representation": "primed sextets (R+)",
+      "sector": "unmixed_M",
+      "sm_representation": "(6,1,+1.33333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_M",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        12.8,
+        0,
+        5.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 6.222222222222222,
+      "mass_expression": "|2(M+eta(p-a-2w))| (AG Table I, lines 2489-2492)",
+      "multiplicity": 1,
+      "ps_representation": "primed sextets (R-)",
+      "sector": "unmixed_N",
+      "sm_representation": "(6,1,-0.666667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_N",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        3.2,
+        0,
+        5.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.7308641975308641,
+      "mass_expression": "|2(M+eta(3a-p))| (AG Table I, lines 2493-2497)",
+      "multiplicity": 1,
+      "ps_representation": "sigma_44(L)/Sigmabar^44_(L) weak triplets",
+      "sector": "unmixed_O",
+      "sm_representation": "(1,3,-1) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_O",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        3.6,
+        4,
+        0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.780246913580247,
+      "mass_expression": "|2(M+eta(a-p))| (AG Table I, lines 2499-2502)",
+      "multiplicity": 1,
+      "ps_representation": "sigma/Sigmabar (10,3,1)-type",
+      "sector": "unmixed_P",
+      "sm_representation": "(3,3,-0.333333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_P",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        1.2,
+        12,
+        3.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 6.291358024691358,
+      "mass_expression": "|2(M-eta(a+p))| (AG Table I, lines 2504-2507)",
+      "multiplicity": 1,
+      "ps_representation": "primed sextet weak triplets",
+      "sector": "unmixed_W",
+      "sm_representation": "(6,3,+0.333333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_W",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        2.4,
+        24,
+        15.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.7901234567901234,
+      "mass_expression": "|-2(m+lambda(p+a+4w))| (AG Table I, lines 2508-2511)",
+      "multiplicity": 1,
+      "ps_representation": "phi^4_(R+)/phi_4(R-) from 210",
+      "sector": "unmixed_I",
+      "sm_representation": "(3,1,+1.66667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_I",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        10,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.276543209876543,
+      "mass_expression": "|2(m+lambda(2a-p))| (AG Table I, lines 2512)",
+      "multiplicity": 1,
+      "ps_representation": "vec phi^(15)_(L): REAL multiplet",
+      "sector": "unmixed_S",
+      "sm_representation": "(1,3,+0) (real)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_S",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.9901234567901236,
+      "mass_expression": "|2(m-lambda(a+p))| (AG Table I, lines 2513-2514)",
+      "multiplicity": 1,
+      "ps_representation": "vec phi octet weak triplet: REAL multiplet",
+      "sector": "unmixed_Q",
+      "sm_representation": "(8,3,+0) (real)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_Q",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0,
+        16,
+        9
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.4790123456790123,
+      "mass_expression": "|-2(m-lambda(p-a))| (AG Table I, lines 2515-2517)",
+      "multiplicity": 1,
+      "ps_representation": "vec phi (15,3,1) triplets",
+      "sector": "unmixed_U",
+      "sm_representation": "(3,3,+0.666667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_U",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        4.8,
+        12,
+        3.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.8666666666666663,
+      "mass_expression": "|2(m+3lambda(a+w))| (AG Table I, lines 2516-2518)",
+      "multiplicity": 1,
+      "ps_representation": "phi_44/phi^44 doublets from (10,2,2)+(10b,2,2)",
+      "sector": "unmixed_V",
+      "sm_representation": "(1,2,-1.5) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_V",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        5.4,
+        1.0,
+        0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.5555555555555554,
+      "mass_expression": "|-2(m+lambda(w-a))| (AG Table I, lines 2519-2522)",
+      "multiplicity": 1,
+      "ps_representation": "primed phi sextet doublets",
+      "sector": "unmixed_B",
+      "sm_representation": "(6,2,+0.833333) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_B",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        10,
+        6,
+        10
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.9555555555555557,
+      "mass_expression": "|2(m-lambda(a+w))| (AG Table I, lines 2523-2526)",
+      "multiplicity": 1,
+      "ps_representation": "primed phi sextet doublets",
+      "sector": "unmixed_Y",
+      "sm_representation": "(6,2,-0.166667) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_Y",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        6,
+        10
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.5209876543209875,
+      "mass_expression": "|2(m+lambda(p-a))| (AG Table I, lines 2527-2529)",
+      "multiplicity": 1,
+      "ps_representation": "phi_(R+)/phi_(R-) octets",
+      "sector": "unmixed_Z",
+      "sm_representation": "(8,1,+1) + c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "unmixed_Z",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        9.6,
+        0,
+        6
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.3320763648178584,
+      "mass_expression": "eigenvalue of 2[[m-lam a, -sq2 lam w],[-sq2 lam w, m+lam(p-a)]] (AG closed form verified)",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_R_octets",
+      "sm_representation": "(8,1,0) (real)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "R_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.9444668450586846,
+      "mass_expression": "eigenvalue of 2[[m-lam a, -sq2 lam w],[-sq2 lam w, m+lam(p-a)]] (AG closed form verified)",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_R_octets",
+      "sm_representation": "(8,1,0) (real)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "R_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "d5_role": "doublet channel (light pair = MSSM Higgs)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.1646059456320055,
+      "mass_expression": "singular value 1 of the 4x4 doublet block at tuned M_H*",
+      "multiplicity": 1,
+      "notes": "heavy doublet pair",
+      "ps_representation": "see AG source lines",
+      "sector": "doublet_h",
+      "sm_representation": "(1,2,+1/2)+(1,2,-1/2) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "h_pair_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.6,
+        1.0,
+        0
+      ]
+    },
+    {
+      "d5_role": "doublet channel (light pair = MSSM Higgs)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.7850382568146,
+      "mass_expression": "singular value 2 of the 4x4 doublet block at tuned M_H*",
+      "multiplicity": 1,
+      "notes": "heavy doublet pair",
+      "ps_representation": "see AG source lines",
+      "sector": "doublet_h",
+      "sm_representation": "(1,2,+1/2)+(1,2,-1/2) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "h_pair_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.6,
+        1.0,
+        0
+      ]
+    },
+    {
+      "d5_role": "doublet channel (light pair = MSSM Higgs)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.941580274519336,
+      "mass_expression": "singular value 3 of the 4x4 doublet block at tuned M_H*",
+      "multiplicity": 1,
+      "notes": "heavy doublet pair",
+      "ps_representation": "see AG source lines",
+      "sector": "doublet_h",
+      "sm_representation": "(1,2,+1/2)+(1,2,-1/2) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "h_pair_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.6,
+        1.0,
+        0
+      ]
+    },
+    {
+      "d5_role": "doublet channel (light pair = MSSM Higgs)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.0542853697298526e-16,
+      "mass_expression": "singular value 4 of the 4x4 doublet block at tuned M_H*",
+      "multiplicity": 1,
+      "notes": "light MSSM pair by det-tuning",
+      "ps_representation": "see AG source lines",
+      "sector": "doublet_h",
+      "sm_representation": "(1,2,+1/2)+(1,2,-1/2) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "h_pair_4",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.6,
+        1.0,
+        0
+      ]
+    },
+    {
+      "d5_role": "d=5 mediator (S_i^j = Audit-2 entries)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 4.797566805588484,
+      "mass_expression": "singular value 1 of the 5x5 triplet block at tuned M_H*",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "triplet_t",
+      "sm_representation": "(3,1,-1/3)+(3b,1,+1/3) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "t_pair_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "d=5 mediator (S_i^j = Audit-2 entries)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 4.314113025659583,
+      "mass_expression": "singular value 2 of the 5x5 triplet block at tuned M_H*",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "triplet_t",
+      "sm_representation": "(3,1,-1/3)+(3b,1,+1/3) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "t_pair_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "d=5 mediator (S_i^j = Audit-2 entries)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.555541470926044,
+      "mass_expression": "singular value 3 of the 5x5 triplet block at tuned M_H*",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "triplet_t",
+      "sm_representation": "(3,1,-1/3)+(3b,1,+1/3) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "t_pair_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "d=5 mediator (S_i^j = Audit-2 entries)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.6133738140329421,
+      "mass_expression": "singular value 4 of the 5x5 triplet block at tuned M_H*",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "triplet_t",
+      "sm_representation": "(3,1,-1/3)+(3b,1,+1/3) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "t_pair_4",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "d=5 mediator (S_i^j = Audit-2 entries)",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.08589268053205198,
+      "mass_expression": "singular value 5 of the 5x5 triplet block at tuned M_H*",
+      "multiplicity": 1,
+      "ps_representation": "see AG source lines",
+      "sector": "triplet_t",
+      "sm_representation": "(3,1,-1/3)+(3b,1,+1/3) pair",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "t_pair_5",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": [
+        0.4,
+        0,
+        1.0
+      ]
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.1926172553772014,
+      "mass_expression": "singular value 1 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.908808725357429,
+      "mass_expression": "singular value 2 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.112677190155879,
+      "mass_expression": "singular value 3 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.1396955967188624,
+      "mass_expression": "singular value 4 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_4",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.9248690264298958,
+      "mass_expression": "singular value 5 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_5",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.9248690264298954,
+      "mass_expression": "singular value 6 of the full G block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_level_6",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.9248690264298954,
+      "mass_expression": "sqrt(10) g |sigma| (AG items i-v, lines 736-830)",
+      "multiplicity": 1,
+      "notes": "massive gauge supermultiplet; threshold treatment = DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "gauge_G",
+      "sm_representation": "(1,1,0)",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "G_vector_multiplet",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 4.0174903720298465,
+      "mass_expression": "singular value 1 of the full E block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_E",
+      "sm_representation": "(3,2,+1/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "E_level_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.7726330847602778,
+      "mass_expression": "singular value 2 of the full E block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_E",
+      "sm_representation": "(3,2,+1/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "E_level_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.164924167405552,
+      "mass_expression": "singular value 3 of the full E block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_E",
+      "sm_representation": "(3,2,+1/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "E_level_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.1649241674055515,
+      "mass_expression": "singular value 4 of the full E block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_E",
+      "sm_representation": "(3,2,+1/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "E_level_4",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.1649241674055515,
+      "mass_expression": "g sqrt(4|a-w|^2+2|w-p|^2+2|sigma|^2) (AG items i-v, lines 736-830)",
+      "multiplicity": 1,
+      "notes": "massive gauge supermultiplet; threshold treatment = DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "gauge_E",
+      "sm_representation": "(3,2,+1/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "E_vector_multiplet",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 2.9456790123456793,
+      "mass_expression": "singular value 1 of the full F block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_F",
+      "sm_representation": "(1,1,+1)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "F_level_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.5372862767741946,
+      "mass_expression": "singular value 2 of the full F block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_F",
+      "sm_representation": "(1,1,+1)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "F_level_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.5372862767741945,
+      "mass_expression": "singular value 3 of the full F block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_F",
+      "sm_representation": "(1,1,+1)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "F_level_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.5372862767741946,
+      "mass_expression": "g sqrt(24|w|^2+2|sigma|^2) (AG items i-v, lines 736-830)",
+      "multiplicity": 1,
+      "notes": "massive gauge supermultiplet; threshold treatment = DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "gauge_F",
+      "sm_representation": "(1,1,+1)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "F_vector_multiplet",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 3.4014017913361903,
+      "mass_expression": "singular value 1 of the full J block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_J",
+      "sm_representation": "(3,1,+2/3)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "J_level_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.8082622447197791,
+      "mass_expression": "singular value 2 of the full J block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_J",
+      "sm_representation": "(3,1,+2/3)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "J_level_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.8082622447197787,
+      "mass_expression": "singular value 3 of the full J block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_J",
+      "sm_representation": "(3,1,+2/3)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "J_level_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 0.43596969257075785,
+      "mass_expression": "singular value 4 of the full J block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_J",
+      "sm_representation": "(3,1,+2/3)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "J_level_4",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.8082622447197787,
+      "mass_expression": "g sqrt(8|a|^2+16|w|^2+2|sigma|^2) (AG items i-v, lines 736-830)",
+      "multiplicity": 1,
+      "notes": "massive gauge supermultiplet; threshold treatment = DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "gauge_J",
+      "sm_representation": "(3,1,+2/3)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "J_vector_multiplet",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.8444444444444446,
+      "mass_expression": "singular value 1 of the full X block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_X",
+      "sm_representation": "(3,2,-5/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "X_level_1",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.3856856999389848,
+      "mass_expression": "singular value 2 of the full X block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_X",
+      "sm_representation": "(3,2,-5/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "X_level_2",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.3856856999389846,
+      "mass_expression": "singular value 3 of the full X block (one level = massive vector-multiplet member)",
+      "multiplicity": 1,
+      "notes": "vector-multiplet b-vector bookkeeping deferred to DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "mixed_X",
+      "sm_representation": "(3,2,-5/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "X_level_3",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    },
+    {
+      "d5_role": "not a d=5 mediator",
+      "mass_GeV": null,
+      "mass_benchmark_units_of_m": 1.3856856999389846,
+      "mass_expression": "g sqrt(4|a+w|^2+2|p+w|^2) (AG items i-v, lines 736-830)",
+      "multiplicity": 1,
+      "notes": "massive gauge supermultiplet; threshold treatment = DYN-2",
+      "ps_representation": "see AG source lines",
+      "sector": "gauge_X",
+      "sm_representation": "(3,2,-5/6)+c.c.",
+      "source_artifact": "code/audit4a_dyn1b_full_spectrum.py",
+      "spin10_representation": "210+126+126b+10 (see fields)",
+      "state_id": "X_vector_multiplet",
+      "status": "benchmark_mass",
+      "threshold_beta_vector_b1_b2_b3": null
+    }
+  ],
+  "tree_level_only": true,
+  "units": "masses in benchmark units of m (m = lambda = eta = 1); GeV normalization fixed at DYN-2 matching"
+}

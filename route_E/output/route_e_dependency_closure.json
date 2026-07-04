@@ -1,0 +1,913 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "positive-root counts match (A,B,C,D rank 4-15; E6=36, E7=63, E8=120, F4=24)",
+      "pass": true
+    },
+    {
+      "name": "dimension anchors (incl. so(9): vector 9, spinor 16; sp(8) fund 8)",
+      "pass": true
+    },
+    {
+      "name": "rho-descent word length = number of positive roots (all algebras)",
+      "pass": true
+    },
+    {
+      "name": "A_n: -w0 = label reversal (complex-rep rule machine-derived)",
+      "pass": true
+    },
+    {
+      "name": "D_odd: -w0 = spinor-node swap (machine-derived)",
+      "pass": true
+    },
+    {
+      "name": "B, C, D_even, E7, E8, F4: w0 = -1, hence NO complex irreps (machine-derived)",
+      "pass": true
+    },
+    {
+      "name": "E6: -w0 is the nontrivial diagram flip (complex irreps exist)",
+      "pass": true
+    },
+    {
+      "name": "complex irreps at dim 15/16 over ALL rank 4-15 algebras = the previous list",
+      "pass": true
+    },
+    {
+      "name": "no complex irrep of dim <= 16 from B, C, D_even, E, F families",
+      "pass": true
+    },
+    {
+      "name": "near-miss ledger: so(9) spinor 16 exists but is SELF-CONJUGATE (fails chirality)",
+      "pass": true
+    },
+    {
+      "name": "near-miss ledger: so(15) vector 15 exists but is SELF-CONJUGATE",
+      "pass": true
+    },
+    {
+      "name": "E6: minimal nontrivial irreps are exactly the two conjugate 27s",
+      "pass": true
+    },
+    {
+      "name": "E7: minimal nontrivial irrep = 56",
+      "pass": true
+    },
+    {
+      "name": "F4: minimal nontrivial irrep = 26",
+      "pass": true
+    },
+    {
+      "name": "E8: minimal nontrivial irrep = 248 (adjoint)",
+      "pass": true
+    },
+    {
+      "name": "rank-16 fundamental/vector dims: A16=17, B16=33, C16=32, D16=32 (all > 16)",
+      "pass": true
+    },
+    {
+      "name": "SU(15) fundamental: tr T^3 = 2730 != 0 -> single-Weyl content anomalous",
+      "pass": true
+    },
+    {
+      "name": "SU(16) fundamental: tr T^3 = 3360 != 0 -> single-Weyl content anomalous",
+      "pass": true
+    },
+    {
+      "name": "Clifford algebra {Gamma_a, Gamma_b} = 2 delta_ab on the 32-dim Fock space",
+      "pass": true
+    },
+    {
+      "name": "chirality operator = occupation parity (up to overall sign)",
+      "pass": true
+    },
+    {
+      "name": "45 generators projected to the even-parity chiral 16",
+      "pass": true
+    },
+    {
+      "name": "cubic anomaly tensor of the 16 vanishes: max |tr({T_a,T_b}T_c)| = 0",
+      "pass": true
+    },
+    {
+      "name": "Cartan weights of the chiral block = the demicube of Appendix A",
+      "pass": true
+    },
+    {
+      "name": "second-order index sanity: tr(H^2)|_16 = 4, i.e. index(16)/index(10) = 2",
+      "pass": true
+    }
+  ],
+  "checks_passed": 24,
+  "checks_total": 24,
+  "complex_irreps_dim15_16_all_rank4_15": [
+    {
+      "algebra": "A14",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "A14",
+      "dim": 15,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "A15",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "A15",
+      "dim": 16,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "A4",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "algebra": "A4",
+      "dim": 15,
+      "labels": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "A5",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "algebra": "A5",
+      "dim": 15,
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "D5",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "D5",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "exceptional_minima": {
+    "E6": 27,
+    "E7": 56,
+    "E8": 248,
+    "F4": 26
+  },
+  "frobenius_schur_types_computed": false,
+  "pslt_only_unconditional_gut_proof_claimed": false,
+  "rank16_fundamental_dims": {
+    "A16": 17,
+    "B16": 33,
+    "C16": 32,
+    "D16": 32
+  },
+  "rank_ge_17_min_dims_cited_not_computed": true,
+  "selfconjugate_near_misses": [
+    {
+      "algebra": "B4",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "B7",
+      "dim": 15,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "C8",
+      "dim": 16,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "D8",
+      "dim": 16,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "sigma_involutions": {
+    "A10": [
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A11": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A12": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A13": [
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A14": [
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A15": [
+      14,
+      13,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A4": [
+      3,
+      2,
+      1,
+      0
+    ],
+    "A5": [
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A6": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A7": [
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A8": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "A9": [
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "B10": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "B11": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "B12": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "B13": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "B14": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "B15": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "B4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "B5": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "B6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "B7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "B8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "B9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "C10": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "C11": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "C12": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "C13": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "C14": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "C15": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "C4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "C5": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "C6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "C7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "C8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "C9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "D10": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "D11": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      9
+    ],
+    "D12": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "D13": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      11
+    ],
+    "D14": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "D15": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      13
+    ],
+    "D4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "D5": [
+      0,
+      1,
+      2,
+      4,
+      3
+    ],
+    "D6": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "D7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      5
+    ],
+    "D8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "D9": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      7
+    ],
+    "E6": [
+      0,
+      3,
+      4,
+      1,
+      2,
+      5
+    ],
+    "E7": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "E8": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "F4": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "spin10_16_max_cubic_trace": 0.0,
+  "su_fund_cubic_traces": {
+    "SU(15)": 2730,
+    "SU(16)": 3360
+  },
+  "witten_global_anomaly_cited_not_computed": true,
+  "zeta_value_derived": false
+}

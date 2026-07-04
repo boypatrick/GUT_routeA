@@ -1,0 +1,228 @@
+{
+  "all_pass": true,
+  "audit": "audit0_dyn_conventions_and_inventory",
+  "checks": [
+    {
+      "name": "PS singlet-vev registry mirrored from HEAD (5 entries: p, a, omega, sigma, bar_sigma)",
+      "pass": true
+    },
+    {
+      "name": "vacuum-cubic special points exact (SU(5) x=1/2,-1; G_LR x=0; flipped x=1/3)",
+      "pass": true
+    },
+    {
+      "name": "special points agree with the HEAD contract (labels, x, xi)",
+      "pass": true
+    },
+    {
+      "name": "all roadmap-named history assets exist in HEAD (38 paths across 7 items)",
+      "pass": true
+    },
+    {
+      "name": "history rerun executes: audit4a1_cmsgut_vacuum_branches.py",
+      "pass": true
+    },
+    {
+      "name": "history rerun executes: audit4a1_cmsgut_mass_export.py",
+      "pass": true
+    },
+    {
+      "name": "history rerun executes: audit4a1_cmsgut_literature_mass_import.py",
+      "pass": true
+    },
+    {
+      "name": "history rerun executes: audit4a1_triplet_symbolic_inverse.py",
+      "pass": true
+    },
+    {
+      "name": "regenerated ledger matches HEAD (volatile fields excluded): vacuum_branches.json",
+      "pass": true
+    },
+    {
+      "name": "regenerated ledger matches HEAD (volatile fields excluded): mass_export_schema.json",
+      "pass": true
+    },
+    {
+      "name": "regenerated ledger matches HEAD (volatile fields excluded): literature_mass_matrices.json",
+      "pass": true
+    },
+    {
+      "name": "regenerated ledger matches HEAD (volatile fields excluded): triplet_symbolic_inverse.json",
+      "pass": true
+    },
+    {
+      "name": "DYN-1 open items confirmed pending in HEAD: heavy spectrum placeholder, scalar-Hessian Goldstone eigenvectors",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "conventions_addendum": {
+    "adopted_dyn0_decisions": {
+      "file_lanes": "new dynamics scripts live at root code/ with ledgers in whitelisted output/audit*/ lanes; output/audit0/ whitelist extended today; output/audit3/ to be extended at DYN-2; history assets recovered read-only via git show HEAD:<path>",
+      "susy_scale_treatment": "single effective SUSY threshold M_S, benchmark 3 TeV; DYN-2 treats M_S as a fit parameter inside [1, 10] TeV; MSSM two-loop running below M_GUT"
+    },
+    "aulakh_girdhar_convention": {
+      "abmsv_crosscheck": "matches ABMSV after omega_ABMSV = -omega_AG",
+      "branch_variable": "x = -lambda*omega/m",
+      "coupling_ratio": "xi = lambda*M/(eta*m)",
+      "vacuum_cubic": "8*x^3 - 15*x^2 + 14*x - 3 + xi*(1-x)^2 = 0"
+    },
+    "ps_singlet_vev_registry": [
+      {
+        "ps_block": "(1,1,1)",
+        "role": "Pati-Salam singlet vev",
+        "sm_status": "SM singlet",
+        "spin10_field": "210_H",
+        "stage1_status": "registered",
+        "symbol": "p"
+      },
+      {
+        "ps_block": "(15,1,1)",
+        "role": "B-L-like adjoint vev",
+        "sm_status": "SM singlet in the SU(4)_C adjoint",
+        "spin10_field": "210_H",
+        "stage1_status": "registered",
+        "symbol": "a"
+      },
+      {
+        "ps_block": "(15,1,3)",
+        "role": "right-triplet-aligned adjoint vev",
+        "sm_status": "SM singlet in the SU(2)_R triplet-aligned block",
+        "spin10_field": "210_H",
+        "stage1_status": "registered",
+        "symbol": "omega"
+      },
+      {
+        "ps_block": "(overline{10},1,3)",
+        "role": "B-L breaking source direction",
+        "sm_status": "SM singlet after right-handed alignment",
+        "spin10_field": "126_H",
+        "stage1_status": "registered",
+        "symbol": "sigma"
+      },
+      {
+        "ps_block": "(10,1,3)",
+        "role": "post-B-L P_nu^c source and D-flat conjugate",
+        "sm_status": "SM singlet conjugate source direction",
+        "spin10_field": "overline{126}_H",
+        "stage1_status": "registered",
+        "symbol": "bar_sigma"
+      }
+    ],
+    "superpotential_parameters": {
+      "M": "m_126 (126_H 126bar_H mass)",
+      "M_H": "m_10 (10_H mass)",
+      "eta": "eta_210_126_126bar (210-126-126bar coupling)",
+      "g": "auxiliary 10-sector coupling used by the literature mass blocks",
+      "gamma, bar_gamma": "10_H-126_H/126bar_H-210_H doublet/triplet mixing couplings",
+      "lambda": "lambda_210 (210_H cubic)",
+      "m": "m_210 (210_H mass)"
+    }
+  },
+  "created_utc": "2026-07-04T15:53:55+00:00",
+  "dyn1_starting_checklist_from_head": {
+    "cubic_coefficients_fixed_from_literature": true,
+    "d_flatness_condition_recorded": true,
+    "doublet_mass_matrix_exported": false,
+    "full_pati_salam_special_point_claimed": false,
+    "goldstone_count_33_exported": false,
+    "heavy_spectrum_json_nonplaceholder": false,
+    "ps_singlet_vev_registry_complete": true,
+    "source_named_special_points_reproduced": true,
+    "symbolic_mass_matrices_exported": false,
+    "triplet_inverse_block_exported": false
+  },
+  "dyn_item": "DYN-0",
+  "heavy_spectrum_still_placeholder": true,
+  "history_assets_recovered_read_only": true,
+  "inventory": {
+    "DYN-0": [
+      "code/audit0_conventions_card.py",
+      "code/audit4a1_cmsgut_vacuum_branches.py",
+      "code/audit4a1_cmsgut_mass_export.py",
+      "code/audit4a1_cmsgut_literature_mass_import.py",
+      "code/audit4a1_triplet_symbolic_inverse.py",
+      "output/audit0/invariant_card.json",
+      "output/audit4a/source_spectrum_schema.json",
+      "output/audit4a1/vacuum_branches.json",
+      "output/audit4a1/mass_export_schema.json",
+      "output/audit4a1/literature_mass_matrices.json",
+      "output/audit4a1/triplet_symbolic_inverse.json"
+    ],
+    "DYN-1": [
+      "code/solve_spin10_vacuum_alignment.py",
+      "code/audit_orbit_superpotential_hessian.py",
+      "code/verify_spin10_component_hessian.py",
+      "code/verify_combined_superpotential_flatness.py"
+    ],
+    "DYN-2": [
+      "code/two_loop_spectrum_fit.py",
+      "code/scan_mediator_threshold_rge.py",
+      "code/scan_thresholds_item5.py"
+    ],
+    "DYN-3": [
+      "code/audit2_source_basis_wilson_builder.py",
+      "code/scan_dimension5_wilson_tensors.py",
+      "code/audit_dressed_dimension5_channels.py",
+      "code/audit_mssm_mixing_d5_dressing.py",
+      "code/audit_full_knu_width.py",
+      "code/scan_proton_channel_bounds.py",
+      "output/audit2/source_basis_wilson_contract.json"
+    ],
+    "DYN-4": [
+      "code/audit1_flavor_target_conventions.py",
+      "code/audit1b_covariant_rank_contract.py",
+      "code/audit_flavor_fit_observables.py",
+      "code/scan_majorana_contact_sensitivity.py",
+      "code/audit_cp1_yukawa_covariant.py",
+      "output/audit1/target_table_conventions.json",
+      "output/audit1b/covariant_rank_contract.json"
+    ],
+    "DYN-5": [
+      "code/verify_hidden_zeta_origin.py",
+      "code/verify_routeB_mediator_grading.py",
+      "code/scan_mediator_r_window.py"
+    ],
+    "DYN-6": [
+      "code/audit_clockwork_radial_driver_hessian.py",
+      "code/audit_majorana_monomial_clockwork_origin.py",
+      "code/audit_constrained_clockwork_source_hessian.py"
+    ]
+  },
+  "no_dynamics_results_claimed": true,
+  "rerun_gates": {
+    "literature_mass_matrices.json": true,
+    "mass_export_schema.json": true,
+    "triplet_symbolic_inverse.json": true,
+    "vacuum_branches.json": true
+  },
+  "scalar_hessian_goldstone_eigenvectors_pending": true,
+  "special_points_exact": [
+    {
+      "cubic_residual": "0",
+      "label": "SU5_x_half",
+      "x": "1/2",
+      "xi": "-5"
+    },
+    {
+      "cubic_residual": "0",
+      "label": "SU5_x_minus_one",
+      "x": "-1",
+      "xi": "10"
+    },
+    {
+      "cubic_residual": "0",
+      "label": "GLR_x_zero",
+      "x": "0",
+      "xi": "3"
+    },
+    {
+      "cubic_residual": "0",
+      "label": "flipped_SU5_x_third",
+      "x": "1/3",
+      "xi": "-2/3"
+    }
+  ],
+  "zeta_value_derived": false
+}

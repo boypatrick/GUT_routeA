@@ -1,0 +1,245 @@
+{
+  "all_pass": true,
+  "audit": "audit1_dyn4a_seesaw_replay_zeta_posterior",
+  "benchmark": {
+    "M_star_GeV": 3926531008378341.5,
+    "chi2_vs_nufit60_ic24": 47.455522845874185,
+    "contact_fraction": 0.13042751666881525,
+    "heavy_MR_singular_values_GeV": [
+      3926531008378341.5,
+      32203796829930.68,
+      23804475922.198605
+    ],
+    "old_targets": {
+      "a21": 1.0995574287564276,
+      "a31": 3.455751918948773,
+      "delta": 3.7699111843077517,
+      "dm21": 7.42e-05,
+      "dm31": 0.002517,
+      "m1_eV": 0.001,
+      "s12": 0.304,
+      "s13": 0.0222,
+      "s23": 0.573
+    },
+    "pulls_vs_nufit60_ic24": {
+      "dm21": -0.36842105257458885,
+      "dm31": 0.20000000096886958,
+      "s12": -0.347826086938884,
+      "s13": 0.0877192980902888,
+      "s23": 6.866666666694532
+    },
+    "zeta": [
+      0.10764729490120784,
+      0.07365148533033768
+    ]
+  },
+  "checks": [
+    {
+      "name": "replayed zeta equals the archived card value",
+      "pass": true
+    },
+    {
+      "name": "zeta reproduces the PAPER reproducibility anchor 0.1076472949 + 0.0736514853 i",
+      "pass": true
+    },
+    {
+      "name": "contact fraction reproduces the paper anchor 1.304275e-1",
+      "pass": true
+    },
+    {
+      "name": "Veronese + contact residual is machine-zero",
+      "pass": true
+    },
+    {
+      "name": "orientation note RECORDED: c_hat = -K_tr(paper); M_* = sigma_max(M_R)",
+      "pass": true
+    },
+    {
+      "name": "forward seesaw closes: the replayed M_R returns the OLD benchmark targets to 1e-9 (inverse <-> forward loop shut)",
+      "pass": true
+    },
+    {
+      "name": "heavy Majorana spectrum exported for DYN-7 (leptogenesis feed)",
+      "pass": true
+    },
+    {
+      "name": "aligned 6-tensor basis is orthonormal (5 Veronese + contact); Audit-1b requires >= 3 aligned tensors with per-tensor residuals",
+      "pass": true
+    },
+    {
+      "name": "residual cascade terminates at machine zero (complete decomposition, not a hollow two-tensor test)",
+      "pass": true
+    },
+    {
+      "name": "target shift table computed; the sin^2 theta_23 octant flip is the dominant refresh (old benchmark sits several sigma high)",
+      "pass": true
+    },
+    {
+      "name": "pipeline sanity: chi^2 of the benchmark against the OLD targets is ~ 0",
+      "pass": true
+    },
+    {
+      "name": "benchmark pull table vs NuFit-6.0 DISCLOSED (theta_23 drives it)",
+      "pass": true
+    },
+    {
+      "name": "zeta-plane scan complete (161 x 241); minimum located",
+      "pass": true
+    },
+    {
+      "name": "residual tension after the zeta-only refit DISCLOSED: with the Dirac sector frozen, zeta alone cannot absorb the theta_23 octant flip if chi^2_min stays large (a finding either way)",
+      "pass": true
+    },
+    {
+      "name": "zeta posterior published: best point, profile Delta-chi^2 <= 1 intervals on |zeta| and arg zeta, distance from the benchmark",
+      "pass": true
+    },
+    {
+      "name": "delta_CP at the best point reported as a PREDICTION vs NuFit (both sin-branches; not fitted)",
+      "pass": true
+    },
+    {
+      "name": "historical LOOSE windows REGRESS as half-widths of the two-sided interval: paper anchors 3.208798e-5 and 5.424119e-5 rad",
+      "pass": true
+    },
+    {
+      "name": "historical TIGHT windows also regress against the archived card (9.9379e-7 scale, 1.7993e-6 rad phase)",
+      "pass": true
+    },
+    {
+      "name": "refreshed Delta-chi^2 <= 1 windows about the NEW best point published",
+      "pass": true
+    }
+  ],
+  "checks_passed": 19,
+  "checks_total": 19,
+  "created_utc": "2026-07-04T17:23:20+00:00",
+  "delta_cp_branch_pulls_sigma": [
+    3.343283582087665,
+    0.11940298507651373
+  ],
+  "delta_cp_prediction_deg_branches": [
+    323.9999999999368,
+    216.0000000000632
+  ],
+  "derivation_log": {
+    "step_1_replay": "Y_e -> U_e (eigh ascending); U_nu = U_e U_PMNS(old benchmark incl. Majorana phases 0.35pi, 1.10pi); m_light = U_nu* D U_nu*^T; mD = Y_nu * 100 GeV; M_R = -mD^T m_light^-1 mD (inverse type-I); M_* = sigma_max; zeta = <c_hat, M_R/M_*>, c_hat = -K_tr(paper)",
+    "step_2_rank_contract": "orthonormal 6-tensor cascade (contact + 5 Veronese), per-tensor coefficients and residuals recorded",
+    "step_3_refresh": "old hardcoded targets vs NuFit-6.0 NO (both variants); theta_23 octant flip dominates",
+    "step_4_posterior": "M_R(zeta') = M_*(M_V + zeta' c_hat), forward seesaw, chi^2 over 5 observables (IC24 1-sigma); grid 161x241 in (|zeta| scale, phase); profile Delta-chi^2 <= 1 intervals",
+    "step_5_windows": "historical loose windows re-derived with the archival tolerance definition (regression), then recomputed as Delta-chi^2 windows at the new best point"
+  },
+  "dyn_item": "DYN-4a",
+  "fit_not_prediction": true,
+  "full_covariant_yukawa_refit_deferred_to_DYN4b": true,
+  "normal_ordering_assumed_m1_fixed": true,
+  "posterior_conditional_on_benchmark_dirac_sector": true,
+  "provenance": {
+    "closure_card": {
+      "note": "user-restored archival artifact",
+      "path": "route_E/output/publication_closure_card/publication_closure_card.json",
+      "sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d"
+    },
+    "nufit": "NuFit-6.0, JHEP 12 (2024) 216, arXiv:2410.05380, Table 1 (Normal Ordering); 1-sigma symmetrized",
+    "recipe_source": "HEAD code/audit_source_majorana_texture_rank.py + code/verify_seesaw_item3.py (conventions transcribed verbatim)",
+    "texture_rank_summary": {
+      "path": "route_E/output/source_majorana_texture_rank/summary.json",
+      "sha256": "a47cc169e7724c0ccdd93a9ff412b04b5ccd7af9495e3e99abeb32e5d73e1dcf"
+    }
+  },
+  "pulls_at_best": {
+    "dm21": -0.36842105256934615,
+    "dm31": 0.20000000245353267,
+    "s12": -0.3478260869129675,
+    "s13": 0.08771929763230964,
+    "s23": 6.86666666675985
+  },
+  "rank_contract_cascade": [
+    {
+      "coefficient": [
+        0.10764729490120784,
+        0.07365148533033768
+      ],
+      "residual_after": 0.9914578472610956,
+      "tensor": "contact"
+    },
+    {
+      "coefficient": [
+        -0.3395115388404334,
+        0.31109341087368503
+      ],
+      "residual_after": 0.8780408477012465,
+      "tensor": "v3"
+    },
+    {
+      "coefficient": [
+        -0.3851644667941553,
+        -0.3736963381603721
+      ],
+      "residual_after": 0.6949636551473184,
+      "tensor": "v1"
+    },
+    {
+      "coefficient": [
+        -0.6511685856994005,
+        -0.07109093971218611
+      ],
+      "residual_after": 0.23222595353168582,
+      "tensor": "v2"
+    },
+    {
+      "coefficient": [
+        0.05801364115808036,
+        0.21723407886471235
+      ],
+      "residual_after": 0.0581039276232274,
+      "tensor": "v4"
+    },
+    {
+      "coefficient": [
+        0.058089775669851657,
+        -0.0013680141573772133
+      ],
+      "residual_after": 1.7825741682781437e-16,
+      "tensor": "v5"
+    }
+  ],
+  "target_shift_sigma": {
+    "dm21": -0.36842105263158076,
+    "dm31": 0.20000000000000484,
+    "s12": -0.34782608695652206,
+    "s13": 0.08771929824561656,
+    "s23": 6.866666666666665
+  },
+  "windows": {
+    "chi2_refreshed": {
+      "Delta_delta": 1.5059893291305068e-06,
+      "Delta_s": 1.008184363660014e-06
+    },
+    "loose_regression": {
+      "Delta_delta": 5.424119231661924e-05,
+      "Delta_s": 3.208797586587344e-05
+    }
+  },
+  "zeta_posterior": {
+    "abs_zeta_68": [
+      0.13043190327106535,
+      0.13043190327106535
+    ],
+    "abs_zeta_best": 0.13043190327106535,
+    "arg_zeta_68": [
+      0.600038020504949,
+      0.600038020504949
+    ],
+    "arg_zeta_best": 0.600038020504949,
+    "chi2_benchmark": 47.455522845874185,
+    "chi2_min": 47.45552284726285,
+    "conditional_on": "benchmark Y_nu, Y_e frozen; NO; m1 = 1e-3 eV",
+    "distance_from_benchmark": 1.3877787807814457e-17,
+    "zeta_best": [
+      0.10764729490120782,
+      0.07365148533033768
+    ]
+  },
+  "zeta_value_derived": false
+}

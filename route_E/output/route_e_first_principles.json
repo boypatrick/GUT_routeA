@@ -1,0 +1,414 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "name": "16 even-parity half-spin weights",
+      "pass": true
+    },
+    {
+      "name": "Pati-Salam split 8 + 8",
+      "pass": true
+    },
+    {
+      "name": "SM face = exactly {Q,L,u^c,d^c,nu^c,e^c} = (6,2,3,3,1,1)",
+      "pass": true
+    },
+    {
+      "name": "exactly one total SM singlet (nu^c forced inside the 16)",
+      "pass": true
+    },
+    {
+      "name": "Tr Y^2 = 10/3",
+      "pass": true
+    },
+    {
+      "name": "Tr T3L^2 = 2",
+      "pass": true
+    },
+    {
+      "name": "k_Y = 5/3",
+      "pass": true
+    },
+    {
+      "name": "dim anchors: A4 fund=5, A4 Sym^2=15, A5 L^2=15, A15 fund=16",
+      "pass": true
+    },
+    {
+      "name": "dim anchors: D5 vector=10, half-spinor=16, adjoint=45; D7 spinor=64",
+      "pass": true
+    },
+    {
+      "name": "dim-16 complex irreps = {SU(16) fund, Spin(10) half-spinors} only",
+      "pass": true
+    },
+    {
+      "name": "dim-15 complex irreps = {SU(5) Sym^2, SU(6) L^2, SU(15) fund} only",
+      "pass": true
+    },
+    {
+      "name": "SU(5) Sym^2 content: (6,1)+(3,2)+(1,3), 6+6+3 = 15, color sextet exotic",
+      "pass": true
+    },
+    {
+      "name": "SU(6) L^2 content: 9+6 = 15 (sextet) and 3+6+3+1+2 = 15 (one 3b only)",
+      "pass": true
+    },
+    {
+      "name": "genus ladder h^0(T) = 3,1,0,0,...  (3 is the maximum, only at g = 0)",
+      "pass": true
+    },
+    {
+      "name": "RR on CP^1: h^0(O(2)) - h^1(O(2)) = 2 + 1 = 3, h^1 = h^0(O(-4)) = 0",
+      "pass": true
+    },
+    {
+      "name": "two-center divisor = zero divisor of a Cartan flow, deg = chi(S^2) = 2",
+      "pass": true
+    },
+    {
+      "name": "invariant symmetric forms on V: solution space is exactly 1-dimensional",
+      "pass": true
+    },
+    {
+      "name": "that direction equals the paper K_tr (up to overall sign)",
+      "pass": true
+    },
+    {
+      "name": "K_tr^2 = I/3",
+      "pass": true
+    },
+    {
+      "name": "K_tr^{-1} = 3 K_tr",
+      "pass": true
+    },
+    {
+      "name": "Killing form B = 2 sqrt(3) K_tr  (contact = Killing pairing)",
+      "pass": true
+    },
+    {
+      "name": "abelian (g = 1) family algebra has Killing form = 0 (Cartan criterion)",
+      "pass": true
+    },
+    {
+      "name": "integrating out X gives Delta M_R = lambda^2 K_tr (200 random trials)",
+      "pass": true
+    },
+    {
+      "name": "lambda = sqrt(zeta) benchmark digits",
+      "pass": true
+    },
+    {
+      "name": "|lambda| benchmark digits",
+      "pass": true
+    },
+    {
+      "name": "|zeta| digits",
+      "pass": true
+    },
+    {
+      "name": "arg zeta digits",
+      "pass": true
+    },
+    {
+      "name": "S_eff = -log|zeta| digits",
+      "pass": true
+    },
+    {
+      "name": "Im T (unit prefactor) digits",
+      "pass": true
+    },
+    {
+      "name": "|zeta|^2 digits",
+      "pass": true
+    },
+    {
+      "name": "|zeta|^2 / Delta_s window = 530.18...",
+      "pass": true
+    },
+    {
+      "name": "|lambda|^2/(16 pi^2) = 8.259697e-4",
+      "pass": true
+    },
+    {
+      "name": "2 pi 17/178 digits",
+      "pass": true
+    },
+    {
+      "name": "Z_178 phase error 4.1475311296e-5 rad",
+      "pass": true
+    },
+    {
+      "name": "|zeta_178 - zeta| = 5.4097037899e-6",
+      "pass": true
+    },
+    {
+      "name": "min N<=6 root-of-unity phase distance = 4.471595e-1 rad",
+      "pass": true
+    },
+    {
+      "name": "first root of unity inside the loose window: N = 178",
+      "pass": true
+    },
+    {
+      "name": "arg zeta/(2 pi) digits",
+      "pass": true
+    },
+    {
+      "name": "17/178, 70/733, 87/911 are continued-fraction convergents",
+      "pass": true
+    },
+    {
+      "name": "their phase errors are 4.15e-5, 6.68e-6, 2.73e-6 rad",
+      "pass": true
+    },
+    {
+      "name": "E6 -> SO(10) x U(1): 78 = 45 + 1 + 16 + 16bar",
+      "pass": true
+    },
+    {
+      "name": "matter-curve carrier: deg(K^{1/2} (x) O(3)) = -1 + 3 = 2",
+      "pass": true
+    },
+    {
+      "name": "h^0(O(2)) = 3, h^1(O(2)) = 0 (Riemann-Roch + Serre)",
+      "pass": true
+    },
+    {
+      "name": "a model with zeta' != zeta satisfies the identical structural theorems",
+      "pass": true
+    }
+  ],
+  "checks_passed": 44,
+  "checks_total": 44,
+  "companion_phenomenology_audits_replayed": false,
+  "continued_fraction_convergents": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      2,
+      21
+    ],
+    [
+      17,
+      178
+    ],
+    [
+      70,
+      733
+    ],
+    [
+      87,
+      911
+    ],
+    [
+      157,
+      1644
+    ]
+  ],
+  "dim15_complex_irreps": [
+    {
+      "algebra": "A14=SU(15)",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "A14=SU(15)",
+      "dim": 15,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "A4=SU(5)",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "algebra": "A4=SU(5)",
+      "dim": 15,
+      "labels": [
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "A5=SU(6)",
+      "dim": 15,
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "algebra": "A5=SU(6)",
+      "dim": 15,
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "dim16_complex_irreps": [
+    {
+      "algebra": "A15=SU(16)",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "A15=SU(16)",
+      "dim": 16,
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "algebra": "D5=Spin(10)",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "algebra": "D5=Spin(10)",
+      "dim": 16,
+      "labels": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "first_root_of_unity_in_loose_window": 178,
+  "genus_ladder_h0_tangent": [
+    3,
+    1,
+    0,
+    0,
+    0,
+    0
+  ],
+  "k_Y": "5/3",
+  "killing_equals_2sqrt3_Ktr": true,
+  "killing_form_spherical_basis": [
+    [
+      0.0,
+      0.0,
+      -2.0
+    ],
+    [
+      0.0,
+      2.0,
+      0.0
+    ],
+    [
+      -2.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "lambda_sqrt_zeta": {
+    "im": 0.10673473744038917,
+    "re": 0.34502115743308964
+  },
+  "no_extra_chiral_sector_assumption_discharged": false,
+  "principle_set_claimed_unique": false,
+  "pslt_only_unconditional_gut_proof_claimed": false,
+  "route_b_r_selection_rule_derived": false,
+  "sm_face_multiplicities": {
+    "L": 2,
+    "Q": 6,
+    "dc": 3,
+    "ec": 1,
+    "nuc": 1,
+    "uc": 3
+  },
+  "zN_le6_min_phase_miss_rad": 0.44715953087838267,
+  "zeta_benchmark": {
+    "im": 0.0736514853,
+    "re": 0.1076472949
+  },
+  "zeta_value_derived": false
+}

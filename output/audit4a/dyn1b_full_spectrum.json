@@ -1,0 +1,439 @@
+{
+  "all_pass": true,
+  "audit": "audit4a_dyn1b_full_spectrum",
+  "benchmark_point": {
+    "M_H_star": [
+      -0.6258212476364382,
+      0.14259218300577065
+    ],
+    "bar_gamma": [
+      -0.23,
+      0.11
+    ],
+    "eta": 1,
+    "g": 0.7,
+    "gamma": [
+      0.31,
+      0.07
+    ],
+    "lambda": 1,
+    "m": 1,
+    "x": 0.1
+  },
+  "checks": [
+    {
+      "name": "PS content dimension sums: 10, 45, 210, 126, 126b",
+      "pass": true
+    },
+    {
+      "name": "Higgs-system chiral state count = 472 = 210 + 126 + 126 + 10",
+      "pass": true
+    },
+    {
+      "name": "gauge census: 45 -> 12 unbroken (SM adjoint) + 33 broken",
+      "pass": true
+    },
+    {
+      "name": "threshold indices {S3,S2,S1} DERIVED from Dynkin indices and Y_SM = Y_AG/2 match AG Table 2 for ALL 26 types",
+      "pass": true
+    },
+    {
+      "name": "AG's printed S_W = 4S1-9.6S2+5.6S3 and S_X = 5S1+3S2-8S3 reproduce for all 26 rows",
+      "pass": true
+    },
+    {
+      "name": "SECTOR CENSUS == PS->SM DECOMPOSITION as multisets of SM multiplets (the completeness proof: no sector missing, none double-counted)",
+      "pass": true
+    },
+    {
+      "name": "census state count = 472",
+      "pass": true
+    },
+    {
+      "name": "broken-gauge census (G,F,J,E,X gaugino sectors) == 45 minus SM adjoint",
+      "pass": true
+    },
+    {
+      "name": "all 21 unmixed masses evaluated at the benchmark; none accidentally massless at x = 0.1",
+      "pass": true
+    },
+    {
+      "name": "R[8,1,0] closed-form eigenvalues match the matrix (AG eq. after line 2570)",
+      "pass": true
+    },
+    {
+      "name": "the five AG gauge-multiplet mass formulas m_lambda (items i-v) EQUAL the gaugino-column norms of the transcribed blocks",
+      "pass": true
+    },
+    {
+      "name": "DYN-1a regression: tuned doublet sector (one zero) and non-singular triplet sector reproduce",
+      "pass": true
+    },
+    {
+      "name": "massless chiral census at the benchmark: exactly ONE zero level (the det-tuned MSSM Higgs pair); every other level massive; the 33 Goldstones are eaten (full mixed blocks non-singular)",
+      "pass": true
+    },
+    {
+      "name": "accidental massless loci inside the SM window scanned and DISCLOSED (isolated x where an unmixed sector becomes light)",
+      "pass": true
+    },
+    {
+      "name": "every exported state carries all schema-required fields (57 states)",
+      "pass": true
+    },
+    {
+      "name": "spectrum covers ALL 26 AG sector types (complete, no longer partial)",
+      "pass": true
+    }
+  ],
+  "checks_passed": 16,
+  "checks_total": 16,
+  "created_utc": "2026-07-04T16:38:54+00:00",
+  "derivation_log": {
+    "step_0_provenance": {
+      "arxiv": "hep-ph/0405074",
+      "key_line_ranges": {
+        "R_matrix": "2569-2585",
+        "appendix_matrices_h_t_G_E_F_J_X": "2601-2731",
+        "gauge_masses_items_i_v": "736-830",
+        "mixed_chiral_gauge": "1184-1360",
+        "mixed_pure_chiral": "1099-1184",
+        "table_2_indices": "2540-2567",
+        "table_I_masses": "2439-2531",
+        "unmixed_section": "1068-1099"
+      },
+      "note": "source fetched from arXiv e-print and used read-only; the HEAD transcription (audit4a1 card) cited the same file",
+      "source_file": "msgtfrvnew.tex",
+      "source_sha256": "4022df729555bf70be842eedcd3addfb80505ef6d0354baf62319fdfafb96c35"
+    },
+    "step_1_y_normalization": "AG labels use Y_AG = 2*Y_SM (electric charge Q = T3L + Y_AG/2); verified for all 26 types by the Table-2 index gate",
+    "step_2_ps_to_sm_engine": {
+      "ps_content": {
+        "10": [
+          "(6,1,1)",
+          "(1,2,2)"
+        ],
+        "126": [
+          "(6,1,1)",
+          "(10,3,1)",
+          "(10b,1,3)",
+          "(15,2,2)"
+        ],
+        "126b": [
+          "(6,1,1)",
+          "(10b,3,1)",
+          "(10,1,3)",
+          "(15,2,2)"
+        ],
+        "210": [
+          "(1,1,1)",
+          "(15,1,1)",
+          "(15,1,3)",
+          "(15,3,1)",
+          "(6,2,2)",
+          "(10,2,2)",
+          "(10b,2,2)"
+        ],
+        "45": [
+          "(15,1,1)",
+          "(1,3,1)",
+          "(1,1,3)",
+          "(6,2,2)"
+        ]
+      },
+      "su2r_branching": {
+        "1": [
+          0.0
+        ],
+        "2": [
+          0.5,
+          -0.5
+        ],
+        "3": [
+          1.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "su4_branching": {
+        "1": [
+          [
+            "1",
+            0.0
+          ]
+        ],
+        "10": [
+          [
+            "6",
+            0.6666666666666666
+          ],
+          [
+            "3",
+            -0.6666666666666666
+          ],
+          [
+            "1",
+            -2.0
+          ]
+        ],
+        "10b": [
+          [
+            "6b",
+            -0.6666666666666666
+          ],
+          [
+            "3b",
+            0.6666666666666666
+          ],
+          [
+            "1",
+            2.0
+          ]
+        ],
+        "15": [
+          [
+            "8",
+            0.0
+          ],
+          [
+            "3",
+            1.3333333333333333
+          ],
+          [
+            "3b",
+            -1.3333333333333333
+          ],
+          [
+            "1",
+            0.0
+          ]
+        ],
+        "4": [
+          [
+            "3",
+            0.3333333333333333
+          ],
+          [
+            "1",
+            -1.0
+          ]
+        ],
+        "4b": [
+          [
+            "3b",
+            -0.3333333333333333
+          ],
+          [
+            "1",
+            1.0
+          ]
+        ],
+        "6": [
+          [
+            "3",
+            -0.6666666666666666
+          ],
+          [
+            "3b",
+            0.6666666666666666
+          ]
+        ]
+      },
+      "y_formula": "Y_SM = T3R + (B-L)/2"
+    },
+    "step_3_census": {
+      "completeness_gate": "census multiset == PS->SM decomposition of 210+126+126b+10 (472 states); PASSED",
+      "gauge_gate": "gaugino sectors == 45 minus SM adjoint (33 states); PASSED",
+      "structure": "21 unmixed entries (19 letter types; C,D doubled; Q,R,S real) + mixed pure chiral R(2x2)/h(4x4)/t(5x5) + mixed chiral-gauge G(6x6)/E(4x4)/F(3x3)/J(4x4)/X(3x3)"
+    },
+    "step_4_masses": {
+      "R_closed_form": "m_R+- = |2m[1+(pt/2-at) +- sqrt((pt/2)^2+2wt^2)]|, pt=lam p/m etc.; matches matrix eigenvalues",
+      "gauge_multiplet_masses": "m_lambda formulas (items i-v) equal the gaugino-column norms of the transcribed blocks to 1e-12: the super-Higgs bookkeeping is closed at the source level",
+      "unmixed_expressions": {
+        "A": "2(M+eta(p+3a+6w))",
+        "B": "-2(m+lambda(w-a))",
+        "C1": "2(-M+eta(a+w))",
+        "C2": "2(-M+eta(a-w))",
+        "D1": "2(M+eta(a+w))",
+        "D2": "2(M+eta(a+3w))",
+        "E1": "-2(M+eta(a-w))",
+        "I": "-2(m+lambda(p+a+4w))",
+        "K": "2(M+eta(a+p+2w))",
+        "L": "2(M+eta(p-a))",
+        "M": "2(M+eta(p-a+2w))",
+        "N": "2(M+eta(p-a-2w))",
+        "O": "2(M+eta(3a-p))",
+        "P": "2(M+eta(a-p))",
+        "Q": "2(m-lambda(a+p))",
+        "S": "2(m+lambda(2a-p))",
+        "U": "-2(m-lambda(p-a))",
+        "V": "2(m+3lambda(a+w))",
+        "W": "2(M-eta(a+p))",
+        "Y": "2(m-lambda(a+w))",
+        "Z": "2(m+lambda(p-a))"
+      },
+      "vacuum_consistency_insight": "on the F-flat branch M + eta(p+3a-6w) = 0, so m_A = 2(M+eta(p+3a+6w)) = 24 eta w exactly: sector A tracks the omega vev alone"
+    },
+    "step_5_conventions": {
+      "abs_mass": "the absolute value of the Mass column is understood",
+      "goldstone_null_vectors_in_source": "AG gives v_0JL = N(-sigmabar, 2a, 2sq2 w) etc. (items ii-v): identical to the DYN-1a alignment result",
+      "real_rep_factor": "AG: real representations get an extra factor 2 in (scalar) masses; recorded verbatim, applies to Q, R, S bookkeeping at the scalar level",
+      "sextet_norm": "primed sextet fields keep unit norm (Table I caption)",
+      "su2l_contraction": "bar F^alpha F_alpha (Table I caption)"
+    },
+    "step_6_accidental_zeros": [
+      {
+        "sector": "C2",
+        "x_zero_near": [
+          0.3002
+        ]
+      },
+      {
+        "sector": "D1",
+        "x_zero_near": [
+          0.2243
+        ]
+      },
+      {
+        "sector": "D2",
+        "x_zero_near": [
+          0.1872
+        ]
+      },
+      {
+        "sector": "E1",
+        "x_zero_near": [
+          0.273
+        ]
+      },
+      {
+        "sector": "K",
+        "x_zero_near": [
+          0.1832
+        ]
+      },
+      {
+        "sector": "L",
+        "x_zero_near": [
+          0.2982
+        ]
+      },
+      {
+        "sector": "M",
+        "x_zero_near": [
+          0.2677
+        ]
+      },
+      {
+        "sector": "P",
+        "x_zero_near": [
+          0.278
+        ]
+      },
+      {
+        "sector": "S",
+        "x_zero_near": [
+          0.2263
+        ]
+      }
+    ]
+  },
+  "dyn_item": "DYN-1b",
+  "gauge_multiplet_masses_benchmark": {
+    "E": 1.1649241674055515,
+    "F": 0.5372862767741946,
+    "G": 0.9248690264298954,
+    "J": 1.8082622447197787,
+    "X": 1.3856856999389846
+  },
+  "no_unique_vacuum_claimed": true,
+  "physical_normalization_deferred_to_DYN2": true,
+  "tree_level_only": true,
+  "unmixed_masses_benchmark": {
+    "A": [
+      -2.4000000000000004,
+      0.0
+    ],
+    "B": [
+      -3.5555555555555554,
+      0.0
+    ],
+    "C1": [
+      -6.25679012345679,
+      0.0
+    ],
+    "C2": [
+      -5.85679012345679,
+      0.0
+    ],
+    "D1": [
+      2.3456790123456788,
+      0.0
+    ],
+    "D2": [
+      1.9456790123456789,
+      0.0
+    ],
+    "E1": [
+      -2.745679012345679,
+      0.0
+    ],
+    "I": [
+      0.7901234567901234,
+      0.0
+    ],
+    "K": [
+      1.911111111111111,
+      0.0
+    ],
+    "L": [
+      5.822222222222222,
+      0.0
+    ],
+    "M": [
+      5.4222222222222225,
+      0.0
+    ],
+    "N": [
+      6.222222222222222,
+      0.0
+    ],
+    "O": [
+      -0.7308641975308641,
+      0.0
+    ],
+    "P": [
+      2.780246913580247,
+      0.0
+    ],
+    "Q": [
+      3.9901234567901236,
+      0.0
+    ],
+    "S": [
+      -1.276543209876543,
+      0.0
+    ],
+    "U": [
+      -0.4790123456790123,
+      0.0
+    ],
+    "V": [
+      -3.8666666666666663,
+      0.0
+    ],
+    "W": [
+      6.291358024691358,
+      0.0
+    ],
+    "Y": [
+      3.9555555555555557,
+      0.0
+    ],
+    "Z": [
+      3.5209876543209875,
+      0.0
+    ]
+  },
+  "zeta_value_derived": false
+}

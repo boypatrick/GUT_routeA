@@ -1,0 +1,229 @@
+{
+  "all_pass": true,
+  "audit": "audit4a_dyn1a_vacuum_goldstone",
+  "branch_classification": {
+    "boundary_behavior": {
+      "x_to_one_third": "G degenerates only: flipped SU(5)xU(1), one extra U(1)",
+      "x_to_zero": "G and F degenerate: G_LR with massless W_R^pm + extra neutral"
+    },
+    "sm_window": "x in (0, 1/3) on the real D-flat slice",
+    "sm_window_roots_on_grid": 73,
+    "special_points_exact": {
+      "G_LR x=0": [
+        "0",
+        "3"
+      ],
+      "SU(5) x=-1": [
+        "-1",
+        "10"
+      ],
+      "SU(5) x=1/2": [
+        "1/2",
+        "-5"
+      ],
+      "flipped SU(5) x=1/3": [
+        "1/3",
+        "-2/3"
+      ]
+    },
+    "xi_grid_points": 401
+  },
+  "checks": [
+    {
+      "name": "branch parametrization reproduces the HEAD F-flat sample (x = 0.1)",
+      "pass": true
+    },
+    {
+      "name": "F-flatness DERIVED: all five F-terms of the explicit singlet W vanish on the AG branch (c_sigma = 1), 200-point x grid",
+      "pass": true
+    },
+    {
+      "name": "the transcribed neutral G chiral block EQUALS the derived singlet Hessian under the field map (p, sqrt3 a, sqrt6 w, i*sqrt2 sigma, -i*sqrt2 bar_sigma)",
+      "pass": true
+    },
+    {
+      "name": "exact special points on the cubic (branch engine self-test)",
+      "pass": true
+    },
+    {
+      "name": "xi grid solved (401 points, [-10, 10]): every xi has 3 cubic roots and the SM window x in (0, 1/3) is populated",
+      "pass": true
+    },
+    {
+      "name": "interior SM point (x = 0.15): all five full mixed blocks non-singular -> unbroken group is exactly the SM (12 = 45 - 33 generators)",
+      "pass": true
+    },
+    {
+      "name": "x -> 1/3 boundary (flipped SU(5)xU(1)): the G AND E vector masses vanish (13 = 1 + 12 extra massless vectors: extra U(1) plus the flipped X',Y' bosons (3,2,1/6)+c.c.), F/J/X vectors stay massive -- validates the E assignment",
+      "pass": true
+    },
+    {
+      "name": "x -> 0 boundary (G_LR): the G and F vector masses vanish (3 = 1 + 2 extra massless vectors: neutral + W_R^pm), E/J/X vectors stay massive -- validates the F assignment",
+      "pass": true
+    },
+    {
+      "name": "x -> 1/2 boundary (SU(5), complex-sigma D-flat slice): exactly the X vector mass vanishes (12 extra massless vectors: the Georgi-Glashow X,Y bosons (3,2,-5/6)+c.c.), G/E/F/J vectors stay massive -- validates the X assignment (J = (3,1,2/3) follows by elimination and the 33-count)",
+      "pass": true
+    },
+    {
+      "name": "each mixed sector has EXACTLY one chiral zero mode (J^dagger J kernel dim = 1)",
+      "pass": true
+    },
+    {
+      "name": "Goldstone alignment: the chiral null vector IS the gauge-orbit direction from the gaugino row (residual < 1e-10 in every sector)",
+      "pass": true
+    },
+    {
+      "name": "no tachyons in the transcribed sectors: all nonzero J^dagger J eigenvalues positive at the SM vacuum (tree level)",
+      "pass": true
+    },
+    {
+      "name": "super-Higgs: every FULL mixed block is non-singular (all 33 Goldstones eaten)",
+      "pass": true
+    },
+    {
+      "name": "Goldstone bookkeeping: 1 + 2 + 6 + 12 + 12 = 33 = 45 - 12",
+      "pass": true
+    },
+    {
+      "name": "alignment reproduces at a second SM-window point (x = 0.22)",
+      "pass": true
+    },
+    {
+      "name": "chiral null ratios reproduce the HEAD ledger gates at x = 0.1",
+      "pass": true
+    },
+    {
+      "name": "det M_doublet(M_H) linear in M_H; fine-tuned root found",
+      "pass": true
+    },
+    {
+      "name": "exactly one light doublet pair at M_H* (smallest singular value ~ 0, next one O(1))",
+      "pass": true
+    },
+    {
+      "name": "light-doublet composition exported and normalized",
+      "pass": true
+    },
+    {
+      "name": "triplet block at M_H* remains non-singular (no light color triplet; d = 5 proton channel stays suppressed by heavy masses)",
+      "pass": true
+    },
+    {
+      "name": "triplet determinant reproduces the HEAD value at the HEAD sample (M_H = 0.67)",
+      "pass": true
+    },
+    {
+      "name": "every exported state carries all schema-required fields (29 states x 12 fields)",
+      "pass": true
+    },
+    {
+      "name": "heavy spectrum is non-placeholder: real benchmark masses for 7 sectors (29 states), partiality explicitly flagged",
+      "pass": true
+    }
+  ],
+  "checks_passed": 23,
+  "checks_total": 23,
+  "created_utc": "2026-07-04T16:21:46+00:00",
+  "doublet_triplet": {
+    "M_H_star": [
+      -0.6258212476364382,
+      0.14259218300577065
+    ],
+    "doublet_singular_values": [
+      3.164605945632,
+      1.785038256815,
+      0.941580274519,
+      0.0
+    ],
+    "light_alpha_abs": [
+      0.662382710728,
+      0.11937647256,
+      0.73310198052,
+      0.097774682229
+    ],
+    "light_bar_alpha_abs": [
+      0.583382872408,
+      0.804846551716,
+      0.084345014964,
+      0.069082348129
+    ],
+    "triplet_singular_values": [
+      4.797566805588,
+      4.31411302566,
+      2.555541470926,
+      0.613373814033,
+      0.085892680532
+    ]
+  },
+  "dyn_item": "DYN-1a",
+  "goldstone_audit": [
+    {
+      "chiral_dim": 5,
+      "chiral_null_ratio": 5.459949185844699e-33,
+      "full_block_min_singular_value": 0.9248690264298954,
+      "goldstone_alignment_residual": 0.0,
+      "real_goldstone_states": 1,
+      "scalar_JdaggerJ_zero_modes": 1,
+      "scalar_min_positive_eigenvalue": 1.2989060531803638,
+      "sector": "G",
+      "sm_irrep": "(1,1,0)"
+    },
+    {
+      "chiral_dim": 3,
+      "chiral_null_ratio": 7.950733724378489e-17,
+      "full_block_min_singular_value": 1.1649241674055515,
+      "goldstone_alignment_residual": 1.0851790323964206e-17,
+      "real_goldstone_states": 12,
+      "scalar_JdaggerJ_zero_modes": 1,
+      "scalar_min_positive_eigenvalue": 3.142228053186737,
+      "sector": "E",
+      "sm_irrep": "(3,2,+1/6) + c.c."
+    },
+    {
+      "chiral_dim": 2,
+      "chiral_null_ratio": 0.0,
+      "full_block_min_singular_value": 0.5372862767741945,
+      "goldstone_alignment_residual": 1.4029721722423414e-16,
+      "real_goldstone_states": 2,
+      "scalar_JdaggerJ_zero_modes": 1,
+      "scalar_min_positive_eigenvalue": 8.677024843773815,
+      "sector": "F",
+      "sm_irrep": "(1,1,+1) + c.c."
+    },
+    {
+      "chiral_dim": 3,
+      "chiral_null_ratio": 2.0651915121288813e-17,
+      "full_block_min_singular_value": 0.43596969257075785,
+      "goldstone_alignment_residual": 1.2468137381099812e-17,
+      "real_goldstone_states": 6,
+      "scalar_JdaggerJ_zero_modes": 1,
+      "scalar_min_positive_eigenvalue": 0.190069572840241,
+      "sector": "J",
+      "sm_irrep": "(3,1,+2/3) + c.c."
+    },
+    {
+      "chiral_dim": 2,
+      "chiral_null_ratio": 1.8687473874522437e-17,
+      "full_block_min_singular_value": 1.3856856999389846,
+      "goldstone_alignment_residual": 2.7149381074817932e-17,
+      "real_goldstone_states": 12,
+      "scalar_JdaggerJ_zero_modes": 1,
+      "scalar_min_positive_eigenvalue": 3.4019753086419757,
+      "sector": "X",
+      "sm_irrep": "(3,2,-5/6) + c.c."
+    }
+  ],
+  "no_unique_vacuum_claimed": true,
+  "sector_sm_assignment_source": "AG hep-ph/0405074 items a)-e), source lines 1203-1328 (Y_AG = 2*Y_SM); cross-checked 2026-07-05 against the fetched arXiv source; boundary degeneracies independently validate G, E, F, X (J by elimination)",
+  "sector_sm_assignment_source_verified": true,
+  "sectors_pending_transcription": true,
+  "singlet_superpotential": {
+    "W": "m(p^2+3a^2+6w^2) + 2*lambda*(a^3+3p*w^2+6a*w^2) + (1/2)[M*sigma*bar_sigma + eta*sigma*bar_sigma*(p+3a-6w)]",
+    "f_flatness_worst_residual_on_grid": 1.609823385706477e-15,
+    "field_map_to_G_block": "(p, sqrt3*a, sqrt6*w, i*sqrt2*sigma, -i*sqrt2*bar_sigma), G_chiral = 2 * Hess(W)",
+    "hessian_match_max_deviation": 4.440892098500626e-16
+  },
+  "tree_level_only": true,
+  "zeta_value_derived": false
+}

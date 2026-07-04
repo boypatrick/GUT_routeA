@@ -40,3 +40,19 @@ backups/
 !/output/audit4a/**
 !/output/audit4a1/
 !/output/audit4a1/**
+
+# Whitelist for the dynamics-lane DYN-0 ledgers.
+!/output/audit0/
+!/output/audit0/**
+
+# Whitelist for the dynamics-lane DYN-2 ledgers.
+!/output/audit3/
+!/output/audit3/**
+
+# Archival restored outputs under route_E/output/ are user-managed data,
+# referenced by sha256 in the DYN ledgers; only top-level route_E ledgers are tracked.
+/route_E/output/*/
+# Archival restored code under route_E/code/ (user-managed); only the two route-E verifiers are tracked.
+/route_E/code/*
+!/route_E/code/verify_route_e_first_principles.py
+!/route_E/code/verify_route_e_dependency_closure.py

@@ -1,0 +1,206 @@
+{
+  "all_pass": true,
+  "audit": "audit3_dyn2_thresholds_unification",
+  "benchmark_x_0p1": {
+    "alpha3_pull_sigma": -34.97599936073654,
+    "converged": true,
+    "residual": 4.263256414560601e-14
+  },
+  "checks": [
+    {
+      "name": "universality gate: chiral census S-sum = (127,127,127) = T(210)+2 T(126)+T(10) in every gauge factor",
+      "pass": true
+    },
+    {
+      "name": "universality gate: 45 S-sum = (8,8,8) = T(45); full-theory b_SO(10) = 6 + 127 - 3*8 = 109 is i-independent",
+      "pass": true
+    },
+    {
+      "name": "heavy-level list is complete: 21 unmixed + 2 R + 3 h + 5 t + chiral/eaten/vector mixed levels",
+      "pass": true
+    },
+    {
+      "name": "DYN-1b ledger regression: triplet levels match heavy_spectrum.json",
+      "pass": true
+    },
+    {
+      "name": "runner self-test: RK4 with two-loop off reproduces the one-loop analytic solution",
+      "pass": true
+    },
+    {
+      "name": "textbook no-threshold MSSM unification: alpha1 = alpha2 near 2e16 GeV with alpha_G^-1 ~ 24-25 and a small alpha_3 mismatch",
+      "pass": true
+    },
+    {
+      "name": "AG coefficient algebra: 10b1+6b2-16b3 = 120, 5b1+3b2-8b3 = 60, eps_ijk(b_i-b_j) weights = (4,-9.6,5.6), and 2/120 = 0.0167",
+      "pass": true
+    },
+    {
+      "name": "benchmark x = 0.1 status DISCLOSED: exact alpha_1,2 matching either converges or is unphysical there (alpha_3 non-perturbative in the matching region)",
+      "pass": true
+    },
+    {
+      "name": "fine x-scan: >= 6/10 points solved or explicitly disclosed as unphysical; the alpha_3 pull landscape over x is recorded",
+      "pass": true
+    },
+    {
+      "name": "COMPATIBILITY POINT exists on the benchmark slice: some x gives |alpha_3 pull| < 3 sigma with M_S = 3 TeV (the unification window is non-empty)",
+      "pass": true
+    },
+    {
+      "name": "SECONDARY 3x3 exact solve (x = 0.1, M_S free) converges; the M_S required for perfect unification is disclosed wherever it lands",
+      "pass": true
+    },
+    {
+      "name": "Monte-Carlo propagation of input uncertainties succeeded on >= 100/120 samples at x*",
+      "pass": true
+    },
+    {
+      "name": "compatibility WINDOW extracted at x* (16/50/84 percentiles), not a point claim",
+      "pass": true
+    },
+    {
+      "name": "perturbativity DISCLOSED: above M_X the full-theory b = 109 puts the Landau pole a factor ~ exp(2 pi alpha_G^-1/109) above M_X (famous MSGUT feature, reported not hidden)",
+      "pass": true
+    },
+    {
+      "name": "benchmark-neighborhood scan folded into the fine x-scan above (x = 0.20, 0.25 probe the accidental-zero region)",
+      "pass": true
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "compatibility_point_MS_3TeV": {
+    "M_H_star_units_of_m": [
+      -0.6258212476364382,
+      0.14259218300577065
+    ],
+    "M_X_GeV": 19069442157790.652,
+    "alpha3_pull_sigma": 0.8083061986128812,
+    "alpha_G_inv": 52.515425233918094,
+    "m_scale_GeV": 26622743051084.668,
+    "x_star": 0.15
+  },
+  "created_utc": "2026-07-04T17:10:00+00:00",
+  "derivation_log": {
+    "inputs_flagged": {
+      "alpha_em_inv_MZ": [
+        127.951,
+        0.009
+      ],
+      "alpha_s_MZ": [
+        0.118,
+        0.0009
+      ],
+      "provenance": "PDG-vintage benchmark values; DYN-4 target-table refresh will update",
+      "sin2w_MZ": [
+        0.23122,
+        4e-05
+      ]
+    },
+    "step_1_b_generator": "every heavy level carries (S1,S2,S3) from AG Table 2 (re-derived in DYN-1b); universality gates: chiral sum (127,127,127), 45 sum (8,8,8), b_SO(10) = 6+127-24 = 109",
+    "step_2_running": "RK4 on alpha_i^-1; SM 2-loop below M_S (b = (41/10,-19/6,-7)), MSSM 2-loop above (b = (33/5,1,-3), standard b_ij); gauge-only 2-loop, Yukawa terms neglected (flagged)",
+    "step_3_matching": "supermultiplet-level one-loop matching at mu* = M_X = min(m_lambda_E, m_lambda_X)*m_scale (AG: lightest p-decay vector); Delta_i = (1/2pi) sum w*S_i*ln(M/M_X) with eaten pairs at m_lambda and vector superfields at weight -3*pair; scheme constants (2/21-type) dropped: DR-bar-style",
+    "step_4_ag_algebra": "10b1+6b2-16b3 = 120, 5b1+3b2-8b3 = 60, eps_ijk(b_i-b_j) = (4,-9.6,5.6), 2/120 = 0.0167: AG eqns (Deltasw, Deltath) coefficients machine-verified; S_W/S_X columns already gated in DYN-1b",
+    "step_5_solve": "exact 3x3 Newton for (alpha_G^-1, ln m_scale, ln M_S) against alpha_1,2,3(M_Z); g in vector masses tied to alpha_G self-consistently; window from 200-sample MC over input errors (alpha_s dominant)"
+  },
+  "dyn_item": "DYN-2",
+  "ew_inputs_pdg_vintage_flagged_for_dyn4_refresh": true,
+  "findings": {
+    "kill_criterion_feed": "this is a DYN-8 entry: the benchmark-slice exclusion is a reproducible, disclosed negative result",
+    "pull_landscape_crosses_zero": "between x = 0.12 and x = 0.14; compatibility point x* = 0.15 with pull +0.8 sigma",
+    "unification_vs_proton_decay_tension": "at x* the exact-matching solution forces M_X ~ 2e13 GeV and alpha_G^-1 ~ 52: d = 6 proton decay (tau ~ M_X^4) is then catastrophically fast -- the raw benchmark slice (lambda = eta = 1, benchmark gamma, M_S = 3 TeV) is excluded by unification + proton decay COMBINED; viability requires the (lambda, eta, gamma, complex xi) scan (AG's cancellation regions), deferred to a dedicated extension; quantitative tau_p = DYN-3"
+  },
+  "landau_ratio_above_MX": 20.6392379820831,
+  "matching_one_loop_only": true,
+  "no_unique_scale_claimed": true,
+  "scheme_constants_dropped_drbar_style": true,
+  "secondary_exact_solve_MS_free_x_0p1": {
+    "MS_in_1_10_TeV_window": false,
+    "M_S_GeV": 55764140.22791769,
+    "M_X_GeV": 5133169969741.393,
+    "alpha_G_inv": 60.126650612798635
+  },
+  "single_effective_MS": true,
+  "two_loop_gauge_only_yukawa_neglected": true,
+  "window_16_50_84": {
+    "alpha3_pull_sigma": [
+      -0.015121626383682354,
+      0.7992625810749541,
+      1.7589096607467185
+    ],
+    "alpha_G_inv": [
+      52.50687321278289,
+      52.514041894603,
+      52.52556033257085
+    ],
+    "log10_MX_GeV": [
+      13.275580971817856,
+      13.280698486930763,
+      13.284162676875052
+    ]
+  },
+  "x_scan": [
+    {
+      "alpha3_pull_sigma": -56.32,
+      "alpha_G_inv": 48.887,
+      "log10_MX_GeV": 14.1605,
+      "x": 0.05
+    },
+    {
+      "alpha3_pull_sigma": -43.57,
+      "alpha_G_inv": 50.379,
+      "log10_MX_GeV": 14.1728,
+      "x": 0.08
+    },
+    {
+      "alpha3_pull_sigma": -34.98,
+      "alpha_G_inv": 51.1246,
+      "log10_MX_GeV": 14.0769,
+      "x": 0.1
+    },
+    {
+      "alpha3_pull_sigma": -23.91,
+      "alpha_G_inv": 52.0152,
+      "log10_MX_GeV": 13.8779,
+      "x": 0.12
+    },
+    {
+      "alpha3_pull_sigma": 1.76,
+      "alpha_G_inv": 52.3932,
+      "log10_MX_GeV": 13.4315,
+      "x": 0.14
+    },
+    {
+      "alpha3_pull_sigma": 0.81,
+      "alpha_G_inv": 52.5154,
+      "log10_MX_GeV": 13.2803,
+      "x": 0.15
+    },
+    {
+      "alpha3_pull_sigma": 9.87,
+      "alpha_G_inv": 52.7033,
+      "log10_MX_GeV": 12.9574,
+      "x": 0.16
+    },
+    {
+      "alpha3_pull_sigma": 54.11,
+      "alpha_G_inv": 53.1275,
+      "log10_MX_GeV": 11.2901,
+      "x": 0.18
+    },
+    {
+      "alpha3_pull_sigma": 31.21,
+      "alpha_G_inv": 52.8475,
+      "log10_MX_GeV": 12.2646,
+      "x": 0.2
+    },
+    {
+      "alpha3_pull_sigma": 7.75,
+      "alpha_G_inv": 52.8568,
+      "log10_MX_GeV": 14.1429,
+      "x": 0.25
+    }
+  ],
+  "zeta_value_derived": false
+}
