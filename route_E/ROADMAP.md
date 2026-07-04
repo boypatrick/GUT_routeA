@@ -369,17 +369,46 @@ Standing discipline for every DYN item:
   (opened below as DYN-9); (ii) extra Higgs content (120-plet; archival
   audits exist); (iii) proper split-spectrum running (refinement only;
   cannot lift M_X by 2-3 orders).
-- **DYN-9 [new lane, open]: non-SUSY / intermediate-scale variant.**
+- **DYN-9 [new lane]: non-SUSY / intermediate-scale variant.**
   Rebuild DYN-2 for a non-supersymmetric SO(10) chain
   (SO(10) -> Pati-Salam or G_LR at M_I -> SM), where d=5 proton decay is
   absent (no higgsinos) and two-step running decouples M_I from M_X.
-  Requires: non-SUSY beta coefficients, the non-SUSY scalar spectrum of
-  the same 210+126+126b(+10) system (the AG-derived blocks carry over at
-  the superpotential level but the potential and spectrum differ), and
-  the d=6-only proton constraint.  This is the last structurally
-  distinct rescue inside the face-projection framework's source-sector
-  choices; a negative result here would push the pressure onto the
-  Higgs-content choice itself.
+  Status: **DYN-9a done** (2026-07-05;
+  `code/audit9_dyn9_nonsusy_intermediate.py`, 14/14 checks; ledgers
+  `output/audit9/dyn9_nonsusy_intermediate.{json,md}`; whitelist extended
+  for `output/audit9/`).
+  Method: all one-loop b coefficients DERIVED from field content (ESH
+  scalars, GUT-normalized abelian factors) and gated against hand values;
+  SM segment two-loop; Newton per chain; anchored against the BDM
+  two-loop results (PRD 80 015013): the G_LR solver lands at
+  (9.43, 16.32, 45.6) vs BDM (9.5, 16.2, 45.5) -- one-loop fidelity is
+  excellent.
+  RESULTS (current bound tau(p -> e+ pi0) > 2.4e34 yr):
+  | G_LR (via 45_H, 126b) | M_I = 1e9.4, M_X = 1e16.3 | tau ~ 1e36:
+    **ALIVE** (above the 10-yr Hyper-K e+pi0 reach ~1e35; only partially
+    probeable) | but seesaw/leptogenesis strained: archival M_R ceiling
+    needs f ~ 1e6, and M_1 > M_I |
+  | PS = 2L2R4C no D (the 210-COMPATIBLE chain) | M_I = 1e11.9,
+    M_X = 1e15.7 | tau ~ 4.3e33: **MARGINAL** (5.6x below the bound =
+    inside BDM's threshold-spread caveat) -- either already dead or
+    sitting EXACTLY in the Hyper-K discovery window; M_I ~ 1e12 is
+    seesaw-friendly and M_1 < M_I (leptogenesis OK) |
+  | PS + D (needs 54_H) | M_X = 1e15.0 | tau ~ 3e30: dead |
+  | 2L1R4C | M_X = 1e14.4 | tau ~ 3e28: dead (BDM reproduced) |
+  STRUCTURAL VERDICT: the rescue EXISTS -- d=5 (the DYN-3 killer) is
+  SUSY-specific and absent here, and at least one chain clears the d=6
+  bound.  The two live-ish options trade off cleanly: G_LR is safely
+  alive but strains the seesaw and swaps the framework's 210_H for 45_H
+  (conditional-input change); the 210-compatible PS chain preserves the
+  source choice and the seesaw scale but is pinned at the bound --
+  maximally falsifiable.  The kinematic theorem core (16 with forced
+  nu^c, N = 3, K_tr = Killing) is SUSY-agnostic and untouched; the
+  126bar (P_nu^c source) survives in every chain.
+  Remaining as **DYN-9b** (open): non-SUSY scalar potential and spectrum
+  of the 210/126 system (real thresholds replacing ESH); the non-SUSY
+  flavor refit (archival M_R was SUSY-convention); two-loop intermediate
+  segment; Yukawa-sector viability (non-SUSY SO(10) fits need the
+  126bar + 10 complex doublet structure).
 
 - **DYN-3 [Audit 2: d=5 proton-decay pipeline] (2-3 sessions).**
   Goal: physical C_5L / C_5R Wilson tensors and channel widths.

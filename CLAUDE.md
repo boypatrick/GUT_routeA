@@ -35,6 +35,7 @@ python3 code/audit1_dyn4b_refreshed_card_unconditional_zeta.py
 python3 code/audit7_dyn7_leptogenesis_argzeta.py
 python3 code/audit2_dyn3_proton_d5_kill_criterion.py
 python3 code/audit3_dyn2b_rescue_scan.py
+python3 code/audit9_dyn9_nonsusy_intermediate.py
 ```
 
 The DYN-4a script requires the archival output set restored under `route_E/output/` (user-managed; sha256 recorded in its ledger).

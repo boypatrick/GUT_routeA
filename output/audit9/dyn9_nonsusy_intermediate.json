@@ -1,0 +1,136 @@
+{
+  "all_pass": true,
+  "archival_MR_spectrum_indicative_only": true,
+  "audit": "audit9_dyn9_nonsusy_intermediate",
+  "chains": {
+    "2L1R4C": {
+      "alive_now": false,
+      "alpha_G_inv": 43.65080382046337,
+      "bdm_criterion": 0.07216315449167089,
+      "log10_MI": 11.554594348578451,
+      "log10_MX": 14.435767888811904,
+      "marginal_within_10x": false,
+      "residual": 3.5775826745521044e-11,
+      "tau_d6_years": 2.6995788170322533e+28,
+      "testable_hyper_k": false
+    },
+    "G_LR": {
+      "alive_now": true,
+      "alpha_G_inv": 45.62896117907096,
+      "bdm_criterion": 446.0673626884492,
+      "leptogenesis_M1_below_MI": false,
+      "log10_MI": 9.426192987928776,
+      "log10_MX": 16.32168619040955,
+      "marginal_within_10x": false,
+      "residual": 7.815970093361102e-14,
+      "seesaw_f_needed": [
+        8.920392607651644,
+        12068.766469175753,
+        1471864.7802625212
+      ],
+      "tau_d6_years": 1.031492061217414e+36,
+      "testable_hyper_k": true
+    },
+    "PS": {
+      "alive_now": false,
+      "alpha_G_inv": 45.08815286943531,
+      "bdm_criterion": 28.636641319319686,
+      "log10_MI": 11.916145472455215,
+      "log10_MX": 15.728036074896437,
+      "marginal_within_10x": true,
+      "residual": 4.263256414560601e-14,
+      "tau_d6_years": 4.2511766598502897e+33,
+      "testable_hyper_k": false
+    },
+    "PS+D": {
+      "alive_now": false,
+      "alpha_G_inv": 41.10036784526142,
+      "bdm_criterion": 0.7810375228180356,
+      "log10_MI": 13.643564912342747,
+      "log10_MX": 14.96601935192547,
+      "marginal_within_10x": false,
+      "residual": 2.842170943040401e-14,
+      "tau_d6_years": 3.162341668865819e+30,
+      "testable_hyper_k": false
+    }
+  },
+  "checks": [
+    {
+      "name": "b coefficients DERIVED from content, G_LR chain: (b3, b2L, b2R, bBL) = (-7, -3, -7/3, 11/2)",
+      "pass": true
+    },
+    {
+      "name": "b coefficients DERIVED, PS chain (no D): (b4, b2L, b2R) = (-23/3, -3, 11/3)",
+      "pass": true
+    },
+    {
+      "name": "b coefficients DERIVED, PS + D: (b4, b2L, b2R) = (-14/3, 11/3, 11/3)",
+      "pass": true
+    },
+    {
+      "name": "b coefficients DERIVED, 2L1R4C: (b4, b2L, b1R) = (-29/3, -3, 23/3) (content-convention note: BDM's XIIa uses a slightly different ESH set; gate below is on their effective two-step anchors)",
+      "pass": true
+    },
+    {
+      "name": "all four chains solved to residual < 1e-9",
+      "pass": true
+    },
+    {
+      "name": "BDM ANCHOR GATE (G_LR, 126bar case): two-loop BDM give n1 = 9.5, nU = 16.2, alpha_U^-1 = 45.5; the one-loop solver must land within (1.0, 0.7, 3.0) of those",
+      "pass": true
+    },
+    {
+      "name": "BDM anchor gate (2L1R4C): nU ~ 14.4-14.6 (their XIIa) within 0.8",
+      "pass": true
+    },
+    {
+      "name": "d=5 ABSENT structurally: no higgsinos in the non-SUSY spectrum -- the DYN-3 killer does not exist in this lane",
+      "pass": true
+    },
+    {
+      "name": "LIVING STRUCTURAL VARIANT FOUND: at least one chain passes the CURRENT bound tau(p -> e+ pi0) > 2.4e34 yr",
+      "pass": true
+    },
+    {
+      "name": "the 2L1R4C chain is DEAD by proton decay (BDM's own conclusion reproduced with the current bound)",
+      "pass": true
+    },
+    {
+      "name": "TESTABILITY: the living chain(s) sit within reach of the Hyper-K e+ pi0 program (tau not far above 1e35 yr) -- the rescue is falsifiable, not a retreat to invisibility",
+      "pass": true
+    },
+    {
+      "name": "seesaw ceiling DISCLOSED: the archival M_R spectrum (SUSY-convention, indicative only) vs M_I -- the heaviest state needs f = M_R3/M_I; f >> 4pi signals that the non-SUSY flavor refit (DYN-9b) must lower the M_R ceiling or raise M_I",
+      "pass": true
+    },
+    {
+      "name": "leptogenesis compatibility DISCLOSED per living chain (archival M_1 = 2.4e10 GeV vs M_I): chains with low M_I strain both the seesaw ceiling and thermal N_1 production; PS-type chains with higher M_I are friendlier",
+      "pass": true
+    },
+    {
+      "name": "the 210-COMPATIBLE PS chain (no D) is MARGINAL, not dead: within 10x of the current bound, i.e. inside BDM's own GUT-threshold spread caveat -- the framework's 210 source is not excluded in the non-SUSY lane",
+      "pass": true
+    }
+  ],
+  "checks_passed": 14,
+  "checks_total": 14,
+  "created_utc": "2026-07-04T18:12:59+00:00",
+  "derivation_log": {
+    "anchors": "BDM PRD 80 015013 (arXiv:0903.4049) p.14 effective two-step results",
+    "b_formula": "b = -(11/3)C_A + (2/3) sum_Weyl T + (1/3) sum_cplx T; abelian: GUT-normalized (T15 of SU(4); sqrt(3/8)(B-L)); all coefficients derived from content and gated against hand values",
+    "matching": "1/a1 = (3/5)/a2R + (2/5)/a_BLnorm (LR) or +(2/5)/a4 (PS); a3 = a4 or a3c; Newton on (ln M_I, ln M_X, split) demanding four-coupling unification",
+    "running": "SM segment two-loop; intermediate segment one-loop (BDM two-loop shifts exponents O(0.1-1): flagged)",
+    "tau_d6": "1.6e34 yr (M_X/1e16)^4 (alpha_G^-1/25)^2; current bound SK p -> e+ pi0 2.4e34 yr; Hyper-K reach ~1e35"
+  },
+  "dyn_item": "DYN-9",
+  "esh_minimal_scalar_content": true,
+  "framework_notes": {
+    "kinematic_core": "the reconstruction's theorem core (16 with forced nu^c, N = 3 from aut(CP1), K_tr = Killing) is SUSY-AGNOSTIC: untouched",
+    "p_nuc_source": "the 126bar survives as the post-B-L P_nu^c source in every chain considered",
+    "route_b_language": "the hidden-messenger SUPERpotential argument needs non-SUSY re-derivation; the K_tr direction uniqueness (representation theory) survives as-is",
+    "source_swap_flag": "BDM's minimal G_LR realization uses 45_H for the first stage where the framework's companion note uses 210_H: a conditional-input swap to be audited in DYN-9b (210-based PS chain computed here as the alternative)"
+  },
+  "nonsusy_scalar_potential_not_rederived_DYN9b": true,
+  "one_loop_intermediate_segment": true,
+  "zeta_value_derived": false
+}

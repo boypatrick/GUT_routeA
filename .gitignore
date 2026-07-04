@@ -64,3 +64,7 @@ backups/
 # Whitelist for the dynamics-lane DYN-3 ledgers.
 !/output/audit2/
 !/output/audit2/**
+
+# Whitelist for the dynamics-lane DYN-9 ledgers (non-SUSY variant lane).
+!/output/audit9/
+!/output/audit9/**
