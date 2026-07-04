@@ -369,6 +369,28 @@ Standing discipline for every DYN item:
   `code/audit_mssm_mixing_d5_dressing.py`, `code/audit_full_knu_width.py`,
   `code/scan_proton_channel_bounds.py` (HEAD).
   Depends: DYN-1, DYN-2, DYN-4 (graph order: after Audit 3).
+  Status: **done** (2026-07-05;
+  `code/audit2_dyn3_proton_d5_kill_criterion.py`, 13/13 checks; ledgers
+  `output/audit2/dyn3_proton_d5_kill_criterion.{json,md}`).
+  Three stacked layers: (1) archival Knu calibration replayed and
+  internally exact (S_T anchors scale as sqrt(bound ratio) to machine
+  precision: Gamma ~ S_T^2; worst channel LLLL up-up-down p -> K+ nubar);
+  (2) the HEAD audit-2 Wilson contract regenerated (deterministic gate)
+  and fed PHYSICAL tensors -- DYN-1 det-tuned triplet inverse entries
+  (max |S_i^j| = 1.99/m at x = 0.1) and the archival Yukawa sectors;
+  (3) the HARD KILL CRITERION via the robust scaling law
+  tau = SK_bound (M_T_eff/1e17 GeV)^2 with the minimal-SUSY-GUT
+  literature anchor: at the DYN-2 compatibility point x* = 0.15,
+  M_T_eff = 1.45e13 GeV gives tau(p -> K+ nubar) ~ 1.2e26 yr --
+  **7.7 orders below Super-K's 5.9e33 yr** (arXiv:1408.1195) -- and
+  across the ENTIRE solved x-scan the unification-vs-proton gap in
+  m_scale is 2.7e2 to 1.2e6.  COMBINED EXCLUSION of the raw benchmark
+  slice (lambda = eta = 1, benchmark gamma, M_S = 3 TeV) recorded as the
+  DYN-8 hard entry.  Escape levers quantified: mini-split sfermions
+  (3-10 orders in tau), triplet retuning via the DYN-2b/4c joint scan.
+  Refinement left open as **DYN-3b**: flavor rotations to the physical
+  basis (DYN-4c), explicit one-loop dressing replacing the literature
+  anchor, channel table beyond the worst channel.
 
 - **DYN-5 [hidden-messenger dynamics at one loop] (1 session).**
   Goal: promote the tree-level matching-silence statement to audited

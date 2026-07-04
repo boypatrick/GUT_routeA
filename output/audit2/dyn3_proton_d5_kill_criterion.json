@@ -1,0 +1,197 @@
+{
+  "all_pass": true,
+  "audit": "audit2_dyn3_proton_d5_kill_criterion",
+  "checks": [
+    {
+      "name": "archival calibration is internally consistent: S_T_safe scales as sqrt(bound ratio), i.e. Gamma proportional to S_T^2",
+      "pass": true
+    },
+    {
+      "name": "archival unit block reproduces: 1/yr = hbar/(seconds per year) in GeV",
+      "pass": true
+    },
+    {
+      "name": "worst channel identified in the archival map: LLLL up-up-down Knu (p -> K+ nubar), conservative max-width normalization",
+      "pass": true
+    },
+    {
+      "name": "deterministic random-tensor contract gate regenerates (zero contraction error, as in the HEAD audit-2 card)",
+      "pass": true
+    },
+    {
+      "name": "DYN-1 regression: the triplet block at the HEAD sample (M_H = 0.67) reproduces the archived determinant",
+      "pass": true
+    },
+    {
+      "name": "physical S_i^j entries computed at the det-tuned x = 0.1 point (units of 1/m); conservative scale = max over the six audit-2 entries",
+      "pass": true
+    },
+    {
+      "name": "PHYSICAL Wilson tensor assembled (archival Yukawa sectors as the triplet Yukawa maps at this audit level; flavor rotations to the physical basis are the DYN-4c refinement)",
+      "pass": true
+    },
+    {
+      "name": "effective triplet scale at the DYN-2 compatibility point x* = 0.15 computed from DYN-1 (triplet inverse) x DYN-2 (m_scale)",
+      "pass": true
+    },
+    {
+      "name": "HARD KILL CRITERION (raw slice): tau(p -> K+ nubar) at x* falls orders of magnitude below the Super-K bound; no O(1-100) dressing/hadronic uncertainty can bridge it",
+      "pass": true
+    },
+    {
+      "name": "x-scan joined: for every unification-solved x, the proton-decay gap factor (m_scale needed / m_scale unification wants) is published",
+      "pass": true
+    },
+    {
+      "name": "COMBINED EXCLUSION (the DYN-8 hard entry): on the ENTIRE solved x-scan of the raw slice, unification and the Super-K bound are incompatible by > 1 order of magnitude in m_scale",
+      "pass": true
+    },
+    {
+      "name": "escape levers quantified (not a model-class exclusion)",
+      "pass": true
+    },
+    {
+      "name": "decoupling limit gate: scaling law sends tau -> infinity as M_T_eff -> infinity",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "created_utc": "2026-07-04T17:50:39+00:00",
+  "derivation_log": {
+    "bounds": "Super-K tau(p -> nubar K+) > 5.9e33 yr (90% CL, arXiv:1408.1195); Hyper-K 10-yr Knu reach O(3e34)",
+    "layer1": "archival Knu calibration replayed: Gamma ~ S_T^2 verified via the two safe-S_T anchors; worst channel LLLL up-up-down Knu, max-width normalization",
+    "layer2": "HEAD audit-2 contract C_5L = sum S_i^j Y^i Y^j regenerated (deterministic gate) and fed the physical det-tuned triplet inverse + archival Yukawa sectors",
+    "layer3": "kill criterion via the robust scaling tau = SK_bound x (M_T_eff / 1e17 GeV)^2, M_T_eff = m_scale/max|S_i^j|; literature anchor: minimal-SUSY-GUT analyses require M_T_eff >~ 1e17 GeV at the Super-K bound with TeV sparticles (Goto-Nihei / Murayama-Pierce lineage)"
+  },
+  "dressing_hadronic_via_literature_anchor_only": true,
+  "dyn_item": "DYN-3",
+  "escape_levers": {
+    "required_combined_shift": "raise m_scale x 2.7e+02 at fixed unification, or an equivalent combination of the two levers",
+    "sfermion_mass": "Gamma ~ 1/m_sf^2-4 (dressing): pushing sfermions from 3 TeV to 100-1000 TeV buys 3-10 orders in tau (decoupling/mini-split direction); DYN-2 M_S assumption must then be redone",
+    "triplet_tuning": "max|S_i^j| depends on (lambda, eta, gamma, x): a DYN-2b/4c joint scan may find slices with heavier effective triplets AND acceptable unification"
+  },
+  "flavor_rotations_to_physical_basis_deferred_DYN4c": true,
+  "hyper_k_reach_years": 3.2e+34,
+  "kill_criterion": {
+    "M_T_eff_GeV": 14489529709093.287,
+    "SK_bound_years": 5.9e+33,
+    "m_scale_GeV": 26622743051084.668,
+    "max_abs_S_over_m": 1.8373779953932432,
+    "orders_short": 7.677891420646367,
+    "statement": "the raw benchmark slice (lambda = eta = 1, benchmark gamma, M_S = 3 TeV) is EXCLUDED: every unification-compatible x underproduces tau(p -> K+ nubar) by >> 1 order; combined with DYN-2 this is the hard DYN-8 entry",
+    "tau_p_Knu_years": 1.2386841800251126e+26,
+    "x_star": 0.15
+  },
+  "physical_entries_x0p1": {
+    "S_1^1": [
+      -1.9385657564122618,
+      -0.44169852677747706
+    ],
+    "S_1^2": [
+      -0.37645588231548943,
+      -0.18004411762914707
+    ],
+    "S_1^4": [
+      0.35244108636730126,
+      -0.7369222714952663
+    ],
+    "S_2^1": [
+      0.10078716313715291,
+      0.048202556282986156
+    ],
+    "S_2^2": [
+      0.018405428511709825,
+      0.014527555208928195
+    ],
+    "S_2^4": [
+      -0.02843807066577948,
+      0.036029109449075204
+    ]
+  },
+  "raw_slice_exclusion_not_model_class": true,
+  "tree_level_triplet_spectrum": true,
+  "x_scan_join": [
+    {
+      "MT_eff_GeV": 30743571087105.82,
+      "alpha3_pull": -56.32,
+      "m_scale_needed_GeV": 6.571439279486935e+17,
+      "tau_years": 5.576486262808781e+26,
+      "unification_vs_proton_gap": 3252.7125660408738,
+      "x": 0.05
+    },
+    {
+      "MT_eff_GeV": 53494064683503.72,
+      "alpha3_pull": -43.57,
+      "m_scale_needed_GeV": 3.88516272487568e+17,
+      "tau_years": 1.688352824254099e+27,
+      "unification_vs_proton_gap": 1869.3662669241432,
+      "x": 0.08
+    },
+    {
+      "MT_eff_GeV": 83819294487011.45,
+      "alpha3_pull": -34.98,
+      "m_scale_needed_GeV": 1.988249174648801e+17,
+      "tau_years": 4.1451477356972053e+27,
+      "unification_vs_proton_gap": 1193.0427309370384,
+      "x": 0.1
+    },
+    {
+      "MT_eff_GeV": 372596548212062.56,
+      "alpha3_pull": -23.91,
+      "m_scale_needed_GeV": 2.8286289678939468e+16,
+      "tau_years": 8.190863076633087e+28,
+      "unification_vs_proton_gap": 268.38681270628734,
+      "x": 0.12
+    },
+    {
+      "MT_eff_GeV": 2089225754472.762,
+      "alpha3_pull": 1.76,
+      "m_scale_needed_GeV": 1.8048014906402386e+18,
+      "tau_years": 2.575269909359846e+24,
+      "unification_vs_proton_gap": 47864.6215163263,
+      "x": 0.14
+    },
+    {
+      "MT_eff_GeV": 14488262332328.744,
+      "alpha3_pull": 0.81,
+      "m_scale_needed_GeV": 1.8373779953932432e+17,
+      "tau_years": 1.2384674979212182e+26,
+      "unification_vs_proton_gap": 6902.138966441995,
+      "x": 0.15
+    },
+    {
+      "MT_eff_GeV": 5462406243818.634,
+      "alpha3_pull": 9.87,
+      "m_scale_needed_GeV": 2.317025513723546e+17,
+      "tau_years": 1.760435036378019e+25,
+      "unification_vs_proton_gap": 18306.950368834605,
+      "x": 0.16
+    },
+    {
+      "MT_eff_GeV": 86175162074.16426,
+      "alpha3_pull": 54.11,
+      "m_scale_needed_GeV": 3.1596043493895744e+17,
+      "tau_years": 4.3814335495200016e+21,
+      "unification_vs_proton_gap": 1160427.1763821896,
+      "x": 0.18
+    },
+    {
+      "MT_eff_GeV": 661010339909.6871,
+      "alpha3_pull": 31.21,
+      "m_scale_needed_GeV": 3.884244494478398e+17,
+      "tau_years": 2.577914549858369e+23,
+      "unification_vs_proton_gap": 151283.56390561585,
+      "x": 0.2
+    },
+    {
+      "MT_eff_GeV": 31666153534350.855,
+      "alpha3_pull": 7.75,
+      "m_scale_needed_GeV": 6.126599607340058e+17,
+      "tau_years": 5.916197150000379e+26,
+      "unification_vs_proton_gap": 3157.94590876097,
+      "x": 0.25
+    }
+  ],
+  "zeta_value_derived": false
+}

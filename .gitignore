@@ -60,3 +60,7 @@ backups/
 # Whitelist for the dynamics-lane DYN-7 ledgers (cosmology lane).
 !/output/audit7/
 !/output/audit7/**
+
+# Whitelist for the dynamics-lane DYN-3 ledgers.
+!/output/audit2/
+!/output/audit2/**
