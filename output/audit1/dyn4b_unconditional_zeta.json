@@ -1,0 +1,149 @@
+{
+  "all_pass": true,
+  "audit": "audit1_dyn4b_refreshed_card_unconditional_zeta",
+  "central_card_phase_convention_disclosed": true,
+  "checks": [
+    {
+      "name": "old benchmark reproduces through the DYN-4b path: zeta anchor bit-level",
+      "pass": true
+    },
+    {
+      "name": "Audit-0 invariants REGRESS on the old Veronese part: I = 0.008692433865+0.018779423508i, J = -8.0628e-5+5.6043e-4i",
+      "pass": true
+    },
+    {
+      "name": "theta_23 octant flip ABSORBED exactly: forward seesaw returns the IC24 targets to 1e-9 (s23 = 0.470)",
+      "pass": true
+    },
+    {
+      "name": "refreshed card published: zeta', contact fraction', I', J', M_*'",
+      "pass": true
+    },
+    {
+      "name": "movement diagnostics vs the old sensitivity windows DISCLOSED: the data refresh moves zeta by orders of magnitude more than the old loose windows (the old anchor digits are decisively superseded)",
+      "pass": true
+    },
+    {
+      "name": "refreshed invariants I', J' published (Audit-0.5 refresh input)",
+      "pass": true
+    },
+    {
+      "name": "Audit-0.5 phase-transfer re-test on the refreshed card: no candidate lands near arg zeta' (no-hit verdict persists)",
+      "pass": true
+    },
+    {
+      "name": "Monte Carlo completed on >= 3800/4000 draws",
+      "pass": true
+    },
+    {
+      "name": "UNCONDITIONAL zeta posterior published (percentiles of |zeta|, circular arg zeta, contact fraction)",
+      "pass": true
+    },
+    {
+      "name": "contact-essentiality robustness: the Veronese-only branch stays excluded across the posterior (P(contact fraction > 0.01) reported)",
+      "pass": true
+    },
+    {
+      "name": "posterior position of the OLD benchmark zeta DISCLOSED (fraction of posterior within +/-10% of the old |zeta|)",
+      "pass": true
+    },
+    {
+      "name": "M_1 posterior published; Davidson-Ibarra viability indicator P(M_1 > 1e9 GeV) reported for DYN-7",
+      "pass": true
+    },
+    {
+      "name": "nuisance attribution: correlation of |zeta| with log10 m1 and the Majorana phases DISCLOSED (which unknowns drive the posterior width)",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "contact_essentiality": {
+    "P(cf > 0.01)": 1.0,
+    "P(cf > 0.05)": 0.9875,
+    "P(cf > 0.13)": 0.73925
+  },
+  "created_utc": "2026-07-04T17:32:46+00:00",
+  "derivation_log": {
+    "central_card_convention": "delta = 212 deg, old phase convention 0.35pi/1.10pi, m1 = 1e-3 eV -- disclosed",
+    "design": "DYN-4a proved zeta (M_V frozen) is orthogonal to the theta_23 flip; DYN-4b frees the full Majorana sector: the inverse seesaw absorbs the refreshed data exactly and the posterior of the DECOMPOSITION (zeta, contact fraction) is computed by marginalizing the unmeasured inputs",
+    "invariants": "classical binary-quartic I, J in the audit-0 (x^2, sqrt2 xy, y^2) convention; old card regressed to the paper digits",
+    "priors": "5 observables + delta_CP ~ NuFit-6.0 IC24 gaussians; Majorana phases uniform [0, 2pi); m1 log-uniform [1e-4, 3e-2] eV (cosmology-safe); NO"
+  },
+  "dirac_kernels_archival_refit_deferred_to_DYN4c": true,
+  "dyn7_feed": {
+    "P_M1_above_1e9_GeV": 1.0,
+    "central_card_heavy_GeV": [
+      4093366820674131.0,
+      29422567304942.316,
+      24896985286.085426
+    ],
+    "log10_M1_GeV_16_50_84": [
+      10.386700319256477,
+      10.443714101913208,
+      10.524502211156289
+    ]
+  },
+  "dyn_item": "DYN-4b",
+  "fit_not_prediction": true,
+  "normal_ordering_assumed": true,
+  "old_anchor_posterior_band_fraction": 0.3145,
+  "refreshed_central_card": {
+    "I": [
+      0.007790205507812644,
+      0.01799056560849406
+    ],
+    "J": [
+      -9.142950355341042e-05,
+      0.0005142150157166885
+    ],
+    "M_star_GeV": 4093366820674131.0,
+    "abs_zeta": 0.12754645951045335,
+    "arg_zeta": 0.5959815188525397,
+    "audit05_retest_closest_miss_rad": [
+      "arg I'",
+      0.5661740467587231
+    ],
+    "contact_fraction": 0.1275431647663081,
+    "heavy_GeV": [
+      4093366820674131.0,
+      29422567304942.316,
+      24896985286.085426
+    ],
+    "movement_vs_old_windows": {
+      "phase_in_loose_windows": 74.78636903816711,
+      "phase_rad": 0.004056501652409339,
+      "scale_in_loose_windows": 689.424009999615,
+      "scale_rel": 0.022122223844387445
+    },
+    "zeta": [
+      0.10555718843436618,
+      0.07159454800111124
+    ]
+  },
+  "unconditional_zeta_posterior": {
+    "abs_zeta_percentiles_2p5_16_50_84_97p5": [
+      0.06161103546675123,
+      0.11344260855570697,
+      0.14405329993902202,
+      0.18386033563537063,
+      0.3248809488889741
+    ],
+    "arg_zeta_circular_mean": 0.6047643350451044,
+    "arg_zeta_percentiles_2p5_16_50_84_97p5": [
+      0.12353151621840236,
+      0.46502267830457733,
+      0.599757993594638,
+      0.7486555929340606,
+      1.1015281849792407
+    ],
+    "contact_fraction_percentiles_16_50_84": [
+      0.11341725504970923,
+      0.14404847659358266,
+      0.18371104070502975
+    ],
+    "old_benchmark_abs_zeta": 0.13043190327106535,
+    "old_benchmark_arg_zeta": 0.600038020504949
+  },
+  "zeta_value_derived": false
+}

@@ -273,11 +273,33 @@ Standing discipline for every DYN item:
   delta_CP prediction (not fitted): branches {324, 216} deg, the 216 deg
   branch is 0.1 sigma from NuFit.  Consequence: the covariant Dirac-sector
   refit is demonstrably necessary to address theta_23.
-  Remaining as **DYN-4b** (open): full covariant refit of Y_10/Y_126bar
-  (charged masses + CKM + refreshed PMNS simultaneously) in the
-  (psi_0, psi_1, psi_2) basis, using the DYN-1 light-doublet composition
-  for the GUT-scale sum rules; produce the unconditional zeta posterior;
-  regenerate the Audit-0.5 invariants I, J on the refreshed card.
+  **DYN-4b done** (2026-07-05;
+  `code/audit1_dyn4b_refreshed_card_unconditional_zeta.py`, 13/13 checks;
+  ledgers `output/audit1/dyn4b_unconditional_zeta.{json,md}`).
+  Design: DYN-4a proved zeta (M_V frozen) orthogonal to the theta_23 flip,
+  so 4b frees the FULL Majorana sector -- the inverse seesaw absorbs
+  NuFit-6.0 exactly and the posterior of the covariant decomposition is
+  computed.  Refreshed central card: zeta' = 0.105557+0.071595i
+  (arg moved 75 old loose windows, |zeta| moved 689 -- the printed anchor
+  digits are decisively superseded by DATA, exactly as the boundary
+  theorem requires), contact fraction' = 0.1275, M_*' = 4.09e15 GeV,
+  I' = 0.007790+0.017991i, J' = -9.143e-5+5.142e-4i; Audit-0.5 re-test
+  still no-hit (miss 0.566 rad).  UNCONDITIONAL posterior (NuFit-6.0
+  gaussians x uniform Majorana phases x log-uniform m1 in [1e-4, 3e-2] eV,
+  4000 draws): |zeta| = 0.144 [0.113, 0.184] (68%), arg zeta = 0.605
+  [0.465, 0.749] rad (circular).  KEY ROBUSTNESS RESULT: contact
+  essentiality survives the refresh and full marginalization --
+  P(contact fraction > 0.01) = 1.000, P(> 0.05) = 0.988; the
+  Veronese-only branch stays excluded posterior-wide.  Nuisance
+  attribution: the alpha_21 Majorana phase dominates the width
+  (corr +0.53), m1 +0.19.  DYN-7 feed: log10 M_1 = 10.44 [10.39, 10.52],
+  P(M_1 > 1e9 GeV) = 1.000 (Davidson-Ibarra viable).  Old-card I/J
+  regress to the Audit-0 paper digits.
+  Remaining as **DYN-4c** (open): kernel-level Dirac refit -- rerun the
+  covariant CP1-kernel fit (archival scan_cp1_o2_yukawa chain) against
+  refreshed charged-fermion masses + CKM, then propagate through 4b;
+  also the GUT-scale sum-rule variant using the DYN-1 light-doublet
+  composition (alpha, bar_alpha).
 
 - **DYN-2 [Audit 3: thresholds and unification] (1-2 sessions).**
   Goal: two-loop MSSM running + one-loop GUT-scale threshold matching
