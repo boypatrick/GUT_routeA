@@ -1113,6 +1113,25 @@ SUB-A -> SUB-B -> SUB-1 -> (SUB-2 | SUB-3).
   tex, citing the DYN-4b orthogonality result.
   Gates: post-refit chi^2 published; contact-essentiality verdict
   under the refit; tex updated accordingly.
+  Status: **done** (2026-07-06;
+  `code/audit1_dyn4c_kernel_dirac_refit.py`, 7/7; ledgers
+  `output/audit1/dyn4c_kernel_dirac_refit.{json,md}`).
+  FINDINGS: (1) EXACT ABSORPTION -- the inverse seesaw refits the
+  Majorana sector to the NuFIT 6.0 centrals identically at UNCHANGED
+  Dirac kernels (residual 9.6e-12, machine level): the 6.9 sigma
+  theta_23 pull is a frozen-anchor property; chi^2_osc = 0 by
+  construction, |zeta_fit| = 0.1275 inside the DYN-4b band.
+  (2) ESSENTIALITY LIFTED: over 1000 kernel-perturbed refits (eps up
+  to 0.3) cf never falls below 0.01 (worst 0.0151) -- the DYN-4b
+  conditionality on the exact kernel shape is removed at the
+  perturbation level.  (3) CHARGED-LEPTON ROUTE: a 5% Y_e kernel
+  perturbation alone absorbs theta_23 below 1 sigma (best 0.1 sigma)
+  with the Majorana sector frozen.  (4) Leptogenesis feed: modest
+  (kappa gain ~1.1x at kernel level) -- the escape is real but not a
+  magic lever.  K2 strengthened in the tex and the collector (K2r;
+  29/29 against 19 ledgers).  Boundary: the GUT-scale sum-rule refit
+  (quark sector) remains the deferred full flavor fit; m_1/Majorana
+  phases at benchmark values.
 
 - **SUB-1 [the theorem letter -- submission unit (1)] (1-2 sessions).**
   Extract the kinematic core into a short, self-contained paper:

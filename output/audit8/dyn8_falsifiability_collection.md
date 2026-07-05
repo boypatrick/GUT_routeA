@@ -1,6 +1,6 @@
 # DYN-8: falsifiability collection
 
-28/28 checks pass.  Closes the dynamics main line; derives nothing new; zeta NOT derived.
+29/29 checks pass.  Closes the dynamics main line; derives nothing new; zeta NOT derived.
 
 ## Branch map
 
@@ -26,9 +26,10 @@
 - **K5r** [non-SUSY LR chain (refresh, CORRECTED by the ratio scan)] the 210-only LR vacuum IS a tree-level local minimum in rare coupling regions at vev ratios near 0.6-0.7 (8/8800 sampled; He-Meljanac 1986 reproduced at claim level); the earlier fixed-ratio negative (0/249 at a/p = 0.8) was an artifact of the fixed ratio; the epsilon invariant neither rescues nor kills any sampled point; the adjoint route is an ALTERNATIVE, not a necessity (`output/audit9/dyn9b1d_lr_ratio_scan.json (corrects dyn9b1b/1c)`)
 - **K6r** [non-SUSY branch (refresh)] K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression 0.165, P = 0/4000 unflavored, boost sweet spot x60) but the gravitino ceiling dissolves by the branch -- a soft constraint on the source scenario, not a kill (`output/audit9/dyn9b3_nonsusy_leptogenesis.json`)
 - **K8r** [string-conditional (refresh)] K8 UPGRADED to a branch requirement: lock tension 9x/159x + type-II deficit 3.7/7.3 orders + leptogenesis floor leave the scale-decoupled instanton-type source as the only quantified scenario; D3 itself remains unpromoted (`output/audit9/dyn9b2_nonsusy_flavor_refit.json`)
+- **K2r** [kinematic core target (refresh)] K2 STRENGTHENED by the kernel refit: the theta_23 tension is a frozen-anchor property (exact Majorana absorption at unchanged kernels; a 5% Y_e perturbation absorbs it alone) and contact essentiality is lifted to the perturbation level (cf never below 0.01 over 1000 refits with eps up to 0.3) (`output/audit1/dyn4c_kernel_dirac_refit.json`)
 - **K11r** [benchmark bookkeeping (refresh)] the zeta-invariance theorem: the normalized contact content is exactly invariant under Dirac rescaling; only M_* is branch-local (the 'what would not falsify' remark is now a theorem) (`output/audit9/dyn9b2_nonsusy_flavor_refit.json`)
 
-Upstream: 276 checks green across 18 source ledgers.
+Upstream: 283 checks green across 19 source ledgers.
 
 ## Checks
 
@@ -54,6 +55,7 @@ Upstream: 276 checks green across 18 source ledgers.
 - [PASS] K5r [non-SUSY LR chain (refresh, CORRECTED by the ratio scan)]: the 210-only LR vacuum IS a tree-level local minimum in rare cou...
 - [PASS] K6r [non-SUSY branch (refresh)]: K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression ...
 - [PASS] K8r [string-conditional (refresh)]: K8 UPGRADED to a branch requirement: lock tension 9x/159x + type...
+- [PASS] K2r [kinematic core target (refresh)]: K2 STRENGTHENED by the kernel refit: the theta_23 tension is a f...
 - [PASS] K11r [benchmark bookkeeping (refresh)]: the zeta-invariance theorem: the normalized contact content is e...
 - [PASS] reconstruction paper contains the Falsifiability section with branch map and all eleven criteria K1-K11
 - [PASS] reconstruction paper status ledger updated (executed audits + still-open list) and manifest extended with the collector

@@ -55,6 +55,7 @@ L = {
     "9b2": load("output/audit9/dyn9b2_nonsusy_flavor_refit.json"),
     "9b3": load("output/audit9/dyn9b3_nonsusy_leptogenesis.json"),
     "9b1d": load("output/audit9/dyn9b1d_lr_ratio_scan.json"),
+    "4c": load("output/audit1/dyn4c_kernel_dirac_refit.json"),
 }
 
 print("== DYN-8 section 1: chain of custody ==")
@@ -249,6 +250,20 @@ bank("K8r", "string-conditional (refresh)", "K8 UPGRADED to a branch "
              for v in s9b2["S2_typeII"].values())
      and L["d3"]["promoted_to_paper"] is False,
      "conditional-dependency statement, not a promotion")
+
+s4c = L["4c"]["derivation_log"]
+bank("K2r", "kinematic core target (refresh)", "K2 STRENGTHENED by the "
+     "kernel refit: the theta_23 tension is a frozen-anchor property "
+     "(exact Majorana absorption at unchanged kernels; a 5% Y_e "
+     "perturbation absorbs it alone) and contact essentiality is "
+     "lifted to the perturbation level (cf never below 0.01 over "
+     "1000 refits with eps up to 0.3)",
+     "output/audit1/dyn4c_kernel_dirac_refit.json",
+     L["4c"]["all_pass"]
+     and min(v["cf_min"] for v in s4c["S2"].values()) > 0.01
+     and s4c["S3"]["eps_absorb"] is not None
+     and s4c["S3"]["eps_absorb"] <= 0.1,
+     f"eps_e(theta23) = {s4c['S3']['eps_absorb']}")
 
 zinv = s9b2["S3_invariance"]
 bank("K11r", "benchmark bookkeeping (refresh)", "the zeta-invariance "

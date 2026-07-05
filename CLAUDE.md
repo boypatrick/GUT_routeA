@@ -47,6 +47,7 @@ python3 code/audit9_dyn9b1c_eps_and_126_quartics.py
 python3 code/audit9_dyn9b2_nonsusy_flavor_refit.py
 python3 code/audit9_dyn9b3_nonsusy_leptogenesis.py
 python3 code/audit9_dyn9b1d_lr_ratio_scan.py
+python3 code/audit1_dyn4c_kernel_dirac_refit.py
 ```
 
 The DYN-4a and DYN-5 scripts require the archival output set restored under `route_E/output/` (user-managed; sha256 recorded in their ledgers).

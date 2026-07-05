@@ -1,10 +1,10 @@
 {
   "audit": "DYN-8 falsifiability collection",
   "dyn_item": "DYN-8",
-  "created_utc": "2026-07-05T23:47:52.967063+00:00",
+  "created_utc": "2026-07-05T23:54:46.377662+00:00",
   "all_pass": true,
-  "checks_passed": 28,
-  "checks_total": 28,
+  "checks_passed": 29,
+  "checks_total": 29,
   "checks": [
     {
       "name": "every source ledger loads and reports all_pass",
@@ -92,6 +92,10 @@
     },
     {
       "name": "K8r [string-conditional (refresh)]: K8 UPGRADED to a branch requirement: lock tension 9x/159x + type...",
+      "pass": true
+    },
+    {
+      "name": "K2r [kinematic core target (refresh)]: K2 STRENGTHENED by the kernel refit: the theta_23 tension is a f...",
       "pass": true
     },
     {
@@ -232,6 +236,13 @@
       "verified": true
     },
     {
+      "id": "K2r",
+      "branch": "kinematic core target (refresh)",
+      "statement": "K2 STRENGTHENED by the kernel refit: the theta_23 tension is a frozen-anchor property (exact Majorana absorption at unchanged kernels; a 5% Y_e perturbation absorbs it alone) and contact essentiality is lifted to the perturbation level (cf never below 0.01 over 1000 refits with eps up to 0.3)",
+      "source_ledger": "output/audit1/dyn4c_kernel_dirac_refit.json",
+      "verified": true
+    },
+    {
       "id": "K11r",
       "branch": "benchmark bookkeeping (refresh)",
       "statement": "the zeta-invariance theorem: the normalized contact content is exactly invariant under Dirac rescaling; only M_* is branch-local (the 'what would not falsify' remark is now a theorem)",
@@ -239,7 +250,7 @@
       "verified": true
     }
   ],
-  "upstream_checks_total": 276,
+  "upstream_checks_total": 283,
   "derives_nothing_new": true,
   "zeta_value_derived": false,
   "nonsusy_flavor_refit_still_open": true,

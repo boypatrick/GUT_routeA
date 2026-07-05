@@ -1,0 +1,147 @@
+{
+  "audit": "DYN-4c kernel-level covariant Dirac refit",
+  "dyn_item": "DYN-4c",
+  "created_utc": "2026-07-05T23:54:01.273544+00:00",
+  "all_pass": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "checks": [
+    {
+      "name": "archival card sha256 matches DYN-4a provenance; DYN-4a records the 6.9 sigma theta_23 pull this audit addresses",
+      "pass": true
+    },
+    {
+      "name": "EXACT ABSORPTION: with the Dirac kernels UNCHANGED, the inverse seesaw refits the Majorana sector to the NuFIT 6.0 centrals IDENTICALLY (forward-seesaw residual < 1e-12): the 6.9 sigma theta_23 pull is a property of the frozen benchmark anchor, not of the framework's fitting capacity -- chi^2_osc = 0 is available by construction (residual at machine level given cond(M_R) ~ 1.6e5)",
+      "pass": true
+    },
+    {
+      "name": "the NuFIT-refit contact coefficient lands inside the DYN-4b unconditional posterior band (consistency of the two refit levels)",
+      "pass": true
+    },
+    {
+      "name": "ESSENTIALITY LIFTED TO THE PERTURBATION LEVEL: over 1000 kernel-perturbed refits (eps up to 0.3) the contact fraction NEVER falls below 0.01 -- the DYN-4b conditionality on the exact archival kernel shape is removed up to 30% perturbations",
+      "pass": true
+    },
+    {
+      "name": "the perturbed contact coefficient stays within (or near) the DYN-4b unconditional band across the ensemble (median tracks the refit value; spread grows with eps as expected)",
+      "pass": true
+    },
+    {
+      "name": "CHARGED-LEPTON ROUTE quantified: the theta_23 pull vs the size of a kernel-level Y_e perturbation (Majorana sector frozen at the OLD benchmark); the smallest sampled eps_e absorbing the shift below 1 sigma is recorded",
+      "pass": true
+    },
+    {
+      "name": "LEPTOGENESIS FEED under Dirac perturbations quantified: the washout parameter distribution over the eps = 0.3 ensemble and the best-case efficiency gain (the DYN-7/9b-3 escape 'Dirac refit' is real but modest at kernel level)",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S1": {
+      "zeta_fit": [
+        0.10555718843436618,
+        0.07159454800111124
+      ],
+      "cf": 0.1275431647663081,
+      "M_star_GeV": 4093366820674131.0
+    },
+    "S2": {
+      "0.05": {
+        "cf_min": 0.07815629512553177,
+        "cf_16_50_84": [
+          0.11151101964508767,
+          0.1292546206633225,
+          0.14424844440898027
+        ],
+        "absz_16_50_84": [
+          0.11151476458287542,
+          0.1292595428018179,
+          0.1442506432261234
+        ]
+      },
+      "0.1": {
+        "cf_min": 0.04074581511254595,
+        "cf_16_50_84": [
+          0.08809020021779639,
+          0.12696097815195495,
+          0.1637401207809209
+        ],
+        "absz_16_50_84": [
+          0.08809411467218789,
+          0.12696569548189418,
+          0.16374606227445493
+        ]
+      },
+      "0.2": {
+        "cf_min": 0.01904536187571816,
+        "cf_16_50_84": [
+          0.07641491058934571,
+          0.13997323302713455,
+          0.20811209023847588
+        ],
+        "absz_16_50_84": [
+          0.0764172978032323,
+          0.13997887635936157,
+          0.2081203482524946
+        ]
+      },
+      "0.3": {
+        "cf_min": 0.015082554915471254,
+        "cf_16_50_84": [
+          0.10086190265191805,
+          0.17880510997258267,
+          0.25951915548281723
+        ],
+        "absz_16_50_84": [
+          0.10086740019423499,
+          0.17882139091689048,
+          0.2595525693548032
+        ]
+      }
+    },
+    "S3": {
+      "curve": {
+        "0.0": {
+          "best_pull": 6.866666666694074,
+          "median_pull": 6.866666666694074
+        },
+        "0.05": {
+          "best_pull": 0.06081612736538178,
+          "median_pull": 4.960709948953024
+        },
+        "0.1": {
+          "best_pull": 0.0022979591059124616,
+          "median_pull": 5.431876841920211
+        },
+        "0.15": {
+          "best_pull": 0.07443998202138295,
+          "median_pull": 6.542512222645637
+        },
+        "0.2": {
+          "best_pull": 0.03903041352017652,
+          "median_pull": 6.589105335457137
+        },
+        "0.3": {
+          "best_pull": 0.0345537063089707,
+          "median_pull": 8.102895970094256
+        }
+      },
+      "eps_absorb": 0.05
+    },
+    "S4": {
+      "mtilde_percentiles": [
+        0.04329758159036979,
+        0.04784306163551816,
+        0.050175813273052164
+      ],
+      "kappa_gain_p16": 1.0511004560007093
+    }
+  },
+  "provenance": {
+    "closure_card_sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d",
+    "targets": "NuFIT 6.0 (IC24) centrals as in DYN-4a"
+  },
+  "gut_scale_sum_rule_refit_deferred_needs_quark_sector": true,
+  "m1_and_majorana_phases_fixed_at_benchmark": true,
+  "perturbations_kernel_level_not_global_fit": true,
+  "zeta_value_derived": false
+}

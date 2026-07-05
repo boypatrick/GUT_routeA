@@ -118,9 +118,20 @@ Consequences for the submission units:
   wording.
 - SUB-3 is UNBLOCKED (the K5r correction has propagated).
 
+## SUB-B outcome (2026-07-06): the theta_23 attack is defused
+
+`code/audit1_dyn4c_kernel_dirac_refit.py` (7/7): the 6.9 sigma pull is
+a frozen-anchor property -- the Majorana sector refits the NuFIT 6.0
+centrals IDENTICALLY at unchanged Dirac kernels (chi^2_osc = 0 by
+construction), a 5% charged-lepton kernel perturbation absorbs the
+shift alone, and contact essentiality survives 1000 kernel-perturbed
+refits up to 30% (cf never below 0.01).  Referee-facing sentence: the
+benchmark card is a reproducibility anchor; the framework fits current
+oscillation data exactly, and its one falsifiable contact statement is
+robust to both data refreshes and kernel deformations.
+
 ## Revised submission order
 
-SUB-A (done) -> SUB-B0 (done; conflict resolved) -> SUB-B (theta_23
-handling = DYN-4c) -> SUB-1 (theorem letter; unblocked, no conflict)
--> SUB-2 (reproduce-and-extend form) -> SUB-3 (arXiv flagship;
-unblocked).
+SUB-A (done) -> SUB-B0 (done; conflict resolved) -> SUB-B (done;
+theta_23 defused) -> **SUB-1 (theorem letter; NEXT)** -> SUB-2
+(reproduce-and-extend form) -> SUB-3 (arXiv flagship; unblocked).
