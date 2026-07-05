@@ -971,6 +971,32 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   derived.
   9b-3: non-SUSY leptogenesis re-run on the 9b-2 tower (non-SUSY loop
   function; the gravitino constraint dissolves).
+  Status 9b-3: **done** (2026-07-06;
+  `code/audit9_dyn9b3_nonsusy_leptogenesis.py`, 10/10; ledgers
+  `output/audit9/dyn9b3_nonsusy_leptogenesis.{json,md}`).  The DYN-7
+  pipeline rerun with exactly three replacements: f_SUSY -> f_SM
+  (verified: hierarchical ratio exactly 1/2; log1p ESSENTIAL -- at
+  tower hierarchies x ~ 1e10 the SM function suffers catastrophic
+  float cancellation with a naive log, which inflated eps1 by ~100x
+  in the first pass and was caught by the Davidson-Ibarra gate);
+  v_u = 100 -> v = 174 in the loop Yukawa (m_D fixed by data;
+  m_tilde and kappa v-independent, match DYN-7 exactly); gravitino
+  ceiling REMOVED.
+  FINDINGS: net suppression eps1(non-SUSY)/eps1(DYN-7) = 0.165 (~6x
+  harder); posterior P(success) = 0/4000 (< 2.5e-4; DYN-7: 0.35%);
+  median |eta_B| = 1.45e-11 vs observed 6.1e-10; boost table: x10 ->
+  0.13, x30 -> 0.40, x60 -> 0.45 (sweet spot), x100 -> 0.34 -- typical
+  viability needs x30-100 (DYN-7 needed x3-10).  THE ONE NON-SUSY
+  GAIN: the gravitino/reheating ceiling dissolves BY THE BRANCH --
+  thermal N_1 production at 2.4e10 GeV is unconstrained and
+  NON-THERMAL production opens as a qualitatively new escape.
+  K6 branch-tagged verdict for the 9b-4 refresh: a SOFT constraint on
+  the source scenario, not a kill -- viability requires flavored +
+  O(10) effects, non-thermal production, or a resonant D3-type tower
+  (the instanton actions are free inputs, so near-degeneracy is
+  available at texture cost).  Boundary: unflavored N_1-dominated
+  thermal estimate; archival tower under the D3-type source is a
+  conditional benchmark (D3 unpromoted); zeta NOT derived.
   9b-4: DYN-8 ledger refresh with the 9b numbers.
   Depends: DYN-9 (done), DYN-8 (structure); D3/D4 optionally as
   source alternatives.  Status: open.

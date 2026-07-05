@@ -1,0 +1,103 @@
+{
+  "audit": "DYN-9b-3 non-SUSY leptogenesis rerun",
+  "dyn_item": "DYN-9b-3",
+  "created_utc": "2026-07-05T22:28:05.522011+00:00",
+  "all_pass": true,
+  "checks_passed": 10,
+  "checks_total": 10,
+  "checks": [
+    {
+      "name": "premise chain-of-custody: DYN-9b-2 selected the scale-decoupled (D3-type) source, so the ARCHIVAL tower is the benchmark input and the K8 coexistence prediction is a standing requirement; DYN-7's gravitino tension was disclosed, not resolved",
+      "pass": true
+    },
+    {
+      "name": "SM loop function verified: hierarchical limit f_SM -> -3/(2 sqrt x), exactly HALF the SUSY function used in DYN-7",
+      "pass": true
+    },
+    {
+      "name": "central chain (benchmark card) computed with the SM function and SM Higgs normalization; m_tilde and kappa are v-independent and match DYN-7 exactly",
+      "pass": true
+    },
+    {
+      "name": "NET SUPPRESSION vs the SUSY-slice pipeline quantified: eps1(non-SUSY)/eps1(DYN-7) = (f_SM/f_SUSY) x (v_arch/v_SM)^2 ~ 0.17 -- the non-SUSY branch makes thermal unflavored leptogenesis ~6x HARDER, before the gravitino gain",
+      "pass": true
+    },
+    {
+      "name": "posterior scan completed on >= 3800/4000 draws and the SM Davidson-Ibarra ceiling is respected point-wise",
+      "pass": true
+    },
+    {
+      "name": "non-SUSY posterior statistics published and compared to DYN-7: P(success) drops with the ~6x suppression",
+      "pass": true
+    },
+    {
+      "name": "boost sensitivity recomputed on the non-SUSY pipeline: typical viability is reachable at SOME enhancement, and the sweet spot sits ~6x above DYN-7's (x3-10 there)",
+      "pass": true
+    },
+    {
+      "name": "GRAVITINO CONSTRAINT DISSOLVED (the one unambiguous non-SUSY gain): without gravitinos there is no reheating ceiling, so thermal N_1 production at M_1 ~ 2.8e10 GeV is UNCONSTRAINED and non-thermal production channels are also freed -- DYN-7's disclosed tension is resolved BY THE BRANCH, not by tuning",
+      "pass": true
+    },
+    {
+      "name": "escape hierarchy UPDATED for the K6 falsifiability entry: the needed enhancement grows to ~x30-100 (unflavored thermal), but TWO qualitatively new escapes open on the non-SUSY branch (non-thermal production unconstrained; a D3-type tower with engineered near-degeneracy for resonance)",
+      "pass": true
+    },
+    {
+      "name": "K6 branch-tagged verdict recorded for the DYN-8 refresh (9b-4)",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S1_central": {
+      "chain": {
+        "M_GeV": [
+          23804475922.303894,
+          32203796829930.633,
+          3926531008378342.5
+        ],
+        "eps1": 3.4777606428234655e-08,
+        "eps_DI_max": 9.027836983535434e-06,
+        "m_tilde_eV": 0.045220140990378944,
+        "kappa": 0.006004064816022623,
+        "eta_B": -2.0045472301559605e-12
+      },
+      "suppression_vs_dyn7": 0.16514731140177036
+    },
+    "S2_posterior": {
+      "n": 4000,
+      "P_success": 0.0,
+      "P_success_dyn7": 0.0035,
+      "boost": {
+        "x3": 0.0,
+        "x5": 0.0,
+        "x10": 0.1265,
+        "x30": 0.39525,
+        "x60": 0.44675,
+        "x100": 0.3415,
+        "x300": 0.09425,
+        "x1000": 0.02675
+      },
+      "median_abs_eta": 1.445108463717883e-11
+    },
+    "S3_escapes": {
+      "escapes": {
+        "flavored_leptogenesis": "O(few)-O(10) enhancement; NOT computed here (unflavored estimate); the leading in-pipeline escape",
+        "resonant_enhancement": "requires quasi-degenerate N_1, N_2 -- the archival tower is hierarchical (ratio ~1.2e3), so this needs a DIFFERENT tower (the D3-type source permits one: the instanton actions are free inputs)",
+        "non_thermal_production": "now UNCONSTRAINED by reheating (the gravitino gain); inflaton decay to N_1 can supply the abundance with the same epsilon_1",
+        "dirac_sector_refit": "the DYN-4c kernel-level escape, still open"
+      },
+      "verdict": "thermal unflavored leptogenesis on the alive branch is HARDER than on the excluded SUSY slice (x6 in eta_B) but no longer reheating-blocked; viability requires flavored + O(10) effects, non-thermal production, or a resonant D3-type tower -- a SOFT constraint on the source scenario, not a kill",
+      "M1_GeV": 23804475922.303894
+    }
+  },
+  "provenance": {
+    "pipeline": "transcribed from code/audit7_dyn7_leptogenesis_argzeta.py with f_SUSY -> f_SM, v_u = 100 -> v = 174 in the loop Yukawa, gravitino ceiling removed",
+    "source_premise": "scale-decoupled D3-type tower (DYN-9b-2 selection); archival tower as benchmark"
+  },
+  "unflavored_estimate_flavored_not_computed": true,
+  "thermal_N1_dominance_assumed": true,
+  "archival_tower_conditional_benchmark": true,
+  "d3_source_card_still_unpromoted": true,
+  "order_of_magnitude_only": true,
+  "zeta_value_derived": false
+}
