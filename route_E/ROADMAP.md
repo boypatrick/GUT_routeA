@@ -401,7 +401,10 @@ Standing discipline for every DYN item:
   SUSY-specific and absent here, and at least one chain clears the d=6
   bound.  The two live-ish options trade off cleanly: G_LR is safely
   alive but strains the seesaw and swaps the framework's 210_H for 45_H
-  (conditional-input change); the 210-compatible PS chain preserves the
+  (conditional-input change; CORRECTED by DYN-9b-1: the (p, a, 0, 0)
+  vev pattern of the 210 itself leaves exactly the left-right group
+  unbroken with D-parity broken by the D-odd p, so the 45_H swap is
+  OPTIONAL, not forced); the 210-compatible PS chain preserves the
   source choice but is pinned at the bound -- maximally falsifiable.
   The kinematic theorem core (16 with forced nu^c, N = 3,
   K_tr = Killing) is SUSY-agnostic and untouched; the 126bar (P_nu^c
@@ -817,6 +820,37 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   system (superpotential-level blocks carry over from DYN-1, the
   potential does NOT); redo the DYN-9 thresholds with the real
   spectrum replacing ESH.
+  Status 9b-1: **first stage done** (2026-07-05;
+  `code/audit9_dyn9b1_nonsusy_vacuum_thresholds.py`, 13/13; ledgers
+  `output/audit9/dyn9b1_nonsusy_vacuum_thresholds.{json,md}`).
+  FINDINGS: (1) little-group map on the (p, a, omega, sigma) slice via
+  zero-counting of the SUSY-INDEPENDENT gauge masses (the DYN-1b
+  m_lambda formulas are |D_mu vev|^2 objects): seven patterns verified
+  -- (p,0,0,0) -> PS (21, D broken), (0,a,0,0) and (p,a,0,0) -> the
+  left-right group (15; p breaks D), (0,0,w,0) -> 3c2L1R1BL (13),
+  (t,t,t,0) -> flipped SU(5) (25), (-t,-t,t,0) -> SU(5) (25), AG
+  benchmark -> SM (12).  KEY: **the left-right chain is 210-REALIZABLE;
+  the 45_H swap is optional** (D-parity assignments cited, CMP 1984).
+  (2) Eaten-Goldstone integers: PS step eats E+X = 24, LR step
+  J+E+X = 30; second stage G+J+F = 9 (PS) / G+F = 3 (LR) from the
+  126bar's 60 real dof.  (3) ESH SENSITIVITY (survivors at M_I, worst
+  case, masses NOT derived): PS verdict threshold-fragile in BOTH
+  directions among physical solutions -- (15,1,1) or (10,2,2)+(10b,2,2)
+  lift tau to ~1e40 (alive), (15,2,2) lands at 3.6e34 (just above the
+  bound, inside the Hyper-K window), (15,3,1)/(6,2,2) sink it to
+  7.6e29/1.0e32 (dead); (15,1,3) has NO physical solution (inverted
+  M_I > M_X).  G_LR NOT unconditionally robust: (1,3,1,0) pulls tau to
+  1.2e33 (dead), (3,2,2,2/3) and a second bidoublet to ~1.3e34
+  (marginal-dead); (8,1,1,0) is trans-Planckian (flagged unphysical);
+  (1,1,3,0) harmless.  READING: the survivor SPECTRUM decides both
+  verdicts -- the K4/K5 falsifiability entries now carry an
+  in-framework threshold-spread quantification, and 9b-1b (quartic
+  Clebsch descent -> survivor masses) is the decisive open item.
+  (4) Tree-level pseudo-Goldstone landmine disclosed with the one-loop
+  stabilization literature anchor (BDM PRD 81 035015), not re-derived.
+  Remaining as **9b-1b**: the 210+126bar quartic invariant descent on
+  and off the singlet slice, survivor masses, tree-vs-one-loop
+  stability of the (p,a) and (p) vacua.
   9b-2: non-SUSY flavor refit at v_R ~ M_I: a perturbative M_R tower,
   zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
   consistent with the boundary theorem), contact-essentiality retest.

@@ -1,0 +1,340 @@
+{
+  "audit": "DYN-9b-1 non-SUSY vacuum kinematics + ESH sensitivity",
+  "dyn_item": "DYN-9b-1",
+  "created_utc": "2026-07-05T12:14:39.341075+00:00",
+  "all_pass": true,
+  "checks_passed": 13,
+  "checks_total": 13,
+  "checks": [
+    {
+      "name": "premise: DYN-9 declares the non-SUSY potential not re-derived and ESH-minimal content assumed -- exactly the two items this audit begins to discharge",
+      "pass": true
+    },
+    {
+      "name": "sector multiplicities sum to 45 - dim SM = 33 (DYN-1b census: G=(1,1,0), F=(1,1,+-1), J=(3,1,2/3)+c.c., E=(3,2,1/6)+c.c., X=(3,2,-5/6)+c.c.)",
+      "pass": true
+    },
+    {
+      "name": "little-group map on the singlet slice: all seven vev patterns give the expected unbroken dimensions (zero-counting of the SUSY-independent gauge masses)",
+      "pass": true
+    },
+    {
+      "name": "KEY RESULT: the left-right chain is 210-REALIZABLE -- pattern (p, a, 0, 0) leaves exactly dim 15 unbroken with D-parity broken by the D-odd p; the 45_H source swap recorded in DYN-9 is OPTIONAL, not forced (D-parity assignments: Chang-Mohapatra-Parida bookkeeping, cited not re-derived)",
+      "pass": true
+    },
+    {
+      "name": "boundary echo: the flipped-SU(5) and SU(5) enhanced loci sit at E- and X-sector zeros exactly as in the SUSY audit (DYN-1a boundary checks) -- the map is branch-independent",
+      "pass": true
+    },
+    {
+      "name": "first-stage eaten sets: Pati-Salam step eats E+X = 24 = 45-21; left-right step eats J+E+X = 30 = 45-15 -- all from the 210 (the only vev at M_X)",
+      "pass": true
+    },
+    {
+      "name": "second-stage eaten sets (sigma turns on): Pati-Salam -> SM eats G+J+F = 9 = 21-12; left-right -> SM eats G+F = 3 = 15-12 -- consistent with the 126bar (10,1,3) supplying 9 (resp. 3) of its 60 real dof as Goldstones",
+      "pass": true
+    },
+    {
+      "name": "baseline gate PS: transcribed solver reproduces the DYN-9 ledger",
+      "pass": true
+    },
+    {
+      "name": "baseline gate G_LR: transcribed solver reproduces the DYN-9 ledger",
+      "pass": true
+    },
+    {
+      "name": "sensitivity scan solved for all candidates on both chains; unphysical formal solutions (inverted M_I > M_X or trans-Planckian M_X) flagged and excluded from verdicts",
+      "pass": true
+    },
+    {
+      "name": "PS verdict is THRESHOLD-FRAGILE in both directions among PHYSICAL solutions (this quantifies, in-framework, the threshold-spread caveat behind the Hyper-K window statement K4): at least one single survivor lifts tau above the current bound and at least one sinks it further",
+      "pass": true
+    },
+    {
+      "name": "G_LR verdict is NOT unconditionally robust: single survivors exist that pull tau below the bound (alive/dead per candidate recorded; the survivor spectrum -- 9b-1b -- decides)",
+      "pass": true
+    },
+    {
+      "name": "tree-level pseudo-Goldstone landmine DISCLOSED, not re-derived: minimal non-SUSY SO(10) potentials are known to disfavor the intermediate little groups at TREE level, with the vacua rescued by one-loop corrections (Bertolini-Di Luzio-Malinsky, PRD 81 035015); the 210+126bar quartic Clebsch descent and the survivor masses remain open as DYN-9b-1b",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S1_little_group_map": {
+      "AG_benchmark": {
+        "vev": [
+          -0.11728395061728394,
+          -0.8777777777777778,
+          -0.1,
+          0.4178132372658481
+        ],
+        "dim_H": 12,
+        "expected": 12,
+        "little_group": "SM"
+      },
+      "p_only": {
+        "vev": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dim_H": 21,
+        "expected": 21,
+        "little_group": "Pati-Salam (D broken: 210 (1,1,1) is D-odd)"
+      },
+      "a_only": {
+        "vev": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dim_H": 15,
+        "expected": 15,
+        "little_group": "SU(3)xSU(2)_LxSU(2)_RxU(1)_BL"
+      },
+      "p_and_a": {
+        "vev": [
+          0.7,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dim_H": 15,
+        "expected": 15,
+        "little_group": "the SAME left-right chain with D-parity broken by p"
+      },
+      "omega_only": {
+        "vev": [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        "dim_H": 13,
+        "expected": 13,
+        "little_group": "3c 2L 1R 1BL"
+      },
+      "flipped_SU5_locus": {
+        "vev": [
+          1.0,
+          1.0,
+          1.0,
+          0.0
+        ],
+        "dim_H": 25,
+        "expected": 25,
+        "little_group": "flipped SU(5)xU(1) (E sector massless)"
+      },
+      "SU5_locus": {
+        "vev": [
+          -1.0,
+          -1.0,
+          1.0,
+          0.0
+        ],
+        "dim_H": 25,
+        "expected": 25,
+        "little_group": "SU(5)xU(1) (X sector massless)"
+      }
+    },
+    "S2_goldstone_bookkeeping": {
+      "PS_step1_eaten": [
+        "E",
+        "X"
+      ],
+      "PS_step2_eaten": [
+        "F",
+        "G",
+        "J"
+      ],
+      "LR_step1_eaten": [
+        "E",
+        "J",
+        "X"
+      ],
+      "LR_step2_eaten": [
+        "F",
+        "G"
+      ]
+    },
+    "S3_esh_sensitivity": {
+      "baseline": {
+        "PS": {
+          "log10_MI": 11.916145472455215,
+          "log10_MX": 15.728036074896437,
+          "alpha_G_inv": 45.08815286943531,
+          "residual": 4.263256414560601e-14
+        },
+        "G_LR": {
+          "log10_MI": 9.426192987928776,
+          "log10_MX": 16.32168619040955,
+          "alpha_G_inv": 45.62896117907096,
+          "residual": 7.815970093361102e-14
+        }
+      },
+      "PS": {
+        "(15,1,1)": {
+          "log10_MI": 10.43397354650788,
+          "log10_MX": 17.51760646459821,
+          "alpha_G_inv": 46.98824230857912,
+          "residual": 2.842170943040401e-14,
+          "tau_d6": 6.647283830831793e+40,
+          "delta_b": {
+            "4C": "4/3"
+          },
+          "physical": true,
+          "alive": true
+        },
+        "(15,1,3)": {
+          "log10_MI": 16.965583829908848,
+          "log10_MX": 14.034312661658154,
+          "alpha_G_inv": 43.467933986076986,
+          "residual": 1.4210854715202004e-14,
+          "tau_d6": 6.634811818853565e+26,
+          "delta_b": {
+            "4C": "4",
+            "2R": "10"
+          },
+          "physical": false,
+          "alive": false
+        },
+        "(15,3,1)": {
+          "log10_MI": 13.859730359510436,
+          "log10_MX": 14.81360464971712,
+          "alpha_G_inv": 40.67834946801282,
+          "residual": 8.526512829121202e-14,
+          "tau_d6": 7.610009698087597e+29,
+          "delta_b": {
+            "4C": "4",
+            "2L": "10"
+          },
+          "physical": true,
+          "alive": false
+        },
+        "(6,2,2)": {
+          "log10_MI": 12.239953453447196,
+          "log10_MX": 15.33720956942335,
+          "alpha_G_inv": 42.403372823839995,
+          "residual": 4.973799150320701e-14,
+          "tau_d6": 1.027730032465176e+32,
+          "delta_b": {
+            "4C": "4/3",
+            "2L": "2",
+            "2R": "2"
+          },
+          "physical": true,
+          "alive": false
+        },
+        "(10,2,2)+(10b,2,2)": {
+          "log10_MI": 10.433973546507868,
+          "log10_MX": 17.517606464598202,
+          "alpha_G_inv": 29.68208652503721,
+          "residual": 3.552713678800501e-14,
+          "tau_d6": 2.6524956307364444e+40,
+          "delta_b": {
+            "4C": "8",
+            "2L": "20/3",
+            "2R": "20/3"
+          },
+          "physical": true,
+          "alive": true
+        },
+        "(15,2,2)_from126": {
+          "log10_MI": 11.690847153676817,
+          "log10_MX": 15.999991405338534,
+          "alpha_G_inv": 37.480955062248086,
+          "residual": 7.193534656835254e-11,
+          "tau_d6": 3.5960596260132184e+34,
+          "delta_b": {
+            "4C": "16/3",
+            "2L": "5",
+            "2R": "5"
+          },
+          "physical": true,
+          "alive": true
+        }
+      },
+      "G_LR": {
+        "(8,1,1,0)": {
+          "log10_MI": 5.498535691995163,
+          "log10_MX": 19.890898831437326,
+          "alpha_G_inv": 49.39497704583207,
+          "residual": 3.1803892852622084e-11,
+          "tau_d6": 2.2866561676371277e+50,
+          "delta_b": {
+            "3c": "1"
+          },
+          "physical": false,
+          "alive": false
+        },
+        "(1,3,1,0)": {
+          "log10_MI": 11.091428421382652,
+          "log10_MX": 15.597213371237649,
+          "alpha_G_inv": 43.805760899029856,
+          "residual": 3.197442310920451e-13,
+          "tau_d6": 1.2026961119224957e+33,
+          "delta_b": {
+            "2L": "2/3"
+          },
+          "physical": true,
+          "alive": false
+        },
+        "(1,1,3,0)": {
+          "log10_MI": 8.539136013774154,
+          "log10_MX": 16.310324731814216,
+          "alpha_G_inv": 45.57838613157556,
+          "residual": 7.105427357601002e-14,
+          "tau_d6": 9.269510041611831e+35,
+          "delta_b": {
+            "2R": "2/3"
+          },
+          "physical": true,
+          "alive": true
+        },
+        "(3,2,2,2/3)": {
+          "log10_MI": 10.156445529411231,
+          "log10_MX": 15.857467135223091,
+          "alpha_G_inv": 43.06147158856841,
+          "residual": 7.105427357601002e-14,
+          "tau_d6": 1.2772803795020305e+34,
+          "delta_b": {
+            "3c": "2/3",
+            "2L": "1",
+            "2R": "1",
+            "BL": "2/3"
+          },
+          "physical": true,
+          "alive": false
+        },
+        "(1,2,2,0)_2nd_bidoublet": {
+          "log10_MI": 10.156445529411268,
+          "log10_MX": 15.857467135223079,
+          "alpha_G_inv": 44.4542988168618,
+          "residual": 6.394884621840902e-14,
+          "tau_d6": 1.3612441774075773e+34,
+          "delta_b": {
+            "2L": "1/3",
+            "2R": "1/3"
+          },
+          "physical": true,
+          "alive": false
+        }
+      },
+      "note": "survivors placed AT M_I = worst case; masses of the candidates are NOT derived here (9b-1b); the scan brackets the ESH systematic one candidate at a time"
+    }
+  },
+  "provenance": {
+    "gauge_mass_formulas": "code/audit4a_dyn1b_full_spectrum.py (gated there against gaugino-column norms); SUSY-independent because they come from |D_mu <vev>|^2",
+    "sector_multiplicities": "DYN-1b census (G,F,J,E,X)",
+    "solver": "transcribed from code/audit9_dyn9_nonsusy_intermediate.py",
+    "d_parity": "Chang-Mohapatra-Parida assignments, cited"
+  },
+  "quartic_clebsch_descent_computed": false,
+  "survivor_masses_derived": false,
+  "tree_level_minimum_established": false,
+  "one_loop_stabilization_cited_not_rederived": true,
+  "flavor_refit_still_open_DYN9b2": true,
+  "zeta_value_derived": false
+}
