@@ -72,3 +72,7 @@ backups/
 # Whitelist for the dynamics-lane DYN-5 ledgers (messenger one-loop lane).
 !/output/audit5/
 !/output/audit5/**
+
+# Whitelist for the DYN-8 falsifiability-collection ledgers.
+!/output/audit8/
+!/output/audit8/**

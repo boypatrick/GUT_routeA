@@ -605,6 +605,30 @@ Standing discipline for every DYN item:
   paper status ledger deferred -> completed-with-findings; Z_178
   re-scope.  Deliverable tex stays SELF-CONTAINED (repo codenames only
   in the terminology remark + literal file paths).
+  Status: **done** (2026-07-05;
+  `code/audit8_dyn8_falsifiability_collection.py`, 22/22 checks;
+  ledgers `output/audit8/dyn8_falsifiability_collection.{json,md}`;
+  whitelist extended for `output/audit8/`).  THE MAIN LINE
+  0 -> (1 || 4a) -> 2 -> 3 -> 5 -> 8 IS CLOSED.
+  Delivered: (1) collector audit re-verifying every quoted number
+  against its source ledger -- 12 ledgers, 210 upstream checks green,
+  no ledger claims a derived zeta; (2) reconstruction paper gains the
+  "Dynamics Audits and Falsifiability" section (branch map with four
+  layers + kill bank K1-K11, all branch-tagged, self-contained
+  language; terminology remark extended for the DYN/D file aliases;
+  status ledger updated executed-audits + still-open; manifest extended
+  with the collector); (3) main paper status ledger updated
+  (deferred -> executed July 2026 with findings) and the Z_178
+  observation carries the retirement note (misses the refreshed card by
+  76x the loose window).  Both PDFs rebuilt clean.
+  Kill bank: K1 fourth family (core); K2 Dirac neutrinos (contact
+  target, P(cf>0.01) = 1.000); K3 SUSY-slice exclusion (FIRED);
+  K4 PS Hyper-K window (dead-or-discoverable, the sharpest entry);
+  K5 channel hierarchy (e+ pi0 dominance, G_LR 1e36); K6 leptogenesis
+  soft kill (SUSY-scoped); K7 messenger spurion ceilings (4.4e-4);
+  K8 N2,N3 > M_I coexistence (string card); K9 Delta S >= 6.6
+  selectivity (string card); K10 bridge window / PS-bridge no-go
+  (string card); K11 Z_178 retirement.
 
 Suggested sequencing: DYN-0 -> (DYN-1 || DYN-4) -> DYN-2 -> DYN-3 ->
 DYN-5 -> DYN-8, with DYN-6/DYN-7 optional lanes after DYN-4.  Statuses
@@ -784,7 +808,8 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   perturbativity not audited; unpromoted.
 
 - **DYN-8 close-out** as specified in section E (branch map + branch-
-  tagged kill bank incl. the D3-D5 outputs).  Status: open.
+  tagged kill bank incl. the D3-D5 outputs).  Status: **done**
+  (2026-07-05; see the section-E DYN-8 entry for the full record).
 
 - **DYN-9b [non-SUSY core re-derivation -- REQUIRED for the alive
   branch] (staged, 3+ sessions).**

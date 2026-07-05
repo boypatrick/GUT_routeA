@@ -140,9 +140,12 @@ checks) and write ledgers with explicit negative-boundary flags
 (Sec.~\ref{sec:manifest}); the provenance ledger of
 Sec.~\ref{sec:provenance} classifies every external ingredient as
 machine-verified, textbook-cited, retained input, or benchmark
-corroboration.  This note adds no phenomenology: the companion note's
-deferred flavor, proton-decay, threshold, and source-sector audits are
-untouched.
+corroboration.  The companion note's formerly deferred flavor,
+proton-decay, threshold, and source-sector audits have since been
+executed as standalone machine-checked scripts;
+Sec.~\ref{sec:falsifiability} collects their outcome as a branch map and
+an explicit list of kill criteria, each tagged with the branch it
+falsifies.
 
 \begin{remark}[Repository terminology]
 \label{rem:terminology}
@@ -150,9 +153,13 @@ In the project repository, the companion lean note, its optional
 hidden-messenger extension, its optional string-constrained interpretation,
 and the present reconstruction are filed under the working aliases
 ``route~A,'' ``route~B,'' ``route~D,'' and ``route~E,'' respectively.
-Those aliases are file-system labels, not scientific claims; outside this
-remark and the literal file paths in Sec.~\ref{sec:manifest} they do not
-occur in this paper.
+The dynamics-audit ledgers cited in Sec.~\ref{sec:falsifiability} are
+filed under working aliases ``DYN-0''--``DYN-9,'' and the three
+string-conditional pricing cards under ``D3''--``D5.''  All of these
+aliases are file-system labels, not scientific claims; outside this
+remark and the literal file paths in
+Secs.~\ref{sec:falsifiability}--\ref{sec:manifest} they do not occur in
+this paper.
 \end{remark}
 
 \subsection{Relation to prior work}
@@ -916,6 +923,201 @@ input carrying its own threshold and UV audit cost.  That is the companion
 note's discipline restated as mathematics, not evaded.
 \end{remark}
 
+\section{Dynamics Audits and Falsifiability}
+\label{sec:falsifiability}
+
+The audits deferred by the companion note were executed in July 2026 as
+standalone machine-checked scripts, one JSON/Markdown ledger pair per
+audit, following the same discipline as the audits of
+Sec.~\ref{sec:manifest} (every claim gated, every negative boundary
+flagged).  A collector script,
+\texttt{code/audit8\_dyn8\_falsifiability\_collection.py}, re-verifies
+every number quoted in this section against its source ledger; its own
+ledger is \texttt{output/audit8/dyn8\_falsifiability\_collection.json}.
+Experimental statuses are as of 2026-07-05.
+
+\subsection{Branch map}
+\label{sec:branchmap}
+
+The results split the framework into four layers with sharply different
+logical statuses.
+
+\begin{description}
+\item[Kinematic core (supersymmetry-agnostic; machine-verified).]
+The theorems of Secs.~\ref{sec:sixface}--\ref{sec:killing}: the
+half-spinor sixteen with its forced sixteenth state, the three-family
+index with the a-priori bound, and the Killing-form contact direction.
+None of the dynamics results below touches this layer, and the
+\(\overline{126}\)-type Majorana source direction survives in every
+surviving branch.
+
+\item[Supersymmetric minimal completion (EXCLUDED as a slice family).]
+The benchmark supersymmetric completion (the
+\(210+126+\overline{126}+10\) superpotential family in its
+minimal-spectrum slice) is excluded by the combination of gauge
+unification and proton decay: the unification-compatible vacuum
+parameter forces the unification scale down to
+\(\sim2\times10^{13}\,\mathrm{GeV}\), where the dimension-five
+colored-triplet channel underproduces
+\(\tau(p\to K^+\bar\nu)\) by \(7.7\) orders of magnitude against the
+Super-Kamiokande bound; a joint rescue scan over the vacuum parameter,
+the source coupling, and the supersymmetry scale finds \emph{zero}
+living points, with the obstruction traced to the spectrum shape (the
+threshold sums force a low unification scale, a dimension-six trap).
+This excludes the \emph{slice family}, not the model class; the ledgers
+record the distinction explicitly.
+
+\item[Non-supersymmetric intermediate-scale variant (ALIVE; refit
+required).]
+With supersymmetry removed the dimension-five channel is structurally
+absent, and two-step breaking through an intermediate gauge group
+decouples the intermediate scale from the unification scale.  Of the
+four canonical chains, two survive proton decay: the left-right chain
+\(\SU(3)\times\SU(2)_L\times\SU(2)_R\times\U(1)_{B-L}\)
+(intermediate scale \(10^{9.4}\,\mathrm{GeV}\), unification scale
+\(10^{16.3}\,\mathrm{GeV}\), \(\tau(p\to e^+\pi^0)\sim10^{36}\,\)yr)
+and the Pati--Salam chain \(\SU(4)\times\SU(2)_L\times\SU(2)_R\)
+(the chain compatible with the companion note's \(210\) source sector;
+\(\tau\simeq4.3\times10^{33}\,\)yr at one loop, within the
+threshold-spread band of the current bound).  A perturbativity gate
+shows that \emph{no} surviving chain can host the benchmark heavy
+Majorana tower through the renormalizable source coupling
+(\(f<4\pi\) fails by up to \(379\times\)): the benchmark contact card
+is local to the excluded supersymmetric slice, and the
+non-supersymmetric flavor refit --- including re-extraction of the
+contact coefficient at the intermediate scale --- is \emph{required}
+and open.  Consistently with Theorem~\ref{thm:boundary}, the contact
+coefficient is an input in every branch; only its bookkeeping moves.
+
+\item[String-conditional pricing cards (unpromoted).]
+Three cards price string-motivated escapes without deriving anything:
+a brane-instanton Majorana source (buys the tower \emph{scale},
+zero texture compression: the instanton data equals the full
+twelve-parameter Majorana data); a protection card for the hidden
+messenger, whose enumeration yields an abelian no-go (any charge
+bookkeeping that allows the Dirac Yukawa and the messenger portal ties
+the messenger mass to the dangerous Dirac contamination), so closure
+requires instanton zero-mode selectivity with a quantified gap; and a
+high-scale supersymmetry-breaking bridge, alive on the left-right side
+for a supersymmetry-breaking scale anywhere in
+\([2\times10^{10},\,3.5\times10^{15}]\,\mathrm{GeV}\) and structurally
+impossible on the Pati--Salam side.  These cards are conditional
+interpretations under the promotion discipline of the companion note's
+string appendix; they must not be cited as evidence.
+\end{description}
+
+\subsection{Kill criteria}
+\label{sec:killbank}
+
+Each entry names the criterion, the branch it falsifies (bracketed),
+and the source ledger.
+
+\begin{enumerate}
+\item[K1.] \textbf{A fourth sequential chiral family} [kinematic core].
+Falsifies the a-priori bound \(N_{\rm fam}\le3\) of
+Theorem~\ref{thm:threefam}, hence the self-carried-index principle
+itself.  Status: a fourth sequential family is strongly excluded by
+Higgs-coupling data; the criterion stands as the core's cleanest
+falsifier.  (Ledger: \texttt{route\_E/output/route\_e\_first\_principles.json}.)
+
+\item[K2.] \textbf{Dirac neutrinos} [kinematic core's physical target].
+Established Dirac nature (e.g.\ persistent absence of neutrinoless
+double-beta decay together with positive evidence of lepton-number
+conservation) removes the Majorana contact target of
+Theorem~\ref{thm:killing}.  Contact essentiality is posterior-wide on
+current oscillation data: \(P(\text{contact fraction}>0.01)=1.000\)
+conditional on the benchmark Dirac kernels.
+(Ledger: \texttt{output/audit1/dyn4b\_unconditional\_zeta.json}.)
+
+\item[K3.] \textbf{Unification \(\times\) proton decay, supersymmetric
+slice} [supersymmetric completion --- \emph{this criterion has fired}].
+\(\tau(p\to K^+\bar\nu)\) short by \(7.7\) orders at the
+unification-compatible point; zero living points in the joint rescue
+scan.  (Ledgers: \texttt{output/audit2/dyn3\_proton\_d5\_kill\_criterion.json},
+\texttt{output/audit3/dyn2b\_rescue\_scan.json}.)
+
+\item[K4.] \textbf{The Pati--Salam window} [non-supersymmetric variant,
+\(210\)-compatible chain].  At one loop
+\(\tau(p\to e^+\pi^0)=4.3\times10^{33}\,\)yr against the current bound
+\(2.4\times10^{34}\,\)yr: the chain is either already dead or sits
+inside the Hyper-Kamiokande discovery window --- the sharpest
+falsifiability statement this framework currently owns.
+(Ledger: \texttt{output/audit9/dyn9\_nonsusy\_intermediate.json}.)
+
+\item[K5.] \textbf{Proton-decay channel hierarchy} [non-supersymmetric
+variant].  The left-right chain predicts
+\(\tau(p\to e^+\pi^0)\sim10^{36}\,\)yr (above the ten-year
+Hyper-Kamiokande reach; only partially probeable), and in the whole
+non-supersymmetric branch the gauge dimension-six channel dominates: an
+observed \(p\to K^+\bar\nu\)-dominated signal would disfavor the
+branch.  (Same ledger as K4.)
+
+\item[K6.] \textbf{Thermal leptogenesis} [supersymmetric slice;
+soft criterion].  On the benchmark slice, thermal unflavored
+leptogenesis fails by \(\sim1.5\) orders with the wrong central sign
+(success probability \(0.4\%\); a \(\times3\)--\(10\) enhancement,
+the size of flavored corrections, lifts it to \(34\)--\(45\%\)).
+On the surviving non-supersymmetric branch the gravitino constraint
+dissolves and the computation must be re-run after the required refit.
+(Ledger: \texttt{output/audit7/dyn7\_leptogenesis\_argzeta.json}.)
+
+\item[K7.] \textbf{Messenger canonical-normalization ceilings}
+[hidden-messenger extension].  The one-loop audit proves light-sector
+silence structurally (seesaw invariance under any invertible
+redefinition of \(\nu^c\)) and quantifies the replay ceilings: an
+\(R\)-breaking spurion of odd charge must satisfy
+\(\varepsilon\lesssim4.4\times10^{-4}\) against the refreshed
+contact-sensitivity windows; a microscopic completion violating the
+ceiling is excluded.
+(Ledger: \texttt{output/audit5/dyn5\_messenger\_one\_loop.json}.)
+
+\item[K8.] \textbf{Heavy-neutrino/gauge-scale coexistence}
+[string-conditional].  The instanton Majorana source \emph{requires}
+the two heavier right-handed neutrinos to sit \emph{above} the
+intermediate gauge scale (factors \(39\) and \(4.8\times10^{3}\) on the
+Pati--Salam chain) --- impossible for a renormalizable perturbative
+source.  Measuring an intermediate-scale gauge boson together with
+heavy-neutrino masses below it falsifies the card.
+(Ledger: \texttt{route\_d/output/d3\_instanton\_majorana\_pricing.json}.)
+
+\item[K9.] \textbf{Zero-mode selectivity gap} [string-conditional].
+Closure of the non-supersymmetric protection card requires the
+messenger-mass instanton to miss the Dirac contamination by
+\(\Delta S\ge6.6\) in action (refreshed windows; \(3.2\) loose) at
+string scale \(2\times10^{16}\,\mathrm{GeV}\); any concrete embedding
+with a smaller gap is excluded as a completion.
+(Ledger: \texttt{route\_d/output/d4\_stueckelberg\_protection.json}.)
+
+\item[K10.] \textbf{Supersymmetry-breaking bridge} [string-conditional].
+The left-right chain admits ultraviolet supersymmetry broken anywhere
+in \([2\times10^{10},\,3.5\times10^{15}]\,\mathrm{GeV}\) (bounded below
+by solvability, above by the messenger matching scale, so the
+holomorphic matching machinery survives throughout); the Pati--Salam
+chain admits \emph{no} such bridge (the anomaly-forced doubling of the
+breaking sector destroys every finite supersymmetric segment).  If the
+Pati--Salam chain is established, its completion cannot be a high-scale
+supersymmetry bridge with \(126\)-type content.
+(Ledger: \texttt{route\_d/output/d5\_susy\_breaking\_bridge.json}.)
+
+\item[K11.] \textbf{Discrete-phase diagnostic retired} [benchmark
+bookkeeping].  On the refreshed Majorana card the
+\(\mathbb Z_{178}\) phase candidate misses by
+\(4.1\times10^{-3}\,\mathrm{rad}\) against the
+\(5.4\times10^{-5}\,\mathrm{rad}\) window (\(76\times\)): data
+supersede reproducibility anchors, and the continuous-phase reading
+stands.  (Ledger: \texttt{output/audit1/dyn4b\_unconditional\_zeta.json}.)
+\end{enumerate}
+
+\begin{remark}[What would not falsify anything]
+The numerical value of the contact coefficient moving with refreshed
+data does not falsify the framework: by Theorem~\ref{thm:boundary} it
+is an input, and its branch-locality (established by the perturbativity
+gate above) is a consequence of that status, not a failure.  Likewise
+the exclusion in K3 is of a slice family; enlarging the Higgs content
+or abandoning weak-scale supersymmetry are recorded escapes, two of
+which (K4, K5) are now the live falsifiable branches.
+\end{remark}
+
 \section{Revised Status Ledger}
 \label{sec:ledger}
 
@@ -950,10 +1152,20 @@ The value of \(\zeta\) (equivalently \(\lambda\) or a stabilizing modulus);
 the benchmark \(M_V\); the hidden phase/radial sector.  By
 Theorem~\ref{thm:boundary} this category cannot be emptied by principles of
 the stated kind.
-\item[Deferred audits (unchanged from the companion note).]
-Full flavor fit; \(d=5\) proton-decay Wilson tensors; threshold/proton
-companion audits; source-sector UV origin; dependency graph
-\(0\to(1\parallel4a)\to3\to2\), with 4b optional.
+\item[Executed dynamics audits (July 2026; Sec.~\ref{sec:falsifiability}).]
+The formerly deferred audits ran to completion along the fixed
+dependency graph \(0\to(1\parallel4a)\to3\to2\): vacuum and full heavy
+spectrum; thresholds and unification; seesaw replay with contact
+posterior; \(d=5\) proton decay; leptogenesis; joint rescue scan;
+non-supersymmetric variant; messenger one-loop; three
+string-conditional pricing cards.  Net outcome: supersymmetric
+minimal slice excluded, non-supersymmetric branch alive and
+falsifiable (branch map, Sec.~\ref{sec:branchmap}).
+\item[Still open.]
+The non-supersymmetric scalar potential and spectrum, the
+non-supersymmetric flavor refit with contact re-extraction at the
+intermediate scale (\emph{required} for the live branch), the
+kernel-level Dirac refit, and physical-basis proton-decay rotations.
 \item[Not claimed --- and provably not claimable in \(\mathfrak M\).]
 A principles-only unique GUT with predicted \(\zeta\)
 (Cor.~\ref{cor:box}).
@@ -991,7 +1203,17 @@ Directory names below are repository aliases (Remark~\ref{rem:terminology}).
   exactly vanishing cubic tensor of the Fock-constructed chiral \(16\) with
   its demicube weights.
 \item Dependency roadmap: \texttt{route\_E/ROADMAP.md} (removed,
-  retained-and-explained, provably-not-closable, and out-of-scope items).
+  retained-and-explained, provably-not-closable, and out-of-scope items;
+  sections E--F track the dynamics and string-conditional programs).
+\item Dynamics-audit ledgers (Sec.~\ref{sec:falsifiability}): scripts
+  \texttt{code/audit0\ldots{}audit9\_dyn*.py} with ledger pairs under
+  \texttt{output/audit0..9/}; string-conditional cards
+  \texttt{route\_d/code/verify\_d3..d5\_*.py} with ledgers under
+  \texttt{route\_d/output/}; collector
+  \texttt{code/audit8\_dyn8\_falsifiability\_collection.py} with ledger
+  \texttt{output/audit8/dyn8\_falsifiability\_collection.json}, which
+  re-verifies every number in Sec.~\ref{sec:falsifiability} against its
+  source ledger.
 \item Negative-boundary flags recorded in the JSON ledgers:
   \texttt{zeta\_value\_derived: false};
   \texttt{no\_extra\_chiral\_sector\_assumption\_discharged: false};

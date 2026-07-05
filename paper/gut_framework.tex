@@ -893,7 +893,13 @@ discrete-phase candidate; exact equality would require either a small axion
 shift or a continuous hidden phase.  The Route-B hidden-messenger theorem uses
 only \(\lambda^2=\zeta\); the \(\mathbb Z_{178}\) value is kept as a side
 diagnostic, not as a premise of the benchmark branch.  Diophantine
-approximations of this kind are generic for any real phase.  For
+approximations of this kind are generic for any real phase.
+(Retirement note, July 2026: on the refreshed Majorana card produced by
+the executed flavor audit, the \(\mathbb Z_{178}\) candidate misses the
+refreshed phase by \(4.1\times10^{-3}\ \mathrm{rad}\), \(76\) times the
+loose window quoted above; the diagnostic is retained for the frozen
+benchmark card only, and the continuous-phase reading stands.  Ledger:
+\texttt{output/audit1/dyn4b\_unconditional\_zeta.json}.)  For
 \(\arg\zeta/(2\pi)=0.09549901697671904\), the continued-fraction convergents
 include
 \[
@@ -1342,9 +1348,21 @@ GUT construction:
 \(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
 no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
 hidden phase/radial sector.
-\item[Deferred audits.]
-Full flavor fit; \(d=5\) proton-decay Wilson tensors;
-threshold/proton companion audits; source-sector UV origin.
+\item[Deferred audits (executed July 2026; results in repository
+ledgers).]
+The full flavor fit, the \(d=5\) proton-decay Wilson tensors, the
+threshold/proton companion audits, and the source-sector dynamics ran
+to completion as standalone machine-checked scripts (ledger pairs under
+\texttt{output/audit0..9/}; collected with a branch map and explicit
+kill criteria in the companion reconstruction note,
+\texttt{route\_E/tex/route\_e\_first\_principles.tex}, Sec.~``Dynamics
+Audits and Falsifiability'').  Net outcome: the benchmark
+supersymmetric minimal slice of this conditional branch is EXCLUDED by
+unification combined with proton decay (a slice-family exclusion, not a
+model-class exclusion); a non-supersymmetric intermediate-scale variant
+survives and is falsifiable at Hyper-Kamiokande; the theorem core of
+this note is untouched.  The non-supersymmetric flavor refit remains
+open.
 \item[Optional UV interpretations.]
 Route-D local F-theory placement and E3-instanton interpretation of
 \(\zeta K_{\rm tr}\), both with global compactification and zero-mode caveats.
