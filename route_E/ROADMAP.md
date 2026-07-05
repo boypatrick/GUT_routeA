@@ -894,6 +894,42 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   landmine literature.  Boundary: 126bar quartics deferred (9b-1c);
   epsilon coupling unscanned; tree level only; coupling sampling in
   full-sum-invariant units; zeta NOT derived.
+  Status 9b-1c: **done** (2026-07-05;
+  `code/audit9_dyn9b1c_eps_and_126_quartics.py`, 11/11; ledgers
+  `output/audit9/dyn9b1c_eps_and_126_quartics.{json,md}`).
+  (A) THE EPSILON LEVER IS EXHAUSTED: the full Q6 gradient (three
+  direct placements + the dual-slot adjoint) is gated; the exact
+  epsilon Hessian (cubic-homogeneity identity) passes the strongest
+  available check -- exactly 24/30 Goldstone zeros persist at
+  lambda_eps != 0.  Sweeping lambda_eps over [-1.5, 1.5] on 200
+  random coupling points: **0 rescues** (median best min-eigenvalue
+  -9.6e2, deeply tachyonic); PS positivity never flips (0/200).
+  VERDICT: the 210-only left-right vacuum is TREE-DEAD with no
+  remaining tree-level lever -- the left-right chain requires the
+  45_H route or one-loop stabilization, full stop.
+  (B) THE 126bar SECTOR: embedding gates extended -- the mixed cubic
+  descends EXACTLY to the AG eta-term |sigma|^2 (p + 3a - 6w) (this
+  also fixed the e_w sign convention, invisible to the omega-even 210
+  invariants; 9b-1b's flipped/SU(5) locus labels swap, dims
+  unaffected), and the full vector-mass gate with sigma passes with
+  scale = 0.500000, sigma-norm c = 1.000000, J/F/E cross-checked.
+  Duality projection: the sigma direction lies entirely in the 126bar
+  half (norm 1 to 1e-12); the mixed cubic + four mixed quartics split
+  the 126bar into exactly (6,1,1)+(10,1,3)+(10bar,3,1)+(15,2,2), the
+  D-parity-odd CUBIC being what splits the two 30s; sigma is
+  machine-located in the SU(2)_R-charged 30 (the SU(2) naming is
+  ANCHORED by sigma: nu^c is right-handed).
+  (C) K4 RETEST WITH THE 126bar REMNANTS: over random (eta + 4 mixed)
+  couplings with the extended-survival tuning and positive remnants
+  (45/150 viable): tau = 4.25e33 at ALL percentiles -- the ESH/DYN-9
+  verdict again.  **K4 (the Hyper-K window) has now survived the real
+  210 spectrum (9b-1b) AND the real 126bar spectrum (9b-1c) at tree
+  level.**  Boundary: (Sigma Sigma*)^2 self-quartics enter only the
+  M_I-scale stationarity, not the M_X masses (deferred with that
+  argument); epsilon-mixed patterns not enumerated; generating set of
+  mixed quartics only; tree level; zeta NOT derived.
+  The 9b-1 series (kinematics -> 210 potential -> epsilon + 126bar)
+  is CLOSED.
   9b-2: non-SUSY flavor refit at v_R ~ M_I: a perturbative M_R tower,
   zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
   consistent with the boundary theorem), contact-essentiality retest.
