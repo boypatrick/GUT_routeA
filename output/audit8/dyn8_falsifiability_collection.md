@@ -1,12 +1,12 @@
 # DYN-8: falsifiability collection
 
-22/22 checks pass.  Closes the dynamics main line; derives nothing new; zeta NOT derived.
+28/28 checks pass.  Closes the dynamics main line; derives nothing new; zeta NOT derived.
 
 ## Branch map
 
 - **kinematic_core**: SUSY-agnostic, machine-verified (44+24), untouched by all dynamics results
 - **susy_minimal_slice**: EXCLUDED (slice family, not model class): unification x proton decay + obstruction map
-- **nonsusy_variant**: ALIVE: G_LR alive (tau ~ 1e36), PS 210-compatible marginal (4.3e33, Hyper-K window); flavor refit REQUIRED (contact card slice-local)
+- **nonsusy_variant**: ALIVE: PS 210-compatible marginal (4.3e33, Hyper-K window, TRIPLE-TESTED against the computed 210 and 126bar spectra); G_LR alive (tau ~ 1e36) but requires the 45-adjoint route (210-only vacuum tree-dead, epsilon lever exhausted); source selection leaves the scale-decoupled instanton-type tower as the only quantified scenario; the normalized contact content is branch-independent by the invariance theorem (M_* branch-local)
 - **string_conditional**: three pricing cards, unpromoted, must not be cited as evidence
 
 ## Kill bank (branch-tagged, all re-verified)
@@ -22,8 +22,13 @@
 - **K9** [string-conditional] zero-mode selectivity gap Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16 (`route_d/output/d4_stueckelberg_protection.json`)
 - **K10** [string-conditional] SUSY-breaking bridge: G_LR window log10 M_SS in [10.30, 15.55]; PS bridge EMPTY (structural) (`route_d/output/d5_susy_breaking_bridge.json`)
 - **K11** [benchmark bookkeeping] Z_178 diagnostic retired: misses the refreshed card by 4.1e-3 rad vs the 5.4e-5 window (76x) (`output/audit1/dyn4b_unconditional_zeta.json`)
+- **K4r** [non-SUSY PS chain (refresh)] K4 TRIPLE-TESTED: the Hyper-K window survives the computed 210 spectrum (tree positivity 39/250, tau = 4.25e33 all percentiles) AND the computed 126bar spectrum (45/150 viable, same tau) (`output/audit9/dyn9b1b + dyn9b1c ledgers`)
+- **K5r** [non-SUSY LR chain (refresh)] 45_H narrative corrected: the LR little group is 210-realizable kinematically but its 210-only vacuum is NEVER a tree minimum (0/249) and the epsilon lever rescues nothing (0/200): the chain requires the adjoint route or one-loop stabilization (`output/audit9/dyn9b1 + dyn9b1b + dyn9b1c ledgers`)
+- **K6r** [non-SUSY branch (refresh)] K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression 0.165, P = 0/4000 unflavored, boost sweet spot x60) but the gravitino ceiling dissolves by the branch -- a soft constraint on the source scenario, not a kill (`output/audit9/dyn9b3_nonsusy_leptogenesis.json`)
+- **K8r** [string-conditional (refresh)] K8 UPGRADED to a branch requirement: lock tension 9x/159x + type-II deficit 3.7/7.3 orders + leptogenesis floor leave the scale-decoupled instanton-type source as the only quantified scenario; D3 itself remains unpromoted (`output/audit9/dyn9b2_nonsusy_flavor_refit.json`)
+- **K11r** [benchmark bookkeeping (refresh)] the zeta-invariance theorem: the normalized contact content is exactly invariant under Dirac rescaling; only M_* is branch-local (the 'what would not falsify' remark is now a theorem) (`output/audit9/dyn9b2_nonsusy_flavor_refit.json`)
 
-Upstream: 210 checks green across 12 source ledgers.
+Upstream: 269 checks green across 17 source ledgers.
 
 ## Checks
 
@@ -45,7 +50,13 @@ Upstream: 210 checks green across 12 source ledgers.
 - [PASS] K9 [string-conditional]: zero-mode selectivity gap Delta S >= 6.6 (refreshed) / 3.2 (loos...
 - [PASS] K10 [string-conditional]: SUSY-breaking bridge: G_LR window log10 M_SS in [10.30, 15.55]; ...
 - [PASS] K11 [benchmark bookkeeping]: Z_178 diagnostic retired: misses the refreshed card by 4.1e-3 ra...
+- [PASS] K4r [non-SUSY PS chain (refresh)]: K4 TRIPLE-TESTED: the Hyper-K window survives the computed 210 s...
+- [PASS] K5r [non-SUSY LR chain (refresh)]: 45_H narrative corrected: the LR little group is 210-realizable ...
+- [PASS] K6r [non-SUSY branch (refresh)]: K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression ...
+- [PASS] K8r [string-conditional (refresh)]: K8 UPGRADED to a branch requirement: lock tension 9x/159x + type...
+- [PASS] K11r [benchmark bookkeeping (refresh)]: the zeta-invariance theorem: the normalized contact content is e...
 - [PASS] reconstruction paper contains the Falsifiability section with branch map and all eleven criteria K1-K11
 - [PASS] reconstruction paper status ledger updated (executed audits + still-open list) and manifest extended with the collector
 - [PASS] main paper status ledger updated (deferred -> executed with findings) and Z_178 retirement note added
 - [PASS] self-containment discipline: the reconstruction paper uses working aliases only inside the terminology remark and literal file paths (spot check: no 'DYN-' outside texttt/remark context)
+- [PASS] 9b-4 REFRESH carried by both papers: the reconstruction paper's branch map records the executed re-derivation (vacuum / source / contact stages), K4 cites three spectrum treatments, K6 is branch-tagged, K8 is upgraded, and the invariance theorem replaces the bookkeeping remark; the main paper's status note records the executed re-derivation

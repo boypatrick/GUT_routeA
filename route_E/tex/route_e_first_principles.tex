@@ -983,11 +983,36 @@ threshold-spread band of the current bound).  A perturbativity gate
 shows that \emph{no} surviving chain can host the benchmark heavy
 Majorana tower through the renormalizable source coupling
 (\(f<4\pi\) fails by up to \(379\times\)): the benchmark contact card
-is local to the excluded supersymmetric slice, and the
-non-supersymmetric flavor refit --- including re-extraction of the
-contact coefficient at the intermediate scale --- is \emph{required}
-and open.  Consistently with Theorem~\ref{thm:boundary}, the contact
-coefficient is an input in every branch; only its bookkeeping moves.
+is local to the excluded supersymmetric slice.
+
+The required non-supersymmetric re-derivation was executed as a
+four-stage audit series (ledgers under \texttt{output/audit9/}).
+Vacuum stage: the \(210\) was built as an explicit rank-four tensor,
+its full renormalizable potential constructed from a machine-tested
+invariant basis (the five polynomial quartic contractions span only
+four dimensions, and the Hodge--epsilon contraction is a genuine fifth
+invariant vanishing identically on the singlet vev slice), and the
+tree-level vacuum problem solved: the Pati--Salam vacuum is a
+tree-level local minimum on \(\sim16\%\) of the sampled coupling
+space, with every surviving scalar at or above the heavy gauge scale
+--- so the proton-lifetime verdict is UNCHANGED by the real spectrum
+--- while the \(210\)-only left--right vacuum is a tree-level minimum
+\emph{nowhere}, even after sweeping the epsilon coupling (the one
+lever that moves only off-slice masses): the left--right chain
+requires the adjoint (\(45\)-type) breaking route or one-loop vacuum
+stabilization.  Source stage: the perturbative ceiling caps the
+neutrino Dirac scale a factor \(9\) (Pati--Salam) to \(159\)
+(left--right) below its \(\mathrm{SO}(10)\)-locked value, the type-II
+escape falls short by \(3.7\)--\(7.3\) orders, and thermal
+leptogenesis drops below the Davidson--Ibarra floor under the rescaled
+renormalizable source --- leaving the scale-decoupled brane-instanton
+source (the first pricing card below) as the only quantified surviving
+scenario.  Contact stage: a machine-verified invariance theorem shows
+the normalized contact content (coefficient, direction, and contact
+fraction) is \emph{exactly} invariant under a rescaling of the Dirac
+kernel; only the suppression scale \(M_*\) is branch-local.
+Consistently with Theorem~\ref{thm:boundary}, the contact coefficient
+is an input in every branch; only its bookkeeping moves.
 
 \item[String-conditional pricing cards (unpromoted).]
 Three cards price string-motivated escapes without deriving anything:
@@ -1041,8 +1066,15 @@ scan.  (Ledgers: \texttt{output/audit2/dyn3\_proton\_d5\_kill\_criterion.json},
 \(\tau(p\to e^+\pi^0)=4.3\times10^{33}\,\)yr against the current bound
 \(2.4\times10^{34}\,\)yr: the chain is either already dead or sits
 inside the Hyper-Kamiokande discovery window --- the sharpest
-falsifiability statement this framework currently owns.
-(Ledger: \texttt{output/audit9/dyn9\_nonsusy\_intermediate.json}.)
+falsifiability statement this framework currently owns.  Retested with
+the \emph{computed} \(210\) spectrum and then with the computed
+\(\overline{126}\) spectrum at tree level (the extended-survival
+assumption replaced by real Hessians): the lifetime is unchanged at
+all sampled percentiles, so the entry now rests on three independent
+spectrum treatments.
+(Ledgers: \texttt{output/audit9/dyn9\_nonsusy\_intermediate.json},
+\texttt{dyn9b1b\_210\_quartic\_descent.json},
+\texttt{dyn9b1c\_eps\_and\_126\_quartics.json}.)
 
 \item[K5.] \textbf{Proton-decay channel hierarchy} [non-supersymmetric
 variant].  The left-right chain predicts
@@ -1050,16 +1082,27 @@ variant].  The left-right chain predicts
 Hyper-Kamiokande reach; only partially probeable), and in the whole
 non-supersymmetric branch the gauge dimension-six channel dominates: an
 observed \(p\to K^+\bar\nu\)-dominated signal would disfavor the
-branch.  (Same ledger as K4.)
+branch.  Caveat from the vacuum stage: the left-right chain is
+kinematically realizable from the \(210\) but its \(210\)-only vacuum
+is never a tree-level minimum (epsilon lever exhausted), so this
+entry's chain requires the adjoint breaking route or one-loop
+stabilization.  (Same ledgers as K4.)
 
-\item[K6.] \textbf{Thermal leptogenesis} [supersymmetric slice;
-soft criterion].  On the benchmark slice, thermal unflavored
+\item[K6.] \textbf{Thermal leptogenesis} [branch-tagged; soft
+criterion].  On the excluded supersymmetric slice, thermal unflavored
 leptogenesis fails by \(\sim1.5\) orders with the wrong central sign
-(success probability \(0.4\%\); a \(\times3\)--\(10\) enhancement,
-the size of flavored corrections, lifts it to \(34\)--\(45\%\)).
-On the surviving non-supersymmetric branch the gravitino constraint
-dissolves and the computation must be re-run after the required refit.
-(Ledger: \texttt{output/audit7/dyn7\_leptogenesis\_argzeta.json}.)
+(success probability \(0.4\%\); a \(\times3\)--\(10\) enhancement
+lifts it to \(34\)--\(45\%\)).  On the surviving non-supersymmetric
+branch the rerun with the Standard-Model loop function and Higgs
+normalization is a factor \(\sim6\) \emph{harder} (posterior success
+\(0/4000\) unflavored; the enhancement sweet spot moves to
+\(\times30\)--\(100\)), but the gravitino/reheating ceiling dissolves
+by the branch itself: thermal production is unconstrained and
+non-thermal production opens as a qualitatively new escape, alongside
+flavored effects and a near-degenerate instanton-sourced tower.  A
+soft constraint on the source scenario, not a kill.
+(Ledgers: \texttt{output/audit7/dyn7\_leptogenesis\_argzeta.json},
+\texttt{output/audit9/dyn9b3\_nonsusy\_leptogenesis.json}.)
 
 \item[K7.] \textbf{Messenger canonical-normalization ceilings}
 [hidden-messenger extension].  The one-loop audit proves light-sector
@@ -1072,13 +1115,20 @@ ceiling is excluded.
 (Ledger: \texttt{output/audit5/dyn5\_messenger\_one\_loop.json}.)
 
 \item[K8.] \textbf{Heavy-neutrino/gauge-scale coexistence}
-[string-conditional].  The instanton Majorana source \emph{requires}
-the two heavier right-handed neutrinos to sit \emph{above} the
-intermediate gauge scale (factors \(39\) and \(4.8\times10^{3}\) on the
-Pati--Salam chain) --- impossible for a renormalizable perturbative
-source.  Measuring an intermediate-scale gauge boson together with
-heavy-neutrino masses below it falsifies the card.
-(Ledger: \texttt{route\_d/output/d3\_instanton\_majorana\_pricing.json}.)
+[string-conditional; UPGRADED to a branch requirement].  The instanton
+Majorana source \emph{requires} the two heavier right-handed neutrinos
+to sit \emph{above} the intermediate gauge scale (factors \(39\) and
+\(4.8\times10^{3}\) on the Pati--Salam chain) --- impossible for a
+renormalizable perturbative source.  The source-selection audit
+(lock tension, type-II failure, leptogenesis floor) leaves this
+scale-decoupled source as the \emph{only} quantified scenario for the
+alive branch with viable leptogenesis, so the coexistence prediction
+upgrades from an optional card to a requirement of that branch; the
+underlying string card itself remains unpromoted.  Measuring an
+intermediate-scale gauge boson together with heavy-neutrino masses
+below it falsifies the scenario.
+(Ledgers: \texttt{route\_d/output/d3\_instanton\_majorana\_pricing.json},
+\texttt{output/audit9/dyn9b2\_nonsusy\_flavor\_refit.json}.)
 
 \item[K9.] \textbf{Zero-mode selectivity gap} [string-conditional].
 Closure of the non-supersymmetric protection card requires the
@@ -1111,8 +1161,12 @@ stands.  (Ledger: \texttt{output/audit1/dyn4b\_unconditional\_zeta.json}.)
 \begin{remark}[What would not falsify anything]
 The numerical value of the contact coefficient moving with refreshed
 data does not falsify the framework: by Theorem~\ref{thm:boundary} it
-is an input, and its branch-locality (established by the perturbativity
-gate above) is a consequence of that status, not a failure.  Likewise
+is an input, and its branch-locality is now a \emph{theorem}: under a
+rescaling of the Dirac kernel the normalized contact content
+(coefficient, direction, contact fraction) is exactly invariant, and
+only the suppression scale \(M_*\) moves (machine-verified to
+\(10^{-16}\); ledger
+\texttt{output/audit9/dyn9b2\_nonsusy\_flavor\_refit.json}).  Likewise
 the exclusion in K3 is of a slice family; enlarging the Higgs content
 or abandoning weak-scale supersymmetry are recorded escapes, two of
 which (K4, K5) are now the live falsifiable branches.

@@ -48,6 +48,12 @@ L = {
     "d3": load("route_d/output/d3_instanton_majorana_pricing.json"),
     "d4": load("route_d/output/d4_stueckelberg_protection.json"),
     "d5": load("route_d/output/d5_susy_breaking_bridge.json"),
+    # DYN-9b series (the 9b-4 refresh)
+    "9b1": load("output/audit9/dyn9b1_nonsusy_vacuum_thresholds.json"),
+    "9b1b": load("output/audit9/dyn9b1b_210_quartic_descent.json"),
+    "9b1c": load("output/audit9/dyn9b1c_eps_and_126_quartics.json"),
+    "9b2": load("output/audit9/dyn9b2_nonsusy_flavor_refit.json"),
+    "9b3": load("output/audit9/dyn9b3_nonsusy_leptogenesis.json"),
 }
 
 print("== DYN-8 section 1: chain of custody ==")
@@ -184,7 +190,69 @@ bank("K11", "benchmark bookkeeping", "Z_178 diagnostic retired: misses "
      abs(miss - 4.098e-3) < 1e-5 and miss / 5.424119e-5 > 70,
      f"miss = {miss:.3e} rad = {miss/5.424119e-5:.0f}x window")
 
-print("== DYN-8 section 4: papers carry the update ==")
+print("== DYN-8 section 4 (9b-4 REFRESH): the non-SUSY series ==")
+
+f1b = L["9b1b"]["derivation_log"]["S4_verdict"]["fractions"]
+k4c = L["9b1c"]["derivation_log"]["S4_K4_retest"]
+bank("K4r", "non-SUSY PS chain (refresh)", "K4 TRIPLE-TESTED: the "
+     "Hyper-K window survives the computed 210 spectrum (tree "
+     "positivity 39/250, tau = 4.25e33 all percentiles) AND the "
+     "computed 126bar spectrum (45/150 viable, same tau)",
+     "output/audit9/dyn9b1b + dyn9b1c ledgers",
+     f1b["PS"]["tree_positive"] == 39
+     and f1b["PS"]["tau_16_50_84"] == ["4.25e+33"] * 3
+     and k4c["viable"] == 45
+     and all(abs(t / 4.25e33 - 1) < 0.01 for t in k4c["tau_percentiles"]),
+     "three independent spectrum treatments agree")
+
+bank("K5r", "non-SUSY LR chain (refresh)", "45_H narrative corrected: "
+     "the LR little group is 210-realizable kinematically but its "
+     "210-only vacuum is NEVER a tree minimum (0/249) and the epsilon "
+     "lever rescues nothing (0/200): the chain requires the adjoint "
+     "route or one-loop stabilization",
+     "output/audit9/dyn9b1 + dyn9b1b + dyn9b1c ledgers",
+     f1b["LR"]["tree_positive"] == 0
+     and L["9b1c"]["derivation_log"]["S2_eps_scan"]["rescued"] == 0,
+     "epsilon Hessian certified by the 24/30 Goldstone gate")
+
+s9b3 = L["9b3"]["derivation_log"]
+bank("K6r", "non-SUSY branch (refresh)", "K6 REPLACED by the "
+     "branch-tagged rerun: ~6x harder (suppression 0.165, P = 0/4000 "
+     "unflavored, boost sweet spot x60) but the gravitino ceiling "
+     "dissolves by the branch -- a soft constraint on the source "
+     "scenario, not a kill",
+     "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
+     abs(s9b3["S1_central"]["suppression_vs_dyn7"] - 0.165) < 0.001
+     and s9b3["S2_posterior"]["P_success"] == 0.0
+     and s9b3["S2_posterior"]["boost"]["x60"] > 0.4,
+     f"median |eta_B| = {s9b3['S2_posterior']['median_abs_eta']:.2e}")
+
+s9b2 = L["9b2"]["derivation_log"]
+bank("K8r", "string-conditional (refresh)", "K8 UPGRADED to a branch "
+     "requirement: lock tension 9x/159x + type-II deficit 3.7/7.3 "
+     "orders + leptogenesis floor leave the scale-decoupled "
+     "instanton-type source as the only quantified scenario; D3 "
+     "itself remains unpromoted",
+     "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
+     s9b2["S1_lock"]["chains"]["PS"]["lock_tension"] > 5
+     and s9b2["S1_lock"]["chains"]["G_LR"]["lock_tension"] > 50
+     and all(v["deficit_orders"] > 3
+             for v in s9b2["S2_typeII"].values())
+     and L["d3"]["promoted_to_paper"] is False,
+     "conditional-dependency statement, not a promotion")
+
+zinv = s9b2["S3_invariance"]
+bank("K11r", "benchmark bookkeeping (refresh)", "the zeta-invariance "
+     "theorem: the normalized contact content is exactly invariant "
+     "under Dirac rescaling; only M_* is branch-local (the 'what "
+     "would not falsify' remark is now a theorem)",
+     "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
+     abs(complex(zinv["zeta"][0], zinv["zeta"][1])
+         - complex(0.1076472949, 0.0736514853)) < 1e-9
+     and abs(zinv["contact_fraction"] - 0.1304275166688152) < 1e-9,
+     "machine-verified to 1e-16 in the source ledger")
+
+print("== DYN-8 section 5: papers carry the update ==")
 
 tex_e = (ROOT / "route_E" / "tex"
          / "route_e_first_principles.tex").read_text()
@@ -207,6 +275,16 @@ check("self-containment discipline: the reconstruction paper uses "
       "file paths (spot check: no 'DYN-' outside texttt/remark context)",
       tex_e.count("DYN-0''--``DYN-9") == 1
       and "route A" not in tex_e.replace("``route~A,''", ""))
+check("9b-4 REFRESH carried by both papers: the reconstruction paper's "
+      "branch map records the executed re-derivation (vacuum / source / "
+      "contact stages), K4 cites three spectrum treatments, K6 is "
+      "branch-tagged, K8 is upgraded, and the invariance theorem "
+      "replaces the bookkeeping remark; the main paper's status note "
+      "records the executed re-derivation",
+      "three independent spectrum treatments" in " ".join(tex_e.split())
+      and "UPGRADED to a branch requirement" in tex_e
+      and "branch-locality is now a \\emph{theorem}" in tex_e
+      and "dyn9b*.json" in tex_a.replace("\\", ""))
 
 # ---------------------------------------------------------------- ledger
 n_pass = sum(1 for _, ok in CHECKS if ok)
@@ -223,10 +301,18 @@ payload = {
         "susy_minimal_slice": "EXCLUDED (slice family, not model class): "
                               "unification x proton decay + obstruction "
                               "map",
-        "nonsusy_variant": "ALIVE: G_LR alive (tau ~ 1e36), PS "
-                           "210-compatible marginal (4.3e33, Hyper-K "
-                           "window); flavor refit REQUIRED (contact "
-                           "card slice-local)",
+        "nonsusy_variant": "ALIVE: PS 210-compatible marginal (4.3e33, "
+                           "Hyper-K window, TRIPLE-TESTED against the "
+                           "computed 210 and 126bar spectra); G_LR "
+                           "alive (tau ~ 1e36) but requires the "
+                           "45-adjoint route (210-only vacuum "
+                           "tree-dead, epsilon lever exhausted); "
+                           "source selection leaves the "
+                           "scale-decoupled instanton-type tower as "
+                           "the only quantified scenario; the "
+                           "normalized contact content is "
+                           "branch-independent by the invariance "
+                           "theorem (M_* branch-local)",
         "string_conditional": "three pricing cards, unpromoted, must "
                               "not be cited as evidence",
     },

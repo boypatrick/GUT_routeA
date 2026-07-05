@@ -998,8 +998,29 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   thermal estimate; archival tower under the D3-type source is a
   conditional benchmark (D3 unpromoted); zeta NOT derived.
   9b-4: DYN-8 ledger refresh with the 9b numbers.
-  Depends: DYN-9 (done), DYN-8 (structure); D3/D4 optionally as
-  source alternatives.  Status: open.
+  Status 9b-4: **done** (2026-07-06; the DYN-8 collector
+  `code/audit8_dyn8_falsifiability_collection.py` extended with the
+  refresh section, now 28/28 checks against 17 ledgers / 269 upstream
+  checks; ledgers `output/audit8/` regenerated).  Refresh entries:
+  K4r (TRIPLE-TESTED: ESH one-loop -> computed 210 spectrum ->
+  computed 126bar spectrum, tau = 4.25e33 at all percentiles in every
+  treatment); K5r (45_H narrative corrected: LR 210-realizable
+  kinematically, tree-dead dynamically, epsilon lever exhausted ->
+  adjoint route or one-loop stabilization required); K6r (REPLACED by
+  the branch-tagged 9b-3 verdict: ~6x harder, P = 0/4000 unflavored,
+  gravitino ceiling dissolved -- soft constraint on the source
+  scenario); K8r (UPGRADED to a branch requirement via the 9b-2
+  source selection; D3 unpromoted); K11r (the zeta-invariance theorem
+  replaces the bookkeeping remark: normalized contact content
+  branch-independent, M_* the only branch-local number).
+  Both papers synchronized: the reconstruction paper's branch map now
+  records the executed vacuum/source/contact stages, K4/K5/K6/K8 and
+  the remark carry the refresh, and the main paper's status note
+  records the executed re-derivation.  Both PDFs rebuilt clean; the
+  collector GATES on all of it.
+  Depends: DYN-9 (done), DYN-8 (structure); D3/D4 as source
+  dependencies (D3 now load-bearing via K8r).
+  **DYN-9b IS CLOSED** (9b-1/1b/1c/2/3/4 all done).
 
 Backlog (optional, unchanged): DYN-6 (axiom-pricing generalization),
 DYN-4c (kernel-level Dirac refit -- the DYN-7 escape), DYN-3b
