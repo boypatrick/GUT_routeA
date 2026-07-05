@@ -1,0 +1,228 @@
+{
+  "all_pass": true,
+  "audit": "Route-D D3 instanton / d=5 Majorana-source pricing card",
+  "checks": [
+    {
+      "name": "premise: the patched DYN-9 ledger declares the archival zeta card NOT transplantable and the tower NOT perturbatively realizable on surviving chains",
+      "pass": true
+    },
+    {
+      "name": "archival closure card sha256 matches the DYN-4a provenance",
+      "pass": true
+    },
+    {
+      "name": "f'_needed = f_renorm * (M_s / v_R) is STRICTLY worse than the renormalizable coupling for every surviving chain and every M_s in the grid, and always violates 4 pi at the tower top",
+      "pass": true
+    },
+    {
+      "name": "anchor: on the 210-compatible PS chain at M_s = 2e16 the d=5 source needs f' ~ 1.2e8 at the tower top",
+      "pass": true
+    },
+    {
+      "name": "structural clash quantified: a renormalizable tower top needs v_R >= sigma_top/(4 pi) = 3.1e14 GeV, while unification fixes M_I(PS) = 8.2e11 -- a factor ~380 that the d=5 operator can only worsen; the escape is CLOSED at intermediate-scale v_R",
+      "pass": true
+    },
+    {
+      "name": "D2 link: S_zeta = -ln|zeta| reproduces the D2 ledger value effective_action_if_prefactor_one",
+      "pass": true
+    },
+    {
+      "name": "required actions S_i = ln(M_s/M_R,i) at M_s = 2e16: [top, mid, bottom] = [1.63, 6.43, 13.64]",
+      "pass": true
+    },
+    {
+      "name": "weak-coupling boundary DISCLOSED: S_top >= 1 requires M_s >= e * M_R,top = 1.07e16 GeV -- satisfied by the G_LR chain M_X = 2.1e16 but NOT by the PS chain M_X = 5.4e15 (there the string scale must sit above the unification scale)",
+      "pass": true
+    },
+    {
+      "name": "same-ballpark DIAGNOSTIC (not evidence): at M_s = 2e16 the top-of-tower action and the D2 contact action differ by < 1",
+      "pass": true
+    },
+    {
+      "name": "replayed archival M_R singular values match the DYN-4a ledger",
+      "pass": true
+    },
+    {
+      "name": "Takagi factorization M_R = U diag(sigma) U^T verified (self-implemented, residual machine-zero)",
+      "pass": true
+    },
+    {
+      "name": "the tower is EXACTLY three rank-1 terms with sigma_k > 0: a single instanton cycle (generic rank-1 M_R) is EXCLUDED; >= 3 distinct cycles with distinct actions are required",
+      "pass": true
+    },
+    {
+      "name": "parameter count: instanton data (3 actions + 9 texture) = 12 = the FULL complex-symmetric Majorana data -- the axiom buys SCALE (f < 4 pi evasion), ZERO texture compression",
+      "pass": true
+    },
+    {
+      "name": "beyond-zeta consequence: on BOTH surviving chains the mechanism REQUIRES N_2 and N_3 heavier than the intermediate gauge scale (sigma/M_I > 1), impossible with a renormalizable perturbative source -- a falsifiable correlation if the Z'/W_R scale and the heavy-N masses are ever both measured",
+      "pass": true
+    },
+    {
+      "name": "price card assembled: statement, 12-parameter cost, buys / does-not-buy lists, beyond-zeta consequence",
+      "pass": true
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "created_utc": "2026-07-05T10:39:32.310755+00:00",
+  "d5_operator_escape_viable_at_intermediate_vR": false,
+  "derivation_log": {
+    "S1_d5_escape_closed": {
+      "conclusion": "instantons are the only string escape for the tower at intermediate-scale v_R",
+      "f_prime_tables": {
+        "G_LR": {
+          "1e17": [
+            334404912.45377946,
+            452398443670.4047,
+            55159847349520.43
+          ],
+          "1e18": [
+            3344049124.537795,
+            4523984436704.047,
+            551598473495204.4
+          ],
+          "2e16": [
+            66880982.4907559,
+            90479688734.08093,
+            11031969469904.086
+          ],
+          "MX_GLR": [
+            70138882.00591709,
+            94887125991.74146,
+            11569357627924.064
+          ],
+          "MX_PS": [
+            17877579.72926514,
+            24185617330.699337,
+            2948893787502.136
+          ]
+        },
+        "PS": {
+          "1e17": [
+            3502.415608068493,
+            4738229.9456983125,
+            577720909.8934467
+          ],
+          "1e18": [
+            35024.15608068494,
+            47382299.45698312,
+            5777209098.934467
+          ],
+          "2e16": [
+            700.4831216136987,
+            947645.9891396624,
+            115544181.97868934
+          ],
+          "MX_GLR": [
+            734.6049831249182,
+            993807.6227399057,
+            121172558.24394679
+          ],
+          "MX_PS": [
+            187.2422083121209,
+            253309.92600630925,
+            30885466.221466586
+          ]
+        }
+      },
+      "formula": "M_R = f' v_R^2 / M_s  =>  f'_needed = M_R M_s / v_R^2 = f_renorm * (M_s/v_R); M_s > v_R always, so the d=5 source strictly RAISES the required coupling",
+      "v_R_min_renormalizable_GeV": 312463409593508.7
+    },
+    "S2_instanton_actions": {
+      "S_table_by_Ms": {
+        "1e17": [
+          3.237413844980741,
+          8.040841105398169,
+          15.250807116998821
+        ],
+        "1e18": [
+          5.5399989379747865,
+          10.343426198392216,
+          17.553392209992868
+        ],
+        "2e16": [
+          1.6279759325466405,
+          6.431403192964069,
+          13.641369204564722
+        ],
+        "MX_GLR": [
+          1.6755385786457715,
+          6.4789658390632,
+          13.688931850663852
+        ],
+        "MX_PS": [
+          0.30860867221108196,
+          5.11203593262851,
+          12.322001944229163
+        ]
+      },
+      "S_zeta_D2": 2.0369040025655094,
+      "note": "three DISTINCT actions are required (hierarchy of the tower); the same-ballpark coincidence S_top ~ S_zeta is recorded as a diagnostic only",
+      "weak_coupling_Ms_min_GeV": 1.0673417888955816e+16
+    },
+    "S3_rank_texture": {
+      "takagi_residual": 7.544557598337908e-16,
+      "takagi_sigma_GeV": [
+        3926531008378341.5,
+        32203796829930.688,
+        23804475922.198597
+      ],
+      "texture_note": "the Takagi vectors u_k ARE the required instanton family texture; they are a NEW conditional input, not derived"
+    },
+    "S4_price_card": {
+      "axiom_statement": "there exist >= 3 Euclidean brane instantons (E3-type) on distinct cycles with actions S_k = ln(M_s/sigma_k) and Grassmann zero modes pairing the nu^c bilinear, generating M_R = sum_k M_s e^{-S_k} u_k u_k^T with B-L broken by the instantons themselves",
+      "beyond_zeta_consequence": "N_2, N_3 heavier than the intermediate gauge scale -- falsifiable correlation",
+      "buys": [
+        "archival-tower SCALE without f < 4 pi violation",
+        "M_R decoupled from the B-L gauge scale M_I (the DYN-9 scale clash dissolves)",
+        "N_2, N_3 > M_I coexistence allowed"
+      ],
+      "does_not_buy": [
+        "zeta's value (boundary theorem intact)",
+        "the family texture u_k (12 = 12, zero compression)",
+        "the PS-chain weak-coupling window (needs M_s > M_X there)"
+      ],
+      "parameter_cost": {
+        "actions": 3,
+        "compression": 0,
+        "majorana_data_dim": 12,
+        "texture_real_params": 9,
+        "total": 12
+      }
+    }
+  },
+  "family_texture_derived": false,
+  "global_divisor_constructed": false,
+  "moduli_stabilization_addressed": false,
+  "price_card": {
+    "axiom_statement": "there exist >= 3 Euclidean brane instantons (E3-type) on distinct cycles with actions S_k = ln(M_s/sigma_k) and Grassmann zero modes pairing the nu^c bilinear, generating M_R = sum_k M_s e^{-S_k} u_k u_k^T with B-L broken by the instantons themselves",
+    "beyond_zeta_consequence": "N_2, N_3 heavier than the intermediate gauge scale -- falsifiable correlation",
+    "buys": [
+      "archival-tower SCALE without f < 4 pi violation",
+      "M_R decoupled from the B-L gauge scale M_I (the DYN-9 scale clash dissolves)",
+      "N_2, N_3 > M_I coexistence allowed"
+    ],
+    "does_not_buy": [
+      "zeta's value (boundary theorem intact)",
+      "the family texture u_k (12 = 12, zero compression)",
+      "the PS-chain weak-coupling window (needs M_s > M_X there)"
+    ],
+    "parameter_cost": {
+      "actions": 3,
+      "compression": 0,
+      "majorana_data_dim": 12,
+      "texture_real_params": 9,
+      "total": 12
+    }
+  },
+  "promoted_to_paper": false,
+  "provenance": {
+    "closure_card_sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d",
+    "d2_ledger": "route_d/output/d2_e3_instanton_zeta.json",
+    "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
+    "dyn9_ledger": "output/audit9/dyn9_nonsusy_intermediate.json"
+  },
+  "zero_mode_spectrum_checked": false,
+  "zeta_value_derived": false
+}

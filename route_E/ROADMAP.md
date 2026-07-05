@@ -648,7 +648,27 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   what it does NOT buy (zeta's value; the texture).
   Gates: negative d=5-escape gate; S_i table; rank statement; price
   card with beyond-zeta consequence or explicit "none".
-  Depends: DYN-9 (patched ledger).  Status: open.
+  Depends: DYN-9 (patched ledger).
+  Status: **done** (2026-07-05;
+  `route_d/code/verify_d3_instanton_majorana_pricing.py`, 15/15 checks;
+  ledgers `route_d/output/d3_instanton_majorana_pricing.{json,md}`).
+  FINDINGS: (1) d=5-operator escape CLOSED as expected -- f' = f *
+  (M_s/v_R) strictly worse; PS chain at M_s = 2e16 needs f'_top ~
+  1.2e8; renormalizable clash factor v_R_min/M_I = 379 can only grow.
+  (2) Instanton escape priced: S = [1.63, 6.43, 13.64] at M_s = 2e16;
+  D2 contact action S_zeta = 2.037 is same-ballpark as the tower top
+  (recorded as diagnostic, NOT evidence); weak coupling (S_top >= 1)
+  needs M_s >= 1.07e16 -- fine on G_LR (M_X = 2.1e16), but on the PS
+  chain the string scale must sit ABOVE M_X = 5.4e15 (disclosed).
+  (3) Takagi bookkeeping: the tower is exactly three rank-1 terms =>
+  >= 3 distinct cycles; instanton data = 3 actions + 9 texture = 12 =
+  full Majorana data -- the axiom buys SCALE (f < 4 pi evasion, M_R
+  decoupled from M_I), ZERO texture compression.  (4) Beyond-zeta
+  consequence: N_2, N_3 heavier than the intermediate gauge scale
+  (PS: 39x, 4763x M_I) -- impossible renormalizably, falsifiable if
+  the Z'/W_R scale and heavy-N masses are both measured.  Boundary:
+  no zero modes / global divisor / moduli; texture is a NEW
+  conditional input; unpromoted.
 
 - **D4 [Stueckelberg / anomalous-U(1) protection card] (1 session).**
   Goal: the non-SUSY substitute for the DYN-5 R-selection rule -- a
