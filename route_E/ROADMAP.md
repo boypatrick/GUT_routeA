@@ -748,7 +748,40 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   load-bearing for any messenger story there).
   Gates: DYN-9 limit reproduced as M_SS -> M_X; the SUSY-slice
   exclusion reproduced as M_SS -> TeV; explicit window verdict.
-  Depends: DYN-9, DYN-3, DYN-5.  Status: open.
+  Depends: DYN-9, DYN-3, DYN-5.
+  Status: **done** (2026-07-05;
+  `route_d/code/verify_d5_susy_breaking_bridge.py`, 17/17 checks;
+  ledgers `route_d/output/d5_susy_breaking_bridge.{json,md}`).
+  FINDINGS: SUSY intermediate b's DERIVED with the anomaly-forced
+  content doubling (U(1)_{B-L} cubic anomaly of Delta_R = 24 forces
+  Delta_R-bar; SUSY PS doubles Sigma_R): b2R jumps -7/3 -> +5 (LR) and
+  11/3 -> +41 (PS).  Endpoint gates: DYN-9 ledger reproduced to 1e-4;
+  DYN-3 calibration 1.24e26 reproduced.
+  | **G_LR bridge: ALIVE** | window log10 M_SS in [10.30, 15.55] |
+    bound BELOW by no-physical-solution (solvability, near the DYN-9
+    M_I = 1e9.4 -- NOT by d=5: tau_d5 ~ 1e46 at the lower edge, the
+    mini-split lever never binds), bound ABOVE by M_SS < M_*
+    (holomorphy) | M_X stays ~1e16.3, tau_d6 in [6.2e35, 9.3e35] |
+    all Case A (M_I <= M_SS); Route-B/DYN-5 holomorphy at matching
+    preserved throughout |
+  | **PS bridge: EMPTY (structural)** | only 18/263 points physical,
+    all with a vanishing SUSY segment (longest case-A segment ~ 0
+    dex); b2R = +41 caps the segment via Y-matching; no M_SS anywhere
+    gives tau_d6 > 2.4e34 (no d=6 rescue) |
+  | TeV end: NO physical bridge solution for either chain --
+    stronger than d=5-dead; the DYN-2/3 exclusion structure
+    reproduced (the catastrophic DYN-3 magnitude was slice-specific,
+    disclosed) |
+  READING: the string-natural interpolation EXISTS exactly on the
+  G_LR side -- UV SUSY broken anywhere in [2e10, 3.5e15] GeV keeps
+  the chain alive, d=5 safe, and the Route-B messenger machinery
+  valid at matching; the 210-compatible PS chain CANNOT be reached
+  through a high-scale SUSY bridge with 126-type breaking content
+  (its rescue, if any, must be genuinely non-SUSY all the way, or
+  use different breaking content -- feeds DYN-9b).
+  Boundary: one-loop intermediate segments; ESH-minimal content both
+  phases; M_T = M_X and degenerate soft spectrum assumed; above-M_X
+  perturbativity not audited; unpromoted.
 
 - **DYN-8 close-out** as specified in section E (branch map + branch-
   tagged kill bank incl. the D3-D5 outputs).  Status: open.

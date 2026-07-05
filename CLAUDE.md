@@ -26,6 +26,7 @@ python3 route_d/code/verify_d1_f_theory_local_placement.py
 python3 route_d/code/verify_d2_e3_instanton_zeta.py
 python3 route_d/code/verify_d3_instanton_majorana_pricing.py
 python3 route_d/code/verify_d4_stueckelberg_protection.py
+python3 route_d/code/verify_d5_susy_breaking_bridge.py
 python3 route_E/code/verify_route_e_first_principles.py
 python3 route_E/code/verify_route_e_dependency_closure.py
 python3 code/audit0_dyn_conventions_and_inventory.py
