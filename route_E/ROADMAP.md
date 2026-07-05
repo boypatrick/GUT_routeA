@@ -692,7 +692,38 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   stabilization.
   Gates: a closing charge assignment or an explicit no-go; S' ceilings
   computed; D3-D4 shared-instanton consistency statement.
-  Depends: D3, DYN-5.  Status: open.
+  Depends: D3, DYN-5.
+  Status: **done** (2026-07-05;
+  `route_d/code/verify_d4_stueckelberg_protection.py`, 14/14 checks;
+  ledgers `route_d/output/d4_stueckelberg_protection.{json,md}`).
+  FINDINGS (the enumeration SHARPENED the planned card):
+  (1) GENERALIZED ABELIAN NO-GO: if the Dirac Yukawa and the portal are
+  charge-allowed then q(X L H) = q(X X) IDENTICALLY, for any number of
+  abelian factors (exhaustive k = 1, 2; B-L instance: the portal forces
+  B-L(X) = -1, both operators sit at -2, so matter parity does not
+  separate them).  The roadmap's "closing charge assignment" does NOT
+  exist -- the no-go branch of the gate fired.
+  (2) Non-SUSY Lorentz bookkeeping: all m = 1 SUSY-style decorations
+  have ODD fermion count => forbidden outright in components; m = 2
+  first arises at dimension 7.  The only renormalizable contamination
+  is the direct X L Htilde -- exactly the operator the no-go ties to
+  the X mass.
+  (3) Closure condition quantified: instanton zero-mode selectivity
+  with Delta S = S'(XLH) - S(XX) >= 6.6 (refreshed DYN-5 ceiling) /
+  3.2 (loose) at M_s = 2e16 (eps_XX = sqrt(3) M_*/M_s = 0.34, i.e. the
+  XX source is LARGE); direct X-Dirac instanton needs S' >= 7.72 /
+  4.26.  D3 consistency: the XX source is the CONJUGATE class of the
+  NN source (+2 vs -2 in B-L) -- both orientations required with
+  independent actions (doubled assumption, priced; NOT the same class
+  the plan anticipated).  The K_tr texture of the X mass becomes an
+  explicit conditional input (the SUSY theorem postulated it).
+  (4) Portability: DYN-5's exact light-sector silence is pure linear
+  algebra and survives non-SUSY unchanged.
+  (5) Beyond-window low-energy consequence: honest NONE (X at
+  sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal
+  zero-mode counting in a concrete embedding.
+  Boundary: selectivity ASSUMED not computed; no anomaly inflow /
+  global embedding; zeta NOT derived; unpromoted.
 
 - **D5 [high-scale SUSY-breaking bridge scan] (1-2 sessions).**
   Goal: the interpolating family between the EXCLUDED SUSY slice and

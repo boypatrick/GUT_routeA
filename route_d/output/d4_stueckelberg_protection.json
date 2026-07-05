@@ -1,0 +1,161 @@
+{
+  "abelian_charge_protection_possible": false,
+  "all_pass": true,
+  "anomaly_inflow_checked": false,
+  "audit": "Route-D D4 Stueckelberg / anomalous-U(1) protection card",
+  "checks": [
+    {
+      "name": "premise: D3 pricing card all_pass with the d=5 escape closed",
+      "pass": true
+    },
+    {
+      "name": "DYN-5 contamination ceilings imported and converted to absolute instanton actions S' = ln(1/eps): refreshed 7.72, loose 4.26",
+      "pass": true
+    },
+    {
+      "name": "IDENTITY (single factor, exhaustive integer grid): Dirac + portal allowed => q(X L H) = q(X X) with ZERO violations",
+      "pass": true
+    },
+    {
+      "name": "TWO abelian factors (exhaustive): the separation q(XLH) != q(XX) is impossible -- adding abelian factors can never help",
+      "pass": true
+    },
+    {
+      "name": "B-L instance: the portal forces B-L(X) = -1 (ODD); then XX = X L Htilde = -2 while NN = +2 -- the 126bar matter parity (even-unit breaking) does NOT separate the X mass from the X-Dirac contamination, and the XX source is the CONJUGATE class of the D3 NN source",
+      "pass": true
+    },
+    {
+      "name": "Lorentz fermion-parity gate: every SUSY-style m = 1 decorated channel has an ODD Weyl-fermion count and is forbidden outright in the non-SUSY component EFT (no operator of any dimension)",
+      "pass": true
+    },
+    {
+      "name": "m = 2 decorations survive Lorentz but first arise at operator dimension 7 (four fermions + scalar): suppressed by (1/M_s)^3, negligible against every DYN-4 window",
+      "pass": true
+    },
+    {
+      "name": "hence the ONLY renormalizable contamination channel in the non-SUSY EFT is the direct Dirac Yukawa X L Htilde -- exactly the channel the S1 no-go ties to the X mass insertion",
+      "pass": true
+    },
+    {
+      "name": "the XX source must be LARGE (eps_XX = sqrt(3) M_*/M_s ~ 0.34 at M_s = 2e16, i.e. S_XX ~ 1.1): a generic same-charge spurion would put the X-Dirac coupling at 0.34 -- more than 2 orders above even the LOOSE ceiling; charge bookkeeping alone is dead (quantified form of the S1 no-go)",
+      "pass": true
+    },
+    {
+      "name": "closure condition quantified: zero-mode selectivity must supply Delta S = S'(XLH) - S(XX) >= 6.6 (refreshed window) / 3.2 (loose) at M_s = 2e16; a DIRECT X L Htilde instanton needs S' >= 7.72 / 4.26 absolute",
+      "pass": true
+    },
+    {
+      "name": "D3 consistency DISCLOSED: the NN tower source carries Delta(B-L) = +2 but the XX mass needs -2 -- the CONJUGATE instanton class; the shared D3+D4 bookkeeping therefore needs BOTH orientations present with independent actions (a doubled conditional assumption, priced -- NOT the same class the roadmap anticipated)",
+      "pass": true
+    },
+    {
+      "name": "K_tr direction of the X mass is itself conditional input in the non-SUSY card: the SUSY theorem POSTULATED K_tr^-1(X,X); here the conjugate-class instanton must be textured along K_tr^-1 for the Schur step to reproduce lambda^2 K_tr (recorded in the price card)",
+      "pass": true
+    },
+    {
+      "name": "portability: DYN-5's EXACT light-sector silence (seesaw invariance under any invertible redefinition of nu^c) is pure linear algebra and carries over to the non-SUSY card unchanged",
+      "pass": true
+    },
+    {
+      "name": "price card assembled, with the honest 'none' for low-energy beyond-window consequences (pricing discipline allows an explicit none)",
+      "pass": true
+    }
+  ],
+  "checks_passed": 14,
+  "checks_total": 14,
+  "created_utc": "2026-07-05T10:47:53.946375+00:00",
+  "derivation_log": {
+    "S1_no_go": {
+      "consequence": "charge bookkeeping alone can NEVER close the non-SUSY protection card; the separator must be non-charge data (instanton zero-mode structure)",
+      "identity": "q(XLH) - q(XX) = (q_X + q_L + q_H) - 2 q_X = -(q_X - q_L - q_H) = -(q_X + q_N) + (q_N + q_L + q_H) = 0 whenever the portal and the Dirac Yukawa are charge-allowed",
+      "scope": "any additive grading: U(1)^k, Z_N^k, gauged or global, anomalous or not, B-L included"
+    },
+    "S2_lorentz": {
+      "fermion_counts": {
+        "Dirac_NLH": 2,
+        "NN_mass": 2,
+        "XN_mass": 2,
+        "XX_mass": 2,
+        "contamination_XLH": 2,
+        "decorated_m1_Dirac": 3,
+        "decorated_m1_Majorana": 3,
+        "decorated_m1_triplet": 3,
+        "decorated_m2_Dirac": 4
+      },
+      "note": "the SUSY decoration danger audited in DYN-5 is a superpotential (scalar-component) artifact; in components it dissolves, and the whole burden lands on X L Htilde"
+    },
+    "S3_closure": {
+      "absolute_S_prime": {
+        "loose": 4.258965268465243,
+        "refreshed": 7.719295591428304
+      },
+      "selectivity_gap_by_Ms": {
+        "1e17": {
+          "S_XX": 2.6881077006466865,
+          "dS_loose": 1.5708575678185566,
+          "dS_refreshed": 5.031187890781618,
+          "eps_XX": 0.06800951204005944
+        },
+        "1e18": {
+          "S_XX": 4.990692793640732,
+          "dS_loose": -0.7317275251754893,
+          "dS_refreshed": 2.7286027977875724,
+          "eps_XX": 0.006800951204005944
+        },
+        "2e16": {
+          "S_XX": 1.0786697882125857,
+          "dS_loose": 3.180295480252657,
+          "dS_refreshed": 6.640625803215719,
+          "eps_XX": 0.3400475602002972
+        }
+      }
+    },
+    "S4_price_card": {
+      "axiom_statement": "an anomalous U(1) (GS-cancelled, Stueckelberg-massive; B-L-like) makes the messenger charge bookkeeping perturbatively EXACT, with all violations instanton-sourced AND the XX-mass instanton's zero modes saturating only the X bilinear (selectivity), textured along K_tr^-1",
+      "beyond_window_consequence": "NONE at low energy (X sits at sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal -- zero-mode counting on the two cycles in any concrete embedding",
+      "buys": [
+        "perturbatively exact selection rules without holomorphy (gauge symmetry, all loop orders)",
+        "calculable violation hierarchy e^{-S}",
+        "with selectivity: X-Dirac contamination pushed below the DYN-4 windows"
+      ],
+      "cannot_buy": [
+        "charge separation of XX from X L Htilde (S1 no-go: impossible for ANY abelian bookkeeping)",
+        "the K_tr texture of the X mass (new conditional input, as in D3)",
+        "zeta's value"
+      ],
+      "closure_conditions": {
+        "both_instanton_orientations": "NN (+2) and XX (-2) classes with independent actions",
+        "direct_instanton_bound": "S' >= 7.72 (refreshed) / 4.26 (loose)",
+        "zero_mode_selectivity_gap": "Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16"
+      }
+    }
+  },
+  "global_embedding_constructed": false,
+  "price_card": {
+    "axiom_statement": "an anomalous U(1) (GS-cancelled, Stueckelberg-massive; B-L-like) makes the messenger charge bookkeeping perturbatively EXACT, with all violations instanton-sourced AND the XX-mass instanton's zero modes saturating only the X bilinear (selectivity), textured along K_tr^-1",
+    "beyond_window_consequence": "NONE at low energy (X sits at sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal -- zero-mode counting on the two cycles in any concrete embedding",
+    "buys": [
+      "perturbatively exact selection rules without holomorphy (gauge symmetry, all loop orders)",
+      "calculable violation hierarchy e^{-S}",
+      "with selectivity: X-Dirac contamination pushed below the DYN-4 windows"
+    ],
+    "cannot_buy": [
+      "charge separation of XX from X L Htilde (S1 no-go: impossible for ANY abelian bookkeeping)",
+      "the K_tr texture of the X mass (new conditional input, as in D3)",
+      "zeta's value"
+    ],
+    "closure_conditions": {
+      "both_instanton_orientations": "NN (+2) and XX (-2) classes with independent actions",
+      "direct_instanton_bound": "S' >= 7.72 (refreshed) / 4.26 (loose)",
+      "zero_mode_selectivity_gap": "Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16"
+    }
+  },
+  "promoted_to_paper": false,
+  "provenance": {
+    "d3_ledger": "route_d/output/d3_instanton_majorana_pricing.json",
+    "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
+    "dyn5_ledger": "output/audit5/dyn5_messenger_one_loop.json"
+  },
+  "zero_mode_selectivity_assumed_not_computed": true,
+  "zeta_value_derived": false
+}
