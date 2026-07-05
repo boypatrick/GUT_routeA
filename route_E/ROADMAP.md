@@ -933,6 +933,42 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   9b-2: non-SUSY flavor refit at v_R ~ M_I: a perturbative M_R tower,
   zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
   consistent with the boundary theorem), contact-essentiality retest.
+  Status 9b-2: **done** (2026-07-05;
+  `code/audit9_dyn9b2_nonsusy_flavor_refit.py`, 11/11; ledgers
+  `output/audit9/dyn9b2_nonsusy_flavor_refit.{json,md}`).  Refit-level
+  structural results from the light-neutrino side (a FULL non-SUSY
+  Yukawa fit is NOT performed -- the Dirac kernel shape is a retained
+  conditional input, disclosed):
+  (1) SO(10) LOCK TENSION: y_t(M_X) = 0.416 machine-derived (one-loop
+  SM run); the perturbative ceiling 4 pi M_I caps the nu-Dirac scale
+  at y_max = 0.046 (PS) / 0.0026 (G_LR); the renormalizable minimal
+  source needs the locked third-generation coupling suppressed 9x /
+  159x (= 2 / 4.4 orders in the tower) -- a structural tension
+  removable only by that much Yukawa tuning.
+  (2) TYPE-II ESCAPE FAILS (order estimate, generous lambda ~ 1 and
+  f = 4 pi): deficit 3.7 (PS) / 7.3 (G_LR) orders with the
+  Delta_L-type block at the gauge scale (9b-1c placement).
+  (3) **ZETA-INVARIANCE THEOREM** (machine-verified to 1e-16): under
+  Y_nu -> y Y_nu the tower rescales uniformly, so zeta, the contact
+  direction, and the contact fraction are EXACTLY invariant; ONLY
+  M_* = y^2 M_*_arch moves.  This sharpens the DYN-9 branch-locality
+  statement: the contact card's normalized content is scale-covariant;
+  M_* is the only branch-local number.  Re-extracted windows at the
+  ceiling: M_*' <= 1.0e13 (PS) / 3.4e10 (G_LR).  Contact essentiality
+  (P(cf > 0.01) = 1.000) carries over verbatim (conditional on the
+  kernel shape only).
+  (4) LEPTOGENESIS SOURCE SELECTION: the rescaled renormalizable
+  source gives M_1' = 7e7 (PS) / 2e5 (G_LR) GeV -- below the
+  Davidson-Ibarra floor (~5e8, order estimate); the scale-decoupled
+  (instanton-type) source keeps the archival M_1 = 2.8e10 alive.
+  Thermal leptogenesis SELECTS the scale-decoupled source, so the D3
+  coexistence prediction (K8: N_2, N_3 above the intermediate gauge
+  scale) UPGRADES from an optional pricing card to a REQUIREMENT of
+  the alive branch with viable leptogenesis.  D3 remains UNPROMOTED:
+  this is a conditional-dependency statement, not a promotion.
+  Boundary: lock quantified from the third-generation relation, not a
+  global fit; type-II/DI numbers are order estimates; zeta NOT
+  derived.
   9b-3: non-SUSY leptogenesis re-run on the 9b-2 tower (non-SUSY loop
   function; the gravitino constraint dissolves).
   9b-4: DYN-8 ledger refresh with the 9b numbers.

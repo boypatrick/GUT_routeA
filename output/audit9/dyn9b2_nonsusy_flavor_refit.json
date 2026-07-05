@@ -1,0 +1,127 @@
+{
+  "audit": "DYN-9b-2 non-SUSY flavor refit + zeta re-extraction",
+  "dyn_item": "DYN-9b-2",
+  "created_utc": "2026-07-05T15:38:00.729182+00:00",
+  "all_pass": true,
+  "checks_passed": 11,
+  "checks_total": 11,
+  "checks": [
+    {
+      "name": "archival closure card sha256 matches the DYN-4a provenance; the DYN-9 ledger declares the card slice-local (the premise this audit sharpens)",
+      "pass": true
+    },
+    {
+      "name": "archival replay reproduces the paper anchors (zeta, M_*, tower)",
+      "pass": true
+    },
+    {
+      "name": "y_top(M_X) machine-derived from the one-loop SM running: the SO(10) lock scale for the third-generation nu-Dirac coupling",
+      "pass": true
+    },
+    {
+      "name": "archival Dirac kernel scale recorded: sigma_max(Y_nu) is O(y_t) -- the archival card RESPECTS the SO(10) lock",
+      "pass": true
+    },
+    {
+      "name": "SO(10) LOCK TENSION quantified: the perturbative ceiling 4 pi M_I caps the nu-Dirac scale at y_max; the renormalizable minimal source needs the third-generation coupling ~9x (PS) / ~160x (G_LR) BELOW its locked scale y_t(M_X) -- i.e. 2 / 4.4 orders of magnitude in the tower, a structural tension only removable by that much Yukawa tuning",
+      "pass": true
+    },
+    {
+      "name": "TYPE-II ESCAPE FAILS (order estimate, flagged; lambda ~ 1 and f at 4 pi, i.e. GENEROUS): with the Delta_L-type block at the gauge scale (DYN-9b-1c) the induced triplet vev falls short of the atmospheric scale by 3.7 (PS) / 7.3 (G_LR) orders",
+      "pass": true
+    },
+    {
+      "name": "ZETA-INVARIANCE THEOREM (machine-verified): under Y_nu -> y Y_nu the tower rescales uniformly, so zeta, the contact direction and the contact fraction are EXACTLY invariant; only M_* = y^2 M_*_arch moves.  The contact card's normalized content is scale-covariant; M_* is the only branch-local number",
+      "pass": true
+    },
+    {
+      "name": "re-extracted M_* windows at v_R ~ M_I recorded per chain (renormalizable-source scenario at the perturbative ceiling): M_*' = 4 pi M_I by construction",
+      "pass": true
+    },
+    {
+      "name": "contact essentiality carries over VERBATIM to the rescaled card (cf invariant; the DYN-4b posterior statement P(cf > 0.01) = 1.000 remains conditional on the Dirac kernel SHAPE only, which the rescale does not touch)",
+      "pass": true
+    },
+    {
+      "name": "LEPTOGENESIS SOURCE SELECTION: under the rescaled renormalizable source M_1 falls BELOW the Davidson-Ibarra floor on both chains (PS ~ 7e7, G_LR ~ 2e5 GeV); under a scale-decoupled (instanton-type) source the archival M_1 ~ 2.8e10 survives -- thermal leptogenesis SELECTS the scale-decoupled source on the alive branch (DI floor is an order estimate, flagged)",
+      "pass": true
+    },
+    {
+      "name": "K8 UPGRADE: the only quantified source scenario that survives S1 (lock tension) + S2 (type-II fails) + S4 (leptogenesis) is the scale-decoupled instanton-type tower of the D3 card, whose coexistence prediction (N_2, N_3 above the intermediate gauge scale) therefore upgrades from an optional pricing card to a REQUIREMENT of the alive branch with viable leptogenesis",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S1_lock": {
+      "yt_MX": 0.41556341660794366,
+      "y_arch": 0.8923822015216857,
+      "chains": {
+        "G_LR": {
+          "M_I": 2668044002.8598156,
+          "MR_ceiling_GeV": 33527629755.354805,
+          "y_max": 0.0026076410547803664,
+          "lock_tension": 159.3637344549882
+        },
+        "PS": {
+          "M_I": 824414216786.1166,
+          "MR_ceiling_GeV": 10359894587880.988,
+          "y_max": 0.04583783027835945,
+          "lock_tension": 9.065948673494168
+        }
+      }
+    },
+    "S2_typeII": {
+      "G_LR": {
+        "v_L_GeV": 1.836196281975389e-19,
+        "m_max_eV": 2.3074323000011097e-09,
+        "deficit_orders": 7.335841036639049
+      },
+      "PS": {
+        "v_L_GeV": 8.733168089754162e-16,
+        "m_max_eV": 1.0974422685334593e-05,
+        "deficit_orders": 3.6585883210863823
+      }
+    },
+    "S3_invariance": {
+      "zeta": [
+        0.10764729490120784,
+        0.07365148533033768
+      ],
+      "contact_fraction": 0.13042751666881525,
+      "M_star_windows": {
+        "G_LR": {
+          "M_star_at_ceiling_GeV": 33527629755.354805
+        },
+        "PS": {
+          "M_star_at_ceiling_GeV": 10359894587880.992
+        }
+      }
+    },
+    "S4_selection": {
+      "M1_archival": 27778839717.093166,
+      "DI_floor": 500000000.0,
+      "rescaled": {
+        "G_LR": {
+          "M1_rescaled_GeV": 237196.30663319174,
+          "below_DI_floor": true
+        },
+        "PS": {
+          "M1_rescaled_GeV": 73292647.0282945,
+          "below_DI_floor": true
+        }
+      }
+    }
+  },
+  "provenance": {
+    "closure_card_sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d",
+    "dyn4a": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
+    "dyn4b": "output/audit1/dyn4b_unconditional_zeta.json",
+    "dyn9": "output/audit9/dyn9_nonsusy_intermediate.json",
+    "d3": "route_d/output/d3_instanton_majorana_pricing.json"
+  },
+  "full_nonsusy_yukawa_fit_performed": false,
+  "dirac_kernel_shape_retained_conditional": true,
+  "so10_lock_quantified_not_refit": true,
+  "typeII_and_DI_are_order_estimates": true,
+  "zeta_value_derived": false
+}
