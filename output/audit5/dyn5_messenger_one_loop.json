@@ -1,0 +1,255 @@
+{
+  "audit": "DYN-5 hidden-messenger dynamics at one loop",
+  "dyn_item": "DYN-5",
+  "created_utc": "2026-07-05T01:02:43.327995+00:00",
+  "all_pass": true,
+  "checks_passed": 21,
+  "checks_total": 21,
+  "checks": [
+    {
+      "name": "lambda = sqrt(zeta): lambda^2 - zeta machine zero and tex digits match",
+      "pass": true
+    },
+    {
+      "name": "|lambda|, |zeta|, arg zeta reproduce the tex anchors",
+      "pass": true
+    },
+    {
+      "name": "companion caveat anchor |lambda|^2/(16 pi^2) = 8.259697e-4",
+      "pass": true
+    },
+    {
+      "name": "higher-order remark |zeta|^2 ~ 1.7e-2 reproduced",
+      "pass": true
+    },
+    {
+      "name": "K_tr^2 = I/3 and K_tr^-1 = 3 K_tr (fixed convention)",
+      "pass": true
+    },
+    {
+      "name": "messenger mass matrix M_* K_tr^-1 has ALL singular values sqrt(3) M_* => exact family degeneracy => delta Z_N proportional to identity at leading log",
+      "pass": true
+    },
+    {
+      "name": "portal coupling matrix is lambda * 1_3: (Y+ Y)/(16 pi^2) = per-efold coefficient times identity",
+      "pass": true
+    },
+    {
+      "name": "strict Route-B benchmark interval ln(M_*/M_X) = -ln(3)/2 (X sits AT sqrt(3) M_*): |delta Z_N| = 4.537102e-4",
+      "pass": true
+    },
+    {
+      "name": "archival closure card present with the DYN-4a provenance sha256",
+      "pass": true
+    },
+    {
+      "name": "benchmark replay reproduces the zeta anchor (links S3 to DYN-4a)",
+      "pass": true
+    },
+    {
+      "name": "EXACT light-sector silence: m_nu invariant under the canonical redefinition (universal AND non-universal delta Z_N) at machine level given cond(M_R) ~ 1.6e5",
+      "pass": true
+    },
+    {
+      "name": "linearized replay residual scales as O(deltaZ^2) (halving deltaZ quarters the residual)",
+      "pass": true
+    },
+    {
+      "name": "at the strict benchmark |deltaZ| = 4.53e-4 the linearized-formula residual sits BELOW even the refreshed window",
+      "pass": true
+    },
+    {
+      "name": "heavy sector NOT silent: all M_R singular values shift by exactly (1 - deltaZ); worst scanned shift stays inside the DYN-4b M_1 window",
+      "pass": true
+    },
+    {
+      "name": "normalized zeta extraction EXACTLY invariant under delta Z_N (only M_* rescales by 1 - deltaZ)",
+      "pass": true
+    },
+    {
+      "name": "R enumeration: all base channels have R = 2; every X-decorated Dirac/triplet/Majorana operator has R = 2 + m (zero violations)",
+      "pass": true
+    },
+    {
+      "name": "portal forces R(X) = 2 - R(16); silence fails ONLY at the measure-zero assignment R(16) = 2 (benchmark R(16) = 1 is safe)",
+      "pass": true
+    },
+    {
+      "name": "SUSY non-renormalization => one-loop effects are Kahler-only; the nu^c leg appears ONLY in Y_nuD => delta Y_u = delta Y_d = delta Y_e = delta C_5L = delta C_5R = 0 at one loop; X, N visible singlets => Delta b = (0,0,0), DYN-2 threshold vector untouched",
+      "pass": true
+    },
+    {
+      "name": "two-loop leakage (ORDER ESTIMATE): shift in alpha^-1 over the full run < 1e-3, i.e. far below the DYN-2 threshold-sensitivity scale O(0.1); two-loop silence itself is NOT claimed",
+      "pass": true
+    },
+    {
+      "name": "spurion regeneration condition k r_s = -m: r_s = -1 regenerates m = 1 at first order; r_s = -2 (constant-W / gravitino type) regenerates ONLY even m (m = 2 at k = 1), never the m = 1 portal decoration; positive-R spurions never regenerate at the holomorphic level",
+      "pass": true
+    },
+    {
+      "name": "spurion ceilings vs DYN-4 windows computed (ORDER estimates): loose window tolerates eps ~ 1e-2, refreshed window forces eps below ~ 1e-3",
+      "pass": true
+    }
+  ],
+  "benchmark": {
+    "zeta": [
+      0.1076472949,
+      0.0736514853
+    ],
+    "lambda": [
+      0.34502115743308964,
+      0.10673473744038917
+    ],
+    "per_efold_coefficient": 0.000825969676394408,
+    "delta_Z_scan": {
+      "strict_benchmark": -0.0004537102182770593,
+      "one_efold": 0.000825969676394408,
+      "one_decade": 0.00190186546413088,
+      "two_decades": 0.00380373092826176,
+      "three_decades": 0.0057055963923926395
+    },
+    "M_star_GeV": 3926531008378341.5
+  },
+  "derivation_log": {
+    "S1_anchors": {
+      "lambda": [
+        0.34502115743308964,
+        0.10673473744038917
+      ],
+      "per_efold_coefficient": 0.000825969676394408,
+      "note": "the tex caveat number 8.259697e-4 is the PER-E-FOLD coefficient of delta Z_N; the full delta Z_N multiplies ln(M_*/M_X)"
+    },
+    "S2_structure": {
+      "derivation": [
+        "W_R/M_* = M_V(N,N)/2 + lambda X(N) - K_tr^-1(X,X)/2 (paper theorem)",
+        "portal in components: lambda X_a N_a => Yukawa matrix lambda * 1_3",
+        "one-loop Kahler correction on N: delta Z_N = (Y+ Y)/(16pi^2) ln(M_*/M_X_i) summed over messenger mass eigenstates i",
+        "X mass matrix = M_* K_tr^-1 = 3 M_* K_tr; K_tr = P/sqrt(3) with P orthogonal symmetric (P^2 = I) => |eigenvalues| all sqrt(3) M_*",
+        "identical log arguments => delta Z_N = deltaZ * 1_3 EXACTLY at leading log (not just approximately family-universal)"
+      ],
+      "delta_Z_scan": {
+        "strict_benchmark": -0.0004537102182770593,
+        "one_efold": 0.000825969676394408,
+        "one_decade": 0.00190186546413088,
+        "two_decades": 0.00380373092826176,
+        "three_decades": 0.0057055963923926395
+      },
+      "strict_benchmark_note": "in the strict theorem all three messengers sit at sqrt(3) M_*, ABOVE the matching scale; the caveat's generic interval covers microscopic completions where the operator-generation scale exceeds the messenger mass"
+    },
+    "S3_replay": {
+      "structural_silence": "m_nu = -mD M_R^-1 mD^T is invariant under mD -> mD A, M_R -> A^T M_R A for ANY invertible A: the seesaw combination is a GL(3)-covariant of the heavy field being integrated out, so canonical-normalization corrections cancel IDENTICALLY in every light observable",
+      "linearized_formula_validity": {
+        "residual_at_deltaZ": {
+          "5.7056e-03": 8.185159737121488e-06
+        },
+        "crossing_loose_window_Delta_s": {
+          "deltaZ": 0.01129688293642607,
+          "ln_M_ratio": 13.6771158303779
+        },
+        "crossing_refreshed_window_Delta_s": {
+          "deltaZ": 0.002002430474186329,
+          "ln_M_ratio": 2.424338969594509
+        },
+        "reading": "the paper's linearized replay formulas are sufficient for ln(M_*/M_X) below the quoted crossing; beyond it the exact A-form must be used (this sharpens the tex caveat 'small, but not automatically smaller than the narrow contact-sensitivity windows')"
+      },
+      "heavy_sector": {
+        "shift_dex_at_worst_scan": 0.002485005007657412,
+        "dyn4b_M1_window_half_width_dex": 0.06890094594990614,
+        "note": "M_R eigenvalues, M_1 (leptogenesis input) and M_* all rescale by (1 - deltaZ); zeta itself does not move"
+      }
+    },
+    "S4_r_selection": {
+      "charges": {
+        "16": 1,
+        "N": 1,
+        "H": 0,
+        "T": 0,
+        "Tbar": 0,
+        "X": 1
+      },
+      "base_channels_R2": {
+        "Dirac": 2,
+        "TripletT": 2,
+        "TripletTbar": 2,
+        "Majorana_MV": 2,
+        "portal": 2,
+        "Xmass": 2
+      },
+      "decorated_R": {
+        "Dirac+1X": 3,
+        "Dirac+2X": 4,
+        "Dirac+3X": 5,
+        "TripletT+1X": 3,
+        "TripletT+2X": 4,
+        "TripletT+3X": 5,
+        "TripletTbar+1X": 3,
+        "TripletTbar+2X": 4,
+        "TripletTbar+3X": 5,
+        "Majorana_MV+1X": 3,
+        "Majorana_MV+2X": 4,
+        "Majorana_MV+3X": 5
+      },
+      "spurion_regeneration_table_kr_eq_minus_m": {
+        "-4": [],
+        "-3": [
+          [
+            1,
+            3
+          ]
+        ],
+        "-2": [
+          [
+            1,
+            2
+          ]
+        ],
+        "-1": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": []
+      },
+      "spurion_conditions_to_audited_order": [
+        "holomorphic spurions with POSITIVE R charge never regenerate X-decorated operators in W (holomorphy)",
+        "even-R spurions (r_s = -2, constant-W/gravitino type) preserve the residual (-1)^R parity: all ODD decorations (including the m = 1 Dirac decoration X 16 16 H) stay absent to ALL orders in the spurion; the m = 2 decoration can appear at O(eps)",
+        "odd-R spurions (r_s = -1) regenerate the m = 1 decoration at O(eps) and are the dangerous case"
+      ],
+      "ceilings_order_estimates": {
+        "eps_odd_loose": 0.01413692276457755,
+        "eps_odd_tight": 0.0004441733732626773,
+        "eps_even_loose": 0.005105600166913798,
+        "eps_even_tight": 0.00016041480076207782
+      },
+      "two_loop_leakage_estimate": {
+        "coupling_level": 2.9566758432751296e-05,
+        "alpha_inv_level": 0.00014772867142897968
+      }
+    }
+  },
+  "provenance": {
+    "closure_card": {
+      "path": "route_E/output/publication_closure_card/publication_closure_card.json",
+      "sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d",
+      "note": "user-restored archival artifact, same sha256 as the DYN-4a ledger"
+    },
+    "windows_source": "output/audit1/dyn4a_seesaw_zeta_posterior.json (contact-sensitivity windows) + dyn4b_unconditional_zeta.json (M_1 posterior)",
+    "tex_caveat": "paper/gut_framework.tex, canonical-basis caveat (delta Z_N observation) + R-selection lemma + tree-level matching-silence theorem"
+  },
+  "zeta_value_derived": false,
+  "one_loop_silence_of_light_sector": true,
+  "heavy_sector_silent": false,
+  "two_loop_silence_claimed": false,
+  "r_symmetry_claimed_anomaly_free": false,
+  "microscopic_messenger_completion_constructed": false,
+  "spurion_sector_constructed": false,
+  "ceilings_are_order_estimates": true
+}

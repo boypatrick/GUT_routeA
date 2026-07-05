@@ -467,6 +467,49 @@ Standing discipline for every DYN item:
   `code/verify_routeB_mediator_grading.py`,
   `code/scan_mediator_r_window.py` (HEAD).
   Depends: DYN-4.
+  Status: **done** (2026-07-05; `code/audit5_dyn5_messenger_one_loop.py`,
+  21/21 checks; ledgers `output/audit5/dyn5_messenger_one_loop.{json,md}`;
+  whitelist extended for `output/audit5/`; requires the archival closure
+  card, same sha256 as DYN-4a).
+  FINDINGS (the tree theorem upgrades cleanly, with two sharpenings and
+  one disclosed non-silence):
+  (1) delta Z_N is EXACTLY family-universal: the portal coupling is
+  lambda * 1_3 and the messenger mass matrix M_* K_tr^-1 has all
+  singular values sqrt(3) M_* (from K_tr^2 = I/3), so the leading log is
+  deltaZ * identity; the caveat anchor 8.259697e-4 is the per-e-fold
+  coefficient (reproduced to 1e-10), and the STRICT benchmark interval
+  is ln(M_*/(sqrt(3) M_*)) = -ln(3)/2, giving |deltaZ| = 4.54e-4.
+  (2) Light-sector silence is STRUCTURAL, not perturbative: the seesaw
+  m_nu = -mD M_R^-1 mD^T is invariant under mD -> mD A,
+  M_R -> A^T M_R A for ANY invertible A (machine-zero, universal AND
+  non-universal delta Z_N) -- canonical-normalization corrections cancel
+  identically in every light observable.  The paper's LINEARIZED replay
+  formulas have a quantified validity range: the O(deltaZ^2) residual
+  crosses the loose contact-sensitivity window at deltaZ ~ 1.1e-2
+  (ln M ratio ~ 14) and the REFRESHED window at deltaZ ~ 2.0e-3
+  (ln M ratio ~ 2.4 -- barely one decade of messenger interval); beyond
+  that use the exact A-form.
+  (3) The HEAVY sector is NOT silent (disclosed): M_R singular values,
+  M_1 (leptogenesis input) and M_* rescale by (1 - deltaZ); worst
+  scanned shift = 3.6% of the DYN-4b M_1 window.  The normalized zeta
+  extraction is EXACTLY invariant (zeta anchor digits are deltaZ-safe).
+  (4) R-selection at one loop: all X-decorated Dirac/triplet/Majorana
+  operators have R = 2 + m; the portal forces R(X) = 1; silence fails
+  only at the measure-zero assignment R(16) = 2; non-renormalization
+  makes one-loop effects Kahler-only and the nu^c leg appears in no
+  visible Yukawa or d=5 channel, so delta Y_{u,d,e} = delta C_5L =
+  delta C_5R = 0 at one loop and the DYN-2 threshold vector is
+  untouched.  Two-loop leakage estimated at 1.5e-4 in alpha^-1 units
+  (negligible vs DYN-2 sensitivity; two-loop silence NOT claimed).
+  (5) Spurion conditions (regeneration iff k r_s = -m): positive-R
+  spurions safe at the holomorphic level; even-R spurions
+  (constant-W/gravitino type) preserve a residual (-1)^R parity so all
+  ODD decorations stay absent to all orders; odd-R spurions are the
+  dangerous case.  Order-estimate ceilings vs the DYN-4 windows:
+  eps_odd < 1.4e-2 (loose) / 4.4e-4 (refreshed).
+  Boundary: zeta NOT derived; R symmetry NOT claimed anomaly free; no
+  microscopic messenger completion constructed; ceilings are order
+  estimates.
 
 - **DYN-6 [zeta-stabilization axioms: new-axiom lane, optional].**
   Constraint from Theorem VII.4: any mechanism fixing zeta is a NEW

@@ -36,11 +36,12 @@ python3 code/audit7_dyn7_leptogenesis_argzeta.py
 python3 code/audit2_dyn3_proton_d5_kill_criterion.py
 python3 code/audit3_dyn2b_rescue_scan.py
 python3 code/audit9_dyn9_nonsusy_intermediate.py
+python3 code/audit5_dyn5_messenger_one_loop.py
 ```
 
-The DYN-4a script requires the archival output set restored under `route_E/output/` (user-managed; sha256 recorded in its ledger).
+The DYN-4a and DYN-5 scripts require the archival output set restored under `route_E/output/` (user-managed; sha256 recorded in their ledgers).
 
-The last script is DYN-0 of the dynamics program (`route_E/ROADMAP.md` section E): new dynamics-lane scripts live at root `code/` with ledgers in whitelisted `output/audit*/` lanes; history assets are recovered read-only via `git show HEAD:<path>`, never restored into the tree.
+The `audit0_dyn_conventions_and_inventory.py` script is DYN-0 of the dynamics program (`route_E/ROADMAP.md` section E): new dynamics-lane scripts live at root `code/` with ledgers in whitelisted `output/audit*/` lanes; history assets are recovered read-only via `git show HEAD:<path>`, never restored into the tree.
 
 The Route-E paper (`route_E/tex/route_e_first_principles.tex`) builds with the same pdflatex/bibtex cycle run inside `route_E/tex/`; its bibliography resolves to `../../paper/refs.bib`.
 
