@@ -584,16 +584,139 @@ Standing discipline for every DYN item:
   Dirac-sector refit, or non-thermal production.  Gravitino/reheating
   tension disclosed, not resolved.
 
-- **DYN-8 [falsifiability section] (1 session; collects all lanes).**
-  Add a Falsifiability section to the reconstruction paper + a ledger,
-  with one entry per kill criterion: fourth chiral family (kills the
-  a-priori bound N <= 3 of the self-carried-index principle); Dirac
+- **DYN-8 [falsifiability section] (1-2 sessions; collects all lanes;
+  CLOSES the main line).**
+  Add a Falsifiability section to the reconstruction paper + a ledger.
+  UPDATED SCOPE (2026-07-05, after the consistency sweep): the section
+  opens with a BRANCH MAP -- (i) kinematic theorem core (SUSY-agnostic,
+  machine-verified), (ii) SUSY minimal slice EXCLUDED (DYN-2 x DYN-3
+  combined + DYN-2b structural obstruction), (iii) non-SUSY alive branch
+  (G_LR / 210-compatible PS; pending the REQUIRED DYN-9b refit),
+  (iv) string-conditional lanes D3-D5 (priced, unpromoted).  Kill bank,
+  each entry branch-tagged: fourth chiral family (kills N <= 3); Dirac
   neutrinos / absence of 0nubb (removes the canonical-contact target);
-  proton-lifetime window from DYN-3 vs Hyper-K reach; unification-window
-  failure from DYN-2; leptogenesis sign/magnitude from DYN-7.  Each
-  entry names the principle or branch it kills and the current
-  experimental status.
+  the PS-chain Hyper-K window (tau ~ 4.3e33 vs bound 2.4e34: dead or
+  discoverable); G_LR tau ~ 1e36 (partial Hyper-K reach); DYN-7
+  leptogenesis soft kill (SUSY-scoped; gravitino tension dissolves on
+  the non-SUSY branch); DYN-5 spurion ceilings; D4's instanton-action
+  bound S' >= 7.7 (if D4 closes); D5's M_SS window (or its emptiness);
+  Z_178 retirement on the refreshed card (data supersedes anchors,
+  strengthening the continuous-phase reading).  Paper touch-ups: main
+  paper status ledger deferred -> completed-with-findings; Z_178
+  re-scope.  Deliverable tex stays SELF-CONTAINED (repo codenames only
+  in the terminology remark + literal file paths).
 
 Suggested sequencing: DYN-0 -> (DYN-1 || DYN-4) -> DYN-2 -> DYN-3 ->
 DYN-5 -> DYN-8, with DYN-6/DYN-7 optional lanes after DYN-4.  Statuses
 start `open`; update per session.
+
+## F. String-conditional program (planned 2026-07-05; items D3-D5,
+## then DYN-8 close-out and the staged DYN-9b)
+
+Discipline: every item below is a CONDITIONAL string interpretation
+under the Route-D promotion bar (precise statement, assumptions-vs-
+derived list, reproducible script, non-overclaiming impact note) and
+the DYN-6 pricing language (axioms are PRICED, not derived; each must
+state at least one consequence beyond the quantity it sources, or
+disclose "none").  Nothing here derives zeta (boundary theorem).
+Scripts live in `route_d/code/verify_dN_*.py` with flat ledgers
+`route_d/output/dN_*.{json,md}` (the string sandbox, physically
+separated from the dynamics lanes).  Execution order:
+D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
+
+- **D3 [instanton / d=5 Majorana-source pricing card] (1 session).**
+  Goal: price the two string escapes for the archival M_R tower that
+  the DYN-9 perturbativity gate closed for renormalizable f v_R.
+  Steps: (1) the d=5-operator source (16 16 16bar 16bar)/M_s with
+  v_R ~ M_I gives f'_needed = M_R,i M_s / v_R^2 -- EXPECTED WORSE than
+  the renormalizable case (extra suppression v_R/M_s; at M_s = 2e16,
+  v_R = 8e11 the top entry needs f' ~ 1e8): compute and GATE the
+  negative result, closing this escape at M_I-scale v_R and leaving
+  instantons as the only string escape for the tower.
+  (2) instanton source M_R,i ~ M_s e^{-S_i}: required actions
+  S_i = ln(M_s/M_R,i) over an M_s grid (M_X of both surviving chains,
+  2e16, 1e17, 1e18); at M_s = 2e16 the archival tower needs
+  S = [13.6, 6.4, 1.6] and the D2 contact action is
+  S_zeta = -ln|zeta| = 2.04 -- record the top-of-tower/contact
+  same-ballpark coincidence explicitly (diagnostic, not evidence).
+  (3) rank bookkeeping: a single instanton gives generically rank-1
+  M_R (zero-mode counting), so the rank-3 tower needs >= 3 distinct
+  cycles; the family texture becomes a NEW conditional input.
+  (4) axiom price card: statement, parameter count (3 actions +
+  phases + texture), what it buys (tower decoupled from the f < 4pi
+  ceiling; B-L broken by the instanton itself, independent of M_I),
+  what it does NOT buy (zeta's value; the texture).
+  Gates: negative d=5-escape gate; S_i table; rank statement; price
+  card with beyond-zeta consequence or explicit "none".
+  Depends: DYN-9 (patched ledger).  Status: open.
+
+- **D4 [Stueckelberg / anomalous-U(1) protection card] (1 session).**
+  Goal: the non-SUSY substitute for the DYN-5 R-selection rule -- a
+  perturbatively exact anomalous U(1)_A (GS-cancelled, Stueckelberg-
+  massive) charging the messenger sector; violations only from
+  instantons e^{-S'}.
+  Steps: (1) charge bookkeeping by brute-force enumeration (reuse the
+  DYN-5 machinery): portal XN allowed, all Dirac/triplet decorations
+  forbidden, AND the obstruction the SUSY version never faced -- the
+  X mass term K_tr^-1(X,X) carries charge 2 q_A(X) != 0, so it must be
+  sourced by a charged vev or by the SAME instanton class as the D3
+  Majorana source (this couples D3+D4 into one bookkeeping; enumerate
+  which assignments close, or record the no-go).
+  (2) strength gate: perturbative exactness upgrades silence to ALL
+  loop orders (stronger than the SUSY one-loop statement); instanton
+  contamination must satisfy the DYN-5 ceilings:
+  S' >= ln(1/eps) = 7.73 (refreshed window) / 4.27 (loose); compare
+  with the D3 actions -- disclose whether the tower-generating and
+  protection-violating instantons can be the same class consistently.
+  (3) NOT claimed: anomaly inflow details, global embedding, moduli
+  stabilization.
+  Gates: a closing charge assignment or an explicit no-go; S' ceilings
+  computed; D3-D4 shared-instanton consistency statement.
+  Depends: D3, DYN-5.  Status: open.
+
+- **D5 [high-scale SUSY-breaking bridge scan] (1-2 sessions).**
+  Goal: the interpolating family between the EXCLUDED SUSY slice and
+  the DYN-9 non-SUSY chains: SUSY broken at M_SS (non-SUSY below, SUSY
+  above) -- string-natural (UV SUSY), and it preserves the
+  Route-B/DYN-5 holomorphy machinery at the matching scale iff
+  M_SS < M_*.
+  Steps: (1) two-segment running per surviving chain (G_LR and the
+  210-compatible PS): DYN-9 non-SUSY b's below M_SS, SUSY versions
+  above; solve (M_I, M_X, alpha_G) as functions of M_SS on a grid
+  M_SS in [1e4, M_X] GeV.
+  (2) proton ledger: tau_d6(M_X(M_SS)); d=5 REAPPEARS above M_SS --
+  compute the mini-split scaling of the DYN-3 estimate with sfermions
+  at M_SS (the "3-10 orders" lever becomes a computed curve).
+  (3) window intersection: alive(tau_d6) AND tau_d5(M_SS) > Super-K
+  AND M_SS < M_* (holomorphy at matching); disclose both orderings of
+  M_SS vs M_I.  Output: the surviving [M_SS] window per chain, or
+  EMPTY.
+  (4) verdict: non-empty window => a falsifiability entry (tau_p
+  pinned into a band); empty => the bridge is DEAD and the alive
+  branch definitively loses Route-B holomorphy (making D4
+  load-bearing for any messenger story there).
+  Gates: DYN-9 limit reproduced as M_SS -> M_X; the SUSY-slice
+  exclusion reproduced as M_SS -> TeV; explicit window verdict.
+  Depends: DYN-9, DYN-3, DYN-5.  Status: open.
+
+- **DYN-8 close-out** as specified in section E (branch map + branch-
+  tagged kill bank incl. the D3-D5 outputs).  Status: open.
+
+- **DYN-9b [non-SUSY core re-derivation -- REQUIRED for the alive
+  branch] (staged, 3+ sessions).**
+  9b-1: non-SUSY scalar potential and spectrum of the 210+126bar(+10)
+  system (superpotential-level blocks carry over from DYN-1, the
+  potential does NOT); redo the DYN-9 thresholds with the real
+  spectrum replacing ESH.
+  9b-2: non-SUSY flavor refit at v_R ~ M_I: a perturbative M_R tower,
+  zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
+  consistent with the boundary theorem), contact-essentiality retest.
+  9b-3: non-SUSY leptogenesis re-run on the 9b-2 tower (non-SUSY loop
+  function; the gravitino constraint dissolves).
+  9b-4: DYN-8 ledger refresh with the 9b numbers.
+  Depends: DYN-9 (done), DYN-8 (structure); D3/D4 optionally as
+  source alternatives.  Status: open.
+
+Backlog (optional, unchanged): DYN-6 (axiom-pricing generalization),
+DYN-4c (kernel-level Dirac refit -- the DYN-7 escape), DYN-3b
+(physical-basis rotations, explicit dressing).
