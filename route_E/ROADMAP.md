@@ -374,7 +374,8 @@ Standing discipline for every DYN item:
   (SO(10) -> Pati-Salam or G_LR at M_I -> SM), where d=5 proton decay is
   absent (no higgsinos) and two-step running decouples M_I from M_X.
   Status: **DYN-9a done** (2026-07-05;
-  `code/audit9_dyn9_nonsusy_intermediate.py`, 14/14 checks; ledgers
+  `code/audit9_dyn9_nonsusy_intermediate.py`, 15/15 checks after the
+  2026-07-05 seesaw-disclosure patch; ledgers
   `output/audit9/dyn9_nonsusy_intermediate.{json,md}`; whitelist extended
   for `output/audit9/`).
   Method: all one-loop b coefficients DERIVED from field content (ESH
@@ -391,8 +392,9 @@ Standing discipline for every DYN item:
   | PS = 2L2R4C no D (the 210-COMPATIBLE chain) | M_I = 1e11.9,
     M_X = 1e15.7 | tau ~ 4.3e33: **MARGINAL** (5.6x below the bound =
     inside BDM's threshold-spread caveat) -- either already dead or
-    sitting EXACTLY in the Hyper-K discovery window; M_I ~ 1e12 is
-    seesaw-friendly and M_1 < M_I (leptogenesis OK) |
+    sitting EXACTLY in the Hyper-K discovery window; M_1 < M_I holds
+    (thermal N_1 production KINEMATICS only -- see the perturbativity
+    gate below) |
   | PS + D (needs 54_H) | M_X = 1e15.0 | tau ~ 3e30: dead |
   | 2L1R4C | M_X = 1e14.4 | tau ~ 3e28: dead (BDM reproduced) |
   STRUCTURAL VERDICT: the rescue EXISTS -- d=5 (the DYN-3 killer) is
@@ -400,15 +402,38 @@ Standing discipline for every DYN item:
   bound.  The two live-ish options trade off cleanly: G_LR is safely
   alive but strains the seesaw and swaps the framework's 210_H for 45_H
   (conditional-input change); the 210-compatible PS chain preserves the
-  source choice and the seesaw scale but is pinned at the bound --
-  maximally falsifiable.  The kinematic theorem core (16 with forced
-  nu^c, N = 3, K_tr = Killing) is SUSY-agnostic and untouched; the
-  126bar (P_nu^c source) survives in every chain.
-  Remaining as **DYN-9b** (open): non-SUSY scalar potential and spectrum
-  of the 210/126 system (real thresholds replacing ESH); the non-SUSY
-  flavor refit (archival M_R was SUSY-convention); two-loop intermediate
-  segment; Yukawa-sector viability (non-SUSY SO(10) fits need the
-  126bar + 10 complex doublet structure).
+  source choice but is pinned at the bound -- maximally falsifiable.
+  The kinematic theorem core (16 with forced nu^c, N = 3,
+  K_tr = Killing) is SUSY-agnostic and untouched; the 126bar (P_nu^c
+  source) survives in every chain.
+  PERTURBATIVITY GATE (added 2026-07-05, consistency sweep): full-chain
+  f_needed = M_R,i^archival/M_I table -- G_LR [8.9, 1.2e4, 1.5e6],
+  PS [0.029, 39, 4.8e3], PS+D [5.4e-4, 0.73, 89], 2L1R4C
+  [0.066, 90, 1.1e4] -- NO chain that survives proton decay can host
+  the archival M_R tower via renormalizable f v_R with f < 4pi (worst
+  PS factor 379x above 4pi; PS+D comes closest but is proton-dead).
+  Root cause is a SCALE CLASH: the archival contact card has
+  M_* = 3.9e15 GeV while surviving chains have M_I <= 1e12.  Hence the
+  archival zeta/M_* card is SUSY-slice-LOCAL and NOT transplantable
+  (ledger flags archival_MR_tower_perturbatively_realizable_on_
+  surviving_chains = false, archival_zeta_card_transplantable_to_
+  nonsusy_chains = false); zeta's value being branch-local is CONSISTENT
+  with the boundary theorem (zeta is an input, not a derived quantity),
+  but the non-SUSY flavor refit is REQUIRED for the alive branch, not
+  optional.  Escape routes for the tower itself (conditional, string
+  lane, unpromoted): d=5 Majorana sources (16 16 16bar 16bar)/M_s or
+  instanton-induced M_R decouple the ceiling from f v_R -- see the
+  Route-D/DYN-6 pricing discipline.
+  Remaining as **DYN-9b** (open, REQUIRED for the alive branch):
+  non-SUSY scalar potential and spectrum of the 210/126 system (real
+  thresholds replacing ESH); the non-SUSY flavor refit incl. zeta/M_*
+  re-extraction at v_R ~ M_I (archival M_R was SUSY-convention and
+  fails the perturbativity gate above); two-loop intermediate segment;
+  Yukawa-sector viability (non-SUSY SO(10) fits need the 126bar + 10
+  complex doublet structure); non-SUSY leptogenesis re-run (gravitino
+  tension dissolves; non-SUSY loop function); non-SUSY messenger
+  protection (holomorphy unavailable -- anomalous-U(1)/Stueckelberg
+  selection rule is the string-motivated substitute, unpromoted).
 
 - **DYN-3 [Audit 2: d=5 proton-decay pipeline] (2-3 sessions).**
   Goal: physical C_5L / C_5R Wilson tensors and channel widths.

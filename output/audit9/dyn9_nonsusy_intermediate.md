@@ -1,6 +1,6 @@
 # DYN-9: the Non-SUSY Intermediate-Scale Variant
 
-`14/14` checks passed.
+`15/15` checks passed.
 
 ## The structural rescue
 

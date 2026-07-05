@@ -306,24 +306,43 @@ check("TESTABILITY: the living chain(s) sit within reach of the Hyper-K "
 print("== DYN-9 section 4: seesaw and leptogenesis cross-checks ==")
 
 MR_ARCH = [2.380e10, 3.220e13, 3.927e15]     # DYN-4a archival spectrum, GeV
-for name in alive:
+FOUR_PI = 4 * math.pi                        # perturbative Yukawa ceiling
+for name in verdicts:                        # ALL chains, not only alive
     MI = 10 ** verdicts[name]["log10_MI"]
     f_needed = [m / MI for m in MR_ARCH]
     verdicts[name]["seesaw_f_needed"] = f_needed
+    verdicts[name]["seesaw_f_perturbative"] = [bool(f < FOUR_PI)
+                                               for f in f_needed]
     verdicts[name]["leptogenesis_M1_below_MI"] = bool(MR_ARCH[0] < MI)
-g_alive = alive[0] if alive else None
-check("seesaw ceiling DISCLOSED: the archival M_R spectrum (SUSY-convention, "
-      "indicative only) vs M_I -- the heaviest state needs f = M_R3/M_I; "
-      "f >> 4pi signals that the non-SUSY flavor refit (DYN-9b) must "
-      "lower the M_R ceiling or raise M_I", True,
-      f"{g_alive}: f_needed = "
-      f"{[f'{x:.1e}' for x in verdicts[g_alive]['seesaw_f_needed']]}"
-      if g_alive else "no living chain")
-lep_table = {n: verdicts[n]["leptogenesis_M1_below_MI"] for n in alive}
-check("leptogenesis compatibility DISCLOSED per living chain (archival "
-      "M_1 = 2.4e10 GeV vs M_I): chains with low M_I strain both the "
-      "seesaw ceiling and thermal N_1 production; PS-type chains with "
-      "higher M_I are friendlier", True, f"M_1 < M_I: {lep_table}")
+f_table = {n: [f"{x:.1e}" for x in v["seesaw_f_needed"]]
+           for n, v in verdicts.items()}
+check("seesaw ceiling DISCLOSED for ALL chains: the archival M_R spectrum "
+      "(SUSY-convention, indicative only) vs v_R ~ M_I; f = M_R,i/M_I "
+      "with perturbativity gate f < 4pi", True,
+      "; ".join(f"{n}: {f_table[n]}" for n in f_table))
+
+# perturbativity gate: which chains can host the FULL archival tower via
+# the renormalizable 126bar coupling f v_R with all f < 4pi?
+tower_ok = {n: all(v["seesaw_f_perturbative"]) for n, v in verdicts.items()}
+survivors_ok = [n for n, v in verdicts.items()
+                if (v["alive_now"] or v["marginal_within_10x"]) and tower_ok[n]]
+check("PERTURBATIVITY GATE: NO chain that survives proton decay can host "
+      "the archival M_R tower perturbatively via renormalizable f v_R "
+      "(PS+D comes closest but is proton-dead) => the archival zeta/M_* "
+      "card (M_* = 3.9e15 GeV vs M_I <= 1e12 on surviving chains) is "
+      "SUSY-slice-LOCAL and NOT transplantable; the non-SUSY flavor "
+      "refit (DYN-9b) is REQUIRED, not optional",
+      len(survivors_ok) == 0 and not tower_ok["G_LR"] and not tower_ok["PS"],
+      f"tower perturbative: {tower_ok}; "
+      f"worst PS factor = {max(verdicts['PS']['seesaw_f_needed'])/FOUR_PI:.0f}x "
+      "above 4pi")
+
+lep_table = {n: verdicts[n]["leptogenesis_M1_below_MI"] for n in verdicts}
+check("leptogenesis compatibility DISCLOSED per chain (archival "
+      "M_1 = 2.4e10 GeV vs M_I): M_1 < M_I holds on the PS-type chains "
+      "for thermal N_1 production KINEMATICS ONLY -- it does NOT make "
+      "the full archival tower realizable (see perturbativity gate)",
+      True, f"M_1 < M_I: {lep_table}")
 
 ps_marg = verdicts["PS"]["marginal_within_10x"]
 check("the 210-COMPATIBLE PS chain (no D) is MARGINAL, not dead: within "
@@ -378,6 +397,8 @@ report = {
     "esh_minimal_scalar_content": True,
     "nonsusy_scalar_potential_not_rederived_DYN9b": True,
     "archival_MR_spectrum_indicative_only": True,
+    "archival_MR_tower_perturbatively_realizable_on_surviving_chains": False,
+    "archival_zeta_card_transplantable_to_nonsusy_chains": False,
     "zeta_value_derived": False,
 }
 

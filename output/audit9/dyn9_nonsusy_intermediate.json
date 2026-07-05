@@ -1,16 +1,29 @@
 {
   "all_pass": true,
   "archival_MR_spectrum_indicative_only": true,
+  "archival_MR_tower_perturbatively_realizable_on_surviving_chains": false,
+  "archival_zeta_card_transplantable_to_nonsusy_chains": false,
   "audit": "audit9_dyn9_nonsusy_intermediate",
   "chains": {
     "2L1R4C": {
       "alive_now": false,
       "alpha_G_inv": 43.65080382046337,
       "bdm_criterion": 0.07216315449167089,
+      "leptogenesis_M1_below_MI": true,
       "log10_MI": 11.554594348578451,
       "log10_MX": 14.435767888811904,
       "marginal_within_10x": false,
       "residual": 3.5775826745521044e-11,
+      "seesaw_f_needed": [
+        0.0663716491038084,
+        89.7969370227996,
+        10951.322102128386
+      ],
+      "seesaw_f_perturbative": [
+        true,
+        false,
+        false
+      ],
       "tau_d6_years": 2.6995788170322533e+28,
       "testable_hyper_k": false
     },
@@ -28,6 +41,11 @@
         12068.766469175753,
         1471864.7802625212
       ],
+      "seesaw_f_perturbative": [
+        true,
+        false,
+        false
+      ],
       "tau_d6_years": 1.031492061217414e+36,
       "testable_hyper_k": true
     },
@@ -35,10 +53,21 @@
       "alive_now": false,
       "alpha_G_inv": 45.08815286943531,
       "bdm_criterion": 28.636641319319686,
+      "leptogenesis_M1_below_MI": true,
       "log10_MI": 11.916145472455215,
       "log10_MX": 15.728036074896437,
       "marginal_within_10x": true,
       "residual": 4.263256414560601e-14,
+      "seesaw_f_needed": [
+        0.02886898298865047,
+        39.05803580817417,
+        4763.382193127328
+      ],
+      "seesaw_f_perturbative": [
+        true,
+        false,
+        false
+      ],
       "tau_d6_years": 4.2511766598502897e+33,
       "testable_hyper_k": false
     },
@@ -46,10 +75,21 @@
       "alive_now": false,
       "alpha_G_inv": 41.10036784526142,
       "bdm_criterion": 0.7810375228180356,
+      "leptogenesis_M1_below_MI": true,
       "log10_MI": 13.643564912342747,
       "log10_MX": 14.96601935192547,
       "marginal_within_10x": false,
       "residual": 2.842170943040401e-14,
+      "seesaw_f_needed": [
+        0.0005407693204222432,
+        0.7316290805712702,
+        89.22693786967012
+      ],
+      "seesaw_f_perturbative": [
+        true,
+        true,
+        false
+      ],
       "tau_d6_years": 3.162341668865819e+30,
       "testable_hyper_k": false
     }
@@ -100,11 +140,15 @@
       "pass": true
     },
     {
-      "name": "seesaw ceiling DISCLOSED: the archival M_R spectrum (SUSY-convention, indicative only) vs M_I -- the heaviest state needs f = M_R3/M_I; f >> 4pi signals that the non-SUSY flavor refit (DYN-9b) must lower the M_R ceiling or raise M_I",
+      "name": "seesaw ceiling DISCLOSED for ALL chains: the archival M_R spectrum (SUSY-convention, indicative only) vs v_R ~ M_I; f = M_R,i/M_I with perturbativity gate f < 4pi",
       "pass": true
     },
     {
-      "name": "leptogenesis compatibility DISCLOSED per living chain (archival M_1 = 2.4e10 GeV vs M_I): chains with low M_I strain both the seesaw ceiling and thermal N_1 production; PS-type chains with higher M_I are friendlier",
+      "name": "PERTURBATIVITY GATE: NO chain that survives proton decay can host the archival M_R tower perturbatively via renormalizable f v_R (PS+D comes closest but is proton-dead) => the archival zeta/M_* card (M_* = 3.9e15 GeV vs M_I <= 1e12 on surviving chains) is SUSY-slice-LOCAL and NOT transplantable; the non-SUSY flavor refit (DYN-9b) is REQUIRED, not optional",
+      "pass": true
+    },
+    {
+      "name": "leptogenesis compatibility DISCLOSED per chain (archival M_1 = 2.4e10 GeV vs M_I): M_1 < M_I holds on the PS-type chains for thermal N_1 production KINEMATICS ONLY -- it does NOT make the full archival tower realizable (see perturbativity gate)",
       "pass": true
     },
     {
@@ -112,9 +156,9 @@
       "pass": true
     }
   ],
-  "checks_passed": 14,
-  "checks_total": 14,
-  "created_utc": "2026-07-04T18:12:59+00:00",
+  "checks_passed": 15,
+  "checks_total": 15,
+  "created_utc": "2026-07-05T10:23:38+00:00",
   "derivation_log": {
     "anchors": "BDM PRD 80 015013 (arXiv:0903.4049) p.14 effective two-step results",
     "b_formula": "b = -(11/3)C_A + (2/3) sum_Weyl T + (1/3) sum_cplx T; abelian: GUT-normalized (T15 of SU(4); sqrt(3/8)(B-L)); all coefficients derived from content and gated against hand values",
