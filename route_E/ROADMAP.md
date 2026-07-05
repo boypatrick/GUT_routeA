@@ -1023,5 +1023,95 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   **DYN-9b IS CLOSED** (9b-1/1b/1c/2/3/4 all done).
 
 Backlog (optional, unchanged): DYN-6 (axiom-pricing generalization),
-DYN-4c (kernel-level Dirac refit -- the DYN-7 escape), DYN-3b
-(physical-basis rotations, explicit dressing).
+DYN-3b (physical-basis rotations, explicit dressing).
+(DYN-4c is promoted out of the backlog into SUB-B below.)
+
+## G. Submission program (planned 2026-07-06)
+
+Strategy: split into three submission units rather than one monolith;
+two hard prerequisites gate everything.  Order:
+SUB-A -> SUB-B -> SUB-1 -> (SUB-2 | SUB-3).
+
+- **SUB-A [prior-art due diligence, round 2] (1-2 sessions).**
+  Adversarial literature search BEFORE any submission, recorded in
+  `route_E/SUBMISSION.md`:
+  (i) the three-point assembly -- family symmetry GENERATED as the
+  automorphism algebra of its own carrier (vs imposed); N_fam <= 3 a
+  priori with equality by the Cartan criterion; Majorana contact
+  direction = the Killing form; second-transvectant/Killing readings
+  of neutrino textures;
+  (ii) the non-SUSY 210 vacuum literature (He--Meljanac, Buccella et
+  al., and successors): whether the tree-level status of the
+  left-right little group for the 210, the quartic-invariant count,
+  and the epsilon-invariant slice behavior are already known --
+  DECIDES whether SUB-2 is submittable and how strongly SUB-1's
+  claims may be worded;
+  (iii) boundary-theorem genre precedents (theories proving their own
+  inputs underivable).
+  Gates: every candidate-novelty claim gets a verdict
+  (clear / partial-overlap / covered) with citations.
+  Status: **done** (2026-07-06; verdicts in `route_E/SUBMISSION.md`).
+  HEADLINES: the three-point assembly survives (Killing-form contact
+  and the transvectant reading CLEAR; automorphism-generated family
+  and the index bound ADJACENT with a required
+  distinguish-paragraph); BUT the 210 tree-vacuum claims hit a
+  CONFLICT -- He-Meljanac PRD 33 2695 (1986) and the 1989 stability
+  papers find left-right minima in finite parameter ranges, clashing
+  with 9b-1b's fixed-vev-ratio scan.  Corrective audit **SUB-B0**
+  inserted (mandatory): free the LR vev ratio, rescan positivity,
+  reproduce-or-localize.  K5r downgraded to ratio-conditional pending
+  SUB-B0.  Bonus candidate-novelty found: the literature's
+  "most general" 210 potential uses 4 quartic invariants (the
+  parity-even set); our machine-independent FIFTH (Hodge-epsilon,
+  parity-odd, slice-vanishing, stability-relevant) may be absent
+  there -- full-text verification required before wording any claim.
+  SUB-1 is UNBLOCKED (no conflict touches it); SUB-3 must wait for
+  the K5r correction.
+
+- **SUB-B0 [corrective audit: the left-right vev ratio freed]
+  (1 session; MANDATORY, inserted by SUB-A).**
+  Rerun the 9b-1b/1c left-right analysis with the vev ratio a/p as a
+  scanned variable (stationarity solved per ratio), epsilon coupling
+  included, tree positivity over (ratio x couplings): reproduce the
+  He-Meljanac stable left-right regions or localize the disagreement
+  (their 4-invariant potential vs our 5-invariant one is a candidate
+  source).  Propagate the outcome to K5r, the DYN-8 ledger, and both
+  papers.
+
+- **SUB-B [theta_23 handling = DYN-4c executed] (1-2 sessions).**
+  The benchmark Dirac card carries a 6.9 sigma theta_23 tension vs
+  NuFIT 6.0 (DYN-4a); a referee strikes here first.  Strong option:
+  kernel-level covariant Dirac refit (free perturbations around the
+  archival kernels, refit to NuFIT 6.0, zeta/contact re-extraction,
+  essentiality retest).  Fallback if the refit fails: demote the
+  benchmark card to reproducibility-anchor-only status throughout the
+  tex, citing the DYN-4b orthogonality result.
+  Gates: post-refit chi^2 published; contact-essentiality verdict
+  under the refit; tex updated accordingly.
+
+- **SUB-1 [the theorem letter -- submission unit (1)] (1-2 sessions).**
+  Extract the kinematic core into a short, self-contained paper:
+  enumerated Spin(10)-16 uniqueness with nu^c forced; the family
+  space as the automorphism algebra of its own carrier; N_fam <= 3 a
+  priori, = 3 by the Cartan criterion; the Majorana contact = Killing
+  form (B = 2 sqrt3 K_tr).  No phenomenology claims; the audits cited
+  as machine verification.  Venue: PLB-style letter or PRD.  Language
+  discipline: fully self-contained, no repo aliases.
+  Gates: builds clean; claims worded per SUB-A verdicts; every
+  theorem statement traceable to a ledger.
+
+- **SUB-2 [the 210 tree-vacuum technical paper -- unit (2);
+  CONDITIONAL on SUB-A(ii)] (2 sessions).**
+  The 9b-1b/1c content as a standalone technical paper: the quartic
+  basis with the machine-found Q5 = Q2 identity, the independent
+  epsilon invariant and its slice-vanishing, exact Hessians with
+  Goldstone gates, tree-level positivity verdicts (PS viable / LR
+  dead with the epsilon lever exhausted), and the 126bar mixed-sector
+  analysis.  Natural sequel to the 45+126 literature.  Venue: PRD.
+
+- **SUB-3 [the framework flagship -- unit (3)] (1 session).**
+  The reconstruction paper (with the falsifiability section) to
+  arXiv FIRST for priority and feedback; journal submission deferred
+  until SUB-1/SUB-2 outcomes are known.
+
+Statuses start `open`; update per session.
