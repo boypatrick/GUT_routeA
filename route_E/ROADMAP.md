@@ -1077,6 +1077,31 @@ SUB-A -> SUB-B -> SUB-1 -> (SUB-2 | SUB-3).
   (their 4-invariant potential vs our 5-invariant one is a candidate
   source).  Propagate the outcome to K5r, the DYN-8 ledger, and both
   papers.
+  Status: **done** (2026-07-06;
+  `code/audit9_dyn9b1d_lr_ratio_scan.py`, 7/7; ledgers
+  `output/audit9/dyn9b1d_lr_ratio_scan.{json,md}`).  Method:
+  polarization decomposition of the Hessians (three builds per
+  pattern give the exact Hessian at ANY vev ratio; assembly gated
+  against direct builds; analytic stationarity solve, gradient
+  residual 1.9e-12; Goldstone 30 at every ratio incl. random
+  epsilon).  RESULTS:
+  **Q1 = YES**: at lambda_eps = 0 (the classic four-invariant family)
+  the left-right stationary family IS a tree-level local minimum at
+  8/8800 sampled (ratio x coupling) points, ALL at vev ratios
+  0.6-0.7 -- He-Meljanac (1986) reproduced at claim level; 9b-1b's
+  negative verdict at fixed a/p = 0.8 CONFIRMED as a ratio artifact
+  (0.8 vs 0.6-0.7: missed by that little).  **Q2 = NO**: the fifth
+  (epsilon) invariant neither rescues any of the 8792 negative points
+  nor kills any of the 8 positive ones -- the seductive hypothesis
+  dies honestly; the epsilon invariant's stability relevance is nil
+  in the sampled space (its candidate-novelty status shrinks to the
+  invariant-count statement itself).  K5r REVERTED accordingly in the
+  collector and both papers: the left-right chain is 210-realizable
+  at tree level in rare coupling regions; the 45_H route is an
+  alternative, not a necessity.  Prior-art CONFLICT of SUB-A(ii):
+  RESOLVED as our artifact.  Boundary: local (not absolute)
+  positivity; He-Meljanac full text still unverified (paywall);
+  full-sum coupling units.
 
 - **SUB-B [theta_23 handling = DYN-4c executed] (1-2 sessions).**
   The benchmark Dirac card carries a 6.9 sigma theta_23 tension vs

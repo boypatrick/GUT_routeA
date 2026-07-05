@@ -95,14 +95,32 @@ invariant count; transvectant in flavor physics; Jarkovska-Malinsky
 - https://arxiv.org/abs/2212.11315
 - https://arxiv.org/pdf/gr-qc/9512033 (the 4-invariant 210 potential)
 
+## SUB-B0 outcome (2026-07-06): conflict RESOLVED as our artifact
+
+`code/audit9_dyn9b1d_lr_ratio_scan.py` (7/7): freeing the left-right
+vev ratio reproduces stable tree-level left-right minima at 8/8800
+sampled points, all at ratios 0.6-0.7 -- consistent with He-Meljanac
+(1986) at claim level; the 9b-1b negative at fixed a/p = 0.8 was a
+ratio artifact.  The epsilon question is answered NO: the fifth
+invariant neither rescues nor kills any sampled point.  K5r reverted
+in the ledger and both papers.
+
+Consequences for the submission units:
+- SUB-2 is now honestly a **reproduce-and-extend** paper: reproduces
+  the classic left-right/Pati-Salam tree structure with modern
+  machine-verified machinery, extends it with (i) the machine
+  invariant-basis analysis (Q5 = Q2 identity; the parity-odd fifth
+  invariant, shown stability-IRRELEVANT in the sampled space -- an
+  honest negative), (ii) exact Goldstone-gated Hessians, (iii) the
+  126bar mixed-sector spectrum, (iv) the threshold/proton pipeline
+  coupling the vacuum to Hyper-K phenomenology.  Viable but weaker
+  than hoped; full-text check of He-Meljanac remains advisable for
+  wording.
+- SUB-3 is UNBLOCKED (the K5r correction has propagated).
+
 ## Revised submission order
 
-SUB-A (done) -> **SUB-B0 (corrective: free the LR ratio; mandatory)**
--> SUB-B (theta_23 handling = DYN-4c) -> SUB-1 (theorem letter;
-UNBLOCKED already -- its content has no conflict) -> SUB-2 (only as
-reproduce-and-extend, pending SUB-B0 + full-text checks) -> SUB-3
-(arXiv flagship, after K5r correction propagates).
-
-Note: SUB-1 does not depend on SUB-B0/SUB-B and can proceed in
-parallel; but the flagship (SUB-3) must NOT go to arXiv before the
-K5r correction is resolved.
+SUB-A (done) -> SUB-B0 (done; conflict resolved) -> SUB-B (theta_23
+handling = DYN-4c) -> SUB-1 (theorem letter; unblocked, no conflict)
+-> SUB-2 (reproduce-and-extend form) -> SUB-3 (arXiv flagship;
+unblocked).

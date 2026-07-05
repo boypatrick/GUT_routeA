@@ -1,0 +1,159 @@
+{
+  "audit": "DYN-9b-1d (SUB-B0) left-right vev-ratio scan",
+  "dyn_item": "DYN-9b-1d",
+  "created_utc": "2026-07-05T23:29:40.347183+00:00",
+  "all_pass": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "checks": [
+    {
+      "name": "POLARIZATION GATE: the assembled Hessian equals a direct build at r = 0.8 for every polynomial pattern (the epsilon pattern is certified by the Goldstone gate below)",
+      "pass": true
+    },
+    {
+      "name": "FULL-STATIONARITY GATE: with (m2, kappa) solved on the slice, the total gradient vanishes in ALL 210 directions (little-group invariance argument verified numerically; epsilon contributes no gradient at any slice point)",
+      "pass": true
+    },
+    {
+      "name": "GOLDSTONE GATE at four ratios with random couplings AND random epsilon: exactly 30 zeros every time -- certifies the polarization assembly including the epsilon block",
+      "pass": true
+    },
+    {
+      "name": "positivity scan executed over 16 ratios x 300 coupling points x 13 epsilon values",
+      "pass": true
+    },
+    {
+      "name": "Q1 VERDICT (the He-Meljanac reproduction question): does the left-right stationary family admit tree-level LOCAL MINIMA somewhere in (ratio x couplings) at lambda_eps = 0 (the classic four-invariant potential family)?",
+      "pass": true
+    },
+    {
+      "name": "Q2 VERDICT (the epsilon question): rescue and kill counts under the fifth invariant recorded",
+      "pass": true
+    },
+    {
+      "name": "K5r PROPAGATION statement recorded for the ledger refresh and both papers",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S3_scan": {
+      "stats": {
+        "samples": 8800,
+        "pos_eps0": 8,
+        "pos_some_eps": 8,
+        "rescued_by_eps": 0,
+        "killed_by_eps": 0
+      },
+      "by_ratio": {
+        "0.05": 0,
+        "0.1": 0,
+        "0.2": 0,
+        "0.3": 0,
+        "0.5": 0,
+        "0.55": 0,
+        "0.6": 3,
+        "0.65": 2,
+        "0.7": 3,
+        "0.75": 0,
+        "0.8": 0,
+        "0.85": 0,
+        "0.9": 0,
+        "1.0": 0,
+        "1.3": 0,
+        "1.7": 0,
+        "2.2": 0,
+        "3.0": 0,
+        "-0.3": 0,
+        "-0.8": 0,
+        "-1.3": 0,
+        "-2.0": 0
+      },
+      "eps_grid": [
+        -1.5,
+        -1.25,
+        -1.0,
+        -0.75,
+        -0.5,
+        -0.25,
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "positive_examples": [
+        {
+          "r": 0.7,
+          "lam": [
+            0.40021007257657004,
+            0.16803520232993674,
+            -0.8246959425211449,
+            0.9617604536822613
+          ],
+          "m2": -57.03552949742,
+          "kappa": -0.951863192374019,
+          "min_eig_eps0": 20.146074092827355
+        },
+        {
+          "r": 0.65,
+          "lam": [
+            0.12760740090519018,
+            -0.18982909776219126,
+            -0.41255854509657786,
+            0.6200741137216639
+          ],
+          "m2": -18.160811916696957,
+          "kappa": -0.02542554659020387,
+          "min_eig_eps0": 0.3115521075256306
+        },
+        {
+          "r": 0.6,
+          "lam": [
+            0.5261464234058617,
+            -0.06663062059475555,
+            -0.6074075762051121,
+            0.43347778268388293
+          ],
+          "m2": -54.769517035469086,
+          "kappa": -0.03356732432032396,
+          "min_eig_eps0": 9.564722131328349
+        },
+        {
+          "r": 0.65,
+          "lam": [
+            0.1882091198621063,
+            0.005382495005060939,
+            -0.8391152959038077,
+            0.9039700232687409
+          ],
+          "m2": -28.01891966144171,
+          "kappa": 0.3514893814560866,
+          "min_eig_eps0": 20.35118045799063
+        },
+        {
+          "r": 0.6,
+          "lam": [
+            0.8651671715620288,
+            -0.487463930416173,
+            -0.6403637862935976,
+            0.9594937272714721
+          ],
+          "m2": -91.43104854750644,
+          "kappa": 0.5534294513489613,
+          "min_eig_eps0": 3.463823053982975
+        }
+      ]
+    },
+    "S4_conclusion": {
+      "q1_positive": true,
+      "statement": "9b-1b's negative left-right verdict WAS a fixed-ratio artifact: freeing the ratio reproduces stable left-right tree minima in finite coupling regions, consistent with He-Meljanac (1986) at claim level.  K5r REVERTS: the left-right chain is 210-realizable at tree level in those regions; the 45_H route is an alternative, not a necessity."
+    }
+  },
+  "local_positivity_not_absolute_minimum": true,
+  "he_meljanac_full_text_not_accessed": true,
+  "coupling_sampling_full_sum_units": true,
+  "sigma_backreaction_neglected": true,
+  "zeta_value_derived": false
+}

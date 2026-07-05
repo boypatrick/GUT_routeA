@@ -1,7 +1,7 @@
 {
   "audit": "DYN-8 falsifiability collection",
   "dyn_item": "DYN-8",
-  "created_utc": "2026-07-05T22:35:38.834342+00:00",
+  "created_utc": "2026-07-05T23:47:52.967063+00:00",
   "all_pass": true,
   "checks_passed": 28,
   "checks_total": 28,
@@ -83,7 +83,7 @@
       "pass": true
     },
     {
-      "name": "K5r [non-SUSY LR chain (refresh)]: 45_H narrative corrected: the LR little group is 210-realizable ...",
+      "name": "K5r [non-SUSY LR chain (refresh, CORRECTED by the ratio scan)]: the 210-only LR vacuum IS a tree-level local minimum in rare cou...",
       "pass": true
     },
     {
@@ -212,9 +212,9 @@
     },
     {
       "id": "K5r",
-      "branch": "non-SUSY LR chain (refresh)",
-      "statement": "45_H narrative corrected: the LR little group is 210-realizable kinematically but its 210-only vacuum is NEVER a tree minimum (0/249) and the epsilon lever rescues nothing (0/200): the chain requires the adjoint route or one-loop stabilization",
-      "source_ledger": "output/audit9/dyn9b1 + dyn9b1b + dyn9b1c ledgers",
+      "branch": "non-SUSY LR chain (refresh, CORRECTED by the ratio scan)",
+      "statement": "the 210-only LR vacuum IS a tree-level local minimum in rare coupling regions at vev ratios near 0.6-0.7 (8/8800 sampled; He-Meljanac 1986 reproduced at claim level); the earlier fixed-ratio negative (0/249 at a/p = 0.8) was an artifact of the fixed ratio; the epsilon invariant neither rescues nor kills any sampled point; the adjoint route is an ALTERNATIVE, not a necessity",
+      "source_ledger": "output/audit9/dyn9b1d_lr_ratio_scan.json (corrects dyn9b1b/1c)",
       "verified": true
     },
     {
@@ -239,7 +239,7 @@
       "verified": true
     }
   ],
-  "upstream_checks_total": 269,
+  "upstream_checks_total": 276,
   "derives_nothing_new": true,
   "zeta_value_derived": false,
   "nonsusy_flavor_refit_still_open": true,

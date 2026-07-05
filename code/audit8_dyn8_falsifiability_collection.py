@@ -54,6 +54,7 @@ L = {
     "9b1c": load("output/audit9/dyn9b1c_eps_and_126_quartics.json"),
     "9b2": load("output/audit9/dyn9b2_nonsusy_flavor_refit.json"),
     "9b3": load("output/audit9/dyn9b3_nonsusy_leptogenesis.json"),
+    "9b1d": load("output/audit9/dyn9b1d_lr_ratio_scan.json"),
 }
 
 print("== DYN-8 section 1: chain of custody ==")
@@ -205,15 +206,23 @@ bank("K4r", "non-SUSY PS chain (refresh)", "K4 TRIPLE-TESTED: the "
      and all(abs(t / 4.25e33 - 1) < 0.01 for t in k4c["tau_percentiles"]),
      "three independent spectrum treatments agree")
 
-bank("K5r", "non-SUSY LR chain (refresh)", "45_H narrative corrected: "
-     "the LR little group is 210-realizable kinematically but its "
-     "210-only vacuum is NEVER a tree minimum (0/249) and the epsilon "
-     "lever rescues nothing (0/200): the chain requires the adjoint "
-     "route or one-loop stabilization",
-     "output/audit9/dyn9b1 + dyn9b1b + dyn9b1c ledgers",
-     f1b["LR"]["tree_positive"] == 0
-     and L["9b1c"]["derivation_log"]["S2_eps_scan"]["rescued"] == 0,
-     "epsilon Hessian certified by the 24/30 Goldstone gate")
+s1d = L["9b1d"]["derivation_log"]
+bank("K5r", "non-SUSY LR chain (refresh, CORRECTED by the ratio scan)",
+     "the 210-only LR vacuum IS a tree-level local minimum in rare "
+     "coupling regions at vev ratios near 0.6-0.7 (8/8800 sampled; "
+     "He-Meljanac 1986 reproduced at claim level); the earlier "
+     "fixed-ratio negative (0/249 at a/p = 0.8) was an artifact of "
+     "the fixed ratio; the epsilon invariant neither rescues nor "
+     "kills any sampled point; the adjoint route is an ALTERNATIVE, "
+     "not a necessity",
+     "output/audit9/dyn9b1d_lr_ratio_scan.json (corrects dyn9b1b/1c)",
+     s1d["S4_conclusion"]["q1_positive"] is True
+     and s1d["S3_scan"]["stats"]["pos_eps0"] == 8
+     and s1d["S3_scan"]["stats"]["rescued_by_eps"] == 0
+     and s1d["S3_scan"]["stats"]["killed_by_eps"] == 0
+     and set(k for k, v in s1d["S3_scan"]["by_ratio"].items() if v)
+     <= {"0.6", "0.65", "0.7"},
+     "prior-art conflict RESOLVED as a fixed-ratio artifact")
 
 s9b3 = L["9b3"]["derivation_log"]
 bank("K6r", "non-SUSY branch (refresh)", "K6 REPLACED by the "
