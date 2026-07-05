@@ -42,6 +42,7 @@ python3 code/audit9_dyn9_nonsusy_intermediate.py
 python3 code/audit5_dyn5_messenger_one_loop.py
 python3 code/audit8_dyn8_falsifiability_collection.py
 python3 code/audit9_dyn9b1_nonsusy_vacuum_thresholds.py
+python3 code/audit9_dyn9b1b_210_quartic_descent.py
 ```
 
 The DYN-4a and DYN-5 scripts require the archival output set restored under `route_E/output/` (user-managed; sha256 recorded in their ledgers).

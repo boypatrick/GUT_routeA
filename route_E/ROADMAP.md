@@ -851,6 +851,49 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   Remaining as **9b-1b**: the 210+126bar quartic invariant descent on
   and off the singlet slice, survivor masses, tree-vs-one-loop
   stability of the (p,a) and (p) vacua.
+  Status 9b-1b: **done** (2026-07-05;
+  `code/audit9_dyn9b1b_210_quartic_descent.py`, 14/14; ledgers
+  `output/audit9/dyn9b1b_210_quartic_descent.{json,md}`).  The 210 is
+  built as an explicit rank-4 antisymmetric tensor; every step gates
+  against the SUSY-side anchors (I2 -> 24(p^2+3a^2+6w^2),
+  I3 -> 48(a^3+3pw^2+6aw^2) = the AG superpotential structure
+  bit-level; the 45x45 vector mass matrix reproduces the DYN-9b-1
+  little-group map AND the DYN-1b J/F/E/X mass ratios with census
+  multiplicities).  MACHINE GROUP THEORY: the five polynomial quartic
+  contractions span only FOUR dimensions (the cyclic pattern Q5
+  degenerates with the 2-2 pattern Q2 -- an identity of the
+  antisymmetric 4-tensor found by the rank test), and the Hodge
+  epsilon quartic is a genuine independent FIFTH invariant whose slice
+  descent vanishes IDENTICALLY (it moves only off-slice masses; its
+  coupling is NOT scanned -- flagged).  Exact Hessians (Richardson on
+  cubic gradients); GAUGE GATE: exactly 24/30 Goldstone zeros at the
+  PS/(p,a) vacua for random couplings.
+  FINAL TREE-LEVEL VERDICTS (250 random O(1) couplings in full-sum
+  units, 4 scanned quartics):
+  | PS (p-only) vacuum | tree-level local minimum on 16% of coupling
+    space (39/250); on EVERY positive sample the 210 survivors sit at
+    or above the gauge scale, so the threshold corrections vanish and
+    tau(p -> e+ pi0) = 4.25e33 at all percentiles = the ESH/DYN-9
+    verdict EXACTLY.  **K4 (Hyper-K window, dead-or-discoverable)
+    survives the real-spectrum test unchanged**; the light-survivor
+    rescue/kill scenarios of 9b-1 require coupling tuning, not
+    generic couplings. |
+  | LR (p,a) vacuum | tree-level local minimum on 0/249 samples --
+    the classic non-SUSY tree-level obstruction BITES: within the
+    scanned coupling space the 210-only left-right vacuum is NEVER a
+    tree minimum.  DYNAMICAL REVERSAL of the 9b-1 kinematic point:
+    the 210 CAN host the LR little group, but its tree potential
+    rejects it; the left-right chain therefore NEEDS the 45_H route,
+    or one-loop stabilization (BDM PRD 81 035015 type), or the
+    UNSCANNED epsilon quartic (which contributes exactly and only to
+    off-slice masses -- the one direction that could rescue tree
+    positivity; open). |
+  Slice phase-diagram sample: deepest bounded slice minimum is
+  PS-type 26 / LR-type 4 / SU(5)-or-SM-type 120 out of 150 -- tree
+  level prefers the enhanced-symmetry vacua, consistent with the
+  landmine literature.  Boundary: 126bar quartics deferred (9b-1c);
+  epsilon coupling unscanned; tree level only; coupling sampling in
+  full-sum-invariant units; zeta NOT derived.
   9b-2: non-SUSY flavor refit at v_R ~ M_I: a perturbative M_R tower,
   zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
   consistent with the boundary theorem), contact-essentiality retest.

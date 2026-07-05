@@ -1,0 +1,237 @@
+{
+  "audit": "DYN-9b-1b 210 quartic descent, survivor masses, verdicts",
+  "dyn_item": "DYN-9b-1b",
+  "created_utc": "2026-07-05T12:56:04.662634+00:00",
+  "all_pass": true,
+  "checks_passed": 14,
+  "checks_total": 14,
+  "checks": [
+    {
+      "name": "quadratic descent: I2 = 24 (p^2 + 3 a^2 + 6 w^2) -- the AG quadratic (DYN-1a anchor)",
+      "pass": true
+    },
+    {
+      "name": "cubic descent: I3 = 48 (a^3 + 3 p w^2 + 6 a w^2) -- the AG superpotential cubic (DYN-1a anchor); p^3 = w^3 = 0",
+      "pass": true
+    },
+    {
+      "name": "little-group map from the ACTUAL 45x45 vector mass matrix reproduces DYN-9b-1 (generic Phi-only leaves 13 = SM + the sigma-massed direction)",
+      "pass": true
+    },
+    {
+      "name": "gauge-mass RATIOS at the AG benchmark equal the DYN-1b formulas (J, F, E, X with multiplicities 6/2/12/12, sigma = 0): the embedding is quantitatively anchored to the SUSY-side audit",
+      "pass": true
+    },
+    {
+      "name": "analytic gradients verified against directional derivatives for all five polynomial quartics",
+      "pass": true
+    },
+    {
+      "name": "machine independence test: the five polynomial quartics span a FOUR-dimensional space -- the cyclic pattern DEGENERATES with the 2-2 contraction (Q5 = Q2, a machine-found identity of the antisymmetric 4-tensor) -- and the epsilon quartic is a genuine FIFTH independent invariant",
+      "pass": true
+    },
+    {
+      "name": "quartic Clebsch DESCENT computed for all six candidates (exact monomial fits on the singlet slice)",
+      "pass": true
+    },
+    {
+      "name": "stationarity structure of the descent: NO odd-in-w terms and NO p^3 a term in ANY invariant (w = 0 consistent; a = 0 stationary at the Pati-Salam point; the harmless p a w^2 cross-terms in Q2/Q5 are recorded)",
+      "pass": true
+    },
+    {
+      "name": "epsilon quartic DISCLOSED as an independent fifth invariant whose coupling is NOT scanned (boundary flag epsilon_quartic_not_scanned); its slice descent is recorded in the ledger",
+      "pass": true
+    },
+    {
+      "name": "GAUGE GATE: stationary Hessians have EXACTLY 24 Goldstone zeros at the Pati-Salam vacuum and 30 at the left-right vacuum for random couplings -- invariants, gradients, descent and stationarity are mutually consistent",
+      "pass": true
+    },
+    {
+      "name": "verdict scan executed: stationarity + classification + tree positivity + multi-threshold matching, both vacua",
+      "pass": true
+    },
+    {
+      "name": "TREE-LEVEL LANDMINE QUANTIFIED: the fraction of random couplings for which the intermediate vacuum is a tree-level local minimum of the 210 sector is recorded (the known non-SUSY pseudo-Goldstone problem; one-loop stabilization cited, not re-derived)",
+      "pass": true
+    },
+    {
+      "name": "FINAL TREE-LEVEL THRESHOLD VERDICT: tau distribution over the viable coupling space per chain, ESH replaced by the computed 210 spectrum",
+      "pass": true
+    },
+    {
+      "name": "tree-level slice phase-diagram SAMPLE recorded (little group of the deepest bounded slice minimum at random couplings)",
+      "pass": true
+    }
+  ],
+  "derivation_log": {
+    "S1_embedding": {
+      "cubic_descent": [
+        1.0,
+        3.0,
+        6.0
+      ],
+      "little_groups": {
+        "p_only": 21,
+        "a_only": 15,
+        "p_and_a": 15,
+        "w_only": 13,
+        "flipped": 25,
+        "SU5": 25,
+        "generic_no_sigma": 13
+      },
+      "vector_scale": 0.4999999999999998
+    },
+    "S2_descent": {
+      "Q1": {
+        "coef": {
+          "(4, 0, 0)": 575.9999999999964,
+          "(0, 4, 0)": 5184.000000000006,
+          "(0, 0, 4)": 20735.99999999997,
+          "(2, 2, 0)": 3455.9999999999886,
+          "(2, 0, 2)": 6912.000000000021,
+          "(0, 2, 2)": 20736.000000000025
+        },
+        "fit_residual": 5.155865656309117e-16
+      },
+      "Q2": {
+        "coef": {
+          "(4, 0, 0)": 96.00000000000074,
+          "(0, 4, 0)": 479.9999999999991,
+          "(0, 0, 4)": 1535.9999999999982,
+          "(2, 0, 2)": 384.00000000000085,
+          "(0, 2, 2)": 1536.0000000000045,
+          "(1, 1, 2)": 767.9999999999961
+        },
+        "fit_residual": 7.092761711687275e-16
+      },
+      "Q3": {
+        "coef": {
+          "(4, 0, 0)": 48.00000000000017,
+          "(0, 4, 0)": 191.99999999999997,
+          "(0, 0, 4)": 431.9999999999992,
+          "(2, 0, 2)": 96.00000000000036,
+          "(0, 2, 2)": 192.00000000000063
+        },
+        "fit_residual": 5.202432362020001e-16
+      },
+      "Q4": {
+        "coef": {
+          "(4, 0, 0)": 144.0000000000003,
+          "(0, 4, 0)": 863.9999999999998,
+          "(0, 0, 4)": 2159.9999999999973,
+          "(2, 0, 2)": 864.0000000000008,
+          "(0, 2, 2)": 1728.0000000000032
+        },
+        "fit_residual": 6.335734599602426e-16
+      },
+      "Q5": {
+        "coef": {
+          "(4, 0, 0)": 96.00000000000074,
+          "(0, 4, 0)": 479.9999999999991,
+          "(0, 0, 4)": 1535.9999999999982,
+          "(2, 0, 2)": 384.00000000000085,
+          "(0, 2, 2)": 1536.0000000000045,
+          "(1, 1, 2)": 767.9999999999961
+        },
+        "fit_residual": 7.092761711687275e-16
+      },
+      "Q6_eps": {
+        "coef": {},
+        "fit_residual": 0.0
+      }
+    },
+    "S4_verdict": {
+      "fractions": {
+        "PS": {
+          "samples": 250,
+          "classified": 250,
+          "id_failures": 0,
+          "tree_positive": 39,
+          "alive": 0,
+          "tau_16_50_84": [
+            "4.25e+33",
+            "4.25e+33",
+            "4.25e+33"
+          ]
+        },
+        "LR": {
+          "samples": 250,
+          "classified": 249,
+          "id_failures": 1,
+          "tree_positive": 0,
+          "alive": 0,
+          "tau_16_50_84": null
+        }
+      },
+      "example_spectra": {
+        "PS": [
+          {
+            "kappa": -0.9014715168902474,
+            "m2": -24.707977999866966,
+            "spectrum_over_MV": {
+              "(15,3,1)": 14.6992,
+              "(15,1,3)": 22.934,
+              "(10,22)pair": 26.1196,
+              "(15,1,1)": 28.7041,
+              "(1,1,1)": 92.1628
+            },
+            "tau": 4.251176654387182e+33,
+            "log10_MX": 15.728036074758018
+          },
+          {
+            "kappa": 0.01599703060128821,
+            "m2": -33.52633852984545,
+            "spectrum_over_MV": {
+              "(15,1,3)": 22.5559,
+              "(15,3,1)": 22.6775,
+              "(10,22)pair": 26.1347,
+              "(15,1,1)": 30.0718,
+              "(1,1,1)": 107.3569
+            },
+            "tau": 4.251176654387182e+33,
+            "log10_MX": 15.728036074758018
+          },
+          {
+            "kappa": 0.92041305143461,
+            "m2": -26.93223570940778,
+            "spectrum_over_MV": {
+              "(15,1,3)": 27.3164,
+              "(15,3,1)": 32.5976,
+              "(10,22)pair": 35.0722,
+              "(15,1,1)": 41.2392,
+              "(1,1,1)": 96.2217
+            },
+            "tau": 4.251176654387182e+33,
+            "log10_MX": 15.728036074758018
+          },
+          {
+            "kappa": 0.3980470855744027,
+            "m2": -37.470544999817044,
+            "spectrum_over_MV": {
+              "(15,1,3)": 6.6823,
+              "(15,3,1)": 13.4719,
+              "(10,22)pair": 14.2585,
+              "(15,1,1)": 19.5265,
+              "(1,1,1)": 113.4964
+            },
+            "tau": 4.251176654387182e+33,
+            "log10_MX": 15.728036074758018
+          }
+        ],
+        "LR": []
+      }
+    },
+    "S4_phase_sample": {
+      "PS(21)": 26,
+      "LR(15)": 4,
+      "other": 120,
+      "runaway": 0
+    }
+  },
+  "sigma_sector_quartics_deferred_9b1c": true,
+  "epsilon_quartic_not_scanned": true,
+  "tree_level_only_one_loop_stabilization_cited": true,
+  "coupling_sampling_in_full_sum_units": true,
+  "LR_vev_ratio_fixed": 0.8,
+  "zeta_value_derived": false
+}
