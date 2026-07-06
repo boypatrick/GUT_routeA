@@ -130,8 +130,30 @@ benchmark card is a reproducibility anchor; the framework fits current
 oscillation data exactly, and its one falsifiable contact statement is
 robust to both data refreshes and kernel deformations.
 
+## SUB-1 status (2026-07-06): draft complete
+
+`route_E/tex/three_families_killing_contact.tex` -- "Three fermion
+families from the automorphism algebra of their own carrier, and the
+Killing-form Majorana contact".  Builds clean (0 errors, 14 references
+resolved; the bibtex control-entry warning is the benign shared-refs
+duplication).  8 pp preprint ~ 5 pp two-column.
+
+Checklist before submission (author-side):
+- [ ] read-through and voice pass;
+- [ ] venue: PRD (letter-style) vs PLB (needs elsarticle reformat);
+      recommendation: arXiv (hep-ph, cross-list hep-th/math-ph) first,
+      then PRD;
+- [ ] cover letter: lead with the assembly novelty (SUB-A verdicts:
+      Killing contact CLEAR, transvectant CLEAR, self-carried family
+      ADJACENT-with-distinction), the machine-verification
+      reproducibility, and the explicit not-claimed discipline;
+- [ ] decide whether to cite the companion reconstruction note as an
+      arXiv preprint (requires SUB-3 posted first) or as a repository
+      reference (current draft: repository only).
+
 ## Revised submission order
 
 SUB-A (done) -> SUB-B0 (done; conflict resolved) -> SUB-B (done;
-theta_23 defused) -> **SUB-1 (theorem letter; NEXT)** -> SUB-2
-(reproduce-and-extend form) -> SUB-3 (arXiv flagship; unblocked).
+theta_23 defused) -> SUB-1 (draft done; author review pending) ->
+SUB-3 (arXiv flagship -- posting it FIRST also gives SUB-1 its
+companion citation) -> SUB-2 (reproduce-and-extend form, optional).

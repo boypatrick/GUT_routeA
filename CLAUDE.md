@@ -54,7 +54,7 @@ The DYN-4a and DYN-5 scripts require the archival output set restored under `rou
 
 The `audit0_dyn_conventions_and_inventory.py` script is DYN-0 of the dynamics program (`route_E/ROADMAP.md` section E): new dynamics-lane scripts live at root `code/` with ledgers in whitelisted `output/audit*/` lanes; history assets are recovered read-only via `git show HEAD:<path>`, never restored into the tree.
 
-The Route-E paper (`route_E/tex/route_e_first_principles.tex`) builds with the same pdflatex/bibtex cycle run inside `route_E/tex/`; its bibliography resolves to `../../paper/refs.bib`.
+The Route-E paper (`route_E/tex/route_e_first_principles.tex`) and the submission letter draft (`route_E/tex/three_families_killing_contact.tex`) build with the same pdflatex/bibtex cycle run inside `route_E/tex/`; their bibliography resolves to `../../paper/refs.bib`. The submission program (units, prior-art verdicts, checklists) is tracked in `route_E/SUBMISSION.md` and ROADMAP section G.
 
 There is no test framework. Each verifier is a standalone script that writes a JSON + Markdown ledger pair into the sibling `output/` directory and prints a one-line summary. The JSON is the machine-readable claim record and includes explicit negative-boundary flags (e.g. `global_e3_divisor_constructed: false`). New checks should follow this pattern: script in `code/`, paired `.json`/`.md` ledger in `output/`, boundary flags stating what is NOT claimed.
 

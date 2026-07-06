@@ -1143,6 +1143,24 @@ SUB-A -> SUB-B -> SUB-1 -> (SUB-2 | SUB-3).
   discipline: fully self-contained, no repo aliases.
   Gates: builds clean; claims worded per SUB-A verdicts; every
   theorem statement traceable to a ledger.
+  Status: **draft complete** (2026-07-06;
+  `route_E/tex/three_families_killing_contact.tex`, builds clean with
+  the shared bibliography, 8 pp preprint).  Content: hypotheses
+  H1/H2/H3 stated as explicit physical choices; the enumerated
+  one-family uniqueness with the forced sixteenth state and the
+  so(9)/so(15) near-misses; the genus ladder with the a-priori bound;
+  the Cartan selection; the Killing-contact identity B = 2 sqrt3 K_tr
+  with full proof; the Poincare-Hopf two-center remark and the
+  "why m = 1" self-carried remark; the one-principle-two-consequences
+  remark; a What-is-not-claimed section (incl. the one-sentence
+  pointer to the coefficient-underivability theorem of the companion);
+  the machine-verification section citing the 68 checks and the
+  repository.  The ADJACENT-literature paragraph distinguishes the
+  imposed-family-symmetry, index-counting, and division-algebra
+  traditions per the SUB-A verdicts.  Fully self-contained language
+  (no repository aliases).  REMAINING (author-side): read-through,
+  venue selection (PRD letter-style vs PLB reformat), arXiv category,
+  cover letter.
 
 - **SUB-2 [the 210 tree-vacuum technical paper -- unit (2);
   CONDITIONAL on SUB-A(ii)] (2 sessions).**
