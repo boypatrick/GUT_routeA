@@ -1,0 +1,398 @@
+{
+  "audit": "audit4a_source_spectrum_schema",
+  "audit0_card_sha256": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+  "candidate_tracks": {
+    "cmsgut_like_210_126_10": {
+      "existing_local_status": "schema placeholder; requires explicit superpotential and spectrum import",
+      "reason_to_keep": "can supply P_nu^c via a 126bar_H source and complete heavy multiplet bookkeeping",
+      "role": "literature-compatible fallback track"
+    },
+    "field_theory_constrained_54_210": {
+      "existing_local_status": "has constrained-orbit and conormal evidence, but not a full heavy spectrum",
+      "primary_artifacts": [
+        "output/constrained_54_210_source_sector/summary.json",
+        "output/combined_conormal_54_210/summary.json",
+        "output/drive_sector_spectrum/drive_sector_spectrum_summary.json"
+      ],
+      "role": "near-term Audit 4a track"
+    },
+    "routeD_global_geometry": {
+      "existing_local_status": "local string-placement appendix only; no global compactification spectrum",
+      "role": "optional parallel 4b track, not the near-term Audit 4a default"
+    }
+  },
+  "card_sha256": "be735ff9f65a62f53a7cd1cbf504b4113d0f65dcaec553a4f6bb55e410471fbc",
+  "created_utc": "2026-06-12T17:06:35+00:00",
+  "existing_local_evidence": {
+    "audit_210": {
+      "D210_eigenvalue_counts_on_twoforms": {
+        "+1": 3,
+        "-1": 3,
+        "0": 39
+      },
+      "D210_eigenvalues_minmax": [
+        -1.0,
+        1.0
+      ],
+      "decomposable_support": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "expected_stabilizer": "SO(6)xSO(4), dimension 15+6=21",
+      "normal_modes_removed_if_radial_retained": 185,
+      "omega_norm": 1.0,
+      "orbit_rank_from_generators": 24,
+      "passes": true,
+      "radial_singlets_retained": 1,
+      "reduced_local_dimension": 25,
+      "representation_dimension": 210,
+      "stabilizer_dimension": 21
+    },
+    "audit_54": {
+      "expected_stabilizer": "SO(6)xSO(4), dimension 15+6=21",
+      "fixed_orbit_dimension": 24,
+      "normal_modes_removed_if_radial_retained": 29,
+      "orbit_rank_from_generators": 24,
+      "passes": true,
+      "radial_singlets_retained": 1,
+      "reduced_local_dimension": 25,
+      "representation_dimension": 54,
+      "spectral_constraint_rank_fixed_radius": 30,
+      "spectral_constraint_residual_norm": 0.0,
+      "stabilizer_dimension": 21
+    },
+    "combined_conormal_passes": true,
+    "combined_conormal_verdict": "The aligned conormal F-term system has nullity 24, exactly the shared SO(10)/(SO(6)xSO(4)) orbit.  A normal-bundle multiplier pairs all 240 normal directions and leaves only those orbit modes; unprojected multipliers would leave 50 Hessian zero modes, including 26 extra multiplier/radial modes.  With two radial source singlets retained deliberately, the physical zero-mode count is 26.  Therefore the constrained branch is viable only if the multipliers are normal-bundle auxiliary/composite fields, not propagating unprojected 54/210 towers.",
+    "completed_120_partner_benchmarks": {
+      "MG_GeV": 7079457843841373.0,
+      "M_lock_GeV": 3887851789147976.0,
+      "R200_projected_threshold_budget": 0.0005022738709841473,
+      "alphaG_inv_R200": 41.36308203884868,
+      "universal_alpha_inverse_shift_at_exact_lock": 0.1907760264729409
+    },
+    "completed_120_partner_mass_locking_window": {
+      "max_abs_log_xi": 0.0022168141872619066,
+      "percent_window": 0.22192731365078266,
+      "projected_beta_l2_for_two_doublet_pairs": 1.423610433604175,
+      "tolerance": 0.0005022738709841473,
+      "xi_max": 1.0022192731365078,
+      "xi_min": 0.9977856411306455
+    },
+    "constrained_54_210_passes": true,
+    "drive_projected_beta_l2_max": 2.4613922385709617e-14,
+    "drive_sector_field_count": 6,
+    "drive_sector_passes": {
+      "all": true,
+      "all_drive_pair_betas_project_universal": true,
+      "canonical_projected_threshold_zero": true,
+      "canonical_safe": true,
+      "mild_light_safe": true,
+      "relative_source_eigenvalues_lifted": true,
+      "relative_source_projected_threshold_zero": true,
+      "relative_source_replay_safe": true
+    },
+    "projector_checks": {
+      "D210_values": {
+        "Sigma8": 0.0,
+        "Sigma_L": 1.0,
+        "Sigma_R": -1.0,
+        "X622": 0.0
+      },
+      "F54_values": {
+        "Sigma8": -1.3333333333333333,
+        "Sigma_L": 2.0,
+        "Sigma_R": 2.0,
+        "X622": 0.3333333333333333
+      },
+      "PR_values": {
+        "Sigma8": 0.0,
+        "Sigma_L": 0.0,
+        "Sigma_R": 1.0,
+        "X622": 0.0
+      },
+      "PX_values": {
+        "Sigma8": 0.0,
+        "Sigma_L": -0.0,
+        "Sigma_R": -0.0,
+        "X622": 0.9999999999999999
+      },
+      "max_projector_error": 1.1102230246251565e-16,
+      "passes": true
+    },
+    "uv_rows": [
+      {
+        "b10": 46.0,
+        "interpretation": "minimal matter/Yukawa/Higgs branch",
+        "landau_ratio_Lambda_over_MG": 284.24146783997605,
+        "reaches_R200": true,
+        "reaches_R50": true,
+        "scenario": "baseline",
+        "sum_T": 70.0
+      },
+      {
+        "b10": 47.0,
+        "interpretation": "minimal Schur completion",
+        "landau_ratio_Lambda_over_MG": 252.04687750226998,
+        "reaches_R200": true,
+        "reaches_R50": true,
+        "scenario": "baseline_plus_10G",
+        "sum_T": 71.0
+      },
+      {
+        "b10": 47.0,
+        "interpretation": "54/210 constrained; only singlets/orbit coordinates retained",
+        "landau_ratio_Lambda_over_MG": 252.04687750226998,
+        "reaches_R200": true,
+        "reaches_R50": true,
+        "scenario": "constrained_54_210_sources_plus_10G",
+        "sum_T": 71.0
+      },
+      {
+        "b10": 115.0,
+        "interpretation": "one elementary 54 and one elementary 210 added",
+        "landau_ratio_Lambda_over_MG": 9.582414984838088,
+        "reaches_R200": false,
+        "reaches_R50": false,
+        "scenario": "elementary_54_210_plus_10G",
+        "sum_T": 139.0
+      },
+      {
+        "b10": 161.0,
+        "interpretation": "three 54 link/driver pairs plus one 210 pair plus 10G",
+        "landau_ratio_Lambda_over_MG": 5.024045379420923,
+        "reaches_R200": false,
+        "reaches_R50": false,
+        "scenario": "documented_drive_tower_plus_10G",
+        "sum_T": 185.0
+      }
+    ]
+  },
+  "heavy_spectrum_schema": {
+    "minimum_output_for_Audit2": [
+      "colored-triplet mass matrix or inverse propagator",
+      "triplet Yukawa tensor map in the Audit 1 physical basis",
+      "doublet-triplet selection or filtering rule"
+    ],
+    "minimum_output_for_Audit3": [
+      "all non-SM heavy fields with SM representation and mass",
+      "one-loop beta vector for each split threshold",
+      "common matching-scale convention"
+    ],
+    "optional_fields": [
+      "mixing_block_id",
+      "triplet_inverse_propagator_entry",
+      "doublet_triplet_partner",
+      "is_complete_gut_multiplet",
+      "projected_threshold_vector",
+      "notes"
+    ],
+    "required_fields": [
+      "state_id",
+      "sector",
+      "spin10_representation",
+      "ps_representation",
+      "sm_representation",
+      "multiplicity",
+      "mass_GeV",
+      "mass_expression",
+      "threshold_beta_vector_b1_b2_b3",
+      "d5_role",
+      "source_artifact",
+      "status"
+    ],
+    "status_values": [
+      "derived_mass",
+      "benchmark_mass",
+      "schema_placeholder",
+      "excluded_or_auxiliary"
+    ]
+  },
+  "known_blockers": [
+    "No complete heavy_spectrum.json exists yet.",
+    "M_star/v_R/source-scale convention remains unset for publication.",
+    "Doublet-triplet splitting and colored-triplet inverse propagator are not exported in final Audit-2-ready form.",
+    "The constrained 54/210 branch has local conormal evidence but not a complete microscopic UV completion.",
+    "Route-D placement is local and cannot replace a global compactification spectrum."
+  ],
+  "publication_boundary": {
+    "claim": "Audit 4a schema fixes what a source-sector/heavy-spectrum artifact must provide.",
+    "not_claimed": [
+      "complete Spin(10) source-sector UV action",
+      "full heavy spectrum",
+      "threshold closure",
+      "d=5 proton safety",
+      "global F-theory compactification"
+    ]
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "label": "audit4a_builder",
+      "path": "code/audit4a_source_spectrum_schema.py",
+      "sha256": "287a0feadcf5a4415377372ea51417b0a6afe0561acb3e462fa53cfc2c3ee9d2",
+      "size_bytes": 10907
+    },
+    {
+      "exists": true,
+      "label": "audit0_card",
+      "path": "output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    },
+    {
+      "exists": true,
+      "label": "constrained_54_210",
+      "path": "output/constrained_54_210_source_sector/summary.json",
+      "sha256": "075b5658b2557bcae333c57e36899373138f7cf97198a4e146c6aeaba97d266d",
+      "size_bytes": 3691
+    },
+    {
+      "exists": true,
+      "label": "combined_conormal_54_210",
+      "path": "output/combined_conormal_54_210/summary.json",
+      "sha256": "72eb90a3c18837778b9af54237c28fddd93f7cfaa4bec2144e846b2aaa686499",
+      "size_bytes": 1339
+    },
+    {
+      "exists": true,
+      "label": "drive_sector_spectrum",
+      "path": "output/drive_sector_spectrum/drive_sector_spectrum_summary.json",
+      "sha256": "1ed8a06d69ad1ee1f49e3ff3179a093f8b4034f1be15267a313730c5bdd9ce5c",
+      "size_bytes": 15365
+    },
+    {
+      "exists": true,
+      "label": "completed_120_partner_action",
+      "path": "output/completed_120_partner_action/summary.json",
+      "sha256": "33a262b38b498c04cb6fb0618a0a336e89796566fb2cf0652958fdbd2548c731",
+      "size_bytes": 7830
+    },
+    {
+      "exists": true,
+      "label": "no_web_input_convention_ledger",
+      "path": "output/no_web_input_convention_ledger/summary.json",
+      "sha256": "07328573e23fa85af9a29553028fc43d3e6153aff88f0c52eaaa9459deb3524f",
+      "size_bytes": 17822
+    }
+  ],
+  "source_sector_acceptance_gates": {
+    "P_nu_source": "P_nu^c must be tied to a post-B-L source, e.g. a 126bar_H-like SM-singlet direction, or remain an explicit benchmark datum",
+    "gauge_breaking": "vacuum little group must be the selected SM/Pati-Salam face",
+    "landau_control": "visible/gut beta-function additions must not force a low Landau pole below the chosen UV trust ratio",
+    "no_extra_chiral_exotics": "no unpaired SM-charged zero modes beyond the protected three 16_i",
+    "proton_export": "colored triplet blocks must export mass inverse and Yukawa maps for Audit 2",
+    "pseudo_goldstone_control": "all accidental charged flat directions must be lifted or explicitly declared auxiliary/composite",
+    "threshold_export": "every split heavy state must export a beta vector and mass convention for Audit 3"
+  },
+  "status": "source-sector/heavy-spectrum interface scaffold only; not a completed UV model",
+  "threshold_inputs_inherited_for_Audit3": {
+    "audit0_dependency_order": "0 -> (1 || 4a) -> 3 -> 2; 4b optional parallel",
+    "required_before_Audit3": "a non-placeholder heavy_spectrum.json satisfying the schema above",
+    "rge_inputs_from_no_web_ledger": {
+      "HEAVY_BASIS": [
+        [
+          0.4,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          3.0
+        ]
+      ],
+      "MSSM_B1": [
+        6.6,
+        1.0,
+        -3.0
+      ],
+      "MSSM_B2": [
+        [
+          7.96,
+          5.4,
+          17.6
+        ],
+        [
+          1.8,
+          25.0,
+          24.0
+        ],
+        [
+          2.2,
+          9.0,
+          14.0
+        ]
+      ],
+      "MSSM_C_BOTTOM": [
+        2.8,
+        6.0,
+        4.0
+      ],
+      "MSSM_C_NU": [
+        1.2,
+        2.0,
+        0.0
+      ],
+      "MSSM_C_TAU": [
+        3.6,
+        2.0,
+        0.0
+      ],
+      "MSSM_C_TOP": [
+        5.2,
+        6.0,
+        4.0
+      ],
+      "MZ_GeV": 91.1876,
+      "PROJECTOR": [
+        [
+          0.6666666666666667,
+          -0.3333333333333333,
+          -0.3333333333333333
+        ],
+        [
+          -0.3333333333333333,
+          0.6666666666666667,
+          -0.3333333333333333
+        ],
+        [
+          -0.3333333333333333,
+          -0.3333333333333333,
+          0.6666666666666667
+        ]
+      ],
+      "SM_B1": [
+        4.1,
+        -3.1666666666666665,
+        -7.0
+      ],
+      "SM_B2": [
+        [
+          3.98,
+          2.7,
+          8.8
+        ],
+        [
+          0.9,
+          5.833333333333333,
+          12.0
+        ],
+        [
+          1.1,
+          4.5,
+          -26.0
+        ]
+      ],
+      "alpha_em_inv_MZ": 127.955,
+      "alpha_s_MZ": 0.1184,
+      "sin2_theta_W_MZ": 0.23122
+    }
+  }
+}

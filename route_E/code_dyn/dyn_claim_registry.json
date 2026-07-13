@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-07-14",
+  "purpose": "Versioned physics interpretation of Route-E dynamics ledgers. A script exit code or ledger all_pass value is mechanical evidence only and MUST NOT promote these statuses.",
+  "allowed_statuses": [
+    "proved",
+    "conditional",
+    "numerical",
+    "preliminary",
+    "invalid_pending_rederivation",
+    "blocked_missing_evidence",
+    "blocked_missing_branch_thermal_inputs",
+    "open",
+    "no-go"
+  ],
+  "excluded_optional_lanes": [
+    {
+      "lane_id": "DYN-6",
+      "status": "open",
+      "reason": "Optional UV-origin lane; it is not one of the 19 recovered required scripts and is not missing dynamics evidence."
+    }
+  ],
+  "claims": {
+    "dyn-0": {
+      "lane_id": "DYN-0",
+      "status": "numerical",
+      "supported_scope": "Conventions, history inventory, and replay scaffolding only.",
+      "arithmetic_interpretation": "all_pass certifies the declared inventory/replay checks, not a dynamics result.",
+      "blockers": []
+    },
+    "dyn-1a": {
+      "lane_id": "DYN-1a",
+      "status": "conditional",
+      "supported_scope": "Specified SUSY CMSGUT vacuum branch and transcribed Goldstone/spectrum benchmark.",
+      "arithmetic_interpretation": "all_pass is conditional on the imported action, branch, conventions, and literature mass formulas.",
+      "blockers": [
+        {
+          "id": "full_action_hessian",
+          "severity": "qualification",
+          "description": "Not an independent full-action Hessian derivation of the complete spectrum."
+        }
+      ]
+    },
+    "dyn-1b": {
+      "lane_id": "DYN-1b",
+      "status": "conditional",
+      "supported_scope": "Complete 472-state census within the transcribed CMSGUT sector formulas and benchmark.",
+      "arithmetic_interpretation": "all_pass closes the conditional census, not the model class.",
+      "blockers": [
+        {
+          "id": "independent_spectrum_derivation",
+          "severity": "qualification",
+          "description": "Requires an independent normalized-action Hessian and representation census."
+        }
+      ]
+    },
+    "dyn-2": {
+      "lane_id": "DYN-2",
+      "status": "conditional",
+      "supported_scope": "Threshold and unification scan for the declared SUSY spectrum slice.",
+      "arithmetic_interpretation": "all_pass checks the implemented running and benchmark compatibility point only.",
+      "blockers": [
+        {
+          "id": "full_two_loop_threshold_system",
+          "severity": "qualification",
+          "description": "Full uncertainty propagation and branch-wide threshold treatment remain open."
+        }
+      ]
+    },
+    "dyn-2b": {
+      "lane_id": "DYN-2b",
+      "status": "no-go",
+      "supported_scope": "No living point in the preregistered finite (x, eta, M_S) SUSY benchmark slice.",
+      "arithmetic_interpretation": "all_pass supports a finite-scan no-go only; it is not a model-class theorem.",
+      "blockers": [
+        {
+          "id": "finite_scan_scope",
+          "severity": "qualification",
+          "description": "The exclusion is branch-, prior-, range-, and threshold-dependent."
+        }
+      ]
+    },
+    "dyn-3": {
+      "lane_id": "DYN-3",
+      "status": "preliminary",
+      "supported_scope": "Dimension-five proton-decay order estimate on the declared SUSY benchmark.",
+      "arithmetic_interpretation": "all_pass validates the implemented scaling chain, not a complete physical amplitude.",
+      "blockers": [
+        {
+          "id": "physical_basis_dressing",
+          "severity": "blocking",
+          "description": "Physical flavor rotations, explicit dressing, and a full uncertainty budget are incomplete."
+        }
+      ]
+    },
+    "dyn-4a": {
+      "lane_id": "DYN-4a",
+      "status": "numerical",
+      "supported_scope": "Inverse-seesaw benchmark reconstruction and a converged connected-local conditional zeta profile likelihood.",
+      "arithmetic_interpretation": "all_pass validates the needle-basin local stencil, profile-root refinement, and Hessian cross-check, but does not prove a global minimum, disconnected-component completeness, a prediction, or a normalized Bayesian posterior.",
+      "resolved_issues": [
+        {
+          "id": "profile_interval_defect",
+          "resolved_at": "2026-07-14",
+          "description": "The former fixed-coordinate, under-resolved slice was replaced by a joint (q, phi) candidate fit and connected-local nuisance-minimized Delta-chi2=1 profiles with root-refinement, local-stencil, and Hessian checks."
+        }
+      ],
+      "blockers": [
+        {
+          "id": "conditional_diagonal_gaussian_fit",
+          "severity": "qualification",
+          "description": "The result remains conditional on the frozen benchmark Dirac sector, fixed normal ordering and m1, and a diagonal-Gaussian NuFit summary; a covariant global flavor fit remains open."
+        },
+        {
+          "id": "global_basin_completeness",
+          "severity": "qualification",
+          "description": "Only the connected needle-like basin around the reproducible candidate is profiled; no global-minimum or disconnected-component completeness claim is made."
+        }
+      ]
+    },
+    "dyn-4b": {
+      "lane_id": "DYN-4b",
+      "status": "numerical",
+      "supported_scope": "Conditional inverse-seesaw zeta distribution under the stated Dirac kernel and nuisance priors.",
+      "arithmetic_interpretation": "all_pass does not justify the word unconditional.",
+      "blockers": [
+        {
+          "id": "conditional_prior_dependence",
+          "severity": "qualification",
+          "description": "Depends on the archival Dirac and charged-lepton kernels, normal ordering, v_u, and chosen nuisance priors."
+        }
+      ]
+    },
+    "dyn-4c": {
+      "lane_id": "DYN-4c",
+      "status": "numerical",
+      "supported_scope": "Kernel perturbation and algebraic inverse-seesaw reconstruction study.",
+      "arithmetic_interpretation": "Exact absorption is largely the identity M_R = -m_D^T m_nu^-1 m_D, not an independent global flavor prediction.",
+      "blockers": [
+        {
+          "id": "global_spin10_flavor_fit",
+          "severity": "blocking",
+          "description": "A covariant Spin(10) Yukawa sum-rule fit with identifiability and rank-deficient cases remains open."
+        }
+      ]
+    },
+    "dyn-5": {
+      "lane_id": "DYN-5",
+      "status": "invalid_pending_rederivation",
+      "supported_scope": "Arithmetic replay of the currently coded messenger formulas only.",
+      "arithmetic_interpretation": "all_pass MUST NOT be interpreted as a valid one-loop messenger calculation.",
+      "blockers": [
+        {
+          "id": "bilinear_not_yukawa",
+          "severity": "blocking",
+          "description": "The displayed quadratic X-N mass mixing does not generate the asserted Yukawa anomalous dimension; specify an explicit trilinear or gauge interaction and rederive matching."
+        },
+        {
+          "id": "tree_kinetic_matching",
+          "severity": "blocking",
+          "description": "Tree-level kinetic matching gives delta Z = |zeta|/3 and must be included before any loop claim."
+        },
+        {
+          "id": "dangerous_XLHu_operator",
+          "severity": "blocking",
+          "description": "The displayed charges do not forbid X L H_u."
+        }
+      ]
+    },
+    "dyn-5v": {
+      "lane_id": "DYN-5V",
+      "node_kind": "guard",
+      "status": "invalid_pending_rederivation",
+      "supported_scope": "Fail-closed model-validity guard for the displayed quadratic N-X messenger system, including tree Kahler matching and full 6x6 Schur-complement identities.",
+      "arithmetic_interpretation": "all_pass validates the counter-diagnostics and matching identities; it deliberately confirms that the historical one-loop physics claim remains invalid.",
+      "blockers": [
+        {
+          "id": "interacting_messenger_action_missing",
+          "severity": "blocking",
+          "description": "Supply an anomaly-consistent charged trilinear or gauge interaction before any loop anomalous dimension can be calculated."
+        },
+        {
+          "id": "dangerous_XLHu_operator",
+          "severity": "blocking",
+          "description": "The displayed additive Abelian charges still allow X L H_u."
+        }
+      ]
+    },
+    "dyn-7": {
+      "lane_id": "DYN-7",
+      "status": "blocked_missing_branch_thermal_inputs",
+      "supported_scope": "Unflavored thermal-leptogenesis order estimate on the conditional zeta sample.",
+      "arithmetic_interpretation": "The legacy arithmetic ledger may replay, but the independent flavor-regime gate blocks physical promotion until branch-local thermal inputs exist.",
+      "blockers": [
+        {
+          "id": "branch_local_thermal_inputs",
+          "severity": "blocking",
+          "description": "Specify the active branch, charged-lepton equilibration temperatures, spectator matrix, reaction densities, initial conditions, and reheating assumptions."
+        },
+        {
+          "id": "flavored_leptogenesis_required",
+          "severity": "blocking",
+          "description": "M1 is about 2.4e10 GeV, in the tau-resolved regime; rerun at least two-flavor Boltzmann, preferably density-matrix evolution with spectator effects."
+        }
+      ]
+    },
+    "dyn-7f": {
+      "lane_id": "DYN-7F",
+      "node_kind": "guard",
+      "status": "blocked_missing_branch_thermal_inputs",
+      "supported_scope": "Fail-closed flavor-regime classifier and Davidson-Ibarra consistency repair for DYN-7 and DYN-9b-3.",
+      "arithmetic_interpretation": "all_pass validates the regime diagnosis and the reason for blocking; it does not validate a leptogenesis posterior.",
+      "blockers": [
+        {
+          "id": "branch_local_thermal_inputs",
+          "severity": "blocking",
+          "description": "DYN-7 requires the SUSY-branch tan beta, charged-lepton rates, spectator matrix, initial conditions, and reheating history."
+        },
+        {
+          "id": "two_flavor_kinetics",
+          "severity": "blocking",
+          "description": "DYN-9b-3 requires at least two-flavor Boltzmann evolution, preferably a density-matrix treatment with branch-local rates."
+        }
+      ]
+    },
+    "dyn-9": {
+      "lane_id": "DYN-9",
+      "status": "preliminary",
+      "supported_scope": "One-loop non-SUSY intermediate-scale ESH branch scan.",
+      "arithmetic_interpretation": "all_pass is a structural branch diagnostic, not a complete non-SUSY theory.",
+      "blockers": [
+        {
+          "id": "nonsusy_potential_and_spectrum",
+          "severity": "blocking",
+          "description": "The full non-SUSY scalar potential, vacuum, two-loop running, and threshold spectrum are not closed."
+        }
+      ]
+    },
+    "dyn-9b-1": {
+      "lane_id": "DYN-9b-1",
+      "status": "preliminary",
+      "supported_scope": "Little-group bookkeeping and ESH threshold sensitivity.",
+      "arithmetic_interpretation": "all_pass does not establish a dynamical vacuum or complete survivor spectrum.",
+      "blockers": [
+        {
+          "id": "quartic_vacuum_completion",
+          "severity": "blocking",
+          "description": "Explicit quartic descent and full stability analysis are delegated downstream."
+        }
+      ]
+    },
+    "dyn-9b-1b": {
+      "lane_id": "DYN-9b-1b",
+      "status": "preliminary",
+      "supported_scope": "Exploratory explicit-210 tensor and fixed-slice quartic scan.",
+      "arithmetic_interpretation": "all_pass is local to the sampled tree-level measure and invariant basis.",
+      "blockers": [
+        {
+          "id": "fixed_ratio_sampling",
+          "severity": "blocking",
+          "description": "Fixed-ratio and finite random sampling do not prove a global vacuum statement."
+        }
+      ]
+    },
+    "dyn-9b-1c": {
+      "lane_id": "DYN-9b-1c",
+      "status": "preliminary",
+      "supported_scope": "Tree-level epsilon and selected 126bar mixed-quartic scan.",
+      "arithmetic_interpretation": "all_pass covers the implemented invariant subset only.",
+      "blockers": [
+        {
+          "id": "incomplete_quartic_basis",
+          "severity": "blocking",
+          "description": "Self-quartics, epsilon-mixed patterns, loop stabilization, and global-minimum tests remain incomplete."
+        }
+      ]
+    },
+    "dyn-9b-1d": {
+      "lane_id": "DYN-9b-1d",
+      "status": "preliminary",
+      "supported_scope": "Rare sampled local left-right positive points after freeing the vev ratio.",
+      "arithmetic_interpretation": "all_pass and a nonzero hit count show sampled existence only, not a global vacuum theorem.",
+      "blockers": [
+        {
+          "id": "measure_and_global_vacuum",
+          "severity": "blocking",
+          "description": "Add confidence intervals, prior/measure sensitivity, competing vacua, and a global or metastability analysis."
+        }
+      ]
+    },
+    "dyn-9b-2": {
+      "lane_id": "DYN-9b-2",
+      "status": "blocked_missing_evidence",
+      "supported_scope": "Proposed non-SUSY flavor refit and zeta re-extraction.",
+      "arithmetic_interpretation": "No mechanical success is admissible until the RE-SC3 dependency and upstream branch are present.",
+      "blockers": [
+        {
+          "id": "RE-SC3",
+          "severity": "blocking",
+          "description": "Missing instanton Majorana-pricing ledger d3_instanton_majorana_pricing.json."
+        },
+        {
+          "id": "global_nonsusy_flavor_fit",
+          "severity": "blocking",
+          "description": "A physical non-SUSY Spin(10) flavor fit remains required even after evidence recovery."
+        }
+      ]
+    },
+    "dyn-9b-3": {
+      "lane_id": "DYN-9b-3",
+      "status": "blocked_missing_evidence",
+      "supported_scope": "Proposed non-SUSY leptogenesis rerun.",
+      "arithmetic_interpretation": "A future all_pass would still be preliminary until the flavored-regime defect is repaired.",
+      "blockers": [
+        {
+          "id": "DYN-9b-2",
+          "severity": "blocking",
+          "description": "Upstream non-SUSY flavor ledger is currently blocked."
+        },
+        {
+          "id": "flavored_leptogenesis_required",
+          "severity": "blocking",
+          "description": "Replace the unflavored calculation by a branch-local flavored Boltzmann or density-matrix treatment."
+        },
+        {
+          "id": "branch_local_thermal_inputs",
+          "severity": "blocking",
+          "description": "The same active-branch thermal inputs required by the DYN-7 flavor-regime gate must be supplied before DYN-9b-3 can be promoted."
+        }
+      ]
+    },
+    "dyn-8": {
+      "lane_id": "DYN-8",
+      "status": "blocked_missing_evidence",
+      "supported_scope": "Falsifiability/status collector only.",
+      "arithmetic_interpretation": "The collector cannot promote any input claim and must not run when a selected optional card is absent.",
+      "blockers": [
+        {
+          "id": "RE-SC3-4-5",
+          "severity": "blocking",
+          "description": "The current collector unconditionally loads missing RE-SC3/4/5 ledgers."
+        },
+        {
+          "id": "stale_branch_map",
+          "severity": "blocking",
+          "description": "Resolve the stale 210-versus-45 non-SUSY branch-map contradiction before regenerating the collector."
+        },
+        {
+          "id": "invalid_inputs_not_promotable",
+          "severity": "blocking",
+          "description": "DYN-5V and DYN-7F explicitly prevent DYN-5 and unflavored DYN-7/9b-3 from being promoted merely because their arithmetic ledgers report all_pass."
+        }
+      ]
+    }
+  },
+  "external_string_cards": {
+    "RE-SC3": {
+      "artifact": "route_d/output/d3_instanton_majorana_pricing.json",
+      "program_role": "optional UV/string pricing card",
+      "dependency_rule": "conditionally required by DYN-9b-2 and DYN-8 when those lanes are selected",
+      "physics_status_after_recovery": "unpromoted_pricing_only"
+    },
+    "RE-SC4": {
+      "artifact": "route_d/output/d4_stueckelberg_protection.json",
+      "program_role": "optional UV/string pricing card",
+      "dependency_rule": "conditionally required by DYN-8 when selected",
+      "physics_status_after_recovery": "unpromoted_pricing_only"
+    },
+    "RE-SC5": {
+      "artifact": "route_d/output/d5_susy_breaking_bridge.json",
+      "program_role": "optional UV/string pricing card",
+      "dependency_rule": "conditionally required by DYN-8 when selected",
+      "physics_status_after_recovery": "unpromoted_pricing_only"
+    }
+  }
+}

@@ -1,0 +1,789 @@
+{
+  "status": "fail_incomplete_cited_dynamics_evidence",
+  "scope": "29-item dynamics P0 file-existence subset plus 4 core artifacts; not an exhaustive extraction of all cited paths and not a validation of scientific correctness",
+  "interpretation": "Relocated source code counts as found for recovery triage, but does not satisfy the cited-path, generated-ledger, clean-clone, or scientific validation gates.",
+  "required_source_provenance": {
+    "exact_paths_present": 2,
+    "git_tracked": 2,
+    "expected": 24,
+    "paths": [
+      "route_E/code/verify_route_e_first_principles.py",
+      "route_E/code/verify_route_e_dependency_closure.py",
+      "code/audit0_dyn_conventions_and_inventory.py",
+      "code/audit1_dyn4a_seesaw_replay_zeta_posterior.py",
+      "code/audit1_dyn4b_refreshed_card_unconditional_zeta.py",
+      "code/audit1_dyn4c_kernel_dirac_refit.py",
+      "code/audit2_dyn3_proton_d5_kill_criterion.py",
+      "code/audit3_dyn2_thresholds_unification.py",
+      "code/audit3_dyn2b_rescue_scan.py",
+      "code/audit4a_dyn1a_vacuum_goldstone_audit.py",
+      "code/audit4a_dyn1b_full_spectrum.py",
+      "code/audit5_dyn5_messenger_one_loop.py",
+      "code/audit7_dyn7_leptogenesis_argzeta.py",
+      "code/audit8_dyn8_falsifiability_collection.py",
+      "code/audit9_dyn9_nonsusy_intermediate.py",
+      "code/audit9_dyn9b1_nonsusy_vacuum_thresholds.py",
+      "code/audit9_dyn9b1b_210_quartic_descent.py",
+      "code/audit9_dyn9b1c_eps_and_126_quartics.py",
+      "code/audit9_dyn9b1d_lr_ratio_scan.py",
+      "code/audit9_dyn9b2_nonsusy_flavor_refit.py",
+      "code/audit9_dyn9b3_nonsusy_leptogenesis.py",
+      "route_d/code/verify_d3_instanton_majorana_pricing.py",
+      "route_d/code/verify_d4_stueckelberg_protection.py",
+      "route_d/code/verify_d5_susy_breaking_bridge.py"
+    ]
+  },
+  "core": {
+    "present": 4,
+    "expected": 4,
+    "records": [
+      {
+        "cited_path": "route_E/code/verify_route_e_first_principles.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code/verify_route_e_first_principles.py"
+        ],
+        "tracked_locations": [
+          "route_E/code/verify_route_e_first_principles.py"
+        ]
+      },
+      {
+        "cited_path": "route_E/code/verify_route_e_dependency_closure.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code/verify_route_e_dependency_closure.py"
+        ],
+        "tracked_locations": [
+          "route_E/code/verify_route_e_dependency_closure.py"
+        ]
+      },
+      {
+        "cited_path": "route_E/output/route_e_first_principles.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/output/route_e_first_principles.json"
+        ],
+        "tracked_locations": [
+          "route_E/output/route_e_first_principles.json"
+        ]
+      },
+      {
+        "cited_path": "route_E/output/route_e_dependency_closure.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/output/route_e_dependency_closure.json"
+        ],
+        "tracked_locations": [
+          "route_E/output/route_e_dependency_closure.json"
+        ]
+      }
+    ]
+  },
+  "source_scripts": {
+    "present_or_relocated": 19,
+    "exact_cited_path_present": 0,
+    "present_locations_git_tracked": 19,
+    "expected": 19,
+    "records": [
+      {
+        "cited_path": "code/audit0_dyn_conventions_and_inventory.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit0_dyn_conventions_and_inventory.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit0_dyn_conventions_and_inventory.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4a_seesaw_replay_zeta_posterior.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4a_seesaw_replay_zeta_posterior.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4a_seesaw_replay_zeta_posterior.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4b_refreshed_card_unconditional_zeta.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4b_refreshed_card_unconditional_zeta.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4b_refreshed_card_unconditional_zeta.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4c_kernel_dirac_refit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4c_kernel_dirac_refit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4c_kernel_dirac_refit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit2_dyn3_proton_d5_kill_criterion.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit2_dyn3_proton_d5_kill_criterion.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit2_dyn3_proton_d5_kill_criterion.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit3_dyn2_thresholds_unification.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit3_dyn2_thresholds_unification.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit3_dyn2_thresholds_unification.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit3_dyn2b_rescue_scan.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit3_dyn2b_rescue_scan.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit3_dyn2b_rescue_scan.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit4a_dyn1a_vacuum_goldstone_audit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit4a_dyn1a_vacuum_goldstone_audit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit4a_dyn1a_vacuum_goldstone_audit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit4a_dyn1b_full_spectrum.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit4a_dyn1b_full_spectrum.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit4a_dyn1b_full_spectrum.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit5_dyn5_messenger_one_loop.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit5_dyn5_messenger_one_loop.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit5_dyn5_messenger_one_loop.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit7_dyn7_leptogenesis_argzeta.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit7_dyn7_leptogenesis_argzeta.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit7_dyn7_leptogenesis_argzeta.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit8_dyn8_falsifiability_collection.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit8_dyn8_falsifiability_collection.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit8_dyn8_falsifiability_collection.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9_nonsusy_intermediate.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9_nonsusy_intermediate.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9_nonsusy_intermediate.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1_nonsusy_vacuum_thresholds.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1_nonsusy_vacuum_thresholds.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1_nonsusy_vacuum_thresholds.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1b_210_quartic_descent.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1b_210_quartic_descent.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1b_210_quartic_descent.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1c_eps_and_126_quartics.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1c_eps_and_126_quartics.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1c_eps_and_126_quartics.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1d_lr_ratio_scan.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1d_lr_ratio_scan.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1d_lr_ratio_scan.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b2_nonsusy_flavor_refit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b2_nonsusy_flavor_refit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b2_nonsusy_flavor_refit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b3_nonsusy_leptogenesis.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b3_nonsusy_leptogenesis.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b3_nonsusy_leptogenesis.py"
+        ]
+      }
+    ]
+  },
+  "selected_dyn_ledgers": {
+    "present": 0,
+    "expected": 4,
+    "records": [
+      {
+        "cited_path": "output/audit8/dyn8_falsifiability_collection.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9_nonsusy_intermediate.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      }
+    ]
+  },
+  "string_cards": {
+    "present": 0,
+    "expected": 6,
+    "records": [
+      {
+        "cited_path": "route_d/code/verify_d3_instanton_majorana_pricing.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/code/verify_d4_stueckelberg_protection.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/code/verify_d5_susy_breaking_bridge.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d3_instanton_majorana_pricing.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d4_stueckelberg_protection.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d5_susy_breaking_bridge.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      }
+    ]
+  },
+  "execution_guard_evidence": {
+    "present": 9,
+    "git_tracked": 9,
+    "expected": 9,
+    "note": "supplemental 2026-07-14 evidence; excluded from the historical 29-item cited-path denominator",
+    "records": [
+      {
+        "cited_path": "route_E/code_dyn/route_e_paths.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/route_e_paths.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/route_e_paths.py"
+        ]
+      },
+      {
+        "cited_path": "route_E/code_dyn/run_route_e_dynamics.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/run_route_e_dynamics.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/run_route_e_dynamics.py"
+        ]
+      },
+      {
+        "cited_path": "route_E/code_dyn/dyn_claim_registry.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/dyn_claim_registry.json"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/dyn_claim_registry.json"
+        ]
+      },
+      {
+        "cited_path": "route_E/code_dyn/requirements.txt",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/requirements.txt"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/requirements.txt"
+        ]
+      },
+      {
+        "cited_path": "route_E/code_dyn/audit5_dyn5_model_validity.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/audit5_dyn5_model_validity.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit5_dyn5_model_validity.py"
+        ]
+      },
+      {
+        "cited_path": "route_E/code_dyn/audit7_dyn7_flavor_regime_gate.py",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "route_E/code_dyn/audit7_dyn7_flavor_regime_gate.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit7_dyn7_flavor_regime_gate.py"
+        ]
+      },
+      {
+        "cited_path": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "output/audit1/dyn4a_seesaw_zeta_posterior.json"
+        ],
+        "tracked_locations": [
+          "output/audit1/dyn4a_seesaw_zeta_posterior.json"
+        ]
+      },
+      {
+        "cited_path": "output/audit5/dyn5_model_validity.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "output/audit5/dyn5_model_validity.json"
+        ],
+        "tracked_locations": [
+          "output/audit5/dyn5_model_validity.json"
+        ]
+      },
+      {
+        "cited_path": "output/audit7/dyn7_flavor_regime_gate.json",
+        "found": true,
+        "exact_path_found": true,
+        "locations": [
+          "output/audit7/dyn7_flavor_regime_gate.json"
+        ],
+        "tracked_locations": [
+          "output/audit7/dyn7_flavor_regime_gate.json"
+        ]
+      }
+    ]
+  },
+  "cited_dynamics": {
+    "present_or_relocated": 19,
+    "expected": 29,
+    "missing": [
+      "output/audit8/dyn8_falsifiability_collection.json",
+      "output/audit9/dyn9_nonsusy_intermediate.json",
+      "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
+      "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
+      "route_d/code/verify_d3_instanton_majorana_pricing.py",
+      "route_d/code/verify_d4_stueckelberg_protection.py",
+      "route_d/code/verify_d5_susy_breaking_bridge.py",
+      "route_d/output/d3_instanton_majorana_pricing.json",
+      "route_d/output/d4_stueckelberg_protection.json",
+      "route_d/output/d5_susy_breaking_bridge.json"
+    ],
+    "records": [
+      {
+        "cited_path": "code/audit0_dyn_conventions_and_inventory.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit0_dyn_conventions_and_inventory.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit0_dyn_conventions_and_inventory.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4a_seesaw_replay_zeta_posterior.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4a_seesaw_replay_zeta_posterior.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4a_seesaw_replay_zeta_posterior.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4b_refreshed_card_unconditional_zeta.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4b_refreshed_card_unconditional_zeta.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4b_refreshed_card_unconditional_zeta.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit1_dyn4c_kernel_dirac_refit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit1_dyn4c_kernel_dirac_refit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit1_dyn4c_kernel_dirac_refit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit2_dyn3_proton_d5_kill_criterion.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit2_dyn3_proton_d5_kill_criterion.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit2_dyn3_proton_d5_kill_criterion.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit3_dyn2_thresholds_unification.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit3_dyn2_thresholds_unification.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit3_dyn2_thresholds_unification.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit3_dyn2b_rescue_scan.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit3_dyn2b_rescue_scan.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit3_dyn2b_rescue_scan.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit4a_dyn1a_vacuum_goldstone_audit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit4a_dyn1a_vacuum_goldstone_audit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit4a_dyn1a_vacuum_goldstone_audit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit4a_dyn1b_full_spectrum.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit4a_dyn1b_full_spectrum.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit4a_dyn1b_full_spectrum.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit5_dyn5_messenger_one_loop.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit5_dyn5_messenger_one_loop.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit5_dyn5_messenger_one_loop.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit7_dyn7_leptogenesis_argzeta.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit7_dyn7_leptogenesis_argzeta.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit7_dyn7_leptogenesis_argzeta.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit8_dyn8_falsifiability_collection.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit8_dyn8_falsifiability_collection.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit8_dyn8_falsifiability_collection.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9_nonsusy_intermediate.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9_nonsusy_intermediate.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9_nonsusy_intermediate.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1_nonsusy_vacuum_thresholds.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1_nonsusy_vacuum_thresholds.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1_nonsusy_vacuum_thresholds.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1b_210_quartic_descent.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1b_210_quartic_descent.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1b_210_quartic_descent.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1c_eps_and_126_quartics.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1c_eps_and_126_quartics.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1c_eps_and_126_quartics.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b1d_lr_ratio_scan.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b1d_lr_ratio_scan.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b1d_lr_ratio_scan.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b2_nonsusy_flavor_refit.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b2_nonsusy_flavor_refit.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b2_nonsusy_flavor_refit.py"
+        ]
+      },
+      {
+        "cited_path": "code/audit9_dyn9b3_nonsusy_leptogenesis.py",
+        "found": true,
+        "exact_path_found": false,
+        "locations": [
+          "route_E/code_dyn/audit9_dyn9b3_nonsusy_leptogenesis.py"
+        ],
+        "tracked_locations": [
+          "route_E/code_dyn/audit9_dyn9b3_nonsusy_leptogenesis.py"
+        ]
+      },
+      {
+        "cited_path": "output/audit8/dyn8_falsifiability_collection.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9_nonsusy_intermediate.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/code/verify_d3_instanton_majorana_pricing.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/code/verify_d4_stueckelberg_protection.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/code/verify_d5_susy_breaking_bridge.py",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d3_instanton_majorana_pricing.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d4_stueckelberg_protection.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      },
+      {
+        "cited_path": "route_d/output/d5_susy_breaking_bridge.json",
+        "found": false,
+        "exact_path_found": false,
+        "locations": [],
+        "tracked_locations": []
+      }
+    ]
+  }
+}

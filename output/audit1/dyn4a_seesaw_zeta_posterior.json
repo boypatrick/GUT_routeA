@@ -83,7 +83,15 @@
       "pass": true
     },
     {
-      "name": "zeta-plane scan complete (161 x 241); minimum located",
+      "name": "best coarse-search candidate agrees between two optimizers",
+      "pass": true
+    },
+    {
+      "name": "adaptive joint zeta fit located a finite interior local candidate",
+      "pass": true
+    },
+    {
+      "name": "needle-basin local stencil converges to the same candidate",
       "pass": true
     },
     {
@@ -91,7 +99,15 @@
       "pass": true
     },
     {
-      "name": "zeta posterior published: best point, profile Delta-chi^2 <= 1 intervals on |zeta| and arg zeta, distance from the benchmark",
+      "name": "profile roots pass tolerance refinement and Delta-chi2 residual gates",
+      "pass": true
+    },
+    {
+      "name": "joint minimum has a positive, step-stable Hessian consistent with profiles",
+      "pass": true
+    },
+    {
+      "name": "connected local zeta profile published with nuisance minimization and Delta-chi2 <= 1 one-parameter intervals",
       "pass": true
     },
     {
@@ -107,33 +123,615 @@
       "pass": true
     },
     {
-      "name": "refreshed Delta-chi^2 <= 1 windows about the NEW best point published",
+      "name": "refreshed connected-local profile Delta-chi2 <= 1 windows summarized without discarding their asymmetric sides",
       "pass": true
     }
   ],
-  "checks_passed": 19,
-  "checks_total": 19,
-  "created_utc": "2026-07-04T17:23:20+00:00",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "created_utc": "2026-07-13T16:41:28+00:00",
   "delta_cp_branch_pulls_sigma": [
-    3.343283582087665,
-    0.11940298507651373
+    3.512115275292146,
+    0.04942870812796675
   ],
   "delta_cp_prediction_deg_branches": [
-    323.9999999999368,
-    216.0000000000632
+    329.6558617222869,
+    210.3441382777131
   ],
   "derivation_log": {
     "step_1_replay": "Y_e -> U_e (eigh ascending); U_nu = U_e U_PMNS(old benchmark incl. Majorana phases 0.35pi, 1.10pi); m_light = U_nu* D U_nu*^T; mD = Y_nu * 100 GeV; M_R = -mD^T m_light^-1 mD (inverse type-I); M_* = sigma_max; zeta = <c_hat, M_R/M_*>, c_hat = -K_tr(paper)",
     "step_2_rank_contract": "orthonormal 6-tensor cascade (contact + 5 Veronese), per-tensor coefficients and residuals recorded",
     "step_3_refresh": "old hardcoded targets vs NuFit-6.0 NO (both variants); theta_23 octant flip dominates",
-    "step_4_posterior": "M_R(zeta') = M_*(M_V + zeta' c_hat), forward seesaw, chi^2 over 5 observables (IC24 1-sigma); grid 161x241 in (|zeta| scale, phase); profile Delta-chi^2 <= 1 intervals",
+    "step_4_profile_likelihood": "M_R(zeta') = M_*(M_V + zeta' c_hat), forward seesaw, diagonal-Gaussian chi^2 over 5 observables (IC24 1-sigma); q=log(|zeta'|/|zeta_ref|), phi=arg(zeta'/zeta_ref); dual-optimizer deterministic multi-start joint fit; connected-local nuisance-minimized Delta-chi^2=1 one-parameter profile intervals; global basin completeness not claimed",
     "step_5_windows": "historical loose windows re-derived with the archival tolerance definition (regression), then recomputed as Delta-chi^2 windows at the new best point"
   },
   "dyn_item": "DYN-4a",
   "fit_not_prediction": true,
   "full_covariant_yukawa_refit_deferred_to_DYN4b": true,
+  "global_minimum_or_disconnected_component_completeness_claimed": false,
+  "joint_fit_diagnostics": {
+    "agreement": {
+      "abs_chi2": 0.0,
+      "max_abs_coordinate": 0.0,
+      "pass": true
+    },
+    "bounds": {
+      "phi": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "q": [
+        -6.907755278982137,
+        0.6931471805599453
+      ]
+    },
+    "coarse_basin_hits": 2,
+    "coarse_runs_total": 18,
+    "coordinates": [
+      "q=log(|zeta|/|zeta_ref|)",
+      "phi=arg(zeta/zeta_ref)"
+    ],
+    "local_basin_stable": true,
+    "local_stencil_runs": [
+      {
+        "chi2": 39.193275793880844,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.7437421281358945e-05,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437591561233432e-05,
+          -3.92723863546949e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793607704,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.7437421281358945e-05,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437454164222278e-05,
+          -3.927209899779282e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793622625,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.7437421281358945e-05,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437481628624687e-05,
+          -3.927215467851027e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579347656,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.2437421281358946e-05,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437487709101362e-05,
+          -3.927218083985252e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579365257,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793710505,
+        "method": "Nelder-Mead",
+        "seed": [
+          -1.2437421281358946e-05,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437415867776864e-05,
+          -3.927203303926603e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793830914,
+        "method": "Nelder-Mead",
+        "seed": [
+          -7.437421281358945e-06,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437595163772982e-05,
+          -3.9272399172855725e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579365966,
+        "method": "Nelder-Mead",
+        "seed": [
+          -7.437421281358945e-06,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.243742926538213e-05,
+          -3.927205056324714e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579372802,
+        "method": "Nelder-Mead",
+        "seed": [
+          -7.437421281358945e-06,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.243750159562492e-05,
+          -3.927221256306871e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793564474,
+        "method": "Powell",
+        "seed": [
+          -1.7437421281358945e-05,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437445346245195e-05,
+          -3.9272077917870824e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579383743,
+        "method": "Powell",
+        "seed": [
+          -1.7437421281358945e-05,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437417735578592e-05,
+          -3.927202770391484e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793524926,
+        "method": "Powell",
+        "seed": [
+          -1.7437421281358945e-05,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437456451473103e-05,
+          -3.927210518815789e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579362694,
+        "method": "Powell",
+        "seed": [
+          -1.2437421281358946e-05,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437439450141901e-05,
+          -3.927206749961803e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579365257,
+        "method": "Powell",
+        "seed": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579368638,
+        "method": "Powell",
+        "seed": [
+          -1.2437421281358946e-05,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437473606058503e-05,
+          -3.927213253327839e-05
+        ]
+      },
+      {
+        "chi2": 39.193275793747866,
+        "method": "Powell",
+        "seed": [
+          -7.437421281358945e-06,
+          -4.9272046416991885e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437507069262707e-05,
+          -3.927222938485292e-05
+        ]
+      },
+      {
+        "chi2": 39.19327579402907,
+        "method": "Powell",
+        "seed": [
+          -7.437421281358945e-06,
+          -3.9272046416991886e-05
+        ],
+        "success": true,
+        "x": [
+          -1.243742941824699e-05,
+          -3.9272056416991887e-05
+        ]
+      },
+      {
+        "chi2": 39.1932757937198,
+        "method": "Powell",
+        "seed": [
+          -7.437421281358945e-06,
+          -2.9272046416991887e-05
+        ],
+        "success": true,
+        "x": [
+          -1.2437416849258165e-05,
+          -3.9272023019596455e-05
+        ]
+      }
+    ],
+    "optimizer_polish": {
+      "Nelder-Mead": {
+        "chi2": 39.19327579365257,
+        "nfev": 163,
+        "success": true,
+        "x": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ]
+      },
+      "Powell": {
+        "chi2": 39.19327579365257,
+        "nfev": 57,
+        "success": true,
+        "x": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ]
+      }
+    },
+    "runs": [
+      {
+        "chi2": 39.19327579391115,
+        "method": "Nelder-Mead",
+        "nfev": 207,
+        "seed": [
+          0.0,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -1.2437496635053255e-05,
+          -3.9272163419816415e-05
+        ]
+      },
+      {
+        "chi2": 19926.979828488453,
+        "method": "Nelder-Mead",
+        "nfev": 417,
+        "seed": [
+          -0.6931471805599453,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -0.5903083578871724,
+          1.9217556419416666
+        ]
+      },
+      {
+        "chi2": 19926.97982848845,
+        "method": "Nelder-Mead",
+        "nfev": 406,
+        "seed": [
+          0.4054651081081644,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -0.5903083261970721,
+          1.921755611393736
+        ]
+      },
+      {
+        "chi2": 29105.113387296733,
+        "method": "Nelder-Mead",
+        "nfev": 395,
+        "seed": [
+          0.0,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.2766530666270155,
+          -3.1415926535897833
+        ]
+      },
+      {
+        "chi2": 29105.113269681882,
+        "method": "Nelder-Mead",
+        "nfev": 444,
+        "seed": [
+          0.0,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.2768210045277555,
+          -3.1415926535897842
+        ]
+      },
+      {
+        "chi2": 19926.97982848845,
+        "method": "Nelder-Mead",
+        "nfev": 225,
+        "seed": [
+          -0.6931471805599453,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -0.5903083272717671,
+          1.921755621269754
+        ]
+      },
+      {
+        "chi2": 19926.979828488453,
+        "method": "Nelder-Mead",
+        "nfev": 195,
+        "seed": [
+          -0.6931471805599453,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -0.5903082999523005,
+          1.9217555862842188
+        ]
+      },
+      {
+        "chi2": 29105.11326968201,
+        "method": "Nelder-Mead",
+        "nfev": 400,
+        "seed": [
+          0.4054651081081644,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.2768209183164325,
+          -3.1415926535897922
+        ]
+      },
+      {
+        "chi2": 29105.113270947346,
+        "method": "Nelder-Mead",
+        "nfev": 375,
+        "seed": [
+          0.4054651081081644,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.276838489322989,
+          -3.141592653589779
+        ]
+      },
+      {
+        "chi2": 39.19327579365257,
+        "method": "Powell",
+        "nfev": 773,
+        "seed": [
+          0.0,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -1.2437421281358946e-05,
+          -3.9272046416991886e-05
+        ]
+      },
+      {
+        "chi2": 19926.979828488453,
+        "method": "Powell",
+        "nfev": 628,
+        "seed": [
+          -0.6931471805599453,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -0.5903083261448697,
+          1.9217556130823288
+        ]
+      },
+      {
+        "chi2": 19926.979828488445,
+        "method": "Powell",
+        "nfev": 668,
+        "seed": [
+          0.4054651081081644,
+          0.0
+        ],
+        "success": true,
+        "x": [
+          -0.5903083253974462,
+          1.9217556234674489
+        ]
+      },
+      {
+        "chi2": 29105.113269716552,
+        "method": "Powell",
+        "nfev": 278,
+        "seed": [
+          0.0,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.2768209433921904,
+          -3.141592653582502
+        ]
+      },
+      {
+        "chi2": 19926.97982848845,
+        "method": "Powell",
+        "nfev": 545,
+        "seed": [
+          0.0,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -0.5903083543502227,
+          1.9217556335770758
+        ]
+      },
+      {
+        "chi2": 29105.11326971661,
+        "method": "Powell",
+        "nfev": 272,
+        "seed": [
+          -0.6931471805599453,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.2768210655582677,
+          -3.141592653582502
+        ]
+      },
+      {
+        "chi2": 19926.979828488453,
+        "method": "Powell",
+        "nfev": 624,
+        "seed": [
+          -0.6931471805599453,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -0.5903083714383869,
+          1.9217556476145539
+        ]
+      },
+      {
+        "chi2": 29105.113269716538,
+        "method": "Powell",
+        "nfev": 270,
+        "seed": [
+          0.4054651081081644,
+          -1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -2.27682107216517,
+          -3.141592653582502
+        ]
+      },
+      {
+        "chi2": 19926.979828488453,
+        "method": "Powell",
+        "nfev": 455,
+        "seed": [
+          0.4054651081081644,
+          1.5707963267948966
+        ],
+        "success": true,
+        "x": [
+          -0.5903083202036233,
+          1.9217556359916705
+        ]
+      }
+    ]
+  },
   "normal_ordering_assumed_m1_fixed": true,
-  "posterior_conditional_on_benchmark_dirac_sector": true,
+  "normalized_bayesian_posterior_claimed": false,
+  "profile_diagnostics": {
+    "definition": {
+      "phi": "min_q chi2(q,phi)",
+      "q": "min_phi chi2(q,phi)"
+    },
+    "delta_chi2": 1.0,
+    "hessian": [
+      [
+        2979541813034.104,
+        -1407378739638.7874
+      ],
+      [
+        -1407378739638.7874,
+        673654038124.0276
+      ]
+    ],
+    "hessian_eigenvalues": [
+      7258890542.660769,
+      3645936960615.4707
+    ],
+    "hessian_profile_scales": [
+      7.134996346319621e-06,
+      1.5005485051964488e-05
+    ],
+    "hessian_step_refinement_max_relative": 0.0019380406218855036,
+    "hessian_vs_profile_max_relative": 0.019647065460910187,
+    "profile_mean_scales": [
+      7.277987442016603e-06,
+      1.5048821868896485e-05
+    ],
+    "root_half_widths": {
+      "phi_minus": 1.5599641494750977e-05,
+      "phi_plus": 1.4498002243041992e-05,
+      "q_minus": 8.50022285461426e-06,
+      "q_plus": 6.055752029418945e-06
+    },
+    "root_half_widths_coarse": {
+      "phi_minus": 1.55996484375e-05,
+      "phi_plus": 1.44980078125e-05,
+      "q_minus": 8.500195312500002e-06,
+      "q_plus": 6.0557421874999995e-06
+    },
+    "root_refinement_max_relative": 3.2401637850221378e-06,
+    "root_residual_max_abs_delta_chi2": 1.1033492341994133e-08
+  },
+  "profile_is_connected_local_component": true,
+  "profile_likelihood_conditional_on_benchmark_dirac_sector": true,
   "provenance": {
     "closure_card": {
       "note": "user-restored archival artifact",
@@ -148,11 +746,11 @@
     }
   },
   "pulls_at_best": {
-    "dm21": -0.36842105256934615,
-    "dm31": 0.20000000245353267,
-    "s12": -0.3478260869129675,
-    "s13": 0.08771929763230964,
-    "s23": 6.86666666675985
+    "dm21": 0.412699356225512,
+    "dm31": 0.42898018205929794,
+    "s12": -0.3935780749073395,
+    "s13": 2.7567296631688785,
+    "s23": 5.575344733877989
   },
   "rank_contract_cascade": [
     {
@@ -213,8 +811,21 @@
   },
   "windows": {
     "chi2_refreshed": {
-      "Delta_delta": 1.5059893291305068e-06,
-      "Delta_s": 1.008184363660014e-06
+      "Delta_delta": 1.5048821868896485e-05,
+      "Delta_delta_minus": 1.5599641494750977e-05,
+      "Delta_delta_plus": 1.4498002243041992e-05,
+      "Delta_s": 7.277888027956703e-06,
+      "Delta_s_minus": 8.500081008055993e-06,
+      "Delta_s_plus": 6.055695047857412e-06,
+      "definition": "one-parameter nuisance-minimized profile, Delta-chi2=1",
+      "relative_phase_interval": [
+        -5.4871687911742866e-05,
+        -2.4774044173949895e-05
+      ],
+      "scale_interval": [
+        0.999979062575055,
+        0.9999936183511109
+      ]
     },
     "loose_regression": {
       "Delta_delta": 5.424119231661924e-05,
@@ -223,22 +834,74 @@
   },
   "zeta_posterior": {
     "abs_zeta_68": [
-      0.13043190327106535,
-      0.13043190327106535
+      0.13042917236288018,
+      0.13043107090045475
     ],
-    "abs_zeta_best": 0.13043190327106535,
+    "abs_zeta_best": 0.130430281044624,
     "arg_zeta_68": [
-      0.600038020504949,
-      0.600038020504949
+      0.5999831488170373,
+      0.600013246460775
     ],
-    "arg_zeta_best": 0.600038020504949,
+    "arg_zeta_best": 0.5999987484585321,
     "chi2_benchmark": 47.455522845874185,
-    "chi2_min": 47.45552284726285,
+    "chi2_min": 39.19327579365257,
     "conditional_on": "benchmark Y_nu, Y_e frozen; NO; m1 = 1e-3 eV",
-    "distance_from_benchmark": 1.3877787807814457e-17,
+    "distance_from_benchmark": 5.373037685089277e-06,
+    "q_68_profile": [
+      -2.0937644135973204e-05,
+      -6.3816692519400005e-06
+    ],
+    "q_best": -1.2437421281358946e-05,
+    "relative_phase_68_profile": [
+      -5.4871687911742866e-05,
+      -2.4774044173949895e-05
+    ],
+    "relative_phase_best": -3.9272046416991886e-05,
+    "statistical_object": "connected local conditional profile likelihood; diagonal-Gaussian NuFit summary; not a normalized Bayesian posterior; no global basin-completeness claim",
+    "thresholds": {
+      "joint_two_parameter_68p27": 2.3,
+      "joint_two_parameter_95": 5.99,
+      "one_parameter_68p27": 1.0
+    },
     "zeta_best": [
-      0.10764729490120782,
-      0.07365148533033768
+      0.1076488483803419,
+      0.07364634176770606
+    ]
+  },
+  "zeta_profile_likelihood": {
+    "abs_zeta_68": [
+      0.13042917236288018,
+      0.13043107090045475
+    ],
+    "abs_zeta_best": 0.130430281044624,
+    "arg_zeta_68": [
+      0.5999831488170373,
+      0.600013246460775
+    ],
+    "arg_zeta_best": 0.5999987484585321,
+    "chi2_benchmark": 47.455522845874185,
+    "chi2_min": 39.19327579365257,
+    "conditional_on": "benchmark Y_nu, Y_e frozen; NO; m1 = 1e-3 eV",
+    "distance_from_benchmark": 5.373037685089277e-06,
+    "q_68_profile": [
+      -2.0937644135973204e-05,
+      -6.3816692519400005e-06
+    ],
+    "q_best": -1.2437421281358946e-05,
+    "relative_phase_68_profile": [
+      -5.4871687911742866e-05,
+      -2.4774044173949895e-05
+    ],
+    "relative_phase_best": -3.9272046416991886e-05,
+    "statistical_object": "connected local conditional profile likelihood; diagonal-Gaussian NuFit summary; not a normalized Bayesian posterior; no global basin-completeness claim",
+    "thresholds": {
+      "joint_two_parameter_68p27": 2.3,
+      "joint_two_parameter_95": 5.99,
+      "one_parameter_68p27": 1.0
+    },
+    "zeta_best": [
+      0.1076488483803419,
+      0.07364634176770606
     ]
   },
   "zeta_value_derived": false

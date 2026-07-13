@@ -1,7 +1,7 @@
 {
   "audit": "DYN-5 hidden-messenger dynamics at one loop",
   "dyn_item": "DYN-5",
-  "created_utc": "2026-07-05T01:02:43.327995+00:00",
+  "created_utc": "2026-07-13T16:35:51.528267+00:00",
   "all_pass": true,
   "checks_passed": 21,
   "checks_total": 21,
@@ -147,8 +147,8 @@
           "ln_M_ratio": 13.6771158303779
         },
         "crossing_refreshed_window_Delta_s": {
-          "deltaZ": 0.002002430474186329,
-          "ln_M_ratio": 2.424338969594509
+          "deltaZ": 0.005380097572676406,
+          "ln_M_ratio": 6.513674444032931
         },
         "reading": "the paper's linearized replay formulas are sufficient for ln(M_*/M_X) below the quoted crossing; beyond it the exact A-form must be used (this sharpens the tex caveat 'small, but not automatically smaller than the narrow contact-sensitivity windows')"
       },
@@ -225,9 +225,9 @@
       ],
       "ceilings_order_estimates": {
         "eps_odd_loose": 0.01413692276457755,
-        "eps_odd_tight": 0.0004441733732626773,
+        "eps_odd_tight": 0.003206401717906145,
         "eps_even_loose": 0.005105600166913798,
-        "eps_even_tight": 0.00016041480076207782
+        "eps_even_tight": 0.0011580034367276604
       },
       "two_loop_leakage_estimate": {
         "coupling_level": 2.9566758432751296e-05,
@@ -251,5 +251,13 @@
   "r_symmetry_claimed_anomaly_free": false,
   "microscopic_messenger_completion_constructed": false,
   "spurion_sector_constructed": false,
-  "ceilings_are_order_estimates": true
+  "ceilings_are_order_estimates": true,
+  "claim_status": "invalid_pending_rederivation",
+  "physics_claim_valid": false,
+  "superseded_by": "route_E/code_dyn/audit5_dyn5_model_validity.py",
+  "invalid_reasons": [
+    "lambda X N is a quadratic mass mixing, not a cubic Yukawa tensor",
+    "the displayed R charges allow X L H_u",
+    "tree-level Kahler matching precedes any interacting-loop calculation"
+  ]
 }

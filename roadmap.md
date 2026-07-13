@@ -19585,3 +19585,108 @@ next:
   - Promote the source-basis `C5L/C5R` tensors to mass-basis Wilson tensors.
   - Continue the separate Audit 4a scalar-Hessian Goldstone and
     non-placeholder heavy-spectrum gates.
+
+# Route-F integration audit
+
+Last updated: 2026-07-13
+
+Route F has been opened as the canonical integration and theory-closure lane:
+
+- workspace: `route_f/`;
+- full cross-route review: `route_f/THEORY_AUDIT.md`;
+- ordered work packages and gates: `route_f/ROADMAP.md`;
+- recent primary-literature matrix: `route_f/LITERATURE_2023_2026.md`;
+- diagnostic arithmetic card: `route_f/output/route_f_diagnostics.{json,md}`;
+- Route-E cited-evidence existence audit:
+  `route_f/output/route_e_evidence_audit.{json,md}`.
+
+The P0 integration blockers are:
+
+1. repair Route E's H3/Cartan selection, because a one-dimensional abelian Lie
+   algebra admits a non-degenerate ad-invariant bilinear form even though its
+   Killing form vanishes;
+2. repair Route B's Majorana-only rule (`X L H_u` is allowed by the displayed
+   post-breaking charges) and include tree-level Kahler/full `N-X` matching;
+3. recover or rerun the evidence for Route-E lanes declared done
+   (DYN-0--DYN-5, DYN-7--DYN-9b and Route-E string-pricing cards
+   `RE-SC3/4/5`, whose paths are under `route_d/`); the current audit is a
+   29-item dynamics P0 existence subset plus 4 core artifacts, not an
+   exhaustive extraction of every path;
+4. freeze one non-supersymmetric `Spin(10)` action before further flavor,
+   amplitude, or proton-decay claims.
+
+All later Route-A/B/C/D/E work should consult `route_f/ROADMAP.md` first to
+avoid repeating toy ledgers or mixing incompatible SUSY/non-SUSY branches.
+
+## Route-E `code_dyn` re-audit
+
+Last updated: 2026-07-13
+
+The 19 Route-E DYN source scripts have now been restored under
+`route_E/code_dyn/`.  Route F was re-audited and synchronized:
+
+- all 19 scripts pass static Python compilation;
+- a historical-layout replay in `/tmp` ran 16 scripts with `219/219` internal
+  checks green;
+- DYN-9b-2 remains blocked by the missing Route-E string card `RE-SC3`,
+  DYN-9b-3 by the missing 9b-2 ledger, and DYN-8 by `RE-SC3/4/5` plus
+  downstream closure (these use historical D3--D5 filenames under `route_d/`,
+  distinct from `RD-D3H/RD-D4M/RD-D5P`);
+- direct execution from `route_E/code_dyn/` is not a valid DAG because the
+  scripts still resolve historical `route_E`, root `route_d`, and root `paper`
+  paths from the moved location;
+- no generated DYN ledger is present in the workspace, and `route_E/` remains
+  untracked, so clean-clone evidence closure is still absent;
+- DYN-5's bilinear-as-Yukawa loop, DYN-4a's unresolved pseudo-profile
+  interval, unflavored DYN-7/9b-3 at `M_1 ~ 2.4e10 GeV`, and DYN-8's stale
+  210-vs-45 branch map prevent promotion of green arithmetic gates to physics
+  conclusions.
+
+Canonical records:
+
+- `route_f/CODE_DYN_REAUDIT.md`;
+- updated `route_f/THEORY_AUDIT.md`;
+- F0-A1--A4 in `route_f/ROADMAP.md`;
+- regenerated `route_f/output/route_e_evidence_audit.{json,md}`.
+
+Status: F0-A advanced from `open` to `in-progress`; source recovery is real,
+but deployment, generated evidence, scientific validation, and string-card
+closure remain open.  Both `route_E/` and `route_f/` are currently untracked,
+so these canonical records describe the present worktree and are not yet
+available in a clean clone.
+
+## Route-E dynamics execution update
+
+Last updated: 2026-07-14.  This section supersedes the path/profile/status
+statements in the 2026-07-13 snapshot immediately above; canonical details are
+in `route_f/ROADMAP.md`.
+
+- **Execution substrate completed:** all recovered scripts now use the shared
+  lowercase path resolver; expensive caches are run-local and keyed by source
+  plus NumPy version.  `route_E/code_dyn/run_route_e_dynamics.py` implements a
+  fail-closed isolated DAG with 19 recovered scripts plus DYN-5V/DYN-7F guards,
+  minimal input snapshots, atomic manifests, SHA-256 chain of custody, and
+  Git/Python/NumPy/BLAS/SciPy provenance.
+- **Isolated replay verified:** DYN-0 -> DYN-4a passes mechanically with
+  literal ledger `all_pass=true`.  Combined DYN-5/DYN-7 guard smoke also
+  passes mechanically, while the manifest correctly sets
+  `physics_promotion_allowed=false`.  The heavy 21-node full replay has not
+  been run.
+- **DYN-4a repaired and narrowed:** `23/23` gates; connected-local candidate
+  `chi2=39.193276` versus benchmark `47.455523`, with root/Hessian/local-stencil
+  convergence.  It is a conditional local profile, not a global-basin theorem
+  or Bayesian posterior.
+- **DYN-5 invalidated, not promoted:** DYN-5V `9/9` establishes
+  `delta Z_tree=|zeta|/3=0.0434773011`, full-6x6/Schur matching, absence of a
+  cubic loop tensor, and the allowed `X L H_u` operator.  Status remains
+  `invalid_pending_rederivation` until an interacting messenger and valid
+  selection sector are supplied.
+- **DYN-7/9b-3 fail closed:** DYN-7F `7/7` places
+  `M1=2.38045e10 GeV` in the tau-resolved regime and repairs the historical
+  Davidson--Ibarra double square root (old bound high by `3.91`).  DYN-7 is
+  `blocked_missing_branch_thermal_inputs`; DYN-9b-3 also needs upstream
+  evidence and flavored kinetics.  Historical unflavored hit fractions are
+  diagnostics only.
+- **Remaining F0-A blockers:** recover/reimplement `RE-SC3/4/5`, run the full
+  DAG from a clean clone, and repair DYN-8's stale 210-vs-45 branch map.  The
+  older statement that the DYN main line was closed is withdrawn.

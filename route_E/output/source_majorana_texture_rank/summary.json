@@ -1,0 +1,225 @@
+{
+  "MR_digest": "562d5ff3e2bec1486d99e1f039eb660e9f4fffd2da39a1701ce2b32ab0691332",
+  "decomposition": {
+    "MR_normalized": [
+      [
+        {
+          "im": -0.37369633816037107,
+          "re": -0.38516446679415584
+        },
+        {
+          "im": -0.05026888555141024,
+          "re": -0.4604457226436996
+        },
+        {
+          "im": 0.1695260580454408,
+          "re": -0.07645481063561532
+        }
+      ],
+      [
+        {
+          "im": -0.05026888555141022,
+          "re": -0.46044572264369965
+        },
+        {
+          "im": 0.21148400144582213,
+          "re": -0.339360205337472
+        },
+        {
+          "im": 0.15360769027005214,
+          "re": 0.04102183906420164
+        }
+      ],
+      [
+        {
+          "im": 0.16952605804544088,
+          "re": -0.07645481063561531
+        },
+        {
+          "im": 0.15360769027005214,
+          "re": 0.04102183906420168
+        },
+        {
+          "im": -0.0013680141573771901,
+          "re": 0.05808977566985232
+        }
+      ]
+    ],
+    "condition_number": 164949.2734578605,
+    "contact_basis": [
+      [
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": 0.5773502691896258
+        }
+      ],
+      [
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": -0.5773502691896258
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        }
+      ],
+      [
+        {
+          "im": 0.0,
+          "re": 0.5773502691896258
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        }
+      ]
+    ],
+    "contact_coefficient": {
+      "im": 0.0736514853303382,
+      "re": 0.10764729490120745
+    },
+    "contact_coefficient_abs": 0.13043190327106532,
+    "contact_fraction": 0.1304275166688152,
+    "contact_projection": [
+      [
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.04252270488168654,
+          "re": 0.062150194688747155
+        }
+      ],
+      [
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": -0.04252270488168654,
+          "re": -0.062150194688747155
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        }
+      ],
+      [
+        {
+          "im": 0.04252270488168654,
+          "re": 0.062150194688747155
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        },
+        {
+          "im": 0.0,
+          "re": 0.0
+        }
+      ]
+    ],
+    "rank_complex_veronese": 5,
+    "rank_complex_veronese_plus_contact": 6,
+    "raw_constraint_M11_minus_2M02": {
+      "im": -0.12756811464505946,
+      "re": -0.18645058406624138
+    },
+    "raw_constraint_abs_over_sqrt3": 0.13043190327106527,
+    "scale_largest_singular_GeV": 3926531008378318.5,
+    "singular_values_GeV": [
+      3926531008378318.5,
+      32203796829930.51,
+      23804475921.995663
+    ],
+    "veronese_constraint_after_projection_abs": 1.5700924586837752e-16,
+    "veronese_only_relative_residual": 0.1304275166688152,
+    "veronese_plus_contact_relative_residual": 2.6873316714356584e-17,
+    "veronese_projection": [
+      [
+        {
+          "im": -0.37369633816037107,
+          "re": -0.38516446679415584
+        },
+        {
+          "im": -0.05026888555141024,
+          "re": -0.4604457226436996
+        },
+        {
+          "im": 0.12700335316375427,
+          "re": -0.13860500532436248
+        }
+      ],
+      [
+        {
+          "im": -0.05026888555141022,
+          "re": -0.46044572264369965
+        },
+        {
+          "im": 0.25400670632750866,
+          "re": -0.27721001064872486
+        },
+        {
+          "im": 0.15360769027005214,
+          "re": 0.04102183906420164
+        }
+      ],
+      [
+        {
+          "im": 0.12700335316375433,
+          "re": -0.13860500532436246
+        },
+        {
+          "im": 0.15360769027005214,
+          "re": 0.04102183906420168
+        },
+        {
+          "im": -0.0013680141573771901,
+          "re": 0.05808977566985232
+        }
+      ]
+    ]
+  },
+  "input_manifest": [
+    {
+      "label": "publication_closure_card",
+      "path": "output/publication_closure_card/publication_closure_card.json",
+      "sha256": "0be55c5f85e279be2d0ffbf1cdf59673f67b070d2a7579bf08842403690ade6d"
+    },
+    {
+      "label": "source_consistent_pmns_replay",
+      "path": "output/source_consistent_pmns_replay/summary.json",
+      "sha256": "c6ca7b72f2474d80283ee4c698c215ccb64ba3400faf2f7e0fbb95774848e4d8"
+    }
+  ],
+  "note": "No web lookup used. Source-consistent Majorana texture rank audit.",
+  "seesaw_residual_recomputed": 5.173995991914203e-12,
+  "source_pmns_pair_digest": "e33901f5bb79ea2d7abdc9fd050f0e91d64fc3f8baddc1b14f815974798febb3",
+  "verdict": {
+    "contact_lift_essential": true,
+    "interpretation": "The source-consistent reconstructed M_R is exactly representable by Veronese_5 plus the orthogonal trace/contact direction, but it is not close to Veronese-only under the 1e-2 contact-fraction criterion.  Thus PMNS compatibility currently relies on a genuine Majorana trace/contact lift and inverse reconstruction; the Majorana sector is not yet a predictive CP1/O(2) texture.",
+    "near_veronese_without_contact": false,
+    "predictive_majorana_texture_closed": false
+  }
+}

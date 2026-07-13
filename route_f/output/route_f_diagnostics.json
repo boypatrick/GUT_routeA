@@ -1,0 +1,45 @@
+{
+  "status": "pass_diagnostic_arithmetic_card",
+  "checks": {
+    "genus_ladder": {
+      "g=0": 3,
+      "g=1": 1,
+      "g=2": 0,
+      "g=3": 0
+    },
+    "abelian_counterexample": {
+      "dimension": 1,
+      "bracket": "zero",
+      "bilinear_form": [
+        [
+          1
+        ]
+      ],
+      "determinant": 1.0,
+      "ad_invariance_residual": 0.0,
+      "nondegenerate_ad_invariant_form_exists": true,
+      "implication": "H3 as ad-invariance alone does not exclude g=1"
+    },
+    "ktr": {
+      "max_abs_K2_minus_I_over_3": 1.1102230246251565e-16,
+      "lambda_squared_minus_zeta": 1.3877787807814457e-17
+    },
+    "messenger_normalization": {
+      "abs_zeta": 0.13043190325293763,
+      "abs_lambda_squared": 0.13043190325293763,
+      "tree_delta_Z_abs_zeta_over_3": 0.043477301084312546,
+      "loop_delta_Z_abs_zeta_over_16pi2": 0.000825969676394408,
+      "tree_to_loop_ratio": 52.637890139143245,
+      "Z_N": 1.0434773010843126,
+      "canonically_normalized_contact_abs_without_retuning": 0.1249973555892413
+    },
+    "longitudinal_unitarity": {
+      "coupling_g": 0.7,
+      "E_over_M_at_abs_Re_a0_equal_half": 7.1617950703742865
+    },
+    "proton_lifetime_mass_sensitivity": {
+      "tau_factor_for_Mx_times_2": 16.0,
+      "tau_factor_for_Mx_times_10": 10000.0
+    }
+  }
+}

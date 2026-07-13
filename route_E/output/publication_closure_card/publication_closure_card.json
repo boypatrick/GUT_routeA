@@ -1,0 +1,524 @@
+{
+  "crossed_projector": {
+    "field_only_unbroken_spin10_projector_possible": false,
+    "future_margin_1e35": 16681174042.182354,
+    "kappa": 30.0,
+    "ps_eft_or_constrained_projector_possible": true
+  },
+  "gates": {
+    "dterm_unitary_lock": true,
+    "endpoint_vectorlike_safe": true,
+    "future_1e35_d5_margin": true,
+    "hidden_radial_lock": true,
+    "loose_mass": true,
+    "post_spin10_source_symmetry": true,
+    "seesaw_residual": true,
+    "strict_ckm": true
+  },
+  "recomputed_observables": {
+    "CKM_abs": [
+      [
+        0.9719917689087001,
+        0.23498621833940433,
+        0.0036712891853226868
+      ],
+      [
+        0.23478577232630224,
+        0.9710990116853022,
+        0.04292261195421018
+      ],
+      [
+        0.010375080090220447,
+        0.041811322561902835,
+        0.9990716545967795
+      ]
+    ],
+    "CKM_observables": {
+      "J": 3.579814638979386e-05,
+      "J_signed": 3.579814638979386e-05,
+      "Vcb": 0.04292261195421018,
+      "Vub": 0.0036712891853226868,
+      "Vus": 0.23498621833940433
+    },
+    "mass_ratios": {
+      "charged_lepton": {
+        "mid": 0.031975129803065855,
+        "small": 0.00030095849147382896
+      },
+      "down": {
+        "mid": 0.035949254181713464,
+        "small": 0.0010275272408099354
+      },
+      "neutrino_dirac": {
+        "mid": 0.1658233822966218,
+        "small": 0.009711969061043156
+      },
+      "up": {
+        "mid": 0.007866405533760145,
+        "small": 1.0007267445499562e-05
+      }
+    },
+    "scores": {
+      "ckm_score": 0.0007634718530717266,
+      "jarlskog_score": 0.003957755805303102,
+      "mass_score": 0.1490597202116622
+    },
+    "seesaw_replay": {
+      "MR_condition_number": 164949.2734578605,
+      "Y_e_singular_values_normalized": [
+        0.00031704623113752543,
+        0.03368436073875241,
+        1.053455011636033
+      ],
+      "heavy_neutrino_masses_GeV": [
+        23804475921.995663,
+        32203796829930.51,
+        3926531008378318.5
+      ],
+      "seesaw_matrix_residual": 5.173995991914203e-12,
+      "theta_norm": 4.358633806693988e-11
+    }
+  },
+  "selected_row": {
+    "Yukawa_fit": {
+      "charged_lepton": [
+        [
+          {
+            "im": -0.06640255861710122,
+            "re": 0.5545541905960267
+          },
+          {
+            "im": -0.37344402331012566,
+            "re": 0.29789728771928836
+          },
+          {
+            "im": -0.20955968582330667,
+            "re": -0.035753519198822255
+          }
+        ],
+        [
+          {
+            "im": -0.3795772776581587,
+            "re": 0.29768944895801225
+          },
+          {
+            "im": -0.4157665700137974,
+            "re": -0.06670948539138323
+          },
+          {
+            "im": -0.08540530494301551,
+            "re": -0.15888232506854455
+          }
+        ],
+        [
+          {
+            "im": -0.20667121907953448,
+            "re": -0.030313433582161254
+          },
+          {
+            "im": -0.08738461613261228,
+            "re": -0.162891631887314
+          },
+          {
+            "im": 0.04067346292012446,
+            "re": -0.059684032397909856
+          }
+        ]
+      ],
+      "down": [
+        [
+          {
+            "im": -0.037804043805616874,
+            "re": 0.5604441549065224
+          },
+          {
+            "im": -0.35969615639977565,
+            "re": 0.3409964322626757
+          },
+          {
+            "im": -0.20692271074919422,
+            "re": -0.008012275452038331
+          }
+        ],
+        [
+          {
+            "im": -0.36273407423448467,
+            "re": 0.33529759539610393
+          },
+          {
+            "im": -0.41506904795953925,
+            "re": -0.011170590117478008
+          },
+          {
+            "im": -0.11400957424707524,
+            "re": -0.1068034195076613
+          }
+        ],
+        [
+          {
+            "im": -0.21011224305819617,
+            "re": -0.0027350960056342554
+          },
+          {
+            "im": -0.11169813834363518,
+            "re": -0.1106933356525934
+          },
+          {
+            "im": -0.019430735838469246,
+            "re": -0.04828202020423398
+          }
+        ]
+      ],
+      "neutrino_dirac": [
+        [
+          {
+            "im": 0.02607475297982268,
+            "re": 0.502798236223418
+          },
+          {
+            "im": -0.22278223658285998,
+            "re": 0.35803236027090524
+          },
+          {
+            "im": -0.17573756824039524,
+            "re": 0.007560976800230067
+          }
+        ],
+        [
+          {
+            "im": -0.28748016624135364,
+            "re": 0.3615730852578729
+          },
+          {
+            "im": -0.313277455416425,
+            "re": 0.06499318866736713
+          },
+          {
+            "im": -0.04880045953672425,
+            "re": 0.01636783307707439
+          }
+        ],
+        [
+          {
+            "im": -0.14138139303661132,
+            "re": 0.05999289681011814
+          },
+          {
+            "im": -0.07369450267250933,
+            "re": -0.02182162260360875
+          },
+          {
+            "im": -0.06828209843504121,
+            "re": 0.059321706569201424
+          }
+        ]
+      ],
+      "up": [
+        [
+          {
+            "im": -0.03666078309885305,
+            "re": 0.5515144414922561
+          },
+          {
+            "im": -0.3640802024318921,
+            "re": 0.31978990186403056
+          },
+          {
+            "im": -0.21601465913079007,
+            "re": -0.017009981647578658
+          }
+        ],
+        [
+          {
+            "im": -0.36712855420286306,
+            "re": 0.3203859586009622
+          },
+          {
+            "im": -0.4293398042535831,
+            "re": -0.03174885078626578
+          },
+          {
+            "im": -0.12152173398760549,
+            "re": -0.14884052589964714
+          }
+        ],
+        [
+          {
+            "im": -0.2140586634354608,
+            "re": -0.014895038446416908
+          },
+          {
+            "im": -0.12302067949568313,
+            "re": -0.15036925314033772
+          },
+          {
+            "im": 0.014398664282501684,
+            "re": -0.08510350573241152
+          }
+        ]
+      ]
+    },
+    "doublet_deformation": {
+      "active_bound_fraction": 0.0,
+      "delta_l2": 0.1927521877896542,
+      "delta_linf": 0.12798411137827947,
+      "relative_to_seed_var_l2": 0.04994976637622676
+    },
+    "label": "all10_radius_0p30_ckmheavy_1",
+    "mixing_coefficients": {
+      "a_d": {
+        "im": -0.20184616520485701,
+        "re": 0.10244462816708523
+      },
+      "a_e": {
+        "im": -0.012105570014810893,
+        "re": 0.22059508002013423
+      },
+      "a_nu": {
+        "im": -0.025890302653372863,
+        "re": 2.3785365258139457
+      },
+      "a_u": {
+        "im": 0.015005573806187989,
+        "re": 0.11027096947072215
+      },
+      "b_d": {
+        "im": -0.0022976673772493903,
+        "re": 0.023326644242809044
+      },
+      "b_e": {
+        "im": -0.06153531948640589,
+        "re": 0.011367451060290794
+      },
+      "b_nu": {
+        "im": -0.06273924797242154,
+        "re": 0.015781273500549652
+      },
+      "b_u": {
+        "im": 0.036138359414390926,
+        "re": 0.00545396904390641
+      },
+      "r_d": {
+        "im": -0.042975074053476656,
+        "re": 1.0380797511517397
+      },
+      "r_u": {
+        "im": -2.0703046481184875,
+        "re": -1.9240178059382291
+      }
+    },
+    "mode": "all10_radius_0p30_ckmheavy"
+  },
+  "source_and_link_status": {
+    "dterm_unitary_link": {
+      "Dflat_fixed_block_moduli_real_dimension": 9,
+      "Dterm_removes_nonunitary_holomorphic_moduli": true,
+      "all_finite_unitary_completions_lock_singular_values": true,
+      "interpretation": "The D-term/Kahler quotient B^dagger B=1 removes the dangerous nonunitary holomorphic moduli.  After imposing the fixed visible block PBP=W_kappa, a 9-real-dimensional family of unitary completions remains because W_kappa sits on the contraction boundary, but every finite sample keeps all singular values equal to one and therefore stays inside the completed-partner mass-locking window.  This is a local quotient derivation of the unitary-link assumption; a microscopic strong-sector origin remains open.",
+      "max_finite_completion_fixed_block_residual": 0.0,
+      "max_finite_completion_unitarity_residual": 1.784571890846933e-15,
+      "previous_holomorphic_nullity_real": 24
+    },
+    "endpoint_vectorlike": {
+      "interpretation": "Gauging the endpoint copy groups with only Q and Qtilde is chiral: SU(4)_L and SU(4)_R have nonzero cubic anomaly proxies.  Adding the conjugate hidden bifundamentals Qc and Qtilde_c makes every hidden copy gauge factor vectorlike.  The one-loop coefficients are b_L=-8, b_H=-4, b_R=-8, so there is no UV Landau obstruction to R=200 at one loop.  Since every endpoint-completion field is a visible Spin(10) singlet, the direct visible threshold vector is zero.  This closes the endpoint anomaly/beta bookkeeping conditionally, while preserving the previously audited radial unitary-link geometry.",
+      "radial_lock_geometry_retained": true,
+      "raw_endpoint_gauging_is_anomalous": true,
+      "residual_unitary_completion_moduli": 9,
+      "vectorlike_completion_beta_safe_to_R200": true,
+      "vectorlike_completion_cancels_all_hidden_cubic_anomalies": true,
+      "vectorlike_completion_visible_threshold_vector": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "hidden_radial_lock": {
+      "all_finite_samples_Dflat_unitary_and_locked": true,
+      "combined_D_rank": 32,
+      "fixed_block_rank_on_residual_link": 7,
+      "hidden_SU4H_beta_b": -8.0,
+      "hidden_gauge_orbit_rank": 16,
+      "interpretation": "Endpoint/radial moment maps reduce the two hidden bifundamental matrices to U(4)xU(4); quotienting the hidden U(4)_H frame leaves a 16-real-dimensional unitary meson link.  The visible fixed block has rank 7 on this link and leaves the already-known 9 real unitary completion moduli.  Since all radial-lock fields are visible Spin(10) singlets, the direct visible threshold vector is zero.  This dynamically realizes the D-term/Kahler lock at the finite rank level, but a fully propagating endpoint-gauge construction would still require a vectorlike/anomaly completion of the hidden copy groups.",
+      "max_D_residual_2norm": 2.220796540705928e-15,
+      "max_abs_log_singular": 1.221245327087673e-15,
+      "quantum_deformed_moduli_compatibility": true,
+      "radial_Dterms_remove_nonunitary_modes": true,
+      "residual_after_fixed_block": 9,
+      "residual_after_radial_D_and_hidden_quotient": 16,
+      "visible_threshold_vector": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "source_symmetry": {
+      "best_ckm_score": 0.0007634718530717266,
+      "best_d5_margin": 16681174042.182354,
+      "best_mass_score": 0.1490597202116622,
+      "best_seesaw_residual": 5.173995991914203e-12,
+      "complete_partner_threshold_safe": true,
+      "completed_partner_percent_lock_window": 0.22192731365078266,
+      "constrained_source_threshold_silent": true,
+      "field_only_spin10_no_go_reused": true,
+      "holomorphic_link_nullity_real": 24,
+      "inert_grading_decouples_doublets": true,
+      "interpretation": "A post-Spin(10) PS fragment/source grading can consistently allow the crossed 120_A/120_B triplet source, the finite-lift reverse entry, the physical doublet Yukawa/mixing sector used by the CKM refit, and inert threshold-completing doublets, while forbidding wrong triplet Yukawas, same-source bare triplet masses, inert Yukawas, and triplet-doublet off-block mixing.  This upgrades the crossed projector from a naked imposed matrix to a conditional constrained-source selection rule.  It is still not an unconditional Spin(10) derivation because the selection is post-breaking/spurion-assisted and the holomorphic link requires an NLSM/D-term or composite unitarity constraint.",
+      "link_holomorphic_constraints_derive_block": true,
+      "local_ckm_d5_closure_survives": true,
+      "nlsm_or_dterm_unitarity_required": true,
+      "operator_ledger_passes": true,
+      "post_spin10_source_symmetry_branch_viable": true,
+      "publication_complete": false,
+      "triplet_projector_realized_by_ps_source_action": true
+    }
+  },
+  "triplet_tensor_source": {
+    "interpretation": "The source-consistent H,F,G_A,G_B tensors are included so channel-specific d=5 proton tables can be rebuilt from the publication card instead of an implicit older scan artifact.  The physical crossed projector remains a post-Spin(10) source-sector assumption.",
+    "model_data": {
+      "F_coefficients": [
+        {
+          "im": 0.005168446448441684,
+          "re": 0.0008433029146124874
+        },
+        {
+          "im": 0.0042995886420141875,
+          "re": 0.010066032163321926
+        },
+        {
+          "im": 0.0005471836684944613,
+          "re": 0.012171282296310756
+        },
+        {
+          "im": -0.006158264030253641,
+          "re": 0.01349065866551468
+        },
+        {
+          "im": -0.010685872334657107,
+          "re": 0.0024890820583095895
+        }
+      ],
+      "G_A_coefficients": [
+        {
+          "im": 0.013616938608837182,
+          "re": -0.0008991566951378125
+        },
+        {
+          "im": -0.007334294015904188,
+          "re": -0.010915668162947957
+        },
+        {
+          "im": 0.005339201750491284,
+          "re": 0.007936774185671696
+        }
+      ],
+      "G_B_coefficients": [
+        {
+          "im": -5.442289483218233e-08,
+          "re": 0.000999368079346774
+        },
+        {
+          "im": -0.0010003867610740094,
+          "re": 3.820467355465091e-07
+        },
+        {
+          "im": 0.0010009159282821257,
+          "re": 0.0010005707531764963
+        }
+      ],
+      "H_coefficients": [
+        {
+          "im": -0.015635257432736114,
+          "re": 0.4019968650342579
+        },
+        {
+          "im": -0.3562686143896506,
+          "re": 0.34786807045473883
+        },
+        {
+          "im": -0.36590397512253503,
+          "re": -0.006745196757580341
+        },
+        {
+          "im": -0.11280400482679254,
+          "re": -0.118991649861217
+        },
+        {
+          "im": -0.004674519782038999,
+          "re": -0.03652035861613452
+        }
+      ],
+      "epsilon_F": {
+        "im": 0.00020968574791295036,
+        "re": 2.1813335183086706e-05
+      },
+      "epsilon_F_abs": 0.00021081730116293362,
+      "epsilon_H": {
+        "im": 0.0008720963571307789,
+        "re": -0.00030197974139227224
+      },
+      "epsilon_H_abs": 0.0009228996805352783,
+      "mixing_coefficients": {
+        "a_d": {
+          "im": -0.20867118714499258,
+          "re": 0.11021207445792676
+        },
+        "a_e": {
+          "im": -0.021638237489268766,
+          "re": 0.09261096864185474
+        },
+        "a_nu": {
+          "im": -0.03204423895304005,
+          "re": 2.3758731638566175
+        },
+        "a_u": {
+          "im": 0.01589190801741633,
+          "re": 0.11668847148842391
+        },
+        "b_d": {
+          "im": 1.3116139062299857e-05,
+          "re": 5.814859288185184e-06
+        },
+        "b_e": {
+          "im": -8.899673148422946e-06,
+          "re": 3.369356268638973e-06
+        },
+        "b_nu": {
+          "im": 1.20264171468862e-06,
+          "re": -2.9777236528547123e-06
+        },
+        "b_u": {
+          "im": 2.4329092001884955e-05,
+          "re": -3.6259115534434334e-05
+        },
+        "r_d": {
+          "im": -0.028074336612256084,
+          "re": 1.0369737814771804
+        },
+        "r_u": {
+          "im": -2.0141647592460514,
+          "re": -2.008457693472007
+        }
+      },
+      "norms": {
+        "F_contact_relative": 0.0062308616259576,
+        "F_geo_fro": 0.03383437377018204,
+        "H_contact_relative": 0.0009095716693828809,
+        "H_geo_fro": 1.014653063195603,
+        "parameter_l2": 3.932469529165054
+      }
+    },
+    "source": "output/two_kernel_flavor_then_d5/summary.json::matrix_cards.d5_both_F_minus_0",
+    "source_best_triplet_profile": {
+      "amplitude": 0.002045162912244766,
+      "amplitude_ratio_to_baseline": 0.9135571353837696,
+      "future_margin_1e35": 0.32007203092458025,
+      "profile": "F_quarter_phase",
+      "selected_index": "0012"
+    }
+  },
+  "verdict": {
+    "interpretation": "The source-consistent crossed-120 row closes the local strict CKM, mass, seesaw, and 1e35 yr d=5 stress gates when paired with the post-Spin(10) source projector and unitary/radial/endpoint completion audits.  This supersedes the older full_flavor_d5_pipeline bottleneck for the local branch, but it is still not a publication-final proof because the full channel table and final unified phenomenology input manifest are not yet rebuilt around this card.",
+    "local_source_consistent_candidate_passes": true,
+    "publication_level_complete": false
+  }
+}

@@ -1,0 +1,7 @@
+quantity,value
+veronese_only_relative_residual,0.1304275166688152
+contact_fraction,0.1304275166688152
+veronese_plus_contact_relative_residual,2.6873316714356584e-17
+contact_coefficient_abs,0.13043190327106532
+condition_number,164949.2734578605
+seesaw_residual_recomputed,5.173995991914203e-12

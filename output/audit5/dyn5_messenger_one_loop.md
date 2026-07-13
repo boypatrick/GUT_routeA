@@ -1,6 +1,12 @@
-# DYN-5: hidden-messenger dynamics at one loop
+# DYN-5: historical one-loop regression (invalid claim)
 
 21/21 checks pass.
+
+**Scientific status: `invalid_pending_rederivation`.**  These checks
+only reproduce the old arithmetic.  The displayed action is quadratic,
+so it does not generate the asserted Yukawa anomalous dimension; the
+displayed R charges also allow `X L H_u`.  Use
+`audit5_dyn5_model_validity.py` for the fail-closed replacement.
 
 ## Result
 
@@ -24,8 +30,8 @@ with one structural sharpening and one disclosed non-silence:
    validity range.**  Residual is O(deltaZ^2); it crosses the loose
    contact-sensitivity window at `deltaZ = 1.13e-02`
    (ln M ratio ~ 13.7) and the refreshed
-   window at `deltaZ = 2.00e-03`
-   (ln M ratio ~ 2.4).  Beyond that the
+   window at `deltaZ = 5.38e-03`
+   (ln M ratio ~ 6.5).  Beyond that the
    exact A-form must be used.
 4. **The heavy sector is NOT silent** (disclosed): `M_R` singular
    values, `M_1` (leptogenesis input) and `M_*` rescale by
@@ -45,7 +51,7 @@ with one structural sharpening and one disclosed non-silence:
    spurions (constant-W/gravitino type, `r_s = -2`) preserve a
    residual `(-1)^R` parity so all ODD decorations stay absent to all
    orders; odd-R spurions are the dangerous case.  Order-estimate
-   ceilings: `eps_odd_loose = 1.4e-02`, `eps_odd_tight = 4.4e-04`, `eps_even_loose = 5.1e-03`, `eps_even_tight = 1.6e-04`
+   ceilings: `eps_odd_loose = 1.4e-02`, `eps_odd_tight = 3.2e-03`, `eps_even_loose = 5.1e-03`, `eps_even_tight = 1.2e-03`
 
 ## Boundary (NOT claimed)
 

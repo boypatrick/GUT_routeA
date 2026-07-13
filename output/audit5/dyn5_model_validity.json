@@ -1,0 +1,105 @@
+{
+  "audit": "audit5_dyn5_model_validity",
+  "dyn_item": "DYN-5",
+  "created_utc": "2026-07-13T16:35:39+00:00",
+  "all_pass": true,
+  "checks_passed": 9,
+  "checks_total": 9,
+  "checks": [
+    {
+      "name": "K_tr^dagger K_tr = I/3",
+      "pass": true,
+      "detail": "residual=1.923e-16"
+    },
+    {
+      "name": "tree Kahler correction is delta Z_N = |zeta|/3",
+      "pass": true,
+      "detail": "deltaZ_tree=0.043477301084"
+    },
+    {
+      "name": "tree correction is 16 pi^2/3 times the historical putative loop coefficient",
+      "pass": true,
+      "detail": "ratio=52.637890139"
+    },
+    {
+      "name": "NN block of the full inverse equals the Schur-complement inverse",
+      "pass": true,
+      "detail": "max relative residual=4.487e-16"
+    },
+    {
+      "name": "full and Schur-complement Weinberg tensors agree at zero momentum",
+      "pass": true,
+      "detail": "max relative residual=7.147e-16"
+    },
+    {
+      "name": "consistent canonical normalization leaves Y M^-1 Y^T invariant",
+      "pass": true,
+      "detail": "relative residual=4.063e-16"
+    },
+    {
+      "name": "displayed action has no cubic messenger tensor",
+      "pass": true,
+      "detail": "W is quadratic; the claimed |lambda|^2/(16 pi^2) anomalous dimension is undefined"
+    },
+    {
+      "name": "the displayed R charges allow the dangerous X L H_u operator",
+      "pass": true,
+      "detail": "R(XLH_u)=2=R(W)"
+    },
+    {
+      "name": "one additive Abelian charge cannot allow XN, XX, LNH_u while forbidding XLH_u",
+      "pass": true,
+      "detail": "q(XLH)=2 q_X=w follows algebraically (also modulo n)"
+    }
+  ],
+  "claim_status": "invalid_pending_rederivation",
+  "physics_claim_valid": false,
+  "blockers": [
+    "no cubic or gauge messenger interaction is specified, so the one-loop anomalous dimension does not exist in the displayed model",
+    "the displayed post-B-L R charges allow X L H_u",
+    "a full branch-local action and an operator-complete selection rule are required"
+  ],
+  "tree_matching": {
+    "abs_zeta": 0.13043190325293763,
+    "delta_Z_tree": 0.043477301084312546,
+    "Z_N": 1.0434773010843126,
+    "contact_abs_before": 0.13043190325293763,
+    "contact_abs_after_without_retuning": 0.1249973555892413,
+    "contact_shift_fraction_without_retuning": -0.04166578519641384,
+    "putative_loop_per_efold_not_generated_by_displayed_action": 0.000825969676394408,
+    "tree_to_putative_loop_ratio": 52.637890139143245
+  },
+  "full_system_validation": {
+    "mass_matrix": "[[M_V, lambda I], [lambda I, -K_tr^-1]]",
+    "schur_complement": "M_V + lambda^2 K_tr",
+    "random_trials": 200,
+    "minimum_singular_value_seen": 0.9026491816364919,
+    "max_NN_inverse_relative_residual": 4.487300452359965e-16,
+    "max_Weinberg_tensor_relative_residual": 7.147135374173674e-16,
+    "canonical_Weinberg_tensor_relative_residual": 4.0628488875575195e-16
+  },
+  "loop_gate": {
+    "displayed_superpotential_degree": 2,
+    "cubic_tensor_norm": 0.0,
+    "status": "blocked_model_not_specified",
+    "minimum_repair": "supply an explicit interacting messenger action, e.g. a fully charged S X N sector, before computing gamma_N"
+  },
+  "selection_rule_gate": {
+    "displayed_R_charges": {
+      "X": 1,
+      "N": 1,
+      "L": 1,
+      "H_u": 0,
+      "W": 2
+    },
+    "operator_R_charges": {
+      "XN": 2,
+      "XX": 2,
+      "LNH_u": 2,
+      "XLH_u": 2
+    },
+    "XLH_u_allowed": true,
+    "single_additive_abelian_no_go": true
+  },
+  "zeta_value_derived": false
+}

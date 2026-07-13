@@ -36,43 +36,61 @@ backups/
 !/output/audit1/**
 !/output/audit1b/
 !/output/audit1b/**
+!/output/audit2/
+!/output/audit2/**
+!/output/audit3/
+!/output/audit3/**
 !/output/audit4a/
 !/output/audit4a/**
 !/output/audit4a1/
 !/output/audit4a1/**
-
-# Whitelist for the dynamics-lane DYN-0 ledgers.
 !/output/audit0/
 !/output/audit0/**
-
-# Whitelist for the dynamics-lane DYN-2 ledgers.
-!/output/audit3/
-!/output/audit3/**
-
-# Archival restored outputs under route_E/output/ are user-managed data,
-# referenced by sha256 in the DYN ledgers; only top-level route_E ledgers are tracked.
-/route_E/output/*/
-# Archival restored code under route_E/code/ (user-managed); only the two route-E verifiers are tracked.
-/route_E/code/*
-!/route_E/code/verify_route_e_first_principles.py
-!/route_E/code/verify_route_e_dependency_closure.py
-
-# Whitelist for the dynamics-lane DYN-7 ledgers (cosmology lane).
+!/output/audit5/
+!/output/audit5/**
 !/output/audit7/
 !/output/audit7/**
-
-# Whitelist for the dynamics-lane DYN-3 ledgers.
-!/output/audit2/
-!/output/audit2/**
-
-# Whitelist for the dynamics-lane DYN-9 ledgers (non-SUSY variant lane).
+!/output/audit8/
+!/output/audit8/**
 !/output/audit9/
 !/output/audit9/**
 
-# Whitelist for the dynamics-lane DYN-5 ledgers (messenger one-loop lane).
-!/output/audit5/
-!/output/audit5/**
-
-# Whitelist for the DYN-8 falsifiability-collection ledgers.
-!/output/audit8/
-!/output/audit8/**
+# Route-E reproducibility: track sources and only the compact evidence lanes.
+/route_E/.DS_Store
+/route_E/code/.DS_Store
+/route_E/tmp/
+/route_E/tex/*.pdf
+/route_E/tex/*.bbl
+/route_E/output/*
+!/route_E/output/route_e_first_principles.json
+!/route_E/output/route_e_first_principles.md
+!/route_E/output/route_e_dependency_closure.json
+!/route_E/output/route_e_dependency_closure.md
+!/route_E/output/audit0/
+!/route_E/output/audit0/**
+!/route_E/output/audit1/
+!/route_E/output/audit1/**
+!/route_E/output/audit2/
+!/route_E/output/audit2/**
+!/route_E/output/audit3/
+!/route_E/output/audit3/**
+!/route_E/output/audit4a/
+!/route_E/output/audit4a/**
+!/route_E/output/audit4a1/
+!/route_E/output/audit4a1/**
+!/route_E/output/audit5/
+!/route_E/output/audit5/**
+!/route_E/output/audit7/
+!/route_E/output/audit7/**
+!/route_E/output/audit8/
+!/route_E/output/audit8/**
+!/route_E/output/audit9/
+!/route_E/output/audit9/**
+!/route_E/output/publication_closure_card/
+!/route_E/output/publication_closure_card/**
+!/route_E/output/source_majorana_texture_rank/
+!/route_E/output/source_majorana_texture_rank/**
+!/route_E/output/full_knu_width/
+!/route_E/output/full_knu_width/**
+!/route_E/output/knu_target_map/
+!/route_E/output/knu_target_map/**

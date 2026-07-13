@@ -1,0 +1,85 @@
+{
+  "audit": "audit7_dyn7_flavor_regime_gate",
+  "created_utc": "2026-07-13T16:47:27+00:00",
+  "all_pass": true,
+  "checks_passed": 7,
+  "checks_total": 7,
+  "checks": [
+    {
+      "name": "DYN-4a exports a positive hierarchical heavy-neutrino spectrum",
+      "pass": true,
+      "detail": "M1=2.380448e+10 GeV"
+    },
+    {
+      "name": "the non-SUSY benchmark lies in the tau-resolved two-flavor regime",
+      "pass": true,
+      "detail": "classifier=two_flavor_tau_resolved"
+    },
+    {
+      "name": "MSSM flavor certification fails closed when branch-local thermal inputs are absent",
+      "pass": true,
+      "detail": "missing=tan_beta,charged_lepton_thermal_rates,spectator_matrix"
+    },
+    {
+      "name": "light masses are extracted with one square root, not two",
+      "pass": true,
+      "detail": "m3=5.017967716118e-02 eV"
+    },
+    {
+      "name": "corrected SUSY Davidson-Ibarra central bound is reproduced",
+      "pass": true,
+      "detail": "epsilon_DI_SUSY=1.397415940654e-05"
+    },
+    {
+      "name": "historical double-square-root bound was overestimated by about 3.91",
+      "pass": true,
+      "detail": "factor=3.91188886"
+    },
+    {
+      "name": "neither historical unflavored scan is promoted to a physical posterior",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "input": {
+    "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
+    "M1_GeV": 23804475922.198605
+  },
+  "regime_boundaries_GeV": {
+    "three_to_two_flavor": 1000000000.0,
+    "two_to_unflavored": 1000000000000.0,
+    "note": "order-of-magnitude SM classifier; density-matrix interpolation required near transitions"
+  },
+  "davidson_ibarra_repair": {
+    "m1_eV": 0.001,
+    "m3_eV": 0.050179677161177515,
+    "delta_m_eV": 0.049179677161177514,
+    "epsilon_DI_SUSY_vu100": 1.3974159406539804e-05,
+    "epsilon_DI_SM_v174": 2.3077948550898078e-06,
+    "historical_double_sqrt_overestimate_factor": 3.9118888594264196
+  },
+  "mssm_inputs": {
+    "tan_beta": null,
+    "charged_lepton_thermal_rates": null,
+    "spectator_matrix": null,
+    "initial_N1_abundance": "assumed_thermal_in_historical_scan"
+  },
+  "statuses": {
+    "DYN-7": {
+      "claim_status": "blocked_missing_branch_thermal_inputs",
+      "historical_unflavored_scan_role": "order_estimate_diagnostic_only",
+      "success_probability_publishable": false,
+      "arg_zeta_conditioned_interval_publishable": false,
+      "required_repair": "supply tan(beta), branch-local charged-lepton and spectator rates, then solve at least the two-flavor kinetic system; density matrix preferred"
+    },
+    "DYN-9b-3": {
+      "claim_status": "blocked_requires_two_flavor",
+      "sm_regime": "two_flavor_tau_resolved",
+      "historical_unflavored_scan_role": "order_estimate_diagnostic_only",
+      "success_probability_publishable": false,
+      "arg_zeta_conditioned_interval_publishable": false,
+      "required_repair": "solve tau-resolved two-flavor Boltzmann or density-matrix equations with spectator effects and branch-local rates"
+    }
+  },
+  "physics_claims_closed": false
+}
