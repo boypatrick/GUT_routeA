@@ -1,6 +1,32 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-05-07
+Last updated: 2026-07-14
+
+## Route-E relationship checkpoint (2026-07-14)
+
+The new reversible derivation ledger is
+`route_f/tex/another_physics_route_e_derivation_ledger.tex`; the canonical
+research order and promotion gates are in `route_f/ROADMAP.md` F0-D.
+
+- **Exact:** on the H3+-selected CP1/O(2) branch,
+  `B(x,x) = 2 Delta = 2 sqrt(3) x^T K_tr x` in Route-E spherical
+  coordinates, so two distinct centers are
+  equivalent to a non-null Killing/contact norm.  The Hopf moment map gives a
+  bounded charge/orientation polarity without introducing negative energy.
+- **No-go:** an exactly U(1)-invariant Q-ball phase cannot modulate an
+  invariant observable, and Route E's absolute `zeta` phase is removable.
+  Any measurable phase must compare two independent structures.
+- **Conditional bridge:** a sextic Q-ball plus an explicit messenger sector
+  can yield `zeta_eff = g^2 Phi^2/Lambda^2`, but this is not yet a completed
+  theory.  Stability, charge leakage, operator selection, canonical/full-6x6
+  matching, H3+ origin, and integrated Route-E fits remain open.
+- **Numerical status:** the bridge verifier passes `22/22` checks and
+  deliberately sets `physics_promotion_allowed=false`.
+
+Research proceeds in AP-E1--AP-E10 order: projective-doublet action,
+discriminant regression, geometric quantization, chiral zero modes, exact
+Q-ball solution, messenger realization, physical-phase quotient, H3+ origin,
+integrated phenomenology, and an independent gravity track.
 
 ## Current status
 

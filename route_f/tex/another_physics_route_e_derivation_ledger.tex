@@ -1,0 +1,1129 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm}
+\usepackage{bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\numberwithin{equation}{section}
+\setlist{nosep,leftmargin=*}
+\setlength{\emergencystretch}{2em}
+
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\sltwo}{\mathfrak{sl}_2(\mathbb C)}
+\newcommand{\Ktr}{K_{\mathrm{tr}}}
+\newcommand{\GeV}{\,\mathrm{GeV}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\divisor}{\operatorname{div}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\status}[1]{\textsf{#1}}
+
+\definecolor{darkgreen}{RGB}{0,105,55}
+\definecolor{darkred}{RGB}{150,25,25}
+\definecolor{darkblue}{RGB}{20,65,140}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Bridge axiom}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{gate}[theorem]{Promotion gate}
+
+\title{Another Physics and Route E:\
+First-Principles Separation Theorems, an Exact
+Discriminant--Killing Bridge, and a Reversible Research Ledger}
+\author{Route F research note}
+\date{14 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This ledger asks which parts of the manuscript \emph{Another physics} can be
+connected to Route E without confusing an algebraic resemblance with a
+physical derivation.  The literal identification of local energy density with
+time, phase-dependent disappearance of invariant mass, fundamental negative
+energy, and indestructible entanglement is ruled out under ordinary local,
+positive-energy relativistic quantum theory.  A conditional complex-scalar
+completion does support finite-charge Q-balls, but its internal phase is not
+itself an observable clock.
+
+The strongest exact connection is new but elementary.  On Route E's
+H3$^+$-conditional branch,
+\(H^0(\CP^1,T_{\CP^1})\simeq H^0(\CP^1,\cO(2))\simeq\sltwo\).
+For a binary quadratic, its discriminant simultaneously detects two distinct
+zeros, a regular-semisimple M\"obius flow, a nonzero Killing norm, and a
+nonzero Route-E second-transvectant contact.  Thus the two-center divisor and
+\(\Ktr\) are not merely parallel observations: they are two readings of the
+same invariant.  A Fubini--Study moment map can further label the two fixed
+points by opposite bounded charges without introducing negative Hamiltonian
+energy.
+
+A candidate action-level bridge makes the Route-E messenger mixing depend on
+a Q-ball field, \(\lambda(\Phi)=g\Phi/\Lambda\), giving
+\(\zeta_{\rm eff}=g^2\Phi^2/\Lambda^2\) and hence the same weight-two phase
+law as Route E.  This is explicitly a bridge axiom, not a promoted result: an
+exact Q-ball \(U(1)\) makes every invariant observable stationary, while an
+observable phase modulation requires relative-phase breaking and therefore
+reopens charge leakage and soliton stability.  All claims are classified,
+derived, and tied to a reproducible numerical ledger; no physics promotion is
+authorized by the present note.
+\end{abstract}
+
+\tableofcontents
+
+\section{Provenance, scope, and logical contract}
+
+The source under review is the 15-page file
+\texttt{Another physics.pdf}, supplied from the local Downloads directory,
+with PDF metadata title
+\texttt{Another physics\_20230910.docx} and SHA-256
+\begin{center}
+\small\texttt{7355cf2237513a6e943555ac2720871a5e81915fd770541baea9d87eccf2654e}.
+\end{center}
+The Route-E reference state for this ledger is repository commit
+\begin{center}
+\small\texttt{e7ba020227853a3b731235b5f3a42083559e7ef2}.
+\end{center}
+The governing Route-E sources are \path{route_E/tex/route_e_first_principles.tex},
+\path{route_E/tex/three_families_killing_contact.tex}, and the canonical
+dynamics registry \path{route_E/code_dyn/dyn_claim_registry.json}.
+
+Four logical labels are used throughout.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                  >{\raggedright\arraybackslash}p{0.72\textwidth}}
+\toprule
+Label & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Label & Meaning \\
+\midrule
+\endhead
+\status{theorem} & Consequence of explicitly stated mathematical or physical
+assumptions, with a proof in this ledger or an identified Route-E proof.\\
+\status{conditional completion} & A consistent model after a new action,
+field content, or boundary condition has been chosen.  It does not derive
+that choice from the source manuscript.\\
+\status{bridge axiom} & An identification between objects belonging to two
+different models.  Similar degree, phase, or dimension is not a proof of the
+identification.\\
+\status{numerical check} & Reproducible arithmetic within a declared
+approximation.  It corroborates formulas but cannot promote a bridge axiom.\\
+\bottomrule
+\end{longtable}
+
+\begin{gate}[Non-promotion]
+The machine card may be green only with the non-promoting status
+\path{mechanical_separation_checks_pass_no_physics_promotion}.  Its Boolean
+field \path{physics_promotion_allowed} must remain \texttt{false}
+until an action-level embedding, stability analysis, and all affected Route-E
+phenomenology gates pass.
+\end{gate}
+
+\section{Covariant dictionary and literal-theory boundary}
+
+The source concepts are useful only after observer, sign, and conservation
+laws are made explicit.  We use metric signature \((-+++ )\).  For an
+observer with unit timelike four-velocity \(u^\mu\), the local measured energy
+density is
+\begin{equation}
+ E_d(x;u):=T_{\mu\nu}(x)u^\mu u^\nu.
+ \label{eq:Ed}
+\end{equation}
+This is a scalar after \(u\) is specified, but it is not an observer-independent
+replacement for spacetime or proper time.  A viable information variable is
+instead a Noether charge, an entropy/correlation functional, or an order
+parameter.  In the Q-ball completion below it is
+\begin{equation}
+ E_i\quad\rightsquigarrow\quad Q_I=\int_\Sigma \dd\Sigma_\mu\,j_I^\mu,
+ \qquad \nabla_\mu j_I^\mu=0.
+ \label{eq:EiQ}
+\end{equation}
+The symbols \(E_p,E_n\) will later be reinterpreted as bounded moment-map
+polarities \(\mu=+1,-1\), not as positive and negative Hamiltonian energies.
+
+\subsection{Local density cannot determine clock rate}
+
+\begin{theorem}[Local-density time no-go]
+No function of the pointwise scalar \(E_d(x;u)\) alone can reproduce the
+gravitational clock rate in all solutions of general relativity.
+\end{theorem}
+
+\begin{proof}
+Consider a static thin spherical shell of mass \(M\) and radius \(R>2GM/c^2\).
+The vacuum interior is flat but its lapse is fixed by matching to the exterior:
+\begin{equation}
+ \dd s^2_{r<R}
+ =-\left(1-\frac{2GM}{Rc^2}\right)c^2\dd t^2
+ +\dd r^2+r^2\dd\Omega^2.
+ \label{eq:shellmetric}
+\end{equation}
+Both the shell interior and spatial infinity have \(T_{\mu\nu}=0\), hence
+\(E_d=0\), but stationary clocks obey
+\begin{equation}
+ \frac{\dd\tau_{\rm in}}{\dd t_\infty}
+ =\sqrt{1-\frac{2GM}{Rc^2}}\ne1.
+ \label{eq:shellclock}
+\end{equation}
+Two points with the same local density therefore have different clock rates.
+The missing datum is the nonlocal metric solution/boundary condition, not a
+different definition of local energy density.
+\end{proof}
+
+For Earth-scale numbers, \(GM/(Rc^2)=6.9613\times10^{-10}\), corresponding at
+leading order to about \(60.15\,\mu\mathrm{s}\) per day.  In the laboratory
+weak-field limit,
+\begin{equation}
+ \frac{\Delta\nu}{\nu}=\frac{g\Delta h}{c^2}
+ =1.091\times10^{-18}\left(\frac{\Delta h}{1\,\mathrm{cm}}\right).
+ \label{eq:clockweak}
+\end{equation}
+This scale has been directly tested by a centimeter atomic-clock network
+\cite{Zheng2023} and is an immediate constraint on any replacement for metric
+proper time.
+
+The same local \(E_d\) can also curve spacetime differently because pressure
+matters.  Tracing
+\begin{equation}
+ G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}
+\end{equation}
+and using \(T=-\varepsilon+3p\) gives
+\begin{equation}
+ R=4\Lambda+\frac{8\pi G}{c^4}(\varepsilon-3p).
+ \label{eq:RicciTrace}
+\end{equation}
+Dust and radiation may have the same \(\varepsilon\), but \(p=0\) and
+\(p=\varepsilon/3\) give different Ricci scalars.  A density-only clock or
+gravity law therefore discards essential stress data.
+
+\subsection{Mass, energy sign, and entanglement}
+
+\begin{theorem}[Phase-toggle no-go in a fixed particle representation]
+For a stable one-particle irreducible representation of the Poincar\'e group,
+the rest mass cannot alternate between \(m\ne0\) and \(m=0\) as an unobserved
+internal phase changes while the state remains in that representation.
+\end{theorem}
+
+\begin{proof}
+The mass is fixed by the Casimir
+\begin{equation}
+ P_\mu P^\mu=-m^2c^2.
+ \label{eq:casimir}
+\end{equation}
+It commutes with the representation.  If a phase trajectory changed the
+eigenvalue from \(-m^2c^2\) to zero, it would leave the massive irreducible
+representation and enter a massless one.  A periodic \emph{coupling}, spectral
+weight, quasiparticle gap, or detector response may vanish; invariant rest
+mass in a fixed representation may not.
+\end{proof}
+
+Likewise, a literal independent negative-energy oscillator,
+\begin{equation}
+ H=\omega a^\dagger a-\Omega b^\dagger b,
+\end{equation}
+has \(\inf\operatorname{spec}H=-\infty\), since
+\(\langle n_b|H|n_b\rangle=-n_b\Omega\).  A stable completion must reinterpret
+the sign as charge, orientation, a hole relative to a filled state, or an
+effective-medium variable; it cannot be a freely excitable fundamental
+negative-energy sector.
+
+Entanglement is not indestructible either.  For
+\begin{equation}
+ \rho_p=(1-p)|\Phi^+\rangle\langle\Phi^+|+\frac p4 I_4,
+ \qquad |\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2},
+\end{equation}
+the partial transpose eigenvalues are
+\begin{equation}
+ \operatorname{spec}(\rho_p^{T_B})
+ =\left\{\frac{2-p}{4},\frac{2-p}{4},\frac{2-p}{4},
+ \frac{-2+3p}{4}\right\}.
+ \label{eq:bellpt}
+\end{equation}
+For \(p\ge2/3\) the state is PPT and, in \(2\times2\), separable.  What is
+forbidden is superluminal signalling, not dynamical loss of entanglement.
+
+\subsection{Other immediate separation results}
+
+For a massive electron of finite Lorentz factor \(\gamma\),
+\begin{equation}
+ \beta:=\frac vc=\sqrt{1-\gamma^{-2}}<1.
+\end{equation}
+Magnetism is encoded in the gauge curvature
+\(F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu\), not in electrons moving
+exactly at \(c\).  Event-horizon escape is similarly excluded by causal
+structure; jets must be launched outside the horizon.
+
+If a proposed galactic potential is parabolic, \(\Phi_N(r)=a r^2\), then
+\begin{equation}
+ \frac{v_c^2}{r}=\frac{\dd\Phi_N}{\dd r}=2ar
+ \quad\Longrightarrow\quad v_c=\sqrt{2a}\,r,
+\end{equation}
+which is solid-body rotation, not an asymptotically flat curve.  A concrete
+modified-gravity alternative must fit both dynamics and lensing; recent weak
+lensing reaches far beyond classical rotation-curve radii \cite{Mistele2024}.
+Finally a decay half-life alone supplies no force.  Only momentum flux does;
+for perfectly absorbed radiation
+\begin{equation}
+ F=\frac Pc=3.3356\,\mathrm{nN}\left(\frac P{1\,\mathrm W}\right).
+\end{equation}
+
+\section{The Route-E theorem boundary imported into Route F}
+
+Route E assumes a self-carried family space
+\begin{equation}
+ V=H^0(\Sigma,L),\qquad L\simeq T_\Sigma,
+ \qquad V\simeq H^0(\Sigma,T_\Sigma)=\mathfrak{aut}(\Sigma).
+ \label{eq:selfcarried}
+\end{equation}
+The original invariant-contact hypothesis H3 requires a nondegenerate
+symmetric invariant bilinear form.  It gives only \(N_{\rm fam}\le3\), since
+the genus-one one-dimensional Abelian algebra admits such a form.  The exact
+selection \(N_{\rm fam}=3\) requires the explicit stronger hypothesis H3$^+$:
+the contact is the nondegenerate adjoint-trace/Killing form.  On that selected
+branch,
+\begin{equation}
+ \Sigma\simeq\CP^1,\qquad T_{\CP^1}\simeq\cO(2),\qquad
+ V\simeq\sltwo,\qquad \dim_{\mathbb C}V=3.
+ \label{eq:routeEbranch}
+\end{equation}
+Thus every result below that invokes this branch is conditional on H3$^+$;
+the subsequent algebra needs no additional physical axiom once the branch is
+chosen.
+
+Riemann--Roch and Serre duality give the dimension transparently:
+\begin{align}
+ h^0(\cO(2))-h^1(\cO(2))&=\deg\cO(2)+1=3,\\
+ h^1(\cO(2))&=h^0(K\otimes\cO(-2))=h^0(\cO(-4))=0,
+\end{align}
+so \(h^0=3\).  Here \(\cO(2)\) is a degree-two holomorphic line bundle, not
+the orthogonal group \(O(2)\).
+
+In Route E's spherical basis \((T_{+1},T_0,T_{-1})\),
+\begin{equation}
+ \Ktr=\frac1{\sqrt3}
+ \begin{pmatrix}
+ 0&0&-1\\[2pt]
+ 0&1&0\\[2pt]
+ -1&0&0
+ \end{pmatrix},
+ \qquad B=2\sqrt3\,\Ktr,
+ \qquad \Ktr^2=\frac13 I.
+ \label{eq:Ktr}
+\end{equation}
+This complex symmetric invariant pairing is not a Hermitian energy operator.
+Its indefinite real-slice signs cannot be read as positive and negative
+physical energies.
+
+\section{Exact discriminant--two-center--Killing theorem}
+
+\subsection{Global vector fields and the adjoint representation}
+
+Let \(\xi=v/u\) on an affine chart of \(\CP^1\).  A holomorphic vector field
+has the local form \(X=q(\xi)\partial_\xi\).  On the other chart
+\(\eta=1/\xi\),
+\begin{equation}
+ q(\xi)\partial_\xi=-\eta^2q(1/\eta)\partial_\eta.
+\end{equation}
+Regularity at \(\eta=0\) therefore forces \(\deg q\le2\):
+\begin{equation}
+ X_q=(a+b\xi+c\xi^2)\partial_\xi.
+ \label{eq:vectorfield}
+\end{equation}
+The basis
+\begin{equation}
+ E=\partial_\xi,\qquad H=-2\xi\partial_\xi,
+ \qquad F=-\xi^2\partial_\xi
+\end{equation}
+obeys
+\begin{equation}
+ [H,E]=2E,\qquad[H,F]=-2F,\qquad[E,F]=H,
+\end{equation}
+which proves \(H^0(\CP^1,T)\simeq\sltwo\).
+
+Homogenizing \eqref{eq:vectorfield} gives the binary quadratic
+\begin{equation}
+ p(u,v)=a u^2+buv+cv^2,\qquad \Delta(p)=b^2-4ac.
+ \label{eq:binaryquad}
+\end{equation}
+The representation statement is precisely
+\begin{equation}
+ H^0(\CP^1,\cO(2))\simeq\operatorname{Sym}^2(\mathbb C^2)^*,
+\end{equation}
+and the invariant epsilon tensor identifies the dual with
+\(\operatorname{Sym}^2\mathbb C^2\) for \(SL(2)\).
+
+\begin{theorem}[Discriminant--Killing equivalence]
+\label{thm:disc-killing}
+For a nonzero \(X_q\in H^0(\CP^1,T)\), the following are equivalent:
+\begin{enumerate}
+\item its zero divisor is a sum of two distinct points;
+\item \(\Delta(p)\ne0\);
+\item the corresponding \(\sltwo\) element is regular semisimple;
+\item its Killing norm is nonzero;
+\item its Route-E contact norm \(\Ktr(X_q,X_q)\) is nonzero.
+\end{enumerate}
+The complement \(\Delta=0\) is the nonzero nilpotent/contact-null cone and
+has one double zero.
+\end{theorem}
+
+\begin{proof}
+Take the standard projective infinitesimal matrix
+\begin{equation}
+ A_q=
+ \begin{pmatrix}-b/2&-c\\ a&b/2\end{pmatrix}.
+\end{equation}
+Direct multiplication gives
+\begin{equation}
+ A_q^2=\frac{\Delta(p)}4 I.
+ \label{eq:AqSquare}
+\end{equation}
+Hence \(\Delta\ne0\) gives two nonzero opposite eigenvalues and a regular
+semisimple element.  If \(\Delta=0\) and \(A_q\ne0\), then \(A_q^2=0\), so
+the element is nilpotent.  The roots of \(p\) are distinct exactly when its
+discriminant is nonzero; when it vanishes, the homogeneous quadratic is a
+square and has a double projective root.  Counting multiplicity, the total
+degree is always
+\begin{equation}
+ \deg\divisor(X_q)=c_1(T_{\CP^1})[\CP^1]=\chi(S^2)=2.
+\end{equation}
+For \(\sltwo\), the canonical adjoint-trace Killing form obeys
+\(B(A,A)=4\Tr_{2\times2}(A^2)\), so the displayed matrix gives
+\begin{equation}
+ B(A_q,A_q)=2\Delta(p).
+ \label{eq:canonicalBdelta}
+\end{equation}
+No rescaling of Lie-algebra generators is allowed here.  Instead, write the
+ same matrix in Route E's spherical basis as
+\begin{equation}
+ A_q=x_+T_{+1}+x_0T_0+x_-T_{-1}
+ =\begin{pmatrix}
+ x_0/2&-x_+/\sqrt2\\ x_-/\sqrt2&-x_0/2
+ \end{pmatrix},\qquad
+ a=\frac{x_-}{\sqrt2},\quad b=-x_0,\quad
+ c=\frac{x_+}{\sqrt2}.
+ \label{eq:sphericalmap}
+\end{equation}
+Then \(\Delta=x_0^2-2x_+x_-\), while Eq.~\eqref{eq:Ktr} gives
+\(B(\bm x,\bm x)=2\sqrt3\,\bm x^T\Ktr\bm x
+=2(x_0^2-2x_+x_-)=2\Delta\).  This is an invertible change of coordinates,
+not a change of bracket.  It proves the remaining zero-versus-nonzero
+equivalence and fixes the normalization.
+\end{proof}
+
+The normalization can be checked without words.  Write
+\begin{equation}
+ p=\frac{x_-}{\sqrt2}u^2-x_0uv+\frac{x_+}{\sqrt2}v^2,
+ \qquad \bm x=(x_+,x_0,x_-)^T.
+\end{equation}
+Then
+\begin{align}
+ \Delta(p)
+ &=x_0^2-2x_+x_-,\\
+ \bm x^T\Ktr\bm x
+ &=\frac1{\sqrt3}(x_0^2-2x_+x_-),\\
+ &\boxed{B(\bm x,\bm x)=2\Delta(p)
+ =2\sqrt3\,\bm x^T\Ktr\bm x.}
+ \label{eq:discKexact}
+\end{align}
+The unnormalized second transvectant is
+\begin{equation}
+ (p,p)_2=p_{uu}p_{vv}-2p_{uv}^2+p_{vv}p_{uu}
+ =8ac-2b^2=-2\Delta(p)=-B(\bm x,\bm x),
+\end{equation}
+so the same invariant is the transvectant singlet, again up to its declared
+normalization.
+
+\begin{remark}[What the theorem does not say]
+The theorem welds two Route-E structures exactly.  It does not identify the
+two zeros with positive/negative energy, two particles, or two families.  It
+also shows why the regular-semisimple qualifier matters: a generic nonzero
+section has two distinct centers, but a nilpotent section has one center with
+multiplicity two.
+\end{remark}
+
+\section{A safe two-polarity bridge: Hopf reduction and moment map}
+
+A creative way to retain the source manuscript's two polarities without a
+negative-energy instability is to begin with a complex doublet
+\(z=(z_0,z_1)\in\mathbb C^2\).  At fixed norm, \(z^\dagger z=1\), the state
+space is \(S^3\).  Quotienting the common phase gives
+\begin{equation}
+ S^3/U(1)\simeq\CP^1.
+ \label{eq:Hopfquotient}
+\end{equation}
+The Hopf map is
+\begin{equation}
+ \bm n=\bigl(2\Re z_0^*z_1,\;2\Im z_0^*z_1,\;
+ |z_0|^2-|z_1|^2\bigr),\qquad \bm n^2=1.
+ \label{eq:Hopfmap}
+\end{equation}
+For the relative circle action, a normalized Fubini--Study moment map is
+\begin{equation}
+ \mu([z_0:z_1])=
+ \frac{|z_0|^2-|z_1|^2}{|z_0|^2+|z_1|^2},
+ \qquad -1\le\mu\le1.
+ \label{eq:momentmap}
+\end{equation}
+Its two fixed points satisfy
+\begin{equation}
+ p_+=[1:0],\quad\mu(p_+)=+1;
+ \qquad p_-=[0:1],\quad\mu(p_-)=-1.
+\end{equation}
+The numerical endpoint values \(\pm1\) use the displayed generator and the
+symmetric additive normalization.  Rescaling the generator by \(c\) rescales
+them to \(\pm c\).  What is normalization-independent is that the compact
+moment image is bounded and that the two fixed points are opposite extrema
+(up to reversing orientation).  This suggests the normalized safe dictionary
+\begin{equation}
+ E_p,E_n\quad\rightsquigarrow\quad\mu=+1,-1
+ \quad\text{(charge/orientation polarity),}
+ \label{eq:safesign}
+\end{equation}
+while the physical Hamiltonian remains bounded below.
+
+With
+\begin{equation}
+ \omega_{\rm FS}=\frac{\ii\,\dd\xi\wedge\dd\bar\xi}
+ {(1+|\xi|^2)^2},
+ \qquad \frac1{2\pi}\int_{\CP^1}\omega_{\rm FS}=1,
+\end{equation}
+geometric quantization of Chern number \(k\ge0\) gives
+\begin{equation}
+ L\simeq\cO(k),\qquad
+ \mathcal H_k=H^0(\CP^1,\cO(k))
+ \simeq\operatorname{Sym}^k\mathbb C^2,
+ \qquad \dim\mathcal H_k=k+1.
+ \label{eq:geomquant}
+\end{equation}
+If, and only if, the physical bubble reduction also satisfies Route E's
+self-carried identification \(L=T_{\CP^1}\simeq\cO(2)\), then \(k=2\) and
+\(\dim\mathcal H=3\).
+
+\begin{assumption}[Projective-doublet bridge, BA-P]
+The energy-information order parameter is a physical complex doublet; its
+fixed-charge reduction is \(\CP^1\); its Berry/prequantum bundle equals
+\(T_{\CP^1}\); and its chiral zero-mode operator has
+\(\ker D^+\simeq H^0(T)\), \(\ker D^-=0\), with no extra charged zero modes.
+\end{assumption}
+
+None of the four clauses follows merely from the Hopf identity
+\eqref{eq:Hopfquotient}.  This bridge is therefore a concrete research target,
+not a derivation of three families.
+
+\section{Conditional Q-ball completion of an energy bubble}
+
+\subsection{Action, charge, and radial equation}
+
+Replace a literal positive/negative-energy bubble by one complex scalar with a
+healthy kinetic term:
+\begin{equation}
+ S_\Phi=\int\dd^4x\sqrt{-g}\left[
+ -g^{\mu\nu}\partial_\mu\Phi^*\partial_\nu\Phi-U(|\Phi|)
+ \right],
+ \label{eq:qballaction}
+\end{equation}
+with
+\begin{equation}
+ U(f)=m^2f^2-\lambda f^4+\frac{\eta}{M^2}f^6,
+ \qquad m^2,\lambda,\eta,M^2>0.
+ \label{eq:qballpotential}
+\end{equation}
+The global \(U(1)\) current can be normalized so that for
+\begin{equation}
+ \Phi(t,r)=f(r)e^{\ii\omega t}
+\end{equation}
+the charge and energy in flat space are
+\begin{align}
+ Q&=2\omega\int\dd^3x\,f^2,\label{eq:qcharge}\\
+ E&=\int\dd^3x\left[\omega^2f^2+(\bm\nabla f)^2+U(f)\right].
+ \label{eq:qenergy}
+\end{align}
+Variation gives the boundary-value problem
+\begin{equation}
+ f''+\frac2r f'=\left(m^2-\omega^2-2\lambda f^2
+ +\frac{3\eta}{M^2}f^4\right)f,
+ \qquad f'(0)=0,\quad f(\infty)=0.
+ \label{eq:qballode}
+\end{equation}
+
+\begin{proposition}[Existence window for the sextic model]
+The thin-wall Q-ball window is nonempty when
+\begin{equation}
+ 0<\omega_0^2:=\min_{f>0}\frac{U(f)}{f^2}<m^2,
+ \end{equation}
+and for \eqref{eq:qballpotential}
+\begin{equation}
+ f_0^2=\frac{\lambda M^2}{2\eta},\qquad
+ \omega_0^2=m^2-\frac{\lambda^2M^2}{4\eta},
+ \qquad \omega_0^2<\omega^2<m^2.
+ \label{eq:qwindow}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The effective ratio is
+\begin{equation}
+ \frac{U(f)}{f^2}=m^2-\lambda f^2+\frac\eta{M^2}f^4.
+\end{equation}
+Differentiation with respect to \(f^2\) gives
+\(-\lambda+2\eta f^2/M^2=0\), hence the displayed \(f_0\) and \(\omega_0\).
+The upper inequality ensures exponential decay at infinity because the
+linearized equation has inverse length \(\sqrt{m^2-\omega^2}\); the lower
+inequality makes the effective potential \(U_\omega=U-\omega^2f^2\) negative
+somewhere, allowing a nontrivial bounce-like radial trajectory.  This is the
+standard Q-ball criterion \cite{Coleman1985}; interacting extensions can
+alter the stability range and must be retested \cite{Hamada2024}.
+\end{proof}
+
+\subsection{Reproducible benchmark and approximation boundary}
+
+For
+\begin{equation}
+ m=M=1\GeV,\qquad\lambda=\eta=1,\qquad Q=10^6,
+\end{equation}
+one finds
+\begin{equation}
+ f_0=\frac1{\sqrt2}\GeV,\qquad
+ \omega_0=\frac{\sqrt3}{2}\GeV=0.8660254\GeV.
+\end{equation}
+At \(\omega=\omega_0\),
+\begin{equation}
+ U_\omega(f)=f^2(f^2-f_0^2)^2,
+\end{equation}
+and the wall tension in the present kinetic convention is
+\begin{equation}
+ \sigma=2\int_0^{f_0}\sqrt{U_\omega(f)}\,\dd f
+ =\frac18\GeV^3.
+ \label{eq:sigma}
+\end{equation}
+Using \(Q=2\omega_0f_0^2(4\pi R^3/3)\) gives
+\begin{equation}
+ R_0=\left(\frac{3Q}{8\pi\omega_0f_0^2}\right)^{1/3}
+ =65.0819045\GeV^{-1}=12.8424157\,\mathrm{fm}.
+\end{equation}
+Adding the leading surface energy yields
+\begin{equation}
+ \frac EQ\simeq\omega_0+\frac{4\pi R_0^2\sigma}{Q}
+ =0.872678754\GeV<m.
+ \label{eq:qbenchmark}
+\end{equation}
+An independent fixed-step-profile variation minimizes
+\begin{equation}
+ E(R)=\frac{Q^2}{4f_0^2V(R)}+U(f_0)V(R)+4\pi R^2\sigma,
+ \qquad V(R)=\frac{4\pi R^3}{3},
+ \label{eq:stepenergy}
+\end{equation}
+and gives
+\begin{equation}
+ R=64.9712654\GeV^{-1},\quad
+ \omega=0.870457184\GeV,\quad
+ E/Q=0.872667434\GeV.
+\end{equation}
+These are thin-wall/step-profile checks, not an exact numerical solution of
+\eqref{eq:qballode}.  The exact profile and fluctuation operator remain a
+promotion gate.
+
+\subsection{Exact-symmetry phase no-observable theorem}
+
+\begin{theorem}[No phase clock from an exact Q-ball symmetry]
+Let the action and a local observable \(\mathcal O\) be invariant under the
+global transformation \(\Phi\mapsto e^{\ii\alpha}\Phi\).  On the stationary
+Q-ball orbit \(\Phi=f(r)e^{\ii\omega t}\), \(\mathcal O\) is independent of
+time.  Therefore the exact Q-ball phase alone cannot make an invariant mass
+or visibility periodically appear and disappear.
+\end{theorem}
+
+\begin{proof}
+For every \(t\), the field is obtained from \(f(r)\) by the symmetry
+transformation with \(\alpha=\omega t\).  Thus
+\begin{equation}
+ \mathcal O[f(r)e^{\ii\omega t}]
+ =\mathcal O[e^{\ii\omega t}f(r)]
+ =\mathcal O[f(r)].
+\end{equation}
+In particular, \(|\Phi|^2\), \(T_{\mu\nu}\), and any invariant pole mass are
+stationary.  An observable phase requires a second phase reference or an
+explicitly symmetry-breaking spurion.
+\end{proof}
+
+This creates a useful no-free-lunch constraint.  Exact \(U(1)\) protects
+\(Q\) but hides the absolute phase; a fixed relative-phase term can expose the
+phase but then generally gives \(\nabla_\mu j^\mu\ne0\), so absolute Q-ball
+stability is replaced by a calculable lifetime.
+
+\section{Route-E weight-two phase and a physical relative phase}
+
+Route E reconstructs
+\begin{equation}
+ M_R=-m_D^T m_\nu^{-1}m_D,\qquad m_D=vY_\nu.
+\end{equation}
+Under a uniform nonzero complex rescaling \(Y_\nu\mapsto yY_\nu\),
+\begin{equation}
+ M_R\mapsto y^2M_R.
+\end{equation}
+If the positive scale is defined by a Takagi singular value,
+\(M_*=\sigma_{\max}(M_R)>0\), then
+\begin{equation}
+ M_*\mapsto|y|^2M_*.
+\end{equation}
+For the normalized contact projection this gives the exact covariance
+\begin{equation}
+ \boxed{\zeta\mapsto\frac{y^2}{|y|^2}\zeta
+ =e^{2\ii\arg y}\zeta.}
+ \label{eq:zetacov}
+\end{equation}
+Consequently \(\zeta\) is invariant under any nonzero real uniform scaling,
+not only positive scaling; for a complex scaling its phase has weight two.
+The normalized construction is undefined at \(y=0\), and family-dependent
+rescalings do not obey \eqref{eq:zetacov}.
+
+The benchmark is
+\begin{equation}
+ \zeta=0.1076472949+0.0736514853\ii,\qquad
+ |\zeta|=0.1304319033,\qquad \arg\zeta=0.6000380203.
+ \label{eq:zetabench}
+\end{equation}
+Uniform phase covariance is not itself observable.  If \(\Phi\) carries
+weight one and \(\zeta\) weight two, a rephasing-invariant relative phase is
+\begin{equation}
+ e^{\ii\delta}:=
+ \frac{\zeta^*\Phi^2}{|\zeta|\,|\Phi|^2},
+ \qquad \delta=2\arg\Phi-\arg\zeta.
+ \label{eq:relativephase}
+\end{equation}
+A bounded visibility ansatz with the source manuscript's four special phases
+is then
+\begin{equation}
+ w(\delta)=\frac{1+\cos\delta}{2}
+ =\cos^2\!\left(\arg\Phi-\frac12\arg\zeta\right),
+ \qquad 0\le w\le1.
+ \label{eq:visibility}
+\end{equation}
+This changes a coupling or spectral residue, not the Poincar\'e Casimir.  The
+two naive identifications are numerically inequivalent:
+\begin{equation}
+ \cos^2(\arg\zeta)=0.68114344,\qquad
+ \cos^2(\arg\zeta/2)=0.91265707.
+\end{equation}
+Route E selects neither convention.
+
+For two complex symmetric Majorana structures
+\(M_R=M_V+M_C\), \(M_C=\zeta\Ktr\), a family-basis congruence sends both as
+\(M\mapsto U^TMU\).  If \(M_V\) is invertible,
+\begin{equation}
+ \mathcal R:=M_V^{-1}M_C\mapsto U^{-1}\mathcal R U.
+\end{equation}
+Therefore quantities such as
+\begin{equation}
+ \Im\Tr(\mathcal R^n),\qquad \arg\det(I+\mathcal R)
+ \label{eq:phaseinvariants}
+\end{equation}
+are basis invariants that can test a \emph{relative} contact phase.  Any
+future phase claim must be written in such invariant form rather than as an
+absolute \(\arg\zeta\).
+
+\section{Candidate Q-ball--Schur-complement bridge}
+
+\subsection{Action-level construction}
+
+Let \(N\in V\) and a sterile heavy messenger \(X\in V^*\) be left-handed Weyl
+family vectors.  A non-supersymmetric quadratic mass sector with a dynamical
+scalar-dependent mixing is
+\begin{align}
+ \mathcal L_{NX}={}&
+ \ii N^\dagger\bar\sigma^\mu D_\mu N
+ +\ii X^\dagger\bar\sigma^\mu\partial_\mu X\nonumber\\
+ &-\frac{M_*}{2}\left[
+ N^TM_VN+2\lambda(\Phi)X^TN-X^T\Ktr^{-1}X
+ \right]+\text{h.c.}
+ \label{eq:NXaction}
+\end{align}
+At momenta well below the messenger gap, the algebraic equation is
+\begin{equation}
+ X=\lambda(\Phi)\Ktr N.
+\end{equation}
+Substitution gives
+\begin{equation}
+ \mathcal L_{\rm eff}\supset
+ -\frac{M_*}{2}N^T\left[M_V+\lambda(\Phi)^2\Ktr\right]N
+ +\text{h.c.}
+ \label{eq:schureff}
+\end{equation}
+More generally, if the messenger kernel is
+\(-\mu\Ktr^{-1}\), then
+\begin{equation}
+ \zeta_{\rm eff}=\frac{\lambda(\Phi)^2}{\mu}.
+ \label{eq:zetageneral}
+\end{equation}
+Route E sets \(\mu=1\) by a field rescaling; keeping it visible is useful for
+charge and normalization audits.
+
+The direct phase-doubling bridge is
+\begin{equation}
+ \lambda(\Phi)=g\frac\Phi\Lambda
+ \quad\Longrightarrow\quad
+ \boxed{\zeta_{\rm eff}(x)=g^2\frac{\Phi(x)^2}{\Lambda^2}.}
+ \label{eq:zetaportal}
+\end{equation}
+On a Q-ball background,
+\begin{equation}
+ \zeta_{\rm eff}(r,t)=g^2\frac{f(r)^2}{\Lambda^2}e^{2\ii\omega t}.
+ \label{eq:zetaball}
+\end{equation}
+This exactly reproduces a localized weight-two coefficient.  It is the most
+direct candidate relation between the two research programs.
+
+\begin{assumption}[Q-ball contact portal, BA-QK]
+The physical heavy mode has the Route-E family representation and kernel in
+\eqref{eq:NXaction}; the dynamical mixing is \(g\Phi/\Lambda\); all charge,
+gauge, anomaly, and operator-selection rules are satisfied; and the resulting
+relative phase cannot be removed by a field redefinition.
+\end{assumption}
+
+\subsection{Why the portal is not yet a completion}
+
+The following gates are mandatory.
+
+\paragraph{Charge ledger.}
+With \(q_\Phi=+1\), the choices \(q_X=0\), \(q_N=-1\) make \(\Phi XN\) and
+\(XX\) invariant, but \(N^TM_VN\) then needs a charge-\(+2\) spurion.  If
+\(M_V\) is instead a fixed explicit term, the Q-ball \(U(1)\) is broken.  If
+all spurions transform dynamically, the full background may be stationary in
+a rotating frame and no visibility modulation follows.  This tension must be
+resolved, not hidden in notation.
+
+\paragraph{Tree-level normalization.}
+For canonical messenger kinetic terms, the leading low-energy substitution
+also gives
+\begin{equation}
+ Z_N=I+|\lambda|^2\Ktr^\dagger\Ktr
+ =\left(1+\frac{|\lambda|^2}{3}\right)I.
+ \label{eq:ZN}
+\end{equation}
+At the Route-E benchmark \(|\lambda|^2=|\zeta|\),
+\begin{equation}
+ \delta Z_N=\frac{|\zeta|}{3}=0.0434773011.
+\end{equation}
+This is a tree-level matching effect.  The canonical physical test is the
+complete Weinberg combination \(Y M^{-1}Y^T\), not \(\zeta\) by itself.
+
+\paragraph{Full propagator and interaction.}
+When external energies are not negligible relative to all heavy Takagi
+singular values, one must use
+\begin{equation}
+ \mathcal M_{NX}=M_*
+ \begin{pmatrix}M_V&\lambda I\\ \lambda I&-\Ktr^{-1}\end{pmatrix}
+ \label{eq:6x6}
+\end{equation}
+and its kinetic matrix.  The original fixed-\(\lambda\) model is Gaussian and
+does not by itself generate a \(|\lambda|^2/(16\pi^2)\) anomalous dimension.
+The dynamical vertex \(g\Phi XN/\Lambda\) supplies a genuine interaction, but
+its loop matching, cutoff power counting, and counterterms must be calculated.
+
+\paragraph{Selection and leakage.}
+The existing Route-B rule permits the unwanted post-breaking operator
+\(XLH\).  A valid discrete/gauge rule must forbid it and enumerate operators
+through a declared dimension.  Moreover, if neutrinos or messengers carry the
+Q-ball charge, the soliton may emit them.  Absolute stability requires its
+energy per unit charge to lie below every kinematically available
+charge-carrying channel; explicit phase locking instead requires a lifetime
+calculation.
+
+\paragraph{Static benchmark versus rotating background.}
+Route E fits a constant \(\zeta\).  Equation \eqref{eq:zetaball} is periodic
+relative to a fixed \(M_V\).  It therefore requires a Floquet/adiabatic
+seesaw analysis and cannot be inserted into the static fit without rerunning
+neutrino, threshold, proton-decay, and cosmology gates.
+
+\section{Candidate dynamical origin of \texorpdfstring{H3$^+$}{H3+}}
+
+The previous sections use H3$^+$ but do not derive it.  There is, however, a
+specific loop mechanism worth testing.  Couple a complete heavy family
+adjoint multiplet to a background family source \(A_\mu^a\).  Covariance and
+the Ward identity constrain its vacuum polarization to
+\begin{equation}
+ \Pi_{ab}^{\mu\nu}(p)=
+ (p^2\eta^{\mu\nu}-p^\mu p^\nu)\,\Pi(p^2)\,
+ \Tr_{\rm ad}(\operatorname{ad}T_a\operatorname{ad}T_b).
+ \label{eq:adjointloop}
+\end{equation}
+The family tensor is therefore
+\begin{equation}
+ B_{ab}^{\rm Kill}:=
+ \Tr_{\rm ad}(\operatorname{ad}T_a\operatorname{ad}T_b).
+\end{equation}
+For a simple algebra, invariant symmetric bilinears form a one-dimensional
+space, so a nonzero result is proportional to the Killing form.  On the
+Route-E branch this is \(2\sqrt3\Ktr\).
+
+\begin{assumption}[Adjoint-loop H3$^+$ mechanism, BA-H3]
+A healthy UV sector contains a complete, non-canceling adjoint current whose
+low-energy two-point function induces the required family bilinear, and a
+specified source/messenger map converts that bilinear into the Majorana
+contact rather than merely a gauge kinetic term.
+\end{assumption}
+
+Equation \eqref{eq:adjointloop} explains why a Killing tensor is natural once
+an adjoint loop exists; it does not prove the existence of that loop, its
+nonzero coefficient, a positive spectral density in the relevant channel, or
+the conversion to a Majorana mass.  H3$^+$ therefore remains physically open.
+
+\section{The oscillatory formula: exact solution and strict separation}
+
+The source manuscript includes
+\begin{equation}
+ \sin(x^2)+\cos(x^2)=\sin(y^2)+\cos(y^2).
+ \label{eq:sourceosc}
+\end{equation}
+Using \(\sin t+\cos t=\sqrt2\sin(t+\pi/4)\), the identity
+\(\sin A=\sin B\) gives
+\begin{equation}
+ A=B+2\pi n\quad\text{or}\quad A=\pi-B+2\pi n,
+ \qquad n\in\mathbb Z.
+\end{equation}
+With \(A=x^2+\pi/4\), \(B=y^2+\pi/4\), the complete real solution set is
+\begin{equation}
+ \boxed{x^2-y^2=2\pi n}
+ \qquad\text{or}\qquad
+ \boxed{x^2+y^2=\frac\pi2+2\pi n},
+ \label{eq:oscsolutions}
+\end{equation}
+subject to real-coordinate nonemptiness.  The circular radii are
+\begin{equation}
+ r_n^2=\frac\pi2+2\pi n,\qquad n\ge0,
+\end{equation}
+and their exact radial pitch is
+\begin{equation}
+ r_{n+1}-r_n=\frac{2\pi}{r_{n+1}+r_n}
+ \sim\frac\pi{r_n}.
+ \label{eq:pitch}
+\end{equation}
+Thus a shrinking interference pitch is a theorem.  These are continuous
+circles/hyperbolae, not discrete atomic orbitals; standard subshell
+degeneracies are \(2(2\ell+1)=2,6,10,14,\ldots\).
+
+There is no direct Route-E identification.  The functions
+\(\sin(\xi^2)\) and \(\cos(\xi^2)\) have an essential singularity in the
+\(\eta=1/\xi\) chart, whereas global sections of \(T_{\CP^1}\) are exactly
+degree-at-most-two polynomials.  A shared appearance of squares is
+insufficient to identify the state spaces.
+
+\section{Relational time and gravity: parallel interfaces, not Route-E derivations}
+
+The source intuition that time may be relational has a standard conditional
+form.  Let a clock \(C\) and system \(S\) satisfy the stationary constraint
+\begin{equation}
+ (H_C+H_S)|\Psi\rangle=0.
+\end{equation}
+If clock states obey \(\langle t|H_C=-\ii\hbar\partial_t\langle t|\), then
+\begin{equation}
+ |\psi(t)\rangle:=\langle t|\Psi\rangle
+\end{equation}
+satisfies
+\begin{align}
+ 0&=\langle t|(H_C+H_S)|\Psi\rangle\\
+ &=-\ii\hbar\partial_t|\psi(t)\rangle+H_S|\psi(t)\rangle,
+\end{align}
+hence
+\begin{equation}
+ \ii\hbar\partial_t|\psi(t)\rangle=H_S|\psi(t)\rangle.
+ \label{eq:PW}
+\end{equation}
+This Page--Wootters construction \cite{PageWootters1983} has active modern
+extensions, including finite-dimensional time-dilation mechanisms
+\cite{Cafasso2024}.  It does not identify time with local \(E_d\), nor does it
+derive Route E.
+
+A thermodynamic route to Einstein's equation is likewise conditional.  On
+every local Rindler horizon, impose
+\begin{equation}
+ \delta Q=T_U\delta S,\qquad
+ T_U=\frac{\hbar\kappa}{2\pi},\qquad
+ \delta S=\frac{\delta A}{4G\hbar}.
+\end{equation}
+The Raychaudhuri equation relates the area variation to
+\(R_{\mu\nu}k^\mu k^\nu\), while the heat flux is proportional to
+\(T_{\mu\nu}k^\mu k^\nu\).  Requiring the equality for every null vector
+\(k^\mu\) gives
+\begin{equation}
+ R_{\mu\nu}+\Phi g_{\mu\nu}=8\pi G T_{\mu\nu}.
+\end{equation}
+Stress conservation and the Bianchi identity fix
+\(\Phi=-R/2+\Lambda\), yielding Einstein's equation
+\cite{Jacobson1995,Jacobson2016}.  The horizon entropy law and local
+equilibrium are inputs.  This route is a gravity interface for later work,
+not evidence for the family/contact bridge.
+
+\section{Claim ledger and ordered research program}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.29\textwidth}
+                  >{\raggedright\arraybackslash}p{0.18\textwidth}
+                  >{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Claim & Status & Boundary / next gate \\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary / next gate \\
+\midrule
+\endhead
+\(E_d\) alone determines time/gravity & \status{refuted} & Thin-shell and
+pressure counterexamples, Eqs.~\eqref{eq:shellmetric}--\eqref{eq:RicciTrace}.\\
+Invariant mass disappears at four internal phases & \status{refuted} &
+Poincar\'e Casimir; only coupling/residue/gap may be modulated.\\
+Route-E CP1/O(2) carrier has three sections & \status{conditional theorem} &
+Requires H3$^+$ to select the branch; H3 alone gives only the upper bound.\\
+Two centers \(\Leftrightarrow\Delta\ne0\Leftrightarrow\Ktr\)-norm nonzero &
+\status{proved} & Exact on the selected CP1 branch,
+Theorem~\ref{thm:disc-killing}.\\
+Opposite center labels without negative energy & \status{candidate bridge} &
+Moment-map polarity is exact; physical identification requires BA-P.\\
+Energy bubble as a Q-ball & \status{conditional completion} & Exact radial
+solution, Hessian, charge leakage, and gravity remain open.\\
+\(\zeta\) carries phase weight two & \status{proved in Route E} & Uniform
+complex rescaling only; the absolute phase is not observable.\\
+\(\zeta_{\rm eff}=g^2\Phi^2/\Lambda^2\) & \status{candidate bridge} &
+Requires BA-QK, charge/selection rules, full matching, and rerun fits.\\
+Adjoint loop physically derives H3$^+$ & \status{open mechanism} & Killing
+tensor follows conditionally; existence and Majorana conversion do not.\\
+Oscillatory equation quantizes atoms or gives CP1 sections & \status{refuted} &
+It gives continuous conics and has an essential singularity at CP1 infinity.\\
+Relational time / thermodynamic gravity & \status{parallel conditional tracks} &
+Useful interfaces; neither derives Route E or the bubble map.\\
+\bottomrule
+\end{longtable}
+
+The sequential program is deliberately fail-closed.
+
+\begin{enumerate}[label=\textbf{AP--E\arabic*.}]
+\item \textbf{Projective-doublet action.}  Write a two-component bubble
+action, identify its constraint and gauge/global quotient, and prove or refute
+that the physical reduced moduli space is \(\CP^1\).
+\item \textbf{Discriminant/contact verifier.}  Preserve
+Theorem~\ref{thm:disc-killing} as an exact symbolic regression test, including
+the regular/nilpotent boundary and Route-E normalization.
+\item \textbf{Self-carried geometric quantization.}  Derive the Berry
+curvature and Chern number from AP--E1 rather than imposing them; test whether
+the prequantum bundle is actually \(T_{\CP^1}\).
+\item \textbf{Chiral zero modes.}  Construct the fluctuation/Dirac operator,
+prove \(\ker D^+\simeq H^0(T)\), compute \(\ker D^-\), extra modes, and the
+spectral gap.
+\item \textbf{Exact Q-ball solution.}  Solve Eq.~\eqref{eq:qballode}, compute
+\(Q(\omega)\), \(E(Q)\), fixed-charge Hessian modes, gravitational
+compactness, and all charge-emission thresholds.
+\item \textbf{Messenger/contact realization.}  Build a gauge- and
+anomaly-consistent version of Eq.~\eqref{eq:NXaction}; enumerate operators,
+forbid \(XLH\), and verify the full kinetic plus six-by-six matching.
+\item \textbf{Physical-phase quotient.}  Remove all field rephasings, list
+basis-invariant CP quantities such as Eq.~\eqref{eq:phaseinvariants}, and test
+whether a relative phase survives without destroying the Q-ball lifetime.
+\item \textbf{H3$^+$ origin test.}  Compute the candidate adjoint current
+correlator and its spectral sign; show whether it yields a Majorana contact or
+only a kinetic bilinear.
+\item \textbf{Integrated phenomenology.}  Rerun Route-E flavor/seesaw,
+threshold, proton-decay, cosmology, and time-dependent/Floquet gates with a
+single action.  Only this stage can request physics promotion.
+\item \textbf{Independent gravity track.}  Constrain any \(E_d\) carrier with
+clock redshift, fifth-force, rotation-curve, and lensing data; do not merge it
+with AP--E1--9 without an explicit operator connecting the sectors.
+\end{enumerate}
+
+\section{Reproducibility ledger}
+
+The independent arithmetic/symbolic card is
+\begin{center}
+\path{route_f/code/verify_another_physics_route_e_bridge.py}.
+\end{center}
+Run from the repository root:
+\begin{verbatim}
+python3 route_f/code/verify_another_physics_route_e_bridge.py
+\end{verbatim}
+It writes
+\begin{center}
+\path{route_f/output/another_physics_route_e_bridge.json},\qquad
+\path{route_f/output/another_physics_route_e_bridge.md}.
+\end{center}
+The current result is \(22/22\) mechanical checks, including
+\begin{equation}
+ \max|\Ktr^2-I/3|=1.11\times10^{-16},\qquad
+ |2\Delta-B|=0,
+\end{equation}
+zero generator-invariance and canonical factor-two residuals, exact agreement
+between the loaded Route-E \(\zeta\) card and the declared benchmark, complex
+weight-two covariance error
+\(2.80\times10^{-17}\), the two independent Q-ball energy estimates in
+Sec.~6, and oscillatory-level-set residuals below \(2.7\times10^{-14}\).
+The JSON explicitly retains all cross-theory identifications as non-derived
+bridge axioms and sets \texttt{physics\_promotion\_allowed=false}.
+
+\appendix
+
+\section{Units and normalization checks}
+
+In \(\hbar=c=1\) units, \([\Phi]=[f]=[m]=[M]=1\),
+\([U]=4\), \([\sigma]=3\), \([R]=-1\), while \(Q,\lambda,\eta\) are
+dimensionless.  Therefore every term in \eqref{eq:qballpotential} has mass
+dimension four and every term in \eqref{eq:stepenergy} has dimension one.
+For \eqref{eq:zetaportal}, \(g\) and \(\zeta_{\rm eff}\) are dimensionless
+and \(\Lambda\) has dimension one.
+
+The Q-ball charge convention differs by factors of two across the literature
+depending on whether \(\Phi=\phi e^{\ii\omega t}\) or
+\(\Phi=\phi e^{\ii\omega t}/\sqrt2\).  Equations
+\eqref{eq:qcharge}--\eqref{eq:stepenergy} use one convention consistently;
+mixing conventions would change \(Q\), \(f_0\), and \(R\) factors and is
+forbidden in the verifier.
+
+\section{Why a phase portal needs a second reference}
+
+Suppose \(\zeta_{\rm eff}=c\Phi^2\) and define the putative invariant
+\(I=\zeta_{\rm eff}^*\Phi^2/(|\zeta_{\rm eff}||\Phi|^2)\).  Then
+\begin{equation}
+ I=\frac{c^*\Phi^{*2}\Phi^2}{|c|\,|\Phi|^4}=\frac{c^*}{|c|},
+\end{equation}
+which is constant.  The field cannot serve as its own phase reference.  A
+nontrivial observable requires a second spurion or matrix structure, such as
+\(M_V\) in \(M_R=M_V+\zeta_{\rm eff}\Ktr\).  If that reference does not
+transform, it explicitly breaks the Q-ball \(U(1)\); if it does transform, one
+must solve the coupled background and identify an invariant relative phase.
+This algebra is the sharp reason that phase doubling alone is not a visibility
+mechanism.
+
+\section{Minimal falsification criteria}
+
+The bridge program should be abandoned or revised if any of the following
+occurs:
+\begin{enumerate}
+\item the reduced bubble moduli space is not \(\CP^1\), or its physical bundle
+has Chern number other than two;
+\item the zero-mode operator has extra unpaired charged modes or does not
+realize \(H^0(T)\);
+\item the exact fixed-charge soliton has a negative Hessian mode or
+\(E/Q\) above an allowed charge carrier;
+\item every phase in \(M_V+\zeta\Ktr\) is removable, leaving no invariant
+quantity such as \eqref{eq:phaseinvariants};
+\item the required explicit breaking makes the soliton lifetime shorter than
+the intended physical process;
+\item a valid selection rule cannot forbid \(XLH\) and dangerous operators;
+\item the embedded model fails Route-E flavor, threshold, proton-decay, or
+cosmology gates;
+\item a gravity carrier violates the redshift relation \eqref{eq:clockweak},
+lensing, or fifth-force bounds.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/another_physics_route_e_bridge}
+
+\end{document}

@@ -46,6 +46,15 @@ dynamics lanes.  The authority is `code_dyn/dyn_claim_registry.json`.
   ad-invariant form, so original H3 proves only `N_fam<=3`; `N=3` is now
   explicitly conditional on a non-degenerate adjoint-trace/Killing contact.
   The physical motivation or UV realization of H3+ remains open.
+- The Route-F bridge audit sharpens the selected-branch mathematics:
+  `B(x,x) = 2 Delta = 2 sqrt(3) x^T K_tr x` in Route-E spherical
+  coordinates exactly identifies the two-center
+  locus with regular semisimple/non-null Killing contact, while `Delta=0` is
+  the nilpotent double-zero cone.  A complete heavy-adjoint current loop can
+  conditionally produce the Killing tensor, but it does not prove the
+  existence of that sector or its conversion into a Majorana contact; H3+
+  therefore remains open.  Full derivation and rollback trail:
+  `../route_f/tex/another_physics_route_e_derivation_ledger.tex`.
 
 Reproducible promotion diagnostics are recorded in
 `../route_f/output/blocker_promotion_gate.{json,md}` (`18/18`, deliberately

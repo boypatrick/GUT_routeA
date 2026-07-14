@@ -1,0 +1,353 @@
+{
+  "all_pass": true,
+  "audit": "verify_another_physics_route_e_bridge",
+  "bridge_axioms": [
+    {
+      "id": "BA1_phase_identification",
+      "statement": "Identify an Another-Physics visibility phase delta with either arg(zeta) or the weight-one lift arg(zeta)/2.  These choices predict different cos^2 values and are not selected by Route-E.",
+      "status": "not_derived"
+    },
+    {
+      "id": "BA2_bubble_identification",
+      "statement": "Identify the proposed energy bubble with the charge-Q soliton of the displayed complex-scalar action.  Q-ball existence does not derive this map.",
+      "status": "not_derived"
+    },
+    {
+      "id": "BA3_two_center_identification",
+      "statement": "Identify a quadratic-phase circle/hyperbola morphology with the two-zero divisor of a CP1/O(2) section.  Shared degree-two algebra is insufficient to identify their state spaces or dynamics.",
+      "status": "not_derived"
+    },
+    {
+      "id": "BA4_UV_embedding",
+      "statement": "Embed the Q-ball scalar and its conserved U(1) charge in the Route-E Spin(10)/family sector while preserving gauge, anomaly, and threshold gates.",
+      "status": "open"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "h^0(O(d))=d+1 for d>=0; d=2 gives 3",
+      "group": "S1_CP1_O2",
+      "name": "H0(CP1,O(2)) has dimension three",
+      "pass": true
+    },
+    {
+      "detail": "weights=[2, 0, -2] in basis ['X^2', 'sqrt(2) X Y', 'Y^2']",
+      "group": "S1_CP1_O2",
+      "name": "Cartan weights are (+2,0,-2)",
+      "pass": true
+    },
+    {
+      "detail": "Delta=4.0, roots=[(1+0j), (-1+0j)], residual=0.00e+00",
+      "group": "S2_quadratic_divisor",
+      "name": "nonzero discriminant gives two distinct projective zeros",
+      "pass": true
+    },
+    {
+      "detail": "Delta=0.0, double root=-0.0",
+      "group": "S2_quadratic_divisor",
+      "name": "zero discriminant gives one double zero",
+      "pass": true
+    },
+    {
+      "detail": "max matrix difference=0.00e+00",
+      "group": "S3_Ktr",
+      "name": "locally reconstructed pairing matches the Route-E convention card",
+      "pass": true
+    },
+    {
+      "detail": "max|K_tr^2-I/3|=1.11e-16",
+      "group": "S3_Ktr",
+      "name": "K_tr squared equals I/3",
+      "pass": true
+    },
+    {
+      "detail": "residuals={\"E\": 0.0, \"F\": 0.0, \"H\": 0.0}",
+      "group": "S3_Ktr",
+      "name": "K_tr is invariant under the full sl2 generator triple",
+      "pass": true
+    },
+    {
+      "detail": "regular Delta=-0.120000, B(x,x)=-0.240000, |B-2Delta|=0.00e+00; null Delta=2.22e-16, null B=0.00e+00",
+      "group": "S3_Ktr",
+      "name": "Route-E Killing norm equals twice the binary-quadratic discriminant",
+      "pass": true
+    },
+    {
+      "detail": "max|A^2-Delta I/4|=0.00e+00; |4 Tr(A^2)-2Delta|=0.00e+00",
+      "group": "S3_Ktr",
+      "name": "standard projective matrix gives A^2=Delta I/4 and canonical B=2 Delta",
+      "pass": true
+    },
+    {
+      "detail": "mu={\"equator\": 0.0, \"p_minus\": -1.0, \"p_plus\": 1.0}",
+      "group": "S3_Ktr",
+      "name": "the normalized CP1 moment map labels the two fixed points by plus/minus one",
+      "pass": true
+    },
+    {
+      "detail": "canonical-card error=0.00e+00; |zeta|=0.1304319032529376, arg(zeta)=0.600038020318215",
+      "group": "S4_zeta",
+      "name": "benchmark magnitude and argument are reproduced",
+      "pass": true
+    },
+    {
+      "detail": "cos^2(arg zeta)=0.6811434402919294; cos^2(arg zeta/2)=0.9126570732133188",
+      "group": "S4_zeta",
+      "name": "both explicit cos-squared phase conventions are reproducible",
+      "pass": true
+    },
+    {
+      "detail": "|error|=2.80e-17, modulus error=2.78e-17, phase error=0.00e+00",
+      "group": "S4_zeta",
+      "name": "complex rescaling obeys weight-two covariance",
+      "pass": true
+    },
+    {
+      "detail": "|zeta'-zeta|=0.094332 for arg(y)=0.37",
+      "group": "S4_zeta",
+      "name": "weight-two covariance is not complex-phase invariance",
+      "pass": true
+    },
+    {
+      "detail": "omega0^2=0.750000; window 0.866025403784<omega<1.0; factorization residual=5.03e-17",
+      "group": "S5_Qball",
+      "name": "chosen sextic potential has a nonempty Q-ball frequency window",
+      "pass": true
+    },
+    {
+      "detail": "sigma_analytic=0.125000000000, sigma_numeric=0.125000000000",
+      "group": "S5_Qball",
+      "name": "analytic wall tension agrees with independent quadrature",
+      "pass": true
+    },
+    {
+      "detail": "R=65.081904460 GeV^-1=12.842415686 fm; E/Q=0.872678753982 GeV",
+      "group": "S5_Qball",
+      "name": "leading thin-wall benchmark reproduces the quoted radius and E/Q",
+      "pass": true
+    },
+    {
+      "detail": "R_var=64.971265436 GeV^-1, omega_var=0.870457184321, E/Q=0.872667433681 GeV",
+      "group": "S5_Qball",
+      "name": "finite-Q step-profile variational cross-check stays inside the window and below free-particle threshold",
+      "pass": true
+    },
+    {
+      "detail": "maximum sampled residual=1.40e-14",
+      "group": "S6_quadratic_phase",
+      "name": "circle family x^2+y^2=pi/2+2pi n solves f(x)=f(y)",
+      "pass": true
+    },
+    {
+      "detail": "maximum sampled residual=2.61e-14",
+      "group": "S6_quadratic_phase",
+      "name": "hyperbola family x^2-y^2=2pi n solves f(x)=f(y)",
+      "pass": true
+    },
+    {
+      "detail": "n=1000000, Delta r=1.253313667348e-03, identity error=2.53e-14, asymptotic relative error=2.50e-07",
+      "group": "S6_quadratic_phase",
+      "name": "radial pitch obeys the exact rationalized identity and pi/r asymptotic",
+      "pass": true
+    },
+    {
+      "detail": "4 bridge axioms retained as non-derived",
+      "group": "S7_boundary",
+      "name": "every cross-theory identification remains an explicit bridge axiom",
+      "pass": true
+    }
+  ],
+  "checks_passed": 22,
+  "checks_total": 22,
+  "logical_contract": {
+    "bridge_axiom": "Additional cross-theory identification requiring action-level derivation and independent phenomenological tests.",
+    "green_run_meaning": "arithmetic/symbolic reproducibility only",
+    "separation_theorem": "A result derived inside one explicitly stated mathematical model; it may rule out a proposed identification but cannot establish a cross-model map."
+  },
+  "open_physics_gates": [
+    "derive rather than identify the phase map between zeta and a visibility observable",
+    "supply a gauge/anomaly-consistent Route-E embedding of the Q-ball U(1)",
+    "solve the radial Q-ball boundary-value problem and fluctuation spectrum",
+    "derive a dynamical map, if any, between quadratic-phase level sets and CP1 divisors",
+    "rerun Route-E flavor, threshold, proton, and cosmology gates after any embedding"
+  ],
+  "physics_promotion_allowed": false,
+  "separation_theorems": {
+    "CP1_O2": {
+      "basis": [
+        "X^2",
+        "sqrt(2) X Y",
+        "Y^2"
+      ],
+      "cartan_weights": [
+        2,
+        0,
+        -2
+      ],
+      "dimension": 3,
+      "scope": "conditional on the CP1/O(2) carrier"
+    },
+    "K_tr": {
+      "CP1_moment_map": {
+        "fixed_point_values": {
+          "equator": 0.0,
+          "p_minus": -1.0,
+          "p_plus": 1.0
+        },
+        "formula": "mu=([z0]^2-[z1]^2)/([z0]^2+[z1]^2), with brackets denoting modulus",
+        "interpretation": "bounded charge/orientation polarity, not negative energy",
+        "normalization_note": "the displayed generator and symmetric additive convention set the endpoints to +/-1; generator rescaling changes their magnitude"
+      },
+      "K_squared_minus_I_over_3_max_abs": 1.1102230246251565e-16,
+      "discriminant_contact_identity": {
+        "canonical_factor_two_error": 0.0,
+        "contact_null_example_discriminant_abs": 2.220446049250313e-16,
+        "contact_null_example_killing_norm_abs": 0.0,
+        "formula": "B_Kill(x,x)=2 Delta(p)=2 sqrt(3) K_tr(x,x)",
+        "projective_matrix_square_error": 0.0,
+        "regular_example_error": 0.0,
+        "route_E_spherical_coordinates": "x=(x_+,x_0,x_-)",
+        "section_map": "p=(x_-/sqrt(2)) X^2-x_0 X Y+(x_+/sqrt(2)) Y^2"
+      },
+      "invariance_equation": "rho(A)^T K_tr+K_tr rho(A)=0 for A=H,E,F",
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          -0.5773502691896258
+        ],
+        [
+          0.0,
+          0.5773502691896258,
+          0.0
+        ],
+        [
+          -0.5773502691896258,
+          0.0,
+          0.0
+        ]
+      ],
+      "sl2_invariance_residuals": {
+        "E": 0.0,
+        "F": 0.0,
+        "H": 0.0
+      },
+      "source_comparison_max_abs": 0.0
+    },
+    "Q_ball": {
+      "action_scope": "flat-space classical complex scalar; thin-wall/step-profile approximation",
+      "below_free_particle_threshold": true,
+      "existence_window_GeV": [
+        0.8660254037844386,
+        1.0
+      ],
+      "f0_squared_GeV2": 0.5,
+      "finite_Q_step_variational": {
+        "E_over_Q_GeV": 0.8726674336806833,
+        "omega_GeV": 0.8704571843212044,
+        "radius_GeV_inverse": 64.97126543573933
+      },
+      "leading_thin_wall": {
+        "E_over_Q_GeV": 0.872678753981896,
+        "radius_GeV_inverse": 65.08190446035745,
+        "radius_fm": 12.842415685843626
+      },
+      "not_an_exact_radial_ODE_solution": true,
+      "omega0_GeV": 0.8660254037844386,
+      "omega0_squared_GeV2": 0.75,
+      "parameters_GeV_convention": {
+        "M": 1.0,
+        "Q": 1000000.0,
+        "eta": 1.0,
+        "lambda": 1.0,
+        "m": 1.0
+      },
+      "potential": "U(f)=m^2 f^2-lambda f^4+(eta/M^2)f^6",
+      "surface_tension_GeV3": 0.125
+    },
+    "quadratic_divisor": {
+      "degenerate_example": {
+        "coefficients": {
+          "a": 1.0,
+          "b": 0.0,
+          "c": 0.0
+        },
+        "discriminant": 0.0,
+        "double_root": -0.0
+      },
+      "formula": "Delta=b^2-4ac for a X^2+b X Y+c Y^2",
+      "regular_example": {
+        "affine_roots": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0
+          ]
+        ],
+        "coefficients": {
+          "a": 1.0,
+          "b": 0.0,
+          "c": -1.0
+        },
+        "discriminant": 4.0,
+        "two_distinct_zeros": true
+      }
+    },
+    "quadratic_phase_solution": {
+      "equation": "sin(x^2)+cos(x^2)=sin(y^2)+cos(y^2)",
+      "families": [
+        "x^2-y^2=2 pi n",
+        "x^2+y^2=pi/2+2 pi n"
+      ],
+      "pitch": {
+        "asymptotic": "Delta r_n~pi/r_n",
+        "exact": "r_(n+1)-r_n=2 pi/(r_(n+1)+r_n)",
+        "relative_error": 2.4997965508699593e-07,
+        "test_n": 1000000
+      },
+      "sampled_max_residual": {
+        "circle": 1.3988810110276972e-14,
+        "hyperbola": 2.609024107869118e-14
+      },
+      "scope": "continuous interference level sets, not discrete atomic orbitals"
+    },
+    "zeta": {
+      "abs": 0.13043190325293763,
+      "arg_rad": 0.600038020318215,
+      "complex_rescaling": {
+        "arg_y": 0.37,
+        "covariance_error": 2.797157557069881e-17,
+        "law": "zeta'=(y^2/|y|^2)zeta=exp(2 i arg(y))zeta",
+        "modulus_error": 2.7755575615628914e-17,
+        "phase_error_rad": 0.0,
+        "phase_invariant": false,
+        "y": [
+          1.5849564875302586,
+          0.6147462343404354
+        ],
+        "zeta_prime": [
+          0.0298318365046939,
+          0.12697457586832453
+        ]
+      },
+      "cos_squared_arg": 0.6811434402919294,
+      "cos_squared_half_arg_weight_one_lift": 0.9126570732133188,
+      "declared_benchmark_source_error": 0.0,
+      "loaded_from_route_E_invariant_card": true,
+      "value": [
+        0.1076472949,
+        0.0736514853
+      ]
+    }
+  },
+  "source_manifest": {
+    "route_E_invariant_card": {
+      "path": "route_E/output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131"
+    }
+  },
+  "status": "mechanical_separation_checks_pass_no_physics_promotion"
+}

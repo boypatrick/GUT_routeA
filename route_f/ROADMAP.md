@@ -40,6 +40,90 @@ All items start `open` unless marked otherwise.
   inputs, a valid interacting DYN-5 messenger action, recomputed RE-SC4
   pricing, and a threshold/experimental-bound envelope for RE-SC5.
 
+## F0-D Another-Physics / Route-E bridge ledger
+
+Status: `in-progress`, deliberately non-promoting.  This lane runs in
+parallel with F0-A/B/C and does not block the F1 action freeze.
+
+Current exact results (2026-07-14):
+
+- On the H3+-selected carrier
+  \(H^0(\mathbb{CP}^1,T_{\mathbb{CP}^1})\simeq
+  H^0(\mathbb{CP}^1,\mathcal O(2))\simeq\mathfrak{sl}_2(\mathbb C)\),
+  hence the complex section count is exactly three.  H3 alone still proves
+  only `N_fam<=3`; this identity does not dynamically derive H3+.
+- For \(q=(a+b\xi+c\xi^2)\partial_\xi\),
+  \(\Delta=b^2-4ac\) obeys
+  \(B(x,x)=2\Delta=2\sqrt3\,x^TK_{\rm tr}x\) in Route-E spherical
+  coordinates.  Therefore two distinct
+  centers, a regular semisimple \(\mathfrak{sl}_2\) element, and non-null
+  Killing/contact norm are exactly equivalent on this branch.  The
+  \(\Delta=0\) boundary is the nilpotent/double-zero cone.
+- Fixed-norm complex doublets give the exact Hopf reduction
+  \(S^3/U(1)=\mathbb{CP}^1\).  Its moment map supplies a bounded
+  charge/orientation polarity \([-1,1]\); this safely replaces the literal
+  positive/negative-energy interpretation, but its physical identification
+  is a bridge axiom.
+- Route E's rescaling parameter has weight two:
+  \(\zeta\mapsto e^{2i\arg y}\zeta\).  Its absolute phase is removable.
+  A physical phase requires an independent reference such as
+  \(\mathcal R=M_V^{-1}M_C\) and basis-invariant quantities
+  \(\operatorname{ImTr}(\mathcal R^n)\) or
+  \(\arg\det(I+\mathcal R)\).  A field cannot serve as its own phase
+  reference.
+- A sextic Q-ball consistently realizes an ``energy bubble'' only
+  conditionally.  For
+  \(U=m^2f^2-\lambda f^4+\eta f^6/M^2\), existence requires
+  \(m^2-\lambda^2M^2/(4\eta)<\omega^2<m^2\).  The benchmark
+  \(m=M=\lambda=\eta=1\,{\rm GeV}\), \(Q=10^6\) gives
+  \(f_0=1/\sqrt2\,{\rm GeV}\), \(R=12.8424\,{\rm fm}\), and
+  \(E/Q=0.872679\,{\rm GeV}\).  Exact U(1) symmetry makes its global phase
+  unobservable; a phase portal therefore reopens charge-leakage and lifetime
+  gates.
+- The candidate messenger action gives
+  \(M_R^{\rm eff}=M_*[M_V+\lambda(\Phi)^2K_{\rm tr}]\) and, for
+  \(\lambda(\Phi)=g\Phi/\Lambda\),
+  \(\zeta_{\rm eff}=g^2\Phi^2/\Lambda^2\).  This is an explicit algebraic
+  bridge, not a UV completion: charge assignments, a genuine interaction,
+  the `XLH` selection rule, canonical normalization, the full six-by-six
+  propagator, loop matching, Q-ball decay, and time-dependent flavor fits all
+  remain mandatory.
+
+Reproducible artifacts:
+
+- `tex/another_physics_route_e_derivation_ledger.tex` and its local BibTeX
+  file contain the complete derivations, assumptions, no-go results, and
+  rollback trail;
+- `output/another_physics_route_e_derivation_ledger.pdf` is the visually
+  checked compiled ledger;
+- `code/verify_another_physics_route_e_bridge.py` writes
+  `output/another_physics_route_e_bridge.{json,md}` and currently passes
+  `22/22` algebraic/numerical checks while setting
+  `physics_promotion_allowed=false`.
+
+Ordered follow-up (fail closed):
+
+1. **AP-E1:** derive the projective-doublet action and prove/refute the CP1
+   reduced moduli space.
+2. **AP-E2:** retain the discriminant/contact theorem as an exact regression
+   test.
+3. **AP-E3:** derive, rather than impose, the Berry curvature, Chern number,
+   and possible \(\mathcal O(2)\) prequantum bundle.
+4. **AP-E4:** build the fluctuation/Dirac operator and audit all chiral zero
+   modes and the spectral gap.
+5. **AP-E5:** solve the radial Q-ball boundary-value problem and fixed-charge
+   stability/compactness/emission thresholds.
+6. **AP-E6:** construct an anomaly-consistent messenger/contact model and
+   pass the complete operator, kinetic, and six-by-six matching gates.
+7. **AP-E7:** quotient all rephasings and isolate genuinely measurable CP
+   invariants without assuming away bubble decay.
+8. **AP-E8:** compute the proposed adjoint-current correlator and decide
+   whether it yields a Majorana contact or only a kinetic Killing tensor.
+9. **AP-E9:** rerun Route-E flavor, threshold, proton-decay, cosmology, and
+   Floquet gates using one action; only here may promotion be requested.
+10. **AP-E10:** keep the gravity/information-density tests independent until
+    an explicit operator connects them to AP-E1--9.
+
 ## Definition of done
 
 Route F is complete only when one active branch has:
@@ -71,6 +155,10 @@ F0-C runs in parallel; for the non-SUSY primary branch it must be translated
 to ordinary Weyl mass/kinetic matching.  F9 family-carrier realization and F10
 global string completion are optional after F1.  F11 synchronizes papers after
 the relevant gates.
+
+F0-D also runs in parallel.  Its exact identities may be imported immediately;
+its Q-ball, phase, and H3+ mechanisms may enter F0-B/C or F5 only after their
+declared action, symmetry, stability, matching, and phenomenology gates pass.
 ```
 
 ## P0: blockers

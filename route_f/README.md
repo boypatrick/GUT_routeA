@@ -26,6 +26,23 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
+## 2026-07-14 Another-Physics / Route-E bridge status
+
+The bridge audit now separates exact mathematics from added physics.  On the
+H3+-selected CP1/O(2) branch, the binary-quadratic discriminant, the
+sl2 Killing norm, the Route-E `K_tr` norm, and the existence of two distinct
+centers are exactly equivalent.  Hopf reduction also gives a safe bounded
+polarity without negative energy.  By contrast, the proposed sextic Q-ball
+and the dynamical `zeta_eff = g^2 Phi^2/Lambda^2` messenger portal are
+conditional constructions: exact U(1) symmetry hides the Q-ball phase, so an
+observable phase needs a second spurion and must pass charge-leakage,
+selection-rule, matching, stability, and phenomenology gates.
+
+The independent bridge verifier passes `22/22` mathematical/numerical checks
+and deliberately records `physics_promotion_allowed=false`.  The complete
+formula ledger and the ordered AP-E1--AP-E10 program are canonical in
+`tex/another_physics_route_e_derivation_ledger.tex` and `ROADMAP.md`.
+
 ## 2026-07-14 execution status
 
 - `route_E/code_dyn/run_route_e_dynamics.py` executes the 19 recovered lanes
@@ -67,9 +84,20 @@ Artifacts:
   Route-E dynamics claims exists in this checkout.
 - `code/audit_blocker_promotion_gate.py`: recomputes the P0 numerical repairs
   and proves that mechanically green incomplete ledgers remain non-promotable.
+- `code/verify_another_physics_route_e_bridge.py`: checks the exact
+  discriminant/Killing identity, Hopf moment map, zeta covariance, and the
+  Q-ball benchmark without promoting the candidate bridge.
+- `tex/another_physics_route_e_derivation_ledger.tex`: complete reversible
+  derivation ledger for the Another-Physics / Route-E relationship.
+- `tex/another_physics_route_e_bridge.bib`: local primary-source bibliography
+  for the bridge ledger.
+- `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
+  visually checked 17-page rendering of the derivation ledger.
 - `route_E/code_dyn/dyn_claim_registry.json`: single physics-status registry.
 - `route_E/code_dyn/run_route_e_dynamics.py`: fail-closed isolated DAG runner.
-- `output/`: generated JSON and Markdown ledgers.
+- `output/another_physics_route_e_bridge.{json,md}`: `22/22` bridge audit
+  with explicit non-promotion status.
+- `output/`: generated JSON, Markdown, and compiled-paper artifacts.
 
 The recommended active physics branch is a non-supersymmetric intermediate-
 scale `Spin(10)` model, with the kinematic Route-A/E core treated as a
@@ -79,6 +107,7 @@ gate: Route F compares a `210_H` continuity branch with the better-established
 UV mechanisms until their selection-rule and global-consistency gates pass.
 
 Workspace provenance note (2026-07-14): the initial Route-E/Route-F evidence
-set was committed and pushed at `6662dd6`.  The blocker corrections described
-above are the next synchronized change set and must pass the clean-clone gate
-before any physics promotion.
+set was committed and pushed at `6662dd6`; the blocker corrections were
+committed and pushed at `e7ba020`.  The subsequent Another-Physics bridge
+ledger is explicitly non-promoting and must pass AP-E1--AP-E9 before it can
+alter any Route-E physics claim.

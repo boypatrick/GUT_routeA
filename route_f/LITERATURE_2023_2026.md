@@ -1,6 +1,6 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-13.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-14.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
 | Source | Main result relevant to Route F | Required response |
@@ -15,6 +15,10 @@ that the present model inherits their results.
 | Sato, [Majorana Fermion Zero Modes and Anomalies in String and M Theories](https://arxiv.org/abs/2404.18138) (2024 thesis) | Gives a conceptual nonperturbative zero-mode-parity/anomaly criterion for pointlike solitons and brane configurations. | Use only as an anomaly cross-check; it is not E3/M5 charged-zero-mode cohomology or a Pfaffian calculation. |
 | Super-Kamiokande, [Search for proton decay via p to e+ eta and mu+ eta](https://arxiv.org/abs/2409.19633) (2024) | Updated channel-specific null search and lifetime limits illustrate that a theory needs a channel table, not one generic lifetime. | Refresh all experimental inputs and publish branching fractions and correlated theory errors by channel. |
 | LEGEND Collaboration, [First Results on the Search for Lepton Number Violating Neutrinoless Double Beta Decay with LEGEND-200](https://arxiv.org/abs/2505.10440) (2025) | No signal; reports a `76Ge` half-life limit and nuclear-matrix-element-dependent effective-mass range. | Treat absence of a signal as a likelihood, not proof of Dirac neutrinos; propagate nuclear matrix element uncertainty. |
+| Zheng et al., [A lab-based test of the gravitational redshift with a miniature clock network](https://doi.org/10.1038/s41467-023-40629-8) (2023) | Directly resolves gravitational redshift over a laboratory-scale height difference. | Use clock redshift as an external constraint on any repaired `E_d` carrier; local density alone may not replace metric/proper-time structure. |
+| Cafasso et al., [Quantum time and the time-dilation induced interaction transfer mechanism](https://doi.org/10.1103/PhysRevD.110.106014) (2024) | Develops a relational quantum-time mechanism with time-dilation-induced transfer in a finite-dimensional setting. | Keep relational time as a parallel interface; it does not derive Route E or make a local energy density equal to time. |
+| Mistele et al., [Indefinitely Flat Circular Velocities and the Baryonic Tully--Fisher Relation from Weak Lensing](https://doi.org/10.3847/2041-8213/ad54b0) (2024) | Weak-lensing data probe the persistence of flat circular velocities beyond resolved rotation curves. | Any gravity repair must fit rotation and lensing jointly; a pure clock-rescaling ansatz is not sufficient. |
+| Hamada et al., [Q-Balls in the presence of attractive force](https://doi.org/10.1007/JHEP08(2024)242) (2024) | Extends Q-ball stability analysis when an additional attractive force is present. | Use as a modern stability/gravity interface for AP-E5, not as evidence that the present bubble-to-Q-ball identification is already realized. |
 
 ## Literature-driven design decisions
 
