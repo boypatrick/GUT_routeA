@@ -10,6 +10,47 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
+## Superseding blocker execution update (2026-07-14)
+
+This section overrides every later historical `done`/`closed` label for the
+dynamics lanes.  The authority is `code_dyn/dyn_claim_registry.json`.
+
+- The canonical case-sensitive path is `route_E/code_dyn/`.  The 21-node
+  isolated runner now passes a full required-card dry-run with all 19 recovered
+  scripts plus DYN-5V/DYN-7F and no preflight errors.  Root DYN scripts are
+  compatibility delegates so they cannot overwrite corrected ledgers with a
+  second implementation.
+- RE-SC3/4/5 exist and are tracked (`15/15`, `14/14`, `18/18` mechanical
+  checks), closing only the artifact-absence blocker.  They remain unpromoted;
+  RE-SC4's numerical selectivity gap inherits invalid DYN-5 input, and RE-SC5
+  is a one-loop toy scan whose lower G_LR edge has `M_I~=101 GeV`.
+- DYN-9b-2 is `preliminary` (`14/14` mechanical), not a flavor fit.  Its double-normalised
+  hypercharge input was repaired: with `g1=0.462` and `b1=41/10`,
+  `y_t(M_X)=0.44116481` rather than `0.41556342`.  The relations
+  `Y_nu=h-3f`, `Y_u=h+f` do not force a top-like `Y_nu` (`h=3f` is a
+  counterexample): the fixed archival-kernel suppressions are `19.5x/342.2x`,
+  whereas `9.6x/169.2x` applies only after an extra top-like ansatz.  Exact
+  zeta invariance is restricted to uniform positive-real rescaling; complex
+  rescaling rotates its phase by `y^2/|y|^2`.
+- DYN-9b-3 remains `blocked_missing_branch_thermal_inputs` (`11/11`
+  mechanical).  The corrected SM
+  Davidson--Ibarra bound is `2.307794855e-6`; `M1=2.38045e10 GeV` is in the
+  tau-resolved regime, and removal of a gravitino-specific ceiling does not
+  make reheating unconstrained.
+- DYN-8 is `preliminary`: `30/30` mechanical/disclosure checks pass while
+  `physics_promotion_allowed=false`.  Its 210/45 contradiction is repaired;
+  rare sampled 210-only LR minima make the 45-adjoint route an alternative,
+  not a necessity.
+- The H3/Cartan logic blocker is resolved by theorem demotion plus an explicit
+  H3+ axiom: the one-dimensional abelian branch has a non-degenerate
+  ad-invariant form, so original H3 proves only `N_fam<=3`; `N=3` is now
+  explicitly conditional on a non-degenerate adjoint-trace/Killing contact.
+  The physical motivation or UV realization of H3+ remains open.
+
+Reproducible promotion diagnostics are recorded in
+`../route_f/output/blocker_promotion_gate.{json,md}` (`18/18`, deliberately
+with `physics_promotion_allowed=false`).
+
 ## A. Removable dependencies (prove in-repo)
 
 - **R1 [remove] CI-1, complex-representation classification.**  Which simple
@@ -95,6 +136,12 @@ principles of the P0-P3 kind; **[impossible]** = provably not closable;
   (author's call; criteria in README.md).
 
 ## E. Dynamics program (planned 2026-07-04; items DYN-0..DYN-8)
+
+> **Historical execution log.**  The original `done`/`closed` labels and
+> numerical interpretations below are retained for provenance only.  They are
+> superseded by the 2026-07-14 blocker update and
+> `code_dyn/dyn_claim_registry.json`; in particular DYN-5, DYN-7, and DYN-8
+> must not be promoted from this section.
 
 The reconstruction paper is deliberately kinematic (representation theory +
 index theory only).  This program adds the action-level dynamics along the
@@ -278,23 +325,28 @@ Standing discipline for every DYN item:
   ledgers `output/audit1/dyn4b_unconditional_zeta.{json,md}`).
   Design: DYN-4a proved zeta (M_V frozen) orthogonal to the theta_23 flip,
   so 4b frees the FULL Majorana sector -- the inverse seesaw absorbs
-  NuFit-6.0 exactly and the posterior of the covariant decomposition is
-  computed.  Refreshed central card: zeta' = 0.105557+0.071595i
+  the NuFit-6.0 central inputs exactly and propagates the covariant
+  decomposition over declared nuisance priors.  No likelihood or draw
+  reweighting was applied, so this is not a posterior.  Refreshed central
+  card: zeta' = 0.105557+0.071595i
   (arg moved 75 old loose windows, |zeta| moved 689 -- the printed anchor
   digits are decisively superseded by DATA, exactly as the boundary
   theorem requires), contact fraction' = 0.1275, M_*' = 4.09e15 GeV,
   I' = 0.007790+0.017991i, J' = -9.143e-5+5.142e-4i; Audit-0.5 re-test
-  still no-hit (miss 0.566 rad).  UNCONDITIONAL posterior (NuFit-6.0
-  gaussians x uniform Majorana phases x log-uniform m1 in [1e-4, 3e-2] eV,
-  4000 draws): |zeta| = 0.144 [0.113, 0.184] (68%), arg zeta = 0.605
-  [0.465, 0.749] rad (circular).  KEY ROBUSTNESS RESULT: contact
-  essentiality survives the refresh and full marginalization --
-  P(contact fraction > 0.01) = 1.000, P(> 0.05) = 0.988; the
-  Veronese-only branch stays excluded posterior-wide.  Nuisance
+  still no-hit (miss 0.566 rad).  UNWEIGHTED PRIOR-DRAW REGRESSION
+  (NuFit-6.0 Gaussian proposal factors x uniform Majorana phases x
+  log-uniform m1 in [1e-4, 3e-2] eV, 4000 draws): |zeta| = 0.144
+  [0.113, 0.184] (central 68% draw interval), arg zeta = 0.605
+  [0.465, 0.749] rad (circular).  CONDITIONAL ROBUSTNESS RESULT: within
+  this declared draw distribution, the sample fractions with contact
+  fraction > 0.01 and > 0.05 are 1.000 and 0.988; this does not constitute
+  a likelihood posterior or a global exclusion of the Veronese-only branch.
+  Nuisance
   attribution: the alpha_21 Majorana phase dominates the width
   (corr +0.53), m1 +0.19.  DYN-7 feed: log10 M_1 = 10.44 [10.39, 10.52],
-  P(M_1 > 1e9 GeV) = 1.000 (Davidson-Ibarra viable).  Old-card I/J
-  regress to the Audit-0 paper digits.
+  the sample fraction with M_1 > 1e9 GeV is 1.000 (a necessary
+  Davidson--Ibarra scale diagnostic, not a leptogenesis-viability claim).
+  Old-card I/J regress to the Audit-0 paper digits.
   Remaining as **DYN-4c** (open): kernel-level Dirac refit -- rerun the
   covariant CP1-kernel fit (archival scan_cp1_o2_yukawa chain) against
   refreshed charged-fermion masses + CKM, then propagate through 4b;
@@ -624,14 +676,17 @@ Standing discipline for every DYN item:
   (deferred -> executed July 2026 with findings) and the Z_178
   observation carries the retirement note (misses the refreshed card by
   76x the loose window).  Both PDFs rebuilt clean.
-  Kill bank: K1 fourth family (core); K2 Dirac neutrinos (contact
-  target, P(cf>0.01) = 1.000); K3 SUSY-slice exclusion (FIRED);
+  Kill bank: K1 fourth family (core); K2 Dirac neutrinos (conditional
+  contact target; unweighted prior-draw fraction cf>0.01 = 1.000);
+  K3 SUSY-slice exclusion (FIRED);
   K4 PS Hyper-K window (dead-or-discoverable, the sharpest entry);
   K5 channel hierarchy (e+ pi0 dominance, G_LR 1e36); K6 leptogenesis
-  soft kill (SUSY-scoped); K7 messenger spurion ceilings (4.4e-4);
-  K8 N2,N3 > M_I coexistence (string card); K9 Delta S >= 6.6
-  selectivity (string card); K10 bridge window / PS-bridge no-go
-  (string card); K11 Z_178 retirement.
+  unflavored regression (branch-tagged and unpromoted); K7 historical
+  messenger-ceiling diagnostic (invalid pending an interacting DYN-5
+  action); K8 fixed-archival-tower N2,N3 > M_I ordering only (the
+  instanton mechanism permits but does not require it); K9 historical-invalid
+  Delta S = 4.66 / 3.18 arithmetic inherited from DYN-5; K10 preliminary
+  bridge toy window / PS-grid obstruction (unpromoted); K11 Z_178 retirement.
 
 Suggested sequencing: DYN-0 -> (DYN-1 || DYN-4) -> DYN-2 -> DYN-3 ->
 DYN-5 -> DYN-8, with DYN-6/DYN-7 optional lanes after DYN-4.  Statuses
@@ -639,6 +694,12 @@ start `open`; update per session.
 
 ## F. String-conditional program (planned 2026-07-05; items D3-D5,
 ## then DYN-8 close-out and the staged DYN-9b)
+
+> **Historical execution log.**  The DYN-9b `closed`, K8 `requirement`,
+> unflavored posterior, reheating, and 210/45 statements below are superseded
+> by the 2026-07-14 blocker update and claim registry.  RE-SC3/4/5 are present
+> but unpromoted; the global fit, flavored kinetics, messenger rederivation,
+> and uncertainty envelopes remain open.
 
 Discipline: every item below is a CONDITIONAL string interpretation
 under the Route-D promotion bar (precise statement, assumptions-vs-
@@ -735,29 +796,33 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   first arises at dimension 7.  The only renormalizable contamination
   is the direct X L Htilde -- exactly the operator the no-go ties to
   the X mass.
-  (3) Closure condition quantified: instanton zero-mode selectivity
-  with Delta S = S'(XLH) - S(XX) >= 6.6 (refreshed DYN-5 ceiling) /
-  3.2 (loose) at M_s = 2e16 (eps_XX = sqrt(3) M_*/M_s = 0.34, i.e. the
-  XX source is LARGE); direct X-Dirac instanton needs S' >= 7.72 /
-  4.26.  D3 consistency: the XX source is the CONJUGATE class of the
-  NN source (+2 vs -2 in B-L) -- both orientations required with
-  independent actions (doubled assumption, priced; NOT the same class
-  the plan anticipated).  The K_tr texture of the X mass becomes an
-  explicit conditional input (the SUSY theorem postulated it).
+  (3) Historical-invalid numerical diagnostic (NOT a closure condition):
+  under the conditional unit-prefactor XX benchmark at M_s = 2e16,
+  eps_XX = sqrt(3) M_*/M_s = 0.34 and S_XX = 1.08.  The old DYN-5
+  ceilings then replay Delta S = S'(XLH) - S(XX) = 4.66 / 3.18 and
+  S'(XLH) = 5.74 / 4.26, but these are not physics bounds because the
+  underlying DYN-5 messenger action is invalid.  Only the exact additive-
+  charge no-go survives.  D3 consistency: the XX and NN operators carry
+  opposite B-L charges (-2 and +2); treating their compensating sources as
+  conjugate instanton orientations with independent actions is an extra
+  ansatz, not a consequence of charge equality.  The K_tr texture of the
+  X mass is likewise an explicit conditional input (the SUSY theorem
+  postulated it).
   (4) Portability: DYN-5's exact light-sector silence is pure linear
   algebra and survives non-SUSY unchanged.
   (5) Beyond-window low-energy consequence: honest NONE (X at
   sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal
   zero-mode counting in a concrete embedding.
-  Boundary: selectivity ASSUMED not computed; no anomaly inflow /
-  global embedding; zeta NOT derived; unpromoted.
+  Boundary: a valid numerical selectivity bound remains OPEN pending an
+  interacting messenger action and explicit zero-mode calculation; no
+  anomaly inflow / global embedding; zeta NOT derived; unpromoted.
 
 - **D5 [high-scale SUSY-breaking bridge scan] (1-2 sessions).**
   Goal: the interpolating family between the EXCLUDED SUSY slice and
   the DYN-9 non-SUSY chains: SUSY broken at M_SS (non-SUSY below, SUSY
-  above) -- string-natural (UV SUSY), and it preserves the
-  Route-B/DYN-5 holomorphy machinery at the matching scale iff
-  M_SS < M_*.
+  above) -- a UV-SUSY toy interpolation.  The inequality M_SS < M_*
+  is only a necessary matching-scale ordering; it does not validate
+  the interacting Route-B/DYN-5 messenger rejected by DYN-5V.
   Steps: (1) two-segment running per surviving chain (G_LR and the
   210-compatible PS): DYN-9 non-SUSY b's below M_SS, SUSY versions
   above; solve (M_I, M_X, alpha_G) as functions of M_SS on a grid
@@ -777,35 +842,32 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   exclusion reproduced as M_SS -> TeV; explicit window verdict.
   Depends: DYN-9, DYN-3, DYN-5.
   Status: **done** (2026-07-05;
-  `route_d/code/verify_d5_susy_breaking_bridge.py`, 17/17 checks;
+  `route_d/code/verify_d5_susy_breaking_bridge.py`, 18/18 checks;
   ledgers `route_d/output/d5_susy_breaking_bridge.{json,md}`).
   FINDINGS: SUSY intermediate b's DERIVED with the anomaly-forced
   content doubling (U(1)_{B-L} cubic anomaly of Delta_R = 24 forces
   Delta_R-bar; SUSY PS doubles Sigma_R): b2R jumps -7/3 -> +5 (LR) and
   11/3 -> +41 (PS).  Endpoint gates: DYN-9 ledger reproduced to 1e-4;
   DYN-3 calibration 1.24e26 reproduced.
-  | **G_LR bridge: ALIVE** | window log10 M_SS in [10.30, 15.55] |
+  | **G_LR toy-grid window (unpromoted)** | log10 M_SS in [10.30, 15.55] |
     bound BELOW by no-physical-solution (solvability, near the DYN-9
     M_I = 1e9.4 -- NOT by d=5: tau_d5 ~ 1e46 at the lower edge, the
     mini-split lever never binds), bound ABOVE by M_SS < M_*
     (holomorphy) | M_X stays ~1e16.3, tau_d6 in [6.2e35, 9.3e35] |
-    all Case A (M_I <= M_SS); Route-B/DYN-5 holomorphy at matching
-    preserved throughout |
-  | **PS bridge: EMPTY (structural)** | only 18/263 points physical,
+    all Case A (M_I <= M_SS); M_SS < M_* is necessary but does not
+    restore the invalid DYN-5 action |
+  | **PS toy-grid window empty under stated assumptions** | only 18/263 points physical,
     all with a vanishing SUSY segment (longest case-A segment ~ 0
-    dex); b2R = +41 caps the segment via Y-matching; no M_SS anywhere
-    gives tau_d6 > 2.4e34 (no d=6 rescue) |
+    dex); b2R = +41 is associated with this scan result but no causal
+    counterfactual has been performed; no sampled M_SS gives
+    tau_d6 > 2.4e34 |
   | TeV end: NO physical bridge solution for either chain --
     stronger than d=5-dead; the DYN-2/3 exclusion structure
     reproduced (the catastrophic DYN-3 magnitude was slice-specific,
     disclosed) |
-  READING: the string-natural interpolation EXISTS exactly on the
-  G_LR side -- UV SUSY broken anywhere in [2e10, 3.5e15] GeV keeps
-  the chain alive, d=5 safe, and the Route-B messenger machinery
-  valid at matching; the 210-compatible PS chain CANNOT be reached
-  through a high-scale SUSY bridge with 126-type breaking content
-  (its rescue, if any, must be genuinely non-SUSY all the way, or
-  use different breaking content -- feeds DYN-9b).
+  READING: this preliminary grid contains a G_LR arithmetic window under
+  one-loop/ESH/degenerate-spectrum assumptions and no PS window.  It is not
+  a physical bridge-survival theorem and supplies no valid messenger action.
   Boundary: one-loop intermediate segments; ESH-minimal content both
   phases; M_T = M_X and degenerate soft spectrum assumed; above-M_X
   perturbativity not audited; unpromoted.
@@ -934,45 +996,37 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   zeta/M_* RE-EXTRACTION on the alive branch (branch-local zeta is
   consistent with the boundary theorem), contact-essentiality retest.
   Status 9b-2: **done** (2026-07-05;
-  `code/audit9_dyn9b2_nonsusy_flavor_refit.py`, 11/11; ledgers
+  `code/audit9_dyn9b2_nonsusy_flavor_refit.py`, 14/14; ledgers
   `output/audit9/dyn9b2_nonsusy_flavor_refit.{json,md}`).  Refit-level
   structural results from the light-neutrino side (a FULL non-SUSY
   Yukawa fit is NOT performed -- the Dirac kernel shape is a retained
   conditional input, disclosed):
-  (1) SO(10) LOCK TENSION: y_t(M_X) = 0.416 machine-derived (one-loop
-  SM run); the perturbative ceiling 4 pi M_I caps the nu-Dirac scale
-  at y_max = 0.046 (PS) / 0.0026 (G_LR); the renormalizable minimal
-  source needs the locked third-generation coupling suppressed 9x /
-  159x (= 2 / 4.4 orders in the tower) -- a structural tension
-  removable only by that much Yukawa tuning.
+  (1) FIXED-KERNEL CEILING: the corrected one-loop replay gives
+  y_t(M_X)=0.44116481.  The relations Y_nu=h-3f and Y_u=h+f do not force
+  Y_nu~Y_u (h=3f gives Y_nu=0, Y_u=4f).  The actual archival-kernel
+  suppressions are 19.5x/342.2x (PS/G_LR); 9.6x/169.2x applies only
+  under an additional top-like ansatz.
   (2) TYPE-II ESCAPE FAILS (order estimate, generous lambda ~ 1 and
   f = 4 pi): deficit 3.7 (PS) / 7.3 (G_LR) orders with the
   Delta_L-type block at the gauge scale (9b-1c placement).
-  (3) **ZETA-INVARIANCE THEOREM** (machine-verified to 1e-16): under
-  Y_nu -> y Y_nu the tower rescales uniformly, so zeta, the contact
-  direction, and the contact fraction are EXACTLY invariant; ONLY
-  M_* = y^2 M_*_arch moves.  This sharpens the DYN-9 branch-locality
-  statement: the contact card's normalized content is scale-covariant;
-  M_* is the only branch-local number.  Re-extracted windows at the
+  (3) **POSITIVE-REAL RESCALING THEOREM**: for uniform y>0, zeta, the
+  projective contact direction, and contact fraction are invariant and
+  M_* -> y^2 M_*.  For complex y, M_* -> |y|^2 M_* and
+  zeta -> (y^2/|y|^2) zeta, so its phase is not invariant.  Re-extracted windows at the
   ceiling: M_*' <= 1.0e13 (PS) / 3.4e10 (G_LR).  Contact essentiality
   (P(cf > 0.01) = 1.000) carries over verbatim (conditional on the
   kernel shape only).
-  (4) LEPTOGENESIS SOURCE SELECTION: the rescaled renormalizable
+  (4) CONDITIONAL SOURCE COMPARISON: the rescaled renormalizable
   source gives M_1' = 7e7 (PS) / 2e5 (G_LR) GeV -- below the
   Davidson-Ibarra floor (~5e8, order estimate); the scale-decoupled
-  (instanton-type) source keeps the archival M_1 = 2.8e10 alive.
-  Thermal leptogenesis SELECTS the scale-decoupled source, so the D3
-  coexistence prediction (K8: N_2, N_3 above the intermediate gauge
-  scale) UPGRADES from an optional pricing card to a REQUIREMENT of
-  the alive branch with viable leptogenesis.  D3 remains UNPROMOTED:
-  this is a conditional-dependency statement, not a promotion.
-  Boundary: lock quantified from the third-generation relation, not a
-  global fit; type-II/DI numbers are order estimates; zeta NOT
-  derived.
+  (instanton-type) benchmark keeps the archival M_1 = 2.8e10 above the
+  adopted floor.  No source is selected without a global flavor fit and
+  flavored thermal kinetics.  The N_2,N_3>M_I ordering belongs only to the
+  fixed archival tower and is not a generic instanton requirement.
   9b-3: non-SUSY leptogenesis re-run on the 9b-2 tower (non-SUSY loop
   function; the gravitino constraint dissolves).
   Status 9b-3: **done** (2026-07-06;
-  `code/audit9_dyn9b3_nonsusy_leptogenesis.py`, 10/10; ledgers
+  `code/audit9_dyn9b3_nonsusy_leptogenesis.py`, 11/11; ledgers
   `output/audit9/dyn9b3_nonsusy_leptogenesis.{json,md}`).  The DYN-7
   pipeline rerun with exactly three replacements: f_SUSY -> f_SM
   (verified: hierarchical ratio exactly 1/2; log1p ESSENTIAL -- at
@@ -983,13 +1037,13 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   m_tilde and kappa v-independent, match DYN-7 exactly); gravitino
   ceiling REMOVED.
   FINDINGS: net suppression eps1(non-SUSY)/eps1(DYN-7) = 0.165 (~6x
-  harder); posterior P(success) = 0/4000 (< 2.5e-4; DYN-7: 0.35%);
+  harder); the unweighted prior-draw regression has 0/4000 target-band
+  hits (not a posterior or success probability; DYN-7 diagnostic: 0.35%);
   median |eta_B| = 1.45e-11 vs observed 6.1e-10; boost table: x10 ->
-  0.13, x30 -> 0.40, x60 -> 0.45 (sweet spot), x100 -> 0.34 -- typical
-  viability needs x30-100 (DYN-7 needed x3-10).  THE ONE NON-SUSY
-  GAIN: the gravitino/reheating ceiling dissolves BY THE BRANCH --
-  thermal N_1 production at 2.4e10 GeV is unconstrained and
-  NON-THERMAL production opens as a qualitatively new escape.
+  0.13, x30 -> 0.40, x60 -> 0.45, x100 -> 0.34.  These are regression
+  target-band hit fractions, not viability probabilities.  The
+  gravitino-specific ceiling is absent on this branch, but reheating
+  history and initial abundance remain unspecified.
   K6 branch-tagged verdict for the 9b-4 refresh: a SOFT constraint on
   the source scenario, not a kill -- viability requires flavored +
   O(10) effects, non-thermal production, or a resonant D3-type tower
@@ -1000,7 +1054,7 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   9b-4: DYN-8 ledger refresh with the 9b numbers.
   Status 9b-4: **done** (2026-07-06; the DYN-8 collector
   `code/audit8_dyn8_falsifiability_collection.py` extended with the
-  refresh section, now 28/28 checks against 17 ledgers / 269 upstream
+  refresh section, now 30/30 checks against 21 ledgers / 304 upstream
   checks; ledgers `output/audit8/` regenerated).  Refresh entries:
   K4r (TRIPLE-TESTED: ESH one-loop -> computed 210 spectrum ->
   computed 126bar spectrum, tau = 4.25e33 at all percentiles in every
@@ -1009,10 +1063,9 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   adjoint route or one-loop stabilization required); K6r (REPLACED by
   the branch-tagged 9b-3 verdict: ~6x harder, P = 0/4000 unflavored,
   gravitino ceiling dissolved -- soft constraint on the source
-  scenario); K8r (UPGRADED to a branch requirement via the 9b-2
-  source selection; D3 unpromoted); K11r (the zeta-invariance theorem
-  replaces the bookkeeping remark: normalized contact content
-  branch-independent, M_* the only branch-local number).
+  scenario); K8r (fixed-tower conditional diagnostic; no source selection,
+  D3 unpromoted); K11r (positive-real invariance plus complex phase
+  covariance, restricted to the fixed-kernel family).
   Both papers synchronized: the reconstruction paper's branch map now
   records the executed vacuum/source/contact stages, K4/K5/K6/K8 and
   the remark carry the refresh, and the main paper's status note
@@ -1020,13 +1073,21 @@ D3 -> D4 -> D5 -> DYN-8 -> DYN-9b.
   collector GATES on all of it.
   Depends: DYN-9 (done), DYN-8 (structure); D3/D4 as source
   dependencies (D3 now load-bearing via K8r).
-  **DYN-9b IS CLOSED** (9b-1/1b/1c/2/3/4 all done).
+  **Historical close-out label withdrawn:** the ledgers execute
+  mechanically, but global flavor, flavored kinetics, messenger/source,
+  and threshold uncertainties keep the physics lane open.
 
 Backlog (optional, unchanged): DYN-6 (axiom-pricing generalization),
 DYN-3b (physical-basis rotations, explicit dressing).
 (DYN-4c is promoted out of the backlog into SUB-B below.)
 
 ## G. Submission program (planned 2026-07-06)
+
+> **Historical submission log with current correction.**  The theorem Letter
+> now proves only \(N_{\rm fam}\le3\) from original H3.  Equality,
+> \(g=0\), the \(\mathcal O(2)\) carrier/two-center branch, and the Killing
+> contact are conditional on the explicit H3+ Killing-contact axiom.  The
+> corrected claim matrix is `SUBMISSION.md`.
 
 Strategy: split into three submission units rather than one monolith;
 two hard prerequisites gate everything.  Order:

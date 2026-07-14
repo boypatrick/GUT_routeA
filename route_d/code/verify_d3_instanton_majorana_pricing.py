@@ -9,29 +9,33 @@ all f < 4 pi).  Four sections, derivations recorded in the JSON:
   S1  d=5-operator escape (16 16 16bar 16bar)/M_s with v_R ~ M_I:
       f'_needed = M_R,i M_s / v_R^2 = f_renorm * (M_s/v_R) -- STRICTLY
       WORSE than the renormalizable case for every M_s > v_R.  This is
-      a NEGATIVE gate: the escape is closed at intermediate-scale v_R,
-      leaving instantons as the only string escape for the tower.
+      a NEGATIVE gate: this escape is closed at intermediate-scale v_R.
+      Of the two mechanisms priced in this card, only the instanton
+      benchmark remains; no exhaustive UV-source classification is claimed.
 
-  S2  Instanton source M_R,i ~ M_s e^{-S_i}: required actions
-      S_i = ln(M_s / M_R,i) over an M_s grid; link to the D2 contact
+  S2  Instanton source M_R,i ~ A_i M_s e^{-S_i}: effective actions
+      S_i = ln(M_s / M_R,i) over an M_s grid at the explicit benchmark
+      prefactor A_i=1; link to the D2 contact
       action S_zeta = -ln|zeta| (same-ballpark diagnostic, NOT
-      evidence); weak-coupling boundary S_top >= 1 requires
-      M_s >= e * M_R,top = 1.07e16 GeV (disclosed per chain).
+      evidence); the minimal exponential-suppression diagnostic
+      S_top >= 1 requires M_s >= e * M_R,top = 1.07e16 GeV.  This does
+      not establish string-loop or alpha-prime semiclassical control.
 
   S3  Rank/texture bookkeeping: Takagi decomposition of the replayed
       archival M_R = sum_k sigma_k u_k u_k^T -- exactly three rank-1
       terms with sigma_k > 0, so >= 3 distinct instanton cycles are
-      required; the instanton data (3 actions + unitary texture)
+      required only under the stated rank-1-per-cycle source ansatz; the
+      instanton data (3 actions + unitary texture)
       counts 3 + 9 = 12 real parameters = the FULL complex-symmetric
       Majorana data.  The axiom buys SCALE (evading f < 4 pi), not
       texture compression.
 
   S4  Price card: precise axiom statement, cost, what it buys, what it
-      does not buy, and the beyond-zeta consequence -- on the
-      210-compatible PS chain the mechanism REQUIRES N_2, N_3 heavier
-      than the intermediate gauge scale M_I (impossible with a
-      renormalizable source), a falsifiable correlation if both scales
-      are ever measured.
+      does not buy, and the beyond-zeta consequence -- for the fixed
+      archival tower, N_2 and N_3 lie above the intermediate gauge scale
+      M_I on both surviving chains.  The instanton benchmark permits this
+      coexistence; it does not require the same ordering for a generic
+      independently fitted tower.
 
 Route-D discipline: this is a CONDITIONAL string interpretation, NOT
 promoted to the paper; no global compactification, zero-mode spectrum,
@@ -139,8 +143,8 @@ DLOG["S1_d5_escape_closed"] = {
                "source strictly RAISES the required coupling",
     "f_prime_tables": fprime,
     "v_R_min_renormalizable_GeV": vR_min,
-    "conclusion": "instantons are the only string escape for the tower "
-                  "at intermediate-scale v_R",
+    "conclusion": "of the two priced mechanisms, the d=5 operator fails "
+                  "and the instanton benchmark remains conditional",
 }
 
 # ------------------------------------------------------------- section 2
@@ -165,10 +169,10 @@ check("required actions S_i = ln(M_s/M_R,i) at M_s = 2e16: "
       f"S = [{S_2e16[0]:.3f}, {S_2e16[1]:.3f}, {S_2e16[2]:.3f}]")
 
 Ms_weak = math.e * MR_sigma[2]
-check("weak-coupling boundary DISCLOSED: S_top >= 1 requires "
+check("minimal exponential-suppression diagnostic: S_top >= 1 requires "
       "M_s >= e * M_R,top = 1.07e16 GeV -- satisfied by the G_LR chain "
-      "M_X = 2.1e16 but NOT by the PS chain M_X = 5.4e15 (there the "
-      "string scale must sit above the unification scale)",
+      "M_X = 2.1e16 but NOT by the PS chain M_X = 5.4e15; this is not "
+      "a proof of string-loop or alpha-prime control",
       abs(Ms_weak - 1.0675e16) / 1.0675e16 < 0.01
       and MX["G_LR"] > Ms_weak and MX["PS"] < Ms_weak,
       f"M_s_min = {Ms_weak:.3e}; M_X(G_LR) = {MX['G_LR']:.2e}, "
@@ -180,7 +184,8 @@ check("same-ballpark DIAGNOSTIC (not evidence): at M_s = 2e16 the "
       f"|S_top - S_zeta| = {abs(S_2e16[0]-S_zeta):.2f}")
 DLOG["S2_instanton_actions"] = {
     "S_table_by_Ms": S_table, "S_zeta_D2": S_zeta,
-    "weak_coupling_Ms_min_GeV": Ms_weak,
+    "S_top_ge_1_diagnostic_Ms_min_GeV": Ms_weak,
+    "semiclassical_control_established": False,
     "note": "three DISTINCT actions are required (hierarchy of the "
             "tower); the same-ballpark coincidence S_top ~ S_zeta is "
             "recorded as a diagnostic only",
@@ -247,9 +252,9 @@ check("Takagi factorization M_R = U diag(sigma) U^T verified "
 terms = [s_tak[k] * np.outer(U_tak[:, k], U_tak[:, k]) for k in range(3)]
 ranks = [int(np.linalg.matrix_rank(t, tol=s_tak[k] * 1e-10))
          for k, t in enumerate(terms)]
-check("the tower is EXACTLY three rank-1 terms with sigma_k > 0: a "
-      "single instanton cycle (generic rank-1 M_R) is EXCLUDED; >= 3 "
-      "distinct cycles with distinct actions are required",
+check("under the explicit rank-1-per-cycle source ansatz, the Takagi tower "
+      "uses exactly three positive rank-1 terms; this is a conditional UV "
+      "cost, not a theorem about general instanton sectors",
       ranks == [1, 1, 1] and all(s > 0 for s in s_tak)
       and np.allclose(sum(terms), MR_GeV, rtol=1e-12),
       f"ranks = {ranks}, sigma ratios = "
@@ -273,12 +278,13 @@ DLOG["S3_rank_texture"] = {
 print("== D3 section 4: price card ==")
 
 coex = {n: [float(s / MI[n]) for s in MR_sigma[1:]] for n in SURV}
-check("beyond-zeta consequence: on BOTH surviving chains the mechanism "
-      "REQUIRES N_2 and N_3 heavier than the intermediate gauge scale "
-      "(sigma/M_I > 1), impossible with a renormalizable perturbative "
-      "source -- a falsifiable correlation if the Z'/W_R scale and the "
-      "heavy-N masses are ever both measured",
-      all(all(r > 1 for r in coex[n]) for n in SURV),
+check("fixed-tower consequence: on BOTH surviving chains the replayed "
+      "archival N_2 and N_3 are heavier than the intermediate gauge "
+      "scale and in fact satisfy sigma/M_I > 4 pi; the instanton "
+      "benchmark permits this coexistence without a perturbative f v_R "
+      "source, but does not "
+      "impose it on a generic independently fitted tower",
+      all(all(r > FOUR_PI for r in coex[n]) for n in SURV),
       f"PS: N2/M_I = {coex['PS'][0]:.0f}, N3/M_I = {coex['PS'][1]:.0f}")
 
 PRICE_CARD = {
@@ -297,10 +303,12 @@ PRICE_CARD = {
              "N_2, N_3 > M_I coexistence allowed"],
     "does_not_buy": ["zeta's value (boundary theorem intact)",
                      "the family texture u_k (12 = 12, zero compression)",
-                     "the PS-chain weak-coupling window "
-                     "(needs M_s > M_X there)"],
-    "beyond_zeta_consequence": "N_2, N_3 heavier than the intermediate "
-                               "gauge scale -- falsifiable correlation",
+                     "semiclassical control (S_top >= 1 is only a "
+                     "minimal suppression diagnostic)"],
+    "beyond_zeta_consequence": "for the fixed archival tower, N_2 and "
+                               "N_3 are heavier than the intermediate "
+                               "gauge scale; the instanton benchmark "
+                               "permits but does not generically require it",
 }
 check("price card assembled: statement, 12-parameter cost, buys / "
       "does-not-buy lists, beyond-zeta consequence", True,
@@ -330,8 +338,13 @@ payload = {
     "global_divisor_constructed": False,
     "family_texture_derived": False,
     "moduli_stabilization_addressed": False,
+    "instanton_prefactors_A_i_fixed_to_one": True,
+    "S_ge_1_semiclassical_control_proved": False,
+    "three_cycles_requires_rank1_per_cycle_assumption": True,
     "zeta_value_derived": False,
     "promoted_to_paper": False,
+    "physics_status": "unpromoted_pricing_only",
+    "physics_promotion_allowed": False,
 }
 (OUT / "d3_instanton_majorana_pricing.json").write_text(
     json.dumps(payload, indent=2, sort_keys=True) + "\n")
@@ -348,16 +361,19 @@ md = ["# Route-D D3: instanton / d=5 Majorana-source pricing card", "",
       f"are `S = [{S_2e16[0]:.2f}, {S_2e16[1]:.2f}, {S_2e16[2]:.2f}]` "
       f"(top/mid/bottom); D2 contact action `S_zeta = {S_zeta:.4f}` is "
       "same-ballpark as the tower top (diagnostic, not evidence).  "
-      f"Weak coupling needs `M_s >= {Ms_weak:.2e}` GeV: OK on G_LR, "
-      "ABOVE `M_X` on the PS chain (disclosed).",
-      "3. **Rank/texture**: the tower is exactly three rank-1 Takagi "
-      "terms => >= 3 distinct cycles; instanton data = 3 + 9 = 12 real "
+      f"The diagnostic `S_top >= 1` needs `M_s >= {Ms_weak:.2e}` GeV: "
+      "OK on G_LR and above `M_X` on PS; it does not prove "
+      "semiclassical control.",
+      "3. **Rank/texture (conditional source ansatz)**: the tower is exactly "
+      "three rank-1 Takagi terms, so the rank-1-per-cycle ansatz needs at "
+      "least three cycles; instanton data = 3 + 9 = 12 real "
       "parameters = the full Majorana data.  **The axiom buys scale, "
       "not texture.**",
-      "4. **Beyond-zeta consequence**: N_2, N_3 heavier than the "
-      f"intermediate gauge scale (PS: {coex['PS'][0]:.0f}x, "
-      f"{coex['PS'][1]:.0f}x M_I) -- impossible renormalizably, "
-      "falsifiable if both scales are measured.",
+      "4. **Fixed archival-tower consequence**: N_2, N_3 are heavier "
+      f"than the intermediate gauge scale (PS: {coex['PS'][0]:.0f}x, "
+      f"{coex['PS'][1]:.0f}x M_I) -- impossible for perturbative "
+      "f v_R, but permitted rather than generically required by the "
+      "instanton benchmark.",
       "", "## Boundary (NOT claimed)", "",
       "- No global compactification, divisor, zero-mode spectrum, or "
       "moduli stabilization is constructed.",
@@ -371,3 +387,6 @@ md += [f"- [{'PASS' if ok else 'FAIL'}] {n}" for n, ok in CHECKS]
 print(f"\nD3: {n_pass}/{len(CHECKS)} checks; d=5 escape CLOSED, instanton "
       f"escape priced at 12 params (scale, not texture); ledgers -> "
       f"{OUT.relative_to(ROOT)}/d3_instanton_majorana_pricing.*")
+
+if n_pass != len(CHECKS):
+    raise SystemExit(1)

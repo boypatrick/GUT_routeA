@@ -1,10 +1,10 @@
 {
   "audit": "DYN-8 falsifiability collection",
   "dyn_item": "DYN-8",
-  "created_utc": "2026-07-05T23:54:46.377662+00:00",
+  "created_utc": "2026-07-14T01:05:22.296846+00:00",
   "all_pass": true,
-  "checks_passed": 29,
-  "checks_total": 29,
+  "checks_passed": 30,
+  "checks_total": 30,
   "checks": [
     {
       "name": "every source ledger loads and reports all_pass",
@@ -12,6 +12,10 @@
     },
     {
       "name": "no source ledger claims a derived zeta (boundary theorem respected program-wide)",
+      "pass": true
+    },
+    {
+      "name": "validity guards fail closed: DYN-5 is invalid pending an interacting messenger action and DYN-7/9b-3 require flavored thermal inputs",
       "pass": true
     },
     {
@@ -23,7 +27,7 @@
       "pass": true
     },
     {
-      "name": "BRANCH non-SUSY ALIVE: G_LR (M_I 1e9.4, M_X 1e16.3, tau ~ 1e36) alive; PS 210-compatible marginal at 4.3e33",
+      "name": "BRANCH non-SUSY PRELIMINARY LEDGER: G_LR has M_I 1e9.4, M_X 1e16.3 and the central d=6 estimate near 1e36; PS is a 210-compatible marginal central estimate at 4.3e33",
       "pass": true
     },
     {
@@ -39,7 +43,7 @@
       "pass": true
     },
     {
-      "name": "K2 [kinematic core target]: Dirac neutrinos remove the Majorana contact target; essentiality...",
+      "name": "K2 [conditional Majorana-card diagnostic]: Dirac neutrinos remove this Majorana contact target; within the ...",
       "pass": true
     },
     {
@@ -55,23 +59,23 @@
       "pass": true
     },
     {
-      "name": "K6 [SUSY slice (soft)]: thermal unflavored leptogenesis fails by ~1.5 orders, wrong cent...",
+      "name": "K6 [SUSY slice (historical diagnostic)]: unflavored regression gives a small success fraction, but DYN-7F...",
       "pass": true
     },
     {
-      "name": "K7 [hidden-messenger extension]: odd-R spurion ceiling eps < 4.4e-4 (refreshed windows); light-se...",
+      "name": "K7 [hidden-messenger extension (invalid model diagnostic)]: historical odd-R ceiling replays arithmetically, but DYN-5V show...",
       "pass": true
     },
     {
-      "name": "K8 [string-conditional]: instanton source requires N2, N3 ABOVE the intermediate gauge sc...",
+      "name": "K8 [string-conditional]: for the fixed archival tower, N2 and N3 lie ABOVE the intermedia...",
       "pass": true
     },
     {
-      "name": "K9 [string-conditional]: zero-mode selectivity gap Delta S >= 6.6 (refreshed) / 3.2 (loos...",
+      "name": "K9 [string-conditional (invalid numerical diagnostic)]: the historical DYN-5 ceilings replay to a finite zero-mode selec...",
       "pass": true
     },
     {
-      "name": "K10 [string-conditional]: SUSY-breaking bridge: G_LR window log10 M_SS in [10.30, 15.55]; ...",
+      "name": "K10 [string-conditional]: preliminary SUSY-breaking toy scan: G_LR window log10 M_SS in [1...",
       "pass": true
     },
     {
@@ -87,19 +91,19 @@
       "pass": true
     },
     {
-      "name": "K6r [non-SUSY branch (refresh)]: K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression ...",
+      "name": "K6r [non-SUSY branch (refresh)]: K6 is replaced by a branch-tagged unflavored regression: ~6x har...",
       "pass": true
     },
     {
-      "name": "K8r [string-conditional (refresh)]: K8 UPGRADED to a branch requirement: lock tension 9x/159x + type...",
+      "name": "K8r [string-conditional (refresh)]: K8 remains an unpromoted conditional diagnostic: the fixed archi...",
       "pass": true
     },
     {
-      "name": "K2r [kinematic core target (refresh)]: K2 STRENGTHENED by the kernel refit: the theta_23 tension is a f...",
+      "name": "K2r [conditional kernel-refit diagnostic]: K2 is refined by the kernel refit: the theta_23 tension is a fro...",
       "pass": true
     },
     {
-      "name": "K11r [benchmark bookkeeping (refresh)]: the zeta-invariance theorem: the normalized contact content is e...",
+      "name": "K11r [benchmark bookkeeping (refresh)]: positive-real rescaling theorem: within the fixed-kernel y>0 fam...",
       "pass": true
     },
     {
@@ -107,7 +111,7 @@
       "pass": true
     },
     {
-      "name": "reconstruction paper status ledger updated (executed audits + still-open list) and manifest extended with the collector",
+      "name": "reconstruction paper status ledger updated (mechanical evidence + still-open list) and manifest extended with the collector",
       "pass": true
     },
     {
@@ -119,14 +123,14 @@
       "pass": true
     },
     {
-      "name": "9b-4 REFRESH carried by both papers: the reconstruction paper's branch map records the executed re-derivation (vacuum / source / contact stages), K4 cites three spectrum treatments, K6 is branch-tagged, K8 is upgraded, and the invariance theorem replaces the bookkeeping remark; the main paper's status note records the executed re-derivation",
+      "name": "9b-4 REFRESH carried by both papers: the reconstruction paper's branch map records the executed re-derivation (vacuum / source / contact stages), K4 cites three spectrum treatments, K6 is branch-tagged, K8 is explicitly unpromoted, and the invariance theorem replaces the bookkeeping remark; the main paper's status note records the executed re-derivation",
       "pass": true
     }
   ],
   "branch_map": {
     "kinematic_core": "SUSY-agnostic, machine-verified (44+24), untouched by all dynamics results",
     "susy_minimal_slice": "EXCLUDED (slice family, not model class): unification x proton decay + obstruction map",
-    "nonsusy_variant": "ALIVE: PS 210-compatible marginal (4.3e33, Hyper-K window, TRIPLE-TESTED against the computed 210 and 126bar spectra); G_LR alive (tau ~ 1e36) but requires the 45-adjoint route (210-only vacuum tree-dead, epsilon lever exhausted); source selection leaves the scale-decoupled instanton-type tower as the only quantified scenario; the normalized contact content is branch-independent by the invariance theorem (M_* branch-local)",
+    "nonsusy_variant": "PRELIMINARY: PS 210-compatible marginal (4.3e33, Hyper-K window, TRIPLE-TESTED against the computed 210 and 126bar spectra); G_LR alive (tau ~ 1e36); the 210-only LR vacuum has rare sampled local minima near vev ratios 0.6--0.7, so the 45-adjoint route is an alternative rather than a necessity; among the two unpromoted D3 mechanisms, only the scale-decoupled instanton benchmark survives the price card; this is not an exhaustive source classification; the normalized contact content is branch-independent by the invariance theorem (M_* branch-local)",
     "string_conditional": "three pricing cards, unpromoted, must not be cited as evidence"
   },
   "kill_bank": [
@@ -135,122 +139,147 @@
       "branch": "kinematic core",
       "statement": "fourth sequential chiral family kills the a-priori bound N_fam <= 3 (self-carried-index principle)",
       "source_ledger": "route_E/output/route_e_first_principles.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K2",
-      "branch": "kinematic core target",
-      "statement": "Dirac neutrinos remove the Majorana contact target; essentiality posterior-wide",
+      "branch": "conditional Majorana-card diagnostic",
+      "statement": "Dirac neutrinos remove this Majorana contact target; within the stated nuisance-prior card, all sampled contact fractions exceed 0.01 (not a data posterior)",
       "source_ledger": "output/audit1/dyn4b_unconditional_zeta.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K3",
       "branch": "SUSY completion (FIRED)",
       "statement": "unification x proton decay excludes the slice family; obstruction map recorded",
       "source_ledger": "output/audit2 + output/audit3 ledgers",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K4",
       "branch": "non-SUSY PS chain",
       "statement": "tau(p -> e+ pi0) = 4.3e33 vs 2.4e34: dead or inside the Hyper-K discovery window",
       "source_ledger": "output/audit9/dyn9_nonsusy_intermediate.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K5",
       "branch": "non-SUSY branch",
       "statement": "e+ pi0 dominance; G_LR at 1e36 partially probeable; K+ nubar dominance would disfavor the branch",
       "source_ledger": "output/audit9/dyn9_nonsusy_intermediate.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K6",
-      "branch": "SUSY slice (soft)",
-      "statement": "thermal unflavored leptogenesis fails by ~1.5 orders, wrong central sign; x3-10 boost -> 34-45%",
+      "branch": "SUSY slice (historical diagnostic)",
+      "statement": "unflavored regression gives a small success fraction, but DYN-7F places M1 in the tau-resolved regime; probabilities and arg-zeta windows are not publishable",
       "source_ledger": "output/audit7/dyn7_leptogenesis_argzeta.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K7",
-      "branch": "hidden-messenger extension",
-      "statement": "odd-R spurion ceiling eps < 4.4e-4 (refreshed windows); light-sector silence structural",
+      "branch": "hidden-messenger extension (invalid model diagnostic)",
+      "statement": "historical odd-R ceiling replays arithmetically, but DYN-5V shows that the displayed bilinear has no asserted one-loop anomalous dimension and allows X L H_u",
       "source_ledger": "output/audit5/dyn5_messenger_one_loop.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K8",
       "branch": "string-conditional",
-      "statement": "instanton source requires N2, N3 ABOVE the intermediate gauge scale (39x, 4.8e3x on PS): coexistence correlation falsifiable",
+      "statement": "for the fixed archival tower, N2 and N3 lie ABOVE the intermediate gauge scale (39x, 4.8e3x on PS); the instanton benchmark permits this coexistence but does not require it for a generic refitted tower",
       "source_ledger": "route_d/output/d3_instanton_majorana_pricing.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K9",
-      "branch": "string-conditional",
-      "statement": "zero-mode selectivity gap Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16",
+      "branch": "string-conditional (invalid numerical diagnostic)",
+      "statement": "the historical DYN-5 ceilings replay to a finite zero-mode selectivity gap, but DYN-5V invalidates those ceilings, so no numerical Delta S bound is physics-promotable",
       "source_ledger": "route_d/output/d4_stueckelberg_protection.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K10",
       "branch": "string-conditional",
-      "statement": "SUSY-breaking bridge: G_LR window log10 M_SS in [10.30, 15.55]; PS bridge EMPTY (structural)",
+      "statement": "preliminary SUSY-breaking toy scan: G_LR window log10 M_SS in [10.30, 15.55]; PS window empty under the stated one-loop/ESH/degenerate-spectrum assumptions",
       "source_ledger": "route_d/output/d5_susy_breaking_bridge.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K11",
       "branch": "benchmark bookkeeping",
       "statement": "Z_178 diagnostic retired: misses the refreshed card by 4.1e-3 rad vs the 5.4e-5 window (76x)",
       "source_ledger": "output/audit1/dyn4b_unconditional_zeta.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K4r",
       "branch": "non-SUSY PS chain (refresh)",
       "statement": "K4 TRIPLE-TESTED: the Hyper-K window survives the computed 210 spectrum (tree positivity 39/250, tau = 4.25e33 all percentiles) AND the computed 126bar spectrum (45/150 viable, same tau)",
       "source_ledger": "output/audit9/dyn9b1b + dyn9b1c ledgers",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K5r",
       "branch": "non-SUSY LR chain (refresh, CORRECTED by the ratio scan)",
       "statement": "the 210-only LR vacuum IS a tree-level local minimum in rare coupling regions at vev ratios near 0.6-0.7 (8/8800 sampled; He-Meljanac 1986 reproduced at claim level); the earlier fixed-ratio negative (0/249 at a/p = 0.8) was an artifact of the fixed ratio; the epsilon invariant neither rescues nor kills any sampled point; the adjoint route is an ALTERNATIVE, not a necessity",
       "source_ledger": "output/audit9/dyn9b1d_lr_ratio_scan.json (corrects dyn9b1b/1c)",
-      "verified": true
+      "verified": true,
+      "physics_promotable": true
     },
     {
       "id": "K6r",
       "branch": "non-SUSY branch (refresh)",
-      "statement": "K6 REPLACED by the branch-tagged rerun: ~6x harder (suppression 0.165, P = 0/4000 unflavored, boost sweet spot x60) but the gravitino ceiling dissolves by the branch -- a soft constraint on the source scenario, not a kill",
+      "statement": "K6 is replaced by a branch-tagged unflavored regression: ~6x harder (suppression 0.165, 0/4000 target-band hits without boost, largest scanned hit fraction near x60); no likelihood or thermal kinetics make these viability probabilities, and absence of a gravitino ceiling is not a reheating prediction",
       "source_ledger": "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K8r",
       "branch": "string-conditional (refresh)",
-      "statement": "K8 UPGRADED to a branch requirement: lock tension 9x/159x + type-II deficit 3.7/7.3 orders + leptogenesis floor leave the scale-decoupled instanton-type source as the only quantified scenario; D3 itself remains unpromoted",
+      "statement": "K8 remains an unpromoted conditional diagnostic: the fixed archival-kernel ceiling and optional top-like ansatz tension, together with the type-II estimate, disfavor the fixed-kernel renormalizable benchmark, while the leptogenesis comparison lacks a global flavor fit and flavored thermal kinetics; D3 itself remains unpromoted",
       "source_ledger": "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K2r",
-      "branch": "kinematic core target (refresh)",
-      "statement": "K2 STRENGTHENED by the kernel refit: the theta_23 tension is a frozen-anchor property (exact Majorana absorption at unchanged kernels; a 5% Y_e perturbation absorbs it alone) and contact essentiality is lifted to the perturbation level (cf never below 0.01 over 1000 refits with eps up to 0.3)",
+      "branch": "conditional kernel-refit diagnostic",
+      "statement": "K2 is refined by the kernel refit: the theta_23 tension is a frozen-anchor property (exact Majorana absorption at unchanged kernels; a 5% Y_e perturbation absorbs it alone) and contact essentiality is lifted to the perturbation level (cf never below 0.01 over 1000 refits with eps up to 0.3)",
       "source_ledger": "output/audit1/dyn4c_kernel_dirac_refit.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     },
     {
       "id": "K11r",
       "branch": "benchmark bookkeeping (refresh)",
-      "statement": "the zeta-invariance theorem: the normalized contact content is exactly invariant under Dirac rescaling; only M_* is branch-local (the 'what would not falsify' remark is now a theorem)",
+      "statement": "positive-real rescaling theorem: within the fixed-kernel y>0 family, normalized contact content is exactly invariant and only M_* moves; for complex y, zeta is phase-covariant rather than invariant",
       "source_ledger": "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
-      "verified": true
+      "verified": true,
+      "physics_promotable": false
     }
   ],
-  "upstream_checks_total": 283,
+  "upstream_checks_total": 304,
+  "collector_status": "preliminary_fail_closed",
+  "physics_promotion_allowed": false,
+  "blockers": [
+    "DYN-5 has no valid interacting messenger action and permits X L H_u",
+    "DYN-7 and DYN-9b-3 require branch-local flavored kinetics",
+    "DYN-9b-2 has not performed a global non-SUSY Spin(10) flavor fit",
+    "RE-SC3/4/5 remain unpromoted pricing cards; RE-SC4 inherits an invalid DYN-5 numerical ceiling"
+  ],
   "derives_nothing_new": true,
   "zeta_value_derived": false,
   "nonsusy_flavor_refit_still_open": true,

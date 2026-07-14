@@ -249,8 +249,16 @@ B = np.array([[np.trace(T_sph[a] @ T_sph[b]) for b in range(3)] for a in range(3
 check("Killing form B = 2 sqrt(3) K_tr  (contact = Killing pairing)",
       np.linalg.norm(B - 2 * math.sqrt(3.0) * Ktr) < 1e-12,
       f"B = {np.round(B, 12).tolist()}")
-check("abelian (g = 1) family algebra has Killing form = 0 (Cartan criterion)",
-      True, "ad X = 0 for abelian algebras, so tr(ad ad) = 0 identically")
+ad_e = np.zeros((1, 1))
+B_abelian = np.ones((1, 1))
+K_abelian = ad_e.T @ ad_e
+invariance_residual = ad_e.T @ B_abelian + B_abelian @ ad_e
+check("original invariant-contact hypothesis admits the g = 1 abelian "
+      "counterexample, while the Killing-contact strengthening rejects it",
+      np.linalg.det(B_abelian) != 0
+      and np.linalg.norm(invariance_residual) == 0
+      and np.linalg.norm(K_abelian) == 0,
+      "B(e,e)=1 is invariant/nondegenerate, but tr(ad_e ad_e)=0")
 
 # ---------------------------------------------------------------- section 5
 print("== Section 5: Route-B Schur complement, lambda^2 = zeta ==")
@@ -368,6 +376,16 @@ report = {
     "sm_face_multiplicities": {"Q": 6, "L": 2, "uc": 3, "dc": 3, "nuc": 1, "ec": 1},
     "k_Y": "5/3",
     "genus_ladder_h0_tangent": ladder,
+    "original_h3_selects_genus": False,
+    "nfam_upper_bound_without_h3plus": 3,
+    "nfam_three_requires_killing_contact": True,
+    "killing_contact_selection_axiom_derived": False,
+    "abelian_invariant_form_counterexample": {
+        "B": B_abelian.tolist(),
+        "det_B": float(np.linalg.det(B_abelian)),
+        "invariance_residual_norm": float(np.linalg.norm(invariance_residual)),
+        "killing_form": K_abelian.tolist(),
+    },
     "killing_form_spherical_basis": np.round(B, 12).tolist(),
     "killing_equals_2sqrt3_Ktr": True,
     "zeta_benchmark": {"re": zeta.real, "im": zeta.imag},
@@ -396,8 +414,11 @@ md_path.write_text(
     "- Enumerated six-face uniqueness: dim-16 complex irreps are only the\n"
     "  SU(16) fundamental (anomalous) and the Spin(10) half-spinors; all\n"
     "  dim-15 candidates fail content or anomaly, so `nu^c` is forced.\n"
-    "- Genus ladder `h^0(Sigma_g, T) = 3, 1, 0`; the Cartan criterion selects\n"
-    "  g = 0, so N = 3 and the two-center divisor is Poincare-Hopf (deg 2).\n"
+    "- Genus ladder `h^0(Sigma_g, T) = 3, 1, 0` proves only `N <= 3`.\n"
+    "  The original invariant-contact hypothesis does not select a genus:\n"
+    "  for the one-dimensional abelian branch, `B(e,e)=1` is invariant and\n"
+    "  nondegenerate although the Killing form vanishes.  The added\n"
+    "  Killing-contact axiom conditionally selects `g = 0`, `N = 3`.\n"
     "- The unique invariant contact equals the Killing form:\n"
     "  `B = 2 sqrt(3) K_tr` in the spherical basis; `K_tr^2 = I/3`.\n"
     "- Route-B Schur complement replays exactly: `Delta M_R = lambda^2 K_tr`,\n"
@@ -408,8 +429,8 @@ md_path.write_text(
     "- Two-model witness: the structural checks are zeta-independent, so no\n"
     "  zeta value follows from the principle set.\n\n"
     "Boundary: `zeta` is not derived; the no-extra-chiral-sector assumption\n"
-    "and the Route-B R-selection rule are not discharged; the deferred\n"
-    "companion audits are not replayed; no PSLT-only unconditional GUT proof\n"
+    "and the Route-B R-selection rule are not discharged; this core audit\n"
+    "does not replay the separate dynamics lanes; no PSLT-only unconditional GUT proof\n"
     "is claimed (the audit's Theorem-5 witness proves the opposite).\n"
 )
 

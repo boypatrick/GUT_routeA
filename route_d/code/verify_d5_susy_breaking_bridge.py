@@ -4,9 +4,9 @@
 One-parameter interpolating family between the EXCLUDED TeV-scale SUSY
 slice (DYN-2/3/2b) and the DYN-9 non-SUSY two-step chains: all
 superpartners at a common M_SS; non-SUSY running below, SUSY running
-above.  String-natural (UV supersymmetry), and it preserves the
-Route-B/DYN-5 holomorphy machinery at the matching scale iff
-M_SS < M_*.
+above.  The ordering M_SS < M_* is recorded only as a necessary scale
+condition for a supersymmetric matching regime.  It does not repair or
+validate the interacting messenger action rejected by DYN-5V.
 
 Solver: the DYN-9 machinery (two-loop SM segment, one-loop
 intermediate, Newton on (ln M_I, ln M_X, split)) extended to two
@@ -29,7 +29,7 @@ Proton ledger along the bridge:
 Survival window per chain:
   solvable & physical  AND  tau_d6 > 2.4e34 (current e+ pi0 bound)
   AND  tau_d5 > 5.9e33 (Super-K nu K+)  AND  M_SS < M_* = 3.93e15
-  (holomorphy at the Route-B matching scale).
+  (a necessary matching-scale ordering only).
 
 Sanity gates at both ends: M_SS above M_X reproduces the DYN-9 ledger
 solutions; M_SS = 3 TeV reproduces the d=5 kill structure and the
@@ -48,6 +48,7 @@ from fractions import Fraction as Fr
 from pathlib import Path
 
 import numpy as np
+from scipy.integrate import solve_ivp
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "route_d" / "output"
@@ -153,12 +154,42 @@ def run2(ainv0, t0, t1, b, bij, nstep=160):
     return a
 
 
+def sm_rhs(_t, ainv):
+    """Two-loop SM inverse-coupling flow used by both solver paths."""
+    alpha = 1.0 / ainv
+    return -B_SM / (2 * math.pi) - (BIJ_SM @ alpha) / (8 * math.pi ** 2)
+
+
+# The old implementation replayed a 160-step RK4 integration at every
+# finite-difference evaluation of every Newton start.  Integrate the same
+# autonomous ODE once with a high-accuracy dense interpolant instead.  The
+# explicit RK4 implementation is retained above as an independent regression
+# oracle and as a guarded fallback outside the tabulated interval.
+SM_DENSE_T_MAX = 50.0
+SM_DENSE = solve_ivp(
+    sm_rhs,
+    (0.0, SM_DENSE_T_MAX),
+    AINV_MZ,
+    method="DOP853",
+    rtol=1.0e-11,
+    atol=1.0e-12,
+    dense_output=True,
+)
+
+
+def sm_ainv_at_log_scale(log_scale):
+    t = log_scale - math.log(MZ)
+    if SM_DENSE.success and 0.0 <= t <= SM_DENSE_T_MAX:
+        return np.asarray(SM_DENSE.sol(t), dtype=float)
+    return run2(AINV_MZ, 0.0, t, B_SM, BIJ_SM)
+
+
 def bridge_equations(u, lnMSS, kind):
     """Residuals for (ln M_I, ln M_X, split) at SUSY-breaking lnMSS."""
     lnMI, lnMX, split = u
     # below M_I: SM two-loop to min(MSS, MI), then MSSM one-loop
     lnLow = min(lnMSS, lnMI)
-    aSM = run2(AINV_MZ, 0.0, lnLow - math.log(MZ), B_SM, BIJ_SM)
+    aSM = sm_ainv_at_log_scale(lnLow)
     if lnMSS < lnMI:
         aSM = aSM - B_MSSM * (lnMI - lnMSS) / (2 * math.pi)
     a1, a2, a3 = aSM
@@ -243,6 +274,18 @@ def solve_bridge(lnMSS, kind, u0=None):
             "residual": res, "physical": physical,
             "case": "B(MSS<MI)" if lnMSS < u[0] else "A(MI<=MSS)",
             "u": u}
+
+
+dense_regression_errors = []
+for scale in (1.0e5, 1.0e10, 1.0e15):
+    log_scale = math.log(scale)
+    dense = sm_ainv_at_log_scale(log_scale)
+    rk4 = run2(AINV_MZ, 0.0, log_scale - math.log(MZ), B_SM, BIJ_SM)
+    dense_regression_errors.append(float(np.max(np.abs(dense - rk4))))
+check("dense two-loop SM trajectory reproduces the independent 160-step "
+      "RK4 oracle at 1e5, 1e10, and 1e15 GeV",
+      SM_DENSE.success and max(dense_regression_errors) < 1.0e-8,
+      f"max |Delta alpha^-1| = {max(dense_regression_errors):.3e}")
 
 
 # endpoint gate: M_SS far above M_X -> the SUSY segment vanishes and
@@ -387,19 +430,19 @@ check("PS d=6 rescue question answered explicitly across the whole "
       f"exists M_SS with tau_d6(PS) > 2.4e34: {ps_d6_rescued}")
 
 ps_phys = [r for r in scan["PS"] if r["physical"]]
-ps_seg = max((r["log10_MX"] - r["log10_MSS"] for r in ps_phys
-              if r["case"].startswith("A")), default=0.0)
-check("PS SUSY-segment obstruction characterized: the doubled Sigma "
-      "content drives b2R to +41, so a two-step solution survives only "
-      "a SHORT SUSY segment (Y-matching caps 41 L / 2pi against "
-      "alpha_1^-1(M_I)); the scan records where the physical branch "
-      "dies", True,
-      f"physical PS points: {len(ps_phys)}; longest case-A SUSY "
-      f"segment = {ps_seg:.2f} dex")
+ps_seg = max((max(0.0, r["log10_MX"] - r["log10_MSS"])
+              for r in ps_phys), default=0.0)
+check("PS sampled-segment diagnostic: with the declared doubled-Sigma "
+      "content (b2R=41), no physical grid point contains more than "
+      "0.05 dex of SUSY PS running below M_X.  This records the result "
+      "but does not by itself prove b2R=41 is the unique cause",
+      ps_seg <= 0.05,
+      f"physical PS points: {len(ps_phys)}; longest sampled SUSY "
+      f"segment below M_X = {ps_seg:.2f} dex")
 
-check("holomorphy-at-matching condition intersected: every alive point "
-      "has M_SS < M_* = 3.93e15 GeV, so the Route-B/DYN-5 machinery "
-      "remains valid at the matching scale throughout the window",
+check("necessary matching-scale ordering intersected: every alive point "
+      "has M_SS < M_* = 3.93e15 GeV; this is not sufficient to validate "
+      "the Route-B/DYN-5 messenger action rejected by DYN-5V",
       all(10 ** r["log10_MSS"] < M_STAR
           for ch in scan.values() for r in ch if r["alive"]))
 check("M_T = M_X assumption FLAGGED with product scaling: tau_d5 "
@@ -421,9 +464,8 @@ print("== D5 section 4: verdict ==")
 bridge_alive = g_win is not None
 check("BRIDGE VERDICT: the high-scale SUSY-breaking bridge has a "
       "non-empty survival window on at least one chain -- the string-"
-      "natural interpolation between the excluded SUSY slice and the "
-      "non-SUSY rescue EXISTS (or its death is recorded)",
-      True,
+      "natural interpolation benchmark exists on the sampled G_LR grid",
+      bridge_alive,
       f"G_LR: {'ALIVE' if g_win else 'EMPTY'}, "
       f"PS: {'ALIVE' if p_win else 'EMPTY'}")
 
@@ -451,6 +493,20 @@ payload = {
     "MT_equals_MX_assumed": True,
     "soft_spectrum_degenerate_assumed": True,
     "above_MX_perturbativity_not_audited": True,
+    "MSS_below_Mstar_is_only_a_necessary_scale_condition": True,
+    "branch_specific_experimental_MI_floor_applied": False,
+    "independent_root_solver_performed": False,
+    "threshold_uncertainty_envelope_performed": False,
+    "proton_decay_flavor_uncertainty_envelope_performed": False,
+    "physics_status": "preliminary_toy_scan",
+    "physics_promotion_allowed": False,
+    "blockers": [
+        "branch-specific experimental lower bound on M_I",
+        "threshold nuisance envelope and independent root solver",
+        "physical-basis proton-decay flavor and lattice uncertainties",
+        "M_T/M_X and non-degenerate soft-spectrum sensitivity",
+        "a valid interacting hidden-messenger action (DYN-5V remains failed)",
+    ],
     "zeta_value_derived": False,
     "promoted_to_paper": False,
 }
@@ -480,8 +536,9 @@ md = ["# Route-D D5: high-scale SUSY-breaking bridge scan", "",
       "- Endpoint gates: DYN-9 ledger reproduced at the high end; "
       "DYN-3 kill number 1.2e26 reproduced at (1.45e13, 3 TeV); TeV "
       "end d=5 dead on both chains.",
-      "- Every alive point has M_SS < M_*: Route-B/DYN-5 holomorphy at "
-      "matching survives throughout the window.",
+      "- Every alive point has M_SS < M_*.  This is only a necessary "
+      "matching-scale ordering and does not restore the invalid DYN-5 "
+      "messenger action.",
       "", "## Boundary (NOT claimed)", "",
       "- One-loop intermediate segments; ESH-minimal content; "
       "M_T = M_X; degenerate soft spectrum; above-M_X perturbativity "
@@ -494,3 +551,6 @@ md += [f"- [{'PASS' if ok else 'FAIL'}] {n}" for n, ok in CHECKS]
 print(f"\nD5: {n_pass}/{len(CHECKS)} checks; G_LR window "
       f"{fmt_win(g_win)}; PS window {fmt_win(p_win)}; ledgers -> "
       f"{OUT.relative_to(ROOT)}/d5_susy_breaking_bridge.*")
+
+if n_pass != len(CHECKS):
+    raise SystemExit(1)

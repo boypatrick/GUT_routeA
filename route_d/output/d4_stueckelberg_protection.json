@@ -9,7 +9,7 @@
       "pass": true
     },
     {
-      "name": "DYN-5 contamination ceilings imported and converted to absolute instanton actions S' = ln(1/eps): refreshed 7.72, loose 4.26",
+      "name": "historical DYN-5 ceiling arithmetic is reproducible but explicitly blocked from promotion by the DYN-5V invalidity gate",
       "pass": true
     },
     {
@@ -17,11 +17,11 @@
       "pass": true
     },
     {
-      "name": "TWO abelian factors (exhaustive): the separation q(XLH) != q(XX) is impossible -- adding abelian factors can never help",
+      "name": "TWO abelian factors (exhaustive): additive charge selection cannot distinguish XLH from XX; adding additive factors does not change that charge-level conclusion",
       "pass": true
     },
     {
-      "name": "B-L instance: the portal forces B-L(X) = -1 (ODD); then XX = X L Htilde = -2 while NN = +2 -- the 126bar matter parity (even-unit breaking) does NOT separate the X mass from the X-Dirac contamination, and the XX source is the CONJUGATE class of the D3 NN source",
+      "name": "B-L instance: the portal forces B-L(X) = -1 (ODD); then XX = X L Htilde = -2 while NN = +2 -- the 126bar matter parity (even-unit breaking) does NOT distinguish the additive-charge classes of the X mass and X-Dirac operators; this equality does not identify their sources or coefficients.  XX has the OPPOSITE charge orientation to the D3 NN operator; identifying geometrically conjugate sources would be an additional ansatz",
       "pass": true
     },
     {
@@ -29,23 +29,23 @@
       "pass": true
     },
     {
-      "name": "m = 2 decorations survive Lorentz but first arise at operator dimension 7 (four fermions + scalar): suppressed by (1/M_s)^3, negligible against every DYN-4 window",
+      "name": "m = 2 decorations survive Lorentz but first arise at operator dimension 7 (four fermions + scalar); their numerical impact requires Wilson coefficients and is not bounded by this card",
       "pass": true
     },
     {
-      "name": "hence the ONLY renormalizable contamination channel in the non-SUSY EFT is the direct Dirac Yukawa X L Htilde -- exactly the channel the S1 no-go ties to the X mass insertion",
+      "name": "hence the ONLY renormalizable contamination channel in the non-SUSY EFT is the direct Dirac Yukawa X L Htilde -- exactly the channel S1 places in the same additive-charge selection class as the X mass insertion",
       "pass": true
     },
     {
-      "name": "the XX source must be LARGE (eps_XX = sqrt(3) M_*/M_s ~ 0.34 at M_s = 2e16, i.e. S_XX ~ 1.1): a generic same-charge spurion would put the X-Dirac coupling at 0.34 -- more than 2 orders above even the LOOSE ceiling; charge bookkeeping alone is dead (quantified form of the S1 no-go)",
+      "name": "conditional unit-prefactor XX benchmark is reproducible: eps_XX = sqrt(3) M_*/M_s ~ 0.34 and S_XX ~ 1.08 at M_s=2e16; this does NOT determine the XLH source, action, or coefficient",
       "pass": true
     },
     {
-      "name": "closure condition quantified: zero-mode selectivity must supply Delta S = S'(XLH) - S(XX) >= 6.6 (refreshed window) / 3.2 (loose) at M_s = 2e16; a DIRECT X L Htilde instanton needs S' >= 7.72 / 4.26 absolute",
+      "name": "historical selectivity-gap arithmetic is reproduced but is not a valid closure bound until the messenger contamination ceiling is rederived from an interacting action",
       "pass": true
     },
     {
-      "name": "D3 consistency DISCLOSED: the NN tower source carries Delta(B-L) = +2 but the XX mass needs -2 -- the CONJUGATE instanton class; the shared D3+D4 bookkeeping therefore needs BOTH orientations present with independent actions (a doubled conditional assumption, priced -- NOT the same class the roadmap anticipated)",
+      "name": "D3 charge consistency DISCLOSED: NN and XX carry opposite B-L charges (+2 and -2), so compensating sources require opposite charges; treating them as conjugate instanton orientations with independent actions is an additional conditional ansatz, not a charge-level theorem",
       "pass": true
     },
     {
@@ -63,10 +63,11 @@
   ],
   "checks_passed": 14,
   "checks_total": 14,
-  "created_utc": "2026-07-05T10:47:53.946375+00:00",
+  "created_utc": "2026-07-14T01:03:32.555766+00:00",
   "derivation_log": {
     "S1_no_go": {
-      "consequence": "charge bookkeeping alone can NEVER close the non-SUSY protection card; the separator must be non-charge data (instanton zero-mode structure)",
+      "consequence": "additive charge bookkeeping alone cannot establish operator separation; any separation must come from additional non-charge data such as a computed zero-mode spectrum",
+      "does_not_imply": "same source, same instanton, same operator order, or same Wilson coefficient",
       "identity": "q(XLH) - q(XX) = (q_X + q_L + q_H) - 2 q_X = -(q_X - q_L - q_H) = -(q_X + q_N) + (q_N + q_L + q_H) = 0 whenever the portal and the Dirac Yukawa are charge-allowed",
       "scope": "any additive grading: U(1)^k, Z_N^k, gauged or global, anomalous or not, B-L included"
     },
@@ -87,26 +88,38 @@
     "S3_closure": {
       "absolute_S_prime": {
         "loose": 4.258965268465243,
-        "refreshed": 7.719295591428304
+        "physics_bound": false,
+        "refreshed": 5.7426059307398045,
+        "status": "historical_invalid"
       },
+      "charge_identity_limitation": "q(XLH)=q(XX) does not identify their sources, orders, or coefficients",
+      "interpretation": "the displayed Delta-S and S-prime values combine valid logarithmic arithmetic with contamination ceilings from the DYN-5 action invalidated by DYN-5V; they are not constraints",
+      "numerical_status": "historical_invalid_pending_dyn5_rederivation",
+      "physics_bound": false,
       "selectivity_gap_by_Ms": {
         "1e17": {
           "S_XX": 2.6881077006466865,
           "dS_loose": 1.5708575678185566,
-          "dS_refreshed": 5.031187890781618,
-          "eps_XX": 0.06800951204005944
+          "dS_refreshed": 3.0544982300931185,
+          "eps_XX": 0.06800951204005944,
+          "physics_bound": false,
+          "status": "historical_invalid"
         },
         "1e18": {
           "S_XX": 4.990692793640732,
           "dS_loose": -0.7317275251754893,
-          "dS_refreshed": 2.7286027977875724,
-          "eps_XX": 0.006800951204005944
+          "dS_refreshed": 0.7519131370990727,
+          "eps_XX": 0.006800951204005944,
+          "physics_bound": false,
+          "status": "historical_invalid"
         },
         "2e16": {
           "S_XX": 1.0786697882125857,
           "dS_loose": 3.180295480252657,
-          "dS_refreshed": 6.640625803215719,
-          "eps_XX": 0.3400475602002972
+          "dS_refreshed": 4.663936142527219,
+          "eps_XX": 0.3400475602002972,
+          "physics_bound": false,
+          "status": "historical_invalid"
         }
       }
     },
@@ -114,48 +127,71 @@
       "axiom_statement": "an anomalous U(1) (GS-cancelled, Stueckelberg-massive; B-L-like) makes the messenger charge bookkeeping perturbatively EXACT, with all violations instanton-sourced AND the XX-mass instanton's zero modes saturating only the X bilinear (selectivity), textured along K_tr^-1",
       "beyond_window_consequence": "NONE at low energy (X sits at sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal -- zero-mode counting on the two cycles in any concrete embedding",
       "buys": [
-        "perturbatively exact selection rules without holomorphy (gauge symmetry, all loop orders)",
-        "calculable violation hierarchy e^{-S}",
-        "with selectivity: X-Dirac contamination pushed below the DYN-4 windows"
+        "perturbatively exact additive-charge selection rules without holomorphy (gauge symmetry, all loop orders)",
+        "a framework in which a concrete instanton calculation could parameterize violations by e^{-S}",
+        "a possible non-charge discriminator through computed zero-mode saturation; no such computation is supplied"
       ],
       "cannot_buy": [
         "charge separation of XX from X L Htilde (S1 no-go: impossible for ANY abelian bookkeeping)",
+        "equality of the XLH and XX source, operator order, or Wilson coefficient (not implied by equal charge)",
         "the K_tr texture of the X mass (new conditional input, as in D3)",
         "zeta's value"
       ],
       "closure_conditions": {
-        "both_instanton_orientations": "NN (+2) and XX (-2) classes with independent actions",
-        "direct_instanton_bound": "S' >= 7.72 (refreshed) / 4.26 (loose)",
-        "zero_mode_selectivity_gap": "Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16"
+        "conjugate_instanton_relation": "additional ansatz, not derived from additive charges",
+        "historical_invalid_snapshot_at_Ms_2e16": {
+          "Delta_S_loose": 3.180295480252657,
+          "Delta_S_refreshed": 4.663936142527219,
+          "S_prime_loose": 4.258965268465243,
+          "S_prime_refreshed": 5.7426059307398045,
+          "physics_bound": false
+        },
+        "numerical_gap_status": "PENDING: rederive the contamination ceiling from an interacting action",
+        "source_charge_requirement": "NN (+2) and XX (-2) operators need oppositely charged compensating sources"
       }
     }
   },
   "global_embedding_constructed": false,
+  "mechanical_status": "checks_pass",
+  "numerical_gap_blocker": "historical ceiling imported from invalid DYN-5",
+  "numerical_selectivity_gap_valid": false,
+  "physics_promotion_allowed": false,
+  "physics_status": "unpromoted_algebraic_no_go_only",
   "price_card": {
     "axiom_statement": "an anomalous U(1) (GS-cancelled, Stueckelberg-massive; B-L-like) makes the messenger charge bookkeeping perturbatively EXACT, with all violations instanton-sourced AND the XX-mass instanton's zero modes saturating only the X bilinear (selectivity), textured along K_tr^-1",
     "beyond_window_consequence": "NONE at low energy (X sits at sqrt(3) M_* ~ 6.8e15 GeV); the card's testable content is internal -- zero-mode counting on the two cycles in any concrete embedding",
     "buys": [
-      "perturbatively exact selection rules without holomorphy (gauge symmetry, all loop orders)",
-      "calculable violation hierarchy e^{-S}",
-      "with selectivity: X-Dirac contamination pushed below the DYN-4 windows"
+      "perturbatively exact additive-charge selection rules without holomorphy (gauge symmetry, all loop orders)",
+      "a framework in which a concrete instanton calculation could parameterize violations by e^{-S}",
+      "a possible non-charge discriminator through computed zero-mode saturation; no such computation is supplied"
     ],
     "cannot_buy": [
       "charge separation of XX from X L Htilde (S1 no-go: impossible for ANY abelian bookkeeping)",
+      "equality of the XLH and XX source, operator order, or Wilson coefficient (not implied by equal charge)",
       "the K_tr texture of the X mass (new conditional input, as in D3)",
       "zeta's value"
     ],
     "closure_conditions": {
-      "both_instanton_orientations": "NN (+2) and XX (-2) classes with independent actions",
-      "direct_instanton_bound": "S' >= 7.72 (refreshed) / 4.26 (loose)",
-      "zero_mode_selectivity_gap": "Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16"
+      "conjugate_instanton_relation": "additional ansatz, not derived from additive charges",
+      "historical_invalid_snapshot_at_Ms_2e16": {
+        "Delta_S_loose": 3.180295480252657,
+        "Delta_S_refreshed": 4.663936142527219,
+        "S_prime_loose": 4.258965268465243,
+        "S_prime_refreshed": 5.7426059307398045,
+        "physics_bound": false
+      },
+      "numerical_gap_status": "PENDING: rederive the contamination ceiling from an interacting action",
+      "source_charge_requirement": "NN (+2) and XX (-2) operators need oppositely charged compensating sources"
     }
   },
   "promoted_to_paper": false,
   "provenance": {
     "d3_ledger": "route_d/output/d3_instanton_majorana_pricing.json",
     "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
-    "dyn5_ledger": "output/audit5/dyn5_messenger_one_loop.json"
+    "dyn5_ledger": "output/audit5/dyn5_messenger_one_loop.json",
+    "dyn5_validity_ledger": "output/audit5/dyn5_model_validity.json"
   },
+  "standalone_exit_policy": "nonzero_until_physics_promotion_allowed",
   "zero_mode_selectivity_assumed_not_computed": true,
   "zeta_value_derived": false
 }

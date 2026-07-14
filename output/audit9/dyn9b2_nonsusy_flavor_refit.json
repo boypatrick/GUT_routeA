@@ -1,10 +1,10 @@
 {
-  "audit": "DYN-9b-2 non-SUSY flavor refit + zeta re-extraction",
+  "audit": "DYN-9b-2 fixed-kernel non-SUSY rescaling audit",
   "dyn_item": "DYN-9b-2",
-  "created_utc": "2026-07-05T15:38:00.729182+00:00",
+  "created_utc": "2026-07-14T01:03:32.642799+00:00",
   "all_pass": true,
-  "checks_passed": 11,
-  "checks_total": 11,
+  "checks_passed": 14,
+  "checks_total": 14,
   "checks": [
     {
       "name": "archival closure card sha256 matches the DYN-4a provenance; the DYN-9 ledger declares the card slice-local (the premise this audit sharpens)",
@@ -15,15 +15,23 @@
       "pass": true
     },
     {
-      "name": "y_top(M_X) machine-derived from the one-loop SM running: the SO(10) lock scale for the third-generation nu-Dirac coupling",
+      "name": "y_top(M_X) machine-derived from the one-loop SM running for the optional top-like third-generation benchmark",
       "pass": true
     },
     {
-      "name": "archival Dirac kernel scale recorded: sigma_max(Y_nu) is O(y_t) -- the archival card RESPECTS the SO(10) lock",
+      "name": "algebraic counterexample: Y_nu=h-3f and Y_u=h+f do not force Y_nu ~ Y_u; h=3f gives Y_nu=0 and Y_u=4f",
       "pass": true
     },
     {
-      "name": "SO(10) LOCK TENSION quantified: the perturbative ceiling 4 pi M_I caps the nu-Dirac scale at y_max; the renormalizable minimal source needs the third-generation coupling ~9x (PS) / ~160x (G_LR) BELOW its locked scale y_t(M_X) -- i.e. 2 / 4.4 orders of magnitude in the tower, a structural tension only removable by that much Yukawa tuning",
+      "name": "archival Dirac kernel scale recorded: sigma_max(Y_nu) happens to be top-like within an order-one factor in this card; this is a benchmark property, not a consequence of the SO(10) relations",
+      "pass": true
+    },
+    {
+      "name": "FIXED-ARCHIVAL-KERNEL diagnostic: the perturbative 4 pi M_I ceiling requires a uniform norm suppression y_arch/y_max of about 19 (PS) / 342 (G_LR)",
+      "pass": true
+    },
+    {
+      "name": "OPTIONAL TOP-LIKE ANSATZ diagnostic: if one additionally imposes y_nu,3 ~ y_t(M_X), the same ceilings correspond to tensions of about 10 (PS) / 169 (G_LR); this is not an SO(10) theorem",
       "pass": true
     },
     {
@@ -31,7 +39,11 @@
       "pass": true
     },
     {
-      "name": "ZETA-INVARIANCE THEOREM (machine-verified): under Y_nu -> y Y_nu the tower rescales uniformly, so zeta, the contact direction and the contact fraction are EXACTLY invariant; only M_* = y^2 M_*_arch moves.  The contact card's normalized content is scale-covariant; M_* is the only branch-local number",
+      "name": "POSITIVE-REAL RESCALING THEOREM (machine-verified): for y>0, Y_nu -> y Y_nu gives M_R -> y^2 M_R and M_* -> y^2 M_*, so zeta, the projective contact direction, and contact fraction are exactly invariant within this fixed-kernel one-parameter family",
+      "pass": true
+    },
+    {
+      "name": "COMPLEX-RESCALING BOUNDARY (machine-verified): for complex y, M_* -> |y|^2 M_* and zeta -> (y^2/|y|^2) zeta; the contact fraction is invariant but the complex zeta phase is not",
       "pass": true
     },
     {
@@ -39,34 +51,42 @@
       "pass": true
     },
     {
-      "name": "contact essentiality carries over VERBATIM to the rescaled card (cf invariant; the DYN-4b posterior statement P(cf > 0.01) = 1.000 remains conditional on the Dirac kernel SHAPE only, which the rescale does not touch)",
+      "name": "contact essentiality carries over to the positive-real rescaled card (cf invariant; the DYN-4b posterior statement P(cf > 0.01) = 1.000 remains conditional on the Dirac kernel SHAPE only, which the rescale does not touch)",
       "pass": true
     },
     {
-      "name": "LEPTOGENESIS SOURCE SELECTION: under the rescaled renormalizable source M_1 falls BELOW the Davidson-Ibarra floor on both chains (PS ~ 7e7, G_LR ~ 2e5 GeV); under a scale-decoupled (instanton-type) source the archival M_1 ~ 2.8e10 survives -- thermal leptogenesis SELECTS the scale-decoupled source on the alive branch (DI floor is an order estimate, flagged)",
+      "name": "CONDITIONAL SOURCE COMPARISON: under the fixed-kernel rescaled source M_1 falls BELOW the Davidson-Ibarra floor on both chains (PS ~ 7e7, G_LR ~ 2e5 GeV); under a scale-decoupled (instanton-type) benchmark the archival M_1 ~ 2.8e10 stays above the order-estimate floor.  This does not select a source without a global flavor fit and flavored thermal kinetics",
       "pass": true
     },
     {
-      "name": "K8 UPGRADE: the only quantified source scenario that survives S1 (lock tension) + S2 (type-II fails) + S4 (leptogenesis) is the scale-decoupled instanton-type tower of the D3 card, whose coexistence prediction (N_2, N_3 above the intermediate gauge scale) therefore upgrades from an optional pricing card to a REQUIREMENT of the alive branch with viable leptogenesis",
+      "name": "K8 NON-PROMOTION: the fixed archival tower used by the D3 benchmark has N_2 and N_3 above the intermediate gauge scale; the instanton mechanism permits but does not generically require this ordering, and the D3 card is explicitly unpromoted",
       "pass": true
     }
   ],
   "derivation_log": {
     "S1_lock": {
-      "yt_MX": 0.41556341660794366,
+      "yt_MX": 0.4411648125938088,
       "y_arch": 0.8923822015216857,
+      "so10_relations_force_top_like_Ynu": false,
+      "counterexample": {
+        "h_over_f": 3.0,
+        "Ynu_over_f": 0.0,
+        "Yu_over_f": 4.0
+      },
       "chains": {
         "G_LR": {
           "M_I": 2668044002.8598156,
           "MR_ceiling_GeV": 33527629755.354805,
           "y_max": 0.0026076410547803664,
-          "lock_tension": 159.3637344549882
+          "archival_kernel_suppression": 342.2181898408745,
+          "top_like_ansatz_tension": 169.181571898118
         },
         "PS": {
           "M_I": 824414216786.1166,
           "MR_ceiling_GeV": 10359894587880.988,
           "y_max": 0.04583783027835945,
-          "lock_tension": 9.065948673494168
+          "archival_kernel_suppression": 19.468246993858898,
+          "top_like_ansatz_tension": 9.624469786522326
         }
       }
     },
@@ -83,11 +103,22 @@
       }
     },
     "S3_invariance": {
+      "domain_of_exact_zeta_invariance": "uniform positive-real y",
       "zeta": [
         0.10764729490120784,
         0.07365148533033768
       ],
       "contact_fraction": 0.13042751666881525,
+      "positive_real_worst_error": 1.0569008315563939e-16,
+      "complex_rescaling": {
+        "theta_rad": 0.37,
+        "phase_factor": [
+          0.7384685587295879,
+          0.674287911628145
+        ],
+        "covariance_error": 1.2023523462386844e-16,
+        "zeta_phase_invariant": false
+      },
       "M_star_windows": {
         "G_LR": {
           "M_star_at_ceiling_GeV": 33527629755.354805
@@ -97,7 +128,7 @@
         }
       }
     },
-    "S4_selection": {
+    "S4_conditional_comparison": {
       "M1_archival": 27778839717.093166,
       "DI_floor": 500000000.0,
       "rescaled": {
@@ -109,7 +140,9 @@
           "M1_rescaled_GeV": 73292647.0282945,
           "below_DI_floor": true
         }
-      }
+      },
+      "source_selected": false,
+      "reason_not_selected": "fixed Dirac-kernel shape, order-estimate DI floor, and missing flavored thermal kinetics"
     }
   },
   "provenance": {
@@ -121,7 +154,20 @@
   },
   "full_nonsusy_yukawa_fit_performed": false,
   "dirac_kernel_shape_retained_conditional": true,
-  "so10_lock_quantified_not_refit": true,
+  "so10_relations_force_top_like_Ynu": false,
+  "top_like_Ynu_is_additional_ansatz": true,
+  "fixed_kernel_ceiling_quantified_not_refit": true,
+  "exact_zeta_invariance_domain": "uniform positive-real rescaling",
+  "complex_rescaling_changes_zeta_phase": true,
   "typeII_and_DI_are_order_estimates": true,
-  "zeta_value_derived": false
+  "zeta_value_derived": false,
+  "mechanical_status": "pass",
+  "physics_status": "preliminary_missing_global_fit_and_flavored_kinetics",
+  "physics_promotion_allowed": false,
+  "blockers": [
+    "full branch-local non-SUSY charged-fermion and neutrino Yukawa fit",
+    "chain-specific threshold matching and intermediate-scale RGEs",
+    "flavored or density-matrix leptogenesis with thermal initial data",
+    "valid UV source construction replacing unpromoted D3 pricing"
+  ]
 }

@@ -431,7 +431,7 @@ def execute_node(node: Node, record: dict[str, Any], workspace: Path,
     stdout_path = run_dir / "logs" / f"{node.node_id}.stdout.log"
     stderr_path = run_dir / "logs" / f"{node.node_id}.stderr.log"
     stdout_path.parent.mkdir(parents=True, exist_ok=True)
-    command = [python, str(workspace / "route_e" / "code_dyn" / node.script)]
+    command = [python, str(workspace / "route_E" / "code_dyn" / node.script)]
     record.update({
         "mechanical_status": "running",
         "command": command,
@@ -520,7 +520,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(str(exc))
 
     repo_root = args.repo_root.expanduser().resolve()
-    source_dir = repo_root / "route_e" / "code_dyn"
+    source_dir = repo_root / "route_E" / "code_dyn"
     registry_path = args.claim_registry.expanduser().resolve()
     try:
         registry, registry_sha = load_claim_registry(registry_path)
@@ -699,7 +699,7 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     # ------------------------------------------------------- isolated snapshot
-    staged_code_dir = workspace / "route_e" / "code_dyn"
+    staged_code_dir = workspace / "route_E" / "code_dyn"
     staged_code_dir.mkdir(parents=True)
     (workspace / "output").mkdir()
     (workspace / "tmp").mkdir()

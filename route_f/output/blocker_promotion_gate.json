@@ -1,0 +1,171 @@
+{
+  "all_pass": true,
+  "audit": "Route-F blocker promotion gate",
+  "checks": [
+    {
+      "detail": "B(e,e)=1 is invariant/nondegenerate; Killing=0; only N_fam<=3 is unconditional",
+      "name": "one-dimensional abelian algebra defeats original H3 but fails H3+",
+      "pass": true
+    },
+    {
+      "detail": "re_sc3=15/15, re_sc4=14/14, re_sc5=18/18",
+      "name": "RE-SC3/4/5 exist and are mechanically green",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "the recovered string cards remain unpromoted pricing cards",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "string-card boundary flags expose their non-derived inputs",
+      "pass": true
+    },
+    {
+      "detail": "121 exact integer assignments",
+      "name": "allowed NLH and XN force q(XLH)=q(XX) for every sampled additive charge",
+      "pass": true
+    },
+    {
+      "detail": "the Abelian no-go survives; Delta-S pricing does not",
+      "name": "RE-SC4 numerical selectivity gaps are blocked by invalid DYN-5 input",
+      "pass": true
+    },
+    {
+      "detail": "correct=0.44116481, double-normalised=0.41556342",
+      "name": "DYN-9b-2 uses already-normalised g1=0.462 with b1=41/10",
+      "pass": true
+    },
+    {
+      "detail": "h=3f gives Y_nu=0 while Y_u=4f",
+      "name": "SO(10) matrix relations do not promote the optional top-like ansatz",
+      "pass": true
+    },
+    {
+      "detail": "archival=19.5/342.2; top-like=9.6/169.2",
+      "name": "fixed archival-kernel suppression is separated from top-like tension",
+      "pass": true
+    },
+    {
+      "detail": "complex covariance error=1.20e-16",
+      "name": "zeta invariance is domain-limited and complex rescaling is phase-covariant",
+      "pass": true
+    },
+    {
+      "detail": "epsilon_DI_SM=2.307794855090e-06",
+      "name": "SM Davidson--Ibarra bound uses physical m3-m1 after one square root",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "DYN-9b-3 remains blocked in the tau-resolved regime",
+      "pass": true
+    },
+    {
+      "detail": "log10(MSS)=10.30, MI=101.31 GeV",
+      "name": "published toy-window lower edge is only about 101 GeV",
+      "pass": true
+    },
+    {
+      "detail": "diagnostic only; an experimental branch-specific bound is still required",
+      "name": "illustrative MI>=10 TeV diagnostic moves the grid edge to log10(MSS)=11.85",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "RE-SC5 toy window remains non-promotable despite its mechanical scan",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "DYN-9b-2 is preliminary rather than a claimed global flavor fit",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "DYN-8 passes disclosure checks while forbidding physics promotion",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "DYN-8 contains no stale promotion or exhaustive-source wording",
+      "pass": true
+    }
+  ],
+  "checks_passed": 18,
+  "checks_total": 18,
+  "created_utc": "2026-07-14T01:08:50.066962+00:00",
+  "mechanical_status": "pass",
+  "numerical_repairs": {
+    "DYN9b2_archival_kernel_suppression": {
+      "G_LR": 342.2181898408745,
+      "PS": 19.468246993858898
+    },
+    "DYN9b2_complex_rescaling_covariance_error": 1.2023523462386844e-16,
+    "DYN9b2_top_like_ansatz_tension": {
+      "G_LR": 169.181571898118,
+      "PS": 9.624469786522326
+    },
+    "RE_SC5_MI_ge_10TeV_diagnostic_edge": {
+      "alive": true,
+      "alpha_G_inv": 38.87402591025857,
+      "case": "A(MI<=MSS)",
+      "log10_MI": 4.027821993256017,
+      "log10_MSS": 11.85,
+      "log10_MX": 16.303187548510078,
+      "physical": true,
+      "residual": 1.8410162283544196e-11,
+      "tau_d5": 1.327347387033573e+49,
+      "tau_d6": 6.314067188462385e+35
+    },
+    "RE_SC5_lower_edge": {
+      "alive": true,
+      "alpha_G_inv": 36.534160860937256,
+      "case": "A(MI<=MSS)",
+      "log10_MI": 2.0056405343008845,
+      "log10_MSS": 10.3,
+      "log10_MX": 16.35891964476107,
+      "physical": true,
+      "residual": 1.4210854715202004e-14,
+      "tau_d5": 1.362852300896083e+46,
+      "tau_d6": 9.317873661295266e+35
+    },
+    "epsilon_DI_SM": 2.3077948550898078e-06,
+    "yt_MX_correct_g1": 0.4411648125938088,
+    "yt_MX_double_normalised_historical": 0.41556341660794366
+  },
+  "open_physics_blockers": [
+    "H3+: physical motivation or UV realization of the Killing-contact axiom",
+    "DYN-5: explicit interacting messenger action and operator-complete symmetry",
+    "RE-SC4: recompute numerical selectivity pricing after DYN-5 rederivation",
+    "RE-SC5: branch-specific experimental MI floor and threshold/proton envelopes",
+    "DYN-9b-2: global branch-local non-SUSY Spin(10) flavor fit",
+    "DYN-9b-3: tau-resolved kinetic or density-matrix evolution with thermal inputs"
+  ],
+  "physics_promotion_allowed": false,
+  "resolved_artifact_blockers": [
+    "RE-SC3",
+    "RE-SC4",
+    "RE-SC5"
+  ],
+  "resolved_logic_blockers": [
+    "Original H3 demoted: invariant/nondegenerate contact does not select genus",
+    "N_fam=3 is explicitly conditional on the H3+ Killing-contact axiom",
+    "Top-like Y_nu is an explicit ansatz, not a consequence of Y_nu=h-3f and Y_u=h+f",
+    "Exact complex-zeta invariance is restricted to uniform positive-real rescaling",
+    "Fixed archival-tower scale ordering is not a generic instanton prediction"
+  ],
+  "source_sha256": {
+    "output/audit5/dyn5_model_validity.json": "03e97454ad912a8b87a7f2d5da9279929173f7241dae9bae68680e509c03e33f",
+    "output/audit7/dyn7_flavor_regime_gate.json": "5ea382ec84fa868ce2669e3d330cf864862a9d8f8d544251d3135021a878d5b4",
+    "output/audit8/dyn8_falsifiability_collection.json": "a88739b534159871b57b2626fe5e9738c5a8182663dd7cdff347fa028121d411",
+    "output/audit9/dyn9b2_nonsusy_flavor_refit.json": "df96f1e6981d7dfc5b66e5a18115d3d5c321a80b9065bafa65b9913dfd5013d4",
+    "output/audit9/dyn9b3_nonsusy_leptogenesis.json": "3371146496c285b6397c60365d134ac503adb3d19e728c01c3d59aaf220d0c76",
+    "route_E/code_dyn/dyn_claim_registry.json": "f9219ac435d652584f62d903a8c1ac324b78c626373c68331e9805dcc3a5109d",
+    "route_E/output/route_e_first_principles.json": "ac81c583464d0761637f771aef7b5b2e5bfc55ba0de0e50b11a5e8d098ba6547",
+    "route_d/output/d3_instanton_majorana_pricing.json": "34d6d8ba1decc706fd6d2cbc1030b184d9e64bbaa145d9bb8458f0bfe8c72849",
+    "route_d/output/d4_stueckelberg_protection.json": "678bfb97befad7c46833d2a20d4b65b716d686d590202ab2a58bb879c8663b43",
+    "route_d/output/d5_susy_breaking_bridge.json": "ef11420b11dd60f1503756cf6a84bd77999f2e6f2486fe2dbb5a7e7452fee8f1"
+  }
+}

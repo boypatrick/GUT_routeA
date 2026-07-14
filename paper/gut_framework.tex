@@ -68,9 +68,13 @@ Majorana contact tensor direction is no longer left arbitrary: it is the unique
 Route-B hidden-messenger mechanism for \(\zeta K_{\rm tr}\) is recorded as a
 conditional extension, but it is not part of the Route-A theorem core.  An
 optional Route-D appendix records local string-constrained interpretations of
-the same skeleton.  The hidden phase/radial sector and the companion audits
-for flavor, proton decay, thresholds, and source-sector UV origin remain open.
-Full phenomenological audits are deferred to companion work.
+the same skeleton.  The hidden phase/radial sector remains open.  Companion
+audits for flavor, proton decay, thresholds, and source-sector UV origin have
+been mechanically executed and ledgered, but they are not a physics closure:
+the fail-closed collector records
+\texttt{physics\_promotion\_allowed=false}, with the global
+non-supersymmetric flavor fit, valid messenger action, recomputed string
+pricing, and flavored thermal kinetics still open.
 \end{abstract}
 
 \maketitle
@@ -1348,25 +1352,32 @@ GUT construction:
 \(C=\CP^1\), \(R=p_++p_-\); protected \(\Spin^c\) carrier;
 no unpaired SM-charged exotics; \(P_{\nu^c}\); \(R\)-selection rule;
 hidden phase/radial sector.
-\item[Deferred audits (executed July 2026; results in repository
-ledgers).]
-The full flavor fit, the \(d=5\) proton-decay Wilson tensors, the
-threshold/proton companion audits, and the source-sector dynamics ran
-to completion as standalone machine-checked scripts (ledger pairs under
-\texttt{output/audit0..9/}; collected with a branch map and explicit
-kill criteria in the companion reconstruction note,
-\texttt{route\_E/tex/route\_e\_first\_principles.tex}, Sec.~``Dynamics
-Audits and Falsifiability'').  Net outcome: the benchmark
-supersymmetric minimal slice of this conditional branch is EXCLUDED by
+\item[Dynamics evidence (mechanically executed July 2026; physics closure
+open).]
+The repository contains standalone machine ledgers for the flavor,
+threshold/proton, source-sector, and non-supersymmetric diagnostic lanes
+(under \path{output/audit0..9/}), collected with a branch map in the
+companion reconstruction note,
+\path{route_E/tex/route_e_first_principles.tex}, Sec.~``Dynamics
+Audits and Falsifiability''.  Their fail-closed collector records
+\path{physics_promotion_allowed=false}: DYN-5 lacks a valid interacting
+messenger, DYN-9b-2 is not a global flavor fit for the non-SUSY branch, and
+DYN-7/9b-3 lack tau-resolved thermal kinetics.  Thus the benchmark
+supersymmetric minimal slice has a conditional finite-scan exclusion by
 unification combined with proton decay (a slice-family exclusion, not a
 model-class exclusion); a non-supersymmetric intermediate-scale variant
-survives and is falsifiable at Hyper-Kamiokande; the theorem core of
+remains a preliminary testable candidate; the theorem core of
 this note is untouched.  The non-supersymmetric re-derivation
-(vacuum, source selection, contact re-extraction, leptogenesis) was
-subsequently executed at the structural level (ledgers
-\texttt{output/audit9/dyn9b*.json}); a machine-verified invariance
-theorem shows the normalized contact content is branch-independent,
-with only the suppression scale \(M_*\) branch-local.
+(vacuum, source pricing, contact rescaling, unflavored leptogenesis) was
+executed only at the structural/order-estimate level (ledgers
+\path{output/audit9/dyn9b*.json}); a machine-verified scaling theorem
+shows that, within the fixed-kernel family and for a uniform positive-real
+rescaling \(y>0\), the normalized contact content is invariant while only
+the suppression scale \(M_*\) moves.  For complex \(y\), instead,
+\(M_*\mapsto |y|^2M_*\) and
+\(\zeta\mapsto (y^2/|y|^2)\zeta\), so the contact fraction is invariant but
+the phase of \(\zeta\) is not.  No global branch-local flavor fit follows
+from this fixed-shape covariance.
 \item[Optional UV interpretations.]
 Route-D local F-theory placement and E3-instanton interpretation of
 \(\zeta K_{\rm tr}\), both with global compactification and zero-mode caveats.

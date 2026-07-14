@@ -290,32 +290,49 @@
     },
     "dyn-9b-2": {
       "lane_id": "DYN-9b-2",
-      "status": "blocked_missing_evidence",
-      "supported_scope": "Proposed non-SUSY flavor refit and zeta re-extraction.",
-      "arithmetic_interpretation": "No mechanical success is admissible until the RE-SC3 dependency and upstream branch are present.",
-      "blockers": [
+      "status": "preliminary",
+      "supported_scope": "Fixed-archival-kernel ceiling estimates, an explicitly optional top-like benchmark, exact zeta invariance for uniform positive-real rescaling, and complex-rescaling phase covariance.",
+      "arithmetic_interpretation": "RE-SC3 is now present, but all_pass does not turn the fixed-shape rescaling exercise into a non-SUSY Spin(10) flavor refit; Y_nu=h-3f and Y_u=h+f do not by themselves force Y_nu to be top-like.",
+      "resolved_issues": [
         {
-          "id": "RE-SC3",
-          "severity": "blocking",
-          "description": "Missing instanton Majorana-pricing ledger d3_instanton_majorana_pricing.json."
+          "id": "RE-SC3_artifact_absence",
+          "resolved_at": "2026-07-14",
+          "description": "The instanton Majorana-pricing ledger is present and hash-tracked; it remains an unpromoted pricing card."
         },
+        {
+          "id": "hypercharge_double_normalization",
+          "resolved_at": "2026-07-14",
+          "description": "The one-loop SM running now uses the already SU(5)-normalised g1=0.462 with b1=41/10, rather than multiplying by sqrt(5/3) twice."
+        },
+        {
+          "id": "so10_lock_and_complex_rescaling_overclaim",
+          "resolved_at": "2026-07-14",
+          "description": "The former SO(10) lock wording is replaced by an algebraic h=3f counterexample plus an optional top-like ansatz. Exact complex-zeta invariance is restricted to uniform positive-real rescaling; complex rescaling rotates zeta by y^2/|y|^2."
+        }
+      ],
+      "blockers": [
         {
           "id": "global_nonsusy_flavor_fit",
           "severity": "blocking",
-          "description": "A physical non-SUSY Spin(10) flavor fit remains required even after evidence recovery."
+          "description": "Perform a branch-local covariant Spin(10) fit to charged fermions, CKM, PMNS and neutrino masses; the current ledger explicitly reports full_nonsusy_yukawa_fit_performed=false."
+        },
+        {
+          "id": "chain_specific_rge_and_thresholds",
+          "severity": "blocking",
+          "description": "Replace SM-only running through intermediate thresholds and the M_Delta=M_X estimate by branch-specific RGEs, doublet mixing, and threshold matching."
         }
       ]
     },
     "dyn-9b-3": {
       "lane_id": "DYN-9b-3",
-      "status": "blocked_missing_evidence",
-      "supported_scope": "Proposed non-SUSY leptogenesis rerun.",
-      "arithmetic_interpretation": "A future all_pass would still be preliminary until the flavored-regime defect is repaired.",
+      "status": "blocked_missing_branch_thermal_inputs",
+      "supported_scope": "Corrected unflavored non-SUSY leptogenesis order estimate with the SM loop function and Davidson-Ibarra normalization.",
+      "arithmetic_interpretation": "The double-square-root error is repaired, but all_pass remains non-publishable because M1 is in the tau-resolved regime and the upstream flavor fit is preliminary.",
       "blockers": [
         {
-          "id": "DYN-9b-2",
+          "id": "global_nonsusy_flavor_fit",
           "severity": "blocking",
-          "description": "Upstream non-SUSY flavor ledger is currently blocked."
+          "description": "The heavy-neutrino and Yukawa inputs must come from the missing branch-local non-SUSY global flavor fit rather than a fixed archival kernel."
         },
         {
           "id": "flavored_leptogenesis_required",
@@ -331,24 +348,24 @@
     },
     "dyn-8": {
       "lane_id": "DYN-8",
-      "status": "blocked_missing_evidence",
-      "supported_scope": "Falsifiability/status collector only.",
-      "arithmetic_interpretation": "The collector cannot promote any input claim and must not run when a selected optional card is absent.",
+      "status": "preliminary",
+      "supported_scope": "Fail-closed chain-of-custody and falsifiability/status collector only.",
+      "arithmetic_interpretation": "RE-SC3/4/5 are present and the 210-versus-45 branch-map contradiction is repaired. Mechanical all_pass certifies disclosure checks only; physics_promotion_allowed remains false.",
       "blockers": [
-        {
-          "id": "RE-SC3-4-5",
-          "severity": "blocking",
-          "description": "The current collector unconditionally loads missing RE-SC3/4/5 ledgers."
-        },
-        {
-          "id": "stale_branch_map",
-          "severity": "blocking",
-          "description": "Resolve the stale 210-versus-45 non-SUSY branch-map contradiction before regenerating the collector."
-        },
         {
           "id": "invalid_inputs_not_promotable",
           "severity": "blocking",
-          "description": "DYN-5V and DYN-7F explicitly prevent DYN-5 and unflavored DYN-7/9b-3 from being promoted merely because their arithmetic ledgers report all_pass."
+          "description": "DYN-5V and DYN-7F prevent DYN-5 and unflavored DYN-7/9b-3 diagnostics from being promoted merely because their arithmetic ledgers report all_pass."
+        },
+        {
+          "id": "global_nonsusy_flavor_fit",
+          "severity": "blocking",
+          "description": "DYN-9b-2 remains a fixed-kernel scaling study rather than a global non-SUSY Spin(10) flavor fit."
+        },
+        {
+          "id": "unpromoted_string_pricing",
+          "severity": "blocking",
+          "description": "RE-SC3/4/5 remain unpromoted pricing cards; the RE-SC4 numerical selectivity gap inherits the invalid DYN-5 ceiling."
         }
       ]
     }
@@ -364,13 +381,15 @@
       "artifact": "route_d/output/d4_stueckelberg_protection.json",
       "program_role": "optional UV/string pricing card",
       "dependency_rule": "conditionally required by DYN-8 when selected",
-      "physics_status_after_recovery": "unpromoted_pricing_only"
+      "physics_status_after_recovery": "unpromoted_pricing_only",
+      "known_limitation": "The additive-Abelian no-go is valid, but the numerical selectivity gaps inherit invalid historical DYN-5 ceilings and are blocked pending messenger rederivation."
     },
     "RE-SC5": {
       "artifact": "route_d/output/d5_susy_breaking_bridge.json",
       "program_role": "optional UV/string pricing card",
       "dependency_rule": "conditionally required by DYN-8 when selected",
-      "physics_status_after_recovery": "unpromoted_pricing_only"
+      "physics_status_after_recovery": "unpromoted_pricing_only",
+      "known_limitation": "The current one-loop toy scan lacks an experimental intermediate-scale floor, threshold/proton uncertainty envelopes, and an independent global root audit."
     }
   }
 }

@@ -33,8 +33,8 @@ CACHE_DIR = Path(
 ).expanduser().resolve()
 
 
-if ROUTE_E_ROOT.name != "route_e":
+if ROUTE_E_ROOT.name != "route_E":
     raise RuntimeError(
-        "Route-E path resolution requires the exact lowercase directory "
-        f"name 'route_e'; resolved {ROUTE_E_ROOT!s}"
+        "Route-E path resolution requires the canonical case-sensitive "
+        f"directory name 'route_E'; resolved {ROUTE_E_ROOT!s}"
     )

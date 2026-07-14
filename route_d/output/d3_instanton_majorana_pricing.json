@@ -1,4 +1,5 @@
 {
+  "S_ge_1_semiclassical_control_proved": false,
   "all_pass": true,
   "audit": "Route-D D3 instanton / d=5 Majorana-source pricing card",
   "checks": [
@@ -31,7 +32,7 @@
       "pass": true
     },
     {
-      "name": "weak-coupling boundary DISCLOSED: S_top >= 1 requires M_s >= e * M_R,top = 1.07e16 GeV -- satisfied by the G_LR chain M_X = 2.1e16 but NOT by the PS chain M_X = 5.4e15 (there the string scale must sit above the unification scale)",
+      "name": "minimal exponential-suppression diagnostic: S_top >= 1 requires M_s >= e * M_R,top = 1.07e16 GeV -- satisfied by the G_LR chain M_X = 2.1e16 but NOT by the PS chain M_X = 5.4e15; this is not a proof of string-loop or alpha-prime control",
       "pass": true
     },
     {
@@ -47,7 +48,7 @@
       "pass": true
     },
     {
-      "name": "the tower is EXACTLY three rank-1 terms with sigma_k > 0: a single instanton cycle (generic rank-1 M_R) is EXCLUDED; >= 3 distinct cycles with distinct actions are required",
+      "name": "under the explicit rank-1-per-cycle source ansatz, the Takagi tower uses exactly three positive rank-1 terms; this is a conditional UV cost, not a theorem about general instanton sectors",
       "pass": true
     },
     {
@@ -55,7 +56,7 @@
       "pass": true
     },
     {
-      "name": "beyond-zeta consequence: on BOTH surviving chains the mechanism REQUIRES N_2 and N_3 heavier than the intermediate gauge scale (sigma/M_I > 1), impossible with a renormalizable perturbative source -- a falsifiable correlation if the Z'/W_R scale and the heavy-N masses are ever both measured",
+      "name": "fixed-tower consequence: on BOTH surviving chains the replayed archival N_2 and N_3 are heavier than the intermediate gauge scale and in fact satisfy sigma/M_I > 4 pi; the instanton benchmark permits this coexistence without a perturbative f v_R source, but does not impose it on a generic independently fitted tower",
       "pass": true
     },
     {
@@ -65,11 +66,11 @@
   ],
   "checks_passed": 15,
   "checks_total": 15,
-  "created_utc": "2026-07-05T10:39:32.310755+00:00",
+  "created_utc": "2026-07-14T01:03:32.664384+00:00",
   "d5_operator_escape_viable_at_intermediate_vR": false,
   "derivation_log": {
     "S1_d5_escape_closed": {
-      "conclusion": "instantons are the only string escape for the tower at intermediate-scale v_R",
+      "conclusion": "of the two priced mechanisms, the d=5 operator fails and the instanton benchmark remains conditional",
       "f_prime_tables": {
         "G_LR": {
           "1e17": [
@@ -157,9 +158,10 @@
           12.322001944229163
         ]
       },
+      "S_top_ge_1_diagnostic_Ms_min_GeV": 1.0673417888955816e+16,
       "S_zeta_D2": 2.0369040025655094,
       "note": "three DISTINCT actions are required (hierarchy of the tower); the same-ballpark coincidence S_top ~ S_zeta is recorded as a diagnostic only",
-      "weak_coupling_Ms_min_GeV": 1.0673417888955816e+16
+      "semiclassical_control_established": false
     },
     "S3_rank_texture": {
       "takagi_residual": 7.544557598337908e-16,
@@ -172,7 +174,7 @@
     },
     "S4_price_card": {
       "axiom_statement": "there exist >= 3 Euclidean brane instantons (E3-type) on distinct cycles with actions S_k = ln(M_s/sigma_k) and Grassmann zero modes pairing the nu^c bilinear, generating M_R = sum_k M_s e^{-S_k} u_k u_k^T with B-L broken by the instantons themselves",
-      "beyond_zeta_consequence": "N_2, N_3 heavier than the intermediate gauge scale -- falsifiable correlation",
+      "beyond_zeta_consequence": "for the fixed archival tower, N_2 and N_3 are heavier than the intermediate gauge scale; the instanton benchmark permits but does not generically require it",
       "buys": [
         "archival-tower SCALE without f < 4 pi violation",
         "M_R decoupled from the B-L gauge scale M_I (the DYN-9 scale clash dissolves)",
@@ -181,7 +183,7 @@
       "does_not_buy": [
         "zeta's value (boundary theorem intact)",
         "the family texture u_k (12 = 12, zero compression)",
-        "the PS-chain weak-coupling window (needs M_s > M_X there)"
+        "semiclassical control (S_top >= 1 is only a minimal suppression diagnostic)"
       ],
       "parameter_cost": {
         "actions": 3,
@@ -194,10 +196,13 @@
   },
   "family_texture_derived": false,
   "global_divisor_constructed": false,
+  "instanton_prefactors_A_i_fixed_to_one": true,
   "moduli_stabilization_addressed": false,
+  "physics_promotion_allowed": false,
+  "physics_status": "unpromoted_pricing_only",
   "price_card": {
     "axiom_statement": "there exist >= 3 Euclidean brane instantons (E3-type) on distinct cycles with actions S_k = ln(M_s/sigma_k) and Grassmann zero modes pairing the nu^c bilinear, generating M_R = sum_k M_s e^{-S_k} u_k u_k^T with B-L broken by the instantons themselves",
-    "beyond_zeta_consequence": "N_2, N_3 heavier than the intermediate gauge scale -- falsifiable correlation",
+    "beyond_zeta_consequence": "for the fixed archival tower, N_2 and N_3 are heavier than the intermediate gauge scale; the instanton benchmark permits but does not generically require it",
     "buys": [
       "archival-tower SCALE without f < 4 pi violation",
       "M_R decoupled from the B-L gauge scale M_I (the DYN-9 scale clash dissolves)",
@@ -206,7 +211,7 @@
     "does_not_buy": [
       "zeta's value (boundary theorem intact)",
       "the family texture u_k (12 = 12, zero compression)",
-      "the PS-chain weak-coupling window (needs M_s > M_X there)"
+      "semiclassical control (S_top >= 1 is only a minimal suppression diagnostic)"
     ],
     "parameter_cost": {
       "actions": 3,
@@ -223,6 +228,7 @@
     "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
     "dyn9_ledger": "output/audit9/dyn9_nonsusy_intermediate.json"
   },
+  "three_cycles_requires_rank1_per_cycle_assumption": true,
   "zero_mode_spectrum_checked": false,
   "zeta_value_derived": false
 }

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Audit a P0 subset of Route-E dynamics evidence cited by the documents.
 
-The Route-E dynamics sources may be restored under ``route_E/code_dyn`` even
-though the papers still cite the historical ``code`` location.  Treat that as
-a relocated source, not as an exact-path match and not as a generated ledger.
+The canonical implementations live under ``route_E/code_dyn``.  The historical
+root ``code`` entry points are thin compatibility delegates, so both the cited
+path and the single implementation are recorded without treating duplicate
+physics logic as independent evidence.
 """
 
 from __future__ import annotations
@@ -74,6 +75,9 @@ EXECUTION_GUARDS = [
     "output/audit1/dyn4a_seesaw_zeta_posterior.json",
     "output/audit5/dyn5_model_validity.json",
     "output/audit7/dyn7_flavor_regime_gate.json",
+    "route_f/code/audit_blocker_promotion_gate.py",
+    "route_f/output/blocker_promotion_gate.json",
+    "route_f/output/blocker_promotion_gate.md",
 ]
 
 DYNAMICS = SOURCE_SCRIPTS + DYN_LEDGERS + STRING_CARDS
@@ -87,9 +91,9 @@ REQUIRED_SOURCE_PATHS = (
 def locate(relative: str) -> list[str]:
     candidates = [REPO / relative]
     if relative.startswith("code/") or relative.startswith("output/"):
-        candidates.append(REPO / "route_e" / relative)
+        candidates.append(REPO / "route_E" / relative)
     if relative.startswith("code/"):
-        candidates.append(REPO / "route_e" / "code_dyn" / Path(relative).name)
+        candidates.append(REPO / "route_E" / "code_dyn" / Path(relative).name)
     return [str(path.relative_to(REPO)) for path in candidates if path.exists()]
 
 
@@ -153,9 +157,10 @@ def main() -> None:
             "of scientific correctness"
         ),
         "interpretation": (
-            "Relocated source code counts as found for recovery triage, but does not "
-            "satisfy the cited-path, generated-ledger, clean-clone, or scientific "
-            "validation gates."
+            "Root cited paths are compatibility delegates to one canonical "
+            "route_E/code_dyn implementation. File existence and tracking satisfy "
+            "only the workspace evidence gate; scientific promotion is governed "
+            "separately by the claim registry and blocker promotion gate."
         ),
         "required_source_provenance": {
             "exact_paths_present": required_sources_exact,
@@ -207,7 +212,7 @@ def main() -> None:
     missing_lines = "\n".join(
         f"- `{path}`" for path in result["cited_dynamics"]["missing"]
     )
-    md_path.write_text(
+    md_content = (
         "# Route-E P0 Evidence-Subset Existence Audit\n\n"
         f"- status: **{result['status']}**\n"
         f"- core artifacts present: `{core_present}/{len(core_records)}`\n"
@@ -232,12 +237,12 @@ def main() -> None:
         f"`{dynamics_present}/{len(dynamics_records)}`\n"
         "- scope: 29-item dynamics subset plus 4 core artifacts; it is not "
         "every cited path, and a present file is not automatically correct\n"
-        "- relocated `route_E/code_dyn` sources count toward recovery triage, "
-        "not exact-path or clean-clone closure\n\n"
+        "- root DYN entry points delegate to one canonical "
+        "`route_E/code_dyn` implementation; this prevents ledger overwrite drift\n\n"
         "## Missing cited dynamics artifacts\n\n"
-        f"{missing_lines}\n",
-        encoding="utf-8",
+        f"{missing_lines}\n"
     )
+    md_path.write_text(md_content.rstrip() + "\n", encoding="utf-8")
     print(
         "route_e_evidence_audit: "
         f"{result['status']} ({dynamics_present}/{len(dynamics_records)} dynamics artifacts present)"

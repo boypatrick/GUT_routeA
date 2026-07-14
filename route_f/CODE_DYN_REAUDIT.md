@@ -5,6 +5,33 @@ Execution addendum: 2026-07-14
 
 ## Superseding execution addendum
 
+### Post-recovery blocker correction (2026-07-14)
+
+This checkpoint supersedes the remaining "missing RE-SC3/4/5" and stale-map
+sentences in this discovery record:
+
+- RE-SC3/4/5 now exist and are Git-tracked.  The 21-node required-card dry-run
+  is preflight-clean, but the cards remain `unpromoted_pricing_only`.
+- Canonical implementations are under case-sensitive `route_E/code_dyn/`;
+  root `code/audit*_dyn*.py` entry points delegate to that single source.
+- DYN-9b-2's double-normalised hypercharge input is repaired:
+  `y_t(M_X)=0.44116481` (historical `0.41556342`).  The lane is a preliminary
+  fixed-kernel scaling study, not a global non-SUSY flavor fit.  It now proves
+  explicitly that the displayed SO(10) relations do not force a top-like
+  `Y_nu`, separates `19.5x/342.2x` archival suppression from the optional
+  `9.6x/169.2x` top-like benchmark, and treats complex rescaling as zeta-phase
+  covariance rather than invariance.
+- DYN-9b-3's corrected SM Davidson--Ibarra bound is
+  `2.307794855e-6`; it remains blocked in the tau-resolved regime and now
+  distinguishes absence of a gravitino-specific ceiling from an unspecified
+  reheating history.
+- DYN-8 consumes DYN-5V/DYN-7F, fixes the 210/45 contradiction, and reports
+  `30/30` mechanical/disclosure checks with
+  `physics_promotion_allowed=false`.
+- `route_f/code/audit_blocker_promotion_gate.py` independently passes `18/18`
+  fail-closed checks, including the exact Abelian charge no-go and the
+  RE-SC5 `M_I~=101 GeV` lower-edge diagnostic.
+
 The 2026-07-13 path/deployment findings below are retained as the discovery
 record but are no longer current:
 
@@ -21,12 +48,13 @@ record but are no longer current:
   bilinear-as-Yukawa loop; DYN-7F (`7/7`) enforces the flavored-regime blocker
   and repairs the Davidson--Ibarra double square root.
 
-Still open: the heavy full replay/clean-clone gate, `RE-SC3/4/5`, an explicit
-interacting DYN-5 completion, flavored DYN-7/9b-3 kinetics, and DYN-8's stale
-branch map.  When a statement below conflicts with this addendum or the claim
-registry, the addendum/registry wins.
+Still open: the heavy full numerical replay/clean-clone gate, an explicit
+interacting DYN-5 completion, recomputed RE-SC4 pricing, an RE-SC5 uncertainty
+and experimental-bound envelope, a global non-SUSY flavor fit, and flavored
+DYN-7/9b-3 kinetics.  When a statement below conflicts with this addendum or
+the claim registry, the addendum/registry wins.
 
-## Verdict
+## Historical 2026-07-13 verdict (superseded by the addendum above)
 
 The previous existence finding must be revised: all 19 DYN source scripts have
 now been recovered under `route_E/code_dyn/`.  They are substantial programs,
@@ -313,7 +341,7 @@ measure-independent viable fraction or a classification of the full potential.
 The scripts also retain tree-level-only and omitted-invariant/stationarity
 boundaries, so `DYN-9b IS CLOSED` is not justified.
 
-### Evidence deployment and collector integrity
+### Historical evidence deployment and collector integrity (superseded)
 
 - The historical `code/...` manifest and the restored `route_E/code_dyn/...`
   location disagree.  Case-sensitive Linux also distinguishes `route_E` from
@@ -334,7 +362,7 @@ boundaries, so `DYN-9b IS CLOSED` is not justified.
   they are not substitutes for a global divisor, flux, zero-mode, Pfaffian,
   and SUSY-breaking construction.
 
-## Required repair gates
+## Historical required repair gates (implementation status is in ROADMAP)
 
 Three implementation strategies can proceed in parallel:
 

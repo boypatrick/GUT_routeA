@@ -19662,7 +19662,7 @@ statements in the 2026-07-13 snapshot immediately above; canonical details are
 in `route_f/ROADMAP.md`.
 
 - **Execution substrate completed:** all recovered scripts now use the shared
-  lowercase path resolver; expensive caches are run-local and keyed by source
+  canonical `route_E` root resolver; expensive caches are run-local and keyed by source
   plus NumPy version.  `route_E/code_dyn/run_route_e_dynamics.py` implements a
   fail-closed isolated DAG with 19 recovered scripts plus DYN-5V/DYN-7F guards,
   minimal input snapshots, atomic manifests, SHA-256 chain of custody, and
@@ -19690,3 +19690,39 @@ in `route_f/ROADMAP.md`.
 - **Remaining F0-A blockers:** recover/reimplement `RE-SC3/4/5`, run the full
   DAG from a clean clone, and repair DYN-8's stale 210-vs-45 branch map.  The
   older statement that the DYN main line was closed is withdrawn.
+
+### Post-recovery blocker execution (2026-07-14)
+
+This subsection supersedes the remaining-blocker sentence immediately above.
+
+- Commit `6662dd6` integrated and pushed the Route-E/Route-F evidence set on
+  top of the concurrently updated remote `main` without overwriting it.
+- RE-SC3/4/5 are present and tracked; the required-card 21-node dry-run has no
+  preflight errors.  Their status remains `unpromoted_pricing_only`.
+- The exact canonical implementation is `route_E/code_dyn/`; historical root
+  DYN paths now delegate to it, eliminating the old-ledger overwrite hazard.
+- DYN-9b-2's GUT-normalized hypercharge replay is corrected
+  (`y_t(M_X)=0.44116481`), but the lane remains a preliminary fixed-kernel
+  scaling study pending a global non-SUSY Spin(10) fit.  The former SO(10)
+  lock claim is withdrawn (`h=3f` gives `Y_nu=0`, `Y_u=4f`): actual archival
+  suppression is `19.5x/342.2x`, while `9.6x/169.2x` assumes a top-like
+  `Y_nu`.  Exact zeta invariance is limited to uniform positive-real scaling;
+  complex scaling is phase-covariant.
+- DYN-9b-3's SM Davidson--Ibarra ceiling is corrected to
+  `2.307794855e-6`.  At `M1=2.38045e10 GeV` it remains blocked on tau-resolved
+  kinetics, spectator effects, reheating history, and initial abundance.
+- DYN-8 now consumes DYN-5V/DYN-7F, resolves the 210/45 map contradiction,
+  exits nonzero on a failed check, and passes `30/30` disclosure checks while
+  recording `physics_promotion_allowed=false`.
+- The H3 logic blocker is repaired by theorem demotion plus an explicit H3+
+  axiom: original invariant-contact H3 proves `N_fam<=3`; `N_fam=3`
+  is conditional on a nondegenerate adjoint-trace/Killing contact.  A physical
+  origin for H3+ remains open.
+- Route-F's independent promotion gate passes `18/18`; it also exposes the
+  RE-SC5 toy-window lower edge `M_I~=101 GeV` and blocks RE-SC4's numerical
+  selectivity gap until DYN-5 is rederived.
+
+Remaining physics work: construct an interacting/selection-safe messenger,
+perform the branch-local global non-SUSY flavor fit, solve two-flavor or
+density-matrix kinetics, add RE-SC5 threshold/experimental/proton envelopes,
+and execute the expensive full DAG plus clean-clone replay.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DYN-8: falsifiability collection (closes the dynamics main line).
+"""DYN-8: fail-closed falsifiability/status collection.
 
 Collector audit: loads every dynamics-lane and string-card ledger,
 re-verifies each number quoted in the reconstruction paper's "Dynamics
@@ -7,9 +7,12 @@ Audits and Falsifiability" section against its source ledger
 (chain-of-custody), checks that both tex files carry the update, and
 writes the collected branch map + kill bank as a ledger of its own.
 
-This audit derives nothing new; it is the bookkeeping closure of the
-program DYN-0 -> (1 || 4a) -> 2 -> 3 -> 5 -> 8 with the DYN-7/9 lanes
-and the D3-D5 string-conditional cards.  zeta is NOT derived anywhere.
+This audit derives nothing new and does not close the physics program.  It
+collects the bookkeeping chain DYN-0 -> (1 || 4a) -> 2 -> 3 -> 5 -> 8 with
+the DYN-7/9 lanes and the D3-D5 string-conditional cards, while consuming the
+DYN-5V and DYN-7F validity guards.  ``all_pass`` below means that the
+chain-of-custody and disclosure checks pass; it is not a promotion verdict.
+zeta is NOT derived anywhere.
 """
 
 import cmath
@@ -45,7 +48,9 @@ L = {
     "dyn3": load("output/audit2/dyn3_proton_d5_kill_criterion.json"),
     "dyn4b": load("output/audit1/dyn4b_unconditional_zeta.json"),
     "dyn5": load("output/audit5/dyn5_messenger_one_loop.json"),
+    "dyn5v": load("output/audit5/dyn5_model_validity.json"),
     "dyn7": load("output/audit7/dyn7_leptogenesis_argzeta.json"),
+    "dyn7f": load("output/audit7/dyn7_flavor_regime_gate.json"),
     "dyn9": load("output/audit9/dyn9_nonsusy_intermediate.json"),
     "d3": load("route_d/output/d3_instanton_majorana_pricing.json"),
     "d4": load("route_d/output/d4_stueckelberg_protection.json"),
@@ -69,6 +74,15 @@ check("no source ledger claims a derived zeta (boundary theorem "
       "respected program-wide)",
       all(v.get("zeta_value_derived") is False for v in L.values()
           if "zeta_value_derived" in v))
+check("validity guards fail closed: DYN-5 is invalid pending an interacting "
+      "messenger action and DYN-7/9b-3 require flavored thermal inputs",
+      L["dyn5v"].get("claim_status") == "invalid_pending_rederivation"
+      and L["dyn5v"].get("physics_claim_valid") is False
+      and L["dyn7f"].get("physics_claims_closed") is False
+      and L["dyn7f"]["statuses"]["DYN-7"]["success_probability_publishable"]
+      is False
+      and L["dyn7f"]["statuses"]["DYN-9b-3"]
+      ["success_probability_publishable"] is False)
 
 print("== DYN-8 section 2: branch map re-verified ==")
 
@@ -88,8 +102,9 @@ check("BRANCH SUSY slice EXCLUDED: d=5 lifetime short by 7.7 orders at "
 
 g = L["dyn9"]["chains"]["G_LR"]
 p = L["dyn9"]["chains"]["PS"]
-check("BRANCH non-SUSY ALIVE: G_LR (M_I 1e9.4, M_X 1e16.3, tau ~ 1e36) "
-      "alive; PS 210-compatible marginal at 4.3e33",
+check("BRANCH non-SUSY PRELIMINARY LEDGER: G_LR has M_I 1e9.4, "
+      "M_X 1e16.3 and the central d=6 estimate near 1e36; PS is a "
+      "210-compatible marginal central estimate at 4.3e33",
       abs(g["log10_MI"] - 9.43) < 0.01 and abs(g["log10_MX"] - 16.32) < 0.01
       and g["tau_d6_years"] > 2.4e34
       and abs(p["tau_d6_years"] / 4.3e33 - 1) < 0.05,
@@ -110,9 +125,10 @@ print("== DYN-8 section 3: kill bank re-verified ==")
 KILL_BANK = []
 
 
-def bank(tag, branch, statement, ledger, ok, detail=""):
+def bank(tag, branch, statement, ledger, ok, detail="", promotable=True):
     KILL_BANK.append({"id": tag, "branch": branch, "statement": statement,
-                      "source_ledger": ledger, "verified": bool(ok)})
+                      "source_ledger": ledger, "verified": bool(ok),
+                      "physics_promotable": bool(promotable)})
     check(f"{tag} [{branch}]: {statement[:64]}...", ok, detail)
 
 
@@ -122,10 +138,13 @@ bank("K1", "kinematic core", "fourth sequential chiral family kills the "
      L["core"]["all_pass"], "theorem-level; LHC Higgs data exclude SM4")
 
 ce = L["dyn4b"]["contact_essentiality"]
-bank("K2", "kinematic core target", "Dirac neutrinos remove the Majorana "
-     "contact target; essentiality posterior-wide",
+bank("K2", "conditional Majorana-card diagnostic", "Dirac neutrinos remove "
+     "this Majorana contact target; within the stated nuisance-prior card, "
+     "all sampled contact fractions exceed 0.01 (not a data posterior)",
      "output/audit1/dyn4b_unconditional_zeta.json",
-     ce["P(cf > 0.01)"] == 1.0, f"P(cf>0.01) = {ce['P(cf > 0.01)']}")
+     ce["P(cf > 0.01)"] == 1.0,
+     f"conditional sample fraction = {ce['P(cf > 0.01)']}",
+     promotable=False)
 
 bank("K3", "SUSY completion (FIRED)", "unification x proton decay "
      "excludes the slice family; obstruction map recorded",
@@ -146,45 +165,62 @@ bank("K5", "non-SUSY branch", "e+ pi0 dominance; G_LR at 1e36 partially "
 
 ps7 = L["dyn7"]["posterior_statistics"]
 bs7 = L["dyn7"]["boost_sensitivity"]
-bank("K6", "SUSY slice (soft)", "thermal unflavored leptogenesis fails "
-     "by ~1.5 orders, wrong central sign; x3-10 boost -> 34-45%",
+bank("K6", "SUSY slice (historical diagnostic)", "unflavored regression "
+     "gives a small success fraction, but DYN-7F places M1 in the "
+     "tau-resolved regime; probabilities and arg-zeta windows are not "
+     "publishable",
      "output/audit7/dyn7_leptogenesis_argzeta.json",
      abs(ps7["P_success"] - 0.0035) < 1e-6
      and abs(bs7["P_success_x3"] - 0.337) < 0.01
      and abs(bs7["P_success_x10"] - 0.4545) < 0.01,
-     f"P = {ps7['P_success']*100:.2f}%, x3 -> {bs7['P_success_x3']*100:.0f}%")
+     f"P = {ps7['P_success']*100:.2f}%, x3 -> {bs7['P_success_x3']*100:.0f}%",
+     promotable=False)
 
 c5 = L["dyn5"]["derivation_log"]["S4_r_selection"]["ceilings_order_estimates"]
-bank("K7", "hidden-messenger extension", "odd-R spurion ceiling "
-     "eps < 4.4e-4 (refreshed windows); light-sector silence structural",
+bank("K7", "hidden-messenger extension (invalid model diagnostic)",
+     "historical odd-R ceiling replays arithmetically, but DYN-5V shows "
+     "that the displayed bilinear has no asserted one-loop anomalous "
+     "dimension and allows X L H_u",
      "output/audit5/dyn5_messenger_one_loop.json",
-     abs(c5["eps_odd_tight"] / 4.44e-4 - 1) < 0.01
-     and L["dyn5"]["one_loop_silence_of_light_sector"],
-     f"eps_odd_tight = {c5['eps_odd_tight']:.2e}")
+     c5["eps_odd_tight"] > 0
+     and L["dyn5"]["one_loop_silence_of_light_sector"]
+     and L["dyn5v"].get("claim_status") == "invalid_pending_rederivation"
+     and L["dyn5v"].get("physics_claim_valid") is False,
+     f"eps_odd_tight = {c5['eps_odd_tight']:.2e}", promotable=False)
 
 cx = L["d3"]["derivation_log"]["S4_price_card"]
-bank("K8", "string-conditional", "instanton source requires N2, N3 "
-     "ABOVE the intermediate gauge scale (39x, 4.8e3x on PS): "
-     "coexistence correlation falsifiable",
+bank("K8", "string-conditional", "for the fixed archival tower, N2 and "
+     "N3 lie ABOVE the intermediate gauge scale (39x, 4.8e3x on PS); "
+     "the instanton benchmark permits this coexistence but does not "
+     "require it for a generic refitted tower",
      "route_d/output/d3_instanton_majorana_pricing.json",
      "N_2, N_3 > M_I" in " ".join(cx["buys"]),
-     "verified against the D3 price card")
+     "verified against the unpromoted D3 price card", promotable=False)
 
 g4 = L["d4"]["derivation_log"]["S3_closure"]["selectivity_gap_by_Ms"]["2e16"]
-bank("K9", "string-conditional", "zero-mode selectivity gap "
-     "Delta S >= 6.6 (refreshed) / 3.2 (loose) at M_s = 2e16",
+bank("K9", "string-conditional (invalid numerical diagnostic)",
+     "the historical DYN-5 ceilings replay to a finite zero-mode "
+     "selectivity gap, but DYN-5V invalidates those ceilings, so no "
+     "numerical Delta S bound is physics-promotable",
      "route_d/output/d4_stueckelberg_protection.json",
-     abs(g4["dS_refreshed"] - 6.64) < 0.05 and abs(g4["dS_loose"] - 3.18) < 0.05,
-     f"Delta S = {g4['dS_refreshed']:.2f} / {g4['dS_loose']:.2f}")
+     math.isfinite(g4["dS_refreshed"])
+     and math.isfinite(g4["dS_loose"])
+     and L["d4"].get("numerical_selectivity_gap_valid") is False
+     and L["d4"].get("physics_promotion_allowed") is False,
+     f"Delta S = {g4['dS_refreshed']:.2f} / {g4['dS_loose']:.2f}; "
+     "blocked because the ceiling is inherited from invalid DYN-5",
+     promotable=False)
 
 w5 = L["d5"]["windows"]
-bank("K10", "string-conditional", "SUSY-breaking bridge: G_LR window "
-     "log10 M_SS in [10.30, 15.55]; PS bridge EMPTY (structural)",
+bank("K10", "string-conditional", "preliminary SUSY-breaking toy scan: "
+     "G_LR window log10 M_SS in [10.30, 15.55]; PS window empty under "
+     "the stated one-loop/ESH/degenerate-spectrum assumptions",
      "route_d/output/d5_susy_breaking_bridge.json",
      w5["PS"] is None and abs(w5["G_LR"]["log10_MSS_min"] - 10.30) < 0.01
      and abs(w5["G_LR"]["log10_MSS_max"] - 15.55) < 0.01,
      f"G_LR window = [{w5['G_LR']['log10_MSS_min']:.2f}, "
-     f"{w5['G_LR']['log10_MSS_max']:.2f}]")
+     f"{w5['G_LR']['log10_MSS_max']:.2f}] (unpromoted toy scan)",
+     promotable=False)
 
 zc = L["dyn4b"]["refreshed_central_card"]["zeta"]
 miss = abs(2 * math.pi * 17 / 178 - cmath.phase(complex(zc[0], zc[1])))
@@ -228,33 +264,42 @@ bank("K5r", "non-SUSY LR chain (refresh, CORRECTED by the ratio scan)",
      "prior-art conflict RESOLVED as a fixed-ratio artifact")
 
 s9b3 = L["9b3"]["derivation_log"]
-bank("K6r", "non-SUSY branch (refresh)", "K6 REPLACED by the "
-     "branch-tagged rerun: ~6x harder (suppression 0.165, P = 0/4000 "
-     "unflavored, boost sweet spot x60) but the gravitino ceiling "
-     "dissolves by the branch -- a soft constraint on the source "
-     "scenario, not a kill",
+r9b3 = s9b3["S2_prior_draw_regression"]
+bank("K6r", "non-SUSY branch (refresh)", "K6 is replaced by a "
+     "branch-tagged unflavored regression: ~6x harder (suppression 0.165, "
+     "0/4000 target-band hits without boost, largest scanned hit fraction "
+     "near x60); no likelihood or thermal kinetics make these viability "
+     "probabilities, and absence of a gravitino ceiling is not a reheating "
+     "prediction",
      "output/audit9/dyn9b3_nonsusy_leptogenesis.json",
      abs(s9b3["S1_central"]["suppression_vs_dyn7"] - 0.165) < 0.001
-     and s9b3["S2_posterior"]["P_success"] == 0.0
-     and s9b3["S2_posterior"]["boost"]["x60"] > 0.4,
-     f"median |eta_B| = {s9b3['S2_posterior']['median_abs_eta']:.2e}")
+     and r9b3["target_band_hit_fraction"] == 0.0
+     and r9b3["boost_target_band_hit_fractions"]["x60"] > 0.4
+     and L["9b3"]["likelihood_applied"] is False
+     and L["9b3"]["success_probability_publishable"] is False,
+     f"median |eta_B| = {r9b3['median_abs_eta']:.2e}; regression only",
+     promotable=False)
 
 s9b2 = L["9b2"]["derivation_log"]
-bank("K8r", "string-conditional (refresh)", "K8 UPGRADED to a branch "
-     "requirement: lock tension 9x/159x + type-II deficit 3.7/7.3 "
-     "orders + leptogenesis floor leave the scale-decoupled "
-     "instanton-type source as the only quantified scenario; D3 "
-     "itself remains unpromoted",
+bank("K8r", "string-conditional (refresh)", "K8 remains an unpromoted "
+     "conditional diagnostic: the fixed archival-kernel ceiling and "
+     "optional top-like ansatz tension, together with the type-II estimate, "
+     "disfavor the fixed-kernel renormalizable benchmark, while the "
+     "leptogenesis comparison lacks a global flavor fit and flavored "
+     "thermal kinetics; D3 itself remains unpromoted",
      "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
-     s9b2["S1_lock"]["chains"]["PS"]["lock_tension"] > 5
-     and s9b2["S1_lock"]["chains"]["G_LR"]["lock_tension"] > 50
+     s9b2["S1_lock"]["so10_relations_force_top_like_Ynu"] is False
+     and s9b2["S1_lock"]["chains"]["PS"]
+     ["archival_kernel_suppression"] > 10
+     and s9b2["S1_lock"]["chains"]["G_LR"]
+     ["archival_kernel_suppression"] > 300
      and all(v["deficit_orders"] > 3
              for v in s9b2["S2_typeII"].values())
      and L["d3"]["promoted_to_paper"] is False,
-     "conditional-dependency statement, not a promotion")
+     "conditional-dependency statement, not a promotion", promotable=False)
 
 s4c = L["4c"]["derivation_log"]
-bank("K2r", "kinematic core target (refresh)", "K2 STRENGTHENED by the "
+bank("K2r", "conditional kernel-refit diagnostic", "K2 is refined by the "
      "kernel refit: the theta_23 tension is a frozen-anchor property "
      "(exact Majorana absorption at unchanged kernels; a 5% Y_e "
      "perturbation absorbs it alone) and contact essentiality is "
@@ -265,18 +310,22 @@ bank("K2r", "kinematic core target (refresh)", "K2 STRENGTHENED by the "
      and min(v["cf_min"] for v in s4c["S2"].values()) > 0.01
      and s4c["S3"]["eps_absorb"] is not None
      and s4c["S3"]["eps_absorb"] <= 0.1,
-     f"eps_e(theta23) = {s4c['S3']['eps_absorb']}")
+     f"eps_e(theta23) = {s4c['S3']['eps_absorb']}", promotable=False)
 
 zinv = s9b2["S3_invariance"]
-bank("K11r", "benchmark bookkeeping (refresh)", "the zeta-invariance "
-     "theorem: the normalized contact content is exactly invariant "
-     "under Dirac rescaling; only M_* is branch-local (the 'what "
-     "would not falsify' remark is now a theorem)",
+bank("K11r", "benchmark bookkeeping (refresh)", "positive-real rescaling "
+     "theorem: within the fixed-kernel y>0 family, normalized contact "
+     "content is exactly invariant and only M_* moves; for complex y, "
+     "zeta is phase-covariant rather than invariant",
      "output/audit9/dyn9b2_nonsusy_flavor_refit.json",
      abs(complex(zinv["zeta"][0], zinv["zeta"][1])
          - complex(0.1076472949, 0.0736514853)) < 1e-9
-     and abs(zinv["contact_fraction"] - 0.1304275166688152) < 1e-9,
-     "machine-verified to 1e-16 in the source ledger")
+     and abs(zinv["contact_fraction"] - 0.1304275166688152) < 1e-9
+     and zinv["domain_of_exact_zeta_invariance"]
+     == "uniform positive-real y"
+     and zinv["complex_rescaling"]["zeta_phase_invariant"] is False,
+     "positive-real invariance and complex phase covariance both verified",
+     promotable=False)
 
 print("== DYN-8 section 5: papers carry the update ==")
 
@@ -288,10 +337,10 @@ check("reconstruction paper contains the Falsifiability section with "
       "Dynamics Audits and Falsifiability" in tex_e
       and all(f"K{i}." in tex_e for i in range(1, 12))
       and "sec:branchmap" in tex_e)
-check("reconstruction paper status ledger updated (executed audits + "
+check("reconstruction paper status ledger updated (mechanical evidence + "
       "still-open list) and manifest extended with the collector",
-      "Executed dynamics audits" in tex_e
-      and "audit8\\_dyn8\\_falsifiability\\_collection" in tex_e)
+      "Mechanically executed dynamics evidence" in tex_e
+      and "audit8_dyn8_falsifiability_collection.py" in tex_e)
 check("main paper status ledger updated (deferred -> executed with "
       "findings) and Z_178 retirement note added",
       "executed July 2026" in tex_a and "Retirement note, July 2026"
@@ -304,12 +353,14 @@ check("self-containment discipline: the reconstruction paper uses "
 check("9b-4 REFRESH carried by both papers: the reconstruction paper's "
       "branch map records the executed re-derivation (vacuum / source / "
       "contact stages), K4 cites three spectrum treatments, K6 is "
-      "branch-tagged, K8 is upgraded, and the invariance theorem "
+      "branch-tagged, K8 is explicitly unpromoted, and the invariance theorem "
       "replaces the bookkeeping remark; the main paper's status note "
       "records the executed re-derivation",
       "three independent spectrum treatments" in " ".join(tex_e.split())
-      and "UPGRADED to a branch requirement" in tex_e
-      and "branch-locality is now a \\emph{theorem}" in tex_e
+      and "not a promoted branch requirement" in " ".join(tex_e.split())
+      and "scaling covariance, not an" in tex_e
+      and "lock theorem" in tex_e
+      and "\\zeta'=e^{2i\\arg y}\\zeta" in tex_e
       and "dyn9b*.json" in tex_a.replace("\\", ""))
 
 # ---------------------------------------------------------------- ledger
@@ -327,15 +378,17 @@ payload = {
         "susy_minimal_slice": "EXCLUDED (slice family, not model class): "
                               "unification x proton decay + obstruction "
                               "map",
-        "nonsusy_variant": "ALIVE: PS 210-compatible marginal (4.3e33, "
+        "nonsusy_variant": "PRELIMINARY: PS 210-compatible marginal (4.3e33, "
                            "Hyper-K window, TRIPLE-TESTED against the "
                            "computed 210 and 126bar spectra); G_LR "
-                           "alive (tau ~ 1e36) but requires the "
-                           "45-adjoint route (210-only vacuum "
-                           "tree-dead, epsilon lever exhausted); "
-                           "source selection leaves the "
-                           "scale-decoupled instanton-type tower as "
-                           "the only quantified scenario; the "
+                           "alive (tau ~ 1e36); the 210-only LR vacuum "
+                           "has rare sampled local minima near vev ratios "
+                           "0.6--0.7, so the 45-adjoint route is an "
+                           "alternative rather than a necessity; "
+                           "among the two unpromoted D3 mechanisms, only "
+                           "the scale-decoupled instanton benchmark survives "
+                           "the price card; this is not an exhaustive source "
+                           "classification; the "
                            "normalized contact content is "
                            "branch-independent by the invariance "
                            "theorem (M_* branch-local)",
@@ -344,6 +397,15 @@ payload = {
     },
     "kill_bank": KILL_BANK,
     "upstream_checks_total": sum(v["checks_passed"] for v in L.values()),
+    "collector_status": "preliminary_fail_closed",
+    "physics_promotion_allowed": False,
+    "blockers": [
+        "DYN-5 has no valid interacting messenger action and permits X L H_u",
+        "DYN-7 and DYN-9b-3 require branch-local flavored kinetics",
+        "DYN-9b-2 has not performed a global non-SUSY Spin(10) flavor fit",
+        "RE-SC3/4/5 remain unpromoted pricing cards; RE-SC4 inherits an "
+        "invalid DYN-5 numerical ceiling",
+    ],
     # negative-boundary flags
     "derives_nothing_new": True,
     "zeta_value_derived": False,
@@ -354,20 +416,26 @@ OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "dyn8_falsifiability_collection.json").write_text(
     json.dumps(payload, indent=2) + "\n")
 
-md = ["# DYN-8: falsifiability collection", "",
-      f"{n_pass}/{len(CHECKS)} checks pass.  Closes the dynamics main "
-      "line; derives nothing new; zeta NOT derived.", "",
+md = ["# DYN-8: fail-closed falsifiability collection", "",
+      f"{n_pass}/{len(CHECKS)} mechanical/disclosure checks pass.  The "
+      "physics main line remains open; this collector derives nothing new; "
+      "zeta is NOT derived.", "",
       "## Branch map", ""]
 md += [f"- **{k}**: {v}" for k, v in payload["branch_map"].items()]
 md += ["", "## Kill bank (branch-tagged, all re-verified)", ""]
 md += [f"- **{e['id']}** [{e['branch']}] {e['statement']} "
-       f"(`{e['source_ledger']}`)" for e in KILL_BANK]
+       f"(`{e['source_ledger']}`; physics-promotable="
+       f"`{str(e['physics_promotable']).lower()}`)" for e in KILL_BANK]
+md += ["", "## Blocking physics work", ""]
+md += [f"- {item}" for item in payload["blockers"]]
 md += ["", f"Upstream: {payload['upstream_checks_total']} checks green "
        f"across {len(L)} source ledgers.", "", "## Checks", ""]
 md += [f"- [{'PASS' if ok else 'FAIL'}] {n}" for n, ok in CHECKS]
 (OUT / "dyn8_falsifiability_collection.md").write_text("\n".join(md) + "\n")
 
-print(f"\nDYN-8: {n_pass}/{len(CHECKS)} checks; kill bank K1-K11 "
-      f"re-verified against {len(L)} ledgers "
-      f"({payload['upstream_checks_total']} upstream checks); "
-      f"ledgers -> {OUT.relative_to(ROOT)}/")
+print(f"\nDYN-8: {n_pass}/{len(CHECKS)} mechanical/disclosure checks; "
+      f"physics promotion BLOCKED; kill bank K1-K11 re-verified against "
+      f"{len(L)} ledgers ({payload['upstream_checks_total']} upstream "
+      f"checks); ledgers -> {OUT.relative_to(ROOT)}/")
+if n_pass != len(CHECKS):
+    raise SystemExit(1)

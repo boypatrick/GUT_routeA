@@ -6,6 +6,40 @@ Last updated: 2026-07-14
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
+## Blocker execution checkpoint (2026-07-14; supersedes older F0-A text)
+
+- **Artifact recovery: done.** RE-SC3/4/5 scripts and ledgers exist, are
+  tracked, and make the full `--string-cards required` dry-run preflight clean.
+  They remain `unpromoted_pricing_only`; file presence is not a physics pass.
+- **Single implementation: done.** `route_E/code_dyn/` is canonical and the
+  19 root DYN paths delegate to it.  The runner/resolver use the exact
+  case-sensitive `route_E` path in source lookup, isolated staging, and
+  execution.
+- **P0 numerical repairs: done.** DYN-9b-2 now uses already-normalised
+  `g1=0.462` (`y_t(M_X)=0.44116481`); DYN-9b-3 uses one square root in the
+  light spectrum (`epsilon_DI^SM=2.307794855e-6`) and no longer calls reheating
+  unconstrained; DYN-8 resolves its 210/45 branch-map contradiction and reads
+  DYN-5V/DYN-7F.
+- **P0 inference-boundary repairs: done.** `Y_nu=h-3f`, `Y_u=h+f` no longer
+  masquerades as an SO(10) top-like lock; `h=3f` is the explicit
+  counterexample.  DYN-9b-2 separates the actual archival-kernel suppression
+  (`19.5x/342.2x`) from the optional top-like tension (`9.6x/169.2x`) and
+  restricts exact zeta invariance to uniform positive-real rescaling.  D3's
+  `N_2,N_3>M_I` ordering is fixed-tower-specific, D4's numerical gap is
+  historical-invalid, and D5's `M_SS<M_*` is only a necessary scale ordering.
+- **Promotion guard: done.** `code/audit_blocker_promotion_gate.py` is `18/18`
+  and deliberately returns `physics_promotion_allowed=false`.  DYN-8 is
+  `30/30` mechanical/disclosure with the same non-promotion result.
+- **H3 logic repair: done; physical origin open.**  The one-dimensional
+  abelian counterexample is now machine-checked.  Original H3 gives only
+  `N_fam<=3`; `N_fam=3` is explicitly conditional on the H3+
+  nondegenerate adjoint-trace/Killing-contact axiom.  Motivating or realizing
+  H3+ dynamically remains an open physics problem.
+- **Still blocking F0-A/F5:** a global branch-local non-SUSY Spin(10) flavor
+  fit, tau-resolved Boltzmann/density-matrix kinetics with spectator/reheating
+  inputs, a valid interacting DYN-5 messenger action, recomputed RE-SC4
+  pricing, and a threshold/experimental-bound envelope for RE-SC5.
+
 ## Definition of done
 
 Route F is complete only when one active branch has:
@@ -45,20 +79,18 @@ the relevant gates.
 
 Status: `in-progress`.
 
-Re-audit update (2026-07-13): all 19 DYN source scripts are present at
-`route_E/code_dyn/`.  In a temporary historical-layout replay, 16 scripts
-complete with `219/219` internal checks.  DYN-9b-2, DYN-9b-3, and DYN-8 remain
-blocked by the missing Route-E string-card `RE-SC3/4/5` evidence chain
-(historical D3--D5 filenames under `route_d/`).  The current source
-location itself is not runnable as one DAG, no DYN ledgers are present in the
-workspace, and scientific-status defects are catalogued in
-`route_f/CODE_DYN_REAUDIT.md`.
+Re-audit history (2026-07-13): all 19 DYN source scripts were recovered at
+`route_E/code_dyn/`; 16 initially replayed with `219/219` internal checks.
+The former missing-card/path/ledger statements are now closed by the checkpoint
+above and are retained only as discovery history.  Scientific-status defects
+remain catalogued in `route_f/CODE_DYN_REAUDIT.md`.
 
 Execution update (2026-07-14):
 
 - **F0-A1 canonical-path/cache subgate: done.**  All 19 recovered scripts use
-  `route_E/code_dyn/route_e_paths.py`; lowercase paths work from both the
-  repository root and `route_E/code_dyn/`.  DYN-9b-1c/1d caches are isolated
+  `route_E/code_dyn/route_e_paths.py`; the exact case-sensitive `route_E`
+  layout works from both the repository root and `route_E/code_dyn/`.
+  DYN-9b-1c/1d caches are isolated
   under `ROUTE_E_CACHE_DIR` and keyed by source plus NumPy version.
 - **F0-A2 runner subgate: implemented, full closure still in-progress.**
   `run_route_e_dynamics.py` snapshots minimal inputs into an isolated
@@ -66,11 +98,13 @@ Execution update (2026-07-14):
   provenance and SHA-256 digests, and separates mechanical `all_pass` from
   physics status.  An isolated DYN-0 -> DYN-4a replay passes; a full optional
   dry-run blocks only declared missing dependencies/descendants.  The
-  expensive full replay and clean-clone test remain open.
+  required-card full dry-run is clean; the expensive full numerical replay and
+  clean-clone test remain open.
 - **F0-A3 registry subgate: done.**  `dyn_claim_registry.json` is the canonical
   status source.  DYN-4a's interval defect is repaired but its fit remains
   conditional; DYN-5 is `invalid_pending_rederivation`; DYN-7 is
-  `blocked_missing_branch_thermal_inputs`; DYN-9b-3 and DYN-8 remain blocked.
+  `blocked_missing_branch_thermal_inputs`; DYN-9b-2 and DYN-8 are preliminary,
+  while DYN-9b-3 remains blocked on branch-local flavored thermal inputs.
 - **Scientific guard evidence:** DYN-4a now uses a two-optimizer candidate fit,
   a converged needle-basin stencil, and connected-local nuisance-minimized
   profiles (`23/23`; no global-basin completeness claim); DYN-5V verifies
@@ -79,36 +113,21 @@ Execution update (2026-07-14):
   Davidson--Ibarra double-square-root bug (`7/7`).  Passing guard arithmetic
   intentionally does not close the DYN-5 or DYN-7 physics blockers.
 
-Tasks:
+Remaining tasks (supersedes the original discovery-stage task list):
 
-- **F0-A1 path/provenance gate:** move or wrap the restored scripts behind one
-  repository-root resolver; use lowercase `route_e`; add `--repo-root`,
-  `--output-dir`, seed, and cache arguments; remove dependence on manual
-  symlinks; track the complete input/source tree in Git; and record commit plus
-  dirty-tree state.
-- **F0-A2 clean-run gate:** build a fail-closed DAG runner for all required
-  recovered lanes (`DYN-0--5`, `DYN-7--9b`, explicitly excluding optional
-  `DYN-6`), generate every required JSON/MD ledger from a clean clone, use
-  content-addressed and
-  atomically written caches, and store Python/NumPy/BLAS plus full
-  input/source/output digests.  Decide whether `RE-SC3/4/5` are required
-  dependencies or optional string cards; DYN-8 must not load an optional card
-  unconditionally.  DYN-6 remains optional/open and is not missing evidence.
-- **F0-A3 scientific-status gate:** create one claim registry using at least
-  `proved`, `conditional`, `numerical`, `preliminary`,
-  `invalid_pending_rederivation`, `blocked_missing_evidence`, `open`, and
-  `no-go`.  At present DYN-1/2 are conditional SUSY-benchmark evidence; DYN-3
-  is preliminary until physical flavor rotations/dressing; DYN-4 is inverse
-  reconstruction rather than a global fit; DYN-5 is invalid pending an
-  interacting messenger rederivation; DYN-7/9b-3 require flavored
-  leptogenesis; and DYN-9/9b remain preliminary.
-- **F0-A4 string-existence gate:** recover or reimplement Route-E string cards
-  `RE-SC3/4/5` without confusing them with Route-D `RD-D3H/RD-D4M/RD-D5P`.
-  Until their scripts and ledgers exist, K8--K10 are
-  `blocked_missing_evidence`; after recovery they remain
-  `unpromoted_pricing_only` until F10 passes.
-- generate README/ROADMAP/paper status tables from the registry and remove
-  stale contradictions, including the DYN-8 210-vs-45 branch-map conflict.
+- **F0-A1 path/provenance gate: done.**  The exact canonical path is
+  `route_E/code_dyn/`; root paths are true delegate wrappers; no lowercase
+  alias or manual symlink is part of the supported execution path.
+- **F0-A2 clean-run gate: in-progress.**  The fail-closed 21-node DAG and
+  required-card dry-run are implemented and clean.  The expensive full
+  numerical clean-clone replay, content-addressed output publication, and
+  end-to-end digest comparison remain open.
+- **F0-A3 scientific-status gate: done.**  The registry is authoritative;
+  arithmetic success and physics promotion are separate fields.
+- **F0-A4 string-existence gate: done for existence.**  RE-SC3/4/5 are present
+  and tracked but remain `unpromoted_pricing_only`; F10 is still required.
+- **F0-A5 document synchronization: in-progress.**  Regenerate status tables
+  from the registry and remove remaining stale historical claims.
 
 Acceptance:
 
@@ -128,16 +147,18 @@ Acceptance:
 
 ### F0-B Repair the three-family theorem
 
-Status: `open`.
+Status: `done` for the logic repair; H3+ physical motivation remains `open`.
 
 Tasks:
 
-- define `canonical` precisely;
-- either require the Killing form or prove functorial `Aut(g)` naturality;
-- handle the one-dimensional abelian counterexample explicitly;
-- weaken "two distinct centers" to a degree-two divisor unless a semisimple
-  orbit-selection principle is supplied;
-- keep the minimal-dimension assumption in the `Spin(10):16` theorem.
+- [done] separate invariant contact (H3) from the nondegenerate
+  adjoint-trace/Killing-contact strengthening (H3+);
+- [done] handle the one-dimensional abelian `B=[1]` counterexample exactly;
+- [done] demote the unconditional theorem to `N_fam<=3` and make
+  `N_fam=3`, `g=0`, `O(2)`, and the two-center statement H3+-conditional;
+- [open] provide a physical or UV derivation of H3+ if it is to be more than a
+  transparent selection axiom;
+- [retained] keep the minimal-dimension assumption in the `Spin(10):16` theorem.
 
 Acceptance:
 
@@ -206,7 +227,7 @@ qualify.
 
 ### F1 Freeze the active action
 
-Status: `open`.
+Status: `in-progress`.
 
 Compare, using identical conventions:
 
@@ -423,9 +444,10 @@ Acceptance:
 
 ## Immediate next action
 
-Run the 21-node full DAG (19 recovered lanes plus DYN-5V/DYN-7F guards) from a
-clean clone after either recovering `RE-SC3/4/5` or formally excluding their
-consumers from the required target.  In parallel, construct an explicit
+Run the 21-node full numerical DAG (19 recovered lanes plus DYN-5V/DYN-7F
+guards) from a clean clone with the now-present RE-SC3/4/5 cards, and compare
+all source/input/output digests with the current ledger set.  In parallel,
+construct an explicit
 interacting messenger/selection sector for DYN-5 and supply branch-local
 thermal inputs for a two-flavor or density-matrix DYN-7/9b-3 calculation.
 F0-B may proceed independently.  Do not spend more compute on new flavor or

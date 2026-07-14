@@ -6,16 +6,18 @@ protects the sterile messenger X from Dirac contamination when
 holomorphy/non-renormalization is unavailable?  The audit sharpens the
 planned card in three ways the enumeration forces on us:
 
-  S1  GENERALIZED ABELIAN NO-GO (the central result).  For ANY number
-      of additive abelian factors (U(1)^k, Z_N^k, B-L included): if the
-      Dirac Yukawa N L H and the portal X N are both charge-allowed,
-      then q(X L H) = q(X X) identically.  So charge bookkeeping can
-      NEVER separate the required X mass insertion from the dangerous
-      X-Dirac contamination: whatever sources one admits the other at
-      the same order.  Proved as an integer identity, confirmed by
-      brute-force enumeration (k = 1, 2), and instantiated on B-L
-      (portal forces B-L(X) = -1; then XX and X L Htilde both sit at
-      -2, so the 126bar matter parity does NOT separate them).
+  S1  GENERALIZED ABELIAN-CHARGE NO-GO (the central exact result).  For
+      ANY number of additive abelian factors (U(1)^k, Z_N^k, B-L
+      included): if the Dirac Yukawa N L H and the portal X N are both
+      charge-allowed, then q(X L H) = q(X X) identically.  Therefore an
+      additive charge selection rule alone cannot allow one operator
+      while forbidding the other.  The identity does NOT imply a common
+      instanton/source, operator dimension, perturbative order, or
+      Wilson coefficient; those require non-charge dynamical data.
+      The identity is confirmed by brute-force enumeration (k = 1, 2)
+      and instantiated on B-L (portal forces B-L(X) = -1; then XX and
+      X L Htilde both sit at -2, so the 126bar matter parity does not
+      distinguish their charge-selection classes).
 
   S2  NON-SUSY LORENTZ BOOKKEEPING (a structural simplification).  In
       component language every operator needs an EVEN number of Weyl
@@ -23,26 +25,28 @@ planned card in three ways the enumeration forces on us:
       three fermions) are Lorentz-forbidden outright; the m = 2
       decorations first arise at operator dimension 7.  The ONLY
       renormalizable contamination channel is the direct Dirac Yukawa
-      X L Htilde -- exactly the channel the no-go ties to the X mass.
+      X L Htilde -- exactly the channel the no-go places in the same
+      additive-charge class as the X mass.
 
-  S3  CLOSURE CONDITION, QUANTIFIED.  The card therefore closes only
-      with instanton ZERO-MODE SELECTIVITY (string-natural: an
-      instanton generates the specific operator its zero modes
-      saturate, not every operator of the same charge).  Required
-      selectivity gap: Delta S = S'(XLH) - S(XX) >=
-      ln(eps_XX / eps_ceiling) with eps_XX = sqrt(3) M_*/M_s;
-      at M_s = 2e16 this is 6.6 (refreshed DYN-5 ceiling) / 3.2
-      (loose).  A DIRECT X L Htilde instanton must have
-      S' >= ln(1/eps_ceiling) = 7.72 / 4.26.  D3 consistency: the NN
-      source carries Delta(B-L) = +2 while XX needs -2 -- the
-      CONJUGATE instanton class (both classes must be present; a
-      doubled assumption, priced).
+  S3  CLOSURE CONDITION, PENDING.  Instanton zero-mode data could
+      distinguish operators with the same additive charge, but no such
+      spectrum is computed here.  The script preserves the historical
+      arithmetic Delta S = ln(eps_XX/eps_ceiling) and
+      S' = ln(1/eps_ceiling), with eps_XX = sqrt(3) M_*/M_s, solely as
+      an invalid diagnostic: eps_ceiling comes from the DYN-5 action
+      rejected by DYN-5V.  Consequently these numbers are not physics
+      bounds and the closure condition remains pending an interacting-
+      action rederivation.  D3 consistency: the NN source carries
+      Delta(B-L) = +2 while XX needs -2.  Opposite compensating source
+      charges are therefore needed; interpreting them as conjugate
+      instanton orientations is an additional conditional ansatz, not
+      a consequence of the charge identity.
 
   S4  Price card.  What the Stueckelberg/GS U(1) buys (exact
-      perturbative bookkeeping, calculable violations), what it cannot
-      buy (the no-go), the closure condition, and the honest "none"
-      for beyond-window low-energy consequences (X sits at
-      sqrt(3) M_* ~ 7e15 GeV).
+      perturbative charge bookkeeping and a possible instanton
+      parametrization), what it cannot buy (the no-go), the pending
+      closure condition, and the honest "none" for beyond-window
+      low-energy consequences at the conditional archival benchmark.
 
 Route-D discipline: CONDITIONAL string interpretation, NOT promoted;
 no zero-mode computation, anomaly-inflow check, or global embedding is
@@ -75,6 +79,8 @@ def check(name, ok, detail=""):
 d3 = json.loads((OUT / "d3_instanton_majorana_pricing.json").read_text())
 dyn5 = json.loads((ROOT / "output" / "audit5"
                    / "dyn5_messenger_one_loop.json").read_text())
+dyn5v = json.loads((ROOT / "output" / "audit5"
+                    / "dyn5_model_validity.json").read_text())
 dyn4a = json.loads((ROOT / "output" / "audit1"
                     / "dyn4a_seesaw_zeta_posterior.json").read_text())
 
@@ -86,9 +92,13 @@ check("premise: D3 pricing card all_pass with the d=5 escape closed",
 ceil = dyn5["derivation_log"]["S4_r_selection"]["ceilings_order_estimates"]
 eps_tight, eps_loose = ceil["eps_odd_tight"], ceil["eps_odd_loose"]
 Sp_tight, Sp_loose = math.log(1 / eps_tight), math.log(1 / eps_loose)
-check("DYN-5 contamination ceilings imported and converted to absolute "
-      "instanton actions S' = ln(1/eps): refreshed 7.72, loose 4.26",
-      abs(Sp_tight - 7.72) < 0.05 and abs(Sp_loose - 4.26) < 0.05,
+check("historical DYN-5 ceiling arithmetic is reproducible but explicitly "
+      "blocked from promotion by the DYN-5V invalidity gate",
+      0 < eps_tight < 1 and 0 < eps_loose < 1
+      and abs(Sp_tight - math.log(1 / eps_tight)) < 1e-14
+      and abs(Sp_loose - math.log(1 / eps_loose)) < 1e-14
+      and dyn5v.get("claim_status") == "invalid_pending_rederivation"
+      and dyn5v.get("physics_claim_valid") is False,
       f"S'_refreshed = {Sp_tight:.3f}, S'_loose = {Sp_loose:.3f} "
       f"(eps = {eps_tight:.2e}, {eps_loose:.2e})")
 
@@ -123,8 +133,9 @@ for qX1, qL1, qH1, qX2, qL2, qH2 in itertools.product(rng, repeat=6):
     tested2 += 1
     if (qX1 + qL1 + qH1, qX2 + qL2 + qH2) != (2 * qX1, 2 * qX2):
         viol2 += 1
-check("TWO abelian factors (exhaustive): the separation q(XLH) != q(XX) "
-      "is impossible -- adding abelian factors can never help",
+check("TWO abelian factors (exhaustive): additive charge selection cannot "
+      "distinguish XLH from XX; adding additive factors does not change "
+      "that charge-level conclusion",
       viol2 == 0 and tested2 > 0, f"{tested2} assignments tested")
 
 # B-L instance: B-L(nu^c) = +1, B-L(L) = -1, B-L(H) = 0.
@@ -133,9 +144,11 @@ bl_X = -bl["N"]                                    # portal forces -1
 bl_XX, bl_XLH, bl_NN = 2 * bl_X, bl_X + bl["L"] + bl["H"], 2 * bl["N"]
 check("B-L instance: the portal forces B-L(X) = -1 (ODD); then "
       "XX = X L Htilde = -2 while NN = +2 -- the 126bar matter parity "
-      "(even-unit breaking) does NOT separate the X mass from the "
-      "X-Dirac contamination, and the XX source is the CONJUGATE class "
-      "of the D3 NN source",
+      "(even-unit breaking) does NOT distinguish the additive-charge "
+      "classes of the X mass and X-Dirac operators; this equality does "
+      "not identify their sources or coefficients.  XX has the "
+      "OPPOSITE charge orientation to the D3 NN operator; identifying "
+      "geometrically conjugate sources would be an additional ansatz",
       bl_X == -1 and bl_XX == bl_XLH == -2 and bl_NN == +2,
       f"B-L: XX = {bl_XX}, XLH = {bl_XLH}, NN = {bl_NN}")
 DLOG["S1_no_go"] = {
@@ -145,9 +158,12 @@ DLOG["S1_no_go"] = {
                 "charge-allowed",
     "scope": "any additive grading: U(1)^k, Z_N^k, gauged or global, "
              "anomalous or not, B-L included",
-    "consequence": "charge bookkeeping alone can NEVER close the "
-                   "non-SUSY protection card; the separator must be "
-                   "non-charge data (instanton zero-mode structure)",
+    "consequence": "additive charge bookkeeping alone cannot establish "
+                   "operator separation; any separation must come from "
+                   "additional non-charge data such as a computed "
+                   "zero-mode spectrum",
+    "does_not_imply": "same source, same instanton, same operator order, "
+                      "or same Wilson coefficient",
 }
 
 # ------------------------------------------------------------- section 2
@@ -175,12 +191,13 @@ check("Lorentz fermion-parity gate: every SUSY-style m = 1 decorated "
 dim_m2 = sum(1.5 if FERM[f] else 1.0
              for f in CHANNELS["decorated_m2_Dirac"])
 check("m = 2 decorations survive Lorentz but first arise at operator "
-      "dimension 7 (four fermions + scalar): suppressed by (1/M_s)^3, "
-      "negligible against every DYN-4 window",
+      "dimension 7 (four fermions + scalar); their numerical impact "
+      "requires Wilson coefficients and is not bounded by this card",
       abs(dim_m2 - 7.0) < 1e-12, f"dim = {dim_m2:.0f}")
 check("hence the ONLY renormalizable contamination channel in the "
       "non-SUSY EFT is the direct Dirac Yukawa X L Htilde -- exactly "
-      "the channel the S1 no-go ties to the X mass insertion",
+      "the channel S1 places in the same additive-charge selection "
+      "class as the X mass insertion",
       fcount["contamination_XLH"] % 2 == 0
       and all(fcount[k] % 2 == 1 for k in odd_killed))
 DLOG["S2_lorentz"] = {
@@ -202,28 +219,30 @@ for tag, Ms in MS_GRID.items():
     gap[tag] = {"eps_XX": eps_XX,
                 "S_XX": math.log(1 / eps_XX),
                 "dS_refreshed": math.log(eps_XX / eps_tight),
-                "dS_loose": math.log(eps_XX / eps_loose)}
+                "dS_loose": math.log(eps_XX / eps_loose),
+                "status": "historical_invalid",
+                "physics_bound": False}
 g16 = gap["2e16"]
-check("the XX source must be LARGE (eps_XX = sqrt(3) M_*/M_s ~ 0.34 at "
-      "M_s = 2e16, i.e. S_XX ~ 1.1): a generic same-charge spurion "
-      "would put the X-Dirac coupling at 0.34 -- more than 2 orders "
-      "above even the LOOSE ceiling; charge bookkeeping alone is dead "
-      "(quantified form of the S1 no-go)",
-      abs(g16["eps_XX"] - 0.340) < 0.005 and g16["eps_XX"] > eps_loose * 10,
-      f"eps_XX = {g16['eps_XX']:.4f} vs eps_loose = {eps_loose:.2e}")
-check("closure condition quantified: zero-mode selectivity must supply "
-      "Delta S = S'(XLH) - S(XX) >= 6.6 (refreshed window) / 3.2 "
-      "(loose) at M_s = 2e16; a DIRECT X L Htilde instanton needs "
-      "S' >= 7.72 / 4.26 absolute",
-      abs(g16["dS_refreshed"] - 6.64) < 0.05
-      and abs(g16["dS_loose"] - 3.18) < 0.05,
+check("conditional unit-prefactor XX benchmark is reproducible: "
+      "eps_XX = sqrt(3) M_*/M_s ~ 0.34 and S_XX ~ 1.08 at M_s=2e16; "
+      "this does NOT determine the XLH source, action, or coefficient",
+      abs(g16["eps_XX"] - 0.340) < 0.005
+      and abs(g16["S_XX"] - math.log(1 / g16["eps_XX"])) < 1e-14,
+      f"eps_XX = {g16['eps_XX']:.4f}, S_XX = {g16['S_XX']:.4f}")
+check("historical selectivity-gap arithmetic is reproduced but is not a "
+      "valid closure bound until the messenger contamination ceiling is "
+      "rederived from an interacting action",
+      abs(g16["dS_refreshed"]
+          - math.log(g16["eps_XX"] / eps_tight)) < 1e-14
+      and abs(g16["dS_loose"]
+              - math.log(g16["eps_XX"] / eps_loose)) < 1e-14
+      and dyn5v.get("physics_claim_valid") is False,
       f"Delta S = {g16['dS_refreshed']:.2f} / {g16['dS_loose']:.2f}")
-check("D3 consistency DISCLOSED: the NN tower source carries "
-      "Delta(B-L) = +2 but the XX mass needs -2 -- the CONJUGATE "
-      "instanton class; the shared D3+D4 bookkeeping therefore needs "
-      "BOTH orientations present with independent actions (a doubled "
-      "conditional assumption, priced -- NOT the same class the "
-      "roadmap anticipated)",
+check("D3 charge consistency DISCLOSED: NN and XX carry opposite B-L "
+      "charges (+2 and -2), so compensating sources require opposite "
+      "charges; treating them as conjugate instanton orientations with "
+      "independent actions is an additional conditional ansatz, not a "
+      "charge-level theorem",
       bl_NN == -bl_XX)
 check("K_tr direction of the X mass is itself conditional input in the "
       "non-SUSY card: the SUSY theorem POSTULATED K_tr^-1(X,X); here "
@@ -238,9 +257,22 @@ check("portability: DYN-5's EXACT light-sector silence (seesaw "
       "invariance under any invertible redefinition of nu^c) is pure "
       "linear algebra and carries over to the non-SUSY card unchanged",
       dyn5["one_loop_silence_of_light_sector"] is True)
-DLOG["S3_closure"] = {"selectivity_gap_by_Ms": gap,
-                      "absolute_S_prime": {"refreshed": Sp_tight,
-                                           "loose": Sp_loose}}
+DLOG["S3_closure"] = {
+    # Compatibility keys are retained for DYN-8 replay, but every value is
+    # explicitly quarantined as a historical-invalid numerical diagnostic.
+    "selectivity_gap_by_Ms": gap,
+    "absolute_S_prime": {"refreshed": Sp_tight, "loose": Sp_loose,
+                         "status": "historical_invalid",
+                         "physics_bound": False},
+    "numerical_status": "historical_invalid_pending_dyn5_rederivation",
+    "physics_bound": False,
+    "interpretation": "the displayed Delta-S and S-prime values combine "
+                      "valid logarithmic arithmetic with contamination "
+                      "ceilings from the DYN-5 action invalidated by "
+                      "DYN-5V; they are not constraints",
+    "charge_identity_limitation": "q(XLH)=q(XX) does not identify their "
+                                  "sources, orders, or coefficients",
+}
 
 # ------------------------------------------------------------- section 4
 print("== D4 section 4: price card ==")
@@ -252,23 +284,34 @@ PRICE_CARD = {
                        "violations instanton-sourced AND the XX-mass "
                        "instanton's zero modes saturating only the X "
                        "bilinear (selectivity), textured along K_tr^-1",
-    "buys": ["perturbatively exact selection rules without holomorphy "
-             "(gauge symmetry, all loop orders)",
-             "calculable violation hierarchy e^{-S}",
-             "with selectivity: X-Dirac contamination pushed below the "
-             "DYN-4 windows"],
+    "buys": ["perturbatively exact additive-charge selection rules "
+             "without holomorphy (gauge symmetry, all loop orders)",
+             "a framework in which a concrete instanton calculation "
+             "could parameterize violations by e^{-S}",
+             "a possible non-charge discriminator through computed "
+             "zero-mode saturation; no such computation is supplied"],
     "cannot_buy": ["charge separation of XX from X L Htilde (S1 no-go: "
                    "impossible for ANY abelian bookkeeping)",
+                   "equality of the XLH and XX source, operator order, "
+                   "or Wilson coefficient (not implied by equal charge)",
                    "the K_tr texture of the X mass (new conditional "
                    "input, as in D3)",
                    "zeta's value"],
     "closure_conditions": {
-        "zero_mode_selectivity_gap": "Delta S >= 6.6 (refreshed) / 3.2 "
-                                     "(loose) at M_s = 2e16",
-        "direct_instanton_bound": f"S' >= {Sp_tight:.2f} (refreshed) / "
-                                  f"{Sp_loose:.2f} (loose)",
-        "both_instanton_orientations": "NN (+2) and XX (-2) classes "
-                                       "with independent actions",
+        "numerical_gap_status": "PENDING: rederive the contamination "
+                                "ceiling from an interacting action",
+        "historical_invalid_snapshot_at_Ms_2e16": {
+            "Delta_S_refreshed": g16["dS_refreshed"],
+            "Delta_S_loose": g16["dS_loose"],
+            "S_prime_refreshed": Sp_tight,
+            "S_prime_loose": Sp_loose,
+            "physics_bound": False,
+        },
+        "source_charge_requirement": "NN (+2) and XX (-2) operators "
+                                     "need oppositely charged compensating "
+                                     "sources",
+        "conjugate_instanton_relation": "additional ansatz, not derived "
+                                        "from additive charges",
     },
     "beyond_window_consequence": "NONE at low energy (X sits at "
                                  "sqrt(3) M_* ~ 6.8e15 GeV); the card's "
@@ -286,6 +329,9 @@ n_pass = sum(1 for _, ok in CHECKS if ok)
 payload = {
     "audit": "Route-D D4 Stueckelberg / anomalous-U(1) protection card",
     "created_utc": datetime.now(timezone.utc).isoformat(),
+    # `all_pass` remains the mechanical ledger status consumed by the
+    # orchestration gates.  Standalone execution nevertheless fails closed
+    # below because the physics-promotion gate is false.
     "all_pass": n_pass == len(CHECKS), "checks_passed": n_pass,
     "checks_total": len(CHECKS),
     "checks": [{"name": n, "pass": ok} for n, ok in CHECKS],
@@ -294,6 +340,7 @@ payload = {
     "provenance": {
         "d3_ledger": "route_d/output/d3_instanton_majorana_pricing.json",
         "dyn5_ledger": "output/audit5/dyn5_messenger_one_loop.json",
+        "dyn5_validity_ledger": "output/audit5/dyn5_model_validity.json",
         "dyn4a_ledger": "output/audit1/dyn4a_seesaw_zeta_posterior.json",
     },
     # negative-boundary flags (Route-D discipline)
@@ -303,32 +350,41 @@ payload = {
     "global_embedding_constructed": False,
     "zeta_value_derived": False,
     "promoted_to_paper": False,
+    "physics_status": "unpromoted_algebraic_no_go_only",
+    "physics_promotion_allowed": False,
+    "numerical_selectivity_gap_valid": False,
+    "numerical_gap_blocker": "historical ceiling imported from invalid DYN-5",
+    "mechanical_status": "checks_pass" if n_pass == len(CHECKS) else "failed",
+    "standalone_exit_policy": "nonzero_until_physics_promotion_allowed",
 }
 (OUT / "d4_stueckelberg_protection.json").write_text(
     json.dumps(payload, indent=2, sort_keys=True) + "\n")
 
 md = ["# Route-D D4: Stueckelberg / anomalous-U(1) protection card", "",
-      f"{n_pass}/{len(CHECKS)} checks pass.  CONDITIONAL string "
-      "interpretation, NOT promoted; zeta NOT derived.", "",
+      f"{n_pass}/{len(CHECKS)} mechanical checks pass.  CONDITIONAL string "
+      "interpretation, NOT promoted; standalone execution fails closed; "
+      "zeta NOT derived.", "",
       "## Verdicts", "",
       "1. **Generalized abelian no-go** (central result): if the Dirac "
       "Yukawa and the portal are charge-allowed then "
       "`q(X L H) = q(X X)` identically, for ANY number of abelian "
       "factors (exhaustively confirmed, k = 1 and 2; B-L instance: "
       "portal forces `B-L(X) = -1`, both operators sit at -2).  Charge "
-      "bookkeeping can never close the card.",
+      "selection alone cannot distinguish the operators.  This does NOT "
+      "imply the same source, operator order, or Wilson coefficient.",
       "2. **Non-SUSY Lorentz bookkeeping**: all SUSY-style m = 1 "
       "decorations have odd fermion count -- forbidden outright; m = 2 "
       "first arises at dimension 7.  The ONLY renormalizable "
       "contamination is the direct `X L Htilde` -- exactly the channel "
-      "the no-go ties to the X mass.",
-      "3. **Closure condition**: instanton zero-mode selectivity with "
-      f"`Delta S >= {g16['dS_refreshed']:.1f}` (refreshed) / "
-      f"`{g16['dS_loose']:.1f}` (loose) at `M_s = 2e16`; a direct "
-      f"X-Dirac instanton needs `S' >= {Sp_tight:.2f}` / "
-      f"`{Sp_loose:.2f}`.  D3 consistency: the XX source is the "
-      "CONJUGATE class of the NN source (+2 vs -2) -- both "
-      "orientations required (doubled assumption, priced).  The K_tr "
+      "the no-go places in the same additive-charge class as the X mass.",
+      "3. **Numerical closure gap blocked**: the historical "
+      f"`Delta S={g16['dS_refreshed']:.1f}/{g16['dS_loose']:.1f}` and "
+      f"`S'={Sp_tight:.2f}/{Sp_loose:.2f}` arithmetic is reproduced, "
+      "but these are **historical-invalid diagnostics**, because they "
+      "import the invalid DYN-5 contamination ceiling; neither is a "
+      "physics bound.  D3 consistency: NN and XX have opposite B-L "
+      "charges (+2 vs -2), but a conjugate-instanton relation is an "
+      "additional ansatz, not a charge theorem.  The K_tr "
       "texture of the X mass becomes conditional input.",
       "4. **Portability**: DYN-5's exact light-sector silence is pure "
       "linear algebra and survives non-SUSY unchanged.",
@@ -338,6 +394,10 @@ md = ["# Route-D D4: Stueckelberg / anomalous-U(1) protection card", "",
       "", "## Boundary (NOT claimed)", "",
       "- Zero-mode selectivity is ASSUMED (the closure condition), not "
       "computed; no anomaly inflow or global embedding.",
+      "- Equal additive charge does not establish a common source, "
+      "operator order, or Wilson coefficient.",
+      "- The numerical selectivity gap is PENDING an interacting-action "
+      "rederivation; historical arithmetic must not be used as a bound.",
       "- zeta's value is NOT derived.",
       "- Route-D promotion bar NOT passed; must not be cited as "
       "evidence.", "", "## Checks", ""]
@@ -345,6 +405,13 @@ md += [f"- [{'PASS' if ok else 'FAIL'}] {n}" for n, ok in CHECKS]
 (OUT / "d4_stueckelberg_protection.md").write_text("\n".join(md) + "\n")
 
 print(f"\nD4: {n_pass}/{len(CHECKS)} checks; abelian charge protection "
-      f"IMPOSSIBLE (no-go identity), closure = zero-mode selectivity "
-      f"with Delta S >= {g16['dS_refreshed']:.1f}; ledgers -> "
+      f"IMPOSSIBLE (no-go identity); numerical selectivity gap BLOCKED "
+      f"pending DYN-5 rederivation; ledgers -> "
       f"{OUT.relative_to(ROOT)}/d4_stueckelberg_protection.*")
+
+if n_pass != len(CHECKS):
+    raise SystemExit(1)
+if not payload["physics_promotion_allowed"]:
+    print("D4 FAIL-CLOSED: mechanical arithmetic passed, but the numerical "
+          "gap and physics promotion remain blocked.")
+    raise SystemExit(2)

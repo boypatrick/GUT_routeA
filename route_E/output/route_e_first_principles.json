@@ -1,4 +1,18 @@
 {
+  "abelian_invariant_form_counterexample": {
+    "B": [
+      [
+        1.0
+      ]
+    ],
+    "det_B": 1.0,
+    "invariance_residual_norm": 0.0,
+    "killing_form": [
+      [
+        0.0
+      ]
+    ]
+  },
   "all_pass": true,
   "checks": [
     {
@@ -86,7 +100,7 @@
       "pass": true
     },
     {
-      "name": "abelian (g = 1) family algebra has Killing form = 0 (Cartan criterion)",
+      "name": "original invariant-contact hypothesis admits the g = 1 abelian counterexample, while the Killing-contact strengthening rejects it",
       "pass": true
     },
     {
@@ -371,6 +385,7 @@
     0
   ],
   "k_Y": "5/3",
+  "killing_contact_selection_axiom_derived": false,
   "killing_equals_2sqrt3_Ktr": true,
   "killing_form_spherical_basis": [
     [
@@ -393,7 +408,10 @@
     "im": 0.10673473744038917,
     "re": 0.34502115743308964
   },
+  "nfam_three_requires_killing_contact": true,
+  "nfam_upper_bound_without_h3plus": 3,
   "no_extra_chiral_sector_assumption_discharged": false,
+  "original_h3_selects_genus": false,
   "principle_set_claimed_unique": false,
   "pslt_only_unconditional_gut_proof_claimed": false,
   "route_b_r_selection_rule_derived": false,

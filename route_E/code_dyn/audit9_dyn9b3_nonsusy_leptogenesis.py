@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """DYN-9b-3: the non-SUSY leptogenesis rerun on the alive branch.
 
-The setting is now FIXED by the preceding audits: DYN-9b-2 showed that
-on the surviving chains the only quantified Majorana source scenario is
-the scale-decoupled (instanton-type, D3) tower -- so the ARCHIVAL tower
-(M_1 = 2.4e10 GeV and up) is the benchmark input, the K8 coexistence
-prediction is a standing requirement, and the DYN-7 pipeline reruns
-with exactly three replacements:
+This audit adopts the archival scale-decoupled (instanton-type, D3) tower
+as a conditional benchmark.  DYN-9b-2 does not select that source: it is a
+fixed-kernel comparison, the D3 card is unpromoted, and K8 remains a
+conditional diagnostic.  On that explicit benchmark, the DYN-7 pipeline
+reruns with exactly three replacements:
 
   (1) LOOP FUNCTION: f_SUSY -> f_SM
       (f_SM(x) = sqrt(x) [1/(1-x) + 1 - (1+x) ln((1+x)/x)]; in the
@@ -18,17 +17,18 @@ with exactly three replacements:
       moves).  The washout parameter m_tilde = (m_D+ m_D)_11 / M_1 is
       v-independent and unchanged; the BDP-type efficiency fit and the
       eta_B = -0.96e-2 eps1 kappa conversion were already SM objects.
-  (3) GRAVITINO/REHEATING CONSTRAINT: DISSOLVED.  DYN-7's disclosed
-      tension (thermal N_1 at M_1 ~ 2.8e10 GeV vs the gravitino-safe
-      T_RH ceiling) does not exist without gravitinos: the reheating
-      temperature is freed.  This is the one unambiguous non-SUSY GAIN.
+  (3) GRAVITINO-SPECIFIC REHEATING CEILING: ABSENT.  DYN-7's disclosed
+      gravitino-safe T_RH ceiling does not apply without gravitinos, but
+      the branch-local reheating history and initial abundance are not
+      supplied.  General thermal production is therefore open, not free.
 
 Net effect on the CP asymmetry: eps1 scales by
 (f_SM/f_SUSY) x (100/174)^2 ~ 0.5 x 0.33 ~ 1/6 relative to DYN-7 --
 the non-SUSY branch makes the historical unflavored diagnostic numerically
-HARDER even as it removes the reheating obstruction.  The resulting hit
-fractions and boost sensitivity are regression diagnostics, not posterior
-probabilities.
+HARDER even as it removes only the gravitino-specific ceiling.  The resulting hit
+fractions and boost sensitivity are unweighted prior-draw regression
+diagnostics.  No likelihood is evaluated, so they are neither posterior
+probabilities nor branch-viability probabilities.
 
 Boundary: order-of-magnitude cosmology (unflavored, N_1-dominated,
 thermal kappa fit).  Since M_1 is in the tau-resolved two-flavor regime, the
@@ -90,11 +90,13 @@ IC24 = {"s12": (0.308, 0.0115), "s13": (0.02215, 0.00057),
 ETA_B_OBS = 6.1e-10
 
 print("== 9b-3 section 0: premise ==")
-check("premise chain-of-custody: DYN-9b-2 selected the scale-decoupled "
-      "(D3-type) source, so the ARCHIVAL tower is the benchmark input "
-      "and the K8 coexistence prediction is a standing requirement; "
-      "DYN-7's gravitino tension was disclosed, not resolved",
+check("premise chain-of-custody: the archival D3-type tower is an "
+      "explicit conditional benchmark, not a selected source; K8 and D3 "
+      "remain unpromoted while DYN-7's gravitino tension was disclosed",
       dyn9b2["all_pass"]
+      and dyn9b2["derivation_log"]["S4_conditional_comparison"][
+          "source_selected"] is False
+      and dyn9b2["physics_promotion_allowed"] is False
       and dyn7["gravitino_reheating_tension_disclosed_not_resolved"]
       is True)
 
@@ -219,7 +221,7 @@ check("NET SUPPRESSION vs the SUSY-slice pipeline quantified: "
 DLOG["S1_central"] = {"chain": ch, "suppression_vs_dyn7": supp}
 
 # ============================================================ section 2
-print("== 9b-3 section 2: posterior scan (DYN-4b priors, SM pipeline) ==")
+print("== 9b-3 section 2: unweighted prior-draw regression (SM pipeline) ==")
 
 rng = np.random.default_rng(20260706)
 N = 4000
@@ -243,20 +245,27 @@ for _ in range(N):
     except np.linalg.LinAlgError:
         continue
 R = np.array(rows)
-check(f"posterior scan completed on >= {int(0.95 * N)}/{N} draws and "
-      "the SM Davidson-Ibarra ceiling is respected point-wise",
+check(f"prior-draw regression completed on >= {int(0.95 * N)}/{N} draws "
+      "and the SM Davidson-Ibarra ceiling is respected point-wise",
       len(R) >= 0.95 * N and di_ok, f"{len(R)} samples")
 
 eta = R[:, 0]
 band = (np.abs(eta) > ETA_B_OBS / math.sqrt(10)) \
     & (np.abs(eta) < ETA_B_OBS * math.sqrt(10))
-success = (eta > 0) & band
-p_succ = float(np.mean(success))
-p7 = dyn7["posterior_statistics"]["P_success"]
-check("non-SUSY posterior statistics published and compared to DYN-7: "
-      "P(success) drops with the ~6x suppression",
-      p_succ <= p7 + 0.002,
-      f"P(success) = {p_succ:.4f} (DYN-7 SUSY-slice: {p7:.4f}); "
+target_band_hit = (eta > 0) & band
+target_band_hit_fraction = float(np.mean(target_band_hit))
+# The DYN-7 ledger retains the historical field name P_success.  Here it is
+# used only as a like-for-like, unweighted target-band regression reference.
+dyn7_target_band_hit_fraction = dyn7["posterior_statistics"]["P_success"]
+likelihood_applied = False
+draws_reweighted = False
+check("unweighted non-SUSY prior-draw target-band hit fraction recomputed "
+      "and compared with the like-for-like DYN-7 regression reference; "
+      "no likelihood or draw reweighting is applied",
+      target_band_hit_fraction <= dyn7_target_band_hit_fraction + 0.002
+      and not likelihood_applied and not draws_reweighted,
+      f"hit fraction = {target_band_hit_fraction:.4f} "
+      f"(DYN-7 reference: {dyn7_target_band_hit_fraction:.4f}); "
       f"median |eta_B| = {np.median(np.abs(eta)):.2e} vs observed "
       f"{ETA_B_OBS:.1e}")
 
@@ -268,26 +277,40 @@ for b in boosts:
         (eb > 0) & (np.abs(eb) > ETA_B_OBS / math.sqrt(10))
         & (np.abs(eb) < ETA_B_OBS * math.sqrt(10))))
 b_best = max(boosts, key=lambda b: boost_sens[f"x{b}"])
-check("boost sensitivity recomputed on the non-SUSY pipeline: typical "
-      "viability is reachable at SOME enhancement, and the sweet spot "
-      "sits ~6x above DYN-7's (x3-10 there)",
+check("fixed multiplicative boost stress test recomputed as unweighted "
+      "target-band hit fractions; its maximum is a regression target, "
+      "not evidence that a physical enhancement or viability is realized",
       max(boost_sens.values()) > 0.25,
       f"{boost_sens}; best boost x{b_best} -> "
-      f"P = {boost_sens[f'x{b_best}']:.3f}")
-DLOG["S2_posterior"] = {"n": int(len(R)), "P_success": p_succ,
-                        "P_success_dyn7": p7, "boost": boost_sens,
-                        "median_abs_eta": float(np.median(np.abs(eta)))}
+      f"hit fraction = {boost_sens[f'x{b_best}']:.3f}")
+DLOG["S2_prior_draw_regression"] = {
+    "n_draws_requested": N,
+    "n_draws_evaluated": int(len(R)),
+    "likelihood_applied": likelihood_applied,
+    "draws_reweighted": draws_reweighted,
+    "target_band_definition": (
+        "eta_B > 0 and |eta_B| within a factor sqrt(10) of 6.1e-10"
+    ),
+    "target_band_hit_fraction": target_band_hit_fraction,
+    "dyn7_legacy_target_band_hit_fraction": dyn7_target_band_hit_fraction,
+    "boost_target_band_hit_fractions": boost_sens,
+    "median_abs_eta": float(np.median(np.abs(eta))),
+    "inferential_status": "regression_only_not_a_posterior_or_viability_probability",
+}
 
 # ============================================================ section 3
-print("== 9b-3 section 3: the gravitino gain and the escape hierarchy ==")
+print("== 9b-3 section 3: branch-specific reheating boundary ==")
 
 M1_bench = ch["M_GeV"][0]
-check("GRAVITINO CONSTRAINT DISSOLVED (the one unambiguous non-SUSY "
-      "gain): without gravitinos there is no reheating ceiling, so "
-      "thermal N_1 production at M_1 ~ 2.8e10 GeV is UNCONSTRAINED "
-      "and non-thermal production channels are also freed -- DYN-7's "
-      "disclosed tension is resolved BY THE BRANCH, not by tuning",
-      M1_bench > 1e10, f"M_1 = {M1_bench:.2e} GeV, T_RH free")
+gravitino_specific_ceiling_absent = True
+branch_local_reheating_history_supplied = False
+check("the gravitino-specific SUSY reheating ceiling is absent on the "
+      "non-SUSY branch, but no branch-local reheating history is supplied; "
+      "thermal or non-thermal production is therefore OPEN, not "
+      "unconstrained",
+      M1_bench > 1e10 and gravitino_specific_ceiling_absent
+      and not branch_local_reheating_history_supplied,
+      f"M_1 = {M1_bench:.2e} GeV; T_RH and initial abundance unspecified")
 
 ESCAPES = {
     "flavored_leptogenesis": "O(few)-O(10) enhancement; NOT computed "
@@ -298,31 +321,44 @@ ESCAPES = {
                             "~1.2e3), so this needs a DIFFERENT tower "
                             "(the D3-type source permits one: the "
                             "instanton actions are free inputs)",
-    "non_thermal_production": "now UNCONSTRAINED by reheating (the "
-                              "gravitino gain); inflaton decay to N_1 "
-                              "can supply the abundance with the same "
-                              "epsilon_1",
+    "non_thermal_production": "not excluded by a gravitino-specific ceiling, "
+                              "but requires an explicit inflaton/reheating "
+                              "model and an initial-abundance calculation",
     "dirac_sector_refit": "the DYN-4c kernel-level escape, still open",
 }
-check("escape hierarchy UPDATED for the K6 falsifiability entry: the "
-      "needed enhancement grows to ~x30-100 (unflavored thermal), but "
-      "TWO qualitatively new escapes open on the non-SUSY branch "
-      "(non-thermal production unconstrained; a D3-type tower with "
-      "engineered near-degeneracy for resonance)", True,
+check("escape hierarchy recorded for the K6 diagnostic: the needed "
+      "unflavored enhancement is ~x30-100; flavored, resonant and "
+      "non-thermal mechanisms remain conditional repair hypotheses rather "
+      "than computed escapes", all(ESCAPES.values()),
       "see ledger escape table")
 verdict = ("thermal unflavored leptogenesis on the alive branch is "
            "HARDER than on the excluded SUSY slice (x6 in eta_B) but "
-           "no longer reheating-blocked; viability requires flavored + "
-           "O(10) effects, non-thermal production, or a resonant "
-           "D3-type tower -- a SOFT constraint on the source scenario, "
-           "not a kill")
-check("K6 branch-tagged verdict recorded for the DYN-8 refresh (9b-4)",
-      True, verdict)
+           "the gravitino-specific ceiling alone is absent; assessing "
+           "viability requires a branch-local flavored kinetic and "
+           "reheating model. "
+           "The current result is an order diagnostic, not a kill")
+check("K6 branch-tagged non-promotion verdict recorded for DYN-8",
+      "order diagnostic, not a kill" in verdict, verdict)
 DLOG["S3_escapes"] = {"escapes": ESCAPES, "verdict": verdict,
-                      "M1_GeV": M1_bench}
+                      "M1_GeV": M1_bench,
+                      "gravitino_specific_ceiling_absent": True,
+                      "branch_local_reheating_history_supplied": False,
+                      "reheating_unconstrained": False}
 
 # ------------------------------------------------------------- ledger
+source_selected = False
+success_probability_publishable = False
+physics_promotion_allowed = False
+physics_status = "blocked_missing_branch_thermal_inputs"
+check("promotion predicate fails closed: the source is unselected, the "
+      "unweighted hit fraction is not publishable as a success "
+      "probability, and physics promotion remains forbidden",
+      source_selected is False
+      and success_probability_publishable is False
+      and physics_promotion_allowed is False
+      and physics_status == "blocked_missing_branch_thermal_inputs")
 n_pass = sum(1 for _, ok in CHECKS if ok)
+mechanical_status = "pass" if n_pass == len(CHECKS) else "fail"
 payload = {
     "audit": "DYN-9b-3 non-SUSY leptogenesis rerun",
     "dyn_item": "DYN-9b-3",
@@ -334,23 +370,35 @@ payload = {
     "provenance": {
         "pipeline": "transcribed from code/audit7_dyn7_leptogenesis_"
                     "argzeta.py with f_SUSY -> f_SM, v_u = 100 -> "
-                    "v = 174 in the loop Yukawa, gravitino ceiling "
-                    "removed",
-        "source_premise": "scale-decoupled D3-type tower (DYN-9b-2 "
-                          "selection); archival tower as benchmark",
+                    "v = 174 in the loop Yukawa; only the gravitino-specific "
+                    "ceiling is removed",
+        "source_premise": "unpromoted scale-decoupled D3-type tower; "
+                          "archival tower adopted as a conditional benchmark",
     },
     # negative-boundary flags
     "unflavored_estimate_flavored_not_computed": True,
     "thermal_N1_dominance_assumed": True,
     "archival_tower_conditional_benchmark": True,
     "d3_source_card_still_unpromoted": True,
+    "source_selected": source_selected,
     "order_of_magnitude_only": True,
-    "claim_status": "blocked_requires_two_flavor",
+    "claim_status": physics_status,
+    "mechanical_status": mechanical_status,
+    "physics_status": physics_status,
+    "physics_promotion_allowed": physics_promotion_allowed,
+    "promotion_gate_fail_closed": True,
+    "likelihood_applied": likelihood_applied,
+    "draws_reweighted": draws_reweighted,
+    "prior_draw_regression_only": True,
     "physics_posterior_valid": False,
-    "success_probability_publishable": False,
+    "success_probability_publishable": success_probability_publishable,
+    "gravitino_specific_ceiling_absent": True,
+    "branch_local_reheating_history_supplied": False,
+    "reheating_unconstrained": False,
     "required_repair": "solve tau-resolved two-flavor Boltzmann or density-"
                        "matrix equations with spectator effects and branch-"
-                       "local thermal rates",
+                       "local thermal rates, reheating history, and initial "
+                       "abundance",
     "zeta_value_derived": False,
 }
 (OUT / "dyn9b3_nonsusy_leptogenesis.json").write_text(
@@ -362,18 +410,25 @@ md = ["# DYN-9b-3: historical non-SUSY unflavored diagnostic", "",
       f"1. **Net suppression vs DYN-7**: eps1 scales by {supp:.3f} "
       "(SM loop function x SM Higgs normalization) -- the non-SUSY "
       "branch is ~6x HARDER for thermal unflavored leptogenesis.",
-      f"2. **Regression diagnostic (not a posterior)**: hit fraction = "
-      f"{p_succ:.4f} (DYN-7: {p7:.4f}); "
+      f"2. **Unweighted prior-draw regression (no likelihood)**: "
+      f"target-band hit fraction = {target_band_hit_fraction:.4f} "
+      f"(DYN-7 legacy regression reference: "
+      f"{dyn7_target_band_hit_fraction:.4f}); "
       f"median |eta_B| = {np.median(np.abs(eta)):.2e}; boost table "
       f"{boost_sens}.",
-      "3. **The gravitino gain**: the reheating ceiling is gone -- "
-      "thermal production is unconstrained and NON-THERMAL production "
-      "opens as a qualitatively new escape.",
-      "4. **Physics status**: blocked_requires_two_flavor; K6 cannot be "
-      "updated from these unflavored hit fractions.",
+      "3. **Reheating boundary**: only the gravitino-specific ceiling is "
+      "absent.  Thermal and non-thermal production remain conditional on "
+      "an explicit reheating history and initial abundance.",
+      "4. **Physics status**: blocked_missing_branch_thermal_inputs; K6 "
+      "cannot be updated from these unflavored hit fractions; physics "
+      "promotion is forbidden.",
       "", "## Boundary (NOT claimed)", "",
-      "- Unflavored, N_1-dominated regression only; flavored effects and "
-      "spectator rates not computed.",
+      "- Unflavored, N_1-dominated regression only; flavored effects, "
+      "spectator rates, reheating history, and initial abundance not "
+      "computed.",
+      "- No likelihood or importance weights are applied; target-band "
+      "hit fractions are regression diagnostics, not posterior or "
+      "viability probabilities.",
       "- The archival tower under the D3-type source is a conditional "
       "benchmark; the source card remains unpromoted.",
       "- zeta's value is NOT derived.",
@@ -382,7 +437,8 @@ md += [f"- [{'PASS' if ok else 'FAIL'}] {n}" for n, ok in CHECKS]
 (OUT / "dyn9b3_nonsusy_leptogenesis.md").write_text("\n".join(md) + "\n")
 
 print(f"\nDYN-9b-3: {n_pass}/{len(CHECKS)} arithmetic checks; suppression "
-      f"{supp:.3f} vs DYN-7; physics status = blocked_requires_two_flavor; "
+      f"{supp:.3f} vs DYN-7; physics status = "
+      f"blocked_missing_branch_thermal_inputs; "
       f"ledgers -> "
       f"output/audit9/dyn9b3_nonsusy_leptogenesis.*")
 if n_pass != len(CHECKS):

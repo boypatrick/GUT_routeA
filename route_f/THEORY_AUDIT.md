@@ -2,6 +2,41 @@
 
 Date: 2026-07-13
 
+## 2026-07-14 blocker correction (authoritative addendum)
+
+The initial audit correctly identified the theory gaps, but its file-status
+snapshot is superseded as follows:
+
+- RE-SC3/4/5 are now present and tracked; they remain unpromoted price cards.
+  RE-SC4's additive-Abelian no-go is exact, while its numerical selectivity
+  gap is blocked because it imports invalid DYN-5 ceilings.  RE-SC5's quoted
+  G_LR lower edge corresponds to `M_I~=101 GeV`; thresholds and experimental
+  lower bounds are not yet propagated.
+- DYN-9b-2 is a preliminary fixed-kernel rescaling diagnostic, not a full
+  non-SUSY flavor fit.  Its `g1` convention is repaired, moving
+  `y_t(M_X)` from `0.41556342` to `0.44116481`.  A top-like `Y_nu` is an
+  extra ansatz, not an SO(10) theorem; the actual archival-kernel suppression
+  is `19.5x/342.2x`.  Exact zeta invariance holds for uniform positive-real
+  rescaling, while complex rescaling rotates its phase.
+- DYN-9b-3 uses the corrected SM Davidson--Ibarra ceiling
+  `2.307794855e-6`, but its unflavored hit fractions are non-publishable at
+  `M1=2.38045e10 GeV`; tau-resolved kinetics, spectator effects, reheating,
+  and initial abundance remain inputs.
+- DYN-8 is now a fail-closed collector (`30/30` disclosure checks,
+  `physics_promotion_allowed=false`) and no longer asserts both that rare
+  210-only LR minima exist and that a 45-adjoint route is mandatory.
+- The exact case-sensitive canonical implementation is `route_E/code_dyn/`;
+  root DYN scripts are delegates.  `audit_blocker_promotion_gate.py` provides
+  an independent `18/18` numerical/non-promotion ledger.
+- The H3 logic defect is repaired in both Route-E manuscripts and the core
+  verifier: original invariant-contact H3 gives only `N_fam<=3`, while
+  `N_fam=3` is explicitly conditional on the added H3+
+  nondegenerate adjoint-trace/Killing-contact axiom.  The physical origin of
+  H3+ remains open.
+
+These repairs close deployment and arithmetic defects, not the active-model
+flavor, messenger, thermal, amplitude, or compactification blockers.
+
 ## Executive verdict
 
 The project has a valuable conditional mathematical core, but it is not yet a
@@ -305,7 +340,7 @@ representation scan, derives the genus ladder, identifies the Killing form
 once \(\mathfrak{sl}_2\) is chosen, and proves an honest underdetermination
 statement for \(\zeta\) inside a specified \(\zeta\)-blind witness family.
 
-### P0 counterexample to the three-family selection as written
+### Historical P0 counterexample and implemented repair (2026-07-14)
 
 For a compact curve,
 
@@ -347,8 +382,10 @@ under every rescaling forces \(B=0\).  Requiring invariance only under the
 finite automorphisms of a generic elliptic curve (often just a small subgroup)
 would not by itself remove the counterexample.
 
-Until one repair is written and independently checked, the theorem proves
-\(N_{\rm fam}\le3\), not \(N_{\rm fam}=3\).
+The first repair is now implemented and independently machine-checked:
+original H3 proves \(N_{\rm fam}\le3\), while \(N_{\rm fam}=3\) is a
+conditional theorem under the explicit H3+ Killing-contact axiom.  The
+discussion above is retained to document why the demotion was necessary.
 
 ### Other theorem-domain issues
 
@@ -363,7 +400,7 @@ Until one repair is written and independently checked, the theorem proves
   physical axiom from selecting a subfamily; the paper itself acknowledges
   this.
 
-### P0 evidence and status integrity
+### Historical P0 evidence snapshot (superseded by the authoritative addendum)
 
 The paper says the completed DYN-0--DYN-5, DYN-7--DYN-9b and Route-E
 string-pricing-card `RE-SC3/4/5` lanes were executed and collected
@@ -486,10 +523,12 @@ and an uncertainty budget before applying experimental bounds.
 
 ## Final recommendation
 
-The theory is not ready to be called complete.  The mathematical skeleton can
-be retained, and several no-go/boundary statements are valuable.  The next
-decisive work is not another texture scan: it is (i) repair H3, (ii) repair the
-Route-B operator and Kähler matching, (iii) recover the missing evidence, and
-(iv) freeze one non-SUSY action whose vacuum, running, flavor, amplitudes, and
-proton decay are computed in a single chain.  The concrete execution order and
-kill criteria are in `ROADMAP.md`.
+The theory is not ready to be called complete.  The H3 logic and evidence
+deployment blockers are repaired, with the former correctly demoted to a
+conditional H3+ theorem and the latter kept fail-closed.  The next decisive
+work is not another texture scan: it is (i) build a valid interacting Route-B
+messenger/selection action, (ii) complete the clean-clone numerical DAG,
+(iii) perform the global branch-local non-SUSY flavor and flavored-thermal
+calculation, and (iv) freeze one non-SUSY action whose vacuum, running,
+amplitudes, and proton decay are computed in a single chain.  The concrete
+execution order and kill criteria are in `ROADMAP.md`.

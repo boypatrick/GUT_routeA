@@ -13,8 +13,10 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{placeins}
+\usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\Urlmuskip=0mu plus 0.5mu
 
 \newcommand{\Spin}{\mathrm{Spin}}
 \newcommand{\SO}{\mathrm{SO}}
@@ -71,10 +73,13 @@ single-object realization of one Standard-Model family exists and that at
 dimension sixteen the \(\Spin(10)\) half-spinor is the unique anomaly-free
 realization; the sixteenth state \(\nu^c\) is therefore forced, not assumed.
 Second, the genus ladder \(h^0(\Sigma_g,T_{\Sigma_g})=3,1,0\) makes three
-families an a-priori maximum; the Cartan criterion selects \(g=0\), so the
-rational family curve, the \(\cO(2)\) carrier, exactly three families, and
-the two-center divisor---the Poincar\'e--Hopf zero divisor of a Cartan
-flow---are derived rather than chosen.  Third, the contact direction equals
+families an a-priori maximum.  A correction is essential: the canonical-contact
+principle as stated does not by itself remove the one-dimensional abelian
+\(g=1\) branch, since that algebra admits nondegenerate invariant forms up to
+scale.  The rational curve, \(\cO(2)\) carrier, exactly three families, and
+two-center divisor follow only after the explicit strengthening that the
+contact be a nondegenerate Killing form (equivalently, that the family algebra
+be semisimple).  Third, on that strengthened branch the contact direction equals
 the Killing form of the family algebra, \(B=2\sqrt3\,K_{\rm tr}\), so its
 existence and nondegeneracy follow from the same simplicity that fixes the
 family number.  Fourth, the hidden-messenger superpotential of the
@@ -90,7 +95,8 @@ computation, including the longest-Weyl-element classification of complex
 representations and the exactly vanishing cubic anomaly tensor of the
 \(16\) built from five fermionic modes.  String-theoretic readings enter
 only as optional interpretations.  This note adds no phenomenology; the
-companion note's deferred audits are unchanged.
+companion dynamics audits are mechanically executed, but their physics
+promotion remains blocked by the open items listed below.
 \end{abstract}
 
 \maketitle
@@ -120,11 +126,12 @@ irreducible?  The answer, developed below, is:
   face-projection principles by exact enumeration (Sec.~\ref{sec:sixface});
 \item the rational family curve, the \(\cO(2)\) carrier, the two-center
   divisor, and the family number \(N_{\rm fam}=3\) follow from the
-  self-carried-index and canonical-contact principles, with
-  \(N_{\rm fam}\le3\) as an a-priori bound (Sec.~\ref{sec:families});
-\item the contact direction is the Killing form of the family algebra, with
-  existence, nondegeneracy, and uniqueness all consequences of simplicity
-  (Sec.~\ref{sec:killing});
+  self-carried-index principle only after an explicit Killing-contact
+  selection axiom is added; without it the rigorous result is the bound
+  \(N_{\rm fam}\le3\) (Sec.~\ref{sec:families});
+\item on that strengthened branch the contact direction is the Killing form
+  of the family algebra, with existence, nondegeneracy, and uniqueness all
+  consequences of simplicity (Sec.~\ref{sec:killing});
 \item the hidden-messenger superpotential is form-unique with a single
   residual complex coupling (Sec.~\ref{sec:messenger});
 \item no value of that coupling---equivalently of \(\zeta\)---is a
@@ -180,16 +187,18 @@ ordinarily imposes a continuous or discrete family group externally
 which we have not found combined in the literature: the family space is
 required to be the automorphism algebra of its own carrier (the covariance
 group is generated, not imposed); the family number is then bounded a
-priori by three, with equality forced by the Cartan criterion; and the
-Majorana contact direction is the Killing form of that algebra.  These are
+priori by three, with equality conditional on the explicit semisimple/Killing-
+contact strengthening; and on that branch the Majorana contact direction is
+the Killing form of that algebra.  These are
 claimed as new assemblies of standard mathematics, not as new mathematics.
 
 \section{The Principle Set and the Anchors}
 \label{sec:principles}
 
-All derivations below are unconditional \emph{relative to the following
-principles}.  The principles themselves are inputs; the point of this note
-is to make the input list minimal and explicit, and then to prove
+All derivations below state their dependencies explicitly.  The four core
+principles are inputs; the equality \(N_{\rm fam}=3\) additionally invokes
+the Killing-contact selection axiom below.  The point of this note is to make
+the input list minimal and explicit, and then to prove
 (Sec.~\ref{sec:boundary}) that the remaining conditional residue cannot be
 absorbed into any principle set of this kind.
 
@@ -233,6 +242,20 @@ canonically by the family geometry itself, with no externally chosen
 tensor.
 \end{principle}
 
+\begin{assumption}[Killing-contact selection axiom]
+\label{an:killingcontact}
+For the purpose of selecting a family branch, the canonical contact is
+required to be a nonzero multiple of the adjoint-trace form
+\[
+  B_{\rm ad}(x,y)=\Tr_{\aut(\Sigma)}
+  \bigl(\operatorname{ad}_x\operatorname{ad}_y\bigr),
+\]
+and this form is required to be nondegenerate.  In the finite-dimensional
+complex algebras on the genus ladder this is equivalent to semisimplicity.
+This axiom strengthens Principle~\ref{pr:contact}; it is not implied by
+invariance and nondegeneracy alone.
+\end{assumption}
+
 Two empirical anchors state what the theory is a theory of; they are shared
 by every model considered in this note.
 
@@ -249,9 +272,11 @@ exotics.
 At least one family exists.
 \end{anchor}
 
-Note what is \emph{not} anchored: the family number three is not assumed
-anywhere below---it is derived in Sec.~\ref{sec:families}---and no property
-of \(\zeta\) is anchored beyond its existence as a coefficient.
+Note what is \emph{not} empirically anchored: the family number three.
+It is selected in Sec.~\ref{sec:families} only conditionally on
+Assumption~\ref{an:killingcontact}; without that axiom the principle set
+proves only \(N_{\rm fam}\le3\).  No property of \(\zeta\) is anchored
+beyond its existence as a coefficient.
 
 \begin{figure}[!htbp]
 \centering
@@ -268,11 +293,13 @@ of \(\zeta\) is anchored beyond its existence as a coefficient.
 \node[box] (pcons) at (-6.0,2.6) {consistency\\principle};
 \node[box] (pface) at (-2.0,2.6) {face-projection\\principle};
 \node[box] (pidx) at (2.0,2.6) {self-carried-index\\principle};
-\node[box] (pcont) at (6.0,2.6) {canonical-contact\\principle};
+\node[box] (pcont) at (6.0,3.2) {invariant-contact\\principle};
+\node[box] (pplus) at (6.0,1.7) {Killing-contact\\selection axiom};
 \node[thm] (t1) at (-5.0,0.0) {Thm.~\ref{thm:sixface}\\ \(\Spin(10)\) 16,
   \(\nu^c\) forced,\\ \(k_Y=5/3\)};
-\node[thm] (t2) at (-0.5,0.0) {Thm.~\ref{thm:threefam}\\ \(g=0\), \(N=3\),
-  \(\cO(2)\),\\ two-center divisor};
+\node[thm] (t2) at (-0.5,0.0) {Cor.~\ref{cor:bound}: \(N\le3\)\\
+  Thm.~\ref{thm:threefam} with H3\(^{+}\):\\
+  \(g=0\), \(N=3\), \(\cO(2)\)};
 \node[thm] (t3) at (4.5,0.0) {Thm.~\ref{thm:killing}\\
   \(K_{\rm tr}=\) Killing form};
 \node[thm] (t4) at (-0.5,-2.4) {Thm.~\ref{thm:messenger}\\ messenger
@@ -282,17 +309,21 @@ of \(\zeta\) is anchored beyond its existence as a coefficient.
 \draw[arr] (pcons) -- (t1);
 \draw[arr] (pface) -- (t1);
 \draw[arr] (pidx) -- (t2);
-\draw[arr] (pcont) -- (t2);
-\draw[arr] (pcont) -- (t3);
+\draw[arr, dashed] (pcont) -- (pplus)
+  node[midway, right] {\scriptsize strengthen};
+\draw[arr] (pplus) -- (t2);
+\draw[arr] (pplus) -- (t3);
 \draw[arr] (t2) -- (t3);
 \draw[arr] (t3) -- (t4);
 \draw[arr, dashed, purple!70!black] (t4) -- (z)
   node[midway, above, purple!70!black] {\scriptsize coefficient};
 \end{tikzpicture}
-\caption{Logical dependency of the reconstruction.  Solid arrows are
-theorems; the dashed edge marks the unique point where a continuous datum
-enters, and Theorem~\ref{thm:boundary} proves that no principle set of this
-kind can supply it.}
+\caption{Logical dependency of the reconstruction.  The vertical dashed
+edge marks the added Killing-contact strengthening; it is an assumption,
+not a theorem.  Solid arrows are theorem dependencies.  The purple dashed
+edge marks the point where a continuous datum enters, and
+Theorem~\ref{thm:boundary} proves that no principle set of this kind can
+supply it.}
 \label{fig:dependency}
 \end{figure}
 
@@ -314,9 +345,11 @@ exceptional minima \(27,56,26,248\) and the rank-16 smallest dimensions
 Sec.~\ref{sec:sixface}.
 \item[Machine-verified here (first-principles audit, 44 checks).]
 The demicube face content and \(k_Y=5/3\); the dimension-\(\le16\)
-enumeration; the genus ladder; the one-dimensionality of the invariant
-contact and the identity \(B=2\sqrt3\,K_{\rm tr}\); the Schur complement;
-the \(\zeta\)-independence witness.
+enumeration; the genus ladder; the explicit one-dimensional abelian
+counterexample to genus selection by invariant bilinearity; the
+one-dimensionality of the invariant contact on the selected
+\(\sltwo\) branch and the identity \(B=2\sqrt3\,K_{\rm tr}\); the Schur
+complement; the \(\zeta\)-independence witness.
 \item[Textbook theorems (cited with statements, not rederived).]
 The Weyl dimension formula and highest-weight theory
 \cite{FultonHarris1991}; Riemann--Roch and Serre duality
@@ -327,13 +360,15 @@ identification \cite{LawsonMichelsohn1989}; \(\pi_4(\Spin(10))=0\)
 \cite{WittenSU2Anomaly1982}; minimal-dimension tables for rank
 \(\ge17\) \cite{Slansky1981}.
 \item[Retained inputs (axioms and matching-level choices).]
-(i)~the four principles; (ii)~the two empirical anchors; (iii)~the
+(i)~the four core principles; (ii)~the two empirical anchors;
+(iii)~the Killing-contact/semisimplicity selection axiom;
+(iv)~the
 minimal-dimension tie-break in Theorem~\ref{thm:sixface} (an Occam clause;
 dropping it reopens, e.g., the \(E_6\) \(27\) with vectorlike extra
-matter); (iv)~the \(U(1)_R\) charge assignment of the hidden-messenger
+matter); (v)~the \(U(1)_R\) charge assignment of the hidden-messenger
 sector --- the Majorana-only selection rule is \emph{derived} from it in
-the companion note, but the assignment itself is an input; (v)~the
-post-\(B\!-\!L\) projector \(P_{\nu^c}\); (vi)~\(\mu\ne0\) and the
+the companion note, but the assignment itself is an input; (vi)~the
+post-\(B\!-\!L\) projector \(P_{\nu^c}\); (vii)~\(\mu\ne0\) and the
 no-extra-unpaired-sector clause of the self-carried-index principle.
 \item[Companion-note benchmark data (corroboration only, never premises).]
 The \(\zeta\) digits, the sensitivity windows, the \(\mathbb Z_{N\le6}\)
@@ -553,10 +588,11 @@ Theorem~\ref{thm:sixface} rather than assumed.
 
 The companion note protects three families by assuming the carrier data
 \((C=\CP^1,\ R=p_++p_-,\ L_R\simeq\cO(2))\) and then applying the
-\(\Spin^c\) Dolbeault index.  This section derives those data from the
-self-carried-index and canonical-contact principles.  The analytic inputs
-are the standard Dolbeault--Hodge identification and Riemann--Roch with
-Serre duality \cite{LawsonMichelsohn1989,GriffithsHarris1978}.
+\(\Spin^c\) Dolbeault index.  This section derives the upper bound from the
+self-carried-index principle and derives those specific carrier data only
+after adding the Killing-contact selection axiom.  The analytic inputs are
+the standard Dolbeault--Hodge identification and Riemann--Roch with Serre
+duality \cite{LawsonMichelsohn1989,GriffithsHarris1978}.
 
 \begin{lemma}[Genus ladder]
 \label{lem:ladder}
@@ -587,27 +623,32 @@ rational.  Three families is the maximum this protection mechanism can
 produce, not a coincidence within it.
 \end{corollary}
 
-\begin{lemma}[Cartan selection]
+\begin{lemma}[Conditional Cartan selection]
 \label{lem:cartan}
-Among \(g=0,1\) (the cases allowed by the existence anchor and
-Lemma~\ref{lem:ladder}), only \(g=0\) satisfies the canonical-contact
-principle.
+Among \(g=0,1\), only \(g=0\) satisfies the \emph{strengthened}
+Killing-contact condition that the contact be a nondegenerate multiple of the
+Killing form, or equivalently that the family algebra be semisimple.  The
+canonical-contact principle of Sec.~\ref{sec:principles} without this
+strengthening does not select the genus.
 \end{lemma}
 
 \begin{proof}
 For \(g=1\), \(\aut(\Sigma_1)\) is the one-dimensional abelian translation
-algebra; the Killing form of an abelian Lie algebra vanishes identically
-(\(\ad X=0\)), so by the Cartan criterion no canonical nondegenerate
-invariant form exists on \(V\), and the canonical-contact principle fails.
+algebra.  If \(e\) is a basis, \(B(e,e)=c\ne0\) defines a nondegenerate
+symmetric ad-invariant form, so invariance and nondegeneracy alone do
+\emph{not} exclude this branch; the arbitrary scale \(c\) is extra data.
+Its Killing form nevertheless vanishes identically (\(\ad X=0\)), so it fails
+the stated Killing-contact/semisimplicity strengthening.
 For \(g=0\), \(V=\aut(\CP^1)=\sltwo\) is simple, and the Cartan criterion
 guarantees that its Killing form is nondegenerate.
 \end{proof}
 
-\begin{theorem}[Three families]
+\begin{theorem}[Conditional three-family selection]
 \label{thm:threefam}
-Under the self-carried-index and canonical-contact principles and the
-existence anchor: the family curve is \(\Sigma\simeq\CP^1\); the family
-space is canonically the M\"obius algebra,
+\mbox{}\par
+Under the self-carried-index and canonical-contact principles, the existence
+anchor, and the added Killing-contact/semisimplicity strengthening: the family
+curve is \(\Sigma\simeq\CP^1\); the family space is the M\"obius algebra,
 \(V=H^0(\CP^1,T_{\CP^1})\simeq\sltwo\); the carrier is
 \(T_{\CP^1}\simeq\cO(2)\); and
 \[
@@ -617,8 +658,9 @@ space is canonically the M\"obius algebra,
 
 \begin{proof}
 Lemma~\ref{lem:ladder} with the existence anchor leaves \(g\in\{0,1\}\);
-Lemma~\ref{lem:cartan} leaves \(g=0\).  The rest is the \(g=0\) row of the
-ladder.
+the strengthened Lemma~\ref{lem:cartan} leaves \(g=0\).  The rest is the
+\(g=0\) row of the ladder.  Without the added strengthening, only
+Corollary~\ref{cor:bound}, \(N_{\rm fam}\le3\), follows.
 \end{proof}
 
 \begin{proposition}[The two-center divisor is Poincar\'e--Hopf]
@@ -633,7 +675,7 @@ is a sum of two distinct points,
 and \(\cO(\divisor X_h)\simeq T_{\CP^1}\simeq\cO(2)\).  The two-center
 divisor \(R=p_++p_-\) of the companion note is therefore the Euler class of
 the family sphere realized by a Cartan flow, and the two ``centers'' are
-the two fixed points of any M\"obius flow.
+the two fixed points of any regular semisimple M\"obius flow.
 \end{proposition}
 
 \begin{proof}
@@ -647,16 +689,18 @@ line bundle on a curve represents its first Chern class, and
 \begin{remark}[Ledger relocation]
 \label{rem:relocation2}
 The companion note lists \(C=\CP^1\), \(R=p_++p_-\), and the protected
-\(\Spin^c\) \(\cO(2)\) carrier as branch assumptions.  Under the
-self-carried-index and canonical-contact principles all three are theorems.
+\(\Spin^c\) \(\cO(2)\) carrier as branch assumptions.  They become theorems
+only after the Killing-contact/semisimplicity strengthening; under the original
+principles the unconditional result is the upper bound \(N_{\rm fam}\le3\).
 What the index principle retains as an assumption is the protection clause
 itself (no additional unpaired SM-charged sectors) and the self-carried
 choice; the latter does real selective work, as the next remark records.
 \end{remark}
 
 \begin{remark}[Why the tangent bundle and not \(\cO(2m)\)]
-For \(g=0\) one has \(h^0(K^{-m})=2m+1\), so ``some canonical bundle
-power'' would allow any odd family number.  The self-carried clause is what
+For \(g=0\), the dimension is \(h^0(K^{-m})=2m+1\).  Thus ``some
+canonical bundle power'' would allow any odd family number.  The
+self-carried clause is what
 singles out \(m=1\): only for the tangent bundle is the family space itself
 the algebra that generates the family covariance (the adjoint module),
 rather than a module over an external symmetry.  Equivalently, the
@@ -669,9 +713,9 @@ and becomes the geometry of \(V\) acting on itself.
 
 The companion note proves that the invariant contact direction in
 \(\mathrm{Sym}^2V^\vee\) is unique (the second transvectant) and remarks
-that it resembles the Killing form.  With Theorem~\ref{thm:threefam} the
-resemblance becomes an identity, and existence, nondegeneracy, and
-uniqueness all follow from simplicity.
+that it resembles the Killing form.  On the strengthened branch of
+Theorem~\ref{thm:threefam} the resemblance becomes an identity, and
+existence, nondegeneracy, and uniqueness follow from simplicity.
 
 \begin{lemma}[Uniqueness]
 \label{lem:unique}
@@ -732,15 +776,16 @@ which is the displayed matrix; dividing by \(2\sqrt3\) reproduces
 Lemma~\ref{lem:unique}.
 \end{proof}
 
-\begin{remark}[One principle, two consequences]
+\begin{remark}[One strengthened condition, two consequences]
 \label{rem:weld}
-The same simplicity that selects \(g=0\) and hence \(N_{\rm fam}=3\)
-(Lemma~\ref{lem:cartan}) also guarantees that the seesaw contact direction
-exists, is unique, and is invertible.  In a hypothetical \(g=1\) branch the
-Majorana contact would have no canonical direction and the messenger mass
-term \(K_{\rm tr}^{-1}(X,X)\) below could not even be written.  ``Exactly
-three families'' and ``a working invariant seesaw contact'' are two faces
-of one principle.
+Conditional on Assumption~\ref{an:killingcontact}, the same simplicity that
+selects \(g=0\) and hence \(N_{\rm fam}=3\)
+(Lemma~\ref{lem:cartan}) also guarantees that the Killing contact exists,
+is unique, and is invertible.  In the \(g=1\) branch an invariant,
+nondegenerate contact \(B(e,e)=c\ne0\) can be written, but it is not the
+adjoint-trace form and its normalization is extra data.  ``Exactly three
+families'' and ``a nondegenerate Killing contact'' are thus two consequences
+of the strengthened axiom, not of invariant bilinearity alone.
 \end{remark}
 
 \section{The Hidden-Messenger Mechanism: Form-Uniqueness}
@@ -790,15 +835,17 @@ superpotential.  (Replayed to \(10^{-14}\) over random matrices in the
 machine audit.)
 \end{proof}
 
-\begin{datum}[Benchmark coefficient, kept as reproducibility anchor]
+\begin{datum}[Benchmark coefficient]
 \label{dat:zeta}
 \[
   \zeta=0.1076472949+0.0736514853\,i,
 \]
 \[
-  \lambda=\sqrt{\zeta}=0.34502115743308964+0.10673473744038917\,i,
-  \qquad
-  |\lambda|=0.3611535729477664 .
+  \begin{aligned}
+  \lambda&=\sqrt{\zeta}
+    =0.34502115743308964+0.10673473744038917\,i,\\
+  |\lambda|&=0.3611535729477664 .
+  \end{aligned}
 \]
 As in the companion note, only the first few significant figures are
 physically meaningful; the digits are shared bit-identically with the
@@ -809,10 +856,13 @@ canonical-normalization caveats of the companion note apply unchanged.
 \section{The Boundary Theorem}
 \label{sec:boundary}
 
-Everything above is a theorem of the four principles (plus the stated EFT
-inputs of Sec.~\ref{sec:messenger}).  Exactly one continuous quantity
-remains: the value of \(\zeta\).  This section proves that the remainder is
-not an accident of insufficient cleverness.
+The six-face result and \(N_{\rm fam}\le3\) are theorems of the four core
+principles.  The three-family/Killing branch additionally assumes the
+\(\zeta\)-blind Killing-contact selection axiom, and the messenger theorem
+uses the stated EFT inputs of Sec.~\ref{sec:messenger}.  Within that
+explicitly conditional skeleton, exactly one continuous quantity remains:
+the value of \(\zeta\).  This section proves that the remainder is not an
+accident of insufficient cleverness.
 
 \begin{lemma}[Two-model lemma]
 \label{lem:twomodel}
@@ -833,11 +883,13 @@ Let
 \]
 be the family of post-\(B\!-\!L\) effective theories of
 Theorem~\ref{thm:messenger} at coupling \(\lambda\), all on the same
-\(\Spin(10)\)/three-family skeleton.  Every member satisfies the
+\(\Spin(10)\)/three-family skeleton.  Every member satisfies all four core
+principles, both anchors, and the Killing-contact selection axiom: the
 consistency principle --- the messenger \(X\) is a gauge singlet, so the
 gauge-anomaly content is exactly that of the \(16_i\), which vanishes by
-item (iii) of Sec.~\ref{sec:sixface} --- together with the remaining three
-principles and both anchors, and realizes \(\zeta(M_\lambda)=\lambda^2\).
+item (iii) of Sec.~\ref{sec:sixface} --- and the remaining assumptions are
+unchanged as \(\lambda\) varies.  Each member realizes
+\(\zeta(M_\lambda)=\lambda^2\).
 Hence \(\zeta\) ranges over \(S=\mathbb C^\times\).  The witness family is
 internal: no string-theoretic input enters.  (The E3-instanton reading
 \(\zeta_\Gamma=A_\Gamma e^{2\pi iT_\Gamma}\)
@@ -879,12 +931,14 @@ Within \(\mathfrak M\),
 \[
 \boxed{
 \begin{gathered}
-\text{four principles}\ \Longrightarrow\ \text{the skeleton
-(Thms.~\ref{thm:sixface}, \ref{thm:threefam}, \ref{thm:killing},
-\ref{thm:messenger})},\\[2pt]
-\text{four principles}\ \not\Longrightarrow\ \zeta ,
-\qquad\text{hence}\qquad
-\text{a principles-only unconditional GUT proof is impossible.}
+\text{four core principles}\ \Longrightarrow\
+ \bigl(\text{Thm.~\ref{thm:sixface} and }N_{\rm fam}\le3\bigr),\\[2pt]
+\text{core + Killing-contact axiom + EFT inputs}\\
+\Longrightarrow\ \text{the conditional skeleton}\\
+\bigl(\text{Thms.~\ref{thm:threefam}, \ref{thm:killing},
+\ref{thm:messenger}}\bigr),\\[2pt]
+\text{every such }\zeta\text{-blind axiom set}\ \not\Longrightarrow\ \zeta ,\\
+\text{hence a principles-only unconditional GUT proof is impossible.}
 \end{gathered}
 }
 \]
@@ -892,7 +946,7 @@ The boundary drawn by the companion note is not provisional modesty; in
 this model class it is a theorem.
 \end{corollary}
 
-\begin{observation}[Finite-class corroboration from the companion note's scans]
+\begin{observation}[Finite-class scan corroboration]
 \label{obs:scans}
 The companion note's negative results are finite-class instances of
 Theorem~\ref{thm:boundary}: the tested hidden \(D\)-quotients leave modulus
@@ -906,7 +960,7 @@ provenance ledger (Sec.~\ref{sec:provenance}) they are benchmark
 corroboration and appear in no hypothesis.
 \end{observation}
 
-\begin{remark}[Diophantine diagnostics are not derivations]
+\begin{remark}[Diophantine diagnostic]
 The approximants \(17/178\), \(70/733\), \(87/911\) are ordinary
 continued-fraction convergents of \(\arg\zeta/2\pi\) (verified in the
 audit), with phase errors \(4.15\times10^{-5}\), \(6.68\times10^{-6}\),
@@ -931,9 +985,9 @@ standalone machine-checked scripts, one JSON/Markdown ledger pair per
 audit, following the same discipline as the audits of
 Sec.~\ref{sec:manifest} (every claim gated, every negative boundary
 flagged).  A collector script,
-\texttt{code/audit8\_dyn8\_falsifiability\_collection.py}, re-verifies
+\path{code/audit8_dyn8_falsifiability_collection.py}, re-verifies
 every number quoted in this section against its source ledger; its own
-ledger is \texttt{output/audit8/dyn8\_falsifiability\_collection.json}.
+ledger is \path{output/audit8/dyn8_falsifiability_collection.json}.
 Experimental statuses are as of 2026-07-05.
 
 \subsection{Branch map}
@@ -943,7 +997,7 @@ The results split the framework into four layers with sharply different
 logical statuses.
 
 \begin{description}
-\item[Kinematic core (supersymmetry-agnostic; machine-verified).]
+\item[Kinematic core (supersymmetry-agnostic; machine-verified).]\mbox{}\par
 The theorems of Secs.~\ref{sec:sixface}--\ref{sec:killing}: the
 half-spinor sixteen with its forced sixteenth state, the three-family
 index with the a-priori bound, and the Killing-form contact direction.
@@ -951,7 +1005,7 @@ None of the dynamics results below touches this layer, and the
 \(\overline{126}\)-type Majorana source direction survives in every
 surviving branch.
 
-\item[Supersymmetric minimal completion (EXCLUDED as a slice family).]
+\item[Supersymmetric minimal completion (EXCLUDED as a slice family).]\mbox{}\par
 The benchmark supersymmetric completion (the
 \(210+126+\overline{126}+10\) superpotential family in its
 minimal-spectrum slice) is excluded by the combination of gauge
@@ -968,7 +1022,7 @@ This excludes the \emph{slice family}, not the model class; the ledgers
 record the distinction explicitly.
 
 \item[Non-supersymmetric intermediate-scale variant (ALIVE; refit
-required).]
+required).]\mbox{}\par
 With supersymmetry removed the dimension-five channel is structurally
 absent, and two-step breaking through an intermediate gauge group
 decouples the intermediate scale from the unification scale.  Of the
@@ -1005,35 +1059,46 @@ correction is recorded in the ledgers).  The fifth (parity-odd)
 quartic invariant neither rescues nor kills any sampled point, so the
 left--right chain is \(210\)-realizable at tree level in those
 regions, with the adjoint (\(45\)-type) route as an alternative
-rather than a necessity.  Source stage: the perturbative ceiling caps the
-neutrino Dirac scale a factor \(9\) (Pati--Salam) to \(159\)
-(left--right) below its \(\mathrm{SO}(10)\)-locked value, the type-II
-escape falls short by \(3.7\)--\(7.3\) orders, and thermal
-leptogenesis drops below the Davidson--Ibarra floor under the rescaled
-renormalizable source --- leaving the scale-decoupled brane-instanton
-source (the first pricing card below) as the only quantified surviving
-scenario.  Contact stage: a machine-verified invariance theorem shows
-the normalized contact content (coefficient, direction, and contact
-fraction) is \emph{exactly} invariant under a rescaling of the Dirac
-kernel; only the suppression scale \(M_*\) is branch-local.
+rather than a necessity.  Source stage: with the corrected
+GUT-normalized \(g_1\), imposing an additional top-like \(Y_\nu\) ansatz
+gives the illustrative ratios \(y_t(M_X)/y_{\max}\simeq10\)
+(Pati--Salam) and \(169\) (left--right); these are not an \(\SO(10)\)
+lock theorem.  For the fixed archival kernel itself, reaching the
+perturbative ceiling requires norm-suppression factors
+\(\sigma_{\max}(Y_\nu^{\rm arch})/y_{\max}\simeq19\) and \(342\),
+respectively.  The type-II order estimate falls short by
+\(3.7\)--\(7.3\) orders.
+The rescaled renormalizable benchmark also lies below an unflavored
+Davidson--Ibarra floor.  These comparisons do not select a UV source:
+they retain the archival Dirac-kernel shape and omit a global branch-local
+flavor fit and flavored thermal kinetics.  The scale-decoupled
+brane-instanton card therefore remains an unpromoted pricing hypothesis.
+Contact stage: the machine audit verifies the uniform-rescaling covariance
+\(Y_\nu\mapsto yY_\nu\), \(M_R\mapsto y^2M_R\).  With the physical
+suppression scale kept positive, \(M_*' = |y|^2M_*\) and
+\(\zeta'=e^{2i\arg y}\zeta\), while the contact fraction and projective
+contact direction are unchanged.  Thus the numerical value of \(\zeta\)
+is exactly invariant only for a uniform positive-real rescaling \(y>0\);
+for a complex rescaling its phase covaries.
 Consistently with Theorem~\ref{thm:boundary}, the contact coefficient
 is an input in every branch; only its bookkeeping moves.
 
 \item[String-conditional pricing cards (unpromoted).]
-Three cards price string-motivated escapes without deriving anything:
-a brane-instanton Majorana source (buys the tower \emph{scale},
-zero texture compression: the instanton data equals the full
-twelve-parameter Majorana data); a protection card for the hidden
-messenger, whose enumeration yields an abelian no-go (any charge
-bookkeeping that allows the Dirac Yukawa and the messenger portal ties
-the messenger mass to the dangerous Dirac contamination), so closure
-requires instanton zero-mode selectivity with a quantified gap; and a
-high-scale supersymmetry-breaking bridge, alive on the left-right side
-for a supersymmetry-breaking scale anywhere in
-\([2\times10^{10},\,3.5\times10^{15}]\,\mathrm{GeV}\) and structurally
-impossible on the Pati--Salam side.  These cards are conditional
-interpretations under the promotion discipline of the companion note's
-string appendix; they must not be cited as evidence.
+Three cards price string-motivated escapes without deriving them.  The
+brane-instanton Majorana card buys the tower \emph{scale} but provides no
+texture compression: its effective Takagi data carry the full
+twelve-parameter Majorana content.  The protection card proves an exact
+additive-Abelian no-go: allowing \(NLH\) and \(XN\) gives
+\(q(XLH)=q(XX)\).  Its historical numerical selectivity gap is blocked
+because it imported the invalid messenger ceiling of K7.  The
+supersymmetry-breaking bridge is only a toy one-loop scan: its nominal
+left--right lower edge permits \(M_I\simeq101\,\mathrm{GeV}\); imposing the
+illustrative requirement \(M_I\ge10\,\mathrm{TeV}\) moves the grid edge to
+\(\log_{10}(M_{\rm SS}/{\rm GeV})=11.85\).  Experimental intermediate-scale
+bounds, threshold envelopes, an independent root solve, and proton-decay
+uncertainties remain open.  These cards are conditional interpretations
+under the promotion discipline of the companion note's string appendix;
+they must not be cited as established evidence.
 \end{description}
 
 \subsection{Kill criteria}
@@ -1045,18 +1110,19 @@ and the source ledger.
 \begin{enumerate}
 \item[K1.] \textbf{A fourth sequential chiral family} [kinematic core].
 Falsifies the a-priori bound \(N_{\rm fam}\le3\) of
-Theorem~\ref{thm:threefam}, hence the self-carried-index principle
+Corollary~\ref{cor:bound}, hence the self-carried-index principle
 itself.  Status: a fourth sequential family is strongly excluded by
 Higgs-coupling data; the criterion stands as the core's cleanest
-falsifier.  (Ledger: \texttt{route\_E/output/route\_e\_first\_principles.json}.)
+falsifier.  (Ledger: \path{route_E/output/route_e_first_principles.json}.)
 
 \item[K2.] \textbf{Dirac neutrinos} [kinematic core's physical target].
 Established Dirac nature (e.g.\ persistent absence of neutrinoless
 double-beta decay together with positive evidence of lepton-number
 conservation) removes the Majorana contact target of
-Theorem~\ref{thm:killing}.  Contact essentiality is posterior-wide on
-current oscillation data: \(P(\text{contact fraction}>0.01)=1.000\),
-and the refit audit lifts the kernel conditionality --- over a
+Theorem~\ref{thm:killing}.  Within the declared nuisance-prior card,
+every sampled contact fraction exceeds (0.01) (sample fraction (1.000));
+this is a conditional regression statistic, not a likelihood-weighted data
+posterior.  The refit audit further finds that, over a
 thousand kernel-perturbed refits (perturbations up to \(30\%\)) the
 contact fraction never falls below \(0.01\).  The same audit
 establishes that the benchmark card's \(\theta_{23}\) tension is a
@@ -1064,15 +1130,15 @@ frozen-anchor property: the Majorana sector refits the current
 oscillation centrals \emph{identically} at unchanged Dirac kernels,
 and a \(5\%\) charged-lepton kernel perturbation alone absorbs the
 shift.
-(Ledgers: \texttt{output/audit1/dyn4b\_unconditional\_zeta.json},
-\texttt{dyn4c\_kernel\_dirac\_refit.json}.)
+(Ledgers: \path{output/audit1/dyn4b_unconditional_zeta.json},
+\path{dyn4c_kernel_dirac_refit.json}.)
 
 \item[K3.] \textbf{Unification \(\times\) proton decay, supersymmetric
 slice} [supersymmetric completion --- \emph{this criterion has fired}].
 \(\tau(p\to K^+\bar\nu)\) short by \(7.7\) orders at the
 unification-compatible point; zero living points in the joint rescue
-scan.  (Ledgers: \texttt{output/audit2/dyn3\_proton\_d5\_kill\_criterion.json},
-\texttt{output/audit3/dyn2b\_rescue\_scan.json}.)
+scan.  (Ledgers: \path{output/audit2/dyn3_proton_d5_kill_criterion.json},
+\path{output/audit3/dyn2b_rescue_scan.json}.)
 
 \item[K4.] \textbf{The Pati--Salam window} [non-supersymmetric variant,
 \(210\)-compatible chain].  At one loop
@@ -1085,9 +1151,9 @@ the \emph{computed} \(210\) spectrum and then with the computed
 assumption replaced by real Hessians): the lifetime is unchanged at
 all sampled percentiles, so the entry now rests on three independent
 spectrum treatments.
-(Ledgers: \texttt{output/audit9/dyn9\_nonsusy\_intermediate.json},
-\texttt{dyn9b1b\_210\_quartic\_descent.json},
-\texttt{dyn9b1c\_eps\_and\_126\_quartics.json}.)
+(Ledgers: \path{output/audit9/dyn9_nonsusy_intermediate.json},
+\path{dyn9b1b_210_quartic_descent.json},
+\path{dyn9b1c_eps_and_126_quartics.json}.)
 
 \item[K5.] \textbf{Proton-decay channel hierarchy} [non-supersymmetric
 variant].  The left-right chain predicts
@@ -1101,68 +1167,69 @@ only in rare coupling regions (vev ratios near \(0.6\)--\(0.7\)),
 consistent with the classical \(210\) minimization literature; the
 adjoint breaking route remains an equally available alternative.
 (Same ledgers as K4, plus
-\texttt{output/audit9/dyn9b1d\_lr\_ratio\_scan.json}.)
+\path{output/audit9/dyn9b1d_lr_ratio_scan.json}.)
 
-\item[K6.] \textbf{Thermal leptogenesis} [branch-tagged; soft
-criterion].  On the excluded supersymmetric slice, thermal unflavored
-leptogenesis fails by \(\sim1.5\) orders with the wrong central sign
-(success probability \(0.4\%\); a \(\times3\)--\(10\) enhancement
-lifts it to \(34\)--\(45\%\)).  On the surviving non-supersymmetric
-branch the rerun with the Standard-Model loop function and Higgs
-normalization is a factor \(\sim6\) \emph{harder} (posterior success
-\(0/4000\) unflavored; the enhancement sweet spot moves to
-\(\times30\)--\(100\)), but the gravitino/reheating ceiling dissolves
-by the branch itself: thermal production is unconstrained and
-non-thermal production opens as a qualitatively new escape, alongside
-flavored effects and a near-degenerate instanton-sourced tower.  A
-soft constraint on the source scenario, not a kill.
-(Ledgers: \texttt{output/audit7/dyn7\_leptogenesis\_argzeta.json},
-\texttt{output/audit9/dyn9b3\_nonsusy\_leptogenesis.json}.)
+\item[K6.] \textbf{Thermal leptogenesis diagnostic} [not promoted].
+The historical unflavored scans are arithmetic regressions, not posterior
+probabilities: \(M_1=2.38\times10^{10}\,\mathrm{GeV}\) lies in the
+tau-resolved regime.  On the non-supersymmetric branch the corrected
+Standard-Model Davidson--Ibarra ceiling is
+\(2.3078\times10^{-6}\), and the unflavored asymmetry is about six times
+smaller than in the supersymmetric regression.  Only the
+gravitino-specific ceiling is absent; reheating history and initial abundance
+remain unspecified.  Publication requires at least two-flavor kinetics with
+spectator effects and branch-local thermal inputs.
+(Ledgers: \path{output/audit7/dyn7_leptogenesis_argzeta.json},
+\path{output/audit7/dyn7_flavor_regime_gate.json},
+\path{output/audit9/dyn9b3_nonsusy_leptogenesis.json}.)
 
-\item[K7.] \textbf{Messenger canonical-normalization ceilings}
-[hidden-messenger extension].  The one-loop audit proves light-sector
-silence structurally (seesaw invariance under any invertible
-redefinition of \(\nu^c\)) and quantifies the replay ceilings: an
-\(R\)-breaking spurion of odd charge must satisfy
-\(\varepsilon\lesssim4.4\times10^{-4}\) against the refreshed
-contact-sensitivity windows; a microscopic completion violating the
-ceiling is excluded.
-(Ledger: \texttt{output/audit5/dyn5\_messenger\_one\_loop.json}.)
+\item[K7.] \textbf{Messenger canonical-normalization diagnostic}
+[invalid pending rederivation].  The seesaw Schur identity is exact, but the
+displayed \(XN\) interaction is bilinear rather than a cubic Yukawa coupling,
+so the asserted one-loop anomalous dimension and spurion ceilings are not
+defined by the displayed action.  Tree matching instead gives
+\(\delta Z=|\zeta|/3=0.0434773\), and the displayed charges allow
+\(XLH_u\).  No numerical messenger ceiling is promoted.
+(Ledgers: \path{output/audit5/dyn5_messenger_one_loop.json},
+\path{output/audit5/dyn5_model_validity.json}.)
 
 \item[K8.] \textbf{Heavy-neutrino/gauge-scale coexistence}
-[string-conditional; UPGRADED to a branch requirement].  The instanton
-Majorana source \emph{requires} the two heavier right-handed neutrinos
-to sit \emph{above} the intermediate gauge scale (factors \(39\) and
-\(4.8\times10^{3}\) on the Pati--Salam chain) --- impossible for a
-renormalizable perturbative source.  The source-selection audit
-(lock tension, type-II failure, leptogenesis floor) leaves this
-scale-decoupled source as the \emph{only} quantified scenario for the
-alive branch with viable leptogenesis, so the coexistence prediction
-upgrades from an optional card to a requirement of that branch; the
-underlying string card itself remains unpromoted.  Measuring an
+[string-conditional fixed-tower diagnostic].  In the replayed archival
+tower, the two heavier right-handed neutrinos sit \emph{above} the
+intermediate gauge scale (factors \(39\) and \(4.8\times10^{3}\) on the
+Pati--Salam chain), beyond a perturbative \(f v_R\) source.  The instanton
+benchmark permits this ordering but does not require it for a generic
+independently fitted tower.  The source-comparison audit
+(the ansatz-dependent \(10/169\) top-like diagnostic, the actual
+\(19/342\) archival-kernel ceiling suppression, the type-II estimate,
+and the unflavored leptogenesis floor) only compares two priced benchmarks.
+Since the global
+non-supersymmetric flavor fit and flavored kinetics remain open, it does not
+select a source and the fixed-tower coexistence statement is not a promoted
+branch requirement;
+the underlying string card also remains unpromoted.  Measuring an
 intermediate-scale gauge boson together with heavy-neutrino masses
 below it falsifies the scenario.
-(Ledgers: \texttt{route\_d/output/d3\_instanton\_majorana\_pricing.json},
-\texttt{output/audit9/dyn9b2\_nonsusy\_flavor\_refit.json}.)
+(Ledgers: \path{route_d/output/d3_instanton_majorana_pricing.json},
+\path{output/audit9/dyn9b2_nonsusy_flavor_refit.json}.)
 
-\item[K9.] \textbf{Zero-mode selectivity gap} [string-conditional].
-Closure of the non-supersymmetric protection card requires the
-messenger-mass instanton to miss the Dirac contamination by
-\(\Delta S\ge6.6\) in action (refreshed windows; \(3.2\) loose) at
-string scale \(2\times10^{16}\,\mathrm{GeV}\); any concrete embedding
-with a smaller gap is excluded as a completion.
-(Ledger: \texttt{route\_d/output/d4\_stueckelberg\_protection.json}.)
+\item[K9.] \textbf{Zero-mode selectivity} [string-conditional].
+The additive-Abelian no-go is exact: once \(NLH\) and \(XN\) are allowed,
+\(q(XLH)=q(XX)\).  The replayed historical-invalid values
+\(\Delta S=4.66\) (refreshed) and \(3.18\) (loose) inherit the invalid
+DYN-5 messenger ceiling and are therefore
+blocked pending an interacting messenger rederivation; they are not exclusion
+bounds on a concrete embedding.
+(Ledger: \path{route_d/output/d4_stueckelberg_protection.json}.)
 
-\item[K10.] \textbf{Supersymmetry-breaking bridge} [string-conditional].
-The left-right chain admits ultraviolet supersymmetry broken anywhere
-in \([2\times10^{10},\,3.5\times10^{15}]\,\mathrm{GeV}\) (bounded below
-by solvability, above by the messenger matching scale, so the
-holomorphic matching machinery survives throughout); the Pati--Salam
-chain admits \emph{no} such bridge (the anomaly-forced doubling of the
-breaking sector destroys every finite supersymmetric segment).  If the
-Pati--Salam chain is established, its completion cannot be a high-scale
-supersymmetry bridge with \(126\)-type content.
-(Ledger: \texttt{route\_d/output/d5\_susy\_breaking\_bridge.json}.)
+\item[K10.] \textbf{Supersymmetry-breaking bridge} [unpromoted toy scan].
+The one-loop minimal-content scan returns a left-right window
+\(\log_{10}M_{\rm SS}\in[10.30,15.55]\), but its lower edge has only
+\(M_I\simeq101\,\mathrm{GeV}\).  No branch-specific experimental lower bound,
+threshold nuisance envelope, complete proton uncertainty, or independent
+global root audit is included.  The Pati--Salam toy slice has no point, but no
+model-class exclusion or ultraviolet bridge is promoted.
+(Ledger: \path{route_d/output/d5_susy_breaking_bridge.json}.)
 
 \item[K11.] \textbf{Discrete-phase diagnostic retired} [benchmark
 bookkeeping].  On the refreshed Majorana card the
@@ -1170,18 +1237,21 @@ bookkeeping].  On the refreshed Majorana card the
 \(4.1\times10^{-3}\,\mathrm{rad}\) against the
 \(5.4\times10^{-5}\,\mathrm{rad}\) window (\(76\times\)): data
 supersede reproducibility anchors, and the continuous-phase reading
-stands.  (Ledger: \texttt{output/audit1/dyn4b\_unconditional\_zeta.json}.)
+stands.  (Ledger: \path{output/audit1/dyn4b_unconditional_zeta.json}.)
 \end{enumerate}
 
 \begin{remark}[What would not falsify anything]
 The numerical value of the contact coefficient moving with refreshed
 data does not falsify the framework: by Theorem~\ref{thm:boundary} it
-is an input, and its branch-locality is now a \emph{theorem}: under a
-rescaling of the Dirac kernel the normalized contact content
-(coefficient, direction, contact fraction) is exactly invariant, and
-only the suppression scale \(M_*\) moves (machine-verified to
-\(10^{-16}\); ledger
-\texttt{output/audit9/dyn9b2\_nonsusy\_flavor\_refit.json}).  Likewise
+is an input.  Under a uniform scalar rescaling
+\(Y_\nu\mapsto yY_\nu\), seesaw covariance gives
+\(M_R\mapsto y^2M_R\).  With \(M_*'>0\), one has
+\(M_*'=|y|^2M_*\), \(\zeta'=e^{2i\arg y}\zeta\), and an unchanged
+contact fraction; the contact direction is unchanged projectively.
+Consequently \(\zeta\) itself is exactly invariant only for \(y>0\)
+(machine-verified to \(10^{-16}\)); a complex rescaling rotates its phase.
+This is scaling covariance, not an \(\SO(10)\) lock theorem (ledger
+\path{output/audit9/dyn9b2_nonsusy_flavor_refit.json}).  Likewise
 the exclusion in K3 is of a slice family; enlarging the Higgs content
 or abandoning weak-scale supersymmetry are recorded escapes, two of
 which (K4, K5) are now the live falsifiable branches.
@@ -1196,16 +1266,17 @@ Enumerated six-face uniqueness with forced \(\nu^c\) and \(k_Y=5/3\)
 (Thm.~\ref{thm:sixface}, Cors.~\ref{cor:nuc}--\ref{cor:ky});
 genus ladder and the a-priori bound \(N_{\rm fam}\le3\)
 (Lem.~\ref{lem:ladder}, Cor.~\ref{cor:bound});
-\(g=0\) selection, \(C=\CP^1\), \(T\simeq\cO(2)\), \(N_{\rm fam}=3\)
-(Thm.~\ref{thm:threefam});
-two-center divisor as Poincar\'e--Hopf (Prop.~\ref{prop:ph});
-contact = Killing form, with existence/nondegeneracy/uniqueness from
-simplicity (Thm.~\ref{thm:killing});
 messenger form-uniqueness and Schur complement (Thm.~\ref{thm:messenger});
 boundary necessity with the internal witness family
 (Def.~\ref{def:class}, Thm.~\ref{thm:boundary});
 the four machine-verified computations (i)--(iv) of
 Sec.~\ref{sec:sixface}.
+\item[Conditional theorem after an added axiom.]
+The \(g=0\) selection, \(C=\CP^1\), \(T\simeq\cO(2)\),
+\(N_{\rm fam}=3\), two-center divisor, and Killing-contact identification
+require the explicit Killing-contact/semisimplicity strengthening.  A
+one-dimensional abelian algebra has nondegenerate invariant forms, so the
+original contact principle alone does not eliminate \(g=1\).
 \item[Retained inputs (items (i)--(vi) of Sec.~\ref{sec:provenance}).]
 The four principles and the two anchors; the minimal-dimension tie-break of
 Theorem~\ref{thm:sixface}; the \(U(1)_R\) charge assignment (from which the
@@ -1221,20 +1292,18 @@ The value of \(\zeta\) (equivalently \(\lambda\) or a stabilizing modulus);
 the benchmark \(M_V\); the hidden phase/radial sector.  By
 Theorem~\ref{thm:boundary} this category cannot be emptied by principles of
 the stated kind.
-\item[Executed dynamics audits (July 2026; Sec.~\ref{sec:falsifiability}).]
-The formerly deferred audits ran to completion along the fixed
-dependency graph \(0\to(1\parallel4a)\to3\to2\): vacuum and full heavy
-spectrum; thresholds and unification; seesaw replay with contact
-posterior; \(d=5\) proton decay; leptogenesis; joint rescue scan;
-non-supersymmetric variant; messenger one-loop; three
-string-conditional pricing cards.  Net outcome: supersymmetric
-minimal slice excluded, non-supersymmetric branch alive and
-falsifiable (branch map, Sec.~\ref{sec:branchmap}).
+\item[Mechanically executed dynamics evidence (July 2026).]
+The dependency graph and three pricing cards are reproducible at the ledger
+level.  The fail-closed collector passes its disclosure checks with
+\path{physics_promotion_allowed=false}; this is not dynamics closure.
+The finite supersymmetric benchmark slice has a conditional exclusion, while
+the non-supersymmetric branch remains a preliminary model candidate.
 \item[Still open.]
-The non-supersymmetric scalar potential and spectrum, the
-non-supersymmetric flavor refit with contact re-extraction at the
-intermediate scale (\emph{required} for the live branch), the
-kernel-level Dirac refit, and physical-basis proton-decay rotations.
+The non-supersymmetric scalar potential and spectrum; a global branch-local
+Spin(10) flavor fit; physical-basis proton-decay rotations; an interacting and
+selection-safe messenger action; recomputed string pricing; and tau-resolved
+Boltzmann/density-matrix kinetics with spectator, reheating, and initial-state
+inputs.
 \item[Not claimed --- and provably not claimable in \(\mathfrak M\).]
 A principles-only unique GUT with predicted \(\zeta\)
 (Cor.~\ref{cor:box}).
@@ -1246,11 +1315,11 @@ A principles-only unique GUT with predicted \(\zeta\)
 Directory names below are repository aliases (Remark~\ref{rem:terminology}).
 
 \begin{itemize}
-\item Paper source: \texttt{route\_E/tex/route\_e\_first\_principles.tex}.
+\item Paper source: \path{route_E/tex/route_e_first_principles.tex}.
 \item First-principles audit (plain \texttt{python3} + \texttt{numpy},
   exact rational arithmetic for the enumeration):
-  \texttt{python3 route\_E/code/verify\_route\_e\_first\_principles.py};
-  ledger \texttt{route\_E/output/route\_e\_first\_principles.json} and
+  \texttt{python3} \path{route_E/code/verify_route_e_first_principles.py};
+  ledger \path{route_E/output/route_e_first_principles.json} and
   \texttt{.md} (44 checks; all pass at this writing).  It replays: the
   demicube face content and \(k_Y=5/3\); the dimension-\(\le16\)
   complex-irrep enumeration; the genus ladder; the one-dimensionality of
@@ -1260,8 +1329,8 @@ Directory names below are repository aliases (Remark~\ref{rem:terminology}).
   \(\mathbb Z_{178}\) diagnostics, and the continued-fraction convergents);
   and the two-model \(\zeta\)-independence witness.
 \item Dependency-closure audit:
-  \texttt{python3 route\_E/code/verify\_route\_e\_dependency\_closure.py};
-  ledger \texttt{route\_E/output/route\_e\_dependency\_closure.json} and
+  \texttt{python3} \path{route_E/code/verify_route_e_dependency_closure.py};
+  ledger \path{route_E/output/route_e_dependency_closure.json} and
   \texttt{.md} (24 checks; all pass at this writing).  It verifies the four
   computations (i)--(iv) of Sec.~\ref{sec:sixface}: root systems and
   \(-w_0\) involutions for every simple algebra of rank \(4\)--\(15\) plus
@@ -1271,37 +1340,40 @@ Directory names below are repository aliases (Remark~\ref{rem:terminology}).
   \(17,33,32,32\); the exact \(\SU(15)/\SU(16)\) cubic traces; and the
   exactly vanishing cubic tensor of the Fock-constructed chiral \(16\) with
   its demicube weights.
-\item Dependency roadmap: \texttt{route\_E/ROADMAP.md} (removed,
+\item Dependency roadmap: \path{route_E/ROADMAP.md} (removed,
   retained-and-explained, provably-not-closable, and out-of-scope items;
   sections E--F track the dynamics and string-conditional programs).
 \item Dynamics-audit ledgers (Sec.~\ref{sec:falsifiability}): scripts
-  \texttt{code/audit0\ldots{}audit9\_dyn*.py} with ledger pairs under
-  \texttt{output/audit0..9/}; string-conditional cards
-  \texttt{route\_d/code/verify\_d3..d5\_*.py} with ledgers under
-  \texttt{route\_d/output/}; collector
-  \texttt{code/audit8\_dyn8\_falsifiability\_collection.py} with ledger
-  \texttt{output/audit8/dyn8\_falsifiability\_collection.json}, which
+  \path{code/audit0...audit9_dyn*.py} with ledger pairs under
+  \path{output/audit0..9/}; string-conditional cards
+  \path{route_d/code/verify_d3..d5_*.py} with ledgers under
+  \path{route_d/output/}; collector
+  \path{code/audit8_dyn8_falsifiability_collection.py} with ledger
+  \path{output/audit8/dyn8_falsifiability_collection.json}, which
   re-verifies every number in Sec.~\ref{sec:falsifiability} against its
   source ledger.
 \item Negative-boundary flags recorded in the JSON ledgers:
-  \texttt{zeta\_value\_derived: false};
-  \texttt{no\_extra\_chiral\_sector\_assumption\_discharged: false};
-  \texttt{route\_b\_r\_selection\_rule\_derived: false};
-  \texttt{companion\_phenomenology\_audits\_replayed: false};
-  \texttt{witten\_global\_anomaly\_cited\_not\_computed: true};
-  \texttt{rank\_ge\_17\_min\_dims\_cited\_not\_computed: true};
-  \texttt{pslt\_only\_unconditional\_gut\_proof\_claimed: false}.
+  \path{zeta_value_derived}\texttt{: false};
+  \path{no_extra_chiral_sector_assumption_discharged}\texttt{: false};
+  \path{route_b_r_selection_rule_derived}\texttt{: false};
+  \path{companion_phenomenology_audits_replayed}\texttt{: false};
+  \path{witten_global_anomaly_cited_not_computed}\texttt{: true};
+  \path{rank_ge_17_min_dims_cited_not_computed}\texttt{: true};
+  \path{pslt_only_unconditional_gut_proof_claimed}\texttt{: false}.
 \end{itemize}
 
 \section{Conclusion}
 
 This note compresses the companion note's branch assumptions into four
-explicit principles and pushes the theorem boundary outward to its provable
-maximum: the \(\Spin(10)\) half-spinor with its forced sixteenth state, the
-rational family curve with its Poincar\'e--Hopf two-center divisor and
-exactly three automorphism-protected families, the Killing-form contact,
-and the form-unique hidden-messenger mechanism are all consequences; the
-single complex coefficient \(\zeta\) provably is not.  Every external
+explicit principles plus one clearly separated Killing-contact selection
+axiom and pushes the theorem boundary to its provable maximum.  The
+\(\Spin(10)\) half-spinor with its forced sixteenth state and the upper bound
+\(N_{\rm fam}\le3\) follow from the core principles.  The rational family
+curve with its Poincar\'e--Hopf two-center divisor, exactly three
+automorphism-protected families, and the Killing-form contact follow
+conditionally on the added selection axiom.  The hidden-messenger mechanism
+is form-unique on that branch, while the single complex coefficient
+\(\zeta\) provably is not fixed.  Every external
 ingredient carries a provenance tag---machine-verified, textbook-cited,
 retained input, or benchmark corroboration---the former classical inputs
 are computations, and the boundary theorem's witness family is internal, so
@@ -1309,9 +1381,12 @@ string-theoretic material survives only as optional interpretation.  The
 deepest feature of the framework is unchanged and is now sharpened: the
 theory contains its own boundary statement, and a complete proof of the
 theory therefore includes an impossibility theorem.  What remains open is
-exactly what the companion note says remains open---the conditional data
-and the deferred companion audits---and Theorem~\ref{thm:boundary} explains
-why that list cannot be talked away.
+precisely recorded in the status ledger: conditional data plus mechanically
+executed but unpromoted dynamics lanes requiring a global non-supersymmetric
+flavor fit, valid messenger action, recomputed string pricing, and flavored
+thermal kinetics.  Theorem~\ref{thm:boundary} explains why the continuous
+coefficient cannot be talked away; it does not discharge those physical
+blockers.
 
 \begin{acknowledgments}
 The reconstruction, its proofs, and the machine audits were drafted and

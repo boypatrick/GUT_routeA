@@ -11,17 +11,20 @@ The review found three immediate blockers:
    `X L H_u`, and integrating out a canonical propagating messenger also gives
    a tree-level Kahler correction that is much larger than the quoted loop
    estimate.
-2. Route E's Cartan-selection proof does not exclude the genus-one branch as
-   written: a one-dimensional abelian Lie algebra admits a non-degenerate
+2. Route E's original Cartan-selection proof did not exclude the genus-one
+   branch: a one-dimensional abelian Lie algebra admits a non-degenerate
    symmetric ad-invariant bilinear form even though its Killing form vanishes.
-3. Route E's 19 DYN source scripts have been recovered under
-   `route_E/code_dyn/`.  Canonical paths and a fail-closed isolated DAG now
-   exist, but Route-D string-pricing-card `RE-SC3/4/5` evidence is still
-   missing and prevents a complete run.  Several green arithmetic gates also
-   fail their physical interpretation.  Route C and D likewise still contain
-   classification/arithmetic gates rather than complete amplitudes or a global
-   compactification.  The evidence card checks a 29-item dynamics P0 subset
-   plus 4 core artifacts, not every path mentioned anywhere in the roadmap.
+   This logic blocker is repaired by proving only `N_fam<=3` from original
+   H3 and making `N_fam=3` conditional on an explicit H3+
+   Killing-contact axiom; a physical origin for H3+ remains open.
+3. Route E's 19 DYN source scripts and Route-D pricing cards RE-SC3/4/5 are
+   now tracked.  This closes the file-existence blocker, not the physics:
+   RE-SC3/4/5 remain unpromoted; DYN-9b-2 is not a global non-SUSY flavor fit;
+   DYN-9b-3 lacks tau-resolved kinetics; and DYN-8 is only a fail-closed
+   collector.  Route C and D likewise still contain classification/arithmetic
+   gates rather than complete amplitudes or a global compactification.  The
+   evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
+   not every path mentioned anywhere in the roadmap.
 
 ## 2026-07-14 execution status
 
@@ -40,6 +43,17 @@ The review found three immediate blockers:
   `blocked_missing_branch_thermal_inputs`.  At
   `M1=2.38045e10 GeV` the non-SUSY lane is tau-resolved/two-flavor; the old
   Davidson--Ibarra bound also contained an extra square root (factor `3.91`).
+- The required-card 21-node dry-run has no preflight errors.  DYN-9b-2's
+  hypercharge normalization is repaired (`y_t(M_X)=0.44116481`), DYN-9b-3
+  reproduces the corrected SM DI ceiling `2.307794855e-6`, and DYN-8 passes
+  `30/30` disclosure checks while explicitly setting
+  `physics_promotion_allowed=false`.
+- `audit_blocker_promotion_gate.py` passes `18/18`: it verifies the
+  one-dimensional Abelian H3 counterexample and exact additive-charge no-go,
+  blocks RE-SC4's DYN-5-derived numerical gap, separates fixed-kernel from
+  optional top-like DYN-9b-2 scaling, checks complex-rescaling covariance,
+  exposes RE-SC5's `M_I~=101 GeV` toy lower edge, and preserves the remaining
+  fit and flavored-kinetics blockers.
 
 Artifacts:
 
@@ -51,6 +65,8 @@ Artifacts:
 - `code/verify_route_f_diagnostics.py`: a small diagnostic arithmetic card.
 - `code/audit_evidence_manifest.py`: checks whether the evidence cited for the
   Route-E dynamics claims exists in this checkout.
+- `code/audit_blocker_promotion_gate.py`: recomputes the P0 numerical repairs
+  and proves that mechanically green incomplete ledgers remain non-promotable.
 - `route_E/code_dyn/dyn_claim_registry.json`: single physics-status registry.
 - `route_E/code_dyn/run_route_e_dynamics.py`: fail-closed isolated DAG runner.
 - `output/`: generated JSON and Markdown ledgers.
@@ -62,7 +78,7 @@ gate: Route F compares a `210_H` continuity branch with the better-established
 `54_H` branch before freezing the action.  Route B and Route D remain optional
 UV mechanisms until their selection-rule and global-consistency gates pass.
 
-Workspace provenance note (2026-07-14): Route-E/Route-F sources and the compact
-evidence set are being prepared for intentional staging.  Until staging is
-completed, a clean clone does not contain this integration lane; consult Git
-status rather than assuming the local workspace equals `HEAD`.
+Workspace provenance note (2026-07-14): the initial Route-E/Route-F evidence
+set was committed and pushed at `6662dd6`.  The blocker corrections described
+above are the next synchronized change set and must pass the clean-clone gate
+before any physics promotion.
