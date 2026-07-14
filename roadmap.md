@@ -23,10 +23,31 @@ research order and promotion gates are in `route_f/ROADMAP.md` F0-D.
 - **Numerical status:** the bridge verifier passes `22/22` checks and
   deliberately sets `physics_promotion_allowed=false`.
 
-Research proceeds in AP-E1--AP-E10 order: projective-doublet action,
-discriminant regression, geometric quantization, chiral zero modes, exact
-Q-ball solution, messenger realization, physical-phase quotient, H3+ origin,
-integrated phenomenology, and an independent gravity track.
+### AP-E1 execution result (2026-07-14)
+
+- **Proved:** a local fixed-norm charge-one complex doublet has
+  `S3/U(1)=CP1`; eliminating its auxiliary connection yields the induced
+  Fubini--Study action.
+- **Refuted:** a merely global common phase cannot be quotiented pointwise.
+  Its fixed-charge reduction is a monopole rotor on `T*CP1`, not automatically
+  the three-dimensional holomorphic space.
+- **New blocker:** the Hopf line has Chern number one, while Route E uses
+  `T_CP1=O(2)`.  The current `Q=10^6` benchmark would imply
+  `dim H0(O(Q))=1,000,001`, so it cannot also be the `k=2` triplet.
+- **Recommended continuation:** separate the macroscopic Q-ball charge from a
+  level-two projective worldline sector, then derive the level rule, verify the
+  LLL gap, construct the chiral operator, and solve the full stability problem.
+- **Evidence:** `route_f/tex/ap_e1_projective_doublet_action.tex` contains the
+  complete derivation; the arithmetic/source regression verifier passes
+  `30/30` while keeping `physics_promotion_allowed=false`.  It now binds the
+  TeX/Bib/script hashes and explicitly checks the Branch-B symplectic sign,
+  the exceptional `k=0` orbit, the `|k|` spectrum, and orientation energy.
+
+Research proceeds in AP-E1--AP-E10 order.  AP-E1 is now complete at the
+non-promoting geometry level; the active sequence is AP-E2 discriminant
+regression, AP-E3 level-two/LLL derivation, AP-E4 chiral zero modes, AP-E5 exact
+Q-ball/Hopf stability, messenger realization, physical-phase quotient, H3+
+origin, integrated phenomenology, and an independent gravity track.
 
 ## Current status
 

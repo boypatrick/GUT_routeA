@@ -19,6 +19,12 @@ that the present model inherits their results.
 | Cafasso et al., [Quantum time and the time-dilation induced interaction transfer mechanism](https://doi.org/10.1103/PhysRevD.110.106014) (2024) | Develops a relational quantum-time mechanism with time-dilation-induced transfer in a finite-dimensional setting. | Keep relational time as a parallel interface; it does not derive Route E or make a local energy density equal to time. |
 | Mistele et al., [Indefinitely Flat Circular Velocities and the Baryonic Tully--Fisher Relation from Weak Lensing](https://doi.org/10.3847/2041-8213/ad54b0) (2024) | Weak-lensing data probe the persistence of flat circular velocities beyond resolved rotation curves. | Any gravity repair must fit rotation and lensing jointly; a pure clock-rescaling ansatz is not sufficient. |
 | Hamada et al., [Q-Balls in the presence of attractive force](https://doi.org/10.1007/JHEP08(2024)242) (2024) | Extends Q-ball stability analysis when an additional attractive force is present. | Use as a modern stability/gravity interface for AP-E5, not as evidence that the present bubble-to-Q-ball identification is already realized. |
+| Bykov and Smilga, [Monopole harmonics on complex projective spaces](https://arxiv.org/abs/2302.11691), SciPost Phys. 15, 195 (2023) | Gives spectra and homogeneous-coordinate eigenfunctions for charged quantum mechanics on projective space; states form `SU(n)` multiplets and connect to twisted Dolbeault/Dirac complexes. | Use to audit the AP-E1 monopole spectrum. Keep all Landau levels unless an LLL/holomorphic projection and its gap are separately derived. |
+| Heeck and Sokhashvili, [Q-balls in polynomial potentials](https://arxiv.org/abs/2211.00021), Phys. Rev. D 107, 016006 (2023) | Studies polynomial Q-balls numerically and analytically and shows how single-field effective potentials can arise from renormalizable multifield models. | Use for AP-E5 radial/profile and scale-separation tests; integrating out heavy fields does not automatically preserve a CP1 orientation sector. |
+| Espinosa, Heeck, Sokhashvili, [The Tunneling Potential Approach to Q-Balls](https://arxiv.org/abs/2307.05667), Phys. Rev. D 108, 056019 (2023) | Recasts the Q-ball radial ODE as a field-space variational problem analogous to a three-dimensional bounce and constructs approximate/exact examples. | Use as a profile-solver cross-check after the action is fixed; it does not derive the potential or projective doublet. |
+| Cuomo et al., [Numerical tests of the large charge expansion](https://arxiv.org/abs/2305.00499), JHEP 05 (2024) 161 | Lattice measurements in the three-dimensional critical `O(2)` model agree with large-charge superfluid EFT predictions over the tested charges. | Treat fixed-charge EFT as a testable expansion, not a universal derivation of AP-E1 coefficients or a justification for identifying macroscopic Q with Chern level two. |
+| Sheu and Shifman, [More on Classical Stability of Hopf-like Solitons of the Toroidal-Twisted type](https://arxiv.org/abs/2605.00757) (2026 preprint) | In two-flavor scalar QED, a low-energy Faddeev--Hopf description and large-size numerical/vorton analysis find locally stable twisted configurations in the studied regime. | This is the closest recent doublet-to-Hopf bridge, but it is a preprint and not a global stability theorem under all perturbations or a derivation of Route-E `O(2)`. |
+| Balakrishnan, Dandoloff, Saxena, [Exact Hopfion Vortices in a 3D Heisenberg Ferromagnet](https://arxiv.org/abs/2202.07195), Phys. Lett. A 480, 128975 (2023) | Exact Hopf-labelled static configurations are stabilized because spatial inhomogeneity supplies a length scale that changes Derrick scaling. | Use as evidence that topology alone is insufficient and a stabilizing scale is essential; do not transfer the condensed-matter Hamiltonian to a Lorentz-invariant UV theory. |
 
 ## Literature-driven design decisions
 
@@ -32,9 +38,23 @@ that the present model inherits their results.
    list of gates but do not construct the missing global geometry.
 5. Refresh experimental likelihoods at execution time.  Numerical limits are
    versioned inputs, not permanent theorem constants.
+6. For AP-E1, keep four claims separate: projective quotient, monopole/line-
+   bundle quantization, fixed-charge Q-ball dynamics, and Hopf stabilization.
+   No recent primary source derives the full chain in one theory.
+7. Do not equate a second-order fixed-charge rotor with
+   `H0(CP1,O(k))`; derive a first-order polarization or show every retained
+   coupling is below the computed LLL gap.
+8. Do not identify the macroscopic Q-ball charge with Route E's level two.
+   Either study the true charge-two sector or introduce an independently
+   quantized level-two internal sector.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,
 massless hypercharge, exotic lifting, and E3/M5 Pfaffian needed here.  Route F
 should therefore retain the relevant foundational literature rather than use a
 recent but only adjacent zero-mode paper as a substitute.
+
+Likewise, no 2023--2026 primary paper found in the AP-E1 search derives in one
+model the chain `4D doublet -> CP1 -> O(2) -> Q-ball -> stable Hopf soliton ->
+three chiral families`.  Each arrow remains an independent theorem or gate in
+the roadmap.

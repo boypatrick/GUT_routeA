@@ -1,0 +1,1022 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm}
+\usepackage{bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\numberwithin{equation}{section}
+\setlist{nosep,leftmargin=*}
+\setlength{\emergencystretch}{3em}
+
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\status}[1]{\textsf{#1}}
+
+\definecolor{darkgreen}{RGB}{0,105,55}
+\definecolor{darkred}{RGB}{150,25,25}
+\definecolor{darkblue}{RGB}{20,65,140}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{gate}[theorem]{Promotion gate}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{AP-E1: The Projective-Doublet Action\\
+Exact Quotient Theorems, Fixed-Charge Quantization,\\
+and the First-Principles Boundary of the Route-E Bridge}
+\author{Route F research note}
+\date{14 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note performs AP-E1 of the Another-Physics/Route-E program.  The central
+result is a separation theorem.  One nonzero charge-one complex doublet with a
+\emph{local} common-phase redundancy and fixed norm has the exact quotient
+\(S^3/U(1)=\CP^1\); eliminating the auxiliary connection gives the
+Fubini--Study sigma model.  By contrast, a physical \emph{global} common phase
+cannot be removed pointwise.  At fixed global charge, a collective doublet
+reduces instead to a charged rotor on \(T^*\CP^1\) in a unit Dirac-monopole
+background.  Holomorphic sections \(H^0(\CP^1,\cO(k))\) arise only after a
+separate first-order symplectic reduction or a controlled lowest-Landau-level
+projection.
+
+This distinction exposes a decisive Route-E blocker.  The Hopf line has Chern
+number one, whereas \(T_{\CP^1}\simeq\cO(2)\).  Neither \(k=2\), the
+holomorphic projection, nor the identification of its three states with three
+chiral families follows from the doublet quotient.  Moreover, identifying the
+prequantum level with the existing macroscopic Q-ball benchmark gives
+\(k=Q/\hbar=10^6\) and \(\dim H^0(\cO(k))=1{,}000{,}001\), not three.  A
+new separated-level construction is proposed: retain the macroscopic conserved
+charge and attach an independent level-two projective worldline sector.  This
+is mathematically consistent and falsifiable, but its level-selection and UV
+origin remain explicit bridge axioms.  A 30-check arithmetic and source
+regression audit verifies the quotient geometry, Chern number, Routh transform,
+spin-one algebra, signed rotor spectrum, Branch-B symplectic sign, Q-ball
+mismatch, and Derrick scaling without authorizing physics promotion.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, conventions, and final logical status}
+
+We use spacetime signature \((-+++ )\), \(\hbar\) explicitly in the quantum
+mechanics, and a single complex doublet
+\begin{equation}
+ Z(x)=\begin{pmatrix}z_0(x)\\z_1(x)\end{pmatrix}\in\CC^2.
+ \label{eq:doublet}
+\end{equation}
+``One doublet'' means two complex components.  Two independent doublets form
+four complex components and, under one fixed-total-norm constraint and one
+common \(U(1)\) quotient, generically give \(\CP^3\), not \(\CP^1\).
+
+Four labels are used throughout.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                  >{\raggedright\arraybackslash}p{0.72\textwidth}}
+\toprule
+Label & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Label & Meaning \\
+\midrule
+\endhead
+\status{proved} & A consequence of the displayed action and hypotheses.\\
+\status{no-go} & A stated set of hypotheses is incompatible with the claimed
+conclusion.\\
+\status{conditional} & A consistent construction after an additional
+low-energy limit, projection, or sector choice.\\
+\status{bridge axiom} & An identification or level-selection rule not implied
+by either the projective-doublet action or Route E.\\
+\bottomrule
+\end{longtable}
+
+\begin{theorem}[AP-E1 separation theorem]
+The following statements hold.
+\begin{enumerate}
+\item A fixed-norm complex doublet with a free local common-phase action has
+\(
+ \{Z:Z^\dagger Z=v^2\}/U(1)\simeq\CP^1
+\), and the canonical flat kinetic term induces the Fubini--Study metric.
+\item If the common phase is only global and the kinetic metric is
+nondegenerate, the phase is a local physical field.  Quotienting one constant
+phase does not produce a pointwise \(\CP^1\) field theory.
+\item Fixing a global Noether charge and reducing a collective doublet gives a
+monopole-coupled \(T^*\CP^1\) rotor.  Its full Hilbert space contains infinitely
+many Landau levels.
+\item \(H^0(\CP^1,\cO(k))\) is obtained from first-order K\"ahler reduction or
+from the lowest Landau level of that rotor.  For \(k=2\) it is the spin-one
+triplet, but \(k=2\) and the projection are additional inputs.
+\item The pure two-derivative \(3+1\)-dimensional \(\CP^1\) model has no
+finite-size static soliton.  A four-derivative, flux, charge, wall, or gravity
+mechanism is required, and the full radial/gauge theory must still pass a
+stability test.
+\end{enumerate}
+\end{theorem}
+
+\begin{gate}[AP-E1 non-promotion]
+AP-E1 may establish the projective geometry but may not promote the Route-E
+\(\cO(2)\)/three-family mechanism until a physical level-two source, a
+controlled holomorphic/LLL gap, a stable background, and a chiral fluctuation
+operator are all supplied.  The numerical audit therefore keeps
+\path{physics_promotion_allowed=false}.
+\end{gate}
+
+\section{Minimal actions and the exact quotient}
+
+\subsection{Auxiliary local action}
+
+Assume a global \(SU(2)\) action on \(Z\) and a local common phase
+\begin{equation}
+ Z\longmapsto e^{\ii\alpha(x)}Z,
+ \qquad
+ a_\mu\longmapsto a_\mu+\partial_\mu\alpha,
+ \qquad
+ D_\mu Z=(\nabla_\mu-\ii a_\mu)Z.
+ \label{eq:localgauge}
+\end{equation}
+The exact fixed-norm auxiliary action is
+\begin{equation}
+ S_{\rm aux}=-\int\dd^4x\sqrt{-g}\left[
+ (D_\mu Z)^\dagger D^\mu Z+\Lambda(x)(Z^\dagger Z-v^2)\right],
+ \qquad v>0.
+ \label{eq:auxaction}
+\end{equation}
+The multiplier equation fixes \(Z^\dagger Z=v^2\), while the absence of a
+Maxwell term makes \(a_\mu\) algebraic.
+
+A renormalizable linear completion is
+\begin{equation}
+ S_{\rm lin}=\int\dd^4x\sqrt{-g}\left[-(D_\mu Z)^\dagger D^\mu Z
+ -m^2X-\frac{\lambda}{2}X^2
+ -\frac{1}{4e^2}f_{\mu\nu}f^{\mu\nu}\right],
+ \quad X=Z^\dagger Z,
+ \label{eq:linearaction}
+\end{equation}
+where \(m^2<0\), \(\lambda>0\), and
+\begin{equation}
+ v^2=-\frac{m^2}{\lambda}.
+ \label{eq:vev}
+\end{equation}
+Taking the radial stiffness large freezes \(X\), while taking the vector
+kinetic scale heavy makes \(a_\mu\) auxiliary at leading derivative order.
+For finite \(\lambda,e\), the \(\CP^1\) theory is an effective derivative
+expansion, not an exact equality of full theories.  Gauged linear models give
+the standard action-level context for projective phases
+\cite{Witten1993}; recent linear formulations of related Grassmannian models
+illustrate, but do not prove, a four-dimensional UV completion of the present
+model \cite{BykovKrivorol2024}.
+
+\begin{remark}[What symmetry does and does not fix]
+In a four-dimensional renormalizable scalar theory the canonical two-derivative
+term is fixed up to normalization after the field coordinates are chosen.
+Higher-dimensional EFT operators can deform the radial metric.  After the
+quotient, however, every \(SU(2)\)-invariant positive metric on
+\(SU(2)/U(1)\simeq\CP^1\) is proportional to the round/Fubini--Study metric:
+the real two-dimensional tangent representation of the isotropy \(U(1)\) is
+irreducible, so an invariant positive bilinear form is unique up to scale.
+\end{remark}
+
+\subsection{Quotient theorem}
+
+\begin{theorem}[Hopf quotient]
+\label{thm:hopfquotient}
+For \(v>0\), the vacuum manifold of \eqref{eq:auxaction} modulo the local
+common phase is
+\begin{equation}
+ \mathcal M=\{Z\in\CC^2:Z^\dagger Z=v^2\}/U(1)
+ =S^3_v/U(1)\simeq\CP^1\simeq S^2.
+ \label{eq:hopfquotient}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The constraint surface is \(S^3_v\).  Because \(v\ne0\), the common-phase
+action is free.  Map each orbit to
+\begin{equation}
+ P=\frac{ZZ^\dagger}{v^2},
+ \qquad P^2=P,\quad P^\dagger=P,\quad \Tr P=1.
+ \label{eq:projector}
+\end{equation}
+The projector is phase invariant.  Conversely, a rank-one Hermitian projector
+selects a complex line in \(\CC^2\), and every unit vector spanning that line
+differs only by a phase.  Rank-one complex lines are precisely
+\(\mathbb P(\CC^2)=\CP^1\).  Writing
+\begin{equation}
+ P=\frac12(I+n^a\sigma_a),
+ \qquad n^a=\frac{Z^\dagger\sigma^a Z}{v^2},
+ \label{eq:hopfmap}
+\end{equation}
+the Pauli completeness identity
+\begin{equation}
+ (\sigma^a)_{ij}(\sigma^a)_{k\ell}
+ =2\delta_{i\ell}\delta_{jk}-\delta_{ij}\delta_{k\ell}
+\end{equation}
+gives \(n^an^a=1\), identifying the quotient with \(S^2\).
+\end{proof}
+
+This is also the elementary Marsden--Weinstein quotient
+\(\CC^2//U(1)\) at a nonzero moment-map value
+\cite{MarsdenWeinstein1974}.  It proves the quotient after the field content,
+charge, and nonzero level are stated; it does not derive those inputs.
+
+\section{Flat-doublet polar decomposition and induced geometry}
+
+\subsection{One exact identity}
+
+On the patch \(z_0\ne0\), set
+\begin{equation}
+ N=1+|w|^2,
+ \qquad
+ s_N(w)=\frac{(1,w)^T}{\sqrt N},
+ \qquad
+ Z=\rho e^{\ii\chi}s_N(w).
+ \label{eq:northsection}
+\end{equation}
+Define the real Hopf connection and Fubini--Study quadratic form by
+\begin{align}
+ \mathcal A&=-\ii s_N^\dagger\dd s_N
+ =\frac{\ii(w\dd\bar w-\bar w\dd w)}{2N},
+ \label{eq:hopfconnection}\\
+ \dd\ell_{\rm FS}^2&=
+ \dd s_N^\dagger(I-s_Ns_N^\dagger)\dd s_N
+ =\frac{\dd\bar w\,\dd w}{N^2}.
+ \label{eq:fsmetric}
+\end{align}
+
+\begin{theorem}[Exact polar decomposition]
+The flat Hermitian metric on \(\CC^2\setminus\{0\}\) obeys
+\begin{equation}
+ \dd Z^\dagger\dd Z
+ =(\dd\rho)^2+\rho^2\left[(\dd\chi+\mathcal A)^2
+ +\dd\ell_{\rm FS}^2\right].
+ \label{eq:polaridentity}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Since \(s_N^\dagger s_N=1\), differentiation gives
+\(s_N^\dagger\dd s_N\) purely imaginary and
+\(s_N^\dagger\dd s_N=\ii\mathcal A\).  Decompose
+\begin{equation}
+ \dd s_N=s_N(s_N^\dagger\dd s_N)
+ +(I-s_Ns_N^\dagger)\dd s_N.
+\end{equation}
+The two terms are orthogonal, so
+\begin{equation}
+ \dd s_N^\dagger\dd s_N
+ =\mathcal A^2+\dd\ell_{\rm FS}^2.
+\end{equation}
+Substitution in
+\(
+ \dd Z=e^{\ii\chi}[s_N\dd\rho+\rho(\ii s_N\dd\chi+\dd s_N)]
+\)
+gives \eqref{eq:polaridentity}; all radial cross terms cancel.
+\end{proof}
+
+Thus the connection and the metric are not appended geometric decorations:
+they are respectively the vertical and horizontal parts of the flat doublet
+metric.  In spherical coordinates
+\begin{equation}
+ w=e^{\ii\phi}\tan\frac\theta2,
+\end{equation}
+one obtains the convention-fixed formulas
+\begin{align}
+ \mathcal A_N&=\frac{1-\cos\theta}{2}\dd\phi,
+ \label{eq:AN}\\
+ \mathcal F=\dd\mathcal A_N
+ &=\frac12\sin\theta\,\dd\theta\wedge\dd\phi,
+ \label{eq:curvature}\\
+ \dd\ell_{\rm FS}^2
+ &=\frac14(\dd\theta^2+\sin^2\theta\,\dd\phi^2)
+ =\frac14\dd\bm n\cdot\dd\bm n.
+ \label{eq:fssphere}
+\end{align}
+Our real line element therefore has sphere radius \(1/2\), Gaussian curvature
+four, and scalar curvature eight.  Other common complex-coordinate
+conventions place a factor of two in \(\dd s^2=2g_{w\bar w}\dd w\dd\bar w\);
+all action, flux, and spectrum formulas here use \eqref{eq:fsmetric}.
+
+\subsection{Patch transition and Chern number}
+
+On \(z_1\ne0\), let \(\eta=1/w\) and
+\begin{equation}
+ s_S(\eta)=\frac{(\eta,1)^T}{\sqrt{1+|\eta|^2}}.
+\end{equation}
+On the overlap, with \(w=|w|e^{\ii\phi}\),
+\begin{equation}
+ s_S=e^{-\ii\phi}s_N,
+ \qquad
+ \mathcal A_S=\mathcal A_N-\dd\phi.
+ \label{eq:patchtransition}
+\end{equation}
+There is no global smooth Hopf section, but \(\mathcal F\) is global and
+\begin{equation}
+ \frac{1}{2\pi}\int_{\CP^1}\mathcal F
+ =\frac{1}{2\pi}\int_0^{2\pi}\dd\phi\int_0^\pi
+ \frac12\sin\theta\,\dd\theta=1.
+ \label{eq:chernone}
+\end{equation}
+This is the unit Hopf bundle.  The sign of the line-bundle name depends on
+whether one associates charge \(+1\) or \(-1\) to the principal bundle; we fix
+the convention that the covariant derivative \(D=\dd-\ii k\mathcal A\) has
+\(c_1=k\) and call it \(\cO(k)\).
+
+\subsection{Eliminating the auxiliary field}
+
+Varying \eqref{eq:auxaction} with respect to \(a_\mu\) gives
+\begin{equation}
+ a_\mu^\star=-\frac{\ii}{2Z^\dagger Z}
+ \left[Z^\dagger\partial_\mu Z
+ -(\partial_\mu Z^\dagger)Z\right].
+ \label{eq:astargeneral}
+\end{equation}
+At fixed norm this becomes
+\begin{equation}
+ a_\mu^\star=-\frac{\ii}{v^2}Z^\dagger\partial_\mu Z
+ =\partial_\mu\chi+\mathcal A_\mu.
+ \label{eq:astar}
+\end{equation}
+Substitution projects orthogonally to the gauge orbit:
+\begin{align}
+ (D_\mu Z)^\dagger D^\mu Z\big|_{a^\star}
+ &=\partial_\mu Z^\dagger
+ \left(I-\frac{ZZ^\dagger}{v^2}\right)\partial^\mu Z
+ \notag\\
+ &=v^2\frac{\partial_\mu\bar w\,\partial^\mu w}
+ {(1+|w|^2)^2}
+ =\frac{v^2}{4}\partial_\mu\bm n\cdot\partial^\mu\bm n.
+ \label{eq:horizontalaction}
+\end{align}
+Hence
+\begin{equation}
+ S_{\CP^1}=-v^2\int\dd^4x\sqrt{-g}\,
+ \frac{\partial_\mu\bar w\,\partial^\mu w}{(1+|w|^2)^2}.
+ \label{eq:cp1action}
+\end{equation}
+Its affine equation of motion is
+\begin{equation}
+ \Box w-\frac{2\bar w}{1+|w|^2}
+ (\partial_\mu w)(\partial^\mu w)=0.
+ \label{eq:cpeom}
+\end{equation}
+This classical projective construction is standard in the
+\(\CP^{N-1}\) sigma-model literature \cite{DAdda1978}.
+
+\section{How far the derivation is genuinely first-principles}
+
+There are two independent routes to the same metric, and their common boundary
+should be explicit.
+
+\subsection{Dynamical-field route}
+
+Assume:
+\begin{enumerate}
+\item a local, Lorentz-invariant, positive two-derivative theory;
+\item exactly one complex order-parameter doublet with a global \(SU(2)\)
+basis symmetry;
+\item common phase is a local redundancy;
+\item the radial mode is restricted to a nonzero level.
+\end{enumerate}
+Then Theorem~\ref{thm:hopfquotient} and \eqref{eq:horizontalaction} force
+\(\CP^1\) and the Fubini--Study kinetic term up to the stiffness \(v^2\).
+This is an action-level derivation, but the four assumptions are microscopic
+inputs.
+
+\subsection{Ray/fidelity route}
+
+Alternatively, suppose each point carries a normalized binary pure state
+\(|u\rangle\in\CC^2\), physical probabilities identify
+\(|u\rangle\sim e^{\ii\alpha}|u\rangle\), and nearby states are compared by
+fidelity.  Expanding
+\begin{equation}
+ 1-|\langle u|u+\dd u\rangle|^2
+\end{equation}
+to quadratic order gives
+\begin{equation}
+ \dd s_{\rm fidelity}^2
+ =\langle\dd u|\dd u\rangle
+ -|\langle u|\dd u\rangle|^2,
+ \label{eq:fidelity}
+\end{equation}
+which is exactly \eqref{eq:fsmetric}.  Pulling this information metric back to
+spacetime yields \eqref{eq:cp1action}.  This route explains why phase is a ray
+redundancy, but it still assumes a binary pure state and does not show that the
+ray is a fundamental spacetime field.
+
+\begin{corollary}[First-principles boundary]
+Locality, Lorentz symmetry, positivity, and \(SU(2)\) invariance determine the
+form of the low-energy action only \emph{after} one complex doublet, ray
+equivalence, and a nonzero radial level are selected.  They do not derive the
+number two, the scale \(v\), or the microscopic origin of the order parameter.
+\end{corollary}
+
+\section{Global-only no-go theorem}
+
+Suppose instead that the common phase is a physical global symmetry.  At fixed
+norm, \eqref{eq:polaridentity} gives the exact local kinetic decomposition
+\begin{equation}
+ \partial_\mu Z^\dagger\partial^\mu Z
+ =v^2\left[
+ (\partial_\mu\chi+\mathcal A_\mu)^2
+ +\frac{\partial_\mu\bar w\,\partial^\mu w}{N^2}
+ \right].
+ \label{eq:globalkinetic}
+\end{equation}
+
+\begin{theorem}[Global \(U(1)\) cannot give a pointwise projective target]
+Assume the common phase is global, the kinetic metric is positive and
+nondegenerate, only one constant \(U(1)\) orbit is quotiented, and no further
+constraint or gauge redundancy is introduced.  Then the local target is not
+\(\CP^1\).
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:globalkinetic} contains the independent local field
+\(\chi(x)\).  Quotienting \(\chi\mapsto\chi+\alpha_0\) removes one constant
+zero mode, not arbitrary functions \(\chi(x)\).  Equivalently, the fixed-norm
+global theory has target \(S^3\), hence three local real coordinates, whereas
+\(\CP^1\) has two.  The Euler--Lagrange equation
+\begin{equation}
+ \Box\chi=-\nabla_\mu\mathcal A^\mu
+ \label{eq:chieom}
+\end{equation}
+shows that eliminating \(\chi\) requires an inverse wave operator.  Formally,
+it produces a nonlocal transverse term
+\begin{equation}
+ \mathcal A_\mu\left(g^{\mu\nu}
+ -\frac{\nabla^\mu\nabla^\nu}{\Box}\right)\mathcal A_\nu,
+ \label{eq:nonlocalterm}
+\end{equation}
+not the pure local Fubini--Study action.
+\end{proof}
+
+This is the first no-free-lunch statement: the same common phase cannot be
+simultaneously discarded as a local gauge redundancy and retained as the
+physical global charge that stabilizes an ordinary Q-ball.
+
+\section{Fixed global charge: exact collective Routh reduction}
+
+\subsection{Doublet Q-ball ansatz}
+
+Consider a global \(U(2)\)-invariant scalar theory in flat spacetime,
+\begin{equation}
+ S_{\rm gl}=\int\dd^4x\left[-\partial_\mu\Phi^\dagger\partial^\mu\Phi
+ -U(\Phi^\dagger\Phi)\right].
+ \label{eq:globalaction}
+\end{equation}
+For the spatially coherent orientation ansatz
+\begin{equation}
+ \Phi(\bm x,t)=f(\bm x)e^{\ii\chi(t)}s_N(w(t)),
+ \label{eq:collectiveansatz}
+\end{equation}
+define
+\begin{equation}
+ \cI[f]=2\int\dd^3x\,f^2,
+ \qquad
+ E_0[f]=\int\dd^3x\left[(\bm\nabla f)^2+U(f^2)\right].
+ \label{eq:inertia}
+\end{equation}
+Direct substitution, without using field equations, gives
+\begin{equation}
+ L_{\rm coll}=\frac{\cI}{2}\left[
+ (\dot\chi+\mathcal A_i\dot q^i)^2
+ +g^{\rm FS}_{ij}\dot q^i\dot q^j\right]-E_0,
+ \label{eq:lcoll}
+\end{equation}
+where \(q^i\) are real coordinates on \(\CP^1\).  The global charge is
+\begin{equation}
+ Q=-\ii\int\dd^3x
+ (\Phi^\dagger\dot\Phi-\dot\Phi^\dagger\Phi)
+ =\cI(\dot\chi+\mathcal A_i\dot q^i).
+ \label{eq:Qglobal}
+\end{equation}
+Consequently the fixed-profile energy, before minimizing the orientation
+velocity, is
+\begin{equation}
+ E[f,q,\dot q]=E_0[f]+\frac{Q^2}{2\cI[f]}
+ +\frac{\cI[f]}{2}g^{\rm FS}_{ij}\dot q^i\dot q^j.
+ \label{eq:fixedQenergyfull}
+\end{equation}
+Thus the orientation-ground-state value (equivalently, the minimum over
+\(\dot q\)) is
+\begin{equation}
+ E_Q^{\rm min}[f]=\min_{\dot q}E[f,q,\dot q]
+ =E_0[f]+\frac{Q^2}{2\cI[f]}
+ =E_0[f]+\frac{Q^2}{4\int f^2}.
+ \label{eq:fixedQenergy}
+\end{equation}
+This is compatible with the standard Q-ball variational principle
+\cite{Coleman1985APE1,HeeckSokhashvili2023,EspinosaHeeckSokhashvili2023}.
+It is exact after insertion of \eqref{eq:collectiveansatz}, but the ansatz is
+not yet proved to be a consistent truncation: spatially varying orientation,
+radial radiation, and nonspherical modes have been omitted.  Fixed-charge EFT
+is independently testable in other theories, as recent lattice work confirms
+for the three-dimensional critical \(O(2)\) model \cite{CuomoEtAl2024}; that
+evidence does not determine the coefficients of the present model.
+
+\subsection{Routh theorem}
+
+\begin{theorem}[Fixed-charge projective rotor]
+For
+\begin{equation}
+ L=\frac{\cI}{2}\left[(\dot\chi+\mathcal A_i\dot q^i)^2
+ +g_{ij}\dot q^i\dot q^j\right]-V(q),
+\end{equation}
+the Routhian at fixed \(Q\) and the reduced Hamiltonian are
+\begin{align}
+ R_Q&=L-Q\dot\chi
+ =\frac{\cI}{2}g_{ij}\dot q^i\dot q^j
+ +Q\mathcal A_i\dot q^i-V-\frac{Q^2}{2\cI},
+ \label{eq:routh}\\
+ H_Q&=\frac{1}{2\cI}g^{ij}
+ (p_i-Q\mathcal A_i)(p_j-Q\mathcal A_j)
+ +V+\frac{Q^2}{2\cI}.
+ \label{eq:hamiltonian}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Solve \eqref{eq:Qglobal} for
+\begin{equation}
+ \dot\chi=\frac{Q}{\cI}-\mathcal A_i\dot q^i
+\end{equation}
+and substitute into \(L-Q\dot\chi\), giving \eqref{eq:routh}.
+Then
+\begin{equation}
+ p_i=\frac{\partial R_Q}{\partial\dot q^i}
+ =\cI g_{ij}\dot q^j+Q\mathcal A_i,
+\end{equation}
+and the Legendre transform yields \eqref{eq:hamiltonian}.
+\end{proof}
+
+The reduced classical phase space is the magnetic cotangent bundle
+\(T^*\CP^1\), not merely \(\CP^1\).  For compact \(\chi\sim\chi+2\pi\),
+single-valued wavefunctions give
+\begin{equation}
+ Q=\hbar k,
+ \qquad k\in\ZZ.
+ \label{eq:chargequantization}
+\end{equation}
+Under \(s\mapsto e^{\ii\beta}s\), one has
+\(\mathcal A\mapsto\mathcal A+\dd\beta\) and
+\(\chi\mapsto\chi-\beta\).  The reduced wavefunction is therefore a section
+with covariant derivative
+\begin{equation}
+ D=\dd-\ii k\mathcal A,
+ \qquad D^2=-\ii k\mathcal F,
+ \qquad \frac{\ii}{2\pi}\int D^2=k.
+ \label{eq:lineconnection}
+\end{equation}
+
+\section{Quantization, line bundles, and the Route-E obstruction}
+
+\subsection{First-order symplectic reduction}
+
+Let \(b=(b_0,b_1)^T\in\CC^2\) have symplectic form
+\begin{equation}
+ \Omega=\ii\hbar\sum_{A=0}^1\dd b_A\wedge\dd\bar b_A,
+ \qquad \mu=\hbar b^\dagger b.
+ \label{eq:symplecticC2}
+\end{equation}
+For \(k>0\), at \(\mu=k\hbar\), write
+\begin{equation}
+ b=\sqrt{k}\,e^{\ii\chi}s_N(w).
+\end{equation}
+The canonical one-form restricts, up to an exact term, to
+\(k\hbar(\dd\chi+\mathcal A)\), hence
+\begin{equation}
+ \mu^{-1}(k\hbar)/U(1)=\CP^1\qquad(k>0),
+ \qquad
+ \Omega_{\rm red}=k\hbar\mathcal F.
+ \label{eq:MWreduction}
+\end{equation}
+The zero level is exceptional:
+\begin{equation}
+ \mu^{-1}(0)=\{0\},\qquad \mu^{-1}(0)/U(1)=\{\mathrm{pt}\};
+\end{equation}
+it supplies the one-dimensional trivial representation, not a geometric
+\(\CP^1\) orbit.  Negative charge is obtained from the conjugate doublet (or
+the opposite symplectic orientation), and uses the anti-holomorphic
+polarization.  K\"ahler quantization for \(k>0\), with \(k=0\) treated by the
+preceding trivial orbit, gives
+\begin{equation}
+ \cH_k=H^0(\CP^1,\cO(k))
+ \simeq\Sym^k(\CC^2)^*,
+ \qquad \dim_\CC\cH_k=k+1.
+ \label{eq:borelweil}
+\end{equation}
+This is the clean finite-dimensional route.  In Schwinger-boson language,
+\begin{equation}
+ N=a_A^\dagger a_A=k,
+ \qquad J_i=\frac\hbar2a^\dagger\sigma_i a,
+ \qquad J^2=\frac{\hbar^2}{4}N(N+2).
+ \label{eq:schwinger}
+\end{equation}
+For \(k=2\),
+\begin{equation}
+ \cH_2=\Span\{|2,0\rangle,|1,1\rangle,|0,2\rangle\},
+ \quad j=1,\quad \dim\cH_2=3,\quad J^2=2\hbar^2.
+ \label{eq:k2triplet}
+\end{equation}
+The weights of \(2J_3/\hbar\) are \((+2,0,-2)\), exactly the Route-E
+weight pattern.  This is a representation-theoretic match, not yet a physical
+family derivation.
+
+\subsection{Second-order rotor and the LLL gate}
+
+The second-order Hamiltonian \eqref{eq:hamiltonian} is different: it has all
+monopole harmonics \cite{WuYang1976,BykovSmilga2023}.  Since
+\eqref{eq:fssphere} is a sphere of radius \(R=1/2\), define
+\(\kappa=|k|\).  The magnitude of the monopole strength is
+\(S=\kappa/2\), and
+\begin{equation}
+ j=\frac{\kappa}{2}+n,
+ \qquad n=0,1,2,\ldots.
+ \label{eq:jn}
+\end{equation}
+The degeneracy and kinetic energy are
+\begin{align}
+ d_n&=2j+1=\kappa+2n+1,
+ \label{eq:degeneracy}\\
+ E_n^{\rm kin}
+ &=\frac{\hbar^2}{2\cI R^2}
+ \left[j(j+1)-\frac{\kappa^2}{4}\right]
+ \notag\\
+ &=\frac{2\hbar^2}{\cI}
+ \left[n(n+\kappa+1)+\frac{\kappa}{2}\right].
+ \label{eq:rotorspectrum}
+\end{align}
+Only the \(n=0\) lowest Landau level is isomorphic, for positive flux, to
+\(H^0(\CP^1,\cO(k))\).  Negative flux uses the conjugate anti-holomorphic
+polarization and has the same spectrum with \(\kappa=|k|\).  The gap is
+\begin{equation}
+ \Delta_{\rm LLL}=E_1-E_0
+ =\frac{2\hbar^2(\kappa+2)}{\cI}.
+ \label{eq:LLLgap}
+\end{equation}
+For \(k=2\), \(d_0=3\) and
+\(\Delta_{\rm LLL}=8\hbar^2/\cI\).  A finite-dimensional family carrier is
+therefore justified only when every relevant mixing, temperature, curvature,
+and portal scale is parametrically below this gap.  Otherwise higher
+\(d_n=5,7,\ldots\) multiplets participate.
+
+\subsection{Why the projective line does not imply a level-two bundle}
+
+The Euler sequence on \(\CP^1\) is
+\begin{equation}
+ 0\longrightarrow\cO
+ \longrightarrow\cO(1)^{\oplus2}
+ \longrightarrow T_{\CP^1}\longrightarrow0,
+ \label{eq:eulersequence}
+\end{equation}
+so taking first Chern classes gives
+\begin{equation}
+ T_{\CP^1}\simeq\cO(2),
+ \qquad c_1(T_{\CP^1})=2.
+ \label{eq:tangento2}
+\end{equation}
+But the minimal Hopf construction has \(c_1=1\) by \eqref{eq:chernone}.
+Therefore
+\begin{equation}
+ \boxed{\text{projective doublet}\ \Longrightarrow\ \CP^1
+ \quad\text{but not}\quad
+ \text{physical prequantum bundle}=T_{\CP^1}=\cO(2).}
+ \label{eq:o2obstruction}
+\end{equation}
+One may impose that the physical fluctuation is tangent-valued, select a
+charge-two sector, or introduce an independent level-two Wess--Zumino term.
+Each is a new physical input.  Coherent-state/Borel--Weil constructions explain
+the representation once the level is selected \cite{Perelomov1972}; they do
+not select the level.
+
+\subsection{Macroscopic-charge contradiction}
+
+The existing bridge benchmark uses
+\begin{equation}
+ Q=10^6,\qquad f_0^2=0.5\,\mathrm{GeV}^2,\qquad
+ R=64.9712654357\,\mathrm{GeV}^{-1}.
+\end{equation}
+In the step-profile collective ansatz,
+\begin{equation}
+ \cI=2f_0^2\frac{4\pi R^3}{3}
+ =1.1488215825\times10^6\,\mathrm{GeV}^{-1},
+ \qquad
+ \frac{Q}{\cI}=0.870457184321\,\mathrm{GeV},
+ \label{eq:benchmarkinertia}
+\end{equation}
+reproducing the stored angular frequency.  If this same \(Q\) is used in
+\eqref{eq:chargequantization}, then
+\begin{equation}
+ k=10^6,
+ \qquad
+ \dim H^0(\CP^1,\cO(k))=1{,}000{,}001.
+ \label{eq:macrocontradiction}
+\end{equation}
+It cannot simultaneously be the \(k=2\) triplet.  This is not a small
+correction: it separates two distinct physical sectors.
+
+\section{Static stability and the limits of topology}
+
+For a unit vector \(\bm n:\RR^3\to S^2\), the two-derivative energy is
+\begin{equation}
+ E_2=\frac{v^2}{4}\int\dd^3x\,(\partial_i\bm n)^2.
+ \label{eq:E2}
+\end{equation}
+Use the size dilation \(\bm n_\lambda(\bm x)=\bm n(\bm x/\lambda)\).  In three
+spatial dimensions,
+\begin{equation}
+ E_2(\lambda)=\lambda E_2,
+ \qquad E_0(\lambda)=\lambda^3E_0.
+ \label{eq:derricktwo}
+\end{equation}
+Thus a positive \(E_2+E_0\) has
+\begin{equation}
+ \left.\frac{\dd E}{\dd\lambda}\right|_{\lambda=1}
+ =E_2+3E_0>0,
+ \label{eq:derrickslope}
+\end{equation}
+and shrinks; this is Derrick's obstruction \cite{Derrick1964}.
+
+If finite gauge stiffness generates, at leading order,
+\begin{align}
+ \mathcal F_{\mu\nu}
+ &=\frac12\bm n\cdot
+ (\partial_\mu\bm n\times\partial_\nu\bm n),
+ \label{eq:Fhopf}\\
+ \mathcal L_4
+ &=-\frac{1}{4e^2}\mathcal F_{\mu\nu}\mathcal F^{\mu\nu}
+ =-\frac{1}{16e^2}
+ [\bm n\cdot(\partial_\mu\bm n\times\partial_\nu\bm n)]^2,
+ \label{eq:skyrme}
+\end{align}
+then \(E_4(\lambda)=\lambda^{-1}E_4\), and
+\begin{equation}
+ E_2(\lambda)+E_4(\lambda)
+ =\lambda E_2+\lambda^{-1}E_4
+\end{equation}
+has a stationary minimum at
+\begin{equation}
+ \lambda_\star=\sqrt{E_4/E_2}.
+ \label{eq:balance}
+\end{equation}
+Finite-energy boundary conditions compactify space to \(S^3\), so
+\begin{equation}
+ \pi_3(S^2)=\ZZ,
+ \qquad
+ Q_H=\frac{1}{4\pi^2}\int_{S^3}\mathcal A\wedge\mathcal F.
+ \label{eq:hopfcharge}
+\end{equation}
+The four-derivative model supports the familiar Hopf-energy mechanism and
+bounds \cite{VakulenkoKapitanskii1979,FaddeevNiemi1997}.  Two-component
+charged condensates provide an action-level route to similar low-energy
+structures \cite{BabaevFaddeevNiemi2002}; recent preprint work studies local
+stability of large twisted configurations in two-flavor scalar QED
+\cite{SheuShifman2026}.  These results motivate a numerical AP-E5 gate but do
+not constitute a global existence theorem for the present parameters.
+
+Three caveats remain.
+\begin{enumerate}
+\item \(\pi_0(\CP^1)=0\), so the two poles are not topologically distinct
+vacua.  An anisotropy such as
+\(V_{\rm aniso}=\Lambda_b^4(1-n_3^2)\) creates two minima but explicitly
+breaks \(SU(2)\).
+\item If the radial mode can reach \(Z=0\), the projective coordinate is
+undefined and Hopf charge can unwind through a core.
+\item Portal forces can create an upper stability charge; conserved \(U(1)\)
+alone does not guarantee arbitrarily large stable Q-balls
+\cite{HamadaEtAl2024APE1}.
+\end{enumerate}
+Exact Hopfion solutions in an inhomogeneous magnetic Hamiltonian further show
+that a length-setting deformation can evade scaling, but that condensed-matter
+Hamiltonian is not a Lorentz-invariant completion of AP-E1
+\cite{BalakrishnanEtAl2023}.
+
+\section{Three completion branches}
+
+\subsection{Branch A: physical charge two}
+
+Set the physical compact charge sector to \(k=2\).  Equations
+\eqref{eq:borelweil}--\eqref{eq:k2triplet} then give the triplet with no extra
+level field.  This is the mathematically shortest route, but a two-quantum
+object is not in the macroscopic thin-wall regime of the current
+\(Q=10^6\) benchmark.  It needs a genuine few-body/nonperturbative calculation
+rather than the classical Q-ball approximation.  Non-Abelian Q-ball analyses
+show that internal charge sectors can be nontrivial
+\cite{SafianColemanAxenides1988}, but they do not select this Route-E sector.
+
+\subsection{Branch B: separated macroscopic and projective charges}
+
+Retain a macroscopic Q-ball field \(\Phi_Q\) with global charge \(Q\), but
+introduce an independent worldline doublet \(b(t)\) with local
+\(U(1)_b\).  A minimal first-order action is
+\begin{align}
+ S_{\rm sep}&=S_Q[\Phi_Q]+\int\dd t\,L_b+S_{\rm portal},
+ \label{eq:separatedaction}\\
+ L_b&=-\frac{\ii\hbar}{2}
+ \left[b^\dagger D_tb-(D_tb)^\dagger b\right]+\hbar k c_t,
+ \qquad D_tb=(\partial_t-\ii c_t)b.
+ \label{eq:firstorderb}
+\end{align}
+Under
+\begin{equation}
+ b\mapsto e^{\ii\alpha(t)}b,
+ \qquad c_t\mapsto c_t+\dot\alpha,
+\end{equation}
+the action changes only by the endpoint term
+\(+\hbar k[\alpha(t_f)-\alpha(t_i)]\).  The \(c_t\) equation imposes
+\begin{equation}
+ b^\dagger b=k.
+\end{equation}
+For closed histories, invariance of \(e^{\ii S/\hbar}\) requires
+\(k\in\ZZ\).  Taking \(k=2\) gives \(\cO(2)\) independently of the
+macroscopic \(Q\).  Gauge-invariant portals may depend on
+\begin{equation}
+ n_b^a=\frac{b^\dagger\sigma^a b}{b^\dagger b}
+\end{equation}
+but must preserve the separate physical \(U(1)_Q\) if the Q-ball is to remain
+stable.
+
+This branch resolves the algebraic contradiction \eqref{eq:macrocontradiction}
+and is the recommended AP-E1 continuation.  It does \emph{not} explain why the
+worldline level equals two or why this spin-one space carries chiral families.
+A pair-only microscopic constituent rule could make two the smallest nonzero
+allowed occupation, but that requires an explicit charge-two or discrete
+selection rule; it may not be asserted from \(b\mapsto-b\) alone.
+
+\subsection{Branch C: tangent self-carriage}
+
+Postulate that the physical zero mode is a tangent deformation of the
+projective background.  Then \eqref{eq:tangento2} forces \(\cO(2)\) and its
+three holomorphic sections.  This is geometrically economical but moves the
+missing physics into the assertion ``family mode equals tangent mode.''  AP-E4
+must derive that statement from a Dirac/fluctuation operator and exclude
+additional modes.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.14\textwidth}
+                  >{\raggedright\arraybackslash}p{0.28\textwidth}
+                  >{\raggedright\arraybackslash}p{0.48\textwidth}}
+\toprule
+Branch & Exact gain & Remaining decisive test \\
+\midrule
+\endfirsthead
+\toprule
+Branch & Exact gain & Remaining decisive test \\
+\midrule
+\endhead
+A & One charge sector directly gives \(H^0(\cO(2))\). & Replace the
+macroscopic Q-ball approximation by a controlled two-quantum calculation.\\
+B & Separates Q-ball stability charge from projective Chern level. & Derive
+the level-two worldline sector and show all portals remain below the LLL and
+charge-leakage gaps.\\
+C & Euler sequence forces tangent bundle \(\cO(2)\). & Derive a chiral
+tangent-valued zero mode with no unwanted partners.\\
+\bottomrule
+\end{longtable}
+
+\section{Reproducible numerical and algebraic audit}
+
+The script
+\path{route_f/code/verify_ap_e1_projective_doublet.py} writes
+\path{route_f/output/ap_e1_projective_doublet.json} and
+\path{route_f/output/ap_e1_projective_doublet.md}.  Its current result is
+\begin{equation}
+ \boxed{30/30\ \text{checks pass},\qquad
+ \texttt{physics\_promotion\_allowed=false}.}
+ \label{eq:auditstatus}
+\end{equation}
+The checks include:
+\begin{enumerate}
+\item projector idempotence, Hermiticity, phase invariance, and the Hopf
+\(S^2\) reconstruction;
+\item exact vertical/horizontal metric decomposition, north/south chart
+agreement, and gauge covariance;
+\item midpoint integration
+\begin{equation}
+ \int\mathcal F=6.283185468670607,
+ \qquad \frac{1}{2\pi}\int\mathcal F=1.000000025702;
+\end{equation}
+\item direct versus closed-form Routh and Legendre transforms;
+\item the fixed-charge orientation-energy minimum, positive-level reduction
+domain, and charge-conjugation invariance of the signed spectrum;
+\item \(\dim\Sym^k\CC^2=k+1\) and its weight lists for \(0\le k\le6\);
+\item the \(k=2\) commutators and Casimir \(J^2=2I_3\) to machine precision;
+\item the Branch-B constraint and positive endpoint phase from its corrected
+first-order symplectic sign, plus a critical-source token/hash regression;
+\item the first four monopole-rotor levels and
+\(\Delta_{\rm LLL}\cI/\hbar^2=8\);
+\item reconstruction of the stored Q-ball frequency and the
+\(1{,}000{,}001\)-versus-three contradiction;
+\item the independent \(E_2,E_4,E_0\) Derrick scalings.
+\end{enumerate}
+These are arithmetic and source regressions, not a proof checker for every TeX
+sentence.  They test convention factors and known failure modes; they cannot
+establish a microscopic level-selection rule.
+
+\section{Claim ledger and ordered next steps}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.29\textwidth}
+                  >{\raggedright\arraybackslash}p{0.18\textwidth}
+                  >{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Claim & AP-E1 status & Reason \\
+\midrule
+\endfirsthead
+\toprule
+Claim & AP-E1 status & Reason \\
+\midrule
+\endhead
+One local fixed-norm doublet gives \(\CP^1\) & \status{proved} & Free Hopf
+quotient and explicit projector bijection.\\
+Canonical kinetic term gives FS geometry & \status{proved} & Exact flat-metric
+polar decomposition and auxiliary-field elimination.\\
+Global-only phase gives pointwise \(\CP^1\) & \status{refuted} & Physical
+fiber mode remains; formal elimination is nonlocal.\\
+Fixed \(Q\) gives a monopole rotor & \status{proved conditionally} & Exact in
+the coherent-orientation collective ansatz; full field-space truncation remains
+to be justified.\\
+Rotor Hilbert space equals three states & \status{refuted without LLL gate} &
+Higher Landau levels give infinitely many states.\\
+Doublet quotient forces \(\cO(2)\) & \status{refuted} & Minimal Hopf Chern
+number is one; tangent Chern number is two.\\
+\(k=2\) gives a triplet & \status{proved} & Borel--Weil/Schwinger algebra after
+the level is selected.\\
+Q-ball benchmark supplies \(k=2\) & \status{refuted} & Existing
+\(Q=10^6\) would give dimension \(1{,}000{,}001\).\\
+Triplet equals three chiral families & \status{bridge axiom} & Requires the
+AP-E4 chiral operator, index, and spectral audit.\\
+Pure \(\CP^1\) bubble is stable & \status{refuted} & Derrick scaling; topology
+alone does not fix size.\\
+Separated level-two sector is consistent & \status{conditional} & Action
+\eqref{eq:separatedaction} is gauge-consistent, but its UV origin is open.\\
+\bottomrule
+\end{longtable}
+
+The recommended execution order is:
+\begin{enumerate}
+\item \textbf{AP-E2 regression:} retain the already proved
+discriminant--Killing/contact identity as an exact invariant check.
+\item \textbf{AP-E3 level derivation:} implement Branch B and search for an
+anomaly, pair-selection, or compactification mechanism that fixes \(k=2\).
+Compute the actual \(\Delta_{\rm LLL}\) and reject the reduction if any portal
+or background scale is comparable to it.
+\item \textbf{AP-E4 chirality:} construct the full fluctuation/Dirac operator
+on the candidate background; compute its index, kernel, partner modes, and
+spectral gap.  A three-dimensional bosonic spin multiplet is not yet three
+chiral fermion families.
+\item \textbf{AP-E5 stability:} solve the coupled radial, gauge, and orientation
+boundary-value problem at finite \(e,\lambda\).  Measure the full Hessian,
+charge-emission thresholds, and the path through \(Z=0\).
+\item \textbf{AP-E6 onward:} only after AP-E3--5 pass may the projective sector
+be inserted into the Route-E messenger and phenomenology pipeline.
+\end{enumerate}
+
+\section{Conclusion}
+
+AP-E1 is closed at the geometry level and open at the physical-selection
+level.  The strongest unconditional statement available from the displayed
+assumptions is
+\begin{equation}
+ \boxed{
+ \text{one local fixed-norm complex doublet}
+ \Longrightarrow \CP^1\ \text{with Fubini--Study dynamics}.}
+\end{equation}
+The strongest no-go statement is
+\begin{equation}
+ \boxed{
+ \text{one global Q-ball phase}
+ \not\Longrightarrow
+ \text{pointwise }\CP^1\not\Longrightarrow\cO(2)
+ \not\Longrightarrow\text{three families}.}
+\end{equation}
+The proposed separated-level action is the most coherent next hypothesis:
+it preserves the macroscopic stability charge while making the projective
+Chern level independently quantized.  Its value \(k=2\), LLL isolation,
+chiral interpretation, and soliton stability are now sharply stated
+falsifiable gates rather than hidden assumptions.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e1_projective_doublet_action}
+
+\end{document}

@@ -43,6 +43,25 @@ and deliberately records `physics_promotion_allowed=false`.  The complete
 formula ledger and the ordered AP-E1--AP-E10 program are canonical in
 `tex/another_physics_route_e_derivation_ledger.tex` and `ROADMAP.md`.
 
+## 2026-07-14 AP-E1 projective-doublet result
+
+AP-E1 is closed for the quotient geometry and remains open for physical
+selection.  A local fixed-norm charge-one doublet gives the exact Hopf quotient
+`S3/U(1)=CP1` and the Fubini--Study kinetic term.  A physical global phase does
+not: fixed-charge Routh reduction gives a monopole-coupled `T*CP1` rotor, whose
+full Hilbert space contains higher Landau levels.  The finite-dimensional
+`H0(CP1,O(k))` carrier therefore requires a first-order or controlled LLL gate.
+
+The minimal Hopf bundle has Chern number one, while `T_CP1=O(2)`.  More
+decisively, identifying the projective level with the existing `Q=10^6`
+benchmark would give `dim H0(O(k))=1,000,001`, not three.  The recommended
+continuation keeps the macroscopic Q-ball charge separate from an independent
+level-two projective worldline sector.  Its level rule, LLL gap, chiral-family
+interpretation, and full soliton stability remain fail-closed AP-E3--AP-E5
+gates.  The AP-E1 arithmetic/source regression verifier passes `30/30` checks
+and still records
+`physics_promotion_allowed=false`.
+
 ## 2026-07-14 execution status
 
 - `route_E/code_dyn/run_route_e_dynamics.py` executes the 19 recovered lanes
@@ -87,16 +106,28 @@ Artifacts:
 - `code/verify_another_physics_route_e_bridge.py`: checks the exact
   discriminant/Killing identity, Hopf moment map, zeta covariance, and the
   Q-ball benchmark without promoting the candidate bridge.
+- `code/verify_ap_e1_projective_doublet.py`: checks the Hopf projector and
+  metric, Chern number, Routh/Legendre transforms, Schwinger triplet, monopole
+  spectrum for both flux signs, Branch-B symplectic sign, the exceptional
+  zero-level orbit, fixed-charge orientation energy, Q-ball charge mismatch,
+  Derrick scaling, and critical TeX/source hashes (`30/30`).
 - `tex/another_physics_route_e_derivation_ledger.tex`: complete reversible
   derivation ledger for the Another-Physics / Route-E relationship.
 - `tex/another_physics_route_e_bridge.bib`: local primary-source bibliography
   for the bridge ledger.
+- `tex/ap_e1_projective_doublet_action.tex` and
+  `tex/ap_e1_projective_doublet_action.bib`: complete AP-E1 derivation and
+  primary-source bibliography.
 - `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
   visually checked 17-page rendering of the derivation ledger.
+- `output/ap_e1_projective_doublet_action.pdf`: clean-built, visually checked
+  15-page AP-E1 note.
 - `route_E/code_dyn/dyn_claim_registry.json`: single physics-status registry.
 - `route_E/code_dyn/run_route_e_dynamics.py`: fail-closed isolated DAG runner.
 - `output/another_physics_route_e_bridge.{json,md}`: `22/22` bridge audit
   with explicit non-promotion status.
+- `output/ap_e1_projective_doublet.{json,md}`: `30/30` AP-E1 audit with the
+  same explicit non-promotion status.
 - `output/`: generated JSON, Markdown, and compiled-paper artifacts.
 
 The recommended active physics branch is a non-supersymmetric intermediate-
@@ -108,6 +139,7 @@ UV mechanisms until their selection-rule and global-consistency gates pass.
 
 Workspace provenance note (2026-07-14): the initial Route-E/Route-F evidence
 set was committed and pushed at `6662dd6`; the blocker corrections were
-committed and pushed at `e7ba020`.  The subsequent Another-Physics bridge
-ledger is explicitly non-promoting and must pass AP-E1--AP-E9 before it can
+committed and pushed at `e7ba020`; the reversible Another-Physics bridge ledger
+was committed and pushed at `6c61d56`.  AP-E1 was then executed as a separate
+non-promoting derivation; AP-E3--AP-E9 must still pass before this bridge can
 alter any Route-E physics claim.

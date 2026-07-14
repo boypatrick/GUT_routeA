@@ -1,0 +1,258 @@
+{
+  "all_pass": true,
+  "audit": "verify_ap_e1_projective_doublet",
+  "branch_decision": {
+    "A_charge_two": "set the physical fixed charge to k=2; obtains the triplet but abandons the macroscopic Q=10^6 thin-wall benchmark",
+    "B_separate_level_two_internal_sector": "retain the macroscopic Q-ball charge but introduce an independent quantized level-two Wess--Zumino/Schwinger-boson sector",
+    "forbidden_shortcut": "identify Q=10^6 with k=2 or infer O(2) merely from CP1"
+  },
+  "checks": [
+    {
+      "detail": "max|P^2-P|=5.56e-17, max|P^dag-P|=5.55e-17, TrP=1.0000000000000000, |detP|=5.80e-18",
+      "group": "G1_Hopf_quotient",
+      "name": "normalized doublet defines a rank-one Hermitian projector",
+      "pass": true
+    },
+    {
+      "detail": "max|P(e^(i alpha)z)-P(z)|=5.57e-17",
+      "group": "G1_Hopf_quotient",
+      "name": "projector is invariant under the common U(1) phase",
+      "pass": true
+    },
+    {
+      "detail": "n^2=0.9999999999999996, max|P-(I+n.sigma)/2|=1.11e-16",
+      "group": "G1_Hopf_quotient",
+      "name": "Pauli Hopf vector lies on S2 and reconstructs the projector",
+      "pass": true
+    },
+    {
+      "detail": "|ds|^2=0.0183320320132069, A^2=0.0000379346403124, g_FS=0.0182940973728944, residual=3.47e-18",
+      "group": "G2_induced_geometry",
+      "name": "flat C2 metric splits into Hopf-fiber plus Fubini--Study metric",
+      "pass": true
+    },
+    {
+      "detail": "north=0.0182940973728944, south=0.0182940973728944",
+      "group": "G2_induced_geometry",
+      "name": "Fubini--Study metric agrees on north and south charts",
+      "pass": true
+    },
+    {
+      "detail": "A'-A-alpha_dot=0.00e+00, horizontal residual=3.47e-18",
+      "group": "G2_induced_geometry",
+      "name": "Hopf connection transforms as A to A+d alpha while horizontal norm is invariant",
+      "pass": true
+    },
+    {
+      "detail": "integral F=6.283185468670607, integral F/(2pi)=1.000000025702",
+      "group": "G2_induced_geometry",
+      "name": "Hopf curvature has first Chern number one",
+      "pass": true
+    },
+    {
+      "detail": "direct=1.1595327812435738, polar=1.1595327812435741",
+      "group": "G3_local_global_split",
+      "name": "polar decomposition of the canonical doublet kinetic term is exact",
+      "pass": true
+    },
+    {
+      "detail": "global kinetic minus fiber=0.1057699414076649, local quotient=0.1057699414076649",
+      "group": "G3_local_global_split",
+      "name": "auxiliary local gauge field removes only the Hopf-fiber square",
+      "pass": true
+    },
+    {
+      "detail": "direct=-0.2210913783783783, closed=-0.2210913783783784, residual=1.11e-16",
+      "group": "G4_fixed_charge",
+      "name": "direct Routh transform equals the monopole-coupled CP1 expression",
+      "pass": true
+    },
+    {
+      "detail": "direct=1.5639753783783781, closed=1.5639753783783783",
+      "group": "G4_fixed_charge",
+      "name": "Legendre transform gives the minimally coupled monopole Hamiltonian",
+      "pass": true
+    },
+    {
+      "detail": "E-E_min=0.7355969999999999, (I/2)g*qdot^2=0.7355969999999999",
+      "group": "G4_fixed_charge",
+      "name": "fixed-Q profile energy retains nonnegative orientation kinetic energy",
+      "pass": true
+    },
+    {
+      "detail": "k>0 regular-level gradient norm=2.828427; mu^-1(0) radius=0.0",
+      "group": "G5_holomorphic_quantization",
+      "name": "C2 moment-map quotient is CP1 only at positive level; k=0 is a point",
+      "pass": true
+    },
+    {
+      "detail": "dL/d(hbar*c)=k-N=0.300000; delta L/(hbar*alpha_dot)=2.000000; reduced flux level=+2",
+      "group": "G5_holomorphic_quantization",
+      "name": "corrected Branch-B symplectic sign imposes N=k and a positive level-k endpoint phase",
+      "pass": true
+    },
+    {
+      "detail": "k=0, dimension=1, weights=[0]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^0(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=1, dimension=2, weights=[1, -1]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^1(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=2, dimension=3, weights=[2, 0, -2]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^2(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=3, dimension=4, weights=[3, 1, -1, -3]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^3(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=4, dimension=5, weights=[4, 2, 0, -2, -4]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^4(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=5, dimension=6, weights=[5, 3, 1, -1, -3, -5]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^5(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "k=6, dimension=7, weights=[6, 4, 2, 0, -2, -4, -6]",
+      "group": "G5_holomorphic_quantization",
+      "name": "Sym^6(C2) has k+1 states and the correct Cartan weights",
+      "pass": true
+    },
+    {
+      "detail": "max commutator error=2.22e-16, max|J^2-2I|=4.44e-16",
+      "group": "G5_holomorphic_quantization",
+      "name": "k=2 Schwinger sector is the spin-one triplet",
+      "pass": true
+    },
+    {
+      "detail": "first four levels=[{\"degeneracy\": 3, \"energy_times_I_over_hbar2\": 2.0, \"j\": 1.0, \"n\": 0}, {\"degeneracy\": 5, \"energy_times_I_over_hbar2\": 10.0, \"j\": 2.0, \"n\": 1}, {\"degeneracy\": 7, \"energy_times_I_over_hbar2\": 22.0, \"j\": 3.0, \"n\": 2}, {\"degeneracy\": 9, \"energy_times_I_over_hbar2\": 38.0, \"j\": 4.0, \"n\": 3}], gap*I/hbar^2=8.0",
+      "group": "G5_holomorphic_quantization",
+      "name": "second-order k=2 rotor has a three-state LLL but infinitely many higher levels",
+      "pass": true
+    },
+    {
+      "detail": "k=+2 levels=[(1.0, 3, 2.0), (2.0, 5, 10.0), (3.0, 7, 22.0), (4.0, 9, 38.0)]; k=-2 levels=[(1.0, 3, 2.0), (2.0, 5, 10.0), (3.0, 7, 22.0), (4.0, 9, 38.0)]",
+      "group": "G5_holomorphic_quantization",
+      "name": "monopole-rotor spectrum depends on |k| and is invariant under flux reversal",
+      "pass": true
+    },
+    {
+      "detail": "I=1148821.582511051325, Q/I=0.870457184321, stored omega=0.870457184321",
+      "group": "G6_route_e_gate",
+      "name": "prior Q-ball angular frequency is Q divided by collective inertia",
+      "pass": true
+    },
+    {
+      "detail": "if k=Q/hbar=1000000, dim H0(O(k))=1000001, not 3",
+      "group": "G6_route_e_gate",
+      "name": "macroscopic Q=10^6 sector is not the k=2 triplet",
+      "pass": true
+    },
+    {
+      "detail": "lambda=1.73, numerical ratios={\"E0\": 5.177716999999997, \"E2\": 1.729999999999994, \"E4\": 0.578034682080926}, expected={\"E0\": 5.1777169999999995, \"E2\": 1.73, \"E4\": 0.5780346820809249}, max relative error=3.44e-15",
+      "group": "G7_Derrick",
+      "name": "three-dimensional size dilation has E2~lambda, E4~lambda^-1, E0~lambda^3",
+      "pass": true
+    },
+    {
+      "detail": "dE/dlambda at lambda=1 is E2+3E0=5.400000",
+      "group": "G7_Derrick",
+      "name": "positive E2 plus E0 cannot have a finite-size Derrick stationary point",
+      "pass": true
+    },
+    {
+      "detail": "lambda_star=sqrt(E4/E2)=2.000000000000, E''=3.000000000000",
+      "group": "G7_Derrick",
+      "name": "an E4 stabilizer can balance E2 at finite size",
+      "pass": true
+    },
+    {
+      "detail": "missing critical fragments=[] ; carriage_return_present=False",
+      "group": "G8_source_regression",
+      "name": "TeX contains the corrected action signs, charge domain, and signed-spectrum formulas",
+      "pass": true
+    }
+  ],
+  "checks_passed": 30,
+  "checks_total": 30,
+  "first_principles_chain": [
+    "flat positive Hermitian metric on one complex doublet",
+    "normalization or a dynamically frozen radial mode",
+    "ray/local-phase equivalence",
+    "Hopf quotient and induced Fubini--Study metric"
+  ],
+  "logical_result": {
+    "fixed_global_charge": "proved for the collective ansatz: Routh reduction gives a monopole-coupled T*CP1 rotor, not by itself H0(CP1,O(k))",
+    "global_U1": "refuted as a pointwise CP1 quotient: the local Hopf-fiber phase remains physical",
+    "holomorphic_sector": "conditional on first-order reduction or a controlled LLL/Kahler polarization: for k>=0, H_k=H0(CP1,O(k)), dim=k+1; for k<0 the conjugate anti-holomorphic sector has dim=|k|+1",
+    "local_U1": "proved under one nonzero charge-one complex doublet, fixed norm, and an auxiliary local U(1): S3/U(1)=CP1 with the induced FS action",
+    "route_E_O2": "not derived: k=2, the LLL gate, and the identification with T_CP1 and three chiral families remain separate assumptions"
+  },
+  "nonderived_inputs": [
+    "why the microscopic order parameter is exactly one complex doublet",
+    "why the radial mode is frozen and what fixes its scale",
+    "why the relevant prequantum level is k=2",
+    "why the second-order rotor may be projected to its LLL",
+    "why the resulting spin-one triplet is a family carrier",
+    "how a stable four-dimensional bubble survives radial, gauge, and portal fluctuations"
+  ],
+  "numerical_summary": {
+    "hopf_chern_number": 1.0000000257020942,
+    "hopf_flux": 6.283185468670607,
+    "k2_LLL_gap_times_I_over_hbar2": 8.0,
+    "k2_rotor_first_levels": [
+      {
+        "degeneracy": 3,
+        "energy_times_I_over_hbar2": 2.0,
+        "j": 1.0,
+        "n": 0
+      },
+      {
+        "degeneracy": 5,
+        "energy_times_I_over_hbar2": 10.0,
+        "j": 2.0,
+        "n": 1
+      },
+      {
+        "degeneracy": 7,
+        "energy_times_I_over_hbar2": 22.0,
+        "j": 3.0,
+        "n": 2
+      },
+      {
+        "degeneracy": 9,
+        "energy_times_I_over_hbar2": 38.0,
+        "j": 4.0,
+        "n": 3
+      }
+    ],
+    "prior_qball_charge": 1000000,
+    "prior_qball_collective_inertia": 1148821.5825110513,
+    "prior_qball_implied_holomorphic_dimension": 1000001,
+    "prior_qball_omega_reconstructed": 0.8704571843212044,
+    "prior_qball_omega_stored": 0.8704571843212044
+  },
+  "physics_promotion_allowed": false,
+  "source_manifest": {
+    "route_f/code/verify_ap_e1_projective_doublet.py": "1e0f866aade57f72474e37a5c6d195e90103733c37f46473d2cf791406a0505c",
+    "route_f/output/another_physics_route_e_bridge.json": "f0bd179ebcaeca073edc2bf454a62fa5dc759f6c267633abcdd123a8faebf144",
+    "route_f/tex/ap_e1_projective_doublet_action.bib": "e96ea9eb6b6e5a1dbc9cc6b82bd9016608727052d0814f9dae697eff8c140b79",
+    "route_f/tex/ap_e1_projective_doublet_action.tex": "cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0"
+  },
+  "status": "ap_e1_conditionally_proved_with_explicit_o2_and_stability_blockers"
+}

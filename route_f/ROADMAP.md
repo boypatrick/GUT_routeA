@@ -89,6 +89,40 @@ Current exact results (2026-07-14):
   propagator, loop matching, Q-ball decay, and time-dependent flavor fits all
   remain mandatory.
 
+### AP-E1 projective-doublet checkpoint (2026-07-14)
+
+Status: **geometry closed; physical level selection and stability open.**
+
+- **Local theorem:** one nonzero charge-one complex doublet with fixed norm
+  and an auxiliary local common-phase redundancy has
+  `S^3/U(1)=CP1`.  Eliminating the auxiliary connection gives the
+  Fubini--Study action exactly.  The connection and metric follow directly
+  from the vertical/horizontal decomposition of the flat `C^2`
+  kinetic term.
+- **Global-only no-go:** if the common phase is a physical global symmetry,
+  it remains a local field.  Quotienting a constant phase does not give a
+  pointwise `CP1`; formally integrating it out gives an additional
+  nonlocal transverse term.
+- **Fixed-charge theorem:** in the coherent-orientation Q-ball ansatz, Routh
+  reduction at `Q=hbar*k` gives a Dirac-monopole rotor on `T*CP1`.  Its
+  complete Hilbert space contains all Landau levels.  `H^0(CP1,O(k))`
+  requires a separate
+  first-order Kähler reduction or a controlled LLL projection with
+  `Delta_LLL=2*hbar^2*(k+2)/I`.
+- **Route-E obstruction:** the minimal Hopf bundle has Chern number one,
+  whereas `T_CP1=O(2)`.  Thus CP1 alone does not derive the Route-E level two.
+  If the existing `Q=10^6` Q-ball charge is identified with `k`, the
+  holomorphic space has dimension `1,000,001`,
+  not three.
+- **Recommended branch:** keep macroscopic `U(1)_Q` charge separate from an
+  independent level-two projective worldline sector.  This removes the charge
+  contradiction, but why `k=2`, why the LLL is isolated, why the triplet is
+  chiral-family space, and why the bubble is stable are still explicit gates.
+- **Stability boundary:** the pure `3+1`-dimensional two-derivative CP1 model
+  fails Derrick scaling.  A finite-`e` Skyrme/Faddeev term can balance the
+  scale, but radial unwinding through `Z=0`, portal-induced charge loss, and
+  the full fluctuation Hessian must be tested in AP-E5.
+
 Reproducible artifacts:
 
 - `tex/another_physics_route_e_derivation_ledger.tex` and its local BibTeX
@@ -100,11 +134,25 @@ Reproducible artifacts:
   `output/another_physics_route_e_bridge.{json,md}` and currently passes
   `22/22` algebraic/numerical checks while setting
   `physics_promotion_allowed=false`.
+- `tex/ap_e1_projective_doublet_action.tex` and its local bibliography contain
+  the complete local/global/fixed-charge derivations, the first-principles
+  boundary, the `O(2)` obstruction, and three completion branches;
+- `output/ap_e1_projective_doublet_action.pdf` is the clean-built, visually
+  checked AP-E1 paper;
+- `code/verify_ap_e1_projective_doublet.py` writes
+  `output/ap_e1_projective_doublet.{json,md}` and passes `30/30`
+  arithmetic/source regression checks while deliberately setting
+  `physics_promotion_allowed=false`.  The audit now covers the corrected
+  Branch-B symplectic sign, the `k=0` domain exception, flux reversal through
+  `|k|`, fixed-charge orientation energy, and critical-source hashes/tokens.
 
 Ordered follow-up (fail closed):
 
-1. **AP-E1:** derive the projective-doublet action and prove/refute the CP1
-   reduced moduli space.
+1. **AP-E1: done at geometry level, non-promoting.**  The local quotient is
+   proved, the global-only shortcut is refuted, and the fixed-charge/LLL/O(2)
+   distinction is explicit.  The selected continuation is the separated
+   macroscopic-charge/level-two branch; its microscopic level rule remains
+   open under AP-E3.
 2. **AP-E2:** retain the discriminant/contact theorem as an exact regression
    test.
 3. **AP-E3:** derive, rather than impose, the Berry curvature, Chern number,

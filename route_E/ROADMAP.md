@@ -55,6 +55,19 @@ dynamics lanes.  The authority is `code_dyn/dyn_claim_registry.json`.
   existence of that sector or its conversion into a Majorana contact; H3+
   therefore remains open.  Full derivation and rollback trail:
   `../route_f/tex/another_physics_route_e_derivation_ledger.tex`.
+- AP-E1 now proves the local fixed-norm doublet quotient
+  `S3/U(1)=CP1` and the induced Fubini--Study action, but also proves that a
+  physical global Q-ball phase cannot be removed pointwise.  Fixed-charge
+  reduction gives a monopole rotor with all Landau levels; the Hopf line has
+  Chern number one, not Route E's tangent-bundle value two.  Identifying its
+  level with the existing `Q=10^6` benchmark would give `1,000,001` states,
+  not three.  Consequently Route E may import the CP1 geometry but may not
+  import `O(2)` or a family count until AP-E3/4 derive the independent level-two
+  sector, LLL isolation, and chiral operator.  The canonical proof is
+  `route_f/tex/ap_e1_projective_doublet_action.tex` (`30/30`
+  arithmetic/source regressions, non-promoting).  The corrected Branch-B
+  first-order sign gives `+k F`; `k=0` is a point rather than `CP1`, and the
+  signed rotor spectrum depends on `|k|`.
 
 Reproducible promotion diagnostics are recorded in
 `../route_f/output/blocker_promotion_gate.{json,md}` (`18/18`, deliberately
