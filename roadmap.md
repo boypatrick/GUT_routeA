@@ -1,6 +1,6 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 ## Route-E relationship checkpoint (2026-07-14)
 
@@ -20,7 +20,7 @@ research order and promotion gates are in `route_f/ROADMAP.md` F0-D.
   can yield `zeta_eff = g^2 Phi^2/Lambda^2`, but this is not yet a completed
   theory.  Stability, charge leakage, operator selection, canonical/full-6x6
   matching, H3+ origin, and integrated Route-E fits remain open.
-- **Numerical status:** the bridge verifier passes `22/22` checks and
+- **Numerical status:** the bridge verifier passes `24/24` checks and
   deliberately sets `physics_promotion_allowed=false`.
 
 ### AP-E1 execution result (2026-07-14)
@@ -43,11 +43,113 @@ research order and promotion gates are in `route_f/ROADMAP.md` F0-D.
   TeX/Bib/script hashes and explicitly checks the Branch-B symplectic sign,
   the exceptional `k=0` orbit, the `|k|` spectrum, and orientation energy.
 
-Research proceeds in AP-E1--AP-E10 order.  AP-E1 is now complete at the
-non-promoting geometry level; the active sequence is AP-E2 discriminant
-regression, AP-E3 level-two/LLL derivation, AP-E4 chiral zero modes, AP-E5 exact
-Q-ball/Hopf stability, messenger realization, physical-phase quotient, H3+
-origin, integrated phenomenology, and an independent gravity track.
+### AP-E2/AP-E3 execution result (2026-07-14)
+
+- **AP-E2 exact regression: done, non-promoting.**  The dedicated verifier
+  passes `30/30` deterministic checks and freezes
+  `B_Kill(A_q,A_q)=2 Delta(p)=2 sqrt(3) x^T K_tr x`,
+  `A_q^2=Delta I/4`, and `(p,p)_2=-2 Delta`.  It covers exact rational and
+  100-decimal complex samples, `SL(2)` covariance, finite/infinite roots,
+  finite/infinite double roots, the zero-section exclusion, the spherical to
+  normalized-polynomial factor of two, and four deliberately wrong negative
+  controls.  This preserves an exact conditional invariant theorem; it does
+  not derive H3+, a carrier, dynamics, or a Berry level, so
+  `physics_promotion_allowed=false`.
+- **AP-E3 candidate-level result: conditionally proved, UV selection open.**
+  For two *declared* orbitals with
+  `H_Mott=sum_r[U N_r(N_r-1)/2-mu N_r]`, `0<mu<U` locks one doublet per
+  orbital only for the bare onsite Hamiltonian.  For the full declared
+  `H_portal=0` Mott--Hund--orientation model, define
+  `C=mu+h/2+J_H/4`; the concise sufficient plateau condition is
+  `C<U-J_H/8`, equivalently `mu<U-h/2-3J_H/8`.  A ferromagnetic
+  `-J_H S_1.S_2`, `J_H>0`, then selects the symmetric spin-one pair.  Its
+  coherent state obeys `|s;2>=|s> tensor |s>`, `A_2=2 A_1`, and
+  `g_2=2 g_1`.  With the fixed convention `A=-i<s|ds>` and microscopic
+  kinetic term `+i hbar a^dagger dot(a)`, the aligned `-h n.S` model has
+  signed action `k=-2`: the ket eigenline is `O(-2)`.  Its dual prequantum
+  line is `O(2)`, with `c1=+2` and `dim H0(CP1,O(2))=3`; reversing the
+  orientation/coupling gives `k=+2`.  Thus the convention-independent result
+  is `|k|=2`, while signed chirality remains open.  The `27/27` audit gives the
+  Hund spectrum
+  `(-1/4,-1/4,-1/4,3/4) J_H`, singlet gap `J_H`, Berry-additivity residual
+  `2.24e-16`, and a convergent curvature-magnitude estimate ending at
+  `2.000000501994128`.  For `U=4`, `mu=1.5`, `J_H=1`, `h=0.2`, the sufficient
+  plateau-condition margin is `2.025`; the full spinful occupancy scan retains
+  `(1,1)` as the unique ground sector with interacting charge gap `1.85`, and
+  `4U>J_H` makes the large-occupancy tail coercive.
+- **AP-E3 blocker:** the repository has not derived why the UV theory contains
+  exactly two orbitals, why singleton/odd sectors are absent, or how this dimer
+  embeds anomaly-consistently and couples to Route-E families below the
+  retained interacting charge, singlet, and orientation gaps.  The bare Mott
+  gap is only the starting point; exchange/portal corrections must remain
+  smaller than the retained interacting gap.  The triplet is not yet proved
+  to be chiral-family data, and the orientation/coupling sign that would select
+  `k=+2` rather than the declared aligned action's `k=-2` is still a blocker.
+  Therefore AP-E3 physics closure and promotion both remain false.
+- **Alternatives retained:** a filled-fermion determinant may add Berry Chern
+  numbers but must fix filling and orientation; a mixed WZW term may yield a
+  quantized coefficient `k=n_c B` but requires a matching `n_c=2` UV coset;
+  the tangent/Dirac route identifies `T_CP1=O(2)` only if AP-E4 derives a
+  tangent-valued chiral zero mode and excludes partners.
+
+### AP-E3 UV/AP-E4 execution result (2026-07-15; supersedes the open items above)
+
+- **Exactly-two rule: proved within a declared constrained unit cell.**
+  Bosonic Schwinger partons obey canonical CCR, and two independent compact
+  Gauss laws `G_r=N_r-1=0`, `r=1,2`, give the exact physical cell
+  `C2 tensor C2`.  They remove odd, singleton, `(2,0)`, and `(0,2)` sectors
+  kinematically; one total-number Gauss law and even parity
+  both fail as negative controls.  Their rank-ten/rank-twenty enumeration is
+  limited to the declared `0<=N_r<=2` audit truncation, whereas the physical
+  rank four is cutoff-independent.  Complete-cell positive-parent boundaries
+  retain a gap at least `h`; arbitrary intercell/Haldane-like boundary phases
+  remain a separate gate.
+- **Physical orientation: signed `k=+2` derived.**  The electron Pauli sign
+  gives `H_Z=+h n.(S_1+S_2)`, so the unique Hund-triplet ground state is
+  anti-aligned.  Its line is the universal quotient square
+  `Q tensor Q=O(2)` and
+  `i hbar <Omega_-|d Omega_->=+2 hbar A_+`.  The dedicated audit passes
+  `26/26`; at `J_H=1,h=0.2` it gives
+  `spec=(-0.45,-0.25,-0.05,0.75)`, Berry-sign residual `1.63e-16`, and a
+  Chern sequence converging to `2.00003212798`.
+- **Mixed-WZW candidate: gauge-anomaly consistent, not all-scale closed.**
+  The explicit `SU(2)_c x U(1)_g` model with two vectorlike Dirac flavours
+  and a charge-one scalar doublet cancels `SU(2)^2 U(1)`, `U(1)^3`,
+  gravitational-`U(1)`, and color Witten anomalies.  Gauged `U(1)_g` removes
+  the off-diagonal Pauli--Guersey symmetry, while generalized-symmetry
+  matching gives `kappa_L=-kappa_R=2` and
+  `S_mix=2 pi hbar 2 integral(omega_3 wedge omega_2)`.  A `B=+1` worldline
+  has `k=nB=+2`.  Nonperturbative mesonic-vacuum selection, diquark gaps,
+  compact-`U(1)`/bordism consistency, soliton stability, a differential-
+  cohomology definition on non-extendible sectors, and an all-scale completion
+  beyond the abelian Landau pole remain open.
+- **AP-E4 canonical Spin-c mathematics: complete, physical origin open.**
+  Horizontal linearization proves `T^(1,0)CP1=O(2)`.  For
+  `D_T^c=sqrt(2)(dbar_T+dbar_T^dagger)` at the AP-E1 radius `R=1/2`, the
+  `22/22` audit proves three positive-chirality zero modes, no negative kernel,
+  and the complete tower
+  `lambda_(n,+/-)=+/-sqrt(n(n+3))/R`, multiplicity `2n+3` per sign.  The first
+  gap is `4`, with five modes per sign.  Every massive level is paired.
+  The audited `n=3` value is `6 sqrt(2)`, and nonzero `+/-` eigenstates are
+  mixtures of the two chiral subspaces rather than chirality eigenstates.
+  Ordinary spin Dirac twisted only by `T=O(2)` is the decisive control: it has
+  two zero modes and gap `2 sqrt(3)`.  Therefore the canonical Spin-c
+  half-canonical shift, a fermionic/moduli-or-compactification origin, anomaly
+  cancellation, and family interpretation remain physical gates.
+- **Promotion status:** AP-E3's exact-cell and sign questions are closed only
+  inside their stated microscopic rule; AP-E4's operator mathematics is
+  closed only for the declared canonical Spin-c choice.  No Route-E family
+  count may be imported until a degree-one portal and the relevant four-/six-
+  dimensional anomaly and stability gates pass.  `physics_promotion_allowed=false`.
+
+Research proceeds in AP-E1--AP-E10 order.  AP-E1 and AP-E2 are complete at
+their non-promoting geometry/algebra levels; AP-E3 now has an exact
+constrained-cell `k=+2` theorem plus an anomaly-consistent intermediate
+mixed-WZW candidate, and AP-E4 has a complete canonical-operator spectrum.
+The active sequence is the charged-two-colour nonperturbative/bordism audit,
+the AP-E4 fermionic Spin-c origin and anomaly completion, AP-E5 exact
+Q-ball/Hopf stability, messenger realization, physical-phase quotient, H3+ origin,
+integrated phenomenology, and an independent gravity track.
 
 ## Current status
 

@@ -10,6 +10,56 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
+## Superseding AP-E3/AP-E4 update (2026-07-15)
+
+This section supersedes the AP-E3/AP-E4 open-status statements in the
+2026-07-14 historical checkpoint below; it does not supersede any Route-E
+dynamics blocker.
+
+- Bosonic Schwinger partons with canonical CCR and two independent compact
+  cell constraints `G_r=N_r-1=0` prove an exact `(N_1,N_2)=(1,1)` physical
+  Hilbert within the declared indivisible unit cell.  Odd, singleton, and
+  `(2,0)/(0,2)` sectors are absent.  Rank-ten/rank-twenty negative controls
+  refer to the declared `0<=N_r<=2` audit truncation; the physical rank four
+  is cutoff-independent.  The proof covers complete-cell positive-parent
+  boundaries, not arbitrary Haldane-like intercell phases.
+- The physical electron Pauli sign selects the anti-aligned Hund-triplet
+  line.  With the fixed AP-E1 connection `A_+`,
+  `i hbar <Omega_-|d Omega_->=+2 hbar A_+`; the line is
+  `Q tensor Q=O(2)` and the signed level is `k=+2`.  This closes the old
+  orientation blocker without manually reversing a Berry term.  The
+  exactly-two/orientation verifier passes `26/26`.
+- An explicit `SU(2)_c x U(1)_g`, `N_f=2` mixed-WZW candidate cancels all
+  dynamical local and Witten gauge anomalies and has
+  `kappa_L=-kappa_R=2`.  Its five-dimensional coefficient is `n=2`, and a
+  positive unit baryon gives `k=nB=+2`.  It is only an anomaly-consistent
+  intermediate UV completion: strong-vacuum selection, Pauli--Guersey/
+  diquark gaps, compact-`U(1)` and bordism effects, soliton stability, and an
+  all-scale completion beyond the abelian Landau pole are open.  In addition,
+  the five-dimensional action is proved extension-independent only on
+  extendible sectors; a differential-cohomology definition for non-extendible
+  sectors remains open.
+- AP-E4 now independently proves `T^(1,0)CP1=O(2)` and solves the declared
+  canonical Spin-c operator.  At `R=1/2`, it has three positive zero modes,
+  no negative kernel, and
+  `lambda_(n,+/-)=+/-sqrt(n(n+3))/R` with multiplicity `2n+3` per sign; the
+  first gap is `4` and every massive level is paired.  The `22/22` audit also
+  checks `lambda_(3)=6 sqrt(2)` and distinguishes eigenvalue pairing from
+  chirality.  It proves the ordinary-spin negative control: twisting only by
+  `T=O(2)` gives
+  two zero modes and gap `2 sqrt(3)`.  The canonical Spin-c half-canonical
+  shift, fermionic origin, higher-dimensional anomaly cancellation, and
+  family interpretation remain underived.
+- Route E still may not import a three-family conclusion.  A degree-one
+  portal, a physical moduli/compactification origin for the AP-E4 operator,
+  complete anomaly cancellation, and stability below all gaps remain
+  mandatory.  `physics_promotion_allowed=false`.
+
+Canonical new evidence:
+`../route_f/tex/ap_e3_exact_two_mixed_wzw_uv.tex`,
+`../route_f/tex/ap_e4_tangent_dirac_spectrum.tex`, and their JSON/Markdown
+verifier outputs in `../route_f/output/`.
+
 ## Superseding blocker execution update (2026-07-14)
 
 This section overrides every later historical `done`/`closed` label for the
@@ -62,12 +112,44 @@ dynamics lanes.  The authority is `code_dyn/dyn_claim_registry.json`.
   Chern number one, not Route E's tangent-bundle value two.  Identifying its
   level with the existing `Q=10^6` benchmark would give `1,000,001` states,
   not three.  Consequently Route E may import the CP1 geometry but may not
-  import `O(2)` or a family count until AP-E3/4 derive the independent level-two
-  sector, LLL isolation, and chiral operator.  The canonical proof is
+  import `O(2)` or a family count unless AP-E3 closes the exactly-two
+  UV/singleton rule and AP-E4 derives the independent chiral operator and gap.
+  The canonical proof is
   `route_f/tex/ap_e1_projective_doublet_action.tex` (`30/30`
   arithmetic/source regressions, non-promoting).  The corrected Branch-B
   first-order sign gives `+k F`; `k=0` is a point rather than `CP1`, and the
   signed rotor spectrum depends on `|k|`.
+- AP-E2 is now an exact mandatory regression: `30/30` deterministic checks
+  preserve `B_Kill=2 Delta=2 sqrt(3) x^T K_tr x`, `A_q^2=Delta I/4`, and the
+  transvectant normalization across `SL(2)` transformations, complex and
+  infinite roots, the nonzero nilpotent boundary, zero-section exclusion, and
+  both basis conventions.  It still derives neither H3+ nor a Berry level and
+  sets `physics_promotion_allowed=false`.
+- AP-E3 supplies a conditional level-magnitude-two *candidate*, not a Route-E
+  dependency closure.  For two declared Bose-Hubbard orbitals, `0<mu<U`
+  selects unit filling only in the bare onsite problem.  In the complete
+  declared `H_portal=0` model, writing `C=mu+h/2+J_H/4`, the sufficient
+  interacting `(1,1)` plateau condition is `C<U-J_H/8`, equivalently
+  `mu<U-h/2-3J_H/8`.  Ferromagnetic `-J_H S_1.S_2` then gives the diagonal
+  symmetric pair `|s;2>=|s> tensor |s>` and doubled Berry curvature/metric.
+  With `A=-i<s|ds>` and `+i hbar a^dagger dot(a)`, the declared aligned
+  `-h n.S` action has `k=-2`: its ket eigenline is `O(-2)`, whereas the dual
+  prequantum line is `O(2)`, has `c1=+2`, and supports the three-state
+  spin-one carrier.  Reversing orientation/coupling gives `k=+2`; AP-E3 has
+  therefore derived `|k|=2`, not the signed chirality.  The `27/27` audit also
+  verifies benchmark plateau-condition margin `2.025`, full spinful ground
+  sector `(1,1)`, interacting charge gap `1.85`, singlet gap `J_H`, and a
+  coercive occupancy tail when `4U>J_H`.  However the theory has not derived
+  exactly two orbitals, excluded the unwanted singleton `|k|=1` sector, built
+  an anomaly-safe four-dimensional portal, selected the `k=+2` orientation,
+  or identified the triplet with chiral families.  Thus
+  `ap_e3_physics_closed=false` and Route E remains barred from importing the
+  family count.
+- The next active bridge gate is AP-E4: construct the actual fluctuation/Dirac
+  operator, prove or refute tangent-valued chiral zero modes, enumerate all
+  partners, and compute the spectral gap.  Filled-fermion, mixed-WZW, and
+  tangent/Dirac level mechanisms remain alternatives until one closes its own
+  UV and anomaly gates.
 
 Reproducible promotion diagnostics are recorded in
 `../route_f/output/blocker_promotion_gate.{json,md}` (`18/18`, deliberately

@@ -1,6 +1,6 @@
 # Another Physics / Route-E Bridge Verification
 
-Status: **mechanical_separation_checks_pass_no_physics_promotion** — `22/22` checks pass.
+Status: **mechanical_separation_checks_pass_no_physics_promotion** — `24/24` checks pass.
 
 This is a fail-closed algebraic/numerical card.  A green result means only
 that the displayed identities are reproducible.  It does **not** identify the
@@ -10,10 +10,12 @@ two theories and `physics_promotion_allowed=false`.
 
 1. On the assumed carrier, `H^0(CP1,O(2))` has basis
    `(X^2,sqrt(2)XY,Y^2)`, dimension `3`, and Cartan weights `(+2,0,-2)`.
-2. A quadratic section `aX^2+bXY+cY^2` has discriminant
+2. A nonzero quadratic section `aX^2+bXY+cY^2` has discriminant
    `Delta=b^2-4ac`: `Delta != 0` gives two distinct projective zeros, while
-   `Delta=0` gives a double zero.  This separates the regular and degenerate
-   cases; it does not make every degree-two pattern the same physical object.
+   `Delta=0` gives a double zero.  The identically zero section is a separate
+   zero orbit and is outside this divisor statement.  This separates the
+   regular-semisimple and nilpotent cases; it does not make every degree-two
+   pattern the same physical object.
 3. The pairing loaded from Route-E obeys
    `rho(A)^T K_tr+K_tr rho(A)=0` for `A=H,E,F` and `K_tr^2=I/3`.
    In Route-E spherical coordinates it also obeys the exact identity
@@ -37,6 +39,11 @@ two theories and `physics_promotion_allowed=false`.
    `x^2-y^2=2 pi n` and `x^2+y^2=pi/2+2 pi n`.  For the circular family,
    `Delta r=2 pi/(r_(n+1)+r_n)~pi/r_n`; this proves a shrinking interference
    pitch, not atomic-orbital quantization.
+7. The AP-E3 successor card proves an exact constrained-cell `k=+2` theorem
+   and an anomaly-consistent mixed-WZW intermediate candidate (`26/26`), while
+   the AP-E4 card solves the declared canonical Spin-c spectrum (`22/22`).
+   Their explicit false flags for all-scale UV closure, physical tangent-
+   fermion origin, and the Route-E portal remain binding.
 
 ## Bridge axioms retained as non-derived
 
@@ -47,10 +54,12 @@ two theories and `physics_promotion_allowed=false`.
 
 ## Mechanical checks
 
+- [PASS] `S0_AP_E3_AP_E4` — AP-E3 exact-cell and intermediate mixed-WZW audit is green but non-promoting: AP-E3 UV=26/26; exactly-two=True; k+2=True; full UV=False; portal=False
+- [PASS] `S0_AP_E3_AP_E4` — AP-E4 canonical Spin-c spectrum is mathematically green but its physical origin is open: AP-E4=22/22; math=True; physical tangent fermion=False; physics closure=False
 - [PASS] `S1_CP1_O2` — H0(CP1,O(2)) has dimension three: h^0(O(d))=d+1 for d>=0; d=2 gives 3
 - [PASS] `S1_CP1_O2` — Cartan weights are (+2,0,-2): weights=[2, 0, -2] in basis ['X^2', 'sqrt(2) X Y', 'Y^2']
-- [PASS] `S2_quadratic_divisor` — nonzero discriminant gives two distinct projective zeros: Delta=4.0, roots=[(1+0j), (-1+0j)], residual=0.00e+00
-- [PASS] `S2_quadratic_divisor` — zero discriminant gives one double zero: Delta=0.0, double root=-0.0
+- [PASS] `S2_quadratic_divisor` — nonzero discriminant gives two distinct projective zeros: Delta=4.0, roots=[(-1-0j), (1-0j)], residual=0.00e+00
+- [PASS] `S2_quadratic_divisor` — a nonzero section with zero discriminant gives one double zero: Delta=0.0, double root=-0.0
 - [PASS] `S3_Ktr` — locally reconstructed pairing matches the Route-E convention card: max matrix difference=0.00e+00
 - [PASS] `S3_Ktr` — K_tr squared equals I/3: max|K_tr^2-I/3|=1.11e-16
 - [PASS] `S3_Ktr` — K_tr is invariant under the full sl2 generator triple: residuals={"E": 0.0, "F": 0.0, "H": 0.0}
@@ -74,5 +83,6 @@ two theories and `physics_promotion_allowed=false`.
 
 - `physics_promotion_allowed=false`.
 - A physical bridge requires an action-level phase map, a gauge/anomaly-safe
-  embedding, an exact soliton/fluctuation analysis, and reruns of Route-E's
-  flavor, threshold, proton, and cosmology gates.
+  embedding, an exact soliton/fluctuation analysis, a physical Spin-c origin,
+  a degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
+  cosmology gates.

@@ -1,7 +1,7 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
@@ -40,6 +40,100 @@ All items start `open` unless marked otherwise.
   inputs, a valid interacting DYN-5 messenger action, recomputed RE-SC4
   pricing, and a threshold/experimental-bound envelope for RE-SC5.
 
+## AP-E3 UV and AP-E4 spectral checkpoint (2026-07-15; current authority)
+
+Status: **exact-cell and canonical-operator mathematics done; mixed-WZW
+intermediate completion anomaly-consistent; Route-E physics non-promoting.**
+
+- **Exactly-two theorem:** use bosonic Schwinger partons with canonical CCR
+  and impose two independent compact constraints `G_r=N_r-1=0`, `r=1,2`,
+  per indivisible unit cell.  The physical Hilbert is exactly
+  `C2 tensor C2`; odd, singleton, `(2,0)`, and `(0,2)` sectors do not exist.
+  The rank-four result is cutoff-independent.  Rank ten for one total-number
+  constraint and rank twenty for parity refer only to the verifier's declared
+  bosonic audit truncation `0<=N_r<=2`; they are negative controls, not an
+  additional continuum theorem.  Complete-cell
+  positive-parent boundaries obey `Delta>=h`; arbitrary intercell topological
+  phases remain an explicit boundary gate.
+- **Physical signed orientation:** Coulomb exchange supplies `J_H>0`, and the
+  negative electron magnetic moment gives
+  `H_Z=+h n.(S_1+S_2)`.  The unique ground state is the anti-aligned triplet,
+  with local gap `h`, quotient line `Q tensor Q=O(2)`, and
+  `i hbar <Omega_-|d Omega_->=+2 hbar A_+`; hence `k=+2` without a manual sign
+  flip.  `verify_ap_e3_exact_two_mixed_wzw.py` passes `26/26`.
+- **Mixed-WZW intermediate UV candidate:**
+  `SU(2)_c x U(1)_g` with `N_f=2` vectorlike charge-one Dirac flavours and a
+  charge-one scalar doublet cancels every dynamical perturbative gauge anomaly
+  and the color Witten anomaly.  Gauged `U(1)_g` removes off-diagonal
+  Pauli--Guersey currents, while
+  `kappa_L=-kappa_R=n_c X_q=2`.  The integral action
+  `2 pi hbar 2 integral(omega_3 wedge omega_2)` reduces on `B=+1` to `k=+2`.
+  The first local color singlet is `qq(phi^dagger)^2`, simultaneously an
+  exactly-two dressing, an `SU(2)_phi` triplet, and `O(2)`.  This construction
+  The anomaly ledger includes `SU(2)_c U(1)_g^2=0` and uses a Bardeen scheme
+  preserving the dynamical gauge symmetries.  The five-dimensional proof is
+  extension-independent on extendible sectors; a differential-character/
+  Cech-bordism definition on non-extendible sectors is still open.  The model
+  also needs a nonperturbative mesonic phase, positive diquark/PG gaps,
+  compact-monopole and bordism audits, a stable unit soliton, and an all-scale
+  completion beyond `b_U(1)=6`.
+- **AP-E4 tangent theorem:** horizontal projective variation
+  `eta=(1-zz^dagger)delta z` is a section of the pullback tangent bundle, and
+  the two-chart Jacobian proves `T^(1,0)CP1=O(2)`.  This is a bosonic
+  tangent-valued fluctuation theorem, not a fermion theorem.
+- **AP-E4 canonical Spin-c spectrum:** for
+  `D_T^c=sqrt(2)(dbar_T+dbar_T^dagger)` and AP-E1 `R=1/2`, Hodge/RR gives
+  `(dim ker+,dim ker-,index)=(3,0,3)`.  The full nonzero tower is
+  `lambda_(n,+/-)=+/-sqrt(n(n+3))/R`, multiplicity `2n+3` for each sign.  The
+  first gap is `4`, with five states per sign; all massive modes are paired.
+  As an explicit audit anchor, `n=3` is `6 sqrt(2)`, not `6`; the `+/-`
+  eigenstates mix `W+` and `W-` and are not themselves chirality eigenstates.
+  `verify_ap_e4_tangent_dirac_spectrum.py` passes `22/22` with an independent
+  finite-`SU(2)` Casimir diagonalization.
+- **Decisive Spin control:** the unique ordinary spin structure has
+  `S^+=O(-1)`.  Ordinary spin Dirac twisted only by `T=O(2)` therefore acts on
+  `O(1)`, has two zero modes, and gap `2 sqrt(3)`.  Canonical Spin-c on
+  `O(2)` is equivalent to ordinary twist `O(3)`; the half-canonical `O(1)`
+  shift must be physically derived.
+- **Promotion gate:** no bosonic argument creates a target-space fermion.  A
+  moduli-space SQM or anomaly-free higher-dimensional compactification, the
+  canonical Spin-c determinant, the distinction between automorphism modes
+  and matter, a degree-one Route-E portal, and all four-/six-dimensional
+  anomaly checks remain open.  `ap_e3_full_uv_closed=false`,
+  `ap_e4_physics_closed=false`, and `physics_promotion_allowed=false`.
+
+Current artifacts:
+
+- `tex/ap_e3_exact_two_mixed_wzw_uv.tex` and its bibliography: complete
+  exactly-two, physical-sign, gauge-anomaly, two-group/WZW, dressing, and
+  deep-UV boundary derivation;
+- `code/verify_ap_e3_exact_two_mixed_wzw.py` and
+  `output/ap_e3_exact_two_mixed_wzw.{json,md}`: `26/26` deterministic audit;
+- `tex/ap_e4_tangent_dirac_spectrum.tex` and its bibliography: complete
+  tangent projection, Spin/Spin-c distinction, chirality, full spectrum, gap,
+  partner, and anomaly-gate derivation;
+- `code/verify_ap_e4_tangent_dirac_spectrum.py` and
+  `output/ap_e4_tangent_dirac_spectrum.{json,md}`: `22/22` deterministic
+  exact/matrix audit.
+- `output/pdf/ap_e3_exact_two_mixed_wzw_uv.pdf` and
+  `output/pdf/ap_e4_tangent_dirac_spectrum.pdf`: clean-built, warning-free,
+  page-by-page checked 12-page and 9-page notes.
+
+Ordered continuation:
+
+1. Run a charged-two-colour nonperturbative phase/soliton scan over
+   `(e_g,v/Lambda_c)`, measuring meson and diquark condensates, `m_PG`, and
+   `B=1` lifetime.
+2. Complete the faithful-group, discrete-axial, compact-monopole, APS/bordism,
+   non-extendible differential-character, and all-scale-embedding audit of the
+   mixed-WZW branch.
+3. Choose AP-E4's physical realization: derive either moduli-space `N=2` SQM
+   or an anomaly-free product compactification; otherwise fall back to the
+   ordinary-spin two-mode result.
+4. Build and orient a degree-one Route-E portal below the AP-E3/AP-E4 gaps.
+5. Continue to AP-E5 only with the selected action: solve the full Q-ball/
+   Hopf boundary-value, Hessian, compactness, and emission problem.
+
 ## F0-D Another-Physics / Route-E bridge ledger
 
 Status: `in-progress`, deliberately non-promoting.  This lane runs in
@@ -58,7 +152,8 @@ Current exact results (2026-07-14):
   coordinates.  Therefore two distinct
   centers, a regular semisimple \(\mathfrak{sl}_2\) element, and non-null
   Killing/contact norm are exactly equivalent on this branch.  The
-  \(\Delta=0\) boundary is the nilpotent/double-zero cone.
+  \(\Delta=0\) boundary of the nonzero theorem domain is the
+  nilpotent/double-zero cone; the zero section is a separate excluded orbit.
 - Fixed-norm complex doublets give the exact Hopf reduction
   \(S^3/U(1)=\mathbb{CP}^1\).  Its moment map supplies a bounded
   charge/orientation polarity \([-1,1]\); this safely replaces the literal
@@ -123,6 +218,75 @@ Status: **geometry closed; physical level selection and stability open.**
   scale, but radial unwinding through `Z=0`, portal-induced charge loss, and
   the full fluctuation Hessian must be tested in AP-E5.
 
+### AP-E2 exact regression and AP-E3 microscopic-level checkpoint (2026-07-14)
+
+Status: **AP-E2 done and non-promoting; AP-E3 candidate level magnitude
+derived, UV exactly-two and signed-chirality rules open.**
+
+- **AP-E2:** `verify_ap_e2_discriminant_regression.py` passes `30/30`.  It
+  freezes the exact projective/Killing/transvectant identities with rational
+  arithmetic, 100-decimal complex tests, `SL(2)` covariance, polarized
+  bilinears, finite/infinite root charts, the nonzero nilpotent boundary, the
+  zero-section exception, the spherical/normalized-basis factor two, and four
+  wrong-convention negative controls.  H3+, dynamics, and the Berry level
+  remain underived; `physics_promotion_allowed=false`.
+- **AP-E3 selected candidate:** declare two orbitals with
+  \[
+  H_{\rm Mott}=\sum_{r=1}^2\left[\frac U2N_r(N_r-1)-\mu N_r\right],
+  \qquad 0<\mu<U,
+  \]
+  and add `-J_H S_1.S_2`, `J_H>0`.  The displayed Mott window guarantees unit
+  occupancy only for the bare onsite Hamiltonian.  For the complete declared
+  `H_portal=0` Mott--Hund--orientation model, define
+  \[
+  C\equiv\mu+\frac h2+\frac{J_H}{4};\qquad
+  C<U-\frac{J_H}{8}
+  \quad\Longleftrightarrow\quad
+  \mu<U-\frac h2-\frac{3J_H}{8}.
+  \]
+  This is the concise sufficient condition for the interacting `(1,1)`
+  plateau.  Unit occupancy on each orbital plus ferromagnetic locking then
+  selects the symmetric triplet.  Along the diagonal coherent-state locus,
+  \[
+  |s;2\rangle=|s\rangle\otimes|s\rangle,
+  \quad \mathcal A_2=2\mathcal A_1,
+  \quad g_2=2g_1,
+  \quad \mathcal L_{\rm ket}=\nu_2^*\mathcal O_{\mathbb{CP}^2}(-1)
+       =\mathcal O_{\mathbb{CP}^1}(-2),
+  \quad \mathcal L_{\rm pre}=\mathcal L_{\rm ket}^*
+       =\mathcal O_{\mathbb{CP}^1}(2).
+  \]
+  With the fixed convention `A=-i<s|ds>` and the microscopic kinetic sign
+  `+i hbar a^dagger dot(a)`, the aligned `-h n.S` model has signed action
+  `k=-2`; reversing orientation/coupling gives `k=+2`.  Thus this declared
+  dimer derives `|k|=2`, while its dual prequantum line has `c1=+2` and the
+  three-state space `H0(CP1,O(2))`.  The `27/27` audit finds
+  `spec(-J_H S_1.S_2)=(-1/4,-1/4,-1/4,3/4) J_H`, singlet gap `J_H`, Berry
+  residual `2.24e-16`, metric residual `2.22e-16`, and final numerical
+  curvature-magnitude estimate `2.000000501994128`.  At `U=4`, `mu=1.5`,
+  `J_H=1`, `h=0.2`, the sufficient-condition margin
+  `(U-J_H/8)-C=U-mu-h/2-3J_H/8` is `2.025`; the full spinful occupancy sector
+  has unique ground `(1,1)` and interacting charge gap `1.85`.  The exact
+  large-occupancy lower bound is coercive for `4U>J_H`.
+- **Unclosed UV gates:** neither occupancy algebra nor large-gauge invariance
+  explains why there are exactly two orbitals.  A permitted singleton retains
+  an unwanted `|k|=1` doublet; without Hund locking the target is
+  `CP1 x CP1`, and opposite orientations cancel to `k=0`.  The dimer must be
+  embedded in an anomaly-consistent four-dimensional theory, odd/singleton
+  sectors must be forbidden rather than assumed heavy, and every
+  exchange/portal correction must keep the interacting charge gap open, as
+  well as remain below the singlet and orientation gaps.  The Route-E portal
+  and chiral-family interpretation are also open.  In addition, the declared
+  aligned coupling gives `k=-2`; a microscopic orientation/coupling principle
+  selecting `k=+2` has not been derived, so signed chirality is a separate
+  blocker.  Hence
+  `ap_e3_physics_closed=false` and `physics_promotion_allowed=false`.
+- **Alternative branches:** keep (i) a filled-fermion determinant with fixed
+  filling/signs, (ii) a mixed WZW completion whose quantized coefficient can
+  reduce to `k=n_c B` but still needs the correct `n_c=2` UV coset, and
+  (iii) the AP-E4 tangent/Dirac route.  None currently supplies an
+  exactly-two UV theorem.
+
 Reproducible artifacts:
 
 - `tex/another_physics_route_e_derivation_ledger.tex` and its local BibTeX
@@ -145,20 +309,41 @@ Reproducible artifacts:
   `physics_promotion_allowed=false`.  The audit now covers the corrected
   Branch-B symplectic sign, the `k=0` domain exception, flux reversal through
   `|k|`, fixed-charge orientation energy, and critical-source hashes/tokens.
+- `code/verify_ap_e2_discriminant_regression.py` writes
+  `output/ap_e2_discriminant_regression.{json,md}` and passes `30/30` exact,
+  fail-closed regressions with no physics promotion;
+- `tex/ap_e2_discriminant_regression.tex` contains the complete AP-E2
+  two-chart, Killing, transvectant, basis, and boundary proof;
+- `code/verify_ap_e3_level_two_microscopic.py` writes
+  `output/ap_e3_level_two_microscopic.{json,md}` and passes `27/27`; its status
+  is `ap_e3_hund_pair_derives_abs_k2_conditionally_uv_and_sign_open`, not a
+  completed UV theory;
+- `tex/ap_e3_level_two_microscopic_origin.tex` and its local bibliography
+  contain the complete Mott--Hund, coercivity, Veronese, Berry/Chern,
+  alternative-branch, and UV-blocker derivation;
+- `output/pdf/ap_e2_discriminant_regression.pdf` and
+  `output/pdf/ap_e3_level_two_microscopic_origin.pdf` are the clean-built,
+  page-by-page checked AP-E2 (12-page) and AP-E3 (13-page) research notes.
 
 Ordered follow-up (fail closed):
 
 1. **AP-E1: done at geometry level, non-promoting.**  The local quotient is
    proved, the global-only shortcut is refuted, and the fixed-charge/LLL/O(2)
    distinction is explicit.  The selected continuation is the separated
-   macroscopic-charge/level-two branch; its microscopic level rule remains
-   open under AP-E3.
-2. **AP-E2:** retain the discriminant/contact theorem as an exact regression
-   test.
-3. **AP-E3:** derive, rather than impose, the Berry curvature, Chern number,
-   and possible \(\mathcal O(2)\) prequantum bundle.
-4. **AP-E4:** build the fluctuation/Dirac operator and audit all chiral zero
-   modes and the spectral gap.
+   macroscopic-charge/level-two branch.  AP-E3 now realizes the magnitude of
+   that level in a declared Mott/Hund pair, while the exactly-two UV and signed
+   orientation rules remain open.
+2. **AP-E2: done, exact and non-promoting.**  Retain the `30/30`
+   discriminant/contact suite as a mandatory regression.
+3. **AP-E3: candidate-level derivation done; physics open.**  The declared
+   Mott/Hund pair derives `|k|=2`; now derive the exactly-two UV field content,
+   exclude singleton/odd sectors, select the signed orientation/chirality, and
+   construct the anomaly-safe Route-E portal.  Failure keeps the dimer as an
+   illustrative EFT only.
+4. **AP-E4: next active mathematical gate.**  Build the fluctuation/Dirac
+   operator, prove whether the physical mode is tangent-valued, and audit all
+   chiral zero modes, unwanted partners, and the spectral gap.  This is also
+   the independent tangent/Dirac alternative to the AP-E3 dimer.
 5. **AP-E5:** solve the radial Q-ball boundary-value problem and fixed-charge
    stability/compactness/emission thresholds.
 6. **AP-E6:** construct an anomaly-consistent messenger/contact model and

@@ -1,0 +1,928 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm}
+\usepackage{bm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\numberwithin{equation}{section}
+\setlist{nosep,leftmargin=*}
+\setlength{\emergencystretch}{3em}
+
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\sltwo}{\mathfrak{sl}_2(\mathbb C)}
+\newcommand{\Ktr}{K_{\mathrm{tr}}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcommand{\nopromote}{\texttt{physics\_promotion\_allowed=false}}
+
+\definecolor{darkgreen}{RGB}{0,105,55}
+\definecolor{darkred}{RGB}{150,25,25}
+\definecolor{darkblue}{RGB}{20,65,140}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{gate}[theorem]{Promotion gate}
+
+\title{AP-E2: Exact Discriminant--Contact Regression\\
+First-Principles Projective Charts, Killing Normalization,\\
+and the Fail-Closed Route-E Convention Boundary}
+\author{Route F research note}
+\date{14 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note completes AP-E2 as an exact, non-promoting regression theorem.  On
+the conditional carrier
+\(H^0(\CP^1,T_{\CP^1})\simeq H^0(\CP^1,\cO(2))\simeq\sltwo\), let
+\(p(u,v)=au^2+buv+cv^2\) and
+\(
+ A_p=\left(\begin{smallmatrix}-b/2&-c\\a&b/2\end{smallmatrix}\right)
+\).
+The projective convention is fixed, rather than guessed, by the identity
+\(\det(z,A_pz)=p(z)\).  Direct multiplication and the adjoint-trace
+normalization then give
+\[
+ A_p^2=\frac{\Delta(p)}4I,
+ \qquad B_{\rm Kill}(A_p,A_p)=2\Delta(p),
+ \qquad (p,p)_2=-2\Delta(p),
+ \]
+where \(\Delta=b^2-4ac\).  Thus, for a nonzero section, two distinct
+projective zeros, a regular semisimple generator, nonzero Killing norm, and
+nonzero Route-E contact are equivalent.  The boundary \(\Delta=0\) is the
+nonzero nilpotent double-zero cone; the zero section is a separate excluded
+stratum.
+
+The note also resolves the convention-sensitive factor of two.  In Route-E
+spherical coordinates \(\bm x=(x_+,x_0,x_-)^T\),
+\[
+ B=2\sqrt3\,\bm x^T\Ktr\bm x,
+ \]
+whereas in normalized polynomial coefficients
+\(\bm y=(a,b/\sqrt2,c)^T\),
+\[
+ B=4\sqrt3\,\bm y^T\Ktr\bm y.
+\]
+These formulas are compatible because \(\bm y=R\bm x/\sqrt2\).  A
+deterministic 30-check audit tests exact rational identities, projective
+charts, \(SL(2)\) covariance, the degenerate boundary, Route-E source hashes,
+100-digit complex samples, and four deliberately wrong conventions.  All
+checks pass, but \nopromote: AP-E2 preserves an
+algebraic theorem and does not derive H3$^+$, a physical two-center
+interpretation, or the AP-E3 level \(k=2\).
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, assumptions, and final logical status}
+
+AP-E2 has one narrow purpose: freeze the exact discriminant/contact theorem
+against later changes of chart, basis, or normalization.  It does not add a
+new action and does not infer dynamics from an invariant polynomial.
+
+The only geometric input is the conditional Route-E branch
+\begin{equation}
+ \Sigma\simeq\CP^1,
+ \qquad T_{\CP^1}\simeq\cO(2),
+ \qquad V:=H^0(\CP^1,T_{\CP^1})\simeq\sltwo.
+ \label{eq:conditional-carrier}
+\end{equation}
+The word ``conditional'' is essential: the algebra below is unconditional
+after Eq.~\eqref{eq:conditional-carrier} is assumed, but AP-E2 does not derive
+the microscopic origin of that carrier or of the stronger contact hypothesis
+H3$^+$.
+
+We distinguish four statuses.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.20\textwidth}
+                  >{\raggedright\arraybackslash}p{0.71\textwidth}}
+\toprule
+Status & Meaning \\
+\midrule
+\endfirsthead
+\toprule
+Status & Meaning \\
+\midrule
+\endhead
+\status{exact theorem} & An identity proved from the displayed definitions
+over \(\CC\), with every normalization fixed.\\
+\status{regression pass} & A deterministic machine check of a theorem,
+boundary case, source hash, or known convention failure.\\
+\status{conditional carrier} & A conclusion valid on
+Eq.~\eqref{eq:conditional-carrier}; it is not a derivation of that equation.\\
+\status{not promoted} & A geometric resemblance has not been turned into a
+physical state-space, action, spectrum, or family-selection mechanism.\\
+\bottomrule
+\end{longtable}
+
+\begin{gate}[AP-E2 non-promotion]
+A green AP-E2 regression may certify the exact invariant identity and its
+regular/nilpotent stratification.  It may not identify the two zeros with two
+particles, opposite energies, or two families; it may not promote H3 to
+H3$^+$; and it may not supply the level-two prequantum bundle required by
+AP-E3.  The output Boolean must therefore remain
+\nopromote.
+\end{gate}
+
+\section{First principles on \texorpdfstring{$\CP^1$}{CP1}}
+
+\subsection{Two charts force a quadratic vector field}
+
+Let \([u:v]\) be homogeneous coordinates on \(\CP^1\).  On
+\(U_u=\{u\ne0\}\), set
+\begin{equation}
+ \xi=\frac vu,
+ \label{eq:xi-chart}
+\end{equation}
+and write a holomorphic vector field as
+\begin{equation}
+ X=q(\xi)\partial_\xi.
+ \label{eq:q-vector}
+\end{equation}
+On \(U_v=\{v\ne0\}\), set \(\eta=u/v=1/\xi\).  Since
+\(\partial_\xi=-\eta^2\partial_\eta\), the same field is
+\begin{equation}
+ X=-\eta^2q(1/\eta)\partial_\eta.
+ \label{eq:eta-transform}
+\end{equation}
+Regularity at \(\eta=0\) forbids powers of \(\xi\) above two.  Therefore
+\begin{equation}
+ q(\xi)=a+b\xi+c\xi^2,
+ \qquad a,b,c\in\CC.
+ \label{eq:q-quadratic}
+\end{equation}
+Conversely, Eq.~\eqref{eq:eta-transform} becomes
+\begin{equation}
+ X=-(a\eta^2+b\eta+c)\partial_\eta,
+ \label{eq:eta-polynomial}
+\end{equation}
+which is regular.  Hence Eq.~\eqref{eq:q-quadratic} lists every global
+holomorphic vector field and proves directly that the section space has
+complex dimension three.
+
+The basis
+\begin{equation}
+ E=\partial_\xi,
+ \qquad H=-2\xi\partial_\xi,
+ \qquad F=-\xi^2\partial_\xi
+ \label{eq:sl2-vector-basis}
+\end{equation}
+obeys
+\begin{equation}
+ [H,E]=2E,
+ \qquad [H,F]=-2F,
+ \qquad [E,F]=H.
+ \label{eq:sl2-brackets}
+\end{equation}
+This constructs the isomorphism
+\(H^0(\CP^1,T_{\CP^1})\simeq\sltwo\) without dimension matching alone.
+
+\subsection{Homogenization and the projective matrix}
+
+Homogenizing Eq.~\eqref{eq:q-quadratic} gives
+\begin{equation}
+ p(u,v)=au^2+buv+cv^2,
+ \qquad p(1,\xi)=q(\xi).
+ \label{eq:binary-quadratic}
+\end{equation}
+For \(z=(u,v)^T\), define
+\begin{equation}
+ A_p=
+ \begin{pmatrix}
+ -b/2&-c\\
+ a&b/2
+ \end{pmatrix}
+ \in\sltwo.
+ \label{eq:projective-matrix}
+\end{equation}
+This sign convention is fixed by the following identity.
+
+\begin{lemma}[Section--eigenline identity]
+For every \(z=(u,v)^T\),
+\begin{equation}
+ \boxed{\det(z,A_pz)=p(u,v).}
+ \label{eq:wedge-identity}
+\end{equation}
+Consequently, \([u:v]\) is a zero of \(p\) if and only if it is an
+eigenline of \(A_p\).
+\end{lemma}
+
+\begin{proof}
+Equation~\eqref{eq:projective-matrix} gives
+\begin{equation}
+ A_pz=
+ \begin{pmatrix}-bu/2-cv\\au+bv/2\end{pmatrix}.
+\end{equation}
+Taking the determinant of the matrix with columns \(z,A_pz\) gives
+\begin{align}
+ \det(z,A_pz)
+ &=u(au+bv/2)-v(-bu/2-cv)\\
+ &=au^2+buv+cv^2=p(u,v).
+\end{align}
+The determinant vanishes precisely when \(z\) and \(A_pz\) are linearly
+dependent, which is the projective eigenline condition.
+\end{proof}
+
+\begin{remark}[Why the chart matters]
+On \(u\ne0\), Eq.~\eqref{eq:wedge-identity} reads
+\(u^2q(\xi)=0\).  At infinity, \([u:v]=[0:1]\), one must instead use
+Eq.~\eqref{eq:eta-polynomial}.  Replacing \(\xi=v/u\) by \(u/v\) without
+transforming the vector-field coefficient reverses the chart convention and
+can exchange which coefficient detects the point at infinity.
+\end{remark}
+
+\section{The exact discriminant--Killing identities}
+
+\subsection{The square of the projective matrix}
+
+Define the binary-quadratic discriminant
+\begin{equation}
+ \Delta(p):=b^2-4ac.
+ \label{eq:discriminant}
+\end{equation}
+Direct multiplication, with no spectral assumption, gives
+\begin{align}
+ A_p^2
+ &=
+ \begin{pmatrix}
+ b^2/4-ac&bc/2-bc/2\\
+ -ab/2+ab/2&b^2/4-ac
+ \end{pmatrix}\\
+ &=\boxed{\frac{\Delta(p)}4I_2}.
+ \label{eq:A-square}
+\end{align}
+Equivalently, Cayley--Hamilton for a traceless two-by-two matrix gives
+\(A_p^2=-\det(A_p)I_2\), and
+\begin{equation}
+ \det(A_p)=-\frac{\Delta(p)}4.
+ \label{eq:det-A}
+\end{equation}
+
+\subsection{Killing normalization from the adjoint trace}
+
+The factor two in AP-E2 is fixed by the canonical Killing form, not by a
+rescaling chosen after the fact.
+
+\begin{lemma}[Fundamental-trace formula]
+For \(A,B\in\sltwo\),
+\begin{equation}
+ B_{\rm Kill}(A,B):=\Tr(\ad_A\ad_B)=4\Tr_2(AB).
+ \label{eq:killing-trace}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write
+\begin{equation}
+ A=\begin{pmatrix}h&e\\f&-h\end{pmatrix},
+ \qquad
+ B=\begin{pmatrix}h'&e'\\f'&-h'\end{pmatrix}.
+\end{equation}
+Computing the adjoint maps on any fixed \((E,H,F)\) basis gives
+\begin{equation}
+ \Tr(\ad_A\ad_B)
+ =8hh'+4(ef'+fe').
+\end{equation}
+On the other hand,
+\begin{equation}
+ 4\Tr_2(AB)=4\{2hh'+ef'+fe'\},
+\end{equation}
+which is identical.  This fixes the normalization of
+Eq.~\eqref{eq:killing-trace}.
+\end{proof}
+
+Combining Eqs.~\eqref{eq:A-square} and \eqref{eq:killing-trace},
+\begin{equation}
+ \boxed{
+ B_{\rm Kill}(A_p,A_p)
+ =4\Tr_2(A_p^2)
+ =2\Delta(p).}
+ \label{eq:killing-discriminant}
+\end{equation}
+Writing \(B=\Delta\) would therefore be a normalization error, not a harmless
+choice of notation.
+
+\subsection{Second transvectant and polarization}
+
+With the derivative convention used in Route E, the second transvectant of a
+quadratic with itself is
+\begin{align}
+ (p,p)_2
+ &:=p_{uu}p_{vv}-2p_{uv}p_{uv}+p_{vv}p_{uu}\\
+ &=8ac-2b^2=-2\Delta(p).
+ \label{eq:self-transvectant}
+\end{align}
+Thus
+\begin{equation}
+ \boxed{(p,p)_2=-B_{\rm Kill}(A_p,A_p).}
+ \label{eq:transvectant-killing}
+\end{equation}
+
+The bilinear statement is stronger than the diagonal one.  Let
+\begin{equation}
+ r(u,v)=a'u^2+b'uv+c'v^2
+\end{equation}
+and polarize the discriminant:
+\begin{equation}
+ D(p,r):=bb'-2(ac'+a'c),
+ \qquad D(p,p)=\Delta(p).
+ \label{eq:polar-discriminant}
+\end{equation}
+Then direct multiplication gives
+\begin{equation}
+ \boxed{
+ B_{\rm Kill}(A_p,A_r)=2D(p,r),
+ \qquad (p,r)_2=-2D(p,r)=-B_{\rm Kill}(A_p,A_r).}
+ \label{eq:polar-identities}
+\end{equation}
+This polarization prevents a false proof that happens to reproduce only a
+single diagonal example.
+
+\section{Zeros, eigenlines, and the null boundary}
+
+\subsection{Regular and degenerate projective divisors}
+
+Over \(\CC\), a nonzero homogeneous quadratic has a degree-two zero divisor,
+counted with multiplicity.  If \(c\ne0\), its finite affine roots are
+\begin{equation}
+ \xi_{\pm}=\frac{-b\pm\sqrt{\Delta}}{2c}
+ \quad(c\ne0),
+ \label{eq:affine-roots}
+\end{equation}
+When \(c=0\) and \(b\ne0\), one root is finite and the other is
+\([0:1]\); when \(c=b=0\) and \(a\ne0\), \([0:1]\) is a double root.
+The homogeneous formulation handles both cases without a singular formula.
+
+Equation~\eqref{eq:A-square} proves the corresponding Lie-algebra
+classification:
+\begin{itemize}
+\item if \(\Delta\ne0\), the eigenvalues of \(A_p\) are
+\(\pm\sqrt{\Delta}/2\), so \(A_p\) is regular semisimple;
+\item if \(\Delta=0\) and \(p\ne0\), then \(A_p\ne0\) and \(A_p^2=0\), so
+\(A_p\) is rank-one nilpotent;
+\item if \(p=0\), then \(A_p=0\), which is neither a nonzero nilpotent orbit
+nor a degree-two effective zero divisor.
+\end{itemize}
+
+\begin{theorem}[AP-E2 discriminant/contact equivalence]
+\label{thm:ap-e2-main}
+For a nonzero
+\(X_p\in H^0(\CP^1,T_{\CP^1})\), the following are equivalent:
+\begin{enumerate}
+\item the zero divisor of \(X_p\) is the sum of two distinct projective
+points;
+\item \(\Delta(p)\ne0\);
+\item \(A_p\) is regular semisimple;
+\item \(B_{\rm Kill}(A_p,A_p)\ne0\);
+\item the Route-E contact norm is nonzero.
+\end{enumerate}
+The complement inside the nonzero section space is the nilpotent/contact-null
+cone.  Each of its points has one double projective zero.  The origin is an
+additional zero-section stratum and is excluded from both orbit statements.
+\end{theorem}
+
+\begin{proof}
+The roots of a nonzero binary quadratic are distinct exactly when
+\(\Delta\ne0\).  Equations~\eqref{eq:A-square} and \eqref{eq:det-A} show that
+\(\Delta\ne0\) is equivalent to two distinct eigenvalues and hence to regular
+semisimplicity.  Equation~\eqref{eq:killing-discriminant} equates this with
+nonzero Killing norm.  Section~\ref{sec:route-e-basis} below proves that the
+Route-E contact is the same bilinear invariant with fixed nonzero
+normalization.  If \(\Delta=0\) and \(p\ne0\), the preceding rank-one
+nilpotent argument applies.  A quadratic with zero discriminant is a square
+of a nonzero linear form, so its unique projective root has multiplicity two.
+Finally, \(p=0\) gives \(A_p=0\) and must be separated before the nonzero
+orbit classification is stated.
+\end{proof}
+
+\subsection{Finite, zero, and infinite double roots}
+
+The differential of the homogeneous section is
+\begin{equation}
+ \dd p=(2au+bv)\dd u+(bu+2cv)\dd v.
+ \label{eq:first-jet}
+\end{equation}
+A double projective root is characterized by
+\begin{equation}
+ p(u,v)=0,
+ \qquad 2au+bv=0,
+ \qquad bu+2cv=0.
+ \label{eq:double-root-jet}
+\end{equation}
+The following cases explicitly guard both charts.
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Section & Double root & Chart interpretation\\
+\midrule
+\((2u-v)^2\) & \([1:2]\) & finite nonzero \(\xi=2\)\\
+\(v^2\) & \([1:0]\) & finite zero \(\xi=0\)\\
+\(u^2\) & \([0:1]\) & \(\eta=0\), the point at infinity\\
+\bottomrule
+\end{tabular}
+\end{center}
+All three satisfy Eq.~\eqref{eq:double-root-jet}; restricting to one affine
+quadratic formula would miss the last case.
+
+\begin{remark}[Nondegenerate form versus null vector]
+The contact matrix is invertible, yet a nonzero \(p\) can obey
+\(B(p,p)=0\).  This is ordinary isotropy of a complex symmetric bilinear form,
+not degeneracy of the form.  Degeneracy would mean that some nonzero vector
+pairs to zero with \emph{every} vector.
+\end{remark}
+
+\section{Exact \texorpdfstring{$SL(2)$}{SL(2)} covariance}
+
+Let
+\begin{equation}
+ g=\begin{pmatrix}\alpha&\beta\\\gamma&\delta\end{pmatrix}
+ \in SL(2,\CC),
+ \qquad \alpha\delta-\beta\gamma=1,
+ \label{eq:g-matrix}
+\end{equation}
+and define the right substitution
+\begin{equation}
+ p^g(z):=p(gz).
+ \label{eq:right-substitution}
+\end{equation}
+Expansion gives
+\begin{align}
+ a^g&=a\alpha^2+b\alpha\gamma+c\gamma^2,\\
+ b^g&=2a\alpha\beta+b(\alpha\delta+\beta\gamma)
+       +2c\gamma\delta,\\
+ c^g&=a\beta^2+b\beta\delta+c\delta^2.
+ \label{eq:coefficient-transform}
+\end{align}
+
+\begin{proposition}[Conjugacy and invariant discriminant]
+Under Eq.~\eqref{eq:right-substitution},
+\begin{equation}
+ A_{p^g}=g^{-1}A_pg,
+ \qquad
+ \Delta(p^g)=\Delta(p).
+ \label{eq:conjugacy}
+\end{equation}
+For \(g\in GL(2,\CC)\), the second equality generalizes to
+\(\Delta(p^g)=\det(g)^2\Delta(p)\).
+\end{proposition}
+
+\begin{proof}
+Insert Eq.~\eqref{eq:coefficient-transform} into
+Eq.~\eqref{eq:projective-matrix}; matrix multiplication gives the first
+identity.  Conjugacy preserves \(\det A_p=-\Delta(p)/4\), proving the
+\(SL(2)\) statement.  For a general \(g\), either direct expansion or
+factoring \(g\) into a scalar and an \(SL(2)\) matrix gives the determinant
+weight two.
+\end{proof}
+
+Scaling the section itself by \(\lambda\in\CC\) gives the separate covariance
+law
+\begin{equation}
+ A_{\lambda p}=\lambda A_p,
+ \qquad \Delta(\lambda p)=\lambda^2\Delta(p),
+ \qquad B(A_{\lambda p},A_{\lambda p})=\lambda^2B(A_p,A_p).
+ \label{eq:section-scaling}
+\end{equation}
+Thus the vanishing locus is projectively well defined even though the
+quadratic invariant has weight two.
+
+\subsection{Uniqueness of the invariant contact line}
+
+The contact is not one arbitrary matrix among many.  In the unnormalized
+coefficient vector
+\begin{equation}
+ \bm c=(a,b,c)^T,
+ \label{eq:coefficient-vector}
+\end{equation}
+the infinitesimal \(\mathfrak{sl}_2\) action can be represented by
+\begin{equation}
+ \rho(H)=\begin{pmatrix}2&0&0\\0&0&0\\0&0&-2\end{pmatrix},
+ \quad
+ \rho(E)=\begin{pmatrix}0&1&0\\0&0&2\\0&0&0\end{pmatrix},
+ \quad
+ \rho(F)=\begin{pmatrix}0&0&0\\2&0&0\\0&1&0\end{pmatrix}.
+ \label{eq:coefficient-generators}
+\end{equation}
+Let \(M=M^T\) be a general six-parameter symmetric matrix.  Invariance means
+\begin{equation}
+ \rho(X)^TM+M\rho(X)=0,
+ \qquad X=H,E,F.
+ \label{eq:invariance-equations}
+\end{equation}
+The \(H\) equation permits only \(M_{13}=M_{31}\) and \(M_{22}\).
+The \(E\) equation then fixes \(M_{13}=-2M_{22}\); the \(F\) equation adds
+no independent freedom.  Hence the solution space is one-dimensional:
+\begin{equation}
+ M=\kappa
+ \begin{pmatrix}
+ 0&0&-2\\
+ 0&1&0\\
+ -2&0&0
+ \end{pmatrix}.
+ \label{eq:unique-coefficient-contact}
+\end{equation}
+At \(\kappa=1\),
+\(\bm c^TM\bm c=b^2-4ac=\Delta\).  Equivalently, the exact linear system has
+rank five in a six-dimensional space of symmetric matrices.  This is the
+first-principles uniqueness of the invariant symmetric contact line.
+
+\section{Route-E basis ledger and the factor of two}
+\label{sec:route-e-basis}
+
+\subsection{Spherical coordinates}
+
+Route E uses
+\begin{equation}
+ \bm x=(x_+,x_0,x_-)^T,
+ \qquad
+ \Ktr=\frac1{\sqrt3}
+ \begin{pmatrix}
+ 0&0&-1\\
+ 0&1&0\\
+ -1&0&0
+ \end{pmatrix}.
+ \label{eq:route-e-k}
+\end{equation}
+The precise map to Eq.~\eqref{eq:binary-quadratic} is
+\begin{equation}
+ a=\frac{x_-}{\sqrt2},
+ \qquad b=-x_0,
+ \qquad c=\frac{x_+}{\sqrt2},
+ \label{eq:spherical-map}
+\end{equation}
+or
+\begin{equation}
+ p_{\bm x}(u,v)
+ =\frac{x_-}{\sqrt2}u^2-x_0uv+\frac{x_+}{\sqrt2}v^2.
+ \label{eq:spherical-polynomial}
+\end{equation}
+It follows that
+\begin{align}
+ \Delta(p_{\bm x})
+ &=x_0^2-2x_+x_-,\\
+ \bm x^T\Ktr\bm x
+ &=\frac1{\sqrt3}(x_0^2-2x_+x_-).
+ \label{eq:spherical-contact}
+\end{align}
+Combining this with Eq.~\eqref{eq:killing-discriminant} yields the frozen
+Route-E identity
+\begin{equation}
+ \boxed{
+ B_{\rm Kill}(A_p,A_p)
+ =2\Delta(p)
+ =2\sqrt3\,\bm x^T\Ktr\bm x.}
+ \label{eq:route-e-master}
+\end{equation}
+
+The matrix is symmetric and invertible:
+\begin{equation}
+ \Ktr^2=\frac13I_3,
+ \qquad \Ktr^{-1}=3\Ktr,
+ \qquad \det\Ktr=-\frac1{3\sqrt3}.
+ \label{eq:k-properties}
+\end{equation}
+Nevertheless,
+\begin{equation}
+ \bm x=(1,1,1/2)^T
+ \quad\Longrightarrow\quad
+ \bm x^T\Ktr\bm x=0,
+ \qquad \Ktr\bm x\ne0,
+ \label{eq:isotropic-example}
+\end{equation}
+which explicitly distinguishes a nonzero isotropic vector from a degenerate
+pairing.
+
+\subsection{Normalized polynomial coefficients}
+
+Now expand the same section in the normalized monomial basis
+\begin{equation}
+ (u^2,\sqrt2uv,v^2),
+ \qquad
+ p=y_-u^2+y_0\sqrt2uv+y_+v^2.
+ \label{eq:normalized-monomials}
+\end{equation}
+Thus
+\begin{equation}
+ \bm y=(y_-,y_0,y_+)^T
+ =\begin{pmatrix}a\\b/\sqrt2\\c\end{pmatrix}
+ =\frac1{\sqrt2}
+ \underbrace{\begin{pmatrix}0&0&1\\0&-1&0\\1&0&0\end{pmatrix}}_{R}
+ \bm x.
+ \label{eq:y-from-x}
+\end{equation}
+Because \(R^T\Ktr R=\Ktr\),
+\begin{equation}
+ \bm y^T\Ktr\bm y=\frac12\bm x^T\Ktr\bm x.
+ \label{eq:factor-two-basis}
+\end{equation}
+Therefore the same Killing invariant has two correct coefficient formulas:
+\begin{equation}
+ \boxed{
+ B=2\sqrt3\,\bm x^T\Ktr\bm x
+  =4\sqrt3\,\bm y^T\Ktr\bm y.}
+ \label{eq:two-basis-master}
+\end{equation}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}
+                                 >{\raggedright\arraybackslash}X
+                                 >{\raggedright\arraybackslash}p{0.25\textwidth}@{}}
+\toprule
+Coordinates & Section convention & Killing formula\\
+\midrule
+\(\bm c=(a,b,c)\) & \(au^2+buv+cv^2\) &
+\(B=2(b^2-4ac)\)\\
+\(\bm y=(a,b/\sqrt2,c)\) &
+\(y_-u^2+y_0\sqrt2uv+y_+v^2\) &
+\(B=4\sqrt3\,\bm y^T\Ktr\bm y\)\\
+\(\bm x=(x_+,x_0,x_-)\) &
+Eq.~\eqref{eq:spherical-polynomial} &
+\(B=2\sqrt3\,\bm x^T\Ktr\bm x\)\\
+\bottomrule
+\end{tabularx}
+\end{center}
+Using the spherical coefficient \(2\sqrt3\) on \(\bm y\) loses a factor of
+two.  Omitting the \(\sqrt2\) in Eq.~\eqref{eq:spherical-map} changes
+\(\Delta=x_0^2-2x_+x_-\) into the wrong expression
+\(x_0^2-4x_+x_-\).  Both errors are explicit negative controls in the
+regression suite.
+
+\subsection{Complex symmetric is not Hermitian}
+
+The Route-E contact is
+\begin{equation}
+ \Ktr(\bm x,\bm y)=\bm x^T\Ktr\bm y,
+ \label{eq:complex-bilinear}
+\end{equation}
+which is complex bilinear and symmetric.  Replacing it by
+\(\bm x^\dagger\Ktr\bm y\) introduces complex conjugation and destroys the
+holomorphic invariant polynomial.  In particular,
+\begin{equation}
+ (\lambda\bm x)^T\Ktr(\lambda\bm x)
+ =\lambda^2\bm x^T\Ktr\bm x,
+\end{equation}
+whereas the Hermitian expression scales as \(|\lambda|^2\).  These are
+different representations and cannot be exchanged on complex samples.
+
+\section{The H3 versus H3\texorpdfstring{$^+$}{+} boundary}
+
+An invariant nondegenerate symmetric bilinear form does not by itself imply a
+nonzero Killing form.  Let \(\mathfrak a=\CC e\) be a one-dimensional abelian
+Lie algebra.  Then
+\begin{equation}
+ [e,e]=0,
+ \qquad \ad_e=0,
+ \qquad B_{\rm Kill}(e,e)=\Tr(\ad_e^2)=0.
+ \label{eq:abelian-killing}
+\end{equation}
+However, the form \(C(e,e)=1\) is symmetric, invariant, and nondegenerate,
+because every bracket vanishes.  Hence the original H3 condition ``there is a
+nondegenerate invariant symmetric pairing'' admits this genus-one/abelian
+counterexample.  Exact selection of the three-dimensional
+\(\sltwo\) carrier requires the stronger H3$^+$ condition that the contact is
+the nondegenerate adjoint-trace/Killing line.
+
+\begin{corollary}[Precise AP-E2 scope]
+Theorem~\ref{thm:ap-e2-main} proves an exact equivalence on the H3$^+$-selected
+\(\CP^1\) branch.  It neither derives H3$^+$ from H3 nor rules out the abelian
+H3 branch.
+\end{corollary}
+
+\section{The 30-check fail-closed regression}
+
+\subsection{Reproducibility contract}
+
+The executable card is
+\begin{center}
+\path{route_f/code/verify_ap_e2_discriminant_regression.py}.
+\end{center}
+From the repository root, run
+\begin{center}
+\texttt{python3 route\_f/code/verify\_ap\_e2\_discriminant\_regression.py}.
+\end{center}
+It writes
+\begin{center}
+\path{route_f/output/ap_e2_discriminant_regression.json}\\
+\path{route_f/output/ap_e2_discriminant_regression.md}.
+\end{center}
+The seed is \(20260714\).  Exact tests use
+\path{fractions.Fraction}; irrational and complex tests use
+\path{mpmath 1.4.1} at 100 decimal places.  The program writes its complete
+report before returning exit status one if any check fails.
+
+\subsection{Coverage by group}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.12\textwidth}
+                       >{\centering\arraybackslash}p{0.10\textwidth}
+                       >{\raggedright\arraybackslash}p{0.68\textwidth}@{}}
+\toprule
+Group & Checks & Fail-closed content\\
+\midrule
+\endfirsthead
+\toprule
+Group & Checks & Fail-closed content\\
+\midrule
+\endhead
+A0 & 4 & Critical source hashes, invariant-card stable digest, Audit-0 builder
+binding, and frozen theorem/proof-block hash.\\
+A1 & 10 & Exact rational \(A^2\), Killing, transvectant, polarized contact,
+one-dimensional invariant line, \(\det(z,Az)=p(z)\), \(SL(2,\mathbb Z)\)
+invariance and conjugacy, and section-scaling weight.\\
+A2 & 5 & Finite and infinite double roots, real/complex/asymmetric regular
+roots, eigenline agreement, vanishing first jet, zero-section guard, and a
+\(10^{-70}\) near-null perturbation.\\
+A3 & 4 & Route-E \(\Ktr\) normalization, inverse and isotropic-vector guard,
+spherical/normalized-basis factor two, and full \(H,E,F\) invariance.\\
+A4 & 1 & 256 seeded complex samples evaluated at 100 decimal places.\\
+A5 & 4 & Required rejection of missing \(\sqrt2\), missing Killing factor two,
+wrong normalized-basis coefficient, and Hermitian substitution.\\
+A6 & 2 & The abelian H3 counterexample and the immutable non-promotion Boolean.\\
+\midrule
+Total & 30 & Every check must pass; otherwise the process exits nonzero.\\
+\bottomrule
+\end{longtable}
+
+The exact randomized layer uses 256 seeded triples in \(\QQ^3\), 256 seeded
+pairs for the polarized identity, 256 exact projective fixed-point tests, and
+256 determinant-one integer substitutions.  Since all operations are in
+\(\QQ\), ``zero residual'' means an exact equality, not a floating tolerance.
+
+The complex layer separately samples 256 points in \(\CC^3\).  Its largest
+intrinsic normalized residual is
+\begin{equation}
+ 1.67930436345868921\times10^{-101}.
+ \label{eq:intrinsic-residual}
+\end{equation}
+The Route-E JSON card stores ordinary double-precision decimals, so its
+separate maximum source-card residual is
+\begin{equation}
+ 6.14719575160384581\times10^{-17},
+ \label{eq:source-residual}
+\end{equation}
+well below the declared \(5\times10^{-15}\) source tolerance.  Keeping these
+two residuals separate prevents the source serialization precision from
+masquerading as a limitation of the 100-digit identity test.
+
+For the near-null probe
+\begin{equation}
+ p_\varepsilon=u^2+2uv+(1+\varepsilon)v^2,
+ \qquad \varepsilon=10^{-70},
+\end{equation}
+the audit resolves
+\begin{equation}
+ \Delta(p_\varepsilon)=-4\times10^{-70}
+\end{equation}
+and obtains zero recorded matrix-identity residual at the working precision.
+This tests the boundary from the regular side instead of evaluating only the
+exact cone.
+
+\subsection{Negative controls}
+
+A regression is incomplete if it tests only the intended formula.  AP-E2
+therefore demands that four intentionally wrong conventions disagree on a
+fixed generic complex point.
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X
+                                 >{\raggedright\arraybackslash}p{0.27\textwidth}
+                                 >{\raggedleft\arraybackslash}p{0.16\textwidth}@{}}
+\toprule
+Wrong convention & Expected diagnosis & Residual\\
+\midrule
+\(a=x_-,\ b=-x_0,\ c=x_+\) & missing \(\sqrt2\) & \(1.0\times10^1\)\\
+\(B=\Delta\) & missing Killing factor two & \(1.2\times10^1\)\\
+\(B=2\sqrt3\,\bm y^T\Ktr\bm y\) & spherical factor used on normalized
+coefficients & \(1.2\times10^1\)\\
+\(\bm x^\dagger\Ktr\bm x\) & Hermitian form substituted for bilinear contact
+& \(1.56205\times10^1\)\\
+\bottomrule
+\end{tabularx}
+\end{center}
+Detection of each wrong formula is a pass.  Accidental agreement is a failure.
+An additional injected bad theorem hash was tested during development; it
+produced 29/30 and a nonzero process exit before the valid artifact was
+regenerated.
+
+\subsection{Current result and provenance lock}
+
+The current card reports
+\begin{equation}
+ \boxed{30/30\ \text{checks pass}.}
+ \label{eq:thirty-pass}
+\end{equation}
+Its non-promotion field remains
+\begin{center}
+\nopromote.
+\end{center}
+The frozen theorem/proof block has SHA-256
+\begin{center}
+\path{3999b88f3fe7e396948c9695939ec5826d74cfc6d06f6b26ed05d3b0e0c4d094}.
+\end{center}
+The audit also recomputes the stable digest of the Route-E invariant card and
+checks that the card-recorded Audit-0 builder hash equals the current builder.
+Thus a green result requires both correct arithmetic and an intact convention
+source chain.
+
+\section{Claim ledger and handoff to AP-E3}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.42\textwidth}
+                  >{\raggedright\arraybackslash}p{0.17\textwidth}
+                  >{\raggedright\arraybackslash}p{0.32\textwidth}}
+\toprule
+Claim & AP-E2 status & Evidence or missing input\\
+\midrule
+\endfirsthead
+\toprule
+Claim & AP-E2 status & Evidence or missing input\\
+\midrule
+\endhead
+Global vector fields on \(\CP^1\) are binary quadratics &
+\status{proved} & Two-chart regularity, Eqs.~\eqref{eq:eta-transform}--
+\eqref{eq:q-quadratic}.\\
+Zeros of \(p\) equal eigenlines of \(A_p\) &
+\status{proved} & Determinant identity \eqref{eq:wedge-identity}.\\
+Two distinct zeros, regular semisimplicity, and non-null contact are
+equivalent & \status{proved on carrier} &
+Theorem~\ref{thm:ap-e2-main}.\\
+The null cone consists of nonzero double-zero/nilpotent sections &
+\status{proved} & Matrix square and first-jet tests; zero section excluded.\\
+The Route-E factor is \(B=2\sqrt3\,x^T\Ktr x\) &
+\status{proved} & Killing trace plus spherical map.\\
+Normalized coefficients use \(B=4\sqrt3\,y^T\Ktr y\) &
+\status{proved} & Exact basis map \eqref{eq:y-from-x}.\\
+H3 alone selects the three-dimensional carrier &
+\status{refuted} & One-dimensional abelian invariant-pairing counterexample.\\
+H3$^+$ has a microscopic dynamical origin &
+\status{open} & Requires a correlator, messenger, anomaly, or UV derivation.\\
+The two divisor points are physical particles, signs of energy, or families &
+\status{not derived} & No action or observable map supplies this identification.\\
+The projective sector has level magnitude \(|k|=2\) &
+\status{candidate magnitude derived; sign/UV open} & The AP-E3 Mott--Hund
+pair gives a ket line \(\cO(-2)\) and dual prequantum line \(\cO(2)\);
+the signed orientation and exactly-two UV rule remain absent.\\
+\bottomrule
+\end{longtable}
+
+AP-E2 is therefore mathematically closed at the regression level.  AP-E3
+should not repeat this discriminant calculation.  It should instead test
+several genuinely distinct microscopic routes to level two:
+\begin{enumerate}
+\item derive a charge-two collective coordinate and its Berry one-form from a
+fully normalized microscopic action;
+\item integrate out explicitly specified gapped fields and compute the induced
+worldline Chern--Simons/Berry level, including anomaly and sign checks;
+\item derive a pair-selection rule that leaves a level-two composite sector
+while keeping the macroscopic Q-ball charge separate;
+\item reject every proposal for which the induced level is not integral, is
+shifted by an uncancelled anomaly, or has a Landau-level gap comparable to the
+portal or background scale.
+\end{enumerate}
+None of these AP-E3 mechanisms can be inferred from
+\(\Delta=B/2\) alone.  That separation is the principal scientific output of
+AP-E2.
+
+\section{Conclusion}
+
+Starting only from the two charts of \(\CP^1\), AP-E2 derives the complete
+chain
+\begin{equation}
+ \det(z,A_pz)=p(z),
+ \qquad
+ A_p^2=\frac\Delta4I,
+ \qquad
+ B_{\rm Kill}=2\Delta,
+ \qquad
+ (p,p)_2=-2\Delta.
+\end{equation}
+It proves that the discriminant, projective two-center divisor,
+regular/nilpotent stratification, Killing norm, and Route-E contact are one
+invariant statement on the conditional \(\CP^1\) carrier.  The chart at
+infinity, zero-section exception, complex-bilinear character, and
+spherical/normalized-basis factor two are all explicit rather than implicit.
+
+The 30-check regression now freezes these conclusions against known
+convention failures and source drift.  This completes AP-E2 without promoting
+the bridge.  AP-E3 now supplies a conditional Mott--Hund pair with
+\(|k|=2\); its displayed aligned action has \(k=-2\), while the desired sign,
+the physical origin of H3$^+$, and the UV principle selecting exactly two
+constituents remain logically separate open problems.
+
+\end{document}

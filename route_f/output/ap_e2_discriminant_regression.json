@@ -1,0 +1,325 @@
+{
+  "all_pass": true,
+  "audit": "verify_ap_e2_discriminant_regression",
+  "checks": [
+    {
+      "detail": "hashed=6/6",
+      "group": "A0_provenance",
+      "name": "all critical AP-E2 sources are present and hashed",
+      "pass": true
+    },
+    {
+      "detail": "stored=a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc; recomputed=a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+      "group": "A0_provenance",
+      "name": "Route-E invariant card verifies its internal stable digest",
+      "pass": true
+    },
+    {
+      "detail": "card=0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81; current=0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81",
+      "group": "A0_provenance",
+      "name": "Route-E card binds the current Audit-0 builder hash",
+      "pass": true
+    },
+    {
+      "detail": "block_sha256=3999b88f3fe7e396948c9695939ec5826d74cfc6d06f6b26ed05d3b0e0c4d094",
+      "group": "A0_provenance",
+      "name": "the AP-E2 theorem/proof block matches the frozen semantic source",
+      "pass": true
+    },
+    {
+      "detail": "(a,b,c)=(Fraction(3, 2), Fraction(-7, 3), Fraction(5, 4)); Delta=-37/18",
+      "group": "A1_exact",
+      "name": "exact rational anchor obeys A_q^2=Delta I/4",
+      "pass": true
+    },
+    {
+      "detail": "Delta=-37/18; B=-37/9; transvectant=37/9",
+      "group": "A1_exact",
+      "name": "exact rational anchor obeys B=2 Delta and (p,p)_2=-2 Delta",
+      "pass": true
+    },
+    {
+      "detail": "p=(Fraction(3, 2), Fraction(-7, 3), Fraction(5, 4)); r=(Fraction(-2, 5), Fraction(11, 7), Fraction(4, 3))",
+      "group": "A1_exact",
+      "name": "polarized anchor obeys B(A_p,A_r)=2D(p,r) and (p,r)_2=-B(A_p,A_r)",
+      "pass": true
+    },
+    {
+      "detail": "constraint rank=5/6; kernel dimension=1",
+      "group": "A1_exact",
+      "name": "the symmetric sl2-invariant contact line is exactly one-dimensional",
+      "pass": true
+    },
+    {
+      "detail": "seed=20260714; samples=256; failures=0; regular=256",
+      "group": "A1_exact",
+      "name": "seeded rational samples obey all projective/Killing/transvectant identities exactly",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; failures=0",
+      "group": "A1_exact",
+      "name": "seeded rational pairs obey the polarized contact identity exactly",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; failures=0; affine xi=v/u",
+      "group": "A1_exact",
+      "name": "det(z,A_p z)=p(z) fixes the homogeneous and affine-chart convention",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; failures=0",
+      "group": "A1_exact",
+      "name": "binary discriminant is exactly invariant under seeded SL(2,Z) substitutions",
+      "pass": true
+    },
+    {
+      "detail": "A[p(gz)]=g^-1 A[p] g; samples=256; failures=0",
+      "group": "A1_exact",
+      "name": "the projective matrix transforms by exact conjugacy under the declared SL(2) substitution",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; failures=0",
+      "group": "A1_exact",
+      "name": "discriminant and contact have exact weight two under section rescaling",
+      "pass": true
+    },
+    {
+      "detail": "cases=4; failures=0; includes u^2 and v^2",
+      "group": "A2_boundary",
+      "name": "finite and infinite double-root charts lie on the nonzero nilpotent/contact-null cone",
+      "pass": true
+    },
+    {
+      "detail": "cases=4; max residual=0.00e+00; min projective separation=0.316228",
+      "group": "A2_boundary",
+      "name": "real, complex, asymmetric, and infinite roots match eigenlines in the xi=v/u chart",
+      "pass": true
+    },
+    {
+      "detail": "cases=3; max section/eigenline/gradient residual=0.00e+00",
+      "group": "A2_boundary",
+      "name": "finite zero, finite nonzero, and infinite double roots have vanishing first jet",
+      "pass": true
+    },
+    {
+      "detail": "Delta(0)=0 and A_0=0; theorem domain is explicitly X_q != 0",
+      "group": "A2_boundary",
+      "name": "the zero section is detected and excluded from the theorem's nonzero nilpotent clause",
+      "pass": true
+    },
+    {
+      "detail": "Delta=-4.0e-70; identity residual=0.0",
+      "group": "A2_boundary",
+      "name": "100-digit arithmetic resolves a 1e-70 perturbation away from the null cone",
+      "pass": true
+    },
+    {
+      "detail": "max|K_source-K_canonical|=3.54908512195e-17; max|K^2-I/3|=4.09813050107e-17",
+      "group": "A3_route_e",
+      "name": "Route-E card uses the canonical spherical K_tr normalization",
+      "pass": true
+    },
+    {
+      "detail": "sym=0.0; inverse=1.22943915032e-16; det=(-1.9245008973e-1 + 0.0j); isotropic norm=(0.0 + 0.0j); |Kx|_max=5.7735026919e-1",
+      "group": "A3_route_e",
+      "name": "K_tr is symmetric, invertible, and may have nonzero isotropic vectors without being degenerate",
+      "pass": true
+    },
+    {
+      "detail": "y=R*x/sqrt(2); B=2sqrt(3)x^TKx=4sqrt(3)y^TKy; residual=3.31036622241e-15",
+      "group": "A3_route_e",
+      "name": "spherical and normalized-polynomial bases carry the required factor-two conversion",
+      "pass": true
+    },
+    {
+      "detail": "residuals={\"E\": \"0.0\", \"F\": \"0.0\", \"H\": \"0.0\"}",
+      "group": "A3_route_e",
+      "name": "loaded K_tr is invariant under the complete H,E,F generator triple",
+      "pass": true
+    },
+    {
+      "detail": "seed=20260714; samples=256; regular=256; failures=0; intrinsic max=1.67930436346e-101; source-card max=6.1471957516e-17",
+      "group": "A4_complex",
+      "name": "seeded 100-digit complex samples reproduce the discriminant/contact theorem",
+      "pass": true
+    },
+    {
+      "detail": "intentional wrong-convention residual=1.0e+1",
+      "group": "A5_negative_control",
+      "name": "missing sqrt(2) in the spherical section map is rejected",
+      "pass": true
+    },
+    {
+      "detail": "intentional wrong-convention residual=1.2e+1",
+      "group": "A5_negative_control",
+      "name": "missing factor two in B_Kill=2 Delta is rejected",
+      "pass": true
+    },
+    {
+      "detail": "intentional wrong-basis residual=1.2e+1",
+      "group": "A5_negative_control",
+      "name": "using the spherical 2sqrt(3) factor on normalized polynomial coefficients is rejected",
+      "pass": true
+    },
+    {
+      "detail": "intentional wrong-convention residual=1.56204993518e+1",
+      "group": "A5_negative_control",
+      "name": "Hermitian substitution for the complex symmetric contact is rejected",
+      "pass": true
+    },
+    {
+      "detail": "ad_e=0 gives Killing=0 while B(e,e)=1 is invariant and nondegenerate",
+      "group": "A6_boundary",
+      "name": "the one-dimensional abelian counterexample passes invariant-pairing H3 but fails Killing-contact H3+",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=false by construction",
+      "group": "A6_boundary",
+      "name": "a green AP-E2 algebraic regression cannot promote a physical bridge",
+      "pass": true
+    }
+  ],
+  "checks_passed": 30,
+  "checks_total": 30,
+  "degenerate_cases": [
+    {
+      "a": "4",
+      "b": "-12",
+      "c": "9",
+      "classification": "nonzero_nilpotent_double_root",
+      "linear_factor": "(2)u+(-3)v"
+    },
+    {
+      "a": "1",
+      "b": "0",
+      "c": "0",
+      "classification": "nonzero_nilpotent_double_root",
+      "linear_factor": "(1)u+(0)v"
+    },
+    {
+      "a": "0",
+      "b": "0",
+      "c": "1",
+      "classification": "nonzero_nilpotent_double_root",
+      "linear_factor": "(0)u+(1)v"
+    },
+    {
+      "a": "25/49",
+      "b": "-110/63",
+      "c": "121/81",
+      "classification": "nonzero_nilpotent_double_root",
+      "linear_factor": "(-5/7)u+(11/9)v"
+    }
+  ],
+  "negative_controls": {
+    "hermitian_substitution": {
+      "detected": true,
+      "residual": "1.56204993518133088e+1",
+      "wrong_convention": "x^dagger K x instead of x^T K x"
+    },
+    "missing_factor_two": {
+      "detected": true,
+      "residual": "1.2e+1",
+      "wrong_convention": "B_Kill=Delta instead of B_Kill=2 Delta"
+    },
+    "missing_sqrt2": {
+      "detected": true,
+      "residual": "1.0e+1",
+      "wrong_convention": "a=x_-, b=-x_0, c=x_+ (sqrt(2) omitted)"
+    },
+    "normalized_basis_factor": {
+      "correct_convention": "B=4sqrt(3)y^T K y",
+      "detected": true,
+      "residual": "1.19999999999999993e+1",
+      "wrong_convention": "B=2sqrt(3)y^T K y in normalized (u^2,sqrt(2)uv,v^2) coefficients"
+    }
+  },
+  "physics_promotion_allowed": false,
+  "precision": {
+    "max_intrinsic_high_precision_identity_residual": "1.67930436345868921e-101",
+    "max_source_card_identity_residual": "6.14719575160384581e-17",
+    "mp_dps": 100,
+    "near_null_discriminant": "-4.0e-70",
+    "near_null_epsilon": "1.0e-70",
+    "near_null_identity_residual": "0.0",
+    "route_E_K_source_error": "3.54908512194980425e-17",
+    "route_E_K_square_error": "4.09813050106923067e-17",
+    "source_normalization_tolerance": "5.0e-15"
+  },
+  "reproducibility": {
+    "high_precision_backend": "mpmath",
+    "mpmath_version": "1.4.1",
+    "seed": 20260714,
+    "stdlib_exact_type": "fractions.Fraction"
+  },
+  "route_E_card_internal_digest": {
+    "matches": true,
+    "recomputed": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc",
+    "stored": "a68f7c93e3eca0b63c95d7f7ac8a281fc58c429040fc98f1eca1846efb1d18bc"
+  },
+  "sample_counts": {
+    "exact_degenerate": 4,
+    "exact_random_rational": 256,
+    "high_precision_complex": 256
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_E/output/audit0/invariant_card.json",
+      "sha256": "891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131",
+      "size_bytes": 10028
+    },
+    {
+      "exists": true,
+      "path": "route_E/code/audit0_conventions_card.py",
+      "sha256": "0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81",
+      "size_bytes": 15657
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/another_physics_route_e_derivation_ledger.tex",
+      "sha256": "f182fb68884cbc3e81f8eafe09dade2299429ae8618d193ae00909f2592d9ab4",
+      "size_bytes": 43901
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e2_discriminant_regression.tex",
+      "sha256": "0c54f461b6e4f1d0f5cebd88dc384b14295add78fd64aeeddcf2c1d5c4b59092",
+      "size_bytes": 31296
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_another_physics_route_e_bridge.py",
+      "sha256": "31f86d49c99181b9b3f2956a1d9e79621b3cfbe90751cec9d58843cd002098e4",
+      "size_bytes": 36432
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e2_discriminant_regression.py",
+      "sha256": "a658e2804509502a66c37cb4f8e2318329a7fd285266bcfd2da70ed92e489276",
+      "size_bytes": 40639
+    }
+  ],
+  "status": "ap_e2_exact_regression_pass_no_physics_promotion",
+  "theorem_block_expected_sha256": "3999b88f3fe7e396948c9695939ec5826d74cfc6d06f6b26ed05d3b0e0c4d094",
+  "theorem_block_sha256": "3999b88f3fe7e396948c9695939ec5826d74cfc6d06f6b26ed05d3b0e0c4d094",
+  "theorem_scope": {
+    "basis_identity": "B=2sqrt(3)x^T K_tr x=4sqrt(3)y^T K_tr y for y=R x/sqrt(2)",
+    "boundary": "Delta=0 and X_q!=0 is the nilpotent/contact-null double-zero cone",
+    "domain": "nonzero X_q in H^0(CP1,T_CP1) on the conditional H3+ carrier",
+    "identity": "B_Kill(A_q,A_q)=2 Delta(p)=2 sqrt(3) x^T K_tr x",
+    "matrix_identity": "A_q^2=Delta(p) I/4",
+    "not_derived": [
+      "H3+ or its microscopic dynamics",
+      "identification of divisor zeros with particles, energies, or families",
+      "Berry level k=2 or an O(2) prequantum bundle"
+    ],
+    "polarized_identity": "B(A_p,A_r)=2D(p,r) and (p,r)_2=-B(A_p,A_r)",
+    "regular_branch": "Delta != 0 iff two distinct zeros iff regular semisimple iff contact non-null",
+    "transvectant_identity": "(p,p)_2=-2 Delta(p)"
+  }
+}

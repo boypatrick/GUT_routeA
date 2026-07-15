@@ -1,0 +1,625 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,slashed}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E4: Tangent-Valued Dirac Operators on \(\mathbb{CP}^1\)\\
+Chirality, Complete Partner Spectrum, Spectral Gap,\\
+and the Canonical-Spin\texorpdfstring{\(^c\)}{c} versus Ordinary-Spin Gate}
+\author{Route F research note}
+\date{15 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note independently constructs and solves the AP-E4 operator problem.
+Linearizing a \(\CP^1\) sigma-model field proves that its physical horizontal
+variation is tangent-valued.  In affine charts the coefficient transforms by
+\(\delta(1/w)=-w^{-2}\delta w\), hence
+\(T^{1,0}\CP^1\simeq\cO(2)\) with Chern number two.  This is a geometric
+theorem about a bosonic fluctuation; it does not yet produce a fermion.
+
+The minimal mathematical three-mode candidate is the canonical
+Spin\({}^c\) Dolbeault operator
+\[
+ D_T^c=\sqrt2\bigl(\bar\partial_T+\bar\partial_T^\dagger\bigr),
+ \qquad
+ W^+=\Omega^{0,0}(T),\quad W^-=\Omega^{0,1}(T).
+\]
+Hodge theory gives
+\(\Ker D_T^{c,+}=H^0(\cO(2))\simeq\CC^3\),
+\(\Ker D_T^{c,-}=H^1(\cO(2))=0\), and index three.  In the AP-E1 round
+sphere convention \(R=1/2\), its complete spectrum is
+\[
+ \lambda_{n,\pm}=\pm\frac{\sqrt{n(n+3)}}{R},\qquad
+ \operatorname{mult}(\lambda_{n,+})=
+ \operatorname{mult}(\lambda_{n,-})=2n+3,\qquad n\ge1.
+\]
+Thus the first massive level is \(\pm4\), fivefold for each sign.  Only the
+kernel lacks opposite chirality; every massive mode has a partner.
+
+A decisive negative control is also proved.  The unique ordinary spin
+structure has \(S^+=\cO(-1)\).  Twisting an ordinary spin Dirac operator only
+by the actual tangent line \(T=\cO(2)\) leaves the Dolbeault line \(\cO(1)\)
+and therefore gives two zero modes, not three.  The canonical Spin\({}^c\)
+choice with \(\cO(2)\) is equivalent to ordinary spin twist \(\cO(3)\): its
+extra half-canonical unit is physical input, not notation.
+
+The companion verifier passes all exact and numerical spectral checks.
+AP-E4 is therefore mathematically closed at the canonical-operator level,
+but the physical origin remains open: a bosonic tangent fluctuation does not
+derive a target-space fermion, a product compactification or moduli-space SQM
+has not been specified, higher-dimensional anomalies are not cancelled, and
+the three automorphism vector fields are not yet chiral Route-E families.
+Physics promotion remains false.
+\end{abstract}
+
+\tableofcontents
+
+\section{Question, conventions, and exact status}
+
+AP-E4 must keep four statements separate:
+\begin{enumerate}[label=(Q\arabic*)]
+\item Is the linearized physical field tangent-valued?
+\item Which Clifford module and Dirac operator act on it?
+\item What are the chirality, complete spectrum, and first gap?
+\item Under what additional microscopic conditions may the index be read as
+  a four-dimensional family count?
+\end{enumerate}
+The first three have exact mathematical answers once the operator choice is
+declared.  The fourth is a physical UV problem and is not solved by an index.
+
+We retain the AP-E1 Fubini--Study convention
+\begin{equation}
+ \dd s^2=\frac{\dd w\,\dd\bar w}{(1+|w|^2)^2}
+ =R^2(\dd\theta^2+\sin^2\theta\,\dd\phi^2),
+ \qquad R=\frac12.
+ \label{eq:metric}
+\end{equation}
+Consequently
+\begin{equation}
+ K_G=\frac1{R^2}=4,
+ \qquad \operatorname{Scal}=\frac2{R^2}=8.
+ \label{eq:curvatures}
+\end{equation}
+Every eigenvalue below refers to the canonical geometric normalization
+\(D^c=\sqrt2(\bar\partial+\bar\partial^\dagger)\) and to
+Eq.~\eqref{eq:metric}.
+
+\section{First-principles derivation of the tangent bundle}
+
+\subsection{Horizontal projection of a projective doublet}
+
+Let a sigma-model field be represented by
+\begin{equation}
+ z(x)\in\CC^2,\qquad z^\dagger z=1,\qquad
+ z\sim e^{\ii\alpha(x)}z.
+ \label{eq:projective-field}
+\end{equation}
+An allowed variation obeys
+\(\operatorname{Re}(z^\dagger\delta z)=0\).  Its vertical gauge component is
+proportional to \(\ii z\), while the gauge-horizontal physical variation is
+\begin{equation}
+ \eta=Q_z\delta z,
+ \qquad Q_z=1-zz^\dagger,
+ \qquad z^\dagger\eta=0.
+ \label{eq:horizontal-variation}
+\end{equation}
+Under \(z\mapsto e^{\ii\alpha}z\), one has
+\(\eta\mapsto e^{\ii\alpha}\eta\).  Intrinsically,
+\begin{equation}
+ T_{[z]}\CP^1\simeq\operatorname{Hom}(\CC z,\CC^2/\CC z),
+ \label{eq:tangent-hom}
+\end{equation}
+and \(\eta\) represents exactly this homomorphism.  Thus a fluctuation about
+\(\varphi_0:X\to\CP^1\) lies in
+\begin{equation}
+ \eta\in\Gamma(X,\varphi_0^*T\CP^1).
+ \label{eq:pullback-tangent}
+\end{equation}
+Notice the pullback: this does not yet make \(\eta\) a spinor living on target
+\(\CP^1\).
+
+\subsection{Two-chart proof that \texorpdfstring{\(T^{1,0}\CP^1=\cO(2)\)}{T CP1=O(2)}}
+
+On \(U_N\), set
+\begin{equation}
+ z_N(w)=\frac{(1,w)^T}{\sqrt{1+|w|^2}}.
+ \label{eq:north-frame}
+\end{equation}
+A direct differentiation and projection gives
+\begin{equation}
+ Q_N\delta z_N
+ =\frac{(-\bar w,1)^T}{(1+|w|^2)^{3/2}}\,\delta w.
+ \label{eq:north-horizontal}
+\end{equation}
+On \(U_S\), use \(v=1/w\) and
+\begin{equation}
+ z_S(v)=\frac{(v,1)^T}{\sqrt{1+|v|^2}},
+ \qquad
+ Q_S\delta z_S
+ =\frac{(1,-\bar v)^T}{(1+|v|^2)^{3/2}}\,\delta v.
+ \label{eq:south-horizontal}
+\end{equation}
+On the overlap,
+\begin{equation}
+ \delta v=\frac{\dd v}{\dd w}\delta w=-w^{-2}\delta w.
+ \label{eq:tangent-transition}
+\end{equation}
+The holomorphic tangent coefficient therefore has degree two.  Hence
+\begin{equation}
+ \boxed{T^{1,0}\CP^1\simeq\cO(2).}
+ \label{eq:tangent-o2}
+\end{equation}
+
+For the positive AP-E1 orientation, a compatible Chern connection is
+\begin{align}
+ a_N^{(2)}&=(1-\cos\theta)\dd\phi,
+ &a_S^{(2)}&=-(1+\cos\theta)\dd\phi,\label{eq:tangent-potentials}\\
+ a_N^{(2)}-a_S^{(2)}&=2\dd\phi,
+ &F_T&=\sin\theta\,\dd\theta\wedge\dd\phi.
+ \label{eq:tangent-curvature}
+\end{align}
+Thus
+\begin{equation}
+ \frac1{2\pi}\int_{S^2}F_T=2.
+ \label{eq:tangent-chern}
+\end{equation}
+The transition proof fixes the algebraic bundle; the flux fixes its oriented
+connection without relying on ambiguous names for ket versus dual lines.
+
+\subsection{The bosonic Hessian is not a Dirac operator}
+
+For
+\begin{equation}
+ S_B=\frac{f^2}{2}\int_X|\dd\varphi|^2,
+ \label{eq:bosonic-action}
+\end{equation}
+the covariant exponential-map expansion gives
+\begin{equation}
+ S_B^{(2)}=\frac{f^2}{2}\int_X
+ \left[
+ \langle D_\mu\eta,D^\mu\eta\rangle
+ -\langle R(\eta,\partial_\mu\varphi_0)
+ \partial^\mu\varphi_0,\eta\rangle
+ \right].
+ \label{eq:jacobi-hessian}
+\end{equation}
+The Jacobi operator is second order,
+\begin{equation}
+ J\eta=-D_\mu D^\mu\eta
+ -R(\eta,\partial_\mu\varphi_0)\partial^\mu\varphi_0
+ \label{eq:jacobi-operator}
+\end{equation}
+in the displayed Euclidean sign convention.  For constant \(\varphi_0\), the
+pullback bundle is trivial on \(X\), the curvature term vanishes, and one gets
+only \(-\Box_X\).  If \(\varphi_0\) has degree \(d\) on a two-cycle, then
+\(c_1(\varphi_0^*T)=2d\), not unconditionally two.
+
+\begin{gate}[Statistics and base manifold]
+The field \(\eta\) is commuting and carries no Clifford index.  A fermion
+requires a separate spin or Spin\({}^c\) module.  In an ordinary supersymmetric
+sigma model, \(\psi\in\Gamma(S_X\otimes\varphi^*T)\) is acted on by a Dirac
+operator on the base \(X\), not automatically by a Dirac operator whose
+coordinate is target \(\CP^1\).  A target spectrum requires an explicit
+moduli-space quantum mechanics or a product compactification.
+\end{gate}
+
+\section{The canonical Spin\texorpdfstring{\({}^c\)}{c} tangent operator}
+
+\subsection{Operator, chirality, and global bundle}
+
+On a K\"ahler curve, the canonical Spin\({}^c\) module is
+\cite{LawsonMichelsohn1989,Wells2008}
+\begin{equation}
+ W^+=\Omega^{0,0},\qquad W^-=\Omega^{0,1},
+ \qquad \Gamma|_{W^\pm}=\pm1.
+ \label{eq:canonical-module}
+\end{equation}
+Twist it by
+\(E=T^{1,0}\CP^1=\cO(2)\).  The selected AP-E4 operator is
+\begin{equation}
+ \boxed{
+ D_T^c=\sqrt2(\bar\partial_T+\bar\partial_T^\dagger):
+ \Omega^{0,0}(T)\oplus\Omega^{0,1}(T)
+ \longrightarrow
+ \Omega^{0,0}(T)\oplus\Omega^{0,1}(T).}
+ \label{eq:canonical-dirac}
+\end{equation}
+It is self-adjoint and odd,
+\begin{equation}
+ \{D_T^c,\Gamma\}=0,
+ \qquad (D_T^c)^2=2\Delta_{\bar\partial_T}.
+ \label{eq:dirac-square}
+\end{equation}
+
+The canonical Spin\({}^c\) determinant before twisting is
+\(K^{-1}=\cO(2)\).  Twisting the module by \(E=\cO(q)\) changes the effective
+determinant to
+\begin{equation}
+ \det W_E=K^{-1}\otimes E^2=\cO(2q+2).
+ \label{eq:spinc-determinant}
+\end{equation}
+For \(q=2\), this is \(\cO(6)\).  This topological datum must eventually be
+part of the microscopic theory.
+
+\subsection{Local ordinary-spin representative and the hidden shift}
+
+The unique spin structure on \(S^2\) has
+\begin{equation}
+ S^+=K^{1/2}=\cO(-1),\qquad S^-=K^{-1/2}=\cO(1).
+ \label{eq:spin-bundles}
+\end{equation}
+An ordinary spin Dirac operator twisted by \(\cO(p)\) may be written on the
+north patch as
+\begin{equation}
+ D_p^{\rm spin}=-\frac{\ii}{R}\left[
+ \sigma_1\left(\partial_\theta+\frac12\cot\theta\right)
+ +\frac{\sigma_2}{\sin\theta}
+ \left(\partial_\phi-\ii a_\phi^{(p)}\right)
+ \right],
+ \label{eq:local-spin-dirac}
+\end{equation}
+where
+\begin{equation}
+ a_N^{(p)}=\frac p2(1-\cos\theta)\dd\phi,
+ \qquad
+ a_S^{(p)}=-\frac p2(1+\cos\theta)\dd\phi.
+ \label{eq:op-connection}
+\end{equation}
+Its positive component is the Dolbeault line
+\begin{equation}
+ S^+\otimes\cO(p)=\cO(p-1).
+ \label{eq:ordinary-effective-line}
+\end{equation}
+Consequently
+\begin{equation}
+ D^c_{\cO(q)}\simeq D^{\rm spin}_{\cO(q+1)}.
+ \label{eq:spin-spinc-relation}
+\end{equation}
+The canonical tangent choice \(q=2\) is equivalent to ordinary twist
+\(p=3\), not \(p=2\).  The unit shift is the half-canonical factor
+\(K^{-1/2}=\cO(1)\).
+
+\begin{gate}[Ordinary tangent negative control]
+If a microscopic fermion is an ordinary spinor twisted only by the actual
+tangent line \(T=\cO(2)\), then \(p=2\) and its positive Dolbeault line is
+\(\cO(1)\).  It has two zero modes.  Calling this operator
+``Spin\({}^c\) on \(T\)'' does not change the count.  The physical problem is
+to derive the canonical Spin\({}^c\) module or the extra \(\cO(1)\), not to
+rename it.
+\end{gate}
+
+\section{Index, chirality, and exact zero modes}
+
+Hodge theory gives \cite{Wells2008}
+\begin{equation}
+ \Ker D_T^{c,+}\simeq H^0(\CP^1,\cO(2)),
+ \qquad
+ \Ker D_T^{c,-}\simeq H^1(\CP^1,\cO(2)).
+ \label{eq:hodge-kernels}
+\end{equation}
+For \(\cO(q)\) on \(\CP^1\),
+\begin{equation}
+ h^0(\cO(q))=\max\{q+1,0\},
+ \qquad
+ h^1(\cO(q))=h^0(\cO(-q-2)).
+ \label{eq:line-cohomology}
+\end{equation}
+The second identity is Serre duality.  At \(q=2\),
+\begin{equation}
+ h^0(\cO(2))=3,
+ \qquad h^1(\cO(2))=h^0(\cO(-4))=0.
+ \label{eq:q2-cohomology}
+\end{equation}
+Equivalently, by the index theorem \cite{AtiyahSinger1968}, with
+\(x=c_1(\cO(1))\) and \(\int_{\CP^1}x=1\),
+\begin{align}
+ \ind D_T^c
+ &=\int_{\CP^1}\operatorname{ch}(\cO(2))
+ \operatorname{Td}(T\CP^1)\notag\\
+ &=\int_{\CP^1}(1+2x)(1+x)=3.
+ \label{eq:index-theorem}
+\end{align}
+Thus
+\begin{equation}
+ \boxed{\dim\Ker D_T^{c,+}=3,\quad
+ \dim\Ker D_T^{c,-}=0,\quad \ind D_T^c=3.}
+ \label{eq:three-zero-modes}
+\end{equation}
+The basis is the familiar
+\(\{z_0^2,z_0z_1,z_1^2\}\), and
+\(H^0(T\CP^1)\simeq\mathfrak{sl}_2(\CC)\) as a complex representation.
+
+\begin{remark}[Orientation reversal is shifted]
+For the canonical Spin\({}^c\) operator, the index of \(\cO(q)\) is \(q+1\).
+Three negative-chirality zero modes require \(q=-4\), not \(q=-2\).  This
+asymmetry is another manifestation of the built-in canonical determinant.
+An ordinary spin monopole spectrum has the more familiar sign-symmetric
+charge count after its half-canonical shift is included explicitly.
+\end{remark}
+
+\section{Complete spectrum and spectral gap}
+
+\subsection{Monopole harmonics and the Weitzenb\"ock shift}
+
+For a canonical Dolbeault twist \(E=\cO(q)\), \(q\ge0\), the relevant
+\(SU(2)\) multiplet at excitation number \(n\ge0\) has
+\begin{equation}
+ j=\frac q2+n,
+ \qquad \dim V_j=2j+1=q+2n+1.
+ \label{eq:monopole-j}
+\end{equation}
+The connection Laplacian has eigenvalue
+\begin{equation}
+ \nabla^*\nabla
+ =\frac1{R^2}\left[j(j+1)-\left(\frac q2\right)^2\right].
+ \label{eq:bochner-spectrum}
+\end{equation}
+On positive chirality, the K\"ahler--Weitzenb\"ock identity subtracts the
+curvature term \(q/(2R^2)\):
+\begin{equation}
+ (D^c_{\cO(q)})^2
+ =2\bar\partial_q^\dagger\bar\partial_q
+ =\nabla^*\nabla-\frac{q}{2R^2}.
+ \label{eq:weitzenbock}
+\end{equation}
+Substitution of Eq.~\eqref{eq:monopole-j} gives the exact identity
+\begin{align}
+ j(j+1)-\frac{q^2}{4}-\frac q2
+ &=n(n+q+1).
+ \label{eq:casimir-identity}
+\end{align}
+At \(n=0\) this vanishes and the multiplicity is \(q+1\), reproducing the
+index result.
+
+For \(n\ge1\), supersymmetry/Hodge decomposition pairs the positive and
+negative form sectors.  Since \(D\) is odd and self-adjoint, every positive
+eigenvalue has a negative partner.  The full spectrum is therefore
+\begin{equation}
+ \boxed{
+ \lambda_{n,\pm}=\pm\frac{\sqrt{n(n+q+1)}}{R},\qquad
+ \operatorname{mult}(\lambda_{n,\pm})=q+2n+1,\qquad n\ge1.}
+ \label{eq:full-q-spectrum}
+\end{equation}
+This agrees with the supersymmetric projective-space monopole spectrum after
+converting operator and radius normalizations \cite{BykovSmilga2023APE4}.
+
+\subsection{The tangent result at \texorpdfstring{\(q=2,R=1/2\)}{q=2,R=1/2}}
+
+For AP-E4,
+\begin{equation}
+ \lambda_{n,\pm}=\pm2\sqrt{n(n+3)},
+ \qquad \operatorname{mult}(\lambda_{n,\pm})=2n+3.
+ \label{eq:tangent-spectrum}
+\end{equation}
+The first levels are
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\(n\) & \(|\lambda_n|\) & multiplicity & interpretation\\
+\midrule
+0 & 0 & \(3\) in \(W^+\), \(0\) in \(W^-\) & chiral kernel; no
+\(\pm\lambda\) split\\
+1 & 4 & 5 & first massive partner level\\
+2 & \(2\sqrt{10}\) & 7 & massive partner level\\
+3 & \(6\sqrt2\simeq8.48528\) & 9 & massive partner level\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus
+\begin{equation}
+ \boxed{\Delta_D=4,\qquad \Delta_{D^2}=16.}
+ \label{eq:canonical-gap}
+\end{equation}
+If the microscopic kinetic operator carries a velocity or normalization
+\(v_D\), all masses are multiplied by \(v_D\); the dimensionless geometric
+gap is the value above.
+
+\subsection{Ordinary spin twisted by the tangent line}
+
+For ordinary \(p=2\), the effective Dolbeault degree is \(q=p-1=1\).  Hence
+\begin{equation}
+ \dim\Ker D_{p=2}^{\rm spin,+}=2,\qquad
+ \lambda_{n,\pm}^{\rm spin}
+ =\pm\frac{\sqrt{n(n+p)}}{R},\qquad
+ \operatorname{mult}=p+2n.
+ \label{eq:ordinary-spectrum}
+\end{equation}
+At \(R=1/2\),
+\begin{equation}
+ \Delta_{p=2}^{\rm spin}=2\sqrt3\simeq3.464101615,
+ \qquad \operatorname{mult}_{n=1}=4
+ \label{eq:ordinary-gap}
+\end{equation}
+per sign.  This different kernel, gap, and degeneracy make the hidden
+Spin\({}^c\) choice experimentally and numerically falsifiable.
+
+\section{Partner spectrum and possible four-dimensional chirality}
+
+\subsection{What ``no opposite chirality'' actually means}
+
+Equation~\eqref{eq:three-zero-modes} proves that the \emph{kernel} has no
+negative-chirality state.  It does not remove negative chirality from the
+theory.  For every \(n\ge1\), choose normalized chiral components
+\(\psi_n^{(0)}\in W^+\) and \(\psi_n^{(1)}\in W^-\) so that
+\begin{equation}
+ D_T^c\psi_n^{(0)}=|\lambda_n|\psi_n^{(1)},\qquad
+ D_T^c\psi_n^{(1)}=|\lambda_n|\psi_n^{(0)}.
+ \label{eq:chiral-component-pair}
+\end{equation}
+The operator then produces the normalized eigenstates
+\begin{equation}
+ \psi_{n,+}=\frac{\psi_n^{(0)}+\psi_n^{(1)}}{\sqrt2},\qquad
+ \psi_{n,-}=\frac{\psi_n^{(0)}-\psi_n^{(1)}}{\sqrt2},
+ \label{eq:massive-pairs}
+\end{equation}
+with eigenvalues \(\pm|\lambda_n|\).  The first massive level contains five
+such pairs.  Any portal with characteristic scale comparable to \(4v_D\) will
+mix these states into the purported three-mode sector.
+
+\subsection{A conditional product compactification}
+
+Only after declaring a product geometry \(M^{3,1}\times\CP^1\) may one write
+schematically
+\begin{equation}
+ \slashed D_6=\slashed D_4\otimes1
+ +\gamma_5\otimes D_T^c,
+ \qquad
+ \Gamma_7=\gamma_5\otimes\Gamma_2,
+ \label{eq:product-dirac}
+\end{equation}
+up to a conventional overall sign.  A single six-dimensional Weyl condition
+then ties internal to four-dimensional chirality: the three internal
+positive zero modes become three same-chirality four-dimensional massless
+modes.  Each nonzero internal pair becomes a massive four-dimensional Dirac
+pair.  A six-dimensional \emph{Dirac} field contains both six-dimensional
+chiralities and generally doubles the four-dimensional zero sector.
+
+\begin{gate}[Higher-dimensional anomalies]
+A single six-dimensional Weyl fermion is generally gauge- and
+gravitationally anomalous.  A physical compactification must cancel its full
+eight-form anomaly polynomial, or exhibit a valid Green--Schwarz
+factorization, and must quantize the Spin\({}^c\) determinant flux.  After
+reduction, the representation-weighted four-dimensional anomaly is multiplied
+by the index three.  These are spectrum-level consistency conditions, not
+optional phenomenology \cite{AlvarezGaumeWitten1984}.
+\end{gate}
+
+\subsection{The automorphism-versus-family gate}
+
+The vector space
+\begin{equation}
+ H^0(\CP^1,T\CP^1)\simeq\mathfrak{sl}_2(\CC)
+ \label{eq:automorphism-space}
+\end{equation}
+consists of holomorphic infinitesimal automorphisms of \(\CP^1\).  Depending
+on the microscopic construction, these may be gauge redundancies, collective
+coordinates, or physical matter modes.  Dimension three alone cannot decide.
+One must derive the kinetic norm, gauge quotient, couplings, and anomaly
+representation of each mode before calling them three families.
+
+\section{Deterministic analytical and numerical audit}
+
+The companion script
+\texttt{route\_f/code/verify\_ap\_e4\_tangent\_dirac\_spectrum.py}
+is deliberately independent of a fitted spectrum.  It performs:
+\begin{enumerate}
+\item exact line-bundle cohomology and Serre-duality checks for \(q=2\),
+  ordinary \(p=2\), and neighbouring \(q=1,3\) controls;
+\item exact rational verification of Eq.~\eqref{eq:casimir-identity} and its
+  multiplicity through ten levels;
+\item numerical construction of each finite \(SU(2)\) spin-\(j\) matrix,
+  diagonalization of the shifted Casimir, and comparison with
+  \(n(n+q+1)\);
+\item a truncated chiral block operator with three positive zero bases and
+  five massive levels, testing Hermiticity,
+  \(\{D,\Gamma\}=0\), exact \(\pm\lambda\) pairing, kernel chirality, and
+  the gap four;
+\item curvature quadrature for \(c_1(T)=2\), horizontal-projection residuals,
+  and radius-rescaling checks;
+\item negative controls for nonintegral monopole charge, ordinary-spin
+  misidentification, a chirality-breaking mass, and the false assertion that
+  massive partners are absent.
+\end{enumerate}
+The spectral block regression checks bookkeeping, while the independent
+Casimir diagonalization checks the representation-theoretic eigenvalues.
+Neither is presented as a substitute for a microscopic origin.
+
+\section{Claim ledger and next steps}
+
+\begin{longtable}{@{}L{0.43\textwidth}L{0.20\textwidth}L{0.28\textwidth}@{}}
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endhead
+Horizontal projective fluctuation is tangent-valued & \status{proved} & as a
+section of \(\varphi_0^*T\CP^1\)\\
+\(T^{1,0}\CP^1=\cO(2)\), \(c_1=2\) & \status{proved} & chart and flux proofs\\
+Canonical Spin\({}^c\) tangent operator has three positive zero modes &
+\status{proved} & declared operator choice\\
+Complete canonical spectrum and gap four & \status{proved} & AP-E1
+\(R=1/2\) convention\\
+Every massive level has paired \(\pm D_T^c\) eigenvalues and equal
+\(W^\pm\) multiplicities & \status{proved} & only the kernel has a chiral
+imbalance\\
+Ordinary spin twist by \(T\) has two zero modes & \status{proved} & decisive
+negative control\\
+Physical fermion is canonical Spin\({}^c\) and tangent-valued &
+\status{open} & requires moduli SQM or compactification\\
+Six-dimensional and four-dimensional anomalies cancel & \status{open} & no
+complete field content or \(I_8\) factorization\\
+Three zero modes are three Route-E families & \status{open} & automorphism,
+gauge, and portal gates unresolved\\
+\bottomrule
+\end{longtable}
+
+Three physically distinct continuations should be retained:
+\begin{enumerate}
+\item \textbf{Moduli-space/SQM route.}  Derive a soliton moduli space
+  \(\CP^1\), its tangent fermions, and \(N=2\) supercharge
+  \(Q=\sqrt2\bar\partial_T\); then compute whether these quantum states carry
+  the required four-dimensional gauge representation.
+\item \textbf{Product-compactification route.}  Specify a six-dimensional
+  anomaly-free theory on \(M^{3,1}\times\CP^1\), derive the Spin\({}^c\)
+  determinant line and \(E=T\), and calculate the complete KK/threshold
+  spectrum.
+\item \textbf{Ordinary-spin control route.}  Accept the natural ordinary
+  tangent twist and its two modes unless an additional \(\cO(1)\) gauge flux
+  is independently derived.  This is the conservative fallback.
+\end{enumerate}
+
+The fail-closed result is
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{tangent\_bundle\_derived=true},\\
+ \texttt{canonical\_spinc\_mathematics\_complete=true},\\
+ \texttt{canonical\_spinc\_three\_zero\_modes=true},\\
+ \texttt{partner\_spectrum\_and\_gap\_complete=true},\\
+ \texttt{physical\_fermionic\_tangent\_mode\_derived=false},\\
+ \texttt{six\_dimensional\_anomaly\_cancelled=false},\\
+ \texttt{route\_e\_chiral\_family\_identification=false},\\
+ \texttt{ap\_e4\_physics\_closed=false},\\
+ \texttt{physics\_promotion\_allowed=false}.
+ \end{gathered}}
+ \label{eq:final-status}
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e4_tangent_dirac_spectrum}
+
+\end{document}

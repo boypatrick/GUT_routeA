@@ -1,0 +1,818 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\braket}[2]{\langle #1\vert #2\rangle}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E3 UV Follow-up:\\
+An Exact Two-Constituent Gauge/Unit-Cell Rule, a Physical \(k=+2\) Orientation,\\
+and an Anomaly-Consistent Mixed-WZW Completion Candidate}
+\author{Route F research note}
+\date{15 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note closes two sharply delimited AP-E3 questions and exposes the gates
+that remain.  First, two independent compact constraint gauge fields impose
+\(G_r=N_r-1=0\), \(r=1,2\), on every indivisible unit cell.  The physical
+cell Hilbert space is therefore exactly \(\CC^2\otimes\CC^2\); singleton,
+odd-total, and charge-transfer sectors are absent kinematically rather than
+merely heavy.  Ferromagnetic exchange selects the triplet, while the sign of
+the electron Pauli magnetic moment selects its anti-aligned coherent ground
+line.  If \(A_+=-\ii s_+^\dagger\dd s_+\) is the AP-E1 unit-flux connection,
+then
+\[
+ \ii\hbar\braket{\Omega_-}{\dd\Omega_-}=+2\hbar A_+.
+\]
+Thus the signed worldline level is physically \(k=+2\).  The ground line is
+the square of the universal quotient line,
+\(Q^{\otimes2}\simeq\cO(2)\), and directly has three holomorphic sections.
+
+Second, we construct an anomaly-consistent intermediate UV candidate with
+gauge group \(SU(2)_c\times U(1)_g\), two vectorlike Dirac flavours of
+abelian charge one, and a charge-one scalar doublet.  All dynamical local and
+Witten gauge anomalies cancel.  Gauging \(U(1)_g\) removes the problematic
+off-diagonal Pauli--G\"ursey generators, and generalized-symmetry matching
+fixes the mixed-WZW coefficient to
+\(n=n_cX_q=2\).  A positive unit baryon reduces the five-dimensional term to
+\(k=nB=+2\).  The same colour Gauss law forces a local baryon to contain two
+quarks and two conjugate-Higgs dressings, producing a degree-two triplet.
+
+The deterministic audit passes all stated algebraic and numerical checks.
+Nevertheless, neither branch proves the Route-E family portal.  The mixed-WZW
+model still needs nonperturbative vacuum selection, soliton stability,
+compact-\(U(1)\)/bordism tests, and an all-scale completion beyond its
+abelian Landau pole.  Hence the exact constrained-cell theorem and signed
+orientation are closed within their declared microscopic model, while full
+AP-E3 UV physics and physics promotion remain false.
+\end{abstract}
+
+\tableofcontents
+
+\section{Logical target and result ledger}
+
+The earlier finite-\(U\) Mott--Hund model proves a level magnitude only after
+declaring two orbitals and an interacting occupancy plateau.  Finite energy
+penalties never remove states from a UV Hilbert space.  The first task here is
+therefore not to increase a Mott gap, but to replace the energetic statement
+by an exact physical-state condition.  The second task is to select the sign
+of the Berry action from a microscopic coupling rather than relabeling an
+already derived negative level.  The third task is an independent
+four-dimensional topological mechanism with a complete anomaly ledger.
+
+The conclusions must be read at three distinct levels.
+\begin{enumerate}[label=(L\arabic*)]
+\item \textbf{Exact constrained-cell theorem.}  Once the two compact Gauss
+  laws and complete-cell boundary condition are part of the microscopic
+  definition, exactly two constituents and the signed \(k=+2\) ground line
+  are proved.
+\item \textbf{Anomaly-consistent intermediate UV candidate.}  The charged
+  two-colour theory cancels every dynamical gauge anomaly and matches the
+  required two-group coefficient, but its strong phase and all-scale UV
+  completion are not proved.
+\item \textbf{Route-E interpretation.}  No calculation below identifies the
+  triplet with three chiral \(Spin(10)\) families or derives the portal map.
+  Physics promotion therefore remains forbidden.
+\end{enumerate}
+
+\section{Exactly two as a gauge/physical-state rule}
+
+\subsection{Why the two Gauss laws are the minimal strong rule}
+
+Four superficially similar restrictions are inequivalent.
+\begin{longtable}{@{}L{0.24\textwidth}L{0.21\textwidth}L{0.46\textwidth}@{}}
+\toprule
+Rule & Physical sector & Decisive boundary\\
+\midrule
+\endfirsthead
+\toprule
+Rule & Physical sector & Decisive boundary\\
+\midrule
+\endhead
+\(G_r=N_r-1=0\), \(r=1,2\) & exactly \((N_1,N_2)=(1,1)\) & removes odd and
+charge-transfer sectors kinematically; selected here\\
+\(G=N_1+N_2-2=0\) & total number two & still contains \((2,0)\) and
+\((0,2)\); insufficient without another selector\\
+\((-1)^{N_1+N_2}=+1\) & every even sector & contains vacuum, \(N=4,6,\ldots\)
+and does not select the pair\\
+finite \(\Lambda_G\sum_r(N_r-1)^2\) & all sectors, separated in energy & is
+an EFT approximation and cannot be called an exact rule\\
+\bottomrule
+\end{longtable}
+
+The selected cell contains two co-located but internally labelled local
+spin-\(1/2\) moments.  The label may be an orbital, layer, or microscopic
+dimer label, but a permitted spatial boundary must terminate whole cells.
+This is a model input: the constraint derives the consequences of the cell,
+not why nature chose this cell architecture.
+
+\subsection{Constraint action, projector, and large gauge invariance}
+
+For cell \(c\), internal label \(r=1,2\), and spinor index \(A=1,2\), let
+\(f_{crA}\) be \emph{bosonic} Schwinger partons with
+\begin{equation}
+ [f_{crA},f_{c'r'B}^\dagger]
+ =\delta_{cc'}\delta_{rr'}\delta_{AB},\qquad
+ N_{cr}=f_{crA}^\dagger f_{crA},\qquad
+ G_{cr}=N_{cr}-1.
+ \label{eq:gauss-law}
+\end{equation}
+The repeated spinor index is summed.  A worldline action that implements the
+constraint is
+\begin{equation}
+ L_c=\ii\hbar\sum_{r,A}f_{crA}^\dagger\dot f_{crA}
+ +\hbar\sum_r a_{0,cr}(N_{cr}-1)-H_c.
+ \label{eq:constraint-action}
+\end{equation}
+Under
+\begin{equation}
+ f_{cr}\longmapsto e^{\ii\alpha_{cr}}f_{cr},\qquad
+ a_{0,cr}\longmapsto a_{0,cr}+\dot\alpha_{cr},
+ \label{eq:constraint-gauge}
+\end{equation}
+the Lagrangian changes only by
+\(-\hbar\sum_r\dot\alpha_{cr}\).  On a time circle,
+\(\Delta\alpha_{cr}=2\pi m_{cr}\) gives
+\begin{equation}
+ \exp\left(\frac{\ii\Delta S}{\hbar}\right)
+ =\exp\left(-2\pi\ii\sum_r m_{cr}\right)=1.
+ \label{eq:large-gauge}
+\end{equation}
+Thus the integer background charge one has no \(0+1\)-dimensional large-gauge
+obstruction.  A half-integer background would fail this test.
+
+The exact physical projector is
+\begin{equation}
+ \Pi_c^{\rm phys}=\prod_{r=1}^2\int_0^{2\pi}
+ \frac{\dd\lambda_{cr}}{2\pi}
+ \exp\!\left[\ii\lambda_{cr}(N_{cr}-1)\right].
+ \label{eq:exact-projector}
+\end{equation}
+It follows immediately that
+\begin{equation}
+ \cH_c^{\rm phys}=\Pi_c^{\rm phys}\cH_c
+ =\ker G_{c1}\cap\ker G_{c2}
+ \simeq\CC^2\otimes\CC^2,
+ \qquad \dim\cH_c^{\rm phys}=4.
+ \label{eq:physical-cell}
+\end{equation}
+All of
+\((0,0),(1,0),(0,1),(2,0),(0,2)\) lie outside this Hilbert space.  In
+particular, exactly two is an operator identity on physical states,
+not the location of a minimum of a potential.
+
+The gauge-invariant spin operators
+\begin{equation}
+ \bm S_{cr}=\frac12f_{crA}^\dagger\bm\sigma_{AB}f_{crB}
+ \label{eq:spin-operator}
+\end{equation}
+commute with every \(G_{cr'}\).  Elitzur's theorem forbids a parton order
+parameter \(\langle f\rangle\), not the physical spin, its spectral projector,
+or a gauge-invariant Berry holonomy.
+
+\subsection{Relation to the old finite-Mott candidate}
+
+On the old \((N_1,N_2)=(1,1)\) sector, the map
+\begin{equation}
+ f_{1A}^\dagger f_{2B}^\dagger\ket0_f
+ \longmapsto
+ a_{1A}^\dagger a_{2B}^\dagger\ket0_a
+ \label{eq:sector-isomorphism}
+\end{equation}
+intertwines both spin algebras.  Consequently the Hund spectrum, triplet
+projector, coherent-state Berry connection, and Veronese map agree exactly.
+The difference is entirely UV-logical: the old Mott construction retains
+singleton and doublon states at finite energy, whereas
+Eq.~\eqref{eq:gauss-law} removes them from the physical Hilbert space.
+Recent two-band calculations illustrate why a finite-\(U\) quasiparticle or
+local-moment regime must not be confused with an exact projection
+\cite{MazitovKatanin2024}.
+
+\subsection{Complete-cell boundary theorem and its limitation}
+
+Let \(P_{0,c}(\bm n)=
+\ket{\Omega_{-,c}(\bm n)}\!\bra{\Omega_{-,c}(\bm n)}\) be the unique local
+ground projector constructed below and \(Q_{0,c}=1-P_{0,c}\).  If an allowed
+finite region \(\Lambda\) consists of complete
+cells and an intercell parent interaction satisfies
+\begin{equation}
+ V_{\rm safe}\ge0,\qquad
+ V_{\rm safe}\bigotimes_{c\in\Lambda}\ket{\Omega_{-,c}}=0,
+ \qquad [V_{\rm safe},G_{cr}]=0,
+ \label{eq:safe-parent}
+\end{equation}
+then the local gap theorem below implies
+\begin{equation}
+ H_\Lambda-E_0|\Lambda|
+ \ge h\sum_{c\in\Lambda}Q_{0,c}+V_{\rm safe}.
+ \label{eq:parent-gap}
+\end{equation}
+The product ground state is unique and \(\Delta_\Lambda\ge h\).  Thus this
+safe parent cone has neither a literal cut-cell singleton nor an accidental
+zero-energy boundary mode.
+
+\begin{gate}[Arbitrary interacting boundaries]
+The Gauss laws exclude literal odd parton number, but do not forbid every
+emergent projective edge representation.  A sufficiently different
+intercell interaction may enter a Haldane-like phase and create boundary
+spin-\(1/2\) modes without violating \(N_1=N_2=1\).  Outside
+Eq.~\eqref{eq:safe-parent}, a gapped homotopy or a direct boundary-spectrum
+proof is mandatory.  Lieb--Schultz--Mattis-type constraints are a useful
+warning, not a proof for this particular model \cite{YaoEtAl2024}.
+\end{gate}
+
+\section{A physical orientation and the signed level \texorpdfstring{\(k=+2\)}{k=+2}}
+
+\subsection{The ferromagnetic sign from exchange}
+
+For two localized electronic orbitals \(\varphi_1,\varphi_2\), the Coulomb
+exchange integral can be written
+\begin{equation}
+ K_{12}=\int\frac{\dd^3q}{(2\pi)^3}
+ \frac{4\pi e^2}{\epsilon q^2}
+ \left|\widetilde{\varphi_1^*\varphi_2}(\bm q)\right|^2\ge0.
+ \label{eq:exchange-integral}
+\end{equation}
+The direct Coulomb contribution is common to singlet and triplet, whereas
+exchange gives
+\begin{equation}
+ E_{\rm singlet}-E_{\rm triplet}=2K_{12},\qquad J_H=2K_{12}>0.
+ \label{eq:hund-sign}
+\end{equation}
+This supplies a first-principles sign for the effective interaction
+\(-J_H\bm S_1\cdot\bm S_2\), subject to the declared localized-orbital
+approximation.
+
+\subsection{The Pauli-Zeeman sign is the orientation selector}
+
+For an electron with charge \(-e\) and \(g_{\rm eff}>0\),
+\begin{equation}
+ \bm\mu=-g_{\rm eff}\mu_B\bm S,
+ \qquad H_Z=-\bm\mu\cdot\bm B
+ =+g_{\rm eff}\mu_BB_{\rm mag}\,\bm n\cdot\bm S,
+ \qquad B_{\rm mag}=|\bm B|,\qquad
+ \bm n=\frac{\bm B}{B_{\rm mag}}.
+ \label{eq:pauli-sign}
+\end{equation}
+Absorbing the units of \(\bm S\) into
+\(h=g_{\rm eff}\mu_BB_{\rm mag}>0\), the cell
+Hamiltonian is
+\begin{equation}
+ H_c(\bm n)=-J_H\bm S_{c1}\cdot\bm S_{c2}
+ +h\bm n\cdot(\bm S_{c1}+\bm S_{c2}),
+ \qquad J_H,h>0.
+ \label{eq:oriented-hamiltonian}
+\end{equation}
+The plus sign is fixed by the negative electronic charge.  It is not a manual
+reversal of the effective Berry term.
+
+Using
+\(\bm S_1\cdot\bm S_2=\tfrac12(\bm S_{\rm tot}^2-\tfrac32)\), the exact
+spectrum is
+\begin{align}
+ E_{1,m}&=-\frac{J_H}{4}+hm,\qquad m=-1,0,+1,\label{eq:triplet-spectrum}\\
+ E_{0,0}&=\frac{3J_H}{4}.\label{eq:singlet-spectrum}
+\end{align}
+The unique ground state is the anti-aligned triplet \(m=-1\), with
+\begin{equation}
+ E_0=-\frac{J_H}{4}-h,\qquad
+ \Delta_{\rm loc}=\min\{h,2h,J_H+h\}=h.
+ \label{eq:local-gap}
+\end{equation}
+Equivalently, as an operator on \(\cH_c^{\rm phys}\),
+\begin{equation}
+ H_c-E_0\ge h\bigl(1-P_{0,c}(\bm n)\bigr).
+ \label{eq:local-gap-operator}
+\end{equation}
+
+\subsection{Anti-aligned eigenline as the universal quotient}
+
+Using the standard adiabatic eigenline construction
+\cite{Berry1984APE3UV}, let
+\begin{equation}
+ s_+(\theta,\phi)=
+ \begin{pmatrix}\cos(\theta/2)\\ e^{\ii\phi}\sin(\theta/2)\end{pmatrix},
+ \qquad
+ A_+=-\ii s_+^\dagger\dd s_+
+ =\frac{1-\cos\theta}{2}\dd\phi.
+ \label{eq:aligned-spinor}
+\end{equation}
+An eigenvector of \(\bm n\cdot\bm\sigma\) with eigenvalue \(-1\) is
+\begin{equation}
+ s_-=\ii\sigma_y s_+^*
+ =\begin{pmatrix}e^{-\ii\phi}\sin(\theta/2)\\-\cos(\theta/2)\end{pmatrix},
+ \qquad -\ii s_-^\dagger\dd s_-=-A_+
+ \label{eq:anti-spinor}
+\end{equation}
+up to an exact patch-gauge term.
+
+There is a useful geometric subtlety.  Let
+\begin{equation}
+ 0\longrightarrow S=\cO(-1)
+ \longrightarrow\underline{\CC}^{2}
+ \longrightarrow Q\longrightarrow0
+ \label{eq:universal-sequence}
+\end{equation}
+be the universal sequence.  The Hermitian orthogonal complement \(S^\perp\)
+is smoothly and complex-linearly isomorphic to the quotient
+\(Q\simeq\cO(1)\).  The normalized embedded frame \(s_-=\ii\sigma_y s_+^*\)
+is anti-holomorphic in the affine coordinate, but that frame does not define
+the holomorphic structure.  Transporting the quotient holomorphic structure
+gives \(S^\perp\simeq Q\).
+
+On the north--south overlap,
+\begin{equation}
+ s_{+,S}=e^{-\ii\phi}s_{+,N},\qquad
+ s_{-,S}=e^{+\ii\phi}s_{-,N},
+ \label{eq:anti-transition}
+\end{equation}
+and algebraic quotient frames obey \(q_S=-wq_N\).  Therefore the pair line is
+\begin{equation}
+ L_-=Q^{\otimes2}\simeq\cO(2).
+ \label{eq:positive-pair-line}
+\end{equation}
+
+\subsection{Berry action, Chern number, and three states}
+
+The anti-aligned ground state is
+\begin{equation}
+ \ket{\Omega_-(\bm n)}=\ket{s_-}_1\otimes\ket{s_-}_2.
+ \label{eq:anti-pair}
+\end{equation}
+Tensor-product differentiation gives
+\begin{equation}
+ \braket{\Omega_-}{\dd\Omega_-}=2s_-^\dagger\dd s_-,
+ \qquad
+ \boxed{\ii\hbar\braket{\Omega_-}{\dd\Omega_-}=+2\hbar A_+.}
+ \label{eq:positive-action}
+\end{equation}
+Relative to \(S_k=\hbar k\int A_+\), this is the signed result
+\begin{equation}
+ \boxed{k=+2.}
+ \label{eq:kplus2}
+\end{equation}
+The action connection \(\mathcal B=\ii\braket{\Omega_-}{\dd\Omega_-}\)
+has
+\begin{equation}
+ \dd\mathcal B=2\dd A_+,\qquad
+ \frac1{2\pi}\int_{\CP^1}\dd\mathcal B=2.
+ \label{eq:positive-chern}
+\end{equation}
+Consequently positive-polarization quantization directly gives
+\begin{equation}
+ H^0(\CP^1,L_-)=H^0(\CP^1,\cO(2))
+ =\Span\{z_0^2,z_0z_1,z_1^2\},
+ \qquad \dim=3.
+ \label{eq:positive-sections}
+\end{equation}
+This corrects a possible overstatement: the normalized orthogonal eigenvector
+is anti-holomorphic in \(w\), but its quotient holomorphic line is still
+\(\cO(1)\), so the pair is the ordinary positive line \(\cO(2)\).
+
+\begin{gate}[Portal degree]
+If Route E supplies an effective orientation map
+\(\widehat{\bm B}_{\rm eff}:\CP^1_E\to S^2\), then pullback gives
+\begin{equation}
+ k_E=2\deg(\widehat{\bm B}_{\rm eff}).
+ \label{eq:portal-degree}
+\end{equation}
+The present calculation proves the coefficient two on the microscopic
+orientation sphere, not \(\deg=+1\) for an unknown Route-E portal.
+\end{gate}
+
+\section{An anomaly-consistent mixed-WZW intermediate UV candidate}
+
+\subsection{Field content}
+
+Consider the renormalizable gauge theory
+\begin{equation}
+ G_{\rm gauge}=SU(2)_c\times U(1)_g
+ \label{eq:gauge-group}
+\end{equation}
+with \(N_f=2\) vectorlike Dirac flavours and a scalar doublet.  In an all-left
+Weyl notation the relevant representations are
+\begin{longtable}{@{}L{0.20\textwidth}L{0.20\textwidth}L{0.22\textwidth}L{0.27\textwidth}@{}}
+\toprule
+Field & \(SU(2)_c\) & \(U(1)_g\) & global representation\\
+\midrule
+\endfirsthead
+\toprule
+Field & \(SU(2)_c\) & \(U(1)_g\) & global representation\\
+\midrule
+\endhead
+\(q_L^{ai}\) & \(\bm2\) & \(+1\) & \(\bm2\) of \(SU(2)_L\)\\
+\(q_R^{c\,ai}\) & \(\bm2\) & \(-1\) & \(\overline{\bm2}\) of \(SU(2)_R\)\\
+\(\phi_I\) & \(\bm1\) & \(+1\) & \(\bm2\) of \(SU(2)_\phi\)\\
+\bottomrule
+\end{longtable}
+Here \(a=1,2\), \(i=1,2\), and \(I=1,2\).  A potential
+\(V_\phi=\lambda(\phi^\dagger\phi-v^2)^2\) produces
+\begin{equation}
+ \{\phi^\dagger\phi=v^2\}/U(1)_g\simeq S^3/U(1)\simeq\CP^1.
+ \label{eq:scalar-cp1}
+\end{equation}
+The QCD-like condensate is required to break
+\(SU(2)_L\times SU(2)_R\to SU(2)_V\), with pion field
+\(g\in SU(2)\).
+
+\subsection{Why pure two-colour QCD is a negative control}
+
+Without \(U(1)_g\), pseudoreality of the colour fundamental enlarges the
+flavour group to \(SU(2N_f)\) and the standard condensate gives
+\begin{equation}
+ SU(2N_f)\longrightarrow Sp(2N_f).
+ \label{eq:pg-breaking}
+\end{equation}
+At \(N_f=2\), \(SU(4)/Sp(4)\simeq S^5\) and
+\(\pi_3(S^5)=0\).  There is then no stable Skyrmion number to insert into
+\(k=n_cB\).  This is why simply substituting \(n_c=2\) into an ordinary
+QCD formula is invalid.  Recent two-colour effective studies explicitly
+retain the Pauli--G\"ursey structure and diquark directions
+\cite{SuenagaEtAl2024APE3UV}.
+
+Gauging \(U(1)_g\) changes this symmetry statement exactly.  In the
+Pauli--G\"ursey basis
+\(Q=(q_L,\epsilon_cq_R^c)\), the gauge generator is
+\begin{equation}
+ T_g=\operatorname{diag}(\bm1_{N_f},-\bm1_{N_f}).
+ \label{eq:pg-generator}
+\end{equation}
+Its centralizer is
+\begin{equation}
+ C_{SU(2N_f)}(T_g)=S\bigl(U(N_f)_L\times U(N_f)_R\bigr).
+ \label{eq:pg-centralizer}
+\end{equation}
+Every off-diagonal Pauli--G\"ursey generator changes \(U(1)_g\) charge by
+two and is not a global current.  This removes the symmetry obstruction, but
+does not by itself prove which condensate strong dynamics selects.
+
+\subsection{Complete dynamical gauge-anomaly ledger}
+
+The perturbative cubic \(SU(2)_c^3\) anomaly vanishes because the fundamental
+is pseudoreal.  The remaining local gauge-anomaly coefficients are
+\begin{align}
+ \mathcal A_{SU(2)_c^2U(1)_g}
+ &=N_fT(\bm2)(1-1)=0,\label{eq:su2su2u1}\\
+ \mathcal A_{SU(2)_cU(1)_g^2}
+ &=2N_f\bigl(1^2+(-1)^2\bigr)\Tr T^a=0,
+ \label{eq:su2u1u1}\\
+ \mathcal A_{U(1)_g^3}
+ &=2N_f\bigl(1^3+(-1)^3\bigr)=0,\label{eq:u1cube}\\
+ \mathcal A_{{\rm grav}^2U(1)_g}
+ &=2N_f(1-1)=0.\label{eq:gravu1}
+\end{align}
+There are \(2N_f=4\) left-Weyl colour doublets, so the mod-two Witten anomaly
+also vanishes.  Scalars do not contribute to fermionic anomalies.  Thus the
+dynamical gauge theory passes both perturbative and \(SU(2)\) global anomaly
+tests.
+
+Background flavour fields reveal the generalized-symmetry datum rather than
+a gauge inconsistency.  Let \(b_g\) be the dynamical \(U(1)_g\) connection,
+\(h_g=\dd b_g\), and let \(F_{L,R}^{\rm fl}\) be the two background flavour
+curvatures.  Here \(n_c=2\) and the quark charge is \(X_q=1\).  In this
+normalization, the mixed part of the six-form anomaly polynomial contains
+\begin{equation}
+ I_6\supset\frac{n_cX_q}{2}\frac{h_g}{2\pi}
+ \left[
+ \Tr\!\left[\left(\frac{F_L^{\rm fl}}{2\pi}\right)^2\right]
+ -\Tr\!\left[\left(\frac{F_R^{\rm fl}}{2\pi}\right)^2\right]
+ \right],
+ \label{eq:anomaly-polynomial}
+\end{equation}
+so the Postnikov classes are
+\begin{equation}
+ \widehat\kappa_L=-\widehat\kappa_R=n_cX_q=2.
+ \label{eq:postnikov-two}
+\end{equation}
+Equation~\eqref{eq:anomaly-polynomial} is written in a Bardeen scheme that
+preserves the two dynamical gauge symmetries.  Its background-flavour
+variation is compensated by the transformation of the magnetic one-form
+background; this is the two-group datum, not a residual gauge anomaly.
+Each background \(SU(2)_{L,R}\) also sees two colour copies, an even number,
+so its Witten anomaly is trivial.  The scalar \(SU(2)_\phi\) acts only on
+bosons.  Bordism refinements remain necessary for the discrete axial and
+faithful-group quotients \cite{Saito2024APE3UV,LeeOhmoriTachikawa2021}.
+
+\subsection{Global definition and coefficient of the mixed WZW term}
+
+Whenever the physical four-manifold, the sigma-model field, and the relevant
+bundles extend over a five-manifold \(Y_5\), choose integrally normalized forms
+\begin{equation}
+ \int_{S^3}\omega_3(g)=1,
+ \qquad
+ \omega_2(s)=\frac{F_s}{2\pi},
+ \qquad \int_{S^2}\omega_2=1,
+ \label{eq:integral-forms}
+\end{equation}
+where the trace convention in
+\(\omega_3=(24\pi^2)^{-1}\Tr(g^{-1}\dd g)^3\) is fixed by the first equation.
+The action is
+\begin{equation}
+ S_{\rm mix}=2\pi\hbar n\int_{Y_5}\omega_3(g)\wedge\omega_2(s),
+ \qquad n\in\ZZ.
+ \label{eq:mixed-action}
+\end{equation}
+Two such extensions differ by a closed five-manifold.  The difference in
+\(S/2\pi\hbar\) is \(n\) times an integer, so the exponentiated action is
+extension-independent.  Non-extendible sectors require a differential-character
+or equivalent \v{C}ech/bordism definition; constructing that refinement remains
+an explicit global-definition gate here.  The UV two-group matching fixes,
+rather than merely permits,
+\begin{equation}
+ \boxed{n=n_cX_q=2.}
+ \label{eq:wzw-level-two}
+\end{equation}
+This coefficient is quantized and tree-level exact in the construction of
+Davighi and Lohitsiri \cite{DavighiLohitsiri2024APE3UV}.
+
+The local sign can also be followed through the tree-level matching.  At
+energies below the Higgs scale, neglecting the \(b_g\) kinetic term at leading
+derivative order gives
+\begin{align}
+ \mathcal L[b_g]
+ &=v^2b_{g,\mu}b_g^\mu
+ +b_{g,\mu}\bigl(j_\phi^\mu+X_qj_q^\mu\bigr),\notag\\
+ b_g^\mu&=-\frac{j_\phi^\mu+X_qj_q^\mu}{2v^2},\qquad
+ \mathcal L_{\rm eff}
+ =-\frac{(j_\phi+X_qj_q)^2}{4v^2}.
+ \label{eq:bg-eom}
+\end{align}
+Confinement identifies \(j_q=n_cj_B\).  Locally define
+\(A_\phi=j_\phi/(2v^2)=+\ii s^\dagger\dd s=-A_R\), where
+\(A_R=-\ii s^\dagger\dd s\) is our Route-E/AP-E1 convention and
+\(F_s=\dd A_R\).  The cross term is therefore
+\begin{equation}
+ S_{\rm cross}=-n_cX_q\hbar\int *j_B\wedge A_\phi
+ =+n_cX_q\hbar\int *j_B\wedge A_R.
+ \label{eq:local-cross}
+\end{equation}
+Thus the microscopic current coupling fixes the local sign; the
+five-dimensional expression supplies its global, quantized completion.
+
+\subsection{Worldline reduction and physical orientation}
+
+For a baryon/Skyrmion with
+\begin{equation}
+ B=\int_{M_3}\omega_3(g)\in\ZZ,
+ \label{eq:baryon-number}
+\end{equation}
+take \(Y_5=M_3\times D_2\), with \(\partial D_2=\gamma\).  Product
+orientation and Stokes' theorem give
+\begin{align}
+ S_{\rm mix}
+ &=2\pi\hbar n
+ \left(\int_{M_3}\omega_3\right)
+ \left(\int_{D_2}\frac{F_s}{2\pi}\right)\notag\\
+ &=\hbar nB\oint_\gamma A_R.
+ \label{eq:worldline-reduction}
+\end{align}
+Therefore
+\begin{equation}
+ \boxed{k=nB=2B.}
+ \label{eq:k-nb}
+\end{equation}
+The positively oriented baryon sector \(B=+1\) has \(k=+2\); its CPT
+antibaryon has \(B=-1\) and \(k=-2\).  This orientation statement is
+physical but sector-dependent, not a claim of a net CPT asymmetry.
+
+\subsection{Colour Gauss law, Higgs dressing, and the even-level rule}
+
+One colour fundamental is not a local gauge singlet.  The minimal local
+baryon contains two quarks and carries \(U(1)_g\) charge \(+2\).  A local
+gauge-invariant interpolating operator must therefore contain two conjugate
+Higgs fields:
+\begin{equation}
+ \mathcal B^{IJ}_{ij}\sim
+ \epsilon_{ab}(q_i^{aT}Cq_j^b)
+ \phi^{\dagger (I}\phi^{\dagger J)}.
+ \label{eq:dressed-baryon}
+\end{equation}
+The scalar factor is
+\begin{equation}
+ \Sym^2\overline{\bm2}=\bm3,
+ \qquad
+ \cO(1)^{\otimes2}=\cO(2).
+ \label{eq:dressing-triplet}
+\end{equation}
+The antisymmetric same-point scalar singlet vanishes.  Thus the first local
+colour-singlet baryon is simultaneously an exactly-two scalar dressing, a
+degree-two line, and an \(SU(2)_\phi\) triplet.
+
+There is also a faithful-group explanation of evenness.  The complete triple
+\[
+ (-\bm1_c,e^{\ii\pi}_g,-\bm1_\phi)
+\]
+acts trivially on both quarks and scalars.  Equivalently, the global centre
+\(-\bm1_\phi\) agrees on all fields with the gauge transformation
+\((-\bm1_c,e^{\ii\pi}_g)\).  Hence the faithful global action on local
+gauge-invariant scalar operators is
+\begin{equation}
+ SU(2)_\phi/\ZZ_2\simeq SO(3).
+ \label{eq:faithful-so3}
+\end{equation}
+An \(SO(3)\)-equivariant \(\cO(k)\) line requires \((-1)^k=1\).  The local
+physical sector therefore has even \(k\), with minimal nonzero value two.
+Nonlocal line defects are an explicit exception and may carry projective
+representations.
+
+\section{What remains before this is a full UV completion}
+
+\subsection{Strong phase and scale ordering}
+
+The charged theory removes the exact Pauli--G\"ursey symmetry, but a desired
+vacuum still has to be selected dynamically.  The required inequalities are
+schematically
+\begin{equation}
+ m_{\rm PG}^2>0,\qquad
+ m_{\rm PG}\gg E_{\rm worldline},\qquad
+ \Lambda_c\gtrsim m_b\sim e_gv.
+ \label{eq:phase-gates}
+\end{equation}
+The first two prevent the baryon from unwinding through an approximately
+\(S^5\) diquark direction.  The last ordering keeps confinement in a regime
+where \(U(1)_g\) still distinguishes the two Pauli--G\"ursey blocks.  If
+\(v\gg\Lambda_c\), the heavy vector leaves only suppressed interactions and
+the unwanted symmetry may become approximately accurate.  These questions
+need lattice or another controlled nonperturbative calculation.
+
+\subsection{Running and the all-scale obstruction}
+
+With two Dirac flavours, two colours, and two charge-one complex scalars, the
+one-loop coefficients are
+\begin{equation}
+ b_{U(1)}=\frac43(2N_f)+\frac13(2)=6,
+ \qquad
+ b_{SU(2)_c}=\frac{11}{3}(2)-\frac43T(\bm2)N_f=6.
+ \label{eq:beta-coefficients}
+\end{equation}
+Colour is asymptotically free, but the abelian coupling has a Landau pole.
+The theory is therefore a valid anomaly-consistent intermediate UV
+description above the sigma model, not an all-scale completion.
+
+A proposed nonabelian embedding
+\(SU(3)\to[SU(2)_c\times U(1)]/\ZZ_2\) has a sharp representation-theoretic
+cost: every \(SU(2)_c\) singlet descending from an \(SU(3)\) representation
+has even abelian charge.  A light colour-singlet charge-one \(\phi_I\) must
+therefore arrive with coloured partners, whose decoupling must preserve both
+light scalars and \(SU(2)_\phi\).  No such complete decoupling proof is
+provided here.
+
+One creative research branch replaces \(U(1)_g\) by an asymptotically free
+\(SU(2)_g\), broken by an adjoint to its Cartan.  Bifundamental quarks and
+scalar \(SU(2)_g\) doublets could reproduce the intermediate spectrum, but
+mass splitting makes the chiral symmetry emergent and
+'t Hooft--Polyakov monopoles make the magnetic one-form symmetry only
+approximate.  It is a future branch, not a claimed solution.
+
+\subsection{Soliton and quantization gates}
+
+Even a quantized \(k=2\) term does not prove a three-state low-energy particle.
+The following remain independent calculations:
+\begin{enumerate}
+\item existence and metastability of a \(B=1\) soliton in the full field
+  space, including its Hessian and decay channels;
+\item Finkelstein--Rubinstein statistics and the collective-coordinate
+  moment of inertia;
+\item separation of the \(\cO(2)\) lowest sector from the higher rotor tower;
+\item compact-\(U(1)\) monopole breaking of the magnetic one-form symmetry;
+\item discrete axial and spin-bordism consistency;
+\item a Route-E portal whose degree is \(+1\) and whose couplings remain below
+  every retained gap.
+\end{enumerate}
+
+\section{Deterministic regression and numerical evidence}
+
+The companion verifier
+\texttt{route\_f/code/verify\_ap\_e3\_exact\_two\_mixed\_wzw.py}
+performs the following independent checks.
+\begin{enumerate}
+\item It enumerates the bosonic four-mode Fock basis truncated at
+  \(0\le N_r\le2\) and evaluates the exact Fourier projector
+  \eqref{eq:exact-projector}.  The separate projector has rank four; within
+  this declared audit truncation, the single total-number projector has rank
+  ten and retains both charge-transfer sectors.  The exact constrained rank
+  four is truncation-independent.
+\item It diagonalizes \eqref{eq:oriented-hamiltonian} at \(J_H=1,h=0.2\).
+  The spectrum is
+  \begin{equation}
+  (-0.45,-0.25,-0.05,0.75),
+  \label{eq:numerical-spectrum}
+  \end{equation}
+  and seeded random directions agree with the anti-aligned tensor-square
+  projector to floating-point precision.
+\item Exact directional derivatives verify
+  \(\ii\braket{\Omega_-}{\dd\Omega_-}=2A_+\) and doubled quantum metric.
+  Midpoint curvature quadrature converges monotonically to \(c_1=+2\), while
+  the overlap transition has winding two.
+\item The script evaluates every local anomaly sum, the mod-two colour and
+  flavour counts, \(\widehat\kappa_L=-\widehat\kappa_R=2\), extension
+  independence of the exponentiated five-dimensional action, and
+  \(k(B=+1)=+2\).
+\item Negative controls include one total Gauss law, parity-only projection,
+  a half-integer background charge, pure two-colour QCD, and the abelian
+  Landau pole.
+\end{enumerate}
+These tests validate formulas and conventions; they cannot replace the
+nonperturbative phase and soliton calculations listed above.
+
+\section{Claim ledger and ordered continuation}
+
+\begingroup
+\small
+\begin{longtable}{@{}L{0.40\textwidth}L{0.19\textwidth}L{0.32\textwidth}@{}}
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endhead
+Separate compact Gauss laws impose \(N_1=N_2=1\) & \status{proved} & within
+the declared indivisible cell\\
+Literal odd and charge-transfer sectors are absent & \status{proved} & not a
+finite-energy statement\\
+Safe-parent complete-cell boundaries have gap at least \(h\) &
+\status{proved} & arbitrary intercell phases excluded\\
+Pauli orientation gives signed \(k=+2\) & \status{proved} & on the microscopic
+orientation sphere\\
+Positive ground line is \(Q^2=\cO(2)\) with three sections &
+\status{proved} & family interpretation not implied\\
+Dynamical gauge anomalies of the charged two-colour model cancel &
+\status{proved} & discrete/bordism refinements remain\\
+Mixed-WZW coefficient and \(B=1\) reduction give \(k=+2\) &
+\status{proved conditionally} & extendible sectors; assumes the desired gapped
+strong phase and unit soliton\\
+Global differential-cohomology definition on non-extendible sectors &
+\status{open} & extension independence alone is insufficient\\
+All-scale mixed-WZW UV completion & \status{open} & abelian Landau pole and
+nonabelian decoupling problem\\
+Route-E degree-one chiral-family portal & \status{open} & no microscopic map
+or anomaly-complete family operator\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The next steps should be executed in this order:
+\begin{enumerate}
+\item lattice or another nonperturbative audit of the charged two-colour
+  phase, measuring meson/diquark condensates, \(m_{\rm PG}\), and the
+  \(B=1\) lifetime over \((e_g,v/\Lambda_c)\);
+\item APS/bordism and compact-monopole audit of the faithful global group;
+\item collective-coordinate Hessian, statistics, and rotor/LLL gap;
+\item explicit degree-one Route-E portal below all gaps;
+\item use the now-complete AP-E4 mathematical spectrum as an independent
+  control, then derive its still-open physical fermion origin through either
+  moduli-space SQM or an anomaly-complete product compactification.
+\end{enumerate}
+
+The fail-closed status is therefore
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{exactly\_two\_constrained\_cell\_proved=true},\\
+ \texttt{physical\_pauli\_orientation\_gives\_k\_plus\_2=true},\\
+ \texttt{dynamical\_gauge\_anomalies\_cancel=true},\\
+ \texttt{mixed\_wzw\_intermediate\_uv\_candidate=true},\\
+ \texttt{mixed\_wzw\_full\_uv\_closed=false},\\
+ \texttt{route\_e\_portal\_closed=false},\\
+ \texttt{physics\_promotion\_allowed=false}.
+ \end{gathered}}
+ \label{eq:final-status}
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e3_exact_two_mixed_wzw_uv}
+
+\end{document}

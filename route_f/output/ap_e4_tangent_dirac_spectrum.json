@@ -1,0 +1,259 @@
+{
+  "all_pass": true,
+  "ap_e4_mathematics_complete": true,
+  "ap_e4_physics_closed": false,
+  "bosonic_tangent_fluctuation_derived": true,
+  "canonical_spectrum": {
+    "first_multiplicity_per_sign": 5,
+    "formula": "lambda_n,+/-=+/-sqrt(n(n+3))/R; multiplicity=2n+3",
+    "gap": 4.0,
+    "index": 3,
+    "tower_sample": [
+      {
+        "lambda_abs": 4.0,
+        "multiplicity_per_sign": 5,
+        "n": 1
+      },
+      {
+        "lambda_abs": 6.324555320336759,
+        "multiplicity_per_sign": 7,
+        "n": 2
+      },
+      {
+        "lambda_abs": 8.48528137423857,
+        "multiplicity_per_sign": 9,
+        "n": 3
+      },
+      {
+        "lambda_abs": 10.583005244258363,
+        "multiplicity_per_sign": 11,
+        "n": 4
+      },
+      {
+        "lambda_abs": 12.649110640673518,
+        "multiplicity_per_sign": 13,
+        "n": 5
+      }
+    ],
+    "zero_modes_negative": 0,
+    "zero_modes_positive": 3
+  },
+  "canonical_spinc_mathematics_complete": true,
+  "canonical_spinc_three_zero_modes": true,
+  "checks": [
+    {
+      "detail": "hashed=5/5",
+      "group": "E40_provenance",
+      "name": "all AP-E4 critical sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "R=0.5; K=4.0; Scal=8.0",
+      "group": "E41_geometry",
+      "name": "the AP-E1 Fubini-Study convention is a round sphere of radius one half",
+      "pass": true
+    },
+    {
+      "detail": "transition winding=2.000000000000",
+      "group": "E41_geometry",
+      "name": "the tangent transition has degree two, hence T^(1,0)CP1=O(2)",
+      "pass": true
+    },
+    {
+      "detail": "flux sequence=[2.0082484079079745, 2.0020576482854167, 2.000514134394606, 2.000128516254437, 2.0000321279797606]",
+      "group": "E41_geometry",
+      "name": "the tangent Chern connection has c1=2",
+      "pass": true
+    },
+    {
+      "detail": "horizontal=1.097e-17; norm=2.082e-17",
+      "group": "E41_geometry",
+      "name": "Q_z delta z is the horizontal tangent-valued sigma-model fluctuation",
+      "pass": true
+    },
+    {
+      "detail": "h0=3; h1=0; index=3",
+      "group": "E42_index",
+      "name": "canonical Dolbeault Spin-c twisted by T=O(2) has (h0,h1,index)=(3,0,3)",
+      "pass": true
+    },
+    {
+      "detail": "h1(O2)=0; h0(O-4)=0",
+      "group": "E42_index",
+      "name": "Serre duality independently gives H1(O(2))=H0(O(-4))*=0",
+      "pass": true
+    },
+    {
+      "detail": "integral ch(O(2)) Td(T)=1+2=3",
+      "group": "E42_index",
+      "name": "Riemann-Roch/Todd integration gives chi(O(q))=q+1",
+      "pass": true
+    },
+    {
+      "detail": "effective Dolbeault line=O(1); h0=2; index=2",
+      "group": "E42_index",
+      "name": "negative control: ordinary spin Dirac twisted only by T=O(2) has two, not three, zero modes",
+      "pass": true
+    },
+    {
+      "detail": "S^+=O(-1); S^+ tensor O(3)=O(2)",
+      "group": "E42_index",
+      "name": "canonical Spin-c O(2) equals ordinary spin twist O(3), exposing the half-canonical shift",
+      "pass": true
+    },
+    {
+      "detail": "q=1 -> 2; q=3 -> 4",
+      "group": "E42_index",
+      "name": "nearby bundle controls q=1 and q=3 give two and four canonical zero modes",
+      "pass": true
+    },
+    {
+      "detail": "levels checked=10",
+      "group": "E43_spectrum",
+      "name": "the monopole-Casimir identity yields lambda_n^2=n(n+q+1)/R^2 exactly",
+      "pass": true
+    },
+    {
+      "detail": "Casimir=1.421e-14; shifted spectrum=1.421e-14",
+      "group": "E43_spectrum",
+      "name": "independent finite SU(2) matrices reproduce every tested D^2 level and degeneracy",
+      "pass": true
+    },
+    {
+      "detail": "Hermitian=0.000e+00; anticommutator=0.000e+00",
+      "group": "E43_spectrum",
+      "name": "the truncated spectral operator is Hermitian and anticommutes with chirality",
+      "pass": true
+    },
+    {
+      "detail": "zero count=3; kernel chirality trace=3.0",
+      "group": "E43_spectrum",
+      "name": "the kernel contains exactly three positive-chirality states",
+      "pass": true
+    },
+    {
+      "detail": "paired nonzero states per sign=45",
+      "group": "E43_spectrum",
+      "name": "every nonzero level is paired at plus/minus lambda as implied by chirality anticommutation",
+      "pass": true
+    },
+    {
+      "detail": "gap=4.000000000000; multiplicity per sign=5",
+      "group": "E43_spectrum",
+      "name": "at R=1/2 the canonical first gap is four with multiplicity five per sign",
+      "pass": true
+    },
+    {
+      "detail": "ordinary gap=3.464101615138; multiplicity=4",
+      "group": "E43_spectrum",
+      "name": "ordinary spin twist T=O(2) has the distinct gap 2 sqrt(3) and first multiplicity four",
+      "pass": true
+    },
+    {
+      "detail": "gap(R=1)=2.000000; gap(R=1/2)=4.000000",
+      "group": "E43_spectrum",
+      "name": "radius drift control: changing R from one half to one halves the canonical gap",
+      "pass": true
+    },
+    {
+      "detail": "mass=0.3; remaining zeros=0",
+      "group": "E44_fail_closed",
+      "name": "a chirality-breaking mass lifts the protected zero modes",
+      "pass": true
+    },
+    {
+      "detail": "q=5/2 rejected; q=2 accepted",
+      "group": "E44_fail_closed",
+      "name": "nonintegral monopole degree is rejected as a global line bundle",
+      "pass": true
+    },
+    {
+      "detail": "kernel=3 positive; massive states=90",
+      "group": "E44_fail_closed",
+      "name": "absence of opposite chirality applies only to the kernel, not the massive tower",
+      "pass": true
+    }
+  ],
+  "checks_passed": 22,
+  "checks_total": 22,
+  "compactification_or_moduli_origin_derived": false,
+  "conventions": {
+    "R": 0.5,
+    "canonical_bundle": "O(2)=T^(1,0)CP1",
+    "canonical_operator": "sqrt(2)(dbar_T+dbar_T^dagger)",
+    "gaussian_curvature": 4.0,
+    "scalar_curvature": 8.0
+  },
+  "numerical_summary": {
+    "casimir_max_residual": 1.4210854715202004e-14,
+    "chirality_anticommutator_residual": 0.0,
+    "dirac_hermitian_residual": 0.0,
+    "flux_sequence": [
+      2.0082484079079745,
+      2.0020576482854167,
+      2.000514134394606,
+      2.000128516254437,
+      2.0000321279797606
+    ],
+    "horizontal_max_residual": 1.0971354589302191e-17,
+    "paired_nonzero_states_per_sign": 45,
+    "shifted_spectrum_max_residual": 1.4210854715202004e-14,
+    "truncated_zero_count": 3
+  },
+  "ordinary_spin_control": {
+    "effective_dolbeault_line": "O(1)",
+    "gap": 3.4641016151377544,
+    "index": 2,
+    "twist": "O(2)=T",
+    "zero_modes": 2
+  },
+  "ordinary_spin_tangent_negative_control_passed": true,
+  "partner_spectrum_and_gap_complete": true,
+  "physical_fermionic_tangent_mode_derived": false,
+  "physics_promotion_allowed": false,
+  "remaining_blockers": [
+    "The horizontal fluctuation Q_z delta z is a commuting sigma-model scalar; it does not derive a fermionic Clifford module or a Dirac operator on target CP1.",
+    "Choose and derive either N=2 moduli-space/SQM quantization or an explicit higher-dimensional product containing CP1.  If CP1 is only field-value space, the target spectrum is not a Kaluza-Klein particle spectrum.",
+    "Explain microscopically why the canonical Spin-c structure is selected.  Relative to the unique ordinary spin structure it supplies a half-canonical O(1) shift; ordinary spin twisted only by T has two zero modes.",
+    "Prove that H0(TCP1) represents matter families rather than automorphism, gauge, or collective-coordinate redundancies.",
+    "For a six-dimensional Weyl realization, cancel the full I8 gauge/gravitational anomaly (or exhibit Green-Schwarz factorization) and audit the Spin-c determinant flux.",
+    "Show that all four-dimensional representation-weighted anomalies cancel and exclude conjugate bundles or additional sectors with compensating zero modes.",
+    "Construct the Route-E portal below the gap 4 v/R_normalization and show its orientation degree is +1 without closing the gap or mixing in the five-fold first massive level."
+  ],
+  "route_e_chiral_family_identification": false,
+  "six_dimensional_anomaly_cancelled": false,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_tangent_dirac_spectrum.tex",
+      "sha256": "8a212bc5db3fb0c1c176a89ed6c77943f914972c5a6f78d4a2f31db737d63307",
+      "size_bytes": 22766
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_tangent_dirac_spectrum.bib",
+      "sha256": "63ef8f67f0b30b4465d4e0a4fa911e163b3ee6358a373effa421bb6de97e7774",
+      "size_bytes": 1254
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e1_projective_doublet_action.tex",
+      "sha256": "cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0",
+      "size_bytes": 37998
+    },
+    {
+      "exists": true,
+      "path": "route_f/LITERATURE_2023_2026.md",
+      "sha256": "71f24c2d5725b32d50b5ff8073919b86b4eb69c2092d9bc52929b97034956a41",
+      "size_bytes": 15797
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e4_tangent_dirac_spectrum.py",
+      "sha256": "ceaee9ca07bd1eaeff4a10e4092917c17d2b4b24ff15252bb95e05a2d288dc1c",
+      "size_bytes": 20996
+    }
+  ],
+  "status": "ap_e4_canonical_spinc_mathematics_complete_physical_origin_and_anomalies_open",
+  "tangent_bundle_derived": true
+}

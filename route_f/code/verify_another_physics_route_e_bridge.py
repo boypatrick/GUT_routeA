@@ -27,6 +27,8 @@ REPO = Path(__file__).resolve().parents[2]
 ROUTE_F = Path(__file__).resolve().parents[1]
 OUTPUT = ROUTE_F / "output"
 ROUTE_E_INVARIANT_CARD = REPO / "route_E" / "output" / "audit0" / "invariant_card.json"
+AP_E3_UV_CARD = OUTPUT / "ap_e3_exact_two_mixed_wzw.json"
+AP_E4_CARD = OUTPUT / "ap_e4_tangent_dirac_spectrum.json"
 
 TOL = 1.0e-12
 CHECKS: list[dict[str, Any]] = []
@@ -119,6 +121,48 @@ def qball_step_energy(
 
 
 def main() -> None:
+    ap_e3_uv = json.loads(AP_E3_UV_CARD.read_text(encoding="utf-8"))
+    ap_e4 = json.loads(AP_E4_CARD.read_text(encoding="utf-8"))
+    check(
+        "S0_AP_E3_AP_E4",
+        "AP-E3 exact-cell and intermediate mixed-WZW audit is green but non-promoting",
+        ap_e3_uv.get("all_pass") is True
+        and ap_e3_uv.get("checks_passed") == 26
+        and ap_e3_uv.get("exactly_two_constrained_cell_proved") is True
+        and ap_e3_uv.get("physical_pauli_orientation_gives_k_plus_2") is True
+        and ap_e3_uv.get("dynamical_gauge_anomalies_cancel") is True
+        and ap_e3_uv.get("mixed_wzw_full_uv_closed") is False
+        and ap_e3_uv.get("route_e_portal_closed") is False
+        and ap_e3_uv.get("physics_promotion_allowed") is False,
+        "AP-E3 UV={}/{}; exactly-two={}; k+2={}; full UV={}; portal={}".format(
+            ap_e3_uv.get("checks_passed"),
+            ap_e3_uv.get("checks_total"),
+            ap_e3_uv.get("exactly_two_constrained_cell_proved"),
+            ap_e3_uv.get("physical_pauli_orientation_gives_k_plus_2"),
+            ap_e3_uv.get("mixed_wzw_full_uv_closed"),
+            ap_e3_uv.get("route_e_portal_closed"),
+        ),
+    )
+    check(
+        "S0_AP_E3_AP_E4",
+        "AP-E4 canonical Spin-c spectrum is mathematically green but its physical origin is open",
+        ap_e4.get("all_pass") is True
+        and ap_e4.get("checks_passed") == 22
+        and ap_e4.get("ap_e4_mathematics_complete") is True
+        and ap_e4.get("canonical_spinc_three_zero_modes") is True
+        and ap_e4.get("partner_spectrum_and_gap_complete") is True
+        and ap_e4.get("physical_fermionic_tangent_mode_derived") is False
+        and ap_e4.get("ap_e4_physics_closed") is False
+        and ap_e4.get("physics_promotion_allowed") is False,
+        "AP-E4={}/{}; math={}; physical tangent fermion={}; physics closure={}".format(
+            ap_e4.get("checks_passed"),
+            ap_e4.get("checks_total"),
+            ap_e4.get("ap_e4_mathematics_complete"),
+            ap_e4.get("physical_fermionic_tangent_mode_derived"),
+            ap_e4.get("ap_e4_physics_closed"),
+        ),
+    )
+
     # ------------------------------------------------------------------ O(2)
     degree = 2
     basis = ["X^2", "sqrt(2) X Y", "Y^2"]
@@ -139,26 +183,27 @@ def main() -> None:
     )
 
     # ------------------------------------------ quadratic sections / divisors
-    # Homogeneous section s=a X^2+b X Y+c Y^2 has Delta=b^2-4ac.
+    # Homogeneous section s=a X^2+b X Y+c Y^2 has Delta=b^2-4ac.  In the
+    # declared affine chart xi=Y/X its coefficient is q(xi)=a+b*xi+c*xi^2.
     regular = {"a": 1.0, "b": 0.0, "c": -1.0}  # X^2-Y^2
-    degenerate = {"a": 1.0, "b": 0.0, "c": 0.0}  # X^2
+    degenerate = {"a": 0.0, "b": 0.0, "c": 1.0}  # Y^2, double xi=0
     delta_regular = regular["b"] ** 2 - 4.0 * regular["a"] * regular["c"]
     delta_degenerate = (
         degenerate["b"] ** 2 - 4.0 * degenerate["a"] * degenerate["c"]
     )
     roots_regular = [
-        (-regular["b"] + sign * cmath.sqrt(delta_regular)) / (2.0 * regular["a"])
+        (-regular["b"] + sign * cmath.sqrt(delta_regular)) / (2.0 * regular["c"])
         for sign in (1.0, -1.0)
     ]
-    root_degenerate = -degenerate["b"] / (2.0 * degenerate["a"])
+    root_degenerate = -degenerate["b"] / (2.0 * degenerate["c"])
     regular_root_residual = max(
-        abs(regular["a"] * z * z + regular["b"] * z + regular["c"])
+        abs(regular["a"] + regular["b"] * z + regular["c"] * z * z)
         for z in roots_regular
     )
     degenerate_root_residual = abs(
-        degenerate["a"] * root_degenerate**2
+        degenerate["a"]
         + degenerate["b"] * root_degenerate
-        + degenerate["c"]
+        + degenerate["c"] * root_degenerate**2
     )
     check(
         "S2_quadratic_divisor",
@@ -170,7 +215,7 @@ def main() -> None:
     )
     check(
         "S2_quadratic_divisor",
-        "zero discriminant gives one double zero",
+        "a nonzero section with zero discriminant gives one double zero",
         delta_degenerate == 0.0 and degenerate_root_residual < TOL,
         f"Delta={delta_degenerate:.1f}, double root={root_degenerate:.1f}",
     )
@@ -590,9 +635,28 @@ def main() -> None:
             "route_E_invariant_card": {
                 "path": str(ROUTE_E_INVARIANT_CARD.relative_to(REPO)),
                 "sha256": sha256(ROUTE_E_INVARIANT_CARD),
-            }
+            },
+            "ap_e3_exact_two_mixed_wzw": {
+                "path": str(AP_E3_UV_CARD.relative_to(REPO)),
+                "sha256": sha256(AP_E3_UV_CARD),
+            },
+            "ap_e4_tangent_dirac_spectrum": {
+                "path": str(AP_E4_CARD.relative_to(REPO)),
+                "sha256": sha256(AP_E4_CARD),
+            },
         },
         "separation_theorems": {
+            "AP_E3_AP_E4_handoff": {
+                "exactly_two_constrained_cell_proved": True,
+                "physical_pauli_orientation_k": 2,
+                "mixed_wzw_intermediate_uv_anomaly_consistent": True,
+                "mixed_wzw_full_uv_closed": False,
+                "canonical_spinc_zero_modes": 3,
+                "canonical_spinc_gap_at_R_half": 4.0,
+                "ordinary_spin_tangent_zero_modes": 2,
+                "physical_fermionic_origin_derived": False,
+                "route_E_portal_closed": False,
+            },
             "CP1_O2": {
                 "basis": basis,
                 "dimension": h0,
@@ -705,6 +769,9 @@ def main() -> None:
         "bridge_axioms": bridge_axioms,
         "checks": CHECKS,
         "open_physics_gates": [
+            "complete the charged-two-colour strong-phase, compact-monopole, bordism, soliton, and all-scale UV audits",
+            "derive the AP-E4 canonical Spin-c fermion from moduli-space SQM or an anomaly-free compactification",
+            "construct and orient a degree-one Route-E portal below the AP-E3/AP-E4 gaps",
             "derive rather than identify the phase map between zeta and a visibility observable",
             "supply a gauge/anomaly-consistent Route-E embedding of the Q-ball U(1)",
             "solve the radial Q-ball boundary-value problem and fluctuation spectrum",
@@ -740,10 +807,12 @@ two theories and `physics_promotion_allowed=false`.
 
 1. On the assumed carrier, `H^0(CP1,O(2))` has basis
    `(X^2,sqrt(2)XY,Y^2)`, dimension `3`, and Cartan weights `(+2,0,-2)`.
-2. A quadratic section `aX^2+bXY+cY^2` has discriminant
+2. A nonzero quadratic section `aX^2+bXY+cY^2` has discriminant
    `Delta=b^2-4ac`: `Delta != 0` gives two distinct projective zeros, while
-   `Delta=0` gives a double zero.  This separates the regular and degenerate
-   cases; it does not make every degree-two pattern the same physical object.
+   `Delta=0` gives a double zero.  The identically zero section is a separate
+   zero orbit and is outside this divisor statement.  This separates the
+   regular-semisimple and nilpotent cases; it does not make every degree-two
+   pattern the same physical object.
 3. The pairing loaded from Route-E obeys
    `rho(A)^T K_tr+K_tr rho(A)=0` for `A=H,E,F` and `K_tr^2=I/3`.
    In Route-E spherical coordinates it also obeys the exact identity
@@ -767,6 +836,11 @@ two theories and `physics_promotion_allowed=false`.
    `x^2-y^2=2 pi n` and `x^2+y^2=pi/2+2 pi n`.  For the circular family,
    `Delta r=2 pi/(r_(n+1)+r_n)~pi/r_n`; this proves a shrinking interference
    pitch, not atomic-orbital quantization.
+7. The AP-E3 successor card proves an exact constrained-cell `k=+2` theorem
+   and an anomaly-consistent mixed-WZW intermediate candidate (`26/26`), while
+   the AP-E4 card solves the declared canonical Spin-c spectrum (`22/22`).
+   Their explicit false flags for all-scale UV closure, physical tangent-
+   fermion origin, and the Route-E portal remain binding.
 
 ## Bridge axioms retained as non-derived
 
@@ -780,8 +854,9 @@ two theories and `physics_promotion_allowed=false`.
 
 - `physics_promotion_allowed=false`.
 - A physical bridge requires an action-level phase map, a gauge/anomaly-safe
-  embedding, an exact soliton/fluctuation analysis, and reruns of Route-E's
-  flavor, threshold, proton, and cosmology gates.
+  embedding, an exact soliton/fluctuation analysis, a physical Spin-c origin,
+  a degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
+  cosmology gates.
 """,
         encoding="utf-8",
     )

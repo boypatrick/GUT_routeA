@@ -1,0 +1,278 @@
+{
+  "all_pass": true,
+  "alternative_branches": {
+    "fermion_determinant": "r filled same-orientation eigenlines induce k=sum C_a; r=2 can give |k|=2, but flavor count, filling, and signs must be independently fixed",
+    "mixed_WZW": "a quantized mixed WZW coefficient can reduce to k=n_c B and is nonrenormalization-protected, but an n_c=2 UV completion with the correct global coset is not present in this repository",
+    "tangent_Dirac": "T_CP1=O(2) gives a three-section Spin-c/Dolbeault index only after the physical mode is proved tangent-valued; this is deferred to AP-E4"
+  },
+  "ap_e3_physics_closed": false,
+  "audit": "verify_ap_e3_level_two_microscopic",
+  "candidate_level_derivation_complete": true,
+  "candidate_level_magnitude_derivation_complete": true,
+  "checks": [
+    {
+      "detail": "hashed=6/6",
+      "group": "M0_provenance",
+      "name": "all AP-E3 input sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "AP-E2=30/30; promotion=False",
+      "group": "M0_provenance",
+      "name": "AP-E2 exact regression is green but explicitly leaves the Berry level underived",
+      "pass": true
+    },
+    {
+      "detail": "U=4.0; mu=1.5; one-orbital ground=1; pair=(1, 1)",
+      "group": "M1_Mott",
+      "name": "the bare Bose-Hubbard window 0<mu<U locks exactly one constituent on each orbital",
+      "pass": true
+    },
+    {
+      "detail": "analytic=1.500000000000; enumerated=1.500000000000",
+      "group": "M1_Mott",
+      "name": "the bare analytic charge gap min(mu,U-mu) matches the enumerated spectrum",
+      "pass": true
+    },
+    {
+      "detail": "mu<0 ground n=0; mu>U ground n=2; counterexample E11=-2.955000, E22=-5.860000",
+      "group": "M1_Mott",
+      "name": "bare-window limits and the interacting false-inference counterexample are detected",
+      "pass": true
+    },
+    {
+      "detail": "C=1.850000 < U-J_H/8=3.875000 (margin=2.025000); ground=(1, 1); full gap=1.850000000000; N>=8 lower bound=31.200000; ground energy=-3.450000",
+      "group": "M1_Mott",
+      "name": "a proved sufficient inequality selects the unique interacting (1,1) plateau",
+      "pass": true
+    },
+    {
+      "detail": "Hermitian residual=0.00e+00; SU2 residual=0.00e+00",
+      "group": "M2_Hund",
+      "name": "the ferromagnetic Hund Hamiltonian is Hermitian and globally SU(2)-invariant",
+      "pass": true
+    },
+    {
+      "detail": "eigenvalues=[-0.25, -0.25, -0.25, 0.75]",
+      "group": "M2_Hund",
+      "name": "exact diagonalization gives a triply degenerate triplet and one singlet",
+      "pass": true
+    },
+    {
+      "detail": "S2 labels=[2.0, 1.9999999999999996, 2.0, 0.0]",
+      "group": "M2_Hund",
+      "name": "the three low states have S^2=2 and the high state has S^2=0",
+      "pass": true
+    },
+    {
+      "detail": "max projector residual=0.00e+00; rank trace=3.0",
+      "group": "M2_Hund",
+      "name": "the spin-one projector equals the symmetric-exchange projector",
+      "pass": true
+    },
+    {
+      "detail": "gap=1.000000000000; J_H=1.000000000000",
+      "group": "M2_Hund",
+      "name": "the singlet exclusion gap is exactly Delta_singlet=J_H",
+      "pass": true
+    },
+    {
+      "detail": "antiferromagnetic spectrum=[-0.75, 0.25, 0.25, 0.25]",
+      "group": "M2_Hund",
+      "name": "reversing the Hund sign selects a singlet and destroys the |k|=2 triplet",
+      "pass": true
+    },
+    {
+      "detail": "64 directions; max spectral residual=8.88e-16; min gap=0.200000000000",
+      "group": "M2_Hund",
+      "name": "a weak orientation field gives a unique gapped ground-state line over every n in S2",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; max norm/map residual=9.99e-16; max singlet leakage=0.00e+00",
+      "group": "M3_Veronese",
+      "name": "the symmetric tensor product is the normalized quadratic Veronese state",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; max residual=3.51e-16",
+      "group": "M3_Veronese",
+      "name": "the pair transforms with phase weight two",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; connection residual=2.24e-16; action-sign residual=2.24e-16",
+      "group": "M3_Veronese",
+      "name": "the pair connection doubles while the declared microscopic kinetic action has signed k=-2",
+      "pass": true
+    },
+    {
+      "detail": "samples=256; max metric residual=2.22e-16",
+      "group": "M3_Veronese",
+      "name": "the Veronese pullback quantum metric is twice the single-doublet metric",
+      "pass": true
+    },
+    {
+      "detail": "single winding=-1.000000000000; pair winding=-2.000000000000",
+      "group": "M3_Veronese",
+      "name": "the ket transition has winding -2 and its dual prequantum line has Chern number +2",
+      "pass": true
+    },
+    {
+      "detail": "cells=[20, 80, 320, 1280]; c1=[2.0020576482854167, 2.000128516254437, 2.000008031927202, 2.000000501994128]; final error=5.02e-07",
+      "group": "M3_Veronese",
+      "name": "direct curvature quadrature converges to dual-prequantum first Chern number two",
+      "pass": true
+    },
+    {
+      "detail": "dimension=3; max Casimir residual=4.44e-16; commutator residual=2.22e-16",
+      "group": "M4_representation",
+      "name": "the locked pair is the three-state spin-one representation",
+      "pass": true
+    },
+    {
+      "detail": "levels 1,2,3 all invariant; max phase residual=2.20e-15",
+      "group": "M4_representation",
+      "name": "large-gauge invariance quantizes k but does not uniquely select signed k=+2",
+      "pass": true
+    },
+    {
+      "detail": "samples=128; max cancellation residual=1.53e-16",
+      "group": "M5_failure_modes",
+      "name": "opposite Berry orientations cancel to k=0 rather than |k|=2",
+      "pass": true
+    },
+    {
+      "detail": "single Hilbert dimension=2 at |k|=1; pair dimension=3 at |k|=2; singleton_exclusion_derived=False",
+      "group": "M5_failure_modes",
+      "name": "a permitted single constituent would retain an unwanted |k|=1 doublet",
+      "pass": true
+    },
+    {
+      "detail": "unlocked product Hilbert dimension=4; symmetric locked subspace dimension=3",
+      "group": "M5_failure_modes",
+      "name": "without Hund locking the target is CP1xCP1 rather than its diagonal CP1",
+      "pass": true
+    },
+    {
+      "detail": "min gap=0.200000; max perturbation=0.030000; ratio=0.150000",
+      "group": "M6_EFT_gate",
+      "name": "an explicit benchmark satisfies portal, temperature, and drive scales below every retained gap",
+      "pass": true
+    },
+    {
+      "detail": "bad portal=0.220000; min gap=0.200000; hierarchy pass=False",
+      "group": "M6_EFT_gate",
+      "name": "a portal above the smallest gap is rejected by the scale-separation gate",
+      "pass": true
+    },
+    {
+      "detail": "magnitude-two proof complete; aligned action k=-2; signed orientation, UV field content, and Route-E identification remain open",
+      "group": "M7_boundary",
+      "name": "the declared dimer derives |k|=2 while the signed Route-E orientation and UV selection remain open",
+      "pass": true
+    }
+  ],
+  "checks_passed": 27,
+  "checks_total": 27,
+  "derived_chain": [
+    "for H_portal=0, C=mu+h/2+J_H/4 < U-J_H/8 is a sufficient global interacting (1,1)-plateau condition",
+    "J_H>0 projects the dimer to the symmetric spin-one triplet",
+    "the diagonal coherent state is the quadratic Veronese embedding",
+    "Berry connections add, so the ket eigenline is O(-2) and its dual prequantum line is O(2)",
+    "the aligned displayed action has k=-2; orientation reversal gives k=+2",
+    "the dual quantized carrier is H0(CP1,O(2)) with dimension three"
+  ],
+  "level_magnitude": 2,
+  "numerical_summary": {
+    "aligned_action_sign_max_residual": 2.237726045655905e-16,
+    "berry_factor_two_max_residual": 2.237726045655905e-16,
+    "charge_gap": 1.5,
+    "chern_final_error": 5.019941280437479e-07,
+    "chern_midpoint_sequence": [
+      2.0020576482854167,
+      2.000128516254437,
+      2.000008031927202,
+      2.000000501994128
+    ],
+    "chern_theta_cells": [
+      20,
+      80,
+      320,
+      1280
+    ],
+    "hund_spectrum": [
+      -0.25,
+      -0.25,
+      -0.25,
+      0.75
+    ],
+    "interacting_charge_gap": 1.85,
+    "interacting_ground_sector": [
+      1,
+      1
+    ],
+    "interacting_plateau_condition_margin": 2.025,
+    "interacting_plateau_constant_C": 1.85,
+    "interacting_plateau_upper_bound": 3.875,
+    "metric_factor_two_max_residual": 2.220446049250313e-16,
+    "mott_parameters": {
+      "U": 4.0,
+      "mu": 1.5
+    },
+    "orientation_gap": 0.19999999999999962,
+    "scale_hierarchy_ratio": 0.15,
+    "singlet_gap": 1.0
+  },
+  "physics_promotion_allowed": false,
+  "positive_level_requires_orientation_reversal": true,
+  "remaining_blockers": [
+    "derive why the UV field content contains exactly two orbitals/constituents",
+    "prove odd or single-constituent sectors are absent rather than merely heavy by assumption",
+    "embed the dimer and its Mott/Hund interactions into an anomaly-consistent four-dimensional field theory",
+    "derive the portal to Route-E families and keep it below charge, singlet, and orientation gaps",
+    "show the spin-one triplet is chiral family data rather than an internal vector multiplet",
+    "derive the physical orientation/chirality that selects the required signed Route-E level rather than only |k|=2"
+  ],
+  "signed_level_for_declared_action": -2,
+  "signed_route_e_level_selected": false,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e1_projective_doublet_action.tex",
+      "sha256": "cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0",
+      "size_bytes": 37998
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e2_discriminant_regression.json",
+      "sha256": "c360753719e4fb3d1f75ccb3b04d8e7cfe89a37d173f6d3130989a7fd9bc25a8",
+      "size_bytes": 11893
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_level_two_microscopic_origin.tex",
+      "sha256": "a649f72721cca74e3370ae8ee71bcd6da5808c97e493aefc01cf36d685d9ea94",
+      "size_bytes": 32635
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_level_two_microscopic.bib",
+      "sha256": "101a75d92fcd026e8be1d266ac9e527e84768317fb170b9c8f8b76a4ae812a63",
+      "size_bytes": 3550
+    },
+    {
+      "exists": true,
+      "path": "route_f/LITERATURE_2023_2026.md",
+      "sha256": "71f24c2d5725b32d50b5ff8073919b86b4eb69c2092d9bc52929b97034956a41",
+      "size_bytes": 15797
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e3_level_two_microscopic.py",
+      "sha256": "8263b14e644d372150fd6db5abc1edda636eb391c69fbf4c5ff1b9a57bcb1c7a",
+      "size_bytes": 32248
+    }
+  ],
+  "status": "ap_e3_hund_pair_derives_abs_k2_conditionally_uv_and_sign_open"
+}

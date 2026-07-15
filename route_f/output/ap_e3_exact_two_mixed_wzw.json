@@ -1,0 +1,254 @@
+{
+  "all_pass": true,
+  "ap_e3_full_uv_closed": false,
+  "arbitrary_interacting_boundary_singleton_absent": false,
+  "checks": [
+    {
+      "detail": "hashed=4/4",
+      "group": "U0_provenance",
+      "name": "all exact-two/mixed-WZW critical sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "basis=36; projector residual=3.538e-17",
+      "group": "U1_exact_cell",
+      "name": "two compact Gauss laws implement the exact Fourier projector P_1 P_1",
+      "pass": true
+    },
+    {
+      "detail": "rank=4",
+      "group": "U1_exact_cell",
+      "name": "the constrained physical cell has rank four and exactly total occupation two",
+      "pass": true
+    },
+    {
+      "detail": "forbidden=(odd totals),(2,0),(0,2)",
+      "group": "U1_exact_cell",
+      "name": "separate Gauss laws remove literal odd, singleton, and charge-transfer sectors",
+      "pass": true
+    },
+    {
+      "detail": "rank(P_total=2)=10; transfer survives=True",
+      "group": "U1_exact_cell",
+      "name": "negative control in the N_r<=2 bosonic audit: one total-number Gauss law is strictly weaker",
+      "pass": true
+    },
+    {
+      "detail": "rank(P_even)=20",
+      "group": "U1_exact_cell",
+      "name": "negative control in the N_r<=2 bosonic audit: even parity neither selects N=2 nor removes charge transfer",
+      "pass": true
+    },
+    {
+      "detail": "integer phase=(1+2.4492935982947064e-16j); half-integer phase=(-1-1.2246467991473532e-16j)",
+      "group": "U1_exact_cell",
+      "name": "integer background charges pass 0+1d large-gauge invariance",
+      "pass": true
+    },
+    {
+      "detail": "spectrum=[-0.45, -0.25, -0.04999999999999999, 0.75]",
+      "group": "U2_orientation",
+      "name": "Hund plus Pauli-Zeeman Hamiltonian has the exact triplet/singlet spectrum",
+      "pass": true
+    },
+    {
+      "detail": "gap=0.200000000000",
+      "group": "U2_orientation",
+      "name": "the unique local gap is min(h,J_H+h)=h for J_H,h>0",
+      "pass": true
+    },
+    {
+      "detail": "projector=1.110e-15; eigen=2.720e-16",
+      "group": "U2_orientation",
+      "name": "random-direction diagonalization selects the anti-aligned tensor-square ground line",
+      "pass": true
+    },
+    {
+      "detail": "max residual=1.624e-16",
+      "group": "U2_orientation",
+      "name": "the microscopic kinetic term gives signed action connection +2 A_+",
+      "pass": true
+    },
+    {
+      "detail": "max residual=8.327e-17",
+      "group": "U2_orientation",
+      "name": "the anti-aligned pair quantum metric is twice the one-doublet metric",
+      "pass": true
+    },
+    {
+      "detail": "sequence=[2.0082484079079745, 2.0020576482854167, 2.000514134394606, 2.000128516254437, 2.0000321279797606]",
+      "group": "U2_orientation",
+      "name": "pair curvature quadrature converges to c1=+2 with second-order refinement",
+      "pass": true
+    },
+    {
+      "detail": "winding=2.000000000000",
+      "group": "U2_orientation",
+      "name": "the quotient-line pair transition has winding +2",
+      "pass": true
+    },
+    {
+      "detail": "U1^3=0; grav^2-U1=0; SU2^2-U1=0.0; SU2-U1^2=0.0",
+      "group": "U3_anomaly",
+      "name": "all local dynamical gauge-anomaly sums vanish",
+      "pass": true
+    },
+    {
+      "detail": "left Weyl doublets=4",
+      "group": "U3_anomaly",
+      "name": "the SU(2)_c Witten anomaly cancels because the Weyl-doublet count is even",
+      "pass": true
+    },
+    {
+      "detail": "kappa_L=2; kappa_R=-2",
+      "group": "U3_anomaly",
+      "name": "the mixed flavour/one-form Postnikov classes are kappa_L=-kappa_R=2",
+      "pass": true
+    },
+    {
+      "detail": "copies per flavour SU(2)=2",
+      "group": "U3_anomaly",
+      "name": "both SU(2)_L and SU(2)_R background Witten anomalies have even colour multiplicity",
+      "pass": true
+    },
+    {
+      "detail": "off-diagonal generators change U(1)_g charge by 2 and do not commute with the gauge generator",
+      "group": "U3_anomaly",
+      "name": "gauged U(1)_g exactly removes off-diagonal Pauli-Guersey generators",
+      "pass": true
+    },
+    {
+      "detail": "tested=200; n=2",
+      "group": "U4_WZW",
+      "name": "the five-dimensional mixed WZW exponent is extension-independent for tested extendible integral classes",
+      "pass": true
+    },
+    {
+      "detail": "k(B=+1)=2; k(B=-1)=-2",
+      "group": "U4_WZW",
+      "name": "a positive unit baryon reduces the mixed WZW term to signed worldline k=+2",
+      "pass": true
+    },
+    {
+      "detail": "qq charge=2; dressing charge=-2; total=0",
+      "group": "U4_WZW",
+      "name": "the minimal local colour singlet requires two quarks and two conjugate Higgs dressings",
+      "pass": true
+    },
+    {
+      "detail": "dim Sym^2(C^2)=3; associated projective line is O(2)",
+      "group": "U4_WZW",
+      "name": "the local Higgs dressing is Sym^2(conjugate doublet), hence a triplet of degree two",
+      "pass": true
+    },
+    {
+      "detail": "one SU(2)_c fundamental is not a colour singlet; the first local baryon uses epsilon_ab q^a q^b",
+      "group": "U4_WZW",
+      "name": "a coloured singleton is excluded from the local gauge-invariant operator algebra",
+      "pass": true
+    },
+    {
+      "detail": "b_U1=6.000000; b_SU2=6.000000",
+      "group": "U5_boundaries",
+      "name": "the running diagnostic detects asymptotically free colour but an abelian Landau pole",
+      "pass": true
+    },
+    {
+      "detail": "without U(1)_g, SU(4)->Sp(4) gives S^5 and pi_3(S^5)=0; the charged theory needs a separate phase audit",
+      "group": "U5_boundaries",
+      "name": "pure two-colour QCD is retained as a negative control, not used for the completion",
+      "pass": true
+    }
+  ],
+  "checks_passed": 26,
+  "checks_total": 26,
+  "complete_cell_safe_parent_boundary_singleton_absent": true,
+  "dynamical_gauge_anomalies_cancel": true,
+  "exactly_two_constrained_cell_proved": true,
+  "finite_U_electronic_uv_exactly_two": false,
+  "literal_odd_and_charge_transfer_sectors_absent": true,
+  "mixed_wzw_extendible_sector_extension_independence_checked": true,
+  "mixed_wzw_full_uv_closed": false,
+  "mixed_wzw_global_differential_cohomology_closed": false,
+  "mixed_wzw_intermediate_uv_candidate_constructed": true,
+  "numerical_summary": {
+    "berry_sign_max_residual": 1.6243534171511178e-16,
+    "beta_coefficients": {
+      "SU2": 6.0,
+      "U1": 6.0
+    },
+    "chern_midpoint_sequence": [
+      2.0082484079079745,
+      2.0020576482854167,
+      2.000514134394606,
+      2.000128516254437,
+      2.0000321279797606
+    ],
+    "gauge_anomalies": {
+      "SU2_U1_squared": 0.0,
+      "SU2_Witten_doublets": 4,
+      "SU2_squared_U1": 0.0,
+      "U1_cubed": 0,
+      "gravity_squared_U1": 0
+    },
+    "hund_zeeman_spectrum": [
+      -0.45,
+      -0.25,
+      -0.04999999999999999,
+      0.75
+    ],
+    "metric_additivity_max_residual": 8.326672684688674e-17,
+    "random_eigenvector_max_residual": 2.7203650143515583e-16,
+    "random_ground_projector_max_residual": 1.110232615317965e-15,
+    "transition_winding": 2.0
+  },
+  "parameters": {
+    "J_H": 1.0,
+    "X_q": 1,
+    "h": 0.2,
+    "mixed_wzw_level": 2,
+    "n_c": 2,
+    "n_f": 2
+  },
+  "physical_pauli_orientation_gives_k_plus_2": true,
+  "physics_promotion_allowed": false,
+  "positive_branch_bundle_is_Q_tensor_2_equal_O_2": true,
+  "remaining_blockers": [
+    "Prove nonperturbatively that the charged two-colour theory condenses in the mesonic SU(2)_L x SU(2)_R -> SU(2)_V channel and gaps every Pauli-Guersey/diquark direction.",
+    "Keep confinement at or above the Higgs-vector scale, or otherwise show that approximate Pauli-Guersey restoration cannot unwind the B=1 soliton.",
+    "Audit compact-U(1) monopoles, the discrete axial anomaly, the spin-bordism sign, and an explicit all-scale embedding beyond the abelian Landau pole.",
+    "Construct the differential-character/Cech-bordism definition on non-extendible four-dimensional sectors; the present test proves only extension independence when an extension exists.",
+    "Compute the soliton Hessian, Finkelstein-Rubinstein statistics, collective-coordinate inertia, and the LLL/adiabatic gap before retaining only the three O(2) states.",
+    "Derive a degree +1 Route-E portal map; neither the constrained cell nor the mixed-WZW sector yet identifies its triplet with three chiral Spin(10) families.",
+    "The complete-cell boundary theorem covers positive parent interactions only; arbitrary intercell couplings may generate emergent projective edge modes even though literal odd-occupancy states are absent."
+  ],
+  "route_e_portal_closed": false,
+  "separate_gauss_laws_enforce_N1_N2_equal_1": true,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_exact_two_mixed_wzw_uv.tex",
+      "sha256": "6f1a2490ddfd909c3f5a5b72c0466cd93b4097b0aa6e852dd715923697faa781",
+      "size_bytes": 32225
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_exact_two_mixed_wzw_uv.bib",
+      "sha256": "707d2671e0fcee6074c6d96fef5101445b5e702b9c4457ace5161a7ff55b49cf",
+      "size_bytes": 2631
+    },
+    {
+      "exists": true,
+      "path": "route_f/LITERATURE_2023_2026.md",
+      "sha256": "ab1cea1c2ee08610db9f1a515845bb26d5b2c751d145b1749bd3035c987ceb7a",
+      "size_bytes": 16009
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e3_exact_two_mixed_wzw.py",
+      "sha256": "0e9844ab5f00526f8a828d8b9f3bc64330ac1a330b4b5248b6b4b2cc102d6a8c",
+      "size_bytes": 22905
+    }
+  ],
+  "status": "ap_e3_exact_cell_and_anomaly_consistent_mixed_wzw_candidate_physics_portal_open"
+}

@@ -1,0 +1,838 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+ colorlinks=true,
+ linkcolor=blue!55!black,
+ citecolor=green!45!black,
+ urlcolor=blue!65!black,
+ pdftitle={AP-E3: A Microscopic Level-Two-Magnitude Candidate},
+ pdfauthor={Route F research note}
+}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\braket}[2]{\langle #1\vert #2\rangle}
+\newcommand{\nopromote}{\texttt{physics\_promotion\_allowed=false}}
+
+\title{AP-E3: A Microscopic Origin Candidate for Projective Level Magnitude Two\\
+Two-Orbital Mott--Hund Locking, the Quadratic Veronese Line,\\
+and the Exactly-Two UV Obstruction}
+\author{Route F research note}
+\date{14 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note asks which microscopic statement can produce the level magnitude
+\(|k|=2\)
+needed for a three-state projective carrier, rather than merely inserting that
+integer in an effective action.  Large \(U(1)\) gauge invariance proves only
+\(k\in\mathbb Z\) and cannot distinguish \(2\) from \(1\) or \(3\).  We then
+construct a minimal conditional candidate.  Two spinful bosonic orbitals are
+placed on a unit-occupancy Mott plateau and coupled ferromagnetically.  Their
+low-energy Hilbert space is the symmetric spin-one triplet.  For a normalized
+doublet \(s\), its oriented ground state is
+\[
+ \ket{s;2}=\ket{s}\otimes\ket{s},
+ \qquad
+ -\ii\braket{s;2}{\dd(s;2)}=2\bigl(-\ii s^\dagger\dd s\bigr).
+\]
+In standard algebraic-geometric conventions the ket eigenline is
+\(L_{\rm ket}=\nu_2^*\cO_{\CP^2}(-1)=\cO_{\CP^1}(-2)\), whereas its dual
+prequantum line is \(L_{\rm pre}=L_{\rm ket}^*=\cO_{\CP^1}(2)\).  Thus the
+declared microscopic dimer derives \(|k|=2\) and
+\(H^0(\CP^1,L_{\rm pre})\simeq\Sym^2\CC^2\) with dimension three, without a
+bare level-two counterterm.  With the convention
+\(A=-\ii\braket{s}{\dd s}\), however, the displayed microscopic kinetic term
+gives signed level \(k=-2\); reversing the orientation gives \(k=+2\).
+
+The construction is verified by a deterministic \(27/27\) audit.  At
+\(U=4,\mu=1.5,J_H=1,h=0.2\), the sufficient interacting-plateau inequality
+has margin \(2.025\), and the complete spinful occupancy problem has the
+unique sector \((N_1,N_2)=(1,1)\), charge gap \(1.85\), Hund
+spectrum \((-1/4,-1/4,-1/4,3/4)\), and a numerical Chern sequence converging
+to \(2.000000501994128\).  The result is nevertheless conditional: the
+repository does not yet derive why the UV field content contains exactly two
+same-orientation constituents, why singleton or odd sectors are forbidden,
+or why the resulting triplet is chiral Route-E family data.  The physical
+orientation selecting the signed Route-E level is also not yet derived.
+Consequently AP-E3 has a complete candidate-level magnitude derivation but
+not a complete signed UV physics derivation, and \nopromote.
+\end{abstract}
+\tableofcontents
+
+\section{Question, assumptions, and precise status}
+
+AP-E1 derived the Hopf quotient and showed that a single projective doublet
+naturally gives a ket line \(\cO(-1)\) and dual prequantum line \(\cO(1)\),
+not their tensor squares.  AP-E2 froze the
+independent discriminant--Killing theorem but did not produce a Berry level.
+AP-E3 must therefore answer a logically separate question: what microscopic
+Hilbert space, Hamiltonian, and gap produce the tensor-square Berry line, and
+what additional principle makes that sector the lowest physical nonzero one?
+
+The selected candidate uses the following declared data.
+\begin{enumerate}[label=(A\arabic*)]
+\item There are two orbitals \(r=1,2\), each with a spinor boson
+  \(a_{rA}\), \(A=1,2\).
+\item The full interacting core Hamiltonian lies on the unit-occupancy
+  plateau.  A sufficient condition derived below is
+  \(C:=\mu+h/2+J_H/4<U-J_H/8\).
+\item A ferromagnetic Hund interaction locks the two spin-\(1/2\) moments into
+  their symmetric triplet.
+\item A weak orientation field selects a unique coherent ground-state line;
+  all portal, drive, and thermal scales remain below the retained gaps.
+\end{enumerate}
+These are microscopic model inputs, not consequences of Route E.
+
+\begin{theorem}[Conditional AP-E3 level-two-magnitude theorem]
+Under assumptions (A1)--(A4), and while the many-body gap remains open, the
+ground-state ket line and its dual prequantum line obey
+\[
+ L_{\rm ket}\simeq\cO_{\CP^1}(-2),\qquad
+ L_{\rm pre}=L_{\rm ket}^*\simeq\cO_{\CP^1}(2),
+\]
+with \(c_1(L_{\rm ket})=-2\), \(c_1(L_{\rm pre})=2\), and
+\[
+ H^0(\CP^1,L_{\rm pre})\simeq\Sym^2\CC^2,\qquad \dim=3.
+\]
+Relative to \(S_k=\hbar k\int A\), the aligned Hamiltonian written below has
+\(k=-2\); the oppositely oriented Hamiltonian has \(k=+2\).  Hence the model
+derives \(|k|=2\), not the physical sign, without a bare level-two term.
+\end{theorem}
+
+\begin{gate}[What the theorem does not prove]
+The theorem does not derive (A1), does not impose a fundamental superselection
+against all single-constituent excitations, and does not identify a spin-one
+internal multiplet with three chiral families.  A Mott gap makes singleton
+sectors irrelevant to the strict low-energy EFT; it does not erase them from
+the full UV Hilbert space.  A fundamental claim that magnitude two is the lowest
+nonzero level therefore still requires an exactly-two UV rule or an
+independent odd-sector prohibition.  It also does not derive which orientation
+is the chiral Route-E convention, so the signed level remains a gate.
+\end{gate}
+
+\section{Large gauge invariance is an integrality theorem, not a selector}
+
+Let \(s\in\CC^2\) satisfy \(s^\dagger s=1\), with redundancy
+\(s\sim e^{\ii\alpha}s\).  The Hopf connection and curvature are
+\begin{equation}
+ A=-\ii s^\dagger\dd s,\qquad F=\dd A,\qquad
+ \frac1{2\pi}\int_{\CP^1}F=1.
+ \label{eq:hopf-data}
+\end{equation}
+For a closed worldline \(\gamma\), consider
+\begin{equation}
+ S_k=\hbar k\oint_\gamma A.
+ \label{eq:level-action}
+\end{equation}
+Under \(s\mapsto e^{\ii\alpha}s\), one has \(A\mapsto A+\dd\alpha\), so a
+large transformation of winding \(m\) changes the action by
+\begin{equation}
+ \Delta S_k=\hbar k\oint_\gamma\dd\alpha=2\pi\hbar k m.
+\end{equation}
+Single-valuedness of \(e^{\ii S/\hbar}\) gives exactly
+\begin{equation}
+ \boxed{k\in\mathbb Z.}
+ \label{eq:integer-only}
+\end{equation}
+Levels \(1,2,3\) all pass this condition.  No argument based only on large
+gauge invariance can select \(k=2\).
+
+There are two common traps.
+\begin{enumerate}
+\item The transformation \(s\mapsto-s\) is already the gauge transformation
+  \(\alpha=\pi\); by itself it does not require even \(k\).
+\item Declaring a field to have gauge weight two need not double the faithful
+  Hopf level.  If the Gauss law is \(2N=K\), then the physical occupation is
+  \(N=K/2\); the minimal label \(K=2\) can still describe one Hopf quantum.
+  A genuine \(\cO(2)\) line requires a tensor square, two additive occupied
+  eigenlines, or another independently normalized topological term.
+\end{enumerate}
+
+An independent exact even-parity projector
+\begin{equation}
+ P_{\rm even}=\frac{1+(-1)^N}{2}
+\end{equation}
+would remove odd occupations.  For
+\(E_N=UN(N-1)/2-\mu N\), the lowest nonzero even sector is uniquely \(N=2\)
+when
+\begin{equation}
+ \frac U2<\mu<\frac{5U}{2}.
+ \label{eq:even-window}
+\end{equation}
+But the parity projector and the plateau are new microscopic inputs;
+Eq.~\eqref{eq:integer-only} does not generate them.
+
+\section{The two-orbital Mott--Hund model}
+\subsection{Microscopic action}
+
+Let the number and spin operators be
+\begin{equation}
+ N_r=a_{rA}^\dagger a_{rA},\qquad
+ \bm S_r=\frac12a_{rA}^\dagger\bm\sigma_{AB}a_{rB}.
+ \label{eq:number-spin}
+\end{equation}
+Repeated spinor indices are summed.  The proposed microscopic action is
+\begin{align}
+ S_{\rm micro}
+ &=\int\dd t\left[
+  \ii\hbar\sum_{r,A}a_{rA}^\dagger\dot a_{rA}-H_{\rm micro}(\bm n)
+ \right],\\
+ H_{\rm micro}(\bm n)
+ &=\sum_{r=1}^2\left[\frac U2N_r(N_r-1)-\mu N_r\right]
+ -J_H\bm S_1\!\cdot\!\bm S_2
+ -h\bm n\!\cdot\!(\bm S_1+\bm S_2)+H_{\rm portal}.
+ \label{eq:micro-hamiltonian}
+\end{align}
+Here \(U,J_H,h>0\), and \(\bm n\in S^2\) is an adiabatic orientation
+parameter.  The two-orbital structure is explicit rather than hidden in a
+level coefficient.  Similar Mott/Hund and coherent-state techniques are
+standard, but the specific exactly-two proposal here is a repository model,
+not a theorem imported from the recent literature
+\cite{ArovasAuerbach1988,OhZhang2023,ZhangEtAl2024Dimer}.
+
+\subsection{Bare unit-occupancy plateau}
+
+For one orbital the onsite energy is
+\begin{equation}
+ E_n^{(0)}=\frac U2n(n-1)-\mu n,\qquad n\in\mathbb Z_{\ge0}.
+\end{equation}
+If \(0<\mu<U\), then \(E_0^{(0)}-E_1^{(0)}=\mu>0\), and, for \(n\ge2\),
+\begin{equation}
+ E_n^{(0)}-E_1^{(0)}
+ =(n-1)\left(\frac{Un}{2}-\mu\right)
+ \ge(n-1)(U-\mu)>0.
+\end{equation}
+Thus \(n=1\) is the unique onsite ground occupation and the bare charge gap is
+\begin{equation}
+ \Delta_{\rm ch}^{(0)}=\min\{\mu,U-\mu\}.
+ \label{eq:bare-charge-gap}
+\end{equation}
+
+\subsection{Exact interacting occupancy minimum and coercive tail}
+
+Set \(H_{\rm portal}=0\) first.  For a single spinful bosonic mode with
+occupation \(n_r\), Bose symmetry gives \(j_r=n_r/2\).  For \(J_H,h>0\), the
+lowest state in the fixed \((n_1,n_2)\) sector has maximal total spin aligned
+with \(\bm n\).  The exact core-Hamiltonian minimum is
+\begin{align}
+ E_{\min}(n_1,n_2)
+ &=\sum_{r=1}^2\left[\frac U2n_r(n_r-1)-\mu n_r\right]
+ -\frac{J_H}{4}n_1n_2-\frac h2(n_1+n_2).
+ \label{eq:sector-minimum}
+\end{align}
+
+The bare window \(0<\mu<U\) is not by itself an interacting theorem.  For
+example, \((U,\mu,J_H,h)=(1,0.99,3.9,0)\) satisfies both \(0<\mu<U\) and
+\(4U>J_H\), but Eq.~\eqref{eq:sector-minimum} gives
+\[
+ E_{\min}(1,1)=-2.955,
+ \qquad E_{\min}(2,2)=-5.86.
+\]
+The following inequality repairs that logical gap.
+
+\begin{proposition}[Sufficient global interacting plateau]
+Assume \(U,\mu,J_H,h>0\), set
+\begin{equation}
+ C:=\mu+\frac h2+\frac{J_H}{4},
+ \label{eq:plateau-C}
+\end{equation}
+and suppose
+\begin{equation}
+ \boxed{C<U-\frac{J_H}{8}}
+ \qquad\Longleftrightarrow\qquad
+ \boxed{0<\mu<U-\frac h2-\frac{3J_H}{8}}.
+ \label{eq:interacting-plateau-condition}
+\end{equation}
+Then \((n_1,n_2)=(1,1)\) is the unique global minimizer of
+Eq.~\eqref{eq:sector-minimum} over \(\mathbb Z_{\ge0}^2\).  This condition is
+sufficient, not claimed necessary.
+\end{proposition}
+
+\begin{proof}
+Put \(x=n_1-1\) and \(y=n_2-1\), so \(x,y\in\mathbb Z_{\ge-1}\).  Direct
+subtraction gives
+\begin{equation}
+ \begin{split}
+ D(x,y)&:=E_{\min}(1+x,1+y)-E_{\min}(1,1)\\
+ &=\frac U2\{x(x+1)+y(y+1)\}-C(x+y)-\frac{J_H}{4}xy.
+ \end{split}
+ \label{eq:plateau-difference}
+\end{equation}
+First take \(x,y\ge0\).  At fixed \(s=x+y\), Eq.~\eqref{eq:plateau-difference}
+decreases as \(xy\) increases, so its minimum occurs at the most balanced
+integer pair.  For \(s=2m\), \(m\ge1\), that minimum is
+\begin{equation}
+ D(m,m)=m\left[\left(U-\frac{J_H}{4}\right)m+U-2C\right]>0,
+\end{equation}
+because the bracket is increasing in \(m\) and at \(m=1\) equals
+\(2(U-J_H/8-C)>0\).  Condition~\eqref{eq:interacting-plateau-condition}
+also implies \(J_H<8U/3<4U\), hence \(U-J_H/4>0\).  For \(s=2m+1\), the
+balanced value is
+\begin{equation}
+ D(m,m+1)=\left(U-\frac{J_H}{4}\right)(m^2+m)
+ +\frac U2+\left(\frac U2-C\right)(2m+1).
+\end{equation}
+It starts at \(U-C>0\), and its successive difference is
+\(2(m+1)(U-J_H/4)+U-2C>0\); hence it too is positive.
+
+It remains to check the boundary allowed by \(x,y\ge-1\).  For \(y\ge0\),
+\begin{equation}
+ D(-1,y)=\frac U2y^2+\left(\frac U2-C+\frac{J_H}{4}\right)y+C.
+\end{equation}
+At \(y=0\) this is \(C>0\); at \(y=1\) it is \(U+J_H/4>0\), and for
+\(y\ge1\) its successive difference
+\(Uy+U-C+J_H/4\) is positive.  The case \(D(x,-1)\) is symmetric, while
+\(D(-1,-1)=2C-J_H/4=2\mu+h+J_H/4>0\).  Every lattice point other than
+\((x,y)=(0,0)\) therefore has strictly higher energy.
+\end{proof}
+
+Let \(N=n_1+n_2\).  From
+\(n_1^2+n_2^2\ge N^2/2\) and \(n_1n_2\le N^2/4\),
+\begin{equation}
+ \boxed{
+ E_{\min}(n_1,n_2)\ge
+ \frac{4U-J_H}{16}N^2
+ -\left(\frac U2+\mu+\frac h2\right)N.}
+ \label{eq:coercive-bound}
+\end{equation}
+Hence \(4U>J_H\) makes the high-occupancy tail coercive.  Notice that
+Eq.~\eqref{eq:interacting-plateau-condition} already implies this inequality.
+A finite sector
+enumeration together with Eq.~\eqref{eq:coercive-bound} proves the global
+ground sector at any stated benchmark.
+
+At
+\begin{equation}
+ (U,\mu,J_H,h)=(4,1.5,1,0.2)
+ \label{eq:benchmark}
+\end{equation}
+one has
+\[
+ C=1.85<3.875=U-\frac{J_H}{8},\qquad
+ (U-J_H/8)-C=2.025,
+\]
+and
+\[
+ E_{\min}(1,1)=-3.45,\qquad
+ E_{\min}(1,0)=E_{\min}(0,1)=-1.60.
+\]
+The exact scan for \(N<8\) has the unique ground \((1,1)\) and interacting
+charge gap \(1.85\).  For \(N\ge8\), the lower bound is increasing and is
+already \(31.2\), excluding every omitted occupancy sector.
+
+\section{Exact triplet projection and the orientation gap}
+
+Inside \(N_1=N_2=1\), each orbital carries spin \(1/2\).  With
+\(\bm S_{\rm tot}=\bm S_1+\bm S_2\),
+\begin{equation}
+ \bm S_1\cdot\bm S_2
+ =\frac12\left(\bm S_{\rm tot}^2-\frac32\right).
+ \label{eq:spin-addition}
+\end{equation}
+The Hund term has the exact spectrum
+\begin{equation}
+ E_{j=1}=-\frac{J_H}{4}\quad(3\text{-fold}),\qquad
+ E_{j=0}=\frac{3J_H}{4}\quad(1\text{-fold}),
+ \label{eq:hund-spectrum}
+\end{equation}
+with singlet gap \(\Delta_{\rm singlet}=J_H\).  The triplet projector is
+\begin{equation}
+ P_{j=1}=\frac{1+P_{12}}{2}=\frac{\bm S_{\rm tot}^2}{2},
+ \qquad \Tr P_{j=1}=3.
+ \label{eq:triplet-projector}
+\end{equation}
+Thus ferromagnetic locking is precisely projection onto \(\Sym^2\CC^2\).
+
+For fixed \(\bm n\), the orientation term gives the four energies
+\begin{equation}
+ -\frac{J_H}{4}-h,\quad -\frac{J_H}{4},\quad
+ -\frac{J_H}{4}+h,\quad \frac{3J_H}{4}.
+ \label{eq:probe-spectrum}
+\end{equation}
+For \(h>0\), the ground state is unique and the triplet orientation gap is
+\(h\).  If \(s(\bm n)\) is the normalized \(+1\) eigenvector of
+\(\bm n\cdot\bm\sigma\), then
+\begin{equation}
+ \ket{\Omega(\bm n)}=\ket{s(\bm n)}\otimes\ket{s(\bm n)}.
+ \label{eq:pair-ground}
+\end{equation}
+This is the microscopic line whose topology is computed next.
+
+\section{Quadratic Veronese geometry and Berry factor two}
+
+\subsection{The symmetric coherent state}
+
+Write \(s=(z_0,z_1)^T\), with \(|z_0|^2+|z_1|^2=1\).  In the normalized
+triplet basis,
+\begin{equation}
+ \ket{s;2}
+ =z_0^2\ket{1,1}
+  +\sqrt2z_0z_1\ket{1,0}
+  +z_1^2\ket{1,-1}.
+ \label{eq:veronese-state}
+\end{equation}
+Its norm is \((|z_0|^2+|z_1|^2)^2=1\), and it has no singlet component.
+Projectively it is the quadratic Veronese embedding
+\begin{equation}
+ \nu_2:\CP^1\longrightarrow\CP^2,\qquad
+ [z_0:z_1]\longmapsto[z_0^2:\sqrt2z_0z_1:z_1^2].
+ \label{eq:veronese-map}
+\end{equation}
+Under \(s\mapsto e^{\ii\alpha}s\), the pair transforms as
+\begin{equation}
+ \ket{s;2}\mapsto e^{2\ii\alpha}\ket{s;2}.
+ \label{eq:phase-two}
+\end{equation}
+This phase weight is a consequence of a tensor product, not a relabeling of
+the gauge generator.
+
+\subsection{Connection, curvature, and quantum metric}
+
+Differentiating the tensor product gives
+\begin{equation}
+ \dd\ket{s;2}
+ =\dd\ket{s}\otimes\ket{s}+\ket{s}\otimes\dd\ket{s}.
+\end{equation}
+Using \(\braket{s}{s}=1\),
+\begin{equation}
+ \braket{s;2}{\dd(s;2)}=2\braket{s}{\dd s},
+\end{equation}
+and therefore
+\begin{equation}
+ \boxed{A_2=2A_1,\qquad F_2=2F_1.}
+ \label{eq:berry-addition}
+\end{equation}
+The Fubini--Study quadratic form is
+\begin{equation}
+ g(\dd\psi,\dd\psi)
+ =\braket{\dd\psi}{\dd\psi}
+  -|\braket{\psi}{\dd\psi}|^2.
+\end{equation}
+Substitution of the product derivative yields
+\begin{equation}
+ \boxed{g_2=2g_1.}
+ \label{eq:metric-addition}
+\end{equation}
+Thus both symplectic and metric data are derived from the microscopic pair.
+This is the standard coherent-state Berry construction applied to the tensor
+product rather than assumed at the effective level
+\cite{Berry1984,Perelomov1972APE3}.
+
+\subsection{Patch proof, ket line, and dual prequantum line}
+
+Use northern and southern unit sections
+\begin{align}
+ s_N&=\begin{pmatrix}\cos(\theta/2)\\e^{\ii\phi}\sin(\theta/2)\end{pmatrix},
+ &A_N&=\frac{1-\cos\theta}{2}\dd\phi,\\
+ s_S&=e^{-\ii\phi}s_N,
+ &A_S&=-\frac{1+\cos\theta}{2}\dd\phi.
+\end{align}
+On the overlap, the pair transition is \(e^{-2\ii\phi}\).  Hence
+\begin{equation}
+ F_2=\sin\theta\,\dd\theta\wedge\dd\phi,
+\end{equation}
+The unitary connection on the ket line is
+\(\nabla_{\rm ket}=\dd+\ii A_2\), whereas its dual has
+\(\nabla_{\rm pre}=\dd-\ii A_2\).  Therefore
+\begin{equation}
+ \boxed{
+ c_1(L_{\rm ket})=-\frac1{2\pi}\int_{\CP^1}F_2=-2,
+ \qquad
+ c_1(L_{\rm pre})=\frac1{2\pi}\int_{\CP^1}F_2=2.}
+ \label{eq:chern-two}
+\end{equation}
+Equivalently, the transition function and Eq.~\eqref{eq:veronese-map} prove
+\begin{equation}
+ \boxed{
+ L_{\rm ket}=\nu_2^*\cO_{\CP^2}(-1)=\cO_{\CP^1}(-2),
+ \qquad
+ L_{\rm pre}=L_{\rm ket}^*=\nu_2^*\cO_{\CP^2}(1)
+ =\cO_{\CP^1}(2).}
+ \label{eq:bundle-pullback}
+\end{equation}
+
+\begin{remark}[Why the dual is essential rather than notational]
+The transition \(e^{-2\ii\phi}\) belongs to the algebraic ket eigenline
+\(\cO(-2)\).  Holomorphic geometric quantization uses its positive dual
+\(\cO(2)\).  This is also the sign distinction between the microscopic ket
+kinetic term and the positive prequantum flux; it cannot be removed merely by
+renaming the same line bundle.
+\end{remark}
+
+\subsection{Three-state quantization}
+
+Holomorphic quantization of the dual prequantum line yields
+\begin{equation}
+ \cH_{|k|=2}=H^0(\CP^1,L_{\rm pre})=H^0(\CP^1,\cO(2))
+ =\Span\{z_0^2,z_0z_1,z_1^2\}
+ \simeq\Sym^2\CC^2,\qquad \dim\cH_{|k|=2}=3.
+ \label{eq:borel-weil}
+\end{equation}
+The spin-one generators obey
+\begin{equation}
+ [J_x,J_y]=\ii J_z,\qquad J_x^2+J_y^2+J_z^2=2I_3.
+\end{equation}
+The same symmetric square therefore appears in the exact spectrum, Berry
+line, and holomorphic state count.
+
+\section{Low-energy action and robustness}
+
+Adiabatic integration of gapped modes gives
+\begin{equation}
+ S_{\rm eff}[s]
+ =-2\hbar\int A_1(s)-\int H_{\rm eff}(s)\,\dd t
+ +O\left(\frac{\partial_t^2}{\Delta}\right),
+ \label{eq:effective-action}
+\end{equation}
+where a conservative retained gap is
+\begin{equation}
+ \Delta=\min\{\Delta_{\rm ch},J_H,h,\Delta_{\rm extra}\}.
+ \label{eq:retained-gap}
+\end{equation}
+Indeed \(\braket{s}{\dd s}=\ii A_1\), so the microscopic kinetic term gives
+\(\ii\hbar\braket{s;2}{\dd(s;2)}=-2\hbar A_1\).  Thus, relative to
+Eq.~\eqref{eq:level-action}, the aligned \(-h\bm n\cdot\bm S_{\rm tot}\)
+Hamiltonian has \(k=-2\).  Replacing it by the anti-aligned orientation (for
+example \(+h\bm n\cdot\bm S_{\rm tot}\)) reverses \(A_1\) and gives \(k=+2\).
+The magnitude two is topological and cannot vary under a smooth perturbation
+unless the line ceases to be isolated or its gap closes.  Which sign is the
+physical Route-E chirality is not selected by the dimer itself.
+
+At the benchmark, the verifier uses
+\begin{equation}
+ (\Lambda_{\rm portal},T,\hbar\omega)=(0.01,0.02,0.03),
+\end{equation}
+while the smallest retained gap is \(h=0.2\).  The ratio \(0.03/0.2=0.15\)
+passes the declared \(0.2\) guard, whereas a portal scale \(0.22\) is rejected.
+This is a benchmark separation check, not a universal error bound.
+
+\section{Why the candidate still does not derive exactly two}
+
+There are two distinct meanings of a level-two-magnitude origin.
+\begin{enumerate}
+\item \emph{Infrared origin:} after declaring two orbitals and working below
+  all charge and singlet gaps, the retained ket/prequantum pair has Chern
+  numbers \((-2,+2)\), hence \(|k|=2\).  This note proves that statement.
+\item \emph{Fundamental selection:} the full UV theory explains why the
+  number of same-orientation constituents is exactly two and prohibits every
+  singleton or odd sector.  This note does not prove that statement.
+\end{enumerate}
+
+A single occupied orbital has ket/prequantum lines \(\cO(-1)\) and
+\(\cO(1)\), respectively, and a two-state doublet.  The
+Mott model makes charge-removal states heavy, so they are absent from the
+strict IR EFT, but they remain states in the full microscopic theory.  To
+claim that \(2\) is the fundamental lowest nonzero level, one needs at least
+one additional mechanism:
+\begin{enumerate}
+\item an exact microscopic gauge constraint whose physical local operators
+  are necessarily bilinears and whose odd sectors are absent;
+\item a discrete gauge superselection with an independently derived even
+  sector and a plateau selecting its first nonzero representation;
+\item an anomaly or generalized-symmetry condition fixing a coefficient to
+  two in a specified four-dimensional UV completion;
+\item a lattice or unit-cell theorem deriving exactly two locked orbitals and
+  forbidding isolated-orbital boundary states.
+\end{enumerate}
+This is the principal remaining AP-E3 blocker.
+
+\section{Alternative microscopic branches}
+
+\subsection{Filled-fermion determinant}
+
+For \(r\) gapped fermion flavors, consider
+\begin{equation}
+ H_f(\bm n)=\sum_{a=1}^r\left[
+ -\Delta_a\psi_a^\dagger(\bm n\cdot\bm\sigma)\psi_a
+ +U_a(N_a-1)^2\right].
+\end{equation}
+If every flavor is singly occupied and remains gapped, the many-body ground
+state is a Slater determinant of eigenlines.  Berry connections add:
+\begin{equation}
+ A_{\det}=\sum_a A_a,\qquad
+ k_{\rm ind}=\sum_a C_a,\qquad C_a=\pm1.
+ \label{eq:fermion-sum}
+\end{equation}
+Two same-orientation filled lines give \(|k|=2\).  One line gives \(|k|=1\),
+and opposite orientations cancel to zero.  Flavor number, filling, and signs must
+all be derived.  Recent experiments show that higher Chern sectors can be
+engineered and tuned, supporting possibility rather than necessity
+\cite{LeeEtAl2023}.
+
+\subsection{Mixed WZW matching}
+
+Let \(\omega_3\) and \(\omega_2\) be integrally normalized generators on the
+two target factors.  A mixed Wess--Zumino--Witten term has schematic form
+\begin{equation}
+ S_{\rm WZW}=2\pi\hbar n\int_{Y_5}\omega_3(g)\wedge\omega_2(s),
+ \qquad n\in\mathbb Z.
+ \label{eq:mixed-wzw}
+\end{equation}
+For a localized configuration with baryon or skyrmion number \(B\), reduction
+to its worldline gives
+\begin{equation}
+ S_{\rm wl}=\hbar nB\int_\gamma A,\qquad k=nB.
+ \label{eq:wzw-reduction}
+\end{equation}
+Davighi and Lohitsiri construct a weakly coupled UV completion in which the
+coefficient equals a color number and is tree-level exact
+\cite{DavighiLohitsiri2024}.  Formally, \(n_c=2\) and \(B=1\) would give a
+signed \(k=2\).  However, two-color theory has pseudoreal representations and a
+different Pauli--Guersey global symmetry and coset
+\cite{SuenagaEtAl2023}.  One cannot obtain a valid Route-E completion merely
+by replacing \(n_c\) with two; the global quotient, anomaly, minimal soliton,
+and mixed-WZW cohomology must be redone.
+
+\subsection{Tangent and Dirac route}
+
+The holomorphic tangent bundle satisfies
+\begin{equation}
+ T^{1,0}\CP^1\simeq\cO(2).
+\end{equation}
+If AP-E4 derives that a physical chiral fluctuation is tangent-valued, the
+canonical Spin\({}^c\) or Dolbeault operator
+\begin{equation}
+ D_T=\sqrt2(\bar\partial_T+\bar\partial_T^\dagger)
+\end{equation}
+has index, with \(x=c_1(\cO(1))\),
+\begin{equation}
+ \operatorname{ind}D_T
+ =\int_{\CP^1}\operatorname{ch}(\cO(2))\operatorname{Td}(T\CP^1)
+ =\int_{\CP^1}(1+2x)(1+x)=3.
+ \label{eq:dolbeault-index}
+\end{equation}
+This convention must be explicit.  An ordinary spin Dirac operator twisted
+by \(\cO(p)\) instead has positive-chirality holomorphic sections
+\(H^0(\cO(p-1))\), of dimension \(p\) for \(p\ge1\); at \(p=2\) that count is
+two, not three.  Projective-space monopole spectra clarify these distinctions
+but take the monopole level as input \cite{BykovSmilga2023APE3}.  The
+tangent/Dirac branch belongs to AP-E4 and cannot be used backward to close
+AP-E3.
+
+\section{Failure modes and falsifiable gates}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}
+                       >{\raggedright\arraybackslash}p{0.66\textwidth}@{}}
+\toprule
+Failure & Consequence and required check\\
+\midrule
+\endfirsthead
+\toprule
+Failure & Consequence and required check\\
+\midrule
+\endhead
+\(\mu\notin(0,U)\) & The bare onsite ground changes to \(N=0\) or
+\(N\ge2\); repeat the complete occupancy minimization.\\
+Interacting plateau inequality fails & The bare condition \(0<\mu<U\) no
+longer proves \((1,1)\); minimize Eq.~\eqref{eq:sector-minimum} globally.\\
+\(J_H<0\) & The singlet is the unique ground state and carries \(k=0\).\\
+No locking & The target is \(\CP^1\times\CP^1\), not its diagonal
+\(\CP^1\).\\
+Opposite Berry orientations & The two Chern numbers cancel, yielding
+\(k=0\).\\
+Singleton allowed & A physical \(|k|=1\) doublet remains; the fundamental
+exactly-two claim fails.\\
+Orientation not derived & The declared aligned action has \(k=-2\); obtaining
+the desired \(k=+2\) requires a physical orientation/chirality argument.\\
+\(h=0\) & The triplet ground space is degenerate, so there is no unique
+Abelian ground-state line for the displayed Berry connection.\\
+Gap-scale collision & If portal, temperature, or drive scales reach a charge,
+singlet, orientation, or extra-state gap, the one-line adiabatic EFT is not
+controlled.\\
+Internal triplet only & A three-state spin multiplet is not automatically
+three chiral families; construct the four-dimensional Dirac operator and
+portal.\\
+\bottomrule
+\end{longtable}
+
+The strongest next AP-E3 tests are:
+\begin{enumerate}
+\item construct an explicit exactly-two gauge constraint or unit-cell
+  symmetry and prove the absence of boundary singleton sectors;
+\item embed Eq.~\eqref{eq:micro-hamiltonian} in an anomaly-consistent
+  four-dimensional model;
+\item compute the many-body Chern number with a lattice-link or Wilson-loop
+  algorithm under every portal deformation up to the first gap closing
+  \cite{FukuiHatsugaiSuzuki2005};
+\item prove that the Route-E coupling maps the triplet to chiral family data
+  and does not introduce opposite-chirality partners.
+\end{enumerate}
+
+\section{The 27-check reproducible audit}
+
+The executable verifier is
+\begin{center}
+\path{route_f/code/verify_ap_e3_level_two_microscopic.py}.
+\end{center}
+From the repository root, run
+\begin{center}
+\texttt{python3 route\_f/code/verify\_ap\_e3\_level\_two\_microscopic.py}.
+\end{center}
+It writes JSON and Markdown reports in \path{route_f/output/}.  The seed is
+\(20260714\).  Its checks are grouped as follows.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}lclX@{}}
+\toprule
+Group & Count & Status & Content\\
+\midrule
+M0 provenance & 2 & pass & Input hashes and green, non-promoting AP-E2 gate.\\
+M1 Mott & 4 & pass & Bare window, false-inference counterexample, proved
+interacting plateau inequality, full minimum, and coercive tail.\\
+M2 Hund & 7 & pass & Hermiticity, \(SU(2)\), triplet/singlet spectrum,
+projector, gaps, sign reversal, and 64 orientations.\\
+M3 Veronese & 6 & pass & Normalization, phase weight, Berry and metric factor
+two, ket/dual transition signs, and prequantum Chern quadrature.\\
+M4 representation & 2 & pass & Spin-one Casimir and large-gauge
+non-selection.\\
+M5 failures & 3 & pass & Opposite orientation, singleton, and unlocked target.\\
+M6 EFT & 2 & pass & Positive hierarchy and rejected bad portal.\\
+M7 boundary & 1 & pass & Magnitude proof complete; signed orientation and UV
+physics closure false.\\
+\midrule
+Total & 27 & pass & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+For \(J_H=1\), exact diagonalization gives
+\begin{equation}
+ \operatorname{spec}H_{\rm Hund}=(-0.25,-0.25,-0.25,0.75),
+\end{equation}
+while the antiferromagnetic sign gives
+\((-0.75,0.25,0.25,0.25)\).  Over 64 seeded orientations at \(h=0.2\), the
+maximum spectral residual is \(8.88\times10^{-16}\).  Over 256 random
+normalized sections, the maximum Veronese or norm residual is
+\(9.99\times10^{-16}\), the Berry factor-two residual is
+\(2.24\times10^{-16}\), and the metric residual is
+\(2.22\times10^{-16}\).
+
+For \(N_\theta\) midpoint cells, direct curvature quadrature gives
+\begin{equation}
+ c_1^{(N_\theta)}
+ =\frac{\pi}{N_\theta}
+  \sum_{j=0}^{N_\theta-1}
+  \sin\left(\frac{(j+1/2)\pi}{N_\theta}\right).
+\end{equation}
+The deterministic sequence is
+\begin{center}
+\begin{tabular}{@{}rr@{}}
+\toprule
+\(N_\theta\) & \(c_1^{(N_\theta)}\)\\
+\midrule
+20 & 2.0020576483\\
+80 & 2.0001285163\\
+320 & 2.0000080319\\
+1280 & 2.0000005020\\
+\bottomrule
+\end{tabular}
+\end{center}
+Its monotone second-order convergence to the dual-prequantum value two verifies
+Eq.~\eqref{eq:chern-two} numerically; it does not replace the patch proof.
+
+\section{Recent-literature boundary}
+
+Recent primary work supplies useful ingredients but not the missing theorem:
+\begin{itemize}
+\item projective monopole spectra and twisted Dolbeault complexes support the
+  AP-E4 spectral audit, while treating the level as an input
+  \cite{BykovSmilga2023APE3};
+\item tunable higher Chern numbers demonstrate realizability but also show
+  that a Hamiltonian can select different integers in different regimes
+  \cite{LeeEtAl2023};
+\item mixed-WZW generalized-symmetry matching can protect an integer
+  coefficient, but its global symmetry and color content must match the UV
+  completion \cite{DavighiLohitsiri2024};
+\item coupled-dimer coherent-state methods make singlet/triplet structure
+  calculable, but antiferromagnetic pairing itself does not imply the
+  ferromagnetic diagonal line or \(|k|=2\) \cite{ZhangEtAl2024Dimer}.
+\end{itemize}
+No cited paper proves the repository-specific chain
+\begin{equation}
+ \begin{gathered}
+ \text{exactly two constituents}\Longrightarrow\text{no singleton},\\
+ \Longrightarrow\{\cO(-2)_{\rm ket},\cO(2)_{\rm pre}\}
+ \Longrightarrow \text{three chiral Route-E families}.
+ \end{gathered}
+\end{equation}
+
+\section{Conclusion and next decisions}
+
+Within the declared two-orbital Mott--Hund model, AP-E3 now has a complete
+first-principles magnitude chain:
+\begin{equation}
+ \begin{gathered}
+ C=\mu+h/2+J_H/4<U-J_H/8
+ \ \Longrightarrow\ (N_1,N_2)=(1,1),\\
+ J_H>0\ \Longrightarrow\ \Sym^2\CC^2\text{ triplet},\\
+ \ket{s}\otimes\ket{s}\ \Longrightarrow\ A_2=2A_1,\\
+ L_{\rm ket}=\nu_2^*\cO(-1)=\cO(-2),\qquad
+ L_{\rm pre}=L_{\rm ket}^*=\cO(2),\\
+ S_{\rm aligned}=-2\hbar\int A_1,\qquad
+ S_{\rm reversed}=+2\hbar\int A_1,\\
+ |k|=2\ \Longrightarrow\quad
+ \dim H^0(\CP^1,\cO(2))=3.
+ \end{gathered}
+ \label{eq:final-chain}
+\end{equation}
+The analytic occupancy theorem and \(27/27\) numerical audit make this more than
+a formal analogy.  The construction also has sharp counterexamples:
+antiferromagnetic exchange gives a \(k=0\) singlet, opposite orientations
+cancel, no locking leaves a product target, and a singleton restores
+\(|k|=1\).  The aligned sign \(k=-2\) also makes the Route-E chirality choice
+an explicit unresolved input rather than a hidden convention.
+
+The candidate-level task is therefore complete.  The full AP-E3 physics task
+is not.  Three viable research choices remain:
+\begin{enumerate}
+\item \textbf{Preferred minimal route:} derive a microscopic gauge or
+  unit-cell rule that makes the two-orbital composite fundamental and removes
+  odd sectors, then construct the Route-E portal.
+\item \textbf{Topological UV route:} build the correct \(n_c=2\) mixed-WZW
+  completion and redo its global-symmetry and anomaly analysis.
+\item \textbf{Independent AP-E4 route:} derive a tangent-valued chiral Dirac
+  mode and its complete partner spectrum, without using the desired count as
+  an input.
+\end{enumerate}
+Until one of these closes its own gates,
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{candidate\_level\_magnitude\_derivation\_complete=true},\\
+ \texttt{signed\_route\_e\_level\_selected=false},\\
+ \texttt{ap\_e3\_physics\_closed=false},\\
+ \texttt{physics\_promotion\_allowed=false}.
+ \end{gathered}}
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e3_level_two_microscopic}
+
+\end{document}

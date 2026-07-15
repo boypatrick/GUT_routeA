@@ -1,6 +1,6 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-14.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-15.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
 | Source | Main result relevant to Route F | Required response |
@@ -20,6 +20,13 @@ that the present model inherits their results.
 | Mistele et al., [Indefinitely Flat Circular Velocities and the Baryonic Tully--Fisher Relation from Weak Lensing](https://doi.org/10.3847/2041-8213/ad54b0) (2024) | Weak-lensing data probe the persistence of flat circular velocities beyond resolved rotation curves. | Any gravity repair must fit rotation and lensing jointly; a pure clock-rescaling ansatz is not sufficient. |
 | Hamada et al., [Q-Balls in the presence of attractive force](https://doi.org/10.1007/JHEP08(2024)242) (2024) | Extends Q-ball stability analysis when an additional attractive force is present. | Use as a modern stability/gravity interface for AP-E5, not as evidence that the present bubble-to-Q-ball identification is already realized. |
 | Bykov and Smilga, [Monopole harmonics on complex projective spaces](https://arxiv.org/abs/2302.11691), SciPost Phys. 15, 195 (2023) | Gives spectra and homogeneous-coordinate eigenfunctions for charged quantum mechanics on projective space; states form `SU(n)` multiplets and connect to twisted Dolbeault/Dirac complexes. | Use to audit the AP-E1 monopole spectrum. Keep all Landau levels unless an LLL/holomorphic projection and its gap are separately derived. |
+| Davighi and Lohitsiri, [WZW terms without anomalies: generalised symmetries in chiral Lagrangians](https://arxiv.org/abs/2407.20340), SciPost Phys. 17, 168 (2024) | Constructs a weakly coupled UV completion of a specific 4d sigma model on `SU(N) x S2`; a 2-group matches the mixed WZW coefficient `n=n_c X_q`, and the result is tree-level exact.  It also sketches `SU(n_c+1)` semi-simple deep-UV unification, while leaving extra-scalar/lepton decoupling to a future explicit model.  Nonminimal scalar charge leaves a discrete gauge sector and changes normalized flux bookkeeping. | AP-E3 specializes the intermediate construction to charged two-color matter, audits its gauge/Witten anomalies, and obtains `n=2`.  Mesonic vacuum selection, compact-monopole/bordism and non-extendible differential-cohomology definitions, explicit semi-simple decoupling beyond the abelian Landau pole, soliton stability, and the Route-E portal remain open. |
+| Saito, [Wess-Zumino-Witten Terms of Sp QCD by Bordism Theory](https://arxiv.org/abs/2404.06185), JHEP 10 (2024) 099 | Uses invertible-field-theory/bordism methods to test perturbative and nonperturbative consistency of ungauged and gauged 4d WZW terms on spin manifolds. | Treat ordinary anomaly sums as necessary but not sufficient.  The charged two-color candidate still needs its faithful-group, discrete-axial, compact-monopole, and spin-bordism audit. |
+| Suenaga et al., [Mass spectrum of spin-one hadrons in dense two-color QCD](https://arxiv.org/abs/2312.17017), Phys. Rev. D 109, 074031 (2024) | Builds a two-color effective theory respecting Pauli--Guersey `SU(4)` and shows that meson, diquark, vector, and axial-vector directions can all matter dynamically. | Pure two-color QCD is a negative control: `SU(4)/Sp(4)=S5` has no stable `pi_3` Skyrmion.  In the charged model, explicitly measure the Pauli--Guersey/diquark gaps rather than inferring them from gauge-anomaly cancellation. |
+| Mazitov and Katanin, [Local magnetic moment formation and Kondo screening in the presence of Hund exchange](https://arxiv.org/abs/2403.20036) (2024) | Finds distinct local-moment, quasiparticle, screening, and Mott regimes in a two-band Hubbard model with Hund exchange. | A finite-`U` plateau is not an exact Hilbert-space projection.  Use it only as the old AP-E3 EFT candidate; the new exactly-two theorem must be stated with exact Gauss constraints. |
+| Yao et al., [Lieb-Schultz-Mattis Theorem for 1D Quantum Magnets with Antiunitary Translation and Inversion Symmetries](https://arxiv.org/abs/2307.09843), Phys. Rev. Lett. 133, 136705 (2024) | Sharpens constraints on projective unit-cell representations and symmetric gapped phases in one-dimensional magnets. | Complete-cell Gauss constraints remove literal odd constituents, but arbitrary intercell interactions may still generate projective edge modes.  Restrict the proved boundary theorem to the positive-parent cone until a gapped homotopy is supplied. |
+| Zhang et al., [Large-N SU(4) Schwinger boson theory for coupled-dimer antiferromagnets](https://arxiv.org/abs/2409.04627) (2024; revised 2025) | Uses `SU(4)` coherent states of spin-1/2 dimers and a Schwinger-boson large-N expansion to describe coupled-dimer phases and their transition. | Treat this as a boundary check that “paired/dimer” does not automatically mean the diagonal `CP1`, a ferromagnetic triplet, or `k=2`; it is not a literature derivation of the proposed Mott/Hund candidate. |
+| Lee et al., [Controllable tunability of a Chern number within the electronic-nuclear spin system in diamond](https://www.nature.com/articles/s41534-023-00732-6), npj Quantum Information 9, 66 (2023) | Demonstrates controllable Chern-number transitions from 0 to 3 in an electronic-nuclear NV-spin system and maps the control problem to an interacting three-qubit system. | Higher or level-two Chern sectors are physically realizable in engineered systems, but existence and tunability do not select `k=2` for Route E.  The microscopic Hamiltonian and exactly-two rule must still be derived. |
 | Heeck and Sokhashvili, [Q-balls in polynomial potentials](https://arxiv.org/abs/2211.00021), Phys. Rev. D 107, 016006 (2023) | Studies polynomial Q-balls numerically and analytically and shows how single-field effective potentials can arise from renormalizable multifield models. | Use for AP-E5 radial/profile and scale-separation tests; integrating out heavy fields does not automatically preserve a CP1 orientation sector. |
 | Espinosa, Heeck, Sokhashvili, [The Tunneling Potential Approach to Q-Balls](https://arxiv.org/abs/2307.05667), Phys. Rev. D 108, 056019 (2023) | Recasts the Q-ball radial ODE as a field-space variational problem analogous to a three-dimensional bounce and constructs approximate/exact examples. | Use as a profile-solver cross-check after the action is fixed; it does not derive the potential or projective doublet. |
 | Cuomo et al., [Numerical tests of the large charge expansion](https://arxiv.org/abs/2305.00499), JHEP 05 (2024) 161 | Lattice measurements in the three-dimensional critical `O(2)` model agree with large-charge superfluid EFT predictions over the tested charges. | Treat fixed-charge EFT as a testable expansion, not a universal derivation of AP-E1 coefficients or a justification for identifying macroscopic Q with Chern level two. |
@@ -47,6 +54,25 @@ that the present model inherits their results.
 8. Do not identify the macroscopic Q-ball charge with Route E's level two.
    Either study the true charge-two sector or introduce an independently
    quantized level-two internal sector.
+9. AP-E2 is an exact regression theorem, not literature-dependent physics:
+   keep its `30/30` discriminant/Killing/transvectant gate green while retaining
+   `physics_promotion_allowed=false`.
+10. Retain the finite-`U` AP-E3 Mott/Hund construction as the EFT predecessor,
+    not the exact rule.  The new `G_r=N_r-1=0` constrained-cell theorem removes
+    literal singleton and charge-transfer sectors, while the electron Pauli
+    sign derives the anti-aligned `Q^2=O(2)` branch and signed `k=+2`.  Its
+    complete-cell positive-parent boundary theorem does not cover arbitrary
+    Haldane-like intercell phases.
+11. The charged two-color mixed-WZW branch is now an anomaly-consistent
+    intermediate UV candidate with `n=2` and `k=nB=+2` for `B=1`.  Do not call
+    it an all-scale completion until the strong phase, bordism/monopole,
+    soliton, and Landau-pole gates close.
+12. AP-E4's canonical Spin-c mathematics is complete, including the full
+    partner tower and gap.  Keep the ordinary-spin tangent result as a
+    mandatory negative control: `T=O(2)` alone gives two zero modes; three
+    requires the canonical half-canonical shift or ordinary twist `O(3)`.
+    Neither operator count is a family theorem without a fermionic UV origin,
+    anomaly cancellation, and a Route-E portal.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,
@@ -58,3 +84,12 @@ Likewise, no 2023--2026 primary paper found in the AP-E1 search derives in one
 model the chain `4D doublet -> CP1 -> O(2) -> Q-ball -> stable Hopf soliton ->
 three chiral families`.  Each arrow remains an independent theorem or gate in
 the roadmap.
+
+The 2026-07-15 follow-up changes the intermediate conclusion but not the final
+promotion boundary.  The repository now proves the constrained-cell chain
+`G_1=G_2=0 -> exactly two -> anti-aligned Hund triplet -> signed k=+2 -> O(2)`
+and constructs an anomaly-consistent mixed-WZW intermediate candidate.  It
+also solves the canonical AP-E4 spectrum.  No checked primary source or
+in-repository theorem yet supplies the remaining chain `nonperturbative strong
+phase + all-scale UV + physical Spin-c fermion + anomaly cancellation +
+degree-one Route-E portal -> three chiral families`.
