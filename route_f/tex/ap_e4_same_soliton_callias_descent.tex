@@ -1,0 +1,910 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E4 Same-Soliton Audit:\\
+Conditional \(N=2\) Moduli-Space SQM, Families-Callias Determinant Line,\\
+CPT/Anti-Canonical Polarization, and Gauge-Basic WZW Transgression}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note asks the stronger AP-E4 question that the independent vortex model
+cannot answer: can a physical tangent fermion, its Callias determinant line,
+and the level-two WZW line all be derived on the \emph{same} charged
+two-colour \(B=1\) soliton?  The answer is a rigorous conditional theorem and
+a rigorous underdetermination result, not a promotion claim.
+
+At two-derivative adiabatic order, a one-multiplet tangent \(N=2\) SQM is
+characterized at low energy by a smooth normalizable bosonic zero-mode
+family, a uniform gap, a Fredholm fermion kernel
+\(\cK_F\simeq T^{1,0}\CP^1=\cO(2)\), the \(N=2\) Ward identities, and the
+Levi--Civita connection.  Exact microscopic supercharges are a sufficient
+mechanism for these identities, but not a logical necessity because
+accidental/emergent worldline supersymmetry is possible.  Our conservative
+same-model audit therefore accepts either microscopic supercharges or an
+independent derivation of all emergent Ward identities.  The present charged
+two-colour proxy specifies a bosonic potential and selected Hessian blocks,
+but no supersymmetry transformations and no Yukawa mass family.  Therefore a
+gapped trivial fermion family and a topologically winding one are both
+compatible with the current bosonic evidence.  The same-model tangent
+fermion and Callias index are underdetermined.
+
+For a declared rank-one asymptotic Callias eigenbundle over
+\(S^2_\infty\times\CP^1\) with
+\(c_1(\cE_+)=p x+q y\), the families boundary push-forward gives, in the
+stated chirality convention,
+\[
+ \operatorname{rank}\Ind\mathscr D=\epsilon p,
+ \qquad
+ c_1(\det\Ind\mathscr D)=\epsilon pq\,y.
+\]
+Thus \(\epsilon p=1,q=2\) is the minimal rank-one template for
+\(\cO(+2)\).  A gauge-invariant discrete Berry computation gives
+\(c_1=1.999999999999981\), while a finite \(3\times3\) template/control kernel-family
+Hamiltonian has residual below \(10^{-15}\) and unit nonzero gap.  These are
+regressions of the conditional topology, not substitutes for the absent
+four-dimensional Callias operator.
+
+In a fixed Dolbeault polarization, CPT must use Serre duality:
+\[
+ E_{-}=K_{\CP^1}\otimes E_+^\vee=\cO(-4),
+ \qquad (h^0,h^1)=(0,3).
+\]
+The naive raw inverse \(\cO(-2)\) has only one negative-chirality zero mode.
+The necessary anti-canonical regulator factor is not derived by the current
+mother model.
+
+Finally, the degree-five mixed-WZW character is correctly transgressed along
+the spatial three-cycle,
+\[
+ \widehat\cL_B=\int_{\Sigma_3}\operatorname{ev}^*\widehat\Omega_5
+ \in\widehat H^2(\widetilde\cC_B;\ZZ).
+\]
+After an equivariant differential refinement and globally trivial vertical
+holonomy establish gauge-basic descent, its pullback to the same soliton
+moduli sphere is \(\cO(+2)\) exactly when
+\(\int_{\Sigma_3\times\CP^1}\operatorname{ev}^*c(\widehat\Omega_5)=2\).
+The factorized conditional map gives \(nB\deg(s)=2\), but the present proxy
+has not identified its scalar \(S^2\) with the soliton collective sphere and
+has not proved equivariant descent.  The AP-E3/AP-E4 composition gate and the
+degree-one Route-E portal therefore remain closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, logic, and strongest defensible conclusion}
+
+There are three spheres that must not be identified by notation alone:
+\begin{enumerate}[label=(S\arabic*)]
+\item the \(SU(2)\simeq S^3\) Skyrme field whose spatial degree is the
+  baryon number \(B\);
+\item the charged-scalar vacuum direction \(s\in S^2\) entering the mixed
+  WZW target \(S^3\times S^2\);
+\item a putative normalizable collective-coordinate sphere
+  \(\cM_B\simeq\CP^1\) of the \emph{same} \(B=1\) soliton.
+\end{enumerate}
+An abstract diffeomorphism \(S^2\simeq\CP^1\) does not identify (S2) and
+(S3).  Such an identification requires an explicit family of solutions and
+an evaluation map.  The current nonlinear proxy establishes a product-target
+\(B=1\) saddle and selected positive radial blocks.  It does not establish a
+normalizable \(\CP^1\) degeneracy of that saddle, a four-dimensional
+supersymmetric completion, or any fermionic fluctuation operator.
+
+We therefore distinguish three kinds of statement:
+\begin{description}
+\item[Definition.] A construction that exists once its displayed geometric
+  inputs are given, such as differential-cohomology fiber integration.
+\item[Conditional theorem.] An implication with every sufficient audit
+  hypothesis displayed explicitly; necessity is claimed only for the stated
+  low-energy one-multiplet data, not for a microscopic supersymmetry mechanism.
+\item[Same-model derivation.] A conclusion obtained from the actual charged
+  two-colour microscopic action and its \(B=1\) solution.
+\end{description}
+Only the first two are achieved here.
+
+\begin{theorem}[Strongest current AP-E4 conclusion]
+The present charged two-colour bosonic data neither imply nor exclude a
+physical tangent fermion.  They admit a precise conditional completion in
+which the same-soliton Callias kernel is \(\cO(2)\), the \(B=+1\) SQM has
+three positive-chirality ground states, the fixed-polarization \(B=-1\)
+sector uses \(\cO(-4)\), and the spatially transgressed WZW line has degree
+\(+2\).  None of these conditional inputs is selected by the current
+fermion/Yukawa or gauge-equivariant data.  Consequently
+\[
+ \texttt{ap\_e3\_ap\_e4\_composition\_gate\_closed=false},
+ \qquad
+ \texttt{degree\_one\_route\_e\_portal\_built=false}.
+\]
+\end{theorem}
+
+\section{Same-soliton collective-coordinate expansion}
+
+\subsection{Configuration space and horizontal zero modes}
+
+Let \(\mathscr S[\Phi,\Psi]\) be a hypothetical four-dimensional mother
+action whose bosonic sector contains the charged two-colour candidate.  A
+family of static unit-soliton solutions is a map
+\begin{equation}
+ \Phi_1:\Sigma_3\times\cM_1\longrightarrow\mathscr F,
+ \qquad m\longmapsto\Phi_1(\cdot;m),
+ \qquad B[\Phi_1(m)]=1,
+ \label{eq:solution-family}
+\end{equation}
+where \(\mathscr F\) is the field-value space.  Gauge equivalence is removed
+by a horizontal condition.  If \(m^a\) is a local complex coordinate and
+\(\epsilon_a\) is the compensating gauge parameter, define
+\begin{equation}
+ \delta_a^H\Phi_1
+ :=\partial_a\Phi_1-\delta_{\epsilon_a}\Phi_1,
+ \qquad
+ \mathscr G_\Phi(\delta_a^H\Phi_1,\delta_\lambda\Phi_1)=0
+ \quad\text{for every }\lambda.
+ \label{eq:horizontal-mode}
+\end{equation}
+The physical moduli metric is the Hessian kinetic pairing
+\begin{equation}
+ G_{a\bar b}(m)
+ =\int_{\Sigma_3}\dd^3x\,
+ \mathscr G_{\Phi_1(m)}
+ \bigl(\delta_a^H\Phi_1,\delta_{\bar b}^H\Phi_1\bigr).
+ \label{eq:l2-metric}
+\end{equation}
+Three requirements are separate: \(\delta_a^H\Phi_1\) must solve the
+linearized equations, be \(L^2\)-normalizable, and have positive finite norm.
+The current radial Hessian does not prove any of them for an orientational
+mode.
+
+Assume for the moment that \(\cM_1=\CP^1\).  On charts
+\(U_N=\{w\}\), \(U_S=\{v\}\) with \(v=w^{-1}\), symmetry and direct chart
+matching give
+\begin{equation}
+ G_{w\bar w}=\frac{C}{(1+|w|^2)^2},
+ \qquad C>0,
+ \qquad
+ G_{v\bar v}|\dd v|^2=G_{w\bar w}|\dd w|^2.
+ \label{eq:fs-metric}
+\end{equation}
+The number \(C\) must be computed from Eq.~\eqref{eq:l2-metric} for the same
+charged soliton; borrowing it from a vortex does not close the gate.
+
+\subsection{Fermion zero-mode family}
+
+Let the quadratic fermionic action on \(\Phi_1(m)\) be
+\begin{equation}
+ S_F^{(2)}
+ =\int\dd t\,\dd^3x\,
+ \overline\Psi\bigl(\ii\partial_t-\mathscr D_m\bigr)\Psi,
+ \qquad
+ \mathscr D_m=\Gamma^i\nabla_i+\mathscr Y(\Phi_1(x;m)).
+ \label{eq:fermion-family}
+\end{equation}
+Here the representation, gauge connection, grading, and Yukawa map
+\(\mathscr Y\) are microscopic data.  If the kernel dimension is constant
+and the rest of the spectrum has a uniform gap, the kernels form a smooth
+Hermitian bundle
+\begin{equation}
+ \cK_F:=\bigsqcup_{m\in\cM_1}\Ker\mathscr D_m
+ \longrightarrow\cM_1.
+ \label{eq:kernel-bundle}
+\end{equation}
+For an orthonormal local frame \(\Xi_A(x;m)\), the adiabatic expansion
+\(\Psi=\chi^A(t)\Xi_A(x;m(t))+\Psi_\perp\) gives the Berry connection
+\begin{equation}
+ (\mathcal A_a)^A{}_B
+ =\int_{\Sigma_3}\dd^3x\,
+ \Xi_A^\dagger\partial_a^H\Xi_B,
+ \qquad
+ D_t\chi^A=\dot\chi^A+(\mathcal A_a)^A{}_B\dot m^a\chi^B.
+ \label{eq:berry-connection}
+\end{equation}
+
+\begin{theorem}[Low-energy characterization and sufficient microscopic closure]
+Fix the two-derivative adiabatic truncation, demand one complex bosonic
+coordinate, one complex Grassmann partner, no extra zero modes, and no
+superpotential.  The low-energy tangent SQM requires the geometric/kernel
+content (T1), (T3)--(T5) and the \(N=2\) Ward identities in (T2).  A sufficient
+same-model microscopic closure is furnished when all of the following hold:
+\begin{enumerate}[label=(T\arabic*)]
+\item Eq.~\eqref{eq:solution-family} gives a smooth normalizable
+  \(\CP^1\) family with positive metric and a uniform noncollective bosonic
+  gap;
+\item either the microscopic theory has two real supercharges preserved by
+  the soliton and maps each \(\delta_a^H\Phi_1\) to a normalizable fermion
+  zero mode, or an independent calculation derives the complete emergent
+  worldline \(N=2\) Ward identities;
+\item Eq.~\eqref{eq:fermion-family} is a uniformly Fredholm family and
+  \(\cK_F\simeq T^{1,0}\cM_1\) as a Hermitian holomorphic line bundle;
+\item the induced Berry connection under this isomorphism is the
+  Levi--Civita connection, and the Ward identities fix the curvature
+  four-fermion term;
+\item all modes orthogonal to the collective multiplet remain uniformly
+  gapped.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+At low energy, a physical collective coordinate requires (T1); a worldline
+superpartner and its closure require the Ward-identity content of (T2);
+tangent-valued transition functions require (T3); covariance of the
+supercharge requires (T4); and a local adiabatic truncation requires (T5).
+This does not make exact microscopic supercharges necessary: the same Ward
+identities may arise accidentally after integrating out gapped modes.
+
+For the stated sufficient closure, choose complex coordinate \(m\) and transport the normalized
+kernel frame through the isomorphism \(\cK_F\simeq T^{1,0}\cM_1\).  Conditions
+(T1)--(T5) give the standard covariant action
+\begin{align}
+ L_{N=2}
+ &=G_{m\bar m}\dot m\dot{\bar m}
+ +\ii G_{m\bar m}\bar\chi^{\bar m}D_t\chi^m
+ -\frac12R_{m\bar m m\bar m}
+ \chi^m\bar\chi^{\bar m}\chi^m\bar\chi^{\bar m},
+ \label{eq:n2-action}\\
+ D_t\chi^m
+ &=\dot\chi^m+\Gamma^m{}_{mm}\dot m\chi^m.
+ \label{eq:covariant-fermion}
+\end{align}
+Up to conventional factors, the transformations
+\begin{equation}
+ \delta m=\varepsilon\chi^m,
+ \qquad
+ \delta\chi^m=-\ii\bar\varepsilon\dot m
+ -\Gamma^m{}_{mm}(\delta m)\chi^m
+ \label{eq:susy-transform}
+\end{equation}
+and their conjugates close on time translation modulo the equations of
+motion.  This is precisely the one-complex-dimensional tangent \(N=2\) sigma
+model~\cite{Witten1982SameSoliton,AlvarezGaume1983SameSoliton}.
+\end{proof}
+
+On \(v=w^{-1}\), a tangent fermion must obey
+\begin{equation}
+ \chi^v=\frac{\partial v}{\partial w}\chi^w=-w^{-2}\chi^w.
+ \label{eq:tangent-transition}
+\end{equation}
+The transition has degree two in the line-bundle convention, hence
+\(\cK_F\simeq T^{1,0}\CP^1=\cO(2)\).  The verifier checks the metric,
+fermion norm, and affine-connection transformation in both charts.
+
+\begin{theorem}[Bosonic underdetermination]
+The bosonic soliton family, its classical Hessian, and the mixed-WZW
+coefficient do not determine \(\cK_F\) or even \(\operatorname{rank}\cK_F\).
+\end{theorem}
+\begin{proof}
+Hold the bosonic action fixed.  Add a spectator vectorlike fermion with a
+constant invertible gauge-invariant mass \(M\).  Its spatial operator has no
+protected zero mode and its kernel bundle is zero.  Alternatively choose an
+allowed Yukawa mass whose normalized asymptotic eigenspace winds over
+\(S^2_\infty\times\cM_1\); the Callias boundary class below may then have
+nonzero index and determinant Chern class.  These fermionic choices leave the
+tree-level bosonic action and Hessian unchanged.  Therefore no function of
+the bosonic data alone selects between them.
+\end{proof}
+
+The present charged two-colour theory is not supplied as a four-dimensional
+supersymmetric action.  Emergent worldline supersymmetry is logically
+possible, but would require the same equalities of metrics, Berry
+connections, and interactions in (T1)--(T5); it cannot be inferred from an
+abstract moduli-space complex structure.
+
+\section{Families-Callias index and determinant line}
+
+\subsection{Uniform Fredholm condition}
+
+A Callias operator has the schematic graded form
+\begin{equation}
+ \mathscr D_m^+
+ =D_{A(m)}^++\mathscr Y_m:
+ H^1(\Sigma_3,E^+)\longrightarrow L^2(\Sigma_3,E^-).
+ \label{eq:callias-operator}
+\end{equation}
+For every \(m\in\cM_1\), require constants \(R,\mu>0\), independent of
+\(m\), such that outside the radius \(R\)
+\begin{equation}
+ \mathscr Y_m^\dagger\mathscr Y_m\ge\mu^2,
+ \qquad
+ \bigl\|[D_{A(m)},\mathscr Y_m]\bigr\|\le\mu^2-\delta
+ \quad(\delta>0).
+ \label{eq:uniform-callias}
+\end{equation}
+These hypotheses make the family Fredholm and define
+\begin{equation}
+ \Ind\mathscr D^+
+ =[\Ker\mathscr D^+]-[\operatorname{coker}\mathscr D^+]
+ \in K^0(\cM_1),
+ \label{eq:index-bundle}
+\end{equation}
+with determinant line
+\begin{equation}
+ \lambda_{\rm C}
+ :=\det\Ind\mathscr D^+
+ =\det\Ker\mathscr D^+\otimes
+ (\det\operatorname{coker}\mathscr D^+)^\vee.
+ \label{eq:determinant-line}
+\end{equation}
+The Callias theorem and its families generalization reduce this class to the
+positive-mass eigenbundle at spatial infinity
+\cite{Callias1978SameSoliton,Kottke2011SameSoliton,VanDenDungen2024SameSoliton}.
+
+\subsection{Boundary push-forward and the required class}
+
+Let \(x\) and \(y\) be positive generators of
+\(H^2(S^2_\infty;\ZZ)\) and \(H^2(\CP^1;\ZZ)\), respectively, normalized by
+unit integral.  Consider the minimal rank-one product template
+\begin{equation}
+ c_1(\cE_+)=p x+q y,
+ \qquad p,q\in\ZZ.
+ \label{eq:positive-eigenbundle}
+\end{equation}
+Because \(x^2=y^2=0\),
+\begin{equation}
+ \operatorname{ch}(\cE_+)
+ =1+p x+q y+p q\,x y.
+ \label{eq:chern-character}
+\end{equation}
+Choose the Callias chirality/orientation sign \(\epsilon=\pm1\) so that the
+boundary map is written
+\begin{equation}
+ \operatorname{ch}(\Ind\mathscr D^+)
+ =\epsilon\int_{S^2_\infty}\operatorname{ch}(\cE_+).
+ \label{eq:boundary-pushforward}
+\end{equation}
+This convention packages the possible overall sign from the spatial
+orientation and grading.  Equations~\eqref{eq:chern-character} and
+\eqref{eq:boundary-pushforward} give
+\begin{equation}
+ \operatorname{rank}\Ind\mathscr D^+=\epsilon p,
+ \qquad
+ c_1(\lambda_{\rm C})=\epsilon p q\,y.
+ \label{eq:callias-rank-c1}
+\end{equation}
+
+\begin{proposition}[Minimal rank-one Callias target]
+Within Eq.~\eqref{eq:positive-eigenbundle}, a single complex kernel with
+\(\lambda_{\rm C}\simeq\cO(+2)\) exists if and only if
+\begin{equation}
+ \epsilon p=1,
+ \qquad q=2,
+ \label{eq:callias-target}
+\end{equation}
+assuming the cokernel vanishes and the kernel dimension stays constant.
+\end{proposition}
+\begin{proof}
+Rank one requires \(\epsilon p=1\).  Substitution into
+Eq.~\eqref{eq:callias-rank-c1} gives \(c_1=q y\), which equals \(2y\) if and
+only if \(q=2\).  Constant kernel dimension and zero cokernel identify the
+virtual determinant with the actual kernel line.
+\end{proof}
+
+The condition \(p=1,q=0\) has the same pointwise index but a trivial
+determinant line.  A doubled pair \(q=+2\) and \(q=-2\) has vanishing total
+determinant Chern class.  These are decisive negative controls: counting a
+single zero mode at one moduli point does not compute a family Chern number.
+
+\subsection{Berry formula and finite template/control regression}
+
+When the kernel is an honest bundle with orthonormal frame \(\Xi_A\), its
+determinant connection and Chern number are
+\begin{align}
+ \mathcal A&=\Tr\int_{\Sigma_3}\Xi^\dagger\dd_{\cM}\Xi,
+ \qquad \mathcal F=\dd\mathcal A+\mathcal A\wedge\mathcal A,
+ \label{eq:kernel-berry}\\
+ c_1(\lambda_{\rm C})
+ &=\frac{\ii}{2\pi}\int_{\CP^1}\Tr\mathcal F.
+ \label{eq:berry-chern}
+\end{align}
+For numerical regression define the spin-\(k/2\) coherent vector
+\begin{equation}
+ u_k(\theta,\phi)_r
+ =\binom{k}{r}^{1/2}
+ \cos^{k-r}\frac\theta2\,
+ \sin^r\frac\theta2\,e^{-\ii r\phi},
+ \qquad 0\le r\le k.
+ \label{eq:coherent-vector}
+\end{equation}
+It spans a smooth anti-Veronese Berry line of degree \(+k\).  With the
+standard degree-\(k\) holomorphic structure this line is \(\cO(k)\); the
+embedding into the trivial finite Hilbert bundle itself is not claimed to be
+holomorphic.  On an oriented triangulation, the gauge-invariant Bargmann flux is
+\begin{equation}
+ \Phi_{abc}
+ =\arg\!\left[
+ \langle u_a,u_b\rangle
+ \langle u_b,u_c\rangle
+ \langle u_c,u_a\rangle\right],
+ \qquad
+ c_1^{\rm disc}=-\frac1{2\pi}\sum_{\triangle abc}\Phi_{abc}.
+ \label{eq:discrete-chern}
+\end{equation}
+The minus sign is fixed by the anti-Hermitian convention
+\(\mathcal A=u^\dagger\dd u\) and
+\(c_1=(\ii/2\pi)\int\mathcal F\); it is not chosen after seeing the result.
+The deterministic verifier uses 2208 triangles and obtains
+\(c_1^{\rm disc}=1.999999999999981\) for \(k=2\).  It also tests
+\(k=0,1,4\).
+
+The finite matrix template/control family
+\begin{equation}
+ H_k(\theta,\phi)=\bm1_{k+1}-|u_k\rangle\langle u_k|
+ \label{eq:finite-family}
+\end{equation}
+has an exact one-dimensional kernel, projector residual below machine
+precision, and nonzero spectrum equal to one.  It verifies that a uniformly
+gapped family with \(c_1=2\) is algebraically consistent.  It is not a
+discretization of Eq.~\eqref{eq:callias-operator}; the actual charged-soliton
+Yukawa data are still absent.
+
+\begin{gate}[Callias status]
+The formula \eqref{eq:callias-rank-c1}, its target class, and the Berry
+regression are complete.  The same-model claims remain false because no
+operator \(\mathscr D_m\), asymptotic eigenbundle \(\cE_+\), uniform mass gap,
+or regulator coupling of \(\lambda_{\rm C}\) to the SQM wavefunction has been
+derived.  In particular, a tangent kernel line does not automatically become
+an additional coefficient line in the quantum Dolbeault complex.
+\end{gate}
+
+\section{CPT, Serre duality, and the anti-canonical sector}
+
+\subsection{Why the naive inverse line is insufficient}
+
+Quantize the conditional \(B=+1\) SQM in a fixed canonical Dolbeault
+polarization with coefficient line
+\begin{equation}
+ E_+=\cO(2),
+ \qquad
+ Q_+=\sqrt2\,\bar\partial_{E_+},
+ \qquad
+ \cH_{0,+}=H^{0,*}(\CP^1,E_+).
+ \label{eq:plus-polarization}
+\end{equation}
+Riemann--Roch gives
+\begin{equation}
+ (h^0(E_+),h^1(E_+))=(3,0).
+ \label{eq:plus-count}
+\end{equation}
+A raw sign reversal of a degree-two Berry/WZW line would suggest
+\(E_{\rm raw,-}=E_+^\vee=\cO(-2)\), but
+\begin{equation}
+ (h^0(\cO(-2)),h^1(\cO(-2)))=(0,1).
+ \label{eq:naive-minus}
+\end{equation}
+Thus a signed integer \(+2\to-2\) alone does not construct the CPT triplet.
+
+\subsection{Fixed-polarization anti-canonical map}
+
+Serre duality on a complex curve states
+\begin{equation}
+ H^0(\cM,E)^*\simeq H^1(\cM,K_{\cM}\otimes E^\vee).
+ \label{eq:serre-duality}
+\end{equation}
+For \(\cM=\CP^1\), \(K_{\cM}=\cO(-2)\).  Therefore the coefficient line that
+realizes the conjugate triplet in the \emph{same} Dolbeault polarization is
+\begin{equation}
+ E_-=K_{\CP^1}\otimes E_+^\vee
+ =\cO(-2)\otimes\cO(-2)=\cO(-4),
+ \label{eq:anti-canonical-line}
+\end{equation}
+and
+\begin{equation}
+ (h^0(E_-),h^1(E_-))=(0,3),
+ \qquad \operatorname{ind}\bar\partial_{E_-}=-3.
+ \label{eq:minus-count}
+\end{equation}
+
+\begin{theorem}[CPT in a fixed Dolbeault polarization]
+Let the \(B=+1\) zero modes be \(H^0(\CP^1,E_+)\).  An antiunitary CPT map
+that reverses chirality while retaining the same displayed complex
+polarization is implemented on zero modes by the Serre pairing if and only if
+the \(B=-1\) coefficient line is
+\(E_-=K_{\CP^1}\otimes E_+^\vee\).  For \(E_+=\cO(2)\), this is
+\(\cO(-4)\), not \(\cO(-2)\).
+\end{theorem}
+\begin{proof}
+The perfect Serre pairing
+\begin{equation}
+ H^0(E_+)\times H^1(K\otimes E_+^\vee)
+ \longrightarrow H^1(K)\simeq\CC
+ \label{eq:serre-pairing}
+\end{equation}
+gives an antilinear identification after choosing the Hermitian structure.
+Conversely, a perfect fixed-polarization pairing with the positive sector for
+all states identifies the negative cohomology with the Serre dual, fixing the
+coefficient line up to holomorphic isomorphism.  Since
+\(\operatorname{Pic}(\CP^1)=\ZZ\), its degree fixes it uniquely.
+\end{proof}
+
+An alternative description uses an anti-holomorphic involution and a
+conjugate polarization.  When both sectors are rewritten in one fixed
+polarization, the canonical factor in Eq.~\eqref{eq:anti-canonical-line}
+reappears.  A physical charged two-colour CPT derivation must specify which
+polarization and fermion-measure regulator are used.  The raw Callias or WZW
+line only supplies the \(\cO(-2)\) part; the additional canonical factor is
+independent UV data.  The mathematics of Eq.~\eqref{eq:anti-canonical-line}
+is closed, but the same-model physical map is not.
+
+\subsection{Finite SQM spectrum regression}
+
+For the Fubini--Study metric
+\(\dd s^2=C\,\dd w\dd\bar w/(1+|w|^2)^2\), the \(E_+=\cO(2)\) Dirac tower is
+\begin{equation}
+ \lambda_{n,\pm}
+ =\pm\frac{2}{\sqrt C}\sqrt{n(n+3)},
+ \qquad
+ \operatorname{mult}(\lambda_{n,\pm})=2n+3,
+ \qquad n\ge1.
+ \label{eq:massive-spectrum}
+\end{equation}
+Serre duality gives the identical massive tower for the
+\(E_-=\cO(-4)\) block, with the three zero modes in opposite chirality
+\cite{BykovSmilga2023SameSoliton}.  The verifier builds four exact massive
+levels, checks
+\begin{equation}
+ Q^2=(Q^\dagger)^2=0,
+ \qquad \{\Gamma,D\}=0,
+ \qquad H=\frac12\{Q,Q^\dagger\},
+ \label{eq:sqm-algebra}
+\end{equation}
+and confirms indices \(+3\) and \(-3\).  This is a spectrum regression of
+the conditional SQM, not evidence for its microscopic realization.
+
+\section{Degree-five differential character and spatial transgression}
+
+\subsection{The framed configuration-space line}
+
+Let the mixed-WZW target be
+\begin{equation}
+ X=S^3\times S^2,
+ \qquad
+ \widehat\Omega_n
+ =n\,\widehat u_3\smile\widehat u_2
+ \in\widehat H^5(X;\ZZ),
+ \label{eq:wzw-character}
+\end{equation}
+with normalized characteristic forms and classes
+\begin{equation}
+ \int_{S^3}\omega_3=1,
+ \qquad
+ \int_{S^2}\omega_2=1,
+ \qquad
+ c(\widehat\Omega_n)=n u_3u_2.
+ \label{eq:normalizations}
+\end{equation}
+Differential characters and their fiber integration define holonomy without
+choosing a five-dimensional extension
+\cite{CheegerSimons1985SameSoliton,BaerBecker2014SameSoliton,
+LeeOhmoriTachikawa2021SameSoliton}.
+
+Let \(\widetilde\cC_B\) be the framed configuration component before the
+gauge quotient and
+\begin{equation}
+ \operatorname{ev}:\Sigma_3\times\widetilde\cC_B\longrightarrow X,
+ \qquad (x,\Phi)\longmapsto\Phi(x),
+ \label{eq:evaluation-map}
+\end{equation}
+be evaluation.  Fiber integration gives the differential line class
+\begin{equation}
+ \widehat\cL_B
+ :=\int_{\Sigma_3}\operatorname{ev}^*\widehat\Omega_n
+ \in\widehat H^{5-3}(\widetilde\cC_B;\ZZ)
+ =\widehat H^2(\widetilde\cC_B;\ZZ).
+ \label{eq:spatial-transgression}
+\end{equation}
+Its curvature and characteristic class commute with fiber integration:
+\begin{align}
+ \frac{F_{\widehat\cL_B}}{2\pi\ii}
+ &=\int_{\Sigma_3}\operatorname{ev}^*
+   (n\omega_3\wedge\omega_2),
+ \label{eq:transgressed-curvature}\\
+ c_1(\widehat\cL_B)
+ &=\int_{\Sigma_3}\operatorname{ev}^*(n u_3u_2).
+ \label{eq:transgressed-c1}
+\end{align}
+This establishes the mathematically correct degree reduction.  It does not
+yet give a line on the gauge quotient.
+
+\subsection{Gauge-basic descent: local and global conditions}
+
+Put \(\cC_B=\widetilde\cC_B/\cG\) and let
+\(p:\widetilde\cC_B\to\cC_B\).  The exact descent statement is
+\begin{equation}
+ \widehat\cL_B\in\operatorname{im}\left[
+ p^*:\widehat H^2(\cC_B;\ZZ)
+ \longrightarrow\widehat H^2(\widetilde\cC_B;\ZZ)
+ \right].
+ \label{eq:descent-image}
+\end{equation}
+For a free smooth action, this is equivalent to a \(\cG\)-equivariant line
+with connection whose curvature is basic and whose vertical action is
+trivial.  Infinitesimally,
+\begin{equation}
+ \mathcal L_{\xi^\#}F=0,
+ \qquad
+ \iota_{\xi^\#}F=0,
+ \qquad \xi\in\operatorname{Lie}\cG.
+ \label{eq:local-basic}
+\end{equation}
+These local equations are not sufficient for disconnected/large gauge
+transformations.  One must also require trivial holonomy on every vertical
+loop and a trivial character on each stabilizer:
+\begin{equation}
+ \operatorname{Hol}_{\widehat\cL_B}(\gamma_g)=1,
+ \qquad
+ \rho_{\Phi}:\operatorname{Stab}_{\cG}(\Phi)\to U(1)
+ \text{ is trivial}.
+ \label{eq:global-basic}
+\end{equation}
+
+\begin{proposition}[Equivariant refinement criterion]
+A sufficient intrinsic construction of Eq.~\eqref{eq:descent-image} is an
+equivariant differential refinement
+\begin{equation}
+ \widehat\Omega_n^{\cG}\in\widehat H^5_{\cG}(X;\ZZ)
+ \label{eq:equivariant-refinement}
+\end{equation}
+whose restriction is \(\widehat\Omega_n\), followed by equivariant fiber
+integration.  It produces a line on the quotient stack.  Descent further to
+the coarse quotient requires the stabilizer condition in
+Eq.~\eqref{eq:global-basic}.
+\end{proposition}
+
+In physical terms, failure of Eq.~\eqref{eq:descent-image} is the residual
+gauge anomaly of the WZW line.  Cancellation of local triangle anomalies in
+a UV fermion table is necessary but does not alone compute the differential
+holonomy for every large gauge loop.  The present model has not supplied
+Eq.~\eqref{eq:equivariant-refinement} or Eq.~\eqref{eq:global-basic}; the
+descent flag remains false.
+
+\subsection{Pullback to the same soliton sphere}
+
+Suppose the same charged soliton actually has a collective embedding
+\begin{equation}
+ \iota:\cM_B\simeq\CP^1\longrightarrow\cC_B.
+ \label{eq:moduli-embedding}
+\end{equation}
+After descent, the line has degree
+\begin{equation}
+ k_{\rm eff}
+ :=\int_{\CP^1}\iota^*c_1(\widehat\cL_B^{\rm quot})
+ =\int_{\Sigma_3\times\CP^1}
+  \operatorname{ev}_\iota^*(n u_3u_2).
+ \label{eq:exact-pullback-integer}
+\end{equation}
+
+\begin{theorem}[Necessary and sufficient WZW pullback gate]
+Assume gauge-basic descent and a fixed holomorphic structure on
+\(\cM_B=\CP^1\).  The spatially transgressed line pulls back as \(\cO(+2)\)
+if and only if the integer in Eq.~\eqref{eq:exact-pullback-integer} is \(+2\).
+\end{theorem}
+\begin{proof}
+Naturality of characteristic classes and fiber integration gives
+Eq.~\eqref{eq:exact-pullback-integer}.  Complex line bundles on \(\CP^1\)
+are classified topologically and holomorphically by their degree because
+\(H^2(\CP^1;\ZZ)=\ZZ\) and
+\(\operatorname{Pic}(\CP^1)=\ZZ\)~\cite{Huybrechts2005SameSoliton}.
+Hence degree \(+2\) is equivalent to \(\cO(+2)\).
+\end{proof}
+
+For the factorized conditional family
+\begin{equation}
+ \operatorname{ev}_\iota(x,m)=(g_B(x),s(m)),
+ \qquad
+ \int_{\Sigma_3}g_B^*u_3=B,
+ \qquad
+ \int_{\CP^1}s^*u_2=d,
+ \label{eq:factorized-map}
+\end{equation}
+Eq.~\eqref{eq:exact-pullback-integer} becomes
+\begin{equation}
+ k_{\rm eff}=n B d.
+ \label{eq:nBd}
+\end{equation}
+Thus \((n,B,d)=(2,+1,+1)\) gives \(+2\), whereas \(d=0\) gives zero and
+\(n=1\) gives only one.  This is a useful sufficient ansatz and numerical
+regression.  It is not a proof that the current scalar direction \(s\) is the
+same normalizable collective coordinate as \(m\).
+
+For \(B=-1\), the raw transgressed degree is \(-2\).  Section 4 shows that a
+fixed-polarization CPT triplet instead needs total coefficient degree \(-4\).
+The missing canonical \(-2\) must come from the CPT transformation of the
+vacuum line/fermion measure, not from changing Eq.~\eqref{eq:nBd}.
+
+\section{Composition theorem and fail-closed gates}
+
+\begin{theorem}[Sufficient same-soliton AP-E3/AP-E4 composition criterion]
+Within the field content and fixed-polarization construction specified in
+this note, the AP-E3 level-two sector and AP-E4 SQM compose on one charged
+two-colour \(B=1\) soliton when all of the following conservative audit
+conditions are proved:
+\begin{enumerate}[label=(C\arabic*)]
+\item a stable \(B=1\) solution has a normalizable
+  \(\cM_1=\CP^1\) family, finite positive \(L^2\) metric, and uniform
+  noncollective bosonic gap;
+\item the same four-dimensional action supplies either microscopic
+  supercharges or independently derived emergent \(N=2\) Ward identities,
+  together with a uniformly Fredholm Yukawa--Callias family;
+\item its kernel bundle is \(T^{1,0}\CP^1\), with the required Ward identity
+  and no extra zero modes;
+\item the actual families index has rank one and determinant Chern number
+  \(+2\), and the UV measure specifies whether that determinant line twists
+  the wavefunctions;
+\item the \(B=-1\) regulator derives
+  \(E_-=K_{\CP^1}\otimes E_+^\vee=\cO(-4)\);
+\item the WZW character admits an equivariant differential refinement and
+  satisfies every local and global gauge-basic condition;
+\item the same-soliton integral
+  \(\int_{\Sigma_3\times\CP^1}\operatorname{ev}^*(2u_3u_2)=+2\);
+\item no gauge projection, anomaly constraint, or lower-energy mixing removes
+  the conditional three-state sector.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Conditions (C1)--(C3) supply the tangent-SQM closure.  Condition (C4)
+is the Callias determinant criterion and prevents a pointwise-index
+substitution.  Condition (C5) is the CPT theorem.  Conditions (C6)--(C7) are
+the necessary and sufficient differential-cohomology descent and pullback
+criteria.  Condition (C8) is required for the Hilbert-space sector to survive.
+Together they construct the claimed SQM.  These are sufficient closure
+conditions for the present construction.  They are not asserted to exhaust
+all possible emergent microscopic mechanisms.  With the current evidence,
+each missing condition nevertheless invalidates the corresponding proposed
+derivation step, so this composition has not been established.
+\end{proof}
+
+\begin{longtable}{L{0.43\textwidth}L{0.16\textwidth}L{0.31\textwidth}}
+\toprule
+Claim & Status & Reason\\
+\midrule
+\endhead
+Low-energy tangent-SQM characterization & \status{closed} & required
+low-energy data and a sufficient same-model audit are explicit\\
+Bosonic underdetermination theorem & \status{closed} & constant-mass and
+winding-Yukawa completions share the bosonic sector\\
+Same charged-soliton \(\CP^1\) family & \status{open} & no solution family or
+orientational \(L^2\) norm\\
+Same-model \(N=2\) tangent fermion & \status{open} & no microscopic
+supercharges, emergent Ward-identity derivation, or Yukawa operator\\
+Conditional Callias \(c_1=+2\) template & \status{closed} & boundary
+push-forward and Berry regression agree\\
+Actual same-model Callias index/determinant & \status{open} & asymptotic mass
+eigenbundle and uniform Fredholm gap absent\\
+Mathematical anti-canonical CPT map & \status{closed} & Serre duality fixes
+\(\cO(-4)\) in a fixed polarization\\
+Physical same-model CPT regulator & \status{open} & canonical vacuum-line
+factor not derived\\
+Degree-five to degree-two fiber integration & \status{closed} & differential
+cohomology defines Eq.~\eqref{eq:spatial-transgression}\\
+Gauge-basic descent & \status{open} & no equivariant refinement or large-gauge
+holonomy audit\\
+Same-soliton pullback \(\cO(+2)\) & \status{open} & the exact integral is not
+computed on a physical moduli family\\
+AP-E3/AP-E4 composition & \status{open} & conditions (C1)--(C8) are not all
+closed\\
+Degree-one Route-E portal & \status{not built} & deliberately deferred until
+composition closes\\
+Physics promotion & \status{forbidden} & conditional mathematics is not a
+microscopic derivation\\
+\bottomrule
+\end{longtable}
+
+\section{Deterministic verification and reproducibility}
+
+Run
+\begin{verbatim}
+PYTHONPYCACHEPREFIX=/tmp/python-cache \
+python3 route_f/code/verify_ap_e4_same_soliton_callias_descent.py
+\end{verbatim}
+The program emits
+\begin{verbatim}
+route_f/output/ap_e4_same_soliton_callias_descent.json
+route_f/output/ap_e4_same_soliton_callias_descent.md
+\end{verbatim}
+and hashes the TeX, bibliography, and verifier.  Its deterministic tests are:
+\begin{enumerate}
+\item CP1 metric, tangent norm, and Levi--Civita chart covariance;
+\item gauge-invariant Berry-Chern numbers \(k=0,1,2,4\);
+\item a uniformly gapped finite template/control kernel-family and its \(c_1=2\);
+\item Callias boundary push-forward, \(q=0\), and doubled-family controls;
+\item finite \(N=2\) matrices, nilpotency, chirality pairing, and the
+  \(+3/-3\) Serre-dual indices;
+\item the \(\cO(-2)\) one-state CPT negative control;
+\item degree reduction \(5-3=2\) and the \(nBd\) transgression integer;
+\item explicit fail-closed conditions for gauge descent and the same-model
+  tangent theorem.
+\end{enumerate}
+The checks encode consequences of the analytic derivations.  They do not
+prove the existence of the missing microscopic structures.
+
+\section{Next calculations, in strict order}
+
+Several routes remain viable, but they should be pursued without weakening
+the gate:
+\begin{enumerate}
+\item \textbf{Supersymmetric same-model completion.}  Specify a
+  four-dimensional charged two-colour action with two preserved real
+  supercharges, solve its \(B=1\) family, and derive the coupled boson--fermion
+  quadratic operator.  This is the direct route to (T1)--(T5).
+\item \textbf{Non-supersymmetric Callias route.}  Even without exact
+  supersymmetry, specify the physical quark/Yukawa operator, calculate its
+  asymptotic positive-mass eigenbundle on
+  \(S^2_\infty\times\cM_1\), and test whether
+  \((\operatorname{rank},c_1)=(1,2)\).  A positive result gives a tangent
+  Fermi bundle but still needs an emergent-SQM Ward-identity audit.
+\item \textbf{Equivariant WZW route.}  Construct
+  \(\widehat\Omega_2^{\cG}\), compute vertical holonomies for representatives
+  of small and large gauge transformations, then evaluate
+  Eq.~\eqref{eq:exact-pullback-integer} on the explicit same-soliton family.
+\item \textbf{CPT regulator route.}  Compute the Bismut--Freed/Dai--Freed
+  determinant-line transformation under \(B\mapsto-B\), and show whether the
+  canonical factor \(K_{\CP^1}\) is supplied.  A raw \(-2\) result is not
+  enough.
+\end{enumerate}
+Only after one coherent mother model closes all composition conditions should
+a degree-one Route-E portal be written.  Until then the correct endpoint is
+an explicit theorem of conditional composability plus a list of missing UV
+data, which this note now provides.
+
+\section{Machine-readable final flags}
+
+The verifier records, among others,
+\begin{align*}
+ &\texttt{conditional\_composition\_sufficient\_criterion\_established=true},\\
+ &\texttt{low\_energy\_tangent\_sqm\_characterization\_derived=true},\\
+ &\texttt{sufficient\_same\_model\_audit\_conditions\_derived=true},\\
+ &\texttt{underdetermination\_theorem\_applies=true},\\
+ &\texttt{physical\_tangent\_fermion\_same\_model\_derived=false},\\
+ &\texttt{callias\_determinant\_c1\_same\_model\_computed=false},\\
+ &\texttt{conditional\_callias\_template\_c1\_plus\_2\_verified=true},\\
+ &\texttt{cpt\_anti\_canonical\_map\_mathematically\_derived=true},\\
+ &\texttt{cpt\_anti\_canonical\_map\_same\_model\_derived=false},\\
+ &\texttt{wzw\_spatial\_fiber\_integration\_defined=true},\\
+ &\texttt{wzw\_gauge\_basic\_descent\_same\_model\_proven=false},\\
+ &\texttt{wzw\_pullback\_o2\_same\_model\_proven=false},\\
+ &\texttt{ap\_e3\_ap\_e4\_composition\_gate\_closed=false},\\
+ &\texttt{degree\_one\_route\_e\_portal\_built=false},\\
+ &\texttt{physics\_promotion\_allowed=false}.
+\end{align*}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e4_same_soliton_callias_descent}
+
+\end{document}

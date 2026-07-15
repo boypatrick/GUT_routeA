@@ -10,6 +10,49 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
+## AP-E completion-frontier update (2026-07-16; current authority)
+
+The next three pre-portal lanes have been executed and integrated without
+promoting a Route-E family claim.
+
+- The new four-dimensional note defines a Wilson/Symanzik-compatible charged
+  two-colour action and the complete **formal**
+  gauge--meson--ghost--fermion super-Hessian. Its **24/24** finite '2^4'
+  diagnostic checks topology extrapolation, gauge/ghost cancellation,
+  declared boson blocks, a Wilson--Dirac Schur factorization, one log-det
+  curvature, and cutoff orders. It is not Monte Carlo, determinant
+  positivity, the exact nonlinear Skyrme Jacobi operator, or a continuum
+  quantum calculation.
+- On explicit 'G3=S1_R x S3' and 'G2=T2_RR x S2' representatives, the
+  ambient product spectra give only a reference '(+1,+1)' phase. Defect
+  mod-two regulators realize all four torsion characters, so the present
+  charged-QC2D fields do not select a unique APS/Dai--Freed pair. The
+  **58/58** audit keeps both microscopic eta signs false/open.
+- The strongest simple group in the scanned charge/global-form set is the
+  simply connected 'Sp(4)=Spin(5)': its '5' contains
+  '2_(+1)+2_(-1)+1_0' and its '4' contains
+  '2_0+1_(+1)+1_(-1)'. Two complex '4' copies supply the separate global
+  'SU(2)_phi' doublet, so 'qq(phi dagger)^2' is a neutral triplet at group
+  level. The older exactly-two unit-cell Gauss law is not rederived.
+  'b0=15/2>0', but radiative threshold protection, the heavy eta match,
+  full gauge bordism, and the nonperturbative 'B=1' phase remain open.
+- On a hypothetical same 'B=1' family, the conditional Callias formula is
+  'rank=epsilon p', 'c1(det Ind D)=epsilon p q'; rank-one 'O(+2)' needs
+  'epsilon p=1,q=2'. Fixed-polarization CPT requires the Serre-dual
+  'K tensor O(2)^vee=O(-4)', not the one-state 'O(-2)' inverse. Spatial WZW
+  fiber integration lands in differential degree two, but equivariant/basic
+  descent, the physical Yukawa family, and the same-soliton pullback are not
+  derived. This card passes **27/27** while all composition gates remain false.
+- The integrated **20/20** gate computes all three complete-lane booleans as
+  false. Therefore no degree-one portal has been constructed and
+  'physics_promotion_allowed=false'.
+
+Next: compute the complete 'Sp(4)' (direct product as backup) regulator and
+mapping-torus eta phases; relax and scan the same charged 'B=1' solution with
+the exact projected Hessian and dynamical lattice ensembles; then calculate
+its Callias/CPT determinant and equivariant WZW descent. Only after one full
+lane closes may a degree-one Route-E portal be written.
+
 ## Superseding AP-E3/AP-E4 global/SQM update (2026-07-16)
 
 This section supersedes the active-continuation language in the 2026-07-15

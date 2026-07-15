@@ -68,5 +68,5 @@ Numerical Chern sequence: `[2.0082484079079745, 2.0020576482854167, 2.0005141343
 
 - `route_f/tex/ap_e3_exact_two_mixed_wzw_uv.tex` - `6f1a2490ddfd909c3f5a5b72c0466cd93b4097b0aa6e852dd715923697faa781` (32225 bytes)
 - `route_f/tex/ap_e3_exact_two_mixed_wzw_uv.bib` - `707d2671e0fcee6074c6d96fef5101445b5e702b9c4457ace5161a7ff55b49cf` (2631 bytes)
-- `route_f/LITERATURE_2023_2026.md` - `d9736214071b6913fb568dc102159751e0e5f6a606204d09bda651b26c2f9c73` (19899 bytes)
+- `route_f/LITERATURE_2023_2026.md` - `c185cfff64135dd0c616ea81557e7361ffab04bc0ebb10406ea99ede83b1cad9` (23578 bytes)
 - `route_f/code/verify_ap_e3_exact_two_mixed_wzw.py` - `0e9844ab5f00526f8a828d8b9f3bc64330ac1a330b4b5248b6b4b2cc102d6a8c` (22905 bytes)

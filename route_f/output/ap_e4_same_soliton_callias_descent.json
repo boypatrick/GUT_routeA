@@ -1,0 +1,371 @@
+{
+  "checks": [
+    {
+      "detail": "hashed=3/3",
+      "group": "S0_provenance",
+      "name": "all same-soliton audit sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "max residual=4.441e-15",
+      "group": "S1_tangent_geometry",
+      "name": "Fubini--Study kinetic metric is chart invariant",
+      "pass": true
+    },
+    {
+      "detail": "max residual=2.665e-15",
+      "group": "S1_tangent_geometry",
+      "name": "psi^v=(-w^-2)psi^w has the tangent-bundle norm",
+      "pass": true
+    },
+    {
+      "detail": "max residual=7.569e-14",
+      "group": "S1_tangent_geometry",
+      "name": "Levi-Civita connection obeys the CP1 chart law",
+      "pass": true
+    },
+    {
+      "detail": "c1=1.999999999999981; triangles=2208",
+      "group": "S1_tangent_geometry",
+      "name": "discrete Berry regression gives c1(TCP1)=+2",
+      "pass": true
+    },
+    {
+      "detail": "sequence=[0.0, 0.999999999999988, 1.9999999999999807, 3.999999999999958]",
+      "group": "S1_tangent_geometry",
+      "name": "Berry-Chern sequence returns k for k=0,1,2,4",
+      "pass": true
+    },
+    {
+      "detail": "kernel=4.561e-16; projector=4.564e-16",
+      "group": "S2_callias_family",
+      "name": "finite H=1-|u_2><u_2| template/control has an exact one-dimensional kernel",
+      "pass": true
+    },
+    {
+      "detail": "gap=0.999999999999999",
+      "group": "S2_callias_family",
+      "name": "finite template/control has a uniform unit nonzero gap",
+      "pass": true
+    },
+    {
+      "detail": "c1=1.999999999999998",
+      "group": "S2_callias_family",
+      "name": "finite template/control kernel Berry line is O(+2)",
+      "pass": true
+    },
+    {
+      "detail": "result={'rank': 1, 'determinant_c1': 2}",
+      "group": "S2_callias_family",
+      "name": "conditional positive-mass eigenbundle (p,q)=(1,2) gives rank one and c1=+2",
+      "pass": true
+    },
+    {
+      "detail": "result={'rank': 1, 'determinant_c1': 0}",
+      "group": "S2_callias_family",
+      "name": "q=0 negative control retains pointwise index but has trivial determinant line",
+      "pass": true
+    },
+    {
+      "detail": "c1 sum=0",
+      "group": "S2_callias_family",
+      "name": "CPT-doubled q=+2 and q=-2 control cancels determinant c1",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "S3_sqm_algebra",
+      "name": "finite B=+1 and B=-1 blocks satisfy Q^2=0 and {Gamma,D}=0",
+      "pass": true
+    },
+    {
+      "detail": "(h0,h1,index)=(3,0,3)",
+      "group": "S3_sqm_algebra",
+      "name": "O(2) has three positive-chirality Dolbeault ground states",
+      "pass": true
+    },
+    {
+      "detail": "degree=-4; (h0,h1,index)=(0,3,-3)",
+      "group": "S3_sqm_algebra",
+      "name": "fixed-polarization CPT/Serre duality requires K tensor E^vee=O(-4)",
+      "pass": true
+    },
+    {
+      "detail": "gap+=2.412090756622; gap-=2.412090756622",
+      "group": "S3_sqm_algebra",
+      "name": "Serre-dual massive spectra and gaps agree between B=+1 and B=-1",
+      "pass": true
+    },
+    {
+      "detail": "(h0,h1)=(0,1)",
+      "group": "S3_sqm_algebra",
+      "name": "naive dual O(-2) is a one-state negative control, not the CPT triplet",
+      "pass": true
+    },
+    {
+      "detail": "c1(TCP1)=c1(det Ind D)=2 in the declared conditional template",
+      "group": "S3_sqm_algebra",
+      "name": "the conditional tangent line and Callias determinant have matching c1=2",
+      "pass": true
+    },
+    {
+      "detail": "5-3=2",
+      "group": "S4_differential_transgression",
+      "name": "fiber integration along Sigma3 lowers differential degree 5 to degree 2",
+      "pass": true
+    },
+    {
+      "detail": "integer=2",
+      "group": "S4_differential_transgression",
+      "name": "factorized same-sphere map gives c1=n B d=+2 for (n,B,d)=(2,1,1)",
+      "pass": true
+    },
+    {
+      "detail": "integer=-2",
+      "group": "S4_differential_transgression",
+      "name": "orientation reversal B=+1 to B=-1 reverses the raw WZW line",
+      "pass": true
+    },
+    {
+      "detail": "integer=0",
+      "group": "S4_differential_transgression",
+      "name": "degree-zero orientation-map control pulls the WZW line back trivially",
+      "pass": true
+    },
+    {
+      "detail": "integer=1",
+      "group": "S4_differential_transgression",
+      "name": "level-one control produces c1=1 and therefore cannot supply O(2)",
+      "pass": true
+    },
+    {
+      "detail": "conditions=['equivariant_differential_refinement', 'curvature_horizontal_and_invariant', 'vertical_and_large_gauge_holonomy_trivial', 'stabilizer_character_trivial', 'class_in_image_of_pullback_from_quotient']",
+      "group": "S4_differential_transgression",
+      "name": "descent audit enumerates local and global necessary conditions",
+      "pass": true
+    },
+    {
+      "detail": "all same-model descent evidence flags are false",
+      "group": "S4_differential_transgression",
+      "name": "gauge descent fails closed when no condition is supplied by the mother model",
+      "pass": true
+    },
+    {
+      "detail": "conditions=8",
+      "group": "S5_underdetermination",
+      "name": "same-model audit records all eight conservative closure conditions",
+      "pass": true
+    },
+    {
+      "detail": "bosonic potential and radial Hessian do not determine a Yukawa family",
+      "group": "S5_underdetermination",
+      "name": "present charged two-colour proxy supplies none of the CP1/SUSY/Callias closure conditions",
+      "pass": true
+    }
+  ],
+  "composition_gate": {
+    "closed": false,
+    "required_before_degree_one_portal": [
+      "same charged-two-colour mother action with microscopic or derived emergent N2 closure",
+      "same B=1 CP1 moduli and uniform bosonic gap",
+      "specified uniformly Fredholm Callias/Yukawa family",
+      "actual determinant line c1=+2 and measure coupling",
+      "UV-derived CPT anti-canonical vacuum line",
+      "equivariant differential character and global gauge descent",
+      "same-soliton transgression integral +2"
+    ]
+  },
+  "gauge_descent_conditions": {
+    "class_in_image_of_pullback_from_quotient": false,
+    "curvature_horizontal_and_invariant": false,
+    "equivariant_differential_refinement": false,
+    "stabilizer_character_trivial": false,
+    "vertical_and_large_gauge_holonomy_trivial": false
+  },
+  "generated_by": "route_f/code/verify_ap_e4_same_soliton_callias_descent.py",
+  "metrics": {
+    "berry_chern": {
+      "k0": {
+        "chern": 0.0,
+        "max_triangle_phase": 0.0,
+        "min_link_overlap": 1.0,
+        "triangles": 2208
+      },
+      "k1": {
+        "chern": 0.999999999999988,
+        "max_triangle_phase": 0.004295919090668583,
+        "min_link_overlap": 0.9957316187468723,
+        "triangles": 2208
+      },
+      "k2": {
+        "chern": 1.9999999999999807,
+        "max_triangle_phase": 0.008591838181337207,
+        "min_link_overlap": 0.9914814565722669,
+        "triangles": 2208
+      },
+      "k4": {
+        "chern": 3.999999999999958,
+        "max_triangle_phase": 0.01718367636267429,
+        "min_link_overlap": 0.983035478726664,
+        "triangles": 2208
+      }
+    },
+    "callias_pushforward": {
+      "doubled_determinant_c1": 0,
+      "formula": {
+        "asymptotic_c1": "p*x + q*y",
+        "determinant_c1": "epsilon*p*q",
+        "rank": "epsilon*p"
+      },
+      "opposite_control": {
+        "determinant_c1": -2,
+        "rank": 1
+      },
+      "q_zero_control": {
+        "determinant_c1": 0,
+        "rank": 1
+      },
+      "required": {
+        "determinant_c1": 2,
+        "rank": 1
+      }
+    },
+    "cp1_chart": {
+      "max_connection_residual": 7.56947420224583e-14,
+      "max_metric_residual": 4.440892098500626e-15,
+      "max_tangent_norm_residual": 2.6645352591003757e-15
+    },
+    "cpt": {
+      "anti_canonical_minus_degree": -4,
+      "canonical_degree": -2,
+      "minus_kernel": {
+        "negative": 3,
+        "positive": 0
+      },
+      "naive_inverse_kernel": {
+        "negative": 1,
+        "positive": 0
+      },
+      "plus_coefficient_degree": 2,
+      "plus_kernel": {
+        "negative": 0,
+        "positive": 3
+      }
+    },
+    "finite_kernel_family_template_control": {
+      "berry": {
+        "chern": 1.9999999999999976,
+        "max_triangle_phase": 0.015308233537242536,
+        "min_link_overlap": 0.9849231551964769,
+        "triangles": 1224
+      },
+      "dimension": 3,
+      "max_kernel_residual": 4.561234287365988e-16,
+      "max_projector_residual": 4.563745665055802e-16,
+      "minimum_nonzero_eigenvalue": 0.999999999999999
+    },
+    "sqm_finite_blocks": {
+      "coefficient_C": 2.75,
+      "minus": {
+        "dirac_gap": 2.412090756622109,
+        "index": -3,
+        "kernel_dimension": 3,
+        "residuals": {
+          "chirality_anticommutator": 0.0,
+          "hamiltonian_identity": 0.0,
+          "q_nilpotency": 0.0,
+          "qdag_nilpotency": 0.0
+        }
+      },
+      "plus": {
+        "dirac_gap": 2.412090756622109,
+        "index": 3,
+        "kernel_dimension": 3,
+        "residuals": {
+          "chirality_anticommutator": 0.0,
+          "hamiltonian_identity": 0.0,
+          "q_nilpotency": 0.0,
+          "qdag_nilpotency": 0.0
+        }
+      }
+    },
+    "wzw_transgression": {
+      "degree_zero_control": 0,
+      "fiber_dimension": 3,
+      "general_pullback_criterion": "int_{Sigma3 x CP1} ev^*(n*u3*u2)=+2",
+      "input_degree": 5,
+      "level_one_control": 1,
+      "minus_sector": -2,
+      "output_degree": 2,
+      "plus_sector": 2
+    }
+  },
+  "same_model_audit_conditions": {
+    "kernel_bundle_isomorphic_to_holomorphic_tangent": false,
+    "microscopic_supercharges_or_independently_derived_emergent_n2_ward_identities": false,
+    "no_extra_zero_modes": false,
+    "normalizable_same_soliton_cp1_moduli_and_positive_metric": false,
+    "specified_yukawa_callias_family": false,
+    "uniform_callias_fredholm_gap": false,
+    "uniform_noncollective_bosonic_gap": false,
+    "ward_identity_fixes_levi_civita_connection_and_curvature_term": false
+  },
+  "schema_version": "ap-e4-same-soliton-callias-descent-v1",
+  "seed": 20260716,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_same_soliton_callias_descent.tex",
+      "sha256": "1f5887ff25880792a70f1a479a1c1137bcab2ea85a9359d9119ebc51cb0ca7fc",
+      "size_bytes": 37137
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_same_soliton_callias_descent.bib",
+      "sha256": "2a0890f7b341a9cb48c5f068ba9a080f5ef399191258c9a09f4348d45fc6fb5e",
+      "size_bytes": 3426
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e4_same_soliton_callias_descent.py",
+      "sha256": "487bcc6336640c490d4f45e7978a41109bb1c87945ee5c6b64dd7b99a6016f18",
+      "size_bytes": 31556
+    }
+  ],
+  "status": {
+    "ap_e3_ap_e4_composition_gate_closed": false,
+    "callias_determinant_c1_same_model_computed": false,
+    "callias_family_index_same_model_computed": false,
+    "callias_fredholm_gap_same_model_verified": false,
+    "callias_line_as_quantum_coefficient_line_same_model_derived": false,
+    "callias_operator_same_model_specified": false,
+    "conditional_callias_template_c1_plus_2_verified": true,
+    "conditional_composition_sufficient_criterion_established": true,
+    "cpt_anti_canonical_map_mathematically_derived": true,
+    "cpt_anti_canonical_map_same_model_derived": false,
+    "degree_one_route_e_portal_built": false,
+    "low_energy_tangent_sqm_characterization_derived": true,
+    "physical_tangent_fermion_same_model_derived": false,
+    "physics_promotion_allowed": false,
+    "same_charged_two_colour_n2_closure_mechanism_specified": false,
+    "same_soliton_cp1_moduli_derived": false,
+    "sufficient_same_model_audit_conditions_derived": true,
+    "underdetermination_theorem_applies": true,
+    "worldline_n2_supersymmetry_same_model_derived": false,
+    "wzw_equivariant_refinement_same_model_constructed": false,
+    "wzw_gauge_basic_descent_same_model_proven": false,
+    "wzw_pullback_o2_same_model_proven": false,
+    "wzw_spatial_fiber_integration_defined": true
+  },
+  "summary": {
+    "passed": 27,
+    "total": 27
+  },
+  "theorems": {
+    "bosonic_underdetermination": "A bosonic soliton profile and Hessian do not determine a fermion kernel: gapped trivial and topologically winding Yukawa families can share the same bosonic action.",
+    "callias_required_class": "With declared Callias orientation epsilon*p=+1, an asymptotic positive-mass eigenbundle class p*x+2*y is necessary and sufficient within the rank-one product template for det Ind D=O(+2).",
+    "fixed_polarization_cpt": "Serre duality maps E_+=O(2) to E_-=K tensor E_+^vee=O(-4), giving three negative-chirality states; naive O(-2) gives only one.",
+    "low_energy_n2_characterization": "At two-derivative adiabatic order, a one-multiplet tangent N=2 SQM is characterized by normalizable CP1 modes, a uniform gap, a Fredholm fermion kernel identified with T^(1,0)CP1, the N=2 Ward identities, and no extra zero modes. Exact microscopic supercharges are sufficient but not logically necessary because the Ward identities may emerge.",
+    "wzw_pullback": "After equivariant gauge descent, the spatially transgressed WZW line pulls back to O(+2) iff its integral characteristic number on Sigma3 x CP1 is +2; factorization gives n*B*degree."
+  }
+}

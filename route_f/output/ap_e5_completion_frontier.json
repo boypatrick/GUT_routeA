@@ -1,0 +1,228 @@
+{
+  "all_pass": true,
+  "any_preportal_route_closed": false,
+  "checks": [
+    {
+      "detail": "hashed=10/10",
+      "group": "provenance",
+      "name": "all three audit source sets exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "lattice=24/24; APS=58/58; SQM=27/27",
+      "group": "source_cards",
+      "name": "all three mechanical cards are green",
+      "pass": true
+    },
+    {
+      "detail": "B0=0.999981468235",
+      "group": "lattice",
+      "name": "sampled B=1 background has a controlled continuum extrapolation",
+      "pass": true
+    },
+    {
+      "detail": "residual=1.421e-14",
+      "group": "lattice",
+      "name": "gauge and ghost determinant xi dependence cancels up to the predicted constant",
+      "pass": true
+    },
+    {
+      "detail": "meson=0.621297848; diquark=0.694069173; control=-0.349308274",
+      "group": "lattice",
+      "name": "declared meson and diquark blocks are positive with a tachyonic control",
+      "pass": true
+    },
+    {
+      "detail": "sigma_min=0.702570766; Schur=6.301e-16; curvature=1.316e-08",
+      "group": "lattice",
+      "name": "Wilson-Dirac Schur and one-loop curvature controls agree",
+      "pass": true
+    },
+    {
+      "detail": "pW=1.99860957; pS=3.99627578",
+      "group": "lattice",
+      "name": "Wilson and tree-Symanzik scaling controls have orders two and four",
+      "pass": true
+    },
+    {
+      "detail": "all six microscopic/full-closure flags remain false",
+      "group": "lattice_boundary",
+      "name": "finite diagnostic is not promoted to a dynamical 4D/full-Hessian result",
+      "pass": true
+    },
+    {
+      "detail": "plain phases={'G2_T2_odd_times_S2': 1, 'G3_S1_periodic_times_S3': 1, 'reason': 'paired nonzero ambient spectrum gives eta=0'}",
+      "group": "aps",
+      "name": "both reduced bordism generators and reference product spectra are explicit",
+      "pass": true
+    },
+    {
+      "detail": "characters=[(-1, -1), (-1, 1), (1, -1), (1, 1)]",
+      "group": "aps",
+      "name": "defect regulators realize all four torsion characters",
+      "pass": true
+    },
+    {
+      "detail": "reference/defect calculations establish regulator dependence, not UV selection",
+      "group": "aps",
+      "name": "charged-QC2D does not yet select either torsion character",
+      "pass": true
+    },
+    {
+      "detail": "candidate=Sp(4)=USp(4)=Spin(5), simply connected; b0=15/2",
+      "group": "semisimple",
+      "name": "the simply connected Sp(4) candidate passes the scanned algebraic screens",
+      "pass": true
+    },
+    {
+      "detail": "APS selection, gauge bordism, protected thresholds, eta matching, and strong dynamics are open",
+      "group": "aps_boundary",
+      "name": "Sp(4) remains a tree-level candidate rather than an all-scale UV completion",
+      "pass": true
+    },
+    {
+      "detail": "template={'determinant_c1': 2, 'rank': 1}",
+      "group": "same_soliton",
+      "name": "conditional Callias boundary class gives rank one and determinant c1=+2",
+      "pass": true
+    },
+    {
+      "detail": "plus={'negative': 0, 'positive': 3}; minus={'negative': 3, 'positive': 0}; naive={'negative': 1, 'positive': 0}",
+      "group": "same_soliton",
+      "name": "Serre-dual anti-canonical CPT sector has three states while O(-2) has one",
+      "pass": true
+    },
+    {
+      "detail": "degree=5-3=2; c1=2",
+      "group": "same_soliton",
+      "name": "spatial differential pushforward has degree two and conditional Chern number +2",
+      "pass": true
+    },
+    {
+      "detail": "conditions=['class_in_image_of_pullback_from_quotient', 'curvature_horizontal_and_invariant', 'equivariant_differential_refinement', 'stabilizer_character_trivial', 'vertical_and_large_gauge_holonomy_trivial']",
+      "group": "same_soliton",
+      "name": "gauge-basic descent conditions are explicit and all remain unsupplied",
+      "pass": true
+    },
+    {
+      "detail": "all eleven same-model closure flags remain false",
+      "group": "same_soliton_boundary",
+      "name": "conditional template is not substituted for a same-mother-model derivation",
+      "pass": true
+    },
+    {
+      "detail": "routes={'four_dimensional_lattice_and_full_hessian': False, 'aps_and_semisimple_uv': False, 'same_soliton_sqm_callias_descent': False}",
+      "group": "portal",
+      "name": "no lane closure means no degree-one portal construction",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=false",
+      "group": "promotion",
+      "name": "all source cards and the integrated frontier remain non-promoting",
+      "pass": true
+    }
+  ],
+  "degree_one_portal": {
+    "authorized": false,
+    "constructed": false,
+    "decision": "No pre-portal lane is closed.  The degree-one Route-E portal is therefore deliberately not constructed; only its theorem-level prerequisites are recorded for the next audit.",
+    "prerequisites": {
+      "anomaly_free_portal_operator": false,
+      "at_least_one_preportal_lane_closed": false,
+      "degree_one_map_and_orientation_proven": false,
+      "gauge_basic_wzw_line_o_plus_2": false,
+      "physical_cpt_anti_canonical_map": false,
+      "physical_tangent_or_callias_line_matched": false,
+      "same_moduli_space_identified": false,
+      "uniform_gap_below_portal_scale": false
+    }
+  },
+  "physics_promotion_allowed": false,
+  "route_closure": {
+    "aps_and_semisimple_uv": false,
+    "four_dimensional_lattice_and_full_hessian": false,
+    "same_soliton_sqm_callias_descent": false
+  },
+  "schema_version": "ap-e5-completion-frontier-v1",
+  "source_card_counts": {
+    "aps": {
+      "passed": 58,
+      "total": 58
+    },
+    "lattice": {
+      "passed": 24,
+      "total": 24
+    },
+    "same_soliton": {
+      "passed": 27,
+      "total": 27
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e5_completion_frontier.py",
+      "sha256": "b2836deb9e499a7fd8ca2139abae2483c603028c01670bbbc6d5a4be5aba32c4",
+      "size_bytes": 16980
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e5_4d_qc2d_lattice_hessian.tex",
+      "sha256": "7cfab056a63f7d01583af882b9b12045cfac21c5471b94d092bfbc10209a1016",
+      "size_bytes": 17832
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e5_4d_qc2d_lattice_hessian.bib",
+      "sha256": "5453a4991ec2ce0a4c0d3e2dac5d887a0537f531602ce8978045e41516d9b69e",
+      "size_bytes": 3286
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e5_4d_qc2d_lattice_hessian.py",
+      "sha256": "12dc734e9ec185fc5a6b69bf7068e65528084ee4e153e549ecc5bf81bcddf2a1",
+      "size_bytes": 35334
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_aps_global_form_search.tex",
+      "sha256": "8fa56b8473ee6bdc93ae809da3f33ab0c756acf63f93c37df16f9288d04f954d",
+      "size_bytes": 31713
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_aps_global_form_search.bib",
+      "sha256": "2f274a4c4fcd6447d90d28a664eae58af317eb20ae976bdf56ec2e0399323cf0",
+      "size_bytes": 3444
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e3_aps_global_form_search.py",
+      "sha256": "b99502b2b797502604abb4ed22f78dc0d9b16889317ee459209e051e97c36b17",
+      "size_bytes": 33702
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_same_soliton_callias_descent.tex",
+      "sha256": "1f5887ff25880792a70f1a479a1c1137bcab2ea85a9359d9119ebc51cb0ca7fc",
+      "size_bytes": 37137
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_same_soliton_callias_descent.bib",
+      "sha256": "2a0890f7b341a9cb48c5f068ba9a080f5ef399191258c9a09f4348d45fc6fb5e",
+      "size_bytes": 3426
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e4_same_soliton_callias_descent.py",
+      "sha256": "487bcc6336640c490d4f45e7978a41109bb1c87945ee5c6b64dd7b99a6016f18",
+      "size_bytes": 31556
+    }
+  ],
+  "summary": {
+    "passed": 20,
+    "total": 20
+  }
+}

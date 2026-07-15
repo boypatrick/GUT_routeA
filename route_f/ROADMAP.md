@@ -6,6 +6,99 @@ Last updated: 2026-07-16
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
+## AP-E completion-frontier checkpoint (2026-07-16; current authority)
+
+Status: **formal derivations and finite controls complete; all three
+pre-portal physics lanes remain open.** The integrated promotion verifier is
+**20/20** and records
+'any_preportal_route_closed=false',
+'degree_one_portal.constructed=false', and
+'physics_promotion_allowed=false'.
+
+### Lane 1 -- four-dimensional charged-QC2D/Hessian
+
+- A Wilson/Symanzik-compatible four-dimensional action, background gauge
+  fixing, FP operator, meson/charge-two-diquark sector, Wilson fermions, and
+  the full formal graded Hessian are explicit.
+- The **24/24** deterministic card tests a much smaller '2^4' trivial-link
+  frozen-background block. Numerical anchors are
+  'B(0)=0.999981468235',
+  'lambda_min(K_mes,test)=0.621297848377',
+  'lambda_min(K_Delta)=0.694069172619',
+  the tachyonic control '-0.349308273811',
+  'sigma_min(D)=0.702570765924', and Wilson/Symanzik orders
+  '1.99861/3.99628'.
+- This is not importance sampling, a dynamical charged-QC2D phase,
+  determinant positivity, the complete nonlinear Skyrme Jacobi Hessian, a
+  renormalized continuum limit, FR quantization, or global stability. All ten
+  corresponding JSON gates remain false.
+
+### Lane 2 -- APS generators and semisimple global form
+
+- 'G3=S1_R x S3' and 'G2=T2_RR x S2' explicitly generate the two reduced
+  spin-bordism factors. Their circle/Arf mod-two indices are one. The ambient
+  chirality-paired product spectrum gives only a reference '(+1,+1)' phase;
+  defect regulators realize all four torsion characters. This proves
+  regulator dependence, not the unique charged-QC2D Dai--Freed determinant.
+- The **58/58** search identifies simply connected
+  'Sp(4)=USp(4)=Spin(5)' as the strongest simple candidate in the scanned
+  set:
+  '5 -> 2_(+1)+2_(-1)+1_0',
+  '4 -> 2_0+1_(+1)+1_(-1)'.
+  Two complex '4' copies preserve the separate 'SU(2)_phi' copy symmetry and
+  give the neutral triplet 'qq(phi dagger)^2' at group level.
+  Direct 'SU(2)c x SU(2)H' is the minimal backup; simply connected 'SU(4)'
+  is secondary. Their diagonal/central quotients fail the odd singlet screen.
+- The candidate is asymptotically free at one loop ('b0=15/2') and passes
+  displayed vectorlike/Witten checks. It is not closed: the light threshold
+  is tuned; full gauge bordism, heavy eta matching, radiative protection,
+  monopoles, strong-vacuum selection, and the stable 'B=1' soliton are open.
+  The exactly-two unit-cell Gauss rule is not rederived.
+
+### Lane 3 -- same-soliton SQM/Callias/CPT/descent
+
+- A low-energy tangent-SQM characterization and conservative sufficient
+  same-model audit are explicit; microscopic bulk supercharges are treated
+  as sufficient, not logically necessary, because emergent worldline 'N=2'
+  is possible.
+- For 'c1(E_+)=p x+q y', the families-Callias template gives
+  '(rank,c1(det Ind D))=(epsilon p,epsilon p q)'. Rank-one 'O(+2)' requires
+  'epsilon p=1,q=2'. The Berry/template control yields
+  'c1=1.999999999999981' and a unit gap, but no physical same-model
+  Dirac--Yukawa family or Fredholm gap has been supplied.
+- Fixed-polarization CPT uses
+  'E_-=K_CP1 tensor E_+^vee=O(-4)' and gives three opposite-chirality modes;
+  raw 'O(-2)' gives one. Spatial differential-character integration
+  'Hhat^5 -> Hhat^2' is defined, while equivariant refinement, basic
+  curvature, large-gauge/stabilizer holonomy, and the same-soliton integral
+  remain open. The card passes **27/27** with composition false.
+
+### Portal gate and ordered continuation
+
+The degree-one portal is authorized only if at least one complete lane above
+closes. None has. Its future theorem must still prove a degree '+1' map,
+pull back 'O(2)' with the physical orientation, give an anomaly-safe
+operator, preserve CPT, add no zero modes, and lie below all retained gaps.
+
+1. Complete the simply connected 'Sp(4)' Euclidean/regulator action, evaluate
+   both target-generator mapping-torus eta phases and
+   'Omega_5^Spin(BSp(4))', and match/protect every heavy threshold. Use the
+   unquotiented product group as backup.
+2. Relax the same charged 'B=1' solution for multiple spacings and volumes,
+   assemble the exact sparse gauge-fixed nonlinear super-Hessian, project
+   gauge/translation/isorotation directions, and run dynamical ensembles
+   after the measure sign is proved.
+3. Compute the same-soliton Yukawa--Callias family, determinant line, CPT
+   regulator, equivariant WZW class, and vertical/large-gauge holonomies.
+4. Construct the degree-one Route-E portal only after one full lane closes.
+
+Canonical evidence:
+'tex/ap_e5_4d_qc2d_lattice_hessian.tex',
+'tex/ap_e3_aps_global_form_search.tex',
+'tex/ap_e4_same_soliton_callias_descent.tex', their verifiers/cards/PDFs,
+and 'code/verify_ap_e5_completion_frontier.py'. The master derivation ledger
+has been synchronized.
+
 ## Blocker execution checkpoint (2026-07-14; supersedes older F0-A text)
 
 - **Artifact recovery: done.** RE-SC3/4/5 scripts and ledgers exist, are
@@ -40,7 +133,7 @@ All items start `open` unless marked otherwise.
   inputs, a valid interacting DYN-5 messenger action, recomputed RE-SC4
   pricing, and a threshold/experimental-bound envelope for RE-SC5.
 
-## AP-E3 global/nonlinear and AP-E4 SQM checkpoint (2026-07-16; current authority)
+## AP-E3 global/nonlinear and AP-E4 SQM checkpoint (2026-07-16; superseded above)
 
 Status: **three requested lanes executed with theorem-level no-go and
 fail-closed separation; no Route-E physics promotion.**

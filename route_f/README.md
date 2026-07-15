@@ -26,6 +26,38 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
+## 2026-07-16 AP-E completion frontier
+
+The latest research bundle adds three standalone derivations and one
+integrated promotion gate:
+
+- 'ap_e5_4d_qc2d_lattice_hessian' defines the four-dimensional lattice
+  action and full formal graded Hessian, with a **24/24** finite
+  frozen-background diagnostic;
+- 'ap_e3_aps_global_form_search' computes the two product/defect mod-two
+  character tables and finds simply connected 'Sp(4)=Spin(5)' as the best
+  simple charge/global-form candidate in the scanned set (**58/58**);
+- 'ap_e4_same_soliton_callias_descent' derives the conditional
+  families-Callias determinant, fixed-polarization CPT/Serre map, and
+  differential-character fiber integration/descent gate (**27/27**);
+- 'verify_ap_e5_completion_frontier.py' integrates them (**20/20**).
+
+The positive results are exact only within their declared levels. The lattice
+calculation is not Monte Carlo or the full nonlinear/quantum Hessian; the
+defect characters do not select a unique charged-QC2D Dai--Freed regulator;
+the 'Sp(4)' split is tree-level and unprotected; and the Callias 'O(2)',
+CPT 'O(-4)', and WZW degree-two line have not been derived from one physical
+'B=1' mother model. Accordingly all three complete-lane booleans are false,
+the degree-one Route-E portal has not been built, and
+'physics_promotion_allowed=false'.
+
+The canonical rollback trail is in
+'tex/another_physics_route_e_derivation_ledger.tex'; current priorities are
+the complete 'Sp(4)' eta/threshold/bordism calculation, a multi-spacing
+dynamical charged-QC2D plus exact projected Hessian calculation, and the
+same-soliton Yukawa--Callias/equivariant-WZW derivation. Portal construction
+starts only after at least one of those lanes closes.
+
 ## 2026-07-14 Another-Physics / Route-E bridge status
 
 The bridge audit now separates exact mathematics from added physics.  On the

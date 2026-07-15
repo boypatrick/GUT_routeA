@@ -1,0 +1,841 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{slashed}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Arf}{\operatorname{Arf}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\SF}{\operatorname{SF}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E3 APS Generators and Semisimple Global Forms:\\
+Product/Defect Mod-Two Indices, Regulator Non-Uniqueness,\\
+and a Simply Connected \(Sp(4)\) Candidate}
+\author{Route F independent research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We evaluate the two reduced generators of
+\(\Omega_4^{\mathrm{Spin}}(S^3\times S^2)\) in explicit solvable fermionic
+models and systematically search semisimple global forms that evade the
+previous \(SU(3)\) charge obstruction.  The generators are
+\[
+ G_3=(S^1_{\rm R}\times S^3,\operatorname{pr}_{S^3},{\rm pt}),
+ \qquad
+ G_2=(T^2_{\rm RR}\times S^2,{\rm pt},\operatorname{pr}_{S^2}).
+\]
+The periodic-circle real Dirac operator has one zero mode and the odd torus
+chiral Dirac operator has mod-two index one.  A codimension-three defect
+regulator therefore evaluates \((-1)^{\nu_3}\), while an Arf-decorated
+codimension-two regulator evaluates \((-1)^{\nu_2}\).  Stacking these two
+invertible regulators produces all four character values on \((G_3,G_2)\).
+By contrast, the untwisted ambient product Dirac spectra are chirality paired
+and provide only a reference phase \(+1\) in a factorized regulator.
+
+This is a controlled negative result: it computes a product/defect mod-two
+index character table, not the unique eta phase of the charged two-colour UV
+theory.  The current data do not specify the complete Euclidean
+Dirac--Yukawa operator, Pauli--Villars mass signs, or five-dimensional
+mapping-torus APS problem.  Heavy invertible spectators can independently
+flip both torsion signs without changing the degree-five differential
+curvature.  Hence neither sign is fixed from the present effective action.
+
+For global forms, a short theorem shows that any unbroken
+\([SU(2)_c\times U(1)]/\ZZ_2\) excludes a charge-one colour singlet, although
+it admits \(\bm2_{+1}\).  Thus the diagonal quotient itself, not merely
+\(SU(3)\) branching, is the obstruction.  Three unquotiented semisimple
+forms pass the charge screen.  The strongest simple candidate in the scanned
+set is the simply connected group
+\(Sp(4)\equiv USp(4)\simeq Spin(5)\), with
+\[
+ \bm5\to\bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0,
+ \qquad
+ \bm4\to\bm2_0\oplus\bm1_{+1}\oplus\bm1_{-1}.
+\]
+Two Dirac \(\bm5\)'s and two complex scalar \(\bm4\)'s give the required
+two-flavour quarks and an exact copy-space \(SU(2)_\phi\) doublet.  One real
+adjoint can break to \(SU(2)_c\times U(1)\) and split all displayed partners
+at tree level.  The one-loop coefficient is \(b_0^{Sp(4)}=15/2>0\), and the
+displayed vectorlike spectrum passes local and Witten-parity checks.
+Nevertheless, the massless charged component is tuned, the heavy eta
+threshold is unmatched, and no \(Sp(4)\) strong-phase or soliton calculation
+is supplied.  The exactly-two operator is therefore realized only at the
+group-theory level; the exactly-two gauge/unit-cell rule is not rederived.
+No Route-E or degree-one-portal promotion is made.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope and claim boundary}
+
+The previous global audit separated the unique ordinary degree-five
+differential character from two spin-torsion characters.  With
+\(X=S^3\times S^2\), stable splitting gives
+\begin{equation}
+ \Omega_4^{\mathrm{Spin}}(X)
+ \simeq \ZZ\oplus\ZZ_2\oplus\ZZ_2,
+ \qquad
+ \widetilde\Omega_4^{\mathrm{Spin}}(X)
+ \simeq\ZZ_2\oplus\ZZ_2.
+ \label{eq:bordism}
+\end{equation}
+After the field-independent gravitational factor is removed, the general
+spin refinement has the form
+\begin{equation}
+ Z_{n,\epsilon_3,\epsilon_2}
+ =Z_n^{\rm diff}
+ (-1)^{\epsilon_3\nu_3+\epsilon_2\nu_2},
+ \qquad (\epsilon_3,\epsilon_2)\in\ZZ_2^2.
+ \label{eq:four-characters}
+\end{equation}
+The purpose of this note is to answer two narrower questions:
+\begin{enumerate}[label=(Q\arabic*)]
+\item what can be computed on explicit representatives of the two reduced
+  generators with a fully stated product/defect regulator;
+\item which low-rank semisimple global forms contain both
+  \(q\sim\bm2_{+1}\) and \(\phi\sim\bm1_{+1}\), so that
+  \(qq(\phi^\dagger)^2\) is neutral.
+\end{enumerate}
+
+Three distinctions will be maintained throughout.
+\begin{enumerate}
+\item A paired spectrum of an untwisted four-dimensional product Dirac
+  operator is a \emph{reference spectral control}; it is not, by itself, a
+  five-dimensional Dai--Freed computation.
+\item A defect mod-two index computes the phase of the explicitly selected
+  invertible regulator.  It proves that a torsion character is realizable,
+  not that charged QC2D selects it.
+\item Charge neutrality and branching prove an operator-level selection
+  rule.  They do not derive the microscopic exactly-two gauge/unit-cell
+  constraint, threshold naturalness, or the nonperturbative phase.
+\end{enumerate}
+This discipline follows the APS/Dai--Freed treatment of determinant phases
+\cite{AtiyahPatodiSinger1975,DaiFreed1994,Yonekura2019} and the bordism
+approach to four-dimensional anomalies
+\cite{DavighiGripaiosLohitsiri2020,Saito2024}.
+
+\section{Explicit representatives of both reduced generators}
+
+\subsection{Pontryagin--Thom invariants}
+
+For a sigma-model field \(\Phi=(g,s):M_4\to S^3\times S^2\), choose regular
+values \(p_3\in S^3\), \(p_2\in S^2\).  Their transverse inverse images are
+\begin{equation}
+ L_g=g^{-1}(p_3),\qquad \dim L_g=1,
+ \qquad
+ \Sigma_s=s^{-1}(p_2),\qquad \dim\Sigma_s=2.
+ \label{eq:inverse-images}
+\end{equation}
+The target orientations frame the normal bundles.  Together with the spin
+structure on \(M_4\), they induce spin structures on \(L_g\) and
+\(\Sigma_s\).  The reduced invariants are
+\begin{equation}
+ \nu_3=[L_g]\in\Omega_1^{\mathrm{Spin}}\simeq\ZZ_2,
+ \qquad
+ \nu_2=\Arf(\Sigma_s)\in\Omega_2^{\mathrm{Spin}}\simeq\ZZ_2.
+ \label{eq:nu-definitions}
+\end{equation}
+
+Take unit-radius factors and define
+\begin{align}
+ G_3&:=
+ (S^1_{\rm R}\times S^3,
+  g=\operatorname{pr}_{S^3},s={\rm const}),
+ \label{eq:G3}\\
+ G_2&:=
+ (T^2_{\rm RR}\times S^2,
+  g={\rm const},s=\operatorname{pr}_{S^2}).
+ \label{eq:G2}
+\end{align}
+Here R denotes periodic spin structure.  The inverse images are
+\begin{equation}
+ L_g=S^1_{\rm R}\times\{p_3\},
+ \qquad
+ \Sigma_s=T^2_{\rm RR}\times\{p_2\}.
+\end{equation}
+The periodic circle is the nonbounding generator of
+\(\Omega_1^{\mathrm{Spin}}\), while the RR torus is the odd spin surface with
+Arf invariant one \cite{Atiyah1971}.  Therefore
+\begin{equation}
+ (\nu_3(G_3),\nu_2(G_3))=(1,0),
+ \qquad
+ (\nu_3(G_2),\nu_2(G_2))=(0,1).
+ \label{eq:generator-values}
+\end{equation}
+
+\subsection{Circle spectrum and mod-two spectral flow}
+
+Let the circle have circumference \(2\pi\).  Its real Dirac spectrum is
+\begin{equation}
+ D_{S^1,\alpha}=-\ii\frac{\dd}{\dd x},
+ \qquad
+ \lambda_n=n+\alpha,
+ \qquad n\in\ZZ,
+ \label{eq:circle-spectrum}
+\end{equation}
+where \(\alpha=0\) for R and \(\alpha=1/2\) for NS spin structure.  Hence
+\begin{equation}
+ \dim_{\RR}\ker D_{S^1,0}=1\pmod2,
+ \qquad
+ \ker D_{S^1,1/2}=0.
+ \label{eq:circle-ko-index}
+\end{equation}
+For the explicit mass path
+\begin{equation}
+ H_\alpha(t)=D_{S^1,\alpha}+t,
+ \qquad -\frac14\le t\le\frac14,
+ \label{eq:circle-mass-path}
+\end{equation}
+only the \(n=0\) R eigenvalue crosses zero.  Thus
+\begin{equation}
+ \SF_2(H_0)=1,
+ \qquad
+ \SF_2(H_{1/2})=0,
+ \label{eq:circle-sf}
+\end{equation}
+and APS identifies this with the mod-two index of
+\(\partial_t+H_\alpha(t)\).  A real Pfaffian changes sign exactly in the R
+case.
+
+\subsection{Odd-torus chiral index and Arf phase}
+
+On a square torus of side \(2\pi\), the chiral Dirac eigenvalues may be
+normalized as
+\begin{equation}
+ D^+_{\alpha\beta}:\quad
+ \lambda_{mn}=(m+\alpha)+\ii(n+\beta),
+ \qquad (m,n)\in\ZZ^2.
+ \label{eq:torus-spectrum}
+\end{equation}
+Only \((\alpha,\beta)=(0,0)\) has a zero mode.  Consequently
+\begin{equation}
+ \ind_2 D^+_{T^2_{\rm RR}}
+ =\dim_{\CC}\ker D^+_{00}\pmod2=1,
+ \qquad
+ \ind_2D^+_{\alpha\beta}=0
+ \quad\text{otherwise}.
+ \label{eq:torus-index}
+\end{equation}
+The equality
+\begin{equation}
+ \Arf(T^2,\alpha,\beta)=\ind_2D^+_{\alpha\beta}
+ \label{eq:arf-index}
+\end{equation}
+identifies the Majorana Pfaffian sign on \(G_2\).  This is a KO/mod-two
+index statement and needs no continuum extrapolation.
+
+\section{Reference ambient spectra versus the actual APS problem}
+
+\subsection{Paired product spectra}
+
+The ordinary Dirac spectra on unit spheres are
+\begin{align}
+ \operatorname{spec}(D_{S^3})
+ &=\left\{\pm(k+\tfrac32),\quad
+   \operatorname{mult}=(k+1)(k+2)\right\}_{k\ge0},
+ \label{eq:s3-spectrum}\\
+ \operatorname{spec}(D_{S^2})
+ &=\left\{\pm(\ell+1),\quad
+   \operatorname{mult}=2(\ell+1)\right\}_{\ell\ge0}.
+ \label{eq:s2-spectrum}
+\end{align}
+For product metrics,
+\begin{align}
+ |\lambda(D_{S^1_{\rm R}\times S^3})|^2
+ &=n^2+(k+\tfrac32)^2\ge\frac94,
+ \label{eq:s1s3-gap}\\
+ |\lambda(D_{T^2_{\rm RR}\times S^2})|^2
+ &=m^2+n^2+(\ell+1)^2\ge1.
+ \label{eq:t2s2-gap}
+\end{align}
+Both ambient four-dimensional operators are gapped, and chirality pairs
+every nonzero eigenvalue with its negative.  A symmetric, factorized
+Pauli--Villars convention therefore assigns reference phase \(+1\) to both
+products.
+
+\begin{remark}[What the paired spectrum does not prove]
+The eta invariant controlling a four-dimensional microscopic anomaly belongs
+to a specified odd-dimensional mapping-torus or APS problem.  Equations
+\eqref{eq:s1s3-gap}--\eqref{eq:t2s2-gap} do not determine that problem.  They
+only verify that an untwisted ambient product determinant has no unpaired
+four-dimensional eigenvalue.  Calling this calculation ``the charged-QC2D
+eta invariant'' would be incorrect.
+\end{remark}
+
+\subsection{An explicit defect Dirac--Yukawa family}
+
+We now construct a separate, computable regulator family.  In a tubular
+neighbourhood of a transverse inverse image \(N=\Phi^{-1}(p)\), use oriented
+normal coordinates \(u^a\), \(a=1,\dots,r\), and an auxiliary real Clifford
+module with matrices \(\Gamma_a\).  A local Dirac--Yukawa operator is
+\begin{equation}
+ \mathcal D_{r,\mu}
+ =\slashed D_{M_4}\otimes\bm1
+ +\mu\sum_{a=1}^{r}u^a(\Phi)\Gamma_a.
+ \label{eq:defect-yukawa}
+\end{equation}
+Using a cutoff in the tubular neighbourhood and a positive Pauli--Villars
+mass outside gives a global Fredholm family.  The normal harmonic-oscillator
+modes pair except for a single localized mode on \(N\), as in the
+Jackiw--Rebbi mechanism \cite{JackiwRebbi1976}.  Gapping that localized mode
+by the nontrivial one- or two-dimensional invertible spin phase gives
+\begin{align}
+ R_3[M_4,g]&=(-1)^{\ind_2D_{L_g}}
+            =(-1)^{\nu_3(M_4,g)},
+ \label{eq:R3}\\
+ R_2[M_4,s]&=(-1)^{\ind_2D^+_{\Sigma_s}}
+            =(-1)^{\Arf(\Sigma_s)}
+            =(-1)^{\nu_2(M_4,s)}.
+ \label{eq:R2}
+\end{align}
+The full APS operator factorizes in the large-\(\mu\) limit into paired
+normal modes and the defect operator.  Therefore its mod-two index is the
+right-hand side of Eqs.~\eqref{eq:R3}--\eqref{eq:R2}.  This establishes an
+explicit regulator realization of each character.
+
+The resulting character table is
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+\((\epsilon_3,\epsilon_2)\) & regulator stack & phase on \(G_3\) & phase on \(G_2\)\\
+\midrule
+\((0,0)\) & reference & \(+1\) & \(+1\)\\
+\((1,0)\) & \(R_3\) & \(-1\) & \(+1\)\\
+\((0,1)\) & \(R_2\) & \(+1\) & \(-1\)\\
+\((1,1)\) & \(R_3R_2\) & \(-1\) & \(-1\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{theorem}[Regulator non-uniqueness]
+The differential curvature and all perturbative local terms held fixed do
+not determine \((\epsilon_3,\epsilon_2)\).  Stacking either heavy invertible
+defect regulator changes exactly one torsion sign.  Hence a microscopic UV
+Dirac--Yukawa operator and its regulator are necessary data for selecting the
+two signs.
+\end{theorem}
+\begin{proof}
+Equations~\eqref{eq:R3} and \eqref{eq:R2} are homomorphisms from reduced spin
+bordism to \(\{\pm1\}\).  Equation~\eqref{eq:generator-values} shows that
+their evaluation matrix is the identity over \(\ZZ_2\), so they form a basis
+of
+\(\operatorname{Hom}(\ZZ_2\oplus\ZZ_2,U(1))\).  They are torsion phases and
+have zero de Rham curvature.  Stacking therefore leaves the fixed
+degree-five curvature unchanged while toggling either sign.
+\end{proof}
+
+\begin{gate}[Charged-QC2D determinant]
+The product/defect construction proves the four possible phase assignments
+and supplies a regulator-dependence negative control.  The current Route-F
+files do not specify the complete charged-QC2D Euclidean operator
+\begin{equation}
+ \mathcal D_{\rm UV}
+ =\gamma^\mu(\nabla_\mu+A_\mu)
+ +P_L\mathcal M(g,s)+P_R\mathcal M(g,s)^\dagger,
+ \label{eq:actual-uv-operator}
+\end{equation}
+including every heavy representation, Yukawa matrix, Pauli--Villars mass
+sign, and mapping-torus extension.  Thus
+\begin{equation}
+ \begin{gathered}
+ \texttt{epsilon\_3\_selected\_by\_charged\_qc2d\_uv=false},\\
+ \texttt{epsilon\_2\_selected\_by\_charged\_qc2d\_uv=false}.
+ \end{gathered}
+ \label{eq:eta-fail-closed}
+\end{equation}
+\end{gate}
+
+\section{A global-form theorem before branching}
+
+Let
+\begin{equation}
+ H_0=SU(2)_c\times U(1)_H,
+ \qquad
+ H_1=\frac{SU(2)_c\times U(1)_H}
+ {\langle(-\bm1,e^{\ii\pi})\rangle}.
+ \label{eq:H-forms}
+\end{equation}
+Normalize \(U(1)_H\) so that its smallest desired charge is one.  A term
+\((j,q)\) descends to \(H_1\) precisely when the quotient generator acts
+trivially:
+\begin{equation}
+ (-1)^{2j}(-1)^q=1
+ \quad\Longleftrightarrow\quad
+ 2j+q=0\pmod2.
+ \label{eq:quotient-condition}
+\end{equation}
+
+\begin{theorem}[Diagonal-quotient obstruction]
+The diagonal quotient \(H_1\) admits a colour doublet \(\bm2_{+1}\) but
+excludes a colour singlet \(\bm1_{+1}\).  Therefore any semisimple embedding
+with unbroken global form \(H_1\) fails the charge-one/exactly-two field
+requirement independently of its Lie algebra branching.
+\end{theorem}
+\begin{proof}
+For \(\bm2_{+1}\), \(2j+q=1+1=2\), so Eq.~\eqref{eq:quotient-condition}
+holds.  For \(\bm1_{+1}\), it gives \(0+1=1\), so it fails.  Since this is a
+statement about the kernel of the group homomorphism, no higher
+representation can evade it.
+\end{proof}
+
+The exact operator charge condition is
+\begin{equation}
+ Q\!\left[qq(\phi^\dagger)^m\right]
+ =2X_q-mX_\phi.
+ \label{eq:dressing-charge}
+\end{equation}
+With \(X_q=X_\phi=1\), the first neutral power is \(m=2\).  Thus an
+\emph{unquotiented} \(H_0\) solves the operator charge equation.  It does not
+by itself prove that a microscopic unit cell has exactly two constituents.
+
+\section{Systematic low-rank semisimple search}
+
+\subsection{Baseline failures}
+
+For
+\(SU(3)\to[SU(2)_c\times U(1)]/\ZZ_2\),
+\begin{equation}
+ \bm3\to\bm2_{+1}\oplus\bm1_{-2}.
+ \label{eq:su3-branch}
+\end{equation}
+The quotient theorem proves that no \(\bm1_{+1}\) occurs in any
+\(SU(3)\) representation.  This recovers the previous no-go without relying
+on a finite representation scan.
+
+The same warning applies to covers and quotients.  The direct product
+\(SU(2)_c\times SU(2)_H\) contains the required representations, whereas
+\(SO(4)=[SU(2)_c\times SU(2)_H]/\ZZ_2\) removes the scalar.  Likewise the
+spinor \(\bm4\) of \(Spin(5)\) does not descend to \(SO(5)\).  Global form is
+therefore physical data, not notation.
+
+\subsection{Minimal product candidate}
+
+Take the unquotiented semisimple group
+\begin{equation}
+ G_{\rm prod}=SU(2)_c\times SU(2)_H
+ \xrightarrow{\langle\Sigma_H\rangle}
+ SU(2)_c\times U(1)_H,
+ \label{eq:product-breaking}
+\end{equation}
+where a real \((\bm1,\bm3)\) scalar has
+\(\langle\Sigma_H\rangle=V T_H^3\), and the doublet weights are
+\(q=\pm1\).  Then
+\begin{align}
+ (\bm2,\bm2)&\to\bm2_{+1}\oplus\bm2_{-1},
+ \label{eq:product-fermion}\\
+ (\bm1,\bm2)&\to\bm1_{+1}\oplus\bm1_{-1}.
+ \label{eq:product-scalar}
+\end{align}
+Two Dirac bifundamentals supply two low-energy quark flavours.  Two complex
+scalar \((\bm1,\bm2)\) copies \(\Phi_I\), \(I=1,2\), retain an exact
+copy-space \(SU(2)_\phi\) when their couplings are proportional to
+\(\delta_{IJ}\).  The two desired charge-one components then form the
+\(SU(2)_\phi\) doublet used in
+\(\operatorname{Sym}^2\bm2=\bm3\).
+
+The group is already a viable minimal semisimple backup.  Its limitation is
+that each required field comes with an opposite-charge partner, and the
+massless branch requires the threshold split discussed below.
+
+\subsection{Best simple candidate in the scanned set: simply connected
+\texorpdfstring{\(Sp(4)\)}{Sp(4)}}
+
+We use physics notation
+\begin{equation}
+ Sp(4)\equiv USp(4)\simeq Spin(5),
+ \label{eq:sp4-notation}
+\end{equation}
+whose fundamental has dimension four.  It contains
+\(Spin(4)=SU(2)_c\times SU(2)_H\).  Under this subgroup
+\begin{align}
+ \bm4&\to(\bm2,\bm1)\oplus(\bm1,\bm2),
+ \label{eq:sp4-4-spin4}\\
+ \bm5&\to(\bm2,\bm2)\oplus(\bm1,\bm1),
+ \label{eq:sp4-5-spin4}\\
+ \bm{10}&\to(\bm3,\bm1)\oplus(\bm1,\bm3)
+                    \oplus(\bm2,\bm2).
+ \label{eq:sp4-10-spin4}
+\end{align}
+These formulas also follow directly from
+\(\bm5=\wedge^2\bm4-\bm1\) and
+\(\bm{10}=\operatorname{Sym}^2\bm4\)
+\cite{Slansky1981}.  Breaking the second factor by a real adjoint
+\(\Sigma\in\bm{10}\), with its vacuum in the
+\((\bm1,\bm3)_0\) direction, gives
+\begin{align}
+ \bm4&\to\bm2_0\oplus\bm1_{+1}\oplus\bm1_{-1},
+ \label{eq:sp4-4}\\
+ \bm5&\to\bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0,
+ \label{eq:sp4-5}\\
+ \bm{10}&\to
+ \bm1_{+2}\oplus\bm2_{+1}\oplus\bm3_0\oplus\bm1_0
+ \oplus\bm2_{-1}\oplus\bm1_{-2}.
+ \label{eq:sp4-10}
+\end{align}
+
+The subgroup embedding is injective.  In particular,
+\((-\bm1_c,-\bm1_H)\) maps to the nontrivial central element of \(Spin(5)\),
+not to the identity.  After \(SU(2)_H\to U(1)_H\), the unbroken global form
+is therefore \(H_0\), so both odd-charge representations are legitimate.
+If one instead quotients \(Spin(5)\) to \(SO(5)\), this central element is
+identified with the identity and the spinor \(\bm4\) is lost.  The scalar
+requirement forces the simply connected cover.
+
+An explicit field list is
+\begin{equation}
+ \Psi_i\in\bm5\ \text{Dirac},\quad i=1,2;
+ \qquad
+ \Phi_I\in\bm4\ \text{complex},\quad I=1,2;
+ \qquad
+ \Sigma\in\bm{10}\ \text{real}.
+ \label{eq:sp4-field-list}
+\end{equation}
+The two \(\Phi_I\) copies are essential.  Their copy index carries the exact
+global \(SU(2)_\phi\); the two gauge weights inside a single \(\bm4\) are not
+a substitute for this flavour doublet.  With copy-symmetric couplings, the
+light \(\bm1_{+1}\) components are \(\phi_I\), and
+\begin{equation}
+ qq(\phi_I^\dagger\phi_J^\dagger)_{\rm sym}
+ \in\operatorname{Sym}^2\bm2_\phi=\bm3_\phi.
+ \label{eq:sp4-triplet}
+\end{equation}
+Equation~\eqref{eq:sp4-triplet} establishes the desired group representation
+of the local operator.  It does not prove the exactly-two microscopic Gauss
+rule.
+
+\subsection{A secondary simple candidate: \texorpdfstring{\(SU(4)\)}{SU(4)}}
+
+The block embedding
+\begin{equation}
+ \iota_4(U,z)=\operatorname{diag}(zU,z^{-1},z^{-1})
+ \in SU(4)
+ \label{eq:su4-embedding}
+\end{equation}
+has trivial kernel.  Consequently
+\begin{align}
+ \bm4&\to\bm2_{+1}\oplus2\,\bm1_{-1},
+ \label{eq:su4-4}\\
+ \overline{\bm4}&\to\bm2_{-1}\oplus2\,\bm1_{+1}.
+ \label{eq:su4-bar4}
+\end{align}
+Two suitably oriented adjoint vacua can reduce the centralizer to the direct
+\(SU(2)_c\times U(1)\) while preserving the block charges.  The fundamental
+also has a useful uniqueness property.  For an \(SU(N)\) block embedding
+with doublet charge \(a\) and each of the other \(N-2\) entries of charge
+\(b\), tracelessness gives
+\begin{equation}
+ 2a+(N-2)b=0.
+ \label{eq:sun-traceless}
+\end{equation}
+Demanding equal-magnitude quark and conjugate-singlet charges, \(a=-b\ne0\),
+forces
+\begin{equation}
+ (4-N)a=0\quad\Longrightarrow\quad N=4.
+ \label{eq:su4-unique}
+\end{equation}
+Thus \(SU(4)\) is the unique member of this fundamental block family with
+the desired equality.  Quotienting by \(\{-\bm1_4\}\) forbids both
+\(\bm4\) and \(\overline{\bm4}\), so again the simply connected form is
+required.  We rank this below \(Sp(4)\) because the required breaking and
+copy-flavour protection use more independent ingredients.
+
+\section{Tree-level partner decoupling}
+
+\subsection{Universal adjoint split}
+
+In all three passing candidates, the desired and conjugate components have
+weights \(q=\pm1\) under the broken generator.  A vectorlike Dirac multiplet
+admits
+\begin{equation}
+ \mathcal L_{\Psi}
+ =-\overline\Psi(m+y\Sigma)\Psi,
+ \qquad
+ M_q=m+q\,yV.
+ \label{eq:fermion-masses}
+\end{equation}
+Choosing
+\begin{equation}
+ m=-yV
+ \label{eq:fermion-tuning}
+\end{equation}
+gives
+\begin{equation}
+ M_{+}=0,\qquad M_{-}=-2yV.
+ \label{eq:fermion-split}
+\end{equation}
+For \(Sp(4)\), the neutral singlet in \(\bm5\) has mass \(M_0=-yV\).  Thus
+all unwanted fermions are heavy at tree level when \(yV\ne0\).
+
+For each scalar copy, take
+\begin{equation}
+ V_2=\Phi_I^\dagger(m_\Phi^2+\kappa\Sigma)\Phi_I.
+ \label{eq:scalar-masses}
+\end{equation}
+The benchmark
+\begin{equation}
+ m_\Phi^2=1,\qquad \kappa V=-2
+ \label{eq:scalar-benchmark}
+\end{equation}
+gives
+\begin{equation}
+ m^2_{\phi,+}=-1,\qquad
+ m^2_{\phi,-}=3,
+ \qquad
+ m^2_{\phi,0}=1\quad(Sp(4)).
+ \label{eq:scalar-split}
+\end{equation}
+Quartics can stabilize the desired charged vacuum while leaving the displayed
+partners positive at tree level.
+
+\begin{gate}[Radiative protection]
+Equation~\eqref{eq:fermion-tuning} is a cancellation between independent
+operators.  No symmetry protecting it has been specified.  Heavy gauge,
+adjoint, and partner loops generically induce
+\begin{equation}
+ \delta M_+\sim\frac{g_G^2}{16\pi^2}\,yV
+ \label{eq:threshold-estimate}
+\end{equation}
+up to representation- and scheme-dependent coefficients.  The candidate is
+therefore an explicit tree-level spectrum, not a natural all-scale
+decoupling theorem.
+\end{gate}
+
+\subsection{Orientation and the unmatched heavy determinant}
+
+The retained colour doublet has \(X_q=+1\) and two colours.  Its light-field
+mixed coefficient is therefore
+\begin{equation}
+ k_{\rm light}=N_cX_q=2(+1)=+2.
+ \label{eq:light-k}
+\end{equation}
+This fixes the algebraic orientation convention.  Integrating out the
+\(q=-1\) partner and neutral fields also generates regulator-dependent local
+and torsion counterterms.  Until their determinant phases are matched across
+the breaking threshold, Eq.~\eqref{eq:light-k} is not an all-scale
+Dai--Freed derivation of \(k=+2\).
+
+\section{Gauge anomalies and one-loop running}
+
+\subsection{Displayed anomaly checks}
+
+All fermions in the candidate lists are Dirac fields in complete deep-group
+representations.  Their left- and right-handed perturbative gauge anomalies
+cancel.  For the product group, two Dirac \((\bm2,\bm2)\)'s give
+\begin{equation}
+ N^{(c)}_{\rm Weyl\ doublet}
+ =N^{(H)}_{\rm Weyl\ doublet}
+ =N_f\,(2\ {\rm chiralities})\,(2\ {\rm spectator\ dimension})=8,
+ \label{eq:product-witten}
+\end{equation}
+which is even.  In the \(Sp(4)\) candidate, the displayed Dirac fields double
+every chiral mod-two phase.  After breaking, the two light Dirac colour
+doublets give four left-Weyl colour doublets, also even.  These are the
+ordinary Witten-parity checks \cite{Witten1982,JiaYi2024}.
+
+\begin{gate}[Full gauge-bordism phase]
+Vectorlike cancellation and the \(\pi_4\) parity test are necessary checks,
+not a substitute for evaluating the complete
+\(\Omega_5^{\mathrm{Spin}}(BSp(4))\) Dai--Freed character with every Higgs and
+background bundle retained.  We therefore set
+\begin{equation}
+ \texttt{best\_candidate\_full\_dai\_freed\_gauge\_bordism\_audit\_complete=false}.
+ \label{eq:gauge-bordism-open}
+\end{equation}
+This is deliberately conservative even though the displayed matter is
+vectorlike.
+\end{gate}
+
+\subsection{Asymptotic-freedom screen}
+
+For Dirac fermions, real scalars, and complex scalars, respectively, use
+\begin{equation}
+ b_0=\frac{11}{3}C_2(G)
+ -\frac43\sum_{\rm Dirac}T(R_f)
+ -\frac16\sum_{\rm real}T(R_s)
+ -\frac13\sum_{\rm complex}T(R_s).
+ \label{eq:beta-general}
+\end{equation}
+Our conventions are
+\begin{equation}
+ T_{SU(2)}(\bm2)=\frac12,\quad T_{SU(2)}(\bm3)=2,
+ \qquad
+ T_{Sp(4)}(\bm4)=\frac12,\quad T_{Sp(4)}(\bm5)=1,
+ \quad T_{Sp(4)}(\bm{10})=3.
+ \label{eq:indices}
+\end{equation}
+For the product candidate, the bifundamental spectator dimension makes
+\(\sum_fT=2\) for each factor.  With one real \(SU(2)_H\) adjoint and two
+complex \(H\) doublets,
+\begin{align}
+ b_{0,c}^{\rm prod}
+ &=\frac{22}{3}-\frac43(2)=\frac{14}{3}>0,
+ \label{eq:b0-product-c}\\
+ b_{0,H}^{\rm prod}
+ &=\frac{22}{3}-\frac43(2)-\frac16(2)
+   -\frac13\left(2\cdot\frac12\right)=4>0.
+ \label{eq:b0-product-h}
+\end{align}
+
+For two Dirac \(\bm5\)'s, one real \(\bm{10}\), and two complex
+\(\bm4\)'s of \(Sp(4)\),
+\begin{equation}
+ b_0^{Sp(4)}
+ =11-\frac43(2)-\frac16(3)
+ -\frac13\left(2\cdot\frac12\right)
+ =\frac{15}{2}>0.
+ \label{eq:b0-sp4}
+\end{equation}
+For the illustrative \(SU(4)\) list of two Dirac fundamentals, two real
+adjoints needed for the breaking, and two complex antifundamentals,
+\begin{equation}
+ b_0^{SU(4)}
+ =\frac{44}{3}-\frac43(1)-\frac16(8)-\frac13(1)
+ =\frac{35}{3}>0.
+ \label{eq:b0-su4}
+\end{equation}
+All three pass the one-loop asymptotic-freedom screen.  This says nothing by
+itself about which Higgs vacuum is nonperturbatively selected.
+
+\section{Classification and exact status}
+
+\begin{longtable}{@{}L{0.17\textwidth}L{0.20\textwidth}L{0.18\textwidth}L{0.35\textwidth}@{}}
+\toprule
+Deep group & relevant global form & charge screen & conclusion\\
+\midrule
+\endfirsthead
+\toprule
+Deep group & relevant global form & charge screen & conclusion\\
+\midrule
+\endhead
+\(SU(3)\) & unbroken \(H_1\) & fail & charge-one singlet forbidden for every irrep\\
+\(SU(2)_c\times SU(2)_H\) & direct product & pass & minimal semisimple backup; opposite-charge partners\\
+\(SO(4)\) & diagonal quotient & fail & \((\bm1,\bm2)\) scalar does not descend\\
+\(Sp(4)=Spin(5)\) & simply connected & pass & best simple candidate in scanned set\\
+\(SO(5)\) & \(Sp(4)/\ZZ_2\) & fail & required spinor \(\bm4\) scalar absent\\
+\(SU(4)\) & simply connected & pass & unique fundamental block equality; more elaborate breaking\\
+\(SU(4)/\ZZ_2\) & central quotient & fail & \(\bm4,\overline{\bm4}\) do not descend\\
+\bottomrule
+\end{longtable}
+
+The word ``best'' refers only to the scanned algebraic criteria: a single
+simple simply connected group, injective unbroken subgroup, minimal
+representations containing both charges, and positive one-loop \(b_0\).
+It is not a claim that \(Sp(4)\) dynamically realizes the desired phase.
+
+\begin{longtable}{@{}L{0.44\textwidth}L{0.17\textwidth}L{0.30\textwidth}@{}}
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endhead
+Product representatives \(G_3,G_2\) & \status{proved} & transverse inverse images generate both reduced summands\\
+Circle and torus mod-two indices & \status{proved} & exact Fourier spectra\\
+Reference ambient product phase \(+1\) & \status{proved for stated regulator} & paired four-dimensional spectrum only\\
+Four defect-regulator character values & \status{proved} & Pontryagin--Thom localization and KO indices\\
+Unique charged-QC2D eta phase & \status{open} & microscopic operator and five-dimensional APS data unspecified\\
+Diagonal-quotient obstruction & \status{proved} & \(2j+q=0\pmod2\)\\
+Simply connected \(Sp(4)\) charge embedding & \status{proved} & explicit \(\bm4,\bm5,\bm{10}\) branching\\
+Exactly-two neutral triplet operator & \status{proved at group level} & needs two complex \(\bm4\) copies; no unit-cell derivation\\
+Displayed partner split & \status{tree-level} & \(m=-yV\) is unprotected\\
+Displayed anomaly and running screen & \status{passed} & vectorlike/Witten parity and one-loop \(b_0\) only\\
+Full \(Sp(4)\) gauge-bordism phase & \status{open} & complete Dai--Freed character not evaluated\\
+All-scale \(k=+2\) orientation & \status{open} & heavy threshold eta counterterm unmatched\\
+Nonperturbative phase and \(B=1\) soliton & \status{open} & requires new strong-dynamics calculation\\
+Degree-one Route-E portal & \status{blocked} & waits for all preceding gates\\
+\bottomrule
+\end{longtable}
+
+\section{Deterministic regression}
+
+The companion verifier
+\begin{center}
+\texttt{route\_f/code/verify\_ap\_e3\_aps\_global\_form\_search.py}
+\end{center}
+performs the following checks without fitted parameters:
+\begin{enumerate}
+\item counts R/NS circle zero modes and mass-path spectral crossings;
+\item counts all four flat-torus spin-structure kernels and verifies the Arf
+  parity;
+\item computes the minimum ambient product gaps and a truncated eta-pairing
+  residual;
+\item constructs all four defect-regulator character values;
+\item enforces the diagonal-centre descent condition;
+\item derives the \(Sp(4)\) \(\bm5\) from \(\wedge^2\bm4-\bm1\) and the
+  \(\bm{10}\) from \(\operatorname{Sym}^2\bm4\);
+\item checks the \(Spin(5)\) centre image, \(SU(4)\) block kernel, and the
+  fundamental \(SU(N)\) uniqueness equation;
+\item evaluates the displayed mass splits, Witten parities, light level, and
+  one-loop beta coefficients;
+\item asserts every fail-closed APS, threshold, dynamics, and portal flag.
+\end{enumerate}
+The numerical calculations encode and regress the displayed analytic
+arguments; they do not independently prove a bordism theorem or strong
+dynamics.
+
+\section{Ordered decisive calculations}
+
+Several strategies remain available, in descending priority.
+\begin{enumerate}
+\item \textbf{Microscopic eta route.}  Write the full charged-QC2D
+  \(\mathcal D_{\rm UV}\) of Eq.~\eqref{eq:actual-uv-operator}, including all
+  heavy fields and regulator masses.  Construct mapping tori representing
+  \(G_3,G_2\), then compute the two exponentiated reduced eta invariants.
+  This is the only route that selects \((\epsilon_3,\epsilon_2)\) for that
+  UV theory.
+\item \textbf{Simply connected \(Sp(4)\) route.}  Derive a symmetry or
+  controlled threshold prescription protecting \(M_+=0\), evaluate the
+  full gauge-bordism character, and match the heavy determinant across
+  \(Sp(4)\to SU(2)_c\times U(1)\).
+\item \textbf{Minimal-product backup.}  If the simple-group threshold is
+  obstructed, repeat the determinant calculation in direct
+  \(SU(2)_c\times SU(2)_H\), retaining the global form and both scalar
+  copies explicitly.
+\item \textbf{Nonperturbative gate.}  For any surviving candidate, establish
+  the charged two-colour vacuum, monopole effects, and the complete \(B=1\)
+  Hessian before composing with AP-E4.
+\end{enumerate}
+
+Until these steps close,
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{route\_e\_uv\_completion\_closed=false},\\
+ \texttt{physics\_promotion\_allowed=false},\\
+ \texttt{degree\_one\_portal\_allowed=false}.
+ \end{gathered}}
+ \label{eq:final-gates}
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e3_aps_global_form_search}
+
+\end{document}

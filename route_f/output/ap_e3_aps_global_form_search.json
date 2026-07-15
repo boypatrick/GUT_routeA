@@ -1,0 +1,639 @@
+{
+  "all_pass": true,
+  "aps_torsion_pair_uniquely_determined": false,
+  "best_candidate_full_dai_freed_gauge_bordism_audit_complete": false,
+  "best_candidate_group_theory_pass": true,
+  "best_candidate_heavy_threshold_eta_matched": false,
+  "best_candidate_nonperturbative_phase_and_soliton_proven": false,
+  "best_candidate_one_loop_asymptotic_freedom_pass": true,
+  "best_candidate_threshold_decoupling_radiatively_protected": false,
+  "best_candidate_tree_level_spectrum_pass": true,
+  "best_semisimple_candidate": "Sp(4)=USp(4)=Spin(5), simply connected",
+  "branching": {
+    "SU2xSU2_fermion_2x2": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "SU2xSU2_scalar_1x2": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "SU4_4": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "SU4_bar4": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        -1
+      ]
+    ],
+    "Sp4_10": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    "Sp4_4": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "Sp4_5": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        -1
+      ]
+    ]
+  },
+  "candidate_classification": [
+    {
+      "global_form": "simply connected",
+      "group": "SU(3)",
+      "passes_charge_screen": false,
+      "reason": "unbroken subgroup is (SU2 x U1)/Z2; 1_(+1) forbidden"
+    },
+    {
+      "global_form": "direct product",
+      "group": "SU(2)c x SU(2)H",
+      "passes_charge_screen": true,
+      "reason": "(2,2) and (1,2) contain 2_(+1) and 1_(+1)"
+    },
+    {
+      "global_form": "(SU2 x SU2)/Z2",
+      "group": "SO(4)",
+      "passes_charge_screen": false,
+      "reason": "(1,2) scalar does not descend"
+    },
+    {
+      "global_form": "simply connected",
+      "group": "Sp(4)=Spin(5)",
+      "passes_charge_screen": true,
+      "reason": "5 contains 2_(+1); 4 contains 1_(+1)"
+    },
+    {
+      "global_form": "Sp4/Z2",
+      "group": "SO(5)",
+      "passes_charge_screen": false,
+      "reason": "spinor 4 scalar does not descend"
+    },
+    {
+      "global_form": "simply connected",
+      "group": "SU(4)",
+      "passes_charge_screen": true,
+      "reason": "4 and bar4 furnish equal-magnitude doublet/singlet charges"
+    },
+    {
+      "global_form": "central quotient",
+      "group": "SU(4)/Z2",
+      "passes_charge_screen": false,
+      "reason": "4 and bar4 do not descend"
+    }
+  ],
+  "charged_qc2d_unique_eta_determinant_computed": false,
+  "checks": [
+    {
+      "detail": "TeX, bibliography, and verifier are present and nonempty",
+      "group": "provenance",
+      "name": "all declared sources exist",
+      "pass": true
+    },
+    {
+      "detail": "hashed=3/3; unique=3",
+      "group": "provenance",
+      "name": "source hashes are well formed",
+      "pass": true
+    },
+    {
+      "detail": "anchors=5/5",
+      "group": "provenance",
+      "name": "claim-boundary anchors in TeX",
+      "pass": true
+    },
+    {
+      "detail": "Omega_4^Spin(S3 x S2)=Z + Z2 + Z2",
+      "group": "bordism",
+      "name": "stable splitting",
+      "pass": true
+    },
+    {
+      "detail": "ker D_S1 periodic=1 mod 2",
+      "group": "dirac_product",
+      "name": "periodic circle KO zero mode",
+      "pass": true
+    },
+    {
+      "detail": "ker D_S1 antiperiodic=0",
+      "group": "dirac_product",
+      "name": "antiperiodic circle negative control",
+      "pass": true
+    },
+    {
+      "detail": "crossings=1",
+      "group": "aps",
+      "name": "periodic circle mod-two spectral flow",
+      "pass": true
+    },
+    {
+      "detail": "crossings=0",
+      "group": "aps",
+      "name": "antiperiodic circle spectral-flow control",
+      "pass": true
+    },
+    {
+      "detail": "dim_C ker D_T2^+(RR)=1",
+      "group": "dirac_product",
+      "name": "odd torus Arf index",
+      "pass": true
+    },
+    {
+      "detail": "zero counts={'RR': 1, 'RA': 0, 'AR': 0, 'AA': 0}",
+      "group": "dirac_product",
+      "name": "three even torus spin structures",
+      "pass": true
+    },
+    {
+      "detail": "minimum |lambda|=1.500000000000",
+      "group": "dirac_product",
+      "name": "ambient S1 x S3 product gap",
+      "pass": true
+    },
+    {
+      "detail": "minimum |lambda|=1.000000000000",
+      "group": "dirac_product",
+      "name": "ambient T2 x S2 product gap",
+      "pass": true
+    },
+    {
+      "detail": "truncated sign-sum residual=0.000e+00",
+      "group": "aps",
+      "name": "plain product eta symmetry",
+      "pass": true
+    },
+    {
+      "detail": "all Hom(Z2+Z2,U(1)) characters realized",
+      "group": "aps",
+      "name": "four independent torsion regulators",
+      "pass": true
+    },
+    {
+      "detail": "stacking the codimension-three defect regulator flips only G3",
+      "group": "aps",
+      "name": "epsilon3 spectator toggle",
+      "pass": true
+    },
+    {
+      "detail": "stacking the Arf defect regulator flips only G2",
+      "group": "aps",
+      "name": "epsilon2 spectator toggle",
+      "pass": true
+    },
+    {
+      "detail": "the four choices share the same degree-five differential curvature",
+      "group": "aps",
+      "name": "local curvature blind to torsion stack",
+      "pass": true
+    },
+    {
+      "detail": "(-1)^(2j+q)=+1 for 2_(+1)",
+      "group": "global_form",
+      "name": "diagonal quotient admits odd charged doublet",
+      "pass": true
+    },
+    {
+      "detail": "(-1)^(2j+q)=-1 for 1_(+1)",
+      "group": "global_form",
+      "name": "diagonal quotient excludes charge-one singlet",
+      "pass": true
+    },
+    {
+      "detail": "H=SU(2)c x U(1)H has no diagonal-centre constraint",
+      "group": "global_form",
+      "name": "unquotiented form admits both required fields",
+      "pass": true
+    },
+    {
+      "detail": "Q[qq(phi^dagger)^2]=2 Xq-2 Xphi=0",
+      "group": "operator",
+      "name": "exactly-two neutrality",
+      "pass": true
+    },
+    {
+      "detail": "3 -> 2_(+1)+1_(-2); every singlet has even charge",
+      "group": "candidate_su3",
+      "name": "SU3 obstruction reproduced",
+      "pass": true
+    },
+    {
+      "detail": "(2,2)->2_(+1)+2_(-1), (1,2)->1_(+1)+1_(-1)",
+      "group": "candidate_product",
+      "name": "SU2 x SU2 branching",
+      "pass": true
+    },
+    {
+      "detail": "no nontrivial central pair is identified with the identity",
+      "group": "candidate_product",
+      "name": "direct product centre is faithful",
+      "pass": true
+    },
+    {
+      "detail": "the diagonal quotient removes the required (1,2) scalar",
+      "group": "candidate_product",
+      "name": "SO4 quotient negative control",
+      "pass": true
+    },
+    {
+      "detail": "4 -> [(1, 1), (2, 0), (1, -1)]",
+      "group": "candidate_sp4",
+      "name": "Sp4 fundamental branching",
+      "pass": true
+    },
+    {
+      "detail": "5 -> [(2, 1), (1, 0), (2, -1)]",
+      "group": "candidate_sp4",
+      "name": "Sp4 vector branching from wedge square",
+      "pass": true
+    },
+    {
+      "detail": "10 -> [(1, 2), (2, 1), (3, 0), (1, 0), (2, -1), (1, -2)]",
+      "group": "candidate_sp4",
+      "name": "Sp4 adjoint branching from symmetric square",
+      "pass": true
+    },
+    {
+      "detail": "(-1c,-1H) maps to the nontrivial Spin5 centre, not to identity",
+      "group": "candidate_sp4",
+      "name": "Spin5-cover embedding has trivial kernel",
+      "pass": true
+    },
+    {
+      "detail": "4 is a Spin5 spinor and does not descend to SO5",
+      "group": "candidate_sp4",
+      "name": "SO5 quotient excludes spinor scalar",
+      "pass": true
+    },
+    {
+      "detail": "4 -> 2_(+1)+2 copies of 1_(-1); bar4 is conjugate",
+      "group": "candidate_su4",
+      "name": "SU4 fundamental branches contain both charges",
+      "pass": true
+    },
+    {
+      "detail": "minimum nontrivial central-image distance=2.828427",
+      "group": "candidate_su4",
+      "name": "SU4 block embedding kernel",
+      "pass": true
+    },
+    {
+      "detail": "2a+(N-2)b=0 and a=-b!=0 imply N=4",
+      "group": "candidate_su4",
+      "name": "fundamental SU(N) equal-charge uniqueness",
+      "pass": true
+    },
+    {
+      "detail": "quotient by {-I4} forbids 4 and bar4, so the candidate needs SU4 itself",
+      "group": "candidate_su4",
+      "name": "SU4 quotient negative control",
+      "pass": true
+    },
+    {
+      "detail": "M(+1)=0.0, M(-1)=-6.0",
+      "group": "threshold",
+      "name": "product fermion split",
+      "pass": true
+    },
+    {
+      "detail": "m2(+1)=-1.0, m2(-1)=3.0",
+      "group": "threshold",
+      "name": "product scalar split",
+      "pass": true
+    },
+    {
+      "detail": "masses={1: 0.0, -1: -6.0, 0: -3.0}",
+      "group": "threshold",
+      "name": "Sp4 fermion partner split",
+      "pass": true
+    },
+    {
+      "detail": "mass-squared={1: -1.0, -1: 3.0, 0: 1.0}",
+      "group": "threshold",
+      "name": "Sp4 scalar partner split",
+      "pass": true
+    },
+    {
+      "detail": "the first adjoint separates upper and lower two-dimensional blocks",
+      "group": "threshold",
+      "name": "SU4 adjoint split",
+      "pass": true
+    },
+    {
+      "detail": "left-Weyl doublets: colour=8, H=8",
+      "group": "anomaly",
+      "name": "product deep Witten parities",
+      "pass": true
+    },
+    {
+      "detail": "light left-Weyl colour doublets=4",
+      "group": "anomaly",
+      "name": "low colour Witten parity",
+      "pass": true
+    },
+    {
+      "detail": "two Dirac 5s have cancelling left/right anomaly phases",
+      "group": "anomaly",
+      "name": "Sp4 vectorlike local anomaly",
+      "pass": true
+    },
+    {
+      "detail": "chiral copies of each real 5=4",
+      "group": "anomaly",
+      "name": "Sp4 pi4 parity for displayed Dirac matter",
+      "pass": true
+    },
+    {
+      "detail": "A(4)+A(bar4)=0 per Dirac flavour",
+      "group": "anomaly",
+      "name": "SU4 vectorlike cubic anomaly",
+      "pass": true
+    },
+    {
+      "detail": "b0_c=14/3",
+      "group": "running",
+      "name": "product colour asymptotic freedom",
+      "pass": true
+    },
+    {
+      "detail": "b0_H=4",
+      "group": "running",
+      "name": "product H asymptotic freedom",
+      "pass": true
+    },
+    {
+      "detail": "b0_Sp4=15/2",
+      "group": "running",
+      "name": "Sp4 asymptotic freedom",
+      "pass": true
+    },
+    {
+      "detail": "b0_SU4=35/3",
+      "group": "running",
+      "name": "SU4 asymptotic freedom",
+      "pass": true
+    },
+    {
+      "detail": "Nc Xq=2*(+1)=+2 before heavy-threshold counterterms",
+      "group": "orientation",
+      "name": "light-field level magnitude and sign",
+      "pass": true
+    },
+    {
+      "detail": "the codimension-three spectator toggles the same local data",
+      "group": "claim_boundary",
+      "name": "charged-QC2D epsilon3 remains open",
+      "pass": true
+    },
+    {
+      "detail": "the Arf spectator toggles the same local data",
+      "group": "claim_boundary",
+      "name": "charged-QC2D epsilon2 remains open",
+      "pass": true
+    },
+    {
+      "detail": "four regulator choices remain until the microscopic determinant is fixed",
+      "group": "claim_boundary",
+      "name": "torsion pair is not inferred from curvature",
+      "pass": true
+    },
+    {
+      "detail": "displayed vectorlike/Witten checks do not replace Omega_5^Spin(BSp4) evaluation with all backgrounds",
+      "group": "claim_boundary",
+      "name": "Sp4 full gauge-bordism audit remains open",
+      "pass": true
+    },
+    {
+      "detail": "M(+1)=0 uses m=-yV and must be symmetry-protected or retuned",
+      "group": "claim_boundary",
+      "name": "radiative threshold protection remains open",
+      "pass": true
+    },
+    {
+      "detail": "the sign of the light +2 coefficient is not yet an all-scale Dai-Freed match",
+      "group": "claim_boundary",
+      "name": "heavy eta threshold remains open",
+      "pass": true
+    },
+    {
+      "detail": "no Sp4 strong-phase or B=1 soliton computation is supplied here",
+      "group": "claim_boundary",
+      "name": "nonperturbative Sp4 route remains open",
+      "pass": true
+    },
+    {
+      "detail": "qq(phi^dagger)^2 is neutral/triplet, but the microscopic exactly-two Gauss rule is not rederived",
+      "group": "claim_boundary",
+      "name": "unit-cell rule is not inferred from operator neutrality",
+      "pass": true
+    },
+    {
+      "detail": "group theory closes first; portal waits for APS, thresholds, and dynamics",
+      "group": "claim_boundary",
+      "name": "no premature Route-E promotion",
+      "pass": true
+    }
+  ],
+  "checks_passed": 58,
+  "checks_total": 58,
+  "decorated_defect_regulator_table": [
+    {
+      "epsilon_2": 0,
+      "epsilon_3": 0,
+      "phase_on_G2": 1,
+      "phase_on_G3": 1
+    },
+    {
+      "epsilon_2": 1,
+      "epsilon_3": 0,
+      "phase_on_G2": -1,
+      "phase_on_G3": 1
+    },
+    {
+      "epsilon_2": 0,
+      "epsilon_3": 1,
+      "phase_on_G2": 1,
+      "phase_on_G3": -1
+    },
+    {
+      "epsilon_2": 1,
+      "epsilon_3": 1,
+      "phase_on_G2": -1,
+      "phase_on_G3": -1
+    }
+  ],
+  "degree_one_portal_allowed": false,
+  "epsilon_2_selected_by_charged_qc2d_uv": false,
+  "epsilon_3_selected_by_charged_qc2d_uv": false,
+  "exactly_two_gauge_unit_cell_rule_rederived": false,
+  "minimal_product_backup": "SU(2)c x SU(2)H, no diagonal quotient",
+  "numerics": {
+    "ambient_s1_s3_gap": 1.5,
+    "ambient_t2_s2_gap": 1.0,
+    "circle_crossings": {
+      "antiperiodic": 0,
+      "periodic": 1
+    },
+    "eta_pairing_residual": 0.0,
+    "light_wzw_level": 2,
+    "s1_zero_counts": {
+      "antiperiodic": 0,
+      "periodic": 1
+    },
+    "sp4_fermion_masses": {
+      "-1": -6.0,
+      "0": -3.0,
+      "1": 0.0
+    },
+    "sp4_scalar_mass_squared": {
+      "-1": 3.0,
+      "0": 1.0,
+      "1": -1.0
+    },
+    "threshold_fermion_masses": {
+      "-1": -6.0,
+      "1": 0.0
+    },
+    "threshold_scalar_mass_squared": {
+      "-1": 3.0,
+      "1": -1.0
+    },
+    "torus_min_singular_values": {
+      "AA": 0.7071067811865476,
+      "AR": 0.5,
+      "RA": 0.5,
+      "RR": 0.0
+    },
+    "torus_zero_counts": {
+      "AA": 0,
+      "AR": 0,
+      "RA": 0,
+      "RR": 1
+    }
+  },
+  "one_loop_beta0": {
+    "SU2c_x_SU2H_H": "4",
+    "SU2c_x_SU2H_colour": "14/3",
+    "SU4": "35/3",
+    "Sp4": "15/2"
+  },
+  "physics_promotion_allowed": false,
+  "plain_product_eta_phases": {
+    "G2_T2_odd_times_S2": 1,
+    "G3_S1_periodic_times_S3": 1,
+    "reason": "paired nonzero ambient spectrum gives eta=0"
+  },
+  "plain_product_reference_phase_only": true,
+  "product_defect_mod2_character_table_computed": true,
+  "product_dirac_spectra_verified": true,
+  "reduced_bordism_generators_explicit": true,
+  "regulator_dependence_demonstrated": true,
+  "remaining_blockers": [
+    "Specify the actual charged-QC2D Euclidean Dirac/Yukawa operator and Pauli-Villars mass signs, then evaluate both generator determinant phases; the product defect models prove possible values, not microscopic selection.",
+    "For Sp(4), compute the complete Dai-Freed gauge-bordism phase with every retained fermion and Higgs background; vectorlike and pi4 parity checks are necessary but deliberately not called a full audit.",
+    "Protect or retune the Sp(4) adjoint split M(+1)=0, and calculate heavy-fermion threshold counterterms fixing whether the infrared +2 orientation survives all-scale matching.",
+    "Demonstrate the desired charged two-colour phase and a stable B=1 soliton in the Sp(4)-broken theory, including monopole-induced violation of the emergent magnetic one-form symmetry.",
+    "Only after APS, threshold, faithful-bundle, and nonperturbative gates close may the degree-one Route-E portal be constructed."
+  ],
+  "route_e_exactly_two_operator_group_theory_realized": true,
+  "route_e_uv_completion_closed": false,
+  "secondary_simple_candidate": "SU(4), simply connected",
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_aps_global_form_search.tex",
+      "sha256": "8fa56b8473ee6bdc93ae809da3f33ab0c756acf63f93c37df16f9288d04f954d",
+      "size_bytes": 31713
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_aps_global_form_search.bib",
+      "sha256": "2f274a4c4fcd6447d90d28a664eae58af317eb20ae976bdf56ec2e0399323cf0",
+      "size_bytes": 3444
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e3_aps_global_form_search.py",
+      "sha256": "b99502b2b797502604abb4ed22f78dc0d9b16889317ee459209e051e97c36b17",
+      "size_bytes": 33702
+    }
+  ],
+  "sp4_two_complex_4_scalar_copies_required": true,
+  "spin_bordism_full": "Z + Z2 + Z2",
+  "spin_bordism_reduced": "Z2 + Z2",
+  "status": "pass_with_open_aps_threshold_and_dynamics_gates"
+}

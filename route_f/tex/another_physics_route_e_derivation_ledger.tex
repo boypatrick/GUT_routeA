@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm}
+\usepackage{amsmath,amssymb,amsfonts,mathtools,amsthm,mathrsfs}
 \usepackage{bm}
 \usepackage{booktabs,array,longtable,tabularx}
 \usepackage{enumitem}
@@ -24,6 +24,9 @@
 \newcommand{\dd}{\mathrm d}
 \newcommand{\ii}{\mathrm i}
 \newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\Arf}{\operatorname{Arf}}
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\divisor}{\operatorname{div}}
 \newcommand{\Span}{\operatorname{span}}
@@ -1193,6 +1196,286 @@ degree-one Route-E portal is postponed until that theorem or an anomaly-free
 product compactification is available.  See
 \path{route_f/tex/ap_e4_moduli_space_sqm.tex}.
 
+\section{2026-07-16 AP--E completion frontier}
+
+This section integrates the next three requested calculations.  It records
+the common normalization and promotion logic; the standalone notes retain
+the full proofs, source manifests, and negative controls.
+
+\subsection{\texorpdfstring{Four-dimensional action and graded \(B=1\)
+Hessian}{Four-dimensional action and graded B=1 Hessian}}
+
+The declared Euclidean lattice theory has the schematic action
+\begin{equation}
+ S_E=S_{g,W/{\rm imp}}+S_{\rm gf}+\overline cM_{\rm FP}c
+ +S_{\chi\Delta}+\overline\psi D_W[U,V,z]\psi ,
+ \label{eq:frontier-lattice-action}
+\end{equation}
+where \(V\in SU(2)_c\), \(z\in U(1)_g\), the meson \(U\in SU(2)\) is
+neutral, and the complex diquark has charge two.  At
+\((\overline V,\overline z,\overline U,\overline\Delta,\overline\psi)
+=(1,1,U_{B=1},0,0)\), write the even variables as
+\(\Phi=(A,b,\eta,d_1,d_2)\).  The complete formal quadratic structure is
+\begin{equation}
+ \mathbb H_{\rm cl}=
+ \begin{pmatrix}
+ K_{\Phi\Phi}&0&0\\
+ 0&0&D_W\\
+ 0&-D_W^T&0
+ \end{pmatrix},
+ \qquad
+ K_{\Phi\Phi}=
+ \begin{pmatrix}
+ K_{AA}&K_{Ab}&K_{A\eta}&K_{Ad_1}&K_{Ad_2}\\
+ K_{bA}&K_{bb}&K_{b\eta}&K_{bd_1}&K_{bd_2}\\
+ K_{\eta A}&K_{\eta b}&K_\eta&K_{\eta d_1}&K_{\eta d_2}\\
+ K_{d_1A}&K_{d_1b}&K_{d_1\eta}&K_\Delta&0\\
+ K_{d_2A}&K_{d_2b}&K_{d_2\eta}&0&K_\Delta
+ \end{pmatrix},
+ \label{eq:frontier-super-hessian}
+\end{equation}
+together with the ghost block.  The one-loop functional and its fermionic
+collective-coordinate curvature are
+\begin{align}
+ \Gamma^{(1)}
+ &=\frac12\log\det{}'K_{\Phi\Phi}
+   -\log\det{}'M_{\rm FP}-\Re\log\det D_W,
+ \label{eq:frontier-one-loop}\\
+ \partial_i\partial_j\Gamma_f^{(1)}
+ &=\Re\Tr\!\left(
+ D^{-1}D_iD^{-1}D_j-D^{-1}D_{ij}\right).
+ \label{eq:frontier-logdet-curvature}
+\end{align}
+This is the requested full \emph{formal} gauge--meson--ghost--fermion
+Hessian.  The numerical certificate is deliberately smaller: it uses a
+\(2^4\) trivial-link background, substitutes a frozen positive
+Gauss--Newton meson block for the full Skyrme Jacobi operator, and evaluates
+one fermion curvature direction.  It therefore cannot be called dynamical
+lattice QC2D or the complete nonlinear Hessian.
+
+The \(24/24\) card gives
+\begin{align}
+ B(0)&=0.999981468235,\nonumber\\
+ \lambda_{\min}(K_{\eta,{\rm test}})&=0.621297848377,\qquad
+ \lambda_{\min}(K_\Delta)=0.694069172619,\nonumber\\
+ \lambda_{\min}(K_{\Delta,{\rm control}})&=-0.349308273811,\qquad
+ \sigma_{\min}(D_W)=0.702570765924,
+ \label{eq:frontier-lattice-numbers}
+\end{align}
+with gauge/ghost \(\xi\)-corrected residual \(1.42\times10^{-14}\), Schur
+solve residual \(6.30\times10^{-16}\), log-determinant curvature relative
+error \(1.32\times10^{-8}\), and free Wilson/Symanzik observed orders
+\(1.99861/3.99628\).  Monte Carlo, measure positivity, the exact Skyrme
+Jacobi zero-mode projection, continuum renormalization, FR quantization, and
+finite-amplitude stability all remain false gates.  Full details are in
+\path{route_f/tex/ap_e5_4d_qc2d_lattice_hessian.tex}.
+
+\subsection{Two torsion generators and regulator-dependent phases}
+
+Explicit representatives of the reduced bordism generators are
+\begin{align}
+ G_3&=(S^1_{\rm R}\times S^3,\operatorname{pr}_{S^3},{\rm pt}),
+ \nonumber\\
+ G_2&=(T^2_{\rm RR}\times S^2,{\rm pt},\operatorname{pr}_{S^2}).
+ \label{eq:frontier-bordism-generators}
+\end{align}
+Their transverse inverse images are the nonbounding periodic circle and the
+odd-spin torus.  Hence
+\begin{equation}
+ \ind_2D_{S^1_{\rm R}}=1,\qquad
+ \ind_2D^+_{T^2_{\rm RR}}=\Arf(T^2_{\rm RR})=1.
+ \label{eq:frontier-mod-two}
+\end{equation}
+The chirality-paired ambient four-dimensional product spectra define only a
+factorized reference phase \((+1,+1)\).  Stacking the two explicitly
+localized defect regulators instead gives the complete character table
+\begin{equation}
+ Z_{\epsilon_3,\epsilon_2}(G_3)=(-1)^{\epsilon_3},
+ \qquad
+ Z_{\epsilon_3,\epsilon_2}(G_2)=(-1)^{\epsilon_2}.
+ \label{eq:frontier-character-table}
+\end{equation}
+Thus all four torsion assignments are realizable with the same de Rham
+curvature.  This proves regulator non-uniqueness; it does not select the
+charged-QC2D phase.  That selection still requires the complete
+Dirac--Yukawa operator, heavy mass signs, and its odd-dimensional
+mapping-torus APS/Dai--Freed problem.
+
+\subsection{A semisimple replacement for the diagonal quotient}
+
+For
+\([SU(2)_c\times U(1)]/\mathbb Z_2\), every representation obeys
+\begin{equation}
+ 2j+q=0\pmod2.
+ \label{eq:frontier-global-parity}
+\end{equation}
+It admits \(\bm2_{+1}\) but forbids \(\bm1_{+1}\); hence any successful
+candidate must retain the unquotiented global form.  Besides the minimal
+backup \(SU(2)_c\times SU(2)_H\), the scan finds the simply connected simple
+group
+\begin{equation}
+ Sp(4)\equiv USp(4)\simeq Spin(5)
+ \label{eq:frontier-sp4}
+\end{equation}
+with branching
+\begin{align}
+ \bm4&\longrightarrow
+ \bm2_0\oplus\bm1_{+1}\oplus\bm1_{-1},\nonumber\\
+ \bm5&\longrightarrow
+ \bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0,\nonumber\\
+ \bm{10}&\longrightarrow
+ \bm1_{+2}\oplus\bm2_{+1}\oplus\bm3_0\oplus\bm1_0
+ \oplus\bm2_{-1}\oplus\bm1_{-2}.
+ \label{eq:frontier-sp4-branching}
+\end{align}
+Two Dirac \(\bm5\)'s provide the two light quark flavours.  Two, not one,
+complex scalar \(\bm4\)'s are required so their copy index retains the
+global \(SU(2)_\phi\) doublet.  Then
+\begin{equation}
+ qq(\phi_I^\dagger\phi_J^\dagger)_{\rm sym}
+ \in\bm3_\phi
+ \label{eq:frontier-sp4-operator}
+\end{equation}
+is the charge-neutral exactly-two \(\mathcal O(2)\) operator at the
+representation-theory level.  This does not rederive the earlier unit-cell
+Gauss rule.
+
+One real adjoint \(\bm{10}\) breaks the second \(SU(2)\) to \(U(1)\).
+For \(M_q=m+q\,yV\), choosing \(m=-yV\) keeps \(q=+1\) light and makes the
+\(q=-1,0\) partners heavy at tree level.  The displayed field content has
+\begin{equation}
+ b_0^{Sp(4)}
+ =11-\frac43(2)-\frac16(3)-\frac13(1)
+ =\frac{15}{2}>0.
+ \label{eq:frontier-sp4-beta}
+\end{equation}
+Vectorlike and Witten-parity checks pass.  The tuning is not radiatively
+protected, however, and neither the full
+\(\Omega_5^{\rm Spin}(BSp(4))\) character nor the heavy determinant
+threshold has been computed.  The algebraic light coefficient
+\(N_cX_q=+2\) is therefore not yet an all-scale orientation theorem.  See
+\path{route_f/tex/ap_e3_aps_global_form_search.tex}; its card passes
+\(58/58\).
+
+\subsection{Same-soliton SQM, Callias line, CPT, and WZW descent}
+
+For a hypothetical same-soliton Fredholm family
+\begin{equation}
+ \mathscr D_m^+=D_{A(m)}^++\mathscr Y_m,
+ \qquad m\in\mathcal M_1\simeq\mathbb{CP}^1,
+ \label{eq:frontier-callias-family}
+\end{equation}
+let the positive-mass eigenline on
+\(S^2_\infty\times\mathbb{CP}^1\) satisfy
+\begin{equation}
+ c_1(\mathcal E_+)=p x+q y.
+ \label{eq:frontier-positive-line}
+\end{equation}
+The families-Callias push-forward gives, in the fixed orientation
+convention,
+\begin{equation}
+ \operatorname{rank}\Ind\mathscr D^+=\epsilon p,\qquad
+ c_1(\det\Ind\mathscr D^+)=\epsilon p q\,y.
+ \label{eq:frontier-callias-pushforward}
+\end{equation}
+Thus a rank-one \(\mathcal O(+2)\) determinant template requires
+\(\epsilon p=1,q=2\).  The finite Berry/kernel-family regression obtains
+\(c_1=1.999999999999981\) with unit nonzero gap.  It is a topology
+template, not the missing four-dimensional Yukawa operator or its Callias
+index.
+
+In one fixed Dolbeault polarization, the conjugate triplet is fixed by
+Serre duality:
+\begin{equation}
+ E_-=
+ K_{\mathbb{CP}^1}\otimes E_+^\vee
+ =\mathcal O(-2)\otimes\mathcal O(-2)
+ =\mathcal O(-4),
+ \qquad (h^0,h^1)=(0,3).
+ \label{eq:frontier-cpt}
+\end{equation}
+The naive inverse \(\mathcal O(-2)\) instead has \((h^0,h^1)=(0,1)\).
+Equation~\eqref{eq:frontier-cpt} closes the mathematical fixed-polarization
+map, not its microscopic CPT regulator.
+
+On framed configuration space, spatial fiber integration is intrinsically
+defined:
+\begin{equation}
+ \widehat{\mathcal L}_B
+ =\int_{\Sigma_3}\operatorname{ev}^*\widehat\Omega_5
+ \in\widehat H^2(\widetilde{\mathcal C}_B;\mathbb Z).
+ \label{eq:frontier-transgression}
+\end{equation}
+It descends through
+\(p:\widetilde{\mathcal C}_B\to\mathcal C_B\) only when
+\begin{equation}
+ \widehat{\mathcal L}_B\in\operatorname{im}p^*,
+ \label{eq:frontier-descent}
+\end{equation}
+which requires an equivariant differential refinement, horizontal invariant
+curvature, trivial vertical and large-gauge holonomy, and trivial stabilizer
+characters.  After that descent, its pullback to a same-soliton
+\(\mathbb{CP}^1\) is \(\mathcal O(+2)\) precisely when
+\begin{equation}
+ \int_{\Sigma_3\times\mathbb{CP}^1}
+ \operatorname{ev}^*c(\widehat\Omega_5)=+2.
+ \label{eq:frontier-transgression-number}
+\end{equation}
+The factorized conditional map yields \(nB\deg(s)=2\), but the present
+theory has not identified its scalar \(S^2\) with a normalizable soliton
+modulus and has not proved Eq.~\eqref{eq:frontier-descent}.  The same-model
+card therefore passes \(27/27\) mathematical controls while keeping every
+composition flag false.  The full derivation is
+\path{route_f/tex/ap_e4_same_soliton_callias_descent.tex}.
+
+\subsection{Portal authorization theorem and current decision}
+
+Let
+\begin{align}
+ C_{\rm lat}&=\text{dynamical 4d phase plus complete projected quantum
+ Hessian},\nonumber\\
+ C_{\rm APS}&=\text{selected torsion phases plus protected semisimple
+ all-scale completion},\nonumber\\
+ C_{\rm SQM}&=\text{same-soliton SQM, Callias/CPT line, and gauge-basic
+ WZW descent}.
+ \label{eq:frontier-route-booleans}
+\end{align}
+The user-specified ordering is encoded exactly as
+\begin{equation}
+ {\rm portal\ authorized}
+ \quad\Longleftrightarrow\quad
+ C_{\rm lat}\lor C_{\rm APS}\lor C_{\rm SQM}.
+ \label{eq:frontier-portal-authorization}
+\end{equation}
+All three booleans are currently false.  Consequently no portal operator is
+written.
+
+When Eq.~\eqref{eq:frontier-portal-authorization} first becomes true, the
+portal theorem must still exhibit a map
+\begin{equation}
+ F:\mathcal M_1\longrightarrow\Sigma_E,\qquad
+ \deg F=+1,\qquad
+ F^*\mathcal O_{\Sigma_E}(2)\simeq\mathcal O_{\mathcal M_1}(2),
+ \label{eq:frontier-degree-one}
+\end{equation}
+fix its orientation, show that its operator is gauge and anomaly consistent,
+and keep every coupling below the retained bosonic, fermionic, and Landau
+gaps.  It must also preserve the physical CPT pairing and introduce no
+extra zero modes.  These are recorded as future prerequisites, not assumed
+facts.
+
+The integrated promotion card
+\path{route_f/code/verify_ap_e5_completion_frontier.py} passes \(20/20\) and
+sets
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{any\_preportal\_route\_closed=false},\\
+ \texttt{degree\_one\_portal.constructed=false},\\
+ \texttt{physics\_promotion\_allowed=false}
+ \end{gathered}}
+ \label{eq:frontier-final-status}
+\end{equation}
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -1218,8 +1501,10 @@ between the loaded Route-E \(\zeta\) card and the declared benchmark, complex
 weight-two covariance error
 \(2.80\times10^{-17}\), the two independent Q-ball energy estimates in
 Sec.~6, and oscillatory-level-set residuals below \(2.7\times10^{-14}\).
-The three successor cards pass \(18/18\), \(38/38\), and \(27/27\),
-respectively.  The JSON explicitly retains all
+The three earlier successor cards pass \(18/18\), \(38/38\), and \(27/27\),
+respectively.  The new completion-frontier cards pass \(24/24\), \(58/58\),
+and \(27/27\), while their integrated authorization gate passes \(20/20\).
+The JSON explicitly retains all
 cross-theory identifications as non-derived bridge axioms and sets
 \texttt{physics\_promotion\_allowed=false}.
 

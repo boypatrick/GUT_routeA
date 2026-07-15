@@ -2,6 +2,78 @@
 
 Last updated: 2026-07-16
 
+## AP-E completion-frontier checkpoint (2026-07-16; current authority)
+
+The three requested pre-portal lanes have been executed as auditable
+calculations. They produce new conditional mathematics and a new
+semisimple candidate, but **none of the three lanes is physically closed**.
+The integrated card passes **20/20** and enforces
+'any_preportal_route_closed=false',
+'degree_one_portal.constructed=false', and
+'physics_promotion_allowed=false'.
+
+- **Four-dimensional action/Hessian:** a Wilson/Symanzik-compatible
+  'SU(2)c x U(1)g' action and the complete formal
+  gauge--meson--ghost--fermion super-Hessian are now explicit. The **24/24**
+  numerical card is only a deterministic '2^4' trivial-link
+  frozen-background diagnostic. It obtains
+  'B(0)=0.999981468235', positive declared meson/diquark blocks
+  '0.621297848377/0.694069172619', a tachyonic control
+  '-0.349308273811', and Wilson/Symanzik orders
+  '1.99861/3.99628'. It is not HMC/Monte Carlo, a measure-positivity proof,
+  the exact nonlinear Skyrme Jacobi Hessian, or a continuum quantum result.
+- **APS generators:** explicit representatives
+  'G3=S1_R x S3' and 'G2=T2_RR x S2' have mod-two circle and Arf indices
+  one. The ambient chirality-paired spectra give only the stated reference
+  phase '(+1,+1)'. Defect regulators realize all four characters
+  '(+,+),(-,+),(+,-),(-,-)', proving regulator non-uniqueness rather than
+  selecting the charged-QC2D determinant. The **58/58** card keeps both
+  microscopic torsion signs open.
+- **Semisimple search:** the best simple candidate in the scanned set is the
+  simply connected cover 'Sp(4)=USp(4)=Spin(5)'. Its
+  '5 -> 2_(+1)+2_(-1)+1_0' and
+  '4 -> 2_0+1_(+1)+1_(-1)' branches evade the diagonal-centre obstruction.
+  Two complex '4' copies are essential for the global 'SU(2)_phi' doublet;
+  the neutral 'qq(phi dagger)^2' triplet is realized only at operator/group
+  level. 'b0=15/2>0', but the light threshold is tuned and the full
+  gauge-bordism, heavy eta, radiative-protection, and strong-soliton gates
+  remain open. Direct 'SU(2)c x SU(2)H' is the minimal backup.
+- **Same-soliton AP-E4:** the **27/27** card gives the conditional families
+  Callias formula
+  '(rank,c1(det Ind D))=(epsilon p,epsilon p q)', so rank-one 'O(+2)'
+  requires 'epsilon p=1,q=2'. Fixed-polarization CPT/Serre duality requires
+  'O(2) -> K tensor O(2)^vee=O(-4)', giving three conjugate modes; naive
+  'O(-2)' gives one. Spatial transgression correctly maps
+  'Hhat^5 -> Hhat^2', but the actual Yukawa family, uniform Fredholm gap,
+  equivariant refinement, large-gauge/stabilizer descent, and same-soliton
+  pullback are absent.
+- **Portal ordering:** the repository records the future degree-one theorem
+  ('deg F=+1', pullback of 'O(2)', physical orientation, anomaly-safe
+  operator, and scale below every retained gap) but deliberately constructs
+  no portal while all three route-closure booleans are false.
+
+Canonical artifacts are the three standalone notes under 'route_f/tex/',
+their verifiers/cards, and
+'route_f/code/verify_ap_e5_completion_frontier.py'. The master formula and
+rollback trail is synchronized in
+'route_f/tex/another_physics_route_e_derivation_ledger.tex'.
+
+Ordered continuation:
+
+1. Choose the simply connected 'Sp(4)' candidate (direct product as backup),
+   specify its complete Euclidean fermion/regulator action, prove the measure
+   symmetry, and compute both target-bordism/mapping-torus eta phases plus
+   the heavy-threshold counterterm.
+2. Relax a charged 'B=1' solution at several 'a,L', assemble the exact sparse
+   gauge-fixed nonlinear Jacobi/super-Hessian, project gauge/translation/
+   isorotation modes, and then run multi-volume/multi-spacing dynamical
+   lattice measurements of meson and diquark gaps.
+3. On that same solution, specify the Yukawa--Callias family, derive or test
+   emergent 'N=2' Ward identities, compute 'det Ind D', CPT transformation,
+   equivariant WZW character, and every vertical/large-gauge holonomy.
+4. Only after one complete lane closes should the degree-one Route-E portal
+   be constructed and tested below all gaps.
+
 ## AP-E3 nonperturbative/global-UV and AP-E4 SQM checkpoint (2026-07-16)
 
 This checkpoint supersedes the corresponding open-next-step wording below,

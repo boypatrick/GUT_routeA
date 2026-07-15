@@ -1,0 +1,419 @@
+{
+  "artifact": "AP-E5 4D charged-QC2D lattice/Hessian diagnostic",
+  "status": "PASS",
+  "scope": "finite 4D background-field/tree-plus-one-collective-coordinate-loop proxy; not dynamical lattice QC2D",
+  "benchmark": {
+    "extents": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "physical_length": 2.4,
+    "soliton_radius": 1.2,
+    "gauge_xi": 0.7,
+    "pion_mass_sq": 0.25,
+    "meson_core_lift": 0.18,
+    "diquark_mass_sq": 0.81,
+    "diquark_core_coupling": -0.3,
+    "diquark_negative_control": -3.0,
+    "wilson_r": 1.0,
+    "wilson_bare_mass": 0.65,
+    "yukawa_sigma": 0.2,
+    "yukawa_pion": 0.16,
+    "flavours": 2,
+    "colour_degeneracy": 2
+  },
+  "topology": {
+    "profile": "F(r)=2 atan[(R/r) exp(-r^2/(2R^2))]",
+    "orientation": "B=+1",
+    "physical_length": 6.4,
+    "finite_difference_estimator": [
+      {
+        "N_s": 17,
+        "a": 0.3999999999999999,
+        "B_lattice": 0.7804621958442137,
+        "abs_error": 0.21953780415578628
+      },
+      {
+        "N_s": 25,
+        "a": 0.2666666666666666,
+        "B_lattice": 0.8957980638679076,
+        "abs_error": 0.10420193613209239
+      },
+      {
+        "N_s": 33,
+        "a": 0.20000000000000018,
+        "B_lattice": 0.9400008778824941,
+        "abs_error": 0.05999912211750591
+      },
+      {
+        "N_s": 49,
+        "a": 0.1333333333333333,
+        "B_lattice": 0.972881794380486,
+        "abs_error": 0.027118205619513946
+      },
+      {
+        "N_s": 65,
+        "a": 0.10000000000000009,
+        "B_lattice": 0.9846555997802079,
+        "abs_error": 0.01534440021979211
+      }
+    ],
+    "quadratic_in_a_squared_extrapolation_last_four": 0.9999814682347314,
+    "extrapolation_abs_error": 1.8531765268559042e-05,
+    "fit_rms_residual": 2.0483210530024598e-06,
+    "observed_order_last_pair": 1.979458402155262
+  },
+  "gauge_and_ghost": {
+    "discretisation": "Wilson quadratic gauge action plus covariant gauge fixing",
+    "extents": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "volume": 16,
+    "expected_gauge_toron_zero_modes_per_generator": 4,
+    "expected_constant_ghost_zero_modes_per_generator": 1,
+    "colour_generators": 3,
+    "extra_U1_generators": 1,
+    "xi_rows": [
+      {
+        "xi": 0.5,
+        "gauge_zero_modes": 4,
+        "ghost_zero_modes": 1,
+        "gauge_nonzero_modes": 60,
+        "minimum_nonzero_gauge_eigenvalue": 3.999999999999992,
+        "minimum_nonzero_ghost_eigenvalue": 3.999999999999997,
+        "one_generator_log_weight": 35.93264587014996,
+        "xi_corrected_log_weight": 30.734042015950372,
+        "xi_corrected_residual": 0.0
+      },
+      {
+        "xi": 0.7,
+        "gauge_zero_modes": 4,
+        "ghost_zero_modes": 1,
+        "gauge_nonzero_modes": 60,
+        "minimum_nonzero_gauge_eigenvalue": 3.999999999999992,
+        "minimum_nonzero_ghost_eigenvalue": 3.999999999999997,
+        "one_generator_log_weight": 33.409104095490854,
+        "xi_corrected_log_weight": 30.73404201595036,
+        "xi_corrected_residual": 1.0658141036401503e-14
+      },
+      {
+        "xi": 1.0,
+        "gauge_zero_modes": 4,
+        "ghost_zero_modes": 1,
+        "gauge_nonzero_modes": 60,
+        "minimum_nonzero_gauge_eigenvalue": 3.999999999999997,
+        "minimum_nonzero_ghost_eigenvalue": 3.999999999999997,
+        "one_generator_log_weight": 30.734042015950358,
+        "xi_corrected_log_weight": 30.734042015950358,
+        "xi_corrected_residual": 1.4210854715202004e-14
+      },
+      {
+        "xi": 2.0,
+        "gauge_zero_modes": 4,
+        "ghost_zero_modes": 1,
+        "gauge_nonzero_modes": 60,
+        "minimum_nonzero_gauge_eigenvalue": 1.9999999999999967,
+        "minimum_nonzero_ghost_eigenvalue": 3.999999999999997,
+        "one_generator_log_weight": 25.53543816175077,
+        "xi_corrected_log_weight": 30.734042015950358,
+        "xi_corrected_residual": 1.4210854715202004e-14
+      }
+    ],
+    "maximum_xi_corrected_residual": 1.4210854715202004e-14
+  },
+  "boson_hessian": {
+    "operator_scope": "complete bosonic Hessian of the declared frozen-background quadratic truncation; not the complete nonlinear Skyrme Jacobi operator",
+    "background_delta": 0.0,
+    "classical_gauge_diquark_mixing": 0.0,
+    "classical_gauge_meson_mixing": 0.0,
+    "meson_dimension": 48,
+    "meson_smallest_eigenvalues": [
+      0.6212978483773208,
+      1.776434243050178,
+      1.77643424305018,
+      1.7764342430501823,
+      2.4704281724029977,
+      2.470428172403003,
+      2.4704281724030093,
+      4.6212978483773215
+    ],
+    "meson_minimum_eigenvalue": 0.6212978483773208,
+    "diquark_real_component_dimension": 16,
+    "diquark_real_component_degeneracy": 2,
+    "diquark_smallest_eigenvalues": [
+      0.6940691726188606,
+      4.694069172618852,
+      4.694069172618854,
+      4.694069172618855,
+      4.6940691726188595,
+      8.694069172618853,
+      8.694069172618855,
+      8.694069172618857
+    ],
+    "diquark_minimum_eigenvalue": 0.6940691726188606,
+    "negative_control_coupling": -3.0,
+    "negative_control_minimum_eigenvalue": -0.3493082738114518,
+    "negative_control_negative_mode_count_per_real_component": 1
+  },
+  "fermion": {
+    "operator": "two-flavour Wilson-Dirac in a sampled chiral B=1 background",
+    "matrix_dimension_one_colour_copy": 128,
+    "SU2_colour_degeneracy_at_trivial_colour_links": 2,
+    "gamma_checks": {
+      "clifford_error": 0.0,
+      "gamma5_square_error": 0.0,
+      "gamma5_internal_trace": 0.0
+    },
+    "minimum_singular_value": 0.7025707659235887,
+    "condition_number": 12.37882835923509,
+    "even_odd_schur_dimension": 64,
+    "determinant_logabs_residual": 4.263256414560601e-14,
+    "determinant_phase_residual": 5.1935606090291716e-17,
+    "schur_solve_relative_residual": 6.301131523316224e-16,
+    "one_loop_collective_coordinate": {
+      "source": "Q_x=rho_B(x) times identity",
+      "Gamma_f": "-Re log det(D_Nf=2+tQ); the matrix already contains both flavours",
+      "analytic_second_derivative_one_colour": 3.488288758010092,
+      "finite_difference_second_derivative_one_colour": 3.488288712105714,
+      "relative_error": 1.3159569422425449e-08,
+      "full_colour_factor_not_used_as_positivity_proof": 2
+    },
+    "determinant_positivity_proven": false,
+    "overlap_index_or_admissibility_proven": false
+  },
+  "continuum_scaling": {
+    "rows": [
+      {
+        "N": 8,
+        "a": 0.3,
+        "continuum_p_squared": 6.853891945200944,
+        "wilson_p_squared": 6.5087381958545,
+        "symanzik_tree_p_squared": 6.826465742620814,
+        "wilson_abs_error": 0.34515374934644427,
+        "symanzik_abs_error": 0.027426202580129733
+      },
+      {
+        "N": 16,
+        "a": 0.15,
+        "continuum_p_squared": 6.853891945200944,
+        "wilson_p_squared": 6.76626377677451,
+        "symanzik_tree_p_squared": 6.852105637081181,
+        "wilson_abs_error": 0.08762816842643417,
+        "symanzik_abs_error": 0.0017863081197635466
+      },
+      {
+        "N": 32,
+        "a": 0.075,
+        "continuum_p_squared": 6.853891945200944,
+        "wilson_p_squared": 6.831900301073619,
+        "symanzik_tree_p_squared": 6.853779142506655,
+        "wilson_abs_error": 0.02199164412732557,
+        "symanzik_abs_error": 0.00011280269428937117
+      },
+      {
+        "N": 64,
+        "a": 0.0375,
+        "continuum_p_squared": 6.853891945200944,
+        "wilson_p_squared": 6.84838873287554,
+        "symanzik_tree_p_squared": 6.853884876809514,
+        "wilson_abs_error": 0.005503212325404405,
+        "symanzik_abs_error": 7.0683914303870665e-06
+      }
+    ],
+    "wilson_observed_order_last_pair": 1.998609569170033,
+    "symanzik_observed_order_last_pair": 3.996275781599152
+  },
+  "fail_closed": {
+    "importance_sampling_or_Monte_Carlo_performed": false,
+    "dynamical_4d_lattice_QC2D_phase_established": false,
+    "fermion_determinant_positivity_proven": false,
+    "complete_nonlinear_gauge_meson_ghost_fermion_Hessian_computed": false,
+    "Skyrme_Jacobi_translation_isorotation_zero_modes_resolved": false,
+    "one_loop_renormalised_continuum_limit_established": false,
+    "Finkelstein_Rubinstein_constraint_derived": false,
+    "finite_amplitude_global_stability_established": false,
+    "degree_one_route_E_portal_allowed": false,
+    "physics_promotion_allowed": false
+  },
+  "checks": [
+    {
+      "group": "provenance",
+      "name": "all declared source files exist",
+      "pass": true,
+      "detail": "route_f/code/verify_ap_e5_4d_qc2d_lattice_hessian.py, route_f/tex/ap_e5_4d_qc2d_lattice_hessian.tex, route_f/tex/ap_e5_4d_qc2d_lattice_hessian.bib"
+    },
+    {
+      "group": "provenance",
+      "name": "deterministic seed recorded",
+      "pass": true,
+      "detail": "numpy Generator seed=20260716"
+    },
+    {
+      "group": "topology",
+      "name": "finite-lattice B estimator approaches one monotonically",
+      "pass": true,
+      "detail": "[0.7804621958442137, 0.8957980638679076, 0.9400008778824941, 0.972881794380486, 0.9846555997802079]"
+    },
+    {
+      "group": "topology",
+      "name": "B=1 continuum extrapolation",
+      "pass": true,
+      "detail": "B0=0.999981468235"
+    },
+    {
+      "group": "topology",
+      "name": "B estimator has second-order convergence",
+      "pass": true,
+      "detail": "p=1.97945840"
+    },
+    {
+      "group": "gauge_ghost",
+      "name": "four gauge toron zero modes per generator",
+      "pass": true,
+      "detail": "[4, 4, 4, 4]"
+    },
+    {
+      "group": "gauge_ghost",
+      "name": "one constant ghost zero mode per generator",
+      "pass": true,
+      "detail": "[1, 1, 1, 1]"
+    },
+    {
+      "group": "gauge_ghost",
+      "name": "all nonzero gauge and ghost modes positive",
+      "pass": true,
+      "detail": "prime spectra only"
+    },
+    {
+      "group": "gauge_ghost",
+      "name": "xi dependence is the predicted background-independent constant",
+      "pass": true,
+      "detail": "max residual=1.421e-14"
+    },
+    {
+      "group": "boson_hessian",
+      "name": "declared meson tangent block is positive",
+      "pass": true,
+      "detail": "lambda_min=0.621297848377"
+    },
+    {
+      "group": "boson_hessian",
+      "name": "charge-two diquark block is positive",
+      "pass": true,
+      "detail": "lambda_min=0.694069172619"
+    },
+    {
+      "group": "boson_hessian",
+      "name": "Delta=0 removes classical gauge-diquark mixing",
+      "pass": true,
+      "detail": "K_A_Delta=0 at the benchmark background"
+    },
+    {
+      "group": "negative_control",
+      "name": "over-attractive core coupling creates a negative diquark mode",
+      "pass": true,
+      "detail": "lambda_min=-0.349308273811; count=1"
+    },
+    {
+      "group": "fermion",
+      "name": "Euclidean Clifford algebra",
+      "pass": true,
+      "detail": "error=0.000e+00"
+    },
+    {
+      "group": "fermion",
+      "name": "finite Wilson operator is nonsingular",
+      "pass": true,
+      "detail": "sigma_min=0.702570765924"
+    },
+    {
+      "group": "fermion",
+      "name": "even-odd Schur determinant factorisation",
+      "pass": true,
+      "detail": "logabs=4.263e-14; phase=5.194e-17"
+    },
+    {
+      "group": "fermion",
+      "name": "even-odd Schur solve agrees with direct solve",
+      "pass": true,
+      "detail": "relative residual=6.301e-16"
+    },
+    {
+      "group": "fermion",
+      "name": "fermion log-determinant curvature trace identity",
+      "pass": true,
+      "detail": "relative error=1.316e-08"
+    },
+    {
+      "group": "scaling",
+      "name": "Wilson dispersion has second-order scaling",
+      "pass": true,
+      "detail": "p=1.99860957"
+    },
+    {
+      "group": "scaling",
+      "name": "tree-level Symanzik dispersion has fourth-order scaling",
+      "pass": true,
+      "detail": "p=3.99627578"
+    },
+    {
+      "group": "fail_closed",
+      "name": "no Monte Carlo claim",
+      "pass": true,
+      "detail": "deterministic background-field diagonalisation only"
+    },
+    {
+      "group": "fail_closed",
+      "name": "determinant positivity remains open",
+      "pass": true,
+      "detail": "no antiunitary/global-form proof is supplied"
+    },
+    {
+      "group": "fail_closed",
+      "name": "FR and global stability remain open",
+      "pass": true,
+      "detail": "local Gaussian spectra cannot close configuration-space topology"
+    },
+    {
+      "group": "fail_closed",
+      "name": "portal and physics promotion remain false",
+      "pass": true,
+      "detail": "necessary finite-lattice diagnostic only"
+    }
+  ],
+  "summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "reproducibility": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "random_seed": 20260716,
+    "sources": [
+      {
+        "path": "route_f/code/verify_ap_e5_4d_qc2d_lattice_hessian.py",
+        "exists": true,
+        "size_bytes": 35334,
+        "sha256": "12dc734e9ec185fc5a6b69bf7068e65528084ee4e153e549ecc5bf81bcddf2a1"
+      },
+      {
+        "path": "route_f/tex/ap_e5_4d_qc2d_lattice_hessian.tex",
+        "exists": true,
+        "size_bytes": 17832,
+        "sha256": "7cfab056a63f7d01583af882b9b12045cfac21c5471b94d092bfbc10209a1016"
+      },
+      {
+        "path": "route_f/tex/ap_e5_4d_qc2d_lattice_hessian.bib",
+        "exists": true,
+        "size_bytes": 3286,
+        "sha256": "5453a4991ec2ce0a4c0d3e2dac5d887a0537f531602ce8978045e41516d9b69e"
+      }
+    ]
+  }
+}

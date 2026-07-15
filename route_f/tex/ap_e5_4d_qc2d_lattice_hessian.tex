@@ -1,0 +1,474 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{definition}
+\newtheorem{gate}[proposition]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\RR}{\mathbb R}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E5 Four-Dimensional Background-Field Gate:\\
+Charged Two-Colour Lattice Action and the\\
+Gauge--Meson--Ghost--Fermion \(B=1\) Hessian}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formulate a four-dimensional Euclidean lattice regularisation for testing
+the charged two-colour Route-F candidate near a static \(B=1\) mesonic
+background.  The gauge sector admits the Wilson action and its tree-level
+Symanzik extension; the colour-singlet effective sector contains a neutral
+\(SU(2)\) meson and a charge-two complex diquark.  Background gauge fixing
+produces the Faddeev--Popov operator.  Two-flavour Wilson fermions with a
+chiral meson insertion give an exact even--odd Schur factorisation.  We derive
+the complete \emph{formal} graded Hessian and its one-loop determinant
+curvature.
+
+A deterministic \(2^4\) calculation then tests a strictly smaller
+frozen-background quadratic truncation.  It verifies gauge/ghost
+\(\xi\)-dependence, meson and diquark proxy spectra, a Wilson--Dirac Schur
+complement, one collective fermion log-determinant curvature, a negative
+control, a \(B=1\) continuum extrapolation, and Wilson versus
+tree-Symanzik cutoff orders.  This is not importance sampling, dynamical
+four-dimensional QC2D, or a determinant-positivity proof.  The complete
+nonlinear Skyrme Jacobi operator, collective modes, continuum
+renormalisation, Finkelstein--Rubinstein constraint, and global stability
+remain open; every physics-promotion and Route-E portal flag remains false.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope and logical levels}
+
+Two-colour QCD has pseudoreal colour representations and meson--diquark
+competition that cannot be imported from three-colour intuition
+\cite{KogutEtAl2000,HandsEtAl2006}.  We separate:
+\begin{enumerate}[label=(L\arabic*)]
+\item the exact definition of a lattice action and its formal second
+variation;
+\item a deterministic finite-background spectrum with no ensemble average;
+\item a volume- and continuum-controlled path-integral result.
+\end{enumerate}
+Only the first two are addressed.  Recent tensor-network work provides a
+different controlled regulator in one spatial dimension, not a substitute
+for this four-dimensional problem \cite{PaiAkiyamaTodo2025}.  Genuine
+four-dimensional QC2D simulations on \(40^4\) and \(32^4\) lattices exist
+\cite{BegunEtAl2022}, but their matter content and observables do not include
+the extra charged-scalar sector or the coupled \(B=1\) Hessian required here.
+
+\begin{gate}[Meaning of a green card]
+A green card certifies the discretisation, projectors, Schur identity,
+scaling tests, and negative control.  It does not certify Monte Carlo,
+measure positivity, the interacting continuum phase, or quantum stability.
+\end{gate}
+
+\section{Four-dimensional gauge and ghost blocks}
+
+\subsection{Wilson and Symanzik-compatible actions}
+
+On a periodic lattice \(\Lambda_a\), let
+\[
+ \nabla_\mu^+f_x=\frac{f_{x+\hat\mu}-f_x}{a},\qquad
+ \nabla_\mu^-f_x=\frac{f_x-f_{x-\hat\mu}}{a}.
+\]
+The provisional gauge group is \(SU(2)_c\times U(1)_g\), with links
+\(V_\mu(x)\in SU(2)_c\) and \(z_\mu(x)=e^{\ii aqb_\mu(x)}\).  The Wilson
+action is \cite{Wilson1974}
+\begin{equation}
+ S_{g,W}=\beta_c\sum_P\left(1-\frac12\Re\Tr V_P\right)
+ +\beta_g\sum_P(1-\Re z_P).
+ \label{eq:wilson}
+\end{equation}
+A tree-level L\"uscher--Weisz/Symanzik-compatible extension is
+\begin{equation}
+ S_{g,\mathrm{imp}}=\beta\left[
+ c_0\sum_P\left(1-\frac12\Re\Tr W_P\right)
+ +c_1\sum_R\left(1-\frac12\Re\Tr W_R\right)\right],
+ \quad c_0+8c_1=1,
+ \label{eq:symanzik}
+\end{equation}
+with \(c_1=-1/12\) at tree level
+\cite{Symanzik1983I,LuscherWeisz1985}.  The matrix test uses Wilson
+\(c_1=0\); a separate free dispersion test checks the improved branch.
+This establishes compatibility, not an interacting improved simulation.
+Here \(W\) denotes either gauge factor in its own defining representation;
+Eq.~\eqref{eq:symanzik} is not a mixed \(SU(2)_c\)--\(U(1)_g\) plaquette.
+
+\subsection{Quadratic gauge fixing and FP cancellation}
+
+Expanding \(V_\mu=e^{\ii aA_\mu^aT^a}\) and adding
+\[
+ S_{\mathrm{gf}}=\frac1{2\xi}\sum_x
+ \left(\nabla_\mu^-A_\mu^a\right)^2
+\]
+gives
+\begin{equation}
+ K_{\mu\nu}^{ab}(p)=\delta^{ab}\left[
+ \widehat p^2\delta_{\mu\nu}+
+(\xi^{-1}-1)\widehat p_\mu\widehat p_\nu^\ast\right],
+ \quad
+ \widehat p_\mu=\frac{e^{\ii ap_\mu}-1}{a}.
+ \label{eq:gauge-kernel}
+\end{equation}
+Every \(p\ne0\) has three transverse eigenvalues \(\widehat p^2\) and one
+longitudinal eigenvalue \(\widehat p^2/\xi\).  Background covariant gauge
+has
+\[
+ M_{\mathrm{FP}}^{ab}=-\overline D_\mu^{ac}D_\mu^{cb};
+\]
+at the tested trivial gauge background it is
+\begin{equation}
+ M_{\mathrm{FP}}^{ab}=-\delta^{ab}\nabla_\mu^-\nabla_\mu^+.
+ \label{eq:fp}
+\end{equation}
+Removing the constant ghost and four gauge torons, one generator obeys
+\begin{equation}
+ \frac12\log\det'K_A(\xi)-\log\det'M_{\mathrm{FP}}
+ =
+ \frac12\log\det'K_A(1)-\log\det'M_{\mathrm{FP}}
+ -\frac{V-1}{2}\log\xi .
+ \label{eq:xi}
+\end{equation}
+The final term is background independent and drops out of normalised
+background differences.  Individual gauge eigenvalues are not
+gauge independent.
+
+\section{Charged meson--diquark sector}
+
+\subsection{\texorpdfstring{Action and \(B=1\) embedding}{Action and B=1 embedding}}
+
+Let \(U_x\in SU(2)\) be neutral and \(\Delta_x\in\mathbb C\) carry
+\(q_\Delta=2\).  A compatible EFT is
+\begin{align}
+ S_{\chi\Delta}
+ =&\frac{f^2a^2}{4}\sum_{x,\mu}
+ \Tr[(U_{x+\hat\mu}-U_x)^\dagger(U_{x+\hat\mu}-U_x)]
+ +S_{\mathrm{Sk},a}[U]\nonumber\\
+ &+\frac{f^2m_\pi^2a^4}{2}\sum_x(2-\Tr U_x)
+ +a^2\sum_{x,\mu}|z_\mu(x)^2\Delta_{x+\hat\mu}-\Delta_x|^2\nonumber\\
+ &+a^4\sum_x\left[
+ (m_\Delta^2+\chi\rho_B(x))|\Delta_x|^2
+ +\lambda_\Delta|\Delta_x|^4\right].
+ \label{eq:eft}
+\end{align}
+\(S_{\mathrm{Sk},a}\) is an explicitly chosen lattice transcription of the
+Skyrme term \cite{Skyrme1961}; different transcriptions have different
+finite-\(a\) Hessians.
+
+The sampled static hedgehog is
+\begin{equation}
+ \overline U(\bm x)=\cos F(r)\mathbf1+
+ \ii\sin F(r)\widehat{\bm x}\cdot\bm\tau,\qquad
+ F(r)=2\tan^{-1}\left[\frac Rr e^{-r^2/(2R^2)}\right].
+ \label{eq:hedgehog}
+\end{equation}
+It has \(F(0)=\pi,F(\infty)=0\) and orientation
+\begin{equation}
+ B=-\frac1{2\pi^2}\int_{\RR^3}
+ \det(n,\partial_1n,\partial_2n,\partial_3n)\,\mathrm d^3x=+1,
+ \quad n=(\cos F,\widehat{\bm x}\sin F).
+ \label{eq:baryon}
+\end{equation}
+Topology is measured on open grids and extrapolated in \(a^2\).  The
+\(2^4\) Hessian only samples the same analytic background; it does not
+pretend that two spatial sites resolve topology.
+
+\subsection{Exact formal versus tested meson Hessian}
+
+Choose tangent frames \(E_x:\RR^3\to T_{n_x}S^3\) and write
+\[
+ n_x(\eta)=n_x+E_x\eta_x-\tfrac12n_x|\eta_x|^2+\mathcal O(\eta^3).
+\]
+The exact nonlinear lattice Jacobi block is
+\begin{equation}
+ (K_\pi)_{xi,yj}
+ =\left.\frac{\partial^2}{\partial\eta_x^i\partial\eta_y^j}
+ (S_\chi+S_{\mathrm{Sk},a})[n(\eta)]\right|_{\eta=0}.
+ \label{eq:exact-jacobi}
+\end{equation}
+It contains connection, target-curvature, mass-curvature, and every Skyrme
+second variation.  The finite certificate tests only the declared positive
+frozen-background Gauss--Newton block
+\begin{equation}
+ S_{\pi,\mathrm{test}}^{(2)}
+ =\frac12\sum_{\langle xy\rangle}|\eta_y-T_{yx}\eta_x|^2
+ +\frac12\sum_x[m_\pi^2+\kappa_\pi\rho_B(x)]|\eta_x|^2,
+ \label{eq:meson-test}
+\end{equation}
+where \(T_{yx}\in SO(3)\) is Levi--Civita parallel transport on \(S^3\).
+Proxy positivity is therefore not reported as positivity of
+Eq.~\eqref{eq:exact-jacobi}.
+
+\subsection{Charge-two diquark Hessian}
+
+At \(\overline\Delta=0\), the two real components share
+\begin{equation}
+ K_\Delta=-D_\mu^{(2)-}D_\mu^{(2)+}
+ +m_\Delta^2+\chi\rho_B(x).
+ \label{eq:diquark}
+\end{equation}
+Because \(D_\mu\Delta\) is linear in \(b_\mu\) and \(\Delta\),
+\(K_{b\Delta}|_{\overline\Delta=0}=0\).  A condensed phase instead has
+gauge--Goldstone mixing and requires an \(R_\xi\) treatment.
+
+\section{Wilson fermions and Schur reduction}
+
+\subsection{Two-flavour operator}
+
+For colour doublets and two flavours, use \cite{WilsonFermion1977}
+\begin{align}
+ D_{xy}
+ =&[m_0+4r/a+y_s\sigma_x+
+ \ii y_p\gamma_5\bm\tau\cdot\bm\pi_x]\delta_{xy}\nonumber\\
+ &-\frac1{2a}\sum_\mu[
+ (r-\gamma_\mu)W_\mu(x)\delta_{x+\hat\mu,y}
+ +(r+\gamma_\mu)W_\mu^\dagger(x-\hat\mu)
+ \delta_{x-\hat\mu,y}].
+ \label{eq:wilson-dirac}
+\end{align}
+The tested matrix sets colour and Abelian links to identity.  Its
+\(4\) spin times \(2\) flavour components already contain \(N_f=2\);
+there is no extra flavour multiplier in the log determinant.  One
+\(128\times128\) spin--flavour matrix is diagonalised, and the two trivial
+colour copies are recorded as a degeneracy.  This is not a measure-positivity
+argument.
+
+A standard Wilson kernel can seed an overlap construction
+\cite{Neuberger1998}, but only after an admissibility/domain-wall gap and
+index analysis.  Neither follows from a single finite singular value.
+
+\subsection{Exact even--odd identity}
+
+Even lattice extents make hopping bipartite:
+\begin{equation}
+ D=\begin{pmatrix}D_{ee}&D_{eo}\\D_{oe}&D_{oo}\end{pmatrix},\qquad
+ S_e=D_{ee}-D_{eo}D_{oo}^{-1}D_{oe}.
+ \label{eq:schur}
+\end{equation}
+Block elimination gives
+\begin{equation}
+ \det D=\det D_{oo}\det S_e,
+ \label{eq:schur-det}
+\end{equation}
+\begin{align}
+ S_ex_e&=b_e-D_{eo}D_{oo}^{-1}b_o,\nonumber\\
+ x_o&=D_{oo}^{-1}(b_o-D_{oe}x_e).
+ \label{eq:schur-solve}
+\end{align}
+Both complex determinant phase and the solution are checked against the
+unreduced matrix.
+
+\section{Formal graded Hessian and one-loop curvature}
+
+Let \(\Phi=(A_\mu^a,b_\mu,\eta^i,d_1,d_2)\) and expand about
+\((0,0,\overline U,0,0)\).  Since a bosonic fluctuation times a fermion
+bilinear is cubic at \(\overline\psi=0\), the classical graded Hessian is
+\begin{equation}
+ \cH_{\mathrm{cl}}=
+ \left(
+ \begin{array}{ccccc|cc}
+ K_{AA}&K_{Ab}&K_{A\pi}&K_{Ad_1}&K_{Ad_2}&0&0\\
+ K_{bA}&K_{bb}&K_{b\pi}&K_{bd_1}&K_{bd_2}&0&0\\
+ K_{\pi A}&K_{\pi b}&K_\pi&K_{\pi d_1}&K_{\pi d_2}&0&0\\
+ K_{d_1A}&K_{d_1b}&K_{d_1\pi}&K_\Delta&0&0&0\\
+ K_{d_2A}&K_{d_2b}&K_{d_2\pi}&0&K_\Delta&0&0\\ \hline
+ 0&0&0&0&0&0&D\\
+ 0&0&0&0&0&-D^T&0
+ \end{array}\right),
+ \label{eq:super-hessian}
+\end{equation}
+plus \(\overline cM_{\mathrm{FP}}c\).  In the tested neutral-meson,
+\(\overline\Delta=0\), trivial-gauge background, bosonic off-diagonal
+blocks vanish at tree level.  Equation~\eqref{eq:super-hessian} is the
+complete \emph{formal} block structure; the numerical operator substitutes
+Eq.~\eqref{eq:meson-test} for the exact nonlinear \(K_\pi\).
+
+At one loop,
+\begin{equation}
+ \Gamma^{(1)}=\frac12\log\det'K_B-\log\det'M_{\mathrm{FP}}
+ -\Re\log\det D_{N_f=2}.
+ \label{eq:one-loop}
+\end{equation}
+For coordinates \(q_i\),
+\begin{equation}
+ \partial_i\partial_j\Gamma_f^{(1)}
+ =\Re\Tr[D^{-1}D_iD^{-1}D_j-D^{-1}D_{ij}].
+ \label{eq:curvature}
+\end{equation}
+The trace includes both flavour components and, in the formal microscopic
+operator, both colours.  The numerical trivial-colour-link test evaluates one
+colour copy; its full two-colour curvature is exactly twice the displayed
+one-copy result.  For \(D(t)=D+tQ\), the tested identity is
+\begin{equation}
+ \Gamma_{f,\,\mathrm{one\ colour}}''(0)
+ =\Re\Tr(D^{-1}QD^{-1}Q),
+ \label{eq:trace-test}
+\end{equation}
+not the full one-loop multi-field Hessian.
+
+\section{Zero modes and global obstructions}
+
+\begin{enumerate}[label=(Z\arabic*)]
+\item Constant ghosts and gauge torons are removed by primed determinants.
+\item An exact infinite-volume soliton has translations and isorotations.
+  Finite volume, anisotropy, and pinning lift them; the positive test block
+  cannot count them.
+\item A nonzero Wilson singular value is not an index.  Spectral flow or an
+  admissible overlap construction is required.
+\item A nonnegative local Hessian does not exclude finite-amplitude
+  unwinding.  Coarse lattices do not preserve topology without a controlled
+  admissibility or continuum argument.
+\end{enumerate}
+The Finkelstein--Rubinstein sign concerns the fundamental group of physical
+configuration space and its quantisation, not an eigenvalue
+\cite{FinkelsteinRubinstein1968}.
+
+\section{Deterministic numerical certificate}
+
+The finite benchmark uses a periodic \(2^4\) lattice, \(L=2.4\), \(R=1.2\),
+\(m_\pi^2=0.25\), \(\kappa_\pi=0.18\), \(m_\Delta^2=0.81\),
+\(\chi=-0.30\), \(r=1\), \(m_0=0.65\), \(y_s=0.20\), and \(y_p=0.16\).
+It is deliberately small so every determinant is directly reproducible.
+
+\subsection{Topology and bosonic spectra}
+
+The open-grid estimator uses the larger topology box \(L_B=6.4\) at
+\(N_s=17,25,33,49,65\), fitted quadratically in \(a^2\) using the last
+four points, and gives
+\[
+ B(0)=0.999981468235.
+\]
+The \(2^4\) blocks give
+\begin{align}
+ \lambda_{\min}(K_{\pi,\mathrm{test}})&=0.621297848377,\nonumber\\
+ \lambda_{\min}(K_\Delta)&=0.694069172619,\nonumber\\
+ \lambda_{\min}(K_\Delta^{\mathrm{negative\ control}})
+ &=-0.349308273811.
+ \label{eq:numbers-boson}
+\end{align}
+The control changes only \(\chi:-0.30\mapsto-3.00\); its negative mode
+proves the sign audit can fail.
+
+\subsection{Gauge, fermion, and scaling residuals}
+
+The maximum corrected residual in Eq.~\eqref{eq:xi} for
+\(\xi=0.5,0.7,1,2\) is \(1.42\times10^{-14}\).
+The Wilson matrix has
+\[
+ \sigma_{\min}(D)=0.702570765924.
+\]
+The determinant-log, determinant-phase, and Schur-solve residuals are
+\[
+ 4.26\times10^{-14},\qquad
+ 5.19\times10^{-17},\qquad
+ 6.30\times10^{-16}.
+\]
+The trace/finite-difference relative discrepancy in
+Eq.~\eqref{eq:trace-test} is \(1.32\times10^{-8}\).
+
+At fixed physical \(L\),
+\begin{align}
+ \widehat p_W^2
+ &=\frac4{a^2}\sin^2\frac{ap}{2}
+ =p^2-\frac{a^2p^4}{12}+\mathcal O(a^4),\nonumber\\
+ \widehat p_{\mathrm{imp}}^2
+ &=\widehat p_W^2+\frac{a^2}{12}(\widehat p_W^2)^2
+ =p^2-\frac{a^4p^6}{90}+\mathcal O(a^6).
+ \label{eq:dispersion}
+\end{align}
+The \(N=32,64\) observed orders are
+\[
+ p_W=1.99860957,\qquad
+ p_{\mathrm{imp}}=3.99627578.
+\]
+This tests free quadratic scaling, not interacting renormalisation.
+
+\section{Status table and exact fail-closed keys}
+
+\begin{longtable}{@{}L{0.43\textwidth}L{0.14\textwidth}L{0.35\textwidth}@{}}
+\toprule
+Claim & Status & Reason\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Reason\\
+\midrule
+\endhead
+Wilson/Symanzik-compatible action & defined &
+Equations \eqref{eq:wilson}--\eqref{eq:eft}.\\
+Gauge/ghost projectors and \(\xi\) law & finite pass &
+Prime spectra test Eq.~\eqref{eq:xi}.\\
+Wilson even--odd Schur algebra & finite pass &
+Determinant and solve identities agree.\\
+Complete nonlinear \(B=1\) Hessian & open &
+The test uses Eq.~\eqref{eq:meson-test}, not
+Eq.~\eqref{eq:exact-jacobi}.\\
+Dynamical four-dimensional QC2D phase & open &
+No ensemble, importance sampling, or thermodynamic limit.\\
+Positive fermion measure & open &
+A singular value is not an antiunitary/global-form proof.\\
+FR and finite-amplitude stability & open &
+Require configuration-space topology and global minimax analysis.\\
+Degree-one Route-E portal & blocked &
+Preceding microscopic and global gates remain false.\\
+\bottomrule
+\end{longtable}
+
+\begin{gate}[Machine-readable promotion boundary]
+The JSON card sets each of the following exact keys to \texttt{false}:
+\begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=2pt]
+\item \path{importance_sampling_or_Monte_Carlo_performed}
+\item \path{dynamical_4d_lattice_QC2D_phase_established}
+\item \path{fermion_determinant_positivity_proven}
+\item \path{complete_nonlinear_gauge_meson_ghost_fermion_Hessian_computed}
+\item \path{Skyrme_Jacobi_translation_isorotation_zero_modes_resolved}
+\item \path{one_loop_renormalised_continuum_limit_established}
+\item \path{Finkelstein_Rubinstein_constraint_derived}
+\item \path{finite_amplitude_global_stability_established}
+\item \path{degree_one_route_E_portal_allowed}
+\item \path{physics_promotion_allowed}
+\end{itemize}
+\end{gate}
+
+\section{Three routes forward}
+
+\begin{enumerate}[label=(R\arabic*)]
+\item \textbf{Full classical Jacobi route.}
+Choose one explicit lattice Skyrme transcription, relax the \(B=1\)
+background at each \(a,L\), assemble its exact sparse second variation,
+project gauge, translation, and isorotation directions, and extrapolate all
+low modes.
+\item \textbf{Dynamical QC2D route.}
+First prove the antiunitary symmetry and measure sign for the actual charges
+and global form.  Then use HMC or an independently validated alternative,
+multiple spacings and volumes, scale setting, and correlator diquark gaps.
+\item \textbf{Fermion/index route.}
+Establish link admissibility, compute overlap spectral flow in the relaxed
+\(B=1\) background, determine the Callias/APS determinant line, and combine
+its curvature with the projected bosonic Jacobi operator and FR quantisation.
+\end{enumerate}
+
+\section{Reproducibility}
+
+The deterministic verifier is
+\texttt{route\_f/code/verify\_ap\_e5\_4d\_qc2d\_lattice\_hessian.py}.
+It writes JSON and Markdown cards, records source hashes and library versions,
+uses seed \(20260716\) only for a Schur-solve right-hand side, and exits
+nonzero if any declared check fails.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e5_4d_qc2d_lattice_hessian}
+\end{document}

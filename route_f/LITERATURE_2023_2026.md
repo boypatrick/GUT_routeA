@@ -20,6 +20,8 @@ that the present model inherits their results.
 | Mistele et al., [Indefinitely Flat Circular Velocities and the Baryonic Tully--Fisher Relation from Weak Lensing](https://doi.org/10.3847/2041-8213/ad54b0) (2024) | Weak-lensing data probe the persistence of flat circular velocities beyond resolved rotation curves. | Any gravity repair must fit rotation and lensing jointly; a pure clock-rescaling ansatz is not sufficient. |
 | Hamada et al., [Q-Balls in the presence of attractive force](https://doi.org/10.1007/JHEP08(2024)242) (2024) | Extends Q-ball stability analysis when an additional attractive force is present. | Use as a modern stability/gravity interface for AP-E5, not as evidence that the present bubble-to-Q-ball identification is already realized. |
 | Bykov and Smilga, [Monopole harmonics on complex projective spaces](https://arxiv.org/abs/2302.11691), SciPost Phys. 15, 195 (2023) | Gives spectra and homogeneous-coordinate eigenfunctions for charged quantum mechanics on projective space; states form `SU(n)` multiplets and connect to twisted Dolbeault/Dirac complexes. | Use to audit the AP-E1 monopole spectrum. Keep all Landau levels unless an LLL/holomorphic projection and its gap are separately derived. |
+| van den Dungen, [Generalised Dirac--Schrodinger operators and the Callias Theorem](https://arxiv.org/abs/2312.17600), Forum Math. Sigma 13, e11 (2025) | Proves a generalized Callias theorem in which the index of a Dirac--Schrodinger operator is computed on a suitable compact hypersurface. | Use it to justify reducing a uniformly Fredholm same-soliton family to its asymptotic positive-mass eigenbundle. It does not provide the charged-QC2D Yukawa map, its uniform gap, or the family determinant class. |
+| Jia and Yi, [Discrete Gauge Anomalies and Instantons](https://arxiv.org/abs/2405.09007), Phys. Rev. D 110, 025011 (2024) | Re-examines the `pi_4(Sp(k))=Z2` anomaly, its instanton zero-mode relation, and the distinction between Euclidean and Lorentzian zero-mode roles. | For a semisimple `Sp(4)` candidate, retain the Witten-parity test as necessary but do not replace a full Dai--Freed/bordism and heavy-threshold calculation by that parity count. |
 | Davighi and Lohitsiri, [WZW terms without anomalies: generalised symmetries in chiral Lagrangians](https://arxiv.org/abs/2407.20340), SciPost Phys. 17, 168 (2024) | Constructs a weakly coupled UV completion of a specific 4d sigma model on `SU(N) x S2`; a 2-group matches the mixed WZW coefficient `n=n_c X_q`, and the result is tree-level exact.  It also sketches `SU(n_c+1)` semi-simple deep-UV unification, while leaving extra-scalar/lepton decoupling to a future explicit model.  Nonminimal scalar charge leaves a discrete gauge sector and changes normalized flux bookkeeping. | AP-E3 specializes the direct-product intermediate construction to charged two-color matter and obtains `n=2`.  The 2026-07-16 audit now defines the bosonic non-extendible sector and performs the proposed `SU(3)` branching/decoupling exercise.  It finds an exact parity no-go for the original charge-one singlet scalar; the closest charge-two branch decouples but changes the `O(2)` dressing to `O(1)`.  Its covering-`U(1)` normalization is not promoted to faithful `U(2)` until correlated centre-flux bundles and determinant lines are matched. |
 | Saito, [Wess-Zumino-Witten Terms of Sp QCD by Bordism Theory](https://arxiv.org/abs/2404.06185), JHEP 10 (2024) 099 | Uses invertible-field-theory/bordism methods to test perturbative and nonperturbative consistency of ungauged and gauged 4d WZW terms on spin manifolds. | Treat ordinary anomaly sums as necessary but not sufficient.  For the special target `S3 x S2`, retain both reduced spin-bordism `Z2` factors: the new audit defines their geometric inverse-image invariants but leaves their APS/Dai--Freed signs to the microscopic regulator. |
 | Pai, Akiyama, and Todo, [Two-color lattice QCD in (1+1) dimensions with Grassmann tensor renormalization group](https://arxiv.org/abs/2501.18918) (2025) | Computes number density, chiral condensate, and diquark condensate with a Grassmann tensor-network formulation of two-colour lattice gauge theory. | Use as a recent methodological control for measuring competing condensates without a sign problem.  Its dimension, discretization, and matter content do not validate the present four-dimensional charged model; a dedicated 4d continuum-extrapolated calculation is still required. |
@@ -45,6 +47,8 @@ are not substitutes for recent model-specific evidence.
 | Davighi, Gripaios, and Randal-Williams, [Differential cohomology and topological actions in physics](https://arxiv.org/abs/2011.05768), Commun. Math. Phys. 396 (2022) 1205 | Supplies the differential-character formulation of Wess--Zumino and related topological actions directly on cycles, without demanding a chosen spacetime extension. | Differential cohomology fixes the bosonic holonomy at fixed integral curvature here; it does not choose the two spin-bordism torsion phases of a fermionic UV regulator. |
 | Aldrovandi and Schaposnik, [Non-Abelian vortices in Chern--Simons theories and their induced effective theory](https://arxiv.org/abs/hep-th/0702209), Phys. Rev. D 76 (2007) 045010 | Provides an explicit supersymmetric non-Abelian-vortex mother model with internal projective moduli and a low-energy sigma-model description. | This independently realizes a physical moduli fermion, but it is not the charged two-colour `B=1` soliton and supplies no automatic AP-E3 `O(2)` coefficient line. |
 | Witten, [Supersymmetry and Morse theory](https://doi.org/10.4310/jdg/1214437492), J. Differential Geom. 17 (1982) 661 | Identifies supersymmetric quantum mechanics with the differential-form complex and its cohomological ground states. | The ordinary tangent fermion produces the Clifford/Dolbeault module; an extra coefficient line must be independently derived before using `H0(O(2))`. |
+| Begun et al., [Study of two color QCD on large lattices](https://arxiv.org/abs/2203.04909), Phys. Rev. D 105, 114505 (2022) | Simulates two-flavour QC2D with staggered fermions on `40^4` and `32^4` lattices at `a=0.048 fm`, focusing on confinement and deconfinement at finite chemical potential. | This is a genuine four-dimensional large-lattice control, but it has neither the extra charged-scalar sector nor a `B=1` gauge--meson--ghost--fermion Hessian. The new `2^4` Route-F calculation must remain labelled a deterministic background-field diagnostic. |
+| Witten and Yonekura, [Anomaly Inflow and the eta-Invariant](https://arxiv.org/abs/1909.08775) (2019/2021), and Dai--Freed, [Eta-Invariants and Determinant Lines](https://arxiv.org/abs/hep-th/9405012) (1994) | Express nonperturbative anomaly phases through odd-dimensional eta invariants and determinant lines; after perturbative anomaly cancellation the eta phase is bordism invariant. | A chirality-paired four-dimensional product spectrum is only a reference control. The charged-QC2D torsion signs require a specified microscopic regulator or mapping-torus problem; defect mod-two characters show the available choices but do not select one. |
 
 ## Literature-driven design decisions
 
@@ -104,6 +108,30 @@ are not substitutes for recent model-specific evidence.
     product, so the `U(1)` flux is correlated with the `SU(2)` centre class.
     Prove the global bundle/determinant-line match before calling its level an
     all-bundle theorem.
+
+17. Treat the new '2^4' charged-QC2D matrix calculation as a background-field
+    regression only. Genuine large four-dimensional QC2D ensembles exist,
+    but neither the 2022 large-lattice work nor the recent 1+1-dimensional
+    tensor-network calculation contains the added charged-scalar sector or
+    the requested coupled 'B=1' Hessian.
+18. Prefer the simply connected 'Sp(4)=Spin(5)' cover for the next
+    semisimple audit, with direct 'SU(2)c x SU(2)H' as the minimal backup.
+    Keep two complex scalar '4' copies explicit. Do not quotient by the
+    centre, and do not call the tree-level branch an all-scale completion
+    before its heavy eta threshold, gauge bordism, and radiative protection
+    are computed.
+19. Interpret the four product/defect mod-two character values as a proof of
+    regulator non-uniqueness. A paired four-dimensional product spectrum is
+    not the odd-dimensional mapping-torus eta invariant of the charged UV
+    theory.
+20. Keep three same-soliton assertions independent: a tangent SQM,
+    'det Ind D=O(+2)', and gauge-basic WZW transgression. Fixed-polarization
+    CPT further requires the anti-canonical 'O(-4)' sector. The conditional
+    Callias theorem and differential fiber integration do not supply the
+    missing physical Yukawa family, equivariant descent, or CPT regulator.
+21. Construct no degree-one Route-E portal until at least one complete
+    pre-portal lane closes. The current integrated gate evaluates all three
+    lane booleans to false.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,
