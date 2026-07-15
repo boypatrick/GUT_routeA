@@ -1,6 +1,6 @@
 # Another Physics / Route-E Bridge Verification
 
-Status: **mechanical_separation_checks_pass_no_physics_promotion** — `24/24` checks pass.
+Status: **mechanical_separation_checks_pass_no_physics_promotion** — `27/27` checks pass.
 
 This is a fail-closed algebraic/numerical card.  A green result means only
 that the displayed identities are reproducible.  It does **not** identify the
@@ -42,8 +42,16 @@ two theories and `physics_promotion_allowed=false`.
 7. The AP-E3 successor card proves an exact constrained-cell `k=+2` theorem
    and an anomaly-consistent mixed-WZW intermediate candidate (`26/26`), while
    the AP-E4 card solves the declared canonical Spin-c spectrum (`22/22`).
-   Their explicit false flags for all-scale UV closure, physical tangent-
-   fermion origin, and the Route-E portal remain binding.
+   The new nonlinear proxy (`18/18`) passes its vacuum, `B=1`, radial, and
+   charged-scalar necessary gates but explicitly leaves lattice QC2D and the
+   full Hessian open.  The global-UV card defines the bosonic non-extendible
+   WZW phase and proves a pure-`SU(3)` no-go for the original charge-one
+   scalar; its two spin-torsion signs and an equivalent all-scale embedding
+   remain open.  The moduli-SQM card (`27/27`) independently derives a
+   physical tangent fermion, but neither the mother-model canonical vacuum
+   line nor its CPT antiparticle polarization.  It is also not the same
+   charged-two-colour soliton, so the spatially transgressed AP-E3 `O(2)`
+   line, gauge descent, and Route-E portal remain non-derived.
 
 ## Bridge axioms retained as non-derived
 
@@ -56,6 +64,9 @@ two theories and `physics_promotion_allowed=false`.
 
 - [PASS] `S0_AP_E3_AP_E4` — AP-E3 exact-cell and intermediate mixed-WZW audit is green but non-promoting: AP-E3 UV=26/26; exactly-two=True; k+2=True; full UV=False; portal=False
 - [PASS] `S0_AP_E3_AP_E4` — AP-E4 canonical Spin-c spectrum is mathematically green but its physical origin is open: AP-E4=22/22; math=True; physical tangent fermion=False; physics closure=False
+- [PASS] `S0_AP_E3_AP_E4` — charged two-colour nonlinear proxy closes only radial classical-EFT gates: proxy=18/18; radial=True; full3d=False; lattice=False
+- [PASS] `S0_AP_E3_AP_E4` — non-extendible bosonic WZW is defined while spin torsion and pure-SU(3) equivalence stay open: global=38/38; char=True; U2 bundle=False; torsion=False; SU3 q=1=False; q=2 equivalent=False
+- [PASS] `S0_AP_E3_AP_E4` — intrinsic N=2 SQM derives a tangent fermion but not the charged-two-colour composition: SQM=27/27; tangent=True; charged embedding=False; portal=False
 - [PASS] `S1_CP1_O2` — H0(CP1,O(2)) has dimension three: h^0(O(d))=d+1 for d>=0; d=2 gives 3
 - [PASS] `S1_CP1_O2` — Cartan weights are (+2,0,-2): weights=[2, 0, -2] in basis ['X^2', 'sqrt(2) X Y', 'Y^2']
 - [PASS] `S2_quadratic_divisor` — nonzero discriminant gives two distinct projective zeros: Delta=4.0, roots=[(-1-0j), (1-0j)], residual=0.00e+00
@@ -83,6 +94,7 @@ two theories and `physics_promotion_allowed=false`.
 
 - `physics_promotion_allowed=false`.
 - A physical bridge requires an action-level phase map, a gauge/anomaly-safe
-  embedding, an exact soliton/fluctuation analysis, a physical Spin-c origin,
-  a degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
+  embedding compatible with the exactly-two dressing, a full gauge-theory
+  soliton/fluctuation analysis, a same-mother-model SQM/WZW composition, a
+  degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
   cosmology gates.

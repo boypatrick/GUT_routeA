@@ -10,6 +10,56 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
+## Superseding AP-E3/AP-E4 global/SQM update (2026-07-16)
+
+This section supersedes the active-continuation language in the 2026-07-15
+checkpoint.  It does not close a Route-E dependency or authorize a family
+interpretation.
+
+- The charged-two-colour lane now has a reproducible nonlinear classical-EFT
+  proxy: a meson/charge-two-diquark vacuum scan, complete homogeneous Hessian,
+  nonlinear `B=1` Skyrme boundary-value solution, Derrick check, radial meson
+  generalized Hessian, and charged-scalar `l=0,1` eigenvalue checks.  These are
+  necessary low-energy stability tests.  They are neither a lattice solution
+  of the four-dimensional gauge theory nor a full coupled 3D/quantum Hessian.
+- The mixed WZW phase is globally defined on non-extendible maps by a
+  degree-five differential character on `S3 x S2`.  The bosonic lift is unique
+  at fixed integral curvature, but the spin theory has
+  `Omega_4^Spin(S3 x S2)=Z + Z2 + Z2`; two reduced APS/Dai--Freed signs remain
+  microscopic UV data.  Thus “non-extendible action defined” and “fermionic
+  UV determinant fixed” are separate statuses.
+- A strict `SU(3)` representation-parity theorem rules out the original
+  charge-one colour-singlet scalar: restriction to
+  `[SU(2) x U(1)]/Z2` requires `2j+q=0 mod 2`.  Consequently a pure-`SU(3)`
+  completion cannot preserve the original two-scalar `O(2)` dressing.  The
+  closest explicit adjoint-decoupling variant uses two `bar(3)` scalars with
+  light `1_(+2)` components and vectorlike fundamentals with tunably heavy
+  `1_(-2)` partners.  It is anomaly-safe at the perturbative vectorlike level
+  but produces a one-scalar flavour doublet, not Route E's triplet.  Its
+  covering-`U(1)` WZW normalization also remains conditional until the
+  faithful-`U(2)` bundle and correlated centre-flux classes are matched.
+- An independent supersymmetric non-Abelian-vortex construction now derives a
+  physical `CP1` tangent Grassmann zero mode and its `N=2` worldline SQM.
+  The declared canonical Spin-c re-quantization gives the untwisted
+  Dolbeault module and one ground state; the source-selected half-form
+  ordering has none.  Three states require a separate `O(2)` coefficient line.  The AP-E3
+  WZW level can provide that line only if the charged-two-colour `B=1` soliton
+  is proved to have the same supersymmetric collective-coordinate theory and
+  its degree-five WZW character is spatially transgressed to that line;
+  the current mother models differ.  Product compactification stays as the
+  six-dimensional anomaly-gated backup.  The mother model also does not
+  derive the canonical vacuum line or its CPT map: fixed-canonical `O(-2)`
+  has one negative mode, whereas three conjugate modes require the
+  anti-canonical polarization/effective `O(-4)`.
+- The degree-one Route-E portal is deliberately deferred until the same-model
+  SQM/WZW composition or the compactification alternative closes.  All new
+  cards remain fail-closed with `physics_promotion_allowed=false`.
+
+Canonical evidence is in the new `../route_f/tex/ap_e3_*` and
+`../route_f/tex/ap_e4_moduli_space_sqm.tex` notes, their verifiers under
+`../route_f/code/`, and generated JSON/Markdown cards under
+`../route_f/output/`.
+
 ## Superseding AP-E3/AP-E4 update (2026-07-15)
 
 This section supersedes the AP-E3/AP-E4 open-status statements in the

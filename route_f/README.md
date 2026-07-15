@@ -38,7 +38,8 @@ conditional constructions: exact U(1) symmetry hides the Q-ball phase, so an
 observable phase needs a second spurion and must pass charge-leakage,
 selection-rule, matching, stability, and phenomenology gates.
 
-The independent bridge verifier passes `22/22` mathematical/numerical checks
+The expanded independent bridge verifier passes `27/27`
+mathematical/numerical checks
 and deliberately records `physics_promotion_allowed=false`.  The complete
 formula ledger and the ordered AP-E1--AP-E10 program are canonical in
 `tex/another_physics_route_e_derivation_ledger.tex` and `ROADMAP.md`.
@@ -154,6 +155,60 @@ families.  A degree-one portal, physical fermionic origin, four-/six-
 dimensional anomaly cancellation, and stability below all gaps remain open;
 `physics_promotion_allowed=false`.
 
+## 2026-07-16 AP-E3 global/nonlinear and AP-E4 SQM result
+
+The requested charged-two-colour computation has been implemented as a
+strictly labelled nonlinear low-energy proxy.  It minimizes a six-real-field
+meson/charge-two-diquark potential on a declared `(e_g,v_g/Lambda_c)` matching
+grid and solves the full nonlinear massive-Skyrme `B=1` hedgehog.  Its
+deterministic card includes the vacuum Hessian and mass gaps, baryon-number
+and Derrick residuals, grid/volume convergence, a generalized radial meson
+Hessian, charged-diquark `l=0,1` blocks, and an unstable negative control.
+This is useful necessary evidence, but not a four-dimensional lattice gauge-
+theory calculation or a complete coupled 3D/quantum soliton Hessian.
+
+The non-extendible mixed-WZW sector now has an intrinsic global definition.
+For `X=S3 x S2`, the integral five-form is the curvature of a degree-five
+differential character, evaluated directly on every mapped spacetime
+four-cycle.  At fixed curvature/class the bosonic lift is unique because
+`H^4(X;R/Z)=0`.  Spin refinement is not unique:
+`Omega_4^Spin(X)=Z + Z2 + Z2`, and the two reduced signs require a microscopic
+APS/Dai--Freed determinant.  The note gives both inverse-image bordism
+invariants explicitly instead of hiding them in an extension choice.
+
+The proposed pure-`SU(3)` all-scale embedding has also been decided.  The
+faithful subgroup after adjoint breaking is `[SU(2) x U(1)]/Z2`, whose
+representations satisfy `2j+q=0 mod 2`.  Therefore the original charge-one
+colour singlet and its two-scalar `O(2)` baryon dressing cannot descend from
+`SU(3)`.  A concrete charge-two variant with
+`bar(3)->2_(-1)+1_(+2)` and explicit adjoint mass splitting does decouple its
+coloured scalars and the `1_(-2)` partners of vectorlike fundamentals at tree
+level.  Its baryon is dressed by one scalar and is an `O(1)` doublet, so it is
+a controlled near-miss rather than Route-E closure.  Moreover, its covering-
+`U(1)` mixed-level normalization is not yet a faithful-`U(2)` all-bundle
+theorem; the correlated centre-flux/determinant-line match is an explicit
+false gate.
+
+Finally, the preferred AP-E4 route now independently derives a physical
+tangent fermion: a half-BPS non-Abelian vortex has `CP1` orientational moduli
+and BPS collective-coordinate supersymmetry, giving `N=2` moduli-space SQM.
+The declared canonical Spin-c re-quantization has one untwisted Dolbeault
+ground state, whereas the source-selected half-form ordering has none.  A separate `O(2)`
+coefficient line reproduces the three positive-chirality modes and paired
+gap.  AP-E3's WZW level can supply that line only after a same-mother-model
+theorem identifies the charged-two-colour `B=1` moduli, spatially transgresses
+the degree-five WZW character, and fixes the signed line pullback.
+The independent BPS vortex does not prove this composition.  Product
+compactification remains the anomaly-checked backup, and the degree-one
+Route-E portal remains deliberately deferred.  All three cards set
+`physics_promotion_allowed=false`.
+
+The vacuum-line and CPT choices are additional gates.  At fixed canonical
+polarization, the AP-E3 antibaryon sign `k=-2` gives one negative mode, not
+the conjugate of the three positive modes.  A physical completion must
+derive the anti-canonical polarization map (or its effective `O(-4)` form)
+rather than infer it from the sign of the WZW integer.
+
 ## 2026-07-14 execution status
 
 - `route_E/code_dyn/run_route_e_dynamics.py` executes the 19 recovered lanes
@@ -241,7 +296,8 @@ Artifacts:
   `output/pdf/ap_e4_tangent_dirac_spectrum.pdf`: clean-built, warning-free,
   page-by-page checked AP-E3 UV (12-page) and AP-E4 (9-page) notes.
 - `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
-  visually checked 17-page rendering of the derivation ledger.
+  visually checked 19-page rendering of the derivation ledger; the same
+  current build is mirrored under `output/pdf/`.
 - `output/ap_e1_projective_doublet_action.pdf`: clean-built, visually checked
   15-page AP-E1 note.
 - `output/pdf/ap_e2_discriminant_regression.pdf` and
@@ -249,8 +305,24 @@ Artifacts:
   page-by-page checked AP-E2 (12-page) and AP-E3 (13-page) notes.
 - `route_E/code_dyn/dyn_claim_registry.json`: single physics-status registry.
 - `route_E/code_dyn/run_route_e_dynamics.py`: fail-closed isolated DAG runner.
-- `output/another_physics_route_e_bridge.{json,md}`: `24/24` bridge audit
+- `output/another_physics_route_e_bridge.{json,md}`: `27/27` bridge audit
   with explicit non-promotion status.
+- `code/scan_ap_e3_charged_two_colour_proxy.py` and
+  `output/ap_e3_charged_two_colour_proxy.{json,md}`: nonlinear EFT vacuum,
+  soliton, Hessian, and convergence card (`18/18`; microscopic QC2D and full
+  coupled 3D/quantum Hessian remain open).
+- `code/verify_ap_e3_nonextendible_wzw_su3_uv.py` and
+  `output/ap_e3_nonextendible_wzw_su3_uv.{json,md}`: differential-character,
+  spin-bordism, representation no-go, and conditional `SU(3)` decoupling
+  audit (`38/38`).
+- `code/verify_ap_e4_moduli_space_sqm.py` and
+  `output/ap_e4_moduli_space_sqm.{json,md}`: intrinsic tangent-fermion SQM,
+  declared-vacuum-line spectrum, WZW-transgression/CPT gates, and backup
+  compactification audit (`27/27`).
+- `output/pdf/ap_e3_charged_two_colour_soliton_proxy.pdf`,
+  `output/pdf/ap_e3_nonextendible_wzw_su3_uv_audit.pdf`, and
+  `output/pdf/ap_e4_moduli_space_sqm.pdf`: 2026-07-16 derivation notes,
+  clean-built and page-by-page checked at 9, 12, and 11 pages respectively.
 - `output/ap_e1_projective_doublet.{json,md}`: `30/30` AP-E1 audit with the
   same explicit non-promotion status.
 - `output/ap_e2_discriminant_regression.{json,md}`: `30/30` AP-E2 exact

@@ -1,0 +1,374 @@
+{
+  "all_pass": true,
+  "ap_e4_worldline_completion_closed": false,
+  "charged_two_colour_soliton_sqm_embedding_closed": false,
+  "checks": [
+    {
+      "detail": "hashed=3/3",
+      "group": "M0_provenance",
+      "name": "all moduli-SQM critical sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "max horizontal residual=3.817e-16",
+      "group": "M1_moduli_metric",
+      "name": "projected orientational variations are horizontal CP1 zero modes",
+      "pass": true
+    },
+    {
+      "detail": "max metric residual=8.882e-16",
+      "group": "M1_moduli_metric",
+      "name": "the L2 metric has the Fubini--Study shape |dw|^2/(1+|w|^2)^2",
+      "pass": true
+    },
+    {
+      "detail": "max chart residual=7.105e-15",
+      "group": "M1_moduli_metric",
+      "name": "the Fubini--Study kinetic norm agrees in the w and v=1/w charts",
+      "pass": true
+    },
+    {
+      "detail": "I0 sequence=[0.22281841361727756, 0.2228184136172765, 0.22281841361727456, 0.22281841361726343]; C(e=1)=1.400009382609",
+      "group": "M1_moduli_metric",
+      "name": "the eliminated-rho near-BPS profile integral is positive, finite, and converged",
+      "pass": true
+    },
+    {
+      "detail": "profile_surrogate_is_microscopic_proof=false",
+      "group": "M1_moduli_metric",
+      "name": "the profile surrogate is not promoted to a solved microscopic vortex",
+      "pass": true
+    },
+    {
+      "detail": "max D_t covariance residual=9.607e-14",
+      "group": "M2_tangent_fermion",
+      "name": "psi transforms as a holomorphic tangent vector under v=1/w",
+      "pass": true
+    },
+    {
+      "detail": "max norm residual=6.217e-15",
+      "group": "M2_tangent_fermion",
+      "name": "the tangent-fermion kinetic norm is chart invariant",
+      "pass": true
+    },
+    {
+      "detail": "k range=-6..6",
+      "group": "M3_dolbeault",
+      "name": "Riemann--Roch and Serre duality give index(O(k))=k+1",
+      "pass": true
+    },
+    {
+      "detail": "(h0,h1) for O(0)=(1,0)",
+      "group": "M3_dolbeault",
+      "name": "untwisted canonical Dolbeault SQM has one, not three, ground state",
+      "pass": true
+    },
+    {
+      "detail": "(h0,h1,index) for O(2)=(3,0,3)",
+      "group": "M3_dolbeault",
+      "name": "an independent O(2) coefficient line gives three positive-chirality zero modes",
+      "pass": true
+    },
+    {
+      "detail": "(h0,h1,index) for O(-4)=(0,3,-3)",
+      "group": "M3_dolbeault",
+      "name": "orientation reversal requires O(-4) for three negative-chirality zero modes",
+      "pass": true
+    },
+    {
+      "detail": "b0+b2=2",
+      "group": "M3_dolbeault",
+      "name": "the de Rham completion has two CP1 vacua and is also not a three-state mechanism",
+      "pass": true
+    },
+    {
+      "detail": "curvature sequence=[2.0082484079079745, 2.0020576482854167, 2.000514134394606, 2.000128516254437, 2.0000321279797606]",
+      "group": "M3_flux",
+      "name": "the candidate magnetic line has integral flux c1(O(2))=2",
+      "pass": true
+    },
+    {
+      "detail": "winding=2.000000000000",
+      "group": "M3_flux",
+      "name": "the north--south transition of O(2) has winding two",
+      "pass": true
+    },
+    {
+      "detail": "c1(det W_E)=2+2k=6",
+      "group": "M3_flux",
+      "name": "canonical Spin-c twisting by O(2) has determinant line O(6)",
+      "pass": true
+    },
+    {
+      "detail": "Q^2=(Qdag)^2=0",
+      "group": "M4_superalgebra",
+      "name": "the finite Dolbeault block has nilpotent Q and Q-dagger",
+      "pass": true
+    },
+    {
+      "detail": "Hermitian/odd/superalgebra residuals below tolerance",
+      "group": "M4_superalgebra",
+      "name": "D is Hermitian, odd, and satisfies D^2={Q,Qdag}=2H",
+      "pass": true
+    },
+    {
+      "detail": "kernel=3; chiralities=[1.0, 1.0, 1.0]",
+      "group": "M4_spectrum",
+      "name": "the k=2 kernel contains exactly three positive-chirality zero modes",
+      "pass": true
+    },
+    {
+      "detail": "Delta_D=3.380605690754; Delta_H=5.714247418179; C=1.400009382609",
+      "group": "M4_spectrum",
+      "name": "the first twisted Dirac and SQM gaps scale as 4/sqrt(C) and 8/C",
+      "pass": true
+    },
+    {
+      "detail": "multiplicity(+gap)=multiplicity(-gap)=5",
+      "group": "M4_spectrum",
+      "name": "the first massive level has five states at each Dirac sign",
+      "pass": true
+    },
+    {
+      "detail": "ordinary_tangent_fermion_implies_E_equals_O(0), not E_equals_T",
+      "group": "M5_fail_closed",
+      "name": "a tangent fermion is not an automatic T-valued coefficient twist",
+      "pass": true
+    },
+    {
+      "detail": "mother_model_level_two_flux_derived=false",
+      "group": "M5_fail_closed",
+      "name": "the unmodified Chern--Simons vortex mother model has no derived O(2) Berry line",
+      "pass": true
+    },
+    {
+      "detail": "charged_two_colour_soliton_sqm_embedding_closed=false",
+      "group": "M5_composability",
+      "name": "the intrinsic vortex SQM is not silently identified with the charged-two-colour soliton",
+      "pass": true
+    },
+    {
+      "detail": "same_B1_CP1_map=false; signed_WZW_pullback_to_O2=false",
+      "group": "M5_composability",
+      "name": "AP-E3 k=2 can twist AP-E4 only after the same B=1 CP1 moduli map and spatially transgressed WZW line pullback are proved",
+      "pass": true
+    },
+    {
+      "detail": "product_compactification_used=false",
+      "group": "M5_fail_closed",
+      "name": "the product compactification route is not used to obtain the SQM result",
+      "pass": true
+    },
+    {
+      "detail": "I8_factorization_or_cancellation=false; global_bordism_audit=false",
+      "group": "M5_fail_closed",
+      "name": "the backup product compactification has not passed its six-dimensional anomaly gate",
+      "pass": true
+    }
+  ],
+  "checks_passed": 27,
+  "checks_total": 27,
+  "cpt_antibaryon_polarization_closed": false,
+  "metrics": {
+    "cohomology": [
+      {
+        "h0": 0,
+        "h1": 5,
+        "index": -5,
+        "k": -6
+      },
+      {
+        "h0": 0,
+        "h1": 4,
+        "index": -4,
+        "k": -5
+      },
+      {
+        "h0": 0,
+        "h1": 3,
+        "index": -3,
+        "k": -4
+      },
+      {
+        "h0": 0,
+        "h1": 2,
+        "index": -2,
+        "k": -3
+      },
+      {
+        "h0": 0,
+        "h1": 1,
+        "index": -1,
+        "k": -2
+      },
+      {
+        "h0": 0,
+        "h1": 0,
+        "index": 0,
+        "k": -1
+      },
+      {
+        "h0": 1,
+        "h1": 0,
+        "index": 1,
+        "k": 0
+      },
+      {
+        "h0": 2,
+        "h1": 0,
+        "index": 2,
+        "k": 1
+      },
+      {
+        "h0": 3,
+        "h1": 0,
+        "index": 3,
+        "k": 2
+      },
+      {
+        "h0": 4,
+        "h1": 0,
+        "index": 4,
+        "k": 3
+      },
+      {
+        "h0": 5,
+        "h1": 0,
+        "index": 5,
+        "k": 4
+      },
+      {
+        "h0": 6,
+        "h1": 0,
+        "index": 6,
+        "k": 5
+      },
+      {
+        "h0": 7,
+        "h1": 0,
+        "index": 7,
+        "k": 6
+      }
+    ],
+    "composability": {
+      "ap_e3_candidate_moduli": "charged-two-colour B=1 soliton CP1 (not yet established)",
+      "cpt_antibaryon_polarization_closed": false,
+      "differential_character_source_degree": 5,
+      "intrinsic_sqm_moduli": "BPS U(2) Chern--Simons vortex CP1",
+      "required_wzw_pullback_degree": 2,
+      "same_b1_cp1_collective_coordinate_proven": false,
+      "spatial_fiber_dimension": 3,
+      "supersymmetric_wz_completion_derived": false,
+      "transgressed_line_degree": 2,
+      "wzw_gauge_basic_descent_proven": false,
+      "wzw_pullback_degree": null
+    },
+    "geometry": {
+      "chern_sequence_k2": [
+        2.0082484079079745,
+        2.0020576482854167,
+        2.000514134394606,
+        2.000128516254437,
+        2.0000321279797606
+      ],
+      "max_chart_metric_residual": 7.105427357601002e-15,
+      "max_fermion_covariance_residual": 9.60711850196813e-14,
+      "max_horizontal_residual": 3.817022403561373e-16,
+      "max_metric_residual": 8.881784197001252e-16,
+      "transition_winding_k2": 2.0
+    },
+    "profile": {
+      "I0": 0.22281841361726343,
+      "I0_sequence": [
+        0.22281841361727756,
+        0.2228184136172765,
+        0.22281841361727456,
+        0.22281841361726343
+      ],
+      "coefficient_C": 1.4000093826090534,
+      "description": "phi_hat=tanh(r), xi_hat=1 convergence surrogate",
+      "microscopic_solution": false
+    },
+    "spectrum": {
+      "coefficient_C": 1.4000093826090534,
+      "dirac_gap": 3.3806056907539177,
+      "first_four_multiplicities_per_sign": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "first_four_positive_eigenvalues": [
+        3.3806056907539177,
+        5.345206926854604,
+        7.171347625349783,
+        8.944241938504595
+      ],
+      "hamiltonian_gap": 5.7142474181788865,
+      "radius": 0.5916099607446306
+    }
+  },
+  "mother_model_vacuum_line_matches_canonical_spinc": false,
+  "next_steps": [
+    "Solve the full BPS radial profiles and recompute I0 with certified tail bounds.",
+    "Derive, rather than postulate, a supersymmetric worldline line E=O(2) from a bulk WZ/CS inflow or a Callias-index Fermi zero-mode bundle.",
+    "Prove that the AP-E3 B=1 charged-two-colour soliton has this same CP1 collective coordinate, transgress the degree-five character along its spatial three-cycle, and show that the resulting signed line pulls back as O(+2).",
+    "Compute the induced determinant-line orientation and verify that its physical sign is +2.",
+    "Derive the mother-model vacuum line and its CPT/anti-canonical map; fixed canonical O(-2) has one negative mode, not the conjugate three-state kernel.",
+    "If product compactification is revived, cancel or Green--Schwarz-factorize the full six-dimensional I8 and close the global bordism anomaly gate.",
+    "Couple candidate ground states to Route E only after the flux origin and every retained spectral gap are closed."
+  ],
+  "physical_tangent_fermion_in_intrinsic_sqm_derived": true,
+  "physics_promotion_allowed": false,
+  "route_e_portal_closed": false,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_moduli_space_sqm.tex",
+      "sha256": "3218162419d0d7c6ae1f8efc2187cb46fd5dc0b9ebff6357eee07f5932e0c41c",
+      "size_bytes": 31353
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e4_moduli_space_sqm.bib",
+      "sha256": "777aabbbed805165177f4483d9f24851a63551bbccb8718fa70a5cb2c645e76f",
+      "size_bytes": 2985
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e4_moduli_space_sqm.py",
+      "sha256": "9224d403cf4cb8d10e9e77e2c1258c3a611a384cfe30bd64e15b827eb97d52b4",
+      "size_bytes": 26068
+    }
+  ],
+  "status": {
+    "ap_e3_k2_o2_coefficient_line_composable": false,
+    "ap_e4_worldline_completion_closed": false,
+    "bps_vortex_cp1_moduli_candidate": true,
+    "canonical_spinc_dolbeault_sqm_derived": false,
+    "canonical_spinc_spectrum_solved_given_declared_vacuum_line": true,
+    "charged_two_colour_soliton_sqm_embedding_closed": false,
+    "cpt_antibaryon_polarization_closed": false,
+    "independent_fermi_zero_mode_bundle_derived": false,
+    "l2_metric_shape_and_finiteness_checked": true,
+    "mother_model_level_two_flux_derived": false,
+    "mother_model_vacuum_line_matches_canonical_spinc": false,
+    "o2_twist_three_positive_zero_modes": true,
+    "physical_tangent_fermion_in_intrinsic_sqm_derived": true,
+    "physics_promotion_allowed": false,
+    "product_compactification_used": false,
+    "route_e_family_identification": false,
+    "route_e_portal_closed": false,
+    "same_b1_cp1_collective_coordinate_proven": false,
+    "signed_wzw_pullback_to_o2_proven": false,
+    "six_dimensional_anomaly_gate_closed": false,
+    "spatial_wzw_transgression_and_pullback_proven": false,
+    "tangent_fermion_covariance_checked": true,
+    "untwisted_tangent_sqm_three_states": false,
+    "wzw_gauge_basic_descent_proven": false
+  },
+  "summary": {
+    "passed": 27,
+    "total": 27
+  }
+}

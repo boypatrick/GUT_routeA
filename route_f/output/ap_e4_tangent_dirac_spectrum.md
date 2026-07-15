@@ -65,5 +65,5 @@ twisted by `O(3)`; the half-canonical shift is physical input, not notation.
 - `route_f/tex/ap_e4_tangent_dirac_spectrum.tex` - `8a212bc5db3fb0c1c176a89ed6c77943f914972c5a6f78d4a2f31db737d63307` (22766 bytes)
 - `route_f/tex/ap_e4_tangent_dirac_spectrum.bib` - `63ef8f67f0b30b4465d4e0a4fa911e163b3ee6358a373effa421bb6de97e7774` (1254 bytes)
 - `route_f/tex/ap_e1_projective_doublet_action.tex` - `cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0` (37998 bytes)
-- `route_f/LITERATURE_2023_2026.md` - `71f24c2d5725b32d50b5ff8073919b86b4eb69c2092d9bc52929b97034956a41` (15797 bytes)
+- `route_f/LITERATURE_2023_2026.md` - `d9736214071b6913fb568dc102159751e0e5f6a606204d09bda651b26c2f9c73` (19899 bytes)
 - `route_f/code/verify_ap_e4_tangent_dirac_spectrum.py` - `ceaee9ca07bd1eaeff4a10e4092917c17d2b4b24ff15252bb95e05a2d288dc1c` (20996 bytes)

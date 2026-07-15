@@ -86,8 +86,8 @@ Interacting-plateau sufficient-condition margin: `2.025`.
 ## Source hashes
 
 - `route_f/tex/ap_e1_projective_doublet_action.tex` - `cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0` (37998 bytes)
-- `route_f/output/ap_e2_discriminant_regression.json` - `c360753719e4fb3d1f75ccb3b04d8e7cfe89a37d173f6d3130989a7fd9bc25a8` (11893 bytes)
+- `route_f/output/ap_e2_discriminant_regression.json` - `ac3578fa73ea2cc98d6f46e081dc2cf9d2b634ca3709a764b8d6a175f6e353f0` (11893 bytes)
 - `route_f/tex/ap_e3_level_two_microscopic_origin.tex` - `a649f72721cca74e3370ae8ee71bcd6da5808c97e493aefc01cf36d685d9ea94` (32635 bytes)
 - `route_f/tex/ap_e3_level_two_microscopic.bib` - `101a75d92fcd026e8be1d266ac9e527e84768317fb170b9c8f8b76a4ae812a63` (3550 bytes)
-- `route_f/LITERATURE_2023_2026.md` - `71f24c2d5725b32d50b5ff8073919b86b4eb69c2092d9bc52929b97034956a41` (15797 bytes)
+- `route_f/LITERATURE_2023_2026.md` - `d9736214071b6913fb568dc102159751e0e5f6a606204d09bda651b26c2f9c73` (19899 bytes)
 - `route_f/code/verify_ap_e3_level_two_microscopic.py` - `8263b14e644d372150fd6db5abc1edda636eb391c69fbf4c5ff1b9a57bcb1c7a` (32248 bytes)

@@ -37,6 +37,24 @@
       "pass": true
     },
     {
+      "detail": "proxy=18/18; radial=True; full3d=False; lattice=False",
+      "group": "S0_AP_E3_AP_E4",
+      "name": "charged two-colour nonlinear proxy closes only radial classical-EFT gates",
+      "pass": true
+    },
+    {
+      "detail": "global=38/38; char=True; U2 bundle=False; torsion=False; SU3 q=1=False; q=2 equivalent=False",
+      "group": "S0_AP_E3_AP_E4",
+      "name": "non-extendible bosonic WZW is defined while spin torsion and pure-SU(3) equivalence stay open",
+      "pass": true
+    },
+    {
+      "detail": "SQM=27/27; tangent=True; charged embedding=False; portal=False",
+      "group": "S0_AP_E3_AP_E4",
+      "name": "intrinsic N=2 SQM derives a tangent fermion but not the charged-two-colour composition",
+      "pass": true
+    },
+    {
       "detail": "h^0(O(d))=d+1 for d>=0; d=2 gives 3",
       "group": "S1_CP1_O2",
       "name": "H0(CP1,O(2)) has dimension three",
@@ -169,16 +187,18 @@
       "pass": true
     }
   ],
-  "checks_passed": 24,
-  "checks_total": 24,
+  "checks_passed": 27,
+  "checks_total": 27,
   "logical_contract": {
     "bridge_axiom": "Additional cross-theory identification requiring action-level derivation and independent phenomenological tests.",
     "green_run_meaning": "arithmetic/symbolic reproducibility only",
     "separation_theorem": "A result derived inside one explicitly stated mathematical model; it may rule out a proposed identification but cannot establish a cross-model map."
   },
   "open_physics_gates": [
-    "complete the charged-two-colour strong-phase, compact-monopole, bordism, soliton, and all-scale UV audits",
-    "derive the AP-E4 canonical Spin-c fermion from moduli-space SQM or an anomaly-free compactification",
+    "replace the charged-two-colour nonlinear EFT proxy by controlled gauge-theory evidence and the full coupled 3D/quantum soliton Hessian",
+    "select both reduced spin-bordism phases with a microscopic APS/Dai-Freed regulator",
+    "replace the pure-SU(3) charge-one no-go by a compatible semisimple UV group or accept the no-go",
+    "derive the AP-E4 SQM vacuum line and CPT polarization, then spatially transgress and gauge-descend the signed AP-E3 O(2) line for the same charged-two-colour B=1 soliton, or use an anomaly-free compactification",
     "construct and orient a degree-one Route-E portal below the AP-E3/AP-E4 gaps",
     "derive rather than identify the phase map between zeta and a visibility observable",
     "supply a gauge/anomaly-consistent Route-E embedding of the Q-ball U(1)",
@@ -191,13 +211,25 @@
     "AP_E3_AP_E4_handoff": {
       "canonical_spinc_gap_at_R_half": 4.0,
       "canonical_spinc_zero_modes": 3,
+      "charged_two_colour_sqm_embedding_closed": false,
+      "cpt_antibaryon_polarization_closed": false,
       "exactly_two_constrained_cell_proved": true,
+      "full_3d_hessian_closed": false,
+      "intrinsic_sqm_physical_tangent_fermion_derived": true,
+      "lattice_qc2d_closed": false,
       "mixed_wzw_full_uv_closed": false,
       "mixed_wzw_intermediate_uv_anomaly_consistent": true,
+      "mother_model_canonical_vacuum_line_derived": false,
+      "nonextendible_bosonic_wzw_defined": true,
+      "nonlinear_eft_radial_gate_pass": true,
       "ordinary_spin_tangent_zero_modes": 2,
-      "physical_fermionic_origin_derived": false,
+      "physical_fermionic_origin_in_charged_two_colour_model_derived": false,
       "physical_pauli_orientation_k": 2,
-      "route_E_portal_closed": false
+      "pure_su3_charge_one_embedding_possible": false,
+      "route_E_portal_closed": false,
+      "spin_torsion_uv_selected": false,
+      "su3_charge_two_variant_route_equivalent": false,
+      "u2_quotient_global_bundle_normalization_proven": false
     },
     "CP1_O2": {
       "basis": [
@@ -370,13 +402,25 @@
     }
   },
   "source_manifest": {
+    "ap_e3_charged_two_colour_proxy": {
+      "path": "route_f/output/ap_e3_charged_two_colour_proxy.json",
+      "sha256": "339e01d15035b71a464f76e02cee59684cd7db282fba4ade354747f34328d67c"
+    },
     "ap_e3_exact_two_mixed_wzw": {
       "path": "route_f/output/ap_e3_exact_two_mixed_wzw.json",
-      "sha256": "d1f77b4fc6e457d46ec6b0c7aae4a45a0cfd6eedd95d6b97c67a9a9e4c3c1833"
+      "sha256": "162cd9a4bcfcc003821a93bf3c62ff5fd642c372c892aa2af2c790195ec2248f"
+    },
+    "ap_e3_nonextendible_wzw_su3_uv": {
+      "path": "route_f/output/ap_e3_nonextendible_wzw_su3_uv.json",
+      "sha256": "d3b0fe67e992b0def00287f4670cc38d0ed89d07fd3b99c0cd9691d8984ded17"
+    },
+    "ap_e4_moduli_space_sqm": {
+      "path": "route_f/output/ap_e4_moduli_space_sqm.json",
+      "sha256": "37b6eed71c4caf4ce81207408c4704b4d33473e114b79913146c01d3dd512078"
     },
     "ap_e4_tangent_dirac_spectrum": {
       "path": "route_f/output/ap_e4_tangent_dirac_spectrum.json",
-      "sha256": "c03bdb596644e051b25dd00b4fe5c0c18c07a087ad00cc6981ce7f19b07da511"
+      "sha256": "849aaf07199011744037237e6a372b903890aef1febea37e65017b4ad0d4813d"
     },
     "route_E_invariant_card": {
       "path": "route_E/output/audit0/invariant_card.json",

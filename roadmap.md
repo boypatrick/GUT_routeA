@@ -1,6 +1,81 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
+
+## AP-E3 nonperturbative/global-UV and AP-E4 SQM checkpoint (2026-07-16)
+
+This checkpoint supersedes the corresponding open-next-step wording below,
+but it does not promote the Another-Physics/Route-E bridge to a physical
+theorem.
+
+- **Charged two-colour scan: nonlinear EFT gate executed, microscopic gauge
+  theory still open.**  The new deterministic scan minimizes a declared
+  six-real-field meson/charge-two-diquark potential, records both condensates
+  and the complete homogeneous Hessian on a two-parameter matching grid, and
+  solves the massive `B=1` SU(2) Skyrme hedgehog without linearising its field
+  equation.  It checks baryon number, the Derrick virial relation, grid/box
+  convergence, a generalized radial meson Hessian, the charged-diquark
+  `l=0,1` blocks, and a tachyonic negative control.  This is a classical
+  nonlinear EFT proxy, not four-dimensional lattice QC2D.  Full coupled 3D
+  modes, quantum determinants, UV matching of its low-energy constants, and
+  global unwinding remain fail-closed.
+  The `18/18` benchmark fixes the auditable reference point:
+  `mu_lift^2=-0.25`, gaps `(0.5,3.5,0.9)`, `|B-1|=4.06e-10`, relative
+  Derrick residual `2.52e-8`, radial `omega_0^2=0.311400567`, charged
+  `l=0` `omega_0^2=0.696506101`, and negative control `-1.430515810`.
+- **Non-extendible WZW sector: bosonic global definition completed; fermionic
+  torsion choice exposed.**  For
+  `X=SU(2) x S2 ~= S3 x S2`, the integral mixed five-form defines a degree-five
+  differential character and therefore a phase on every closed mapped
+  four-cycle, whether or not the spacetime map extends to a five-manifold.
+  The curvature lift is unique because `H^4(X;R/Z)=0`.  Spin refinement has
+  additional data:
+  `Omega_4^Spin(X)=Z + Z2 + Z2`; the two reduced signs can be represented by
+  the spin-bordism class of the inverse image of a regular point in `S3` and
+  the Arf class of the inverse image of a regular point in `S2`.  Their two
+  APS/Dai--Freed signs must be selected by a microscopic determinant and are
+  not fixed by the de Rham WZW form.
+- **Pure `SU(3)` deep UV: original spectrum refuted, closest decoupling branch
+  constructed.**  Breaking with an adjoint gives the faithful subgroup
+  `[SU(2) x U(1)]/Z2`; every restricted representation obeys
+  `2j+q=0 mod 2`.  Hence a colour singlet has even `q`, so the original
+  charge-one singlet scalar cannot descend from any `SU(3)` representation.
+  More strongly, an `O(2)` dressing `qq(phi^dagger)^2` would require equal
+  odd doublet and even singlet charges and is impossible.  A pair of
+  `bar(3)` scalars instead supplies light `1_(+2)` components after explicit
+  adjoint mass splitting, while two vectorlike fundamentals admit a tuned
+  `2_(+1)`/`1_(-2)` quark--lepton split.  This is an actual tree-level
+  decoupling model, but its minimal gauge-invariant baryon uses one scalar
+  and is a flavour doublet, not the required triplet; finite-threshold,
+  radiative, monopole, and 2-group matching remain open.  Its covering-
+  `U(1)` level normalization is not yet an all-bundle result for faithful
+  `U(2)`; the correlated centre-flux/determinant-line match remains
+  fail-closed.
+- **AP-E4 moduli-space `N=2` SQM: physical tangent fermion independently
+  derived, composability open.**  A supersymmetric non-Abelian vortex mother
+  model has `CP1` orientational moduli; BPS collective-coordinate
+  supersymmetry supplies a worldline Grassmann field transforming with the holomorphic tangent
+  Jacobian.  Quantization yields the canonical Dolbeault module
+  `Omega^(0,*)`, but the tangent Clifford generator does not by itself make
+  wavefunctions `T=O(2)`-valued.  The declared canonical Spin-c
+  re-quantization has one untwisted ground state, whereas the source-selected
+  half-form ordering has none.  An independent `O(2)` WZ/magnetic or Fermi-index line gives
+  `(h0,h1)=(3,0)` and the paired AP-E4 spectrum.  AP-E3's level-two WZW can
+  supply that line only after proving that the same charged-two-colour
+  `B=1` object has this supersymmetric `CP1` moduli action and after spatially
+  transgressing the degree-five WZW character to the required differential
+  line.  The present BPS
+  vortex is an independent construction, not that proof.  Product
+  compactification remains the anomaly-gated backup.  A further CPT gate is
+  open: at fixed canonical polarization, `k=-2` has one negative mode;
+  obtaining the conjugate three-state antibaryon requires an anti-canonical
+  polarization map (equivalently an effective `O(-4)` description).
+- **Ordering retained:** first replace the EFT proxy by controlled gauge-
+  theory evidence and complete the coupled soliton Hessian; determine the two
+  spin-torsion phases and choose a deep-UV group compatible with the
+  charge-one/exactly-two branch; then establish a same-mother-model SQM (or an
+  anomaly-free product compactification).  Only after those steps should the
+  degree-one Route-E portal be built.  `physics_promotion_allowed=false`.
 
 ## Route-E relationship checkpoint (2026-07-14)
 
@@ -20,7 +95,7 @@ research order and promotion gates are in `route_f/ROADMAP.md` F0-D.
   can yield `zeta_eff = g^2 Phi^2/Lambda^2`, but this is not yet a completed
   theory.  Stability, charge leakage, operator selection, canonical/full-6x6
   matching, H3+ origin, and integrated Route-E fits remain open.
-- **Numerical status:** the bridge verifier passes `24/24` checks and
+- **Numerical status:** the expanded bridge verifier passes `27/27` checks and
   deliberately sets `physics_promotion_allowed=false`.
 
 ### AP-E1 execution result (2026-07-14)

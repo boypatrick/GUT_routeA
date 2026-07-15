@@ -1,0 +1,1059 @@
+{
+  "all_pass": true,
+  "charged_coordinate_scan": {
+    "Lambda_c_over_f": 1.0,
+    "critical_e_g_times_v_g_over_Lambda_c": 0.7905694150420949,
+    "matching_coefficient_c_g": 0.24,
+    "matching_status": "declared_EFT_ansatz_not_UV_derived",
+    "mu_PG_baseline_sq_over_Lambda_c_sq": -0.4,
+    "rows": [
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7964766161036997,
+        "e_g": 0.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.4,
+        "meson_condensate_sigma_over_Lambda_c": 0.625,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 0.5,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.2444696886495865,
+          0.3999999886872273,
+          0.3999999886872274,
+          0.39999998868722747,
+          12.4555302519301
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7964766161036997,
+        "e_g": 0.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.4,
+        "meson_condensate_sigma_over_Lambda_c": 0.625,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 1.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.2444696886495865,
+          0.3999999886872273,
+          0.3999999886872274,
+          0.39999998868722747,
+          12.4555302519301
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7964766161036997,
+        "e_g": 0.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.4,
+        "meson_condensate_sigma_over_Lambda_c": 0.625,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 2.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.2444696886495865,
+          0.3999999886872273,
+          0.3999999886872274,
+          0.39999998868722747,
+          12.4555302519301
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7964766161036997,
+        "e_g": 0.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.4,
+        "meson_condensate_sigma_over_Lambda_c": 0.625,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 3.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.2444696886495865,
+          0.3999999886872273,
+          0.3999999886872274,
+          0.39999998868722747,
+          12.4555302519301
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7914047521366454,
+        "e_g": 0.25,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.39625000000000005,
+        "meson_condensate_sigma_over_Lambda_c": 0.6309148264984227,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 0.5,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.23921850111664286,
+          0.39624996617249053,
+          0.3962500105814115,
+          0.3962500105814115,
+          12.449531438532215
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7751411059851555,
+        "e_g": 0.25,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.385,
+        "meson_condensate_sigma_over_Lambda_c": 0.6493506493506493,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 1.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.22329175054604308,
+          0.38499998744612185,
+          0.38499998744612185,
+          0.38499998744612185,
+          12.431708230719249
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.6887253157490535,
+        "e_g": 0.25,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.34,
+        "meson_condensate_sigma_over_Lambda_c": 0.7352941176470588,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 4.440892098500626e-08,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 2.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          4.440892098500626e-08,
+          0.1565352358088017,
+          0.34000002813172614,
+          0.34000002813172614,
+          0.34000002813172614,
+          12.363464800899923
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.3354155034964249,
+        "e_g": 0.25,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.265,
+        "meson_condensate_sigma_over_Lambda_c": 0.9433962264150942,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 3.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.029167301568035868,
+          0.2649999997217378,
+          0.2649999997217378,
+          0.2649999997217378,
+          12.265832694319641
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7751411059851555,
+        "e_g": 0.5,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.385,
+        "meson_condensate_sigma_over_Lambda_c": 0.6493506493506493,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 0.5,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.22329175054604308,
+          0.38499998744612185,
+          0.38499998744612185,
+          0.38499998744612185,
+          12.431708230719249
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.6887253157490535,
+        "e_g": 0.5,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.34,
+        "meson_condensate_sigma_over_Lambda_c": 0.7352941176470588,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 4.440892098500626e-08,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 1.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          4.440892098500626e-08,
+          0.1565352358088017,
+          0.34000002813172614,
+          0.34000002813172614,
+          0.34000002813172614,
+          12.363464800899923
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 0.5,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.16000000000000003,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.09000000744663339,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 2.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.09000000744663339,
+          0.09000000744663339,
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 0.5,
+        "matched_mu_lift_sq_over_Lambda_c_sq": 0.14,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.24999999848063226,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 3.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          0.3899999878598237,
+          0.3899999878598237,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.7439359023843771,
+        "e_g": 0.75,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.36625,
+        "meson_condensate_sigma_over_Lambda_c": 0.68259385665529,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 0.5,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.1961173514470097,
+          0.3662500080992004,
+          0.3662500080992004,
+          0.3662500080992004,
+          12.402632647368595
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.3354155034964249,
+        "e_g": 0.75,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.265,
+        "meson_condensate_sigma_over_Lambda_c": 0.9433962264150942,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.0,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 1.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.0,
+          0.029167301568035868,
+          0.2649999997217378,
+          0.2649999997217378,
+          0.2649999997217378,
+          12.265832694319641
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 0.75,
+        "matched_mu_lift_sq_over_Lambda_c_sq": 0.14,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.24999999848063226,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 2.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          0.3899999878598237,
+          0.3899999878598237,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 0.75,
+        "matched_mu_lift_sq_over_Lambda_c_sq": 0.8149999999999998,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.24999999848063226,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 3.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          1.0649999993006531,
+          1.0649999993006531,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.6887253157490535,
+        "e_g": 1.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.34,
+        "meson_condensate_sigma_over_Lambda_c": 0.7352941176470588,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 4.440892098500626e-08,
+        "phase": "diquark_condensed_U1g_broken",
+        "v_g_over_Lambda_c": 0.5,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          4.440892098500626e-08,
+          0.1565352358088017,
+          0.34000002813172614,
+          0.34000002813172614,
+          0.34000002813172614,
+          12.363464800899923
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 1.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": -0.16000000000000003,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.09000000744663339,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 1.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.09000000744663339,
+          0.09000000744663339,
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 1.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": 0.5599999999999999,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.24999999848063226,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 2.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          0.810000000406319,
+          0.810000000406319,
+          12.250000003266592
+        ]
+      },
+      {
+        "diquark_condensate_real_basis_over_Lambda_c": 0.0,
+        "e_g": 1.0,
+        "matched_mu_lift_sq_over_Lambda_c_sq": 1.7600000000000002,
+        "meson_condensate_sigma_over_Lambda_c": 1.0,
+        "minimum_vacuum_hessian_over_Lambda_c_sq": 0.24999999848063226,
+        "phase": "mesonic_U1g_unbroken",
+        "v_g_over_Lambda_c": 3.0,
+        "vacuum_hessian_eigenvalues_over_Lambda_c_sq": [
+          0.24999999848063226,
+          0.24999999848063226,
+          0.24999999848063226,
+          2.0099999886724618,
+          2.0099999886724618,
+          12.250000003266592
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "detail": "hashed=3/3",
+      "group": "P0_provenance",
+      "name": "proxy source, independent TeX derivation, and bibliography exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "residual=2.220e-16",
+      "group": "P1_vacuum",
+      "name": "the declared mesonic vacuum solves the exact stationarity equation",
+      "pass": true
+    },
+    {
+      "detail": "max residual=3.267e-09",
+      "group": "P1_vacuum",
+      "name": "finite-difference and analytic six-field vacuum Hessians agree",
+      "pass": true
+    },
+    {
+      "detail": "gaps=(0.500000,3.500000,0.900000)",
+      "group": "P1_vacuum",
+      "name": "benchmark pion, sigma, and doubly charged diquark gaps are positive",
+      "pass": true
+    },
+    {
+      "detail": "critical=-0.250000; critical Hessian min=0.000e+00",
+      "group": "P1_vacuum",
+      "name": "analytic scan finds diquark onset exactly at mu_lift^2=-m_pi^2",
+      "pass": true
+    },
+    {
+      "detail": "phases=['diquark_condensed_U1g_broken', 'mesonic_U1g_unbroken']; matching=declared_EFT_ansatz_not_UV_derived",
+      "group": "P1_vacuum",
+      "name": "the declared (e_g,v_g/Lambda_c) chart resolves both sides of the charged phase gate",
+      "pass": true
+    },
+    {
+      "detail": "nodes=579; max rms=2.955e-07",
+      "group": "P2_soliton",
+      "name": "nonlinear hedgehog BVP converges with the regular origin series",
+      "pass": true
+    },
+    {
+      "detail": "B_numeric=0.999999999594",
+      "group": "P2_soliton",
+      "name": "integrated baryon density agrees with the B=1 boundary formula",
+      "pass": true
+    },
+    {
+      "detail": "relative residual=2.522e-08",
+      "group": "P2_soliton",
+      "name": "Derrick virial identity E4=E2+3E0 is numerically satisfied",
+      "pass": true
+    },
+    {
+      "detail": "d2E/dlambda2=8.145879695",
+      "group": "P2_soliton",
+      "name": "scale Hessian is positive at the Skyrme saddle",
+      "pass": true
+    },
+    {
+      "detail": "d(E2*lambda+E0*lambda^3)/dlambda|1=3.319202687",
+      "group": "P2_soliton",
+      "name": "negative control: deleting E4 removes the finite-scale Derrick stationary point",
+      "pass": true
+    },
+    {
+      "detail": "lowest five=[0.31140056712190023, 0.4257651809692827, 0.5821246592778764, 0.7752867401972081, 1.024793300584382]",
+      "group": "P3_hessian",
+      "name": "all computed spherically symmetric meson Hessian eigenvalues are positive",
+      "pass": true
+    },
+    {
+      "detail": "lambda0=0.696506101; continuum=0.810000000; free-box=0.840461742",
+      "group": "P3_hessian",
+      "name": "the doubly charged l=0 soliton mode is positive and bound below its continuum threshold",
+      "pass": true
+    },
+    {
+      "detail": "lambda_l0=0.696506101; lambda_l1=0.872004739",
+      "group": "P3_hessian",
+      "name": "centrifugal ordering makes l=0 the most dangerous charged scalar channel",
+      "pass": true
+    },
+    {
+      "detail": "chi=-5; lambda0=-1.430515810",
+      "group": "P3_hessian",
+      "name": "negative control: a stronger attractive core coupling produces a charged tachyon",
+      "pass": true
+    },
+    {
+      "detail": "delta_radial=2.571e-07, p=1.9952; delta_diquark=1.620e-05, p=2.0007",
+      "group": "P4_convergence",
+      "name": "the N=600,1200,2400 sequence shows second-order Hessian convergence and a final change below 2e-5",
+      "pass": true
+    },
+    {
+      "detail": "delta_E=8.679e-09; delta_diquark=3.916e-06",
+      "group": "P4_convergence",
+      "name": "the final box enlargement stabilises soliton energy and the localized diquark eigenvalue",
+      "pass": true
+    },
+    {
+      "detail": "sequence=[0.3497397998444644, 0.31140083333049695, 0.29138464523810853]; beta^2=0.250000000",
+      "group": "P4_convergence",
+      "name": "the lowest radial finite-box state decreases toward the pion continuum beta^2 without crossing zero",
+      "pass": true
+    }
+  ],
+  "checks_passed": 18,
+  "checks_total": 18,
+  "full_3d_hessian_closed": false,
+  "global_unwinding_excluded": false,
+  "grid_convergence": [
+    {
+      "B_numeric": 0.9999999995940666,
+      "box": 18.0,
+      "derrick_relative_residual": 2.5223696174580667e-08,
+      "diquark_hessian_eigenvalues": [
+        0.6964412676398769,
+        0.8562992357764703,
+        0.9826151082792353,
+        1.1779083392025502
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6964412676398769,
+        0.8562992357764703,
+        0.9826151082792353,
+        1.1779083392025502
+      ],
+      "energy_dimensionless_integral": 6.135914192963568,
+      "intervals": 600,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.3114015918947311,
+        0.42577838417806535,
+        0.5821915220783405,
+        0.7754439705174473
+      ],
+      "radial_hessian_eigenvalues": [
+        0.3114015918947311,
+        0.42577838417806535,
+        0.5821915220783405,
+        0.7754439705174473
+      ],
+      "spacing": 0.029999833333333333
+    },
+    {
+      "B_numeric": 0.9999999995940666,
+      "box": 18.0,
+      "derrick_relative_residual": 2.5223696174580667e-08,
+      "diquark_hessian_eigenvalues": [
+        0.6965061007409699,
+        0.856304003497749,
+        0.9826274178044627,
+        1.177931927188437
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6965061007409699,
+        0.856304003497749,
+        0.9826274178044627,
+        1.177931927188437
+      ],
+      "energy_dimensionless_integral": 6.135914192963568,
+      "intervals": 1200,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.31140056712155095,
+        0.4257651809683491,
+        0.582124659277901,
+        0.7752867401965693
+      ],
+      "radial_hessian_eigenvalues": [
+        0.31140056712155095,
+        0.4257651809683491,
+        0.582124659277901,
+        0.7752867401965693
+      ],
+      "spacing": 0.014999916666666667
+    },
+    {
+      "B_numeric": 0.9999999995940666,
+      "box": 18.0,
+      "derrick_relative_residual": 2.5223696174580667e-08,
+      "diquark_hessian_eigenvalues": [
+        0.6965223009406734,
+        0.8563051953783914,
+        0.9826304947453874,
+        1.1779378233992384
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6965223009406734,
+        0.8563051953783914,
+        0.9826304947453874,
+        1.1779378233992384
+      ],
+      "energy_dimensionless_integral": 6.135914192963568,
+      "intervals": 2400,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.3114003100688627,
+        0.42576186923568726,
+        0.5821078888989405,
+        0.7752473344335132
+      ],
+      "radial_hessian_eigenvalues": [
+        0.3114003100688627,
+        0.42576186923568726,
+        0.5821078888989405,
+        0.7752473344335132
+      ],
+      "spacing": 0.007499958333333333
+    }
+  ],
+  "grid_convergence_certification": {
+    "diquark_final_doubling_change": 1.620019970349773e-05,
+    "diquark_observed_order": 2.000718983825481,
+    "diquark_richardson_extrapolate": 0.6965277010072412,
+    "diquark_richardson_fine_grid_error_estimate": 5.4000665677955695e-06,
+    "expected_order": 2.0,
+    "radial_final_doubling_change": 2.570526882461621e-07,
+    "radial_observed_order": 1.9951686188672073,
+    "radial_richardson_extrapolate": 0.3114002243846333,
+    "radial_richardson_fine_grid_error_estimate": 8.568422943389109e-08
+  },
+  "hessian": {
+    "diquark_continuum_threshold": 0.81,
+    "diquark_free_box_threshold": 0.840461741978671,
+    "diquark_l0_eigenvalues": [
+      0.6965061007409071,
+      0.8563040034976785,
+      0.9826274178042146,
+      1.1779319271888207,
+      1.4387661098560551
+    ],
+    "diquark_l0_omega_sq_in_ef_sq_units": [
+      0.6965061007409071,
+      0.8563040034976785,
+      0.9826274178042146,
+      1.1779319271888207,
+      1.4387661098560551
+    ],
+    "diquark_l1_eigenvalues": [
+      0.8720047394976513,
+      0.9918861768362799,
+      1.1693542606699852
+    ],
+    "diquark_l1_omega_sq_in_ef_sq_units": [
+      0.8720047394976513,
+      0.9918861768362799,
+      1.1693542606699852
+    ],
+    "diquark_negative_control_chi": -5.0,
+    "diquark_negative_control_eigenvalues": [
+      -1.4305158104185836,
+      0.8432854139451974,
+      0.9436367915864033
+    ],
+    "operator_metadata": {
+      "diquark_problem": "ordinary Sturm-Liouville H_Delta,l u = omega^2 u with Dirichlet finite-box boundaries",
+      "eigenvalue_interpretation": "dimensionless squared frequency omega^2/(e f)^2",
+      "legacy_eigenvalue_keys_retained_for_compatibility": true,
+      "radial_problem": "generalized Sturm-Liouville H_F eta = omega^2 A eta with Dirichlet finite-box boundaries"
+    },
+    "radial_eigenvalues": [
+      0.31140056712190023,
+      0.4257651809692827,
+      0.5821246592778764,
+      0.7752867401972081,
+      1.024793300584382
+    ],
+    "radial_finite_box_continuum_floor": 0.25,
+    "radial_generalized_omega_sq_in_ef_sq_units": [
+      0.31140056712190023,
+      0.4257651809692827,
+      0.5821246592778764,
+      0.7752867401972081,
+      1.024793300584382
+    ]
+  },
+  "homogeneous_phase_scan": [
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.7964766161036997,
+      "hessian_eigenvalues": [
+        0.0,
+        0.2444696886495865,
+        0.3999999886872273,
+        0.3999999886872274,
+        0.39999998868722747,
+        12.4555302519301
+      ],
+      "mu_lift_sq": -0.4,
+      "phase": "diquark_condensed_U1g_broken",
+      "potential": -0.2764583333333333,
+      "sigma": 0.625
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.560257877132387,
+      "hessian_eigenvalues": [
+        0.0,
+        0.09180875110571554,
+        0.2999999804131903,
+        0.2999999804131903,
+        0.2999999804131903,
+        12.308191209060782
+      ],
+      "mu_lift_sq": -0.3,
+      "phase": "diquark_condensed_U1g_broken",
+      "potential": -0.25166666666666665,
+      "sigma": 0.8333333333333334
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.2776876908487581,
+      "hessian_eigenvalues": [
+        0.0,
+        0.01962295594509073,
+        0.25999999930803597,
+        0.25999999930803597,
+        0.25999999930803597,
+        12.260377083110402
+      ],
+      "mu_lift_sq": -0.26,
+      "phase": "diquark_condensed_U1g_broken",
+      "potential": -0.24759230769230772,
+      "sigma": 0.9615384615384615
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.0,
+        0.0,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        12.250000003266592
+      ],
+      "mu_lift_sq": -0.25,
+      "phase": "critical",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.14999999020659516,
+        0.14999999020659516,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        12.250000003266592
+      ],
+      "mu_lift_sq": -0.1,
+      "phase": "mesonic_U1g_unbroken",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        12.250000003266592
+      ],
+      "mu_lift_sq": 0.0,
+      "phase": "mesonic_U1g_unbroken",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.44999999282424596,
+        0.44999999282424596,
+        12.250000003266592
+      ],
+      "mu_lift_sq": 0.2,
+      "phase": "mesonic_U1g_unbroken",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        0.810000000406319,
+        0.810000000406319,
+        12.250000003266592
+      ],
+      "mu_lift_sq": 0.56,
+      "phase": "mesonic_U1g_unbroken",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    },
+    {
+      "critical_mu_lift_sq": -0.25,
+      "diquark_magnitude_real_basis": 0.0,
+      "hessian_eigenvalues": [
+        0.24999999848063226,
+        0.24999999848063226,
+        0.24999999848063226,
+        1.2499999924031613,
+        1.2499999924031613,
+        12.250000003266592
+      ],
+      "mu_lift_sq": 1.0,
+      "phase": "mesonic_U1g_unbroken",
+      "potential": -0.24739583333333334,
+      "sigma": 1.0
+    }
+  ],
+  "lattice_qc2d_closed": false,
+  "model": {
+    "alpha": 0.9,
+    "beta": 0.5,
+    "chi": -2.0,
+    "e": 1.0,
+    "f": 1.0,
+    "h": 0.25,
+    "lam": 6.0,
+    "m_diquark_sq": 0.81,
+    "m_pi": 0.5,
+    "m_sigma_sq": 12.25,
+    "mu_lift_sq": 0.56,
+    "q_diquark": 2,
+    "v_sq": 0.9583333333333334
+  },
+  "model_class": "charged-two-colour nonlinear EFT proxy; not lattice QC2D",
+  "nonlinear_eft_proxy_pass": true,
+  "physics_promotion_allowed": false,
+  "quantum_nonperturbative_gauge_theory_closed": false,
+  "radial_hessian_necessary_gate_pass": true,
+  "remaining_blockers": [
+    "Replace the classical EFT proxy by a controlled lattice or other nonperturbative calculation of the charged SU(2)c gauge theory.",
+    "Compute the full three-dimensional coupled meson, radial-sigma, vector, gauge, and ghost Hessian, including collective zero modes.",
+    "Include the fermion determinant and quantum corrections; the present Hessian is tree-level classical.",
+    "Prove that the microscopic charged theory dynamically selects the mesonic vacuum and match mu_lift_sq and chi from UV observables.",
+    "Exclude global escape/unwinding paths in the faithful full target; positivity of local Hessian blocks is only a necessary condition.",
+    "No Route-E family portal follows from this proxy scan."
+  ],
+  "runtime": {
+    "deterministic": true,
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "randomness_used": false,
+    "scipy": "1.13.1"
+  },
+  "schema_version": 1,
+  "soliton": {
+    "B_boundary": 1.0,
+    "B_numeric": 0.9999999995940666,
+    "B_residual": 4.059333980066526e-10,
+    "E0": 0.2512456683968018,
+    "E2": 2.5654656823029627,
+    "E4": 3.3192028422638034,
+    "bvp_max_rms_residual": 2.955252296939526e-07,
+    "bvp_nodes": 579,
+    "derrick_relative_residual": 2.5223696174580667e-08,
+    "derrick_virial": -1.547704353566104e-07,
+    "energy_dimensionless_integral": 6.135914192963568,
+    "energy_units_4pi_f_over_e": 77.10617180668676,
+    "no_skyrme_scale_derivative": 3.3192026874933678,
+    "origin_slope": 2.244905536362364,
+    "scale_second_derivative": 8.145879694908418
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e3_charged_two_colour_proxy.py",
+      "sha256": "937c94002dd1259075d25d6dba088d1a6d3b291fd31b1038e45a56abca9d53c2",
+      "size_bytes": 35674
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_charged_two_colour_soliton_proxy.tex",
+      "sha256": "bd649e3a707af2e205b431d8598563aaa8750c7a8d01ac044d8cc124906bb431",
+      "size_bytes": 22753
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e3_charged_two_colour_soliton_proxy.bib",
+      "sha256": "46be2552086c7f6ea29a76edd4052b6f2576ebb73aff62c1664e6a7a1e5e8946",
+      "size_bytes": 1834
+    }
+  ],
+  "status": "pass",
+  "vacuum": {
+    "analytic_hessian": [
+      [
+        12.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.81,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.81
+      ]
+    ],
+    "critical_mu_lift_sq": -0.25,
+    "finite_difference_hessian": [
+      [
+        12.250000003266592,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.24999999848063226,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.24999999848063226,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.24999999848063226,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.810000000406319,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.810000000406319
+      ]
+    ],
+    "hessian_max_residual": 3.2665923299646238e-09,
+    "mass_gaps": [
+      0.5,
+      3.5,
+      0.9
+    ],
+    "stationarity_residual": 2.220446049250313e-16
+  },
+  "volume_convergence": [
+    {
+      "B_numeric": 0.9999999999984761,
+      "box": 14.0,
+      "derrick_relative_residual": 1.196879342186357e-06,
+      "diquark_hessian_eigenvalues": [
+        0.6965476931476106,
+        0.8946166609665649,
+        1.1123969729502212,
+        1.4424440421726255
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6965476931476106,
+        0.8946166609665649,
+        1.1123969729502212,
+        1.4424440421726255
+      ],
+      "energy_dimensionless_integral": 6.135914701276122,
+      "intervals": 700,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.3497397998444644,
+        0.5247386159090003,
+        0.7530476889915112,
+        1.0669087275394167
+      ],
+      "radial_hessian_eigenvalues": [
+        0.3497397998444644,
+        0.5247386159090003,
+        0.7530476889915112,
+        1.0669087275394167
+      ],
+      "spacing": 0.019999857142857142
+    },
+    {
+      "B_numeric": 0.9999999995940666,
+      "box": 18.0,
+      "derrick_relative_residual": 2.5223696174580667e-08,
+      "diquark_hessian_eigenvalues": [
+        0.6964892971233707,
+        0.8563027674515054,
+        0.9826242267167984,
+        1.1779258122680845
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6964892971233707,
+        0.8563027674515054,
+        0.9826242267167984,
+        1.1779258122680845
+      ],
+      "energy_dimensionless_integral": 6.135914192963568,
+      "intervals": 900,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.31140083333049695,
+        0.42576861073924016,
+        0.582142027666723,
+        0.7753275639411086
+      ],
+      "radial_hessian_eigenvalues": [
+        0.31140083333049695,
+        0.42576861073924016,
+        0.582142027666723,
+        0.7753275639411086
+      ],
+      "spacing": 0.01999988888888889
+    },
+    {
+      "B_numeric": 0.9999999995926411,
+      "box": 22.0,
+      "derrick_relative_residual": 4.249443847776528e-10,
+      "diquark_hessian_eigenvalues": [
+        0.6964853814866162,
+        0.8388726314522189,
+        0.9204003159468954,
+        1.0486135989816867
+      ],
+      "diquark_omega_sq_in_ef_sq_units": [
+        0.6964853814866162,
+        0.8388726314522189,
+        0.9204003159468954,
+        1.0486135989816867
+      ],
+      "energy_dimensionless_integral": 6.135914184284355,
+      "intervals": 1100,
+      "radial_generalized_omega_sq_in_ef_sq_units": [
+        0.29138464523810853,
+        0.37030077081720303,
+        0.4828607374166214,
+        0.6225875577694323
+      ],
+      "radial_hessian_eigenvalues": [
+        0.29138464523810853,
+        0.37030077081720303,
+        0.4828607374166214,
+        0.6225875577694323
+      ],
+      "spacing": 0.019999909090909092
+    }
+  ]
+}

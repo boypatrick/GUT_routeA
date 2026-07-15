@@ -1,0 +1,919 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Arf}{\operatorname{Arf}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E3 Global-Definition and Deep-UV Audit:\\
+Differential Characters on Non-Extendible Four-Sectors\\
+and the Exact Boundary of the \(SU(3)\) Embedding}
+\author{Route F independent research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note closes the ordinary global-definition problem for the level-two
+mixed Wess--Zumino--Witten functional and sharply delimits what remains UV
+data.  For the actual two-flavour target
+\(X=SU(2)\times S^2\simeq S^3\times S^2\), the integral curvature
+\(n\omega_3\wedge\omega_2\) has a unique degree-five differential-character
+refinement.  Its holonomy defines the mixed action on every closed oriented
+four-manifold and every sigma-model map, including configurations that do not
+extend over a spin five-manifold.  A \v{C}ech--Deligne representative and its
+descent equations make the construction local and computable.
+
+Spin bordism contributes additional information that the curvature cannot
+fix.  Stable splitting gives
+\[
+ \Omega^{\mathrm{Spin}}_4(S^3\times S^2)
+ \simeq \ZZ\oplus\ZZ_2\oplus\ZZ_2,
+\]
+not merely one reduced \(\ZZ_2\).  The two reduced signs are detected by the
+spin one-manifold \(g^{-1}(p_3)\) and the Arf invariant of the spin
+two-manifold \(s^{-1}(p_2)\).  The full action is therefore
+\[
+ Z_{n,\epsilon_3,\epsilon_2}
+ =\Hol_{\widehat\Omega_n}(g,s)
+ (-1)^{\epsilon_3\nu_3+\epsilon_2\nu_2}.
+\]
+The two signs require a specified UV APS/Dai--Freed determinant and are not
+silently chosen here.
+
+The proposed all-scale breaking
+\(SU(3)\to[SU(2)_c\times U(1)_g]/\ZZ_2\) is then audited exactly.  Its kernel
+forces \(2j+q=0\pmod2\), so a colour singlet has even abelian charge and the
+original charge-one scalar cannot occur in any \(SU(3)\) representation.
+Two \(\overline{\bm3}\) scalars do furnish a conditional charge-two variant,
+and explicit adjoint mass matrices can make their coloured partners heavy.
+Vectorlike fundamental fermions give
+\(\bm3\to\bm2_{+1}\oplus\bm1_{-2}\); all dynamical gauge anomalies cancel,
+and an adjoint mass matrix can tune the quarks light while making the extra
+leptons heavy.  Neither tuning is symmetry protected.  More decisively, the
+charge-two scalar needs only one conjugate dressing of \(qq\), giving a
+doublet rather than the exactly-two triplet.  Thus the global mixed-WZW
+functional is defined, while a Route-E-equivalent all-scale UV completion is
+not established.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, conventions, and claim discipline}
+
+The purpose of this note is narrow.  It does not repeat the local anomaly
+ledger or the worldline reduction already established in the main AP-E3
+note.  Instead it addresses two residual questions:
+\begin{enumerate}[label=(Q\arabic*)]
+\item how to define the mixed functional when the four-dimensional spin
+  configuration is not a five-dimensional spin boundary;
+\item whether the suggested \(SU(3)\) embedding actually reproduces the
+  charge-one scalar, decouples all partners, and preserves the level-two
+  triplet mechanism.
+\end{enumerate}
+
+We use
+\begin{equation}
+ X=SU(2)\times S^2\simeq S^3\times S^2,
+ \qquad
+ \int_{S^3}\omega_3=1,
+ \qquad
+ \int_{S^2}\omega_2=1,
+ \label{eq:normalized-forms}
+\end{equation}
+and the mixed curvature
+\begin{equation}
+ \Omega_{5,n}=n\,\omega_3\wedge\omega_2,
+ \qquad n=2.
+ \label{eq:mixed-curvature}
+\end{equation}
+The trace in
+\(\omega_3=(24\pi^2)^{-1}\Tr(g^{-1}\dd g)^3\) is fixed by
+Eq.~\eqref{eq:normalized-forms}, so no later sign or normalization is hidden
+in a representation convention.
+
+Statements are marked as follows.  \status{Proved} means a topological,
+group-theoretic, or algebraic result follows from the displayed assumptions.
+\status{Conditional} means an explicit Lagrangian or mass matrix exists but
+its hierarchy or radiative stability is assumed.  \status{Open} means no
+completion is claimed.
+
+\section{The extension-free differential-character functional}
+
+\subsection{Integral class and uniqueness}
+
+Let \(u_3\in H^3(S^3;\ZZ)\) and
+\(u_2\in H^2(S^2;\ZZ)\) be positive generators.  K\"unneth's theorem gives
+\begin{equation}
+ H^\bullet(X;\ZZ)
+ \simeq \Lambda_{\ZZ}(u_3)\otimes
+ \frac{\ZZ[u_2]}{(u_2^2)},
+ \qquad
+ H^4(X;\ZZ)=0,
+ \qquad
+ H^5(X;\ZZ)=\ZZ\{u_3u_2\}.
+ \label{eq:cohomology-ring}
+\end{equation}
+
+A degree-\(k\) Cheeger--Simons differential character is a homomorphism
+\begin{equation}
+ \widehat h:Z_{k-1}(X)\longrightarrow\RR/\ZZ
+ \label{eq:character-definition}
+\end{equation}
+for which there is a closed integral-period \(k\)-form
+\(\operatorname{curv}(\widehat h)\) satisfying
+\begin{equation}
+ \widehat h(\partial C_k)
+ =\int_{C_k}\operatorname{curv}(\widehat h)\pmod\ZZ.
+ \label{eq:character-boundary}
+\end{equation}
+Differential characters are equivalent to smooth Deligne cohomology
+\cite{CheegerSimons1985,Brylinski1993}.
+
+Choose the unique normalized refinements
+\begin{equation}
+ \widehat u_3\in\widehat H^3(S^3;\ZZ),
+ \qquad
+ \widehat u_2\in\widehat H^2(S^2;\ZZ),
+ \label{eq:factor-characters}
+\end{equation}
+with curvatures \(\omega_3\) and \(\omega_2\).  Their differential cup
+product is
+\begin{equation}
+ \widehat\Omega_n
+ :=n\,\widehat u_3\smile\widehat u_2
+ \in\widehat H^5(X;\ZZ),
+ \label{eq:differential-cup}
+\end{equation}
+and obeys
+\begin{align}
+ \operatorname{curv}(\widehat\Omega_n)
+ &=n\omega_3\wedge\omega_2,\notag\\
+ c(\widehat\Omega_n)&=n\,u_3u_2.
+ \label{eq:cup-data}
+\end{align}
+
+\begin{theorem}[Unique ordinary differential refinement]
+For every \(n\in\ZZ\), Eq.~\eqref{eq:differential-cup} is the unique
+ordinary degree-five differential character with curvature
+\(n\omega_3\wedge\omega_2\).
+\end{theorem}
+\begin{proof}
+The curvature exact sequence is
+\begin{equation}
+ 0\longrightarrow H^4(X;\RR/\ZZ)
+ \longrightarrow\widehat H^5(X;\ZZ)
+ \xrightarrow{\operatorname{curv}}\Omega^5_{\ZZ}(X)
+ \longrightarrow0.
+ \label{eq:curvature-sequence}
+\end{equation}
+Equation~\eqref{eq:cohomology-ring} and the universal coefficient theorem
+give \(H^4(X;\RR/\ZZ)=0\).  Hence the fiber over the prescribed integral
+curvature contains exactly one character.
+\end{proof}
+
+\subsection{Definition on an arbitrary four-sector}
+
+Let \(M_4\) be a closed oriented four-manifold and
+\(\Phi=(g,s):M_4\to X\).  Define
+\begin{equation}
+ Z_n^{\rm diff}[M_4,\Phi]
+ :=\exp\!\left[2\pi\ii\,
+ \widehat\Omega_n\bigl(\Phi_*[M_4]\bigr)\right].
+ \label{eq:global-holonomy}
+\end{equation}
+This formula requires neither a five-manifold nor an extension of \(\Phi\).
+It is therefore a definition, rather than an instruction that fails in a
+non-bounding sector.
+
+When a singular five-chain \(C_5\) in \(X\) satisfies
+\(\partial C_5=\Phi_*[M_4]\), the character axiom gives
+\begin{equation}
+ Z_n^{\rm diff}[M_4,\Phi]
+ =\exp\!\left[2\pi\ii n\int_{C_5}\omega_3\wedge\omega_2\right].
+ \label{eq:chain-formula}
+\end{equation}
+Such a chain exists here because \(H_4(X;\ZZ)=0\).  It need not be the image
+of a smooth spin five-manifold.  If a genuine extension
+\((Y_5,\widetilde\Phi)\) exists, Eq.~\eqref{eq:chain-formula} reduces to
+\begin{equation}
+ Z_n^{\rm diff}
+ =\exp\!\left[2\pi\ii n\int_{Y_5}
+ \widetilde\Phi^*(\omega_3\wedge\omega_2)\right].
+ \label{eq:five-manifold-limit}
+\end{equation}
+Changing the extension adds an integral period and leaves the exponential
+unchanged.  Thus the five-dimensional formula is a consequence of the
+character, not its universal definition.
+
+\section{A computable \v{C}ech--Deligne representative}
+
+\subsection{Descent data and triangulated holonomy}
+
+On a good cover \(\{U_i\}\) of \(X\), a degree-five Deligne cocycle may be
+written
+\begin{equation}
+ \check C=
+ \bigl(C_i^{(4)},C_{ij}^{(3)},C_{ijk}^{(2)},
+ C_{ijkl}^{(1)},C_{ijklm}^{(0)},N_{ijklmn}\bigr),
+ \label{eq:deligne-data}
+\end{equation}
+where \(N\) is integer valued.  We fix the descent-sign convention
+\begin{align}
+ \dd C_i^{(4)}&=\Omega_{5,n},\notag\\
+ \delta C^{(4)}&=\dd C^{(3)},&
+ \delta C^{(3)}&=-\dd C^{(2)},\notag\\
+ \delta C^{(2)}&=\dd C^{(1)},&
+ \delta C^{(1)}&=-\dd C^{(0)},\notag\\
+ \delta C^{(0)}&=N,&\delta N&=0.
+ \label{eq:descent-equations}
+\end{align}
+The integer cocycle represents \(n u_3u_2\).  Another representative differs
+by a Deligne coboundary and defines the same character.
+
+Choose a triangulation subordinate to the cover and a barycentric labelling.
+The logarithm of the holonomy is the alternating flag sum
+\begin{align}
+ \frac{1}{2\pi\ii}\log\Hol_{\check C}(M_4)
+ ={}&\sum_{\sigma^4}\int_{\sigma^4}C^{(4)}_{i_0}
+ -\sum_{\sigma^3\subset\sigma^4}\int_{\sigma^3}C^{(3)}_{i_0i_1}
+ +\sum_{\sigma^2\subset\sigma^3\subset\sigma^4}
+   \int_{\sigma^2}C^{(2)}_{i_0i_1i_2}\notag\\
+ &-\sum_{\sigma^1\subset\cdots\subset\sigma^4}
+   \int_{\sigma^1}C^{(1)}_{i_0i_1i_2i_3}
+ +\sum_{\sigma^0\subset\cdots\subset\sigma^4}
+   C^{(0)}_{i_0i_1i_2i_3i_4}\pmod\ZZ.
+ \label{eq:cech-holonomy}
+\end{align}
+The orientations and incidence numbers are those of the nested simplices.
+Equations~\eqref{eq:descent-equations} make internal faces cancel, while
+\(N\in\ZZ\) makes cover changes and refinements invisible after
+exponentiation.  This is the promised extension-free local algorithm.
+
+\subsection{Explicit normalization check}
+
+Use hyperspherical coordinates on \(S^3\):
+\begin{equation}
+ \omega_3=\frac{1}{2\pi^2}\sin^2\chi\sin\theta\,
+ \dd\chi\wedge\dd\theta\wedge\dd\varphi.
+ \label{eq:s3-volume}
+\end{equation}
+Two illustrative gerbe potentials are
+\begin{align}
+ B_N&=f_N(\chi)\sin\theta\,\dd\theta\wedge\dd\varphi,
+ &f_N(\chi)&=\frac{2\chi-\sin2\chi}{8\pi^2},\notag\\
+ B_S&=f_S(\chi)\sin\theta\,\dd\theta\wedge\dd\varphi,
+ &f_S(\chi)&=f_N(\chi)-\frac1{4\pi}.
+ \label{eq:gerbe-potentials}
+\end{align}
+They satisfy
+\begin{equation}
+ \dd B_N=\dd B_S=\omega_3,
+ \qquad
+ \int_{S^2}(B_N-B_S)=1.
+ \label{eq:gerbe-overlap}
+\end{equation}
+The two-chart presentation may be refined to a good cover; its overlap
+already exposes the integral gerbe transition.
+
+For the \(S^2\) factor, Route-E conventions give
+\begin{align}
+ A_N&=\frac{1-\cos\Theta}{2}\dd\Phi,&
+ A_S&=-\frac{1+\cos\Theta}{2}\dd\Phi,\notag\\
+ A_N-A_S&=\dd\Phi,&
+ \omega_2&=\frac{\dd A}{2\pi}
+ =\frac{\sin\Theta}{4\pi}\dd\Theta\wedge\dd\Phi.
+ \label{eq:hopf-patches}
+\end{align}
+Locally one may start with
+\begin{equation}
+ C_{N,\alpha}^{(4)}=n B_N\wedge\omega_2,
+ \qquad
+ C_{S,\alpha}^{(4)}=n B_S\wedge\omega_2.
+ \label{eq:local-four-potential}
+\end{equation}
+The non-exact integral overlap in Eq.~\eqref{eq:gerbe-overlap} is precisely
+why a single global four-form does not exist.  The remaining terms in
+Eq.~\eqref{eq:deligne-data} are generated by the Deligne cup product of the
+gerbe and Hopf-line cocycles.  Omitting them would make the action patch
+dependent.
+
+\section{Spin bordism, the two torsion signs, and APS selection}
+
+\subsection{The special \texorpdfstring{\(N_f=2\)}{Nf=2} stable splitting}
+
+The target in this repository uses \(SU(2)\simeq S^3\), so its bordism must
+not be replaced by a generic \(SU(N\ge3)\) result.  The stable splitting is
+\begin{equation}
+ \Sigma^\infty(S^3\times S^2)_+
+ \simeq S^0\vee S^2\vee S^3\vee S^5.
+ \label{eq:stable-splitting}
+\end{equation}
+Since spin bordism is a generalized homology theory and
+\begin{equation}
+ \Omega^{\rm Spin}_0=\ZZ,\quad
+ \Omega^{\rm Spin}_1=\ZZ_2,\quad
+ \Omega^{\rm Spin}_2=\ZZ_2,\quad
+ \Omega^{\rm Spin}_3=0,\quad
+ \Omega^{\rm Spin}_4=\ZZ,
+ \label{eq:low-spin-bordism}
+\end{equation}
+we obtain the following result.
+
+\begin{theorem}[Full and reduced four-bordism]
+\begin{align}
+ \Omega^{\rm Spin}_4(S^3\times S^2)
+ &\simeq\ZZ\oplus\ZZ_2\oplus\ZZ_2,\notag\\
+ \widetilde\Omega^{\rm Spin}_4(S^3\times S^2)
+ &\simeq\ZZ_2\oplus\ZZ_2.
+ \label{eq:bordism-result}
+\end{align}
+The free \(\ZZ\) is the field-independent gravitational sector.  The first
+reduced \(\ZZ_2\) comes from the \(S^3\) factor and the second from \(S^2\).
+\end{theorem}
+
+The \(S^3\) summand is the special two-flavour discrete WZW sector discussed
+in Ref.~\cite{LeeOhmoriTachikawa2021Global}.  The extra \(S^2\) summand is the
+one retained in the generic mixed-target calculation of
+Ref.~\cite{DavighiLohitsiri2024Global}.  Both are present for the actual
+product \(S^3\times S^2\).
+
+\subsection{Transverse inverse-image invariants}
+
+Let \(p_3\in S^3\) and \(p_2\in S^2\) be regular values.  Transversality gives
+\begin{align}
+ L_g&:=g^{-1}(p_3),&\dim L_g&=1,\notag\\
+ \Sigma_s&:=s^{-1}(p_2),&\dim\Sigma_s&=2.
+ \label{eq:inverse-images}
+\end{align}
+The oriented tangent spaces at the regular values frame the normal bundles.
+Together with the spin structure on \(M_4\), these framings induce spin
+structures on \(L_g\) and \(\Sigma_s\).  Define
+\begin{align}
+ \nu_3(M_4,g)&=[L_g]\in\Omega_1^{\rm Spin}\simeq\ZZ_2,
+ \label{eq:nu3}\\
+ \nu_2(M_4,s)&=\Arf(\Sigma_s)\in
+ \Omega_2^{\rm Spin}\simeq\ZZ_2.
+ \label{eq:nu2}
+\end{align}
+Changing the regular value gives a spin bordism between inverse images, so
+the invariants are well defined.  Representatives are
+\begin{align}
+ &(S^1_{\rm periodic}\times S^3,
+ g=\operatorname{pr}_{S^3},\ s={\rm const})
+ &&\text{for }\nu_3=1,\notag\\
+ &(T^2_{\rm odd}\times S^2,
+ g={\rm const},\ s=\operatorname{pr}_{S^2})
+ &&\text{for }\nu_2=1.
+ \label{eq:bordism-generators}
+\end{align}
+
+\begin{definition}[Full spin-refined mixed functional]
+After factoring out the pure gravitational phase, the most general
+spin-refined action with curvature Eq.~\eqref{eq:mixed-curvature} is
+\begin{equation}
+ Z_{n,\epsilon_3,\epsilon_2}[M_4,g,s]
+ =Z_n^{\rm diff}[M_4,g,s]
+ (-1)^{\epsilon_3\nu_3(M_4,g)+
+       \epsilon_2\nu_2(M_4,s)},
+ \qquad \epsilon_3,\epsilon_2\in\ZZ_2.
+ \label{eq:full-spin-action}
+\end{equation}
+\end{definition}
+
+The ordinary differential character fixes the continuous/integral mixed
+part uniquely.  It does not fix either torsion character.  On a spin-bounding
+configuration both \(\nu_3\) and \(\nu_2\) vanish, so all four choices reduce
+to Eq.~\eqref{eq:five-manifold-limit}; this explains why extension tests alone
+cannot distinguish them.
+
+\subsection{What APS/Dai--Freed must compute}
+
+The coefficients \((\epsilon_3,\epsilon_2)\) are selected by the phase of a
+specified UV determinant, not by choosing a convenient square root.  For a
+real or pseudoreal one-parameter family of regulated boundary operators
+\(\mathcal D_t\), the mod-two spectral flow satisfies
+\begin{equation}
+ \operatorname{SF}_2(\mathcal D_t)
+ =\ind_{2,{\rm APS}}(\partial_t+\mathcal D_t).
+ \label{eq:aps-spectral-flow}
+\end{equation}
+For a complex family, the corresponding object is the exponentiated reduced
+eta invariant
+\begin{equation}
+ \tau_Y(\mathcal D)=
+ \exp\!\left[2\pi\ii\,\bar\eta(\mathcal D_Y)\right],
+ \qquad
+ \bar\eta=\frac{\eta+\dim\ker\mathcal D}{2},
+ \label{eq:dai-freed}
+\end{equation}
+viewed as a section of the determinant line.  APS gluing makes the result a
+bordism character \cite{AtiyahPatodiSinger1975,DaiFreed1994}.
+
+To determine Eq.~\eqref{eq:full-spin-action}, one must evaluate the UV
+determinant on both backgrounds in Eq.~\eqref{eq:bordism-generators}.  The
+standard two-flavour QCD result gives
+\(\epsilon_3=n_c\bmod2=0\) for two colours, provided the usual quark
+determinant and skyrmion identification are retained.  No calculation in the
+present repository fixes \(\epsilon_2\).  A convention
+\(\epsilon_2=0\) is allowed but is not a first-principles derivation.  Modern
+bordism treatments illustrate precisely why this determinant step is
+independent of local anomaly matching \cite{Freed2008,Saito2024Global}.
+
+\begin{gate}[Global-definition result]
+The ordinary non-extendible mixed functional is now defined by
+Eq.~\eqref{eq:global-holonomy}.  The full spin theory remains a two-bit family
+until a UV APS/Dai--Freed calculation selects \((\epsilon_3,\epsilon_2)\).
+Calling the entire spin refinement \emph{closed} before that calculation
+would be false.
+\end{gate}
+
+\section{The exact \texorpdfstring{\(SU(3)\)}{SU(3)} quotient and branching}
+
+\subsection{Group homomorphism and parity theorem}
+
+Take an adjoint field \(\Sigma\sim\bm8\) with
+\begin{equation}
+ \langle\Sigma\rangle=V_\Sigma T,
+ \qquad T=\operatorname{diag}(1,1,-2).
+ \label{eq:adjoint-vev}
+\end{equation}
+The unbroken subgroup is the image of
+\begin{equation}
+ \iota:SU(2)_c\times U(1)_g\longrightarrow SU(3),
+ \qquad
+ \iota(U,e^{\ii\alpha})
+ =\begin{pmatrix}e^{\ii\alpha}U&0\\0&e^{-2\ii\alpha}\end{pmatrix}.
+ \label{eq:embedding-map}
+\end{equation}
+Its kernel is
+\begin{equation}
+ \ker\iota=\{(\bm1,1),(-\bm1,-1)\}\simeq\ZZ_2,
+ \label{eq:embedding-kernel}
+\end{equation}
+so the gauge group below \(V_\Sigma\) is
+\begin{equation}
+ U(2)\simeq[SU(2)_c\times U(1)_g]/\ZZ_2.
+ \label{eq:u2-group}
+\end{equation}
+
+\begin{theorem}[Quotient-parity rule]
+An \(SU(2)_c\) spin-\(j\) multiplet of integer-normalized abelian charge
+\(q\) is a representation of Eq.~\eqref{eq:u2-group} if and only if
+\begin{equation}
+ 2j+q=0\pmod2.
+ \label{eq:quotient-parity}
+\end{equation}
+Consequently every colour doublet has odd charge and every colour singlet has
+even charge.
+\end{theorem}
+\begin{proof}
+The kernel generator acts as
+\((-1)^{2j}e^{\ii\pi q}\).  It must act trivially, which is exactly
+Eq.~\eqref{eq:quotient-parity}.
+\end{proof}
+
+This is a representation-independent obstruction.  In particular, a
+\(\bm1_{+1}\) scalar cannot descend from any \(SU(3)\) representation.  It is
+not repaired by placing that scalar next to coloured partners; the forbidden
+singlet itself never appears.
+
+\subsection{Low-representation decomposition}
+
+With the normalization in Eq.~\eqref{eq:adjoint-vev}, direct weight
+decomposition gives \cite{Slansky1981}
+\begin{longtable}{@{}L{0.16\textwidth}L{0.72\textwidth}@{}}
+\toprule
+\(SU(3)\) irrep & \(SU(2)_c\times U(1)_g\) content\\
+\midrule
+\endfirsthead
+\toprule
+\(SU(3)\) irrep & \(SU(2)_c\times U(1)_g\) content\\
+\midrule
+\endhead
+\(\bm3\) & \(\bm2_{+1}\oplus\bm1_{-2}\)\\
+\(\overline{\bm3}\) & \(\bm2_{-1}\oplus\bm1_{+2}\)\\
+\(\bm6\) & \(\bm3_{+2}\oplus\bm2_{-1}\oplus\bm1_{-4}\)\\
+\(\overline{\bm6}\) & \(\bm3_{-2}\oplus\bm2_{+1}\oplus\bm1_{+4}\)\\
+\(\bm8\) & \(\bm3_0\oplus\bm2_{+3}\oplus\bm2_{-3}\oplus\bm1_0\)\\
+\(\bm{10}\) & \(\bm4_{+3}\oplus\bm3_0\oplus\bm2_{-3}\oplus\bm1_{-6}\)\\
+\bottomrule
+\end{longtable}
+Every term obeys Eq.~\eqref{eq:quotient-parity}.  The companion verifier
+derives the symmetric-power rows from weights rather than storing only their
+dimensions.
+
+\section{Fermions, anomaly matching, and lepton decoupling}
+
+\subsection{Vectorlike deep-UV multiplets}
+
+Take \(N_f=2\) Dirac fields \(\Psi_i\in\bm3\) of \(SU(3)\).  Below
+\(V_\Sigma\),
+\begin{equation}
+ \Psi_i\longrightarrow q_i\oplus\ell_i,\qquad
+ q_i\sim\bm2_{+1},\qquad
+ \ell_i\sim\bm1_{-2}.
+ \label{eq:quark-lepton-split}
+\end{equation}
+In all-left notation the fields are
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+field & \(SU(2)_c\) & \(U(1)_g\)\\
+\midrule
+\(q_L\) & \(\bm2\) & \(+1\)\\
+\(q_R^c\) & \(\bm2\) & \(-1\)\\
+\(\ell_L\) & \(\bm1\) & \(-2\)\\
+\(\ell_R^c\) & \(\bm1\) & \(+2\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The extra lepton is not optional: it is the third component of every
+fundamental \(SU(3)\) fermion.
+
+The deep theory is vectorlike, hence
+\begin{equation}
+ \mathcal A_{SU(3)^3}=N_f[A(\bm3)+A(\overline{\bm3})]=0.
+ \label{eq:su3-anomaly}
+\end{equation}
+After branching, the complete local ledger is
+\begin{align}
+ \mathcal A_{SU(2)_c^2U(1)_g}
+ &=N_fT(\bm2)(1-1)=0,\notag\\
+ \mathcal A_{U(1)_g^3}
+ &=N_f\{2(1^3-1^3)+(-2)^3+2^3\}=0,\notag\\
+ \mathcal A_{{\rm grav}^2U(1)_g}
+ &=N_f\{2(1-1)-2+2\}=0.
+ \label{eq:branched-anomalies}
+\end{align}
+There are \(2N_f=4\) left-Weyl colour doublets, so the colour Witten anomaly
+also vanishes.
+
+For independent quark and lepton chiral-flavour backgrounds, the
+operator-valued mixed coefficients are
+\begin{equation}
+ \widehat\kappa_q=2(+1)=+2,\qquad
+ \widehat\kappa_\ell=1(-2)=-2.
+ \label{eq:kappa-cancellation}
+\end{equation}
+They cancel on the diagonal deep-UV flavour group, as required because the
+simple \(SU(3)\) phase has no exact magnetic \(U(1)\) one-form symmetry
+\cite{DavighiLohitsiri2024Global}.  For \(N_f=2\), perturbative flavour cubic
+anomalies vanish, but the global Witten count is informative: the quark
+flavour factor sees two copies (even), the lepton factor one copy (odd), and
+the diagonal deep factor three copies (odd).  Decoupling the lepton while
+keeping an exact unchanged deep chiral symmetry is therefore not innocuous.
+
+\subsection{Adjoint mass matrix and its exact conditions}
+
+The most direct renormalizable splitting is
+\begin{equation}
+ \mathcal L_{\rm mass}
+ =-\overline\Psi_{L\,i}
+ \bigl(m_{ij}+y_{ij}\Sigma\bigr)\Psi_R^j+{\rm h.c.},
+ \label{eq:fermion-mass-lagrangian}
+\end{equation}
+where \(m\) and \(y\) are complex \(N_f\times N_f\) matrices.  The two
+blocks are
+\begin{equation}
+ M_q=m+V_\Sigma y,\qquad
+ M_\ell=m-2V_\Sigma y.
+ \label{eq:mass-blocks}
+\end{equation}
+
+\begin{proposition}[Tree-level decoupling condition]
+All two quark flavours are massless and all two leptons are massive at tree
+level if
+\begin{equation}
+ m=-V_\Sigma y,\qquad \det y\ne0.
+ \label{eq:fermion-tuning}
+\end{equation}
+Then
+\begin{equation}
+ M_q=0,\qquad
+ M_\ell=-3V_\Sigma y,\qquad
+ \sigma_{\min}(M_\ell)=3V_\Sigma\sigma_{\min}(y)>0.
+ \label{eq:fermion-spectrum}
+\end{equation}
+\end{proposition}
+
+This proves a mass-matrix identity, not natural decoupling.  Both terms in
+Eq.~\eqref{eq:fermion-mass-lagrangian} connect left and right flavour groups.
+If the exact deep symmetry is
+\(SU(N_f)_L\times SU(N_f)_R\) and \(\Sigma\) is a flavour singlet, they are
+forbidden.  If they are present, only vector flavour is exact and the quark
+chiral group is accidental below the thresholds.  In the absence of a
+protecting symmetry, the cancellation \(M_q=0\) must be retuned after heavy
+gauge, adjoint, and lepton loops; parametrically,
+\begin{equation}
+ \delta M_q\sim\frac{g_3^2}{16\pi^2}\,yV_\Sigma
+ \label{eq:threshold-estimate}
+\end{equation}
+up to representation- and scheme-dependent coefficients.  The emergence of
+quark flavour, rather than its exact deep-UV realization, is required by the
+generalized-symmetry no-go theorem.
+
+\begin{gate}[Fermion decoupling]
+Equations~\eqref{eq:fermion-tuning}--\eqref{eq:fermion-spectrum} are
+\status{proved tree-level algebra}.  A symmetry-protected or fully retuned
+quantum decoupling with the required emergent chiral theory is \status{open}.
+Adding spectators changes both the flavour-Witten and determinant-phase
+ledgers and must be audited as a new model.
+\end{gate}
+
+\section{Scalar embedding: the no-go and the charge-two variant}
+
+\subsection{The charge-one model cannot be embedded}
+
+The intermediate AP-E3 model used a colour-singlet scalar doublet
+\(\phi_I\sim\bm1_{+1}\), \(I=1,2\).  The quotient-parity theorem proves that
+this representation does not exist in the \(SU(3)\) embedding.  There is a
+second, directly physical form of the obstruction.
+
+Let the quark doublet have positive charge \(X_q\) and a colour-singlet scalar
+have positive charge \(X_\phi\).  Equation~\eqref{eq:quotient-parity} implies
+\begin{equation}
+ X_q\in2\ZZ+1,\qquad X_\phi\in2\ZZ.
+ \label{eq:charge-parities}
+\end{equation}
+A two-quark baryon dressed by \(m\) conjugate scalars is neutral only if
+\begin{equation}
+ 2X_q-mX_\phi=0.
+ \label{eq:dressing-diophantine}
+\end{equation}
+For exactly two dressings, \(m=2\) requires
+\(X_q=X_\phi\), contradicting Eq.~\eqref{eq:charge-parities}.
+
+\begin{theorem}[\(SU(3)\) exactly-two no-go]
+No representation of
+\([SU(2)_c\times U(1)_g]/\ZZ_2\) descending from \(SU(3)\) can
+simultaneously contain an odd-charge colour-doublet quark, an equal-charge
+colour-singlet scalar, and the neutral local operator
+\(qq(\phi^\dagger)^2\).  The AP-E3 exactly-two triplet mechanism therefore
+does not lift unchanged to this \(SU(3)\) embedding.
+\end{theorem}
+
+\subsection{A concrete charge-two scalar branch}
+
+There is nevertheless a nearby, anomaly-consistent scalar spectrum.  Take two
+complex fields
+\begin{equation}
+ \Phi_I\in\overline{\bm3},\qquad I=1,2,
+ \label{eq:antitriplet-scalars}
+\end{equation}
+forming a global \(SU(2)_\phi\) doublet.  They decompose as
+\begin{equation}
+ \Phi_I\longrightarrow\chi_I\oplus\phi_I,\qquad
+ \chi_I\sim\bm2_{-1},\qquad
+ \phi_I\sim\bm1_{+2}.
+ \label{eq:scalar-decomposition}
+\end{equation}
+The coloured fields \(\chi_I\) are the unavoidable partners.
+
+The quadratic potential may be written
+\begin{equation}
+ V_2=
+ \Phi_I^\dagger
+ \bigl[(m^2)_{IJ}+\kappa_{IJ}\Sigma_{\overline3}
+ +\rho_{IJ}\Sigma_{\overline3}^2\bigr]\Phi_J,\qquad
+ \Sigma_{\overline3}=-\Sigma_3^T.
+ \label{eq:scalar-potential}
+\end{equation}
+After Eq.~\eqref{eq:adjoint-vev},
+\begin{align}
+ M_\chi^2&=m^2-V_\Sigma\kappa+V_\Sigma^2\rho,\notag\\
+ M_\phi^2&=m^2+2V_\Sigma\kappa+4V_\Sigma^2\rho.
+ \label{eq:scalar-mass-blocks}
+\end{align}
+Exact \(SU(2)_\phi\) requires each coefficient matrix to be proportional to
+\(\delta_{IJ}\).  A sufficient tree-level window is
+\begin{equation}
+ \lambda_{\rm eff}>0,\quad
+ M_\phi^2=-\mu_\phi^2<0,\quad
+ M_\chi^2+\lambda_{\chi\phi}v_\phi^2>0,\quad
+ M_\chi,\ M_\ell\gg v_\phi,\Lambda_c.
+ \label{eq:scalar-window}
+\end{equation}
+For example,
+\(V_\Sigma=1,m^2=1,\kappa=-1,\rho=0\) gives
+\(M_\chi^2=2\) and \(M_\phi^2=-1\) before quartic shifts.  This establishes a
+nonempty tree-level parameter region.
+
+The charge-two condensate has a \(\ZZ_2\) stabilizer in the covering
+\(SU(2)\times U(1)\), but this stabilizer is exactly the identified colour
+centre.  Indeed \([U,-1]=[-U,1]\) in \(U(2)\), so
+\begin{equation}
+ U(2)\xrightarrow{\langle\phi\rangle}SU(2)_c
+ \label{eq:second-breaking}
+\end{equation}
+without an additional independent \(\ZZ_2\) gauge factor.  The coarse scalar
+vacuum is still
+\begin{equation}
+ \{\phi^\dagger\phi=v_\phi^2\}/U(1)_g\simeq\CP^1.
+ \label{eq:charge-two-cp1}
+\end{equation}
+
+For nonminimal scalar charge, our symbol
+\(\operatorname{Vol}_{S^2}\) denotes the curvature form induced from the
+covering (U(1)) orbit and is normalized by
+\begin{equation}
+ \int_{S^2}\operatorname{Vol}_{S^2}=X_\phi,
+ \qquad
+ \omega_2:=\frac{\operatorname{Vol}_{S^2}}{X_\phi},
+ \qquad \int_{S^2}\omega_2=1.
+ \label{eq:nonminimal-s2-normalization}
+\end{equation}
+Consequently, in the covering-group normalization,
+\begin{equation}
+ S_{\rm mix}=2\pi\hbar(n_cX_q)
+ \int\omega_3\wedge\frac{\operatorname{Vol}_{S^2}}{X_\phi}
+ \label{eq:charge-two-wzw}
+\end{equation}
+would have coefficient \(n_cX_q=2\) for
+\(n_c=2,X_q=1,X_\phi=2\)
+\cite{DavighiLohitsiri2024Global}.  Because the actual faithful subgroup is
+\(U(2)=[SU(2)\times U(1)]/\ZZ_2\), applying this covering-
+\(U(1)\) normalization to the quotient theory also requires a global match
+of principal bundles and allowed fluxes.  We have not performed that bundle
+match, so Eq.~\eqref{eq:charge-two-wzw} is a conditional normalization result,
+not an all-bundle theorem for faithful \(U(2)\).  This topological statement
+must not be confused with the local dressing representation.  Equation
+\eqref{eq:dressing-diophantine} now gives
+\begin{equation}
+ qq\phi^\dagger:\qquad 2(1)-1(2)=0.
+ \label{eq:one-dressing}
+\end{equation}
+Only one global \(SU(2)_\phi\) doublet is used.  The operator is a doublet,
+not \(\operatorname{Sym}^2\bm2=\bm3\), and no exactly-two microscopic
+derivation of the Route-E triplet survives.
+
+\begin{gate}[Faithful-\(U(2)\) bundle normalization]
+The missing step is to prove that the determinant line and its first Chern
+class remain the stated integral generator when the \(U(1)\) flux is
+correlated with the \(SU(2)\)-centre 't~Hooft flux by the quotient.  Until
+that calculation is supplied,
+\texttt{u2\_quotient\_global\_bundle\_normalization\_proven=false}.
+\end{gate}
+
+\begin{gate}[Status of the charge-two branch]
+The representation, anomaly, and tree-level scalar mass algebra are
+\status{conditional but explicit}.  The branch is not equivalent to the
+original charge-one/exactly-two model.  It may UV-complete the normalized
+mixed topological coefficient only if the faithful-\(U(2)\) bundle gate
+closes, while it already fails the specific triplet mechanism; these are
+logically distinct claims.
+\end{gate}
+
+\section{Running, monopoles, and the all-scale boundary}
+
+With two Dirac \(\bm3\) fermions, one real adjoint scalar, and two complex
+\(\overline{\bm3}\) scalars, the one-loop deep-UV coefficient is
+\begin{align}
+ b_0^{SU(3)}
+ &=\frac{11}{3}C_2(\bm8)
+ -\frac43N_fT(\bm3)
+ -\frac16T(\bm8)
+ -\frac13(2)T(\overline{\bm3})\notag\\
+ &=11-\frac43-\frac12-\frac13
+ =\frac{53}{6}>0.
+ \label{eq:su3-beta}
+\end{align}
+Thus this field list removes the abelian Landau pole and remains
+asymptotically free at one loop.  This does not close the generalized symmetry
+at finite \(V_\Sigma\).  The breaking \(SU(3)\to U(2)\) produces finite-mass
+nonabelian monopoles.  They violate the abelian Bianchi identity and hence the
+continuous magnetic one-form symmetry is exact only in the decoupling limit
+where those monopoles are removed.  At finite scale it is emergent, as is the
+separate quark chiral symmetry after the lepton mass splitting.  This is
+consistent with the no-go theorem but prevents an all-scale exact two-group
+claim.
+
+The remaining nonperturbative requirements are independent:
+\begin{enumerate}
+\item select a mesonic rather than diquark/Pauli--G\"ursey vacuum;
+\item prove a stable \(B=1\) soliton after the charge-two deformation;
+\item compute the monopole-induced violation of winding conservation;
+\item evaluate the two UV APS/Dai--Freed torsion characters;
+\item produce either a protected lepton-decoupling symmetry or a complete
+  threshold-retuning prescription;
+\item recover an exactly-two triplet by a different all-scale group or accept
+  that the charge-two branch addresses only the mixed topological term.
+\end{enumerate}
+
+\section{Deterministic algebraic and numerical regression}
+
+The companion program
+\begin{center}
+\texttt{route\_f/code/verify\_ap\_e3\_nonextendible\_wzw\_su3\_uv.py}
+\end{center}
+checks, without fitting parameters:
+\begin{enumerate}
+\item the full and reduced stable-splitting bordism groups;
+\item Gaussian-quadrature normalization of \(\omega_3\), \(\omega_2\), and
+  their product;
+\item the local gerbe derivative, overlap period, Hopf transition, and
+  extension phases;
+\item branching of
+  \(\bm3,\overline{\bm3},\bm6,\overline{\bm6},\bm8,\bm{10}\)
+  from explicit weights;
+\item the quotient parity and exactly-two Diophantine no-go;
+\item all dynamical gauge anomalies, the colour Witten parity, and
+  \(\widehat\kappa_q+\widehat\kappa_\ell=0\);
+\item a non-diagonal two-flavour benchmark for
+  \(M_q=0,M_\ell=-3V_\Sigma y\), the scalar split, and
+  \(b_0^{SU(3)}=53/6\);
+\item fail-closed booleans for torsion selection, radiative protection,
+  finite-scale one-form exactness, Route equivalence, and physics promotion.
+\end{enumerate}
+
+A green mechanical run is compatible with
+\texttt{full\_uv\_closed=false}.  This is deliberate: numerical verification
+can confirm the displayed algebra but cannot supply missing strong dynamics
+or an unspecified fermion determinant.
+
+\section{Claim ledger and next decisive calculations}
+
+\begin{longtable}{@{}L{0.42\textwidth}L{0.16\textwidth}L{0.32\textwidth}@{}}
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endhead
+Degree-five ordinary differential character on every four-cycle &
+\status{proved} & unique because \(H^4(X;\RR/\ZZ)=0\)\\
+\(\Omega_4^{\rm Spin}(S^3\times S^2)=\ZZ\oplus\ZZ_2\oplus\ZZ_2\) &
+\status{proved} & stable splitting; free gravitational factor separated\\
+Two transverse-preimage torsion invariants & \status{proved} &
+\(\nu_3\in\Omega_1^{\rm Spin}\),
+\(\nu_2=\Arf\in\Omega_2^{\rm Spin}\)\\
+UV values of \((\epsilon_3,\epsilon_2)\) & \status{open} &
+\(\epsilon_3=0\) follows only with the standard two-colour determinant;
+\(\epsilon_2\) uncomputed\\
+No \(SU(3)\)-derived colour-singlet charge-one scalar & \status{proved} &
+quotient parity \(2j+q=0\pmod2\)\\
+No exactly-two dressing in this \(SU(3)\) embedding & \status{proved} &
+\(2X_q=2X_\phi\) contradicts odd/even parity\\
+Charge-two \(\overline{\bm3}\) scalar mass split & \status{conditional} &
+nonempty tree-level window; thresholds and vacuum require control\\
+Dynamical gauge-anomaly cancellation & \status{proved} & vectorlike
+\(SU(3)\) and explicit branched ledger\\
+Light quarks plus heavy leptons & \status{conditional} & exact tree identity,
+no chiral protection\\
+Normalized mixed level \(n=2\) in charge-two branch & \status{conditional} &
+covering-group result; faithful-\(U(2)\) bundle/flux matching and local
+triplet remain open\\
+Route-E-equivalent all-scale UV completion & \status{open} & monopoles,
+strong phase, torsion, radiative decoupling, and triplet mismatch\\
+\bottomrule
+\end{longtable}
+
+The ordered next calculations are:
+\begin{enumerate}
+\item build the actual Euclidean UV Dirac/Yukawa operator on the two generator
+  backgrounds in Eq.~\eqref{eq:bordism-generators} and compute its APS
+  spectral flow or Dai--Freed eta phase;
+\item perform one-loop matching of Eqs.~\eqref{eq:fermion-mass-lagrangian} and
+  \eqref{eq:scalar-potential}, including all symmetry-allowed counterterms;
+\item quantify finite-mass monopole events and the lifetime of the emergent
+  winding charge;
+\item decide explicitly whether the charge-two branch is retained only as a
+  mixed-WZW UV candidate or replaced by a different group capable of the
+  exactly-two triplet.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e3_nonextendible_wzw_su3_uv_audit}
+
+\end{document}

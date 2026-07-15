@@ -1,0 +1,613 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{gate}[proposition]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E3 Nonlinear Follow-up:\\
+A Charged Two-Colour EFT Proxy, Diquark Gap,\\
+and the Necessary \(B=1\) Soliton-Hessian Gate}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct and solve a deliberately limited low-energy proxy for the
+unsettled strong-phase and soliton-stability gates of the charged two-colour
+AP-E3 candidate.  A real \(O(4)\) meson multiplet is supplemented by a
+complex \(U(1)_g\)-charge-two diquark.  Its homogeneous potential yields an
+analytic phase boundary, vacuum condensates, and the exact tree-level gaps
+\[
+ m_\pi^2=\frac{h}{f},\qquad
+ m_\sigma^2=m_\pi^2+2\lambda f^2,\qquad
+ m_\Delta^2=m_\pi^2+\mu_g^2.
+\]
+In the mesonic phase we take the nonlinear \(SU(2)\) limit, add the Skyrme
+term, solve the full \(B=1\) hedgehog boundary-value problem, verify baryon
+number and Derrick's virial identity, and diagonalise two quadratic blocks:
+the generalized spherically symmetric meson Hessian and the most dangerous
+charged-diquark channel.  Grid and volume sequences converge; an intentionally
+over-attractive diquark coupling produces a negative eigenvalue and therefore
+tests that the audit can fail.
+
+The term nonperturbative is used only in the narrow classical sense that no
+small-amplitude or small-profile expansion is used in solving the nonlinear
+boundary-value problem.  This is not lattice two-colour QCD, does not
+integrate the microscopic gauge theory, and does not close the full
+three-dimensional coupled Hessian.  Moreover, the product target used here
+excludes the global \(S^5\) escape direction by assumption.  The result is
+consequently a useful necessary gate and a reproducible falsifier, not a proof
+of the microscopic charged phase or of a stable quantum baryon.
+\end{abstract}
+
+\tableofcontents
+
+\section{Epistemic boundary and questions answered}
+
+The anomaly-consistent charged two-colour construction fixes ultraviolet
+quantum numbers but not the infrared vacuum.  Gauge-anomaly cancellation
+does not prove a mesonic condensate, a positive diquark gap, or a stable
+\(B=1\) saddle.  Effective descriptions of two-colour dynamics explicitly
+retain meson and diquark directions
+\cite{SuenagaEtAl2023Proxy,SuenagaEtAl2024Proxy}; the pseudoreal theory is
+therefore not equivalent to ordinary three-colour QCD.  This note asks three
+narrower questions.
+\begin{enumerate}[label=(Q\arabic*)]
+\item Can one exhibit a charged effective potential with a transparent
+  meson--diquark phase boundary and a positive benchmark Hessian?
+\item Does its declared mesonic nonlinear subsector possess a numerically
+  converged \(B=1\) hedgehog satisfying the exact topology and scale tests?
+\item Are its radial meson and charged-diquark quadratic blocks locally
+  nonnegative, and can the same implementation detect an unstable control?
+\end{enumerate}
+
+The answers are yes inside the proxy.  The following statements remain
+false: a lattice or continuum nonperturbative solution of the microscopic
+\(SU(2)_c\times U(1)_g\) gauge theory; a UV derivation of every effective
+coefficient; a full three-dimensional Hessian; a fermion-determinant audit;
+and exclusion of finite-amplitude unwinding paths.
+
+\begin{gate}[Promotion boundary]
+A positive result below sets only the nonlinear-EFT and radial-Hessian
+necessary gates to true.  It leaves the full three-dimensional Hessian,
+lattice QC2D, global unwinding, and physics-promotion gates false.
+\end{gate}
+
+\section{Charged homogeneous EFT proxy}
+
+\subsection{Fields, charge, and potential}
+
+Let
+\[
+ \varphi=(\sigma,\pi_1,\pi_2,\pi_3,d_1,d_2),\qquad
+ \Delta=\frac{d_1+\ii d_2}{\sqrt2}.
+\]
+The mesons are \(U(1)_g\)-neutral and \(\Delta\) has charge
+\(q_\Delta=2\), as expected for a two-quark operator.  Thus
+\[
+ D_\mu\Delta=(\partial_\mu-2\ii e_g b_\mu)\Delta.
+\]
+With canonical real-field normalization, the proxy Lagrangian is
+\begin{equation}
+ \cL_{\rm hom}
+ =\frac12(\partial_\mu\sigma)^2+\frac12(\partial_\mu\bm\pi)^2
+ +|D_\mu\Delta|^2-\frac14F_{\mu\nu}F^{\mu\nu}-V,
+ \label{eq:hom-lagrangian}
+\end{equation}
+\begin{equation}
+ V=\frac{\lambda}{4}
+ \left(\sigma^2+\bm\pi^2+2|\Delta|^2-v^2\right)^2
+ -h\sigma+\mu_g^2|\Delta|^2.
+ \label{eq:potential}
+\end{equation}
+Here \(\mu_g^2\) is a matched Pauli--G\"ursey-breaking coefficient.  Its
+sign and magnitude are not inferred merely from the gauge charge.
+Equation~\eqref{eq:potential} is a diagnostic model, not a claimed exact
+chiral Lagrangian of the UV candidate.
+
+\subsection{Mesonic stationary point and exact vacuum Hessian}
+
+At \(\bm\pi=\Delta=0\), choose the positive root \(f\) of
+\begin{equation}
+ \lambda(f^2-v^2)f=h.
+ \label{eq:f-equation}
+\end{equation}
+Define \(m_\pi^2=h/f=\lambda(f^2-v^2)\).  Direct differentiation of
+Eq.~\eqref{eq:potential} gives
+\begin{equation}
+ \left.\nabla^2V\right|_{(f,\bm0,0)}
+ =\operatorname{diag}\left(
+ m_\sigma^2,
+ m_\pi^2,m_\pi^2,m_\pi^2,
+ m_\Delta^2,m_\Delta^2\right),
+ \label{eq:vacuum-hessian}
+\end{equation}
+where
+\begin{equation}
+ m_\sigma^2=m_\pi^2+2\lambda f^2,\qquad
+ m_\Delta^2=m_\pi^2+\mu_g^2.
+ \label{eq:gaps}
+\end{equation}
+Therefore the charged direction is locally stable precisely when
+\begin{equation}
+ \mu_g^2>-m_\pi^2.
+ \label{eq:local-phase-boundary}
+\end{equation}
+The two identical diquark eigenvalues follow from unbroken \(U(1)_g\), and
+linear meson--diquark mixing is forbidden by charge.
+
+\subsection{Condensed branch and continuous onset}
+
+When \(\Delta\ne0\), the stationary equations read
+\begin{equation}
+ \lambda(R^2-v^2)\sigma=h,\qquad
+ [\lambda(R^2-v^2)+\mu_g^2]d_a=0,
+ \quad R^2=\sigma^2+d_1^2+d_2^2.
+\end{equation}
+For \(\mu_g^2<0\), the charged branch is consequently
+\begin{equation}
+ \sigma=-\frac{h}{\mu_g^2},\qquad
+ d_1^2+d_2^2=v^2-\frac{\mu_g^2}{\lambda}
+ -\frac{h^2}{(\mu_g^2)^2}.
+ \label{eq:condensed-branch}
+\end{equation}
+The right-hand side vanishes continuously at
+\(\mu_g^2=-h/f=-m_\pi^2\).  Below that point \(U(1)_g\) is Higgsed and the
+homogeneous Hessian contains the corresponding angular zero mode before
+gauge fixing.  This analytic onset is used as a positive and negative
+classification test in the scan.
+
+\subsection{Explicit
+\texorpdfstring{\((e_g,v_g/\Lambda_c)\)}{(eg, vg/Lambda-c)}
+sensitivity chart}
+
+The EFT coefficient \(\mu_g^2\) is not yet known from the charged microscopic
+theory.  To avoid hiding that ignorance while still scanning the requested
+coordinates, we declare the matching ansatz
+\begin{equation}
+ \frac{\mu_g^2}{\Lambda_c^2}
+ =\frac{\mu_{\rm PG,0}^2}{\Lambda_c^2}
+ +c_g\left(e_g\frac{v_g}{\Lambda_c}\right)^2.
+ \label{eq:matching-ansatz}
+\end{equation}
+The numerical chart uses
+\(\mu_{\rm PG,0}^2/\Lambda_c^2=-0.40\), \(c_g=0.24\), and
+\(\Lambda_c=f=1\).  This makes both sides of the analytic phase boundary
+visible.  It is a sensitivity coordinate chart, not a loop matching result.
+Every cell records \(e_g\), \(v_g/\Lambda_c\), \(\langle\sigma\rangle\),
+\(|\langle d\rangle|\), and the smallest homogeneous Hessian eigenvalue.
+Table~\ref{tab:charged-chart} shows the complete deterministic chart.
+Here D denotes the diquark-condensed branch and M the mesonic branch.
+The zero on D is the ungauge-fixed \(U(1)_g\) angular mode, not a negative
+curvature.
+
+\begin{longtable}{@{}rrrrrr@{}}
+\caption{Declared charged-coordinate sensitivity chart.}
+\label{tab:charged-chart}\\
+\toprule
+\(e_g\) & \(v_g/\Lambda_c\) & \(\mu_g^2/\Lambda_c^2\) &
+phase & \(\sigma/\Lambda_c\) & \((|d|,\lambda_{\min})\)\\
+\midrule
+\endfirsthead
+\toprule
+\(e_g\) & \(v_g/\Lambda_c\) & \(\mu_g^2/\Lambda_c^2\) &
+phase & \(\sigma/\Lambda_c\) & \((|d|,\lambda_{\min})\)\\
+\midrule
+\endhead
+0.00 & 0.50 & -0.4000 & D & 0.625000 & (0.796477,0)\\
+0.00 & 1.00 & -0.4000 & D & 0.625000 & (0.796477,0)\\
+0.00 & 2.00 & -0.4000 & D & 0.625000 & (0.796477,0)\\
+0.00 & 3.00 & -0.4000 & D & 0.625000 & (0.796477,0)\\
+0.25 & 0.50 & -0.3963 & D & 0.630915 & (0.791405,0)\\
+0.25 & 1.00 & -0.3850 & D & 0.649351 & (0.775141,0)\\
+0.25 & 2.00 & -0.3400 & D & 0.735294 & (0.688725,0)\\
+0.25 & 3.00 & -0.2650 & D & 0.943396 & (0.335416,0)\\
+0.50 & 0.50 & -0.3850 & D & 0.649351 & (0.775141,0)\\
+0.50 & 1.00 & -0.3400 & D & 0.735294 & (0.688725,0)\\
+0.50 & 2.00 & -0.1600 & M & 1.000000 & (0,0.090000)\\
+0.50 & 3.00 &  0.1400 & M & 1.000000 & (0,0.250000)\\
+0.75 & 0.50 & -0.3663 & D & 0.682594 & (0.743936,0)\\
+0.75 & 1.00 & -0.2650 & D & 0.943396 & (0.335416,0)\\
+0.75 & 2.00 &  0.1400 & M & 1.000000 & (0,0.250000)\\
+0.75 & 3.00 &  0.8150 & M & 1.000000 & (0,0.250000)\\
+1.00 & 0.50 & -0.3400 & D & 0.735294 & (0.688725,0)\\
+1.00 & 1.00 & -0.1600 & M & 1.000000 & (0,0.090000)\\
+1.00 & 2.00 &  0.5600 & M & 1.000000 & (0,0.250000)\\
+1.00 & 3.00 &  1.7600 & M & 1.000000 & (0,0.250000)\\
+\bottomrule
+\end{longtable}
+
+\section{Mesonic nonlinear limit and the
+\texorpdfstring{\(B=1\)}{B=1} saddle}
+
+\subsection{Why a product-target proxy is used}
+
+In the positive-gap phase, freeze the heavy radial mode and set
+\(\Delta=0\).  Write
+\begin{equation}
+ U=\frac{\sigma+\ii\bm\tau\cdot\bm\pi}{f}\in SU(2).
+\end{equation}
+We then use the standard sigma plus Skyrme energy
+\cite{Skyrme1961,AdkinsNappiWitten1983}.  This is a product-target
+construction: \(U\) remains an \(SU(2)\) coordinate when the spectator
+\(\Delta\) fluctuates.  It therefore retains
+\(\pi_3(SU(2))=\ZZ\).
+
+That choice is useful for a local gate but logically costly.  In ungauged
+two-colour QCD the Pauli--G\"ursey target for two flavours is
+\(SU(4)/Sp(4)\simeq S^5\), for which \(\pi_3(S^5)=0\).  The present proxy
+does not prove that the charged microscopic theory dynamically factorizes
+its target, nor does it exclude a finite-amplitude path that restores an
+\(S^5\)-like escape direction.  This is why local Hessian positivity is not
+promoted to global soliton stability.
+
+\subsection{Static energy and hedgehog reduction}
+
+Take
+\begin{equation}
+ E_U=\int\dd^3x\left[
+ \frac{f^2}{4}\Tr(\partial_iU\,\partial_iU^\dagger)
+ +\frac{1}{32e^2}\Tr\!\left([L_i,L_j]^\dagger[L_i,L_j]\right)
+ +\frac{f^2m_\pi^2}{2}\Tr(1-U)\right],
+ \label{eq:skyrme-energy}
+\end{equation}
+where \(L_i=U^\dagger\partial_iU\).  For
+\begin{equation}
+ U(\bm x)=\cos F(r)+\ii\,\bm\tau\cdot\widehat{\bm x}\sin F(r),
+ \qquad x=efr,\qquad \beta=\frac{m_\pi}{ef},
+ \label{eq:hedgehog}
+\end{equation}
+the energy is
+\begin{equation}
+ E_U=\frac{4\pi f}{e}\int_0^\infty\dd x\,\cE_F,
+ \label{eq:radial-energy}
+\end{equation}
+\begin{equation}
+ \cE_F=
+ \frac12x^2F'^2+\sin^2F(1+F'^2)
+ +\frac{\sin^4F}{2x^2}
+ +\beta^2x^2(1-\cos F).
+ \label{eq:radial-density}
+\end{equation}
+The baryon number reduces to
+\begin{equation}
+ B=-\frac2\pi\int_0^\infty\sin^2F\,F'\,\dd x
+ =\frac1\pi\left[F-\frac12\sin2F\right]_{x=\infty}^{x=0}.
+ \label{eq:baryon-number}
+\end{equation}
+Thus \(F(0)=\pi\), \(F(\infty)=0\) imply \(B=1\).
+
+\subsection{Euler--Lagrange equation and regular origin data}
+
+Varying Eq.~\eqref{eq:radial-density} yields
+\begin{equation}
+ (x^2+2\sin^2F)F''
+ +2xF'
+ +2\sin F\cos F(F'^2-1)
+ -\frac{2\sin^3F\cos F}{x^2}
+ -\beta^2x^2\sin F=0.
+ \label{eq:hedgehog-ode}
+\end{equation}
+A numerically stable origin condition cannot set \(F(\epsilon)=\pi\) while
+allowing a finite nonzero slope.  Substitution of
+\begin{equation}
+ F(x)=\pi-a x+b x^3+O(x^5)
+\end{equation}
+into Eq.~\eqref{eq:hedgehog-ode} gives
+\begin{equation}
+ b=\frac{a(2a^4+4a^2+3\beta^2)}{30(1+2a^2)}.
+ \label{eq:origin-series}
+\end{equation}
+The boundary-value solver treats \(a\) as an unknown parameter and imposes
+both Eq.~\eqref{eq:origin-series} at \(x=\epsilon\) and \(F(L)=0\).
+
+\subsection{Derrick identity and collapse negative control}
+
+Split the dimensionless integral into \(E_2+E_4+E_0\), corresponding to
+the two-derivative, four-derivative, and mass terms.  Under
+\(F(x)\mapsto F(x/\lambda)\),
+\begin{equation}
+ E(\lambda)=\lambda E_2+\lambda^{-1}E_4+\lambda^3E_0.
+\end{equation}
+Any finite-size stationary solution must obey
+\begin{equation}
+ E_2-E_4+3E_0=0,\qquad
+ E''(1)=2E_4+6E_0>0.
+ \label{eq:derrick}
+\end{equation}
+Deleting the Skyrme contribution leaves
+\(E'_{\rm no\;Skyrme}(1)=E_2+3E_0>0\), so shrinking lowers the energy.
+The code checks both the virial identity and this deliberate collapse
+control.
+
+\section{Second variation and spectral problems}
+
+\subsection{Spherically symmetric meson block}
+
+Let \(F\mapsto F+\varepsilon\eta\) with
+\(\eta(0)=\eta(L)=0\).  Write
+\begin{equation}
+ \cE_F=\frac12A(F,x)F'^2+\cU(F,x),\quad
+ A=x^2+2\sin^2F,
+\end{equation}
+\begin{equation}
+ \cU=\sin^2F+\frac{\sin^4F}{2x^2}
+ +\beta^2x^2(1-\cos F).
+\end{equation}
+Twice differentiating the energy and integrating the mixed
+\(\eta\eta'\) term by parts gives
+\begin{equation}
+ \delta^2E_F=\frac{4\pi f}{e}\int_0^L\dd x
+ \left[A\eta'^2+V_F\eta^2\right],
+ \label{eq:radial-second-variation}
+\end{equation}
+\begin{equation}
+ V_F=\cU_{FF}+\frac12A_{FF}F'^2-\bigl(A_F F'\bigr)',
+ \label{eq:VF-abstract}
+\end{equation}
+or, using the background equation,
+\begin{align}
+ V_F={}&2\cos2F
+ +\frac{2}{x^2}\left(3\sin^2F\cos^2F-\sin^4F\right)
+ +\beta^2x^2\cos F \notag\\
+ &-2\cos2F\,F'^2-4\sin F\cos F\,F''.
+ \label{eq:VF-explicit}
+\end{align}
+The same sigma and Skyrme terms give the radial kinetic norm
+\(\int A\eta^2\dd x\).  Hence the displayed squared frequencies solve the
+generalized Sturm--Liouville problem
+\begin{equation}
+ \cH_F\eta=\omega^2A\eta,\qquad
+ \cH_F=-\frac{\dd}{\dd x}A\frac{\dd}{\dd x}+V_F.
+ \label{eq:radial-generalized}
+\end{equation}
+At large \(x\), the continuum floor is \(\omega^2=\beta^2\).  A lowest
+finite-box eigenvalue approaching \(\beta^2\) from above is therefore not a
+localized breathing mode.
+
+\subsection{Charged-diquark block}
+
+The leading symmetry-allowed static spectator energy is chosen as
+\begin{equation}
+ E_\Delta^{(2)}
+ =\frac{4\pi f}{e}\sum_{a=1}^2\frac12
+ \int_0^\infty\dd x\,x^2
+ \left[(d_a')^2+
+ \{\alpha^2+\chi(1-\cos F)\}d_a^2\right],
+ \label{eq:diquark-quadratic}
+\end{equation}
+where
+\begin{equation}
+ \alpha=\frac{m_\Delta}{ef}.
+\end{equation}
+The coefficient \(\chi\) measures the matched core interaction.  It is
+independent input and is scanned with a tachyonic negative control.  Because
+the background has \(\Delta=0\), the two real components are degenerate and
+there is no quadratic meson--diquark mixing.
+
+For angular momentum \(\ell\), set \(u_\ell=xd_\ell\).  The Hessian becomes
+\begin{equation}
+ \cH_{\Delta,\ell}
+ =-\frac{\dd^2}{\dd x^2}+\alpha^2+\chi(1-\cos F)
+ +\frac{\ell(\ell+1)}{x^2},
+ \qquad u_\ell(0)=u_\ell(L)=0.
+ \label{eq:diquark-operator}
+\end{equation}
+Thus \(\ell=0\) is the most dangerous scalar channel:
+\(\cH_{\Delta,\ell}-\cH_{\Delta,0}\ge0\).  Positivity of its lowest
+eigenvalue closes the charged-scalar block in this proxy.  It does
+\emph{not} close nonradial meson, vector, gauge, radial-\(\sigma\), ghost, or
+fermionic channels.  A positive bound mode satisfies
+\begin{equation}
+ 0<\omega_{\Delta,0}^2<\alpha^2.
+\end{equation}
+
+\subsection{Gauge-field block at the declared saddle}
+
+At \(\Delta=0\), the Maxwell field does not mix linearly with
+\(d_1,d_2\).  With nonnegative Maxwell and optional Proca/Higgs quadratic
+terms, its isolated tree-level block is nonnegative.  This observation does
+not replace gauge fixing and ghost accounting in the full coupled
+three-dimensional problem; those remain explicit blockers.
+
+\section{Deterministic numerical experiment}
+
+\subsection{Benchmark and algorithms}
+
+The benchmark fixes
+\begin{equation}
+ f=e=1,\quad \lambda=6,\quad m_\pi=0.5,\quad
+ \mu_g^2=0.56,\quad \chi=-2,
+ \label{eq:benchmark}
+\end{equation}
+so that
+\[
+ v^2=\frac{23}{24},\quad h=\frac14,\quad
+ (m_\pi,m_\sigma,m_\Delta)=(0.5,3.5,0.9),\quad
+ (\beta,\alpha)=(0.5,0.9).
+\]
+The BVP is solved on \([\epsilon,L]\), \(\epsilon=10^{-4}\), using the
+regular series and an adaptive collocation tolerance of \(3\times10^{-7}\).
+The radial generalized problem uses linear finite elements with consistent
+mass matrix.  The transformed diquark problem uses a centered
+second-difference operator.  Sparse symmetric eigensolvers request the
+algebraically lowest eigenvalues.
+
+\subsection{Benchmark results}
+
+The machine-readable output is authoritative for the final digits.  The
+expected audit structure is
+\begin{longtable}{@{}L{0.38\textwidth}L{0.25\textwidth}L{0.27\textwidth}@{}}
+\toprule
+Quantity & Result & Interpretation\\
+\midrule
+\endfirsthead
+\toprule
+Quantity & Result & Interpretation\\
+\midrule
+\endhead
+Vacuum gaps & \((0.5,3.5,0.9)\) & positive meson, radial, diquark gaps\\
+\(B\) and \(|B-1|\) &
+\(0.999999999594,\ 4.06\times10^{-10}\) & topology/integration check\\
+\(E_2-E_4+3E_0\) &
+\(-1.55\times10^{-7}\) & relative residual \(2.52\times10^{-8}\)\\
+lowest \(\omega_F^2\) & \(0.311400567\) & \(L=18,N=1200\) radial gate\\
+lowest \(\omega_{\Delta,0}^2\) & \(0.696506101\) &
+positive bound mode below \(\alpha^2=0.81\)\\
+\(\chi=-5\) control & \(-1.430515810\) & charged tachyon detected\\
+\bottomrule
+\end{longtable}
+
+Three grids with \(N=600,1200,2400\) at fixed \(L=18\) test discretization.
+A second sequence with
+\((L,N)=(14,700),(18,900),(22,1100)\) tests the box.  The soliton energy and
+localized diquark eigenvalue must stabilize.  The first radial finite-box
+state is instead expected to decrease toward the continuum floor
+\(\beta^2=0.25\), remaining positive.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+\(N\) & spacing & \(\omega_{F,\min}^2\) &
+\(\omega_{\Delta,\min}^2\)\\
+\midrule
+600  & 0.02999983 & 0.311401592 & 0.696441268\\
+1200 & 0.01499992 & 0.311400567 & 0.696506101\\
+2400 & 0.00749996 & 0.311400310 & 0.696522301\\
+\bottomrule
+\end{tabular}
+\caption{Fixed-box discretization sequence.  Both observed convergence orders
+are approximately two; the machine-readable card records Richardson
+extrapolates and error estimates.}
+\label{tab:grid-convergence}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+\(L\) & \(N\) & \(\int\cE_F\dd x\) &
+\(\omega_{F,\min}^2\) & \(\omega_{\Delta,\min}^2\)\\
+\midrule
+14 & 700  & 6.135914701 & 0.349739800 & 0.696547693\\
+18 & 900  & 6.135914193 & 0.311400833 & 0.696489297\\
+22 & 1100 & 6.135914184 & 0.291384645 & 0.696485381\\
+\bottomrule
+\end{tabular}
+\caption{Fixed-spacing volume sequence.  The radial finite-box state moves
+toward \(\beta^2=0.25\), whereas the localized charged mode stabilizes.}
+\label{tab:volume-convergence}
+\end{table}
+
+\subsection{What the negative controls prove}
+
+Three failure modes are built into the same calculation.
+\begin{enumerate}
+\item Setting \(\mu_g^2<-m_\pi^2\) makes the mesonic stationary point
+  unstable and moves the homogeneous minimum to the charged branch.
+\item Removing \(E_4\) violates the possibility of a finite-size Derrick
+  stationary point and produces collapse.
+\item Replacing the benchmark \(\chi=-2\) by \(\chi=-5\) makes the lowest
+  charged-diquark eigenvalue negative.
+\end{enumerate}
+Consequently a green benchmark is not caused by an eigenvalue routine that
+silently takes absolute values or by a phase classifier that always selects
+the mesonic branch.
+
+\section{Interpretation and remaining routes}
+
+\subsection{What has been learned}
+
+The proxy demonstrates a logically consistent local scenario:
+\begin{equation}
+\begin{gathered}
+ m_\Delta^2>0,\quad \langle\Delta\rangle=0,\quad
+ U(1)_g\ {\rm unbroken},\\
+ B=1,\quad \delta^2E_F>0\ {\rm in\ the\ radial\ sample},\quad
+ \delta^2E_\Delta>0\ {\rm for\ every\ scalar}\ \ell .
+\end{gathered}
+\end{equation}
+It also quantifies how a sufficiently attractive soliton core can destroy
+that scenario even while the homogeneous vacuum retains a positive diquark
+gap.  Vacuum stability and soliton-core stability are therefore independent
+gates.
+
+\subsection{What has not been learned}
+
+The following gaps cannot be repaired by increasing the radial grid.
+\begin{enumerate}
+\item The ansatz~\eqref{eq:matching-ansatz} and the coupling \(\chi\) need
+  matching from the microscopic charged gauge theory.
+\item The mesonic \(SU(2)\) product factor is assumed.  A faithful full target
+  may allow global unwinding even when every local eigenvalue reported here
+  is positive.
+\item Nonradial meson deformations, the finite radial-\(\sigma\) field,
+  vector mesons, gauge/ghost fields, and collective zero modes require a
+  coupled three-dimensional Hessian.
+\item Fermionic and gauge determinants can shift the classical spectrum.
+\item A lattice calculation must measure the meson and diquark condensates,
+  charged gap, baryon free energy, and finite-volume scaling.
+\end{enumerate}
+
+\subsection{Recommended next implementations}
+
+There are three useful continuations, ordered by evidential strength.
+\begin{enumerate}
+\item \textbf{Lattice phase chart.}  Scan \((e_g,v_g/\Lambda_c)\) and measure
+  \(\langle\bar qq\rangle\), a gauge-invariant dressed diquark correlator,
+  the corresponding gap, and volume scaling.  This directly replaces the
+  matching ansatz.
+\item \textbf{Full EFT Hessian.}  Retain \(\sigma\), vector mesons and the
+  massive \(U(1)_g\) field on a three-dimensional grid, gauge-fix, remove
+  collective modes, and continue the lowest eigenpairs in \(\chi\).
+\item \textbf{Global path search.}  Use a string or nudged-elastic-band method
+  in the faithful field space between the \(B=1\) configuration and vacuum.
+  This tests finite-amplitude escape that a Hessian cannot see.
+\end{enumerate}
+
+\section{Reproducibility ledger}
+
+Run from the repository root:
+\begin{verbatim}
+python3 route_f/code/scan_ap_e3_charged_two_colour_proxy.py
+\end{verbatim}
+The program writes
+\begin{verbatim}
+route_f/output/ap_e3_charged_two_colour_proxy.json
+route_f/output/ap_e3_charged_two_colour_proxy.md
+\end{verbatim}
+and records Python, NumPy, SciPy, source hashes, every mechanical assertion,
+the phase chart, convergence sequences, Hessian spectra, negative controls,
+and fail-closed booleans.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e3_charged_two_colour_soliton_proxy}
+
+\end{document}

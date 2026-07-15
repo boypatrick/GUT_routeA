@@ -82,9 +82,9 @@ is a PASS; accidental agreement would fail the run.
 
 - `route_E/output/audit0/invariant_card.json` — `891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131` (10028 bytes)
 - `route_E/code/audit0_conventions_card.py` — `0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81` (15657 bytes)
-- `route_f/tex/another_physics_route_e_derivation_ledger.tex` — `f182fb68884cbc3e81f8eafe09dade2299429ae8618d193ae00909f2592d9ab4` (43901 bytes)
+- `route_f/tex/another_physics_route_e_derivation_ledger.tex` — `37b4001290e81166bf6fb49a6faa94458eed43e9f0a39a23498e5454cbe7c3dc` (50139 bytes)
 - `route_f/tex/ap_e2_discriminant_regression.tex` — `0c54f461b6e4f1d0f5cebd88dc384b14295add78fd64aeeddcf2c1d5c4b59092` (31296 bytes)
-- `route_f/code/verify_another_physics_route_e_bridge.py` — `31f86d49c99181b9b3f2956a1d9e79621b3cfbe90751cec9d58843cd002098e4` (36432 bytes)
+- `route_f/code/verify_another_physics_route_e_bridge.py` — `a5b070b09a1b82deb8f40cd93ff032df45368eb0085b2b4b2a8212442f4c6ada` (42757 bytes)
 - `route_f/code/verify_ap_e2_discriminant_regression.py` — `a658e2804509502a66c37cb4f8e2318329a7fd285266bcfd2da70ed92e489276` (40639 bytes)
 
 The theorem-block hash lock is

@@ -14,7 +14,10 @@
 \setlength{\emergencystretch}{2em}
 
 \newcommand{\CP}{\mathbb{CP}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
 \newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
 \newcommand{\sltwo}{\mathfrak{sl}_2(\mathbb C)}
 \newcommand{\Ktr}{K_{\mathrm{tr}}}
 \newcommand{\GeV}{\,\mathrm{GeV}}
@@ -43,7 +46,7 @@
 First-Principles Separation Theorems, an Exact
 Discriminant--Killing Bridge, and a Reversible Research Ledger}
 \author{Route F research note}
-\date{14 July 2026}
+\date{16 July 2026}
 
 \begin{document}
 \maketitle
@@ -1040,6 +1043,156 @@ clock redshift, fifth-force, rotation-curve, and lensing data; do not merge it
 with AP--E1--9 without an explicit operator connecting the sectors.
 \end{enumerate}
 
+\section{2026-07-16 AP--E3 global/nonlinear and AP--E4 SQM handoff}
+
+This section is a reversible index into three standalone derivation notes.
+It records the equations needed to reconstruct the decision boundary without
+replacing their complete proofs and numerical ledgers.
+
+\subsection{Charged two-colour nonlinear proxy}
+
+The declared six-real-field diagnostic potential is
+\begin{equation}
+ V=\frac{\lambda}{4}
+ \left(\sigma^2+\bm\pi^2+2|\Delta|^2-v^2\right)^2
+ -h\sigma+\mu_g^2|\Delta|^2,
+ \qquad q_\Delta=2.
+ \label{eq:handoff-proxy-potential}
+\end{equation}
+At the mesonic stationary point, \(h/f=m_\pi^2\), and its exact Hessian
+contains
+\begin{equation}
+ m_\sigma^2=m_\pi^2+2\lambda f^2,\qquad
+ m_\Delta^2=m_\pi^2+\mu_g^2.
+ \label{eq:handoff-proxy-gaps}
+\end{equation}
+The requested \((e_g,v_g/\Lambda_c)\) scan is explicitly a matching ansatz,
+not a UV loop result:
+\begin{equation}
+ \frac{\mu_g^2}{\Lambda_c^2}
+ =\frac{\mu_{\rm PG,0}^2}{\Lambda_c^2}
+ +c_g\left(e_g\frac{v_g}{\Lambda_c}\right)^2.
+ \label{eq:handoff-matching-chart}
+\end{equation}
+The mesonic nonlinear sector solves the \(B=1\) hedgehog with
+\begin{equation}
+ B=-\frac2\pi\int_0^\infty\sin^2F\,F'\,\dd x=1,
+ \qquad E_2-E_4+3E_0=0,
+ \label{eq:handoff-b-virial}
+\end{equation}
+and diagonalizes both the generalized radial operator and the charged block
+\begin{equation}
+ \cH_{\Delta,\ell}=-\frac{\dd^2}{\dd x^2}+\alpha^2
+ +\chi(1-\cos F)+\frac{\ell(\ell+1)}{x^2}.
+ \label{eq:handoff-diquark-hessian}
+\end{equation}
+The deterministic \(18/18\) card passes the classical radial necessary gate.
+It deliberately leaves lattice QC2D, the full coupled three-dimensional
+Hessian, quantum determinants, and global target-space unwinding open.  The
+complete formulas are in
+\path{route_f/tex/ap_e3_charged_two_colour_soliton_proxy.tex}.
+
+\subsection{Non-extendible mixed WZW and spin refinement}
+
+Put \(X=S^3\times S^2\), choose integral generators \(u_3,u_2\), and let
+\(\widehat\Omega_n\in\widehat H^5(X;\ZZ)\) have curvature
+\(n\omega_3\wedge\omega_2\) and characteristic class \(n u_3u_2\).  The
+bosonic action on every closed spin four-manifold, without an extension of
+its map, is
+\begin{equation}
+ Z_{\rm bos}(M,\phi)=
+ \exp\!\left(2\pi\ii\,\widehat\Omega_n(\phi_*[M])\right).
+ \label{eq:handoff-diff-character}
+\end{equation}
+Here \(H^4(X;\RR/\ZZ)=0\), so fixed integral curvature has no ordinary flat
+ambiguity.  Stable splitting instead gives
+\begin{equation}
+ \Omega_4^{\rm Spin}(S^3\times S^2)
+ \simeq\ZZ\oplus\ZZ_2\oplus\ZZ_2.
+ \label{eq:handoff-spin-bordism}
+\end{equation}
+If \(\nu_3\) is the spin-bordism class of the inverse image of a regular
+point under the \(S^3\) projection and \(\nu_2\) is the Arf class of the
+inverse-image spin surface under the \(S^2\) projection, the general reduced
+spin refinement is
+\begin{equation}
+ Z_{\epsilon_3,\epsilon_2}(M,\phi)=Z_{\rm bos}(M,\phi)
+ (-1)^{\epsilon_3\nu_3+\epsilon_2\nu_2}.
+ \label{eq:handoff-spin-refinement}
+\end{equation}
+The bosonic differential-character definition is complete; a microscopic
+APS/Dai--Freed determinant must still choose
+\((\epsilon_3,\epsilon_2)\) before the spin-refined action is fixed.
+
+\subsection{Pure-\texorpdfstring{\(SU(3)\)}{SU(3)} no-go and near-miss}
+
+Adjoint breaking uses
+\begin{equation}
+ \iota(A,e^{\ii\alpha})=
+ \operatorname{diag}(e^{\ii\alpha}A,e^{-2\ii\alpha}),\qquad
+ \ker\iota=\{(1,1),(-1,-1)\},
+ \label{eq:handoff-su3-map}
+\end{equation}
+so every \([SU(2)\times U(1)]/\ZZ_2\) term descending from \(SU(3)\) obeys
+\begin{equation}
+ 2j+q=0\pmod2.
+ \label{eq:handoff-parity}
+\end{equation}
+A colour singlet therefore has even charge, proving that the original
+\(\bm1_{+1}\) scalar cannot occur.  Since \(qq(\phi^\dagger)^m\) requires
+\(2X_q=mX_\phi\), the desired \(m=2\) would require an odd doublet charge to
+equal an even singlet charge.  This is impossible.  The closest explicit
+branch instead has
+\begin{equation}
+ \bm3\to\bm2_{+1}\oplus\bm1_{-2},\qquad
+ \overline{\bm3}\to\bm2_{-1}\oplus\bm1_{+2},
+ \qquad M_q=m+Vy,\quad M_\ell=m-2Vy.
+ \label{eq:handoff-su3-branch}
+\end{equation}
+Choosing \(m=-Vy\) makes \(M_q=0\) and \(M_\ell=-3Vy\), while an adjoint
+scalar mass split can keep \(\bm1_{+2}\) light.  This is an actual tree-level
+decoupling but its minimal baryon \(qq\phi^\dagger\) is an \(\cO(1)\)
+\(SU(2)_\phi\) flavour doublet, not the Route-E \(\cO(2)\) triplet.  The full
+proof is in
+\path{route_f/tex/ap_e3_nonextendible_wzw_su3_uv_audit.tex}.
+
+\subsection{Physical tangent fermion and the composability gate}
+
+A half-BPS non-Abelian vortex independently yields a normalizable
+\(\CP^1\) orientational modulus and a worldline fermion.  On \(v=1/w\),
+\begin{equation}
+ \psi^v=-w^{-2}\psi^w,\qquad
+ D_t\psi^v=-w^{-2}D_t\psi^w,
+ \label{eq:handoff-tangent-fermion}
+\end{equation}
+so the Grassmann field is physically tangent-valued.  Canonical
+Spin\({}^c\) quantization gives
+\begin{equation}
+ Q_E=\sqrt2\,\bar\partial_E,\qquad
+ \cH_{\rm ground}=H^{0,*}(\CP^1,E).
+ \label{eq:handoff-sqm}
+\end{equation}
+In the declared canonical Spin\({}^c\) re-quantization, the tangent Clifford
+generator alone corresponds to \(E=\cO\) and gives one ground state.  The
+source-selected half-form ordering has no normalizable zero mode.  A
+separately derived \(E=\cO(2)\) gives
+\begin{equation}
+ (h^0,h^1)=(3,0),\qquad
+ \lambda_{n,\pm}=\pm\frac2{\sqrt C}\sqrt{n(n+3)},\qquad
+ \operatorname{mult}=2n+3,\qquad n\ge1.
+ \label{eq:handoff-sqm-spectrum}
+\end{equation}
+The intrinsic \(27/27\) SQM audit therefore derives a physical tangent
+fermion, but does not derive the canonical vacuum line and is not yet in the
+charged-two-colour mother model.  AP--E3's signed \(k=+2\) WZW character
+composes with it only after proving the same \(B=1\), the same \(\CP^1\)
+collective-coordinate map, transgressing the degree-five character along the
+spatial three-cycle, and pulling the resulting differential line back with
+degree \(+2\).  The
+degree-one Route-E portal is postponed until that theorem or an anomaly-free
+product compactification is available.  See
+\path{route_f/tex/ap_e4_moduli_space_sqm.tex}.
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -1055,7 +1208,7 @@ It writes
 \path{route_f/output/another_physics_route_e_bridge.json},\qquad
 \path{route_f/output/another_physics_route_e_bridge.md}.
 \end{center}
-The current result is \(22/22\) mechanical checks, including
+The current result is \(27/27\) mechanical checks, including
 \begin{equation}
  \max|\Ktr^2-I/3|=1.11\times10^{-16},\qquad
  |2\Delta-B|=0,
@@ -1065,8 +1218,10 @@ between the loaded Route-E \(\zeta\) card and the declared benchmark, complex
 weight-two covariance error
 \(2.80\times10^{-17}\), the two independent Q-ball energy estimates in
 Sec.~6, and oscillatory-level-set residuals below \(2.7\times10^{-14}\).
-The JSON explicitly retains all cross-theory identifications as non-derived
-bridge axioms and sets \texttt{physics\_promotion\_allowed=false}.
+The three successor cards pass \(18/18\), \(38/38\), and \(27/27\),
+respectively.  The JSON explicitly retains all
+cross-theory identifications as non-derived bridge axioms and sets
+\texttt{physics\_promotion\_allowed=false}.
 
 \appendix
 

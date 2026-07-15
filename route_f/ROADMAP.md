@@ -1,7 +1,7 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
@@ -40,7 +40,106 @@ All items start `open` unless marked otherwise.
   inputs, a valid interacting DYN-5 messenger action, recomputed RE-SC4
   pricing, and a threshold/experimental-bound envelope for RE-SC5.
 
-## AP-E3 UV and AP-E4 spectral checkpoint (2026-07-15; current authority)
+## AP-E3 global/nonlinear and AP-E4 SQM checkpoint (2026-07-16; current authority)
+
+Status: **three requested lanes executed with theorem-level no-go and
+fail-closed separation; no Route-E physics promotion.**
+
+- **Charged two-colour nonlinear proxy:** the dedicated program scans a
+  declared meson/charge-two-diquark linear-sigma vacuum over a two-parameter
+  matching ansatz, records condensates and the six-field Hessian, and solves
+  the full nonlinear `B=1` massive-Skyrme hedgehog.  Baryon number, Derrick
+  virial, box/grid convergence, the radial generalized meson Hessian, charged
+  scalar `l=0,1` ordering, and a tachyonic negative control are machine
+  checked.  This closes a classical nonlinear-EFT necessary gate only:
+  `full_3d_hessian_closed=false`, `lattice_qc2d_closed=false`, and the low-
+  energy matching coefficients remain UV inputs.
+  The `18/18` benchmark records phase onset
+  `mu_lift^2=-m_pi^2=-0.25`, gaps `(m_pi,m_sigma,m_Delta)=(0.5,3.5,0.9)`,
+  `|B-1|=4.06e-10`, relative Derrick residual `2.52e-8`, radial finite-box
+  `omega_0^2=0.311400567`, charged `l=0` bound
+  `omega_0^2=0.696506101<0.81`, and the tachyonic control `-1.430515810`.
+- **Differential-cohomology definition:** normalize integral generators
+  `omega_3` and `omega_2` on `S3` and `S2`.  The mixed curvature
+  `n omega_3 wedge omega_2` defines a degree-five differential character,
+  whose holonomy on the pushed-forward spacetime four-cycle is meaningful
+  without choosing a five-dimensional spacetime extension.  Since
+  `H^4(S3 x S2;R/Z)=0`, this bosonic lift is unique at fixed curvature/class.
+- **APS/spin refinement:** stable splitting gives
+  `Omega_4^Spin(S3 x S2)=Z + Z2 + Z2`.  The reduced generators are detected by
+  a regular-point inverse-image spin one-manifold for the `S3` projection and
+  the Arf invariant of the inverse-image spin surface for the `S2` projection.
+  The globally defined spin action therefore also contains two signs
+  `(epsilon_3,epsilon_2)`.  A UV Dai--Freed/APS determinant must determine
+  them; the differential form alone cannot.  The global/UV card passes
+  `38/38` algebraic and normalization checks while retaining those false
+  gates.
+- **`SU(3)` representation no-go:** adjoint breaking leaves the faithful
+  group `[SU(2) x U(1)]/Z2`, so every irrep obeys `2j+q=0 mod 2`.  The original
+  colour-singlet `1_(+1)` scalar and the resulting
+  `qq(phi^dagger)^2 -> O(2)` dressing cannot descend from pure `SU(3)`.  A
+  concrete nearest variant uses two `bar(3)` scalars,
+  `bar(3)->2_(-1)+1_(+2)`, with adjoint mass splitting, plus vectorlike
+  fundamentals `3->2_(+1)+1_(-2)` whose singlet partners are made heavy by a
+  displayed mass/adjoint-Yukawa tuning.  It really decouples at tree level,
+  but `qq phi^dagger` is a flavour doublet/O(1), not the Route-E triplet/O(2).
+  Threshold, radiative, finite-monopole, and exact-emergent-2-group gates stay
+  open.  The charge-two near-miss also inherits a global-form gate: its
+  covering-`U(1)` level normalization is conditional until determinant lines
+  and first Chern classes are matched on faithful `U(2)` bundles with
+  correlated centre flux;
+  `u2_quotient_global_bundle_normalization_proven=false`.
+- **Moduli-space `N=2` SQM:** a half-BPS non-Abelian-vortex mother theory
+  independently supplies `CP1` orientational moduli and a physical tangent
+  fermion through BPS collective-coordinate supersymmetry.  Its chart
+  covariance and finite `L2`
+  metric are checked.  In the declared canonical Spin-c re-quantization,
+  quantization gives `Omega^(0,*)` and one untwisted ground state; the
+  source-selected half-form ordering has none.  A separate `E=O(2)`
+  WZ/magnetic or Fermi-index line gives
+  three positive-chirality states and the AP-E4 paired spectrum
+  `lambda_(n,+/-)=+/-2 sqrt(n(n+3))/sqrt(C)`, `n>=1`, with
+  `Delta_D=4/sqrt(C)` and `Delta_H=8/C`.  The SQM card passes `27/27`.
+  This is not yet a
+  completion of the charged-two-colour branch: the BPS vortex and its bulk
+  supersymmetry have not been derived for the same `B=1` soliton.  The AP-E3
+  level-two line is composable only after spatial transgression of the
+  degree-five character and that same-moduli pullback theorem.
+  The mother model does not select the canonical vacuum line used by the
+  three-state theorem.  Its CPT map is also open: fixed-canonical `O(-2)`
+  has one negative mode, not the conjugate three-state kernel; the physical
+  antibaryon must derive an anti-canonical/effective `O(-4)` polarization.
+- **Backup and handoff:** product compactification is retained only as an
+  anomaly-polynomial-checked backup.  The degree-one Route-E portal is
+  deliberately postponed until either same-model SQM/WZW composition or the
+  compactification branch closes.  Every new card retains
+  `physics_promotion_allowed=false`.
+
+New canonical artifacts:
+
+- `tex/ap_e3_charged_two_colour_soliton_proxy.tex`, its bibliography,
+  `code/scan_ap_e3_charged_two_colour_proxy.py`, and generated proxy cards;
+- `tex/ap_e3_nonextendible_wzw_su3_uv_audit.tex`, its bibliography,
+  `code/verify_ap_e3_nonextendible_wzw_su3_uv.py`, and generated global-UV
+  cards;
+- `tex/ap_e4_moduli_space_sqm.tex`, its bibliography,
+  `code/verify_ap_e4_moduli_space_sqm.py`, and generated SQM cards.
+
+Ordered continuation:
+
+1. Replace the nonlinear EFT matching ansatz by controlled charged-QC2D
+   evidence and diagonalize the full coupled three-dimensional/quantum
+   soliton Hessian.
+2. Compute the two spin-torsion signs from a chosen microscopic regulator and
+   replace pure `SU(3)` by a semisimple embedding compatible with the
+   charge-one/exactly-two dressing, or accept the exact no-go.
+3. Derive `N=2` collective-coordinate supersymmetry, its canonical vacuum
+   line and CPT map, then transgress/gauge-descend the AP-E3 `O(2)` line for
+   the same soliton; otherwise execute the anomaly-free product compactification backup.
+4. Only then construct and orient the degree-one Route-E portal below every
+   retained gap.
+
+## AP-E3 UV and AP-E4 spectral checkpoint (2026-07-15; superseded where noted above)
 
 Status: **exact-cell and canonical-operator mathematics done; mixed-WZW
 intermediate completion anomaly-consistent; Route-E physics non-promoting.**
@@ -296,7 +395,7 @@ Reproducible artifacts:
   checked compiled ledger;
 - `code/verify_another_physics_route_e_bridge.py` writes
   `output/another_physics_route_e_bridge.{json,md}` and currently passes
-  `22/22` algebraic/numerical checks while setting
+  `27/27` algebraic/numerical checks while setting
   `physics_promotion_allowed=false`.
 - `tex/ap_e1_projective_doublet_action.tex` and its local bibliography contain
   the complete local/global/fixed-charge derivations, the first-principles

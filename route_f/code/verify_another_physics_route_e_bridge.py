@@ -29,6 +29,9 @@ OUTPUT = ROUTE_F / "output"
 ROUTE_E_INVARIANT_CARD = REPO / "route_E" / "output" / "audit0" / "invariant_card.json"
 AP_E3_UV_CARD = OUTPUT / "ap_e3_exact_two_mixed_wzw.json"
 AP_E4_CARD = OUTPUT / "ap_e4_tangent_dirac_spectrum.json"
+AP_E3_NONLINEAR_CARD = OUTPUT / "ap_e3_charged_two_colour_proxy.json"
+AP_E3_GLOBAL_UV_CARD = OUTPUT / "ap_e3_nonextendible_wzw_su3_uv.json"
+AP_E4_SQM_CARD = OUTPUT / "ap_e4_moduli_space_sqm.json"
 
 TOL = 1.0e-12
 CHECKS: list[dict[str, Any]] = []
@@ -123,6 +126,9 @@ def qball_step_energy(
 def main() -> None:
     ap_e3_uv = json.loads(AP_E3_UV_CARD.read_text(encoding="utf-8"))
     ap_e4 = json.loads(AP_E4_CARD.read_text(encoding="utf-8"))
+    ap_e3_nonlinear = json.loads(AP_E3_NONLINEAR_CARD.read_text(encoding="utf-8"))
+    ap_e3_global_uv = json.loads(AP_E3_GLOBAL_UV_CARD.read_text(encoding="utf-8"))
+    ap_e4_sqm = json.loads(AP_E4_SQM_CARD.read_text(encoding="utf-8"))
     check(
         "S0_AP_E3_AP_E4",
         "AP-E3 exact-cell and intermediate mixed-WZW audit is green but non-promoting",
@@ -160,6 +166,67 @@ def main() -> None:
             ap_e4.get("ap_e4_mathematics_complete"),
             ap_e4.get("physical_fermionic_tangent_mode_derived"),
             ap_e4.get("ap_e4_physics_closed"),
+        ),
+    )
+    check(
+        "S0_AP_E3_AP_E4",
+        "charged two-colour nonlinear proxy closes only radial classical-EFT gates",
+        ap_e3_nonlinear.get("all_pass") is True
+        and ap_e3_nonlinear.get("checks_passed") == 18
+        and ap_e3_nonlinear.get("nonlinear_eft_proxy_pass") is True
+        and ap_e3_nonlinear.get("radial_hessian_necessary_gate_pass") is True
+        and ap_e3_nonlinear.get("full_3d_hessian_closed") is False
+        and ap_e3_nonlinear.get("lattice_qc2d_closed") is False
+        and ap_e3_nonlinear.get("physics_promotion_allowed") is False,
+        "proxy={}/{}; radial={}; full3d={}; lattice={}".format(
+            ap_e3_nonlinear.get("checks_passed"),
+            ap_e3_nonlinear.get("checks_total"),
+            ap_e3_nonlinear.get("radial_hessian_necessary_gate_pass"),
+            ap_e3_nonlinear.get("full_3d_hessian_closed"),
+            ap_e3_nonlinear.get("lattice_qc2d_closed"),
+        ),
+    )
+    check(
+        "S0_AP_E3_AP_E4",
+        "non-extendible bosonic WZW is defined while spin torsion and pure-SU(3) equivalence stay open",
+        ap_e3_global_uv.get("all_pass") is True
+        and ap_e3_global_uv.get("checks_passed") == 38
+        and ap_e3_global_uv.get("ordinary_differential_character_defined_on_all_4_cycles") is True
+        and ap_e3_global_uv.get("u2_quotient_global_bundle_normalization_proven") is False
+        and ap_e3_global_uv.get("torsion_uv_selected") is False
+        and ap_e3_global_uv.get("su3_charge_one_singlet_embedding_possible") is False
+        and ap_e3_global_uv.get("su3_charge_two_variant_tree_level_constructed") is True
+        and ap_e3_global_uv.get("su3_charge_two_variant_route_equivalent") is False
+        and ap_e3_global_uv.get("full_uv_closed") is False
+        and ap_e3_global_uv.get("physics_promotion_allowed") is False,
+        "global={}/{}; char={}; U2 bundle={}; torsion={}; SU3 q=1={}; q=2 equivalent={}".format(
+            ap_e3_global_uv.get("checks_passed"),
+            ap_e3_global_uv.get("checks_total"),
+            ap_e3_global_uv.get("ordinary_differential_character_defined_on_all_4_cycles"),
+            ap_e3_global_uv.get("u2_quotient_global_bundle_normalization_proven"),
+            ap_e3_global_uv.get("torsion_uv_selected"),
+            ap_e3_global_uv.get("su3_charge_one_singlet_embedding_possible"),
+            ap_e3_global_uv.get("su3_charge_two_variant_route_equivalent"),
+        ),
+    )
+    check(
+        "S0_AP_E3_AP_E4",
+        "intrinsic N=2 SQM derives a tangent fermion but not the charged-two-colour composition",
+        ap_e4_sqm.get("all_pass") is True
+        and ap_e4_sqm.get("checks_passed") == 27
+        and ap_e4_sqm.get("physical_tangent_fermion_in_intrinsic_sqm_derived") is True
+        and ap_e4_sqm.get("mother_model_vacuum_line_matches_canonical_spinc") is False
+        and ap_e4_sqm.get("cpt_antibaryon_polarization_closed") is False
+        and ap_e4_sqm.get("charged_two_colour_soliton_sqm_embedding_closed") is False
+        and ap_e4_sqm.get("ap_e4_worldline_completion_closed") is False
+        and ap_e4_sqm.get("route_e_portal_closed") is False
+        and ap_e4_sqm.get("physics_promotion_allowed") is False,
+        "SQM={}/{}; tangent={}; charged embedding={}; portal={}".format(
+            ap_e4_sqm.get("checks_passed"),
+            ap_e4_sqm.get("checks_total"),
+            ap_e4_sqm.get("physical_tangent_fermion_in_intrinsic_sqm_derived"),
+            ap_e4_sqm.get("charged_two_colour_soliton_sqm_embedding_closed"),
+            ap_e4_sqm.get("route_e_portal_closed"),
         ),
     )
 
@@ -644,6 +711,18 @@ def main() -> None:
                 "path": str(AP_E4_CARD.relative_to(REPO)),
                 "sha256": sha256(AP_E4_CARD),
             },
+            "ap_e3_charged_two_colour_proxy": {
+                "path": str(AP_E3_NONLINEAR_CARD.relative_to(REPO)),
+                "sha256": sha256(AP_E3_NONLINEAR_CARD),
+            },
+            "ap_e3_nonextendible_wzw_su3_uv": {
+                "path": str(AP_E3_GLOBAL_UV_CARD.relative_to(REPO)),
+                "sha256": sha256(AP_E3_GLOBAL_UV_CARD),
+            },
+            "ap_e4_moduli_space_sqm": {
+                "path": str(AP_E4_SQM_CARD.relative_to(REPO)),
+                "sha256": sha256(AP_E4_SQM_CARD),
+            },
         },
         "separation_theorems": {
             "AP_E3_AP_E4_handoff": {
@@ -654,7 +733,19 @@ def main() -> None:
                 "canonical_spinc_zero_modes": 3,
                 "canonical_spinc_gap_at_R_half": 4.0,
                 "ordinary_spin_tangent_zero_modes": 2,
-                "physical_fermionic_origin_derived": False,
+                "intrinsic_sqm_physical_tangent_fermion_derived": True,
+                "physical_fermionic_origin_in_charged_two_colour_model_derived": False,
+                "mother_model_canonical_vacuum_line_derived": False,
+                "cpt_antibaryon_polarization_closed": False,
+                "charged_two_colour_sqm_embedding_closed": False,
+                "nonlinear_eft_radial_gate_pass": True,
+                "full_3d_hessian_closed": False,
+                "lattice_qc2d_closed": False,
+                "nonextendible_bosonic_wzw_defined": True,
+                "u2_quotient_global_bundle_normalization_proven": False,
+                "spin_torsion_uv_selected": False,
+                "pure_su3_charge_one_embedding_possible": False,
+                "su3_charge_two_variant_route_equivalent": False,
                 "route_E_portal_closed": False,
             },
             "CP1_O2": {
@@ -769,8 +860,10 @@ def main() -> None:
         "bridge_axioms": bridge_axioms,
         "checks": CHECKS,
         "open_physics_gates": [
-            "complete the charged-two-colour strong-phase, compact-monopole, bordism, soliton, and all-scale UV audits",
-            "derive the AP-E4 canonical Spin-c fermion from moduli-space SQM or an anomaly-free compactification",
+            "replace the charged-two-colour nonlinear EFT proxy by controlled gauge-theory evidence and the full coupled 3D/quantum soliton Hessian",
+            "select both reduced spin-bordism phases with a microscopic APS/Dai-Freed regulator",
+            "replace the pure-SU(3) charge-one no-go by a compatible semisimple UV group or accept the no-go",
+            "derive the AP-E4 SQM vacuum line and CPT polarization, then spatially transgress and gauge-descend the signed AP-E3 O(2) line for the same charged-two-colour B=1 soliton, or use an anomaly-free compactification",
             "construct and orient a degree-one Route-E portal below the AP-E3/AP-E4 gaps",
             "derive rather than identify the phase map between zeta and a visibility observable",
             "supply a gauge/anomaly-consistent Route-E embedding of the Q-ball U(1)",
@@ -839,8 +932,16 @@ two theories and `physics_promotion_allowed=false`.
 7. The AP-E3 successor card proves an exact constrained-cell `k=+2` theorem
    and an anomaly-consistent mixed-WZW intermediate candidate (`26/26`), while
    the AP-E4 card solves the declared canonical Spin-c spectrum (`22/22`).
-   Their explicit false flags for all-scale UV closure, physical tangent-
-   fermion origin, and the Route-E portal remain binding.
+   The new nonlinear proxy (`18/18`) passes its vacuum, `B=1`, radial, and
+   charged-scalar necessary gates but explicitly leaves lattice QC2D and the
+   full Hessian open.  The global-UV card defines the bosonic non-extendible
+   WZW phase and proves a pure-`SU(3)` no-go for the original charge-one
+   scalar; its two spin-torsion signs and an equivalent all-scale embedding
+   remain open.  The moduli-SQM card (`27/27`) independently derives a
+   physical tangent fermion, but neither the mother-model canonical vacuum
+   line nor its CPT antiparticle polarization.  It is also not the same
+   charged-two-colour soliton, so the spatially transgressed AP-E3 `O(2)`
+   line, gauge descent, and Route-E portal remain non-derived.
 
 ## Bridge axioms retained as non-derived
 
@@ -854,8 +955,9 @@ two theories and `physics_promotion_allowed=false`.
 
 - `physics_promotion_allowed=false`.
 - A physical bridge requires an action-level phase map, a gauge/anomaly-safe
-  embedding, an exact soliton/fluctuation analysis, a physical Spin-c origin,
-  a degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
+  embedding compatible with the exactly-two dressing, a full gauge-theory
+  soliton/fluctuation analysis, a same-mother-model SQM/WZW composition, a
+  degree-one portal, and reruns of Route-E's flavor, threshold, proton, and
   cosmology gates.
 """,
         encoding="utf-8",

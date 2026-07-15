@@ -1,0 +1,748 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,slashed}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E4: A Physical Tangent Fermion from Vortex Moduli-Space SQM\\
+Canonical Spin\texorpdfstring{\({}^c\)}{c} Quantization, Conditional
+\(\cO(2)\) Twisting,\\ Chirality, Partner Spectrum, Gap, and the AP-E3
+Composability Gate}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note supplies the missing intrinsic tangent-fermion realization behind
+AP-E4, while showing that the vacuum-line polarization remains independent
+physical data.
+A half-BPS non-Abelian \(U(2)\) Chern--Simons--Higgs vortex has a normalizable
+internal moduli space
+\(SU(2)_{c+f}/U(1)\simeq\CP^1\).  Promoting its orientation to a slow
+worldline coordinate yields the exact Fubini--Study kinetic term
+\[
+ L_B=C\frac{|\dot w|^2}{(1+|w|^2)^2},\qquad
+ C=\frac{2\pi}{e^2}I_0>0,
+\]
+where \(I_0\) is an explicitly convergent radial \(L^2\) integral.  The one
+complex unbroken supercharge supplies a complex fermion satisfying
+\(\psi^v=-w^{-2}\psi^w\) under \(v=1/w\), so the physical worldline fermion is
+intrinsically tangent-valued.  This closes the ``bosonic fluctuation is not a
+fermion'' objection for this mother model.
+
+The decisive distinction is then made explicit.  In canonical
+Spin\({}^c\)/Dolbeault polarization the tangent fermion generates the
+Clifford module \(\Omega^{0,*}(\CP^1)\); it does \emph{not} also make the
+wavefunction \(T\CP^1=\cO(2)\)-valued.  Consequently the declared canonical
+Spin\({}^c\) re-quantization of the untwisted complex has one Dolbeault ground
+state, not three; the source-selected half-form/operator ordering instead has
+no normalizable zero mode.  An independent coefficient line
+\(E=\cO(2)\) changes the supercharge to
+\(Q_E=\sqrt2\,\bar\partial_E\) and gives
+\((h^0,h^1)=(3,0)\).  Its exact nonzero tower is
+\[
+ \lambda_{n,\pm}=\pm\frac{2}{\sqrt C}\sqrt{n(n+3)},\qquad
+ \operatorname{mult}(\lambda_{n,\pm})=2n+3,\qquad n\ge1,
+\]
+so \(\Delta_D=4/\sqrt C\) and
+\(\Delta_H=8/C\) for \(H=D^2/2\).
+
+AP-E3's oriented level \(k=+2\) mixed-WZW term could provide precisely this
+coefficient line, but only after proving that its charged-two-colour
+\(B=1\) soliton has the \emph{same} \(\CP^1\) collective-coordinate map and
+that the spatially transgressed WZW line pulls back with Chern number \(+2\).
+The vortex used here is
+an independent \(2+1\)-dimensional mother model, not that soliton.  Thus
+\texttt{physical\_tangent\_fermion\_in\_intrinsic\_sqm\_derived=true}, while
+the charged-two-colour embedding, AP-E4 worldline completion, Route-E portal,
+and physics promotion remain false.  Product compactification is retained
+only as a backup behind a full six-dimensional anomaly gate.
+\end{abstract}
+
+\tableofcontents
+
+\section{Problem and theorem-level answer}
+
+The AP-E4 question contains four logically distinct layers:
+\begin{enumerate}[label=(E4.\arabic*)]
+\item derive a physical \(\CP^1\) collective-coordinate manifold and its
+  \(L^2\) metric from a mother action;
+\item derive a Grassmann-odd tangent partner and the worldline supercharge;
+\item determine which additional line bundle, if any, twists the quantum
+  states and then solve chirality, partners, and the gap;
+\item prove that the result composes with AP-E3 and eventually Route E.
+\end{enumerate}
+The first two layers are solved by the intrinsic vortex model below.  The
+third is solved mathematically both without and with a declared \(\cO(2)\)
+coefficient line.  The fourth remains a sharply stated physical gate.
+
+\begin{theorem}[Intrinsic tangent result and fixed-polarization line-twist result]
+For a charge-one half-BPS \(U(2)\) non-Abelian Chern--Simons vortex with the
+translational coordinate factored out, the internal moduli are \(\CP^1\),
+their \(L^2\) metric is Fubini--Study with a finite positive coefficient
+\(C\), and the BPS collective-coordinate supersymmetry supplies a physical
+tangent fermion.  In the declared canonical Dolbeault re-quantization the untwisted
+ground-state space is
+\(H^{0,*}(\CP^1,\cO)=\CC\).  Within \(SU(2)\)-equivariant holomorphic line
+twists of this fixed canonical operator, and with no added superpotential or
+extra Fermi multiplet, exactly three positive-chirality ground states occur
+if and only if the independent coefficient line is \(E=\cO(2)\):
+\[
+ H^{0,*}(\CP^1,E)=H^0(\CP^1,\cO(2))\simeq\CC^3,
+ \qquad H^1(\CP^1,\cO(2))=0.
+\]
+Every nonzero level is paired.  This theorem does not claim uniqueness among
+all possible SQM field contents, potentials, or vacuum-line regularizations.
+\end{theorem}
+
+\section{A BPS mother model with internal \texorpdfstring{\(\CP^1\)}{CP1}}
+
+\subsection{Bulk ingredients and colour--flavour locking}
+
+Consider the \(2+1\)-dimensional \(\mathcal N=2\) supersymmetric
+Chern--Simons--Higgs theory with gauge group \(U(2)\), two fundamental Higgs
+flavours assembled into a \(2\times2\) matrix \(H\), and a positive FI scale
+\(\xi\).  Its bosonic action has the schematic but sufficient form
+\begin{equation}
+ S_{\rm bulk}=\int\dd^3x\left[
+ \frac{\kappa}{4\pi}\epsilon^{\mu\nu\rho}
+ \Tr\!\left(A_\mu\partial_\nu A_\rho-
+ \frac{2\ii e}{3}A_\mu A_\nu A_\rho\right)
+ +\Tr(D_\mu H)^\dagger D^\mu H-V_6(H;\xi,\kappa,e)
+ +\mathcal L_F\right].
+ \label{eq:bulk-action}
+\end{equation}
+Supersymmetry fixes the sextic potential \(V_6\) and admits first-order BPS
+vortex equations.  We use the explicit BPS family and collective-coordinate
+reduction of Ref.~\cite{AldrovandiSchaposnik2007APE4SQM}; no claim below
+depends on inventing a new radial solution.
+
+The asymmetric vacuum may be chosen as
+\begin{equation}
+ H_\infty=\sqrt\xi\,\bm 1_2.
+ \label{eq:locked-vacuum}
+\end{equation}
+Gauge \(SU(2)_c\) and flavour \(SU(2)_f\) are then locked to a global
+diagonal \(SU(2)_{c+f}\).  A reference unit vortex embeds its winding in one
+colour--flavour direction and has stabilizer \(U(1)\).  Therefore its
+internal orbit is
+\begin{equation}
+ \cM_{\rm int}=\frac{SU(2)_{c+f}}{U(1)}\simeq\CP^1.
+ \label{eq:orbit}
+\end{equation}
+The full one-vortex moduli space contains also its centre
+\(Z\in\CC\): \(\cM_1\simeq\CC_Z\times\CP^1\).  We factor out \(Z\), or
+equivalently hold the vortex centre fixed with a weak supersymmetric trap.
+This avoids confusing translational states with the proposed three-state
+internal sector.
+
+\subsection{Projector representation and physical zero mode}
+
+Write a normalized orientation and its rank-one projector as
+\begin{equation}
+ n\in\CC^2,\qquad n^\dagger n=1,\qquad
+ n\sim e^{\ii\alpha}n,\qquad P=nn^\dagger.
+ \label{eq:n-projector}
+\end{equation}
+The oriented vortex fields can be expressed schematically as
+\begin{equation}
+ H(r;n)=\sqrt\xi\,\bm1_2+
+ \bigl(\widetilde\varphi(r)-\sqrt\xi\bigr)P,
+ \qquad
+ A_\mu(r;n)=A_\mu^{(0)}(r)\bm1_2+A_\mu^{(1)}(r)
+ \left(P-\frac12\bm1_2\right).
+ \label{eq:oriented-fields}
+\end{equation}
+An infinitesimal global rotation generated by a Hermitian
+\(\epsilon\in\mathfrak{su}(2)\) gives
+\begin{equation}
+ \delta_\epsilon P=\ii[\epsilon,P],\qquad
+ \delta_\epsilon H=\ii[\epsilon,H],\qquad
+ \delta_\epsilon A_\mu=\ii[\epsilon,A_\mu].
+ \label{eq:symmetry-zero-mode}
+\end{equation}
+Differentiating a family of exact solutions along an exact symmetry orbit
+annihilates the linearized field equations.  Directions satisfying
+\([\epsilon,P]=0\) are the stabilizer and hence zero; the remaining two real
+directions span \(T_P\CP^1\).
+
+Normalizability follows from the local-vortex boundary conditions.  Near
+the core all profiles are regular, so the radial norm has a bounded
+integrand times \(r\dd r\).  At infinity the massive bulk equations imply
+\(\widetilde\varphi-\sqrt\xi=O(e^{-mr})\) and analogous decay for the
+non-Abelian gauge profile.  Hence
+\begin{equation}
+ \|\delta_\epsilon\Phi\|_{L^2}^2
+ \leq C_0\int_0^1r\,\dd r+
+ C_\infty\int_1^\infty r e^{-2mr}\,\dd r<\infty.
+ \label{eq:normalizable}
+\end{equation}
+This is a genuine normalizable collective mode, not merely a tangent vector
+in field-value space.  Index and moduli-matrix analyses of non-Abelian
+vortices give the same moduli count in broader Yang--Mills--Chern--Simons
+settings~\cite{GudnasonEto2021APE4SQM}.
+
+\section{First-principles \texorpdfstring{\(L^2\)}{L2} metric}
+
+\subsection{Horizontal geometry of the normalized doublet}
+
+For a path \(n(t)\), the physical horizontal velocity is
+\begin{equation}
+ \eta=(1-P)\dot n,\qquad n^\dagger\eta=0,\qquad
+ \|\eta\|^2=\dot n^\dagger\dot n-|n^\dagger\dot n|^2.
+ \label{eq:horizontal-velocity}
+\end{equation}
+Because \(n^\dagger n=1\), \(n^\dagger\dot n\) is purely imaginary and
+therefore
+\begin{equation}
+ \dot n^\dagger\dot n+(n^\dagger\dot n)^2
+ =\dot n^\dagger\dot n-|n^\dagger\dot n|^2=\|\eta\|^2.
+ \label{eq:source-bracket}
+\end{equation}
+On the north chart choose
+\begin{equation}
+ n_N(w)=\frac{(1,w)^T}{\sqrt{1+|w|^2}}.
+ \label{eq:north-section}
+\end{equation}
+Direct differentiation and projection give
+\begin{equation}
+ \|(1-P)\dot n_N\|^2
+ =\frac{|\dot w|^2}{(1+|w|^2)^2}.
+ \label{eq:fs-shape}
+\end{equation}
+This proves the Fubini--Study shape without invoking symmetry uniqueness.
+
+\subsection{Radial norm and elimination of the temporal compensator}
+
+Promoting \(n\) to \(n(t)\) requires a temporal gauge-field compensator
+with a radial function \(\rho(r)\).  Integrating the explicit bulk ansatz
+over the transverse plane gives~\cite{AldrovandiSchaposnik2007APE4SQM}
+\begin{align}
+ S_{\rm eff}
+ &=\frac{2\pi}{e^2}I_0\int\dd t\,
+ \left[\dot n^\dagger\dot n+(n^\dagger\dot n)^2\right],
+ \label{eq:published-effective-action}\\
+ I_0&=\int_0^\infty\dd\hat r\,\hat r\left[
+ (\hat\varphi^2+\hat\xi)\rho^2
+ +2(1-\rho)(\hat\varphi-\sqrt{\hat\xi})^2\right],
+ \label{eq:i0}\\
+ \rho&=\frac{(\hat\varphi-\sqrt{\hat\xi})^2}
+ {\hat\varphi^2+\hat\xi}.
+ \label{eq:rho}
+\end{align}
+Here hats denote the dimensionless radial variables used in that reduction.
+The last equation is algebraic because \(\rho\) is nondynamical in the pure
+Chern--Simons model.  Substitution makes finiteness manifest from the same
+core regularity and exponential tail used in Eq.~\eqref{eq:normalizable};
+the integrand is nonnegative and nonzero for a nontrivial vortex, so
+\begin{equation}
+ C:=\frac{2\pi}{e^2}I_0>0.
+ \label{eq:C}
+\end{equation}
+Combining Eqs.~\eqref{eq:source-bracket}--\eqref{eq:C} yields
+\begin{equation}
+ \boxed{L_B=C\frac{\dot w\dot{\bar w}}{(1+|w|^2)^2}},\qquad
+ K=C\log(1+|w|^2),\qquad
+ g_{w\bar w}=\frac{C}{(1+|w|^2)^2}.
+ \label{eq:LB}
+\end{equation}
+Since a round sphere of radius \(R\) has
+\(\dd s^2=4R^2\dd w\dd\bar w/(1+|w|^2)^2\),
+\begin{equation}
+ R=\frac{\sqrt C}{2},\qquad \operatorname{Area}(\CP^1)=\pi C.
+ \label{eq:radius-area}
+\end{equation}
+
+For deterministic regression, the companion code also inserts the analytic
+surrogate \(\hat\varphi=\tanh\hat r\), \(\hat\xi=1\) into
+Eqs.~\eqref{eq:i0}--\eqref{eq:rho}, and verifies positivity and quadrature
+convergence.  This is a numerical check of the reduction, not a claim to
+have solved the microscopic BPS radial equation.
+
+\begin{gate}[No hidden level-two term in this mother reduction]
+For the particular ansatz of Ref.~\cite{AldrovandiSchaposnik2007APE4SQM},
+the Chern--Simons density has no orientation-dependent term linear in
+\(\dot n\); all time-dependent orientational terms in
+Eq.~\eqref{eq:published-effective-action} come from the scalar kinetic
+energy.  Thus this mother model derives \(C\) but does not derive a magnetic
+line of Chern number two.  Other Chern--Simons vortex theories can induce
+magnetic fields on moduli space~\cite{CollieTong2008APE4SQM}; that possibility
+does not retroactively insert one here.
+\end{gate}
+
+\section{Physical tangent fermion and intrinsic \texorpdfstring{\(N=2\)}{N=2} SQM}
+
+\subsection{BPS supersymmetry and tangent covariance}
+
+The bulk vortex preserves one complex supercharge.  Supersymmetry therefore
+completes Eq.~\eqref{eq:LB} with a complex Grassmann collective coordinate
+\(\psi^w(t)\):
+\begin{equation}
+ L_{\rm SQM}=g_{w\bar w}\dot w\dot{\bar w}
+ +\frac{\ii}{4}g_{w\bar w}
+ \left(\bar\psi^{\bar w}D_t\psi^w-
+ \bar D_t\bar\psi^{\bar w}\psi^w\right),
+ \label{eq:sqm-action}
+\end{equation}
+with
+\begin{align}
+ D_t\psi^w&=\dot\psi^w+\Gamma^w{}_{ww}\dot w\psi^w,
+ &\Gamma^w{}_{ww}&=g^{w\bar w}\partial_wg_{w\bar w}
+ =-\frac{2\bar w}{1+|w|^2}.
+ \label{eq:fermion-connection}
+\end{align}
+Under the south-chart coordinate \(v=1/w\),
+\begin{equation}
+ \psi^v=\frac{\partial v}{\partial w}\psi^w=-w^{-2}\psi^w,
+ \qquad
+ D_t\psi^v=-w^{-2}D_t\psi^w.
+ \label{eq:fermion-transition}
+\end{equation}
+Hence \(\psi\in\Gamma(T^{1,0}\CP^1)\) and its kinetic norm is chart
+independent.  This is the physical tangent fermion missing from a purely
+bosonic AP-E4 argument.
+
+\subsection{What the tangent fermion quantizes to}
+
+Fix the canonical Spin\({}^c\) polarization associated with the complex
+structure.  The tangent fermion and its adjoint become one Clifford
+creation--annihilation pair.  Via the metric, a creation operator wedges by
+a \((0,1)\)-form and its adjoint contracts.  Therefore the Fock bundle is
+\begin{equation}
+ W_{\rm can}=\Omega^{0,0}(\CP^1)\oplus\Omega^{0,1}(\CP^1)
+ =\Omega^{0,*}(\CP^1),
+ \qquad \Gamma=(-1)^q\quad\hbox{on }\Omega^{0,q}.
+ \label{eq:fock-module}
+\end{equation}
+The supercharges and Hamiltonian are
+\begin{equation}
+ Q=\sqrt2\,\bar\partial,\qquad
+ Q^\dagger=\sqrt2\,\bar\partial^\dagger,\qquad
+ D=Q+Q^\dagger,\qquad
+ H=\frac12\{Q,Q^\dagger\}=\frac12D^2.
+ \label{eq:untwisted-supercharges}
+\end{equation}
+In particular \(Q^2=(Q^\dagger)^2=0\),
+\(\{D,\Gamma\}=0\), and supersymmetric ground states are Dolbeault
+cohomology classes.
+
+The phrase ``tangent fermion'' describes the transformation of the
+\emph{Clifford generator}.  It does not say that the Fock vacuum or every
+wavefunction carries an additional factor \(T^{1,0}\CP^1\).  Declaring
+\begin{equation}
+ \Omega^{0,*}\longrightarrow
+ \Omega^{0,*}\otimes T^{1,0}\CP^1
+ \label{eq:forbidden-double-count}
+\end{equation}
+is an independent twist, not a consequence of
+Eq.~\eqref{eq:fermion-transition}.
+
+\begin{remark}[Vacuum-line ordering]
+The explicit operator ordering used in the original vortex quantization
+packages the two Fock components with a half-form factor and reports no
+normalizable zero mode~\cite{AldrovandiSchaposnik2007APE4SQM}; geometrically
+this is the ordinary-spin realization
+\(\Omega^{0,*}\otimes K^{1/2}\), with
+\(K^{1/2}=\cO(-1)\) on \(S^2\).  AP-E4's operator card instead declares the
+canonical Spin\({}^c\) realization \eqref{eq:fock-module}.  The physical
+tangent fermion is intrinsic, whereas the vacuum-line regularization is an
+additional datum that must remain fixed when comparing spectra.  In
+particular, the mother action does not derive the canonical vacuum line used
+in the subsequent spectral theorem.  Neither choice supplies the desired
+coefficient \(\cO(2)\).
+\end{remark}
+
+\section{Untwisted canonical negative controls and the independent
+\texorpdfstring{\(\cO(2)\)}{O(2)} twist}
+
+\subsection{The untwisted model does not have three vacua}
+
+For the canonical realization, Hodge theory gives
+\begin{equation}
+ \Ker D^+\simeq H^0(\CP^1,\cO)=\CC,
+ \qquad
+ \Ker D^-\simeq H^1(\CP^1,\cO)=0.
+ \label{eq:untwisted-count}
+\end{equation}
+Thus the declared canonical Spin\({}^c\) re-quantization has one ground
+state.  As stressed in the vacuum-line remark, this is not the
+source-selected half-form ordering, which has no normalizable zero mode.
+A different model
+with enough fermions to realize the full de Rham complex has
+\(b_0+b_2=2\) vacua on \(S^2\).  This also is not a three-state mechanism.
+
+\subsection{Magnetic/Wess--Zumino coefficient line}
+
+Let \(E=\cO(k)\) be an independently derived Hermitian line.  In north and
+south patches choose
+\begin{align}
+ a_N^{(k)}&=\frac{k}{2}(1-\cos\theta)\dd\phi,
+ &a_S^{(k)}&=-\frac{k}{2}(1+\cos\theta)\dd\phi,
+ \label{eq:monopole-connections}\\
+ F^{(k)}&=\dd a^{(k)}=\frac{k}{2}\sin\theta\,
+ \dd\theta\wedge\dd\phi,
+ &\frac1{2\pi}\int_{S^2}F^{(k)}&=k.
+ \label{eq:monopole-flux}
+\end{align}
+The overlap transition has winding \(k\), so integrality is necessary for a
+global quantum line.  A worldline term
+\begin{equation}
+ S_{\rm WZ}=\hbar\int a^{(k)}_i(q)\dot q^i\dd t
+ \label{eq:worldline-wz}
+\end{equation}
+and its supersymmetric curvature coupling replace
+Eq.~\eqref{eq:untwisted-supercharges} by
+\begin{equation}
+ \cH_E=L^2\Omega^{0,*}(\CP^1,E),\qquad
+ Q_E=\sqrt2\,\bar\partial_E,\qquad
+ D_E=\sqrt2(\bar\partial_E+\bar\partial_E^\dagger),
+ \qquad H_E=\frac12D_E^2.
+ \label{eq:twisted-supercharges}
+\end{equation}
+
+For all integer \(k\), Riemann--Roch and Serre duality give
+\begin{align}
+ h^0(\cO(k))&=\max(k+1,0),
+ &h^1(\cO(k))&=\max(-k-1,0),
+ \label{eq:line-cohomology}\\
+ \ind D_E^+&=h^0-h^1=k+1.
+ \label{eq:rr-index}
+\end{align}
+At positive level two,
+\begin{equation}
+ \boxed{\dim\Ker D_{\cO(2)}^+=3,\qquad
+ \dim\Ker D_{\cO(2)}^-=0,\qquad \ind D_{\cO(2)}^+=3.}
+ \label{eq:three-states}
+\end{equation}
+A homogeneous-coordinate basis is
+\(\{z_0^2,z_0z_1,z_1^2\}\).  The canonical Spin\({}^c\) determinant after
+twisting is
+\begin{equation}
+ \det W_E=K^{-1}\otimes E^2=\cO(2k+2),
+ \qquad k=2:\quad\det W_E=\cO(6).
+ \label{eq:det-line}
+\end{equation}
+Orientation reversal is shifted in canonical Spin\({}^c\) convention:
+three negative-chirality modes require \(E=\cO(-4)\), for which
+\((h^0,h^1)=(0,3)\), not \(E=\cO(-2)\).
+
+\begin{gate}[CPT and antiparticle polarization]
+AP-E3 assigns \(k=-2\) to the \(B=-1\) antibaryon.  Holding the same
+canonical complex polarization fixed would give
+\((h^0(\cO(-2)),h^1(\cO(-2)))=(0,1)\), not the CPT conjugate of the
+three-state \(B=+1\) kernel.  A physical completion must therefore derive how
+CPT conjugates the complex/Spin\({}^c\) vacuum line---equivalently, why the
+antiparticle operator is the anti-canonical conjugate, or why its effective
+fixed-polarization coefficient is \(\cO(-4)\).  This polarization map is not
+fixed by the signed WZW integer alone and remains an independent
+composability gate.
+\end{gate}
+
+\section{Exact partner spectrum and spectral gap}
+
+For \(k\ge0\), the monopole-harmonic multiplet at excitation number \(n\)
+has
+\begin{equation}
+ j=\frac{k}{2}+n,\qquad \dim V_j=k+2n+1.
+ \label{eq:j}
+\end{equation}
+The connection Laplacian and the K\"ahler--Weitzenb\"ock curvature shift
+combine to
+\begin{align}
+ D_E^2
+ &=\frac1{R^2}\left[j(j+1)-\frac{k^2}{4}-\frac{k}{2}\right]
+ =\frac{n(n+k+1)}{R^2}
+ =\frac{4n(n+k+1)}{C}.
+ \label{eq:spectrum-square}
+\end{align}
+At \(n=0\) this reproduces \(k+1\) positive-chirality zero modes.  For
+\(n\ge1\), oddness of \(D_E\) pairs the two chiral sectors and gives the
+full spectrum~\cite{BykovSmilga2023APE4SQM}
+\begin{equation}
+ \boxed{\lambda_{n,\pm}=\pm\frac{2}{\sqrt C}
+ \sqrt{n(n+k+1)},\qquad
+ \operatorname{mult}(\lambda_{n,\pm})=k+2n+1.}
+ \label{eq:full-spectrum}
+\end{equation}
+For \(k=2\),
+\begin{equation}
+ \Delta_D=\frac4{\sqrt C},\qquad
+ \Delta_H=\frac12\Delta_D^2=\frac8C,
+ \qquad \operatorname{mult}(\pm\Delta_D)=5.
+ \label{eq:gaps}
+\end{equation}
+Every massive state has a partner.  Only the kernel carries a chiral
+imbalance; therefore ``no partner'' must never be applied to the full tower.
+
+\section{AP-E3/AP-E4 composability: necessary and sufficient data}
+
+AP-E3 has produced an anomaly-consistent intermediate mixed-WZW candidate
+whose signed collective term is intended to have \(k=n_cB=+2\).  That datum
+can supply the line \(E=\cO(2)\) in Eq.~\eqref{eq:twisted-supercharges}, but
+the numerical equality of two integers is not enough.
+
+Let \(\Sigma_3\) be a spatial slice carrying the unit soliton,
+\(\widetilde\cC_{B=1}\) the corresponding framed field-configuration
+component before quotienting gauge transformations, and
+\begin{equation}
+ \operatorname{ev}:\Sigma_3\times\widetilde\cC_{B=1}\longrightarrow X
+ \label{eq:evaluation-map}
+\end{equation}
+the evaluation map into the mixed-WZW target.  For the AP-E3 character
+\(\widehat\Omega_5\in\widehat H^5(X;\ZZ)\), fiber integration in
+differential cohomology first transgresses the degree-five WZW character to
+the degree-two differential line class
+\begin{equation}
+ \widehat{\mathcal L}_{\rm WZW}
+ :=\int_{\Sigma_3}\operatorname{ev}^*\widehat\Omega_5
+ \in\widehat H^2(\widetilde\cC_{B=1};\ZZ).
+ \label{eq:wzw-transgression}
+\end{equation}
+This degree-lowering step is mandatory: a degree-five class cannot be
+directly pulled back and equated to a first Chern class.  Put
+\(\cC_{B=1}:=\widetilde\cC_{B=1}/\cG\).  Gauge consistency further requires
+the transgressed differential line to be basic and descend:
+\begin{equation}
+ \widehat{\mathcal L}_{\rm WZW}
+ =p^*\widehat{\mathcal L}_{\rm WZW}^{\rm quot},
+ \qquad p:\widetilde\cC_{B=1}\to\cC_{B=1}.
+ \label{eq:wzw-gauge-descent}
+\end{equation}
+Failure of this descent is precisely a global gauge-anomaly obstruction.
+
+Let \(\cM_{B=1}\) be the collective-coordinate component of the
+charged-two-colour soliton and let
+\begin{equation}
+ \iota:\cM_{B=1}\longrightarrow\cC_{B=1}
+ \label{eq:collective-embedding}
+\end{equation}
+embed it into the UV configuration space modulo gauge transformations.
+The AP-E3 and AP-E4 cards are composable only if all of the following are
+proved:
+\begin{enumerate}[label=(C\arabic*)]
+\item \(\cM_{B=1}\simeq\CP^1\) with a finite \(L^2\) metric and a positive
+  gap to every noncollective fluctuation;
+\item the projector \(P=nn^\dagger\) is the same physical orientation in
+  both constructions, rather than an abstractly isomorphic sphere;
+\item \(B[\iota(n)]=+1\) is constant on this component and the orientation
+  map has degree \(+1\);
+\item Eq.~\eqref{eq:wzw-gauge-descent} holds, including every large gauge
+  transformation, so the transgressed line exists on the same quotient that
+  contains the collective moduli;
+\item the transgressed differential WZW line pulls back as
+\begin{equation}
+ \iota^*\widehat{\mathcal L}_{\rm WZW}^{\rm quot}
+ =2\,\widehat c_1(\cO(1)),
+ \qquad
+ \frac1{2\pi}\int_{\cM_{B=1}}\iota^*F_{\rm WZW}=+2;
+ \label{eq:signed-pullback}
+\end{equation}
+\item the pullback admits the supersymmetric completion in
+  Eq.~\eqref{eq:twisted-supercharges} and introduces no extra massless Fermi or
+  gauge modes;
+\item CPT maps the \(B=+1\) canonical polarization to the correct
+  anti-canonical \(B=-1\) operator, so the antibaryon has the conjugate
+  three-state kernel rather than the one-state fixed-polarization
+  \(\cO(-2)\) kernel;
+\item the collective states carry the required microscopic representation,
+  survive all gauge/anomaly projections, and couple through a Route-E portal
+  below both the bulk and SQM gaps.
+\end{enumerate}
+When (C1)--(C8) hold, the composition is a theorem:
+\begin{equation}
+ k_{\rm eff}=n_cB\deg(\iota)=2\cdot1\cdot1=+2,
+ \qquad E_{\rm eff}=\cO(+2),
+ \label{eq:conditional-composition}
+\end{equation}
+and Eq.~\eqref{eq:three-states} follows.  If the degree is \(-1\), or if the
+WZW line lives on a different sphere, the conclusion does not follow.
+
+\begin{gate}[Mother-model mismatch]
+The mother model in Sections 2--4 is a \(2+1\)-dimensional supersymmetric
+\(U(2)\) Chern--Simons--Higgs vortex.  It independently proves that a
+physical tangent fermion can arise on \(\CP^1\), but it is not the current
+four-dimensional charged-two-colour
+\(SU(2)_c\times U(1)_g\) AP-E3 candidate and does not prove
+Eq.~\eqref{eq:collective-embedding}.  Therefore both the charged-two-colour
+embedding flag and the AP-E4 worldline-completion flag remain false.
+\end{gate}
+
+Three microscopic ways to close the coefficient-line gate should be pursued
+in parallel:
+\begin{enumerate}
+\item derive Eq.~\eqref{eq:signed-pullback} directly from the AP-E3
+  mixed-WZW differential character on an explicit stable \(B=1\) solution;
+\item calculate a bulk Callias/Fermi-zero-mode index over the soliton and
+  show that its determinant line over \(\cM_{B=1}\) is \(\cO(+2)\);
+\item derive an exactly-two gapped microscopic doublet whose Berry
+  determinant over the \emph{same} moduli sphere has Chern number \(+2\),
+  and prove that integrating it out preserves supersymmetry and the gap.
+\end{enumerate}
+
+\section{Backup product compactification and its six-dimensional anomaly gate}
+
+A product construction
+\(M^{3,1}\times\CP^1\) could instead turn the internal operator into a
+four-dimensional chiral multiplicity via
+\begin{equation}
+ \slashed D_6=\slashed D_4\otimes1+\gamma_5\otimes D_E,
+ \qquad \Gamma_7=\gamma_5\otimes\Gamma_2.
+ \label{eq:product-dirac}
+\end{equation}
+This route is not used in the present proof.  It is admissible only after a
+six-dimensional chiral field content passes all of the following:
+\begin{enumerate}[label=(6D\arabic*)]
+\item the complete local eight-form anomaly polynomial, including
+  \(\Tr F^4\), \((\Tr F^2)^2\), \(p_1(T)\Tr F^2\), \(p_1(T)^2\), and
+  \(p_2(T)\), vanishes or factorizes as
+  \(I_8=\tfrac12\Omega_{\alpha\beta}X_4^\alpha X_4^\beta\) with an integral
+  Green--Schwarz lattice~\cite{AlvarezGaumeWitten1984APE4SQM};
+\item global gauge/gravitational anomalies are checked by the appropriate
+  spin/Spin\({}^c\) bordism invariant rather than inferred from \(I_8\);
+\item the Spin\({}^c\) determinant and \(\cO(2)\) flux obey integral and
+  mod-two quantization conditions;
+\item the index-weighted four-dimensional spectrum cancels every local and
+  global anomaly, and the KK tower remains above the portal scale.
+\end{enumerate}
+None is established here, so
+\texttt{six\_dimensional\_anomaly\_gate\_closed=false}.
+
+\section{Deterministic verification}
+
+The companion script
+\path{route_f/code/verify_ap_e4_moduli_space_sqm.py} uses a fixed seed and
+contains no fitted spectral data.  It verifies:
+\begin{enumerate}
+\item horizontal projection, the two-chart Fubini--Study metric, tangent
+  fermion covariance, and invariant fermion norm at 250 deterministic
+  complex probes;
+\item positivity and convergence of the eliminated-\(\rho\) analytic
+  radial surrogate;
+\item Riemann--Roch and Serre duality for \(\cO(k)\), \(-6\le k\le6\),
+  including the untwisted, \(k=2\), \(k=-4\), and de Rham controls;
+\item midpoint curvature quadrature and transition-function winding for
+  \(c_1(\cO(2))=2\);
+\item a finite exact superalgebra block testing \(Q^2=0\), Hermiticity,
+  \(\{D,\Gamma\}=0\), \(D^2=2H\), three positive-chirality zero modes,
+  the first gap, and five states per massive sign;
+\item fail-closed machine-readable fields separating intrinsic tangent
+  physics from the charged-two-colour embedding, WZW pullback, Route-E
+  portal, and six-dimensional anomaly gate.
+\end{enumerate}
+It writes
+\begin{center}
+\small
+\path{route_f/output/ap_e4_moduli_space_sqm.json}\\
+\path{route_f/output/ap_e4_moduli_space_sqm.md}.
+\end{center}
+A green run certifies the declared geometry and algebra; it deliberately does
+not turn an open embedding into a physical theorem.
+
+\section{Claim ledger and ordered next steps}
+
+\begin{longtable}{@{}L{0.47\textwidth}L{0.18\textwidth}L{0.27\textwidth}@{}}
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Boundary\\
+\midrule
+\endhead
+Independent BPS mother has internal \(\CP^1\) and finite \(L^2\) metric &
+\status{derived} & published radial reduction plus chart proof\\
+Physical tangent fermion in intrinsic SQM & \status{derived} & BPS
+collective-coordinate supersymmetry and Eq.~\eqref{eq:fermion-transition}\\
+Canonical Spin\({}^c\)/Dolbeault algebra and spectrum & \status{solved} &
+declared canonical vacuum-line polarization\\
+Mother model selects that canonical vacuum line & \status{false} &
+source-selected half-form ordering has no normalizable zero mode\\
+Untwisted tangent SQM gives three vacua & \status{false} & one vacuum only in
+the declared canonical re-quantization; source ordering has none and the de
+Rham control has two\\
+Independent \(\cO(+2)\) coefficient gives three positive zero modes &
+\status{proved conditionally} & Riemann--Roch, Hodge theory, and spectrum\\
+This mother model itself derives \(\cO(+2)\) & \status{false} & no
+orientation-dependent first-order term in its reduction\\
+Same charged-two-colour \(B=1\) \(\CP^1\) moduli map & \status{open} & no
+stable AP-E3 soliton/embedding theorem\\
+Signed transgressed AP-E3 WZW line is \(\cO(+2)\) on that same moduli &
+\status{open} & Eq.~\eqref{eq:signed-pullback} not computed\\
+CPT maps the \(B=-1\) sector to the conjugate three-state operator &
+\status{open} & fixed canonical \(E=\cO(-2)\) has only one negative mode\\
+Six-dimensional product anomaly gate & \status{open backup} & product route
+unused; \(I_8\), GS, and bordism audits open\\
+Three states are Route-E chiral families & \status{open} & representation,
+portal, anomaly, and scale gates unresolved\\
+\bottomrule
+\end{longtable}
+
+The ordered research programme is:
+\begin{enumerate}
+\item establish or rule out a stable charged-two-colour \(B=1\) soliton with
+  \(\CP^1\) internal moduli and compute its full fluctuation gap;
+\item transgress the signed mixed-WZW differential character along the
+  spatial three-cycle, pull the resulting differential line to that exact
+  family, and derive its supersymmetric worldline completion;
+\item independently compute the soliton Fermi/Callias index and determinant
+  line, providing a non-WZW cross-check of \(\cO(+2)\);
+\item derive the vacuum-line regularization and its CPT/anti-canonical map
+  rather than imposing the canonical polarization only in the baryon sector;
+\item only after those agree, construct the Route-E portal below
+  \(\min(\Delta_{\rm bulk},4/\sqrt C)\) and redo the anomaly ledger;
+\item retain product compactification only if its complete 6D local and
+  global anomaly gate can be closed.
+\end{enumerate}
+
+The final fail-closed status is
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{physical\_tangent\_fermion\_in\_intrinsic\_sqm\_derived=true},\\
+ \texttt{mother\_model\_vacuum\_line\_matches\_canonical\_spinc=false},\\
+ \texttt{o2\_twist\_three\_positive\_zero\_modes=true},\\
+ \texttt{cpt\_antibaryon\_polarization\_closed=false},\\
+ \texttt{charged\_two\_colour\_soliton\_sqm\_embedding\_closed=false},\\
+ \texttt{ap\_e4\_worldline\_completion\_closed=false},\\
+ \texttt{route\_e\_portal\_closed=false},\\
+ \texttt{six\_dimensional\_anomaly\_gate\_closed=false},\\
+ \texttt{physics\_promotion\_allowed=false}.
+ \end{gathered}}
+ \label{eq:final-status}
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e4_moduli_space_sqm}
+
+\end{document}
