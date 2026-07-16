@@ -22,6 +22,7 @@ that the present model inherits their results.
 | Bykov and Smilga, [Monopole harmonics on complex projective spaces](https://arxiv.org/abs/2302.11691), SciPost Phys. 15, 195 (2023) | Gives spectra and homogeneous-coordinate eigenfunctions for charged quantum mechanics on projective space; states form `SU(n)` multiplets and connect to twisted Dolbeault/Dirac complexes. | Use to audit the AP-E1 monopole spectrum. Keep all Landau levels unless an LLL/holomorphic projection and its gap are separately derived. |
 | van den Dungen, [Generalised Dirac--Schrodinger operators and the Callias Theorem](https://arxiv.org/abs/2312.17600), Forum Math. Sigma 13, e11 (2025) | Proves a generalized Callias theorem in which the index of a Dirac--Schrodinger operator is computed on a suitable compact hypersurface. | Use it to justify reducing a uniformly Fredholm same-soliton family to its asymptotic positive-mass eigenbundle. It does not provide the charged-QC2D Yukawa map, its uniform gap, or the family determinant class. |
 | Jia and Yi, [Discrete Gauge Anomalies and Instantons](https://arxiv.org/abs/2405.09007), Phys. Rev. D 110, 025011 (2024) | Re-examines the `pi_4(Sp(k))=Z2` anomaly, its instanton zero-mode relation, and the distinction between Euclidean and Lorentzian zero-mode roles. | For a semisimple `Sp(4)` candidate, retain the Witten-parity test as necessary but do not replace a full Dai--Freed/bordism and heavy-threshold calculation by that parity count. |
+| Saito and Tachikawa, [Cancelling mod-2 anomalies by Green--Schwarz mechanism with B-mu-nu](https://arxiv.org/abs/2411.09223), SciPost Phys. 19, 017 (2025) | Treats the four-dimensional `Sp(n)` Witten anomaly as the nontrivial character of the relevant spin-bordism class and shows that it cannot be removed by the proposed Green--Schwarz mechanism; its appendix gives a direct low-degree `BSp(n)` bordism analysis. | Use it to audit `Omega_5^Spin(BSp(4))` and the mod-two representation character.  Keep this gauge-bordism calculation separate from the two target-space torsion signs on `S3 x S2`, which still require the specified Dirac--Yukawa mass map and regulator. |
 | Davighi and Lohitsiri, [WZW terms without anomalies: generalised symmetries in chiral Lagrangians](https://arxiv.org/abs/2407.20340), SciPost Phys. 17, 168 (2024) | Constructs a weakly coupled UV completion of a specific 4d sigma model on `SU(N) x S2`; a 2-group matches the mixed WZW coefficient `n=n_c X_q`, and the result is tree-level exact.  It also sketches `SU(n_c+1)` semi-simple deep-UV unification, while leaving extra-scalar/lepton decoupling to a future explicit model.  Nonminimal scalar charge leaves a discrete gauge sector and changes normalized flux bookkeeping. | AP-E3 specializes the direct-product intermediate construction to charged two-color matter and obtains `n=2`.  The 2026-07-16 audit now defines the bosonic non-extendible sector and performs the proposed `SU(3)` branching/decoupling exercise.  It finds an exact parity no-go for the original charge-one singlet scalar; the closest charge-two branch decouples but changes the `O(2)` dressing to `O(1)`.  Its covering-`U(1)` normalization is not promoted to faithful `U(2)` until correlated centre-flux bundles and determinant lines are matched. |
 | Saito, [Wess-Zumino-Witten Terms of Sp QCD by Bordism Theory](https://arxiv.org/abs/2404.06185), JHEP 10 (2024) 099 | Uses invertible-field-theory/bordism methods to test perturbative and nonperturbative consistency of ungauged and gauged 4d WZW terms on spin manifolds. | Treat ordinary anomaly sums as necessary but not sufficient.  For the special target `S3 x S2`, retain both reduced spin-bordism `Z2` factors: the new audit defines their geometric inverse-image invariants but leaves their APS/Dai--Freed signs to the microscopic regulator. |
 | Pai, Akiyama, and Todo, [Two-color lattice QCD in (1+1) dimensions with Grassmann tensor renormalization group](https://arxiv.org/abs/2501.18918) (2025) | Computes number density, chiral condensate, and diquark condensate with a Grassmann tensor-network formulation of two-colour lattice gauge theory. | Use as a recent methodological control for measuring competing condensates without a sign problem.  Its dimension, discretization, and matter content do not validate the present four-dimensional charged model; a dedicated 4d continuum-extrapolated calculation is still required. |
@@ -132,6 +133,34 @@ are not substitutes for recent model-specific evidence.
 21. Construct no degree-one Route-E portal until at least one complete
     pre-portal lane closes. The current integrated gate evaluates all three
     lane booleans to false.
+22. For the simply connected compact group written physically as
+    `Sp(4)=USp(4)` (mathematical `Sp(2)`), keep the exact result
+    `Omega_5^Spin(BSp(2))=Z2` separate from the two target-space torsion
+    characters.  The gauge-bordism generator is detected by a fundamental
+    `4`, whereas `5` and `10` have even instanton index; this does not select
+    either reduced `Omega_4^Spin(S3 x S2)` sign.
+23. Do not rename Pauli--Villars moment cancellation, gamma-five reality, or
+    local theta-angle periodicity as a complete Euclidean/APS regulator.
+    Closure requires the regulator kernel and mass interpolation, boundary
+    eta prescription, local counterterm scheme, regulated bosonic/ghost
+    sectors, and the full heavy determinant including gravitational phases.
+24. Distinguish a continuum radial stationary point from a stationary point
+    of its sampled cubic action.  A sparse analytic second derivative can be
+    algebraically exact while still being an off-shell curvature operator;
+    topology, projected gradient, spacing, and volume limits must all close
+    before its low eigenvalues are called a physical soliton Hessian.
+25. For the present hedgehog, use the actual localized orbit
+    `SU(2)/Z2=SO(3)`, not an assumed `CP1`.  A spatially uniform scalar-vacuum
+    `CP1` has norm proportional to volume and is not a localized modulus.
+    Therefore reformulating the target on the `SO(3)`/`SU(2)` collective
+    coordinate and computing its torsion/Finkelstein--Rubinstein line is now
+    preferable to importing `O(2)` from a spectator family.
+26. Retain the two-band obstruction as a UV-design test.  On
+    `S2_infinity x CP1`, a nondegenerate two-level mass in a trivial rank-two
+    bundle has `c1(E_+)^2=0`, so it cannot realize `c1=x+2y`.  Any future
+    construction must use at least three bands, a nontrivial ambient bundle,
+    or an infinite-dimensional operator family and then prove its uniform
+    Fredholm gap and regulator threshold.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,

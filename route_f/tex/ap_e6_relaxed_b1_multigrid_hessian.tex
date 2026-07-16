@@ -1,0 +1,466 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{definition}
+\newtheorem{gate}[proposition]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\one}{\mathbf 1}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E6 Deterministic Classical Gate:\\
+A Coupled Relaxed \(B=1\) Solution, Multigrid Scan,\\
+and Exact Sparse \(n+s\) Projected-Curvature Audit}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We replace the analytic-profile and single-field limitations of the preceding
+charged two-colour proxy by a coupled relaxation.  The declared classical
+sector contains a unit meson field \(n:\RR^3\to S^3\), a neutral breathing
+field \(s\), a charge-two complex diquark at zero background, and free
+gauge--ghost quadratic blocks.  A two-field hedgehog \((F(r),s(r))\) is solved
+as a nonlinear boundary-value problem on four radial volumes.  The same
+relaxed solution is sampled on three lattice spacings and three physical
+volumes.  Starting from one explicitly stated finite-difference energy, we
+assemble its analytic sparse embedding Hessian, apply the constrained
+Riemannian correction, restrict it to \(T_nS^3\), and remove three translations
+and three isorotations by an explicit orthogonal projector.  Toron and
+constant-ghost projectors are audited separately.  Negative controls detect
+a charged tachyon, an omitted collective direction, and loss of Derrick
+stationarity without the Skyrme term.
+
+The cubic-grid audit deliberately exposes an obstruction.  The sampled
+continuum solution has tangential gradient density approximately
+\(0.35\)--\(0.43\), while the displayed lattice baryon estimator only rises
+from \(0.168\) to \(0.625\).  It is therefore off shell for the finite cubic
+energy.  Its negative projected curvatures cannot be called physical
+instability eigenvalues; instead they fail-close the discrete-stationarity
+and topology-convergence gates.
+
+Completeness below refers only to exact differentiation of the declared
+deterministic classical sector.  No fermion determinant, interacting
+colour-link ensemble, four-dimensional importance sampling, HMC, or quantum
+continuum limit is computed.  Consequently the microscopic charged-QC2D lane
+and the degree-one Route-E portal remain closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope and epistemic levels}
+
+Two-colour QCD has pseudoreal matter and genuine meson--diquark competition
+\cite{KogutEtAl2000APE6}.  Recent linear and extended-linear sigma analyses
+make clear that scalar and spin-one channels can reorganise in dense matter
+\cite{SuenagaEtAl2023APE6,SuenagaEtAl2024APE6}.  A classical EFT soliton is
+therefore neither a lattice measurement nor a proof of the microscopic phase.
+Four-dimensional simulations exist on much larger ensembles
+\cite{BegunEtAl2022APE6}; a recent tensor calculation controls a different
+one-dimensional regulator \cite{PaiAkiyamaTodo2025APE6}.  Neither supplies the
+charged scalar, soliton background, or projected Hessian studied here.
+
+We distinguish four statements:
+\begin{enumerate}[label=(L\arabic*)]
+\item a stationary solution of an explicitly declared classical EFT;
+\item the exact second derivative of a declared discretisation, including
+  its collective-coordinate quotient, with a separate stationarity test;
+\item a dynamical four-dimensional Euclidean path integral;
+\item a regulator-independent quantum continuum phase.
+\end{enumerate}
+This note reaches L1 only in the coupled hedgehog sector; no independent
+principle-of-symmetric-criticality proof is invoked to promote it to arbitrary
+three-dimensional variations.  It reaches the algebraic differentiation part
+of L2.  The sampled cubic configuration fails the discrete-stationarity and
+topology tests, so its L2 operator is an off-shell curvature diagnostic.
+
+\begin{gate}[Meaning of ``complete'']
+Sparse differentiation is complete only for the \(n+s\) block:
+every entry is a derivative of one energy, and a geodesic energy difference
+checks it.  The \(\Delta\) spectrum is a separate Dirichlet block, while the
+gauge/ghost algebra uses a separate periodic \(5^3\) grid.  They are not one
+same-grid assembled Hessian.  Moreover, exact differentiation does not make
+the sampled cubic field stationary.  Thus the aggregate
+\path{sparse_projected_hessian_complete_in_declared_sector} gate is false,
+and this is not yet a physical stability Hessian nor the complete
+gauge--meson--ghost--fermion Hessian of charged QC2D.  In particular, there is
+no Wilson/overlap fermion determinant on the same relaxed background.
+\end{gate}
+
+\section{Declared coupled classical EFT}
+
+\subsection{Fields and energy}
+
+Let \(n=(n_0,\bm n)\in S^3\), \(n\cdot n=1\), and let \(s\in\RR\) be a
+neutral breathing field with vacuum value one.  In units \(f=e=1\), define
+\begin{align}
+ E[n,s]=\int_{\RR^3}\!\dd^3x\,\bigg\{&
+ \frac12\partial_i n\cdot\partial_i n
+ +\frac{\kappa}{2}\sum_{i<j}
+ \left[|\partial_i n|^2|\partial_j n|^2
+ -(\partial_i n\cdot\partial_j n)^2\right]\nonumber\\
+ &+\frac12|\nabla s|^2+\frac12m_s^2(s-1)^2
+ +\beta^2s^2(1-n_0)\bigg\}.
+ \label{eq:energy}
+\end{align}
+The first line is the sigma-plus-Skyrme energy
+\cite{Skyrme1961APE6,AdkinsNappiWitten1983APE6}.  The last term couples the
+breathing field to explicit chiral breaking while preserving the vacuum
+\((n,s)=(\one,1)\).  It is a declared diagnostic interaction, not a UV
+matching result.  The benchmark is
+\begin{equation}
+ \beta=\frac12,\qquad m_s=\frac52,\qquad \kappa=1.
+ \label{eq:parameters}
+\end{equation}
+
+A charge-two complex scalar is retained only to quadratic order about
+\(\overline\Delta=0\):
+\begin{equation}
+ \cH_\Delta=-D_i^{(2)}D_i^{(2)}+m_\Delta^2
+ +\chi(1-\overline n_0),\qquad
+ m_\Delta^2=0.81,\quad\chi=-0.30.
+ \label{eq:diquark}
+\end{equation}
+At zero charged background, gauge--diquark mixing vanishes.  This does not
+cover a Higgsed/condensed branch.
+
+\subsection{Topology and the coupled hedgehog}
+
+Use
+\begin{equation}
+ n_0=\cos F(r),\qquad \bm n=\widehat{\bm x}\sin F(r),
+ \qquad s=s(r),
+ \label{eq:hedgehog}
+\end{equation}
+with \(F(0)=\pi\), \(F(\infty)=0\), \(s'(0)=0\), and
+\(s(\infty)=1\).  Then
+\begin{equation}
+ B=-\frac{1}{2\pi^2}\int\det(n,\partial_1n,\partial_2n,
+ \partial_3n)\,\dd^3x
+ =-\frac2\pi\int_0^\infty\sin^2F\,F'\,\dd r=+1.
+ \label{eq:baryon}
+\end{equation}
+Substitution into Eq.~\eqref{eq:energy} gives \(E=4\pi\int\mathcal E_r\dd r\),
+where the dimensionless radial integrand is
+\begin{align}
+ \mathcal E_r={}&\frac12r^2F'^2+\sin^2F
+ +\kappa\left(\sin^2F F'^2+\frac{\sin^4F}{2r^2}\right)
+ +\frac12r^2s'^2\nonumber\\
+ &+\frac12m_s^2r^2(s-1)^2+\beta^2r^2s^2(1-\cos F).
+ \label{eq:radial-energy}
+\end{align}
+
+\subsection{Euler--Lagrange boundary-value problem}
+
+Direct variation gives
+\begin{align}
+ (r^2+2\kappa\sin^2F)F''={}&-2rF'
+ -2\sin F\cos F(\kappa F'^2-1)
+ +\frac{2\kappa\sin^3F\cos F}{r^2}
+ +\beta^2r^2s^2\sin F,
+ \label{eq:F-bvp}\\
+ s''+\frac2r s'={}&m_s^2(s-1)+2\beta^2s(1-\cos F).
+ \label{eq:s-bvp}
+\end{align}
+Near the origin,
+\begin{equation}
+ F=\pi-ar+br^3+O(r^5),\qquad
+ b=\frac{a(2\kappa a^4+4a^2+3\beta^2s_0^2)}
+ {30(1+2\kappa a^2)},
+ \label{eq:origin-F}
+\end{equation}
+and
+\begin{equation}
+ s=s_0+\frac16[m_s^2(s_0-1)+4\beta^2s_0]r^2+O(r^4).
+ \label{eq:origin-s}
+\end{equation}
+These series, rather than a hard-coded profile, seed the nonlinear BVP.
+
+\begin{proposition}[Generalised Derrick identity]
+Every sufficiently localised stationary solution of
+Eq.~\eqref{eq:radial-energy} satisfies
+\begin{equation}
+ E_2+E_{s,\mathrm{kin}}-E_4
+ +3(E_{s,\mathrm{pot}}+E_m)=0.
+ \label{eq:virial}
+\end{equation}
+Its scale curvature is \(2E_4+6(E_{s,\mathrm{pot}}+E_m)\).
+\end{proposition}
+\begin{proof}
+Apply \(F(r)\mapsto F(r/\lambda)\),
+\(s(r)\mapsto s(r/\lambda)\).  Two-derivative terms scale as \(\lambda\),
+the Skyrme term as \(\lambda^{-1}\), and potential terms as
+\(\lambda^3\).  Differentiation at \(\lambda=1\) proves
+Eq.~\eqref{eq:virial}; a second derivative gives the stated curvature.
+\end{proof}
+
+\section{One lattice energy and its exact sparse Hessian}
+
+\subsection{Declared discretisation}
+
+On an open cubic lattice of spacing \(a\), freeze the boundary to the sampled
+continuum profile rather than overwriting it by the vacuum,
+let \(\delta_i n_x=(n_{x+\hat\imath}-n_x)/a\).  The single energy used by
+the implementation is
+\begin{align}
+ E_a={}&a^3\sum_{x,i}\frac12(|\delta_i n_x|^2+|\delta_i s_x|^2)
+ +\frac{\kappa a^3}{2}\sum_{x,i<j}
+ \left(|\delta_i n_x|^2|\delta_jn_x|^2
+ -(\delta_i n_x\cdot\delta_jn_x)^2\right)\nonumber\\
+ &+a^3\sum_x\left[\frac12m_s^2(s_x-1)^2
+ +\beta^2s_x^2(1-n_{0,x})\right].
+ \label{eq:lattice-energy}
+\end{align}
+No quadratic block is inserted by hand: every meson--breathing entry below
+is an analytic second derivative of Eq.~\eqref{eq:lattice-energy}.
+This sampled-profile Dirichlet condition is part of the off-shell diagnostic.
+For the fixed-spacing volume scan its maximum boundary \(n\)-distance from the
+vacuum decreases from about \(0.350\) at \(L=4\), through \(0.120\) at \(L=6\),
+to \(0.0493\) at \(L=8\); it is not silently treated as an exact vacuum wall.
+
+For a Skyrme cell pair \(u=\delta_i n\), \(v=\delta_j n\), write
+\(W=\kappa(|u|^2|v|^2-(u\cdot v)^2)/2\).  The local blocks are
+\begin{align}
+ W_{uu}&=\kappa(|v|^2\one-vv^T),&
+ W_{vv}&=\kappa(|u|^2\one-uu^T),\nonumber\\
+ W_{uv}&=\kappa[2uv^T-vu^T-(u\cdot v)\one],&
+ W_{vu}&=W_{uv}^T.
+ \label{eq:wedge-hessian}
+\end{align}
+Together with nearest-neighbour Laplacians and the local \(s\)--\(n_0\)
+cross derivative, Eq.~\eqref{eq:wedge-hessian} produces a sparse symmetric
+embedding Hessian \(H_{\mathrm{emb}}\).
+
+\subsection{Constrained tangent Hessian}
+
+At each site choose \(E_x:\RR^3\to T_{n_x}S^3\),
+\begin{equation}
+ E_x^TE_x=\one_3,\qquad E_x^Tn_x=0.
+\end{equation}
+If \(g_x=\partial E_a/\partial n_x\) and
+\(\lambda_x=n_x\cdot g_x\), the constrained Riemannian Hessian is
+\begin{equation}
+ H_{\mathrm{tan}}
+ =T^T\left[H_{\mathrm{emb}}-\bigoplus_x
+ \lambda_x\one_4\right]T,\qquad
+ T_x=\begin{pmatrix}E_x&0\\0&1\end{pmatrix}.
+ \label{eq:constrained-H}
+\end{equation}
+The multiplier term is essential: simply restricting the ambient Hessian is
+not the second variation on the sphere.  Equation~\eqref{eq:constrained-H}
+is assembled analytically as CSR sparse data.
+
+An independent test chooses a horizontal vector \(v\), follows the sitewise
+geodesic
+\[
+ n_x(t)=\cos(t|v_x|)n_x+\frac{\sin(t|v_x|)}{|v_x|}v_x,
+\]
+and evaluates
+\begin{equation}
+ \frac{E_a[n(t),s+tv_s]-2E_a[n,s]+E_a[n(-t),s-tv_s]}{t^2}
+ =v^TH_{\mathrm{tan}}v+O(t^2).
+ \label{eq:directional-check}
+\end{equation}
+This checks the Weingarten/Lagrange-multiplier term as well as the ambient
+second derivative.  It checks differentiation, not stationarity.
+
+\section{Collective and gauge projectors}
+
+\subsection{Translations and isorotations}
+
+Let the six sampled collective vectors be
+\begin{equation}
+ z_i=(E^T\partial_i n,\partial_i s),\quad i=1,2,3,
+ \qquad
+ z_{3+a}=(E^T(0,\bm e_a\times\bm n),0),\quad a=1,2,3.
+ \label{eq:collective}
+\end{equation}
+After a thin QR decomposition \(Z=QR\), \(Q^TQ=\one_6\), define
+\begin{equation}
+ P_{\mathrm{coll}}=\one-QQ^T,\qquad
+ H_{\mathrm{proj}}=P_{\mathrm{coll}}H_{\mathrm{tan}}P_{\mathrm{coll}}
+ \big|_{\operatorname{im}P_{\mathrm{coll}}}.
+ \label{eq:collective-projector}
+\end{equation}
+The implementation tests \(P^2=P\), \(Q^TP=0\), eigenvector horizontality,
+and an intentionally incomplete rank-five projector.  Because a finite cube
+and its Dirichlet boundary lift continuum translations, raw collective
+Rayleigh quotients are reported rather than declared exact zeroes.
+
+\subsection{Gauge and ghost zero modes}
+
+For the decoupled free Abelian block on a periodic three-dimensional audit
+grid, let \(G\) be the forward gradient and \(L=G^TG\).  Covariant gauge
+fixing gives
+\begin{equation}
+ K_A(\xi)=\one_3\otimes L+(\xi^{-1}-1)GG^T,\qquad M_{\mathrm{FP}}=L.
+ \label{eq:gauge-ghost}
+\end{equation}
+The three constant link torons and one constant ghost are removed by
+\begin{equation}
+ P_A=\one-\sum_{i=1}^3t_it_i^T,\qquad
+ P_c=\one-\frac{\bm1\bm1^T}{V}.
+ \label{eq:gauge-projectors}
+\end{equation}
+Then, up to a background-independent normalization,
+\begin{equation}
+ \frac12\log\det{}'K_A(\xi)-\log\det{}'M_{\mathrm{FP}}
+ +\frac{V-1}{2}\log\xi
+\end{equation}
+is \(\xi\)-independent \cite{FaddeevPopov1967APE6}.
+
+\section{Numerical certificate}
+
+\subsection{Coupled radial relaxation}
+
+The final tables and exact values are machine-generated in
+\path{route_f/output/ap_e6_relaxed_b1_multigrid_hessian.json}.  The BVP is
+solved independently at \(R=8,10,12,16\).  The volume sequence converges to
+approximately
+\begin{equation}
+ E/(4\pi f/e)=6.1282155,\qquad s(0)=0.9171290,\qquad B=1,
+ \end{equation}
+with BVP residual below \(3\times10^{-7}\).  The nonconstant \(s(r)\) and
+the change between boxes demonstrate a genuine coupled relaxation rather
+than evaluation of the old analytic profile.
+
+\subsection{Multigrid, multivolume, and spectra}
+
+The fixed-volume scan uses \(L=8\) at \(N=9,13,17\); the fixed-spacing scan
+uses \((N,L)=(9,4),(13,6),(17,8)\), all with \(a=0.5\).  Every row
+re-samples the same \(R=16\) relaxed continuum solution and reassembles the
+exact Hessian of Eq.~\eqref{eq:lattice-energy}.  We report the lattice
+topological estimator, sparse dimension and nonzero count, tangential
+stationarity residual, raw low spectrum, projected spectrum, and charge-two
+diquark spectrum.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+\(N\)&\(a\)&\(B_a\)&
+\(\|\operatorname{grad}E_a\|_{2,\mathrm{dens}}\)&
+\(\lambda_{\mathrm{proj},0}\)&\(\lambda_{\Delta,0}\)\\
+\midrule
+9&1.000000&0.168018&0.34766&-10.79222&1.219089\\
+13&0.666667&0.440012&0.43018&-23.42272&1.223574\\
+17&0.500000&0.625354&0.42171&-28.44285&1.224884\\
+\bottomrule
+\end{tabular}
+\caption{Fixed-\(L=8\) off-shell curvature scan.  The improving but still
+coarse \(B_a\) and non-small gradient prohibit a stability interpretation.}
+\label{tab:grid}
+\end{table}
+
+The \(N=17\) reduced block has \(13500\) variables and \(395538\) nonzero
+entries.  Its symmetry residual is below \(10^{-16}\); the best relative
+residual in Eq.~\eqref{eq:directional-check} is below \(2\times10^{-9}\).
+Projector idempotency, horizontality, and eigenvector-overlap residuals are
+respectively below \(2\times10^{-16}\), \(10^{-13}\), and
+\(10^{-8}\).  Thus the negative values in Table~\ref{tab:grid} are not
+caused by omitting the sphere-curvature term or by collective leakage.  Yet
+they remain off-shell finite-grid curvatures, because the background has not
+been re-relaxed for Eq.~\eqref{eq:lattice-energy}.
+
+At fixed \(a=0.5\), the negative branch is volume-stable:
+\(-28.41847,-28.44005,-28.44285\).  The lowest diquark box state is unbound
+and moves as \(1/L^2\); a linear fit extrapolates to \(0.813709\), close to the
+declared threshold \(m_\Delta^2=0.81\), with RMS residual
+\(1.28\times10^{-3}\).  These are algebraic finite-grid controls.  Since
+neither cubic stationarity nor \(B_a\to1\) is demonstrated, the top-level
+\path{multigrid_multivolume_converged} flag is false.
+
+For downstream same-soliton work, the public function
+\path{solve_relaxed_profile(box=16.0, sample_points=4097)} returns canonical
+arrays \((r,F,s)\).  The JSON records their little-endian float64 SHA-256, so a
+Callias/Yukawa calculation can prove that it consumed this exact solution.
+
+\subsection{Negative controls}
+
+Three falsifiers are mandatory.
+\begin{enumerate}[label=(N\arabic*)]
+\item Replacing \(\chi=-0.30\) by \(\chi=-5\) must create a negative
+  charge-two scalar eigenvalue.
+\item Removing one column from \(Q\) must leave unit leakage along the omitted
+  collective direction.
+\item Setting \(\kappa=0\) leaves the scale derivative
+  \(E_2+E_{s,\mathrm{kin}}+3(E_{s,\mathrm{pot}}+E_m)>0\), so no finite-scale
+  Derrick saddle exists.
+\end{enumerate}
+
+\section{What is and is not closed}
+
+The following finite classical statements are closed by the verifier:
+\begin{enumerate}
+\item a coupled, regular, finite-volume-converged \(B=+1\) BVP exists in the
+declared EFT;
+\item the exact analytic sparse \(n+s\) Hessian of the declared lattice energy
+is symmetric and its tangent constraint term is included;
+\item translation, isorotation, toron, and constant-ghost projectors satisfy
+their respective algebraic tests, with the different boundary/grid choices
+recorded rather than merged;
+\item the geodesic directional second difference validates the analytic
+Hessian, the diquark block remains positive, and all three negative controls
+fire.
+\end{enumerate}
+
+The following remain false:
+\begin{enumerate}
+\item stationarity of the sampled field for the cubic energy,
+\(B_a\to1\), and a physical projected stability spectrum; the observed
+negative curvatures are consequently off-shell diagnostics;
+\item one same-grid \(n+s+\Delta+\)gauge/ghost assembled sparse Hessian;
+\item the full gauge--meson--ghost--fermion Hessian on one microscopic action;
+\item interacting \(SU(2)_c\) links, the fermion determinant, and measure
+positivity;
+\item four-dimensional importance sampling or HMC;
+\item a continuum quantum phase, finite-amplitude global stability, and a
+microscopic derivation of \(m_s,m_\Delta,\chi\);
+\item permission to construct the degree-one Route-E portal.
+\end{enumerate}
+
+\begin{gate}[Lane status]
+The calculation advances the classical soliton/Hessian lane but does not
+close it at the microscopic level.  The exact machine flag names are retained
+in the JSON certificate.  In prose, the false gates are:
+\begin{itemize}[nosep,leftmargin=2em]
+\item discrete stationarity, lattice-topology convergence, and a physical
+projected Hessian at a stationary discrete solution;
+\item multigrid/multivolume convergence, aggregate same-grid assembly, and
+the full gauge--meson--ghost--fermion Hessian;
+\item dynamical four-dimensional sampling and a continuum quantum phase;
+\item physics promotion and closure of this lane.
+\end{itemize}
+\end{gate}
+
+\section{Next decisive computations}
+
+\begin{enumerate}
+\item Put Wilson or overlap fermions, dynamical \(SU(2)_c\) and Abelian links,
+and the charged scalar on one four-dimensional Euclidean action; then sample
+it rather than freezing the background.
+\item Re-relax the soliton on every four-dimensional ensemble, compute the
+fermion determinant curvature or stochastic estimator, and extrapolate in
+\(a\), spatial volume, Euclidean time, and statistics.
+\item Test finite-amplitude escape paths in the faithful target; a positive
+local projected Hessian is only a necessary condition.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{ap_e6_relaxed_b1_multigrid_hessian}
+
+\end{document}

@@ -1,0 +1,1078 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{slashed}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\SF}{\operatorname{SF}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E6 Same-Soliton Yukawa--Callias Audit:\\
+The Physical Moduli No-Go, a Constituent Dirac Completion,\\
+CPT Algebra, and a Typed Local Mixed-WZW Ansatz}
+\author{Route F research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We test whether the canonical Workline-B relaxed charged two-colour \(B=1\)
+field can
+support the same physical \(\CP^1\) fermion family required by AP-E4.  The
+answer is a sharp no-go for the present model and a correctly typed local
+differential-character ansatz; neither is a physics-promotion claim.  The
+background is bound to the Workline-B public solver and machine card by the
+SHA-256 checksum of the canonical little-endian float64 \((r,F,s)\) array.
+
+First, the internal stabilizer of
+
+\[
+ U_F(\bm x)=\cos F(r)+\ii\,\bm\tau\!\cdot\!\widehat{\bm x}\sin F(r)
+\]
+
+is only the centre \(\ZZ_2\).  Its pure isospin orbit is therefore
+\(SU(2)/\ZZ_2\simeq SO(3)\), not \(\CP^1\).  The same \(SO(3)\) is obtained
+from the combined spatial--isospin symmetry after quotienting the diagonal
+hedgehog stabilizer; these are not two independent collective-coordinate
+sets and neither is a colour-gauge redundancy.  The separate scalar-vacuum
+\(\CP^1\) is spatially uniform and has norm proportional to the three-volume,
+so it is not a localized normalizable soliton modulus.
+
+Second, we write the minimal declared constituent chiral Yukawa completion
+and its static Hamiltonian,
+\[
+ \mathcal D_E=\gamma^\mu D_\mu
+ +M(P_RU_F+P_LU_F^\dagger),\qquad
+ H_F=-\ii\alpha^iD_i+\beta M
+ \bigl(\cos F+\ii\gamma_5\bm\tau\!\cdot\!\widehat{\bm x}\sin F\bigr).
+\]
+Writing the Hermitian potential as
+\(\Phi_F=\beta M(\cos F+\ii\gamma_5\bm\tau\cdot\widehat{\bm x}\sin F)\),
+its asymptotic mass is \(\Phi_\infty=\beta M\), not \(M\bm1\).  Under the
+stated domain, bounded-commutator, coercivity, and decay hypotheses, the
+ordinary \(S^2_\infty\) Callias positive-eigenbundle is constant and the
+static Callias index is zero.  The
+four-dimensional interpolation formula
+\(\Ind(\partial_\tau+H_\tau)=\SF(H_\tau)=B\) concerns spectral flow and does
+not force a zero mode at the final static soliton.  A finite Wilson control
+finds no accidental endpoint zero at the benchmark, but does not prove a
+continuum spectral gap.
+
+Third, a new two-band obstruction rules out the previously declared mixed
+eigenline in the minimal mass representation.  On
+\(X=S^2_\infty\times\CP^1\), let \(x,y\) generate the two degree-two
+cohomologies.  A globally nondegenerate \(2\times2\) Hermitian mass with one
+positive band defines a map \(f:X\to\CP^1\); its eigenline obeys
+\(c_1^2=f^*(u^2)=0\).  But the desired line has
+\[
+ c_1=x+2y,\qquad c_1^2=4xy\ne0.
+\]
+Thus a nontrivial ambient bundle, at least three bands, or another microscopic
+mechanism is necessary.  The numerical \(\cO(2)\) Veronese line is retained
+only as a spectator control.
+
+Finally, define first the universal differential character
+\[
+ \widehat\Xi_5
+ =2\,\operatorname{pr}_U^*\widehat\omega_3
+ \smile\operatorname{pr}_s^*\widehat c_1(\mathsf H)
+ \in\widehat H^5(SU(2)\times\CP^1;\ZZ),
+\]
+then pull it back by the evaluation map on
+\(\Sigma_3\times\cC_{\rm restr}\) and fiber-integrate to a degree-two
+character.  This is a well-typed local ansatz.  Constant-loop and centre
+phase controls do not prove descent on the restricted gauge stack: all
+components of \(\operatorname{Map}(\Sigma_3,U(1))\), an equivariant cocycle,
+and vertical holonomy remain untreated.  The odd/even centre test is only a
+necessary control, not an exactly-two theorem.  Consequently every descent,
+same-soliton composition, and portal gate remains false.
+\end{abstract}
+
+\tableofcontents
+
+\section{Question, evidence levels, and theorem-level answer}
+
+The previous AP-E4 note supplied a conditional families-Callias template.
+The present task is stronger: start from the \emph{same} nonlinear \(B=1\)
+configuration published by charged two-colour Workline-B, determine its true
+symmetry orbit, and only then ask for a fermion family, determinant line, CPT
+map, and WZW line.  We use four evidence labels.
+
+\begin{description}
+\item[Same-background result.] A statement computed from the canonical
+  Workline-B \((F(r),s(r))\) and the fields already present in the charged EFT.
+\item[Declared completion.] An explicit new fermion term that is compatible
+  with the displayed low-energy symmetries but has not been matched from the
+  microscopic charged gauge theory.
+\item[Restricted theorem.] A complete construction on a stated open
+  subspace, with every required equivariance and globality hypothesis stated.
+\item[Spectator control.] A finite matrix or bundle designed to validate an
+  index, Berry, or regulator formula but not derived from the mother model.
+\end{description}
+
+\begin{theorem}[Strongest defensible AP-E6 result]
+For the present \(B=1\) hedgehog, the localized rotational/isospin orbit is
+\(SO(3)\), while the scalar \(\CP^1\) vacuum orientation is nonnormalizable in
+infinite volume.  Hence there is no same-soliton physical \(\CP^1\) on which
+an \(\cO(2)\) families determinant line or its \(\cO(-4)\) CPT partner can be
+defined.  The minimal constituent chiral Yukawa operator is Fredholm at the
+essential-spectrum level but has trivial ordinary Callias boundary class.
+Its four-dimensional spectral flow is logically distinct from a static
+kernel.  A universal degree-five differential character and its degree-two
+family transgression are correctly typed, but restricted gauge-stack descent
+is not proved.  In particular, tested constant loops and the faithful centre
+do not exhaust the gauge group.  Therefore
+\[
+ \begin{gathered}
+ \texttt{same\_physical\_moduli\_space\_derived=false},\qquad
+ \texttt{determinant\_line\_o2\_derived=false},\\
+ \texttt{gauge\_basic\_wzw\_descent\_proven=false},\qquad
+ \texttt{lane\_closed=false}.
+ \end{gathered}
+\]
+The narrower distinction is
+\[
+\begin{gathered}
+\texttt{restricted\_higgsed\_sigma\_model\_descent\_proven=false},\\
+\texttt{restricted\_local\_differential\_character\_ansatz\_typed=true}.
+\end{gathered}
+\]
+\end{theorem}
+
+Recent Skyrmion--fermion computations explicitly find a level that flows
+through zero as a Yukawa parameter is varied; they do not turn every static
+endpoint into a protected zero mode~\cite{DzhunushalievEtAl2024APE6}.  Recent
+generalized Callias theory likewise emphasizes that the index is a pairing of
+the actual potential class with the Dirac class and can be localized to an
+appropriate hypersurface~\cite{VanDenDungen2025APE6}.  These results motivate
+the separation enforced below.
+
+\section{The actual B=1 moduli: stabilizer before quantization}
+
+\subsection{Relaxed hedgehog and its baryon number}
+
+Workline-B solves the coupled nonlinear \((F,s)\) boundary-value problem and
+publishes a canonical sampling with box radius (R=16) and (4097) points.
+Its pion component defines
+\begin{equation}
+ U_F(\bm x)=\cos F(r)+\ii\tau_i\widehat x_i\sin F(r),
+ \qquad F(0)=\pi,\quad F(\infty)=0.
+ \label{eq:hedgehog}
+\end{equation}
+With the convention
+\begin{equation}
+ B=-\frac{1}{24\pi^2}\int_{\RR^3}
+ \Tr\bigl(U_F^{-1}\dd U_F\bigr)^3,
+ \label{eq:baryon}
+\end{equation}
+the canonical numerical solution gives
+\(B=0.999999999686391\) and
+\(s(0)=0.917128964607058\).  Neither topology nor spherical symmetry
+identifies the moduli space with \(S^2\).
+
+The verifier calls exactly
+\begin{center}
+\small
+\nolinkurl{scan_ap_e6_relaxed_b1_multigrid_hessian}\\[-1pt]
+\nolinkurl{.solve_relaxed_profile(box=16,sample_points=4097)}
+\end{center}
+and forms the SHA-256 digest of the little-endian float64 columns
+\((r,F,s)\).  It hard-asserts equality with the digest stored in the
+Workline-B machine card:
+\begin{center}
+\small\nolinkurl{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}.
+\end{center}
+The full Workline-B script and card hashes are recorded in
+Table~\ref{tab:provenance} and in the JSON source manifest.  Thus
+``same soliton'' means byte-identical canonical \((r,F,s)\) data, not an
+independent AP-E3 solve.
+
+\subsection{Pure internal stabilizer}
+
+Let \(A\in SU(2)_V\) act by
+\(U_F(\bm x)\mapsto A U_F(\bm x)A^{-1}\).
+Choose a radius \(r_0\) for which \(\sin F(r_0)\ne0\), which exists for every
+nontrivial degree-one profile.  If \(A\) fixes the complete configuration,
+then
+\begin{equation}
+ A(\tau_i\widehat x_i)A^{-1}=\tau_i\widehat x_i
+ \quad\text{for all }\widehat{\bm x}\in S^2.
+ \label{eq:all-directions}
+\end{equation}
+Taking successively three independent directions implies
+\(A\tau_iA^{-1}=\tau_i\) for \(i=1,2,3\).  By irreducibility of the defining
+\(SU(2)\) representation, or directly by the Pauli commutators,
+\begin{equation}
+ \operatorname{Stab}_{SU(2)_V}(U_F)=\{\bm1,-\bm1\}=\ZZ_2.
+ \label{eq:pure-stabilizer}
+\end{equation}
+Thus the pure internal orbit is
+\begin{equation}
+ \cM_{\rm int}=SU(2)_V/\ZZ_2\simeq SO(3),
+ \qquad \dim_\RR\cM_{\rm int}=3.
+ \label{eq:so3-orbit}
+\end{equation}
+The verifier forms the positive Gram matrix
+\begin{equation}
+ G_{ab}=\sum_{i=1}^3
+ \Tr\bigl([\tau_a,\tau_i]^\dagger[\tau_b,\tau_i]\bigr),
+ \label{eq:stabilizer-gram}
+\end{equation}
+whose kernel is the continuous stabilizer Lie algebra.  All three eigenvalues
+are strictly positive.
+
+\subsection{Combined spatial--isospin symmetry is the same orbit}
+
+It is essential not to count another three modes.  Let
+\((R,A)\in SO(3)_{\rm space}\times SU(2)_V\) act by
+\begin{equation}
+ U_F(\bm x)\longmapsto A U_F(R^{-1}\bm x)A^{-1}.
+ \label{eq:combined-action}
+\end{equation}
+Writing \(\pi:SU(2)\to SO(3)\) for the double cover, Eq.~\eqref{eq:hedgehog}
+is fixed precisely when \(R=\pi(A)\).  Hence the connected stabilizer is the
+diagonal lift \(SU(2)_{\rm diag}\), with the appropriate central
+identifications, and
+\begin{equation}
+ \frac{SO(3)_{\rm space}\times SO(3)_V}{SO(3)_{\rm diag}}
+ \simeq SO(3).
+ \label{eq:combined-orbit}
+\end{equation}
+Equations~\eqref{eq:so3-orbit} and \eqref{eq:combined-orbit} describe the same
+relative spin--isospin orientation of a hedgehog.  They are not two
+independent \(SO(3)\)'s.  Moreover, \(U_F\) is a colour singlet.  Microscopic
+\(SU(2)_c\) gauge transformations do not quotient this global pion orbit.
+
+\begin{corollary}[No physical \(\CP^1\) from hedgehog rotations]
+The relaxed hedgehog has no \(U(1)\) pure-internal stabilizer.  Therefore the
+identification \(SU(2)/U(1)=\CP^1\) cannot be made for this solution.
+\end{corollary}
+
+\subsection{Why the scalar vacuum sphere is not a soliton modulus}
+
+The charged UV candidate also has a scalar doublet
+\(\phi=vz\), \(z^\dagger z=1\), \(z\sim e^{\ii\lambda}z\), so the vacuum
+quotient is \(\CP^1\).  If \(z=z(m)\) is spatially uniform, the kinetic norm
+of a variation is
+\begin{equation}
+ \|\delta_m\phi\|^2
+ =v^2\int_{\RR^3}\dd^3x\,
+ \delta_mz^\dagger(1-zz^\dagger)\delta_mz.
+ \label{eq:bulk-norm}
+\end{equation}
+For any nonzero tangent variation the density approaches a positive
+constant, so the norm diverges as the volume.  In a box
+\([-L,L]^3\), \(\|\delta_m\phi\|^2\propto8L^3\).  This is a bulk Goldstone
+coordinate, not a localized collective coordinate.  Making it slowly
+time-dependent produces an inertia that diverges in the infinite-volume
+limit.
+
+\begin{gate}[Same physical moduli]
+One would have to find a different relaxed charged soliton with a localized
+scalar texture and stabilizer \(U(1)\), then prove its horizontal mode is
+\(L^2\)-normalizable.  The present solution proves instead
+\(\cM_1\simeq SO(3)\) for rotations and a nonnormalizable bulk \(\CP^1\).
+\end{gate}
+
+\section{A concrete constituent Yukawa completion on the same profile}
+
+\subsection{Four-dimensional Euclidean operator}
+
+The lowest-dimension chiral constituent coupling compatible with vectorlike
+\(U(1)_g\) charge is declared to be
+\begin{equation}
+ S_{F,Y}=\int\dd^4x\,
+ \overline\Psi\left[
+ \gamma^\mu(\partial_\mu+\mathcal A_\mu)
+ +M\bigl(P_RU_F+P_LU_F^\dagger\bigr)
+ \right]\Psi,
+ \qquad P_{R,L}=\frac{1\pm\gamma_5}{2}.
+ \label{eq:4d-yukawa}
+\end{equation}
+Here \(\Psi\) carries spin and flavour/isospin; \(\mathcal A_\mu\) denotes the
+declared vectorlike gauge connection.  Equation~\eqref{eq:4d-yukawa} is a
+standard chiral Yukawa form, but in this project it is a \emph{declared
+constituent completion}: the current Workline-B charged EFT supplied no fermion
+representation, Yukawa coefficient, or regulator matching.  It must not be
+silently promoted to a renormalizable microscopic interaction.
+
+The canonical Workline-B background also contains the relaxed breathing
+field \(s(r)\).  Equation~\eqref{eq:4d-yukawa} deliberately declares no
+\(s\overline\Psi\Psi\), \(sU_F\), or other breathing-scalar Yukawa coupling.
+Therefore \(s\) is \emph{decoupled by this declared completion}; it is not
+silently omitted from the imported solution.  Any microscopic matching that
+generates an \(s\)-dependent fermion mass changes the operator and requires a
+new Callias audit.
+
+Under the Euclidean CPT image
+\begin{equation}
+ U_F(\bm x)\mapsto U_F^\dagger(-\bm x),\qquad
+ \mathcal A_\mu(x)\mapsto\mathcal A_\mu^{\rm CPT}(x),
+ \label{eq:cpt-fields}
+\end{equation}
+assume an antiunitary map \(\Theta\) on the one-particle Hilbert space such
+that \(\Theta\ii\Theta^{-1}=-\ii\) and
+\begin{equation}
+ \mathcal D_E[\Phi^{\rm CPT}]
+ =\Theta\,\mathcal D_E[\Phi]\Theta^{-1}.
+ \label{eq:cpt-operator}
+\end{equation}
+This relation is conditional: \(\Theta\) must map the operator domain,
+boundary conditions, and spectral cut to their CPT images; the fermion and
+regulator representations must be \(\Theta\)-closed; regulator masses must be
+real.  It implies determinant conjugation only after those assumptions and a
+consistent determinant-line orientation are supplied.  It does not choose a
+physical regulator.
+
+\subsection{Static three-dimensional Hamiltonian}
+
+Choose Pauli matrices \(\rho_i\) for the upper/lower Dirac block,
+\(\sigma_i\) for spin, and \(\tau_i\) for isospin.  One convenient Hermitian
+representation is
+\begin{equation}
+ \alpha_i=\rho_1\otimes\sigma_i,\qquad
+ \beta=\rho_3\otimes\bm1,\qquad
+ \gamma_5=\rho_1\otimes\bm1.
+ \label{eq:gamma-rep}
+\end{equation}
+On
+\(\cH=L^2(\RR^3,S\otimes\CC^2_\tau)\), define
+\begin{equation}
+ D_3=-\ii\alpha^iD_i,
+ \qquad
+ \Phi_F=\beta M\bigl(\cos F
+ +\ii\gamma_5\bm\tau\!\cdot\!\widehat{\bm x}\sin F\bigr),
+ \qquad H_F=D_3+\Phi_F,
+ \label{eq:dirac-potential-split}
+\end{equation}
+initially on \(C_c^\infty\) and with self-adjoint domain
+\(\operatorname{Dom}H_F=H^1\) under the smooth-decaying gauge assumptions
+below.  Explicitly,
+\begin{align}
+ H_F
+ &=-\ii\rho_1\otimes\sigma_iD_i\otimes\bm1_\tau
+ +M\rho_3\otimes\bm1\otimes\bm1\cos F(r)\notag\\
+ &\hspace{18mm}
+ -M\rho_2\otimes\bm1\otimes
+ \bigl(\bm\tau\!\cdot\!\widehat{\bm x}\bigr)\sin F(r).
+ \label{eq:static-hamiltonian}
+\end{align}
+The second line follows from
+\(\ii\beta\gamma_5=-\rho_2\).  Thus \(\Phi_F\) and \(H_F\) are Hermitian.
+Notice also that \(\Phi_F^2=M^2\bm1\).
+
+Since \(F(r)\to0\) exponentially in the Workline-B massive-pion profile,
+\begin{equation}
+ H_F-H_\infty\ \text{is relatively compact},\qquad
+ H_\infty=-\ii\alpha^i\partial_i+\beta M.
+ \label{eq:relative-compact}
+\end{equation}
+Consequently
+\begin{equation}
+ \sigma_{\rm ess}(H_F)=(-\infty,-|M|]\cup[|M|,\infty).
+ \label{eq:essential-spectrum}
+\end{equation}
+This proves a uniform \emph{essential-spectrum} gap \( |M| \) under global
+unitary isorotation.  It does not exclude discrete eigenvalues in the gap,
+prove \(\inf|\sigma(H_F)|>0\), or establish a uniform Fredholm family over an
+unconstructed physical moduli space.
+
+\subsection{Ordinary Callias boundary index is zero}
+
+The self-adjoint Hamiltonian \(H_F\) is not itself the off-diagonal Fredholm
+operator whose index is being quoted.  Define
+\begin{equation}
+ \mathscr C_F=D_3+\ii\Phi_F:
+ H^1(\RR^3,S\otimes\CC^2_\tau)\longrightarrow\cH,
+ \qquad
+ \mathbb B_F=
+ \begin{pmatrix}0&\mathscr C_F^\dagger\\
+                 \mathscr C_F&0\end{pmatrix},
+ \label{eq:callias}
+\end{equation}
+where \(\mathbb B_F\) acts on the doubled Hilbert space with grading
+\(\Gamma=\operatorname{diag}(1,-1)\).  We impose the following sufficient
+Callias hypotheses:
+\begin{enumerate}[label=(C\arabic*)]
+\item \(\RR^3\) is complete and \(D_3\) is self-adjoint on \(H^1\);
+\item \(\Phi_F\) is bounded and Hermitian, and
+  \([D_3,\Phi_F]\) extends to a bounded operator;
+\item outside a compact set \(K\), for some \(\epsilon>0\),
+  \begin{equation}
+   \Phi_F^2-\lVert[D_3,\Phi_F]\rVert\bm1\ge\epsilon\bm1;
+   \label{eq:callias-coercive}
+  \end{equation}
+\item the gauge field is smooth and decays sufficiently that
+  \(H_F-H_\infty\) is relatively compact.
+\end{enumerate}
+Then \(\mathscr C_F\) is Fredholm, \(\mathbb B_F\) is its graded
+self-adjoint double, and the index is determined by the positive
+eigenbundle
+\(E_+(\Phi_\infty)\to S^2_\infty\)~\cite{Callias1978APE6,VanDenDungen2025APE6}.
+For Eq.~\eqref{eq:dirac-potential-split}, the correct boundary potential is
+\begin{equation}
+ \Phi_\infty=\beta M,
+ \qquad E_+(\Phi_\infty)=S^2_\infty\times\CC^4,
+ \qquad c_1(E_+)=0,
+ \qquad \Ind\mathscr C_F=0.
+ \label{eq:actual-callias-zero}
+\end{equation}
+The rank-four value refers to the displayed Dirac--isospin representation;
+only its constancy is topologically relevant.  Equation
+\eqref{eq:actual-callias-zero} is asserted only under (C1)--(C4), not for an
+arbitrary microscopic gauge background.
+The fact that \(U_F:\RR^3\cup\{\infty\}\simeq S^3\to SU(2)\simeq S^3\)
+has degree one is a bulk \(\pi_3\) statement.  The ordinary static Callias
+boundary theorem sees \(S^2_\infty\) and a constant mass here; it cannot be
+replaced by \(B\) without changing the operator problem.
+
+\subsection{Where B does enter: four-dimensional spectral flow}
+
+Let \(U_\tau\) interpolate from the vacuum to \(U_F\), and define
+\begin{equation}
+ \mathscr D_{\rm flow}=\partial_\tau+H[U_\tau].
+ \label{eq:flow-operator}
+\end{equation}
+With APS boundary conditions, a maintained endpoint gap, and a regulator
+whose anomaly normalization is fixed, the standard index/spectral-flow
+identity is
+\begin{equation}
+ \Ind\mathscr D_{\rm flow}=\SF\{H[U_\tau]\}.
+ \label{eq:index-sf}
+\end{equation}
+In the adiabatic chiral problem the anomaly calculation identifies this
+spectral flow with the winding \(B\), up to the stated representation and sign
+conventions~\cite{APS1975APE6,GoldstoneWilczek1981APE6}.  But spectral flow
+counts crossings \emph{along the path}.  It does not assert
+\(\Ker H[U_F]\ne0\).  Numerically observed Skyrmion levels indeed cross zero
+only at selected coupling values~\cite{DzhunushalievEtAl2024APE6}.
+
+\begin{gate}[Static Callias versus interpolation index]
+For the same canonical background, the defensible statements are
+\[
+ \begin{gathered}
+ \text{uniform essential gap true},\\
+ \text{ordinary boundary Callias index }0,\\
+ \text{conditional interpolation spectral flow }B.
+ \end{gathered}
+\]
+The full endpoint spectral gap and a physical static zero-mode bundle remain
+unproved.
+\end{gate}
+
+\section{Families determinant line and a two-band obstruction}
+
+\subsection{Conditional push-forward formula}
+
+To compare with the previous template, suppose temporarily that a physical
+\(\CP^1\) family \(Y\) existed and a rank-one positive asymptotic eigenbundle
+over
+\begin{equation}
+ X=S^2_\infty\times Y,
+ \qquad H^*(X;\ZZ)=\ZZ[x,y]/(x^2,y^2),
+ \qquad \int_{S^2_\infty}x=1
+ \label{eq:product-base}
+\end{equation}
+had
+\begin{equation}
+ c_1(E_+)=p x+q y.
+ \label{eq:pq-line}
+\end{equation}
+Since
+\begin{equation}
+ \operatorname{ch}(E_+)
+ =1+px+qy+pq\,xy,
+ \label{eq:chern-character}
+\end{equation}
+the oriented boundary push-forward gives
+\begin{equation}
+ \operatorname{rank}\Ind\mathscr C=\epsilon p,
+ \qquad
+ c_1(\det\Ind\mathscr C)=\epsilon pq\,y.
+ \label{eq:family-pushforward}
+\end{equation}
+Thus \(\epsilon p=1,q=2\) would produce a rank-one \(\cO(2)\) index line.
+The Bismut--Freed determinant connection would then refine
+Eq.~\eqref{eq:family-pushforward} geometrically~\cite{BismutFreed1986APE6,
+BismutFreed1986IIAPE6}.
+
+\subsection{No globally gapped two-band realization of x+2y}
+
+\begin{theorem}[Two-band mixed-line obstruction]
+Let \(\Phi:X\to\operatorname{Herm}(2)\) be continuous on
+\(X=S^2\times\CP^1\), acting on the trivial bundle \(X\times\CC^2\).  Assume
+that its two eigenvalues are globally nondegenerate and separated by zero,
+with exactly one positive band.  Then its positive eigenline \(E_+\) obeys
+\begin{equation}
+ c_1(E_+)^2=0.
+ \label{eq:square-zero}
+\end{equation}
+In particular \(c_1(E_+)=x+2y\) is impossible.
+\end{theorem}
+
+\begin{proof}
+Subtracting half the trace and dividing by the nonzero eigenvalue separation
+deformation-retracts \(\Phi\) to a traceless unit Hermitian matrix
+\begin{equation}
+ \widehat\Phi=f_a\tau_a,
+ \qquad \bm f:X\longrightarrow S^2\simeq\CP^1.
+ \label{eq:mass-map}
+\end{equation}
+The positive eigenline is \(E_+=f^*\mathsf H_+\), where
+\(\mathsf H_+\to\CP^1\) is the universal positive eigenline.  If
+\(u=c_1(\mathsf H_+)\), then \(u^2=0\) because
+\(H^4(\CP^1;\ZZ)=0\).  Naturality gives
+
+\[
+ c_1(E_+)^2=f^*(u^2)=0.
+\]
+
+On the other hand, using \(x^2=y^2=0\),
+\begin{equation}
+ (x+2y)^2=4xy,
+ \label{eq:mixed-square}
+\end{equation}
+and \(xy\) generates \(H^4(S^2\times\CP^1;\ZZ)\).  Hence
+\(4xy\ne0\), a contradiction.
+\end{proof}
+
+The hypotheses matter.  The theorem does not cover a nontrivial ambient
+rank-two bundle, a band crossing, more than two bands, or an operator-valued
+infinite-dimensional mass.  It does prove that the most economical globally
+gapped \(2\times2\) spectator mass cannot realize the desired mixed line.
+At least a rank-three ambient construction or nontrivial microscopic bundle
+is necessary, but not by itself sufficient.
+
+\subsection{Why the Veronese control is not the missing construction}
+
+For \(z=(z_0,z_1)\in\CC^2\), define
+\begin{equation}
+ u_2(z)=\bigl(z_0^2,\sqrt2z_0z_1,z_1^2\bigr)^T,
+ \qquad
+ K(z)=\bm1_3-u_2(z)u_2(z)^\dagger.
+ \label{eq:veronese}
+\end{equation}
+Then \(K u_2=0\), the two nonzero eigenvalues equal one, and
+\(u_2(e^{\ii\lambda}z)=e^{2\ii\lambda}u_2(z)\).  The kernel line over
+\(\CP^1\) is \(\cO(2)\).  The verifier computes its Berry number \(+2\) using
+gauge-invariant Bargmann triangle phases.
+
+This is a rank-three \emph{spectator} control over the \(y\)-sphere only.  It
+does not construct the required \(p=1\) dependence over \(S^2_\infty\), does
+not couple to Eq.~\eqref{eq:static-hamiltonian}, and is not a Yukawa term of
+the charged mother model.
+
+\subsection{The actual orientation space cannot carry free c1=2}
+
+Even before choosing a mass, the physical orbit found above has
+\begin{equation}
+ H^2(SO(3);\ZZ)\simeq\ZZ_2,
+ \qquad H^2(SU(2);\ZZ)=H^2(S^3;\ZZ)=0.
+ \label{eq:so3-cohomology}
+\end{equation}
+Thus an orientation determinant line can at most carry a torsion
+\(\ZZ_2\) class on \(SO(3)\); on the spin cover it is topologically trivial.
+There is no free Chern number \(+2\) to identify with \(\cO(2)\).  A possible
+torsion sign is a Finkelstein--Rubinstein/fermion-measure question and is not
+computed here.
+
+\begin{gate}[Families determinant]
+The abstract formula~\eqref{eq:family-pushforward} and the Veronese regression
+are correct.  The same soliton supplies neither their \(\CP^1\) base nor the
+mixed asymptotic eigenbundle.  Therefore
+\(\texttt{determinant\_line\_o2\_derived=false}\).
+\end{gate}
+
+\section{CPT algebra, Pfaffians, and the conditional anti-canonical map}
+
+\subsection{Pauli--Villars determinant transformation}
+
+Let \(\mathcal D_M[\Phi]\) be Eq.~\eqref{eq:4d-yukawa} and choose a
+CPT-covariant Pauli--Villars operator \(\mathcal D_\Lambda[\Phi]\) with the
+same kinetic representation.  Define
+\begin{equation}
+ Z_{\rm PV}[\Phi]
+ =\frac{\det\mathcal D_M[\Phi]}{\det\mathcal D_\Lambda[\Phi]}.
+ \label{eq:pv-ratio}
+\end{equation}
+The following are assumptions, not outputs of the charged EFT:
+\begin{enumerate}[label=(T\arabic*)]
+\item \(\Theta\) is antiunitary, obeys
+  \(\Theta\ii\Theta^{-1}=-\ii\), and satisfies
+  Eq.~\eqref{eq:cpt-operator};
+\item \(\Theta\) maps the operator domain, boundary conditions, and spectral
+  cut to their CPT images;
+\item the physical and Pauli--Villars representations are closed under
+  \(\Theta\), and every regulator mass is real;
+\item determinant and Pfaffian orientations are transported consistently.
+\end{enumerate}
+Under (T1)--(T4), for both masses,
+\begin{equation}
+ Z_{\rm PV}[\Phi^{\rm CPT}]=Z_{\rm PV}[\Phi]^*.
+ \label{eq:det-cpt}
+\end{equation}
+Equivalently, its eta/phase contribution reverses sign.  A finite spectral
+cutoff regression uses real eigenvalues \(\lambda_j\) and
+\begin{equation}
+ Z_+(\mu,\Lambda)=\prod_j
+ \frac{\mu+\ii\lambda_j}{\Lambda+\ii\lambda_j},\qquad
+ Z_-=\prod_j
+ \frac{\mu-\ii\lambda_j}{\Lambda-\ii\lambda_j}=Z_+^*.
+ \label{eq:spectral-regulator}
+\end{equation}
+This is an algebraic finite spectral-product identity, not a microscopic
+regulator construction.  Global
+phases of fermion determinants require eta/Dai--Freed data beyond a local
+matrix identity~\cite{WittenYonekura2019APE6}.
+
+\subsection{Majorana doubling and Pfaffian orientation}
+
+For an antisymmetric doubled matrix
+\begin{equation}
+ \mathcal A(D)=
+ \begin{pmatrix}0&D\\-D^T&0\end{pmatrix},
+ \qquad
+ \Pf\mathcal A(D)=(-1)^{n(n-1)/2}\det D,
+ \label{eq:pf-doubling}
+\end{equation}
+Eq.~\eqref{eq:det-cpt} implies the corresponding Pfaffian conjugation after a
+fixed orientation.  Whether the orientation can be fixed globally on all
+gauge sectors is precisely an anomaly/regulator question and remains open.
+
+\subsection{Anti-canonical O(-4) remains conditional}
+
+If a physical polarized \(\CP^1\) family with \(E_+=\cO(2)\) existed, fixed
+Dolbeault polarization and Serre duality would map it to
+\begin{equation}
+ E_-=K_{\CP^1}\otimes E_+^\vee
+ =\cO(-2)\otimes\cO(-2)=\cO(-4).
+ \label{eq:anti-canonical}
+\end{equation}
+Then \((h^0,h^1)=(3,0)\) maps to \((0,3)\).  But
+Eq.~\eqref{eq:anti-canonical} is a statement on \(\CP^1\).  The actual
+orientation space is \(SO(3)\), and the mother model has not supplied the
+polarization or the anti-canonical regulator factor.  Determinant
+conjugation alone does not manufacture them.
+
+\begin{gate}[Physical CPT regulator]
+The determinant/Pfaffian conjugation law follows conditionally from
+(T1)--(T4), and its finite spectral-product regression is algebraically
+correct.  No \(\Theta\)-covariant regulator has been derived from the mother
+model, and the \(\cO(-4)\) physical line is absent.  Hence
+\(\texttt{physical\_cpt\_regulator\_derived=false}\).
+\end{gate}
+
+\section{Typed local mixed-WZW character and the unclosed descent problem}
+
+\subsection{Universal character before evaluation}
+
+Restrict first to \(\phi^\dagger\phi=v^2>0\) everywhere.  Write
+\(z=\phi/v\in S^3\), with \(z\mapsto e^{\ii\lambda}z\), and let
+\begin{equation}
+ s=[z]:M_4\longrightarrow\CP^1.
+ \label{eq:projective-map}
+\end{equation}
+Let \(\mathsf H\to\CP^1\) be the Hopf line and
+\(\widehat c_1(\mathsf H)\in\widehat H^2(\CP^1;\ZZ)\) its differential
+first Chern class.  Let
+\(\widehat\omega_3\in\widehat H^3(SU(2);\ZZ)\) have curvature the
+integrally normalized baryon three-form.  The correctly typed universal
+object is defined on the target product, before any spacetime field is
+inserted:
+\begin{equation}
+ \boxed{
+ \widehat\Xi_5
+ =2\,\operatorname{pr}_U^*\widehat\omega_3
+ \smile\operatorname{pr}_s^*\widehat c_1(\mathsf H)
+ \in\widehat H^5(SU(2)\times\CP^1;\ZZ).}
+ \label{eq:differential-character}
+\end{equation}
+This is an intrinsic differential-cohomology construction, not a choice of a
+five-dimensional extension~\cite{DavighiGripaiosRandalWilliams2022APE6}.
+The coefficient two is the charged-two-colour mixed-WZW level matched in the
+intermediate UV candidate~\cite{DavighiLohitsiri2024APE6}; global-form
+refinements of symplectic QCD remain relevant~\cite{Saito2024APE6}.
+
+Let \(\cC_{\rm restr}\) denote the smooth nonvanishing-Higgs field space
+before quotienting by the gauge group.  Its evaluation map is
+\begin{equation}
+ \operatorname{ev}:\Sigma_3\times\cC_{\rm restr}
+ \longrightarrow SU(2)\times\CP^1,\qquad
+ (x,c)\longmapsto\bigl(U_c(x),s_c(x)\bigr).
+ \label{eq:evaluation-map}
+\end{equation}
+Only now do we pull back and fiber-integrate:
+\begin{equation}
+ \widehat\cL_{\rm loc}
+ :=\int_{\Sigma_3}\operatorname{ev}^*\widehat\Xi_5
+ \in\widehat H^2(\cC_{\rm restr};\ZZ).
+ \label{eq:transgression}
+\end{equation}
+Thus \(\widehat\cL_{\rm loc}\) is a well-typed line-with-connection
+candidate on the unquotiented restricted field space.  Equation
+\eqref{eq:transgression} alone does not construct an equivariant differential
+cocycle or prove that the line descends to the gauge quotient stack.
+
+\subsection{Local curvature control is not stack descent}
+
+On a local Hopf lift define
+\begin{equation}
+ a=-\ii z^\dagger\dd z,
+ \qquad z\mapsto e^{\ii\lambda}z,
+ \qquad a\mapsto a+\dd\lambda.
+ \label{eq:hopf-connection}
+\end{equation}
+The curvature can be written without the lift,
+\begin{equation}
+ f=\dd a=-\ii\,\dd z^\dagger(1-zz^\dagger)\wedge\dd z
+ =s^*F_{\rm FS}.
+ \label{eq:basic-curvature}
+\end{equation}
+It is invariant and horizontal under the vertical \(U(1)\) vector.  Since
+\(U\) is neutral under vector \(U(1)_g\), the curvature
+\(2\omega_3(U)\wedge f/(2\pi)\) passes the local horizontal-curvature test.
+The connection \(a\) itself
+is not a basic one-form; rather, its transformation law is exactly the
+descent datum of the associated line bundle.  Confusing these two statements
+would incorrectly demand a globally defined potential on \(\CP^1\).
+Conversely, horizontal curvature does not by itself prove equivariant
+differential-character descent: one must still specify the cocycle on gauge
+arrows and prove trivial vertical holonomy.
+
+\subsection{A sampled constant-loop integrality control}
+
+For the restricted constant-loop ansatz and a gauge function with winding
+\(\lambda(1)-\lambda(0)=2\pi n\), the worldline connection at baryon number
+\(B\) shifts by
+\begin{equation}
+ \Delta S/\hbar=2B\,[\lambda(1)-\lambda(0)]=4\pi Bn.
+ \label{eq:large-gauge}
+\end{equation}
+Therefore
+\begin{equation}
+ \exp(\ii\Delta S/\hbar)=1
+ \qquad(B,n\in\ZZ).
+ \label{eq:large-invariance}
+\end{equation}
+The quantized coefficient is essential.  This computation samples a
+one-parameter class; it does not classify all connected components of
+\(\operatorname{Map}(\Sigma_3,U(1))\), nor does it supply their equivariant
+cocycle data.
+
+\subsection{Free Hopf action and faithful centre}
+
+The \(U(1)\) action on \(S^3\) is free whenever \(\phi\ne0\), so the
+restricted Hopf quotient has no gauge stabilizer.  Separately, the faithful
+global identification equates the flavour centre \(z\mapsto-z\) with the
+gauge transformation \(e^{\ii\pi}\).  An \(\cO(k)\) fiber transforms by
+\begin{equation}
+ e^{\ii k\pi}=(-1)^k.
+ \label{eq:center-holonomy}
+\end{equation}
+Thus \(k=2B\) has trivial phase for this tested centre element, while the
+\(k=1\) negative control does not.  This is a necessary even-weight check.
+It is \emph{not} an exactly-two theorem: it neither excludes higher even
+weights nor checks every stabilizer, gauge component, global form, or anomaly
+constraint.
+
+\subsection{Restriction to the two candidate collective spaces}
+
+If one formally inserts a product family
+\((U_B(\bm x),s(m))\) with \(m\in\CP^1\), then
+\begin{equation}
+ c_1(\widehat\cL_B)
+ =\int_{\Sigma_3\times\CP^1}
+ 2\,\omega_3(U_B)\wedge s^*\omega_2
+ =2B\deg(s).
+ \label{eq:formal-c1}
+\end{equation}
+For \(B=1,\deg(s)=1\), this is \(+2\).  But this \(s(m)\) is the
+volume-divergent scalar vacuum coordinate of Eq.~\eqref{eq:bulk-norm}.
+It is not a localized moduli-space map.
+
+On the actual rotational orbit \(SO(3)\), hold the scalar vacuum fixed.  The
+evaluation map has no scalar tangent component, so the two-form curvature of
+Eq.~\eqref{eq:transgression} restricts trivially along the \(SO(3)\) orbit.
+The WZW line therefore does not supply a free \(c_1=2\) on the physical
+orientation family.
+
+\subsection{Why even restricted stack descent remains open}
+
+Equations~\eqref{eq:differential-character}--\eqref{eq:transgression} are
+correctly typed on the unquotiented nonvanishing-Higgs field space.  To
+descend them to the restricted gauge stack one must still:
+\begin{enumerate}[label=(R\arabic*)]
+\item treat every component of \(\operatorname{Map}(\Sigma_3,U(1))\), not
+  only the sampled constant-loop ansatz;
+\item construct the equivariant differential cocycle on gauge arrows and
+  verify its composition law;
+\item prove trivial vertical holonomy for every gauge loop.
+\end{enumerate}
+The extension to the full microscopic space additionally requires:
+\begin{enumerate}[label=(D\arabic*)]
+\item configurations where \(\phi=0\) and the projective map \(s\) fails;
+\item defects and nontrivial gauge bundles not represented by one global
+  normalized doublet;
+\item the full faithful global-form quotient and all non-extendible bordism
+  sectors of the microscopic theory;
+\item a same-soliton normalizable collective map.
+\end{enumerate}
+Accordingly the machine card distinguishes the two flags
+\begin{center}
+\footnotesize
+\begin{tabular}{c}
+\texttt{restricted\_local\_differential\_character\_ansatz\_typed=true}\\
+\texttt{restricted\_higgsed\_sigma\_model\_descent\_proven=false}\\
+\texttt{gauge\_basic\_wzw\_descent\_proven=false}
+\end{tabular}
+\end{center}
+
+\section{Numerical controls}
+
+\subsection{Same-profile and stabilizer regressions}
+
+The verifier imports the Workline-B public solver, calls it at
+\(R=16\) with (4097) samples, and hard-asserts equality of the canonical
+\((r,F,s)\) checksum with the Workline-B card.  It then reads \(B\) from that
+same card, evaluates the Gram matrix~\eqref{eq:stabilizer-gram}, and fits the
+uniform scalar-mode norm against box size.  The expected power is three.
+
+\subsection{Finite Wilson--Dirac endpoint control}
+
+On a cubic grid the verifier discretizes Eq.~\eqref{eq:static-hamiltonian}
+with central derivatives and a Wilson control term
+\begin{equation}
+ H_{W,a}=H_{F,a}-\frac{r_Wa}{2}\,\beta\Delta_a.
+ \label{eq:wilson-control}
+\end{equation}
+The mass term uses only the canonical Workline-B (F) samples, with a stated
+piecewise-linear off-grid interpolation.  The accompanying canonical
+breathing field (s) does not enter because the declared coupling
+\eqref{eq:4d-yukawa} contains no (s)-dependent Yukawa term.  Dirichlet
+finite-box boundaries are used.  The calculation checks
+Hermiticity and the smallest-magnitude eigenvalues on two grids.  A positive
+finite-box minimum excludes an accidental zero only for this benchmark.  It
+is not a continuum extrapolation, a fermion determinant, or lattice QC2D.
+The grids are deliberately small and the solver uses shift-invert
+\texttt{eigsh} with a smallest-magnitude fallback for reproducibility.
+
+There is also a direct coset-representative test.  If one incorrectly
+parametrizes the hedgehog by \(SU(2)/U(1)\), then \(A\) and
+\(Ae^{-\ii\theta\tau_3/2}\) denote the same proposed \(\CP^1\) point.  The
+two conjugated hedgehog operators differ at nonzero \(\theta\), although they
+are unitarily isospectral.  Hence the operator does not descend to that
+\(\CP^1\) quotient.
+
+\subsection{Berry, CPT, and holonomy controls}
+
+The following controls are deliberately finite and diagnostic:
+\begin{enumerate}[label=(N\arabic*)]
+\item Bargmann-triangle Berry phases of Eq.~\eqref{eq:veronese} give
+  \(c_1=+2\), with unit nonzero projector gap.
+\item The spectral product~\eqref{eq:spectral-regulator} and its antisymmetric
+  doubling obey determinant and Pfaffian conjugation to floating-point
+  precision.
+\item Sampled constant-loop \(U(1)\) windings give unit phase at level two;
+  the faithful centre gives \(+1\) at level two and \(-1\) in the level-one
+  control.  These do not prove restricted gauge-stack descent.
+\end{enumerate}
+
+\subsection{Recorded numerical values and scope}
+
+The profile and its producing artifacts are cryptographically bound as
+follows.
+\begin{table}[ht]
+\centering
+\scriptsize
+\begin{tabular}{@{}L{0.24\textwidth}L{0.69\textwidth}@{}}
+\toprule
+Artifact & SHA-256\\
+\midrule
+Canonical little-endian float64 \((r,F,s)\)
+ & \nolinkurl{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}\\
+Workline-B solver script
+ & \nolinkurl{393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d}\\
+Workline-B machine card
+ & \nolinkurl{204dc3c91d3b83031fb70cafefa63e29df56f14c76c230600497ec94e1fb18b5}\\
+\bottomrule
+\end{tabular}
+\caption{Canonical same-soliton provenance used by the C workline.}
+\label{tab:provenance}
+\end{table}
+
+Table~\ref{tab:numerics} records the deterministic run.  The two Wilson
+entries are deliberately reported separately: their increase with resolution
+is not presented as a continuum extrapolation.  They only show that neither
+finite matrix has an accidental zero at the declared benchmark.
+
+\begin{longtable}{@{}L{0.43\textwidth}L{0.22\textwidth}L{0.27\textwidth}@{}}
+\caption{AP-E6 deterministic numerical controls.}
+\label{tab:numerics}\\
+\toprule
+Quantity & Value & Interpretation\\
+\midrule
+\endfirsthead
+\toprule
+Quantity & Value & Interpretation\\
+\midrule
+\endhead
+Canonical Workline-B baryon number
+ & \(0.999999999686391\)
+ & Card-bound \(R=16\) coupled profile.\\
+Canonical breathing field at the origin
+ & \(s(0)=0.917128964607058\)
+ & Imported and explicitly decoupled by the declared Yukawa.\\
+Stabilizer Gram spectrum
+ & \((16,16,16)\)
+ & No continuous pure-internal stabilizer.\\
+Uniform scalar norm power
+ & \(3.000000000000001\)
+ & Volume divergence in a cubic box.\\
+Wilson \(5^3\), matrix dimension \(1000\)
+ & \(\min|\lambda|=0.010896961\)
+ & Finite-box endpoint control only.\\
+Wilson \(7^3\), matrix dimension \(2744\)
+ & \(\min|\lambda|=0.283674971\)
+ & Finite-box endpoint control only.\\
+False-\(\CP^1\) representative operator difference
+ & \(1.15817\times10^{-2}\)
+ & Relative Frobenius norm.\\
+Representative isospectral residual
+ & \(4.86\times10^{-17}\)
+ & Unitary-conjugation check.\\
+Veronese spectator Berry number
+ & \(1.999999999999986\)
+ & \(\cO(2)\) template, not same-model evidence.\\
+Veronese kernel residual / nonzero gap
+ & \(4.16\times10^{-16}/1\)
+ & Projector regression.\\
+CPT determinant / Pfaffian residual
+ & \(0/0\)
+ & Finite spectral-cutoff algebra.\\
+Maximum level-two large-gauge phase residual
+ & \(2.45\times10^{-15}\)
+ & Sampled windings only; not stack descent.\\
+\bottomrule
+\end{longtable}
+
+\begin{gate}[Meaning of a green verifier]
+A green run means that the no-go deductions, conditional index formulae,
+finite discretizations, and fail-closed flags are mutually consistent.  It
+does not mean that a physical Callias family or portal has been constructed.
+\end{gate}
+
+\section{Gate ledger and next mathematically decisive experiments}
+
+\begin{longtable}{@{}L{0.39\textwidth}L{0.14\textwidth}L{0.39\textwidth}@{}}
+\toprule
+Gate & Status & Reason\\
+\midrule
+\endfirsthead
+\toprule
+Gate & Status & Reason\\
+\midrule
+\endhead
+Same physical \(\CP^1\) moduli space derived
+ & \status{false}
+ & Hedgehog orbit is \(SO(3)\); scalar \(\CP^1\) norm diverges with volume.\\
+Actual Yukawa--Callias operator derived from mother model
+ & \status{false}
+ & Eq.~\eqref{eq:4d-yukawa} is a declared constituent completion.\\
+Uniform essential Fredholm gap
+ & \status{true}
+ & Under (C1)--(C4), \(\Phi_\infty=\beta M\) gives essential threshold \( |M| \).\\
+Uniform full endpoint spectral gap
+ & \status{false}
+ & Only two finite Wilson controls; no continuum exclusion of zero crossings.\\
+Static ordinary Callias index \(+1\)
+ & \status{false}
+ & Actual asymptotic positive eigenbundle is trivial and has index zero.\\
+Four-dimensional interpolation formula
+ & \status{conditional theorem}
+ & APS index equals spectral flow; anomaly matching gives \(B\) under stated regulator assumptions.\\
+Same-model determinant line \(\cO(2)\)
+ & \status{false}
+ & Wrong base and no mixed mass; minimal globally gapped two-band mass is obstructed.\\
+Physical CPT/anti-canonical regulator
+ & \status{false}
+ & Conditional algebra holds under (T1)--(T4), but no physical regulator or \(\CP^1\) polarization is derived.\\
+Restricted local differential-character ansatz typed
+ & \status{true}
+ & Universal target character, evaluation pullback, and fiber-integration degrees are consistent.\\
+Restricted Higgsed gauge-stack descent
+ & \status{false}
+ & All gauge-group components, an equivariant cocycle, and vertical holonomy remain unchecked.\\
+Full microscopic gauge-basic descent
+ & \status{false}
+ & Higgs zeros, defects, all bundles/bordism sectors, and same-soliton pullback remain open.\\
+Same-soliton composition / lane closed
+ & \status{false}
+ & No physical \(\CP^1\), Callias \(\cO(2)\), or CPT line.\\
+Degree-one Route-E portal
+ & \status{not authorized}
+ & No pre-portal lane is closed.\\
+\bottomrule
+\end{longtable}
+
+There are three concrete ways forward, ordered by how directly they address
+the no-go.
+
+\begin{enumerate}[label=\textbf{C\arabic*.}]
+\item \textbf{Change the soliton, not its name.}  Search the full relaxed
+  gauge--meson--scalar equations for a localized scalar texture whose exact
+  symmetry breaking is \(G/H=SU(2)/U(1)\), and verify the horizontal
+  \(L^2\) norm and projected Hessian gap.  This is the only route that keeps
+  the desired physical \(\CP^1\) literal.
+\item \textbf{Accept \(SO(3)\) and reformulate the target.}  Compute the
+  torsion determinant line, Finkelstein--Rubinstein sign, and WZW holonomy on
+  \(SO(3)\) or its \(SU(2)\) cover.  This may yield a meaningful two-valued
+  structure, but it cannot reproduce a free Chern number two.
+\item \textbf{Construct a genuine higher-rank asymptotic mass.}  Starting
+  from anomaly-free microscopic fields, build a globally gapped rank-three
+  or larger mass over \(S^2_\infty\times\CP^1\), compute its family index and
+  heavy-regulator threshold, and show that its light kernel couples to the
+  same soliton.  The Veronese control supplies only the \(q=2\) factor; the
+  \(p=1\) spatial factor and decoupling are still missing.
+\end{enumerate}
+
+No degree-one portal should be started until one of these routes closes all
+of its physical gates.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e6_same_soliton_yukawa_callias}
+
+\end{document}

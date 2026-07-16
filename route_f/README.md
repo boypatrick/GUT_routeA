@@ -26,7 +26,36 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-16 AP-E completion frontier
+## 2026-07-16 AP-E6 same-background result
+
+The next execution round is fail-closed and more restrictive than the prior
+frontier templates.
+
+- `ap_e6_sp4_eta_bordism_threshold` passes **39/39** and proves
+  `Omega_5^Spin(BSp(2))=Z2` with characters `4:-1`, `5:+1`, `10:+1`.
+  The full Euclidean regulator, both target mapping-torus signs, and the
+  heavy/gravitational APS ratio remain open.  The checked `+2-2=0` is a
+  conditional charge-trace obstruction, not a computed determinant.
+- `ap_e6_relaxed_b1_multigrid_hessian` passes **20/20** and solves a genuine coupled continuum
+  `B=1` BVP and publishes one canonical `(r,F,s)` checksum.  Its sparse
+  constrained/projected cubic `n+s` Hessian is analytically exact, while the
+  separate diquark/gauge/ghost blocks are not one aggregate matrix.  The
+  field is evaluated off shell: the cubic gradient is still `O(.4)` and the
+  lattice degree is not converged.  Its negative curvatures are diagnostics,
+  not physical instability modes.
+- `ap_e6_same_soliton_yukawa_callias` passes **25/25** and consumes that exact checksum.  It finds
+  the physical localized orbit `SO(3)`, not `CP1`; the scalar `CP1` norm grows
+  with volume, the static Callias index is zero, and a new `c1^2` theorem
+  rules out the desired `x+2y` line in a trivial two-band mass family.  Its
+  differential character is only a correctly typed restricted ansatz; the
+  physical CPT regulator and gauge-basic microscopic descent remain open.
+
+The AP-E6 frontier verifier passes **15/15** and independently recomputes all three conjunctions
+as false.  No degree-one portal is started.  Full formulas, numerical
+anchors, limitations, and suggested repairs are synchronized in
+`ROADMAP.md` and `tex/another_physics_route_e_derivation_ledger.tex`.
+
+## 2026-07-16 AP-E completion frontier (superseded above)
 
 The latest research bundle adds three standalone derivations and one
 integrated promotion gate:
@@ -305,6 +334,18 @@ Artifacts:
   canonical Spin-c cohomology, exact and matrix-derived complete spectrum,
   chirality/partner tower, gap, ordinary-spin control, and fail-closed
   physical-origin gates (`22/22`).
+- `code/verify_ap_e6_sp4_eta_bordism_threshold.py`: exact low-degree
+  `BSp(2)` AHSS and representation character, partial regulator controls,
+  target-sign nonselection, and fail-closed heavy-threshold audit (`39/39`).
+- `code/scan_ap_e6_relaxed_b1_multigrid_hessian.py`: canonical coupled
+  hedgehog BVP, exact sparse `n+s` second variation, off-shell multigrid/
+  multivolume scan, and aggregate-Hessian negative gate (`20/20`).
+- `code/verify_ap_e6_same_soliton_yukawa_callias.py`: frozen-profile
+  provenance, actual `SO(3)` orbit, Callias/two-band no-go, algebraic CPT,
+  and typed-but-undescended WZW character (`25/25`).
+- `code/verify_ap_e6_execution_frontier.py`: independently checks fresh
+  manifests, the canonical same-background checksum, every lane conjunction,
+  and the no-portal rule (`15/15`).
 - `tex/another_physics_route_e_derivation_ledger.tex`: complete reversible
   derivation ledger for the Another-Physics / Route-E relationship.
 - `tex/another_physics_route_e_bridge.bib`: local primary-source bibliography
@@ -328,8 +369,16 @@ Artifacts:
   `output/pdf/ap_e4_tangent_dirac_spectrum.pdf`: clean-built, warning-free,
   page-by-page checked AP-E3 UV (12-page) and AP-E4 (9-page) notes.
 - `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
-  visually checked 19-page rendering of the derivation ledger; the same
+  visually checked 27-page rendering of the derivation ledger; the same
   current build is mirrored under `output/pdf/`.
+- `tex/ap_e6_sp4_eta_bordism_threshold.tex`,
+  `tex/ap_e6_relaxed_b1_multigrid_hessian.tex`, and
+  `tex/ap_e6_same_soliton_yukawa_callias.tex`: complete AP-E6 formula,
+  numerical, and rollback records with their local bibliographies.
+- `output/pdf/ap_e6_sp4_eta_bordism_threshold.pdf`,
+  `output/pdf/ap_e6_relaxed_b1_multigrid_hessian.pdf`, and
+  `output/pdf/ap_e6_same_soliton_yukawa_callias.pdf`: warning-free,
+  page-by-page checked 12-, 7-, and 14-page AP-E6 notes.
 - `output/ap_e1_projective_doublet_action.pdf`: clean-built, visually checked
   15-page AP-E1 note.
 - `output/pdf/ap_e2_discriminant_regression.pdf` and
@@ -365,6 +414,12 @@ Artifacts:
   anomaly-consistent intermediate-UV audit with full physics promotion false.
 - `output/ap_e4_tangent_dirac_spectrum.{json,md}`: `22/22` AP-E4 canonical
   operator audit with mathematical closure and physical closure false.
+- `output/ap_e6_sp4_eta_bordism_threshold.{json,md}`,
+  `output/ap_e6_relaxed_b1_multigrid_hessian.{json,md}`, and
+  `output/ap_e6_same_soliton_yukawa_callias.{json,md}`: `39/39`, `20/20`,
+  and `25/25` mechanical cards with every full-lane flag false.
+- `output/ap_e6_execution_frontier.{json,md}`: `15/15` fresh-manifest and
+  same-background integration card with portal authorization false.
 - `output/`: generated JSON, Markdown, and compiled-paper artifacts.
 
 The recommended active physics branch is a non-supersymmetric intermediate-

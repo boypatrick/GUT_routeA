@@ -1,0 +1,481 @@
+{
+  "ahss": {
+    "BSp2_integral_homology_low_degree": {
+      "0": "Z",
+      "1": "0",
+      "2": "0",
+      "3": "0",
+      "4": "Z",
+      "5": "0",
+      "6": "0"
+    },
+    "extension_problem": false,
+    "spin_coefficients": {
+      "0": "Z",
+      "1": "Z2",
+      "2": "Z2",
+      "3": "0",
+      "4": "Z",
+      "5": "0"
+    },
+    "surviving_term": "E2_4_1=Z2",
+    "total_degree_five_diagonal": {
+      "E2_0_5": "0",
+      "E2_1_4": "0",
+      "E2_2_3": "0",
+      "E2_3_2": "0",
+      "E2_4_1": "Z2",
+      "E2_5_0": "0"
+    }
+  },
+  "all_pass": true,
+  "checks": [
+    {
+      "detail": "TeX, bibliography, and verifier are present and nonempty",
+      "group": "provenance",
+      "name": "all declared sources exist",
+      "pass": true
+    },
+    {
+      "detail": "hashed=3/3; unique=3",
+      "group": "provenance",
+      "name": "source hashes are unique sha256 values",
+      "pass": true
+    },
+    {
+      "detail": "anchors=5/5",
+      "group": "provenance",
+      "name": "theorem and fail-closed anchors are present",
+      "pass": true
+    },
+    {
+      "detail": "anti-Hermitian T_H^3 is converted to Hermitian H=-2i T_H^3",
+      "group": "convention",
+      "name": "anti-Hermitian Cartan gives Hermitian charge generator",
+      "pass": true
+    },
+    {
+      "detail": "Omega_q^Spin={0: 'Z', 1: 'Z2', 2: 'Z2', 3: '0', 4: 'Z', 5: '0'}",
+      "group": "bordism",
+      "name": "low spin coefficients",
+      "pass": true
+    },
+    {
+      "detail": "H_4=Z and H_p=0 for 0<p<8, p!=4",
+      "group": "bordism",
+      "name": "BSp(2) homology below degree eight",
+      "pass": true
+    },
+    {
+      "detail": "nonzero diagonal entries=[(4, 1)]",
+      "group": "bordism",
+      "name": "unique total-degree-five AHSS entry",
+      "pass": true
+    },
+    {
+      "detail": "d2 and d3 have zero targets; d4:Z2->Z is zero",
+      "group": "bordism",
+      "name": "all outgoing AHSS differentials vanish",
+      "pass": true
+    },
+    {
+      "detail": "incoming d2 starts at H_6(BSp2;Z)=0; higher coefficient degree is negative",
+      "group": "bordism",
+      "name": "all incoming AHSS differentials vanish",
+      "pass": true
+    },
+    {
+      "detail": "Omega_5^Spin(BSp(2))=Z2 with a single filtration quotient",
+      "group": "bordism",
+      "name": "Omega5 result and extension",
+      "pass": true
+    },
+    {
+      "detail": "restrictions={'4': [2, 1, 1], '5': [2, 2, 1], '10': [3, 2, 2, 1, 1, 1]}",
+      "group": "representation",
+      "name": "SU2 restriction dimensions",
+      "pass": true
+    },
+    {
+      "detail": "2T/embedded-index={'4': 1, '5': 2, '10': 6}",
+      "group": "representation",
+      "name": "instanton indices",
+      "pass": true
+    },
+    {
+      "detail": "nu_R={'4': 1, '5': 0, '10': 0}",
+      "group": "representation",
+      "name": "mod-two Witten characters",
+      "pass": true
+    },
+    {
+      "detail": "Weyl copies=4; character=0",
+      "group": "representation",
+      "name": "two Dirac five character",
+      "pass": true
+    },
+    {
+      "detail": "one left-Weyl 4 has exponentiated eta phase -1",
+      "group": "representation",
+      "name": "fundamental negative control detects generator",
+      "pass": true
+    },
+    {
+      "detail": "moments={0: 0, 1: 0, 2: 0}",
+      "group": "regulator",
+      "name": "PV finite-difference moments",
+      "pass": true
+    },
+    {
+      "detail": "residual=0.000e+00",
+      "group": "regulator",
+      "name": "finite-matrix gamma5 hermiticity",
+      "pass": true
+    },
+    {
+      "detail": "det=0.941675000000-1.200e-17i",
+      "group": "regulator",
+      "name": "one-flavour determinant is real",
+      "pass": true
+    },
+    {
+      "detail": "det^2=0.886751805625",
+      "group": "regulator",
+      "name": "two identical flavours are nonnegative",
+      "pass": true
+    },
+    {
+      "detail": "fermion PV/gamma5 controls pass; four completion classes remain open",
+      "group": "regulator",
+      "name": "partial controls do not promote full regulator",
+      "pass": true
+    },
+    {
+      "detail": "masses={'+1': 0.0, '-1': -2.0, '0': -1.0}",
+      "group": "threshold",
+      "name": "positive-charge light tuning",
+      "pass": true
+    },
+    {
+      "detail": "masses={'+1': 2.0, '-1': 0.0, '0': 1.0}",
+      "group": "threshold",
+      "name": "opposite-charge negative control",
+      "pass": true
+    },
+    {
+      "detail": "signs={'+1': 1, '-1': -1, '0': -1}",
+      "group": "threshold",
+      "name": "declared mass signs",
+      "pass": true
+    },
+    {
+      "detail": "Delta theta_c/pi=2",
+      "group": "threshold",
+      "name": "local SU2c theta periodicity",
+      "pass": true
+    },
+    {
+      "detail": "Delta theta_H/pi=4",
+      "group": "threshold",
+      "name": "local U1H theta periodicity",
+      "pass": true
+    },
+    {
+      "detail": "2*(+1)+2*(-1)+1*0=0",
+      "group": "threshold",
+      "name": "complete five charge trace",
+      "pass": true
+    },
+    {
+      "detail": "light=2; heavy=-2; total=0",
+      "group": "threshold",
+      "name": "light plus heavy mixed coefficient",
+      "pass": true
+    },
+    {
+      "detail": "algebraic controls={'sigma_minus=-1,sigma_zero=-1': 0, 'sigma_minus=-1,sigma_zero=+1': 0, 'sigma_minus=+1,sigma_zero=-1': 0, 'sigma_minus=+1,sigma_zero=+1': 0}; no determinant evaluated",
+      "group": "threshold",
+      "name": "conditional uniform-flavour trace is mass-sign independent",
+      "pass": true
+    },
+    {
+      "detail": "Nc*Xq*B=2*(+1)*(+1)=2",
+      "group": "orientation",
+      "name": "physical infrared k=+2 orientation",
+      "pass": true
+    },
+    {
+      "detail": "Nc*Xq*B=2*(-1)*(+1)=-2",
+      "group": "orientation",
+      "name": "opposite branch orientation negative control",
+      "pass": true
+    },
+    {
+      "detail": "local theta periodicity is not eta matching; unbroken/gravitational APS ratios are open",
+      "group": "threshold",
+      "name": "APS determinant-ratio gates remain open",
+      "pass": true
+    },
+    {
+      "detail": "invertible character pairs=[(-1, -1), (-1, 1), (1, -1), (1, 1)]; microscopic realization not asserted",
+      "group": "target_eta",
+      "name": "all four abstract target torsion characters are enumerated",
+      "pass": true
+    },
+    {
+      "detail": "nu3 is the 1d spin Dirac mod-two index and nu2 is the 2d Arf invariant",
+      "group": "target_eta",
+      "name": "target torsion mod-two indices are defined",
+      "pass": true
+    },
+    {
+      "detail": "Nc mod 2=0",
+      "group": "target_eta",
+      "name": "G3 light reference parity",
+      "pass": true
+    },
+    {
+      "detail": "Nc*Nf*|c1| mod 2=0",
+      "group": "target_eta",
+      "name": "G2 unit-flux light reference parity",
+      "pass": true
+    },
+    {
+      "detail": "mass-family lift absent; abstract I3/I2 counterterms independently toggle characters",
+      "group": "target_eta",
+      "name": "reference controls do not select the microscopic pair",
+      "pass": true
+    },
+    {
+      "detail": "gauge character and target character have different bordism domains",
+      "group": "claim_boundary",
+      "name": "gauge bordism closes without selecting target eta",
+      "pass": true
+    },
+    {
+      "detail": "local theta shifts pass, but unbroken/gravitational APS determinant ratios are open",
+      "group": "claim_boundary",
+      "name": "local theta periodicity does not imply eta matching",
+      "pass": true
+    },
+    {
+      "detail": "full regulator, target eta, APS threshold, naturalness, and strong B=1 gates remain false",
+      "group": "claim_boundary",
+      "name": "no premature lane or portal promotion",
+      "pass": true
+    }
+  ],
+  "checks_passed": 39,
+  "checks_total": 39,
+  "conditional_uniform_flavour_trace_obstruction_verified": true,
+  "degree_one_portal_allowed": false,
+  "euclidean_regulator": {
+    "finite_matrix_gamma5_residual": 0.0,
+    "finite_matrix_one_flavour_determinant": {
+      "imag": -1.2000750812593938e-17,
+      "real": 0.941675
+    },
+    "gamma5_hermiticity": true,
+    "missing_for_completion": [
+      "regulator-field statistics and full K(t)/Lambda_a(t)/mass interpolation",
+      "APS boundary operator, domain, and zero-mode convention",
+      "finite local-counterterm and renormalization scheme",
+      "gauge-scalar-ghost regulator and measure"
+    ],
+    "pv_coefficients": [
+      1,
+      -3,
+      3,
+      -1
+    ],
+    "pv_mass_squared_nodes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pv_moments": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "scope": "partial_fermion_pv_gamma5_controls_only",
+    "two_identical_flavours_nonnegative_off_zero_locus": true
+  },
+  "fermion_pv_gamma5_controls_verified": true,
+  "gravitational_aps_phase_computed": false,
+  "heavy_pure_gauge_threshold_eta_matched": false,
+  "heavy_threshold_eta_matched": false,
+  "k_plus_two_all_scale_matched": false,
+  "k_plus_two_ir_orientation_derived": true,
+  "lane_closed": false,
+  "local_pure_gauge_theta_periodicity_check": true,
+  "omega5_generator": "embedded unit Sp(1) instanton on S4 times periodic S1; equivalently pi4 mapping torus",
+  "omega5_spin_bsp4": "Z2",
+  "omega5_spin_bsp4_computed": true,
+  "physics_promotion_allowed": false,
+  "remaining_blockers": [
+    "Specify regulator-field statistics, full K(t)/Lambda_a(t) interpolation, APS boundary data, finite local counterterms, and gauge-scalar-ghost regulators.",
+    "Construct one common regulated mass-family lift (g,s)->(A,Sigma,Phi,M,PV) and evaluate both G3 and G2 APS phases.",
+    "Evaluate the unbroken-group plus gravitational APS determinant ratio across the heavy threshold.",
+    "Test whether emergent flavour or explicit UV topological data evades the conditional uniform-flavour charge-trace obstruction.",
+    "Protect the light-branch tuning m=-yV against radiative thresholds.",
+    "Prove the charged two-colour phase and stable B=1 soliton nonperturbatively before any portal construction."
+  ],
+  "representation_characters": {
+    "SU2c_restrictions": {
+      "10": [
+        3,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "4": [
+        2,
+        1,
+        1
+      ],
+      "5": [
+        2,
+        2,
+        1
+      ]
+    },
+    "embedded_instanton_indices": {
+      "10": 6,
+      "4": 1,
+      "5": 2
+    },
+    "mod2_characters": {
+      "10": 0,
+      "4": 1,
+      "5": 0
+    },
+    "two_Dirac_5_Weyl_count": 4,
+    "two_Dirac_5_total_character": 0
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_sp4_eta_bordism_threshold.tex",
+      "sha256": "827b4471ceaca7043947308e1ae9eb7c37093338e2bf881e9af615feba42f936",
+      "size_bytes": 35879
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_sp4_eta_bordism_threshold.bib",
+      "sha256": "9bf27cf0c4540f2bf5b3a72413513d2ff48094653e53b432bad0cd54f06d4687",
+      "size_bytes": 3558
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e6_sp4_eta_bordism_threshold.py",
+      "sha256": "8cb4e85cb1ef9ae3226813a39083c9f7df2830131c73152deef0c20217e2967a",
+      "size_bytes": 28674
+    }
+  ],
+  "sp4_euclidean_regulator_complete": false,
+  "sp4_gauge_bordism_character_trivial": true,
+  "sp4_group_notation": "Sp(4)_physics=USp(4)=Spin(5)=Sp(2)_math",
+  "status": "pass_with_exact_gauge_bordism_and_fail_closed_partial_audits",
+  "strong_b1_phase_proven": false,
+  "target_eta": {
+    "character_rows_are_invertible_counterterms_not_microscopic_regulators": true,
+    "conditional_no_defect_positive_pv_reference_pair": {
+      "G2": 1,
+      "G3": 1
+    },
+    "conditional_reference_is_first_principles_selection": false,
+    "domain": "reduced Omega_4^Spin(S3 x S2)=Z2+Z2",
+    "invertible_character_table": [
+      {
+        "epsilon_2": 0,
+        "epsilon_3": 0,
+        "phase_on_G2": 1,
+        "phase_on_G3": 1
+      },
+      {
+        "epsilon_2": 1,
+        "epsilon_3": 0,
+        "phase_on_G2": -1,
+        "phase_on_G3": 1
+      },
+      {
+        "epsilon_2": 0,
+        "epsilon_3": 1,
+        "phase_on_G2": 1,
+        "phase_on_G3": -1
+      },
+      {
+        "epsilon_2": 1,
+        "epsilon_3": 1,
+        "phase_on_G2": -1,
+        "phase_on_G3": -1
+      }
+    ],
+    "mass_family_lift_supplied": false,
+    "mod2_invariants_defined": true,
+    "reference_light_parities": {
+      "G2": 0,
+      "G3": 0
+    },
+    "unique_pair_selected": false
+  },
+  "target_mapping_torus_eta_pair_selected": false,
+  "threshold": {
+    "charge_trace_is_determinant_calculation": false,
+    "conditional_uniform_flavour_charge_trace_mass_sign_controls": {
+      "sigma_minus=+1,sigma_zero=+1": 0,
+      "sigma_minus=+1,sigma_zero=-1": 0,
+      "sigma_minus=-1,sigma_zero=+1": 0,
+      "sigma_minus=-1,sigma_zero=-1": 0
+    },
+    "gravitational_aps_phase_computed": false,
+    "ir_k_B_plus_one": 2,
+    "local_pure_gauge_theta_shift_over_pi": {
+      "SU2c": 2,
+      "U1H": 4
+    },
+    "mixed_coefficients": {
+      "full_complete_5": 0,
+      "heavy_q_minus_and_neutral": -2,
+      "light_q_plus": 2
+    },
+    "negative_charge_light_control_masses": {
+      "+1": 2.0,
+      "-1": 0.0,
+      "0": 1.0
+    },
+    "opposite_branch_k_B_plus_one": -2,
+    "positive_charge_light_masses": {
+      "+1": 0.0,
+      "-1": -2.0,
+      "0": -1.0
+    },
+    "positive_charge_light_signs_with_mu": {
+      "+1": 1,
+      "-1": -1,
+      "0": -1
+    },
+    "unbroken_group_aps_determinant_ratio_computed": false,
+    "weights_and_multiplicities": [
+      {
+        "charge": 1,
+        "multiplicity": 2
+      },
+      {
+        "charge": -1,
+        "multiplicity": 2
+      },
+      {
+        "charge": 0,
+        "multiplicity": 1
+      }
+    ]
+  },
+  "threshold_radiatively_protected": false,
+  "unbroken_group_aps_determinant_ratio_computed": false,
+  "uniform_flavour_threshold_no_go_proven": false
+}

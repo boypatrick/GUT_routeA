@@ -6,7 +6,113 @@ Last updated: 2026-07-16
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E completion-frontier checkpoint (2026-07-16; current authority)
+## AP-E6 same-background checkpoint (2026-07-16; current authority)
+
+Status: **three rigorous advances, three full lanes still open, and no
+portal work started.**  This round strengthens the meaning of closure rather
+than promoting a partial calculation.
+
+### Lane A -- simply connected `Sp(4)`
+
+- The revised **39/39** card computes, in physics/mathematics notation,
+  `Omega_5^Spin(BSp(4)_phys)=Omega_5^Spin(BSp(2)_math)=Z2`.  A unit instanton
+  on `S4` times the nonbounding spin circle generates it.  Restriction to the
+  instanton `SU(2)` gives mod-two characters
+  `(chi_4,chi_5,chi_10)=(-1,+1,+1)`, so the displayed two Dirac `5`s have
+  trivial dynamical gauge-bordism character.
+- This does **not** select the two independent target characters on
+  `G3=S1_R x S3` and `G2=T2_Arf=1 x S2`.  Their common microscopic
+  Dirac--Yukawa mass-family lift and APS problem are still absent.
+- Fermionic gamma-five reality and three PV moment identities pass, but the
+  full interpolation/kernel, regulator statistics, APS domain, finite local
+  scheme, and gauge--scalar--ghost regulators are not specified.  Hence
+  `sp4_euclidean_regulator_complete=false`.
+- The light `B=+1` orientation is `k_IR=+2`.  The complete-`5` identity
+  `+2-2=0` is only a conditional uniform-flavour obstruction.  A local
+  pure-gauge theta-periodicity check is not an unbroken/gravitational APS
+  determinant ratio; `heavy_threshold_eta_matched=false` and the lane stays
+  open.
+
+### Lane B -- one canonical relaxed `B=1` field
+
+- The **20/20** card solves a coupled continuum `F(r),s(r)` hedgehog-sector
+  BVP, not the old analytic profile.  It is
+  solved at `R=8,10,12,16`.  At `R=16`,
+  `E/(4 pi)=6.1282155`, `s(0)=0.9171289646`, and `B=+1`.  The canonical
+  4097-point little-endian `(r,F,s)` checksum is
+  `81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59`.
+- The analytic CSR `n+s` Hessian is exactly differentiated from one declared
+  cubic energy, includes the sphere multiplier, and projects translations and
+  isorotations.  The diquark and free toron/ghost blocks use separately
+  declared grids/boundaries and are audited rather than merged.  Consequently
+  the aggregate same-grid sparse-Hessian gate is false.
+- The crucial negative result is numerical, not semantic.  At fixed `L=8`,
+  `(N,B_a,gradient_density)` is approximately
+  `(9,.168,.348)`, `(13,.440,.430)`, `(17,.625,.422)`.  The sampled
+  continuum solution is not stationary for the cubic action and its lattice
+  degree is not converged.  Its negative projected curvatures are therefore
+  off-shell diagnostics, not physical instability eigenvalues.  The sampled
+  boundary also differs from the exact vacuum by about `.0493` at `L=8`.
+- The `n_s_sparse_constrained_second_variation_complete` subgate is true, but
+  `sparse_projected_hessian_complete_in_declared_sector`,
+  `discrete_stationarity_achieved`, `lattice_topology_converged_to_B1`,
+  `multigrid_multivolume_converged`, the full fermionic super-Hessian, 4d
+  importance sampling, and the quantum-continuum gate all remain false.
+
+### Lane C -- Yukawa/Callias/CPT/WZW on that checksum
+
+- The revised **25/25** verifier imports Lane B's public solver and hard-matches the
+  canonical `(r,F,s)` checksum.  Its declared Yukawa term couples to `F` and
+  explicitly decouples `s`; it does not silently substitute another soliton.
+- The localized internal stabilizer is exactly `Z2`, so the physical orbit is
+  `SU(2)/Z2=SO(3)`, not `CP1`.  Combined space--isospin quotienting gives the
+  same orbit.  The separate scalar-vacuum `CP1` has norm proportional to
+  volume and is a bulk Goldstone direction.
+- Constant asymptotic mass makes the ordinary static Callias boundary bundle
+  trivial and its index zero.  Four-dimensional spectral flow can still be
+  `B=1`; it does not force a static endpoint zero mode.
+- A new two-band no-go is exact under its stated assumptions: a globally
+  gapped `2x2` mass in a trivial rank-two bundle has `c1(E_+)^2=0`, whereas
+  the desired `c1=x+2y` has square `4xy`.  A future model needs at least three
+  bands, a nontrivial ambient bundle, or an infinite-dimensional family.
+- The universal differential character is now typed on `SU(2) x CP1` before
+  evaluation and fiber integration.  This is a local restricted ansatz, not
+  the missing full equivariant cocycle/vertical-holonomy proof.  The physical
+  CPT regulator, `O(2)` determinant line, gauge-basic microscopic descent,
+  and same-soliton composition remain false.
+
+### Portal decision and next ordered work
+
+The independent **15/15** AP-E6 frontier card recomputes each lane as a conjunction.
+All three are false, so `any_preportal_route_closed=false`, portal start is
+unauthorized, `degree_one_portal.constructed=false`, and
+`physics_promotion_allowed=false`.
+
+1. **Regulator/threshold route:** write one explicit five-dimensional
+   interpolation with APS domains and local scheme for every fermion, PV,
+   gauge, scalar, and ghost field; compute both target generator phases plus
+   the unbroken and gravitational heavy ratios.  A direct
+   `SU(2)c x SU(2)H` completion remains the backup if complete-`5` threshold
+   matching cannot preserve `+2`.
+2. **On-shell Hessian route:** re-relax the field for each cubic action until
+   the projected gradient meets a preregistered tolerance, use a geometric
+   lattice-degree estimator, then repeat spacing/volume limits before adding
+   Wilson/overlap determinant curvature and dynamical 4d ensembles.
+   Before raising the Hessian-completeness gate, add pure-`n`, pure-`s`,
+   `n-s` cross, and cell-local geodesic probes; replace raw IPR by a physical
+   participation volume and enlarge the three-point diquark volume fit.
+3. **Physical-moduli route:** preferentially quantize the actual `SO(3)` (or
+   its `SU(2)` FR cover), calculate its torsion determinant line and CPT/FR
+   holonomy, and ask whether that observable can replace the discarded free
+   `O(2)` class.  In parallel, test a rank-three mass-family construction
+   against the `c1^2` obstruction and a uniform Fredholm-gap gate.
+4. Build a degree-one Route-E portal only after one entire route above closes.
+
+Canonical evidence is under `route_f/tex/ap_e6_*`, `route_f/code/*ap_e6*`,
+and `route_f/output/ap_e6_*`; the master derivation ledger records the full
+formula chain and rollback boundary.
+
+## AP-E completion-frontier checkpoint (2026-07-16; superseded above)
 
 Status: **formal derivations and finite controls complete; all three
 pre-portal physics lanes remain open.** The integrated promotion verifier is

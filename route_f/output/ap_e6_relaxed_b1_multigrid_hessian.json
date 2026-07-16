@@ -1,0 +1,987 @@
+{
+  "algebraic_hessian_multigrid_control_pass": true,
+  "all_blocks_assembled_on_one_same_grid_and_boundary_condition": false,
+  "all_pass": true,
+  "artifact": "AP-E6 coupled relaxed B=1 multigrid sparse-Hessian audit",
+  "checks": [
+    {
+      "detail": "hashed=3/3",
+      "group": "P0_provenance",
+      "name": "script, independent derivation, and bibliography exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "points=4097; checksum=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "P0_provenance",
+      "name": "the public same-solution API produces canonical r-F-s arrays with a SHA-256 checksum",
+      "pass": true
+    },
+    {
+      "detail": "max residual=2.956e-07",
+      "group": "P1_relaxation",
+      "name": "the coupled F-s BVP converges from the regular origin series",
+      "pass": true
+    },
+    {
+      "detail": "B=0.999999999686; min s=0.917128965",
+      "group": "P1_relaxation",
+      "name": "the relaxed solution has B=+1 and the breathing amplitude remains positive",
+      "pass": true
+    },
+    {
+      "detail": "virial/E=1.796e-07; curvature=8.08175706",
+      "group": "P1_relaxation",
+      "name": "the generalized Derrick virial identity is satisfied",
+      "pass": true
+    },
+    {
+      "detail": "delta E=3.988e-06; delta s0=1.133e-07",
+      "group": "P2_volume",
+      "name": "R=12 to R=16 stabilises energy and the coupled core field",
+      "pass": true
+    },
+    {
+      "detail": "errors=[0.8319822650099871, 0.5599876462859643, 0.37464574146737817]",
+      "group": "P3_multigrid",
+      "name": "the fixed-volume B estimator improves monotonically with resolution",
+      "pass": true
+    },
+    {
+      "detail": "projected negative=[-10.792219279276424, -23.42271591904794, -28.44285305075885]; diquark positive=[1.2190889714700144, 1.2235741122210273, 1.224884179556587]",
+      "group": "P3_multigrid",
+      "name": "the exact off-shell projector detects a negative meson-breathing curvature while the diquark block stays positive",
+      "pass": true
+    },
+    {
+      "detail": "delta projected=5.020e+00; delta diquark=1.310e-03",
+      "group": "P3_multigrid",
+      "name": "the final refinement exposes nonconvergence of the off-shell curvature while the diquark gap remains controlled",
+      "pass": true
+    },
+    {
+      "detail": "inverse participation ratios=[0.5079310927762034, 0.30844271552165403, 0.1421571026828438]",
+      "group": "P3_multigrid",
+      "name": "the negative mode is strongly localised and is not misreported as a continuum collective zero mode",
+      "pass": true
+    },
+    {
+      "detail": "projected negative=[-28.418471544202234, -28.440046592199526, -28.44285305075885]; diquark positive=[2.453698743285602, 1.540651003481715, 1.224884179556587]",
+      "group": "P4_multivolume",
+      "name": "fixed-spacing volume scan reproduces the negative projected mode and positive diquark gap",
+      "pass": true
+    },
+    {
+      "detail": "delta projected=2.806e-03; Delta extrapolate=0.813709480; fit rms=1.278e-03",
+      "group": "P4_multivolume",
+      "name": "the negative mode stabilises and the unbound diquark level has the expected 1/L^2 threshold extrapolation",
+      "pass": true
+    },
+    {
+      "detail": "idem=6.791e-17; orth=6.224e-15; eig overlap=2.275e-16",
+      "group": "P5_projector",
+      "name": "translation-isorotation projector is idempotent and horizontal",
+      "pass": true
+    },
+    {
+      "detail": "dofs=13500; nnz=395538; residual=6.538e-17",
+      "group": "P5_projector",
+      "name": "the exact n+s sparse Hessian is symmetric",
+      "pass": true
+    },
+    {
+      "detail": "best relative residual=1.023e-09",
+      "group": "P5_projector",
+      "name": "an independent exponential-map energy difference reproduces v^T H_tan v",
+      "pass": true
+    },
+    {
+      "detail": "max residual=8.687e-16",
+      "group": "P6_gauge_ghost",
+      "name": "toron and constant-ghost projectors are idempotent and orthogonal",
+      "pass": true
+    },
+    {
+      "detail": "max xi residual=1.137e-13",
+      "group": "P6_gauge_ghost",
+      "name": "free gauge/ghost determinant ratio obeys the xi cancellation law",
+      "pass": true
+    },
+    {
+      "detail": "lambda0=-1.634223328",
+      "group": "P7_negative_controls",
+      "name": "a strong attractive diquark core creates a tachyon",
+      "pass": true
+    },
+    {
+      "detail": "leakage=1.000000000000",
+      "group": "P7_negative_controls",
+      "name": "omitting one collective vector is detected by unit leakage",
+      "pass": true
+    },
+    {
+      "detail": "dE/dscale=3.308299766",
+      "group": "P7_negative_controls",
+      "name": "removing the Skyrme term destroys Derrick stationarity",
+      "pass": true
+    }
+  ],
+  "checks_passed": 20,
+  "checks_total": 20,
+  "continuum_bvp_volume_converged": true,
+  "continuum_quantum_phase_proven": false,
+  "convergence_summary": {
+    "diquark_linear_in_inverse_L_squared_extrapolate": 0.8137094800144598,
+    "diquark_linear_in_inverse_L_squared_fit_rms": 0.0012784012219477386,
+    "final_diquark_grid_change": 0.001310067335559717,
+    "final_projected_grid_change": 5.020137131710911,
+    "fixed_spacing_volume_diquark_minima": [
+      2.453698743285602,
+      1.540651003481715,
+      1.224884179556587
+    ],
+    "fixed_spacing_volume_projected_minima": [
+      -28.418471544202234,
+      -28.440046592199526,
+      -28.44285305075885
+    ],
+    "fixed_volume_B_errors": [
+      0.8319822650099871,
+      0.5599876462859643,
+      0.37464574146737817
+    ],
+    "fixed_volume_diquark_minima": [
+      1.2190889714700144,
+      1.2235741122210273,
+      1.224884179556587
+    ],
+    "fixed_volume_lowest_mode_inverse_participation_ratios": [
+      0.5079310927762034,
+      0.30844271552165403,
+      0.1421571026828438
+    ],
+    "fixed_volume_projected_minima": [
+      -10.792219279276424,
+      -23.42271591904794,
+      -28.44285305075885
+    ],
+    "projected_multigrid_converged": false,
+    "reason_projected_multigrid_not_converged": "sampled continuum BVP is not re-relaxed on each cubic lattice; gradient density remains O(0.4) and the topology estimator is not yet near B=1"
+  },
+  "coupled_bvp": {
+    "canonical_same_solution": {
+      "box": 16.0,
+      "model": {
+        "beta": 0.5,
+        "breathing_mass": 2.5,
+        "diquark_charge": 2,
+        "diquark_core_coupling": -0.3,
+        "diquark_mass_sq": 0.81,
+        "skyrme_coefficient": 1.0
+      },
+      "profile_sha256_r_F_s_little_endian_float64": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "public_solver_api": "route_f.code.scan_ap_e6_relaxed_b1_multigrid_hessian.solve_relaxed_profile",
+      "sample_points": 4097
+    },
+    "equations": "coupled Euler-Lagrange BVP for F(r) and s(r)",
+    "final_core_field_change": 1.1329868787601782e-07,
+    "final_energy_change": 3.987611208344788e-06,
+    "volume_sequence": [
+      {
+        "B_numeric": 0.9999999998321626,
+        "B_residual": 1.6783741063619573e-10,
+        "E2": 2.57453158525569,
+        "E4": 3.308800551162621,
+        "E_mass": 0.23777299385435788,
+        "E_s_kinetic": 0.0017084900684602687,
+        "E_s_potential": 0.005665233785659377,
+        "box": 8.0,
+        "breathing_at_origin": 0.9171364441021772,
+        "bvp_max_rms_residual": 2.119347151249917e-07,
+        "bvp_nodes": 521,
+        "derrick_relative_residual": 0.00036645193234316324,
+        "derrick_virial": -0.002245792918418976,
+        "energy_dimensionless_integral": 6.128478854126788,
+        "minimum_breathing": 0.9171364441021772,
+        "origin_slope": 2.2376585807687537,
+        "scale_second_derivative": 8.078230468165346
+      },
+      {
+        "B_numeric": 1.0000000000272067,
+        "B_residual": 2.7206681352254236e-11,
+        "E2": 2.5741064156836515,
+        "E4": 3.3083616735438004,
+        "E_mass": 0.23840194296430026,
+        "E_s_kinetic": 0.001708782832631668,
+        "E_s_potential": 0.00566874972222895,
+        "box": 10.0,
+        "breathing_at_origin": 0.9171298748001382,
+        "bvp_max_rms_residual": 2.681256767691826e-07,
+        "bvp_nodes": 575,
+        "derrick_relative_residual": 5.456649138215745e-05,
+        "derrick_virial": -0.0003343969679294734,
+        "energy_dimensionless_integral": 6.128247564746612,
+        "minimum_breathing": 0.9171298748001382,
+        "origin_slope": 2.2374403403577845,
+        "scale_second_derivative": 8.081147503206775
+      },
+      {
+        "B_numeric": 0.9999999997167915,
+        "B_residual": 2.832084566861681e-10,
+        "E2": 2.5740286048436554,
+        "E4": 3.30830843699682,
+        "E_mass": 0.23850447602232988,
+        "E_s_kinetic": 0.0017088183132232245,
+        "E_s_potential": 0.005669176565989064,
+        "box": 12.0,
+        "breathing_at_origin": 0.9171290779057458,
+        "bvp_max_rms_residual": 2.9561090265817475e-07,
+        "bvp_nodes": 565,
+        "derrick_relative_residual": 8.168126954386945e-06,
+        "derrick_virial": -5.00560749844281e-05,
+        "energy_dimensionless_integral": 6.128219512742017,
+        "minimum_breathing": 0.9171290779057458,
+        "origin_slope": 2.2374138712522336,
+        "scale_second_derivative": 8.081658789523553
+      },
+      {
+        "B_numeric": 0.9999999996863905,
+        "B_residual": 3.1360947172487386e-10,
+        "E2": 2.574013281347761,
+        "E4": 3.3083008666765905,
+        "E_mass": 0.23852331647913558,
+        "E_s_kinetic": 0.0017088233568078996,
+        "E_s_potential": 0.005669237270514682,
+        "box": 16.0,
+        "breathing_at_origin": 0.917128964607058,
+        "bvp_max_rms_residual": 2.7447098143984733e-07,
+        "bvp_nodes": 580,
+        "derrick_relative_residual": 1.796155938704659e-07,
+        "derrick_virial": -1.1007230709125793e-06,
+        "energy_dimensionless_integral": 6.128215525130809,
+        "minimum_breathing": 0.917128964607058,
+        "origin_slope": 2.2374101061560756,
+        "scale_second_derivative": 8.081757055851082
+      }
+    ]
+  },
+  "coupled_hedgehog_sector_stationary": true,
+  "diquark_separate_quadratic_block_audited": true,
+  "discrete_stationarity_achieved": false,
+  "dynamical_4d_importance_sampling_performed": false,
+  "epistemic_scope": {
+    "calculation": "deterministic classical continuum BVP plus finite-difference sparse second variation",
+    "exactly_differentiated_sector": "unit O(4) meson n plus neutral breathing scalar s on an open sampled-profile boundary",
+    "excluded": "fermion determinant, interacting colour links, four-dimensional path integral, HMC, continuum quantum extrapolation",
+    "separate_not_same_grid_audits": "charge-two Delta Dirichlet spectrum and periodic free gauge/ghost algebra"
+  },
+  "fail_closed": {
+    "HMC_or_Monte_Carlo_performed": false,
+    "all_blocks_assembled_on_one_same_grid_and_boundary_condition": false,
+    "continuum_quantum_phase_proven": false,
+    "degree_one_route_E_portal_allowed": false,
+    "discrete_stationarity_achieved": false,
+    "dynamical_4d_importance_sampling_performed": false,
+    "dynamical_colour_links_included": false,
+    "fermion_determinant_included": false,
+    "finite_amplitude_global_unwinding_excluded": false,
+    "full_gauge_meson_ghost_fermion_hessian_complete": false,
+    "full_three_dimensional_continuum_stationarity_proven": false,
+    "lane_closed": false,
+    "lattice_topology_converged_to_B1": false,
+    "microscopic_charged_QC2D_phase_proven": false,
+    "multigrid_multivolume_converged": false,
+    "physical_projected_hessian_at_stationary_discrete_solution": false,
+    "physics_promotion_allowed": false,
+    "sparse_projected_hessian_complete_in_declared_sector": false
+  },
+  "full_gauge_meson_ghost_fermion_hessian_complete": false,
+  "full_three_dimensional_continuum_stationarity_proven": false,
+  "gauge_ghost": {
+    "constant_ghost_zero_modes": 1,
+    "extent": 5,
+    "gauge_projector_idempotency_residual": 4.528032034182377e-17,
+    "gauge_projector_orthogonality_residual": 8.68722560872908e-16,
+    "ghost_projector_idempotency_residual": 1.0679996564221767e-17,
+    "ghost_projector_orthogonality_residual": 2.7755575615628914e-16,
+    "maximum_xi_corrected_residual": 1.1368683772161603e-13,
+    "spacing": 0.8,
+    "toron_zero_modes": 3,
+    "xi_rows": [
+      {
+        "gauge_zero_modes": 3,
+        "ghost_zero_modes": 1,
+        "minimum_nonzero_gauge_eigenvalue": 2.159321892578269,
+        "minimum_nonzero_ghost_eigenvalue": 2.159321892578284,
+        "xi": 0.5,
+        "xi_corrected_log_weight": 133.1004108726683,
+        "xi_corrected_residual": 0.0
+      },
+      {
+        "gauge_zero_modes": 3,
+        "ghost_zero_modes": 1,
+        "minimum_nonzero_gauge_eigenvalue": 2.1593218925782787,
+        "minimum_nonzero_ghost_eigenvalue": 2.159321892578284,
+        "xi": 1.0,
+        "xi_corrected_log_weight": 133.10041087266842,
+        "xi_corrected_residual": 1.1368683772161603e-13
+      },
+      {
+        "gauge_zero_modes": 3,
+        "ghost_zero_modes": 1,
+        "minimum_nonzero_gauge_eigenvalue": 1.079660946289138,
+        "minimum_nonzero_ghost_eigenvalue": 2.159321892578284,
+        "xi": 2.0,
+        "xi_corrected_log_weight": 133.10041087266836,
+        "xi_corrected_residual": 5.684341886080802e-14
+      }
+    ]
+  },
+  "gauge_ghost_separate_periodic_algebra_block_audited": true,
+  "lane_closed": false,
+  "lattice_topology_converged_to_B1": false,
+  "model": {
+    "beta": 0.5,
+    "breathing_mass": 2.5,
+    "diquark_charge": 2,
+    "diquark_core_coupling": -0.3,
+    "diquark_mass_sq": 0.81,
+    "skyrme_coefficient": 1.0
+  },
+  "multigrid_multivolume_converged": false,
+  "multigrid_scan": [
+    {
+      "B_lattice": 0.16801773499001288,
+      "L": 8.0,
+      "N": 9,
+      "a": 1.0,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          9.182448920017663,
+          9.182448920017663,
+          9.182448920017663,
+          11.721314767590586,
+          11.721314767590592,
+          11.721314767590592
+        ]
+      },
+      "diquark_lowest": [
+        1.2190889714700144,
+        1.6871021969866031,
+        1.6871021969866071,
+        1.6871021969866111,
+        2.1292098417141685
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 7.260215929772962e-10,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 1.97701037762954e-08,
+            "analytic_quadratic_form": 7.657140111075515,
+            "finite_difference": 7.657140130845619,
+            "relative_residual": 2.5819174638974327e-09,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 5.5592490610933964e-09,
+            "analytic_quadratic_form": 7.657140111075515,
+            "finite_difference": 7.657140116634764,
+            "relative_residual": 7.260215929772962e-10,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 5.5592490610933964e-09,
+            "analytic_quadratic_form": 7.657140111075515,
+            "finite_difference": 7.657140116634764,
+            "relative_residual": 7.260215929772962e-10,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 1715,
+      "energy_lattice": 42.81849798956539,
+      "gradient_l2_density": 0.34766007275647054,
+      "hessian_nnz": 35506,
+      "hessian_symmetry_residual": 4.8289670807998395e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.04927112376097919,
+      "maximum_boundary_s_distance_from_vacuum": 0.00015494670171778413,
+      "reduced_dofs": 1372,
+      "spectrum": {
+        "collective_Hq_norms": [
+          4.399096911206142,
+          4.399096911206142,
+          4.399096911206146,
+          1.7584555743559305,
+          1.7584555743559303,
+          1.7584555743559283
+        ],
+        "collective_rayleigh": [
+          1.6395577098354535,
+          1.6395577098354592,
+          1.6395577098354623,
+          0.9419013647968759,
+          0.9419013647968748,
+          0.9419013647968741
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.5079310927762034,
+        "lowest_mode_max_to_mean_node_amplitude": 65.47556663513905,
+        "penalty": 265.0,
+        "projected_eigenvector_collective_overlap": 1.1348475005996126e-14,
+        "projected_lowest": [
+          -10.792219279276424
+        ],
+        "projector_idempotency_residual": 5.1937471655896846e-17,
+        "projector_orthogonality_residual": 1.412064909445121e-15,
+        "raw_lowest": [
+          -11.526428021421165
+        ]
+      }
+    },
+    {
+      "B_lattice": 0.4400123537140357,
+      "L": 8.0,
+      "N": 13,
+      "a": 0.6666666666666665,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          40.885593797496895,
+          40.88559379749693,
+          40.88559379749696,
+          48.19170762657306,
+          48.19170762657309,
+          48.19170762657311
+        ]
+      },
+      "diquark_lowest": [
+        1.2235741122210273,
+        1.706272392465238,
+        1.7062723924652488,
+        1.7062723924652494,
+        2.164442861206969
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 5.716460050529019e-10,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 8.012102981069802e-09,
+            "analytic_quadratic_form": 4.628805295484971,
+            "finite_difference": 4.628805303497074,
+            "relative_residual": 1.7309224453413424e-09,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 2.646038055331701e-09,
+            "analytic_quadratic_form": 4.628805295484971,
+            "finite_difference": 4.628805292838933,
+            "relative_residual": 5.716460050529019e-10,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 2.3962320128134706e-08,
+            "analytic_quadratic_form": 4.628805295484971,
+            "finite_difference": 4.628805271522651,
+            "relative_residual": 5.176782905841391e-09,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 6655,
+      "energy_lattice": 56.70681531974393,
+      "gradient_l2_density": 0.4301831894013416,
+      "hessian_nnz": 150050,
+      "hessian_symmetry_residual": 5.979245488122833e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.04927112376097919,
+      "maximum_boundary_s_distance_from_vacuum": 0.00015494670171778413,
+      "reduced_dofs": 5324,
+      "spectrum": {
+        "collective_Hq_norms": [
+          7.6030508390138065,
+          7.6030508390138065,
+          7.603050839013796,
+          2.204521755983966,
+          2.2045217559839663,
+          2.204521755983967
+        ],
+        "collective_rayleigh": [
+          1.4509037062862011,
+          1.4509037062862007,
+          1.4509037062861982,
+          0.3572268659695598,
+          0.3572268659695578,
+          0.3572268659695576
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.30844271552165403,
+        "lowest_mode_max_to_mean_node_amplitude": 174.1803184670851,
+        "penalty": 557.5944101334214,
+        "projected_eigenvector_collective_overlap": 8.543513119185775e-17,
+        "projected_lowest": [
+          -23.42271591904794
+        ],
+        "projector_idempotency_residual": 9.773833683207649e-17,
+        "projector_orthogonality_residual": 5.6343818499726694e-15,
+        "raw_lowest": [
+          -23.989128494983674
+        ]
+      }
+    },
+    {
+      "B_lattice": 0.6253542585326218,
+      "L": 8.0,
+      "N": 17,
+      "a": 0.5,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          97.14358322507836,
+          97.14358322507843,
+          97.14358322507854,
+          135.67846532550175,
+          135.6784653255019,
+          135.6784653255019
+        ]
+      },
+      "diquark_lowest": [
+        1.224884179556587,
+        1.7131367064828715,
+        1.7131367064828875,
+        1.7131367064828897,
+        2.1769858706343643
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 1.0225823196307679e-09,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 3.3816189848323575e-09,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.306940598690744,
+            "relative_residual": 1.0225823196307679e-09,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 2.504009044557165e-08,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.3069405702690347,
+            "relative_residual": 7.571980724749294e-09,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 1.2451607345198568e-07,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.3069404707930516,
+            "relative_residual": 3.7652951380079506e-08,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 16875,
+      "energy_lattice": 64.24791193270921,
+      "gradient_l2_density": 0.42170621616870146,
+      "hessian_nnz": 395538,
+      "hessian_symmetry_residual": 6.537897098730719e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.04927112376097919,
+      "maximum_boundary_s_distance_from_vacuum": 0.00015494670171778413,
+      "reduced_dofs": 13500,
+      "spectrum": {
+        "collective_Hq_norms": [
+          8.796567439012353,
+          8.796567439012351,
+          8.796567439012335,
+          2.3875640077235833,
+          2.3875640077235842,
+          2.387564007723583
+        ],
+        "collective_rayleigh": [
+          1.1055404866195504,
+          1.1055404866195402,
+          1.1055404866195346,
+          0.11530655958414916,
+          0.1153065595841491,
+          0.11530655958414805
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.1421571026828438,
+        "lowest_mode_max_to_mean_node_amplitude": 249.90895451352762,
+        "penalty": 1365.5399952375205,
+        "projected_eigenvector_collective_overlap": 2.2749272084177097e-16,
+        "projected_lowest": [
+          -28.44285305075885
+        ],
+        "projector_idempotency_residual": 6.791300953192041e-17,
+        "projector_orthogonality_residual": 6.224187831804784e-15,
+        "raw_lowest": [
+          -28.62691992420374
+        ]
+      }
+    }
+  ],
+  "multivolume_scan": [
+    {
+      "B_lattice": 0.6211214567762887,
+      "L": 4.0,
+      "N": 9,
+      "a": 0.5,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          76.97526770247623,
+          76.97526770247624,
+          76.97526770247624,
+          121.37300617753732,
+          121.37300617753735,
+          121.37300617753739
+        ]
+      },
+      "diquark_lowest": [
+        2.453698743285602,
+        4.261656435016471,
+        4.261656435016471,
+        4.261656435016484,
+        6.037628977413954
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 2.5243454493832145e-09,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 5.8508563327563934e-08,
+            "analytic_quadratic_form": 4.178084527351102,
+            "finite_difference": 4.178084585859665,
+            "relative_residual": 1.4003681099448282e-08,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 1.0546928663757171e-08,
+            "analytic_quadratic_form": 4.178084527351102,
+            "finite_difference": 4.17808453789803,
+            "relative_residual": 2.5243454493832145e-09,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 3.896863809416118e-08,
+            "analytic_quadratic_form": 4.178084527351102,
+            "finite_difference": 4.17808456631974,
+            "relative_residual": 9.326914723495848e-09,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 1715,
+      "energy_lattice": 62.38138541652337,
+      "gradient_l2_density": 1.3224622044161523,
+      "hessian_nnz": 35506,
+      "hessian_symmetry_residual": 6.928495111035769e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.3500832587494269,
+      "maximum_boundary_s_distance_from_vacuum": 0.006765381303463713,
+      "reduced_dofs": 1372,
+      "spectrum": {
+        "collective_Hq_norms": [
+          9.40235867885084,
+          9.402358678850849,
+          9.402358678850838,
+          3.209813877926556,
+          3.209813877926556,
+          3.2098138779265577
+        ],
+        "collective_rayleigh": [
+          1.754203203699112,
+          1.7542032036991124,
+          1.754203203699112,
+          1.0178858699332058,
+          1.0178858699332074,
+          1.0178858699332065
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.14181648550065784,
+        "lowest_mode_max_to_mean_node_amplitude": 29.476149833374322,
+        "penalty": 1365.5399952375205,
+        "projected_eigenvector_collective_overlap": 2.5268348069311386e-16,
+        "projected_lowest": [
+          -28.418471544202234
+        ],
+        "projector_idempotency_residual": 4.295255322700772e-17,
+        "projector_orthogonality_residual": 1.1275702593849246e-15,
+        "raw_lowest": [
+          -28.626704532523252
+        ]
+      }
+    },
+    {
+      "B_lattice": 0.6252153611466273,
+      "L": 6.0,
+      "N": 13,
+      "a": 0.5,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          93.30561399677114,
+          93.30561399677117,
+          93.30561399677124,
+          133.84998972236343,
+          133.84998972236346,
+          133.8499897223637
+        ]
+      },
+      "diquark_lowest": [
+        1.540651003481715,
+        2.3915325420592035,
+        2.3915325420592084,
+        2.391532542059216,
+        3.2100869014209943
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 3.3407547257208336e-09,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 1.682391648216708e-08,
+            "analytic_quadratic_form": 3.4716086335055554,
+            "finite_difference": 3.471608650329472,
+            "relative_residual": 4.846144326233758e-09,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 1.1597792948236929e-08,
+            "analytic_quadratic_form": 3.4716086335055554,
+            "finite_difference": 3.4716086219077624,
+            "relative_residual": 3.3407547257208336e-09,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 8.265206652424695e-08,
+            "analytic_quadratic_form": 3.4716086335055554,
+            "finite_difference": 3.471608550853489,
+            "relative_residual": 2.3808002355607312e-08,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 6655,
+      "energy_lattice": 63.963097605412045,
+      "gradient_l2_density": 0.6715171452520234,
+      "hessian_nnz": 150050,
+      "hessian_symmetry_residual": 6.672710634168238e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.12017505176174617,
+      "maximum_boundary_s_distance_from_vacuum": 0.0009621453572608019,
+      "reduced_dofs": 5324,
+      "spectrum": {
+        "collective_Hq_norms": [
+          8.864156824416481,
+          8.86415682441648,
+          8.864156824416483,
+          2.5079119418180285,
+          2.507911941818026,
+          2.507911941818029
+        ],
+        "collective_rayleigh": [
+          1.1713580553052954,
+          1.1713580553052991,
+          1.1713580553052974,
+          0.23843532706878762,
+          0.23843532706878773,
+          0.23843532706878734
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.14211794830695543,
+        "lowest_mode_max_to_mean_node_amplitude": 103.95974820232578,
+        "penalty": 1365.5399952375205,
+        "projected_eigenvector_collective_overlap": 1.5910666881224778e-16,
+        "projected_lowest": [
+          -28.440046592199526
+        ],
+        "projector_idempotency_residual": 7.663756307655595e-17,
+        "projector_orthogonality_residual": 4.322930902134203e-15,
+        "raw_lowest": [
+          -28.626919908418735
+        ]
+      }
+    },
+    {
+      "B_lattice": 0.6253542585326218,
+      "L": 8.0,
+      "N": 17,
+      "a": 0.5,
+      "boundary_condition": "sampled continuum profile frozen on cubic boundary; not overwritten by vacuum",
+      "collective_basis": {
+        "labels": [
+          "translation_1",
+          "translation_2",
+          "translation_3",
+          "isorotation_1",
+          "isorotation_2",
+          "isorotation_3"
+        ],
+        "raw_gram_eigenvalues": [
+          97.14358322507836,
+          97.14358322507843,
+          97.14358322507854,
+          135.67846532550175,
+          135.6784653255019,
+          135.6784653255019
+        ]
+      },
+      "diquark_lowest": [
+        1.224884179556587,
+        1.7131367064828715,
+        1.7131367064828875,
+        1.7131367064828897,
+        2.1769858706343643
+      ],
+      "directional_second_difference": {
+        "best_relative_residual": 1.0225823196307679e-09,
+        "method": "sitewise S3 exponential map plus centred energy difference",
+        "rows": [
+          {
+            "absolute_residual": 3.3816189848323575e-09,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.306940598690744,
+            "relative_residual": 1.0225823196307679e-09,
+            "step": 0.002
+          },
+          {
+            "absolute_residual": 2.504009044557165e-08,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.3069405702690347,
+            "relative_residual": 7.571980724749294e-09,
+            "step": 0.001
+          },
+          {
+            "absolute_residual": 1.2451607345198568e-07,
+            "analytic_quadratic_form": 3.306940595309125,
+            "finite_difference": 3.3069404707930516,
+            "relative_residual": 3.7652951380079506e-08,
+            "step": 0.0005
+          }
+        ]
+      },
+      "embedding_dofs": 16875,
+      "energy_lattice": 64.24791193270921,
+      "gradient_l2_density": 0.42170621616870146,
+      "hessian_nnz": 395538,
+      "hessian_symmetry_residual": 6.537897098730719e-17,
+      "maximum_boundary_n_distance_from_vacuum": 0.04927112376097919,
+      "maximum_boundary_s_distance_from_vacuum": 0.00015494670171778413,
+      "reduced_dofs": 13500,
+      "spectrum": {
+        "collective_Hq_norms": [
+          8.796567439012353,
+          8.796567439012351,
+          8.796567439012335,
+          2.3875640077235833,
+          2.3875640077235842,
+          2.387564007723583
+        ],
+        "collective_rayleigh": [
+          1.1055404866195504,
+          1.1055404866195402,
+          1.1055404866195346,
+          0.11530655958414916,
+          0.1153065595841491,
+          0.11530655958414805
+        ],
+        "lowest_mode_inverse_participation_ratio": 0.1421571026828438,
+        "lowest_mode_max_to_mean_node_amplitude": 249.90895451352762,
+        "penalty": 1365.5399952375205,
+        "projected_eigenvector_collective_overlap": 2.2749272084177097e-16,
+        "projected_lowest": [
+          -28.44285305075885
+        ],
+        "projector_idempotency_residual": 6.791300953192041e-17,
+        "projector_orthogonality_residual": 6.224187831804784e-15,
+        "raw_lowest": [
+          -28.62691992420374
+        ]
+      }
+    }
+  ],
+  "n_s_sparse_constrained_second_variation_complete": true,
+  "negative_controls": {
+    "no_skyrme_derrick_derivative": 3.3082997659535196,
+    "omitted_collective_direction_leakage": 1.000000000000004,
+    "strong_core_coupling": -5.0,
+    "strong_core_diquark_lowest": [
+      -1.6342233282777296,
+      1.1811017338409013,
+      1.181101733840908,
+      1.4300837867734544,
+      2.0814974451051644
+    ]
+  },
+  "negative_off_shell_projected_curvature_detected": true,
+  "off_shell_projected_curvature_diagnostic": true,
+  "physical_projected_hessian_at_stationary_discrete_solution": false,
+  "physics_promotion_allowed": false,
+  "projected_hessian_stability_gate_pass": false,
+  "runtime": {
+    "deterministic": true,
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "random_seed": 20260716,
+    "randomness_used_only_for_projector_probe": true,
+    "scipy": "1.13.1"
+  },
+  "same_relaxed_b1_solution_computed": true,
+  "schema_version": 1,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_relaxed_b1_multigrid_hessian.tex",
+      "sha256": "9b777bec08b0d06e18921110b5e31a871f10d1d29a1eaaa31eb39f2d4d459dfe",
+      "size_bytes": 19126
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_relaxed_b1_multigrid_hessian.bib",
+      "sha256": "be0aa6f57b40423f5a0f0ed3598a404d85d7d264bb5c9f6de6ac44d4a2d7ab50",
+      "size_bytes": 2899
+    }
+  ],
+  "sparse_projected_hessian_complete_in_declared_sector": false,
+  "status": "mechanical_pass_physics_fail_closed"
+}

@@ -1,0 +1,223 @@
+{
+  "all_pass": true,
+  "any_preportal_route_closed": false,
+  "canonical_same_background_sha256": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+  "checks": [
+    {
+      "detail": "hashed=10/10",
+      "group": "provenance",
+      "name": "all AP-E6 source sets exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "checks=39/39",
+      "group": "source_cards",
+      "name": "sp4 mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=False",
+      "group": "source_cards",
+      "name": "sp4 card forbids premature physics promotion",
+      "pass": true
+    },
+    {
+      "detail": "fresh=3/3; stale=[]",
+      "group": "provenance",
+      "name": "sp4 source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "checks=20/20",
+      "group": "source_cards",
+      "name": "b1 mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=False",
+      "group": "source_cards",
+      "name": "b1 card forbids premature physics promotion",
+      "pass": true
+    },
+    {
+      "detail": "fresh=3/3; stale=[]",
+      "group": "provenance",
+      "name": "b1 source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "checks=25/25",
+      "group": "source_cards",
+      "name": "callias mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=False",
+      "group": "source_cards",
+      "name": "callias card forbids premature physics promotion",
+      "pass": true
+    },
+    {
+      "detail": "fresh=5/5; stale=[]",
+      "group": "provenance",
+      "name": "callias source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "B1=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59; Callias=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "same_background",
+      "name": "Callias/CPT/WZW card consumes the canonical relaxed B=1 profile",
+      "pass": true
+    },
+    {
+      "detail": "source=False; recomputed=False; inputs={'sp4_euclidean_regulator_complete': False, 'omega5_spin_bsp4_computed': True, 'target_mapping_torus_eta_pair_selected': False, 'heavy_threshold_eta_matched': False, 'threshold_radiatively_protected': False, 'strong_b1_phase_proven': False}",
+      "group": "closure_logic",
+      "name": "sp4 source lane flag equals the independent conjunction",
+      "pass": true
+    },
+    {
+      "detail": "source=False; recomputed=False; inputs={'same_relaxed_b1_solution_computed': True, 'multigrid_multivolume_converged': False, 'sparse_projected_hessian_complete_in_declared_sector': False, 'all_blocks_assembled_on_one_same_grid_and_boundary_condition': False, 'discrete_stationarity_achieved': False, 'lattice_topology_converged_to_B1': False, 'physical_projected_hessian_at_stationary_discrete_solution': False, 'projected_hessian_stability_gate_pass': False, 'full_gauge_meson_ghost_fermion_hessian_complete': False, 'dynamical_4d_importance_sampling_performed': False, 'continuum_quantum_phase_proven': False}",
+      "group": "closure_logic",
+      "name": "b1 source lane flag equals the independent conjunction",
+      "pass": true
+    },
+    {
+      "detail": "source=False; recomputed=False; inputs={'same_physical_moduli_space_derived': False, 'actual_yukawa_callias_operator_derived': False, 'uniform_fredholm_gap_proven': False, 'determinant_line_o2_derived': False, 'physical_cpt_regulator_derived': False, 'gauge_basic_wzw_descent_proven': False, 'same_soliton_composition_closed': False}",
+      "group": "closure_logic",
+      "name": "callias source lane flag equals the independent conjunction",
+      "pass": true
+    },
+    {
+      "detail": "any_closed=False; constructed=False",
+      "group": "portal",
+      "name": "portal construction obeys the one-complete-lane prerequisite",
+      "pass": true
+    }
+  ],
+  "checks_passed": 15,
+  "checks_total": 15,
+  "closure_inputs": {
+    "relaxed_b1_full_hessian": {
+      "all_blocks_assembled_on_one_same_grid_and_boundary_condition": false,
+      "continuum_quantum_phase_proven": false,
+      "discrete_stationarity_achieved": false,
+      "dynamical_4d_importance_sampling_performed": false,
+      "full_gauge_meson_ghost_fermion_hessian_complete": false,
+      "lattice_topology_converged_to_B1": false,
+      "multigrid_multivolume_converged": false,
+      "physical_projected_hessian_at_stationary_discrete_solution": false,
+      "projected_hessian_stability_gate_pass": false,
+      "same_relaxed_b1_solution_computed": true,
+      "sparse_projected_hessian_complete_in_declared_sector": false
+    },
+    "same_soliton_callias_descent": {
+      "actual_yukawa_callias_operator_derived": false,
+      "determinant_line_o2_derived": false,
+      "gauge_basic_wzw_descent_proven": false,
+      "physical_cpt_regulator_derived": false,
+      "same_physical_moduli_space_derived": false,
+      "same_soliton_composition_closed": false,
+      "uniform_fredholm_gap_proven": false
+    },
+    "sp4_eta_threshold": {
+      "heavy_threshold_eta_matched": false,
+      "omega5_spin_bsp4_computed": true,
+      "sp4_euclidean_regulator_complete": false,
+      "strong_b1_phase_proven": false,
+      "target_mapping_torus_eta_pair_selected": false,
+      "threshold_radiatively_protected": false
+    }
+  },
+  "physics_promotion_allowed": false,
+  "portal": {
+    "constructed": false,
+    "decision": "No complete pre-portal lane is closed.  In accordance with the ordered research rule, the degree-one Route-E portal is not started.",
+    "start_authorized": false
+  },
+  "route_closure": {
+    "relaxed_b1_full_hessian": false,
+    "same_soliton_callias_descent": false,
+    "sp4_eta_threshold": false
+  },
+  "schema_version": "ap_e6_execution_frontier_v1",
+  "source_card_counts": {
+    "b1": {
+      "passed": 20,
+      "total": 20
+    },
+    "callias": {
+      "passed": 25,
+      "total": 25
+    },
+    "sp4": {
+      "passed": 39,
+      "total": 39
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e6_execution_frontier.py",
+      "sha256": "7d14a56109e1b33019887e63960f9d3aa1ef1c2c511900bba6fe8c73d2145dbc",
+      "size_bytes": 11466
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_sp4_eta_bordism_threshold.tex",
+      "sha256": "827b4471ceaca7043947308e1ae9eb7c37093338e2bf881e9af615feba42f936",
+      "size_bytes": 35879
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_sp4_eta_bordism_threshold.bib",
+      "sha256": "9bf27cf0c4540f2bf5b3a72413513d2ff48094653e53b432bad0cd54f06d4687",
+      "size_bytes": 3558
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e6_sp4_eta_bordism_threshold.py",
+      "sha256": "8cb4e85cb1ef9ae3226813a39083c9f7df2830131c73152deef0c20217e2967a",
+      "size_bytes": 28674
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_relaxed_b1_multigrid_hessian.tex",
+      "sha256": "9b777bec08b0d06e18921110b5e31a871f10d1d29a1eaaa31eb39f2d4d459dfe",
+      "size_bytes": 19126
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_relaxed_b1_multigrid_hessian.bib",
+      "sha256": "be0aa6f57b40423f5a0f0ed3598a404d85d7d264bb5c9f6de6ac44d4a2d7ab50",
+      "size_bytes": 2899
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_same_soliton_yukawa_callias.tex",
+      "sha256": "12f59e5ad643b60cacb96c0548d5fd56256d693f274bb692c1df81674c25f8ad",
+      "size_bytes": 43381
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_same_soliton_yukawa_callias.bib",
+      "sha256": "d9f40779644cf1e383ae5e38450103f96dc1b140af1b3c4883d88e39ba64ca3c",
+      "size_bytes": 3642
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e6_same_soliton_yukawa_callias.py",
+      "sha256": "0bf309f95d61c34f8aad1c0988ba8d3517b713111d7c5f9a66c27e68eb34c8c7",
+      "size_bytes": 37545
+    }
+  ],
+  "summary": {
+    "passed": 15,
+    "total": 15
+  }
+}

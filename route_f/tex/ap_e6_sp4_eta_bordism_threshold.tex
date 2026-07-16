@@ -1,0 +1,907 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{slashed}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\SF}{\operatorname{SF}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E6: The Simply Connected \(Sp(4)\) Candidate\\
+Partial Euclidean Controls, Gauge Bordism, Target-Space Eta No-Go,\\
+and Heavy-Threshold Audit}
+\author{Route F independent research note}
+\date{16 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We complete a sharply delimited audit of the proposed simply connected
+deep group
+\(Sp(4)_{\rm phys}=USp(4)=Spin(5)=Sp(2)_{\rm math}\).  First, we give a
+Euclidean action ansatz and verify two limited fermionic controls for two
+Dirac \(\bm5\)'s: gamma-five reality/positivity and three Pauli--Villars
+moment identities.  This is \emph{not} a complete Euclidean regulator.
+In particular, the regulator-field statistics and full mass interpolation,
+APS boundary data, finite local-counterterm scheme, and regulated
+gauge--scalar--ghost measure have not been specified.
+
+Second, an explicit Atiyah--Hirzebruch spectral-sequence computation gives
+\[
+ \boxed{\Omega^{\mathrm{Spin}}_5(BSp(2))\simeq\ZZ_2.}
+\]
+Its generator is an embedded unit \(Sp(1)\) instanton on \(S^4\), times the
+periodic spin circle, equivalently the mapping torus of the nontrivial
+element of \(\pi_4(Sp(2))\).  Restriction to this \(Sp(1)\) gives mod-two
+indices \(\nu_{\bm4}=1\), \(\nu_{\bm5}=0\), and
+\(\nu_{\bm{10}}=0\).  Hence the displayed two Dirac \(\bm5\)'s define the
+trivial character of the nonzero bordism class.  The dynamical
+\(Sp(4)\) gauge-bordism anomaly gate is therefore closed for this field
+list.
+
+Third, this result does \emph{not} select the two target-space signs on
+\(G_3=S^1_{\rm R}\times S^3\) and
+\(G_2=T^2_{\rm RR}\times S^2\).  Those signs are characters of
+\(\widetilde\Omega^{\mathrm{Spin}}_4(S^3\times S^2)\), and require a mass
+map from the sigma-model target into the regulated Fredholm family.  The
+current \(Sp(4)\) action specifies neither the composite pion lift nor the
+full \(s\)-dependent Dirac--Yukawa/PV family.  We prove underdetermination
+by enumerating the independent torsion invertible sectors/counterterms
+that flip either character while leaving the gauge character and de Rham
+curvature fixed.  This enumeration is not a microscopic realization of
+those sectors.
+
+Finally, threshold bookkeeping produces a stronger obstruction.  The
+\(\bm5\) branches as
+\(\bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0\).  Uniform flavour action on the
+complete irrep gives
+\(2(+1)+2(-1)+0=0\).  Under the additional hypothesis that the chiral
+flavour symmetry acts uniformly and exactly on the complete \(\bm5\), the
+light/heavy charge traces are conditionally \(+2\) and \(-2\).  This is an
+algebraic obstruction, not an evaluated heavy determinant.
+The physical \(B=+1\) infrared orientation \(k_{\rm IR}=+2\) is derived,
+but it can survive only if the chiral flavour symmetry is emergent below
+the breaking threshold or if new UV topological data are added.  Neither
+option is yet a closed first-principles completion.  No Route-E portal is
+authorized.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, notation, and exact claim boundary}
+
+Throughout this note ``\(Sp(4)\)'' means the physics group with a
+four-dimensional defining representation,
+\begin{equation}
+ G=Sp(4)_{\rm phys}=USp(4)=Spin(5)=Sp(2)_{\rm math}.
+ \label{eq:notation}
+\end{equation}
+This convention is essential when reading bordism tables.  The candidate
+field content is
+\begin{equation}
+ \Psi_i\in\bm5\ \text{Dirac},\quad i=1,2;
+ \qquad
+ \Phi_I\in\bm4\ \text{complex},\quad I=1,2;
+ \qquad
+ \Sigma\in\bm{10}\ \text{real}.
+ \label{eq:fields}
+\end{equation}
+The copy index \(I\) carries the desired global \(SU(2)_\phi\); it is not a
+gauge weight.  The standard branch through
+\(Spin(4)=SU(2)_c\times SU(2)_H\) is
+\begin{align}
+ \bm4&\longrightarrow(\bm2,\bm1)\oplus(\bm1,\bm2),
+ \label{eq:four-spin4}\\
+ \bm5&\longrightarrow(\bm2,\bm2)\oplus(\bm1,\bm1),
+ \label{eq:five-spin4}\\
+ \bm{10}&\longrightarrow(\bm3,\bm1)\oplus(\bm1,\bm3)
+                       \oplus(\bm2,\bm2).
+ \label{eq:ten-spin4}
+\end{align}
+After \(SU(2)_H\to U(1)_H\), with doublet weights normalized to
+\(q=\pm1\),
+\begin{align}
+ \bm4&\to\bm2_0\oplus\bm1_{+1}\oplus\bm1_{-1},
+ \label{eq:four-u1}\\
+ \bm5&\to\bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0,
+ \label{eq:five-u1}\\
+ \bm{10}&\to\bm1_{+2}\oplus\bm2_{+1}\oplus\bm3_0\oplus\bm1_0
+                 \oplus\bm2_{-1}\oplus\bm1_{-2}.
+ \label{eq:ten-u1}
+\end{align}
+These identities can be obtained from
+\(\bm5=\wedge^2\bm4-\bm1\) and
+\(\bm{10}=\Sym^2\bm4\) \cite{Slansky1981}.
+
+Four logically different questions will not be conflated:
+\begin{enumerate}[label=(\roman*)]
+\item whether the Euclidean \(Sp(4)\) path integral has been specified;
+\item whether its \emph{dynamical gauge} determinant line has a global
+  anomaly, classified here by \(\Omega^{\rm Spin}_5(BSp(2))\);
+\item which spin-torsion characters the induced \emph{target-space}
+  functional assigns to \(G_3\) and \(G_2\);
+\item whether the heavy threshold preserves the desired integer mixed-WZW
+  coefficient and the \(k=+2\) orientation.
+\end{enumerate}
+Only (ii) will close.  Question (i) has only partial fermion controls,
+(iii) is proved underdetermined, and (iv) has a conditional uniform-flavour
+trace obstruction but no APS determinant-ratio computation.  This separation follows the
+APS/Dai--Freed treatment of determinant phases
+\cite{AtiyahPatodiSinger1975,DaiFreed1994,WittenYonekura2019}.
+
+\section{Partial Euclidean fermion-regulator controls}
+
+\subsection{Bundles, hermiticity, and the bosonic action}
+
+Let \(M_4\) be a closed oriented Riemannian spin manifold and
+\(P\to M_4\) a principal \(G\)-bundle.  Write
+\(E_R=P\times_G R\), choose Hermitian Euclidean gamma matrices, and use an
+anti-Hermitian gauge connection \(A\).  If \(T_R^a\) are anti-Hermitian
+generators, define the Hermitian adjoint-Higgs endomorphism
+\begin{equation}
+ \widehat\Sigma_R:=-\ii\Sigma^aT_R^a,
+ \qquad \widehat\Sigma_R^\dagger=\widehat\Sigma_R.
+ \label{eq:sigma-hat}
+\end{equation}
+The gauge-fixed bosonic action may be chosen as
+\begin{align}
+ S_{E,{\rm bos}}={}&\int_{M_4}\!\dd^4x\sqrt g\,
+ \mathcal L_{\rm bos}+S_{\rm gf}+S_{\rm gh},
+ \label{eq:bosonic-action}\\
+ \mathcal L_{\rm bos}={}&
+ \frac1{2g_G^2}\tr(F_{\mu\nu}^\dagger F^{\mu\nu})
+ +\frac12(D_\mu\Sigma)^a(D^\mu\Sigma)^a
+ \notag\\
+ &
+ +\sum_{I=1}^2(D_\mu\Phi_I)^\dagger D^\mu\Phi_I
+ +V(\Sigma,\Phi),
+ \label{eq:bosonic-density}\\
+ V={}&\frac{\lambda_\Sigma}{4}
+   \bigl(\Sigma^a\Sigma^a-v_\Sigma^2\bigr)^2
+ +m_\Phi^2\sum_I\Phi_I^\dagger\Phi_I
+ +\kappa\sum_I\Phi_I^\dagger\widehat\Sigma_{\bm4}\Phi_I
+ \notag\\
+ &+\lambda_1\Bigl(\sum_I\Phi_I^\dagger\Phi_I\Bigr)^2
+ +\lambda_2\sum_{I,J}|\Phi_I^\dagger\Phi_J|^2.
+ \label{eq:potential}
+\end{align}
+Here \(\lambda_\Sigma,\lambda_1>0\) and
+\(\lambda_1+\lambda_2>0\) give a simple bounded quartic domain.  The
+copy-symmetric coefficients preserve \(SU(2)_\phi\).  A background
+\(R_\xi\) gauge fixing and its Faddeev--Popov determinant define
+\(S_{\rm gf}+S_{\rm gh}\) formally; no regulator for the
+gauge--scalar--ghost complex is supplied here.  This omission does not
+affect the separate bordism computation below, but it keeps the full
+Euclidean-regulator gate open.
+
+Choose an adjoint vacuum
+\begin{equation}
+ \langle\widehat\Sigma\rangle=V H,
+ \qquad H=-2\ii T_H^3,
+ \label{eq:adjoint-vev}
+\end{equation}
+where \(T_H^3\) is anti-Hermitian.  Thus \(H\) is Hermitian and has the
+real weights displayed in
+Eqs.~\eqref{eq:four-u1}--\eqref{eq:ten-u1}.  Because
+\(Spin(4)\hookrightarrow Spin(5)\) is injective, its central element
+\((-\bm1_c,-\bm1_H)\) maps to the nontrivial centre of \(Spin(5)\), not to
+the identity.  The unbroken group is consequently the direct product
+\(SU(2)_c\times U(1)_H\), rather than its diagonal \(\ZZ_2\) quotient.
+
+\subsection{Dirac--Yukawa operator and threshold masses}
+
+For each flavour let
+\begin{equation}
+ \mathcal K_{A,\Sigma}
+ :=\gamma^\mu(\nabla_\mu+A_\mu^{(\bm5)})
+ +m\bm1_{\bm5}+y\widehat\Sigma_{\bm5}.
+ \label{eq:dirac-yukawa}
+\end{equation}
+The fermion action is
+\begin{equation}
+ S_{E,{\rm f}}=\sum_{i=1}^2
+ \int_{M_4}\!\dd^4x\sqrt g\,\overline\Psi_i\mathcal K_{A,\Sigma}\Psi_i.
+ \label{eq:fermion-action}
+\end{equation}
+On the three branches of \(\bm5\),
+\begin{equation}
+ M_+=m+yV,
+ \qquad M_-=m-yV,
+ \qquad M_0=m.
+ \label{eq:masses-general}
+\end{equation}
+At the tree-level light-point \(m=-yV\), and with \(yV>0\),
+\begin{equation}
+ (M_+,M_-,M_0)=(0,-2yV,-yV).
+ \label{eq:masses-tuned}
+\end{equation}
+For determinant statements we keep a positive infrared mass
+\(M_+=\mu>0\) and take \(\mu\downarrow0\) only after all phases and zero
+modes have been recorded.
+
+The operator obeys
+\begin{equation}
+ \mathcal K_{A,\Sigma}^\dagger
+ =\gamma_5\mathcal K_{A,\Sigma}\gamma_5.
+ \label{eq:gamma5-hermiticity}
+\end{equation}
+Thus its nonreal eigenvalues occur in complex-conjugate pairs and
+\(\det\mathcal K\in\RR\).  For the two identical flavours,
+\begin{equation}
+ Z_{\Psi,\mu}=\bigl(\det\mathcal K_{A,\Sigma;\mu}\bigr)^2\ge0
+ \label{eq:two-flavour-positive}
+\end{equation}
+away from the declared zero locus.  This is a two-flavour positivity
+statement, not a claim that an arbitrary chiral mass family has positive
+determinant.
+
+\subsection{Pauli--Villars amplitude and eta phase}
+
+It is useful to separate the ultraviolet amplitude subtraction from the
+global phase.  Put
+\begin{equation}
+ c_a=(1,-3,3,-1),\qquad
+ \Lambda_a^2=a\Lambda^2,\qquad a=0,1,2,3,
+ \label{eq:pv-data}
+\end{equation}
+The finite-difference identities
+\begin{equation}
+ \sum_ac_a=\sum_ac_aa=\sum_ac_aa^2=0
+ \label{eq:pv-moments}
+\end{equation}
+remove the first three heat-kernel power moments in
+\begin{equation}
+ \log|\det\mathcal K|_{\rm PV}
+ =\frac12\sum_{a=0}^3c_a
+   \log\det\bigl(\mathcal K^\dagger\mathcal K+\Lambda_a^2\bigr).
+ \label{eq:pv-amplitude}
+\end{equation}
+The remaining logarithmic divergences would have to be removed by a
+declared finite gauge-invariant local-counterterm scheme.  Such a scheme is
+not supplied in this note.
+
+For the phase, a completed construction would choose a five-dimensional
+interpolation \(Y_5\), self-adjoint operators \(D_{Y,R,a}\), compatible APS
+boundary conditions, regulator statistics, and PV reference signs
+\(\sigma_a\in\{\pm1\}\).  Its torsion datum would have the schematic form
+\begin{equation}
+ \tau_R(Y_5;\sigma)
+ =\exp\!\left[2\pi\ii\sum_ac_a\sigma_a
+ \overline\eta(D_{Y,R,a})\right],
+ \qquad
+ \overline\eta=\frac{\eta+\dim\ker D}{2}.
+ \label{eq:eta-regulator}
+\end{equation}
+Once all boundary and interpolation data are supplied, APS gluing can make
+the torsion part a bordism character.  Here
+Eq.~\eqref{eq:eta-regulator} is only a template: neither the full
+\(\mathcal K(t),\Lambda_a(t)\) mass interpolation nor the APS boundary
+operator/domain, local counterterms, and gauge--scalar--ghost regulator are
+defined.
+
+\begin{proposition}[Partial fermion-regulator controls]
+Equations~\eqref{eq:gamma5-hermiticity}--\eqref{eq:pv-moments} establish
+gamma-five reality, two-flavour positivity away from the declared zero
+locus, and three PV moment identities.  They do not define the complete
+functional measure or its phase.  Consequently
+\begin{equation}
+ \texttt{fermion\_pv\_gamma5\_controls\_verified=true},\qquad
+ \texttt{sp4\_euclidean\_regulator\_complete=false}.
+ \label{eq:regulator-partial-gate}
+\end{equation}
+\end{proposition}
+
+\section{The exact gauge-bordism group}
+
+\subsection{AHSS computation}
+
+The integral cohomology ring is
+\begin{equation}
+ H^*(BSp(2);\ZZ)=\ZZ[q_1,q_2],
+ \qquad |q_1|=4,\quad |q_2|=8.
+ \label{eq:bsp-cohomology}
+\end{equation}
+Consequently, in degrees below eight,
+\begin{equation}
+ H_p(BSp(2);\ZZ)=
+ \begin{cases}
+ \ZZ,&p=0,4,\\
+ 0,&0<p<8,\ p\ne4,
+ \end{cases}
+ \label{eq:bsp-homology}
+\end{equation}
+and \(H_4(BSp(2);\ZZ_2)=\ZZ_2\).  The homological AHSS is
+\begin{equation}
+ E^2_{p,q}=H_p(BSp(2);\Omega_q^{\rm Spin})
+ \Longrightarrow\Omega_{p+q}^{\rm Spin}(BSp(2)),
+ \qquad
+ d_r:E^r_{p,q}\to E^r_{p-r,q+r-1}.
+ \label{eq:ahss}
+\end{equation}
+Use
+\begin{equation}
+ \Omega_0^{\rm Spin}=\ZZ,\quad
+ \Omega_1^{\rm Spin}=\ZZ_2,\quad
+ \Omega_2^{\rm Spin}=\ZZ_2,\quad
+ \Omega_3^{\rm Spin}=0,\quad
+ \Omega_4^{\rm Spin}=\ZZ,\quad
+ \Omega_5^{\rm Spin}=0.
+ \label{eq:spin-coefficients}
+\end{equation}
+On the total-degree-five diagonal the only nonzero term is
+\begin{equation}
+ E^2_{4,1}=H_4(BSp(2);\ZZ_2)=\ZZ_2.
+ \label{eq:unique-ahss-term}
+\end{equation}
+The outgoing maps are
+\begin{align}
+ d_2:E^2_{4,1}&\longrightarrow E^2_{2,2}=0,
+ \notag\\
+ d_3:E^3_{4,1}&\longrightarrow E^3_{1,3}=0,
+ \notag\\
+ d_4:E^4_{4,1}&\longrightarrow E^4_{0,4}=\ZZ.
+ \label{eq:outgoing}
+\end{align}
+The last homomorphism vanishes because there is no nonzero group
+homomorphism \(\ZZ_2\to\ZZ\).  There is no incoming \(d_2\), since
+\(E^2_{6,0}=H_6(BSp(2);\ZZ)=0\), and for \(r\ge3\) an incoming
+differential would start at negative coefficient degree.  Hence the class
+survives to \(E^\infty\), and there is no extension problem because it is
+the only filtration quotient.
+
+\begin{theorem}[Low-degree \(Sp(4)\) gauge bordism]
+For the simply connected group in Eq.~\eqref{eq:notation},
+\begin{equation}
+ \boxed{\Omega_5^{\rm Spin}(BSp(2))\simeq\ZZ_2.}
+ \label{eq:omega5-result}
+\end{equation}
+\end{theorem}
+This agrees with the direct \(Sp(n)\) analysis of Saito and Tachikawa
+\cite{SaitoTachikawa2025}; recent instanton zero-mode analysis is also
+given by Jia and Yi \cite{JiaYi2024}.
+
+\subsection{Geometric generator and representation character}
+
+Let \(P_1\to S^4\) be the unit instanton bundle for an embedded
+\(Sp(1)=SU(2)_c\subset Sp(2)\).  A geometric generator is
+\begin{equation}
+ Y_5=(S^4,P_1)\times S^1_{\rm R}.
+ \label{eq:geometric-generator}
+\end{equation}
+It is bordant to the mapping torus obtained by gluing the ends of
+\(S^4\times[0,1]\) with the nontrivial element of
+\(\pi_4(Sp(2))=\ZZ_2\), and also to the \(S^5\) clutching construction.
+For a four-dimensional left Weyl fermion in representation \(R\), product
+factorization gives
+\begin{equation}
+ \tau_R(Y_5)=(-1)^{\ind_{S^4}D_R}.
+ \label{eq:product-eta-index}
+\end{equation}
+
+Restrict Eqs.~\eqref{eq:four-spin4}--\eqref{eq:ten-spin4} to the instanton
+\(SU(2)_c\).  The required decompositions and instanton indices are
+\begin{align}
+ \bm4&\downarrow SU(2)_c=\bm2\oplus\bm1\oplus\bm1,
+ &\ind D_{\bm4}&=1,
+ \label{eq:index-four}\\
+ \bm5&\downarrow SU(2)_c=2\,\bm2\oplus\bm1,
+ &\ind D_{\bm5}&=2,
+ \label{eq:index-five}\\
+ \bm{10}&\downarrow SU(2)_c=\bm3\oplus2\,\bm2\oplus3\,\bm1,
+ &\ind D_{\bm{10}}&=4+2=6.
+ \label{eq:index-ten}
+\end{align}
+Here \(2T_{SU(2)}(\bm2)=1\) and
+\(2T_{SU(2)}(\bm3)=4\).  Equivalently, in the convention
+\(T_{Sp(2)}(\bm4)=1/2\),
+\begin{equation}
+ 2T(\bm4)=1,
+ \qquad2T(\bm5)=2,
+ \qquad2T(\bm{10})=6.
+ \label{eq:dynkin-mod2}
+\end{equation}
+Therefore
+\begin{equation}
+ \nu_{\bm4}=1,
+ \qquad \nu_{\bm5}=0,
+ \qquad \nu_{\bm{10}}=0
+ \quad\text{in }\ZZ_2.
+ \label{eq:characters}
+\end{equation}
+The fundamental \(\bm4\) detects the Witten class
+\cite{Witten1982,WangWenWitten2019}; the vector \(\bm5\) and adjoint
+\(\bm{10}\) do not.
+
+A Dirac \(\bm5\) is two left-Weyl \(\bm5\)'s after charge conjugation.
+For two Dirac flavours the exponent is
+\begin{equation}
+ \nu_{2{\rm D}\,\bm5}
+ =2\ {\rm flavours}\times2\ {\rm Weyl/Dirac}\times\nu_{\bm5}
+ =4\times0=0\pmod2.
+ \label{eq:dirac-character}
+\end{equation}
+Scalars do not contribute a fermionic Dai--Freed character.
+
+\begin{corollary}[Gauge-bordism gate closes]
+The complete dynamical \(Sp(4)\) gauge determinant for the displayed
+fermion list evaluates to \(+1\) on the generator of
+\(\Omega_5^{\rm Spin}(BSp(2))\).  Thus
+\begin{equation}
+ \texttt{sp4\_gauge\_bordism\_character\_trivial=true}.
+ \label{eq:gauge-gate-closed}
+\end{equation}
+This conclusion is stronger than merely observing that the fields are
+vectorlike: the nonzero bordism group and its representation character have
+both been computed.
+\end{corollary}
+
+\section{Why the two target mapping-torus phases remain undetermined}
+
+\subsection{Different domains for the two characters}
+
+Put \(X=S^3\times S^2\).  The target-space spin refinement is a character
+of
+\begin{equation}
+ \widetilde\Omega_4^{\rm Spin}(X)=\ZZ_2\oplus\ZZ_2,
+ \label{eq:target-bordism}
+\end{equation}
+with generators
+\begin{align}
+ G_3&=(S^1_{\rm R}\times S^3,\operatorname{pr}_{S^3},{\rm pt}),
+ \label{eq:G3}\\
+ G_2&=(T^2_{\rm RR}\times S^2,{\rm pt},\operatorname{pr}_{S^2}).
+ \label{eq:G2}
+\end{align}
+The most general torsion factor is
+\begin{equation}
+ Z_{\rm tor}(M,g,s)=(-1)^{\epsilon_3\nu_3(M,g)+
+                              \epsilon_2\nu_2(M,s)},
+ \qquad(\epsilon_3,\epsilon_2)\in\ZZ_2^2.
+ \label{eq:target-character}
+\end{equation}
+Here the invariants have a concrete mod-two definition.  For regular values
+\(p_3\in S^3\) and \(p_2\in S^2\), give
+\(L_g=g^{-1}(p_3)\) and \(\Sigma_s=s^{-1}(p_2)\) their induced spin
+structures and set
+\begin{equation}
+ \nu_3(M,g)=\dim\ker D_{L_g}\pmod2\in\Omega_1^{\rm Spin}=\ZZ_2,
+ \qquad
+ \nu_2(M,s)=\operatorname{Arf}(\Sigma_s)\in
+ \Omega_2^{\rm Spin}=\ZZ_2.
+ \label{eq:target-mod2-definitions}
+\end{equation}
+Their exponentials are abstract invertible spin-TQFT characters.  They may
+be stacked as torsion counterterms/sectors, but Eq.~\eqref{eq:target-character}
+does not by itself construct a massive microscopic regulator realizing any
+chosen pair.
+
+By contrast, Eq.~\eqref{eq:omega5-result} classifies gauge bundles on
+five-manifolds.  There is no canonical map
+\begin{equation}
+ \widetilde\Omega_4^{\rm Spin}(S^3\times S^2)
+ \longrightarrow\Omega_5^{\rm Spin}(BSp(2)).
+ \label{eq:no-canonical-map}
+\end{equation}
+To produce a determinant phase one must specify a regulated mass-family
+lift
+\begin{equation}
+ \mathfrak L:\ (g,s)\longmapsto
+ [A(g,s),\Sigma(g,s),\Phi(g,s),\mathcal M(g,s),\{c_a,\Lambda_a,\sigma_a\}]
+ \in\mathcal F_{\rm Fred}/\mathcal G,
+ \label{eq:mass-family-lift}
+\end{equation}
+and then pull back the determinant line and its Dai--Freed connection.
+The action in Section~2 only contains the elementary
+\(A,\Sigma,\Phi\).  It does not specify the composite pion
+\(g\)-dependent chiral mass, nor a complete \(s\)-dependent fermion
+Yukawa operator, nor the PV continuation along either generator.
+
+\begin{theorem}[Target eta underdetermination]
+The computation
+\(\Omega_5^{\rm Spin}(BSp(2))=\ZZ_2\) and the trivial gauge character of
+the two Dirac \(\bm5\)'s do not determine
+\((\epsilon_3,\epsilon_2)\).  With the current field/action data, neither
+\(\tau(G_3)\) nor \(\tau(G_2)\) is a defined microscopic number.
+\end{theorem}
+\begin{proof}
+The two putative characters have different bordism domains, as shown by
+Eqs.~\eqref{eq:target-bordism} and \eqref{eq:omega5-result}.  A comparison
+requires the extra map \(\mathfrak L\) in
+Eq.~\eqref{eq:mass-family-lift}.  It is absent.  Independently, the four
+characters in Eq.~\eqref{eq:target-character} are distinguished by the two
+mod-two indices in Eq.~\eqref{eq:target-mod2-definitions}.  Stacking either
+abstract invertible torsion sector has zero de Rham curvature and does not
+alter the \(Sp(4)\) gauge character or perturbative anomaly polynomial, but
+it flips one target character.  Because the microscopic theory has not
+fixed these invertible sectors/counterterms, all four character assignments
+remain compatible with the supplied local and gauge-bordism data.  This is
+an ambiguity statement, not a construction of four heavy determinants.
+\end{proof}
+
+The explicit negative-control table is
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+invertible sector/counterterm & \((\epsilon_3,\epsilon_2)\) & \(Z(G_3)\) & \(Z(G_2)\)\\
+\midrule
+reference & \((0,0)\) & \(+1\) & \(+1\)\\
+\(I_3=(-1)^{\nu_3}\) & \((1,0)\) & \(-1\) & \(+1\)\\
+\(I_2=(-1)^{\nu_2}\) & \((0,1)\) & \(+1\) & \(-1\)\\
+\(I_3I_2\) & \((1,1)\) & \(-1\) & \(-1\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+This table enumerates the character group and proves non-uniqueness of the
+present data.  It is neither a menu from which the desired answer may be
+selected nor evidence that any row has been generated by the displayed
+fermion determinant.
+
+\subsection{Conditional spectral controls}
+
+Define a conditional no-defect reference \({\cal C}_0\) on the retained
+branch by
+\begin{equation}
+ \mathcal K_{{\cal C}_0}(g,s)
+ =\slashed D_{A(s)}+
+ \mu\bigl(P_Lg+P_Rg^\dagger\bigr),
+ \qquad \mu>0,
+ \label{eq:conditional-c0}
+\end{equation}
+with the \(q=-1,0\) branch masses kept constant, a formally positive PV
+reference orientation, and no \(I_3\) or \(I_2\) counterterm.  Here \(A(s)\) is the pullback
+Hopf connection seen by the charge-one light branch.  This is a formal
+\emph{conditional low-energy} parity control; it is not the missing all-field
+deep-\(Sp(4)\) lift in Eq.~\eqref{eq:mass-family-lift}.
+
+Two useful parity controls then follow.  In the standard light two-colour
+chiral mass family, the \(S^3\) discrete-WZW parity is
+\begin{equation}
+ N_c\pmod2=2\pmod2=0.
+ \label{eq:g3-control}
+\end{equation}
+For a unit Hopf line over the \(S^2\) factor, the number of light charged
+zero-mode copies is
+\begin{equation}
+ N_cN_f|c_1|=2\cdot2\cdot1=4=0\pmod2.
+ \label{eq:g2-control}
+\end{equation}
+Thus the formal parity count in \({\cal C}_0\) would return \((+1,+1)\).
+It is not an evaluated microscopic eta invariant.  Stacking \(I_3\) or
+\(I_2\) changes the character without changing the stated
+light spectra.  Equations~\eqref{eq:g3-control} and
+\eqref{eq:g2-control} therefore cannot be promoted to a unique
+microscopic selection.
+
+\begin{gate}[Mapping-torus pair]
+Until Eq.~\eqref{eq:mass-family-lift} is supplied and the two APS problems
+are evaluated with the same PV convention,
+\begin{equation}
+ \texttt{target\_mapping\_torus\_eta\_pair\_selected=false}.
+ \label{eq:target-pair-false}
+\end{equation}
+\end{gate}
+
+\section{Heavy thresholds and the fate of
+\texorpdfstring{\(k=+2\)}{k=+2}}
+
+\subsection{Weight, multiplicity, mass-sign, and index ledger}
+
+For \(yV>0\), \(m=-yV\), and the positive light regulator mass \(\mu\),
+the complete one-flavour branch ledger is
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+branch & \(U(1)_H\) charge & \(SU(2)_c\) & multiplicity & mass & sign\\
+\midrule
+light & \(+1\) & \(\bm2\) & 2 & \(\mu\) & \(+\)\\
+charged heavy & \(-1\) & \(\bm2\) & 2 & \(-2yV\) & \(-\)\\
+neutral heavy & \(0\) & \(\bm1\) & 1 & \(-yV\) & \(-\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+There are two identical flavour copies.  Mass signs control theta-like
+threshold terms relative to the PV reference, whereas the mixed flavour
+coefficient below is a charge trace.  These two ledgers must not be
+identified.
+
+For negative real masses and a positive PV reference, the pure unbroken
+gauge theta shifts, in units of \(\pi\), are
+\begin{align}
+ \frac{\Delta\theta_c}{\pi}
+ &=N_f\,[2T_{SU(2)}(\bm2)]=2\cdot1=2,
+ \label{eq:theta-c}\\
+ \frac{\Delta\theta_H}{\pi}
+ &=N_f\,[\dim\bm2\,q^2]=2\cdot2\cdot1=4.
+ \label{eq:theta-h}
+\end{align}
+Both exponentiate trivially on integral instanton sectors.  The neutral
+branch has no gauge theta shift.  Flipping all PV reference signs changes
+these integers by even amounts for the two-flavour spectrum.  This is only
+a local pure-gauge theta-periodicity check in the stated normalization.  It
+is \emph{not} an APS eta or determinant-ratio matching calculation.  The
+unbroken-group Dai--Freed ratio, gravitational phase, spectral flow, and
+boundary zero-mode contribution remain open.
+
+As a second negative control, take \(m=+yV\).  Then
+\begin{equation}
+ (M_+,M_-,M_0)=(2yV,0,yV),
+ \label{eq:opposite-tuning}
+\end{equation}
+so the \(q=-1\), not the \(q=+1\), colour doublet is light.  Its infrared
+orientation is \(k=-2\).  This shows that the sign of \(k_{\rm IR}\) is
+fixed by the selected branch and generator orientation, not by the
+positivity of the full two-flavour measure.
+
+\subsection{Conditional uniform-flavour charge-trace obstruction}
+
+Let \(SU(2)_L\times SU(2)_R\) act uniformly on the two flavour copies of a
+complete \(\bm5\).  In the normalization where a retained
+\(\bm2_{+1}\) contributes \(+2\), the left mixed coefficient is
+\begin{equation}
+ \kappa_L^{\rm full}
+ =\sum_{w\in\bm5}q_w
+ =2(+1)+2(-1)+1(0)=0,
+ \qquad \kappa_R^{\rm full}=-\kappa_L^{\rm full}=0.
+ \label{eq:full-trace}
+\end{equation}
+Splitting light and heavy pieces gives
+\begin{equation}
+ \kappa_L^{\rm light}=+2,
+ \qquad
+ \kappa_L^{\rm heavy}=-2,
+ \qquad
+ \kappa_L^{\rm light}+\kappa_L^{\rm heavy}=0.
+ \label{eq:threshold-cancel}
+\end{equation}
+These are representation-theory charge traces, not terms extracted from an
+evaluated regulated determinant.  The split acquires threshold meaning only
+under the uniform exact-flavour and symmetry-preserving matching hypotheses
+stated next.
+This equality follows from tracelessness of the embedded semisimple
+generator.  It is independent of the signs in
+Eq.~\eqref{eq:masses-tuned}.  Indeed, multiplying an \(SU(2)\) chiral mass
+map by \(-1\) sends \(g\mapsto-g\), but
+\begin{equation}
+ (-g)^{-1}\dd(-g)=g^{-1}\dd g,
+ \label{eq:minus-g}
+\end{equation}
+so the normalized \(S^3\) winding form is unchanged.  Mass sign affects
+the separate theta ledger, not the charge-trace identity.
+
+\begin{proposition}[Conditional uniform-flavour trace obstruction]
+Assume the chiral flavour symmetry acts uniformly on a complete
+\(Sp(4)\) \(\bm5\), and the heavy threshold preserves that exact symmetry.
+Then the complete-irrep charge trace is zero, while its formal light/heavy
+decomposition is \(+2-2\).  Hence any symmetry-preserving matching
+construction would have to account for the heavy \(-2\) rather than simply
+discard it.  This conditional obstruction does not assert that the actual
+heavy determinant has been calculated.
+\end{proposition}
+\begin{proof}
+The assumed uniform flavour assignment makes the relevant representation
+trace additive over the five weights.  Equations~\eqref{eq:full-trace} and
+\eqref{eq:threshold-cancel} are then exact algebraic identities.  Promoting
+them to a statement about determinant phases requires the missing regulated
+mass interpolation and APS ratio; no such promotion is made here.
+\end{proof}
+
+This is the concrete \(Sp(4)\) realization of the recent semisimple
+deep-UV warning: a nonzero mixed WZW/2-group structure requires the
+relevant flavour and magnetic symmetries to emerge together below the
+semisimple breaking scale, rather than remain exact throughout the deep UV
+\cite{DavighiLohitsiri2024}.
+
+The actual operator \(m+y\widehat\Sigma_{\bm5}\) makes this distinction
+unavoidable.  A nonzero heavy-branch Dirac mass preserves only the vector
+flavour subgroup, not an exact independent
+\(SU(2)_L\times SU(2)_R\) acting on the full \(\bm5\).  The candidate can
+therefore evade the hypothesis of the proposition only by treating the desired
+chiral symmetry as emergent in the tuned light branch.  That is a logically
+consistent escape route, but it no longer supplies a deep-UV anomaly or
+2-group matching derivation of \(k=+2\); the emergence and threshold
+functional must be constructed explicitly.
+
+\subsection{What remains true about physical orientation}
+
+Choose the generator \(H\) so the retained colour doublet has
+\(X_q=+1\), and orient the baryon current so a soliton has \(B=+1\).  The
+light charged-two-colour sector then has
+\begin{equation}
+ n_{\rm IR}=N_cX_q=2,
+ \qquad
+ k_{\rm IR}=n_{\rm IR}B=+2.
+ \label{eq:k-ir}
+\end{equation}
+The opposite branch in Eq.~\eqref{eq:opposite-tuning} gives \(-2\), and
+CPT sends \(B\to-B\).  Thus Eq.~\eqref{eq:k-ir} is a physical, declared
+infrared orientation.  It is not an all-scale matching theorem.
+
+There are three logically possible repairs:
+\begin{enumerate}
+\item make \(SU(2)_L\times SU(2)_R\) emergent only after
+  \(Sp(4)\to SU(2)_c\times U(1)_H\), while explicitly tracking the
+  symmetry-emergence scale and every threshold;
+\item add a specified heavy invertible sector whose integer mixed
+  functional changes the threshold by \(+2\), then compute its two target
+  torsion signs with the same regulator;
+\item abandon the uniform complete-irrep flavour assignment and construct
+  a different anomaly-consistent UV representation set.
+\end{enumerate}
+Option 1 is closest to the known deep-UV mechanism, but none has yet been
+implemented in this candidate.
+
+\begin{gate}[Full heavy-threshold eta matching]
+Although the pure gauge theta shifts in
+Eqs.~\eqref{eq:theta-c}--\eqref{eq:theta-h} pass a local periodicity check,
+the unbroken-group and gravitational APS determinant ratios, target-dependent
+heavy determinant, and all-scale \(+2\) coefficient are not computed.
+Therefore
+\begin{equation}
+ \begin{gathered}
+ \texttt{local\_pure\_gauge\_theta\_periodicity\_check=true},\\
+ \texttt{unbroken\_group\_aps\_determinant\_ratio\_computed=false},\\
+ \texttt{gravitational\_aps\_phase\_computed=false},\\
+ \texttt{heavy\_threshold\_eta\_matched=false},\\
+ \texttt{k\_plus\_two\_ir\_orientation\_derived=true},\\
+ \texttt{k\_plus\_two\_all\_scale\_matched=false}.
+ \end{gathered}
+ \label{eq:threshold-gates}
+\end{equation}
+\end{gate}
+
+\section{Mechanical and numerical verification}
+
+The companion script performs exact rational/integer checks and small
+spectral controls.  Its independent tests include:
+\begin{enumerate}
+\item the low-degree \(BSp(2)\) AHSS diagonal and every possible incoming
+  and outgoing differential;
+\item the \(SU(2)_c\) restriction of \(\bm4,\bm5,\bm{10}\) and mod-two
+  Dynkin indices \((1,0,0)\);
+\item the four-Weyl multiplicity of two Dirac \(\bm5\)'s;
+\item the partial fermionic PV moments and gamma-five controls, together
+  with an explicit check that the full regulator gate remains false;
+\item both mass tunings, all charge multiplicities, and the local
+  pure-gauge theta-periodicity shifts \((2,4)\);
+\item the conditional uniform-flavour trace identity \(+2-2=0\), without
+  claiming an APS determinant evaluation;
+\item finite-mode gamma-five pairing and reference zero-mode parities for
+  \(G_3,G_2\);
+\item the four abstract target invertible characters, their mod-two-index
+  definitions, and all fail-closed booleans.
+\end{enumerate}
+Passing these checks validates the algebra and the conditional obstruction.  It does
+not convert a false physics gate into a true one.
+
+\section{Final theorem and gate ledger}
+
+\begin{theorem}[AP-E6 result]
+For the displayed simply connected \(Sp(4)\) field list:
+\begin{enumerate}
+\item fermionic gamma-five and PV-moment controls are explicit, but the
+  complete Euclidean regulator remains open;
+\item \(\Omega_5^{\rm Spin}(BSp(2))=\ZZ_2\), and the two Dirac
+  \(\bm5\)'s have trivial character on its generator;
+\item the target mapping-torus pair remains underdetermined because the
+  necessary mass-family lift is absent and abstract invertible torsion
+  sectors/counterterms can flip either character;
+\item the local pure-gauge theta shifts pass a periodicity check, while a
+  uniform complete-irrep flavour hypothesis gives only the conditional
+  charge-trace obstruction \(+2-2=0\); no heavy APS ratio is evaluated;
+\item the light \(B=+1\) sector has the physical orientation \(+2\), but
+  no all-scale \(+2\) matching, radiative protection, or nonperturbative
+  \(B=1\) phase is established.
+\end{enumerate}
+Consequently this work closes the dynamical gauge-bordism subgate, but not
+the Euclidean-regulator, heavy-threshold, or full \(Sp(4)\) lane.
+\end{theorem}
+
+\begin{longtable}{@{}L{0.42\textwidth}L{0.14\textwidth}L{0.38\textwidth}@{}}
+\toprule
+Gate & status & evidence\\
+\midrule
+\endfirsthead
+\toprule
+Gate & status & evidence\\
+\midrule
+\endhead
+Fermion PV/gamma-five controls & \status{partial} &
+Eqs.~\eqref{eq:gamma5-hermiticity}--\eqref{eq:pv-moments}\\
+Complete Euclidean \(Sp(4)\) regulator & \status{open} &
+mass interpolation, APS boundary/local scheme, and bosonic regulators absent\\
+\(\Omega_5^{\rm Spin}(BSp(2))\) & \status{closed} &
+AHSS gives the unique surviving \(E^2_{4,1}=\ZZ_2\)\\
+Displayed gauge-bordism character & \status{closed} &
+\(\nu_{\bm5}=0\), hence two Dirac \(\bm5\)'s are trivial\\
+Target \((\epsilon_3,\epsilon_2)\) & \status{open} &
+mass-family lift absent; four invertible characters remain possible\\
+Local pure-gauge theta periodicity & \status{checked} &
+local shifts \((2\pi,4\pi)\) exponentiate trivially\\
+Unbroken/gravitational APS threshold & \status{open} &
+no regulated determinant ratio, spectral flow, or boundary analysis\\
+Target-dependent heavy threshold & \status{open} &
+uniform exact flavour only conditionally gives the trace \(+2-2=0\)\\
+All-scale \(k=+2\) & \status{open} &
+only the light \(B=+1\) orientation is derived\\
+Radiative protection & \status{open} &
+\(m=-yV\) remains an unprotected cancellation\\
+Strong charged \(B=1\) phase & \status{open} &
+no dynamical lattice/continuum soliton proof in this note\\
+Full lane / Route-E portal & \status{blocked} &
+target eta, threshold, naturalness, and dynamics gates remain false\\
+\bottomrule
+\end{longtable}
+
+The machine-readable status is
+\begin{equation}
+ \begin{gathered}
+ \texttt{fermion\_pv\_gamma5\_controls\_verified=true},\\
+ \texttt{sp4\_euclidean\_regulator\_complete=false},\\
+ \texttt{omega5\_spin\_bsp4\_computed=true},\\
+ \texttt{target\_mapping\_torus\_eta\_pair\_selected=false},\\
+ \texttt{local\_pure\_gauge\_theta\_periodicity\_check=true},\\
+ \texttt{heavy\_threshold\_eta\_matched=false},\\
+ \texttt{threshold\_radiatively\_protected=false},\\
+ \texttt{strong\_b1\_phase\_proven=false},\\
+ \texttt{lane\_closed=false},\qquad
+ \texttt{physics\_promotion\_allowed=false}.
+ \end{gathered}
+ \label{eq:machine-status}
+\end{equation}
+
+\section{Next discriminating calculations}
+
+The following alternatives are ordered by information gain.
+\begin{enumerate}
+\item \textbf{Emergent-flavour construction.}  Specify the fields that
+  split the full \(\bm5\) flavour symmetry at the \(Sp(4)\) breaking scale,
+  derive the exact light flavour symmetry, and calculate the induced
+  integer threshold functional.  This directly tests whether the
+  semisimple no-go assumptions are escaped rather than merely violated.
+\item \textbf{Common target mass map.}  Construct
+  \(\mathfrak L(g,s)\) in Eq.~\eqref{eq:mass-family-lift} on both
+  \(G_3\) and \(G_2\), including every heavy branch and PV sign.  A single
+  lattice spectral-flow implementation should then compute both eta
+  phases without independent convention changes.
+\item \textbf{Alternative representation set.}  Search for complete
+  \(Sp(4)\) representations plus spectators whose exact flavour-weighted
+  charge trace is \(+2\), whose \(\ZZ_2\) gauge-bordism character vanishes,
+  and whose scalar sector still realizes the charge-one/exactly-two
+  operator.  The trace and mod-two-index constraints can be imposed before
+  any dynamical scan.
+\end{enumerate}
+No degree-one portal should be built until at least one full lane, including
+its nonperturbative \(B=1\) gate, closes.
+
+\bibliographystyle{unsrt}
+\bibliography{ap_e6_sp4_eta_bordism_threshold}
+
+\end{document}

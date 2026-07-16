@@ -10,7 +10,38 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E completion-frontier update (2026-07-16; current authority)
+## AP-E6 same-background update (2026-07-16; current authority)
+
+No Route-E dependency is removed in this round, but three stronger facts now
+replace the previous templates.
+
+- The simply connected physics `Sp(4)` candidate has the exact gauge result
+  `Omega_5^Spin(BSp(2))=Z2`; `4` detects its generator and `5,10` do not.
+  This does not determine either target-space torsion sign.  The full
+  Euclidean regulator and heavy/gravitational APS ratio remain open despite
+  successful PV-moment and local-periodicity controls.
+- A **20/20** canonical coupled continuum `B=1` card now exists with checksum
+  `81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59`.
+  Its analytically differentiated sparse cubic `n+s` Hessian is off shell;
+  the diquark/gauge/ghost controls are not one same-grid aggregate.  The
+  sampled cubic gradient is not small and the displayed lattice degree has
+  not converged to one.  No physical stability or quantum-phase claim is
+  imported into Route E.
+- The **25/25** Callias card consumes that exact checksum.  It proves that the
+  localized orbit is `SO(3)`, not `CP1`, and that the scalar-vacuum `CP1` is
+  nonnormalizable.  The ordinary endpoint Callias index is zero.  A separate
+  two-band theorem rules out `c1=x+2y` in a trivial rank-two gapped mass
+  family because its square is nonzero.  The WZW expression is now a typed
+  restricted ansatz, not full equivariant/gauge-basic descent.
+
+The integrated card passes **15/15**.  Consequently the `Sp(4)`,
+on-shell-Hessian, and same-soliton determinant-line
+closures are all false; no degree-one portal is authorized or constructed.
+The preferred continuation is to compute a complete APS threshold, re-relax
+each cubic solution before its Hessian, and quantize the actual `SO(3)`/FR
+collective coordinate (with a rank-three mass-family branch in parallel).
+
+## AP-E completion-frontier update (2026-07-16; superseded above)
 
 The next three pre-portal lanes have been executed and integrated without
 promoting a Route-E family claim.

@@ -1,0 +1,447 @@
+{
+  "actual_yukawa_callias_operator_derived": false,
+  "all_pass": true,
+  "checks": [
+    {
+      "detail": "hashed=5/5",
+      "group": "E6_0_provenance",
+      "name": "all AP-E6 and canonical Workline-B sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "Gram eigenvalues=[16.0, 16.0, 16.0]; orbit=SU(2)/Z2 = SO(3)",
+      "group": "E6_1_same_moduli",
+      "name": "hedgehog has no continuous internal stabilizer and orbit dimension three",
+      "pass": true
+    },
+    {
+      "detail": "H=Z2, so dim(G/H)=3 rather than 2",
+      "group": "E6_1_same_moduli",
+      "name": "physical hedgehog orbit is SO(3), not CP1",
+      "pass": true
+    },
+    {
+      "detail": "fitted power=3.000000000000001",
+      "group": "E6_1_same_moduli",
+      "name": "uniform scalar CP1 orientation has volume-divergent L2 norm",
+      "pass": true
+    },
+    {
+      "detail": "computed=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59; card=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "E6_2_same_profile",
+      "name": "canonical Workline-B (r,F,s) checksum equals the published B card",
+      "pass": true
+    },
+    {
+      "detail": "B=0.999999999686391; residual=3.136e-10",
+      "group": "E6_2_same_profile",
+      "name": "canonical Workline-B coupled profile remains a unit B=1 hedgehog",
+      "pass": true
+    },
+    {
+      "detail": "Phi_F -> beta M, Phi_F^2 -> M^2, so the essential threshold is |M|",
+      "group": "E6_2_same_profile",
+      "name": "the chiral Yukawa mass is invertible at infinity",
+      "pass": true
+    },
+    {
+      "detail": "Phi_infinity/|M|=sgn(M) beta is constant; E_+ is trivial and Ind=0",
+      "group": "E6_2_same_profile",
+      "name": "ordinary S2-infinity Callias positive-eigenbundle class is trivial",
+      "pass": true
+    },
+    {
+      "detail": "Ind(d_tau+H_tau)=SF(H_tau)=B conditionally; ker H_endpoint is not fixed",
+      "group": "E6_2_same_profile",
+      "name": "four-dimensional spectral flow is kept distinct from a static endpoint kernel",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "E6_3_wilson_control",
+      "name": "finite Wilson Hamiltonians are Hermitian",
+      "pass": true
+    },
+    {
+      "detail": "gaps=[0.010896960821179729, 0.28367497127235386]",
+      "group": "E6_3_wilson_control",
+      "name": "benchmark finite boxes have no accidental endpoint zero mode",
+      "pass": true
+    },
+    {
+      "detail": "relative difference=1.158173e-02",
+      "group": "E6_3_wilson_control",
+      "name": "right-U1 representatives of one CP1 point give different hedgehog operators",
+      "pass": true
+    },
+    {
+      "detail": "spectral residual=4.857e-17",
+      "group": "E6_3_wilson_control",
+      "name": "the representative ambiguity is nevertheless unitary isospectral",
+      "pass": true
+    },
+    {
+      "detail": "(x+2y)^2=4xy != 0 but f^*(u^2)=0 for f:S2xCP1->CP1",
+      "group": "E6_4_callias_family",
+      "name": "minimal two-band asymptotic mass cannot realize c1=x+2y",
+      "pass": true
+    },
+    {
+      "detail": "kernel=4.156e-16; gap=0.999999999999999",
+      "group": "E6_4_callias_family",
+      "name": "rank-three spectator Veronese template has an exact O(2) kernel line",
+      "pass": true
+    },
+    {
+      "detail": "c1=1.999999999999986",
+      "group": "E6_4_callias_family",
+      "name": "spectator Berry control returns c1=+2",
+      "pass": true
+    },
+    {
+      "detail": "residual=0.000e+00",
+      "group": "E6_5_cpt",
+      "name": "finite regulated determinant obeys CPT complex conjugation",
+      "pass": true
+    },
+    {
+      "detail": "residual=0.000e+00",
+      "group": "E6_5_cpt",
+      "name": "Majorana-doubled Pfaffian control obeys the same conjugation law",
+      "pass": true
+    },
+    {
+      "detail": "physical moduli are SO(3); K_CP1 tensor E^vee remains a spectator rule",
+      "group": "E6_5_cpt",
+      "name": "anti-canonical O(-4) is not assigned without a physical CP1 polarization",
+      "pass": true
+    },
+    {
+      "detail": "Xi5_hat=2 pr_U^* omega3_hat cup pr_s^* c1_hat(Hopf) in Hhat^5(SU2 x CP1); int_Sigma3 ev^* Xi5_hat in Hhat^2(C_restricted)",
+      "group": "E6_6_wzw_descent",
+      "name": "universal degree-five character and degree-two family transgression are correctly typed",
+      "pass": true
+    },
+    {
+      "detail": "large residual=2.449e-15",
+      "group": "E6_6_wzw_descent",
+      "name": "sampled constant-loop level-two phases satisfy the local integrality control",
+      "pass": true
+    },
+    {
+      "detail": "phase=[1.0, -2.4492935982947064e-16]; necessary control, not an exactly-two theorem",
+      "group": "E6_6_wzw_descent",
+      "name": "even Hopf weight has trivial phase for the tested faithful Z2 element",
+      "pass": true
+    },
+    {
+      "detail": "phase=[-1.0, 1.2246467991473532e-16]",
+      "group": "E6_6_wzw_descent",
+      "name": "level-one negative control has nontrivial faithful Z2 holonomy",
+      "pass": true
+    },
+    {
+      "detail": "no stabilizer occurs on S3 -> CP1 before the faithful Z2 identification",
+      "group": "E6_6_wzw_descent",
+      "name": "restricted nonvanishing-Higgs Hopf action is free",
+      "pass": true
+    },
+    {
+      "detail": "all Map(Sigma3,U1) components, equivariant cocycles, vertical holonomy, zeros/defects, and nontrivial bundles remain open",
+      "group": "E6_6_wzw_descent",
+      "name": "neither restricted stack descent nor full microscopic descent is promoted",
+      "pass": true
+    }
+  ],
+  "checks_passed": 25,
+  "checks_total": 25,
+  "cpt_scope": {
+    "conditional_pfaffian_law": "under the Theta and orientation assumptions, Pf A[CPT Phi]=conjugate(Pf A[Phi])",
+    "conditional_regulator_law": "under the Theta assumptions, Z_PV[CPT Phi]=conjugate(Z_PV[Phi])",
+    "cp1_anti_canonical_rule": "K_CP1 tensor E^vee=O(-4) only if the physical CP1 family and polarization exist",
+    "finite_test_status": "algebraic finite spectral-product regression, not a physical regulator construction",
+    "same_mother_regulator_fixed": false,
+    "theta_assumptions": [
+      "Theta is antiunitary and Theta i Theta^{-1}=-i",
+      "Theta maps the operator, domain, boundary conditions, and spectral cut to their CPT images",
+      "the fermion and Pauli-Villars representations are Theta-closed and regulator masses are real",
+      "the determinant/Pfaffian orientation is transported consistently"
+    ]
+  },
+  "declared_constituent_yukawa_completion_written": true,
+  "determinant_line_o2_derived": false,
+  "four_dimensional_interpolation_index_formula_derived": true,
+  "gauge_basic_wzw_descent_proven": false,
+  "gauge_descent_scope": {
+    "evaluation": "ev: Sigma3 x C_restricted -> SU2 x CP1, (x,c)->(U_c(x),s_c(x))",
+    "full_mother_model": "open",
+    "local_status": "well-typed local differential-character ansatz plus constant-loop phase controls",
+    "missing_restricted_stack_data": [
+      "all components of Map(Sigma3,U1)",
+      "an equivariant differential cocycle",
+      "triviality of vertical holonomy"
+    ],
+    "restricted_space": "|phi|=v != 0, projective s=[phi], smooth sigma-model fields",
+    "restricted_stack_descent": "not proven",
+    "stabilizer": "the tested faithful Z2 phase is trivial for even weight, a necessary control but not an exactly-two theorem",
+    "typed_transgression": "int_Sigma3 ev^*Xi5_hat in Hhat^2(C_restricted)",
+    "universal_differential_character": "Xi5_hat=2 pr_U^*omega3_hat cup pr_s^*c1_hat(Hopf) in Hhat^5(SU2 x CP1)"
+  },
+  "lane_closed": false,
+  "numerics": {
+    "cp1_representative_ambiguity": {
+      "relative_operator_difference": 0.0115817315978464,
+      "same_cp1_coset_representative_angle": 0.73,
+      "unitary_spectrum_max_residual": 4.85722573273506e-17
+    },
+    "cpt_regulator_control": {
+      "determinant_conjugation_residual": 0.0,
+      "pfaffian_conjugation_residual": 0.0,
+      "regulated_phase_minus": 1.1659033401837524e-05,
+      "regulated_phase_plus": -1.1659033401837524e-05,
+      "spectral_cutoff_modes": 8,
+      "status": "algebraic_CPT_control_not_a_microscopic_regulator_derivation"
+    },
+    "gauge_holonomy_controls": {
+      "all_Map_Sigma3_U1_components_checked": false,
+      "equivariant_cocycle_constructed": false,
+      "even_weight_Z2_control_is_exactly_two_theorem": false,
+      "faithful_Z2_stabilizer_phase_k1_negative_control": [
+        -1.0,
+        1.2246467991473532e-16
+      ],
+      "faithful_Z2_stabilizer_phase_k2": [
+        1.0,
+        -2.4492935982947064e-16
+      ],
+      "family_transgression_typing": "int_Sigma3 ev^* Xi5_hat in Hhat^2(C_restricted)",
+      "full_microscopic_configuration_space_descent": false,
+      "hopf_action_free_when_phi_nonzero": true,
+      "large_gauge_max_phase_residual_k2": 2.4492935982947065e-15,
+      "large_gauge_windings": [
+        -3,
+        -1,
+        0,
+        1,
+        2,
+        5
+      ],
+      "restricted_higgsed_sigma_model_descent_proven": false,
+      "restricted_local_differential_character_ansatz_typed": true,
+      "small_gauge_closed_loop_shift": 0.0,
+      "universal_character_typing": "Xi5_hat=2 pr_U^* omega3_hat cup pr_s^* c1_hat(Hopf) in Hhat^5(SU2 x CP1)",
+      "vertical_holonomy_proven_trivial": false
+    },
+    "veronese_o2_template": {
+      "ambient_dimension": 3,
+      "berry": {
+        "chern": 1.9999999999999856,
+        "max_triangle_phase": 0.012387758896535789,
+        "min_link_overlap": 0.9877641290737883,
+        "triangles": 1520
+      },
+      "kernel_residual": 4.155957228185557e-16,
+      "minimum_nonzero_gap": 0.999999999999999,
+      "status": "spectator_template_not_same_mother_model"
+    },
+    "wilson_dirac": [
+      {
+        "eigenvalues_near_zero": [
+          -0.02667038942702219,
+          -0.026670389427022136,
+          -0.026670389427022125,
+          -0.010896960821179729,
+          0.01873547002187718,
+          0.018735470021877268,
+          0.0187354700218773,
+          0.03470578448232489
+        ],
+        "grid_points_per_axis": 5,
+        "half_width": 5.5,
+        "hermiticity_residual": 0.0,
+        "matrix_dimension": 1000,
+        "minimum_absolute_eigenvalue": 0.010896960821179729,
+        "shift_invert_failure_if_any": null,
+        "solver": "eigsh_shift_invert_sigma_0",
+        "yukawa_mass": 0.82
+      },
+      {
+        "eigenvalues_near_zero": [
+          -0.3547265569364187,
+          -0.3547265569364185,
+          -0.3547265569364168,
+          -0.28367497127235386,
+          0.31980263771693873,
+          0.31980263771693895,
+          0.3198026377169393,
+          0.38857523323345
+        ],
+        "grid_points_per_axis": 7,
+        "half_width": 5.5,
+        "hermiticity_residual": 0.0,
+        "matrix_dimension": 2744,
+        "minimum_absolute_eigenvalue": 0.28367497127235386,
+        "shift_invert_failure_if_any": null,
+        "solver": "eigsh_shift_invert_sigma_0",
+        "yukawa_mass": 0.82
+      }
+    ]
+  },
+  "operator_audit": {
+    "asymptotic_mass": "Phi_infinity=beta M (not M times the identity)",
+    "asymptotic_positive_eigenbundle": "constant positive eigenspace of sgn(M) beta, hence a trivial rank-four bundle over S2_infinity",
+    "callias_assumptions": [
+      "R3 is complete and D_3 is self-adjoint on H^1",
+      "Phi_F is bounded and Hermitian and [D_3,Phi_F] extends boundedly",
+      "outside a compact set Phi_F^2-||[D_3,Phi_F]|| >= epsilon > 0",
+      "gauge connection is smooth and decays so H_F-H_infinity is relatively compact"
+    ],
+    "callias_operator": "C_F=D_3+i Phi_F: H^1 -> L^2; graded double B_F=[[0,C_F^dagger],[C_F,0]]",
+    "conditional_interpolation_index": "Ind(D_4,flow)=SF(H_tau)=B",
+    "endpoint_zero_mode_implied": false,
+    "euclidean_4d": "D_E=gamma^mu D_mu+M(P_R U+P_L U^dagger)",
+    "interpolation_operator": "D_4,flow=partial_tau+H[U_tau]",
+    "ordinary_callias_boundary_p": 0,
+    "ordinary_callias_index": 0,
+    "ordinary_callias_index_scope": "only under the explicitly listed domain, bounded-commutator, coercivity, and decay assumptions",
+    "physical_domain": "Dom(H_F)=H^1(R3,S tensor C2); H_F is self-adjoint under the stated smooth-decaying gauge assumptions",
+    "static_3d": "H_F=D_3+Phi_F, D_3=-i alpha^i D_i, Phi_F=beta M(cos F+i gamma5 tau.rhat sin F)",
+    "two_band_obstruction": {
+      "desired_c1": "x+2y",
+      "desired_c1_square_xy_coefficient": 4,
+      "reason": "positive eigenline of a 2x2 mass pulls back u from CP1, hence c1^2=0"
+    }
+  },
+  "physical_cpt_regulator_derived": false,
+  "physics_promotion_allowed": false,
+  "remaining_blockers": [
+    "Derive the relaxed B=1 symmetry orbit from the full gauge-meson solution; the present hedgehog gives SO(3), not CP1.",
+    "Produce a localized normalisable CP1 zero mode rather than the volume-divergent uniform scalar vacuum orientation.",
+    "Derive a microscopic Yukawa representation and regulator whose asymptotic eigenbundle has the required mixed topology; the minimal two-band construction is obstructed.",
+    "Prove a full uniform endpoint spectral gap and compute the actual families determinant/Pfaffian line.",
+    "Extend the restricted Higgsed sigma-model differential character across all microscopic gauge bundles, zeros, defects, and non-extendible sectors.",
+    "Only after one complete lane closes may a degree-one Route-E portal be constructed."
+  ],
+  "restricted_higgsed_sigma_model_descent_proven": false,
+  "restricted_local_differential_character_ansatz_typed": true,
+  "runtime": {
+    "deterministic": true,
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "randomness_used": false,
+    "scipy": "1.13.1"
+  },
+  "same_physical_moduli_space_derived": false,
+  "same_profile": {
+    "B_numeric": 0.9999999996863905,
+    "B_residual": 3.1360947172487386e-10,
+    "box": 16.0,
+    "breathing_scalar_treatment": "s is decoupled by the declared Yukawa M U^gamma5; no s-dependent Yukawa coupling is claimed",
+    "canonical_checksum_equality_asserted": true,
+    "card_profile_sha256_r_F_s_little_endian_float64": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+    "model": {
+      "beta": 0.5,
+      "breathing_mass": 2.5,
+      "diquark_charge": 2,
+      "diquark_core_coupling": -0.3,
+      "diquark_mass_sq": 0.81,
+      "skyrme_coefficient": 1.0
+    },
+    "origin_slope": 2.2374101061560756,
+    "profile_sha256_r_F_s_little_endian_float64": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+    "s_at_origin": 0.917128964607058,
+    "sample_points": 4097,
+    "wilson_profile_source": "canonical r,F,s card-bound arrays; F linearly interpolated off-grid",
+    "workline_b_card_sha256": "f5a353011e0877e3659e2efdfde8027884eb2d6487ca657458f16e4d1915f63f",
+    "workline_b_script_sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d"
+  },
+  "same_soliton_composition_closed": false,
+  "schema_version": 1,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e6_same_soliton_yukawa_callias.py",
+      "sha256": "0bf309f95d61c34f8aad1c0988ba8d3517b713111d7c5f9a66c27e68eb34c8c7",
+      "size_bytes": 37545
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_same_soliton_yukawa_callias.tex",
+      "sha256": "12f59e5ad643b60cacb96c0548d5fd56256d693f274bb692c1df81674c25f8ad",
+      "size_bytes": 43381
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e6_same_soliton_yukawa_callias.bib",
+      "sha256": "d9f40779644cf1e383ae5e38450103f96dc1b140af1b3c4883d88e39ba64ca3c",
+      "size_bytes": 3642
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e6_relaxed_b1_multigrid_hessian.json",
+      "sha256": "f5a353011e0877e3659e2efdfde8027884eb2d6487ca657458f16e4d1915f63f",
+      "size_bytes": 34903
+    }
+  ],
+  "status": "pass_with_same_soliton_no_go_and_open_physics_gates",
+  "symmetry_and_moduli": {
+    "actual_free_c1_target": "H^2(SO(3);Z) has no free Z summand; on the SU2 cover H^2(S3;Z)=0",
+    "stabilizer": {
+      "continuous_stabilizer_dimension": 0,
+      "eigenvalues": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "gram": [
+        [
+          16.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          16.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          16.0
+        ]
+      ],
+      "group_stabilizer": "center Z2={+1,-1}",
+      "orbit": "SU(2)/Z2 = SO(3)",
+      "orbit_dimension": 3
+    },
+    "uniform_scalar_cp1_norm": {
+      "box_half_widths": [
+        3.0,
+        4.5,
+        6.0,
+        7.5
+      ],
+      "l2_norms_unit_density": [
+        216.0,
+        729.0,
+        1728.0,
+        3375.0
+      ],
+      "log_log_power": 3.000000000000001,
+      "norm_over_L_cubed": [
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ]
+    }
+  },
+  "uniform_essential_gap_at_infinity_proven": true,
+  "uniform_fredholm_gap_proven": false
+}

@@ -1476,6 +1476,288 @@ sets
  \label{eq:frontier-final-status}
 \end{equation}
 
+\section{AP-E6 same-background audit: exact obstructions and open gates}
+\label{sec:ap-e6-same-background}
+
+This section supersedes the completion-frontier status immediately above.
+It records the next execution round without weakening the portal ordering.
+The compact group denoted \(Sp(4)\) in the physics convention is
+\(USp(4)\), or \(Sp(2)\) in the mathematical convention used in classifying
+spaces.
+
+\subsection{The exact Sp(4) gauge-bordism result}
+
+The low-degree integral cohomology and spin-bordism coefficients are
+\begin{align}
+ H^*(BSp(2);\ZZ)&=\ZZ[q_1,q_2],& |q_1|&=4,&|q_2|&=8,\nonumber\\
+ (\Omega_q^{\rm Spin})_{q=0}^5
+  &=(\ZZ,\ZZ_2,\ZZ_2,0,\ZZ,0).
+ \label{eq:e6-bsp-input}
+\end{align}
+In the homological Atiyah--Hirzebruch spectral sequence
+\begin{equation}
+ E^2_{p,q}=H_p(BSp(2);\Omega_q^{\rm Spin})
+ \Longrightarrow \Omega_{p+q}^{\rm Spin}(BSp(2)),
+ \label{eq:e6-bsp-ahss}
+\end{equation}
+the only nonzero term with \(p+q=5\) is
+\begin{equation}
+ E^2_{4,1}=H_4(BSp(2);\ZZ_2)=\ZZ_2.
+\end{equation}
+The possible \(d_2\) source and target use \(H_6\) and \(H_2\), both zero;
+the \(d_3\) target uses \(H_1\), and the only later possible map from this
+torsion group to \(E^r_{0,4}\simeq\ZZ\) is zero.  There is no extension
+ambiguity on this diagonal.  Hence
+\begin{equation}
+ \boxed{\Omega_5^{\rm Spin}(BSp(2))\simeq\ZZ_2.}
+ \label{eq:e6-bsp-result}
+\end{equation}
+A geometric representative is a unit \(Sp(2)\) instanton on \(S^4\) times
+the nonbounding spin circle.  Restriction to the instanton \(SU(2)_c\)
+gives
+\begin{align}
+ \bm4&\downarrow \bm2\oplus\bm1\oplus\bm1,&
+ \bm5&\downarrow \bm2\oplus\bm2\oplus\bm1,\nonumber\\
+ \bm{10}&\downarrow \bm3\oplus\bm2\oplus\bm2
+                   \oplus\bm1\oplus\bm1\oplus\bm1.
+\end{align}
+With the doublet index normalized to one, the instanton indices are
+\((1,2,6)\).  The corresponding mod-two characters therefore are
+\begin{equation}
+ (\chi_{\bm4},\chi_{\bm5},\chi_{\bm{10}})=(-1,+1,+1).
+ \label{eq:e6-sp4-characters}
+\end{equation}
+Thus the displayed two Dirac \(\bm5\)'s are trivial on the unique gauge
+bordism generator.  This closes the gauge-bordism subgate only.
+
+It does not select the two target-space signs.  Independently,
+\begin{equation}
+ \widetilde\Omega_4^{\rm Spin}(S^3\times S^2)
+ \simeq \ZZ_2\{S^1_R\times S^3\}
+ \oplus\ZZ_2\{T^2_{\Arf=1}\times S^2\}.
+ \label{eq:e6-target-bordism}
+\end{equation}
+Without a common microscopic mass-family lift and APS boundary problem,
+invertible torsion sectors can flip either character.  The gauge character
+in Eq.~\eqref{eq:e6-sp4-characters} and the ordered target pair are different
+questions.
+
+The Euclidean note verifies gamma-five reality, two-flavour determinant
+positivity away from zeroes, and the Pauli--Villars moment identities
+\begin{equation}
+ c_a=(1,-3,3,-1),\qquad
+ \sum_a c_a a^j=0\quad(j=0,1,2).
+ \label{eq:e6-pv-moments}
+\end{equation}
+It does not specify the full interpolation \(K(t)\), regulator statistics,
+APS domain, finite local counterterms, or regulated gauge--scalar--ghost
+complex.  Accordingly these are partial controls, not a complete Euclidean
+regulator.
+
+At the chosen light branch the infrared orientation remains
+\begin{equation}
+ k_{\rm IR}=N_cX_qB=2\cdot1\cdot1=+2.
+ \label{eq:e6-ir-orientation}
+\end{equation}
+For a uniform flavour action on a complete \(\bm5\), however, the algebraic
+charge trace is only the conditional obstruction
+\begin{equation}
+ k_{\rm full}=2(+1)+2(-1)+0=+2-2=0.
+ \label{eq:e6-threshold-obstruction}
+\end{equation}
+The local pure-gauge shifts are periodic, but no unbroken-group or
+gravitational APS determinant ratio has been evaluated.  Therefore
+Eq.~\eqref{eq:e6-threshold-obstruction} is not an actual heavy-determinant
+matching computation and neither target eta sign is selected.
+
+\subsection{One genuinely relaxed continuum B=1 field, but an off-shell
+cubic Hessian}
+
+The declared classical sector is enlarged to a unit \(O(4)\) meson field
+\(n\), a neutral breathing field \(s\), and a quadratic charge-two field.
+Its continuum energy is
+\begin{align}
+ E[n,s]=\int\!\dd^3x\bigg\{&\frac12|\partial_i n|^2
+ +\frac\kappa2\sum_{i<j}
+ \bigl(|\partial_i n|^2|\partial_jn|^2
+ -(\partial_i n\!\cdot\!\partial_jn)^2\bigr)\nonumber\\
+ &+\frac12|\nabla s|^2+\frac12m_s^2(s-1)^2
+ +\beta^2s^2(1-n_0)\bigg\}.
+ \label{eq:e6-coupled-energy}
+\end{align}
+For \(n=(\cos F,\widehat{\bm x}\sin F)\), direct variation gives
+\begin{align}
+ (r^2+2\kappa\sin^2F)F''={}&-2rF'
+ -2\sin F\cos F(\kappa F'^2-1)
+ +\frac{2\kappa\sin^3F\cos F}{r^2}
+ +\beta^2r^2s^2\sin F,\nonumber\\
+ s''+\frac2r s'={}&m_s^2(s-1)+2\beta^2s(1-\cos F).
+ \label{eq:e6-coupled-bvp}
+\end{align}
+With \((\beta,m_s,\kappa)=(1/2,5/2,1)\), a nonlinear BVP solve on
+\(R=8,10,12,16\) converges to
+\begin{equation}
+ E/(4\pi)=6.1282155,\qquad s(0)=0.91712896,\qquad B=+1,
+ \label{eq:e6-bvp-anchor}
+\end{equation}
+and obeys the generalized Derrick identity.  The canonical 4097-point
+little-endian float64 array \((r,F,s)\) has SHA-256
+\begin{center}
+\texttt{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}.
+\end{center}
+This proves stationarity within the coupled hedgehog sector.  It is not a
+Palais symmetric-criticality proof for every three-dimensional variation.
+
+For the separately declared cubic action, the analytic constrained Hessian
+is
+\begin{equation}
+ H_{\rm tan}=T^T\left[H_{\rm emb}
+ -\bigoplus_x(n_x\!\cdot g_x)\bm1_4\right]T,
+ \qquad
+ H_{\rm proj}=P_{\rm coll}H_{\rm tan}P_{\rm coll}.
+ \label{eq:e6-projected-hessian}
+\end{equation}
+Every \(n+s\) entry is differentiated from one finite-difference energy;
+sparse symmetry, geodesic second differences, and the
+translation/isorotation projector are checked independently.  The quadratic
+diquark and free toron/ghost operators use separately declared grids and
+boundaries.  They are audited controls, not blocks of one aggregate matrix.
+Thus the \(n+s\) second variation is exact while the complete declared-sector
+sparse-Hessian gate remains false.
+
+It is not yet a physical stability operator.  At fixed \(L=8\), the sampled
+continuum solution gives
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+\(N\)&\(a\)&\(B_a\)&
+\(\|\operatorname{grad}E_a\|_{2,{\rm dens}}\)\\
+\midrule
+9&1.000000&0.168018&0.34766\\
+13&0.666667&0.440012&0.43018\\
+17&0.500000&0.625354&0.42171\\
+\bottomrule
+\end{tabular}
+\end{center}
+The background is therefore off shell for the cubic action and its topology
+estimator has not converged to one.  The observed negative projected
+curvatures are useful falsifiers of premature stability claims, but they
+cannot be promoted to soliton instability eigenvalues.  No interacting
+colour links, fermion determinant, four-dimensional importance sampling, or
+continuum quantum limit is present.
+Moreover, the cubic boundary samples the finite \(R=16\) profile rather than
+imposing the exact vacuum; at \(L=8\) its maximum boundary deviation is about
+\(4.93\times10^{-2}\).  This boundary mismatch is recorded as part of the
+off-shell diagnostic.
+
+\subsection{The same canonical field and the physical-moduli obstruction}
+
+The Yukawa/Callias audit consumes the checksum above rather than re-solving
+an older profile.  The declared constituent Yukawa term couples to \(F\) but
+not to \(s\); this decoupling is part of the action, not a silent profile
+replacement:
+\begin{equation}
+ \mathcal D_E=\gamma^\mu D_\mu
+ +M(P_RU_F+P_LU_F^\dagger),\qquad
+ H_F=-\ii\alpha^iD_i+\beta M
+ \bigl(\cos F+\ii\gamma_5\bm\tau\!\cdot\!\widehat{\bm x}\sin F\bigr).
+ \label{eq:e6-yukawa-operator}
+\end{equation}
+
+The true localized orbit is found before any family index is assigned.  If
+\(A\in SU(2)_V\) fixes \(U_F\), then at a radius with \(\sin F\ne0\),
+\(A(\bm\tau\cdot\widehat{\bm x})A^{-1}
+=\bm\tau\cdot\widehat{\bm x}\) for every direction.  Hence \(A\) commutes
+with all three Pauli matrices and
+\begin{equation}
+ \operatorname{Stab}_{SU(2)_V}(U_F)=\ZZ_2,\qquad
+ \mathcal M_{\rm rot}=SU(2)/\ZZ_2\simeq SO(3),
+ \label{eq:e6-actual-moduli}
+\end{equation}
+not \(\CP^1\).  Quotienting combined space--isospin rotations by the
+diagonal hedgehog stabilizer gives the same \(SO(3)\), not a second orbit.
+The separate scalar-vacuum \(\CP^1\) is spatially uniform, with
+\begin{equation}
+ \|\delta_m\phi\|^2_{[-L,L]^3}=8L^3|\delta_m\phi|^2,
+ \label{eq:e6-bulk-cp1-norm}
+\end{equation}
+so it is a bulk Goldstone direction rather than a normalizable soliton
+modulus.
+
+At infinity Eq.~\eqref{eq:e6-yukawa-operator} has a constant invertible mass.
+Its positive boundary eigenbundle on \(S^2_\infty\) is therefore trivial,
+\begin{equation}
+ c_1(E_+)=0,\qquad \ind_{\rm Callias}=0.
+ \label{eq:e6-callias-zero}
+\end{equation}
+This static statement does not contradict spectral flow along a
+four-dimensional interpolation; spectral flow equal to \(B\) does not force
+an endpoint zero mode.
+
+There is also a representation-level obstruction to the former two-band
+template.  A globally nondegenerate \(2\times2\) Hermitian mass with one
+positive band on \(X=S^2_\infty\times\CP^1\) defines
+\(f:X\to\CP^1\), so its eigenline satisfies
+\begin{equation}
+ c_1(E_+)^2=f^*(u^2)=0.
+\end{equation}
+The desired class instead obeys
+\begin{equation}
+ c_1(E_+)=x+2y,\qquad c_1(E_+)^2=4xy\ne0.
+ \label{eq:e6-two-band-obstruction}
+\end{equation}
+Thus it requires at least three trivial bands, a nontrivial ambient bundle,
+or a genuinely infinite-dimensional family, followed by a new uniform-gap
+proof.  On the actual \(SO(3)\), \(H^2(SO(3);\ZZ)=\ZZ_2\), so only a torsion
+line, not a free \(\cO(2)\) class, is available.
+
+Finally, the correctly typed universal target character is
+\begin{equation}
+ \widehat\Xi_5
+ =2\,\operatorname{pr}_U^*\widehat\omega_3
+ \smile\operatorname{pr}_s^*\widehat c_1(\mathsf H)
+ \in\widehat H^5(SU(2)\times\CP^1;\ZZ).
+ \label{eq:e6-universal-character}
+\end{equation}
+Only after pulling it back by the evaluation map may one form
+\begin{equation}
+ \int_{\Sigma_3}\operatorname{ev}^*\widehat\Xi_5
+ \in\widehat H^2(\mathcal C_{\rm restricted};\ZZ).
+ \label{eq:e6-typed-transgression}
+\end{equation}
+This establishes a typed local ansatz.  It does not yet construct the full
+equivariant differential cocycle, prove all vertical and large-gauge
+holonomies, extend through Higgs zeroes and defects, or pull an \(\cO(2)\)
+line back to a physical same-soliton \(\CP^1\).  The finite CPT determinant
+identity is likewise an algebraic conjugation control, not a microscopic
+global regulator.
+
+\subsection{AP-E6 decision}
+
+With the stronger definitions forced by this round, let
+\begin{align*}
+ C_{Sp}&=(\hbox{complete regulator})\wedge(\hbox{both target eta signs})\\
+ &\quad\wedge(\hbox{full heavy APS match})\wedge(\hbox{strong phase}),\\
+ C_{B1}&=(\hbox{same stationary lattice solution})\wedge(B_a\to1)\\
+ &\quad\wedge(\hbox{full projected super-Hessian})
+ \wedge(\hbox{4d dynamics}),\\
+ C_{\rm Cal}&=(\hbox{physical moduli})\wedge(\hbox{actual gapped family})\\
+ &\quad\wedge(\hbox{CPT determinant line})
+ \wedge(\hbox{gauge-basic descent}).
+\end{align*}
+The exact gauge-bordism subgate, continuum BVP, sparse differentiation, and
+moduli/two-band no-go are genuine advances, but
+\begin{equation}
+ C_{Sp}=C_{B1}=C_{\rm Cal}=\mathrm{false},\qquad
+ \boxed{\text{portal not started}.}
+ \label{eq:e6-final-decision}
+\end{equation}
+The canonical standalone records are
+\path{route_f/tex/ap_e6_sp4_eta_bordism_threshold.tex},
+\path{route_f/tex/ap_e6_relaxed_b1_multigrid_hessian.tex}, and
+\path{route_f/tex/ap_e6_same_soliton_yukawa_callias.tex}, together with their
+machine-readable cards and the independent AP-E6 frontier verifier.
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -1504,6 +1786,9 @@ Sec.~6, and oscillatory-level-set residuals below \(2.7\times10^{-14}\).
 The three earlier successor cards pass \(18/18\), \(38/38\), and \(27/27\),
 respectively.  The new completion-frontier cards pass \(24/24\), \(58/58\),
 and \(27/27\), while their integrated authorization gate passes \(20/20\).
+The AP-E6 follow-up cards pass \(39/39\), \(20/20\), and \(25/25\);
+their fresh-manifest, same-checksum frontier conjunction passes \(15/15\)
+while keeping every complete-lane boolean false.
 The JSON explicitly retains all
 cross-theory identifications as non-derived bridge axioms and sets
 \texttt{physics\_promotion\_allowed=false}.
