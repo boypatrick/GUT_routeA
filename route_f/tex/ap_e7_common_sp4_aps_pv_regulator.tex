@@ -1,0 +1,1102 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{slashed}
+\usepackage{mathrsfs}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\SF}{\operatorname{SF}}
+\newcommand{\FP}{\operatorname{FP}}
+\newcommand{\Arf}{\operatorname{Arf}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E7: A Common Quadratic (Sp(4)) APS/PV Regulator\\
+Exact Pure Heavy-Threshold Phase, Two Target Tests,\\
+and a Determinant-Line No-Go}
+\author{Route F independent research note}
+\date{17 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note repairs a precise omission of AP-E6.  For the candidate simply
+connected group, denoted \(Sp(4)\) in the physics convention and
+\(Sp(2)\) in the mathematics convention, we specify one common
+background-field quadratic regulator for fermions, gauge fields,
+    the adjoint and fundamental scalars, and Faddeev--Popov ghosts.  The
+    Hilbert spaces, Sobolev domains, Euclidean Clifford and reference real structures,
+gauge complex, Pauli--Villars superdeterminants, finite local subtraction,
+five-dimensional mass interpolation, spectral cut, and APS domains are all
+explicit.  This closes
+\texttt{common\_quadratic\_aps\_pv\_regulator\_specified}.  It does not
+construct a nonperturbative continuum gauge measure: Gribov/global gauge
+slicing, interacting removal of the cutoff, and reflection positivity remain
+open.
+
+As a constructive negative control, we also give a compact-link overlap
+framework and a continuum Higgs-orbit source that are mutually
+Ginsparg--Wilson compatible.  We do \emph{not} write the finite-lattice
+Dirac--Yukawa operator or its five-dimensional target kernel, so this is not a
+completed overlap lift and no overlap eta pair is claimed as computed.  A
+copy-counting diagnostic predicts the conditional pair \((+1,+1)\) if such a
+lift, the standard determinant orientation, and the no-stacked-torsion
+convention are supplied.  This is new conditional Higgsed-sector data, not a
+consequence of the original action.  A Schur-lemma theorem proves only that
+an exact separated rank-two light projector cannot extend continuously and
+\(Sp(4)\)-equivariantly to the restored point \(\Sigma=0\).
+
+The same regulator gives a new exact threshold result.  For one flavour the
+negative-mass heavy bundle after
+\(Sp(4)\to SU(2)_c\times U(1)_H\) is
+\(E_h=(V_c\otimes L^{-1})\oplus\bm1\), and
+\[
+ I_h=\ind D^+_{E_h}
+ =\int_{M_4}\left[-c_2(V_c)+x^2-\frac18p_1(TM_4)\right],
+ \qquad x=c_1(L).
+\]
+The two Dirac flavours therefore contribute
+\(\exp(2\pi\ii I_h)=1\) on every closed spin four-manifold.  Thus the
+constant-mass pure unbroken-gauge plus gravitational APS threshold is
+computed and is removable by the displayed integral local counterterm.  On
+the two target representatives
+\(G_3=S^1_{\rm R}\times S^3\) and
+\(G_2=T^2_{\rm RR}\times S^2\), the same pure component is explicitly
+\((+1,+1)\).
+
+This does not determine the full target phases.  The microscopic action has
+no map from \((g,s)\in S^3\times S^2\) to a full all-branch chiral
+Dirac--Yukawa/PV family: \(g\) is composite and no \(s\)-dependent fermion
+mass is declared.  Consequently there is no pullback determinant line over
+\(\operatorname{Map}(M_4,S^3\times S^2)\).  We prove non-identifiability by
+stacking the two independent zero-curvature spin characters
+\((-1)^{\nu_3}\) and \((-1)^{\nu_2}\), which leaves every local symbol and
+the pure threshold unchanged while flipping either target sign.  Moreover,
+two controlled ansaetze have been evaluated: a uniform exact flavour mass map
+on the complete \(\bm5\) has mixed coefficient \(+2-2=0\), whereas a
+light-only emergent flavour assignment has no declared deep-UV target family.
+These cases do not exhaust continuous equivariant non-projector couplings.
+Hence the present work does not give an all-scale \(k=+2\) matching theorem.
+No portal is authorized.
+\end{abstract}
+
+\tableofcontents
+
+\section{Claim boundary and field content}
+
+The candidate field list and branch convention are
+\begin{equation}
+ \Psi_i\in\bm5\ \hbox{Dirac},\quad i=1,2;\qquad
+ \Phi_I\in\bm4\ \hbox{complex},\quad I=1,2;\qquad
+ \Sigma\in\bm{10}\ \hbox{real}.
+ \label{eq:field-list}
+\end{equation}
+With the Hermitian generator \(H=-2\ii T_H^3\),
+\begin{equation}
+ \bm5\longrightarrow\bm2_{+1}\oplus\bm2_{-1}\oplus\bm1_0,
+ \qquad
+ \bm4\longrightarrow\bm2_0\oplus\bm1_{+1}\oplus\bm1_{-1}.
+ \label{eq:branching}
+\end{equation}
+The unbroken group is the direct product
+\(SU(2)_c\times U(1)_H\), not its diagonal quotient.  These facts use the
+injective \(Spin(4)\subset Spin(5)\) embedding and the standard low
+representations \cite{Slansky1981}.
+
+Four statements are separated throughout.
+\begin{enumerate}[label=(\roman*)]
+\item A common \emph{quadratic} APS/PV regulator can be an exact elliptic
+  construction around a nondegenerate smooth background.
+\item Such a construction is not a rigorous nonperturbative measure for an
+  interacting four-dimensional gauge theory.
+\item A pure unbroken-gauge/gravitational mass-sign phase is a determinant
+  ratio on bundles over spacetime.
+\item A target torsion phase additionally requires a map from target fields
+  to a regulated Fredholm family and its determinant line.
+\end{enumerate}
+The last distinction is the determinant-line version of the APS and
+Dai--Freed framework \cite{AtiyahPatodiSinger1975,BismutFreed1986,DaiFreed1994}.
+Recent bordism analyses of \(Sp\) QCD and mod-two \(Sp(n)\) anomalies support
+the same separation between local polynomials and torsion characters
+\cite{Saito2024,SaitoTachikawa2025}.
+
+\section{Euclidean Hilbert spaces, gamma matrices, and reality}
+
+\subsection{Geometric data and domains}
+
+Let \(M_4\) be a closed connected Riemannian spin four-manifold, let
+\(S=S^+\oplus S^-\) be its complex spinor bundle, and let
+\(P\to M_4\) be a principal \(Sp(2)\)-bundle.  Write \(E_R=P\times_R R\).
+All connections are smooth and anti-Hermitian.  The basic Hilbert spaces are
+\begin{align}
+ \cH_F&=L^2(M_4,S\otimes E_{\bm5}\otimes\CC^2_f),
+ &\operatorname{Dom}\slashed D_A&=H^1(M_4,S\otimes E_{\bm5}\otimes\CC^2_f),
+ \label{eq:fermion-domain}\\
+ \cH_B&=L^2(M_4,\mathcal B),
+ &\operatorname{Dom}\Delta_B&=H^2(M_4,\mathcal B),
+ \label{eq:boson-domain}\\
+ \cH_{\rm gh}&=L^2(M_4,\operatorname{ad}P\otimes\CC),
+ &\operatorname{Dom}\Delta_{\rm gh}&=H^2(M_4,\operatorname{ad}P\otimes\CC),
+ \label{eq:ghost-domain}
+\end{align}
+where
+\begin{equation}
+ \mathcal B=
+ \bigl(T^*M_4\otimes\operatorname{ad}P\bigr)
+ \oplus\operatorname{ad}P
+ \oplus\bigl(E_{\bm4}^{\oplus2}\bigr)_{\RR}.
+ \label{eq:boson-bundle}
+\end{equation}
+The last summand is realified because the scalar Gaussian is a real bosonic
+Gaussian.  Compactness and ellipticity give discrete spectra with finite
+multiplicity.  A prime on a determinant will remove the finite-dimensional
+kernel and place its orientation in the determinant line.
+
+\subsection{Clifford and real structures}
+
+Choose Hermitian Euclidean gamma matrices
+\begin{equation}
+ \gamma_1=\sigma_1\otimes\sigma_1,\quad
+ \gamma_2=\sigma_1\otimes\sigma_2,\quad
+ \gamma_3=\sigma_1\otimes\sigma_3,\quad
+ \gamma_4=\sigma_2\otimes\bm1,
+ \qquad
+ \gamma_5=\gamma_1\gamma_2\gamma_3\gamma_4.
+ \label{eq:gamma-choice}
+\end{equation}
+Thus
+\begin{equation}
+ \gamma_\mu^\dagger=\gamma_\mu,\qquad
+ \{\gamma_\mu,\gamma_\nu\}=2\delta_{\mu\nu},\qquad
+ \gamma_5^\dagger=\gamma_5,\qquad \gamma_5^2=1.
+ \label{eq:clifford-checks}
+\end{equation}
+Put \(B=\gamma_2\gamma_4\) and let \(K\) denote componentwise complex
+conjugation.  Direct multiplication gives
+\begin{equation}
+ B\gamma_\mu^*B^{-1}=\gamma_\mu,\qquad BB^*=-\bm1.
+ \label{eq:spin-reality}
+\end{equation}
+The \(\bm5\) is the real vector representation of \(Spin(5)\), so its
+bundle has a parallel conjugation \(K_{\bm5}^2=+1\).  Therefore
+\begin{equation}
+ J=(BK)\otimes K_{\bm5},\qquad J^2=-1
+ \label{eq:total-reality}
+\end{equation}
+is the quaternionic real structure on the one-flavour spinor bundle.  It
+commutes with the covariant Dirac operator and a real scalar reference mass.
+It does \emph{not} commute with a fixed nonzero adjoint Higgs mass in the
+convention below.  Indeed, in a real vector basis the anti-Hermitian
+generators \(T^a_{\bm5}\) are real antisymmetric, and hence
+\begin{equation}
+ K_{\bm5}\widehat\Sigma_{\bm5}K_{\bm5}^{-1}
+ =-\widehat\Sigma_{\bm5},\qquad
+ J\mathcal K_{A,\Sigma}J^{-1}=\mathcal K_{A,-\Sigma}.
+ \label{eq:adjoint-reality-odd}
+\end{equation}
+Thus \(J^2=-1\) gives Kramers pairing only in the scalar-reference sector
+(or for a family involution that also sends \(\Sigma\mapsto-\Sigma\)), not at
+a fixed generic Higgs background.  Positivity below instead uses the
+elementary two-flavour determinant square and gamma-five Hermiticity; no
+fixed-adjoint-mass Kramers claim is made.
+
+For anti-Hermitian \(A\), \(\slashed D_A^\dagger=-\slashed D_A\).  Define
+\begin{equation}
+ \widehat\Sigma_{\bm5}=-\ii\Sigma^aT^a_{\bm5},\qquad
+ \mathcal K_{A,\Sigma}=\slashed D_A+m+y\widehat\Sigma_{\bm5},\qquad
+ H_{A,\Sigma}=\gamma_5\mathcal K_{A,\Sigma}.
+ \label{eq:fermion-H}
+\end{equation}
+Then
+\begin{equation}
+ \mathcal K^\dagger=\gamma_5\mathcal K\gamma_5,\qquad
+ H^\dagger=H,\qquad \operatorname{Dom}H=H^1.
+ \label{eq:gamma5-hermiticity}
+\end{equation}
+The light mass is kept at \(M_+=\mu>0\) during every determinant
+calculation; the limit \(\mu\downarrow0\) is taken only after zero modes have
+been separated.
+
+\section{The full background-field quadratic complex}
+
+\subsection{Gauge action and gauge fixing}
+
+Fix a smooth background \((\bar A,\bar\Sigma,\bar\Phi)\) and write the
+fluctuation as \(b=(a,\sigma,\varphi)\in\Gamma(\mathcal B)\).  At vanishing
+background fermions the infinitesimal gauge-action operator is
+\begin{equation}
+ \cR_{\bar X}\epsilon=
+ \bigl(D_{\bar A}\epsilon,
+       [\bar\Sigma,\epsilon],
+       -\epsilon\bar\Phi\bigr),
+ \qquad
+ \cR_{\bar X}:H^1(\operatorname{ad}P)\longrightarrow L^2(\mathcal B).
+ \label{eq:gauge-action}
+\end{equation}
+The notation \(-\epsilon\bar\Phi\) includes both fundamental copies and
+realification.  The background Feynman gauge functional is the exact adjoint
+\begin{equation}
+ \cF_{\bar X}(b)=\cR_{\bar X}^{\dagger}b,
+ \qquad
+ S_{\rm gf}^{(2)}=\frac12\|\cF_{\bar X}(b)\|^2.
+ \label{eq:gauge-fixing}
+\end{equation}
+Let \(S_{\rm bos}\) be the AP-E6 Yang--Mills plus covariant kinetic and
+scalar-potential action.  Its gauge-fixed Hessian and ghost operator are
+defined without dropping mixing terms by
+\begin{align}
+ \Delta_B&=S_{\rm bos}^{(2)}[\bar X]+\cR_{\bar X}\cR_{\bar X}^{\dagger},
+ \label{eq:exact-boson-hessian}\\
+ \Delta_{\rm gh}&=\cR_{\bar X}^{\dagger}\cR_{\bar X}.
+ \label{eq:exact-ghost-hessian}
+\end{align}
+This definition contains the gauge--adjoint--fundamental mixing and the full
+matrix of second derivatives of the declared potential.  Their principal
+symbols are
+\begin{equation}
+ \sigma_2(\Delta_B)(x,\xi)=|\xi|^2\bm1_{\mathcal B},
+ \qquad
+ \sigma_2(\Delta_{\rm gh})(x,\xi)=|\xi|^2\bm1_{\operatorname{ad}P}.
+ \label{eq:principal-symbols}
+\end{equation}
+Hence both are Laplace type and essentially self-adjoint on their stated
+Sobolev domains.  Background stabilizers are projected from both operators.
+If \(\Delta_B\) has negative modes, the Gaussian contour is the steepest
+descent contour fixed by the upper lateral Agmon cut
+\(\theta_B=\pi-\varepsilon\), \(0<\varepsilon\ll1\); such a saddle is not
+called stable.  This convention defines the quadratic determinant but does
+not turn a negative mode into a physical vacuum.
+
+\subsection{What is and is not included}
+
+Equations~\eqref{eq:exact-boson-hessian}--\eqref{eq:exact-ghost-hessian}
+are preferable to listing only diagonal blocks: the latter would silently
+drop the Higgs-mechanism mixing.  The quadratic functional is
+\begin{equation}
+ S^{(2)}=\frac12\langle b,\Delta_Bb\rangle
+ +\langle\bar c,\Delta_{\rm gh}c\rangle
+ +\sum_{i=1}^2\langle\bar\Psi_i,\mathcal K\Psi_i\rangle.
+ \label{eq:full-quadratic-action}
+\end{equation}
+This is the entire gauge--scalar--ghost--fermion quadratic complex about the
+declared background.  Fermion-loop contributions to an effective bosonic
+Hessian arise after integrating Eq.~\eqref{eq:full-quadratic-action}; they
+are not part of the bare Gaussian operator and are not claimed here.
+
+\section{One common Pauli--Villars prescription}
+
+\subsection{Superdeterminant and regulator statistics}
+
+Use the four-node finite difference
+\begin{equation}
+ c_a=(1,-3,3,-1),\qquad \Lambda_a^2=a\Lambda^2,\qquad a=0,1,2,3.
+ \label{eq:pv-data}
+\end{equation}
+It obeys
+\begin{equation}
+ \sum_ac_a a^r=0\quad(r=0,1,2),
+ \qquad
+ \sum_ac_aa^3=-6.
+ \label{eq:pv-moments}
+\end{equation}
+For any positive Laplace-type eigenvalue \(\lambda\),
+\begin{equation}
+ \sum_ac_a\log(\lambda+a\Lambda^2)
+ =-\frac{2\Lambda^6}{\lambda^3}+O(\lambda^{-4}),
+ \label{eq:pv-asymptotic}
+\end{equation}
+so the first three ultraviolet moments cancel.  Define
+\begin{align}
+ Z_{\rm quad}^{\rm PV}(\Lambda)
+ :={}&\tau_F
+ \prod_{a=0}^3
+ \det{}'_{\theta_B}(\Delta_B+\Lambda_a^2)^{-c_a/2}
+ \det{}'(\Delta_{\rm gh}+\Lambda_a^2)^{c_a}
+ \notag\\
+ &\times
+ \det{}'(H^2+\Lambda_a^2)^{N_f c_a/2},
+ \qquad N_f=2.
+ \label{eq:common-pv}
+\end{align}
+Here \(\tau_F\) is the fermion determinant-line phase defined in the next
+section.  The last determinant is only its positive amplitude.  It can be
+implemented with an auxiliary Pauli doublet
+\begin{equation}
+ \widehat H_a=H\otimes\sigma_3+\Lambda_a\bm1\otimes\sigma_1,
+ \qquad \widehat H_a^2=H^2+\Lambda_a^2,
+ \label{eq:pv-doublet}
+\end{equation}
+whose spectrum is phase-paired.  Thus amplitude subtraction cannot
+silently choose a torsion phase.
+
+Equation~\eqref{eq:common-pv} is first of all a zeta-determinant
+prescription.  Integer powers in complex sectors admit the usual commuting
+or Berezin auxiliary-field representation, with multiplicity \(|c_a|\).
+For the real bosonic sector the half-integer power is instead the spectral-cut
+square root of the determinant.  We do not claim that a positive half-integer
+power of a symmetric second-order operator is a literal real-Grassmann
+Gaussian: such a local realization would require an additional
+antisymmetric first-order Pfaffian construction, which is not supplied here.
+The three elliptic determinant families are:
+\begin{center}
+\begin{tabular}{L{0.24\textwidth}L{0.27\textwidth}L{0.36\textwidth}}
+\toprule
+sector & operator at node \(a\) & determinant exponent\\
+\midrule
+real gauge plus scalars & \(\Delta_B+a\Lambda^2\) & \(-c_a/2\)\\
+complex FP ghost & \(\Delta_{\rm gh}+a\Lambda^2\) & \(+c_a\)\\
+two Dirac amplitudes & \(H^2+a\Lambda^2\) & \(N_fc_a/2=c_a\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every mass is a scalar endomorphism, so the regulator preserves background
+\(Sp(4)\) covariance.  BRST covariance at quadratic order follows because
+the boson and ghost operators are built from the same \(\cR_{\bar X}\).
+
+\subsection{Finite local subtraction}
+
+The moment equations remove power terms but leave local logarithmic terms.
+Let \(A_4(\bar X)\) be the total integrated Seeley--DeWitt coefficient of
+the supercomplex in Eq.~\eqref{eq:common-pv}.  At a fixed scale \(\mu_R\)
+we define the finite scheme
+\begin{equation}
+ \log Z_{\rm quad}^{\rm ren}
+ =\FP_{\Lambda\to\infty}
+ \left[\log Z_{\rm quad}^{\rm PV}(\Lambda)
+       -A_4(\bar X)\log\frac{\Lambda^2}{\mu_R^2}
+       -S_{\rm pow}^{\rm loc}(\Lambda;\bar X)\right].
+ \label{eq:finite-part}
+\end{equation}
+The finite local convention is fixed by
+\begin{equation}
+ \theta_c=\theta_H=\theta_{\rm grav}=0
+ \quad\hbox{for positive reference masses},
+ \qquad
+ Z_{\rm quad}^{\rm ren}[0,VH,0]>0,
+ \label{eq:finite-convention}
+\end{equation}
+and by adding no separate target torsion invertible theory.  This fixes all
+local de Rham counterterms of the quadratic reference problem.  It cannot
+fix a pullback determinant line over a target space for which no pullback
+map has been specified.
+
+\begin{proposition}[Quadratic regulator closure]
+On a smooth compact background with projected stabilizer and a declared
+Agmon contour for every negative bosonic mode,
+Eqs.~\eqref{eq:fermion-domain}--\eqref{eq:finite-convention} define the full
+common quadratic fermion--PV--gauge--scalar--ghost amplitude.  Together with
+the phase construction below,
+\begin{equation}
+ \texttt{common\_quadratic\_aps\_pv\_regulator\_specified=true}.
+ \label{eq:quadratic-regulator-true}
+\end{equation}
+This statement is deliberately weaker than a nonperturbative continuum
+measure.
+\end{proposition}
+
+\section{Five-dimensional interpolation, spectral cut, and APS domain}
+
+\subsection{The common cylinder operator}
+
+Let \(Y_5=M_4\times[0,1]\) with product geometry near both ends.  Choose a
+smooth path of backgrounds \(X(t)=(A(t),\Sigma(t),\Phi(t))\), constant near
+\(t=0,1\), and a Hermitian fermion mass endomorphism \(\mathcal M(t)\).
+The positive PV reference is
+\begin{equation}
+ H_0=\gamma_5(\slashed D_{A(0)}+M_*),\qquad M_*>0,
+ \label{eq:positive-reference}
+\end{equation}
+and the endpoint is
+\begin{equation}
+ H_1=\gamma_5(\slashed D_{A(1)}+m+y\widehat\Sigma(1)).
+ \label{eq:physical-endpoint}
+\end{equation}
+The simplest mass interpolation is affine away from collars,
+\begin{equation}
+ \mathcal M(t)=(1-f(t))M_*+f(t)(m+y\widehat\Sigma(t)),
+ \quad f=0\ \hbox{near }0,\quad f=1\ \hbox{near }1.
+ \label{eq:mass-interpolation}
+\end{equation}
+No gap is assumed along the path; crossings are the information measured by
+spectral flow.
+
+For the physical determinant-sign ratio we require gapped endpoints,
+\begin{equation}
+ 0\notin\operatorname{spec}(H_0)\cup\operatorname{spec}(H_1),
+ \label{eq:zero-cut-gap}
+\end{equation}
+and fix the physical spectral cut to \(\alpha=0\).  Crossings through zero in
+the open cylinder remain allowed.  For the separate mathematical statement
+about a Fredholm index, one may instead choose any real cut in the common
+endpoint resolvent,
+\(\alpha\notin\operatorname{spec}(H_0)\cup\operatorname{spec}(H_1)\), and
+write \(P_I(H)\) for the spectral projector of \(H\) on \(I\).  The Fredholm
+operator
+\begin{equation}
+ \cD_5^+=\partial_t+H(t)
+ \label{eq:five-d-operator}
+\end{equation}
+has the explicit domain
+\begin{equation}
+ \begin{split}
+ \operatorname{Dom}_{\rm APS,\alpha}(\cD_5^+)
+ =\{u\in H^1(Y_5):\ &P_{[\alpha,\infty)}(H_0)u|_{t=0}=0,\\
+ &P_{(-\infty,\alpha)}(H_1)u|_{t=1}=0\}.
+ \end{split}
+ \label{eq:aps-domain}
+\end{equation}
+Its adjoint is \(-\partial_t+H(t)\) with complementary boundary projectors.
+The self-adjoint double is
+\begin{equation}
+ \mathbb D_{5,\alpha}=
+ \begin{pmatrix}0&(\cD_5^+)^*\\ \cD_5^+&0\end{pmatrix}
+ \label{eq:selfadjoint-double}
+\end{equation}
+on the direct sum of these two APS domains.  This gives a literal Hilbert
+space and domain, rather than a schematic ``five-dimensional eta
+operator.''
+
+\subsection{Reduced eta and determinant phase}
+
+For a self-adjoint elliptic endpoint operator define
+\begin{equation}
+ \eta_\alpha(H;s)=\sum_{\lambda\ne\alpha}
+ \operatorname{sgn}(\lambda-\alpha)|\lambda-\alpha|^{-s},
+ \qquad
+ \bar\eta_\alpha(H)=\frac{\eta_\alpha(H;0)+\dim\ker(H-\alpha)}2.
+ \label{eq:reduced-eta}
+\end{equation}
+For every such auxiliary cut, the APS theorem identifies
+\begin{equation}
+ \ind_{\rm APS,\alpha}(\cD_5^+)=\SF_\alpha\{H(t)\}.
+ \label{eq:sf-index}
+\end{equation}
+For a real mass interpolation with the gapped endpoints
+\eqref{eq:zero-cut-gap}, the regulated physical determinant-sign ratio is
+\begin{equation}
+ \tau_F[X(t)]
+ =\exp\!\left(\ii\pi N_f\SF_0\{H(t)\}\right).
+ \label{eq:fermion-phase}
+\end{equation}
+The arbitrary \(\alpha\) in Eq.~\eqref{eq:sf-index} is therefore an index
+bookkeeping device and must not be substituted into
+Eq.~\eqref{eq:fermion-phase}.  A formulation that moves the physical cut
+would require the corresponding endpoint spectral-section orientation (or
+reduced-eta correction); that extra datum is not used here.  Equivalent
+zero-cut reduced-eta formulae differ by the local index density already fixed
+in Eq.~\eqref{eq:finite-convention}.  APS gluing and the Bismut--Freed
+holonomy theorem make the resulting zero-cut section compatible with
+concatenating paths
+\cite{AtiyahPatodiSinger1975,BismutFreed1986,DaiFreed1994}.
+
+For a general complex chiral mass family the phase is a section of the
+pulled-back determinant line, not simply a sign.  The Dai--Freed prescription
+still applies, but only after that family and its endpoint bundles have been
+defined \cite{Witten2016,WittenYonekura2019}.
+
+\section{A conditional GW-compatible Higgsed source}
+
+\subsection{Finite compact-link regulator}
+
+There is a useful regulator framework that goes beyond the continuum Gaussian
+without pretending to solve the continuum limit or already supplying the
+target Yukawa operator.  On a finite four-dimensional
+hypercubic lattice take compact \(Sp(4)\) links \(U_\ell\) with Haar measure,
+the Wilson plaquette action, and site fields \(\Sigma_x,\Phi_x\) with the
+gauge-covariant nearest-neighbour discretization of the declared scalar
+action.  The finite bosonic integral is gauge invariant and requires no
+gauge fixing or Faddeev--Popov ghosts.  Its perturbative expansion is
+matched to the continuum background complex of Section~3.
+
+Let
+\begin{equation}
+ H_W(U)=\gamma_5(D_W(U)-m_0),\qquad 0<m_0<2,
+ \qquad
+ D_{\rm ov}=\frac1a\left(1+\gamma_5\operatorname{sgn}H_W\right).
+ \label{eq:overlap}
+\end{equation}
+At finite \(a\), chiral sources use the Ginsparg--Wilson involution and
+projectors
+\begin{equation}
+ \widehat\gamma_5=\gamma_5(1-aD_{\rm ov}),\qquad
+ \widehat P_{L,R}=\frac{1\mp\widehat\gamma_5}{2};
+ \label{eq:gw-projectors}
+\end{equation}
+the un-hatted \(P_{L,R}\) in the continuum mass formula below denote their
+\(a\to0\) limits.  This keeps the finite-lattice source compatible with the
+overlap chiral decomposition.
+On the admissible-link locus, \(H_W\) is gapped and the sign function is
+local.  A five-dimensional domain-wall determinant divided by its
+Pauli--Villars field of dimensionless mass \(m_{\rm PV}=1\) converges as
+\(L_s\to\infty\) to the overlap determinant.  Domain-wall eta invariants
+realize the APS and mod-two APS indices, while the massive Wilson eta
+invariant agrees with the continuum index at sufficiently small lattice
+spacing \cite{FukayaOnogiYamaguchi2017,FukayaEtAl2022,AokiEtAl2025}.
+These facts provide a finite regulator for a Dirac operator once that operator
+and its domain-wall interpolation have been specified.  They do not by
+themselves define the target-dependent Dirac--Yukawa family used below.
+
+\subsection{Spectral projectors and an explicit target mass}
+
+Restrict now to the exact Higgs orbit on which
+\begin{equation}
+ h=\frac{\widehat\Sigma_{\bm5}}V,
+ \qquad \operatorname{spec}h=(+1,+1,-1,-1,0),
+ \qquad h^3=h.
+ \label{eq:higgs-h}
+\end{equation}
+The covariant orthogonal projectors are
+\begin{equation}
+ P_+=\frac{h^2+h}{2},\qquad
+ P_-=\frac{h^2-h}{2},\qquad
+ P_0=1-h^2.
+ \label{eq:higgs-projectors}
+\end{equation}
+They obey
+\begin{equation}
+ P_rP_s=\delta_{rs}P_r,\qquad
+ P_++P_-+P_0=1,\qquad
+ (\operatorname{rank}P_+,\operatorname{rank}P_-,\operatorname{rank}P_0)
+ =(2,2,1).
+ \label{eq:projector-checks}
+\end{equation}
+Away from the exact orbit but before a spectral gap closes, the same
+projectors are defined by Riesz contours around the three separated spectral
+clusters.  They cease to exist as branch projectors at the restored locus.
+
+Let \(g_x\in SU(2)_f\) be a declared Hubbard--Stratonovich chiral mass
+source.  Let \(A_H(s)\) be the pullback Hopf connection for
+\(s:M_4\to S^2\), embedded into the links through
+\(\exp(\ii A_H H)\).  The continuum Higgsed all-branch source is
+\begin{equation}
+ \begin{split}
+ \mathcal M_{\rm H}(g,s;\Sigma)
+ ={}&P_+\otimes\mu\bigl(P_Lg+P_Rg^\dagger\bigr)
+ -2yV P_-\otimes\bm1_f-yV P_0\otimes\bm1_f,\\
+ &P_L=\frac{1-\gamma_5}{2},\qquad P_R=\frac{1+\gamma_5}{2}.
+ \end{split}
+ \label{eq:higgsed-target-mass}
+\end{equation}
+Here \(s\) is intended to enter the covariant Wilson/overlap operator through
+its Hopf link, not as an undeclared direct Yukawa.  Equations
+\eqref{eq:overlap}--\eqref{eq:higgsed-target-mass} specify a
+GW-compatible continuum-limit source on the gapped Higgsed locus.  They do
+not specify the finite operator: the ordinary projectors acting on
+\(\bar\Psi\), the hatted projectors acting on \(\Psi\), determinant
+orientation, and the corresponding five-dimensional target kernel remain to
+be written.  Consequently this note does not claim a completed overlap
+determinant line or a computed overlap eta invariant.
+
+There is nevertheless a useful conditional copy-counting diagnostic.  On
+\(G_3\), the unit \(S^3\) mass
+winding is repeated \(\operatorname{rank}P_+=2\) times, hence its mod-two
+index is zero.  On \(G_2\), the light charged sector has
+\(2\cdot2\cdot|c_1|=4\) Hopf-flux zero-mode copies; the charged heavy sector
+adds another four, and the neutral sector adds none.  Therefore, assuming a
+finite GW implementation with the displayed continuum limit, standard
+copy-additivity and orientation, positive \(m_{\rm PV}=1\), and no stacked
+\(I_3,I_2\) sector, the predicted pair is
+\begin{equation}
+ \left(\tau_{\rm H,ov}(G_3),\tau_{\rm H,ov}(G_2)\right)=(+1,+1).
+ \label{eq:higgsed-overlap-pair}
+\end{equation}
+This is a conditional parity prediction, not an eta computation or a unique
+phase extracted from the original deep-UV action.
+
+\begin{gate}[Higgsed construction versus UV claim]
+The exact distinction is
+\begin{equation}
+ \begin{gathered}
+ \texttt{conditional\_higgsed\_gw\_source\_specified=true},\\
+ \texttt{finite\_higgsed\_overlap\_dirac\_yukawa\_operator\_defined=false},\\
+ \texttt{five\_dimensional\_higgsed\_target\_kernel\_defined=false},\\
+ \texttt{minimal\_higgsed\_overlap\_eta\_pair\_computed=false},\\
+ \texttt{conditional\_higgsed\_parity\_predicts\_plus\_plus=true},\\
+ \texttt{original\_deep\_sp4\_action\_uniquely\_selects\_target\_pair=false}.
+ \end{gathered}
+ \label{eq:higgsed-lift-gates}
+\end{equation}
+\end{gate}
+
+\section{The two target generators: what the common regulator computes}
+
+\subsection{Bordism representatives and abstract characters}
+
+Let \(X=S^3\times S^2\).  The two reduced spin-bordism generators are
+\begin{align}
+ G_3&=(S^1_{\rm R}\times S^3,\operatorname{pr}_{S^3},{\rm pt}),
+ \label{eq:G3}\\
+ G_2&=(T^2_{\rm RR}\times S^2,{\rm pt},\operatorname{pr}_{S^2}).
+ \label{eq:G2}
+\end{align}
+For regular values define
+\begin{equation}
+ \nu_3(M,g)=\dim_{\RR}\ker D_{g^{-1}(p_3)}\pmod2,
+ \qquad
+ \nu_2(M,s)=\Arf(s^{-1}(p_2)).
+ \label{eq:target-invariants}
+\end{equation}
+Then
+\begin{equation}
+ (\nu_3(G_3),\nu_2(G_3))=(1,0),
+ \qquad
+ (\nu_3(G_2),\nu_2(G_2))=(0,1),
+ \label{eq:generator-invariants}
+\end{equation}
+because the periodic circle is nonbounding and the RR torus has odd spin
+structure \cite{Atiyah1971}.  The four abstract torsion characters are
+\begin{equation}
+ Z_{\epsilon_3,\epsilon_2}(M,g,s)
+ =(-1)^{\epsilon_3\nu_3+\epsilon_2\nu_2},
+ \qquad (\epsilon_3,\epsilon_2)\in\ZZ_2^2.
+ \label{eq:four-characters}
+\end{equation}
+
+\subsection{Pure heavy component on both representatives}
+
+The common regulator can be evaluated on the part of each representative
+that is already a declared unbroken gauge bundle.  On \(G_3\), take the
+unbroken bundle trivial.  Its characteristic numbers are
+\begin{equation}
+ \int c_2(V_c)=0,\qquad \int x^2=0,\qquad \int p_1(TG_3)=0.
+ \label{eq:G3-classes}
+\end{equation}
+On \(G_2\), take \(L=\operatorname{pr}_{S^2}^*\mathcal O(1)\), so
+\(x=\operatorname{pr}_{S^2}^*u\).  Since \(u^2=0\) on \(S^2\), and the
+product tangent bundle has vanishing Pontryagin number,
+\begin{equation}
+ \int c_2(V_c)=0,\qquad \int x^2=0,\qquad \int p_1(TG_2)=0.
+ \label{eq:G2-classes}
+\end{equation}
+The heavy-index formula proved below therefore gives
+\begin{equation}
+ \boxed{\tau_h^{\rm pure}(G_3)=+1,\qquad
+        \tau_h^{\rm pure}(G_2)=+1.}
+ \label{eq:pure-pair}
+\end{equation}
+These are actual evaluations of the constant-mass unbroken-gauge plus
+gravitational determinant ratio.  They do not contain a pion chiral mass or
+an \(s\)-dependent fermion Yukawa family.
+
+\subsection{No target pullback: a precise non-identifiability theorem}
+
+Let \(\mathscr C_{\rm UV}\) be the quotient of declared smooth
+\((A,\Sigma,\Phi)\) configurations by gauge transformations.  The common
+quadratic regulator defines a determinant line \(\mathcal L_{\rm UV}\) over
+the nondegenerate locus of \(\mathscr C_{\rm UV}\).  To ask for a target eta
+pair one needs a map
+\begin{equation}
+ \mathfrak L:\operatorname{Map}(M_4,S^3\times S^2)
+ \longrightarrow\mathscr C_{\rm UV},
+ \qquad
+ (g,s)\longmapsto(A,\Sigma,\Phi,\mathcal M_{\rm all\ branches}),
+ \label{eq:missing-lift}
+\end{equation}
+and then the line \(\mathfrak L^*\mathcal L_{\rm UV}\).  The declared
+microscopic action has no such map: \(g\) is a composite pion orientation,
+not an elementary mass source, and \(\Phi\) does not enter the fermion mass
+\(m+y\widehat\Sigma_{\bm5}\).  A Hopf connection associated with \(s\) can
+specify the \(U(1)_H\) bundle used in Eq.~\eqref{eq:G2-classes}; it does not
+supply the missing chiral mass on all light and heavy branches.
+The continuum source in Eq.~\eqref{eq:higgsed-target-mass} does not yet
+supply this map: a finite GW Dirac--Yukawa operator, its five-dimensional
+kernel, and determinant orientation are still absent.  Even after those are
+added, the resulting map would depend on a new Hubbard--Stratonovich source,
+a no-stack convention, and a restriction to the gapped Higgs orbit, rather
+than being data implicit in the original action.
+
+\begin{theorem}[Target eta non-identifiability]
+The data in Eqs.~\eqref{eq:field-list}--\eqref{eq:finite-convention} determine
+the pure pair in Eq.~\eqref{eq:pure-pair}, but do not determine
+\((\tau_{\rm full}(G_3),\tau_{\rm full}(G_2))\).  In particular, setting
+``no torsion stack'' in the UV local scheme cannot replace the absent map
+\(\mathfrak L\).
+\end{theorem}
+\begin{proof}
+Without \(\mathfrak L\) in the original action, the pullback determinant line on which the two
+holonomies would be evaluated is undefined.  This is a type obstruction,
+not a difficult numerical eta sum.  Independently, suppose one arbitrary
+finite lift with continuum limit Eq.~\eqref{eq:higgsed-target-mass} were
+supplied.  Stacking either invertible spin character
+\(I_3=(-1)^{\nu_3}\) or \(I_2=(-1)^{\nu_2}\) has zero local de Rham
+curvature, changes none of the principal symbols, PV moments, gauge-bordism
+character, or pure heavy index, but flips exactly one target value.  Thus
+all four rows
+\[
+ (+,+),\quad(-,+),\quad(+,-),\quad(-,-)
+\]
+remain compatible with the currently declared local and pure-threshold
+data.  Selection requires both \(\mathfrak L\) and an explicit microscopic
+choice of the torsion invertible sector.
+\end{proof}
+
+For comparison, the circle spectral path
+\(D_{S^1,\alpha_s}+t\), \(-1/4\le t\le1/4\), has one crossing for periodic
+spin \(\alpha_s=0\) and none for antiperiodic spin \(\alpha_s=1/2\).  The
+RR torus has one chiral zero mode modulo two, whereas the other three torus
+spin structures have none.  These exact KO controls reproduce
+Eq.~\eqref{eq:generator-invariants}; they realize the two abstract stacks,
+not the missing \(Sp(4)\) target lift.
+
+\begin{gate}[Full target pair]
+The exact status is
+\begin{equation}
+ \begin{gathered}
+ \texttt{pure\_heavy\_phase\_on\_G3\_computed=true},\\
+ \texttt{pure\_heavy\_phase\_on\_G2\_computed=true},\\
+ \texttt{conditional\_higgsed\_parity\_predicts\_plus\_plus=true},\\
+ \texttt{minimal\_higgsed\_overlap\_eta\_pair\_computed=false},\\
+ \texttt{original\_action\_target\_mass\_family\_lift\_defined=false},\\
+ \texttt{target\_mapping\_torus\_eta\_pair\_selected=false}.
+ \end{gathered}
+ \label{eq:target-gates}
+\end{equation}
+\end{gate}
+
+\section{Exact constant-mass heavy threshold}
+
+\subsection{Index polynomial}
+
+At \(m=-yV+\mu\), with \(yV>0\) and then \(\mu\downarrow0\), the branches
+have signs
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+branch & bundle & charge & limiting mass & sign\\
+\midrule
+light & \(V_c\otimes L\) & \(+1\) & \(\mu\) & \(+\)\\
+charged heavy & \(V_c\otimes L^{-1}\) & \(-1\) & \(-2yV\) & \(-\)\\
+neutral heavy & \(\bm1\) & \(0\) & \(-yV\) & \(-\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+Put \(x=c_1(L)\) and use \(c_1(V_c)=0\).  The degree-four Chern characters
+are
+\begin{align}
+ \operatorname{ch}_2(V_c\otimes L^{-1})
+ &=-c_2(V_c)+x^2,
+ \label{eq:charged-chern}\\
+ \operatorname{ch}_2(\bm1)&=0.
+ \label{eq:neutral-chern}
+\end{align}
+Since \(\widehat A(TM)=1-p_1(TM)/24+\cdots\), the one-flavour heavy index is
+\begin{align}
+ I_h
+ &=\int_{M_4}\widehat A(TM_4)
+   \left[\operatorname{ch}(V_c\otimes L^{-1})+1\right]_{(4)}
+ \notag\\
+ &=\int_{M_4}
+ \left[-c_2(V_c)+x^2-\frac18p_1(TM_4)\right]\in\ZZ.
+ \label{eq:heavy-index}
+\end{align}
+The separate gravitational coefficients are \(-p_1/12\) for the rank-two
+charged branch and \(-p_1/24\) for the singlet.  Thus
+Eq.~\eqref{eq:heavy-index} includes both and does not discard the neutral
+fermion.
+
+For one negative Dirac mass relative to a positive reference, paired
+nonzero eigenvalues cancel and the zero modes give
+\begin{equation}
+ \frac{\det(\slashed D-|M|)}{\det(\slashed D+|M|)}
+ =(-1)^{\dim\ker\slashed D}
+ =(-1)^{\ind D^+}.
+ \label{eq:mass-sign-index}
+\end{equation}
+The second equality holds because sum and difference of the two chiral
+kernel dimensions have the same parity.  It is also the spectral-flow
+evaluation of Eq.~\eqref{eq:fermion-phase}.
+
+\begin{theorem}[Two-flavour pure threshold]
+For the complete negative-mass heavy sector and \(N_f=2\),
+\begin{equation}
+ \tau_h^{\rm pure}(M_4,V_c,L)
+ =\exp\!\left(\ii\pi N_f I_h\right)
+ =\exp(2\pi\ii I_h)=1
+ \label{eq:pure-heavy-theorem}
+\end{equation}
+on every closed spin four-manifold and every
+\(SU(2)_c\times U(1)_H\) bundle.
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:mass-sign-index} applies additively to the charged and
+neutral heavy branches, giving \(I_h\) in Eq.~\eqref{eq:heavy-index}.
+The index is integral by the Atiyah--Singer theorem.  Two identical flavours
+multiply it by two, so the exponential is one.  Equivalently, on a closed
+spin four-manifold \(x^2\) is even and \(p_1=3\sigma\) with
+\(\sigma\in16\ZZ\), while the possible odd \(c_2(V_c)\) contribution is
+also doubled.
+\end{proof}
+
+The corresponding finite local threshold functional is
+\begin{equation}
+ S_{h,\rm loc}
+ =2\pi\ii\int_{M_4}
+ \left[-c_2(V_c)+x^2-\frac18p_1(TM_4)\right].
+ \label{eq:local-threshold}
+\end{equation}
+It is an integral counterterm and exponentiates to one on closed spin
+backgrounds.  On a manifold with boundary its Chern--Simons transgression
+is precisely the local term paired with the APS eta section; the finite
+scheme in Eq.~\eqref{eq:finite-convention} removes it.  Thus the constant
+real-mass unbroken-gauge and gravitational determinant ratio is actually
+matched, not merely checked for theta periodicity.
+
+\begin{gate}[Scope of the threshold theorem]
+Equation~\eqref{eq:pure-heavy-theorem} closes
+\begin{equation}
+ \texttt{pure\_unbroken\_gauge\_gravity\_heavy\_phase\_computed=true}.
+ \label{eq:pure-threshold-true}
+\end{equation}
+It does not evaluate a target-dependent chiral mass family, because that
+family is absent from the action.  Accordingly
+\begin{equation}
+ \texttt{mixed\_wzw\_heavy\_determinant\_computed=false}.
+ \label{eq:mixed-threshold-false}
+\end{equation}
+\end{gate}
+
+\section{Controlled all-scale mixed-WZW tests}
+
+The mixed WZW curvature studied in the recent UV completion of
+Davighi--Lohitsiri is an integral degree-five class and its coefficient is
+fixed by a generalized-symmetry matching condition
+\cite{DavighiLohitsiri2024}.  For the present branch weights, a uniform
+exact chiral flavour action on the complete \(\bm5\) gives
+\begin{equation}
+ \kappa_{\rm full}=2(+1)+2(-1)+1(0)=0,
+ \qquad
+ \kappa_{\rm light}=+2,\qquad
+ \kappa_{\rm heavy}=-2.
+ \label{eq:charge-trace}
+\end{equation}
+The sign of a real Dirac mass does not change this charge trace: multiplying
+an \(SU(2)\) chiral mass map by \(-1\) leaves
+\(({-g})^{-1}\dd(-g)=g^{-1}\dd g\).
+
+\begin{theorem}[Exact separated rank-two projector obstruction]
+Let \(\mathcal U\) be an \(Sp(4)\)-invariant neighbourhood of
+\(\Sigma=0\) in the adjoint representation.  Suppose
+\[
+ C:\mathcal U\longrightarrow\operatorname{End}_{\CC}(\bm5)
+\]
+is continuous and equivariant,
+\(C(u\Sigma)=R_{\bm5}(u)C(\Sigma)R_{\bm5}(u)^{-1}\).
+If \(C(t\Sigma_0)\) is the rank-two light-branch projector \(P_+\) for
+\(t>0\), then \(C\) cannot extend to \(t=0\) while retaining a separated
+rank-two branch.  More generally, a continuous equivariant chiral-mass
+coefficient has
+\begin{equation}
+ C(0)=c\bm1_{\bm5},\qquad
+ \Tr_{\bm5}\!\left(HC(0)\right)=c\Tr_{\bm5}H=0,
+ \label{eq:schur-zero}
+\end{equation}
+whereas the Higgsed selector obeys
+\begin{equation}
+ \Tr_{\bm5}(HP_+)=2.
+ \label{eq:projector-trace-two}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The restored point is fixed by all of \(Sp(4)\).  Equivariance therefore
+makes \(C(0)\) commute with the irreducible complex \(\bm5\); Schur's lemma
+gives the first equation in Eq.~\eqref{eq:schur-zero}.  The eigenvalues of
+\(H=h(\Sigma_0)\) are \(+1,+1,-1,-1,0\), so its trace is zero, while
+Eq.~\eqref{eq:higgs-projectors} gives
+\(\Tr(HP_+)=1+1=2\).  Continuity along \(t\Sigma_0\) is incompatible with
+keeping this coefficient equal to two at \(t=0\).  Equivalently, if \(C\)
+remains an orthogonal projector, then \(C(0)=c\bm1\) and \(C(0)^2=C(0)\)
+force \(c=0\) or \(1\), of rank zero or five, never rank two.  Hence the
+branch gap must close, the selector must become discontinuous, equivariance
+must fail, or new UV fields must carry the missing data.
+\end{proof}
+
+This theorem is deliberately limited to an exact separated projector.  It
+does not exclude continuous equivariant non-idempotent coefficients such as
+\(C(\Sigma)=c\bm1+f(\lVert\Sigma\rVert)\widehat\Sigma\).  Such families can
+reorganize their spectrum or close a gap at the restored point and require a
+separate determinant-line analysis.
+
+\begin{proposition}[Two controlled mass assignments]
+Within the currently declared \(Sp(4)\) field/action data, the following two
+assignments can be evaluated:
+\begin{enumerate}[label=(\Alph*)]
+\item the chiral flavour mass map acts uniformly on the full \(\bm5\), in
+  which case the exact all-scale mixed coefficient is zero by
+  Eq.~\eqref{eq:charge-trace}; or
+\item the desired chiral flavour symmetry emerges only on the tuned light
+  branch below the breaking threshold, in which case no deep-UV target
+  mass-family lift exists and its APS eta pair cannot be computed.
+\end{enumerate}
+Neither evaluated assignment is an all-scale derivation of \(k=+2\).  No
+claim is made that these two assignments exhaust all continuous equivariant
+non-projector mass families.
+\end{proposition}
+\begin{proof}
+In case (A), additivity of the family index over representation weights gives
+the first equality in Eq.~\eqref{eq:charge-trace}; local four-dimensional
+counterterms cannot change the integral cohomology class of the degree-five
+curvature.  Restoring \(+2\) requires adding a new heavy differential
+character or changing the representation/symmetry assignment.  In case
+(B), the heavy Dirac masses preserve only vector flavour, so the deep-UV
+operator is not a family over \(S^3\); this is exactly the type obstruction
+in Eq.~\eqref{eq:missing-lift}.  New fields, a new invertible sector, or a
+non-projector equivariant mass family require additional analysis outside
+these two controlled assignments.
+\end{proof}
+
+The infrared orientation remains meaningful:
+\begin{equation}
+ n_{\rm IR}=N_cX_q=2,\qquad k_{\rm IR}=n_{\rm IR}B=+2
+ \quad(X_q=+1,\ B=+1).
+ \label{eq:ir-k}
+\end{equation}
+It is not promoted to an all-scale theorem.  Recent \(Sp\)-QCD bordism work
+controls the consistency of WZW sectors but does not provide the missing
+mixed target family of this particular Higgsed model \cite{Saito2024}.
+
+\section{Deterministic verification}
+
+The companion program
+\texttt{route\_f/code/verify\_ap\_e7\_common\_sp4\_aps\_pv\_regulator.py}
+performs exact or floating-point checks of:
+\begin{enumerate}
+\item the Euclidean Clifford algebra, gamma-five, quaternionic reference
+  structure \(BB^*=-1\), and the odd transformation of the adjoint mass;
+\item gamma-five Hermiticity and the two-flavour determinant square for a
+  scalar-reference control;
+\item all PV moments and the \(-2/\lambda^3\) asymptotic coefficient;
+\item positivity and common construction of toy boson and ghost Laplace
+  symbols;
+\item the physical zero-cut sign, an auxiliary-cut counter-control, R/NS
+  circle spectral flow, and the four abstract target characters;
+\item a symbolic Chern-character expansion, spin-integrality spot checks on a
+  finite characteristic-number grid, and direct evaluation of the two pure
+  generator indices;
+\item the conditionally derived Higgsed parity prediction, the
+  \(+2-2=0\) charge trace, and explicitly labelled declared-scope gates.
+\end{enumerate}
+These checks verify the algebra and reproducibility.  They are not a lattice
+definition of interacting \(Sp(4)\) gauge theory.
+This regulator branch is background-field/topological and does not import or
+depend on the relaxed \(B=1\) soliton profile or its checksum.
+
+\section{Final gate ledger and ordered continuation}
+
+\begin{longtable}{@{}L{0.36\textwidth}L{0.16\textwidth}L{0.39\textwidth}@{}}
+\toprule
+claim & status & exact boundary\\
+\midrule
+\endfirsthead
+\toprule
+claim & status & exact boundary\\
+\midrule
+\endhead
+Euclidean gamma and reference-reality data & \status{closed with scope} &
+explicit Clifford representation, \(J^2=-1\), scalar-reference Kramers
+sector; fixed adjoint mass transforms with \(\Sigma\mapsto-\Sigma\)\\
+Full common quadratic gauge--scalar--ghost--fermion PV amplitude &
+\status{closed} & exact gauge complex, all mixing retained, shared four-node
+superdeterminant and finite local scheme\\
+Five-dimensional APS problem & \status{closed for UV field paths} & zero-cut
+physical phase with gapped endpoints; arbitrary cut retained only for the
+Fredholm index; complementary APS domains and self-adjoint double\\
+Nonperturbative continuum \(Sp(4)\) measure & \status{open} & no constructive
+interacting cutoff removal, global gauge slice, or reflection-positivity proof\\
+Pure unbroken gauge plus gravitational heavy threshold & \status{closed} &
+two-flavour phase \(\exp(2\pi\ii I_h)=1\), local integral counterterm explicit\\
+Pure heavy phase on \(G_3,G_2\) & \status{closed} & \((+1,+1)\) for the
+constant-mass unbroken bundle component\\
+Conditional Higgsed GW source & \status{source only} & \((+1,+1)\) is a
+copy-counting prediction; finite Dirac--Yukawa operator, five-dimensional
+target kernel, determinant orientation, and eta computation remain open\\
+Full target eta pair & \status{undefined} & no all-branch target mass map or
+pullback determinant line in the original action; two torsion stacks prove
+non-identifiability\\
+Uniform exact-flavour assignment & \status{evaluated, gives zero} &
+complete-irrep coefficient \(+2-2=0\); not an exhaustive classification of
+equivariant non-projector families\\
+Light emergent-flavour \(k_{\rm IR}=+2\) & \status{derived only in IR} & no
+deep-UV target-family APS matching\\
+Degree-one Route-E portal & \status{forbidden} & neither target matching nor
+full \(Sp(4)\) dynamical lane is closed\\
+\bottomrule
+\end{longtable}
+
+The machine-readable final flags are
+\begin{equation}
+ \begin{gathered}
+ \texttt{euclidean\_gamma\_reference\_reality\_data\_specified=true},\\
+ \texttt{exact\_separated\_rank\_two\_projector\_obstruction\_proven=true},\\
+ \texttt{common\_quadratic\_aps\_pv\_regulator\_specified=true},\\
+ \texttt{five\_dimensional\_aps\_domain\_specified=true},\\
+ \texttt{physical\_fermion\_phase\_zero\_cut\_fixed=true},\\
+ \texttt{fixed\_adjoint\_mass\_kramers\_reality\_proven=false},\\
+ \texttt{full\_nonperturbative\_sp4\_measure\_constructed=false},\\
+ \texttt{pure\_unbroken\_gauge\_gravity\_heavy\_phase\_computed=true},\\
+ \texttt{conditional\_higgsed\_gw\_source\_specified=true},\\
+ \texttt{finite\_higgsed\_overlap\_dirac\_yukawa\_operator\_defined=false},\\
+ \texttt{five\_dimensional\_higgsed\_target\_kernel\_defined=false},\\
+ \texttt{minimal\_higgsed\_overlap\_eta\_pair\_computed=false},\\
+ \texttt{conditional\_higgsed\_parity\_predicts\_plus\_plus=true},\\
+ \texttt{original\_action\_target\_mass\_family\_lift\_defined=false},\\
+ \texttt{target\_mapping\_torus\_eta\_pair\_selected=false},\\
+ \texttt{mixed\_wzw\_heavy\_determinant\_computed=false},\\
+ \texttt{k\_plus\_two\_all\_scale\_matched=false},\\
+ \texttt{sp4\_aps\_pv\_lane\_closed=false},\\
+ \texttt{degree\_one\_route\_e\_portal\_started=false},\\
+ \texttt{physics\_promotion\_authorized=false}.
+ \end{gathered}
+ \label{eq:final-flags}
+\end{equation}
+
+The next discriminating calculations are:
+\begin{enumerate}
+\item write the exact finite GW Dirac--Yukawa operator, its determinant
+  orientation, and its five-dimensional domain-wall target kernel before
+  promoting the conditional \((+1,+1)\) parity count to an eta result;
+\item derive the Hubbard--Stratonovich source in
+  Eq.~\eqref{eq:higgsed-target-mass} from the original interacting action,
+  or replace it by new UV fields that evade the exact-projector obstruction;
+\item if exact uniform flavour is retained, add a specified heavy
+  differential character of coefficient \(+2\) and calculate both of its
+  torsion signs rather than choosing them;
+\item alternatively, formulate a symmetry-emergence matching theorem across
+  the \(Sp(4)\) breaking scale, including the operator that creates the
+  light-only chiral determinant line;
+\item only after one of these closes, combine it with the independent
+  relaxed-soliton or \(SO(3)\)/FR determinant-line routes.  The portal remains
+  last.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{ap_e7_common_sp4_aps_pv_regulator}
+
+\end{document}

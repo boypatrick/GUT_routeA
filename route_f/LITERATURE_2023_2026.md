@@ -1,6 +1,6 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-16.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-17.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
 | Source | Main result relevant to Route F | Required response |
@@ -20,6 +20,7 @@ that the present model inherits their results.
 | Mistele et al., [Indefinitely Flat Circular Velocities and the Baryonic Tully--Fisher Relation from Weak Lensing](https://doi.org/10.3847/2041-8213/ad54b0) (2024) | Weak-lensing data probe the persistence of flat circular velocities beyond resolved rotation curves. | Any gravity repair must fit rotation and lensing jointly; a pure clock-rescaling ansatz is not sufficient. |
 | Hamada et al., [Q-Balls in the presence of attractive force](https://doi.org/10.1007/JHEP08(2024)242) (2024) | Extends Q-ball stability analysis when an additional attractive force is present. | Use as a modern stability/gravity interface for AP-E5, not as evidence that the present bubble-to-Q-ball identification is already realized. |
 | Bykov and Smilga, [Monopole harmonics on complex projective spaces](https://arxiv.org/abs/2302.11691), SciPost Phys. 15, 195 (2023) | Gives spectra and homogeneous-coordinate eigenfunctions for charged quantum mechanics on projective space; states form `SU(n)` multiplets and connect to twisted Dolbeault/Dirac complexes. | Use to audit the AP-E1 monopole spectrum. Keep all Landau levels unless an LLL/holomorphic projection and its gap are separately derived. |
+| Aoki et al., [Eta Invariant of Massive Wilson Dirac Operator and the Index](https://arxiv.org/abs/2501.02873) (2025) | Relates the eta invariant of a massive Wilson--Dirac operator to the continuum index under the stated lattice and continuum-limit hypotheses. | Use as a regulator bridge for AP-E7, not as permission to omit the actual target Yukawa kernel, GW chiral-projector placement, endpoint orientation, or admissibility/locality hypotheses of this model. |
 | van den Dungen, [Generalised Dirac--Schrodinger operators and the Callias Theorem](https://arxiv.org/abs/2312.17600), Forum Math. Sigma 13, e11 (2025) | Proves a generalized Callias theorem in which the index of a Dirac--Schrodinger operator is computed on a suitable compact hypersurface. | Use it to justify reducing a uniformly Fredholm same-soliton family to its asymptotic positive-mass eigenbundle. It does not provide the charged-QC2D Yukawa map, its uniform gap, or the family determinant class. |
 | Jia and Yi, [Discrete Gauge Anomalies and Instantons](https://arxiv.org/abs/2405.09007), Phys. Rev. D 110, 025011 (2024) | Re-examines the `pi_4(Sp(k))=Z2` anomaly, its instanton zero-mode relation, and the distinction between Euclidean and Lorentzian zero-mode roles. | For a semisimple `Sp(4)` candidate, retain the Witten-parity test as necessary but do not replace a full Dai--Freed/bordism and heavy-threshold calculation by that parity count. |
 | Saito and Tachikawa, [Cancelling mod-2 anomalies by Green--Schwarz mechanism with B-mu-nu](https://arxiv.org/abs/2411.09223), SciPost Phys. 19, 017 (2025) | Treats the four-dimensional `Sp(n)` Witten anomaly as the nontrivial character of the relevant spin-bordism class and shows that it cannot be removed by the proposed Green--Schwarz mechanism; its appendix gives a direct low-degree `BSp(n)` bordism analysis. | Use it to audit `Omega_5^Spin(BSp(4))` and the mod-two representation character.  Keep this gauge-bordism calculation separate from the two target-space torsion signs on `S3 x S2`, which still require the specified Dirac--Yukawa mass map and regulator. |
@@ -50,6 +51,9 @@ are not substitutes for recent model-specific evidence.
 | Witten, [Supersymmetry and Morse theory](https://doi.org/10.4310/jdg/1214437492), J. Differential Geom. 17 (1982) 661 | Identifies supersymmetric quantum mechanics with the differential-form complex and its cohomological ground states. | The ordinary tangent fermion produces the Clifford/Dolbeault module; an extra coefficient line must be independently derived before using `H0(O(2))`. |
 | Begun et al., [Study of two color QCD on large lattices](https://arxiv.org/abs/2203.04909), Phys. Rev. D 105, 114505 (2022) | Simulates two-flavour QC2D with staggered fermions on `40^4` and `32^4` lattices at `a=0.048 fm`, focusing on confinement and deconfinement at finite chemical potential. | This is a genuine four-dimensional large-lattice control, but it has neither the extra charged-scalar sector nor a `B=1` gauge--meson--ghost--fermion Hessian. The new `2^4` Route-F calculation must remain labelled a deterministic background-field diagnostic. |
 | Witten and Yonekura, [Anomaly Inflow and the eta-Invariant](https://arxiv.org/abs/1909.08775) (2019/2021), and Dai--Freed, [Eta-Invariants and Determinant Lines](https://arxiv.org/abs/hep-th/9405012) (1994) | Express nonperturbative anomaly phases through odd-dimensional eta invariants and determinant lines; after perturbative anomaly cancellation the eta phase is bordism invariant. | A chirality-paired four-dimensional product spectrum is only a reference control. The charged-QC2D torsion signs require a specified microscopic regulator or mapping-torus problem; defect mod-two characters show the available choices but do not select one. |
+| Yonekura, [Dai--Freed theorem and topological phases of matter](https://arxiv.org/abs/1607.01873), JHEP 09 (2016) 022 | Gives a practical determinant-line and eta-invariant formulation of fermionic phases with boundaries and families. | AP-E7 fixes the physical sign at zero spectral cut with gapped endpoints.  An arbitrary cut requires its spectral-section/end-point orientation and cannot be inserted into the determinant sign by spectral-flow counting alone. |
+| Fukaya, Onogi, and Yamaguchi, [Atiyah--Patodi--Singer index from the domain-wall fermion Dirac operator](https://arxiv.org/abs/1710.03379), Phys. Rev. D 96, 125004 (2017), and Fukaya et al., [Mod-two APS index and domain-wall fermion](https://arxiv.org/abs/2012.03543), Commun. Math. Phys. 393 (2022) 1189 | Realize ordinary and mod-two APS indices through domain-wall fermions and clarify how a finite regulator carries the eta phase. | They motivate the AP-E7 finite-regulator direction but do not define this model's missing target-dependent overlap/Yukawa operator or select its two mapping-torus characters. |
+| Berg and Luescher, [Definition and statistical distributions of a topological number in the lattice O(3) sigma-model](https://doi.org/10.1016/0550-3213(81)90568-X), Nucl. Phys. B 190 (1981) 412 | Defines geometric lattice degree using spherical simplices and exposes the role of exceptional/dislocation configurations. | AP-E7 uses the analogous Freudenthal regular-value construction only on the admissible subset.  The unrestricted finite-site configuration space is connected, so a naive optimizer may unwind through the exceptional locus. |
 
 ## Literature-driven design decisions
 
@@ -161,6 +165,27 @@ are not substitutes for recent model-specific evidence.
     construction must use at least three bands, a nontrivial ambient bundle,
     or an infinite-dimensional operator family and then prove its uniform
     Fredholm gap and regulator threshold.
+27. In APS determinant-sign formulae, use the physical zero cut with gapped
+    endpoints, or include the full spectral-section/end-point orientation.
+    `SF_alpha` by itself depends on `alpha` and is not an invariant physical
+    sign.
+28. Keep the AP-E7 regulator claim at the determinant-prescription level
+    unless every half-integral power is realized by a valid local first-order
+    or Pfaffian PV system.  Likewise, do not infer fixed-background Kramers
+    symmetry for an adjoint Higgs mass from a scalar-mass gamma-matrix test.
+29. The finite-site no-sector theorem is now a design constraint: naive
+    fixed-boundary `(S3)^M` has one connected component.  A future exact
+    lattice `B` sector must declare an admissibility barrier or a
+    topology-preserving spherical-volume action and demonstrate regulator-
+    independent continuum observables.
+30. On the physical `SO(3)` orbit, distinguish classification from selection.
+    `H^2(SO(3);Z)=Z2` gives two line candidates and a topological Real lift;
+    only the actual Yukawa mapping-torus mod-two index and microscopic CPT
+    regulator can select the Pfaffian line.
+31. The explicit rank-three `O(1,2)` mass family is the minimal bundle-level
+    solution of the `c1^2` obstruction.  Keep it mathematical until a localized
+    normalizable modulus, charged-two-colour three-band Yukawa representation,
+    and same-operator uniform Fredholm gap are derived.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,

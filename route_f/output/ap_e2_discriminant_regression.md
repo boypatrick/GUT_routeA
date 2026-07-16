@@ -82,7 +82,7 @@ is a PASS; accidental agreement would fail the run.
 
 - `route_E/output/audit0/invariant_card.json` — `891df84534327029b3eed227381b4cc0d24beb41ec1988a610051d0e53c6f131` (10028 bytes)
 - `route_E/code/audit0_conventions_card.py` — `0e4215ba4f35c00623045da89cb5b4240e3bd648b1ba3205c0772de00a11ec81` (15657 bytes)
-- `route_f/tex/another_physics_route_e_derivation_ledger.tex` — `5758d609c0bbc74fbb3ac82398a4ad1bda8ca4118f57a1280428b6c3327007a1` (72940 bytes)
+- `route_f/tex/another_physics_route_e_derivation_ledger.tex` — `e514c4b2bde0f7b9c1c2e07e5f86f46d76b1d7797262bbdd449abe8b095997f6` (88057 bytes)
 - `route_f/tex/ap_e2_discriminant_regression.tex` — `0c54f461b6e4f1d0f5cebd88dc384b14295add78fd64aeeddcf2c1d5c4b59092` (31296 bytes)
 - `route_f/code/verify_another_physics_route_e_bridge.py` — `a5b070b09a1b82deb8f40cd93ff032df45368eb0085b2b4b2a8212442f4c6ada` (42757 bytes)
 - `route_f/code/verify_ap_e2_discriminant_regression.py` — `a658e2804509502a66c37cb4f8e2318329a7fd285266bcfd2da70ed92e489276` (40639 bytes)

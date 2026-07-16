@@ -1,0 +1,544 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\RP}{\mathbb {RP}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Pf}{\operatorname{Pf}}
+\newcommand{\Det}{\operatorname{Det}}
+\newcommand{\indtwo}{\operatorname{ind}_{2}}
+\newcommand{\ch}{\operatorname{ch}}
+\newcommand{\status}[1]{\textcolor{blue!60!black}{\textsf{#1}}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\title{AP-E7 on the Actual \(SO(3)\) Soliton Orbit:\\
+FR Torsion, Pfaffian Holonomy, CPT, and a Minimal\\
+Rank-Three Resolution of the \(c_1=x+2y\) Obstruction}
+\author{Route F research note}
+\date{17 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The canonical AP-E6 relaxed charged two-colour \(B=1\) profile has localized
+collective orbit \(SO(3)=SU(2)/\ZZ_2\), not \(\CP^1\).  We therefore replace
+the previously assumed free \(\cO(2)\) line by the exact classification of
+lines on the actual orbit.  The cellular complex of \(\RP^3\) gives
+\[
+ H^2(SO(3);\ZZ)=\ZZ_2,\qquad
+ t=\beta(a),\quad a\in H^1(SO(3);\ZZ_2),
+\]
+and the unique nontrivial flat line is
+\(\cL_{\rm FR}=SU(2)\mathbin{\times}_{\rm sign}\CC\).  Its generator-loop
+holonomy is \(-1\), its square is trivial, and its real form is the candidate
+FR Pfaffian line.  A determinant obtained by squaring that real Pfaffian has
+holonomy \(+1\).  However, the usual QCD WZW/FR rule gives
+\((-1)^{N_cB}=+1\) for \(N_c=2,B=1\), conditionally selecting the trivial
+bosonic sector.  The actual Yukawa mapping-torus mod-two index has not been
+computed with a common microscopic regulator, so this standard selection is
+not promoted to a same-operator Pfaffian theorem.
+
+The torsion line is the correct alternative carrier on \(SO(3)\), but it is
+not equivalent to \(\cO(2)\): its de Rham curvature vanishes and \(2t=0\),
+whereas \(c_1(\cO(2))\) is a nonzero free class.  Their collective spectra
+also disagree.  CPT inversion preserves both torsion classes.  We construct
+one deck-compatible topological Real lift, while keeping the physical CPT
+operator, its square, spectral cut, and Pfaffian orientation open.
+
+In parallel we solve the earlier two-band obstruction at the level of bundle
+mathematics.  On \(X=\CP^1_z\times\CP^1_w\), the three sections
+\[
+ s=(z_0w_0^2,\ z_1w_1^2,\ z_0w_1^2+z_1w_0^2)
+\]
+of \(\cO(1,2)\) have no common zero.  With
+\(P_+=\overline{s}\,\overline{s}^{\dagger}/\lVert s\rVert^2\),
+\[
+ \cM=m(2P_+-\bm1_3),\qquad
+ \operatorname{spec}\cM=\{+m,-m,-m\},\qquad
+ c_1(E_+)=x+2y .
+\]
+The negative rank-two complement has
+\(c_1(E_-)=-x-2y\) and \(c_2(E_-)=4xy\), so
+\(E_+\oplus E_-=X\times\CC^3\) exactly.  This proves that rank three is
+enough, and is minimal relative to the two-band obstruction.  It remains a
+spectator: the \(\CP^1\) factor is not a normalizable modulus of the canonical
+soliton and no charged two-colour Yukawa embedding has produced these three
+bands.  Hence every physical closure and portal gate remains false.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, provenance, and theorem-level answer}
+
+This note addresses two questions left by AP-E6.
+\begin{enumerate}[label=(\roman*)]
+\item What determinant or Pfaffian line can exist on the actual localized
+  moduli \(SO(3)\), and what does CPT do to it?
+\item Is the obstruction \(c_1^2\ne0\) intrinsic, or only a defect of the
+  two-band asymptotic mass?
+\end{enumerate}
+The first question is answered exactly at the topological level and
+fail-closed at the microscopic-regulator level.  The second has an explicit
+rank-three success, fail-closed as a physical same-soliton construction.
+
+The verifier imports the public AP-E6 Workline-B solver, calls
+\begin{center}
+\small
+\nolinkurl{solve_relaxed_profile(box=16.0,sample_points=4097)},
+\end{center}
+and hard-asserts equality among its recomputed little-endian float64
+\((r,F,s)\) digest and the Workline-B and Workline-C machine cards:
+\begin{center}
+\small
+\nolinkurl{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}.
+\end{center}
+The bound solution has
+\(B=0.999999999686391\) and \(s(0)=0.917128964607058\).  Thus the topology
+below is not attached to a separately solved or idealized hedgehog.
+
+\begin{theorem}[Strongest defensible AP-E7 result]
+Let \(\cQ=SO(3)\) be the localized orbit of the canonical AP-E6 \(B=1\)
+profile.  Then:
+\begin{enumerate}[label=(\alph*)]
+\item complex line bundles on \(\cQ\) form \(\ZZ_2\); the nontrivial class is
+  the flat FR sign line and has generator holonomy \(-1\);
+\item its real sign form can be a Pfaffian line, but the actual family chooses
+  it only if its mapping-torus mod-two index is odd;
+\item inversion preserves the class and admits a topological Real lift, but
+  topology does not determine the microscopic CPT regulator;
+\item no line on \(\cQ\) is equivalent to the free \(\cO(2)\) line on
+  \(\CP^1\);
+\item a globally gapped rank-three Hermitian mass on the spectator
+  \(\CP^1\times\CP^1\) realizes \(c_1(E_+)=x+2y\) exactly.
+\end{enumerate}
+Nevertheless,
+\[
+\begin{gathered}
+\texttt{actual\_pfaffian\_torsion\_class\_selected=false},\\
+\texttt{microscopic\_cpt\_regulator\_constructed=false},\\
+\texttt{physical\_rank\_three\_yukawa\_embedding\_derived=false},\\
+\texttt{lane\_closed=false},\qquad
+\texttt{portal\_start\_allowed=false}.
+\end{gathered}
+\]
+\end{theorem}
+
+The determinant-line and eta-holonomy distinction follows the families
+framework of Bismut--Freed and Dai--Freed
+\cite{BismutFreed1986APE7,DaiFreed1994APE7}.  FR signs are configuration-space
+quantization data rather than a consequence of merely writing a soliton
+ansatz~\cite{FinkelsteinRubinstein1968APE7,Krusch2003APE7}.
+
+\section{Exact topology of the physical orbit}
+
+\subsection{Cellular computation of \texorpdfstring{\(H^2(SO(3);\ZZ)\)}{H2(SO(3);Z)}}
+
+Use \(SO(3)\simeq\RP^3\), with one cell in each dimension \(0,1,2,3\).
+For the usual cellular orientations the integral boundary is
+\[
+ d_k=1+(-1)^k,
+ \qquad
+ 0\longrightarrow \ZZ\xrightarrow{0}\ZZ
+ \xrightarrow{2}\ZZ\xrightarrow{0}\ZZ\longrightarrow0.
+\]
+Dualizing gives
+\[
+ 0\longrightarrow \ZZ\xrightarrow{0}\ZZ
+ \xrightarrow{2}\ZZ\xrightarrow{0}\ZZ\longrightarrow0,
+\]
+where the displayed terms now have cohomological degrees \(0,1,2,3\).
+Consequently
+\begin{equation}
+ H^0=\ZZ,\qquad H^1=0,\qquad H^2=\ZZ/2,\qquad H^3=\ZZ.
+ \label{eq:rp3-cohomology}
+\end{equation}
+In particular \(H^2_{\rm dR}(SO(3))=0\).  There is no continuous magnetic
+flux or free Chern-number parameter on this orbit.
+
+\subsection{The Bockstein and the unique nontrivial line}
+
+Let \(a\) generate \(H^1(\RP^3;\ZZ_2)=\ZZ_2\), and use the coefficient
+sequence
+\[
+ 0\longrightarrow\ZZ\xrightarrow{\times2}\ZZ
+ \longrightarrow\ZZ_2\longrightarrow0.
+\]
+Represent \(a\) by the mod-two cellular cochain \(1\), lift it to the integer
+cochain \(A=1\), and note that \(\delta A=2\).  Dividing by two before taking
+the integral class gives
+\begin{equation}
+ \beta(a)=\left[\frac{\delta A}{2}\right]=[1]=t,
+ \qquad H^2(\RP^3;\ZZ)=\{0,t\},\qquad 2t=0.
+ \label{eq:bockstein}
+\end{equation}
+Since complex line bundles are classified by \(H^2(-;\ZZ)\), these are the
+only two topological possibilities.
+
+The universal cover is
+\[
+ p:SU(2)=S^3\longrightarrow SO(3)=\RP^3,
+ \qquad A\sim-A.
+\]
+The nontrivial line has the concrete associated-bundle model
+\begin{equation}
+ \cL_{\rm FR}=SU(2)\mathbin{\times}_{\ZZ_2,\mathrm{sign}}\CC,
+ \qquad (A,z)\sim(-A,-z),
+ \label{eq:fr-line}
+\end{equation}
+so a section lifted to \(SU(2)\) obeys \(\psi(-A)=-\psi(A)\).  Its pullback
+to \(S^3\) is trivial because \(H^2(S^3;\ZZ)=0\), but its descent data are
+not.  The real sign line
+\[
+ \cP_{\rm FR}=SU(2)\mathbin{\times}_{\mathrm{sign}}\RR
+\]
+has \(w_1(\cP_{\rm FR})=a\), and
+\(\cP_{\rm FR}\otimes_{\RR}\CC=\cL_{\rm FR}\) has
+\(c_1=\beta(a)=t\).
+
+\subsection{Generator holonomy and rotor sectors}
+
+A generator of \(\pi_1(SO(3))=\ZZ_2\) lifts to
+\begin{equation}
+ A(\tau)=
+ \begin{pmatrix}e^{\ii\pi\tau}&0\\0&e^{-\ii\pi\tau}\end{pmatrix},
+ \qquad 0\leq\tau\leq1,\qquad A(1)=-\bm1_2.
+ \label{eq:generator-loop}
+\end{equation}
+Closing the lift uses the sign transition in~\eqref{eq:fr-line}; hence
+\begin{equation}
+ \Hol_\gamma(\cL_{\rm FR})=-1,
+ \qquad \Hol_\gamma(\cL_{\rm FR}^{\otimes2})=+1.
+ \label{eq:fr-holonomy}
+\end{equation}
+Peter--Weyl functions in spin \(j\) transform under the centre as
+\((-1)^{2j}\).  The trivial sector therefore contains integer \(j\), while
+the FR sign sector contains half-integer \(j\).  The lowest full rigid-rotor
+block in the odd sector is \(j=1/2\) and has dimension
+\((2j+1)^2=4\), not three.  Additional hedgehog constraints may reduce the
+physical spin/isospin labeling, but they cannot turn the torsion line into
+the \(\CP^1\) holomorphic space \(H^0(\CP^1,\cO(2))\).
+
+\section{Determinant, Pfaffian, and the missing mapping-torus calculation}
+
+\subsection{What topology determines}
+
+For a real skew-adjoint Fredholm family with Pfaffian line \(\Pf\to\cQ\),
+the loop sign is controlled by mod-two spectral flow, equivalently by the
+appropriate mapping-torus mod-two index:
+\begin{equation}
+ \Hol_\gamma(\Pf)=(-1)^{\indtwo(\mathscr D_{Y_\gamma})}.
+ \label{eq:pf-holonomy}
+\end{equation}
+On \(SO(3)\), equation~\eqref{eq:pf-holonomy} leaves exactly two options:
+the trivial real line if the index is even, and \(\cP_{\rm FR}\) if it is
+odd.  For the standard doubled skew matrix, the determinant line is the
+Pfaffian square,
+\begin{equation}
+ \Det\simeq\Pf^{\otimes2},
+ \qquad \Hol_\gamma(\Det)=+1
+ \label{eq:det-pf-square}
+\end{equation}
+in either torsion sector.  This does not say that every complex chiral
+determinant is automatically the square of one real Pfaffian; the real
+structure and representation must first be specified.  A single
+pseudoreal \(SU(2)\) Weyl doublet can carry the familiar mod-two anomaly,
+whereas vectorlike doubling gives an even representation-parity control
+\cite{Witten1982APE7}.
+
+\subsection{Conditional two-colour selection}
+
+The standard Skyrmion WZW/FR rotation rule gives
+\begin{equation}
+ \Hol_{2\pi}=(-1)^{N_cB}.
+ \label{eq:ncb}
+\end{equation}
+For the present two-colour, unit-charge target,
+\begin{equation}
+ N_c=2,\qquad B=1,\qquad (-1)^{N_cB}=+1.
+ \label{eq:two-colour-sign}
+\end{equation}
+Thus, \emph{if} the usual WZW derivation is realized by the same charged
+two-colour regulator, it selects the trivial bosonic line, as expected for a
+two-colour diquark baryon.  The AP-E6 declared constituent Dirac completion
+also contains two Weyl doublets and has even mod-two representation parity.
+These are strong consistency controls, not the requested operator theorem:
+the common Euclidean/PV operator, its mapping-torus domain, eta prescription,
+and Pfaffian orientation are still absent.  WZW quantization and global
+current algebra supply the context for~\eqref{eq:ncb}~\cite{Witten1983APE7}.
+
+\begin{gate}[Actual Pfaffian class]
+The machine card sets
+\begin{center}
+\small
+\nolinkurl{actual_yukawa_mapping_torus_mod2_index_computed=false}\\
+\nolinkurl{actual_pfaffian_torsion_class_selected=false}.
+\end{center}
+The conditional value \(+1\) in~\eqref{eq:two-colour-sign} is not silently
+substituted for a same-operator APS/PV computation.
+\end{gate}
+
+\section{CPT on the torsion line}
+
+Use the base involution
+\begin{equation}
+ \iota:SO(3)\longrightarrow SO(3),\qquad \iota([A])=[A^{-1}].
+ \label{eq:base-involution}
+\end{equation}
+Since inversion acts trivially on \(\pi_1(SO(3))=\ZZ_2\), it preserves both
+flat characters.  Equivalently,
+\[
+ c_1(\overline{\cL}_{\rm FR})=-t=t,
+\]
+because \(2t=0\).  One explicit topological anti-linear lift is
+\begin{equation}
+ J[A,z]=[A^{-1},\overline z].
+ \label{eq:real-lift}
+\end{equation}
+It is well-defined: replacing \((A,z)\) by \((-A,-z)\) sends the right-hand
+side to \([-A^{-1},-\overline z]=[A^{-1},\overline z]\).  This particular
+lift satisfies \(J^2=1\).
+
+Existence is not uniqueness of the microscopic CPT operation.  A physical
+antiunitary map must also act on spin, gauge, flavour and regulator spaces;
+preserve or transform the operator domain and boundary conditions; choose a
+spectral cut; and transport the determinant/Pfaffian orientation.  Its square
+on the full Hilbert space can contain fermion parity or internal symmetries
+not seen by the one-dimensional topological carrier.  We therefore record
+\eqref{eq:real-lift} as a Real-line construction and keep
+\(\texttt{microscopic\_cpt\_regulator\_constructed=false}\).
+
+\section{Why torsion cannot replace \texorpdfstring{\(\cO(2)\)}{O(2)}}
+
+Let \(u=c_1(\cO(1))\) generate \(H^2(\CP^1;\ZZ)=\ZZ\).  The old carrier has
+\[
+ c_1(\cO(2))=2u\ne0,
+\]
+a free class visible in de Rham cohomology and Berry curvature.  On the actual
+orbit, every line has class \(0\) or \(t\), with
+\[
+ 2t=0,
+ \qquad t\otimes\RR=0,
+ \qquad F_{\nabla_{\rm flat}}=0.
+\]
+There is no class-preserving identification \(2u\leftrightarrow t\).  More
+physically, \(\cO(2)\) produces three Dolbeault sections on \(\CP^1\), while
+the FR line imposes a centre parity on an \(SO(3)\) rotor.  Therefore the
+torsion line is the correct \emph{classification replacement} on the true
+moduli but not an equivalent realization of the AP-E4 three-state mechanism.
+
+\section{Explicit minimal rank-three mass family}
+
+\subsection{A basepoint-free map to \texorpdfstring{\(\CP^2\)}{CP2}}
+
+Let
+\[
+ X=\CP^1_z\times\CP^1_w,
+ \qquad x=c_1(\cO(1,0)),\qquad y=c_1(\cO(0,1)),
+\]
+so \(x^2=y^2=0\) and \(\int_Xxy=1\).  Consider
+\begin{equation}
+ \begin{aligned}
+ s_0&=z_0w_0^2,\\
+ s_1&=z_1w_1^2,\\
+ s_2&=z_0w_1^2+z_1w_0^2.
+ \end{aligned}
+ \label{eq:sections}
+\end{equation}
+All three are sections of \(\cO(1,2)\).
+
+\begin{lemma}[No common zero]
+The sections in~\eqref{eq:sections} are basepoint-free.
+\end{lemma}
+\begin{proof}
+If \(s_0=s_1=0\), then
+\((z_0=0\ \text{or}\ w_0=0)\) and
+\((z_1=0\ \text{or}\ w_1=0)\).  The branches
+\(z_0=z_1=0\) and \(w_0=w_1=0\) are forbidden in projective space.  In the
+remaining branch \(z_0=0,w_1=0\), one has
+\(z_1w_0^2\ne0\), so \(s_2\ne0\).  In the branch
+\(w_0=0,z_1=0\), one has \(z_0w_1^2\ne0\), again giving \(s_2\ne0\).
+Thus no common zero exists.
+\end{proof}
+
+The normalized holomorphic column \(v=s/\lVert s\rVert\) defines a map
+\(f:X\to\CP^2\).  Its span is the pulled-back tautological line
+\[
+ \operatorname{span}(v)=f^*\cO_{\CP^2}(-1),
+ \qquad c_1(\operatorname{span}(v))=-(x+2y).
+\]
+This fixes the sign that a bare ``Veronese vector'' can easily obscure.
+Complex conjugation reverses the Chern class.  Hence
+\begin{equation}
+ e_+=\frac{\overline{s}}{\lVert s\rVert},
+ \qquad
+ P_+=e_+e_+^\dagger,
+ \qquad
+ c_1(E_+)=x+2y.
+ \label{eq:positive-projector}
+\end{equation}
+
+\subsection{Hermitian mass and uniform gap}
+
+For any constant \(m>0\), define
+\begin{equation}
+ \cM(z,w)=m(2P_+(z,w)-\bm1_3).
+ \label{eq:rank-three-mass}
+\end{equation}
+Because \(P_+^2=P_+=P_+^\dagger\) globally,
+\begin{equation}
+ \operatorname{spec}\cM=\{+m,-m,-m\},
+ \qquad \cM^2=m^2\bm1_3.
+ \label{eq:rank-three-spectrum}
+\end{equation}
+Thus the gap to zero is exactly \(m\) and the positive--negative band
+separation is \(2m\), uniformly on all of \(X\).  Compactness plus the
+basepoint-free lemma ensures the projector has no singular normalization.
+
+\subsection{Complement bundle and K-theory identity}
+
+Let \(E_-=E_+^\perp\), a rank-two bundle.  Since the ambient three-band
+bundle is trivial,
+\begin{equation}
+ E_+\oplus E_-=X\times\CC^3,
+ \qquad c(E_-)=(1+c_1(E_+))^{-1}.
+\end{equation}
+Writing \(\ell=x+2y\) and using \(\ell^2=4xy\),
+\begin{equation}
+ c_1(E_-)=-\ell=-(x+2y),
+ \qquad c_2(E_-)=\ell^2=4xy.
+ \label{eq:complement-chern}
+\end{equation}
+Equivalently in K-theory and rational cohomology
+\begin{equation}
+ [E_-]=3-[E_+],
+ \qquad
+ \ch(E_-)=3-e^\ell=2-\ell-\frac{\ell^2}{2}
+ =2-(x+2y)-2xy .
+ \label{eq:k-theory}
+\end{equation}
+These identities are the precise cancellation that a total trivial rank-three
+bundle requires; no nonexistent ``complement line'' is introduced.  Standard
+bundle classification and K-theory provide the general framework
+\cite{Atiyah1989APE7,Hatcher2017APE7}.
+
+\subsection{Minimality relative to the two-band no-go}
+
+A gapped \(2\times2\) Hermitian mass with one positive and one negative band
+defines a map to the Grassmannian
+\(\mathrm{Gr}_1(\CC^2)=\CP^1\).  If \(u\in H^2(\CP^1;\ZZ)\), then
+\(u^2=0\), so every positive eigenline pulled back from this target obeys
+\[
+ c_1(E_+)^2=0.
+\]
+The requested class obeys
+\[
+ (x+2y)^2=4xy\ne0.
+\]
+For three bands the target is \(\CP^2\), whose hyperplane class has nonzero
+square.  Equations~\eqref{eq:positive-projector}--\eqref{eq:rank-three-spectrum}
+therefore show both sufficiency and minimality: rank three is the first
+nontrivial sign-split band number that can realize the class in a trivial
+ambient bundle.
+
+\section{Numerical and symbolic verification}
+
+The deterministic verifier performs the following independent controls.
+\begin{enumerate}[label=(\arabic*)]
+\item It evaluates the \(\RP^3\) cellular boundaries \((0,2,0)\), the
+  Bockstein lift \(\delta A/2=1\), and the FR character square.
+\item It samples the path~\eqref{eq:generator-loop} at 65 points and checks
+  unitarity, determinant one, endpoints, inversion, and deck compatibility.
+\item It scans \(9\times12\) points on each \(\CP^1\), or 11,664 points on
+  \(X\), at \(m=1.7\).  The sampled minimum is
+  \(\lVert s\rVert^2=0.25\); projector, Hermiticity, and eigenvalue residuals
+  are at floating-point roundoff, and the gap is \(1.7\).
+\item Gauge-invariant triangulated Berry sums with 1,520 triangles per sphere
+  give
+  \[
+  \frac{\ii}{2\pi}\int_{\CP^1_z}\Tr(P_+\dd P_+\wedge\dd P_+)=1,
+  \qquad
+  \frac{\ii}{2\pi}\int_{\CP^1_w}\Tr(P_+\dd P_+\wedge\dd P_+)=2
+  \]
+  to better than \(10^{-11}\).
+\end{enumerate}
+The matrix gap is an exact finite-band theorem.  It is not the Fredholm gap of
+the spatial Yukawa--Callias operator.  General Callias theory requires the
+actual asymptotic potential and operator class, not merely a target bundle
+template~\cite{VanDenDungen2025APE7}.
+
+\begin{table}[ht]
+\centering
+\caption{AP-E7 evidence boundary.}
+\begin{tabular}{L{0.53\linewidth}L{0.30\linewidth}}
+\toprule
+Statement & Status\\
+\midrule
+\(H^2(SO(3);\ZZ)=\ZZ_2\), FR cover and both flat sectors & \status{exact}\\
+FR sign-line and Pfaffian-candidate holonomy \(-1\) & \status{exact topology}\\
+Standard \((-1)^{N_cB}=+1\) at \(N_c=2,B=1\) & \status{conditional UV rule}\\
+Actual Yukawa mapping-torus mod-two index & \status{open}\\
+Deck-compatible topological CPT Real lift & \status{constructed}\\
+Microscopic CPT/PV regulator and Pfaffian orientation & \status{open}\\
+Rank-three \(c_1(E_+)=x+2y\) mass and uniform matrix gap & \status{exact spectator}\\
+Same-soliton rank-three Yukawa embedding and Fredholm gap & \status{open}\\
+Degree-one Route-E portal & \status{forbidden}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Blockers and next discriminating calculations}
+
+The result narrows the remaining work to operator-level questions.
+\begin{enumerate}[label=\textbf{B\arabic*.},leftmargin=*]
+\item Construct the common Euclidean/PV Yukawa operator along the nontrivial
+  \(SO(3)\) loop and evaluate its mapping-torus \(\indtwo\) or eta phase.
+  This decides between the two classified Pfaffian lines.
+\item Define the regulator CPT action on its domain, spectral cut and
+  orientation.  Then compare its transported Real structure with
+  equation~\eqref{eq:real-lift}.
+\item Derive three asymptotic fermion bands from an actual charged two-colour
+  representation and match their normalized mass projector to
+  equation~\eqref{eq:positive-projector}, including gauge covariance and
+  heavy-threshold decoupling.
+\item Replace the spectator \(\CP^1\) by a localized normalizable physical
+  modulus, or formulate the family over the actual \(SO(3)\) orbit.  Without
+  this step the rank-three success cannot close the same-soliton lane.
+\item Prove a uniform Fredholm gap for that spatial operator.  Only then may
+  the determinant/Pfaffian family be paired with the WZW descent and tested
+  as a portal antecedent.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e7_so3_fr_rank3_family}
+
+\end{document}

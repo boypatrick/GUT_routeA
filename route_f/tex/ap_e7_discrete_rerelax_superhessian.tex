@@ -1,0 +1,412 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cH}{\mathcal H}
+
+\title{AP-E7 Discrete Re-relaxation Audit:\\
+Finite-site Topology, an Admissibility Obstruction,\\
+and Same-grid Sparse Operators}
+\author{Route F research note}
+\date{17 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The AP-E6 continuum hedgehog is used only as an initial condition. We then
+minimize the same declared finite-difference $n+s$ energy independently on
+five cubic grids with exact-vacuum Dirichlet data. This exposes a structural
+obstruction: at finite site number the unconstrained configuration space is
+path-connected, so it has no exact $B\in\pi_3(S^3)$ components. A
+Freudenthal-tetrahedron regular-value degree equals $B=1$ only on an
+admissible open subset. Unconstrained solves cross its dislocation boundary
+and converge to $B=0$. Endpoint-guarded line searches at three explicit
+admissibility floors have $B=1$ at every accepted iterate, but hit the floor
+with nonzero projected gradient instead of finding an interior stationary
+point. Continuous admissibility of the entire geodesic segment between two
+accepted endpoints is not certified.
+
+For numerical and algebraic controls only, a central $3^3$ hedgehog core is
+fixed and every other variable is re-relaxed. In that artificial sector we
+assemble an exact sparse constraint-projected $n+s$ Hessian and same-grid
+diquark, gauge, ghost, and Wilson/Yukawa normal operators. The latter is a
+positive fermion proxy, not the bosonic second derivative of
+$-\log\det D_W$. Therefore no genuine unanchored relaxed $B=1$ lattice
+solution, physical super-Hessian, four-dimensional dynamics, or continuum
+stability theorem is claimed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Declared finite-difference problem}
+
+Let $n_x\in S^3\subset\RR^4$, $s_x\in\RR$, and freeze every boundary site to
+$n_x=(1,0,0,0)$, $s_x=1$. The AP-E6 energy is discretized as
+\begin{align}
+ E_a[n,s]={}&\frac a2\sum_{\langle xy\rangle}
+ \left(\lVert n_y-n_x\rVert^2+(s_y-s_x)^2\right)\nonumber\\
+ &+\frac{\kappa a^3}{2}\sum_c\sum_{i<j}
+ \left(\lVert u_i^c\rVert^2\lVert u_j^c\rVert^2
+ -(u_i^c\!\cdot u_j^c)^2\right)\nonumber\\
+ &+a^3\sum_{x\in\mathrm{int}}
+ \left[\frac{m_s^2}{2}(s_x-1)^2
+ +\beta^2s_x^2(1-n_{x0})\right],
+ \label{eq:lattice-energy}
+\end{align}
+where $u_i^c=(n_{c+\hat\imath}-n_c)/a$ and
+\begin{equation}
+ \kappa=1,\qquad \beta=\frac12,\qquad m_s=\frac52.
+ \label{eq:parameters}
+\end{equation}
+This is an ordinary classical three-dimensional regulator of the continuum
+Skyrme-type model \cite{Skyrme1961APE7}. It is neither a Euclidean
+four-dimensional measure nor a two-colour lattice-QCD action. Recent
+two-colour sigma-model studies motivate additional scalar channels but do not
+remove this distinction \cite{SuenagaEtAl2023APE7,SuenagaEtAl2024APE7}.
+
+Each grid is initialized by the same AP-E6 $R=16$ continuum solution with
+canonical little-endian float64 checksum
+\begin{center}
+\path{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}.
+\end{center}
+The sampled outer faces are replaced by the exact vacuum before each
+independent lattice solve.
+
+\section{Why a finite-site \texorpdfstring{$B$}{B} sector is not automatic}
+
+\begin{theorem}[Finite-site no-sector theorem]
+For $M=(N-2)^3<\infty$ dynamical sites and fixed boundary, the unconstrained
+configuration space
+\begin{equation}
+ \cC_N=(S^3)^M\times\RR^M
+ \label{eq:configuration-space}
+\end{equation}
+is path-connected. Consequently no integer-valued continuous function on all
+of $\cC_N$ can distinguish a $B=1$ component from the vacuum.
+\end{theorem}
+
+\begin{proof}
+Both $S^3$ and $\RR$ are path-connected. Given two configurations, choose a
+path between the two values at every site and take their finite Cartesian
+product. This constructs a path in $\cC_N$. A continuous map from a connected
+space to the discrete space $\mathbb Z$ is constant. Thus continuum
+$\pi_3(S^3)$ cannot become an exact decomposition of the unrestricted
+finite-site space without an additional admissibility condition,
+topology-preserving interpolation, or infinite dislocation barrier.
+\end{proof}
+
+This is the finite-site form of the dislocation problem familiar from
+geometric lattice charge \cite{BergLuscher1981APE7,Berg1981DislocationsAPE7}.
+Lattice Skyrme constructions that retain metastable topology introduce an
+explicit spherical-tetrahedron prescription and stabilizing structure
+\cite{SchrammSvetitsky2000APE7}.
+
+\section{Freudenthal regular-value degree}
+
+Split every cube into the six Freudenthal tetrahedra indexed by permutations
+$p\in S_3$, with vertices
+\begin{equation}
+ x_0=c,\quad x_1=c+e_{p_1},\quad
+ x_2=c+e_{p_1}+e_{p_2},\quad x_3=c+(1,1,1).
+\end{equation}
+Their domain orientation is $\epsilon(p)=\sgn(p)$. For a generic regular
+target $q\in S^3$, form
+\begin{equation}
+ V_T=[n_{x_0}\ n_{x_1}\ n_{x_2}\ n_{x_3}],\qquad
+ c_T=V_T^{-1}q\quad\text{when }\det V_T\ne0.
+ \label{eq:target-matrix}
+\end{equation}
+There are finitely many tetrahedra.  If $V_T$ is singular, its column span is
+a proper linear subspace of $\mathbb R^4$; choose the generic regular target
+$q$ outside the finite union of those spans.  Such a tetrahedron then has no
+preimage of $q$ and contributes zero.  Equivalently, an exceptional target is
+defined by an arbitrarily small regular perturbation before taking the signed
+count.  Thus the inverse in \eqref{eq:target-matrix} is never applied to a
+singular matrix.  The numerical implementation uses the declared
+$|\det V_T|<10^{-13}$ exceptional-cell tolerance and verifies target agreement
+and a much larger nonzero determinant margin on every counted preimage.
+The ray through $q$ intersects the positive cone of the four vertices iff
+every component of $c_T$ is positive. In that case the local map degree is
+\begin{equation}
+ d_T(q)=\epsilon(p)\sgn\det V_T.
+\end{equation}
+Thus, in the sign convention of the continuum AP-E6 card,
+\begin{equation}
+ \deg(n;q)=\sum_T d_T(q),\qquad B_{\rm geom}=-\deg(n;q).
+ \label{eq:degree}
+\end{equation}
+Three generic targets are used, and agreement is required.
+
+The normalized affine map on $T$ is defined only if the vertex convex hull
+does not contain the origin. Its exact margin is
+\begin{equation}
+ \delta_T=\min_{\lambda_i\ge0,\ \sum_i\lambda_i=1}
+ \left\lVert\sum_{i=0}^3\lambda_i n_{x_i}\right\rVert,
+ \qquad \delta_a=\min_T\delta_T.
+ \label{eq:admissibility}
+\end{equation}
+The implementation enumerates all active faces of each four-vertex convex
+program. When $\delta_a>0$, normalization is nonsingular and
+$B_{\rm geom}$ is locally constant. At $\delta_a=0$, a dislocation can change
+the integer without contradicting the theorem above. A regression uses the
+four regular-tetrahedron vectors
+$(1,1,1,0)$, $(1,-1,-1,0)$, $(-1,1,-1,0)$, and $(-1,-1,1,0)$, divided by
+$\sqrt3$. Their equal-weight sum vanishes; the active-set KKT solver returns
+$\delta_a=2.21\times10^{-16}$ and correctly rejects admissibility.
+
+\section{Riemannian relaxation and its audit}
+
+At every site choose an orthonormal tangent frame $E_x\in\RR^{4\times3}$.
+A fixed-base exponential chart is
+\begin{equation}
+ n_x(z_x)=\cos r_x\,n_x^{(0)}
+ +\frac{\sin r_x}{r_x}E_xz_x,
+ \qquad r_x=\lVert z_x\rVert,
+ \label{eq:chart}
+\end{equation}
+while $s_x=s_x^{(0)}+\sigma_x$. If $u=z/r$, the exact pullback of an
+embedding gradient $g\in\RR^4$ is
+\begin{align}
+ J(z)^Tg={}&u\bigl[(-\sin r\,n^{(0)}+\cos r\,Eu)\cdot g\bigr]\nonumber\\
+ &+\frac{\sin r}{r}(I-uu^T)E^Tg,
+ \label{eq:chart-gradient}
+\end{align}
+with limit $E^Tg$ at $r=0$. A centered directional derivative checks
+Eq.~\eqref{eq:chart-gradient} independently; its best relative residual is
+$7.31\times10^{-11}$.
+
+Three logically different solves are reported:
+\begin{enumerate}[label=(\alph*)]
+\item unconstrained L-BFGS relaxation of every interior variable;
+\item Riemannian Armijo descent that rejects any candidate endpoint with
+  $B_{\rm geom}\ne1$ or $\delta_a<\delta_{\rm floor}$;
+\item an artificial control fixing the $n$ values, but not $s$, on the
+  central $3\times3\times3$ sampled hedgehog block.
+\end{enumerate}
+Only (a) tests full-grid stationarity. Case (b) diagnoses the admissible
+boundary. Case (c) tests a deliberately restricted solver and cannot be
+called a genuine relaxed lattice soliton.
+
+\section{Exact restricted Hessian and same-grid blocks}
+
+Let $G_x=\partial E_a/\partial n_x$ and $\lambda_x=n_x\cdot G_x$. With
+$Q=\diag(E_1,1,E_2,1,\ldots)$, the exact Riemannian second variation is
+\begin{equation}
+ H_{n+s}=Q^T\left[H_{\rm emb}
+ -\diag(\lambda_1I_4,0,\lambda_2I_4,0,\ldots)\right]Q.
+ \label{eq:riemannian-hessian}
+\end{equation}
+For artificial control (c), rows and columns belonging to the 81 fixed core
+tangent variables are deleted. This restriction is an exact Hessian of
+Eq.~\eqref{eq:lattice-energy} on that constrained manifold. It is not a
+full-grid physical Hessian. On every grid, an independent centered geodesic
+second difference with all fixed-core tangent entries set to zero reproduces
+$v^TH_{n+s}v$; the largest best-step relative residual is
+$2.44\times10^{-9}$.
+
+On the identical interior Dirichlet grid, define
+\begin{align}
+ H_\Delta&=I_2\otimes\left[L_D+m_\Delta^2
+ +\chi(1-n_0)\right],
+ &m_\Delta^2&=0.81,&\chi&=-0.30,\label{eq:diquark}\\
+ H_A&=I_3\otimes L_D,& H_{\bar cc}&=L_D,
+ &&(\xi=1).\label{eq:gauge-ghost}
+\end{align}
+These are declared quadratic blocks. Here $H_A$ has three real spatial
+components and $H_{\bar cc}$ one complex ghost: they are Abelian Feynman-gauge
+proxies \cite{FaddeevPopov1967APE7}. A physical SU(2) regulator would instead
+require at least $3\times3M=9M$ real spatial-adjoint gauge variables and $3M$
+complex adjoint ghosts, plus interacting cross blocks. Those are absent.
+
+For an explicit same-grid fermion proxy, let
+\begin{align}
+ D_W={}&\sum_{i=1}^3\gamma_i\frac{T_i^+-T_i^-}{2a}+m\one
+ +\frac{r_W}{2a}\sum_{i=1}^3(2-T_i^+-T_i^-)\nonumber\\
+ &+y\left(P_R\otimes U_x+P_L\otimes U_x^\dagger\right),
+ \qquad U_x=n_{x0}\one+i n_{xa}\tau_a,
+ \label{eq:wilson-yukawa}
+\end{align}
+with $m=0.60$, $y=0.80$, $r_W=1$, and Dirichlet shifts. This is a
+Wilson/Yukawa operator in the sense of an explicitly declared regulator
+\cite{Wilson1974APE7}. We diagonalize
+\begin{equation}
+ K_F=D_W^\dagger D_W\succeq0.
+ \label{eq:normal}
+\end{equation}
+The displayed same-grid direct sum is therefore
+\begin{equation}
+ \cH_{\rm declared}=
+ H_{n+s}^{\rm core\,restricted}\oplus H_\Delta\oplus H_A
+ \oplus H_{\bar cc}\oplus K_F.
+ \label{eq:direct-sum}
+\end{equation}
+Only the first block is a bosonic Hessian of the interacting background
+energy. $H_\Delta$ is the Hessian of a separately declared quadratic sector;
+$H_A$ is a free gauge proxy; $H_{\bar cc}$ is a Grassmann operator; and $K_F$
+is a positive normal proxy. Equation~\eqref{eq:direct-sum} is not the BRST
+super-Hessian nor the second variation of $-\log\det D_W$.
+
+\section{Numerical results}
+
+The deterministic card records five independently re-relaxed grid/volume
+pairs:
+\begin{equation}
+ (N,L)=(7,6),(9,6),(11,6),(9,8),(11,10).
+ \label{eq:grid-sequence}
+\end{equation}
+The first three vary $a=L/(N-1)$ at fixed volume; $(7,6)$, $(9,8)$, and
+$(11,10)$ give the fixed-$a=1$ volume sequence. No result is obtained by
+interpolating a previously relaxed lattice field.
+
+\subsection{Unconstrained unwind}
+
+Table~\ref{tab:unwind} shows that full-grid solves converge to the exact
+vacuum within numerical tolerance. Here $g_a$ is the sitewise tangent-gradient
+RMS divided by $a^3$.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Independent full-grid minimizations of Eq.~\eqref{eq:lattice-energy}.}
+\label{tab:unwind}
+\begin{tabular}{rrrrrrr}
+\toprule
+$N$&$L$&$a$&$E_{\rm initial}$&$E_\star$&$g_a$&$B_{\rm geom}$\\
+\midrule
+7&6&1.00&43.95516354&$9.07\times10^{-16}$&$1.99\times10^{-9}$&0\\
+9&6&0.75&54.15076270&$5.33\times10^{-17}$&$3.91\times10^{-9}$&0\\
+11&6&0.60&61.09804327&$8.07\times10^{-16}$&$3.17\times10^{-9}$&0\\
+9&8&1.00&43.16126382&$1.77\times10^{-14}$&$1.84\times10^{-8}$&0\\
+11&10&1.00&42.97909652&$2.04\times10^{-15}$&$2.13\times10^{-9}$&0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Fixing only the central value $n(0)=-1$ also fails. It converges to
+$E=12.46071222$, $g_a=7.15\times10^{-9}$, but all three regular targets give
+$B_{\rm geom}=0$ and $\delta_a=0$. The single pinned point is surrounded by a
+degenerate tetrahedral dislocation.
+
+\subsection{Admissible-component guard}
+
+At $N=7,L=6$, every accepted guard endpoint has three-target $B=1$, yet each
+search terminates on its floor with nonzero gradient
+(Table~\ref{tab:guard}). The
+monotone fall of $E$ and $g_a$ as the floor is lowered is evidence that the
+descent is driven toward the dislocation boundary, not toward a resolved
+interior critical point. This is a controlled numerical result, not a proof
+that no other metastable critical point exists anywhere in the component.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Admissible-component descent at $N=7,L=6$.}
+\label{tab:guard}
+\begin{tabular}{rrrrrr}
+\toprule
+$\delta_{\rm floor}$&steps&$E_\star$&$g_a$&final $\delta_a$&$B_{\rm geom}$\\
+\midrule
+0.10&21&28.63959591&0.47292019&0.100000002&1\\
+0.05&25&26.04401742&0.43767430&0.050000002&1\\
+0.02&28&24.72976823&0.41784577&0.020000002&1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Artificial fixed-core control}
+
+The free residual passes the $2\times10^{-6}$ tolerance on every artificial
+fixed-core grid, while the full unanchored residual does not
+(Table~\ref{tab:anchor-spectrum}). This separation is why the result is never
+promoted to full stationarity.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Artificial controls and lowest same-grid spectra.}
+\label{tab:anchor-spectrum}
+\begin{tabular}{rrrrrrrrr}
+\toprule
+$N$&$L$&free $g_a$&full $g_a$&$B_{\rm FD}$&
+$\lambda_0^{n+s}$&$\lambda_0^\Delta$&$\lambda_0^A$&$\sigma_{\min}D_W$\\
+\midrule
+7&6&$1.45\times10^{-8}$&0.5792&0.16647&2.26434&1.52463&0.80385&1.50522\\
+9&6&$3.33\times10^{-8}$&0.6631&0.34779&1.80433&1.53862&0.81195&1.46312\\
+11&6&$6.11\times10^{-8}$&0.6379&0.47754&1.50021&1.55084&0.81572&1.43240\\
+9&8&$9.46\times10^{-9}$&0.3453&0.16638&1.16107&1.21935&0.45672&1.44662\\
+11&10&$1.02\times10^{-8}$&0.2362&0.16644&0.75628&1.07593&0.29366&1.42132\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The largest exact restricted $n+s$ matrix occurs at $N=11$: it has 2,835
+degrees of freedom and 77,031 nonzeros. On that grid the real diquark block
+has 1,458 degrees of freedom and 9,234 nonzeros, the gauge block has 2,187 and
+13,851, the complex ghost has 729 and 4,617, and the fermion normal operator
+has 5,832 complex degrees of freedom and 190,432--190,636 nonzeros over the
+two $N=11$ backgrounds.
+
+The $N=7,L=6$ artificial solve was independently repeated; canonical JSON
+serialization gave the identical digest
+\begin{center}
+\path{27c5e4f06d5a27dc8866bd8bad32c8205a0d5f9d7ada10a9eb1dfecb6c4ca6c8}.
+\end{center}
+The complete machine-readable values, source hashes, and guard traces are in
+\path{route_f/output/ap_e7_discrete_rerelax_superhessian.json}.
+
+\begin{gate}[What the fixed-core spectrum means]
+Positive eigenvalues of $H_{n+s}^{\rm core\,restricted}$ establish only local
+stability under variations that vanish on the artificial core and outer
+boundary. They do not establish a full-grid $B=1$ stationary point. The smooth
+derivative estimator $B_{\rm FD}$ is also not integer on these coarse grids;
+it is a convergence diagnostic, never a replacement for admissible geometric
+degree.
+\end{gate}
+
+\section{Fail-closed conclusion and next constructions}
+
+The finite-site theorem and numerical unwind close an ambiguity left by
+AP-E6: simply re-running a generic optimizer cannot produce a genuine
+topological lattice soliton for the declared naive action. At least one new
+ingredient is necessary. Three controlled options are:
+\begin{enumerate}
+\item add an infinite or systematically removable barrier
+  $V_{\rm adm}(\delta_T)$ and prove observables become barrier-independent;
+\item replace the naive Skyrme cell by a topology-preserving spherical-volume
+  action and repeat the $a,L$ scan;
+\item retain the continuum-relaxed soliton, but discretize only its fluctuation
+  operator with a convergence theorem that never promotes finite-site degree
+  to an exact sector.
+\end{enumerate}
+Only after one construction produces an unanchored stationary sequence may
+the fermion contribution be upgraded from $D_W^\dagger D_W$ to the bosonic
+second derivative of the regulated determinant and combined with interacting
+SU(2) gauge--ghost cross blocks.
+
+Accordingly the genuine relaxed-$B=1$, full unanchored stationarity, physical
+aggregate super-Hessian, four-dimensional dynamics, HMC, quantum continuum,
+physics-promotion, and portal-start flags are all false.
+
+\bibliographystyle{unsrt}
+\bibliography{ap_e7_discrete_rerelax_superhessian}
+
+\end{document}

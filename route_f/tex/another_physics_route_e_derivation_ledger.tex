@@ -14,6 +14,7 @@
 \setlength{\emergencystretch}{2em}
 
 \newcommand{\CP}{\mathbb{CP}}
+\newcommand{\CC}{\mathbb C}
 \newcommand{\RR}{\mathbb R}
 \newcommand{\ZZ}{\mathbb Z}
 \newcommand{\cO}{\mathcal O}
@@ -49,7 +50,7 @@
 First-Principles Separation Theorems, an Exact
 Discriminant--Killing Bridge, and a Reversible Research Ledger}
 \author{Route F research note}
-\date{16 July 2026}
+\date{17 July 2026}
 
 \begin{document}
 \maketitle
@@ -1758,6 +1759,342 @@ The canonical standalone records are
 \path{route_f/tex/ap_e6_same_soliton_yukawa_callias.tex}, together with their
 machine-readable cards and the independent AP-E6 frontier verifier.
 
+\section{AP-E7 regulator, discrete topology, and determinant-family audit}
+\label{sec:ap-e7-audit}
+
+This section supersedes the AP-E6 execution status while retaining every
+negative boundary proved there.  It executes the three requested alternatives
+in order.  The result is deliberately asymmetric: the common quadratic
+regulator, a pure heavy threshold, the finite-site topology theorem, the
+classification of the physical \(SO(3)\) collective-coordinate lines, and a
+minimal rank-three mass family are exact.  None of them by itself closes a
+same-model pre-portal physics lane.
+
+\subsection{Common quadratic APS/PV complex and its exact scope}
+
+For a smooth background \(\bar X=(\bar A,\bar\Sigma,\bar\Phi)\), let the
+infinitesimal gauge action be
+\begin{equation}
+ {\cal R}_{\bar X}\epsilon
+ =\left(D_{\bar A}\epsilon,[\bar\Sigma,\epsilon],-\epsilon\bar\Phi\right).
+ \label{eq:e7-gauge-action}
+\end{equation}
+Using background Feynman gauge, the complete bare quadratic boson/ghost
+operators are defined without deleting mixing terms:
+\begin{equation}
+ \Delta_B=S_{\rm bos}^{(2)}[\bar X]
+       +{\cal R}_{\bar X}{\cal R}_{\bar X}^{\dagger},\qquad
+ \Delta_{\rm gh}={\cal R}_{\bar X}^{\dagger}{\cal R}_{\bar X}.
+ \label{eq:e7-quadratic-complex}
+\end{equation}
+They act on the stated \(H^2\) Sobolev domains after background stabilizers
+are projected.  The fermion amplitude is built from
+\(H=\gamma_5{\cal K}\).  Spinor charge conjugation is retained only as a
+reference/scalar-mass algebraic control; no fixed-Higgs Kramers symmetry is
+assumed for a general adjoint mass.
+
+The common determinant prescription uses
+\begin{equation}
+ c_a=(1,-3,3,-1),\qquad \Lambda_a^2=a\Lambda^2,\qquad a=0,1,2,3,
+ \label{eq:e7-pv-data}
+\end{equation}
+for which
+\begin{equation}
+ \sum_ac_aa^r=0\quad(r=0,1,2),\qquad
+ \sum_ac_aa^3=-6,\qquad
+ \sum_ac_a\log(\lambda+a\Lambda^2)
+ =-\frac{2\Lambda^6}{\lambda^3}+O(\lambda^{-4}).
+ \label{eq:e7-pv-moments}
+\end{equation}
+At the level of zeta determinants the regulated quadratic amplitude is
+\begin{align}
+ Z_{\rm quad}^{\rm PV}(\Lambda)={}&\tau_F
+ \prod_{a=0}^3
+ \det{}'_{\theta_B}(\Delta_B+a\Lambda^2)^{-c_a/2}
+ \det{}'(\Delta_{\rm gh}+a\Lambda^2)^{c_a}\nonumber\\
+ &\times\det{}'(H^2+a\Lambda^2)^{N_fc_a/2},\qquad N_f=2.
+ \label{eq:e7-common-pv}
+\end{align}
+Here \(\theta_B=\pi-\varepsilon\) is the upper lateral cut at a saddle.
+Equation~\eqref{eq:e7-common-pv} is a determinant prescription; it is not a
+claim that every half-integral power has already been realized by a local
+second-order Grassmann PV field.  The finite part subtracts the integrated
+supercomplex \(A_4\) coefficient at a fixed scale and declares positive
+reference masses to have zero local gauge, Hopf, and gravitational theta
+angles.
+
+On \(Y_5=M_4\times[0,1]\), the interpolation operator and its literal APS
+domain are
+\begin{align}
+ {\cal D}_5^+&=\partial_t+H(t),\nonumber\\
+ \operatorname{Dom}_{\rm APS,0}({\cal D}_5^+)
+ =\{u\in H^1(Y_5):{}&P_{[0,\infty)}(H_0)u|_0=0,\quad
+ P_{(-\infty,0)}(H_1)u|_1=0\}.
+ \label{eq:e7-aps-domain}
+\end{align}
+The physical determinant-sign formula uses the fixed cut \(0\) and gapped
+endpoints:
+\begin{equation}
+ \tau_F[X(t)]=\exp\!\left(\ii\pi N_f
+        \operatorname{SF}_0\{H(t)\}\right).
+ \label{eq:e7-physical-sf}
+\end{equation}
+An arbitrary common resolvent cut still defines a Fredholm APS problem, but
+its spectral flow cannot replace Eq.~\eqref{eq:e7-physical-sf} without the
+corresponding endpoint spectral-section orientation term.  This distinction
+is part of the regulator, not a convention that may be discarded.
+
+The constant negative-mass heavy bundle is
+\begin{equation}
+ E_h=(V_c\otimes L^{-1})\oplus\bm1,\qquad x=c_1(L),
+\end{equation}
+so the one-flavour index is
+\begin{equation}
+ I_h=\int_{M_4}\widehat A(TM_4)\operatorname{ch}(E_h)\big|_4
+ =\int_{M_4}\left[-c_2(V_c)+x^2-\frac18p_1(TM_4)\right]\in\ZZ.
+ \label{eq:e7-heavy-index}
+\end{equation}
+The rank-two charged branch contributes \(-p_1/12\), and the neutral singlet
+contributes \(-p_1/24\); hence gravity has not been omitted.  For two identical
+Dirac flavours,
+\begin{equation}
+ \boxed{\tau_h^{\rm pure}=\exp(\ii\pi\,2I_h)=1}
+ \label{eq:e7-heavy-phase}
+\end{equation}
+on every closed spin four-manifold and every unbroken
+\(SU(2)_c\times U(1)_H\) bundle.  This closes the pure unbroken-gauge/gravity
+threshold, not a target-dependent mixed WZW determinant.
+
+On the separated Higgs orbit, one can consistently declare
+\begin{equation}
+ h=\widehat\Sigma_{\bm5}/V,\qquad
+ P_\pm=\frac{h^2\pm h}{2},\qquad P_0=1-h^2,\qquad
+ (\rank P_+,\rank P_-,\rank P_0)=(2,2,1).
+ \label{eq:e7-higgs-projectors}
+\end{equation}
+A GW-compatible target source built from these projectors has even copies on
+both target generators and therefore conditionally yields \((+1,+1)\) in the
+no-stacked-sector convention.  It is not promoted to a finite overlap
+Dirac--Yukawa theorem until the ordinary/GW chiral projectors, five-dimensional
+kernel, and determinant orientation are specified in one operator.
+
+There is a sharp reason this source does not restore the original deep-UV
+claim.  Suppose an exact separated rank-two projector \(C(\Sigma)\) were
+continuous and \(Sp(4)\)-equivariant through \(\Sigma=0\).  Since the complex
+\(\bm5\) is irreducible, Schur's lemma gives
+\begin{equation}
+ C(0)=c\bm1_5,\qquad \Tr(HC(0))=0,\qquad
+ \Tr(HP_+)=2.
+ \label{eq:e7-schur-obstruction}
+\end{equation}
+If \(C\) remains a projector, \(c=0\) or \(1\), so its rank is zero or five,
+never two.  Thus the exact branch projector must lose its gap, continuity, or
+equivariance, or acquire new UV data.  This theorem does not prohibit every
+non-idempotent equivariant coupling; it prohibits the exact separated
+rank-two selector needed by the proposed light-only family.  A uniform exact
+flavour action on the complete \(\bm5\) instead has
+\begin{equation}
+ \kappa_{\rm full}=2(+1)+2(-1)+0=0,\qquad
+ \kappa_{\rm light}=+2,\qquad \kappa_{\rm heavy}=-2.
+ \label{eq:e7-charge-trace}
+\end{equation}
+Therefore neither construction is yet an all-scale derivation of
+\(k=+2\).
+
+\subsection{Finite-site topology and the re-relaxation result}
+
+The fixed-boundary finite-site configuration space of the declared naive
+\(n+s\) action is
+\begin{equation}
+ {\cal C}_N=(S^3)^{(N-2)^3}\times\RR^{(N-2)^3}.
+ \label{eq:e7-finite-config-space}
+\end{equation}
+Both factors are path-connected and a finite product of path-connected
+spaces is path-connected.  Hence no continuous integer-valued function on
+all of \({\cal C}_N\) can distinguish an exact \(B=1\) component from the
+vacuum.  A finite-\(a\) topological sector requires an admissibility
+restriction, topology-preserving interpolation, or infinite dislocation
+barrier; it is not supplied by the naive sampled action.
+
+For diagnostics, each cube is split into the six Freudenthal tetrahedra.  For
+a generic target \(q\in S^3\), let
+\begin{equation}
+ V_T=[n_{x_0}\ n_{x_1}\ n_{x_2}\ n_{x_3}],\qquad
+ c_T=V_T^{-1}q\quad\text{for }\det V_T\ne0.
+\end{equation}
+For a singular tetrahedron, \(\operatorname{span}V_T\) is a proper subspace
+of \(\RR^4\).  The generic regular target is chosen outside the finite union
+of these spans, so a singular cell has no preimage and contributes zero; an
+exceptional target is equivalently handled by an arbitrarily small regular
+perturbation.  The numerical implementation treats
+\(|\det V_T|<10^{-13}\) as exceptional and separately verifies three-target
+agreement and a nonzero-determinant margin for every counted hit.
+The normalized affine tetrahedron hits \(q\) exactly when all entries of
+\(c_T\) are positive, and its signed contribution is
+\begin{equation}
+ d_T(q)=\operatorname{sgn}(p)\operatorname{sgn}\det V_T,\qquad
+ B_{\rm geom}=-\sum_Td_T(q).
+ \label{eq:e7-geometric-degree}
+\end{equation}
+Three regular targets must agree.  The admissibility margin is
+\begin{equation}
+ \delta_a=\min_T\min_{\lambda_i\ge0,\,\sum_i\lambda_i=1}
+ \left\|\sum_{i=0}^3\lambda_i n_{x_i}\right\|.
+ \label{eq:e7-admissibility}
+\end{equation}
+Only on \(\delta_a>0\) is the normalized interpolation nonsingular and the
+degree locally constant.
+
+Five independent full-grid relaxations give:
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+\(N\)&\(L\)&\(a\)&\(E_{\rm initial}\)&\(E_\star\)&\(B_{\rm geom}\)\\
+\midrule
+7&6&1.00&43.95516&\(9.07\times10^{-16}\)&0\\
+9&6&0.75&54.15076&\(5.33\times10^{-17}\)&0\\
+11&6&0.60&61.09804&\(8.07\times10^{-16}\)&0\\
+9&8&1.00&43.16126&\(1.77\times10^{-14}\)&0\\
+11&10&1.00&42.97910&\(2.04\times10^{-15}\)&0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The maximum final free projected-gradient density is
+\(1.84\times10^{-8}\): the optimizer has converged, but to the vacuum.
+Pinning only \(n(0)=-1\) also gives \(B_{\rm geom}=0\) through a degenerate
+tetrahedron.  Admissibility-guarded searches at
+\(\delta_{\rm floor}=0.10,0.05,0.02\) retain \(B_{\rm geom}=1\), but stop on
+the respective floor with gradient densities \(0.473,0.438,0.418\).  They do
+not find an interior stationary point.
+
+An explicitly artificial control fixes the central \(3\times3\times3\)
+hedgehog \(n\)-values while re-relaxing all remaining variables independently
+on each grid.  Its free constrained residual is below
+\(6.2\times10^{-8}\), its three target degrees equal one, and its exact
+restricted \(n+s\) Hessian has positive lowest eigenvalues
+\(2.2643,1.8043,1.5002,1.1611,0.7563\) on the five grids.  The corresponding
+full unanchored residuals are \(0.24\)--\(0.66\); therefore these are
+restricted controls, not soliton stability eigenvalues.
+
+On the same sites the audit also assembles a declared quadratic diquark
+block, free Dirichlet gauge and ghost Laplacians, and
+\begin{equation}
+ K_F=D_W^\dagger D_W\succeq0.
+ \label{eq:e7-fermion-normal}
+\end{equation}
+Their positive spectra are useful implementation checks.  However \(K_F\)
+is not the second derivative of \(-\log\det D_W\), the interacting
+gauge--meson cross blocks are absent, and a ghost operator is not an ordinary
+positive bosonic Hessian block.  Consequently the direct sum is not a
+physical BRST super-Hessian.  The exact finite-site conclusion is stronger
+and more negative: the naive action has no exact topological component, and
+its tested unconstrained minimizers unwind.
+
+\subsection{The actual \texorpdfstring{\(SO(3)\)}{SO(3)} cover and the
+rank-three alternative}
+
+For the true localized orbit \(SO(3)\simeq\mathbb{RP}^3\), the cellular
+boundary maps are \(0,2,0\).  Dualizing gives
+\begin{equation}
+ H^2(SO(3);\ZZ)=\ZZ_2=\{0,t\},\qquad t=\beta(a),\qquad 2t=0,
+ \label{eq:e7-so3-cohomology}
+\end{equation}
+where \(a\in H^1(SO(3);\ZZ_2)\) is the cover class.  The unique nontrivial
+complex line is the FR line
+\begin{equation}
+ {\cal L}_{\rm FR}=SU(2)\times_{\ZZ_2,\mathrm{sign}}\CC,\qquad
+ (A,z)\sim(-A,-z).
+ \label{eq:e7-fr-line}
+\end{equation}
+A generator of \(\pi_1(SO(3))\) lifts from \(A=\bm1\) to \(A=-\bm1\), so
+\begin{equation}
+ \operatorname{Hol}_\gamma({\cal L}_{\rm FR})=-1,\qquad
+ \operatorname{Hol}_\gamma({\cal L}_{\rm FR}^{\otimes2})=+1.
+ \label{eq:e7-fr-holonomy}
+\end{equation}
+For a real skew-adjoint family,
+\begin{equation}
+ \operatorname{Hol}_\gamma(\operatorname{Pf})
+ =(-1)^{\operatorname{ind}_2({\cal D}_{Y_\gamma})},\qquad
+ \operatorname{Det}\simeq\operatorname{Pf}^{\otimes2}.
+ \label{eq:e7-pfaffian-line}
+\end{equation}
+Topology therefore classifies the two candidates but does not compute the
+actual same-Yukawa mapping-torus mod-two index.  The standard conditional
+Skyrmion rule gives
+\begin{equation}
+ (-1)^{N_cB}=(-1)^{2\cdot1}=+1,
+ \label{eq:e7-fr-two-colour}
+\end{equation}
+and thus favours the trivial/bosonic sector, but it is not substituted for
+the missing operator computation.  Inversion preserves the torsion class and
+admits the topological Real lift
+\begin{equation}
+ J[A,z]=[A^{-1},\overline z],\qquad J^2=1,
+ \label{eq:e7-fr-real-lift}
+\end{equation}
+while the microscopic CPT action on spin, gauge, regulator, domain, and
+Pfaffian orientation remains open.
+
+The torsion carrier cannot reproduce the old \(\cO(2)\) mechanism:
+\(t\otimes\RR=0\) and a flat representative has zero curvature, whereas
+\(c_1(\cO(2))\) is a nonzero free class.  Moreover the lowest odd FR rotor
+block has \(j=1/2\) and full Peter--Weyl multiplicity four, not the three
+holomorphic sections of \(\cO(2)\).
+
+The independent rank-three branch does remove the AP-E6 two-band obstruction
+at the bundle level.  On
+\(X=\CP^1_z\times\CP^1_w\), set
+\begin{equation}
+ s=(z_0w_0^2,\ z_1w_1^2,\ z_0w_1^2+z_1w_0^2).
+ \label{eq:e7-rank-three-sections}
+\end{equation}
+These three sections of \(\cO(1,2)\) have no common zero.  With
+\begin{equation}
+ e_+=\frac{\overline s}{\|s\|},\qquad
+ P_+=e_+e_+^\dagger,\qquad
+ {\cal M}=m(2P_+-\bm1_3),\quad m>0,
+ \label{eq:e7-rank-three-mass}
+\end{equation}
+one has the exact global identities
+\begin{align}
+ \operatorname{spec}{\cal M}&=\{+m,-m,-m\},&{\cal M}^2&=m^2\bm1_3,
+ \nonumber\\
+ c_1(E_+)&=x+2y,&c_1(E_-)&=-(x+2y),&c_2(E_-)&=4xy.
+ \label{eq:e7-rank-three-chern}
+\end{align}
+Thus \(E_+\oplus E_-=X\times\CC^3\), and rank three is minimal because the
+\(\CP^2\) hyperplane class can have nonzero square while the \(\CP^1\)
+two-band class cannot.  A scan of 11,664 points gives
+\(\min\|s\|^2=0.25\), projector residual \(5.64\times10^{-16}\), spectral
+residual \(2.89\times10^{-15}\), exact gap \(m=1.7\), and discrete Berry
+Chern numbers \((1.000000000000003,1.999999999999998)\).
+
+This is a genuine topological mass-family theorem, but its second
+\(\CP^1_w\) factor is still a spectator rather than a localized normalizable
+modulus.  No charged two-colour representation has yet produced its three
+bands or the bidegree-\((1,2)\) Yukawa projector, and the finite matrix gap is
+not a uniform Fredholm gap of the same soliton operator.
+
+\subsection{AP-E7 decision}
+
+Let \(C_{\rm APS}\) require the common regulator, the original target-family
+lift, both actual target eta signs, the mixed heavy determinant, and all-scale
+\(k=+2\).  Let \(C_{B1}\) require an unanchored admissible stationary sequence,
+the interacting physical super-Hessian, and a dynamical continuum limit.
+Let \(C_{\rm fam}\) require either the actual \(SO(3)\) Pfaffian route or a
+physical rank-three same-soliton family, together with microscopic CPT and
+gauge-basic WZW descent.  The current result is
+\begin{equation}
+ C_{\rm APS}=C_{B1}=C_{\rm fam}=\mathrm{false},\qquad
+ \boxed{\text{degree-one Route-E portal not started}.}
+ \label{eq:e7-final-decision}
+\end{equation}
+The mathematical advances are retained as reusable lemmas; they are not
+promotion substitutes.  The canonical records are the three
+\path{route_f/tex/ap_e7_*} notes, their machine-readable cards, and the
+independent AP-E7 execution-frontier verifier.
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -1789,6 +2126,12 @@ and \(27/27\), while their integrated authorization gate passes \(20/20\).
 The AP-E6 follow-up cards pass \(39/39\), \(20/20\), and \(25/25\);
 their fresh-manifest, same-checksum frontier conjunction passes \(15/15\)
 while keeping every complete-lane boolean false.
+The AP-E7 regulator, discrete-topology, and \(SO(3)\)/rank-three cards pass
+\(42/42\), \(16/16\), and \(18/18\), respectively.  Their independent
+same-checksum execution-frontier conjunction passes \(16/16\), with the two
+family alternatives represented by a disjunction but every condition within
+each alternative retained conjunctively.  All complete-lane, portal, and
+promotion booleans remain false.
 The JSON explicitly retains all
 cross-theory identifications as non-derived bridge axioms and sets
 \texttt{physics\_promotion\_allowed=false}.

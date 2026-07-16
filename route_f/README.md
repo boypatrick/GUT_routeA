@@ -26,7 +26,33 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-16 AP-E6 same-background result
+## 2026-07-17 AP-E7 current result
+
+The requested common-regulator, discrete re-relaxation, and actual-moduli
+alternatives have been executed and integrated.  The outcome is intentionally
+fail-closed:
+
+- A common quadratic APS/PV gauge--scalar--ghost--fermion prescription and the
+  pure two-flavour heavy gauge/gravity threshold are now explicit.  The pure
+  phase is exactly `+1`.  The conditional Higgsed `(+,+)` source is not the
+  still-missing original target-family mapping-torus computation.
+- A theorem shows that the unrestricted finite-site `S3` configuration space
+  is connected.  All five unconstrained grid/volume solves unwind to vacuum.
+  The positive fixed-core spectra are exact only in that artificial restricted
+  sector; the assembled fermion normal and free gauge/ghost blocks are not a
+  physical super-Hessian.
+- The actual `SO(3)` orbit has one nontrivial `Z2` FR line, but topology alone
+  does not select the microscopic Pfaffian class.  A minimal rank-three mass
+  family exactly realizes `c1=x+2y` and passes numerical Chern/gap checks, yet
+  remains a spectator bundle rather than a same-soliton Yukawa derivation.
+
+The three AP-E7 cards pass `42/42`, `16/16`, and `18/18`; the independent
+execution-frontier card passes `16/16` while keeping all three complete lanes,
+portal construction, and physics promotion false.  See
+`tex/another_physics_route_e_derivation_ledger.tex` for the combined formulas
+and `tex/ap_e7_*` plus `output/ap_e7_*` for the standalone proofs and cards.
+
+## 2026-07-16 AP-E6 same-background result (superseded by AP-E7)
 
 The next execution round is fail-closed and more restrictive than the prior
 frontier templates.
@@ -346,6 +372,13 @@ Artifacts:
 - `code/verify_ap_e6_execution_frontier.py`: independently checks fresh
   manifests, the canonical same-background checksum, every lane conjunction,
   and the no-portal rule (`15/15`).
+- `code/verify_ap_e7_common_sp4_aps_pv_regulator.py`,
+  `code/scan_ap_e7_discrete_rerelax_superhessian.py`, and
+  `code/verify_ap_e7_so3_fr_rank3_family.py`: common APS/PV, finite-site
+  topology/re-relaxation, and actual-`SO(3)`/rank-three audits (`42/42`,
+  `16/16`, and `18/18`; all physical lane flags false).
+- `code/verify_ap_e7_execution_frontier.py`: independent fresh-manifest,
+  conjunctive-lane and alternative-family gate (`16/16`; no portal).
 - `tex/another_physics_route_e_derivation_ledger.tex`: complete reversible
   derivation ledger for the Another-Physics / Route-E relationship.
 - `tex/another_physics_route_e_bridge.bib`: local primary-source bibliography
@@ -369,7 +402,7 @@ Artifacts:
   `output/pdf/ap_e4_tangent_dirac_spectrum.pdf`: clean-built, warning-free,
   page-by-page checked AP-E3 UV (12-page) and AP-E4 (9-page) notes.
 - `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
-  visually checked 27-page rendering of the derivation ledger; the same
+  visually checked 31-page rendering of the derivation ledger; the same
   current build is mirrored under `output/pdf/`.
 - `tex/ap_e6_sp4_eta_bordism_threshold.tex`,
   `tex/ap_e6_relaxed_b1_multigrid_hessian.tex`, and
@@ -420,6 +453,20 @@ Artifacts:
   and `25/25` mechanical cards with every full-lane flag false.
 - `output/ap_e6_execution_frontier.{json,md}`: `15/15` fresh-manifest and
   same-background integration card with portal authorization false.
+- `tex/ap_e7_common_sp4_aps_pv_regulator.tex`,
+  `tex/ap_e7_discrete_rerelax_superhessian.tex`, and
+  `tex/ap_e7_so3_fr_rank3_family.tex`, with their local bibliographies:
+  complete AP-E7 derivations and explicit proof/assumption boundaries.
+- `output/pdf/ap_e7_common_sp4_aps_pv_regulator.pdf`,
+  `output/pdf/ap_e7_discrete_rerelax_superhessian.pdf`, and
+  `output/pdf/ap_e7_so3_fr_rank3_family.pdf`: warning-free, page-by-page
+  checked 15-, 6-, and 8-page AP-E7 notes.
+- `output/ap_e7_common_sp4_aps_pv_regulator.{json,md}`,
+  `output/ap_e7_discrete_rerelax_superhessian.{json,md}`, and
+  `output/ap_e7_so3_fr_rank3_family.{json,md}`: `42/42`, `16/16`, and
+  `18/18` fail-closed evidence cards.
+- `output/ap_e7_execution_frontier.{json,md}`: `16/16` integrated gate with
+  every complete-lane, portal, and promotion boolean false.
 - `output/`: generated JSON, Markdown, and compiled-paper artifacts.
 
 The recommended active physics branch is a non-supersymmetric intermediate-
@@ -429,13 +476,16 @@ gate: Route F compares a `210_H` continuity branch with the better-established
 `54_H` branch before freezing the action.  Route B and Route D remain optional
 UV mechanisms until their selection-rule and global-consistency gates pass.
 
-Workspace provenance note (updated 2026-07-15): the initial Route-E/Route-F evidence
+Workspace provenance note (updated 2026-07-17): the initial Route-E/Route-F evidence
 set was committed and pushed at `6662dd6`; the blocker corrections were
 committed and pushed at `e7ba020`; the reversible Another-Physics bridge ledger
 was committed and pushed at `6c61d56`.  AP-E1 was then executed as a separate
 non-promoting derivation and committed/pushed at `cce4913`.  AP-E2 is now
 frozen as an exact non-promoting regression.  AP-E3's constrained-cell and
 signed-orientation subgates and AP-E4's canonical spectral mathematics are now
-complete.  The mixed-WZW strong/all-scale gates, AP-E4 fermionic Spin-c
-origin/anomalies, the degree-one Route-E portal, and AP-E5--AP-E9 must still
-pass before this bridge can alter any Route-E physics claim.
+complete.  AP-E5, AP-E6, and the present AP-E7 alternatives have since been
+executed at their declared mechanical scopes, without closing a physical
+pre-portal lane.  The mixed-WZW strong/all-scale gates, AP-E4 fermionic
+Spin-c origin/anomalies, the degree-one Route-E portal, and the remaining
+downstream phenomenology gates must still pass before this bridge can alter
+any Route-E physics claim.

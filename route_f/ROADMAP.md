@@ -1,12 +1,73 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E6 same-background checkpoint (2026-07-16; current authority)
+## AP-E7 regulator/topology/family checkpoint (2026-07-17; current authority)
+
+Status: **five exact subresults, three physical lanes still open, portal not
+started.**  The lane cards pass `42/42`, `16/16`, and `18/18`; the independent
+execution-frontier gate passes `16/16`.
+
+### Lane A -- common APS/PV and threshold
+
+- Done: the exact background quadratic complex, common PV determinant
+  prescription, finite local scheme, fixed-zero-cut APS domain, and pure
+  two-flavour heavy gauge/gravity index.  The closed-spin phase is exactly
+  `+1` for every bundle.
+- Conditional only: the separated Higgs projectors define a GW-compatible
+  target source and even mod-two counts `(+,+)`.  A complete finite
+  overlap/domain-wall target operator and its determinant orientation are not
+  yet present.
+- Permanent design constraint: a continuous equivariant **exact separated
+  rank-two projector** cannot survive the restored `Sp(4)` point.  New UV
+  fields, a gap closing, or an explicitly emergent symmetry are required.
+  The theorem does not rule out every non-idempotent coupling.
+- Open: original target mass-family lift, actual mapping-torus pair, mixed
+  heavy determinant, nonperturbative continuum measure, and all-scale `k=+2`.
+
+### Lane B -- discrete topology before super-Hessian
+
+- Done: the finite-site configuration space is path-connected, and the
+  three-target Freudenthal degree is locally constant only on the admissible
+  subset.  Five full-grid independent solves unwind to `B_geom=0`; guarded
+  descent reaches each positive admissibility floor with nonzero gradient.
+- Control only: independently re-relaxed fixed-core sectors retain
+  `B_geom=1`, have free constrained gradients below `6.2e-8`, and positive
+  exact restricted `n+s` Hessians.  Their full unanchored gradients are
+  `0.24--0.66`.
+- Open: an unanchored admissible `B=1` stationary sequence, interacting gauge
+  and meson cross blocks, the second derivative of the regulated fermion
+  determinant, BRST superdeterminant, dynamics/HMC, and continuum stability.
+
+### Lane C -- physical `SO(3)` line or rank-three family
+
+- Done: `H^2(SO(3);Z)=Z2`, the FR holonomy and determinant square, and a
+  topological CPT Real lift.  The standard conditional `N_c=2,B=1` rule
+  favours the trivial/bosonic line.
+- Done mathematically: a basepoint-free `O(1,2)` triple defines the minimal
+  three-band mass with exact gap and `c1(E+)=x+2y`; 11,664 samples and Berry
+  meshes reproduce `(c1_x,c1_y)=(1,2)` to roundoff.
+- Open physically: the actual mapping-torus mod-two index, microscopic CPT
+  regulator, localized physical replacement for the spectator `CP1`,
+  three-band charged-two-colour Yukawa embedding, uniform Fredholm gap, and
+  gauge-basic descent.
+
+### Ordered continuation
+
+1. Complete one literal finite regulator/operator, including target Yukawa
+   kernel and endpoint orientation, or change the UV field content explicitly.
+2. Replace the naive lattice topology by a controlled admissible or
+   spherical-volume action; re-relax at several `a,L`; only then compute the
+   physical determinant Hessian and interacting gauge/ghost blocks.
+3. Compute the actual `SO(3)` mapping-torus Pfaffian/CPT data, with the
+   physical rank-three embedding as the parallel alternative.
+4. Start a degree-one Route-E portal only after one full conjunction closes.
+
+## AP-E6 same-background checkpoint (2026-07-16; superseded above)
 
 Status: **three rigorous advances, three full lanes still open, and no
 portal work started.**  This round strengthens the meaning of closure rather
@@ -623,7 +684,12 @@ Reproducible artifacts:
   `output/pdf/ap_e3_level_two_microscopic_origin.pdf` are the clean-built,
   page-by-page checked AP-E2 (12-page) and AP-E3 (13-page) research notes.
 
-Ordered follow-up (fail closed):
+Historical ordered follow-up (fail closed; superseded by the AP-E7 current
+authority above):
+
+The labels in this archived sequence record the plan as it stood before the
+AP-E4--AP-E7 execution rounds.  They are not the current task numbering or
+authorization state.
 
 1. **AP-E1: done at geometry level, non-promoting.**  The local quotient is
    proved, the global-only shortcut is refuted, and the fixed-charge/LLL/O(2)
@@ -638,7 +704,7 @@ Ordered follow-up (fail closed):
    exclude singleton/odd sectors, select the signed orientation/chirality, and
    construct the anomaly-safe Route-E portal.  Failure keeps the dimer as an
    illustrative EFT only.
-4. **AP-E4: next active mathematical gate.**  Build the fluctuation/Dirac
+4. **AP-E4: was the next active mathematical gate.**  Build the fluctuation/Dirac
    operator, prove whether the physical mode is tangent-valued, and audit all
    chiral zero modes, unwanted partners, and the spectral gap.  This is also
    the independent tangent/Dirac alternative to the AP-E3 dimer.
@@ -646,7 +712,7 @@ Ordered follow-up (fail closed):
    stability/compactness/emission thresholds.
 6. **AP-E6:** construct an anomaly-consistent messenger/contact model and
    pass the complete operator, kinetic, and six-by-six matching gates.
-7. **AP-E7:** quotient all rephasings and isolate genuinely measurable CP
+7. **Legacy AP-E7 stage:** quotient all rephasings and isolate genuinely measurable CP
    invariants without assuming away bubble decay.
 8. **AP-E8:** compute the proposed adjoint-current correlator and decide
    whether it yields a Majorana contact or only a kinetic Killing tensor.

@@ -1,8 +1,58 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
-## AP-E6 same-background checkpoint (2026-07-16; current authority)
+## AP-E7 regulator/topology/family checkpoint (2026-07-17; current authority)
+
+The ordered continuation has now been executed.  It closes several sharply
+defined mathematical subproblems, but **no complete pre-portal physics lane**.
+
+- **Common APS/PV (42/42):** the background-field gauge--scalar--ghost--fermion
+  quadratic complex, common PV determinant prescription, finite local scheme,
+  and a fixed-zero-cut APS cylinder problem are explicit.  The pure two-flavour
+  heavy index is
+  `I_h = integral[-c2(Vc)+x^2-p1/8]`, so its unbroken gauge/gravity phase is
+  `exp(2 pi i I_h)=1` on every closed spin four-manifold.  A Higgsed
+  GW-compatible source conditionally gives the no-stack pair `(+,+)`, but a
+  full finite overlap Yukawa kernel has not been completed and the original
+  target mapping-torus pair remains unselected.  Schur's lemma proves only the
+  exact separated rank-two-projector obstruction at the restored point; the
+  claim is not extended to arbitrary non-idempotent couplings.  The complete
+  `5` charge trace is still `+2-2=0`, so all-scale `k=+2` remains open.
+- **Discrete re-relaxation (16/16):** the fixed-boundary finite-site space
+  `(S3)^(N_int) x R^(N_int)` is path-connected, so the naive action has no
+  exact finite-`a` `B` components.  Five independent unconstrained relaxations
+  at `(N,L)=(7,6),(9,6),(11,6),(9,8),(11,10)` all converge to `B_geom=0` and
+  vacuum energy.  An admissibility guard preserves three-target `B_geom=1`
+  but reaches the dislocation floor with nonzero gradient.  A fixed `3^3`
+  core gives positive exact restricted `n+s` Hessians and positive same-grid
+  proxy blocks, but its full residual is nonzero; `D_W dagger D_W` is not the
+  Hessian of `-log det D_W`, so there is no physical super-Hessian.
+- **Actual moduli and rank three (18/18):** `H^2(SO(3);Z)=Z2`; the nontrivial FR line
+  has generator holonomy `-1`, while its determinant square is trivial.
+  The conditional two-colour rule `(-1)^(N_c B)=+1` favours the trivial bosonic
+  sector, but the actual Yukawa mapping-torus mod-two index and microscopic CPT
+  map are not computed.  Independently, the basepoint-free section
+  `s=(z0 w0^2,z1 w1^2,z0 w1^2+z1 w0^2)` produces a minimal rank-three mass
+  `M=m(2P-I3)` with spectrum `{+m,-m,-m}` and `c1(E+)=x+2y`.  The numerical
+  Berry test gives `(1.000000000000003,1.999999999999998)`, but the second
+  `CP1` is a spectator and no physical same-soliton Yukawa/Fredholm embedding
+  follows.
+- **Portal (16/16):** the integrated gate treats FR and rank-three as alternatives,
+  but keeps the conditions within either route conjunctive and still requires
+  microscopic CPT and gauge-basic descent.  Every complete lane is false;
+  no degree-one portal is started or constructed.
+
+Next work must change one missing physical ingredient rather than repeat the
+same calculation: (1) write the complete finite GW/domain-wall target kernel
+or add explicit UV fields that evade the exact-projector obstruction; (2) add
+a controlled admissibility/spherical-volume action and find an unanchored
+stationary continuum sequence before computing determinant Hessians; or (3)
+derive the actual `SO(3)` mapping-torus operator, or embed the three-band
+projector into a localized charged-two-colour Yukawa family.  The portal
+remains subsequent to one complete closure.
+
+## AP-E6 same-background checkpoint (2026-07-16; superseded above)
 
 The requested `Sp(4)`, relaxed-soliton, and same-soliton Callias lines have
 now been executed one level deeper.  They yield exact bordism and no-go

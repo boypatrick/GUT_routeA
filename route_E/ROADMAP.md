@@ -10,7 +10,41 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E6 same-background update (2026-07-16; current authority)
+## AP-E7 regulator/topology/family update (2026-07-17; current authority)
+
+No Route-E dependency is removed and no portal is authorized, but the next
+three alternatives now have exact theorem boundaries.
+
+- The common background-field quadratic APS/PV prescription and the pure
+  two-flavour heavy gauge/gravity phase are explicit.  The latter is identically
+  one because the relevant index is integral and doubled.  The physical APS
+  sign uses a fixed zero cut with gapped endpoints; arbitrary-cut spectral flow
+  is not used without its endpoint orientation.  The Higgsed `(+,+)` source is
+  conditional and not yet a complete finite overlap Yukawa operator.  An exact
+  separated rank-two selector cannot extend equivariantly through the restored
+  `Sp(4)` point, while the full `5` has zero mixed charge trace.  Hence no
+  original-action all-scale `k=+2` theorem is imported into Route E.
+- At finite site number the unrestricted fixed-boundary `S3` configuration
+  space is path-connected.  The five requested independent lattice
+  relaxations unwind to the vacuum; guarded `B=1` descent hits the admissibility
+  boundary rather than an interior critical point.  Positive fixed-core
+  restricted spectra and `D_W dagger D_W` are controls, not a physical
+  gauge--meson--ghost--fermion super-Hessian.
+- On the physical collective orbit there are only the trivial line and one
+  `Z2` FR torsion line.  Topology supplies a Real lift but not the microscopic
+  Pfaffian class or CPT regulator.  Torsion cannot replace the free `O(2)`
+  class.  A separate rank-three construction exactly realizes `c1=x+2y` with
+  a uniform finite matrix gap and passes Berry-Chern numerics, but it still
+  uses a nonnormalizable spectator `CP1` and is not the charged-two-colour
+  same-soliton Yukawa family.
+
+The integrated authorization remains
+`any_preportal_route_closed=false`,
+`degree_one_portal_constructed=false`, and
+`physics_promotion_allowed=false`.  The three source cards pass `42/42`,
+`16/16`, and `18/18`; the independent integrated gate passes `16/16`.
+
+## AP-E6 same-background update (2026-07-16; superseded above)
 
 No Route-E dependency is removed in this round, but three stronger facts now
 replace the previous templates.

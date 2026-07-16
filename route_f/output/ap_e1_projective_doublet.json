@@ -250,7 +250,7 @@
   "physics_promotion_allowed": false,
   "source_manifest": {
     "route_f/code/verify_ap_e1_projective_doublet.py": "1e0f866aade57f72474e37a5c6d195e90103733c37f46473d2cf791406a0505c",
-    "route_f/output/another_physics_route_e_bridge.json": "c6d04453c438e51bf7c7737b8efbbe5a0bd065e55fa7449195a149e07d1aa81d",
+    "route_f/output/another_physics_route_e_bridge.json": "35981815d9d941b043649fd5675e40f84466dadd504340a236da344352214b45",
     "route_f/tex/ap_e1_projective_doublet_action.bib": "e96ea9eb6b6e5a1dbc9cc6b82bd9016608727052d0814f9dae697eff8c140b79",
     "route_f/tex/ap_e1_projective_doublet_action.tex": "cd4e36772688a48f97c09c9e1251b4b61256d2441ff9b7247e3a7d27d0014ca0"
   },

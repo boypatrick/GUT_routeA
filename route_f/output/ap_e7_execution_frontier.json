@@ -1,0 +1,234 @@
+{
+  "all_pass": true,
+  "any_preportal_route_closed": false,
+  "canonical_same_background_sha256": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+  "checks": [
+    {
+      "detail": "hashed=10/10",
+      "group": "provenance",
+      "name": "all AP-E7 source sets exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "checks=42/42; status=mechanical_pass_physics_fail_closed",
+      "group": "source_cards",
+      "name": "aps mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "fresh=3/3; stale=[]",
+      "group": "provenance",
+      "name": "aps source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "checks=16/16; status=mechanical_pass_physics_fail_closed",
+      "group": "source_cards",
+      "name": "lattice mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "fresh=4/4; stale=[]",
+      "group": "provenance",
+      "name": "lattice source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "checks=18/18; status=mathematical_topology_and_rank_three_success_physics_fail_closed",
+      "group": "source_cards",
+      "name": "family mechanical card is green",
+      "pass": true
+    },
+    {
+      "detail": "fresh=6/6; stale=[]",
+      "group": "provenance",
+      "name": "family source-card manifest is fresh",
+      "pass": true
+    },
+    {
+      "detail": "value=False",
+      "group": "promotion_boundary",
+      "name": "APS card explicitly forbids promotion",
+      "pass": true
+    },
+    {
+      "detail": "value=False",
+      "group": "promotion_boundary",
+      "name": "lattice card explicitly forbids promotion",
+      "pass": true
+    },
+    {
+      "detail": "value=False",
+      "group": "promotion_boundary",
+      "name": "family card explicitly forbids promotion",
+      "pass": true
+    },
+    {
+      "detail": "lattice=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59; family=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "same_background",
+      "name": "lattice and family branches consume the frozen AP-E6 profile",
+      "pass": true
+    },
+    {
+      "detail": "source=False; recomputed=False",
+      "group": "closure_logic",
+      "name": "APS/PV source lane equals the full physical conjunction",
+      "pass": true
+    },
+    {
+      "detail": "source=False; recomputed=False",
+      "group": "closure_logic",
+      "name": "lattice source lane equals the unanchored physical conjunction",
+      "pass": true
+    },
+    {
+      "detail": "source=False; FR=False; rank3=False; descent=False; recomputed=False",
+      "group": "closure_logic",
+      "name": "family source lane agrees with alternatives plus prior descent gate",
+      "pass": true
+    },
+    {
+      "detail": "any_closed=False; portal_started=False",
+      "group": "portal",
+      "name": "no portal is started while every complete pre-portal lane is open",
+      "pass": true
+    },
+    {
+      "detail": "physics_promotion_allowed=False",
+      "group": "portal",
+      "name": "physics promotion remains false",
+      "pass": true
+    }
+  ],
+  "checks_passed": 16,
+  "checks_total": 16,
+  "closure_inputs": {
+    "common_aps_pv": {
+      "common_quadratic_aps_pv_regulator_specified": true,
+      "five_dimensional_aps_domain_specified": true,
+      "full_nonperturbative_sp4_measure_constructed": false,
+      "k_plus_two_all_scale_matched": false,
+      "mixed_wzw_heavy_determinant_computed": false,
+      "original_action_target_mass_family_lift_defined": false,
+      "pure_unbroken_gauge_gravity_heavy_phase_computed": true,
+      "target_mapping_torus_eta_pair_selected": false
+    },
+    "prior_same_soliton_descent": {
+      "gauge_basic_wzw_descent_proven": false
+    },
+    "rank_three_alternative": {
+      "microscopic_cpt_regulator_constructed": false,
+      "physical_rank_three_yukawa_embedding_derived": false,
+      "rank_three_c1_target_realized": true,
+      "rank_three_topological_mass_family_constructed": true,
+      "rank_three_uniform_matrix_gap_proven": true,
+      "same_soliton_family_uniform_fredholm_gap_proven": false
+    },
+    "so3_fr_alternative": {
+      "actual_pfaffian_torsion_class_selected": false,
+      "actual_yukawa_mapping_torus_mod2_index_computed": false,
+      "microscopic_cpt_regulator_constructed": false,
+      "same_soliton_family_uniform_fredholm_gap_proven": false,
+      "so3_torsion_lines_classified": true
+    },
+    "unanchored_b1_superhessian": {
+      "admissibility_independent_continuum_B1_solution_constructed": false,
+      "fermion_determinant_bosonic_second_variation_computed": false,
+      "four_dimensional_dynamics_performed": false,
+      "genuine_unanchored_B1_lattice_stationary_point_found": false,
+      "importance_sampling_or_hmc_performed": false,
+      "interacting_gauge_meson_cross_blocks_computed": false,
+      "physical_aggregate_superhessian_complete": false,
+      "projected_stability_continuum_extrapolated": false
+    }
+  },
+  "decision": "The common quadratic regulator and pure heavy threshold are real advances; the finite-site topology theorem and rank-three bundle are also exact.  Nevertheless the original target mass-family lift, an unanchored discrete B=1 stationary point with its physical super-Hessian, and an actual same-soliton determinant/family/descent construction all remain open.  The degree-one Route-E portal is therefore not started.",
+  "degree_one_portal_constructed": false,
+  "degree_one_portal_started": false,
+  "physics_promotion_allowed": false,
+  "route_closure": {
+    "common_aps_pv": false,
+    "determinant_family_descent": false,
+    "rank_three_alternative": false,
+    "so3_fr_alternative": false,
+    "unanchored_b1_superhessian": false
+  },
+  "schema_version": "ap_e7_execution_frontier_v1",
+  "source_card_counts": {
+    "aps": {
+      "passed": 42,
+      "total": 42
+    },
+    "family": {
+      "passed": 18,
+      "total": 18
+    },
+    "lattice": {
+      "passed": 16,
+      "total": 16
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e7_execution_frontier.py",
+      "sha256": "7ed6bfcdd42a46e6e5e39d16031cb2e7867b736cc004cc7cd88ae07e07cfd9c7",
+      "size_bytes": 16619
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_common_sp4_aps_pv_regulator.tex",
+      "sha256": "5f4012b72a335895ed946250a693420915ad1cdc959e9e33de426d5154e367a2",
+      "size_bytes": 46678
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_common_sp4_aps_pv_regulator.bib",
+      "sha256": "e1c251769526c57a21d51cb33d788956e3529190e92dc03900c62420503e111d",
+      "size_bytes": 5482
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e7_common_sp4_aps_pv_regulator.py",
+      "sha256": "9834cfdf8a251656a0219ae791f7365ea4dc6303b83f8d7b35da245e8d26c4a3",
+      "size_bytes": 28627
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_discrete_rerelax_superhessian.tex",
+      "sha256": "a63f0f877c7197b2c9ad8454632debc380c07de6296df7a0f420e0e59401ba70",
+      "size_bytes": 17491
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_discrete_rerelax_superhessian.bib",
+      "sha256": "8d037b7f0ef697e25c81165732f22e9c99cf0759fca90e776ff4e1e05b41be78",
+      "size_bytes": 2771
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e7_discrete_rerelax_superhessian.py",
+      "sha256": "74a4685c0ceb74bc87a14129e37f6b950ae5e263ca2122ddcc89eca323221dde",
+      "size_bytes": 62370
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_so3_fr_rank3_family.tex",
+      "sha256": "4385fb0c81e62a7cd20225373ac43e04ae2464ff467fc663d4d22a449927597c",
+      "size_bytes": 21005
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_so3_fr_rank3_family.bib",
+      "sha256": "826fd4295c1724a4f25a631dbdfa1177b8c3cb91560b614bb3319040b8eda7ec",
+      "size_bytes": 2398
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e7_so3_fr_rank3_family.py",
+      "sha256": "bc6604c79bdb2c8e14da737b288e524bde27df4362f692f3275baad98cccc96e",
+      "size_bytes": 28497
+    }
+  ],
+  "status": "mechanical_pass_physics_fail_closed"
+}

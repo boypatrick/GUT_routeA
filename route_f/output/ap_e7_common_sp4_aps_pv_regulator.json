@@ -1,0 +1,492 @@
+{
+  "checks": [
+    {
+      "detail": "TeX, bibliography, and verifier are nonempty",
+      "group": "provenance",
+      "name": "all declared sources exist",
+      "pass": true
+    },
+    {
+      "detail": "hashed=3/3; unique=3",
+      "group": "provenance",
+      "name": "source hashes are unique sha256 values",
+      "pass": true
+    },
+    {
+      "detail": "anchors=9/9",
+      "group": "provenance",
+      "name": "all theorem anchors are present",
+      "pass": true
+    },
+    {
+      "detail": "zero is excluded from both endpoint spectra and SF_0 defines the phase",
+      "group": "provenance",
+      "name": "physical fermion phase fixes the zero cut with gapped endpoints",
+      "pass": true
+    },
+    {
+      "detail": "general alpha remains available for the APS index, not the physical sign",
+      "group": "provenance",
+      "name": "arbitrary APS cut is restricted to Fredholm-index bookkeeping",
+      "pass": true
+    },
+    {
+      "detail": "upper lateral cut and renormalized finite part found",
+      "group": "provenance",
+      "name": "lateral Agmon cut and finite log are explicit",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "clifford",
+      "name": "Hermitian Euclidean gamma matrices",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "clifford",
+      "name": "Euclidean Clifford algebra",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "clifford",
+      "name": "gamma5 involution and anticommutation",
+      "pass": true
+    },
+    {
+      "detail": "max residual=0.000e+00",
+      "group": "reality",
+      "name": "B gamma-star equals gamma B",
+      "pass": true
+    },
+    {
+      "detail": "norm(BB*+1)=0.000e+00",
+      "group": "reality",
+      "name": "quaternionic reality squares to minus one",
+      "pass": true
+    },
+    {
+      "detail": "Hermitian residual=0.000e+00; K5 Sigmahat K5^-1 + Sigmahat=0.000e+00",
+      "group": "reality",
+      "name": "adjoint Hermitian mass is odd under vector conjugation",
+      "pass": true
+    },
+    {
+      "detail": "family residual=0.000e+00; fixed-background residual=1.188e+00",
+      "group": "reality",
+      "name": "anti-linear map sends the plus-Sigma mass to minus-Sigma",
+      "pass": true
+    },
+    {
+      "detail": "K residual=0.000e+00; H residual=0.000e+00",
+      "group": "reality",
+      "name": "finite scalar-reference gamma5-hermitian kernel",
+      "pass": true
+    },
+    {
+      "detail": "det(K)^2=0.725468539966",
+      "group": "reality",
+      "name": "scalar-reference two-flavour determinant square is nonnegative",
+      "pass": true
+    },
+    {
+      "detail": "min eigenvalue=2.826726e+00",
+      "group": "quadratic_complex",
+      "name": "ghost R-dagger R is symmetric positive",
+      "pass": true
+    },
+    {
+      "detail": "min eigenvalue=4.288672e-01",
+      "group": "quadratic_complex",
+      "name": "gauge-fixed boson toy is symmetric positive",
+      "pass": true
+    },
+    {
+      "detail": "moments={0: 0, 1: 0, 2: 0, 3: -6}",
+      "group": "pv",
+      "name": "first three PV moments cancel",
+      "pass": true
+    },
+    {
+      "detail": "lambda^3 sum(c log(1+a/lambda))=-1.999100213",
+      "group": "pv",
+      "name": "large-lambda log coefficient is minus two",
+      "pass": true
+    },
+    {
+      "detail": "Nf*c/2=[1, -3, 3, -1]",
+      "group": "pv",
+      "name": "two-flavour fermion amplitude exponents are integral",
+      "pass": true
+    },
+    {
+      "detail": "SF_0=-1; one-flavour sign=-1",
+      "group": "aps",
+      "name": "gapped scalar endpoints give the physical zero-cut sign",
+      "pass": true
+    },
+    {
+      "detail": "SF_0=-1; SF_2=0",
+      "group": "aps",
+      "name": "auxiliary cut changes raw spectral flow and is not the physical sign",
+      "pass": true
+    },
+    {
+      "detail": "crossings=1",
+      "group": "aps",
+      "name": "periodic circle path has one crossing",
+      "pass": true
+    },
+    {
+      "detail": "crossings=0",
+      "group": "aps",
+      "name": "antiperiodic circle path has no crossing",
+      "pass": true
+    },
+    {
+      "detail": "characters={(0, 0): (1, 1), (0, 1): (1, -1), (1, 0): (-1, 1), (1, 1): (-1, -1)}",
+      "group": "target",
+      "name": "four abstract target torsion characters",
+      "pass": true
+    },
+    {
+      "detail": "idempotent=0.000e+00; orthogonal=0.000e+00; sum=0.000e+00",
+      "group": "projectors",
+      "name": "P plus P minus P zero are orthogonal projectors",
+      "pass": true
+    },
+    {
+      "detail": "ranks=(2, 2, 1)",
+      "group": "projectors",
+      "name": "projector ranks are two two one",
+      "pass": true
+    },
+    {
+      "detail": "Tr(H)=0.0; Tr(H cI)=0.000e+00",
+      "group": "extendibility",
+      "name": "Schur scalar has zero H trace",
+      "pass": true
+    },
+    {
+      "detail": "Tr(H P+)=2.000000000000",
+      "group": "extendibility",
+      "name": "Higgsed light selector has H trace two",
+      "pass": true
+    },
+    {
+      "detail": "ranks={0.0: 0, 1.0: 5}",
+      "group": "extendibility",
+      "name": "Schur idempotent ranks exclude rank two",
+      "pass": true
+    },
+    {
+      "detail": "rank(P+) mod 2=0",
+      "group": "conditional_higgsed_source",
+      "name": "conditional Higgsed G3 copy parity is even",
+      "pass": true
+    },
+    {
+      "detail": "light=4; heavy=4; parity=0",
+      "group": "conditional_higgsed_source",
+      "name": "conditional Higgsed G2 copy parity is even",
+      "pass": true
+    },
+    {
+      "detail": "derived pair=((-1)^0,(-1)^0)=(1, 1)",
+      "group": "conditional_higgsed_source",
+      "name": "copy-counting parity prediction is derived as plus plus",
+      "pass": true
+    },
+    {
+      "detail": "-1/12-1/24=-1/8",
+      "group": "heavy_index",
+      "name": "charged plus neutral gravitational coefficient",
+      "pass": true
+    },
+    {
+      "detail": "(2-c2)(1-x+x^2/2) [degree four]=(-1)c2+(1)x^2",
+      "group": "heavy_index",
+      "name": "symbolic degree-four Chern expansion gives minus c2 plus x squared",
+      "pass": true
+    },
+    {
+      "detail": "grid points=567; all denominators one",
+      "group": "heavy_index",
+      "name": "finite spin characteristic grid spot-checks heavy-index integrality",
+      "pass": true
+    },
+    {
+      "detail": "indices={'G3': Fraction(0, 1), 'G2': Fraction(0, 1)}; pair=(1, 1)",
+      "group": "heavy_index",
+      "name": "declared generator data directly evaluate to the pure pair plus plus",
+      "pass": true
+    },
+    {
+      "detail": "charges=[1, 1, -1, -1, 0]; sum=0",
+      "group": "mixed_wzw",
+      "name": "complete five charge trace vanishes",
+      "pass": true
+    },
+    {
+      "detail": "light=2; heavy=-2; total=0",
+      "group": "mixed_wzw",
+      "name": "light heavy split is plus two minus two",
+      "pass": true
+    },
+    {
+      "detail": "true gates=['common_quadratic_aps_pv_regulator_specified', 'conditional_higgsed_gw_source_specified', 'conditional_higgsed_parity_predicts_plus_plus', 'euclidean_gamma_reference_reality_data_specified', 'exact_separated_rank_two_projector_obstruction_proven', 'five_dimensional_aps_domain_specified', 'physical_fermion_phase_zero_cut_fixed', 'pure_heavy_phase_on_G2_computed', 'pure_heavy_phase_on_G3_computed', 'pure_unbroken_gauge_gravity_heavy_phase_computed']",
+      "group": "declared_scope",
+      "name": "derived and conditional-source gates match the declared true set",
+      "pass": true
+    },
+    {
+      "detail": "false gates=['degree_one_route_e_portal_started', 'finite_higgsed_overlap_dirac_yukawa_operator_defined', 'five_dimensional_higgsed_target_kernel_defined', 'fixed_adjoint_mass_kramers_reality_proven', 'full_nonperturbative_sp4_measure_constructed', 'k_plus_two_all_scale_matched', 'minimal_higgsed_overlap_eta_pair_computed', 'mixed_wzw_heavy_determinant_computed', 'original_action_target_mass_family_lift_defined', 'original_deep_sp4_action_uniquely_selects_target_pair', 'physics_promotion_authorized', 'sp4_aps_pv_lane_closed', 'target_mapping_torus_eta_pair_selected']",
+      "group": "declared_scope",
+      "name": "unconstructed operators, physics promotion, and portal stay false",
+      "pass": true
+    },
+    {
+      "detail": "computed lane closure=False",
+      "group": "declared_scope",
+      "name": "Sp4 APS/PV lane remains fail closed",
+      "pass": true
+    }
+  ],
+  "conditional_higgsed_gw_source": {
+    "G2_heavy_copies": 4,
+    "G2_light_copies": 4,
+    "G2_mod2_exponent": 0,
+    "G3_mod2_exponent": 0,
+    "conditional_parity_prediction": [
+      1,
+      1
+    ],
+    "finite_overlap_dirac_yukawa_operator_defined": false,
+    "five_dimensional_target_kernel_defined": false,
+    "overlap_eta_pair_computed": false,
+    "projector_ranks": [
+      2,
+      2,
+      1
+    ],
+    "scope": "GW-compatible continuum-limit source on the gapped Higgs orbit; not a completed lift",
+    "trace_H": 0.0,
+    "trace_H_P_plus": 2.0
+  },
+  "dependencies": {
+    "reason": "this APS/PV branch is background-field and topological",
+    "relaxed_B1_soliton_profile_used": false,
+    "soliton_profile_checksum": null
+  },
+  "gates": {
+    "common_quadratic_aps_pv_regulator_specified": true,
+    "conditional_higgsed_gw_source_specified": true,
+    "conditional_higgsed_parity_predicts_plus_plus": true,
+    "degree_one_route_e_portal_started": false,
+    "euclidean_gamma_reference_reality_data_specified": true,
+    "exact_separated_rank_two_projector_obstruction_proven": true,
+    "finite_higgsed_overlap_dirac_yukawa_operator_defined": false,
+    "five_dimensional_aps_domain_specified": true,
+    "five_dimensional_higgsed_target_kernel_defined": false,
+    "fixed_adjoint_mass_kramers_reality_proven": false,
+    "full_nonperturbative_sp4_measure_constructed": false,
+    "k_plus_two_all_scale_matched": false,
+    "minimal_higgsed_overlap_eta_pair_computed": false,
+    "mixed_wzw_heavy_determinant_computed": false,
+    "original_action_target_mass_family_lift_defined": false,
+    "original_deep_sp4_action_uniquely_selects_target_pair": false,
+    "physical_fermion_phase_zero_cut_fixed": true,
+    "physics_promotion_authorized": false,
+    "pure_heavy_phase_on_G2_computed": true,
+    "pure_heavy_phase_on_G3_computed": true,
+    "pure_unbroken_gauge_gravity_heavy_phase_computed": true,
+    "sp4_aps_pv_lane_closed": false,
+    "target_mapping_torus_eta_pair_selected": false
+  },
+  "heavy_threshold": {
+    "characteristic_grid_points": 567,
+    "characteristic_grid_sample": [
+      {
+        "I_heavy": 14,
+        "c2": -4,
+        "p1": -144,
+        "signature": -48,
+        "x2": -8
+      },
+      {
+        "I_heavy": 8,
+        "c2": -4,
+        "p1": -96,
+        "signature": -32,
+        "x2": -8
+      },
+      {
+        "I_heavy": 2,
+        "c2": -4,
+        "p1": -48,
+        "signature": -16,
+        "x2": -8
+      },
+      {
+        "I_heavy": -4,
+        "c2": -4,
+        "p1": 0,
+        "signature": 0,
+        "x2": -8
+      },
+      {
+        "I_heavy": -10,
+        "c2": -4,
+        "p1": 48,
+        "signature": 16,
+        "x2": -8
+      },
+      {
+        "I_heavy": -16,
+        "c2": -4,
+        "p1": 96,
+        "signature": 32,
+        "x2": -8
+      },
+      {
+        "I_heavy": -22,
+        "c2": -4,
+        "p1": 144,
+        "signature": 48,
+        "x2": -8
+      },
+      {
+        "I_heavy": 16,
+        "c2": -4,
+        "p1": -144,
+        "signature": -48,
+        "x2": -6
+      }
+    ],
+    "derived_ch2_coefficients": {
+      "c2_Vc": -1,
+      "x_squared": 1
+    },
+    "flavour_count": 2,
+    "generator_indices": {
+      "G2": 0,
+      "G3": 0
+    },
+    "gravitational_coefficient": "-1/8",
+    "one_flavour_index_polynomial": "-c2(Vc)+x^2-p1(TM)/8",
+    "phase_on_closed_spin_four_manifolds": 1
+  },
+  "mixed_wzw": {
+    "IR_k_for_B_plus_one": 2,
+    "all_scale_k_matched": false,
+    "charges": [
+      1,
+      1,
+      -1,
+      -1,
+      0
+    ],
+    "controlled_assignments_exhaustive": false,
+    "full_coefficient": 0,
+    "heavy_coefficient": -2,
+    "light_coefficient": 2
+  },
+  "reality_scope": {
+    "adjoint_family_involution": "J K(A,Sigma) J^-1 = K(A,-Sigma)",
+    "adjoint_family_residual": 0.0,
+    "fixed_adjoint_mass_kramers_reality": false,
+    "fixed_background_noncommutation_residual": 1.1879393923933999,
+    "reference_J_square": -1,
+    "scalar_reference_reality": true
+  },
+  "regulator": {
+    "agmon_cut": "theta_B=pi-epsilon, upper lateral",
+    "aps_domain_t0": "P_[alpha,infinity)(H0)u(0)=0",
+    "aps_domain_t1": "P_(-infinity,alpha)(H1)u(1)=0",
+    "auxiliary_aps_cut_role": "alpha in common endpoint resolvent, Fredholm index only",
+    "physical_endpoint_condition": "0 outside spec(H0) union spec(H1)",
+    "physical_fermion_spectral_cut": 0,
+    "pv_coefficients": [
+      1,
+      -3,
+      3,
+      -1
+    ],
+    "pv_moments": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": -6
+    },
+    "pv_nodes_squared_in_Lambda_units": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pv_real_boson_realization": "spectral-cut determinant square root; no literal symmetric real-Grassmann Gaussian claimed",
+    "scalar_control_SF_0": -1,
+    "scalar_control_SF_2": 0,
+    "scaled_large_lambda_log_coefficient": -1.9991002126254487
+  },
+  "schema_version": "ap-e7-common-sp4-aps-pv-v2",
+  "sources": [
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_common_sp4_aps_pv_regulator.tex",
+      "sha256": "5f4012b72a335895ed946250a693420915ad1cdc959e9e33de426d5154e367a2",
+      "size_bytes": 46678
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_common_sp4_aps_pv_regulator.bib",
+      "sha256": "e1c251769526c57a21d51cb33d788956e3529190e92dc03900c62420503e111d",
+      "size_bytes": 5482
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e7_common_sp4_aps_pv_regulator.py",
+      "sha256": "9834cfdf8a251656a0219ae791f7365ea4dc6303b83f8d7b35da245e8d26c4a3",
+      "size_bytes": 28627
+    }
+  ],
+  "status": "mechanical_pass_physics_fail_closed",
+  "summary": {
+    "checks_failed": 0,
+    "checks_passed": 42,
+    "checks_total": 42,
+    "physics_lane_closed": false,
+    "portal_started": false
+  },
+  "target_eta": {
+    "abstract_character_table": {
+      "00": [
+        1,
+        1
+      ],
+      "01": [
+        1,
+        -1
+      ],
+      "10": [
+        -1,
+        1
+      ],
+      "11": [
+        -1,
+        -1
+      ]
+    },
+    "conditional_higgsed_overlap_eta_pair": null,
+    "conditional_higgsed_parity_prediction": [
+      1,
+      1
+    ],
+    "full_original_action_pair": null,
+    "pure_heavy_pair": [
+      1,
+      1
+    ]
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "actual_pfaffian_torsion_class_selected": false,
+  "actual_yukawa_mapping_torus_mod2_index_computed": false,
+  "all_pass": true,
+  "checks": [
+    {
+      "detail": "hashed=6/6",
+      "group": "E7_0_provenance",
+      "name": "all AP-E7 and canonical AP-E6 sources exist and are hashed",
+      "pass": true
+    },
+    {
+      "detail": "computed=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59; B-card=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59; C-card=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "E7_0_provenance",
+      "name": "AP-E7 recomputes exactly the AP-E6 canonical relaxed B=1 profile",
+      "pass": true
+    },
+    {
+      "detail": "B=0.999999999686391; s(0)=0.917128964607058",
+      "group": "E7_0_provenance",
+      "name": "bound profile remains the unit-charge relaxed solution",
+      "pass": true
+    },
+    {
+      "detail": "d=(0,2,0), so H^2=coker(2)=Z/2 and H^2_dR=0",
+      "group": "E7_1_so3_topology",
+      "name": "cellular complex gives H2(SO3;Z)=Z2 and no de Rham degree-two class",
+      "pass": true
+    },
+    {
+      "detail": "integer lift A=1 has delta A=2, hence beta(a)=[1] mod 2",
+      "group": "E7_1_so3_topology",
+      "name": "Bockstein of the FR sign class generates the torsion Chern class",
+      "pass": true
+    },
+    {
+      "detail": "H^2(SU2=S3;Z)=0",
+      "group": "E7_1_so3_topology",
+      "name": "pullback of either torsion line to the SU2 cover is trivial",
+      "pass": true
+    },
+    {
+      "detail": "A(0)-I=0.000e+00; A(1)+I=1.732e-16",
+      "group": "E7_2_fr_holonomy",
+      "name": "the lifted generator closes by the nontrivial deck transformation",
+      "pass": true
+    },
+    {
+      "detail": "Hol(Pf)=-1; Hol(Det)=Hol(Pf)^2=+1",
+      "group": "E7_2_fr_holonomy",
+      "name": "nontrivial FR/Pfaffian line has holonomy -1 but determinant square is trivial",
+      "pass": true
+    },
+    {
+      "detail": "(-1)^(N_c B)=(-1)^2=+1; actual regulator realization remains open",
+      "group": "E7_2_fr_holonomy",
+      "name": "standard even-colour B=1 WZW/FR rule conditionally selects the trivial sector",
+      "pass": true
+    },
+    {
+      "detail": "FR odd rotor starts at j=1/2 with full SU2 multiplicity 4, not 3",
+      "group": "E7_2_fr_holonomy",
+      "name": "torsion FR quantization does not reproduce the CP1 O(2) three-state carrier",
+      "pass": true
+    },
+    {
+      "detail": "J[A,z]=[A^-1,conj(z)] is one valid topological choice",
+      "group": "E7_3_cpt",
+      "name": "inversion admits a deck-compatible topological Real lift",
+      "pass": true
+    },
+    {
+      "detail": "operator domain, spectral cut, representation and Pfaffian orientation remain missing",
+      "group": "E7_3_cpt",
+      "name": "topological line invariance is not promoted to a microscopic CPT regulator",
+      "pass": true
+    },
+    {
+      "detail": "exact four-branch proof; sampled min ||s||^2=0.250000000000000",
+      "group": "E7_4_rank_three",
+      "name": "the three bidegree-(1,2) sections are basepoint-free",
+      "pass": true
+    },
+    {
+      "detail": "P2-P=5.639e-16; M-Mdag=6.351e-16",
+      "group": "E7_4_rank_three",
+      "name": "rank-three projector is globally Hermitian and idempotent",
+      "pass": true
+    },
+    {
+      "detail": "max spectrum residual=2.887e-15; gap=1.699999999999997",
+      "group": "E7_4_rank_three",
+      "name": "mass spectrum is uniformly {-m,-m,+m}",
+      "pass": true
+    },
+    {
+      "detail": "Berry mesh=(1.000000000000003,1.999999999999998)",
+      "group": "E7_4_rank_three",
+      "name": "positive eigenline has the requested Chern class x+2y",
+      "pass": true
+    },
+    {
+      "detail": "c(E_-)=(1+x+2y)^-1=1-(x+2y)+4xy",
+      "group": "E7_4_rank_three",
+      "name": "rank-two complement cancels the total Chern class in the trivial C3 bundle",
+      "pass": true
+    },
+    {
+      "detail": "CP1 target forces l^2=0 at rank two; CP2 has h^2 nonzero",
+      "group": "E7_4_rank_three",
+      "name": "rank three is the first band number that evades the two-band square obstruction",
+      "pass": true
+    }
+  ],
+  "checks_passed": 18,
+  "checks_total": 18,
+  "determinant_pfaffian_scope": {
+    "declared_vectorlike_dirac_control": "two Weyl SU2 doublets give even mod-two representation parity",
+    "determinant_square": "Det=Pf tensor Pf has Hol=+1 for either Z2 Pf sector",
+    "standard_wzw_conditional_selection": "k=N_c=2 and B=1 gives trivial holonomy",
+    "two_possible_pfaffian_classes": [
+      "trivial",
+      "P_FR with w1=a"
+    ],
+    "universal_formula": "Hol_gamma(Pf)=(-1)^ind2(D_mapping_torus)",
+    "why_actual_class_is_open": "the same-mother Euclidean/PV operator, mapping-torus domain, spectral cut and Pfaffian orientation have not been constructed"
+  },
+  "fr_cover_and_holonomy": {
+    "B": 1,
+    "N_c": 2,
+    "complexification": "P_FR tensor_R C=L_FR, c1(L_FR)=beta(a)=t",
+    "cover": "SU(2)=S3 -> SO(3)=RP3 with deck A -> -A",
+    "cp1_o2_three_state_spectrum_reproduced": false,
+    "cpt_base_involution": "iota([A])=[A^{-1}]",
+    "deck_compatibility_residual": 0.0,
+    "determinant_of_real_skew_family": "Det=Pf tensor Pf has trivial holonomy",
+    "endpoint_minus_residual": 1.7319121124709866e-16,
+    "endpoint_plus_residual": 0.0,
+    "explicit_real_lift_square_residual": 0.0,
+    "explicit_topological_real_lift": "J[A,z]=[A^{-1},conj(z)]",
+    "fr_even_sector_spins": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "fr_flat_line": "L_FR=SU(2) x_{sign} C, psi(-A)=-psi(A)",
+    "fr_generator_holonomy": -1,
+    "fr_line_square_holonomy": 1,
+    "fr_odd_sector_spins": [
+      0.5,
+      1.5,
+      2.5
+    ],
+    "generator_lift": "A(t)=diag(exp(i*pi*t),exp(-i*pi*t)), A(1)=-I",
+    "inversion_square_residual": 3.510833468576701e-16,
+    "lowest_odd_full_rotor_multiplicity": 4,
+    "maximum_determinant_one_residual": 2.234416423911378e-16,
+    "maximum_unitarity_residual": 3.1401849173675503e-16,
+    "pfaffian_real_line": "P_FR=SU(2) x_{sign} R, w1(P_FR)=a",
+    "standard_two_colour_sector_if_applicable": "trivial/bosonic",
+    "standard_two_colour_wzw_fr_phase": 1,
+    "standard_wzw_fr_rule": "(-1)^(N_c B)",
+    "su2_center_characters_by_spin": {
+      "0.0": 1,
+      "0.5": -1,
+      "1.0": 1,
+      "1.5": -1,
+      "2.0": 1,
+      "2.5": -1
+    },
+    "topology_alone_fixes_physical_theta_square": false
+  },
+  "fr_cover_constructed": true,
+  "free_o2_line_replaced_with_equivalent_so3_line": false,
+  "lane_closed": false,
+  "microscopic_cpt_regulator_constructed": false,
+  "physical_rank_three_yukawa_embedding_derived": false,
+  "physics_promotion_allowed": false,
+  "portal_start_allowed": false,
+  "rank_three_c1_target_realized": true,
+  "rank_three_family": {
+    "base": "X=CP1_z x CP1_w, x=c1(O(1,0)), y=c1(O(0,1))",
+    "basepoint_free_exact_case_proof": "s0=s1=0 has four branches; in each allowed projective branch s2 is nonzero",
+    "c1_square": "(x+2y)^2=4xy",
+    "chern_mesh_x": {
+      "chern": 1.000000000000003,
+      "maximum_triangle_phase": 0.012282653430652924,
+      "minimum_link_overlap": 0.9879328391963028,
+      "triangles": 1520,
+      "varying_factor": "z"
+    },
+    "chern_mesh_y": {
+      "chern": 1.9999999999999976,
+      "maximum_triangle_phase": 0.06487256191325265,
+      "minimum_link_overlap": 0.9403412250063109,
+      "triangles": 1520,
+      "varying_factor": "w"
+    },
+    "chern_positive_line": {
+      "x_coefficient": 1,
+      "y_coefficient": 2
+    },
+    "exact_band_separation": 3.4,
+    "exact_gap_to_zero": 1.7,
+    "exact_spectrum": [
+      -1.7,
+      -1.7,
+      1.7
+    ],
+    "mass": "M=m(2P_+-I3)",
+    "mass_scale": 1.7,
+    "maximum_mass_hermiticity_residual": 6.351496834429973e-16,
+    "maximum_projector_idempotence_residual": 5.639457007035982e-16,
+    "maximum_spectrum_residual": 2.886579864025407e-15,
+    "minimality": "rank two with one positive and one negative band factors through CP1 and forces c1(E_+)^2=0; this rank-three family is minimal",
+    "negative_complement": {
+      "K_class": "[E_-]=3-[E_+]",
+      "c1": "-(x+2y)",
+      "c2": "(x+2y)^2=4xy",
+      "chern_character": "ch(E_-)=2-(x+2y)-2xy",
+      "rank": 2,
+      "total_bundle_identity": "E_+ direct_sum E_-=X x C^3"
+    },
+    "positive_line": "E_+=conjugate(f^*O(-1)), c1(E_+)=x+2y",
+    "positive_projector": "P_+=conj(s) conj(s)^dagger/||s||^2",
+    "sampled_minimum_gap_to_zero": 1.6999999999999973,
+    "sampled_minimum_section_norm_squared": 0.24999999999999994,
+    "samples": 11664,
+    "sections": [
+      "s0=z0*w0^2",
+      "s1=z1*w1^2",
+      "s2=z0*w1^2+z1*w0^2"
+    ],
+    "status": "exact_topological_spectator_not_same_soliton_yukawa_embedding"
+  },
+  "rank_three_topological_mass_family_constructed": true,
+  "rank_three_uniform_matrix_gap_proven": true,
+  "remaining_blockers": [
+    "Construct the actual same-mother Euclidean/PV Yukawa family on the nontrivial SO(3) loop and compute its mapping-torus mod-two index.",
+    "Derive the Pfaffian orientation and CPT lift from that regulator; topology alone only classifies the two candidates.",
+    "Derive three asymptotic fermion bands and the bidegree-(1,2) projector from the charged two-colour microscopic representation.",
+    "Replace the spectator CP1 factor by a localized normalizable physical modulus, or prove a different actual-moduli family theorem.",
+    "Prove a uniform Fredholm gap for the same-soliton operator, not merely the exact finite 3x3 mass gap.",
+    "Do not start the Route-E portal until a complete physical lane closes."
+  ],
+  "replacement_verdict": {
+    "correct_line_classification_on_actual_moduli": "only the trivial line and the unique flat torsion FR line exist",
+    "equivalent_to_cp1_o2": false,
+    "nontrivial_fr_line_is_valid_alternate_quantization": true,
+    "reason": "2t=0 and t has zero de Rham curvature, whereas c1(O(2)) is a nonzero free class; the collective spectra also differ",
+    "standard_two_colour_rule_prefers_nontrivial_fr_line": false
+  },
+  "runtime": {
+    "deterministic": true,
+    "numpy": "2.0.2",
+    "python": "3.9.6",
+    "randomness_used": false
+  },
+  "same_profile": {
+    "B_numeric": 0.9999999996863905,
+    "box": 16.0,
+    "identity_assertion": "computed == B-card == C-card == frozen AP-E6 checksum",
+    "profile_sha256_r_F_s_little_endian_float64": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+    "s_at_origin": 0.917128964607058,
+    "sample_points": 4097,
+    "workline_b_card_sha256": "f5a353011e0877e3659e2efdfde8027884eb2d6487ca657458f16e4d1915f63f",
+    "workline_b_script_sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+    "workline_c_card_sha256": "a721073c28313ffe4edc150b71a136e7594f8f5358afc9c5601944591de095e6"
+  },
+  "same_soliton_family_uniform_fredholm_gap_proven": false,
+  "schema_version": 1,
+  "so3_cellular_topology": {
+    "bockstein": "beta(a)=t generates H^2(RP3;Z)=Z2",
+    "bockstein_divided_by_two_representative": 1,
+    "bockstein_integer_lift_delta": 2,
+    "cellular_boundaries": {
+      "d1": 0,
+      "d2": 2,
+      "d3": 0
+    },
+    "de_rham_h2_dimension": 0,
+    "integral_cohomology": {
+      "H0": "Z",
+      "H1": "0",
+      "H2": "Z/2",
+      "H3": "Z"
+    },
+    "integral_homology": {
+      "H0": "Z",
+      "H1": "Z/2",
+      "H2": "0",
+      "H3": "Z"
+    },
+    "mod2_degree_one": "H^1(RP3;Z2)=Z2 generated by a",
+    "space": "SO(3)=RP3",
+    "torsion_order": 2
+  },
+  "so3_torsion_lines_classified": true,
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e7_so3_fr_rank3_family.py",
+      "sha256": "bc6604c79bdb2c8e14da737b288e524bde27df4362f692f3275baad98cccc96e",
+      "size_bytes": 28497
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_so3_fr_rank3_family.tex",
+      "sha256": "4385fb0c81e62a7cd20225373ac43e04ae2464ff467fc663d4d22a449927597c",
+      "size_bytes": 21005
+    },
+    {
+      "exists": true,
+      "path": "route_f/tex/ap_e7_so3_fr_rank3_family.bib",
+      "sha256": "826fd4295c1724a4f25a631dbdfa1177b8c3cb91560b614bb3319040b8eda7ec",
+      "size_bytes": 2398
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e6_relaxed_b1_multigrid_hessian.json",
+      "sha256": "f5a353011e0877e3659e2efdfde8027884eb2d6487ca657458f16e4d1915f63f",
+      "size_bytes": 34903
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e6_same_soliton_yukawa_callias.json",
+      "sha256": "a721073c28313ffe4edc150b71a136e7594f8f5358afc9c5601944591de095e6",
+      "size_bytes": 17172
+    }
+  ],
+  "status": "mathematical_topology_and_rank_three_success_physics_fail_closed",
+  "topological_cpt_real_lift_exists": true
+}
