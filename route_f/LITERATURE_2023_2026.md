@@ -54,6 +54,8 @@ are not substitutes for recent model-specific evidence.
 | Yonekura, [Dai--Freed theorem and topological phases of matter](https://arxiv.org/abs/1607.01873), JHEP 09 (2016) 022 | Gives a practical determinant-line and eta-invariant formulation of fermionic phases with boundaries and families. | AP-E7 fixes the physical sign at zero spectral cut with gapped endpoints.  An arbitrary cut requires its spectral-section/end-point orientation and cannot be inserted into the determinant sign by spectral-flow counting alone. |
 | Fukaya, Onogi, and Yamaguchi, [Atiyah--Patodi--Singer index from the domain-wall fermion Dirac operator](https://arxiv.org/abs/1710.03379), Phys. Rev. D 96, 125004 (2017), and Fukaya et al., [Mod-two APS index and domain-wall fermion](https://arxiv.org/abs/2012.03543), Commun. Math. Phys. 393 (2022) 1189 | Realize ordinary and mod-two APS indices through domain-wall fermions and clarify how a finite regulator carries the eta phase. | They motivate the AP-E7 finite-regulator direction but do not define this model's missing target-dependent overlap/Yukawa operator or select its two mapping-torus characters. |
 | Berg and Luescher, [Definition and statistical distributions of a topological number in the lattice O(3) sigma-model](https://doi.org/10.1016/0550-3213(81)90568-X), Nucl. Phys. B 190 (1981) 412 | Defines geometric lattice degree using spherical simplices and exposes the role of exceptional/dislocation configurations. | AP-E7 uses the analogous Freudenthal regular-value construction only on the admissible subset.  The unrestricted finite-site configuration space is connected, so a naive optimizer may unwind through the exceptional locus. |
+| Ward, [Stable topological Skyrmions on the 2-D lattice](https://arxiv.org/abs/hep-th/9502048), Lett. Math. Phys. 35 (1995) 385 | Demonstrates that a lattice action can be designed so topology-changing configurations carry an energetic obstruction and stable discrete solitons become possible. | AP-E8 adopts the design lesson, not Ward's two-dimensional action.  Its own three-dimensional Freudenthal barrier, finite-grid existence theorem, and continuum caveats are derived independently. |
+| Schramm and Svetitsky, [Topology and metastability in the lattice Skyrme model](https://arxiv.org/abs/hep-lat/0008003), Phys. Rev. D 62 (2000) 114020 | Uses spherical tetrahedra and a topology-sensitive lattice construction for Skyrmions, emphasizing exceptional configurations and metastability. | AP-E8 uses normalized-affine degree plus a unique-edge subtracted logarithmic barrier.  It does not claim an exact spherical-volume implementation or inherit continuum/regulator independence from this paper. |
 
 ## Literature-driven design decisions
 
@@ -186,6 +188,14 @@ are not substitutes for recent model-specific evidence.
     solution of the `c1^2` obstruction.  Keep it mathematical until a localized
     normalizable modulus, charged-two-colour three-band Yukawa representation,
     and same-operator uniform Fredholm gap are derived.
+32. AP-E8 now implements the admissibility alternative required by item 29.
+    The finite-grid sector and no-pin stationary-family statements are true,
+    but the new barrier occupies roughly one quarter of the displayed coarse-
+    grid energy and has strong gamma dependence.  Treat its compact-supported
+    `O(a^2)` regression as a consistency check on fixed smooth fields only.
+    Require equicoercivity or a Gamma-limit/counterexample, alternative
+    triangulations, and joint `(a,L,gamma,epsilon)` extrapolation before any
+    continuum or regulator-independent interpretation.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,
@@ -206,3 +216,10 @@ also solves the canonical AP-E4 spectrum.  No checked primary source or
 in-repository theorem yet supplies the remaining chain `nonperturbative strong
 phase + all-scale UV + physical Spin-c fermion + anomaly cancellation +
 degree-one Route-E portal -> three chiral families`.
+
+The 2026-07-17 AP-E8 follow-up changes the finite-grid conclusion but still
+does not alter that promotion boundary.  Seven unanchored admissible
+stationary representatives and an exact fixed-grid minimizer theorem now
+replace AP-E7's finite-grid negative result.  No 2023--2026 primary source in
+the scoped matrix supplies the missing equicoercive continuum limit, physical
+charged-QC2D determinant Hessian, or Route-E portal for this action.

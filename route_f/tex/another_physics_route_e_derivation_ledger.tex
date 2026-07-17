@@ -2095,6 +2095,134 @@ promotion substitutes.  The canonical records are the three
 \path{route_f/tex/ap_e7_*} notes, their machine-readable cards, and the
 independent AP-E7 execution-frontier verifier.
 
+\section{AP-E8 topology-preserving finite-grid \texorpdfstring{$B=1$}{B=1} construction}
+\label{sec:ap-e8-topology}
+
+Among the three proposed continuations, the topology-preserving action was
+chosen because it directly changes the AP-E7 finite-site no-sector blocker.
+The finite GW/domain-wall target kernel and the actual \(SO(3)\) Yukawa
+mapping-torus index remain independent open lanes.
+
+Let \(\mathcal E_F\) be the set of unique unordered vertex pairs that
+co-occur in any tetrahedron of the fixed Freudenthal split.  For
+\(-1/3<\epsilon<1\), \(\gamma>0\), and \(t>\epsilon\), define
+\begin{equation}
+ b_\epsilon(t)=-\log\frac{t-\epsilon}{1-\epsilon}
+ +\frac{t-1}{1-\epsilon},\qquad
+ E^{\rm TP}_{a}=E_a+\gamma a\sum_{\{x,y\}\in\mathcal E_F}
+ b_\epsilon(n_x\cdot n_y),
+ \label{eq:e8-action}
+\end{equation}
+and set the action to \(+\infty\) if any pair dot is at or below
+\(\epsilon\).  The production values are \(\epsilon=0.01,\gamma=1\).
+The subtracted linear term gives
+\begin{equation}
+ b_\epsilon(1)=b_\epsilon'(1)=0,\qquad
+ b_\epsilon''(t)=\frac1{(t-\epsilon)^2},\qquad
+ b_\epsilon(1-u)=\frac{u^2}{2(1-\epsilon)^2}+O(u^3).
+ \label{eq:e8-barrier-calculus}
+\end{equation}
+
+For any Freudenthal tetrahedron whose six pair dots exceed \(\epsilon\),
+every barycentric point obeys
+\begin{equation}
+ \left\|\sum_{i=0}^3\lambda_i n_i\right\|^2
+ \ge\epsilon+(1-\epsilon)\sum_i\lambda_i^2
+ \ge\frac{1+3\epsilon}{4}.
+ \label{eq:e8-affine-bound}
+\end{equation}
+At \(\epsilon=0.01\), the normalized-affine norm is therefore at least
+\(0.507444578255\).  The interpolation never meets zero, so its degree is
+locally constant.  The divergent barrier prevents every continuous
+finite-energy path from reaching the exceptional locus and changing \(B\).
+
+There is also an exact finite-dimensional existence theorem.  In an energy
+sublevel \(E_a^{\rm TP}\le C\), nonnegativity gives
+\begin{equation}
+ b_\epsilon(n_x\cdot n_y)\le\frac{C}{\gamma a}.
+ \label{eq:e8-sublevel}
+\end{equation}
+Because \(b_\epsilon\) is strictly decreasing from infinity to zero, every
+edge has a fixed-grid margin \(n_x\cdot n_y\ge\epsilon+\delta_{a,C}\).
+The \(S^3\) variables are compact and the \(m_s>0\) potential is coercive in
+all \(s_x\).  A minimizing sequence in any nonempty admissible component
+therefore has an interior limit in the same component.  The limit is an
+unanchored minimizer and all tangent-plus-scalar first variations vanish.
+Sampling any smooth compact-supported continuum degree-one field makes the
+\(B=1\) components nonempty on all sufficiently fine grids, hence supplies a
+grid-indexed family of such minimizers.  No compactness uniform in \(a\) is
+implied.
+
+On a fixed uniformly smooth test field,
+\begin{equation}
+ n(x)\cdot n(x+av)=1-\frac{a^2}{2}|D_vn|^2+O(a^3),
+\end{equation}
+so the added action has the asymptotic form
+\begin{equation}
+ \gamma a\sum_e b_\epsilon(n_x\cdot n_y)
+ =\frac{\gamma a^2}{8(1-\epsilon)^2}
+ \int\sum_v\rho_v|D_vn|^4\,\dd^3x+O(a^3).
+ \label{eq:e8-smooth-scaling}
+\end{equation}
+This estimate is not uniform on the unknown minimizers.  A compact-supported,
+exact-boundary-compatible degree-one regression gives a global log--log slope
+\(2.15910\), \(R^2=0.999141\), and successive local slopes
+\(2.3356,2.1276,2.0695,2.0440\).
+
+For tangent variations \(\xi_x\perp n_x\), the exact barrier second variation
+on one edge, with \(q=n_x\cdot n_y\) and \(w=\gamma a\), is
+\begin{align}
+ \delta^2(wb_\epsilon(q))=w\{&b_\epsilon''(q)
+ (\xi_x\cdot n_y+n_x\cdot\xi_y)^2\nonumber\\
+ &+b_\epsilon'(q)[2\xi_x\cdot\xi_y
+ -q(|\xi_x|^2+|\xi_y|^2)]\}.
+ \label{eq:e8-edge-hessian}
+\end{align}
+The full Riemann Hessian must further contain the total sphere-curvature shift
+\(Q^T[H_{\rm emb}-\operatorname{diag}(\lambda_xI_4,0)]Q\), with
+\(\lambda_x=n_x\cdot G_x\).  AP-E8 validates
+Eq.~\eqref{eq:e8-edge-hessian}; it does not yet assemble a physical aggregate
+super-Hessian.
+
+Seven independent final fields, with no core or centre pin, give
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+\(N\)&\(L\)&\(a\)&\(E_a^{\rm TP}\)&direct gradient density&\(\min n_x\cdot n_y\)\\
+\midrule
+15&6&0.428571&75.090097547&\(1.651\times10^{-7}\)&0.091845\\
+17&6&0.375000&72.444298275&\(3.421\times10^{-7}\)&0.090442\\
+19&6&0.333333&70.831336466&\(2.028\times10^{-7}\)&0.083178\\
+21&6&0.300000&69.844122881&\(7.704\times10^{-7}\)&0.077786\\
+16&6&0.400000&73.627393329&\(2.150\times10^{-7}\)&0.090722\\
+21&8&0.400000&73.346860060&\(1.052\times10^{-7}\)&0.095418\\
+26&10&0.400000&73.289478682&\(1.228\times10^{-7}\)&0.095975\\
+\bottomrule
+\end{tabular}
+\end{center}
+All three regular-value targets give \(B=(1,1,1)\) in every case.  The
+fixed-\(a=0.4\) energy spread over \(L=6,8,10\) is \(0.459\%\), but the
+weighted radius changes by about \(18\%\), so size/volume convergence is not
+claimed.  Four nearby \((\gamma,\epsilon)\) controls and one deterministically
+perturbed initial field also return admissible stationary \(B=1\) endpoints.
+The total-gradient, invalid-continuation-gradient, and intrinsic-barrier-
+Hessian residuals are \(9.38\times10^{-11}\), \(2.81\times10^{-11}\), and
+\(8.16\times10^{-9}\).  The standalone card passes \(13/13\).
+
+Thus the AP-E7 statement that no unanchored admissible finite-grid stationary
+representative was available is superseded:
+\begin{equation}
+ \boxed{C_{B1}^{\rm finite\ grid}=\mathrm{true},\qquad
+ C_{B1}^{\rm physical\ continuum}=\mathrm{false}.}
+ \label{eq:e8-decision}
+\end{equation}
+Equicoercivity, Gamma convergence, a continuum stationary limit, barrier and
+triangulation independence, the physical determinant Hessian, interacting
+gauge/ghost blocks, four-dimensional QC2D dynamics, and the quantum continuum
+limit remain open.  Hence the full Lane-B conjunction, portal authorization,
+and physics promotion remain false.
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -2131,7 +2259,10 @@ The AP-E7 regulator, discrete-topology, and \(SO(3)\)/rank-three cards pass
 same-checksum execution-frontier conjunction passes \(16/16\), with the two
 family alternatives represented by a disjunction but every condition within
 each alternative retained conjunctively.  All complete-lane, portal, and
-promotion booleans remain false.
+promotion booleans remain false.  AP-E8's topology-preserving finite-grid card
+passes \(13/13\), promotes only the finite-grid sector/stationarity
+subcondition, and explicitly keeps the physical-continuum Lane-B conjunction,
+every complete lane, portal authorization, and promotion false.
 The JSON explicitly retains all
 cross-theory identifications as non-derived bridge axioms and sets
 \texttt{physics\_promotion\_allowed=false}.

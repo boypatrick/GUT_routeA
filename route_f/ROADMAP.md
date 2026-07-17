@@ -6,7 +6,98 @@ Last updated: 2026-07-17
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E7 regulator/topology/family checkpoint (2026-07-17; current authority)
+## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; current authority)
+
+Status: **the finite-grid topology/stationarity sub-blocker is closed; the
+physical continuum Lane-B conjunction, the other two lanes, and the portal
+remain open.**  The production card passes `13/13` and sets
+`physics_promotion_allowed=false`, `portal_start_allowed=false`, and
+`lane_closed=false`.
+
+### Why this path was selected
+
+- A finite GW/domain-wall target kernel would advance Lane A but still needs
+  the actual target mass-family lift, determinant orientation, mixed heavy
+  threshold, and all-scale `k=+2` mechanism.
+- The actual `SO(3)` Yukawa mapping-torus mod-two index would select a torsion
+  Pfaffian line in Lane C but would not change AP-E7's finite-site unwinding.
+- The topology-preserving action places a finite-energy boundary strictly
+  before the AP-E7 dislocation locus, creates exact finite-grid components, and therefore
+  changes a proved blocker rather than adding another proxy calculation.
+
+### What is now proved and computed
+
+- **Action:** on the unique unordered vertex pairs of a fixed Freudenthal
+  triangulation,
+  `E_TP = E_APE7 + gamma*a*sum b_epsilon(n_x dot n_y)`, with
+  `b_epsilon(t)=-log((t-epsilon)/(1-epsilon))+(t-1)/(1-epsilon)` for
+  `t>epsilon` and `+infinity` otherwise.  Production values are
+  `epsilon=0.01`, `gamma=1`.
+- **Exact topology:** if every tetrahedron pair dot exceeds `epsilon`, then
+  every normalized-affine denominator is at least
+  `sqrt((1+3 epsilon)/4)=0.507444578255`.  Degree is locally constant and no
+  continuous finite-energy path changes `B`.
+- **Exact existence:** in every nonempty fixed-grid admissible component,
+  barrier-bounded sublevels stay a positive distance from the exceptional
+  set.  Compact `S3` variables plus the coercive `m_s>0` potential yield an
+  interior minimizer with no core or centre pin.  Sampling a compact-supported
+  continuum degree-one field proves nonempty `B=1` components on every
+  sufficiently fine grid.
+- **Seven direct stationary representatives:** fixed `L=6` at
+  `N=15,17,19,21` and fixed `a=0.4` at `(N,L)=(16,6),(21,8),(26,10)` all have
+  three-target `B=[1,1,1]`, positive pair margins, and direct tangent-plus-
+  scalar gradient densities between `1.052e-7` and `7.704e-7`, below the
+  declared `2e-6` tolerance.
+- **Controls:** four nearby `(gamma,epsilon)` values and one deterministic
+  tangent/scalar perturbation return admissible stationary `B=1` endpoints.
+  The fixed-`a` energy spread is `0.459%`, but the weighted radius still changes
+  by about `18%`; no volume convergence is claimed.  The strong gamma
+  dependence is evidence that regulator independence remains open.
+- **Calculus:** the full chart gradient, differentiable solver continuation,
+  and intrinsic barrier Hessian have directional residuals `9.38e-11`,
+  `2.81e-11`, and `8.16e-9`.  A boundary-compatible compact-supported profile
+  has global barrier exponent `2.1591` and local slopes approaching two, in
+  agreement with the analytic smooth-field `O(a^2)` expansion.
+
+### Fail-closed boundary
+
+The following remain false: numerical certification of the global minimizer,
+complete line-search-segment admissibility, equicoercivity, Gamma convergence,
+a continuum stationary limit, barrier/triangulation independence, a physical
+charged-QC2D action, total same-action Riemann Hessian, regulated determinant
+second variation, interacting gauge/meson/ghost blocks, BRST
+superdeterminant, four-dimensional dynamics/HMC, and the quantum continuum
+limit.  Accordingly
+`C_B1_finite_grid=true` but `C_B1_physical_continuum=false`.
+
+### Ordered continuation
+
+1. Establish an equicoercive/Gamma-liminf estimate for a declared
+   `gamma(a),epsilon(a)` scaling, or construct a barrier-core-collapse
+   counterexample.  Track local gradient concentration and a topological
+   radius in addition to energy.
+2. Repeat the stationary family for at least two alternative cube
+   triangulations, translated starts, wider `a,L`, and several regulator
+   trajectories; extrapolate observables jointly rather than calling the
+   barrier energy physical.
+3. Only after a regulator-stable continuum background appears, assemble the
+   full same-action tangent Hessian with the sphere-curvature shift, then add
+   interacting gauge/ghost blocks and the bosonic second variation of one
+   regulated fermion determinant.
+4. In parallel, complete either the finite target GW/domain-wall operator or
+   the actual `SO(3)` Yukawa mapping-torus mod-two index and microscopic CPT
+   regulator.
+5. Start a degree-one Route-E portal only after one complete physical lane
+   closes; AP-E8 alone does not authorize it.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e8_topology_preserving_b1.tex` and its PDF;
+- `route_f/code/scan_ap_e8_topology_preserving_b1.py`;
+- `route_f/output/ap_e8_topology_preserving_b1.{json,md}`;
+- AP-E8 section in `route_f/tex/another_physics_route_e_derivation_ledger.tex`.
+
+## AP-E7 regulator/topology/family checkpoint (2026-07-17; superseded above)
 
 Status: **five exact subresults, three physical lanes still open, portal not
 started.**  The lane cards pass `42/42`, `16/16`, and `18/18`; the independent

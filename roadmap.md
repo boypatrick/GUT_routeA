@@ -2,7 +2,50 @@
 
 Last updated: 2026-07-17
 
-## AP-E7 regulator/topology/family checkpoint (2026-07-17; current authority)
+## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; current authority)
+
+The topology-preserving route was selected because it directly changes
+AP-E7's proved finite-site no-sector obstruction.  The new action is
+
+`E_TP = E_APE7 + gamma*a*sum_unique_Freudenthal_pairs b_epsilon(n_x dot n_y)`
+
+with
+`b_epsilon(t)=-log((t-epsilon)/(1-epsilon))+(t-1)/(1-epsilon)` for
+`t>epsilon` and infinite energy otherwise.  The subtraction makes the new
+term `O(a^2)` on a fixed uniformly smooth boundary-compatible field while the
+logarithm still forbids a dislocation crossing.
+
+- **Theorem:** pairwise admissibility gives normalized-affine norm at least
+  `sqrt((1+3 epsilon)/4)=0.507444578255`.  Degree is constant along every
+  finite-energy path.  Barrier sublevels stay inside the admissible component;
+  compact `S3` variables and the coercive scalar potential prove an interior
+  no-pin minimizer in every nonempty component.  Smooth degree-one sampling
+  makes such components nonempty on sufficiently fine grids.
+- **Numerics (`13/13`):** seven independently re-relaxed final fields cover
+  `N=15,17,19,21` at `L=6` and `(N,L)=(16,6),(21,8),(26,10)` at `a=0.4`.
+  Direct tangent-plus-scalar gradient densities are
+  `1.052e-7--7.704e-7`; minimum pair dots are `0.077786--0.095975`; all three
+  regular targets give `B=[1,1,1]`; no core or centre is fixed.
+- **Controls:** four nearby `(gamma,epsilon)` values and a deterministically
+  perturbed start retain an admissible stationary `B=1` endpoint.  Gradient,
+  optimizer-continuation, and barrier-Hessian residuals are `9.38e-11`,
+  `2.81e-11`, and `8.16e-9`.  A compact-supported exact-boundary test has
+  barrier exponent `2.1591` and local slopes approaching two.
+- **Boundary:** the fixed-`a` energy spread is `0.459%`, but the weighted
+  radius changes about `18%`; gamma dependence is strong.  There is no
+  equicoercivity, Gamma convergence, continuum stationary limit,
+  barrier/triangulation independence, physical QC2D action, total determinant
+  super-Hessian, HMC, or quantum continuum limit.
+
+Therefore `C_B1_finite_grid=true` now genuinely supersedes the AP-E7 negative
+result, while `C_B1_physical_continuum=false`, every complete pre-portal lane
+remains false, and no degree-one portal is authorized.  Next: prove or refute
+a regulator-stable continuum limit with alternative triangulations and
+regulator trajectories; only then assemble the same-action physical Hessian.
+The finite GW/domain-wall and actual `SO(3)` mapping-torus paths remain
+parallel alternatives.
+
+## AP-E7 regulator/topology/family checkpoint (2026-07-17; superseded above)
 
 The ordered continuation has now been executed.  It closes several sharply
 defined mathematical subproblems, but **no complete pre-portal physics lane**.

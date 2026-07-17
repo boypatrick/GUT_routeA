@@ -1,0 +1,660 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype,xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\title{AP-E8 Topology-Preserving Lattice Action:\\
+An Unanchored Finite-Grid \(B=1\) Stationary Family\\
+with a Fail-Closed Continuum Boundary}
+\author{Route F research note}
+\date{17 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AP-E7 proved that the unrestricted fixed-boundary finite-site space is
+connected, so the naive sampled action has no exact integer topological
+sectors and its unanchored relaxations unwind.  This note changes that
+specific blocker.  On a fixed Freudenthal triangulation we add a logarithmic
+barrier to every unique pair of vertices sharing a tetrahedron.  Its linear
+term is subtracted, so it diverges at a pairwise admissibility floor that
+prevents reaching the dislocation locus while contributing
+only \(O(a^2)\) to a uniformly smooth sampled field.  Pairwise admissibility
+gives an explicit \(0.50744\) lower bound on the norm of every affine
+tetrahedron.  The normalized interpolation is therefore nonsingular, its
+degree is locally constant, and no continuous finite-energy path changes
+\(B\).
+
+For every fixed grid and every nonempty admissible component, compactness of
+the sphere variables, coercivity of the breathing field, and divergence of
+the barrier prove existence of an interior unanchored minimizer.  Sampling a
+smooth continuum degree-one field shows that such \(B=1\) components exist on
+all sufficiently fine grids.  Numerically, seven independently re-relaxed
+representatives at four spacings and three volumes have direct full tangent
+gradient densities below \(8\times10^{-7}\), three-target charge
+\((1,1,1)\), and positive barrier margins without a core or centre pin.
+Nearby barrier parameters give the same finite-grid conclusion.
+
+The result is deliberately narrower than a continuum theorem.  The
+grid-indexed minimizers have not been proved equicoercive, convergent, barrier-
+independent, or triangulation-independent.  No physical two-colour gauge
+measure, determinant Hessian, BRST superdeterminant, HMC calculation, or
+degree-one Route-E portal is supplied.  The finite-grid topology/stationarity
+sub-blocker is closed; the physical Lane-B conjunction remains open.
+\end{abstract}
+
+\tableofcontents
+
+\section{Decision and logical scope}
+
+The three proposed blocker-changing paths were:
+\begin{enumerate}[label=(\roman*)]
+\item complete a finite Ginsparg--Wilson/domain-wall target kernel;
+\item replace the naive lattice action by a topology-preserving one and find
+an unanchored stationary sequence;
+\item compute the actual \(SO(3)\) Yukawa mapping-torus mod-two index.
+\end{enumerate}
+The first route still lacks one target mass-family lift, its mixed determinant
+orientation, and an all-scale \(k=+2\) mechanism.  The third route can select a
+Pfaffian torsion line but does not repair the finite-site unwinding found in
+AP-E7.  Route (ii) is selected because it directly changes the proved
+finite-site obstruction: the infinite barrier removes the dislocation locus
+from the finite-energy configuration space and creates separated components.
+
+This construction is inspired by geometric lattice charge and lattice
+Skyrmion admissibility ideas \cite{BergLuscher1981APE8,
+Berg1981DislocationsAPE8,Ward1995APE8,SchrammSvetitsky2000APE8}, but the
+specific action below uses a subtracted logarithm and counts every unordered
+Freudenthal co-cell pair only once.  Its finite-energy boundary lies strictly
+inside the normalized-affine admissible region, before any true dislocation.
+No claim of regulator uniqueness is
+made.  Recent dense two-colour effective theories show that diquark, scalar,
+vector, and axial channels can all affect the dynamics
+\cite{SuenagaEtAl2023APE8,SuenagaEtAl2024APE8}; they do not convert the present
+three-dimensional classical regulator into four-dimensional QC2D.
+
+\section{Finite-grid data and the AP-E7 base action}
+
+Let \(\Lambda_{a,L}\) be an \(N^3\) cubic grid with spacing
+\(a=L/(N-1)\).  The outer faces are fixed to
+\begin{equation}
+ n_x=e_0=(1,0,0,0),\qquad s_x=1,
+ \qquad x\in\partial\Lambda_{a,L}.
+ \label{eq:boundary}
+\end{equation}
+At each of the \(M=(N-2)^3\) interior sites,
+\(n_x\in S^3\subset\RR^4\) and \(s_x\in\RR\).  Before admissibility, the
+configuration space is
+\begin{equation}
+ \cC_N=(S^3)^M\times\RR^M,
+ \label{eq:naive-space}
+\end{equation}
+which is path-connected.
+
+The AP-E7 base action is retained literally:
+\begin{align}
+ E_a[n,s]={}&\frac a2\sum_{\langle xy\rangle}
+ \bigl(\lVert n_y-n_x\rVert^2+(s_y-s_x)^2\bigr)\nonumber\\
+ &+\frac{\kappa a^3}{2}\sum_c\sum_{i<j}
+ \left(\lVert u_i^c\rVert^2\lVert u_j^c\rVert^2
+ -(u_i^c\!\cdot u_j^c)^2\right)\nonumber\\
+ &+a^3\sum_{x\in\mathrm{int}}
+ \left[\frac{m_s^2}{2}(s_x-1)^2
+ +\beta^2s_x^2(1-n_{x0})\right],
+ \label{eq:base-action}
+\end{align}
+where
+\begin{equation}
+ u_i^c=\frac{n_{c+\hat\imath}-n_c}{a},\qquad
+ \kappa=1,\quad\beta=\frac12,\quad m_s=\frac52.
+ \label{eq:base-parameters}
+\end{equation}
+Every term in Eq.~\eqref{eq:base-action} is nonnegative.  The last line is
+coercive in all interior \(s_x\).  This is a classical Skyrme-type regulator
+\cite{Skyrme1961APE8}, not a lattice gauge-theory action.
+
+Each cube is split into the six Freudenthal tetrahedra.  For a permutation
+\(p\in S_3\), their vertices are
+\begin{equation}
+ x_0=c,\qquad x_1=c+e_{p_1},\qquad
+ x_2=c+e_{p_1}+e_{p_2},\qquad x_3=c+(1,1,1).
+ \label{eq:freudenthal}
+\end{equation}
+Let \(\cE_F\) be the set of \emph{unique unordered} vertex pairs
+\(\{x,y\}\) that co-occur in at least one such tetrahedron.  Pair incidence
+is not multiplied when the same edge belongs to several tetrahedra.
+
+\section{The topology-preserving action}
+
+Fix
+\begin{equation}
+ -\frac13<\epsilon<1,\qquad \gamma>0,\qquad
+ q_{xy}=n_x\cdot n_y.
+\end{equation}
+For the production card, \(\epsilon=0.01\) and \(\gamma=1\).  Put
+\begin{equation}
+ b_\epsilon(t)=
+ \begin{cases}
+ -\log\!\dfrac{t-\epsilon}{1-\epsilon}
+ +\dfrac{t-1}{1-\epsilon},&t>\epsilon,\\[6pt]
+ +\infty,&t\le\epsilon.
+ \end{cases}
+ \label{eq:barrier}
+\end{equation}
+The AP-E8 action is
+\begin{equation}
+ \boxed{
+ E^{\mathrm{TP}}_{a,\epsilon,\gamma}[n,s]
+ =E_a[n,s]+\gamma a\sum_{\{x,y\}\in\cE_F}
+ b_\epsilon(q_{xy}).}
+ \label{eq:tp-action}
+\end{equation}
+
+The subtraction in Eq.~\eqref{eq:barrier} is essential.  With
+\(d=1-\epsilon\), direct differentiation gives
+\begin{align}
+ b_\epsilon(1)&=b_\epsilon'(1)=0,
+ &b_\epsilon'(t)&=-\frac1{t-\epsilon}+\frac1d
+ =\frac{t-1}{d(t-\epsilon)},\label{eq:bprime}\\
+ b_\epsilon''(t)&=\frac1{(t-\epsilon)^2}>0,
+ &\lim_{t\downarrow\epsilon}b_\epsilon(t)&=+\infty.
+ \label{eq:bsecond}
+\end{align}
+Since \(t\le1\) for unit vectors, \(b_\epsilon\) decreases from infinity to
+zero and is nonnegative on its finite domain.  Writing
+\(u=1-t\in[0,d)\),
+\begin{equation}
+ b_\epsilon(1-u)
+ =-\log\left(1-\frac ud\right)-\frac ud
+ =\sum_{k=2}^{\infty}\frac1k\left(\frac ud\right)^k
+ =\frac{u^2}{2d^2}+O(u^3).
+ \label{eq:barrier-series}
+\end{equation}
+Thus no term linear in \(1-t\) remains.
+
+\section{No-zero lemma and exact finite-energy sectors}
+
+\begin{lemma}[Pairwise admissibility implies a uniform no-zero bound]
+Let \(n_0,\ldots,n_3\in S^3\) obey
+\(n_i\cdot n_j>\epsilon\) for every \(i\ne j\).  For all barycentric
+coordinates \(\lambda_i\ge0\), \(\sum_i\lambda_i=1\),
+\begin{equation}
+ \left\lVert\sum_{i=0}^3\lambda_i n_i\right\rVert^2
+ \ge \epsilon+(1-\epsilon)\sum_{i=0}^3\lambda_i^2
+ \ge\frac{1+3\epsilon}{4}>0.
+ \label{eq:no-zero-bound}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Using \(2\sum_{i<j}\lambda_i\lambda_j
+=1-\sum_i\lambda_i^2\),
+\begin{align}
+ \left\lVert\sum_i\lambda_i n_i\right\rVert^2
+ &=\sum_i\lambda_i^2
+ +2\sum_{i<j}\lambda_i\lambda_j(n_i\cdot n_j)\nonumber\\
+ &\ge\sum_i\lambda_i^2
+ +2\epsilon\sum_{i<j}\lambda_i\lambda_j
+ =\epsilon+(1-\epsilon)\sum_i\lambda_i^2.
+\end{align}
+The first inequality is strict whenever at least two barycentric weights are
+positive; at a vertex both sides of that comparison equal one.  Finally,
+the Cauchy--Schwarz inequality gives \(\sum_i\lambda_i^2\ge1/4\).
+The last bound is positive exactly when \(\epsilon>-1/3\).
+\end{proof}
+
+For \(\epsilon=0.01\), Eq.~\eqref{eq:no-zero-bound} yields
+\begin{equation}
+ \min_T\min_{\lambda\in\Delta^3}
+ \left\lVert\sum_i\lambda_i n_i\right\rVert
+ \ge\sqrt{\frac{1+3\epsilon}{4}}
+ =0.507444578255\ldots.
+ \label{eq:numerical-lower-bound}
+\end{equation}
+Therefore the normalized affine interpolation
+\begin{equation}
+ \widehat n_T(\lambda)
+ =\frac{\sum_i\lambda_i n_i}
+ {\lVert\sum_i\lambda_i n_i\rVert}
+ \label{eq:normalized-affine}
+\end{equation}
+is continuous on every tetrahedron, including common faces.
+
+Define the admissible open set
+\begin{equation}
+ \cA_{\epsilon,N}
+ =\{(n,s)\in\cC_N:q_{xy}>\epsilon
+ \text{ for all }\{x,y\}\in\cE_F\}.
+ \label{eq:admissible-set}
+\end{equation}
+Collapsing the vacuum boundary to a point turns Eq.~\eqref{eq:normalized-affine}
+into a continuous map \(S^3\to S^3\).  Its degree
+\(B_{\rm geom}\in\ZZ\) is constant on every connected component of
+\(\cA_{\epsilon,N}\).
+
+\begin{theorem}[Finite-energy sector preservation]
+Every continuous path with finite
+\(E^{\mathrm{TP}}_{a,\epsilon,\gamma}\) remains in one component of
+\(\cA_{\epsilon,N}\), and its normalized-affine degree is constant.
+Consequently no continuous finite-energy path joins \(B=1\) to the vacuum.
+\end{theorem}
+
+\begin{proof}
+Finite action requires every \(q_{xy}>\epsilon\), so the entire path lies in
+\(\cA_{\epsilon,N}\).  A connected path cannot change connected component.
+Equation~\eqref{eq:no-zero-bound} makes the normalized interpolation a
+continuous homotopy along the path, and homotopy invariance fixes its degree.
+Equivalently, any route to another degree must meet some
+\(q_{xy}=\epsilon\), where Eq.~\eqref{eq:barrier} has infinite energy.
+\end{proof}
+
+\section{Existence of an unanchored finite-grid stationary family}
+
+\begin{theorem}[Fixed-grid minimizer]
+For fixed \(a>0\), fixed finite \(N\), \(\gamma>0\), \(m_s>0\), and any
+nonempty connected component \(K\subset\cA_{\epsilon,N}\), the action
+\(E^{\mathrm{TP}}_{a,\epsilon,\gamma}\) attains a minimum at an interior
+point of \(K\).  That minimizer is stationary under every interior
+\(S^3\)-tangent variation of \(n\) and every interior variation of \(s\).
+No core or centre anchor is required.
+\end{theorem}
+
+\begin{proof}
+Choose a minimizing sequence in \(K\).  After discarding finitely many terms,
+its energy is bounded by a finite constant \(C\).  Nonnegativity of every
+term in Eq.~\eqref{eq:tp-action} implies, for every edge,
+\begin{equation}
+ b_\epsilon(q_{xy})\le\frac{C}{\gamma a}.
+ \label{eq:barrier-sublevel}
+\end{equation}
+The strictly decreasing map
+\(b_\epsilon:(\epsilon,1]\to[0,\infty)\) is invertible.  Hence there is a
+fixed-grid \(\delta_{a,C}>0\) such that
+\begin{equation}
+ q_{xy}\ge\epsilon+\delta_{a,C}
+ \label{eq:sublevel-margin}
+\end{equation}
+for every member of the sequence and every edge.  All \(n_x\) already lie in
+the compact finite product \((S^3)^M\).  The mass term gives
+\begin{equation}
+ \frac{a^3m_s^2}{2}\sum_{x\in\mathrm{int}}(s_x-1)^2\le C,
+ \label{eq:s-coercive}
+\end{equation}
+so the finite vector \((s_x)\) is bounded.  A subsequence converges.  The
+uniform margin \eqref{eq:sublevel-margin} keeps its limit inside
+\(\cA_{\epsilon,N}\); connected components are closed relative to that open
+set, so the limit remains in \(K\).  Continuity on the finite-energy domain
+shows that the limit attains the infimum.
+
+The margin also supplies a neighborhood contained in the same admissible
+component.  The minimizer is therefore an unconstrained interior critical
+point of the fixed-boundary finite-dimensional manifold.  Its tangent and
+scalar first variations vanish.  No value at an interior site was fixed in
+the argument.
+\end{proof}
+
+\begin{theorem}[Nonempty \(B=1\) components on a refining grid sequence]
+Let \(n:\overline\Omega\to S^3\) be a smooth degree-one map equal to the
+vacuum near \(\partial\Omega\), and let \(s\) be smooth.  For any fixed
+\(\epsilon<1\), all sufficiently fine Freudenthal grids obtained by sampling
+\((n,s)\) belong to \(\cA_{\epsilon,N}\) and their normalized-affine degree
+is one.  Consequently Theorem 5.1 supplies an unanchored stationary minimizer
+\((n_a,s_a)\) in a \(B=1\) component for every grid in a sequence
+\(a\downarrow0\).
+\end{theorem}
+
+\begin{proof}
+Uniform continuity of \(n\) on the compact domain implies that the images of
+any two vertices sharing a tetrahedron approach one another uniformly as
+\(a\to0\).  Their dot products therefore approach one uniformly and exceed
+\(\epsilon\) for sufficiently small \(a\).  The piecewise affine
+interpolation of the sampled values converges uniformly to \(n\), and its
+norm converges uniformly to one.  After normalization it is uniformly close
+to \(n\); for sufficiently small \(a\), the pointwise shortest-geodesic
+homotopy is well-defined.  Thus its degree equals \(\deg n=1\).  Apply the
+fixed-grid theorem to the component containing that sample.
+\end{proof}
+
+\begin{remark}[What ``sequence'' does and does not mean]
+The theorem gives a family of exact finite-dimensional minimizers indexed by
+the grid spacing.  It does not give a compactness estimate uniform in \(a\).
+Indeed, Eq.~\eqref{eq:barrier-sublevel} permits
+\(\delta_{a,C}\) to shrink rapidly as \(a\downarrow0\).  The theorem alone
+does not imply that \((n_a,s_a)\) converges, that its limit solves a continuum
+Euler--Lagrange equation, or that a barrier-supported lattice core cannot
+form.
+\end{remark}
+
+\section{Smooth-field scaling of the new term}
+
+Let an edge have physical displacement \(av\) with \(v\) fixed by the
+Freudenthal stencil.  For a uniformly smooth unit field,
+\begin{equation}
+ n(x)\cdot n(x+av)
+ =1-\frac{a^2}{2}\lVert D_vn(x)\rVert^2+O(a^3).
+ \label{eq:dot-expansion}
+\end{equation}
+Combining Eqs.~\eqref{eq:barrier-series} and \eqref{eq:dot-expansion},
+\begin{equation}
+ b_\epsilon(n(x)\cdot n(x+av))
+ =\frac{a^4}{8(1-\epsilon)^2}
+ \lVert D_vn(x)\rVert^4+O(a^5).
+ \label{eq:edge-expansion}
+\end{equation}
+There are \(O(a^{-3})\) unique edges at fixed physical volume.  Therefore
+\begin{equation}
+ \gamma a\sum_{\{x,y\}\in\cE_F}b_\epsilon(q_{xy})
+ =\frac{\gamma a^2}{8(1-\epsilon)^2}
+ \int_\Omega\sum_v\rho_v\lVert D_vn\rVert^4\,\dd^3x
+ +O(a^3),
+ \label{eq:smooth-irrelevance}
+\end{equation}
+where \(\rho_v\) are the direction/incidence densities of the chosen unique-
+edge stencil.  Thus the new term has no leading kinetic renormalization and
+is \(O(a^2)\) on a fixed uniformly smooth family.
+
+Equation~\eqref{eq:smooth-irrelevance} is not uniform over the unknown
+minimizers.  It proves neither equicoercivity nor Gamma convergence.  It also
+does not remove finite-\(a\) triangulation dependence, because the
+\(\rho_v\) depend on the chosen stencil.
+
+\section{Exact first and second variations}
+
+Let \(w=\gamma a\), \(q=n_x\cdot n_y\), and consider one barrier edge
+\(w b_\epsilon(q)\).  Its ambient gradients are
+\begin{equation}
+ G_x^{(xy)}=w b_\epsilon'(q)n_y,\qquad
+ G_y^{(xy)}=w b_\epsilon'(q)n_x.
+ \label{eq:edge-gradient}
+\end{equation}
+The ambient Hessian blocks are
+\begin{align}
+ H_{xx}^{(xy)}&=w b_\epsilon''(q)n_yn_y^T,&
+ H_{yy}^{(xy)}&=w b_\epsilon''(q)n_xn_x^T,\nonumber\\
+ H_{xy}^{(xy)}&=w\left[b_\epsilon''(q)n_yn_x^T
+ +b_\epsilon'(q)I_4\right],&
+ H_{yx}^{(xy)}&=(H_{xy}^{(xy)})^T.
+ \label{eq:edge-ambient-hessian}
+\end{align}
+
+For tangent vectors \(\xi_x\perp n_x\), \(\xi_y\perp n_y\), take the
+product geodesic on \(S^3\times S^3\).  Its first dot-product variation is
+\begin{equation}
+ \delta q=\xi_x\cdot n_y+n_x\cdot\xi_y,
+ \label{eq:delta-q}
+\end{equation}
+and its second variation is
+\begin{equation}
+ \delta^2q=2\xi_x\cdot\xi_y
+ -q\bigl(\lVert\xi_x\rVert^2+\lVert\xi_y\rVert^2\bigr).
+ \label{eq:delta2-q}
+\end{equation}
+Hence the exact intrinsic edge quadratic form is
+\begin{align}
+ \delta^2\bigl(wb_\epsilon(q)\bigr)
+ =w\Bigl\{&b_\epsilon''(q)
+ (\xi_x\cdot n_y+n_x\cdot\xi_y)^2\nonumber\\
+ &+b_\epsilon'(q)
+ \left[2\xi_x\cdot\xi_y
+ -q(\lVert\xi_x\rVert^2+\lVert\xi_y\rVert^2)\right]\Bigr\}.
+ \label{eq:intrinsic-edge-hessian}
+\end{align}
+
+For the full action, let \(G_x=\partial E^{\rm TP}/\partial n_x\),
+\(P_x=I_4-n_xn_x^T\), and \(\lambda_x=n_x\cdot G_x\).  Stationarity is
+\begin{equation}
+ P_xG_x=0,\qquad \frac{\partial E^{\rm TP}}{\partial s_x}=0.
+ \label{eq:stationarity}
+\end{equation}
+If \(Q\) collects orthonormal tangent frames and the scalar directions, the
+full Riemann Hessian at a stationary point is
+\begin{equation}
+ H_{\rm Riem}
+ =Q^T\left[H_{\rm emb}
+ -\diag(\lambda_1I_4,0,\lambda_2I_4,0,\ldots)\right]Q.
+ \label{eq:riemann-hessian}
+\end{equation}
+Projecting \(H_{\rm emb}\) without the sphere-curvature shift is incorrect.
+The AP-E8 card validates Eq.~\eqref{eq:intrinsic-edge-hessian} independently;
+it does not assemble or promote Eq.~\eqref{eq:riemann-hessian} as a physical
+gauge--meson--ghost--fermion super-Hessian.
+
+\section{Numerical protocol}
+
+The reproducible implementation is
+\begin{center}
+\path{route_f/code/scan_ap_e8_topology_preserving_b1.py}.
+\end{center}
+It imports the canonical AP-E6 continuum profile only as initial data.  The
+little-endian \((r,F,s)\) checksum is
+\begin{center}
+\small\texttt{81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59}.
+\end{center}
+Every grid receives exact vacuum boundary data and is minimized independently.
+No core, centre, or interior field value is fixed.
+
+A fixed-base exponential chart is used within each L-BFGS solve and is
+re-centred if needed.  An invalid trial point receives a solver-only
+continuation which matches the exact \(b,b',b''\) at a positive cutoff and
+adds a differentiable quartic rejection below the admissibility floor.  Its
+energy/gradient pair is checked separately.  All reported fields are
+re-evaluated against the literal infinite-barrier domain.  Because the
+complete geodesic segment of
+each internal quasi-Newton line search was not interval-certified,
+\texttt{complete\_line\_search\_segments\_certified\_admissible=false}.
+This does not affect the final-point stationarity test or the existence
+theorem, but it forbids a stronger claim about the numerical trajectory.
+
+At every final field the code discards the chart derivative and recomputes
+the direct projected gradient
+\begin{equation}
+ g_a=\frac{
+ \left[\sum_x\lVert P_xG_x\rVert^2
+ +\sum_x\left(\partial E^{\rm TP}/\partial s_x\right)^2\right]^{1/2}}
+ {a^3\sqrt{4M}}.
+ \label{eq:gradient-density}
+\end{equation}
+The stationarity threshold is \(g_a<2\times10^{-6}\).  The degree is counted
+independently with three generic regular targets.  A size diagnostic is
+\begin{equation}
+ R_{\rm rms}^2
+ =\frac{\sum_x(1-n_{x0})|x|^2}{\sum_x(1-n_{x0})}.
+ \label{eq:rms-radius}
+\end{equation}
+It is a profile diagnostic, not a proof of localization or continuum
+compactness.
+
+Three independent calculus regressions precede the relaxation:
+\begin{align}
+ \text{total-gradient directional residual}&=9.38\times10^{-11},\nonumber\\
+ \text{invalid-continuation gradient residual}&=2.81\times10^{-11},\nonumber\\
+ \text{barrier geodesic-Hessian residual}&=8.16\times10^{-9}.
+ \label{eq:calculus-residuals}
+\end{align}
+
+\section{Numerical results}
+
+\subsection{Four spacings and three volumes}
+
+The seven principal solutions are:
+\begin{center}
+\small
+\begin{tabular}{rrrrrrrr}
+\toprule
+\(N\)&\(L\)&\(a\)&\(E^{\rm TP}\)&\(g_a\)&\(\min q\)&\(B\) rows&\(R_{\rm rms}/a\)\\
+\midrule
+15&6&0.428571&75.090097547&\(1.651\!\times10^{-7}\)&0.091845&\((1,1,1)\)&3.0704\\
+17&6&0.375000&72.444298275&\(3.421\!\times10^{-7}\)&0.090442&\((1,1,1)\)&3.3504\\
+19&6&0.333333&70.831336466&\(2.028\!\times10^{-7}\)&0.083178&\((1,1,1)\)&3.6277\\
+21&6&0.300000&69.844122881&\(7.704\!\times10^{-7}\)&0.077786&\((1,1,1)\)&3.8980\\
+16&6&0.400000&73.627393329&\(2.150\!\times10^{-7}\)&0.090722&\((1,1,1)\)&3.2634\\
+21&8&0.400000&73.346860060&\(1.052\!\times10^{-7}\)&0.095418&\((1,1,1)\)&3.5780\\
+26&10&0.400000&73.289478682&\(1.228\!\times10^{-7}\)&0.095975&\((1,1,1)\)&3.8613\\
+\bottomrule
+\end{tabular}
+\end{center}
+All pair margins \(\min q-\epsilon\) are positive.  The fixed-
+\(a=0.4\) energy spread over \(L=6,8,10\) is
+\begin{equation}
+ \frac{E_{\max}-E_{\min}}{E_{\max}}=0.00458952.
+ \label{eq:volume-spread}
+\end{equation}
+The fixed-\(L=6\) physical radii for \(N=15,17,19,21\) are
+\(1.3159,1.2564,1.2092,1.1694\), while \(R_{\rm rms}/a\) grows.  This is evidence
+against a literal one-cell collapse in the displayed sequence, but it is not
+a uniform lower-radius theorem.
+
+\subsection{Barrier-parameter controls}
+
+At \(N=15,L=6\), four nearby choices give:
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+\(\gamma\)&\(\epsilon\)&\(E^{\rm TP}\)&\(g_a\)&\(\min q\)&\(B\) rows\\
+\midrule
+0.5&0.010&63.665861079&\(1.614\!\times10^{-7}\)&0.044767&\((1,1,1)\)\\
+2.0&0.010&90.696115305&\(1.794\!\times10^{-7}\)&0.221220&\((1,1,1)\)\\
+1.0&0.005&74.773915108&\(1.487\!\times10^{-7}\)&0.085519&\((1,1,1)\)\\
+1.0&0.020&75.719960191&\(2.790\!\times10^{-7}\)&0.104399&\((1,1,1)\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+These controls show persistence of admissible stationary representatives, not
+regulator independence: the finite-\(a\) energies and profiles visibly depend
+on \(\gamma\) and \(\epsilon\).
+
+A deterministic \(2\times10^{-3}\) tangent-plus-scalar perturbation of the
+\(N=15,L=6\) initial sample returns to a numerically indistinguishable
+same-energy admissible stationary representative: its final energy
+differs from the baseline by less than \(10^{-13}\) relatively, has
+three-target \(B=(1,1,1)\), and passes the direct stationarity threshold.
+This is a local-basin control, not a proof that the reported point is the
+global minimizer of its component.
+
+\subsection{Compact-supported smooth-profile scaling}
+
+To avoid a boundary-layer artifact, this regression does not overwrite the
+nonzero tail of the canonical AP-E6 profile.  It uses a separate \(C^2\),
+degree-one hedgehog with support radius two inside the \(L=6\) box, so the
+field already equals the exact vacuum on every boundary face.  Its barrier
+energy is:
+\begin{center}
+\small
+\begin{tabular}{rrrr}
+\toprule
+\(N\)&\(a\)&\(E_{\rm barrier}\)&\(\min q\)\\
+\midrule
+17&0.375000&30.439452623&0.150863\\
+21&0.300000&18.075663943&0.360734\\
+25&0.250000&12.263778095&0.551121\\
+29&0.214286&8.914172689&0.656982\\
+33&0.187500&6.784938174&0.722692\\
+\bottomrule
+\end{tabular}
+\end{center}
+A log--log fit gives slope \(2.15910\) with \(R^2=0.999141\).  The four
+successive local slopes are \(2.3356,2.1276,2.0695,2.0440\), approaching the
+analytic exponent two.  The fit is not applied to the re-relaxed minimizers
+and cannot establish their continuum behavior.
+
+\section{Machine gates and changed blocker}
+
+The production card passes \(13/13\) checks.  It writes
+\begin{center}
+\path{route_f/output/ap_e8_topology_preserving_b1.json},\qquad
+\path{route_f/output/ap_e8_topology_preserving_b1.md}.
+\end{center}
+The following statements are now true:
+\begin{enumerate}
+\item a topology-preserving finite-grid action is explicitly defined;
+\item its finite-energy degree is preserved by theorem;
+\item every nonempty fixed-grid \(B=1\) component has an unanchored minimizer;
+\item such components and minimizers exist on a sufficiently fine grid
+sequence;
+\item seven numerical final fields pass a direct unanchored stationarity test,
+three-target \(B=1\), and a positive barrier margin.
+\end{enumerate}
+
+This changes the AP-E7 conclusion.  The former statement
+``no unanchored admissible finite-grid stationary representative has been
+found'' is superseded.  The correct new statement is
+\begin{equation}
+ \boxed{C_{B1}^{\rm finite\ grid}=\mathrm{true},\qquad
+ C_{B1}^{\rm physical\ continuum}=\mathrm{false}.}
+ \label{eq:changed-blocker}
+\end{equation}
+
+\begin{gate}[Continuum and physics remain fail closed]
+None of the following has been established: a numerically certified global
+minimum, complete line-search-segment admissibility, equicoercivity, Gamma
+convergence, a continuum stationary limit, barrier or triangulation
+independence, a physical charged-QC2D action, an interacting
+gauge--meson--ghost--fermion Hessian, a BRST superdeterminant, four-dimensional
+dynamics, HMC, or a quantum continuum limit.
+\end{gate}
+
+Consequently the full Lane-B closure condition remains false and no
+degree-one Route-E portal is authorized.  The two deferred alternatives---a
+complete finite GW/domain-wall target kernel and the actual \(SO(3)\) Yukawa
+mapping-torus mod-two index---remain independent research lanes.
+
+\section{Ordered next work}
+
+The next calculations should be ordered by their ability to distinguish a
+physical continuum object from a barrier artifact:
+\begin{enumerate}
+\item Prove an equicoercive estimate or a Gamma-liminf statement for a
+controlled scaling \(\gamma(a),\epsilon(a)\), or produce a counterexample
+showing barrier-core collapse.  Measure local gradient concentration and a
+topological radius, not only total energy.
+\item Repeat the stationary family for at least two alternative cube
+triangulations and several \(\gamma(a),\epsilon(a)\) trajectories.  Extrapolate
+observables jointly in \(a,L,\gamma,\epsilon\); do not extrapolate the barrier
+energy as if it were physical.
+\item Only after one regulator-stable continuum background is identified,
+assemble the full same-action Riemann Hessian including the curvature shift
+in Eq.~\eqref{eq:riemann-hessian}, then add interacting gauge/ghost blocks and
+the bosonic second variation of one regulated fermion determinant.
+\item In parallel, complete either the finite target GW/domain-wall operator
+or the actual \(SO(3)\) mapping-torus mod-two index.  A portal remains last.
+\end{enumerate}
+
+\section{Reproduction}
+
+From the repository root, run
+\begin{verbatim}
+python3 route_f/code/scan_ap_e8_topology_preserving_b1.py
+\end{verbatim}
+The JSON serializer rejects NaN and infinity.  The output records Python,
+NumPy, SciPy, source SHA-256 values, the canonical seed checksum, every main
+and control case, the three calculus audits, all Boolean theorem and fail-closed
+flags, and the \(13/13\) checks.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e8_topology_preserving_b1}
+
+\end{document}

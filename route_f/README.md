@@ -26,7 +26,34 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-17 AP-E7 current result
+## 2026-07-17 AP-E8 topology-preserving finite-grid result
+
+AP-E8 selects the topology-preserving-action route and genuinely changes one
+AP-E7 blocker.  A subtracted logarithmic barrier on all unique Freudenthal
+co-cell pairs gives an exact normalized-affine no-zero bound, separates the
+finite-energy configuration space into degree components, and proves an
+interior unanchored minimizer in every nonempty component.  Sampling a smooth
+compact-supported degree-one field makes `B=1` components nonempty on all
+sufficiently fine grids.
+
+The production card passes `13/13`.  Seven no-pin final fields at four
+spacings and three volumes all have direct tangent-plus-scalar gradient below
+`7.8e-7`, positive pair margins, and three-target `B=[1,1,1]`.  Four nearby
+barrier choices and one perturbed start give the same finite-grid verdict.
+The exact action calculus, differentiable solver continuation, and intrinsic
+barrier Hessian pass independent directional checks.
+
+This is not yet a continuum or physical-lattice result.  The weighted radius
+has not volume-converged, gamma dependence is strong, and no equicoercivity,
+Gamma convergence, regulator independence, physical QC2D action, determinant
+Hessian, BRST superdeterminant, HMC, or quantum continuum limit is present.
+Thus `C_B1_finite_grid=true` but `C_B1_physical_continuum=false`; every complete
+pre-portal lane, portal authorization, and physics promotion remain false.
+See `tex/ap_e8_topology_preserving_b1.tex`,
+`code/scan_ap_e8_topology_preserving_b1.py`, and
+`output/ap_e8_topology_preserving_b1.{json,md}`.
+
+## 2026-07-17 AP-E7 result (superseded by AP-E8 for finite-grid Lane B)
 
 The requested common-regulator, discrete re-relaxation, and actual-moduli
 alternatives have been executed and integrated.  The outcome is intentionally

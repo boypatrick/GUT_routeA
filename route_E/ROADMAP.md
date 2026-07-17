@@ -10,7 +10,44 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E7 regulator/topology/family update (2026-07-17; current authority)
+## AP-E8 topology-preserving finite-grid update (2026-07-17; current authority)
+
+AP-E8 deliberately chose the one route that changes the AP-E7 finite-site
+blocker.  It adds a subtracted logarithmic barrier on every unique
+Freudenthal co-cell pair.  If all pair dots exceed `epsilon=0.01`, the
+normalized-affine denominator has the exact lower bound
+`sqrt((1+3 epsilon)/4)=0.507444578255`; the finite-energy configuration space
+therefore decomposes into degree components.  Compactness plus the coercive
+breathing-field potential proves an interior unanchored minimizer in every
+nonempty component, and a sampled compact-supported continuum degree-one map
+proves such components exist on sufficiently fine grids.
+
+The `13/13` numerical card independently re-relaxes seven no-pin backgrounds:
+four spacings at fixed `L=6` and three volumes at fixed `a=0.4`.  Every direct
+tangent-plus-scalar gradient density is below `7.8e-7`, every minimum pair dot
+is above `0.0777`, and all three regular targets give `B=[1,1,1]`.  Four
+barrier-parameter controls and one perturbed start remain stationary and
+admissible.  The solver-continuation gradient and intrinsic barrier Hessian
+are independently differentiated.
+
+This changes one dependency statement only:
+`C_B1_finite_grid=true`.  It does not import a Route-E portal or a physical
+continuum soliton.  Equicoercivity, Gamma convergence, barrier/triangulation
+independence, size/volume convergence, a physical QC2D action, the determinant
+Hessian, interacting gauge/ghost blocks, BRST superdeterminant, four-dimensional
+dynamics, and quantum continuum limit remain absent.  The fixed-`a` energy
+spread is only `0.459%`, but the weighted radius changes by about `18%`, so
+`C_B1_physical_continuum=false`.
+
+The integrated authorization consequently remains
+`any_preportal_route_closed=false`, `degree_one_portal_constructed=false`, and
+`physics_promotion_allowed=false`.  Ordered work is: prove or refute a
+regulator-stable continuum limit; test alternative triangulations and
+regulator trajectories; only then construct the total same-action physical
+Hessian.  The finite GW/domain-wall kernel and actual `SO(3)` mapping-torus
+index remain parallel lanes, and the portal remains last.
+
+## AP-E7 regulator/topology/family update (2026-07-17; superseded above)
 
 No Route-E dependency is removed and no portal is authorized, but the next
 three alternatives now have exact theorem boundaries.

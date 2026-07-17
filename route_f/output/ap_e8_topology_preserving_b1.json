@@ -1,0 +1,2281 @@
+{
+  "action_definition": {
+    "barrier": "b_epsilon(t)=-log((t-epsilon)/(1-epsilon))+(t-1)/(1-epsilon), t>epsilon; +infinity otherwise",
+    "base_action": "AP-E7 declared finite-difference n+s action",
+    "coefficient": "gamma*a",
+    "edge_measure": "unique unordered vertex pairs co-occurring in any Freudenthal tetrahedron",
+    "epsilon": 0.01,
+    "gamma": 1.0,
+    "normalized_affine_lower_bound": 0.507444578254611,
+    "triangulation": "fixed six-tetrahedron Freudenthal split"
+  },
+  "artifact": "AP-E8 topology-preserving finite-grid B=1 construction",
+  "barrier_intrinsic_hessian_audit": {
+    "analytic_intrinsic_quadratic_form": 0.27174200417558375,
+    "best_relative_residual": 8.159266762230999e-09,
+    "rows": [
+      {
+        "analytic": 0.27174200417558375,
+        "finite_difference": 0.2717420137798854,
+        "relative_residual": 9.604301631771506e-09,
+        "step": 0.002
+      },
+      {
+        "analytic": 0.27174200417558375,
+        "finite_difference": 0.2717419924636033,
+        "relative_residual": 1.17119804410315e-08,
+        "step": 0.001
+      },
+      {
+        "analytic": 0.27174200417558375,
+        "finite_difference": 0.271741996016317,
+        "relative_residual": 8.159266762230999e-09,
+        "step": 0.0005
+      }
+    ]
+  },
+  "canonical_profile_checksum": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+  "checks": [
+    {
+      "detail": "checksum=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "P0_provenance",
+      "name": "the canonical AP-E6 continuum seed has the frozen checksum",
+      "pass": true
+    },
+    {
+      "detail": "b(1)=0.000e+00; b'(1)=0.000e+00; min b''=1.020e+00",
+      "group": "P1_action",
+      "name": "the subtracted logarithmic barrier is nonnegative, vacuum-flat, convex, and divergent at the floor",
+      "pass": true
+    },
+    {
+      "detail": "sqrt((1+3 epsilon)/4)=0.507444578255",
+      "group": "P1_action",
+      "name": "pairwise admissibility gives a uniform no-zero bound for normalized affine interpolation",
+      "pass": true
+    },
+    {
+      "detail": "best relative residual=9.377e-11",
+      "group": "P1_calculus",
+      "name": "the full AP-E8 chart gradient agrees with a centred directional derivative",
+      "pass": true
+    },
+    {
+      "detail": "best relative residual=2.809e-11",
+      "group": "P1_calculus",
+      "name": "the optimizer-only invalid-domain continuation returns a derivative consistent with its energy",
+      "pass": true
+    },
+    {
+      "detail": "best relative residual=8.159e-09",
+      "group": "P1_calculus",
+      "name": "the intrinsic barrier second variation agrees with a centred geodesic second difference",
+      "pass": true
+    },
+    {
+      "detail": "max gradient=7.704e-07; min pair margin=6.779e-02; B rows=[[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]",
+      "group": "P2_stationarity",
+      "name": "every main final field is unanchored, admissible, three-target B=1, and stationary by the direct tangent test",
+      "pass": true
+    },
+    {
+      "detail": "(N,a)=[(15, 0.4285714285714284), (17, 0.375), (19, 0.3333333333333335), (21, 0.2999999999999998)]",
+      "group": "P2_sequence",
+      "name": "the fixed-box sequence contains four independently re-relaxed spacings",
+      "pass": true
+    },
+    {
+      "detail": "relative energy spread=4.589523e-03",
+      "group": "P2_sequence",
+      "name": "the fixed-spacing L=6,8,10 sequence is stationary with controlled finite-volume energy spread",
+      "pass": true
+    },
+    {
+      "detail": "controls=[(0.5, 0.01, 1.6142235821369239e-07, 0.03476695498081362), (2.0, 0.01, 1.7944472821244817e-07, 0.21121993191627725), (1.0, 0.005, 1.4873487957096304e-07, 0.08051904818413147), (1.0, 0.02, 2.7901910638483354e-07, 0.08439859599539702)]",
+      "group": "P3_regulator_controls",
+      "name": "nearby gamma and epsilon choices retain admissible unanchored B=1 stationary representatives",
+      "pass": true
+    },
+    {
+      "detail": "seed=20260719; relative energy difference=4.920518612508454e-14",
+      "group": "P3_basin_control",
+      "name": "a deterministic tangent-plus-scalar perturbation returns to a numerically indistinguishable same-energy admissible stationary B=1 representative",
+      "pass": true
+    },
+    {
+      "detail": "slope=2.159102; R2=0.999141; local slopes=[2.335595393897472, 2.1276499577950196, 2.0694530874120183, 2.0439932562383656]",
+      "group": "P3_smooth_field",
+      "name": "the barrier has a stable approximately quadratic power on a compact-supported boundary-compatible profile",
+      "pass": true
+    },
+    {
+      "detail": "barrier=0.000e+00; B=[0, 0, 0]",
+      "group": "P4_controls",
+      "name": "the exact vacuum has zero barrier and B=0",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "fail_closed": {
+    "barrier_regulator_independence_established": false,
+    "complete_line_search_segments_certified_admissible": false,
+    "continuum_stationary_limit_constructed": false,
+    "four_dimensional_dynamics_performed": false,
+    "gamma_convergence_proven": false,
+    "global_minimizer_numerically_certified": false,
+    "minimizer_sequence_equicoercive": false,
+    "physical_gauge_meson_ghost_fermion_superhessian_complete": false,
+    "physical_qc2d_action_derived": false,
+    "quantum_continuum_limit_proven": false,
+    "triangulation_independence_established": false
+  },
+  "generated_utc": "deterministic-no-wall-clock",
+  "gradient_audit": {
+    "analytic_directional_derivative": 0.06046564538448492,
+    "best_relative_residual": 9.376563414598138e-11,
+    "energy": 89.47839502074868,
+    "rows": [
+      {
+        "analytic": 0.06046564538448492,
+        "finite_difference": 0.06046564529071929,
+        "relative_residual": 9.376563414598138e-11,
+        "step": 2e-05
+      },
+      {
+        "analytic": 0.06046564538448492,
+        "finite_difference": 0.060465644224905184,
+        "relative_residual": 1.1595797377861317e-09,
+        "step": 1e-05
+      },
+      {
+        "analytic": 0.06046564538448492,
+        "finite_difference": 0.06046564777761886,
+        "relative_residual": 2.3931339410143693e-09,
+        "step": 5e-06
+      }
+    ]
+  },
+  "lane_closed": false,
+  "main_case_specifications": [
+    [
+      15,
+      6.0
+    ],
+    [
+      17,
+      6.0
+    ],
+    [
+      19,
+      6.0
+    ],
+    [
+      21,
+      6.0
+    ],
+    [
+      16,
+      6.0
+    ],
+    [
+      21,
+      8.0
+    ],
+    [
+      26,
+      10.0
+    ]
+  ],
+  "main_stationary_cases": [
+    {
+      "L": 6.0,
+      "N": 15,
+      "a": 0.4285714285714284,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 19.054131102950812,
+        "base_energy": 56.03596644408236,
+        "direct_projected_gradient_l2_density": 1.6509564143289396e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.2182888687475937e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.09184531472010232,
+        "minimum_pair_margin": 0.08184531472010233,
+        "total_energy": 75.09009754703317
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 3.039841969499828e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2882058317854682,
+            "minimum_hit_positive_cone_margin": 0.022846573147712684,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.09382614348218318,
+            "minimum_hit_positive_cone_margin": 0.04820820400135915,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.6249888746212451,
+            "minimum_hit_positive_cone_margin": 0.020221704358972983,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 20.571071890127886,
+        "base_energy": 68.87563382537544,
+        "direct_projected_gradient_l2_density": 1.9446266338255553,
+        "direct_tangent_plus_scalar_gradient_l2": 14.349966851322035,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.06438516358105371,
+        "minimum_pair_margin": 0.05438516358105371,
+        "total_energy": 89.44670571550333
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.5109290335111814e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22354355046213126,
+            "minimum_hit_positive_cone_margin": 0.10639938924627841,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.052062849190853175,
+            "minimum_hit_positive_cone_margin": 0.040019992911137676,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2276052875613612,
+            "minimum_hit_positive_cone_margin": 0.1037818806464258,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 86.35839430413222,
+        "rms_radius": 1.3158811457908999,
+        "rms_radius_over_a": 3.070389340178768
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.6509564143289396e-07,
+          "energy": 75.09009754703317,
+          "function_evaluations": 415,
+          "iterations": 387,
+          "minimum_pair_dot": 0.09184531472010232,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 21014
+    },
+    {
+      "L": 6.0,
+      "N": 17,
+      "a": 0.375,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 17.501173542615152,
+        "base_energy": 54.94312473286912,
+        "direct_projected_gradient_l2_density": 3.420695068062113e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 2.0959216748354127e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.0904421599283797,
+        "minimum_pair_margin": 0.0804421599283797,
+        "total_energy": 72.44429827548427
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 3.289444186074804e-12,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.27602591473513927,
+            "minimum_hit_positive_cone_margin": 0.013609712636734833,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.07699360014477913,
+            "minimum_hit_positive_cone_margin": 0.05628213481350707,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.3596516869870659,
+            "minimum_hit_positive_cone_margin": 0.14795149967496413,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 14.480221492641816,
+        "base_energy": 71.10805184146814,
+        "direct_projected_gradient_l2_density": 0.9691719126118437,
+        "direct_tangent_plus_scalar_gradient_l2": 5.9382914228470804,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.22418912218385542,
+        "minimum_pair_margin": 0.2141891221838554,
+        "total_energy": 85.58827333410996
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.1727349001702138e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.08867609158654724,
+            "minimum_hit_positive_cone_margin": 0.030139137208019973,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.08866863863004402,
+            "minimum_hit_positive_cone_margin": 0.10192494067483145,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.14986340265205259,
+            "minimum_hit_positive_cone_margin": 0.046747625130791816,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 100.07551418121311,
+        "rms_radius": 1.2564135678848154,
+        "rms_radius_over_a": 3.3504361810261742
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 3.420695068062113e-07,
+          "energy": 72.44429827548427,
+          "function_evaluations": 360,
+          "iterations": 341,
+          "minimum_pair_dot": 0.0904421599283797,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 31024
+    },
+    {
+      "L": 6.0,
+      "N": 19,
+      "a": 0.3333333333333335,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 16.64729806393844,
+        "base_energy": 54.18403840159499,
+        "direct_projected_gradient_l2_density": 2.0283009888472526e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.0531058273966939e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.08317833038428146,
+        "minimum_pair_margin": 0.07317833038428147,
+        "total_energy": 70.83133646553343
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 4.768365814166224e-13,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.29400860258192124,
+            "minimum_hit_positive_cone_margin": 0.012237242838053254,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.06566638023596631,
+            "minimum_hit_positive_cone_margin": 0.0970370222764227,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.537784493252405,
+            "minimum_hit_positive_cone_margin": 0.01906571089285471,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 11.087595103184368,
+        "base_energy": 72.75012982187391,
+        "direct_projected_gradient_l2_density": 0.7740656103810241,
+        "direct_tangent_plus_scalar_gradient_l2": 4.018994269400439,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.3504105236567899,
+        "minimum_pair_margin": 0.34041052365678987,
+        "total_energy": 83.83772492505828
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 6.238056346458255e-08,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.0875182039593415,
+            "minimum_hit_positive_cone_margin": 0.17476078501820863,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.057419541793647215,
+            "minimum_hit_positive_cone_margin": 0.037692785720157225,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.1435016966226427,
+            "minimum_hit_positive_cone_margin": 0.10415774340561203,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 113.53039781679615,
+        "rms_radius": 1.2092322598301235,
+        "rms_radius_over_a": 3.627696779490369
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 2.0283009888472526e-07,
+          "energy": 70.83133646553343,
+          "function_evaluations": 345,
+          "iterations": 322,
+          "minimum_pair_dot": 0.08317833038428146,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 43794
+    },
+    {
+      "L": 6.0,
+      "N": 21,
+      "a": 0.2999999999999998,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 16.270507472879654,
+        "base_energy": 53.573615407903,
+        "direct_projected_gradient_l2_density": 7.704481777188289e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 3.445621697357132e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.077785985461787,
+        "minimum_pair_margin": 0.067785985461787,
+        "total_energy": 69.84412288078265
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.0764966322851824e-13,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.3071707362729795,
+            "minimum_hit_positive_cone_margin": 0.029563244648120775,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.05572473371197926,
+            "minimum_hit_positive_cone_margin": 0.11954493925290184,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.5329632095516668,
+            "minimum_hit_positive_cone_margin": 0.006240833806701019,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 8.83374531924036,
+        "base_energy": 74.00183336746838,
+        "direct_projected_gradient_l2_density": 0.6768946933575225,
+        "direct_tangent_plus_scalar_gradient_l2": 3.0272289684222615,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.45051048573766794,
+        "minimum_pair_margin": 0.44051048573766793,
+        "total_energy": 82.83557868670874
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 3.6470310382762715e-08,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.05703708710741984,
+            "minimum_hit_positive_cone_margin": 0.010655733026542618,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.04789927208879336,
+            "minimum_hit_positive_cone_margin": 0.05020739028410291,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.12568128231823514,
+            "minimum_hit_positive_cone_margin": 0.21606445016994072,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 126.26475742018675,
+        "rms_radius": 1.1694036850416256,
+        "rms_radius_over_a": 3.8980122834720876
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 7.704481777188289e-07,
+          "energy": 69.84412288078265,
+          "function_evaluations": 368,
+          "iterations": 350,
+          "minimum_pair_dot": 0.077785985461787,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 59660
+    },
+    {
+      "L": 6.0,
+      "N": 16,
+      "a": 0.3999999999999999,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 18.18968024504771,
+        "base_energy": 55.43771308356453,
+        "direct_projected_gradient_l2_density": 2.149794823360581e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.4414481860128886e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.09072204462580302,
+        "minimum_pair_margin": 0.08072204462580303,
+        "total_energy": 73.62739332861224
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 6.8706777113330875e-12,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.27151147010486215,
+            "minimum_hit_positive_cone_margin": 0.09151186416785491,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.21748482359807772,
+            "minimum_hit_positive_cone_margin": 0.06254963395231714,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.21951906796482984,
+            "minimum_hit_positive_cone_margin": 0.023065086599734025,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 17.106188163570483,
+        "base_energy": 70.08129438726289,
+        "direct_projected_gradient_l2_density": 1.8919531641001643,
+        "direct_tangent_plus_scalar_gradient_l2": 12.685640633139187,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.058155774993778164,
+        "minimum_pair_margin": 0.04815577499377816,
+        "total_energy": 87.18748255083337
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.6833902087473643e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.06192882089662511,
+            "minimum_hit_positive_cone_margin": 0.002916200611832565,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.07488094404359237,
+            "minimum_hit_positive_cone_margin": 0.12910358522456458,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2446721241063041,
+            "minimum_hit_positive_cone_margin": 0.18712077712045846,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 92.57776263406026,
+        "rms_radius": 1.3053692456897275,
+        "rms_radius_over_a": 3.2634231142243193
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 2.149794823360581e-07,
+          "energy": 73.62739332861224,
+          "function_evaluations": 358,
+          "iterations": 333,
+          "minimum_pair_dot": 0.09072204462580302,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 25695
+    },
+    {
+      "L": 8.0,
+      "N": 21,
+      "a": 0.3999999999999999,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 17.906475586795395,
+        "base_energy": 55.44038447327851,
+        "direct_projected_gradient_l2_density": 1.0517608574779816e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.1149550914540272e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.09541753450855328,
+        "minimum_pair_margin": 0.08541753450855329,
+        "total_energy": 73.34686006007391
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.0159371876543696e-13,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.283972086141802,
+            "minimum_hit_positive_cone_margin": 0.016935100562045665,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.08304683979284348,
+            "minimum_hit_positive_cone_margin": 0.09745932794966149,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.3590868169745351,
+            "minimum_hit_positive_cone_margin": 0.10749958096558833,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 16.923590321027074,
+        "base_energy": 68.88400537238604,
+        "direct_projected_gradient_l2_density": 0.7449472264620266,
+        "direct_tangent_plus_scalar_gradient_l2": 7.897068017914718,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.1489910846712937,
+        "minimum_pair_margin": 0.1389910846712937,
+        "total_energy": 85.80759569341312
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.5297384914827176e-09,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2101718523307818,
+            "minimum_hit_positive_cone_margin": 0.04004152501283511,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.08594076785005943,
+            "minimum_hit_positive_cone_margin": 0.031354502495518376,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2516260846937561,
+            "minimum_hit_positive_cone_margin": 0.011890098024502787,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 102.8406771364898,
+        "rms_radius": 1.4311870241349534,
+        "rms_radius_over_a": 3.577967560337384
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.0517608574779816e-07,
+          "energy": 73.34686006007391,
+          "function_evaluations": 445,
+          "iterations": 412,
+          "minimum_pair_dot": 0.09541753450855328,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 59660
+    },
+    {
+      "L": 10.0,
+      "N": 26,
+      "a": 0.40000000000000036,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 17.84622608306246,
+        "base_energy": 55.44325259935377,
+        "direct_projected_gradient_l2_density": 1.2278530871310222e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.8478777605563024e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.09597500228513495,
+        "minimum_pair_margin": 0.08597500228513495,
+        "total_energy": 73.28947868241623
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.0149865185110963e-13,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2810310170018073,
+            "minimum_hit_positive_cone_margin": 0.08966575238715403,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22175370912093986,
+            "minimum_hit_positive_cone_margin": 0.11893017298555404,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.219384059692944,
+            "minimum_hit_positive_cone_margin": 0.04276691707869048,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 17.071149606072517,
+        "base_energy": 68.58903297426846,
+        "direct_projected_gradient_l2_density": 0.8402549137618585,
+        "direct_tangent_plus_scalar_gradient_l2": 12.645554949628979,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.05815577499377944,
+        "minimum_pair_margin": 0.04815577499377944,
+        "total_energy": 85.66018258034097
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.520858305113088e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.061928820896625054,
+            "minimum_hit_positive_cone_margin": 0.002916200611832724,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.07488094404359232,
+            "minimum_hit_positive_cone_margin": 0.1291035852245628,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.24467212410630454,
+            "minimum_hit_positive_cone_margin": 0.1871207771204585,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 106.4100531878807,
+        "rms_radius": 1.5445142047526863,
+        "rms_radius_over_a": 3.861285511881712
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.2278530871310222e-07,
+          "energy": 73.28947868241623,
+          "function_evaluations": 443,
+          "iterations": 414,
+          "minimum_pair_dot": 0.09597500228513495,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 115075
+    }
+  ],
+  "model": {
+    "beta": 0.5,
+    "breathing_mass": 2.5,
+    "diquark_charge": 2,
+    "diquark_core_coupling": -0.3,
+    "diquark_mass_sq": 0.81,
+    "skyrme_coefficient": 1.0
+  },
+  "numpy": "2.0.2",
+  "parameter_controls": [
+    {
+      "L": 6.0,
+      "N": 15,
+      "a": 0.4285714285714284,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 14.15289095369764,
+        "base_energy": 49.512970125060065,
+        "direct_projected_gradient_l2_density": 1.6142235821369239e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.1911826409945758e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.04476695498081362,
+        "minimum_pair_margin": 0.03476695498081362,
+        "total_energy": 63.6658610787577
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 1.3369820217337075e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.18660337031119137,
+            "minimum_hit_positive_cone_margin": 0.019667027147012295,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2495258010999092,
+            "minimum_hit_positive_cone_margin": 0.03094705789563172,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.7151961479849543,
+            "minimum_hit_positive_cone_margin": 0.11285146087525282,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 0.5,
+      "initial": {
+        "barrier_energy": 10.285535945063943,
+        "base_energy": 68.87563382537544,
+        "direct_projected_gradient_l2_density": 1.1027944930870435,
+        "direct_tangent_plus_scalar_gradient_l2": 8.137842064051029,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.06438516358105371,
+        "minimum_pair_margin": 0.05438516358105371,
+        "total_energy": 79.16116977043939
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.5109290335111814e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22354355046213126,
+            "minimum_hit_positive_cone_margin": 0.10639938924627841,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.052062849190853175,
+            "minimum_hit_positive_cone_margin": 0.040019992911137676,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2276052875613612,
+            "minimum_hit_positive_cone_margin": 0.1037818806464258,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 61.853508547612584,
+        "rms_radius": 1.2265109326121277,
+        "rms_radius_over_a": 2.8618588427616327
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.6142235821369239e-07,
+          "energy": 63.6658610787577,
+          "function_evaluations": 361,
+          "iterations": 332,
+          "minimum_pair_dot": 0.04476695498081362,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 21014
+    },
+    {
+      "L": 6.0,
+      "N": 15,
+      "a": 0.4285714285714284,
+      "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.01,
+      "final": {
+        "barrier_energy": 26.61273247119056,
+        "base_energy": 64.08338283349961,
+        "direct_projected_gradient_l2_density": 1.7944472821244817e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.324174963307696e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.22121993191627726,
+        "minimum_pair_margin": 0.21121993191627725,
+        "total_energy": 90.69611530469018
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 8.593161116951266e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.14956716403249445,
+            "minimum_hit_positive_cone_margin": 0.06563504302380034,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.1041361867485573,
+            "minimum_hit_positive_cone_margin": 0.09649700482780758,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.4901072938159955,
+            "minimum_hit_positive_cone_margin": 0.02780433429475964,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 2.0,
+      "initial": {
+        "barrier_energy": 41.14214378025577,
+        "base_energy": 68.87563382537544,
+        "direct_projected_gradient_l2_density": 3.768865208733586,
+        "direct_tangent_plus_scalar_gradient_l2": 27.811555118955262,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.06438516358105371,
+        "minimum_pair_margin": 0.05438516358105371,
+        "total_energy": 110.01777760563121
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.5109290335111814e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22354355046213126,
+            "minimum_hit_positive_cone_margin": 0.10639938924627841,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.052062849190853175,
+            "minimum_hit_positive_cone_margin": 0.040019992911137676,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2276052875613612,
+            "minimum_hit_positive_cone_margin": 0.1037818806464258,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 130.36414094800665,
+        "rms_radius": 1.433144145389921,
+        "rms_radius_over_a": 3.344003005909817
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.7944472821244817e-07,
+          "energy": 90.69611530469018,
+          "function_evaluations": 591,
+          "iterations": 557,
+          "minimum_pair_dot": 0.22121993191627726,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 21014
+    },
+    {
+      "L": 6.0,
+      "N": 15,
+      "a": 0.4285714285714284,
+      "analytic_normalized_affine_norm_lower_bound": 0.5037360419902471,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.005,
+      "final": {
+        "barrier_energy": 19.052119360144065,
+        "base_energy": 55.721795747919884,
+        "direct_projected_gradient_l2_density": 1.4873487957096304e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 1.0975580372875618e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.08551904818413147,
+        "minimum_pair_margin": 0.08051904818413147,
+        "total_energy": 74.77391510806395
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.9022318511543785e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2851323590978614,
+            "minimum_hit_positive_cone_margin": 0.03570459769748791,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.09069026358056306,
+            "minimum_hit_positive_cone_margin": 0.0487139325691514,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.6328478677180782,
+            "minimum_hit_positive_cone_margin": 0.020467076203456915,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 20.24730760893573,
+        "base_energy": 68.87563382537544,
+        "direct_projected_gradient_l2_density": 1.8354735104884177,
+        "direct_tangent_plus_scalar_gradient_l2": 13.544494132620857,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.06438516358105371,
+        "minimum_pair_margin": 0.05938516358105372,
+        "total_energy": 89.12294143431117
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.5109290335111814e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22354355046213126,
+            "minimum_hit_positive_cone_margin": 0.10639938924627841,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.052062849190853175,
+            "minimum_hit_positive_cone_margin": 0.040019992911137676,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2276052875613612,
+            "minimum_hit_positive_cone_margin": 0.1037818806464258,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 84.97274884601737,
+        "rms_radius": 1.3124327701847962,
+        "rms_radius_over_a": 3.0623431304311923
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 1.4873487957096304e-07,
+          "energy": 74.77391510806395,
+          "function_evaluations": 416,
+          "iterations": 390,
+          "minimum_pair_dot": 0.08551904818413147,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 21014
+    },
+    {
+      "L": 6.0,
+      "N": 15,
+      "a": 0.4285714285714284,
+      "analytic_normalized_affine_norm_lower_bound": 0.51478150704935,
+      "core_or_centre_anchor_used": false,
+      "deterministic_perturbation_seed": null,
+      "epsilon": 0.02,
+      "final": {
+        "barrier_energy": 19.070778270941368,
+        "base_energy": 56.64918192053993,
+        "direct_projected_gradient_l2_density": 2.7901910638483354e-07,
+        "direct_tangent_plus_scalar_gradient_l2": 2.0589633289302324e-06,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.10439859599539703,
+        "minimum_pair_margin": 0.08439859599539702,
+        "total_energy": 75.7199601914813
+      },
+      "final_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 3.3990618162831045e-11,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.13527744662549482,
+            "minimum_hit_positive_cone_margin": 0.039057699332410975,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.10821546668001418,
+            "minimum_hit_positive_cone_margin": 0.0012132661733284425,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.5856967966044446,
+            "minimum_hit_positive_cone_margin": 0.07568076964214489,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "gamma": 1.0,
+      "initial": {
+        "barrier_energy": 21.260660381774592,
+        "base_energy": 68.87563382537544,
+        "direct_projected_gradient_l2_density": 2.2389561207278907,
+        "direct_tangent_plus_scalar_gradient_l2": 16.52190994155229,
+        "invalid_edges": 0,
+        "minimum_pair_dot": 0.06438516358105371,
+        "minimum_pair_margin": 0.04438516358105371,
+        "total_energy": 90.13629420715003
+      },
+      "initial_topology": {
+        "all_targets_B1": true,
+        "baryon_numbers": [
+          1,
+          1,
+          1
+        ],
+        "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+        "minimum_nonzero_absolute_tetrahedron_determinant": 2.5109290335111814e-07,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.4142135623730951,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.22354355046213126,
+            "minimum_hit_positive_cone_margin": 0.10639938924627841,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.0,
+              0.2672612419124244,
+              0.5345224838248488,
+              0.8017837257372732
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.2251898522967026,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.052062849190853175,
+            "minimum_hit_positive_cone_margin": 0.040019992911137676,
+            "preimage_tetrahedra": 1,
+            "target": [
+              0.24945491291459204,
+              -0.4490188432462657,
+              0.6984737561608577,
+              0.4982857982996319
+            ]
+          },
+          {
+            "baryon_number": 1,
+            "closest_boundary_vertex_distance": 1.6312287968987544,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2276052875613612,
+            "minimum_hit_positive_cone_margin": 0.1037818806464258,
+            "preimage_tetrahedra": 1,
+            "target": [
+              -0.33045369391587887,
+              0.6108386463293518,
+              0.22030246261058592,
+              -0.6849403837529127
+            ]
+          }
+        ],
+        "targets_agree": true
+      },
+      "radius": {
+        "one_minus_n0_weight": 89.13269927029847,
+        "rms_radius": 1.3226935231849601,
+        "rms_radius_over_a": 3.086284887431575
+      },
+      "recentering_history": [
+        {
+          "direct_projected_gradient_l2_density": 2.7901910638483354e-07,
+          "energy": 75.7199601914813,
+          "function_evaluations": 493,
+          "iterations": 456,
+          "minimum_pair_dot": 0.10439859599539703,
+          "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "optimizer_success": true,
+          "recenter": 0
+        }
+      ],
+      "stationary_by_direct_tangent_test": true,
+      "unique_freudenthal_pair_edges": 21014
+    }
+  ],
+  "perturbed_start_basin_control": {
+    "L": 6.0,
+    "N": 15,
+    "a": 0.4285714285714284,
+    "analytic_normalized_affine_norm_lower_bound": 0.507444578254611,
+    "core_or_centre_anchor_used": false,
+    "deterministic_perturbation_seed": 20260719,
+    "epsilon": 0.01,
+    "final": {
+      "barrier_energy": 19.054132997169816,
+      "base_energy": 56.03596454986704,
+      "direct_projected_gradient_l2_density": 7.47197483865069e-07,
+      "direct_tangent_plus_scalar_gradient_l2": 5.513788065198753e-06,
+      "invalid_edges": 0,
+      "minimum_pair_dot": 0.09184545080368686,
+      "minimum_pair_margin": 0.08184545080368687,
+      "total_energy": 75.09009754703686
+    },
+    "final_topology": {
+      "all_targets_B1": true,
+      "baryon_numbers": [
+        1,
+        1,
+        1
+      ],
+      "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+      "minimum_nonzero_absolute_tetrahedron_determinant": 3.039511603853845e-11,
+      "target_rows": [
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.4142135623730951,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.24930040159605754,
+          "minimum_hit_positive_cone_margin": 0.014616492582361707,
+          "preimage_tetrahedra": 1,
+          "target": [
+            0.0,
+            0.2672612419124244,
+            0.5345224838248488,
+            0.8017837257372732
+          ]
+        },
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.2251898522967026,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.2249323171159891,
+          "minimum_hit_positive_cone_margin": 0.08189695443450169,
+          "preimage_tetrahedra": 1,
+          "target": [
+            0.24945491291459204,
+            -0.4490188432462657,
+            0.6984737561608577,
+            0.4982857982996319
+          ]
+        },
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.6312287968987544,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.5333964829412302,
+          "minimum_hit_positive_cone_margin": 0.03142197666203113,
+          "preimage_tetrahedra": 1,
+          "target": [
+            -0.33045369391587887,
+            0.6108386463293518,
+            0.22030246261058592,
+            -0.6849403837529127
+          ]
+        }
+      ],
+      "targets_agree": true
+    },
+    "gamma": 1.0,
+    "initial": {
+      "barrier_energy": 20.57576356231817,
+      "base_energy": 68.93280043279594,
+      "direct_projected_gradient_l2_density": 1.9560444765009226,
+      "direct_tangent_plus_scalar_gradient_l2": 14.434222441086742,
+      "invalid_edges": 0,
+      "minimum_pair_dot": 0.06149592615396957,
+      "minimum_pair_margin": 0.05149592615396957,
+      "total_energy": 89.50856399511412
+    },
+    "initial_topology": {
+      "all_targets_B1": true,
+      "baryon_numbers": [
+        1,
+        1,
+        1
+      ],
+      "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+      "minimum_nonzero_absolute_tetrahedron_determinant": 5.091843731696191e-09,
+      "target_rows": [
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.4142135623730951,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.22053758876037632,
+          "minimum_hit_positive_cone_margin": 0.10566647418459967,
+          "preimage_tetrahedra": 1,
+          "target": [
+            0.0,
+            0.2672612419124244,
+            0.5345224838248488,
+            0.8017837257372732
+          ]
+        },
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.2251898522967026,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.05077209658353768,
+          "minimum_hit_positive_cone_margin": 0.0317797476251177,
+          "preimage_tetrahedra": 1,
+          "target": [
+            0.24945491291459204,
+            -0.4490188432462657,
+            0.6984737561608577,
+            0.4982857982996319
+          ]
+        },
+        {
+          "baryon_number": 1,
+          "closest_boundary_vertex_distance": 1.6312287968987544,
+          "map_degree": -1,
+          "minimum_hit_absolute_determinant": 0.22968222448743497,
+          "minimum_hit_positive_cone_margin": 0.09761355791400726,
+          "preimage_tetrahedra": 1,
+          "target": [
+            -0.33045369391587887,
+            0.6108386463293518,
+            0.22030246261058592,
+            -0.6849403837529127
+          ]
+        }
+      ],
+      "targets_agree": true
+    },
+    "radius": {
+      "one_minus_n0_weight": 86.35838332597925,
+      "rms_radius": 1.3158809917143015,
+      "rms_radius_over_a": 3.070388980666705
+    },
+    "recentering_history": [
+      {
+        "direct_projected_gradient_l2_density": 7.47197483865069e-07,
+        "energy": 75.09009754703686,
+        "function_evaluations": 324,
+        "iterations": 308,
+        "minimum_pair_dot": 0.09184545080368686,
+        "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+        "optimizer_success": true,
+        "recenter": 0
+      }
+    ],
+    "stationary_by_direct_tangent_test": true,
+    "unique_freudenthal_pair_edges": 21014
+  },
+  "physics_promotion_allowed": false,
+  "portal_start_allowed": false,
+  "proof_contract": {
+    "continuum_boundary": "the theorem supplies finite-grid minimizers indexed by a; it gives neither equicoercivity nor convergence of those minimizers",
+    "finite_grid_existence": "compact n-space plus coercive m_s>0 breathing potential and barrier-bounded sublevels yield an interior minimizer in every nonempty admissible component",
+    "grid_sequence_nonemptiness": "sampling a smooth compactly supported degree-one continuum field gives pair dots>epsilon on every sufficiently fine grid by uniform continuity",
+    "sector_preservation": "all six pair dots in every tetrahedron exceed epsilon, so the normalized affine map has norm at least sqrt((1+3 epsilon)/4); its degree is locally constant and the barrier forbids a finite-energy crossing"
+  },
+  "python": "3.9.6",
+  "scipy": "1.13.1",
+  "smooth_compact_supported_profile_barrier_scaling": {
+    "fit_r_squared": 0.9991408950677518,
+    "fitted_intercept": 5.513985423056955,
+    "fitted_log_log_slope": 2.1591017251722135,
+    "local_log_log_slopes": [
+      2.335595393897472,
+      2.1276499577950196,
+      2.0694530874120183,
+      2.0439932562383656
+    ],
+    "profile": "C2 degree-one hedgehog with support radius 2 inside the L=6 box and exact vacuum boundary",
+    "rows": [
+      {
+        "N": 17,
+        "a": 0.375,
+        "barrier_energy": 30.439452622973235,
+        "minimum_pair_dot": 0.15086300935682695
+      },
+      {
+        "N": 21,
+        "a": 0.2999999999999998,
+        "barrier_energy": 18.075663943040997,
+        "minimum_pair_dot": 0.3607335233768041
+      },
+      {
+        "N": 25,
+        "a": 0.25,
+        "barrier_energy": 12.263778095408528,
+        "minimum_pair_dot": 0.5511212008213643
+      },
+      {
+        "N": 29,
+        "a": 0.2142857142857144,
+        "barrier_energy": 8.914172689069925,
+        "minimum_pair_dot": 0.6569820496948275
+      },
+      {
+        "N": 33,
+        "a": 0.1875,
+        "barrier_energy": 6.784938174150341,
+        "minimum_pair_dot": 0.7226917835354876
+      }
+    ],
+    "scope": "fixed compact-supported boundary-compatible test field only; not a uniform bound on minimizers"
+  },
+  "solver_continuation_gradient_audit": {
+    "analytic_directional_derivative": 2060739.3792691706,
+    "best_relative_residual": 2.8091784758056198e-11,
+    "energy": 20819.978117790644,
+    "invalid_edges": 1,
+    "rows": [
+      {
+        "analytic": 2060739.3792691706,
+        "finite_difference": 2060739.3793270604,
+        "relative_residual": 2.8091784758056198e-11,
+        "step": 2e-06
+      },
+      {
+        "analytic": 2060739.3792691706,
+        "finite_difference": 2060739.3790996866,
+        "relative_residual": 8.224424033367118e-11,
+        "step": 1e-06
+      },
+      {
+        "analytic": 2060739.3792691706,
+        "finite_difference": 2060739.379547158,
+        "relative_residual": 1.3489694587056094e-10,
+        "step": 5e-07
+      }
+    ],
+    "test_pair_dot": -0.01
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e8_topology_preserving_b1.py",
+      "sha256": "f473391024a16a5e83ed1c62431e9b1262c9ba37ce444245b843cd79981f5727",
+      "size_bytes": 43334
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e7_discrete_rerelax_superhessian.py",
+      "sha256": "74a4685c0ceb74bc87a14129e37f6b950ae5e263ca2122ddcc89eca323221dde",
+      "size_bytes": 62370
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    }
+  ],
+  "stationarity_tolerance": 2e-06,
+  "status": "mechanical_pass_finite_grid_blocker_changed_continuum_fail_closed",
+  "theorem_flags": {
+    "finite_energy_sector_preservation_proven": true,
+    "finite_grid_B1_minimizer_exists_in_each_nonempty_component": true,
+    "grid_indexed_unanchored_B1_stationary_family_exists": true,
+    "multi_spacing_and_multi_volume_representatives_computed": true,
+    "numerical_finite_multigrid_unanchored_B1_stationary_family_found": true,
+    "topology_preserving_finite_grid_action_defined": true
+  },
+  "vacuum_control": {
+    "barrier_energy": 0.0,
+    "topology": {
+      "all_targets_B1": false,
+      "baryon_numbers": [
+        0,
+        0,
+        0
+      ],
+      "method": "Freudenthal tetrahedra plus normalized-affine regular-value preimage count",
+      "minimum_nonzero_absolute_tetrahedron_determinant": null,
+      "target_rows": [
+        {
+          "baryon_number": 0,
+          "closest_boundary_vertex_distance": 1.4142135623730951,
+          "map_degree": 0,
+          "minimum_hit_absolute_determinant": null,
+          "minimum_hit_positive_cone_margin": null,
+          "preimage_tetrahedra": 0,
+          "target": [
+            0.0,
+            0.2672612419124244,
+            0.5345224838248488,
+            0.8017837257372732
+          ]
+        },
+        {
+          "baryon_number": 0,
+          "closest_boundary_vertex_distance": 1.2251898522967026,
+          "map_degree": 0,
+          "minimum_hit_absolute_determinant": null,
+          "minimum_hit_positive_cone_margin": null,
+          "preimage_tetrahedra": 0,
+          "target": [
+            0.24945491291459204,
+            -0.4490188432462657,
+            0.6984737561608577,
+            0.4982857982996319
+          ]
+        },
+        {
+          "baryon_number": 0,
+          "closest_boundary_vertex_distance": 1.6312287968987544,
+          "map_degree": 0,
+          "minimum_hit_absolute_determinant": null,
+          "minimum_hit_positive_cone_margin": null,
+          "preimage_tetrahedra": 0,
+          "target": [
+            -0.33045369391587887,
+            0.6108386463293518,
+            0.22030246261058592,
+            -0.6849403837529127
+          ]
+        }
+      ],
+      "targets_agree": true
+    }
+  }
+}

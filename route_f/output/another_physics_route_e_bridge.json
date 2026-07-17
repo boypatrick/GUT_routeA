@@ -408,7 +408,7 @@
     },
     "ap_e3_exact_two_mixed_wzw": {
       "path": "route_f/output/ap_e3_exact_two_mixed_wzw.json",
-      "sha256": "db45ea93c037476564a4e04e8d78a5028edb3302af5593a725e6723d6185a1ba"
+      "sha256": "6619c83f5d96e498d14950914846ef8bc76f8911672c921ab78f2809be60e9b9"
     },
     "ap_e3_nonextendible_wzw_su3_uv": {
       "path": "route_f/output/ap_e3_nonextendible_wzw_su3_uv.json",
@@ -420,7 +420,7 @@
     },
     "ap_e4_tangent_dirac_spectrum": {
       "path": "route_f/output/ap_e4_tangent_dirac_spectrum.json",
-      "sha256": "c9a64e8a6ecaac3f649a8c75e9ff0e4abbf296b1b38a6fb6ccad187f7424e6b8"
+      "sha256": "6d23571237399f8b62ff2c16505ab469aa38e361e138cbdf9075bfecdbdf8743"
     },
     "route_E_invariant_card": {
       "path": "route_E/output/audit0/invariant_card.json",
