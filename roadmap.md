@@ -2,7 +2,44 @@
 
 Last updated: 2026-07-20
 
-## AP-E12 endpoint density/regularity checkpoint (2026-07-20; current authority)
+## AP-E13 annular endpoint checkpoint (2026-07-20; current authority)
+
+The requested universal annular target-valued endpoint replacement is false.
+For the geodesic-sphere trace
+`g_eps=(cos eps,sin eps omega)` on every sphere of `A_(rho,2rho)`, the shell
+minor norms are `8 pi rho sin^2 eps`, `2 pi sin^4 eps/rho`, and zero.  Yet any
+trace-preserving filling obeys
+
+`int_Brho |M3(DU)|^2 >= V(eps)^2/|B_rho|`,
+
+where `V(eps)=2 pi(eps-sin(2eps)/2)~4 pi eps^3/3` modulo the `S3` volume
+`2 pi^2`.  Setting `eps=sqrt(rho)` makes the shell energy tend to zero while
+the filling lower bound tends to `4 pi/3`.  No good-sphere selection changes
+the trace, and the forced cubic-minor densities are not equiintegrable.
+
+A corrected theorem is proved: if
+`||log_q g||_infinity<=Lambda rho` in one normal target ball, geodesic
+contraction preserves the trace and controls the filling by
+`rho T1+Lambda^2 rho^3`, `rho T2+Lambda^2 rho T1`, and
+`Lambda^2 rho T2` at minor orders one, two, and three.  Thus the missing input
+is scale-compatible Morrey oscillation, or at minimum decay of the relative
+Wess--Zumino flux faster than `rho^(3/2)`.
+
+The parallel exact-strong-quasiconvexity route does not independently give
+reverse Hölder: the highest cutoff term leaves
+`rho^(-2)|u-q|^2|M2|^2`, whose control assumes either the same oscillation
+bound or prior higher integrability.  The `9/9` card therefore closes the
+conditional replacement and disproves the unconditional lemma, but does not
+decide endpoint graph density or regularity of the actual relaxed minimizer.
+Next prove WZ/Morrey decay from a monotonicity or frequency formula, or find a
+Noether/Maurer--Cartan compensation that removes the cutoff remainder.  A
+concrete parallel test, motivated by the 2026 Hopf-lifting/constraint-
+preserving approximation theorem, is to split the `S3` field into its `S2`
+Hopf projection and vertical gauge one-form and search for an exact div--curl
+form of that remainder.  The
+Hessian, determinant variation, and portal remain embargoed.
+
+## AP-E12 endpoint density/regularity checkpoint (2026-07-20; superseded above)
 
 AP-E12 executes the fixed-degree complete-minor graph-density priority and,
 after it does not close, audits the relaxed-minimizer regularity fallback.

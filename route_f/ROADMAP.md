@@ -6,7 +6,72 @@ Last updated: 2026-07-20
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E12 endpoint density/regularity checkpoint (2026-07-20; current authority)
+## AP-E13 annular replacement/reverse-Hölder checkpoint (2026-07-20; current authority)
+
+Status: **the unconditional good-sphere annular replacement is disproved by
+an explicit Wess--Zumino filling obstruction.  A scale-compatible conditional
+replacement is proved.  Exact strong quasiconvexity alone does not close the
+parallel reverse-Hölder route.  Endpoint density itself remains undecided;
+the Hessian, determinant, and portal gates remain false.**  The production
+card passes `9/9`.
+
+### Exact no-go theorem
+
+- For `g_eps(omega)=(cos eps,sin eps omega)` and the radial-constant shell map
+  on `A_(rho,2rho)`, the raw minor norms are
+  `E1=8 pi rho sin^2(eps)`, `E2=2 pi sin^4(eps)/rho`, and `E3=0`.
+- Every trace-preserving filling has Wess--Zumino volume
+  `V(eps)+2 pi^2 k`, where
+  `V(eps)=2 pi(eps-sin(2eps)/2)~4 pi eps^3/3`.  Hence
+  `int_B |M3(DU)|^2 >= V(eps)^2/|B|`.
+- At `eps=sqrt(rho)`, the shell graph energy tends to zero but the filling
+  lower bound tends to `4 pi/3`.  Every sphere has the same trace, so choosing
+  a good radius cannot help.  The filling densities keep positive mass on
+  shrinking balls and therefore fail `L2` equiintegrability.
+- More generally, for `eps=rho^alpha`, shell energy vanishes for
+  `alpha>1/4`, while the WZ-forced cubic-minor filling cost vanishes only for
+  `alpha>1/2`.  This is a genuine annular window, distinct from AP-E12's
+  excluded full-core Malý dipole.
+
+### Repaired theorem and reverse-Hölder boundary
+
+- If the good-sphere trace lies in one normal ball and
+  `||log_q g||_infinity <= Lambda rho`, geodesic contraction preserves the
+  trace and gives
+  `I1<=C(rho T1+Lambda^2 rho^3)`,
+  `I2<=C(rho T2+Lambda^2 rho T1)`, and
+  `I3<=C Lambda^2 rho T2`.  Coarea converts `rho Tk` to shell costs.  This
+  closes the conditional target-valued endpoint replacement.
+- A necessary weaker datum is
+  `dist(V_WZ(g),2 pi^2 Z)^2/rho^3 -> 0`.  Shell graph energy alone does not
+  imply it.
+- The stress cutoff contains
+  `rho^(-1)|u-q||M2||M3|`.  Young's inequality leaves
+  `rho^(-2)|u-q|^2|M2|^2`, which requires the desired Morrey oscillation or
+  prior higher integrability.  Therefore exact strong quasiconvexity is not
+  an independent reverse-Hölder proof.
+
+### Ordered continuation
+
+1. Prove WZ-flux decay plus scale-compatible trace oscillation for the
+   selected relaxed `B=1` minimizer, using a monotonicity/frequency formula.
+2. In parallel, derive a genuinely compensated Noether-current/
+   `S3=SU(2)` Maurer--Cartan reverse-Hölder estimate that removes the cutoff
+   remainder without assuming its conclusion.  The 2026 Hopf-lifting theorem
+   suggests a concrete variable split: `S3` field -> `S2` Hopf projection plus
+   vertical gauge one-form; test whether the remaining cutoff product is an
+   exact/div--curl pairing in those variables.
+3. Only after local recovery, classicality, and continuum isolation close may
+   the same-action Riemann Hessian and regulated determinant be assembled.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e13_annular_replacement_reverse_holder.tex` and PDF;
+- `route_f/code/verify_ap_e13_annular_replacement_reverse_holder.py`;
+- `route_f/output/ap_e13_annular_replacement_reverse_holder.{json,md}`;
+- AP-E13 section in the master Route-E derivation ledger.
+
+## AP-E12 endpoint density/regularity checkpoint (2026-07-20; superseded above)
 
 Status: **the endpoint was audited but not closed.  Degree is continuous in
 the complete-minor graph norm, the AP-E11 density is exactly strongly

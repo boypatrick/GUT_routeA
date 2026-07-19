@@ -3,6 +3,40 @@
 Checked on 2026-07-20.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
+## AP-E13 annular/reverse-Hölder transfer boundary
+
+Luckhaus's foundational manifold-valued interpolation controls ordinary
+first-order Sobolev energy; Mironescu--Van Schaftingen explains why critical
+manifold trace extension has separate analytic and topological conditions.
+Neither controls the present `L2` third-minor filling cost.  Auckly--Kapitanski
+explicitly identified uniformly energy-bounded smooth approximation as an
+unresolved point even for the usual Skyrme energy.  Esteban--Müller instead
+establish integer degree directly in the finite-energy class.  These sources
+support the fail-closed boundary, but the AP-E13 Wess--Zumino cap no-go and
+the scale-compatible geodesic-cone estimates are derived in-repository.
+
+The 2026 Guerra--Lamy--Zemas result proves global minimality of the Hopf map
+for a special large-coupling Faddeev--Skyrme problem.  Its target, invariant,
+and homogeneous setting differ from the present `S3` complete-minor graph
+problem, so it cannot be transferred as endpoint density or reverse Hölder.
+Their separate 2026 lifting paper is more structurally suggestive: it
+characterizes `W1,2` Hopf liftability by exactness of the pulled-back area form
+and constructs smooth approximations preserving that constraint.  It still
+controls only `W1,2 x L2` in the base-map/gauge variables, not the AP-E13
+`L2` complete-minor graph norm.  A useful next experiment is nevertheless to
+rewrite the `S3` target field as its `S2` Hopf projection plus the vertical
+gauge one-form and test whether the Maurer--Cartan cutoff remainder becomes an
+exact/div--curl pairing.
+
+| Source | Relevant result | Transfer boundary |
+|---|---|---|
+| Luckhaus, [Partial Hölder Continuity for Minima of Certain Energies among Maps into a Riemannian Manifold](https://iumj.org/article/3325/), Indiana Univ. Math. J. 37 (1988) 349 | Supplies the classical annular interpolation architecture for manifold-valued Sobolev minimizers. | Controls first-order Sobolev cost, not Wess--Zumino flux or `L2` second/third complete minors. |
+| Mironescu and Van Schaftingen, [Trace theory for Sobolev mappings into a manifold](https://doi.org/10.5802/afst.1675), Ann. Fac. Sci. Toulouse 30 (2021) 281 | Separates analytic and topological trace-extension obstructions. | Does not prove the endpoint complete-minor estimates needed here. |
+| Auckly and Kapitanski, [Holonomy and Skyrme's model](https://doi.org/10.1007/s00220-003-0901-x), Commun. Math. Phys. 240 (2003) 97 | Develops the finite-energy Skyrme variational class and flags the missing uniformly energy-bounded smooth approximation. | The standard Skyrme action lacks the present sextic `L2` third-minor term; it is a warning, not a no-go theorem for AP-E13. |
+| Esteban and Müller, [Sobolev maps with integer degree and applications to Skyrme's problem](https://doi.org/10.1098/rspa.1992.0014), Proc. R. Soc. A 436 (1992) 197 | Proves integer degree and applies it to existence in Skyrme's problem. | Direct degree theory does not yield strong graph-norm density. |
+| Guerra, Lamy, and Zemas, [Global Minimality of the Hopf Map in the Faddeev–Skyrme Model with Large Coupling Constant](https://doi.org/10.1007/s00220-026-05702-5), Commun. Math. Phys. 407, 171 (2026) | Establishes special global minimality and uniqueness modulo symmetries in a large-coupling Hopf sector. | It is an `S3 -> S2` Hopf problem, not the `S3` target endpoint replacement or selected relaxed `B=1` regularity theorem. |
+| Guerra, Lamy, and Zemas, [Some lifting and approximation properties for maps in `W1,2(B3;S2)`](https://arxiv.org/abs/2605.14507) (2026) | Characterizes `W1,2` Hopf lifts through exactness of `u*omega_S2` and gives smooth approximation preserving `d eta=u*omega_S2`. | The convergence is first-order for the base map and `L2` for the gauge one-form; it does not control `M2/M3` in the AP-E13 graph norm. |
+
 ## AP-E12 transfer boundary
 
 The closest current result is Gmeineder--Kristensen's 2024 smooth partial-
@@ -302,6 +336,14 @@ are not substitutes for recent model-specific evidence.
     theorem across its `q<3` boundary to this `(2,6)` sphere-constrained
     problem.  The next analytic object is a target-valued annular replacement
     with `L2` minor equiintegrability or a model-specific reverse-Hölder gain.
+37. AP-E13 disproves that annular replacement under shell-energy control
+    alone: a shrinking geodesic-cap trace has vanishing shell energy but a
+    non-vanishing Wess--Zumino-forced cubic-minor filling cost.  Use the proved
+    geodesic-cone replacement only under linear-in-radius target oscillation.
+    Exact strong quasiconvexity does not bypass the blocker because its
+    highest cutoff remainder requires that oscillation or prior higher
+    integrability.  Seek WZ/Morrey decay or a Noether/Maurer--Cartan
+    compensation before any Hessian construction.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,

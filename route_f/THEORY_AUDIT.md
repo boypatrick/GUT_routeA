@@ -2,6 +2,25 @@
 
 Date: 2026-07-13
 
+## 2026-07-20 AP-E13 analytic addendum (current continuum authority)
+
+The AP-E12 proposal of a universal good-sphere annular replacement is now
+disproved.  A geodesic-cap trace of target radius `eps=sqrt(rho)` has shell
+complete-minor energy tending to zero, but relative Wess--Zumino volume forces
+every trace-preserving filling to have third-minor squared norm bounded below
+by `4 pi/3+o(1)`.  The forced densities are not equiintegrable on the
+shrinking filling balls.
+
+A corrected theorem is proved under the scale-compatible condition
+`||log_q g||_infinity<=Lambda rho`; geodesic contraction then controls all
+three complete-minor filling norms by the good-sphere trace/shell norms.  The
+parallel reverse-Hölder attempt remains circular because the highest stress
+cutoff produces `rho^(-2)|u-q|^2|M2|^2`, requiring either that same Morrey
+bound or already-known higher integrability.  This eliminates one proof
+strategy but neither proves nor disproves endpoint graph density for every
+fixed map.  Classicality, continuum isolation, the same-action Hessian,
+determinant variation, and portal authorization remain false.
+
 ## 2026-07-14 blocker correction (authoritative addendum)
 
 The initial audit correctly identified the theory gaps, but its file-status

@@ -1,0 +1,288 @@
+{
+  "artifact": "AP-E13 annular endpoint replacement and reverse-Hoelder audit",
+  "checks": [
+    {
+      "detail": "relative error=2.000e-11",
+      "group": "G1",
+      "name": "exact small-cap WZ volume asymptotics",
+      "pass": true
+    },
+    {
+      "detail": "minimum ratio=1.000000001",
+      "group": "G2",
+      "name": "explicit cap filling respects the WZ lower bound",
+      "pass": true
+    },
+    {
+      "detail": "maximum slope error=5.209e-05",
+      "group": "S1",
+      "name": "power-law exponents match exact scaling",
+      "pass": true
+    },
+    {
+      "detail": "shell=6.283e-08",
+      "group": "N1",
+      "name": "critical cap has vanishing shell energy",
+      "pass": true
+    },
+    {
+      "detail": "lower=4.188790188",
+      "group": "N2",
+      "name": "critical cap has non-vanishing filling cost",
+      "pass": true
+    },
+    {
+      "detail": "epsilon=R gives first-, second-, and third-minor costs of order R^3",
+      "group": "C1",
+      "name": "scale-compatible cap costs all decay cubically",
+      "pass": true
+    },
+    {
+      "detail": "the same trace occurs on every sphere of the low-energy radial-constant shell",
+      "group": "T1",
+      "name": "unconditional annular theorem is disproved",
+      "pass": true
+    },
+    {
+      "detail": "geodesic contraction under ||log_q g||_infinity <= Lambda R",
+      "group": "T2",
+      "name": "conditional target-valued replacement closes all minor estimates",
+      "pass": true
+    },
+    {
+      "detail": "the cutoff estimate is circular at r^-2 |u-q|^2 |M2|^2",
+      "group": "R1",
+      "name": "reverse-Hoelder and downstream gates fail closed",
+      "pass": true
+    }
+  ],
+  "checks_passed": 9,
+  "checks_total": 9,
+  "geometry": {
+    "cap_volume_formula": "2*pi*(epsilon-sin(2*epsilon)/2)",
+    "linear_fill_rows": [
+      {
+        "R": 0.15,
+        "epsilon": 0.11,
+        "linear_cap_fill": 0.002188110861376065,
+        "ratio": 1.000001116955043,
+        "wz_lower_bound": 0.002188108417357334
+      },
+      {
+        "R": 0.08,
+        "epsilon": 0.06,
+        "linear_cap_fill": 0.0003811542781840461,
+        "ratio": 1.0000000988296047,
+        "wz_lower_bound": 0.0003811542405147232
+      },
+      {
+        "R": 0.03,
+        "epsilon": 0.02,
+        "linear_cap_fill": 9.927395688310527e-06,
+        "ratio": 1.0000000012691934,
+        "wz_lower_bound": 9.927395675710742e-06
+      }
+    ],
+    "minimum_linear_fill_to_lower_bound_ratio": 1.0000000012691934,
+    "small_cap_leading_term": "4*pi*epsilon^3/3",
+    "smallest_epsilon_relative_error": 1.9999890632504957e-11,
+    "trace_first_norm_formula": "8*pi*sin(epsilon)^2",
+    "trace_second_minor_norm_formula": "4*pi*sin(epsilon)^4"
+  },
+  "numpy": "2.0.2",
+  "python": "3.9.6",
+  "quick": false,
+  "scaling": {
+    "R_values": [
+      0.01,
+      0.0031622776601683794,
+      0.001,
+      0.00031622776601683794,
+      0.0001,
+      3.1622776601683795e-05,
+      1e-05,
+      3.162277660168379e-06,
+      1e-06,
+      3.162277660168379e-07,
+      1e-07,
+      3.162277660168379e-08,
+      1e-08
+    ],
+    "critical_alpha_half": {
+      "fill_m3_lower": [
+        4.172067715680517,
+        4.1834950276677265,
+        4.187115015788697,
+        4.188260392791241,
+        4.188622656446805,
+        4.188737220624914,
+        4.18877344963058,
+        4.188784906208533,
+        4.188788530014946,
+        4.188789674941717,
+        4.188790037234786,
+        4.188790151801918,
+        4.188790188031231
+      ],
+      "fill_stays_positive": true,
+      "limiting_fill_lower": 4.1887902047863905,
+      "shell_tends_to_zero": true,
+      "shell_total": [
+        0.06491913613510188,
+        0.020078390946909205,
+        0.006304122138151065,
+        0.001989011823086523,
+        0.0006285279631073436,
+        0.0001987127090417629,
+        6.283394745977733e-05,
+        1.9869385970877247e-05,
+        6.283206251123491e-06,
+        1.9869197475540986e-06,
+        6.28318740157462e-07,
+        1.986917862598728e-07,
+        6.283185516619098e-08
+      ],
+      "smallest_R_fill_lower": 4.188790188031231,
+      "smallest_R_shell_total": 6.283185516619098e-08
+    },
+    "maximum_slope_error": 5.2086125848199716e-05,
+    "power_rows": [
+      {
+        "alpha": 0.3,
+        "maximum_slope_error": 5.2086125848199716e-05,
+        "measured_slopes": {
+          "fill_m3_lower": -1.2000312512626143,
+          "first": 1.5999739569370754,
+          "second": 0.19994791387415176
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": -1.2000000000000002,
+          "first": 1.6,
+          "second": 0.19999999999999996
+        }
+      },
+      {
+        "alpha": 0.4,
+        "maximum_slope_error": 4.060162404395662e-06,
+        "measured_slopes": {
+          "fill_m3_lower": -0.6000024360975744,
+          "first": 1.7999979699187985,
+          "second": 0.5999959398375957
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": -0.5999999999999996,
+          "first": 1.8,
+          "second": 0.6000000000000001
+        }
+      },
+      {
+        "alpha": 0.5,
+        "maximum_slope_error": 3.124066256798841e-07,
+        "measured_slopes": {
+          "fill_m3_lower": -1.874347020845549e-07,
+          "first": 1.9999998437966864,
+          "second": 0.9999996875933743
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": 0.0,
+          "first": 2.0,
+          "second": 1.0
+        }
+      },
+      {
+        "alpha": 0.6,
+        "maximum_slope_error": 2.403662513472682e-08,
+        "measured_slopes": {
+          "fill_m3_lower": 0.5999999855780249,
+          "first": 2.199999987981687,
+          "second": 1.3999999759633748
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": 0.5999999999999996,
+          "first": 2.2,
+          "second": 1.4
+        }
+      },
+      {
+        "alpha": 0.75,
+        "maximum_slope_error": 5.16875209299883e-10,
+        "measured_slopes": {
+          "fill_m3_lower": 1.4999999996898752,
+          "first": 2.499999999741563,
+          "second": 1.9999999994831248
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": 1.5,
+          "first": 2.5,
+          "second": 2.0
+        }
+      },
+      {
+        "alpha": 1.0,
+        "maximum_slope_error": 8.784084570834239e-13,
+        "measured_slopes": {
+          "fill_m3_lower": 2.999999999999474,
+          "first": 2.999999999999562,
+          "second": 2.9999999999991216
+        },
+        "predicted_slopes": {
+          "fill_m3_lower": 3.0,
+          "first": 3.0,
+          "second": 3.0
+        }
+      }
+    ],
+    "scale_compatible_alpha_one": {
+      "all_costs_tend_to_zero": true,
+      "all_predicted_slope": 3.0,
+      "fill_slope": 2.999999999999474,
+      "first_slope": 2.999999999999562,
+      "second_slope": 2.9999999999991216
+    }
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e13_annular_replacement_reverse_holder.py",
+      "sha256": "782be98dd152a158bc24482322fce4280c95a7b2d6af7db1ecf2a5c7d56291fa",
+      "size_bytes": 15875
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e12_graph_density_regular_minimizer.json",
+      "sha256": "1da4419334391b9260e3e2603e68938fa726653b3f17b9610c1732c9f46bc4b3",
+      "size_bytes": 69277
+    }
+  ],
+  "status": "production_unconditional_no_go_conditional_repair",
+  "theory": {
+    "classicality": false,
+    "conditional_estimates": {
+      "first_minor": "int_B_R |DU|^2 <= C[R*T1 + Lambda^2*R^3]",
+      "good_sphere": "T1 <= E1(A_R,2R)/R and T2 <= E2(A_R,2R)/R",
+      "second_minor": "int_B_R |M2(DU)|^2 <= C[R*T2 + Lambda^2*R*T1]",
+      "third_minor": "int_B_R |M3(DU)|^2 <= C*Lambda^2*R*T2"
+    },
+    "conditional_hypothesis": "on a good sphere S_R, the trace lies in a normal ball about q and ||log_q g||_infinity <= Lambda R",
+    "conditional_scale_compatible_replacement": true,
+    "continuum_isolation": false,
+    "determinant_variation_gate_open": false,
+    "endpoint_graph_density_disproved": false,
+    "endpoint_graph_density_proved": false,
+    "hessian_gate_open": false,
+    "model_specific_reverse_holder_status": "open_for_actual_relaxed_minimizer",
+    "necessary_wz_condition": "dist(V_WZ(g_R), 2*pi^2*Z)^2 / R^3 -> 0",
+    "ordered_next_gate": [
+      "prove WZ-flux decay plus scale-compatible trace oscillation for the selected relaxed B=1 minimizer, using a monotonicity/frequency argument",
+      "or derive a Noether-current/Maurer-Cartan reverse-Hoelder estimate that controls the cutoff remainder without assuming the desired Morrey bound",
+      "only then return to graph density/classicality and the same-action Hessian"
+    ],
+    "portal_start_allowed": false,
+    "reason": "the geodesic-cap trace with epsilon=sqrt(R) has vanishing shell graph energy but every trace-preserving filling carries a non-vanishing WZ-forced L2 third-minor cost",
+    "reverse_holder_obstruction": "the highest cutoff-stress term leaves r^(-2)|u-q|^2|M2(Du)|^2 after Young; controlling it requires precisely an L-infinity/Morrey oscillation bound or prior higher integrability",
+    "strong_quasiconvexity_implies_reverse_holder_without_extra_input": false,
+    "unconditional_annular_endpoint_replacement": false,
+    "unconditional_statement_disproved": true,
+    "weak_euler_lagrange_authorized": false
+  }
+}

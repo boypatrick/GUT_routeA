@@ -1,0 +1,471 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\cof}{\operatorname{cof}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\osc}{\operatorname{osc}}
+
+\title{AP-E13 Annular Target-Valued Endpoint Replacement:\\
+A Wess--Zumino No-Go, a Scale-Compatible Repair,\\
+and the Reverse-H\"older Closure Test}
+\author{Route-F derivation ledger}
+\date{20 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AP-E12 asked for a target-valued annular replacement which keeps the trace on
+a good sphere and makes all three squared complete-minor families
+equiintegrable.  AP-E13 proves that this statement is false if ``low shell
+energy'' is its only hypothesis.  For the geodesic-sphere trace
+$g_\varepsilon(\omega)=(\cos\varepsilon,\sin\varepsilon\,\omega)$, take the
+radially constant map on $A_{\rho,2\rho}$ and set
+$\varepsilon=\sqrt\rho$.  Its first-, second-, and third-minor shell norms
+are $O(\rho^2)$, $O(\rho)$, and zero.  Nevertheless every smooth
+$\SSS^3$-valued filling of the trace satisfies
+\[
+ \int_{B_\rho}|M_3(DU)|^2\dd x
+ \geq \frac{V(\varepsilon)^2}{|B_\rho|}
+ \longrightarrow \frac{4\pi}{3},\qquad
+ V(\varepsilon)=2\pi\left(\varepsilon-\tfrac12\sin2\varepsilon\right).
+\]
+The lower bound is forced by the Wess--Zumino volume modulo
+$\operatorname{vol}(\SSS^3)=2\pi^2$.  Since every sphere in the shell has the
+same trace, selection of a good sphere cannot remove it.  The corresponding
+third-minor densities concentrate on shrinking balls and are not
+equiintegrable.
+
+A corrected positive theorem is also proved.  If a good-sphere trace lies in
+a normal ball about $q$ and
+$\|\log_q g\|_{L^\infty}\leq\Lambda\rho$, its geodesic contraction preserves
+the trace and controls all complete-minor norms by the shell norms.  The
+linear-in-$\rho$ oscillation is exactly the scale which compensates the cubic
+minor.  Finally, the exact strong-quasiconvexity identity is tested as a
+possible independent reverse-H\"older route.  Its highest cutoff-stress term
+leaves $\rho^{-2}|u-q|^2|M_2(Du)|^2$; without a Morrey oscillation estimate or
+prior higher integrability this is circular.  Thus the universal annular
+lemma is disproved, the repaired conditional lemma is closed, but endpoint
+graph density, regularity of the selected relaxed minimizer, the Riemann
+Hessian, and determinant variation remain unauthorized.  The reproducible
+scaling and quadrature card passes $9/9$.
+\end{abstract}
+
+\tableofcontents
+
+\section{The proposed endpoint lemma and its exact meaning}
+
+For $F\in\RR^{4\times3}$ let $M_k(F)$ be the vector of all $k$-minors.  The
+complete-minor part of the AP-E11 continuum action is
+\begin{equation}
+ W(F)=\frac12\left(|F|^2+a_2|M_2(F)|^2+a_3|M_3(F)|^2\right),
+ \qquad a_2,a_3>0.
+ \label{eq:density}
+\end{equation}
+Write $A_{\rho,2\rho}=B_{2\rho}\setminus\overline B_\rho$ and
+\begin{equation}
+ E_k(u;A_{\rho,2\rho})=
+ \int_{A_{\rho,2\rho}}|M_k(Du)|^2\dd x,
+ \qquad M_1(Du)=Du.
+ \label{eq:shell-energy}
+\end{equation}
+The requested universal statement would have to imply at least the following
+vanishing property:
+
+\begin{definition}[Universal vanishing annular replacement]
+Whenever $u_j:A_{\rho_j,2\rho_j}\to\SSS^3$ and
+$\sum_{k=1}^3E_k(u_j;A_{\rho_j,2\rho_j})\to0$, one can select
+$s_j\in(\rho_j,2\rho_j)$ and find
+$U_j:B_{s_j}\to\SSS^3$ with
+$\operatorname{tr}U_j=u_j|_{S_{s_j}}$ such that
+\begin{equation}
+ \sum_{k=1}^3\int_{B_{s_j}}|M_k(DU_j)|^2\dd x\longrightarrow0.
+ \label{eq:AR0}
+\end{equation}
+For endpoint graph density one needs more: after extension by zero to a fixed
+ambient ball, the three squared-minor families should be equiintegrable.
+\end{definition}
+
+Ordinary Luckhaus interpolation controls a first-order Sobolev cost
+\cite{Luckhaus1988}.  It does not contain the $L^2$ cubic-minor conclusion in
+\eqref{eq:AR0}.  Trace extension for manifold-valued Sobolev maps can itself
+carry critical analytic and homotopy obstructions \cite{MironescuVanSchaftingen2021}.
+Here $\pi_2(\SSS^3)=0$ removes the ordinary null-homotopy obstruction, but it
+does not remove the quantitative Wess--Zumino cost of a chosen null homotopy.
+
+\section{The geodesic-cap trace}
+
+Use polar coordinates on the unit three-sphere,
+\begin{equation}
+ y=(\cos\theta,\sin\theta\,\omega),
+ \qquad 0\leq\theta\leq\pi,\quad\omega\in\SSS^2,
+ \label{eq:s3polar}
+\end{equation}
+for which
+\begin{equation}
+ \dd s^2_{\SSS^3}=\dd\theta^2+\sin^2\theta\,\dd s^2_{\SSS^2},
+ \qquad
+ \omega_3=\sin^2\theta\,\dd\theta\wedge\omega_2,
+ \qquad \int_{\SSS^3}\omega_3=2\pi^2.
+ \label{eq:s3metric}
+\end{equation}
+For $0<\varepsilon<\pi/2$ define
+\begin{equation}
+ g_\varepsilon(\omega)
+   =(\cos\varepsilon,\sin\varepsilon\,\omega).
+ \label{eq:trace}
+\end{equation}
+Its two nonzero singular values on the unit $\SSS^2$ both equal
+$\sin\varepsilon$.  Consequently
+\begin{equation}
+ \int_{\SSS^2}|D_\omega g_\varepsilon|^2\dd\omega
+ =8\pi\sin^2\varepsilon,
+ \qquad
+ \int_{\SSS^2}|M_2(D_\omega g_\varepsilon)|^2\dd\omega
+ =4\pi\sin^4\varepsilon.
+ \label{eq:trace-norms}
+\end{equation}
+The oriented volume of the cap bounded by $g_\varepsilon$ is
+\begin{align}
+ V(\varepsilon)
+ &=4\pi\int_0^\varepsilon\sin^2\theta\dd\theta
+ =2\pi\left(\varepsilon-\frac12\sin2\varepsilon\right)\notag\\
+ &=\frac{4\pi}{3}\varepsilon^3
+   -\frac{4\pi}{15}\varepsilon^5+O(\varepsilon^7).
+ \label{eq:cap-volume}
+\end{align}
+
+\section{A Wess--Zumino lower bound for every filling}
+
+\begin{lemma}[Relative degree quantizes the filling volume]
+Let $U:B_\rho\to\SSS^3$ be smooth with trace
+$U|_{S_\rho}=g_\varepsilon$ after identifying
+$S_\rho/\rho\simeq\SSS^2$.  Then some $k\in\mathbb Z$ satisfies
+\begin{equation}
+ \int_{B_\rho}U^*\omega_3=V(\varepsilon)+2\pi^2k.
+ \label{eq:relative-degree}
+\end{equation}
+In particular, for sufficiently small $\varepsilon$,
+\begin{equation}
+ \left|\int_{B_\rho}U^*\omega_3\right|\geq V(\varepsilon).
+ \label{eq:wz-distance}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Glue $U$ to the oppositely oriented canonical geodesic cap along their common
+trace.  The result is a map $\SSS^3\to\SSS^3$ of integer degree $k$.  The
+integral of $\omega_3$ over the glued domain is therefore $2\pi^2k$, which
+gives \eqref{eq:relative-degree} up to reversing $k$.  Since
+$0<V(\varepsilon)<\pi^2$ for small $\varepsilon$, the closest element of
+$V(\varepsilon)+2\pi^2\mathbb Z$ to zero is $V(\varepsilon)$.
+\end{proof}
+
+For an $\SSS^3$-valued map the three derivative columns are tangent to the
+target.  Hence the scalar pullback Jacobian is the component of the Hodge
+dual third-minor vector along $U$, and
+\begin{equation}
+ |U^*\omega_3|\leq |M_3(DU)|\dd x.
+ \label{eq:jacobian-minor}
+\end{equation}
+Cauchy--Schwarz and \eqref{eq:wz-distance} now give the central estimate.
+
+\begin{theorem}[Wess--Zumino filling bound]
+Every trace-preserving filling above satisfies
+\begin{equation}
+ \boxed{\int_{B_\rho}|M_3(DU)|^2\dd x
+ \geq\frac{V(\varepsilon)^2}{|B_\rho|}
+ =\frac{3V(\varepsilon)^2}{4\pi\rho^3}.}
+ \label{eq:filling-lower}
+\end{equation}
+The conclusion extends to a complete-minor graph limit for which the trace
+and distributional Jacobian are stable.
+\end{theorem}
+
+\begin{proof}
+Equations \eqref{eq:wz-distance} and \eqref{eq:jacobian-minor} imply
+\[
+ V(\varepsilon)
+ \leq\int_{B_\rho}|M_3(DU)|\dd x
+ \leq |B_\rho|^{1/2}
+       \|M_3(DU)\|_{L^2(B_\rho)}.
+\]
+Squaring proves \eqref{eq:filling-lower}.  Stability under graph convergence
+follows by strong $L^2$ convergence of the third-minor vector and the trace.
+\end{proof}
+
+\section{Disproof of the unconditional annular replacement}
+
+On $A_{\rho,2\rho}$ set
+\begin{equation}
+ u_{\rho,\varepsilon}(r\omega)=g_\varepsilon(\omega).
+ \label{eq:radial-constant}
+\end{equation}
+There are two tangential singular values $\sin\varepsilon/r$ and one zero
+radial singular value.  Direct integration yields
+\begin{align}
+ E_1(u_{\rho,\varepsilon};A_{\rho,2\rho})
+ &=8\pi\rho\sin^2\varepsilon,\notag\\
+ E_2(u_{\rho,\varepsilon};A_{\rho,2\rho})
+ &=\frac{2\pi}{\rho}\sin^4\varepsilon,
+ &E_3(u_{\rho,\varepsilon};A_{\rho,2\rho})&=0.
+ \label{eq:shell-exact}
+\end{align}
+
+\begin{theorem}[No universal endpoint replacement]
+The assertion \eqref{eq:AR0} is false.  More strongly, low complete-minor
+energy on a shell does not imply equiintegrable $L^2$ third minors for any
+trace-preserving interior replacement.
+\end{theorem}
+
+\begin{proof}
+Let $\varepsilon=\rho^{1/2}$ and send $\rho\downarrow0$.  Equation
+\eqref{eq:shell-exact} gives
+\begin{equation}
+ E_1=8\pi\rho^2+O(\rho^3),\qquad
+ E_2=2\pi\rho+O(\rho^2),\qquad E_3=0.
+ \label{eq:critical-shell}
+\end{equation}
+Thus the entire shell graph energy tends to zero.  Every sphere in the shell
+has exactly the trace $g_{\sqrt\rho}$, so no good-radius selection changes
+the boundary data.  On a selected radius $s\in(\rho,2\rho)$, the filling
+bound and \eqref{eq:cap-volume} give
+\begin{equation}
+ \int_{B_s}|M_3(DU)|^2\dd x
+ \geq\frac{3V(\sqrt\rho)^2}{4\pi s^3}
+ \geq \frac{1}{8}\left(\frac{4\pi}{3}+o(1)\right).
+ \label{eq:selected-radius-bound}
+\end{equation}
+If the replacement is made at the inner radius $s=\rho$, the limit is
+exactly $4\pi/3$.  In either case it does not tend to zero, contradicting
+\eqref{eq:AR0}.  Extend $|M_3(DU)|^2$ by zero to a fixed ball.  Its integral
+on the shrinking set $B_{2\rho}$ remains bounded below, so the family is not
+equiintegrable.
+\end{proof}
+
+The full scale diagram is useful.  Put $\varepsilon=\rho^\alpha$.  Then
+\begin{equation}
+ E_1\asymp\rho^{1+2\alpha},\qquad
+ E_2\asymp\rho^{4\alpha-1},\qquad
+ \inf_U\int_{B_\rho}|M_3(DU)|^2\dd x
+ \gtrsim\rho^{6\alpha-3}.
+ \label{eq:alpha-diagram}
+\end{equation}
+The shell energy vanishes already for $\alpha>1/4$, whereas the forced
+filling cost vanishes only for $\alpha>1/2$.  The interval
+$1/4<\alpha\leq1/2$ is the previously missing endpoint obstruction window.
+This does not contradict AP-E12's radial Mal\'y-dipole calculation: that
+calculation studied a different interior two-hole mechanism and required
+finite second-minor energy all the way to its singular core.  The present map
+lives on a punctured shell and asks whether that core can be replaced.
+
+\begin{remark}[Necessary boundary datum]
+For a general trace $g:S_\rho\to\SSS^3$, let
+$\mathcal V(g)\in\RR/(2\pi^2\mathbb Z)$ be its relative Wess--Zumino volume.
+A necessary condition for vanishing cubic-minor filling cost is
+\begin{equation}
+ \frac{\dist(\mathcal V(g),2\pi^2\mathbb Z)^2}{\rho^3}\longrightarrow0.
+ \label{eq:necessary-wz}
+\end{equation}
+The shell norm alone does not imply \eqref{eq:necessary-wz}.
+\end{remark}
+
+\section{A scale-compatible positive replacement theorem}
+
+The no-go identifies the missing hypothesis.  The following sufficient
+condition is stronger than \eqref{eq:necessary-wz}, but it controls all
+three minor orders simultaneously.
+
+\begin{theorem}[Conditional target-valued endpoint replacement]
+Let $g:S_\rho\to\SSS^3$ have image in a normal ball about $q\in\SSS^3$ and
+suppose
+\begin{equation}
+ \|\log_q g\|_{L^\infty(S_\rho)}\leq\Lambda\rho,
+ \qquad \Lambda\rho<\tfrac14\operatorname{inj}(\SSS^3).
+ \label{eq:linear-osc}
+\end{equation}
+Put
+\begin{equation}
+ T_1(g)=\int_{S_\rho}|D_\tau g|^2\dd S,\qquad
+ T_2(g)=\int_{S_\rho}|M_2(D_\tau g)|^2\dd S.
+ \label{eq:trace-costs}
+\end{equation}
+There is a trace-preserving $U:B_\rho\to\SSS^3$ and a constant $C$,
+uniform for $\Lambda\rho$ in a fixed normal ball, such that
+\begin{align}
+ \int_{B_\rho}|DU|^2\dd x
+ &\leq C\{\rho T_1+\Lambda^2\rho^3\},
+ \label{eq:positive-one}\\
+ \int_{B_\rho}|M_2(DU)|^2\dd x
+ &\leq C\{\rho T_2+\Lambda^2\rho T_1\},
+ \label{eq:positive-two}\\
+ \int_{B_\rho}|M_3(DU)|^2\dd x
+ &\leq C\Lambda^2\rho T_2.
+ \label{eq:positive-three}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Write $v(\omega)=\log_qg(\rho\omega)$ and define the geodesic cone
+\begin{equation}
+ U(r\omega)=\exp_q\left(\frac r\rho v(\omega)\right),
+ \qquad 0\leq r\leq\rho.
+ \label{eq:geodesic-cone}
+\end{equation}
+It is $\SSS^3$-valued, equals $q$ at the centre, and has trace $g$.  On the
+fixed normal ball, $D\exp_q$ and its exterior powers are uniformly bounded
+and invertible.  Since $r/\rho$ cancels the $1/r$ in a physical angular
+derivative,
+\begin{equation}
+ |D_rU|\leq C\Lambda,qquad
+ |D_\tau U(r,\omega)|\leq C|D_\tau g(\rho\omega)|.
+ \label{eq:cone-derivatives}
+\end{equation}
+Decomposing exterior products into radial--tangential and purely tangential
+parts gives
+\begin{align}
+ |M_2(DU)|^2
+ &\leq C\{|M_2(D_\tau g)|^2+\Lambda^2|D_\tau g|^2\},
+ \label{eq:cone-m2}\\
+ |M_3(DU)|^2
+ &\leq C\Lambda^2|M_2(D_\tau g)|^2.
+ \label{eq:cone-m3}
+\end{align}
+The volume-to-boundary factor in polar integration is
+$\int_0^\rho r^2\dd r/\rho^2=\rho/3$.  Integrating
+\eqref{eq:cone-derivatives}--\eqref{eq:cone-m3} proves
+\eqref{eq:positive-one}--\eqref{eq:positive-three}.
+\end{proof}
+
+If a shell map satisfies the scale-compatible oscillation bound and
+$E_k=E_k(u;A_{\rho,2\rho})$, coarea selects one radius
+$s\in(\rho,2\rho)$ at which, after changing universal constants,
+\begin{equation}
+ T_1(u|_{S_s})\leq C\frac{E_1}{\rho},qquad
+ T_2(u|_{S_s})\leq C\frac{E_2}{\rho}.
+ \label{eq:good-sphere}
+\end{equation}
+The theorem then bounds the filling by
+$C(E_1+E_2+\Lambda^2\rho^3)$ at every minor order.  For the cap family,
+$\varepsilon=\Lambda\rho$ makes all three costs $O(\rho^3)$.  Thus
+linear-in-radius oscillation is a clean sufficient repair.  It is not a
+consequence of the assumed endpoint graph energy; the critical counterexample
+has oscillation $\sqrt\rho$.
+
+\section{Can exact strong quasiconvexity bypass the no-go?}
+
+For $G=F^TF$, differentiation of \eqref{eq:density} gives the classical
+stress
+\begin{equation}
+ P(F)=F+a_2\{(\tr G)F-FG\}+a_3F\cof G.
+ \label{eq:stress}
+\end{equation}
+The singular-value representation implies
+\begin{equation}
+ |P(F)|\leq C\{|F|+|F||M_2(F)|+|M_2(F)||M_3(F)|\}.
+ \label{eq:stress-bound}
+\end{equation}
+AP-E12 proved the exact ambient strong-quasiconvexity identity.  For an
+actual smooth constrained minimizer, a target-valued cutoff comparison or
+formal tangent first variation would therefore try to estimate the highest
+stress term by
+\begin{align}
+ \frac{|u-q|}{\rho}|M_2(Du)||M_3(Du)|
+ &\leq \eta|M_3(Du)|^2
+ +\frac{C_\eta}{\rho^2}|u-q|^2|M_2(Du)|^2.
+ \label{eq:cutoff-obstruction}
+\end{align}
+The first term is absorbable.  The second is not controlled at the endpoint:
+$M_2(Du)^2$ is only in $L^1$, while Poincar\'e control of $u-q$ is not
+$L^\infty$.  H\"older would require higher integrability of $M_2(Du)$, which
+is the conclusion the reverse-H\"older argument is meant to prove.  An
+$L^\infty$ Morrey estimate $\|u-q\|_\infty\leq c\rho$ would close the scale,
+but it is precisely the additional hypothesis of the positive annular
+theorem.
+
+\begin{proposition}[Reverse-H\"older closure verdict]
+The exact strong-quasiconvexity identity does not, by itself, provide a
+non-circular reverse-H\"older seed for the sphere-constrained relaxed
+minimizer.  A successful model-specific proof must add at least one new
+ingredient which controls \eqref{eq:cutoff-obstruction}: for example a
+Wess--Zumino-flux decay plus Morrey oscillation estimate, a monotonicity or
+frequency formula, or a compensated Noether/Maurer--Cartan estimate.
+\end{proposition}
+
+This proposition is a boundary statement, not a proof that every possible
+reverse-H\"older theorem is false.  Minimality may exclude the cap pattern for
+the selected $B=1$ solution, but that requires a new model-specific theorem.
+Moreover, the selected object is presently only a minimizer of the fixed-
+degree lower-semicontinuous relaxation.  Until local fixed-trace recovery is
+available, inserting the naive stress \eqref{eq:stress} into its weak
+Euler--Lagrange equation would assume the desired conclusion.
+
+The caution is consistent with the older Skyrme variational literature:
+finite Skyrme energy maps need not be continuous, and smooth approximation
+with uniformly bounded Skyrme energy was explicitly identified as an
+unresolved step \cite{AucklyKapitanski2003}.  Integer degree and existence can
+instead be established directly in the energy class \cite{EstebanMuller1992}.
+Recent progress for the Faddeev--Skyrme Hopf map proves global minimality in
+a special homogeneous large-coupling problem, but does not supply the
+present $\SSS^3$ complete-minor endpoint replacement
+\cite{GuerraLamyZemas2026}.
+A second 2026 result characterizes $W^{1,2}$ Hopf lifts by exactness of the
+pulled-back area form and constructs smooth approximations preserving that
+base-map/gauge constraint \cite{GuerraLamyZemasLifting2026}.  It does not
+control $L^2$ second and third minors, but it suggests an actionable change of
+variables for the next reverse-H\"older attempt: decompose the $\SSS^3$ field
+into its $\SSS^2$ Hopf projection and vertical gauge one-form, then test
+whether \eqref{eq:cutoff-obstruction} becomes an exact div--curl pairing.
+
+\section{Numerical verification and authorization ledger}
+
+The independent card
+\begin{center}
+\texttt{route\_f/code/verify\_ap\_e13\_annular\_replacement\_reverse\_holder.py}
+\end{center}
+checks the exact trace norms, stable cap-volume series, Wess--Zumino lower
+bound, explicit geodesic filling, and power-law slopes.  It passes $9/9$.
+At the smallest production radius $\rho=10^{-8}$ with
+$\varepsilon=\sqrt\rho$, the shell norm is $6.283\times10^{-8}$ whereas the
+filling lower bound is $4.188790188$, converging to $4\pi/3$.  For
+$\varepsilon=\rho$, all measured slopes equal three to numerical precision.
+
+The updated decision is
+\begin{equation}
+ \boxed{\begin{gathered}
+ C_{\rm universal\ annular}=\mathrm{false\ (disproved)},\qquad
+ C_{\rm conditional\ linear\ oscillation}=\mathrm{true},\\
+ C_{\rm reverse\ H\ddot{o}lder\ for\ selected\ minimizer}=\mathrm{false\ (open)},\\
+ C_{D_{\rm end}}=C_{\rm classicality}=C_{\rm isolation}
+ =C_{\rm Hessian}=C_{\det}=C_{\rm portal}=\mathrm{false}.
+ \end{gathered}}
+ \label{eq:decision}
+\end{equation}
+The no-go eliminates one proposed proof strategy, not the endpoint density
+theorem itself.  The most efficient next target is now narrower: prove that
+the selected relaxed $B=1$ minimizer has
+\eqref{eq:necessary-wz} and scale-compatible trace oscillation on good
+spheres, preferably from a monotonicity/frequency identity.  In parallel,
+one may exploit the $\SSS^3\simeq SU(2)$ Maurer--Cartan and target-rotation
+Noether structures to cancel the last term in \eqref{eq:stress-bound}; the
+Hopf base/gauge split above is the first concrete formulation to test.  Only
+after either route yields local recovery, classicality, and continuum
+isolation is the same-action Riemann Hessian legal.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e13_annular_replacement_reverse_holder}
+
+\end{document}

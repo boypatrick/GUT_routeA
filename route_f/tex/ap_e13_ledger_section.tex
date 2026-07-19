@@ -1,0 +1,79 @@
+\section{AP-E13: annular endpoint replacement and reverse-H\"older audit}
+
+AP-E12 proposed a target-valued annular replacement which keeps the trace on
+a good sphere while controlling all three $L^2$ complete-minor families.
+AP-E13 proves that its unconditional form is false.  For
+\begin{equation}
+ g_\varepsilon(\omega)=(\cos\varepsilon,\sin\varepsilon\,\omega)
+ \in\mathbb S^3,
+ \qquad
+ u_{\rho,\varepsilon}(r\omega)=g_\varepsilon(\omega)
+ \quad\hbox{on }A_{\rho,2\rho},
+ \label{eq:e13-cap-trace}
+\end{equation}
+one has
+\begin{equation}
+ E_1=8\pi\rho\sin^2\varepsilon,\qquad
+ E_2=\frac{2\pi}{\rho}\sin^4\varepsilon,\qquad E_3=0.
+ \label{eq:e13-shell}
+\end{equation}
+The relative Wess--Zumino volume of the trace is
+\begin{equation}
+ V(\varepsilon)=2\pi\left(\varepsilon-\frac{1}{2}\sin2\varepsilon\right)
+ =\frac{4\pi}{3}\varepsilon^3+O(\varepsilon^5)
+ \quad\bmod 2\pi^2\mathbb Z.
+ \label{eq:e13-wz}
+\end{equation}
+Gluing any trace-preserving filling $U:B_\rho\to\mathbb S^3$ to the canonical cap
+and using integer degree gives
+\begin{equation}
+ \int_{B_\rho}|M_3(DU)|^2\dd x
+ \geq\frac{V(\varepsilon)^2}{|B_\rho|}.
+ \label{eq:e13-fill-lower}
+\end{equation}
+At $\varepsilon=\sqrt\rho$, the shell graph energy tends to zero but the
+right side of \eqref{eq:e13-fill-lower} tends to $4\pi/3$.  Every sphere of
+the shell has the same trace, so a good-radius choice cannot remove the
+obstruction.  After zero extension to a fixed ball, the squared third-minor
+densities retain positive mass on shrinking sets and are not equiintegrable.
+This disproves the universal annular lemma, but not endpoint graph density
+for every fixed map.
+
+There is a scale-compatible repair.  If a trace $g:S_\rho\to\mathbb S^3$ lies in
+a normal ball about $q$ and
+$\|\log_qg\|_\infty\leq\Lambda\rho$, the geodesic cone
+$U(r\omega)=\exp_q((r/\rho)\log_qg(\rho\omega))$ obeys
+\begin{align}
+ \int_{B_\rho}|DU|^2&\leq C(\rho T_1+\Lambda^2\rho^3),\notag\\
+ \int_{B_\rho}|M_2(DU)|^2&\leq
+ C(\rho T_2+\Lambda^2\rho T_1),\notag\\
+ \int_{B_\rho}|M_3(DU)|^2&\leq C\Lambda^2\rho T_2,
+ \label{eq:e13-conditional}
+\end{align}
+where $T_k$ are the tangential trace-minor norms.  Coarea on a good sphere
+turns $\rho T_k$ into the corresponding shell cost.  Thus a linear Morrey
+oscillation bound, or a comparably strong Wess--Zumino-flux decay theorem, is
+the missing hypothesis.
+
+The parallel reverse-H\"older route does not close from exact strong
+quasiconvexity alone.  The classical stress
+\begin{equation}
+ P(F)=F+a_2\{(\operatorname{tr}F^TF)F-F(F^TF)\}
+       +a_3F\operatorname{cof}(F^TF)
+ \label{eq:e13-stress}
+\end{equation}
+contains a highest cutoff product
+\begin{equation}
+ \frac{|u-q|}{\rho}|M_2(Du)||M_3(Du)|
+ \leq\eta|M_3(Du)|^2
+ +\frac{C_\eta}{\rho^2}|u-q|^2|M_2(Du)|^2.
+ \label{eq:e13-cutoff}
+\end{equation}
+The last term needs the same Morrey bound or prior higher integrability of
+$M_2$, so using it to prove $L^{2+\delta}$ is circular.  The AP-E13 card
+passes $9/9$: at $\rho=10^{-8}$ the critical shell norm is
+$6.283\times10^{-8}$ while the filling lower bound is $4.188790188$.
+Accordingly the conditional replacement theorem is true; the universal
+replacement is false by counterexample; the model-specific reverse-H\"older
+theorem, endpoint density, classicality, continuum isolation, Hessian,
+determinant, and portal gates remain false.

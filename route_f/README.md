@@ -26,7 +26,27 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-20 AP-E12 endpoint graph-density and regularity audit
+## 2026-07-20 AP-E13 annular replacement and reverse-Hölder audit
+
+AP-E13 disproves the unconditional annular endpoint-replacement strategy with
+an exact `S3` geodesic-cap family.  At cap radius `eps=sqrt(rho)`, the shell's
+complete-minor energy tends to zero, while relative Wess--Zumino volume forces
+every trace-preserving filling to carry asymptotic third-minor `L2` cost
+`4 pi/3`.  Since the trace is identical on every shell sphere, good-radius
+selection cannot repair it, and the filling family is not equiintegrable.
+
+The corrected theorem assumes scale-compatible target oscillation
+`||log_q g||_infinity<=Lambda rho`.  Its geodesic contraction controls all
+three filling-minor norms by the good-sphere trace norms and hence by the
+shell energy.  The reverse-Hölder alternative remains open: its highest
+stress cutoff leaves a term requiring that same Morrey bound or already-known
+higher integrability.  The `9/9` card therefore changes the blocker without
+promoting endpoint density, classicality, Hessian, determinant, or portal.
+See `tex/ap_e13_annular_replacement_reverse_holder.tex`,
+`code/verify_ap_e13_annular_replacement_reverse_holder.py`, and
+`output/ap_e13_annular_replacement_reverse_holder.{json,md}`.
+
+## 2026-07-20 AP-E12 endpoint graph-density and regularity audit (superseded by AP-E13 for the annular gate)
 
 AP-E12 attacks the last AP-E11 classical-continuum gate.  It proves three
 useful facts: graph-norm convergence makes the degree continuous; the
