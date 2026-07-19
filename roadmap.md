@@ -1,8 +1,41 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-18
+Last updated: 2026-07-19
 
-## AP-E10 stencil/cell/translation checkpoint (2026-07-18; current authority)
+## AP-E11 compatible-cochain checkpoint (2026-07-19; current authority)
+
+AP-E11 implements the requested structural repair.  On oriented tetrahedra,
+`dn` is a primal one-cochain and the Alexander--Whitney front/back cup obeys
+the exact graded Leibniz identity.  Antisymmetrized double and triple cups are
+exactly the affine second and third minors.  Positive Whitney Hodge Gram
+matrices make their norms rotation covariant, and the same triple cup,
+contracted with the vertex field and the exact radial Jacobian, gives the
+normalized-affine degree cochain.
+
+The resulting compatible action has the exact periodic cell formula
+
+`Q_(R,K)(A)=|A|^2/2+R|M_2(A)|^2/2+K|M_3(A)|^2/2`.
+
+Periodic first-, second-, and third-minor means are null Lagrangians.  Jensen
+therefore proves the zero corrector globally for the uniform six-tet and both
+checkerboard five-tet cells; the numerical residual is `2.555e-14`.  The
+13-case unanchored scan passes every declared quotient gate: joint-tail
+energy/RMS/CDF spreads are `0.437%/3.489%/4.067%`, while triangulation spreads
+are `0.463%/0.752%/3.556%`.  Every field is stationary, admissible, and has
+three-target `B=[1,1,1]`.
+
+The continuum theorem closes only at the correct relaxed level.  Dirichlet
+equicoercivity, weak identification of complete minors and topological
+current, polyconvex liminf, and nodal recovery prove Gamma convergence to the
+fixed-degree lower-semicontinuous relaxation.  Smooth fixed-degree density in
+the complete-minor graph norm, or regularity/isolation of the selected
+relaxed minimizer, remains unproved.  Hence
+`relaxed_regulator_stable=true`, but classical `regulator_stable=false`, and
+the Hessian/determinant/portal authorization remains false.  The next
+mainline is precisely that density or regularity theorem; no Hessian is legal
+before it closes.
+
+## AP-E10 stencil/cell/translation checkpoint (2026-07-18; superseded above)
 
 AP-E10 resolves the two mathematical questions left first in AP-E9, with a
 negative physical verdict.  The one-corner forward Skyrme stencil does not

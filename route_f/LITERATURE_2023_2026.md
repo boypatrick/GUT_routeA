@@ -1,7 +1,30 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-18.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-19.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
+
+## AP-E11 transfer boundary
+
+AP-E11 uses the finite-element exterior-calculus principle that cochains,
+discrete differentiation, and Hodge products must form one compatible
+complex.  The recent shifted-product work of Ptackova and Velho supplies
+useful evidence that exact Leibniz identities can be retained in discrete
+calculus.  Its constructions are two-dimensional and polygonal, however;
+they do not prove the present three-dimensional tetrahedral Skyrme action,
+its normalized-affine degree identity, or its Gamma limit.  Those statements
+are derived independently in the AP-E11 ledger.
+
+The continuum proof uses classical polyconvex lower semicontinuity and weak
+minor compactness.  Briani--Cicalese--Kreutz provides a recent example of a
+topology-sensitive discrete/continuum proof architecture, but only for a
+two-dimensional `S2` regime.  Bethuel's density theorem likewise warns that
+topology constrains Sobolev approximation; it does not supply the still
+missing fixed-degree density theorem in the complete `M_2/M_3` graph norm.
+
+| Source | Main result relevant to AP-E11 | Transfer boundary |
+|---|---|---|
+| Ptackova and Velho, [A simple and complete discrete exterior calculus on general polygonal meshes](https://arxiv.org/abs/2401.15436) (2024) | Builds a DEC framework on general polygonal meshes with discrete differential-form operations. | Structural motivation only: the setting is two-dimensional and does not give the tetrahedral Hodge/cell/degree theorem used here. |
+| Ptackova, [Discrete exterior calculus with a discrete Leibniz rule](https://arxiv.org/abs/2504.14275) (2025) | Constructs shifted discrete products satisfying an exact Leibniz identity in its declared complex. | Confirms the design principle, not this three-dimensional Alexander--Whitney/Whitney realization or its continuum limit. |
 
 ## AP-E10 transfer boundary
 

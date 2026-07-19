@@ -10,7 +10,34 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E10 stencil/cell/translation update (2026-07-18; current authority)
+## AP-E11 compatible cochain update (2026-07-19; current authority)
+
+No Route-E dependency or portal is promoted.  AP-E11 replaces the refuted
+one-corner stencil by a genuine tetrahedral cochain complex.  The
+Alexander--Whitney cup has an exact graded Leibniz rule; its antisymmetrized
+first-cochain products reproduce all affine second and third minors.  Positive
+Whitney Hodge Gram matrices give one rotation-covariant action.  Contracting
+the same ordered triple cup with the vertex field and the exact radial
+Jacobian yields the normalized-affine degree cochain, so the energetic and
+topological discretizations no longer use incompatible stencils.
+
+Periodic null-Lagrangian identities and convexity prove the exact cell
+density
+`Q_(R,K)=|A|^2/2+R|M_2(A)|^2/2+K|M_3(A)|^2/2` with zero corrector on the
+six-tet and both checkerboard five-tet cells.  A 13-background unanchored scan
+passes the joint `(a,L)`, translation, and triangulation quotient thresholds,
+with all three regular values giving `B=1`.
+
+This closes the compatible-cell and relaxed-continuum gates, not the
+classical one.  The proved Gamma limit is the fixed-degree lower-semicontinuous
+relaxation.  Smooth fixed-degree density in the complete-minor graph norm, or
+regularity and isolation of the selected relaxed minimizer, remains open.
+Thus `C_B1_relaxed_continuum=true`, but the unrelaxed physical-background,
+Hessian, determinant, and degree-one portal gates remain false.  The next
+ordered task is that density/regularity theorem; Hessian work is still
+prohibited until it closes.
+
+## AP-E10 stencil/cell/translation update (2026-07-18; superseded above)
 
 No Route-E dependency or portal is promoted.  AP-E10 instead proves that the
 current AP-E7/AP-E8 mainline cannot supply the missing continuum background.

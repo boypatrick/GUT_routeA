@@ -1,12 +1,85 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-18
+Last updated: 2026-07-19
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E10 stencil/cell/translation checkpoint (2026-07-18; current authority)
+## AP-E11 compatible cochain checkpoint (2026-07-19; current authority)
+
+Status: **the tetrahedral discrete-de-Rham replacement, its exact cell
+formula, and the declared translation/triangulation quotient gate are
+closed.  Gamma convergence is unconditional only to the fixed-degree
+lower-semicontinuous relaxation.  Identification with the unrelaxed smooth
+sector is still open, so the Hessian, determinant, and portal gates remain
+false.**  The production card passes `11/11`; all 13 unanchored backgrounds
+are stationary, admissible, and have three-target `B=[1,1,1]`.
+
+### Compatible complex, Hodge star, and degree
+
+- The Alexander--Whitney front/back cup product obeys the exact graded
+  Leibniz identity and associativity.  For `a^A=dn^A`, full antisymmetrization
+  of `a^A cup a^B` and `a^A cup a^B cup a^C` equals the affine Whitney
+  two- and three-minor cochains, including the necessary `1/2!` and `1/3!`
+  factors.
+- The element Whitney mass matrices `M_k^T` for `k=1,2,3` are positive Gram
+  matrices, rotation covariant, and exact on constant affine forms.  The
+  smallest measured eigenvalue is `2.485e-2`; the maximum rotation residual
+  is `3.553e-15`.
+- The same ordered triple cup gives
+  `C_h(T)=det[n_0,n_1,n_2,n_3]`.  Radial pullback of the normalized affine map
+  gives the exact local degree cochain
+  `Omega_h(T)=s_T C_h(T)/(2 pi^2) int_Delta |sum lambda_i n_i|^(-4) dlambda`.
+  Independent Duffy--Gauss and three-regular-value calculations agree within
+  `3.069e-7`.
+
+### Cell formula and continuum statement
+
+The compatible action is the positive Whitney-Hodge norm of the complete
+first, second, and third affine minors, with coefficients `R=1`, `K=0.35`,
+plus the mass potential.  Its exact periodic cell formula is
+
+`Q_(R,K)(A)=|A|^2/2 + R|M_2(A)|^2/2 + K|M_3(A)|^2/2`.
+
+First-, second-, and third-minor means are periodic null Lagrangians.  Jensen
+in the complete-minor vector proves the zero corrector globally for the
+uniform six-tet and both checkerboard five-tet cells.  Numerical cell
+optimization agrees within `2.555e-14`.
+
+Dirichlet coercivity, weak minor identification, the normalized-current
+formula, polyconvex lower semicontinuity, and smooth nodal recovery prove
+Gamma convergence to the fixed-degree lower-semicontinuous relaxation.  The
+remaining theorem blocker is density of smooth fixed-degree maps in the
+complete-minor graph norm, or an equivalent regularity/isolation theorem for
+the selected relaxed minimizer.  Until one of those is proved,
+`full_unrelaxed_density_theorem=false` and no classical Hessian may be built.
+
+### Quotient gate and ordered continuation
+
+- Six joint-limit backgrounds reach `(N,L,a)=(37,8,0.222222)`; three
+  translated starts and four five-tet controls share `(29,7,0.25)`.
+- Joint-tail energy, RMS-size, and radial-CDF spreads are respectively
+  `0.437%`, `3.489%`, and `4.067%`; translation residuals are below
+  `7.2e-7`; cross-triangulation spreads are `0.463%`, `0.752%`, and `3.556%`.
+  All declared numerical thresholds pass.
+- Therefore `compatible_cell_formula=true`, `quotient_gate=true`, and
+  `relaxed_regulator_stable=true`, while classical `regulator_stable`,
+  `hessian_gate_open`, `determinant_variation_gate_open`, and `portal` remain
+  false.
+- Next, prove graph-norm density or regularity/isolation of the relaxed
+  minimizer.  Only then assemble the same-action Riemann Hessian and regulated
+  determinant variation.  GW/domain-wall and the actual `SO(3)` mod-two index
+  remain parallel lanes.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e11_compatible_cochain_action.tex` and PDF;
+- `route_f/code/scan_ap_e11_compatible_cochain_action.py`;
+- `route_f/output/ap_e11_compatible_cochain_action.{json,md}`;
+- AP-E11 section in `route_f/tex/another_physics_route_e_derivation_ledger.tex`.
+
+## AP-E10 stencil/cell/translation checkpoint (2026-07-18; superseded above)
 
 Status: **the current one-corner forward Skyrme mainline is refuted as a
 continuum regulator; the finite-`R` cell problem is closed with a negative

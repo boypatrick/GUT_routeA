@@ -1,0 +1,446 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\cuph}{\smile_h}
+\newcommand{\Wh}{\mathcal W_h}
+\newcommand{\Ih}{I_h}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\cof}{\operatorname{cof}}
+
+\title{AP-E11 Compatible Tetrahedral Cochain Action:\
+Exact Leibniz Algebra, Positive Whitney Hodge Star, Shared Degree Cochain,\
+and a Mesh-Independent Complete-Minor Cell Formula}
+\author{Route-F derivation ledger}
+\date{19 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AP-E10 proved that the one-corner forward Skyrme stencil is not a compatible
+discrete differential product.  AP-E11 replaces it by one ordered
+tetrahedral cochain complex.  The Alexander--Whitney front/back cup satisfies
+the exact Leibniz identity; its target-antisymmetric products are precisely
+the de Rham cochains of the affine two- and three-minors.  Consistent Whitney
+mass matrices give positive, rigid-rotation-covariant Hodge stars.  A radial
+dressing of the same third-cup family is the exact degree density of the
+normalized piecewise-affine map.  Adding the positive three-cochain Hodge
+norm closes the finite-grid collapse mode and gives the polyconvex density
+\[
+ Q_{R,K}(A)=\frac12|A|^2+\frac R2|\wedge^2A|^2
+              +\frac K2|\wedge^3A|^2 .
+\]
+Every periodic P1 corrector preserves the means of all three minor orders;
+Jensen's inequality therefore proves that the corrector is zero and the cell
+formula is identical on the six- and checkerboard five-tetrahedron meshes.
+The production card passes $11/11$ exact/mechanical checks, all thirteen
+unanchored $B=1$ solves, and the declared translation/triangulation quotient
+continuum gate.  What is closed unconditionally is Gamma convergence to the
+fixed-degree lower-semicontinuous relaxation.  Identification of that
+relaxation with the unrelaxed classical graph-norm functional remains a
+separate density theorem; consequently the classical Hessian and determinant
+variation are not yet authorized.
+\end{abstract}
+
+\tableofcontents
+
+\section{Why the action must be replaced}
+
+Let $K_h$ be an ordered, oriented, shape-regular tetrahedral complex in a
+bounded Lipschitz domain $\Omega\subset\RR^3$.  A nodal field is a
+zero-cochain $n_h=(n_h^0,\ldots,n_h^3)\in C^0(K_h;\RR^4)$ with
+$|n_h(v)|=1$ at every vertex.  AP-E10 sampled all spatial derivatives from
+one cube corner and multiplied them without a cochain shift.  The exact
+oscillatory counterexample then retained a nonzero discrete two-minor while
+converging uniformly to a constant.  No coefficient calibration can repair
+that algebraic failure.
+
+The replacement has three requirements.
+First, $d^2=0$ and the product used to form a minor must satisfy a discrete
+Leibniz rule.  Second, the positive quadratic form called a Hodge star must
+reconstruct affine exterior forms independently of a cube body diagonal.
+Third, the topological three-cochain must refer to the same normalized-affine
+map as the finite-grid degree.  Whitney forms and finite element exterior
+calculus provide the appropriate commuting-complex architecture
+\cite{Whitney1957,Dodziuk1976,ArnoldFalkWinther2010}.  Recent discrete
+exterior-calculus work likewise emphasizes that a proposed wedge must be
+checked against Leibniz rather than inferred from visual locality
+\cite{PtackovaVelho2024,Ptackova2025}; those surface results are motivation,
+not a proof of the present three-dimensional construction.
+
+\section{Exact shifted cup algebra}
+
+For an increasing simplex $[v_0\ldots v_{p+q}]$, define the front/back
+Alexander--Whitney product
+\begin{equation}
+ (\alpha\cuph\beta)[v_0\ldots v_{p+q}]
+ =\alpha[v_0\ldots v_p],\beta[v_p\ldots v_{p+q}],
+ \qquad \alpha\in C^p,\quad\beta\in C^q .
+ \label{eq:aw}
+\end{equation}
+
+\begin{theorem}[Differential graded identities]
+The simplicial coboundary and \eqref{eq:aw} obey
+\begin{align}
+ d^2&=0,\label{eq:d2}\\
+ d(\alpha\cuph\beta)
+ &=d\alpha\cuph\beta+(-1)^p\alpha\cuph d\beta,
+ \label{eq:leibniz}\\
+ (\alpha\cuph\beta)\cuph\gamma
+ &=\alpha\cuph(\beta\cuph\gamma).
+ \label{eq:assoc}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Expand $d$ as the alternating sum of deleted vertices.  Deleting one of the
+front vertices produces the first term in \eqref{eq:leibniz}; deleting a
+back vertex produces the second, including the sign from passing $p$
+front degrees.  The two copies obtained by deleting the shared vertex cancel.
+A second deletion cancels in pairs, proving \eqref{eq:d2}.  Both sides of
+\eqref{eq:assoc} evaluate to the product on the three consecutive front,
+middle, and back blocks.
+\end{proof}
+
+Put $a^A=dn_h^A$.  The correctly normalized antisymmetric two-cochain is
+\begin{equation}
+ X_h^{AB}=\frac1{2!}\left(a^A\cuph a^B-a^B\cuph a^A\right).
+ \label{eq:two-cup}
+\end{equation}
+On an oriented face $[012]$,
+\begin{equation}
+ X_h^{AB}[012]
+ =\frac12\det
+ \begin{pmatrix}
+ n_1^A-n_0^A & n_2^A-n_0^A\\
+ n_1^B-n_0^B & n_2^B-n_0^B
+ \end{pmatrix}
+ =\int_{[012]}\dd(\Ih n^A)\wedge\dd(\Ih n^B).
+ \label{eq:two-exact}
+\end{equation}
+The factor $1/2!$ is essential: the reference triangle has area $1/2$.
+Similarly define the fully antisymmetrized family
+\begin{equation}
+ Z_h^{ABC}=\frac1{3!}\sum_{\pi\in S_3}\operatorname{sgn}(\pi)
+ a^{\pi(A)}\cuph a^{\pi(B)}\cuph a^{\pi(C)}.
+ \label{eq:three-cup}
+\end{equation}
+It is the de Rham three-cochain of the affine third minor.
+
+There is also a distinguished target contraction.  If
+$T=[0123]$, direct expansion gives
+\begin{equation}
+ C_h[n](T)=\epsilon_{ABCD}
+ \left(n^A\cuph a^B\cuph a^C\cuph a^D\right)(T)
+ =\det[n_0\ n_1\ n_2\ n_3].
+ \label{eq:det-cup}
+\end{equation}
+Thus the energy cochains \eqref{eq:three-cup} and the topological contraction
+\eqref{eq:det-cup} belong to one differential graded algebra; they are not
+separate stencils.
+
+\section{Positive rotation-calibrated Hodge stars}
+
+Let $\lambda_i$ be the barycentric coordinates of a tetrahedron.  For an
+oriented $k$-face $\sigma=[i_0\ldots i_k]$, the Whitney form is
+\begin{equation}
+ \Wh(\sigma)=k!\sum_{r=0}^k(-1)^r\lambda_{i_r}
+ \dd\lambda_{i_0}\wedge\cdots\widehat{\dd\lambda_{i_r}}
+ \cdots\wedge\dd\lambda_{i_k}.
+ \label{eq:whitney}
+\end{equation}
+Define the local consistent Hodge matrix by
+\begin{equation}
+ (M_k^T)_{\sigma\tau}
+ =\int_T\Wh(\sigma)\wedge\star\Wh(\tau),
+ \qquad k=1,2,3.
+ \label{eq:hodge}
+\end{equation}
+
+\begin{proposition}[Positivity and rotation calibration]
+For every nondegenerate tetrahedron, $M_k^T$ is positive definite.  Under a
+rigid rotation $Q\in SO(3)$, the naturally identified matrix satisfies
+$M_k^{QT}=M_k^T$.  If $f,g$ are affine, then
+\begin{align}
+ (df)^TM_1^T(df)&=\int_T|\dd f|^2,\label{eq:hodge1}\\
+ (X_h^{fg})^TM_2^T(X_h^{fg})&=\int_T|\dd f\wedge\dd g|^2,
+ \label{eq:hodge2}\\
+ (Z_h^{fgh})^TM_3^T(Z_h^{fgh})&=\int_T|\dd f\wedge\dd g\wedge\dd h|^2.
+ \label{eq:hodge3}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Equation \eqref{eq:hodge} is a Gram matrix.  Linear independence of the local
+Whitney basis makes its nullspace trivial.  A rigid rotation preserves volume
+and the Euclidean inner product on exterior forms, giving covariance.  The
+commuting identity $\Wh d=\dd\Wh$ reconstructs every constant differential
+of an affine function.  Equations \eqref{eq:two-exact} and
+\eqref{eq:three-cup} then give \eqref{eq:hodge1}--\eqref{eq:hodge3}.
+\end{proof}
+
+This consistent star is deliberately not replaced by a diagonal
+circumcentric formula; diagonal positivity can fail on non-Delaunay
+tetrahedra.  Rotational calibration here means exact affine reconstruction,
+not an empirical average of body diagonals.
+
+\section{The shared cochain is the normalized-affine degree}
+
+On a tetrahedron write
+\begin{equation}
+ v_T(\lambda)=\sum_{i=0}^3\lambda_i n_i,
+ \qquad u_T=\frac{v_T}{|v_T|},
+ \qquad \lambda\in\Delta^3.
+ \label{eq:normalize}
+\end{equation}
+Fix $-1/3<\epsilon<1$ and impose
+$n_i\cdot n_j>\epsilon$ for all vertex pairs of every tetrahedron.  Then
+\begin{equation}
+ |v_T|^2
+ \ge \epsilon+(1-\epsilon)\sum_i\lambda_i^2
+ \ge\frac{1+3\epsilon}{4}>0.
+ \label{eq:affine-gap}
+\end{equation}
+The production action uses $\epsilon=-0.32$, for which the last lower bound
+is $10^{-2}$; every relaxed solution is in fact much farther from it.
+
+Let $s_T=\operatorname{sgn}\det[x_1-x_0,x_2-x_0,x_3-x_0]$ and define
+\begin{equation}
+ \Omega_h[n](T)=\frac{s_T}{2\pi^2}\,C_h[n](T)
+ \int_{\Delta^3}\frac{\dd\lambda}{|v_T(\lambda)|^4}.
+ \label{eq:omega}
+\end{equation}
+
+\begin{theorem}[Exact degree identity]
+If the boundary is the vacuum and \eqref{eq:affine-gap} holds, the normalized
+affine pieces glue to a continuous map $u_h:\Omega/\partial\Omega\to S^3$,
+and
+\begin{equation}
+ \sum_{T\in K_h^{(3)}}\Omega_h[n](T)=\deg u_h\in\ZZ.
+ \label{eq:degree}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+On the reference tetrahedron,
+\[
+ u_T^*\operatorname{vol}_{S^3}
+ =\frac{\det[v_T,\partial_1v_T,\partial_2v_T,\partial_3v_T]}
+ {|v_T|^4}\dd\lambda.
+\]
+The determinant is independent of $\lambda$ and equals
+$\det[n_0,n_1,n_2,n_3]=C_h[n](T)$.  Multiplication by $s_T$ converts the
+reference orientation to the physical orientation.  Summing and dividing by
+$\operatorname{vol}(S^3)=2\pi^2$ is the pullback definition of degree.
+\end{proof}
+
+This identity is stronger than agreement with one regular value.  The code
+nevertheless checks three regular values and an independent Duffy--Gauss
+evaluation of \eqref{eq:omega}.
+
+\section{Compatible complete-minor action and cell formula}
+
+Let $v_h=\Ih n_h$ be the P1 affine interpolant.  The AP-E11 action is
+\begin{equation}
+ E_h[n_h]=\sum_{T\in K_h}\int_T
+ \left\{
+ \frac12|Dv_h|^2+\frac R2|\wedge^2Dv_h|^2
+ +\frac K2|\wedge^3Dv_h|^2+m^2(1-v_h^0)
+ \right\}\dd x,
+ \label{eq:action}
+\end{equation}
+on the admissible nodal $S^3$ sector, and $+\infty$ outside it.  The production
+card uses $(R,K,m^2)=(1,0.35,0.12)$.  Equations
+\eqref{eq:hodge1}--\eqref{eq:hodge3} express every derivative term as a
+positive cochain Hodge norm.  The $K$ term is not an unrelated stabilizer:
+it is the norm of the complete family \eqref{eq:three-cup} whose contraction
+and radial dressing give \eqref{eq:omega}.  For a smooth $S^3$ map its norm
+is the squared topological-current density.
+
+For a periodic P1 corrector $\varphi:Y\to\RR^4$, define
+\begin{equation}
+ Q_{R,K}^{\rm cell}(A)=\inf_{\varphi\ \mathrm{periodic}}
+ \int_Y Q_{R,K}(A+D\varphi)\dd x,
+ \quad
+ Q_{R,K}(A)=\frac12|A|^2+\frac R2|M_2(A)|^2+\frac K2|M_3(A)|^2.
+ \label{eq:cell}
+\end{equation}
+
+\begin{theorem}[Finite-$R,K$ mesh-independent cell formula]
+On every conforming periodic tetrahedral mesh,
+\begin{equation}
+ \boxed{Q_{R,K}^{\rm cell}(A)=Q_{R,K}(A),\qquad\varphi=0
+ \text{ is a global minimizer}.}
+ \label{eq:cell-result}
+\end{equation}
+This holds for the uniform six-tet mesh and for both checkerboard five-tet
+phases, with no mesh-dependent rescaling.
+\end{theorem}
+
+\begin{proof}
+Periodicity and the null-Lagrangian identities give, for $r=1,2,3$,
+\begin{equation}
+ \frac1{|Y|}\int_Y M_r(A+D\varphi)\dd x=M_r(A).
+ \label{eq:nullmean}
+\end{equation}
+For $r=1$ this is the mean-zero gradient identity.  For $r=2,3$, expand each
+minor and integrate one derivative by parts; periodic boundary terms vanish
+and mixed derivatives cancel.  The function
+$(F,G,H)\mapsto(|F|^2+R|G|^2+K|H|^2)/2$ is convex.  Jensen applied to the
+complete minor vector and \eqref{eq:nullmean} proves the lower bound
+$Q_{R,K}(A)$, attained at zero corrector.  This is the standard polyconvex
+mechanism \cite{Ball1977}, evaluated here on the actual finite periodic
+complex rather than invoked as an asymptotic slogan.
+\end{proof}
+
+\section{Compensated compactness and the precise Gamma theorem}
+
+Let $a_h\to0$ on a shape-regular mesh family and suppose
+$\sup_hE_h[n_h]<\infty$.  The Dirichlet term bounds $v_h$ in $H^1$.
+Rellich gives $v_h\to v$ strongly in $L^2$ after a subsequence.  Nodal unit
+length and the local interpolation estimate
+\begin{equation}
+ \|1-|v_h|\|_{L^2}\le C a_h\|Dv_h\|_{L^2}
+ \label{eq:sphere-limit}
+\end{equation}
+imply $|v|=1$ almost everywhere.
+
+The action bounds $M_2(Dv_h)$ and $M_3(Dv_h)$ in $L^2$.  Because the
+cochains are actual affine minors, not one-corner products, the distributional
+null-Lagrangian identities identify their weak limits with $M_2(Dv)$ and
+$M_3(Dv)$.  Equivalently, each third minor satisfies the Piola form
+\begin{equation}
+ \det D(v_h^{A},v_h^{B},v_h^{C})
+ =\frac13\operatorname{div}
+ \left((v_h^{A},v_h^{B},v_h^{C})\,cof
+ D(v_h^{A},v_h^{B},v_h^{C})\right).
+ \label{eq:piola}
+\end{equation}
+This is precisely the differential constraint missing in AP-E10; general
+div--curl theory explains why such compatibility is indispensable
+\cite{BrianeCasadoDiaz2016}.
+
+The normalized current has the exact affine formula
+\begin{equation}
+ J_h=\frac{\det[v_h,D_1v_h,D_2v_h,D_3v_h]}{|v_h|^4}.
+ \label{eq:current}
+\end{equation}
+The uniform gap \eqref{eq:affine-gap}, strong finite-$L^p$ convergence of
+$v_h$, and weak $L^2$ compactness of the third minors identify the weak
+limit of $J_h$.  In particular its integral and hence degree are closed.
+
+\begin{theorem}[Unconditional relaxed fixed-degree Gamma theorem]
+Fix a degree $B$, the boundary vacuum, $-1/3<\epsilon<1$, and a shape-regular
+mesh family.  In strong $L^2$, the discrete functionals \eqref{eq:action}
+Gamma-converge on the degree-$B$ sector to the fixed-degree lower-
+semicontinuous relaxation of the smooth complete-minor action.
+\end{theorem}
+
+\begin{proof}
+Equicoercivity and sector closure were established above.  Convex weak lower
+semicontinuity in $(Dv,M_2(Dv),M_3(Dv))$ gives the liminf.  For every smooth
+$S^3$ map, nodal interpolation is eventually admissible, preserves degree,
+and converges in all three Hodge energies by affine exactness.  Apply that
+recovery construction to a smooth sequence defining the fixed-degree lower-
+semicontinuous relaxation and take a diagonal subsequence.
+\end{proof}
+
+The last phrase is important.  This theorem does not assert that the relaxed
+functional equals the naive classical graph-norm functional on every finite-
+energy Sobolev map.  Smooth approximation of manifold-valued Sobolev maps is
+topology-sensitive \cite{Bethuel1991}; the exact density problem for the
+simultaneous $Dv$, $M_2(Dv)$, and $M_3(Dv)$ graph norm is not supplied by the
+standard theorem.  Recent rigorous lattice-skyrmion work gives a useful
+compactness/liminf/recovery architecture in two dimensions
+\cite{BrianiCicaleseKreutz2026}, but does not identify this three-dimensional
+graph-norm relaxation.
+
+\section{Numerical verification and quotient gate}
+
+The independent card is
+\begin{center}
+\texttt{route\_f/code/scan\_ap\_e11\_compatible\_cochain\_action.py}.
+\end{center}
+It verifies exact integer cochain identities, local Hodge matrices, radial
+degree integration, periodic cell optimizations, and thirteen unanchored
+stationary fields.  Selected residuals are
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+check & observed maximum/minimum\\
+\midrule
+$d^2$, Leibniz, associativity residual & $0$\\
+third-cup determinant residual & $8.33\times10^{-16}$\\
+minimum local Hodge eigenvalue & $2.485\times10^{-2}$\\
+rigid-rotation Hodge residual & $3.55\times10^{-15}$\\
+affine one-/two-/three-form reconstruction residual & $2.40\times10^{-16}$\\
+radial cochain versus regular-value degree & $3.07\times10^{-7}$\\
+periodic complete-minor mean residual & $1.78\times10^{-15}$\\
+optimized cell-formula relative residual & $2.56\times10^{-14}$\\
+maximum projected gradient density, 13 cases & $1.54\times10^{-7}$\\
+minimum pair dot product, 13 cases & $0.2724$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every case has three-target $B=(1,1,1)$.  The common sequence extends through
+$N=37$, $L=8$, and $a=0.222222$.  Translation and mesh comparisons use
+$N=29$, $L=7$, and $a=0.25$.  The quotient uses the positive density of the same
+action, lumped from each exact tetrahedral contribution to its four vertices;
+its radial comparison is the maximum CDF distance, not a bin-phase-sensitive
+histogram norm.
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+gate & observed & threshold & pass\\
+\midrule
+joint-tail energy spread & $0.437\%$ & $3\%$ & yes\\
+joint-tail centered-radius spread & $3.489\%$ & $5\%$ & yes\\
+joint-tail radial CDF distance & $4.067\%$ & $5\%$ & yes\\
+translated-start energy spread & $8.33\times10^{-12}$ & $1\%$ & yes\\
+translated-start radius spread & $7.16\times10^{-7}$ & $2\%$ & yes\\
+translated-start CDF distance & $5.91\times10^{-7}$ & $3\%$ & yes\\
+five-/six-tet energy spread & $0.463\%$ & $3\%$ & yes\\
+five-/six-tet radius spread & $0.752\%$ & $5\%$ & yes\\
+five-/six-tet CDF distance & $3.556\%$ & $5\%$ & yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus
+\begin{equation}
+ \boxed{C_{\rm cell}=\mathrm{true},\quad
+ C_{\rm quotient}=\mathrm{true},\quad
+ C_{\rm relaxed\ regulator}=\mathrm{true}.}
+ \label{eq:passed}
+\end{equation}
+The classical-action identification remains
+\begin{equation}
+ \boxed{C_{\rm graph\ density}=\mathrm{false},\quad
+ C_{\rm classical\ regulator}=\mathrm{false},\quad
+ C_{\rm Hessian}=C_{\det}=\mathrm{false}.}
+ \label{eq:failed}
+\end{equation}
+Equation \eqref{eq:failed} is not a return of the AP-E10 stencil blocker.
+That blocker is removed.  It is a sharper functional-analytic question:
+either prove fixed-degree smooth density in the complete-minor graph norm, or
+prove that the selected relaxed minimizer is a regular isolated classical
+solution.  Only then may the same-action Riemann Hessian be assembled; a
+regulated determinant additionally requires a declared fermion kernel and
+counterterm prescription.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e11_compatible_cochain_action}
+
+\end{document}

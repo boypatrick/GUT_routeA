@@ -26,7 +26,34 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-18 AP-E10 stencil no-go, cell formula, and translation quotient
+## 2026-07-19 AP-E11 compatible tetrahedral cochain action
+
+AP-E11 replaces the AP-E10-refuted one-corner stencil by one compatible
+discrete-de-Rham evidence chain.  Primal `dn` is combined with the
+Alexander--Whitney front/back cup product, which obeys the exact graded
+Leibniz rule.  Full antisymmetrization reproduces the affine two- and
+three-minor cochains.  Positive Whitney mass matrices provide the calibrated
+Hodge stars, and radial pullback of the same triple cup gives the exact
+normalized-affine degree on every admissible tetrahedron.
+
+The periodic cell problem is closed analytically: all complete-minor means
+are periodic null Lagrangians, so convexity makes the zero corrector global
+and gives the mesh-independent density
+`|A|^2/2+R|M_2(A)|^2/2+K|M_3(A)|^2/2`.  The 13-case unanchored production scan
+passes the declared joint-limit, translation, and five-/six-tet quotient
+thresholds; all fields are stationary, admissible, and `B=1`.
+
+The rigorous continuum conclusion is deliberately narrower.  Gamma
+convergence is proved to the fixed-degree lower-semicontinuous relaxation.
+Smooth fixed-degree density in the full minor graph norm (or regularity and
+isolation of the selected relaxed minimizer) remains unproved.  Consequently
+the relaxed regulator gate passes, but the classical background, Hessian,
+determinant, and portal gates remain closed.  See
+`tex/ap_e11_compatible_cochain_action.tex`,
+`code/scan_ap_e11_compatible_cochain_action.py`, and
+`output/ap_e11_compatible_cochain_action.{json,md}`.
+
+## 2026-07-18 AP-E10 stencil no-go, cell formula, and translation quotient (superseded by AP-E11)
 
 AP-E10 proves that the AP-E7 one-corner forward Skyrme stencil cannot support
 the proposed continuum proof.  Exact three- and two-periodic sphere-valued

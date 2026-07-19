@@ -1,0 +1,144 @@
+\section{AP-E11: compatible complete-minor cochain action}
+
+AP-E11 replaces, rather than rescales, the AP-E10 stencil.  On an ordered
+tetrahedral complex define the Alexander--Whitney front/back cup by
+\begin{equation}
+ (\alpha\smile_h\beta)[v_0\ldots v_{p+q}]
+ =\alpha[v_0\ldots v_p]\,\beta[v_p\ldots v_{p+q}].
+ \label{eq:e11-cup}
+\end{equation}
+The exact differential graded identities are
+\begin{equation}
+ d^2=0,\qquad d(\alpha\smile_h\beta)=d\alpha\smile_h\beta
+ +(-1)^p\alpha\smile_h d\beta,
+ \qquad (\alpha\smile_h\beta)\smile_h\gamma
+ =\alpha\smile_h(\beta\smile_h\gamma).
+ \label{eq:e11-dga}
+\end{equation}
+For $a^A=dn^A$, the normalized antisymmetric cochains
+\begin{align}
+ X_h^{AB}&=\frac12(a^A\smile_h a^B-a^B\smile_h a^A),\label{eq:e11-x}\\
+ Z_h^{ABC}&=\frac1{3!}\sum_{\pi\in S_3}\operatorname{sgn}(\pi)
+ a^{\pi(A)}\smile_h a^{\pi(B)}\smile_h a^{\pi(C)}
+ \label{eq:e11-z}
+\end{align}
+are exactly the de Rham cochains of the P1 affine two- and three-minors.
+The factor $1/2$ in \eqref{eq:e11-x} is the reference-triangle area.
+
+For a $k$-simplex $\sigma=[i_0\ldots i_k]$, use the Whitney form
+\begin{equation}
+ \mathcal W_h(\sigma)=k!\sum_{r=0}^k(-1)^r\lambda_{i_r}
+ d\lambda_{i_0}\wedge\cdots\widehat{d\lambda_{i_r}}\cdots
+ \wedge d\lambda_{i_k}
+ \label{eq:e11-whitney}
+\end{equation}
+and the consistent Hodge Gram matrix
+$(M_k^T)_{\sigma\tau}=\int_T\mathcal W_h(\sigma)\wedge
+\star\mathcal W_h(\tau)$.  Every $M_k^T$, $k=1,2,3$, is positive definite;
+rigid rotations preserve it; and $\mathcal W_hd=d\mathcal W_h$ reconstructs
+affine exterior forms exactly
+\cite{Whitney1957,Dodziuk1976,ArnoldFalkWinther2010}.  The audit gives
+$\lambda_{\min}=2.485\times10^{-2}$, rotation residual
+$3.55\times10^{-15}$, and affine reconstruction residual
+$2.40\times10^{-16}$.
+
+The same third-cup family supplies topology.  On $T=[0123]$,
+\begin{equation}
+ C_h[n](T)=\epsilon_{ABCD}
+ (n^A\smile_h a^B\smile_h a^C\smile_h a^D)(T)
+ =\det[n_0\ n_1\ n_2\ n_3].
+ \label{eq:e11-cup-det}
+\end{equation}
+If every tetrahedral vertex pair obeys $n_i\cdot n_j>\epsilon>-1/3$, then
+for $v_T=\sum_i\lambda_i n_i$,
+\begin{equation}
+ |v_T|^2\ge\epsilon+(1-\epsilon)\sum_i\lambda_i^2
+ \ge\frac{1+3\epsilon}{4}>0.
+ \label{eq:e11-gap}
+\end{equation}
+Consequently $u_T=v_T/|v_T|$ is defined and its exact topological cochain is
+\begin{equation}
+ \Omega_h(T)=\frac{s_T}{2\pi^2}C_h[n](T)
+ \int_{\Delta^3}|v_T(\lambda)|^{-4}\,d\lambda,\qquad
+ \sum_T\Omega_h(T)=\deg u_h.
+ \label{eq:e11-degree}
+\end{equation}
+This is the pullback formula for the $S^3$ volume form; the numerator is
+constant on each affine tetrahedron and equals \eqref{eq:e11-cup-det}.
+
+The compatible action is
+\begin{equation}
+ \begin{split}
+ E_h&=\sum_T\int_T\left\{
+ \frac12|Dv_h|^2+\frac R2|\wedge^2Dv_h|^2
+ +\frac K2|\wedge^3Dv_h|^2+m^2(1-v_h^0)\right\}d^3x,\\
+ &(R,K,m^2)=(1,0.35,0.12).
+ \end{split}
+ \label{eq:e11-action}
+\end{equation}
+The positive $K$ term is the Hodge norm of the complete family
+\eqref{eq:e11-z}; its contraction with $n$ and radial dressing give
+\eqref{eq:e11-degree}.  It closes the finite-grid topology-collapse mode
+without reintroducing a mesh-direction quartic.
+
+Every periodic P1 corrector preserves the means of all first, second, and
+third minors.  Convex Jensen inequality on the complete minor vector proves
+the exact cell formula
+\begin{equation}
+ \boxed{Q_{R,K}^{\rm cell}(A)
+ =\frac12|A|^2+\frac R2|M_2(A)|^2+\frac K2|M_3(A)|^2,\qquad
+ \varphi_{\min}=0.}
+ \label{eq:e11-cell}
+\end{equation}
+It is identical on the uniform six-tet and both checkerboard five-tet meshes;
+the optimized residual is $2.56\times10^{-14}$ and the minor-mean residual is
+$1.78\times10^{-15}$.  This is the model-specific polyconvex mechanism
+\cite{Ball1977}, not a scalar rescaling of AP-E10.
+
+The Dirichlet term gives $H^1$ equicoercivity and forces the P1 limit back to
+$S^3$.  The $L^2$ Hodge bounds on the compatible second and third minors,
+together with Piola/null-Lagrangian identities, identify their weak limits.
+Equation \eqref{eq:e11-gap} then identifies the normalized current
+$\det[v_h,D_1v_h,D_2v_h,D_3v_h]/|v_h|^4$ and closes degree.  Convex lower
+semicontinuity gives the liminf; smooth nodal interpolation gives recovery.
+Thus the discrete theory Gamma-converges unconditionally to the fixed-degree
+lower-semicontinuous relaxation.  Equality with the naive unrelaxed graph-
+norm functional still requires a topology-sensitive smooth-density theorem
+\cite{Bethuel1991}.
+
+The production card passes $11/11$.  All thirteen unanchored cases have
+$B=(1,1,1)$, projected gradient density at most $1.54\times10^{-7}$, and pair
+dot at least $0.2724$.  The tail reaches $(N,L,a)=(37,8,0.222222)$; translation
+and mesh comparisons use $(29,7,0.25)$.  With the same-action positive energy
+density as quotient measure, the diagnostics are
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+diagnostic&observed&threshold&pass\\
+\midrule
+joint-tail energy spread&0.437\%&3\%&yes\\
+joint-tail centered-radius spread&3.489\%&5\%&yes\\
+joint-tail radial CDF distance&4.067\%&5\%&yes\\
+translated-start energy spread&$8.33\times10^{-12}$&1\%&yes\\
+translated-start centered-radius spread&$7.16\times10^{-7}$&2\%&yes\\
+five-/six-tet energy spread&0.463\%&3\%&yes\\
+five-/six-tet centered-radius spread&0.752\%&5\%&yes\\
+five-/six-tet radial CDF distance&3.556\%&5\%&yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+Therefore
+\begin{equation}
+ \boxed{\begin{gathered}
+ C_{\rm cell}=C_{\rm quotient}
+ =C_{\rm relaxed\ regulator}=\mathrm{true},\\
+ C_{\rm graph\ density}=C_{\rm classical\ regulator}
+ =C_{\rm Hessian}=C_{\det}=\mathrm{false}.
+ \end{gathered}}
+ \label{eq:e11-decision}
+\end{equation}
+The AP-E10 stencil and mesh-universality blockers are closed.  The next
+single mathematical gate is either fixed-degree smooth density in the
+complete-minor graph norm or independent regularity and isolation of the
+selected relaxed minimizer.  The classical same-action Hessian and regulated
+determinant remain embargoed until one of those routes succeeds.

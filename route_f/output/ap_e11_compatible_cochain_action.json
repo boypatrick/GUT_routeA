@@ -1,0 +1,3486 @@
+{
+  "artifact": "AP-E11 compatible tetrahedral cochain action",
+  "cell_problem": {
+    "density": "Q_R,K(A)=1/2 |A|^2 + R/2 |wedge^2 A|^2 + K/2 |wedge^3 A|^2",
+    "finite_K": 0.35,
+    "finite_R": 1.0,
+    "mesh_independent_closed_formula": true,
+    "null_lagrangian_rows": [
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 0,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 9.34232087547226e-18,
+        "third_minor_mean_residual": 2.6483092478648132e-18
+      },
+      {
+        "gradient_mean_residual": 8.881784197001252e-16,
+        "matrix_index": 1,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 1.9896624567705057e-17,
+        "third_minor_mean_residual": 6.991169047710486e-18
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 2,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 2.220446049250313e-16,
+        "third_minor_mean_residual": 3.455836865552195e-17
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 3,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 1.6653345369377348e-16,
+        "third_minor_mean_residual": 1.6653345369377348e-16
+      },
+      {
+        "gradient_mean_residual": 8.881784197001252e-16,
+        "matrix_index": 4,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 8.881784197001252e-16,
+        "third_minor_mean_residual": 8.881784197001252e-16
+      },
+      {
+        "gradient_mean_residual": 4.440892098500626e-16,
+        "matrix_index": 5,
+        "mesh": "uniform_ppp",
+        "minor_mean_residual": 1.7763568394002505e-15,
+        "third_minor_mean_residual": 4.440892098500626e-16
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 0,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 9.607017058647883e-18,
+        "third_minor_mean_residual": 7.437607147303389e-19
+      },
+      {
+        "gradient_mean_residual": 3.3306690738754696e-16,
+        "matrix_index": 1,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 5.570897152933815e-17,
+        "third_minor_mean_residual": 2.858992555405647e-18
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 2,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 3.3306690738754696e-16,
+        "third_minor_mean_residual": 2.220446049250313e-16
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 3,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 1.1102230246251565e-16,
+        "third_minor_mean_residual": 1.1102230246251565e-16
+      },
+      {
+        "gradient_mean_residual": 6.661338147750939e-16,
+        "matrix_index": 4,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 8.881784197001252e-16,
+        "third_minor_mean_residual": 4.440892098500626e-16
+      },
+      {
+        "gradient_mean_residual": 4.440892098500626e-16,
+        "matrix_index": 5,
+        "mesh": "five_tet_phase0",
+        "minor_mean_residual": 5.551115123125783e-16,
+        "third_minor_mean_residual": 4.440892098500626e-16
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 0,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 1.3840860801350867e-17,
+        "third_minor_mean_residual": 5.0362651551748e-19
+      },
+      {
+        "gradient_mean_residual": 3.3306690738754696e-16,
+        "matrix_index": 1,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 3.4318784798498195e-17,
+        "third_minor_mean_residual": 1.3549380712730275e-18
+      },
+      {
+        "gradient_mean_residual": 3.3306690738754696e-16,
+        "matrix_index": 2,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 2.220446049250313e-16,
+        "third_minor_mean_residual": 1.1671292774850304e-17
+      },
+      {
+        "gradient_mean_residual": 2.220446049250313e-16,
+        "matrix_index": 3,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 2.220446049250313e-16,
+        "third_minor_mean_residual": 2.220446049250313e-16
+      },
+      {
+        "gradient_mean_residual": 8.881784197001252e-16,
+        "matrix_index": 4,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 1.7763568394002505e-15,
+        "third_minor_mean_residual": 1.3322676295501878e-15
+      },
+      {
+        "gradient_mean_residual": 6.661338147750939e-16,
+        "matrix_index": 5,
+        "mesh": "five_tet_phase1",
+        "minor_mean_residual": 4.440892098500626e-16,
+        "third_minor_mean_residual": 4.440892098500626e-16
+      }
+    ],
+    "optimization_rows": [
+      {
+        "cell_minimum": 0.5000000000000006,
+        "closed_formula": 0.5,
+        "gradient_infinity_norm": 3.3014803439701554e-08,
+        "matrix_index": 0,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 15,
+        "optimizer_success": true,
+        "relative_residual": 5.551115123125783e-16
+      },
+      {
+        "cell_minimum": 1.0,
+        "closed_formula": 1.0,
+        "gradient_infinity_norm": 1.5577283346904228e-08,
+        "matrix_index": 1,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 20,
+        "optimizer_success": true,
+        "relative_residual": 0.0
+      },
+      {
+        "cell_minimum": 3.1750000000000007,
+        "closed_formula": 3.175,
+        "gradient_infinity_norm": 1.0087661692736372e-08,
+        "matrix_index": 2,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 15,
+        "optimizer_success": true,
+        "relative_residual": 2.7974123455122054e-16
+      },
+      {
+        "cell_minimum": 2.914125075000003,
+        "closed_formula": 2.9141250749999994,
+        "gradient_infinity_norm": 9.413496490336473e-08,
+        "matrix_index": 3,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 18,
+        "optimizer_success": true,
+        "relative_residual": 1.2191356195651628e-15
+      },
+      {
+        "cell_minimum": 26.5541319963866,
+        "closed_formula": 26.554131996386257,
+        "gradient_infinity_norm": 1.077320749276467e-06,
+        "matrix_index": 4,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 28,
+        "optimizer_success": true,
+        "relative_residual": 1.2977762816368726e-14
+      },
+      {
+        "cell_minimum": 26.28785004229313,
+        "closed_formula": 26.287850042292458,
+        "gradient_infinity_norm": 3.6174947598693885e-06,
+        "matrix_index": 5,
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 30,
+        "optimizer_success": true,
+        "relative_residual": 2.5542708293490366e-14
+      },
+      {
+        "cell_minimum": 0.5000000000000038,
+        "closed_formula": 0.5,
+        "gradient_infinity_norm": 1.0218441565095181e-07,
+        "matrix_index": 0,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 12,
+        "optimizer_success": true,
+        "relative_residual": 3.774758283725532e-15
+      },
+      {
+        "cell_minimum": 1.0,
+        "closed_formula": 1.0,
+        "gradient_infinity_norm": 3.806816528673095e-08,
+        "matrix_index": 1,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 16,
+        "optimizer_success": true,
+        "relative_residual": 0.0
+      },
+      {
+        "cell_minimum": 3.1750000000000007,
+        "closed_formula": 3.175,
+        "gradient_infinity_norm": 2.3620134228033444e-08,
+        "matrix_index": 2,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 14,
+        "optimizer_success": true,
+        "relative_residual": 2.7974123455122054e-16
+      },
+      {
+        "cell_minimum": 2.9141250750000003,
+        "closed_formula": 2.9141250749999994,
+        "gradient_infinity_norm": 2.9198845240318086e-08,
+        "matrix_index": 3,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 16,
+        "optimizer_success": true,
+        "relative_residual": 3.047839048912907e-16
+      },
+      {
+        "cell_minimum": 26.554131996386346,
+        "closed_formula": 26.554131996386257,
+        "gradient_infinity_norm": 5.058404842217534e-07,
+        "matrix_index": 4,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 27,
+        "optimizer_success": true,
+        "relative_residual": 3.3447842310228673e-15
+      },
+      {
+        "cell_minimum": 26.28785004229252,
+        "closed_formula": 26.287850042292458,
+        "gradient_infinity_norm": 3.763057939004666e-07,
+        "matrix_index": 5,
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 23,
+        "optimizer_success": true,
+        "relative_residual": 2.2974922803668584e-15
+      },
+      {
+        "cell_minimum": 0.5000000000000004,
+        "closed_formula": 0.5,
+        "gradient_infinity_norm": 1.4501343938155832e-08,
+        "matrix_index": 0,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 14,
+        "optimizer_success": true,
+        "relative_residual": 4.440892098500626e-16
+      },
+      {
+        "cell_minimum": 1.0000000000000002,
+        "closed_formula": 1.0,
+        "gradient_infinity_norm": 2.0215600702681393e-08,
+        "matrix_index": 1,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 15,
+        "optimizer_success": true,
+        "relative_residual": 2.220446049250313e-16
+      },
+      {
+        "cell_minimum": 3.1750000000000016,
+        "closed_formula": 3.175,
+        "gradient_infinity_norm": 5.2569648936483624e-08,
+        "matrix_index": 2,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 13,
+        "optimizer_success": true,
+        "relative_residual": 5.594824691024411e-16
+      },
+      {
+        "cell_minimum": 2.9141250750000083,
+        "closed_formula": 2.9141250749999994,
+        "gradient_infinity_norm": 1.260240064114744e-07,
+        "matrix_index": 3,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 15,
+        "optimizer_success": true,
+        "relative_residual": 3.047839048912907e-15
+      },
+      {
+        "cell_minimum": 26.55413199638631,
+        "closed_formula": 26.554131996386257,
+        "gradient_infinity_norm": 4.1383351876561614e-07,
+        "matrix_index": 4,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 29,
+        "optimizer_success": true,
+        "relative_residual": 2.0068705386137202e-15
+      },
+      {
+        "cell_minimum": 26.287850042292558,
+        "closed_formula": 26.287850042292458,
+        "gradient_infinity_norm": 8.511703197284365e-07,
+        "matrix_index": 5,
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 23,
+        "optimizer_success": true,
+        "relative_residual": 3.784104932368943e-15
+      }
+    ],
+    "polyconvexity": true,
+    "proof": "for every periodic P1 corrector phi, the means of A+D phi and of every second and third minor equal the corresponding affine minors; the displayed density is convex in the complete minor vector, so Jensen proves phi=0 is a global minimizer on every conforming tetrahedral mesh"
+  },
+  "checks": [
+    {
+      "detail": "d2=0.000e+00; Leibniz=0.000e+00",
+      "group": "P1_algebra",
+      "name": "the simplicial coboundary squares to zero and the shifted cup satisfies exact Leibniz and associativity",
+      "pass": true
+    },
+    {
+      "detail": "two=0.000e+00; three=8.327e-16",
+      "group": "P1_algebra",
+      "name": "antisymmetric exact cups reproduce the affine two-minor and the epsilon third cup reproduces the vertex determinant",
+      "pass": true
+    },
+    {
+      "detail": "lambda_min=2.485e-02; rotation=3.553e-15",
+      "group": "P2_hodge",
+      "name": "the one- and two-cochain Whitney Hodge matrices are strictly positive and rotation covariant",
+      "pass": true
+    },
+    {
+      "detail": "maximum affine residual=2.397e-16",
+      "group": "P2_hodge",
+      "name": "Whitney reconstruction and Hodge energies are exact for affine one- and two-forms",
+      "pass": true
+    },
+    {
+      "detail": "maximum residual=3.068e-07",
+      "group": "P3_degree",
+      "name": "the radially dressed third cup cochain agrees with normalized-affine regular-value degree on all meshes",
+      "pass": true
+    },
+    {
+      "detail": "maximum null-Lagrangian residual=1.776e-15",
+      "group": "P4_cell",
+      "name": "periodic P1 gradients and two-minors retain their affine means on every six- and five-tet mesh",
+      "pass": true
+    },
+    {
+      "detail": "maximum relative cell residual=2.554e-14",
+      "group": "P4_cell",
+      "name": "the finite-R cell minimum is the same rotationally invariant closed formula on every mesh",
+      "pass": true
+    },
+    {
+      "detail": "classical graph-norm density remains separate and explicitly false",
+      "group": "P5_compactness",
+      "name": "compatible minors close the liminf and topological-current concentration defect for the relaxed fixed-degree action",
+      "pass": true
+    },
+    {
+      "detail": "failed=[]",
+      "group": "P6_quotient",
+      "name": "all compatible-action representatives are unanchored stationary admissible B=1 fields",
+      "pass": true
+    },
+    {
+      "detail": "production=True; threshold=True; quotient=True",
+      "group": "P6_quotient",
+      "name": "the smaller-a/larger-L translation-and-triangulation quotient thresholds are evaluated without premature promotion",
+      "pass": true
+    },
+    {
+      "detail": "[('route_f/code/scan_ap_e11_compatible_cochain_action.py', '616102db5266aacd7a11d96a125b73bf60c4fa3ea07966b65f33de0a3d060f49'), ('route_f/code/ap_e9_triangulation_tools.py', '89230d6e623acb9a3292b7a69d43a929882961901a90b6df807c4af3e881e910')]",
+      "group": "P0_provenance",
+      "name": "the AP-E11 source and triangulation helper are checksummed",
+      "pass": true
+    }
+  ],
+  "checks_passed": 11,
+  "checks_total": 11,
+  "cochain_algebra": {
+    "antisymmetric_two_cup_equals_affine_wedge_residual": 0.0,
+    "associativity_maximum_residual": 0.0,
+    "d_squared_zero_maximum_residual": 0.0,
+    "epsilon_n_cup_dn3_equals_vertex_determinant_residual": 8.326672684688674e-16,
+    "leibniz_maximum_residual": 0.0,
+    "leibniz_rows": [
+      {
+        "degrees": [
+          0,
+          0
+        ],
+        "leibniz_maximum_residual": 0.0
+      },
+      {
+        "degrees": [
+          0,
+          1
+        ],
+        "leibniz_maximum_residual": 0.0
+      },
+      {
+        "degrees": [
+          1,
+          0
+        ],
+        "leibniz_maximum_residual": 0.0
+      },
+      {
+        "degrees": [
+          1,
+          1
+        ],
+        "leibniz_maximum_residual": 0.0
+      },
+      {
+        "degrees": [
+          1,
+          2
+        ],
+        "leibniz_maximum_residual": 0.0
+      }
+    ],
+    "verdict": "the shifted front/back cup is an exact differential graded product; target antisymmetrization recovers the affine exterior minors"
+  },
+  "degree_cochain": {
+    "admissibility_lower_bound": "if every pair in a tetrahedron has dot product at least epsilon, then |sum lambda_i n_i|^2 >= epsilon+(1-epsilon) sum lambda_i^2 >= (1+3 epsilon)/4",
+    "field": {
+      "extent": 13,
+      "length": 7.0,
+      "profile": "compact C1 hedgehog with exact vacuum boundary"
+    },
+    "rows": [
+      {
+        "all_targets_agree": true,
+        "final_cochain_vs_preimage_degree_residual": 3.06846700603991e-07,
+        "mesh": "uniform_ppp",
+        "quadrature_rows": [
+          {
+            "map_degree_from_shared_cochain": -0.9998660795136733,
+            "maximum_local_absolute_contribution": 0.0030241885646295733,
+            "minimum_sampled_affine_norm": 0.6659450162331368,
+            "quadrature_order": 4,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -0.9999934169561268,
+            "maximum_local_absolute_contribution": 0.0030234501383982217,
+            "minimum_sampled_affine_norm": 0.6341124695158036,
+            "quadrature_order": 6,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -0.9999996931532994,
+            "maximum_local_absolute_contribution": 0.003023444437467628,
+            "minimum_sampled_affine_norm": 0.6186258468432211,
+            "quadrature_order": 8,
+            "reference_simplex_weight_sum": 0.16666666666666669
+          }
+        ],
+        "successive_quadrature_residual": 6.276197172638831e-06,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.02914779874819114,
+            "minimum_hit_positive_cone_margin": 0.01085351370178202,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.14527872917441914,
+            "minimum_hit_positive_cone_margin": 0.041827769792283705,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.12899498115448946,
+            "minimum_hit_positive_cone_margin": 0.1313138890798943,
+            "preimage_tetrahedra": 1
+          }
+        ]
+      },
+      {
+        "all_targets_agree": true,
+        "final_cochain_vs_preimage_degree_residual": 7.704887594606191e-08,
+        "mesh": "five_tet_phase0",
+        "quadrature_rows": [
+          {
+            "map_degree_from_shared_cochain": -1.0001709827893672,
+            "maximum_local_absolute_contribution": 0.005385906721938936,
+            "minimum_sampled_affine_norm": 0.7206656874390213,
+            "quadrature_order": 4,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -1.000003260572022,
+            "maximum_local_absolute_contribution": 0.00538277795717542,
+            "minimum_sampled_affine_norm": 0.7097283118516208,
+            "quadrature_order": 6,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -1.000000077048876,
+            "maximum_local_absolute_contribution": 0.005382739218120454,
+            "minimum_sampled_affine_norm": 0.7045919601284488,
+            "quadrature_order": 8,
+            "reference_simplex_weight_sum": 0.16666666666666669
+          }
+        ],
+        "successive_quadrature_residual": 3.183523145988687e-06,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.09213319778533476,
+            "minimum_hit_positive_cone_margin": 0.0034336812429693435,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.1716081967427777,
+            "minimum_hit_positive_cone_margin": 0.035410227220856134,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.07981780509442479,
+            "minimum_hit_positive_cone_margin": 0.046134487385462025,
+            "preimage_tetrahedra": 1
+          }
+        ]
+      },
+      {
+        "all_targets_agree": true,
+        "final_cochain_vs_preimage_degree_residual": 3.952916727278932e-08,
+        "mesh": "five_tet_phase1",
+        "quadrature_rows": [
+          {
+            "map_degree_from_shared_cochain": -1.0001697518339652,
+            "maximum_local_absolute_contribution": 0.005383344412025292,
+            "minimum_sampled_affine_norm": 0.7362617818091632,
+            "quadrature_order": 4,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -1.0000024630332949,
+            "maximum_local_absolute_contribution": 0.005379424873116581,
+            "minimum_sampled_affine_norm": 0.7336170547096927,
+            "quadrature_order": 6,
+            "reference_simplex_weight_sum": 0.16666666666666674
+          },
+          {
+            "map_degree_from_shared_cochain": -1.0000000395291673,
+            "maximum_local_absolute_contribution": 0.005379364455431844,
+            "minimum_sampled_affine_norm": 0.7342075784534016,
+            "quadrature_order": 8,
+            "reference_simplex_weight_sum": 0.16666666666666669
+          }
+        ],
+        "successive_quadrature_residual": 2.423504127602172e-06,
+        "target_rows": [
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.13772401990729433,
+            "minimum_hit_positive_cone_margin": 0.005115833423370677,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.15968859699477714,
+            "minimum_hit_positive_cone_margin": 0.03140215581200033,
+            "preimage_tetrahedra": 1
+          },
+          {
+            "baryon_number": 1,
+            "map_degree": -1,
+            "minimum_hit_absolute_determinant": 0.2950566922706436,
+            "minimum_hit_positive_cone_margin": 0.06947301330992749,
+            "preimage_tetrahedra": 1
+          }
+        ]
+      }
+    ],
+    "theorem": "Omega_h(T)=(orientation(T)/(2 pi^2)) (epsilon n cup dn cup dn cup dn)(T) integral_Delta |sum lambda_i n_i|^(-4) d lambda; its sum is the pullback integral of the normalized-affine map and hence its degree"
+  },
+  "determinant_variation_gate_open": false,
+  "fail_closed": {
+    "classical_graph_norm_density_theorem": false,
+    "classical_regulator_stable_background": false,
+    "compatible_cochain_action_constructed": true,
+    "finite_R_mesh_independent_cell_formula": true,
+    "gw_domain_wall_parallel_lane_retained": true,
+    "one_corner_forward_stencil_retired": true,
+    "positive_rotation_calibrated_hodge": true,
+    "quotient_continuum_gate": true,
+    "regulated_determinant_variation_allowed": false,
+    "relaxed_fixed_degree_gamma_theorem": true,
+    "relaxed_regulator_stable_background": true,
+    "same_action_riemann_hessian_allowed": false,
+    "shared_degree_three_cochain": true,
+    "shifted_cup_exact_leibniz": true,
+    "so3_mod_two_index_parallel_lane_retained": true
+  },
+  "generated_utc": "2026-07-19T02:05:19.391110+00:00",
+  "hessian_gate_open": false,
+  "hodge_star": {
+    "exact_one_form_reconstruction_residual": 6.206335383118183e-17,
+    "exact_three_form_reconstruction_residual": 1.1102230246251565e-16,
+    "exact_two_form_reconstruction_residual": 2.396682302503803e-16,
+    "maximum_rotation_covariance_residual": 3.552713678800501e-15,
+    "minimum_hodge_eigenvalue": 0.024854527978471326,
+    "one_cochain_energy_identity_residual": 1.3877787807814457e-17,
+    "rows": [
+      {
+        "degree": 1,
+        "maximum_eigenvalue": 0.14854135056869255,
+        "minimum_eigenvalue": 0.024854527978471326,
+        "rotation_covariance_residual": 2.7755575615628914e-17
+      },
+      {
+        "degree": 2,
+        "maximum_eigenvalue": 0.5723833811426083,
+        "minimum_eigenvalue": 0.18700367050272654,
+        "rotation_covariance_residual": 1.3877787807814457e-16
+      },
+      {
+        "degree": 3,
+        "maximum_eigenvalue": 3.1796502384737657,
+        "minimum_eigenvalue": 3.1796502384737657,
+        "rotation_covariance_residual": 3.552713678800501e-15
+      }
+    ],
+    "three_cochain_energy_identity_residual": 2.7755575615628914e-17,
+    "two_cochain_energy_identity_residual": 1.1102230246251565e-16,
+    "verdict": "the consistent Whitney stars are positive Gram matrices, commute with rigid rotations, and exactly reconstruct constant one-, two-, and three-forms"
+  },
+  "numpy": "2.0.2",
+  "portal_start_allowed": false,
+  "python": "3.9.6",
+  "quick": false,
+  "quotient_scan": {
+    "cases": [
+      {
+        "case_id": "joint_N17_L5.5",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 17,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.27243744073619164,
+          "minimum_pair_margin": 0.5924374407361916,
+          "physical_energy": 77.57799949124723,
+          "projected_gradient_density": 1.5386001493392752e-07,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.05019761137931024,
+              "minimum_hit_positive_cone_margin": 0.09508038737956791,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.1547000906047119,
+              "minimum_hit_positive_cone_margin": 0.10823058347302426,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016060170273291947,
+              "minimum_hit_positive_cone_margin": 0.014374370298180955,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.046390443131864356,
+              "minimum_hit_positive_cone_margin": 0.15114074662959803,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.04557089890972415,
+              "minimum_hit_positive_cone_margin": 0.17466261804366034,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.03466367270026761,
+              "minimum_hit_positive_cone_margin": 0.18824389982088718,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.041821135083236746,
+          "barycentre": [
+            -8.850166070555487e-09,
+            5.569450162273594e-09,
+            2.2885232539547535e-09
+          ],
+          "barycentre_norm": 1.0704277335268952e-08,
+          "centered_covariance_eigenvalues": [
+            0.3855925810384789,
+            0.38559258117691014,
+            0.4360818581799699
+          ],
+          "centered_rms": 1.0987570342870887,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.020071303045672673,
+            0.0,
+            0.0,
+            0.08996655502969197,
+            0.13424832358011046,
+            0.06714093897266799,
+            0.03988629097994221,
+            0.1220171983926879,
+            0.09453215053164586,
+            0.03040395760944354,
+            0.10377896491085635,
+            0.04340900751292093,
+            0.06397939775958379,
+            0.003896939381274528,
+            0.05235796957524528,
+            0.023807282830103704,
+            0.011623259026845276,
+            0.023961054936993794,
+            0.015038956274436556,
+            0.005371346585375039,
+            0.011188008316185988,
+            0.005671329395418439,
+            0.00843517860418538,
+            0.004318950824424797,
+            0.005659909775452252,
+            0.005558286434275922,
+            0.002589471233167014,
+            0.0035675122218936173,
+            0.002050945544612621,
+            0.00198961248499719,
+            0.0013530135540142305,
+            0.0008103239537663019,
+            0.0006664982557684897,
+            0.0002918523781787759,
+            0.0003582100881608966
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 87,
+            "minimum_pair_margin": 0.5924374407361916,
+            "optimizer_iterations": 81,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 77.57799949124723,
+            "projected_gradient_density": 1.5386001493392752e-07
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "spacing": 0.34375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N21_L6",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 21,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.5070033649973116,
+          "minimum_pair_margin": 0.8270033649973116,
+          "physical_energy": 79.24568127756045,
+          "projected_gradient_density": 5.003372377802873e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.02340816551909635,
+              "minimum_hit_positive_cone_margin": 0.06072825160243756,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.0827239162065693,
+              "minimum_hit_positive_cone_margin": 0.10023601142319914,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.017290245500831046,
+              "minimum_hit_positive_cone_margin": 0.14290027629563137,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.03218273214058617,
+              "minimum_hit_positive_cone_margin": 0.07130509168547847,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.03808602499034425,
+              "minimum_hit_positive_cone_margin": 0.17075121724516565,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01786714389879177,
+              "minimum_hit_positive_cone_margin": 0.0650388974406842,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 6.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.02825599941295359,
+          "barycentre": [
+            -4.839430848421351e-07,
+            7.513299515671041e-08,
+            4.624034366439317e-07
+          ],
+          "barycentre_norm": 6.735449610440707e-07,
+          "centered_covariance_eigenvalues": [
+            0.4565646379163173,
+            0.4565646388627842,
+            0.49639207232926896
+          ],
+          "centered_rms": 1.1872326432120919,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.010106988564219445,
+            0.0,
+            0.025172763677291796,
+            0.02517274344833645,
+            0.0838015583623816,
+            0.061467042914668236,
+            0.11448142980243069,
+            0.08413950525362397,
+            0.06350792946461878,
+            0.11841673732308915,
+            0.04119531245557691,
+            0.05480047650035669,
+            0.06297144747382948,
+            0.049984893136865306,
+            0.023226460889313554,
+            0.03404812491884038,
+            0.02736967875598035,
+            0.02241072282598808,
+            0.014575241929829891,
+            0.015391660759977738,
+            0.00938598405961142,
+            0.01156071326458725,
+            0.007618537648513858,
+            0.006383031493293547,
+            0.007577165802279681,
+            0.004670963206059724,
+            0.002953333216772811,
+            0.004334886338653522,
+            0.003236939958234908,
+            0.0024177465014778134,
+            0.00254453138829472,
+            0.0017571099027803903,
+            0.0015485065460405065,
+            0.0009190140163255912,
+            0.0008508181998560091
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 111,
+            "minimum_pair_margin": 0.8270033649973116,
+            "optimizer_iterations": 105,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.24568127756045,
+            "projected_gradient_density": 5.003372377802873e-08
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "spacing": 0.3,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N25_L6.5",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 25,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.6230707031820327,
+          "minimum_pair_margin": 0.9430707031820327,
+          "physical_energy": 79.94999732551224,
+          "projected_gradient_density": 3.9566181419579484e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.018762089424739087,
+              "minimum_hit_positive_cone_margin": 0.18817244355501345,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.04827304507132916,
+              "minimum_hit_positive_cone_margin": 0.012412796854726045,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.012715851104120475,
+              "minimum_hit_positive_cone_margin": 0.023487319876090984,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.010159523653643587,
+              "minimum_hit_positive_cone_margin": 0.03420115081650064,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.029981997105891337,
+              "minimum_hit_positive_cone_margin": 0.02818147648630721,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.021071773979078567,
+              "minimum_hit_positive_cone_margin": 0.11785606278267655,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 6.5,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0215104034903204,
+          "barycentre": [
+            -5.2917323755482615e-06,
+            -1.0947684747820455e-06,
+            5.973917151441597e-06
+          ],
+          "barycentre_norm": 8.055348265599094e-06,
+          "centered_covariance_eigenvalues": [
+            0.49794041702151437,
+            0.49794041749757745,
+            0.530779496739554
+          ],
+          "centered_rms": 1.235580969122884,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.006599678679304821,
+            0.0,
+            0.03444370705879143,
+            0.06002068083854508,
+            0.034928407675255596,
+            0.0230121397731688,
+            0.15148791515867926,
+            0.027594830346420844,
+            0.14361860437398846,
+            0.042325743631766874,
+            0.06091607005809077,
+            0.08448982792238183,
+            0.054830497628350384,
+            0.04866545030551685,
+            0.04398238595391432,
+            0.021991220386550422,
+            0.028137377960453007,
+            0.024939710585090827,
+            0.015531300655744507,
+            0.020204249335808465,
+            0.008906850227861952,
+            0.00970251536365406,
+            0.009847321642952461,
+            0.00811510060982326,
+            0.005535516592409941,
+            0.005837839285312412,
+            0.003857509153210319,
+            0.004067829273533852,
+            0.003343330475053042,
+            0.002951131583071332,
+            0.003110015894108601,
+            0.0020512929774874544,
+            0.0017749517780602574,
+            0.0018111949368045045,
+            0.0013678018788341089
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 143,
+            "minimum_pair_margin": 0.9430707031820327,
+            "optimizer_iterations": 135,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.94999732551224,
+            "projected_gradient_density": 3.9566181419579484e-08
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "spacing": 0.2708333333333333,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N29_L7",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.6918704461853091,
+          "minimum_pair_margin": 1.0118704461853092,
+          "physical_energy": 80.31187756255115,
+          "projected_gradient_density": 2.4718144801001395e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016413278976071297,
+              "minimum_hit_positive_cone_margin": 0.031597547376132774,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.030023085994593253,
+              "minimum_hit_positive_cone_margin": 0.12528227716356474,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011200490741539108,
+              "minimum_hit_positive_cone_margin": 0.1669499316176383,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.010558118629189149,
+              "minimum_hit_positive_cone_margin": 0.12255559557408423,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.02419530313003565,
+              "minimum_hit_positive_cone_margin": 0.0018935298948035363,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.014854110866200367,
+              "minimum_hit_positive_cone_margin": 0.031049962146123725,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0174718604482168,
+          "barycentre": [
+            -4.155296405996326e-06,
+            -1.8582567921942859e-06,
+            4.756209907457264e-06
+          ],
+          "barycentre_norm": 6.583398758332722e-06,
+          "centered_covariance_eigenvalues": [
+            0.5276635099025934,
+            0.5276635103163428,
+            0.5558131256945128
+          ],
+          "centered_rms": 1.2693069549614266,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.004842431438783049,
+            0.0,
+            0.025950245828053782,
+            0.046408040946217206,
+            0.037029637551984636,
+            0.0763300634643938,
+            0.06021717859198207,
+            0.11992438750715781,
+            0.04730418551639779,
+            0.08734550791673021,
+            0.09057982256565873,
+            0.059191040592365116,
+            0.06715954523305652,
+            0.03863568002580043,
+            0.039880776730819335,
+            0.024547595743685004,
+            0.04112395281693921,
+            0.017526006718638784,
+            0.02062877637364202,
+            0.014135580671080715,
+            0.016245413974714705,
+            0.010954662234179721,
+            0.0076515449851300805,
+            0.008848131392660994,
+            0.0054546663869918756,
+            0.006195287626697252,
+            0.004380723665937271,
+            0.004219624946659328,
+            0.003915903216735737,
+            0.00222893190766557,
+            0.0032188968551880542,
+            0.002109297140459976,
+            0.0025681734321461656,
+            0.0014297552104494547,
+            0.0018185307909977238
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 185,
+            "minimum_pair_margin": 1.0118704461853092,
+            "optimizer_iterations": 175,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.31187756255115,
+            "projected_gradient_density": 2.4718144801001395e-08
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up",
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N33_L7.5",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 33,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.7368776557635038,
+          "minimum_pair_margin": 1.0568776557635038,
+          "physical_energy": 80.52426138505672,
+          "projected_gradient_density": 2.5352645165575233e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.007472926704801491,
+              "minimum_hit_positive_cone_margin": 0.07951577043235108,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.028052553911906877,
+              "minimum_hit_positive_cone_margin": 0.22022800635342307,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.007021829582289005,
+              "minimum_hit_positive_cone_margin": 0.04159087290951853,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.012445433359662554,
+              "minimum_hit_positive_cone_margin": 0.01894886520972378,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.020123107975331702,
+              "minimum_hit_positive_cone_margin": 0.07061320386745053,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011510649594005887,
+              "minimum_hit_positive_cone_margin": 0.05141683129091477,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.5,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.01481400864850162,
+          "barycentre": [
+            2.1799373212659347e-06,
+            6.779120747810389e-07,
+            -7.2902638688502e-07
+          ],
+          "barycentre_norm": 2.396491389209788e-06,
+          "centered_covariance_eigenvalues": [
+            0.55043888032059,
+            0.5504388803808185,
+            0.5752693379359649
+          ],
+          "centered_rms": 1.294660997573254,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.003811837308978603,
+            0.0,
+            0.020776277183865443,
+            0.03777826830124337,
+            0.03859320491907754,
+            0.10931791516390968,
+            0.02180578046762816,
+            0.12030831377165556,
+            0.09105225681977926,
+            0.07545459570429643,
+            0.07839851488860751,
+            0.05825355210007744,
+            0.055399138315565345,
+            0.04121183817053181,
+            0.031422206920216016,
+            0.04788524394268439,
+            0.023174213558766747,
+            0.024273063922415048,
+            0.02080848831481438,
+            0.01620039681450075,
+            0.01446504491148827,
+            0.011967935113524918,
+            0.009647021831092058,
+            0.008259850423559478,
+            0.00696052946813164,
+            0.006363448710417176,
+            0.0047321106123545875,
+            0.004103207979792461,
+            0.004071841757029751,
+            0.0026060667057692896,
+            0.003106935226648381,
+            0.002429797187073678,
+            0.0019424271212354419,
+            0.0019363478139350267,
+            0.0014823285493341554
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 213,
+            "minimum_pair_margin": 1.0568776557635038,
+            "optimizer_iterations": 203,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.52426138505672,
+            "projected_gradient_density": 2.5352645165575233e-08
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "spacing": 0.234375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N37_L8",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 37,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.7683611737439001,
+          "minimum_pair_margin": 1.0883611737439,
+          "physical_energy": 80.66361153105245,
+          "projected_gradient_density": 1.5781386713840485e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.006938737101176517,
+              "minimum_hit_positive_cone_margin": 0.09735353295547573,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.026074187920145337,
+              "minimum_hit_positive_cone_margin": 0.15968886001184676,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.005974482004686688,
+              "minimum_hit_positive_cone_margin": 0.004761677987495051,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.012869804837124696,
+              "minimum_hit_positive_cone_margin": 0.03422588227222631,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.017753007593074566,
+              "minimum_hit_positive_cone_margin": 0.13331940228491707,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.008210968903855488,
+              "minimum_hit_positive_cone_margin": 0.005434923572174453,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 8.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.012951566780779123,
+          "barycentre": [
+            1.4109964968586846e-08,
+            -1.1198547426234677e-06,
+            2.079435396621646e-06
+          ],
+          "barycentre_norm": 2.361847858015141e-06,
+          "centered_covariance_eigenvalues": [
+            0.568433322143336,
+            0.5684333223190062,
+            0.5908094342523641
+          ],
+          "centered_rms": 1.3144109246026168,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.0031452812041659547,
+            0.0,
+            0.017345110732797,
+            0.051479718211296335,
+            0.06341747229446605,
+            0.046009172540915806,
+            0.06501238792197836,
+            0.07442636028439285,
+            0.08193919437053378,
+            0.10182048730584226,
+            0.056979503704557254,
+            0.08834660022469605,
+            0.04858550961654038,
+            0.042067636483529104,
+            0.050899947489397974,
+            0.030658879200071522,
+            0.030407697521459765,
+            0.024152932689476603,
+            0.02116487482730882,
+            0.01668281170549084,
+            0.01626878430496208,
+            0.010935977279841346,
+            0.010636328518157136,
+            0.007295569932337356,
+            0.007847707392666698,
+            0.005048363387214566,
+            0.005236164268943018,
+            0.004476776766885628,
+            0.0036705680178358195,
+            0.003456808566881234,
+            0.0024847312808162964,
+            0.002508857489243214,
+            0.0018918057533715063,
+            0.0022359501338629845,
+            0.0014640285780646203
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 209,
+            "minimum_pair_margin": 1.0883611737439,
+            "optimizer_iterations": 200,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.66361153105245,
+            "projected_gradient_density": 1.5781386713840485e-08
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "spacing": 0.2222222222222222,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "translation_0_N29",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.6918702919040726,
+          "minimum_pair_margin": 1.0118702919040725,
+          "physical_energy": 80.31187756264436,
+          "projected_gradient_density": 3.2215067501500646e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01641328546566516,
+              "minimum_hit_positive_cone_margin": 0.0315170087073627,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.030023182030081204,
+              "minimum_hit_positive_cone_margin": 0.12533740070201416,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011200308047688252,
+              "minimum_hit_positive_cone_margin": 0.1670202082988332,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.019107871612799837,
+              "minimum_hit_positive_cone_margin": 0.01980422981564111,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.023153961057620184,
+              "minimum_hit_positive_cone_margin": 0.03776975309232503,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.012866467767833864,
+              "minimum_hit_positive_cone_margin": 0.024691463761999502,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.017472072677902756,
+          "barycentre": [
+            8.559396369096642e-06,
+            -7.331267830665372e-06,
+            -1.0127150974460284e-06
+          ],
+          "barycentre_norm": 1.131531466981139e-05,
+          "centered_covariance_eigenvalues": [
+            0.5276625939213513,
+            0.5276627325506033,
+            0.5558125113173247
+          ],
+          "centered_rms": 1.2693060457546395,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.004842439968917646,
+            0.0,
+            0.02595028713164526,
+            0.04640811025379761,
+            0.03702972222438786,
+            0.07633012578293602,
+            0.060217249206217294,
+            0.11992449853741804,
+            0.047304222554862656,
+            0.08734558442200031,
+            0.09057983930941406,
+            0.05919105393544569,
+            0.06715953126987372,
+            0.03863566152578523,
+            0.039880768984932806,
+            0.024547540549381016,
+            0.04112389603976757,
+            0.017525975936071723,
+            0.02062873152757825,
+            0.014135547723579969,
+            0.016245365340588465,
+            0.010954624656926572,
+            0.007651515139369191,
+            0.008848089590967997,
+            0.005454640247986406,
+            0.006195254271558225,
+            0.004380698677129624,
+            0.004219602471226153,
+            0.003915882036380663,
+            0.0022289199077423294,
+            0.003218884235031167,
+            0.0021092887781468048,
+            0.002568166812883185,
+            0.0014297528364430401,
+            0.001818528113607503
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 416,
+            "minimum_pair_margin": 1.0118702919040725,
+            "optimizer_iterations": 402,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.31187756264436,
+            "projected_gradient_density": 3.2215067501500646e-08
+          }
+        ],
+        "roles": [
+          "translation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      },
+      {
+        "case_id": "translation_1_N29",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.6918667099553252,
+          "minimum_pair_margin": 1.0118667099553251,
+          "physical_energy": 80.31187756322004,
+          "projected_gradient_density": 3.932365978401096e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01641452406688904,
+              "minimum_hit_positive_cone_margin": 0.03158236129837842,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.0300260911114348,
+              "minimum_hit_positive_cone_margin": 0.1254177411627517,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011199939678707865,
+              "minimum_hit_positive_cone_margin": 0.16699142559363991,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01628421127237604,
+              "minimum_hit_positive_cone_margin": 0.0755729376036319,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.02350908062899548,
+              "minimum_hit_positive_cone_margin": 0.005614751513669108,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01203448444436914,
+              "minimum_hit_positive_cone_margin": 0.022174048161247593,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.01747223047351709,
+          "barycentre": [
+            2.4775934638281502e-05,
+            2.4996084910362893e-05,
+            2.479294923318893e-05
+          ],
+          "barycentre_norm": 4.3050453304535045e-05,
+          "centered_covariance_eigenvalues": [
+            0.5276629883168715,
+            0.5276629885880888,
+            0.5558131830444157
+          ],
+          "centered_rms": 1.2693065665745908,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.004842435727008195,
+            0.0,
+            0.02595026900972536,
+            0.04640807868289975,
+            0.03703001231348431,
+            0.07632977413219529,
+            0.06021722125309155,
+            0.1199244581355416,
+            0.047304209345255255,
+            0.0873457169091857,
+            0.09057967654654331,
+            0.05919105172493515,
+            0.0671595437089303,
+            0.03863567116843507,
+            0.03988093456108977,
+            0.024547403501949967,
+            0.04112391886277761,
+            0.017525990164238413,
+            0.020628747602350134,
+            0.014135563795165982,
+            0.016245373348126525,
+            0.010954632932052616,
+            0.007651522056784202,
+            0.008848099640968185,
+            0.005454651448138805,
+            0.0061952565436178,
+            0.004380705059671742,
+            0.0042196097565777475,
+            0.003915891085118982,
+            0.002228928077451266,
+            0.003218889857930323,
+            0.00210929667937676,
+            0.002568174198597679,
+            0.0014297570771291427,
+            0.0018185350936555566
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 431,
+            "minimum_pair_margin": 1.0118667099553251,
+            "optimizer_iterations": 411,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.31187756322004,
+            "projected_gradient_density": 3.932365978401096e-08
+          }
+        ],
+        "roles": [
+          "translation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "case_id": "translation_2_N29",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.6918682383624403,
+          "minimum_pair_margin": 1.0118682383624402,
+          "physical_energy": 80.31187756281965,
+          "projected_gradient_density": 3.4884912155473125e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016413744017114235,
+              "minimum_hit_positive_cone_margin": 0.0314796821574842,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.030024777827791244,
+              "minimum_hit_positive_cone_margin": 0.12546210209521252,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011199873799431624,
+              "minimum_hit_positive_cone_margin": 0.16694596873379106,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016909382679898236,
+              "minimum_hit_positive_cone_margin": 0.062244400182885094,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.02500154389704825,
+              "minimum_hit_positive_cone_margin": 0.0022405103251195335,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.010595188102284521,
+              "minimum_hit_positive_cone_margin": 0.03843259184081843,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0174720967706227,
+          "barycentre": [
+            1.2732582070278903e-05,
+            2.108654283523448e-05,
+            1.2356695300913028e-05
+          ],
+          "barycentre_norm": 2.7558099602080194e-05,
+          "centered_covariance_eigenvalues": [
+            0.5276632112119439,
+            0.5276632701196654,
+            0.5558131996286721
+          ],
+          "centered_rms": 1.269306771809038,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.0048424337864437575,
+            0.0,
+            0.025950259588691,
+            0.046408062173509325,
+            0.03702984375265758,
+            0.07632990517688563,
+            0.06021720359956033,
+            0.11992442733533755,
+            0.0473041999414305,
+            0.08734562811984255,
+            0.09057974846775052,
+            0.059191052289742654,
+            0.06715954324242791,
+            0.03863567336681189,
+            0.03988087135137473,
+            0.02454747530995398,
+            0.04112393128747464,
+            0.0175259925153518,
+            0.020628752308103935,
+            0.014135565430259362,
+            0.016245385165817507,
+            0.010954640449496667,
+            0.007651531214350743,
+            0.008848112660142238,
+            0.005454659006347762,
+            0.006195274140787126,
+            0.004380715362357414,
+            0.004219620522236558,
+            0.003915899299547703,
+            0.0022289307677593926,
+            0.0032188966296459887,
+            0.002109297640962409,
+            0.002568175896124701,
+            0.0014297577256655722,
+            0.0018185344751485704
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 429,
+            "minimum_pair_margin": 1.0118682383624402,
+            "optimizer_iterations": 408,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 80.31187756281965,
+            "projected_gradient_density": 3.4884912155473125e-08
+          }
+        ],
+        "roles": [
+          "translation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          -0.41,
+          0.19,
+          0.33
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_center",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.8010716966583816,
+          "minimum_pair_margin": 1.1210716966583816,
+          "physical_energy": 79.94176620465447,
+          "projected_gradient_density": 4.530282972024856e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016536281375541004,
+              "minimum_hit_positive_cone_margin": 0.0831767743298639,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.03675793496882737,
+              "minimum_hit_positive_cone_margin": 0.13045341874406038,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.015799098620669336,
+              "minimum_hit_positive_cone_margin": 0.07851925104425354,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.022666480290134707,
+              "minimum_hit_positive_cone_margin": 0.06773742389248989,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.02642109766975496,
+              "minimum_hit_positive_cone_margin": 0.19480446279858066,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.015442648147364497,
+              "minimum_hit_positive_cone_margin": 0.013698893050980885,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "five_tet_phase0",
+        "quotient_observables": {
+          "anisotropy_ratio": 4.435626785961601e-09,
+          "barycentre": [
+            1.315820528074693e-06,
+            -1.3373287933483368e-06,
+            -1.913507416768745e-07
+          ],
+          "barycentre_norm": 1.8858544668031975e-06,
+          "centered_covariance_eigenvalues": [
+            0.5290459480414755,
+            0.5290459507309186,
+            0.5290459550814267
+          ],
+          "centered_rms": 1.259816595324026,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.008017920319027403,
+            0.0,
+            0.00943520654472497,
+            0.07713626882566435,
+            0.025487244118239362,
+            0.03927992047802613,
+            0.10062017774350683,
+            0.12720151105866312,
+            0.03085067579616516,
+            0.10637395059820558,
+            0.07233551316115719,
+            0.05936144560180541,
+            0.07747567437600601,
+            0.032349595274956365,
+            0.036205804223823454,
+            0.03441737393812758,
+            0.033174262013192436,
+            0.01661963395048339,
+            0.022516908065855785,
+            0.012779573807956617,
+            0.01512699890463787,
+            0.010486246079612058,
+            0.00740872298753879,
+            0.008874227577040317,
+            0.005961586948457152,
+            0.005264358683110758,
+            0.004711488118995222,
+            0.003459528645052081,
+            0.0041905662181335734,
+            0.0021016696799744565,
+            0.003050551062961935,
+            0.0019427164631632176,
+            0.0026567591119789256,
+            0.0015137665351853706,
+            0.0016121530885710635
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 134,
+            "minimum_pair_margin": 1.1210716966583816,
+            "optimizer_iterations": 129,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.94176620465447,
+            "projected_gradient_density": 4.530282972024856e-08
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_translated",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.801067752230988,
+          "minimum_pair_margin": 1.121067752230988,
+          "physical_energy": 79.94176621513812,
+          "projected_gradient_density": 3.082064064025988e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016528668626960952,
+              "minimum_hit_positive_cone_margin": 0.08374184909353805,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.03674219356716841,
+              "minimum_hit_positive_cone_margin": 0.13000757658287357,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01579813133893398,
+              "minimum_hit_positive_cone_margin": 0.07782569548563996,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.016605210919798084,
+              "minimum_hit_positive_cone_margin": 0.026816816943781952,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.050037364858053573,
+              "minimum_hit_positive_cone_margin": 0.1570552066502403,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.013011681337100142,
+              "minimum_hit_positive_cone_margin": 0.020228146101926654,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "five_tet_phase0",
+        "quotient_observables": {
+          "anisotropy_ratio": 5.1127431901258706e-08,
+          "barycentre": [
+            -5.474693479818804e-05,
+            -0.00011490959076762702,
+            -0.00015949805223588692
+          ],
+          "barycentre_norm": 0.0002040614358158402,
+          "centered_covariance_eigenvalues": [
+            0.5290458690590931,
+            0.529045924654416,
+            0.52904595020537
+          ],
+          "centered_rms": 1.2598165516926974,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.008017915754901022,
+            0.0,
+            0.009435202191279508,
+            0.07713625513540213,
+            0.025490141078618987,
+            0.03927701734443302,
+            0.10062017273396544,
+            0.1272014940822142,
+            0.030850672507375363,
+            0.10637544398498183,
+            0.07233401976004522,
+            0.059361454995870346,
+            0.07747568783014684,
+            0.03234960023120325,
+            0.03620742400386813,
+            0.0344157681887619,
+            0.033174262640644575,
+            0.016619635201121453,
+            0.022516908080840763,
+            0.01277964477633188,
+            0.015126933084125643,
+            0.010486247103036339,
+            0.007408723719529544,
+            0.008874229060584892,
+            0.0059616622097882705,
+            0.005264283262119722,
+            0.004711487292694181,
+            0.0034595276202101506,
+            0.004190563297184515,
+            0.002101689896280846,
+            0.003050527936664265,
+            0.0019427147790725258,
+            0.002656757463606693,
+            0.0015137651869872744,
+            0.0016121675661093743
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 256,
+            "minimum_pair_margin": 1.121067752230988,
+            "optimizer_iterations": 249,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.94176621513812,
+            "projected_gradient_density": 3.082064064025988e-08
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_center",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.8066315710145521,
+          "minimum_pair_margin": 1.126631571014552,
+          "physical_energy": 79.94176621959811,
+          "projected_gradient_density": 1.829094771360515e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.017276265595853456,
+              "minimum_hit_positive_cone_margin": 0.03973168343715827,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.04259984511522462,
+              "minimum_hit_positive_cone_margin": 0.07382736401653416,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.00994488982357003,
+              "minimum_hit_positive_cone_margin": 0.05315868364144753,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.013109491517558197,
+              "minimum_hit_positive_cone_margin": 0.0987037914482838,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.029314663561680873,
+              "minimum_hit_positive_cone_margin": 0.046082471298914726,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011666712591164814,
+              "minimum_hit_positive_cone_margin": 0.09082348641384241,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "five_tet_phase1",
+        "quotient_observables": {
+          "anisotropy_ratio": 9.922198345836261e-10,
+          "barycentre": [
+            1.7406433322097705e-08,
+            -2.720531199836263e-08,
+            -1.3305189830263142e-08
+          ],
+          "barycentre_norm": 3.493051672025802e-08,
+          "centered_covariance_eigenvalues": [
+            0.5290453448855387,
+            0.5290453452307652,
+            0.5290453464603265
+          ],
+          "centered_rms": 1.2598158740770933,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.0017716534653341802,
+            0.0,
+            0.04305119012982522,
+            0.016771914421033034,
+            0.04945050139171207,
+            0.11507536354504941,
+            0.021236084376768088,
+            0.11490774753783811,
+            0.06457721564292439,
+            0.06959772166492485,
+            0.10941835594344367,
+            0.05920387552718423,
+            0.05638549079883575,
+            0.04450465212850432,
+            0.042875972982516004,
+            0.014036962664218035,
+            0.047784487547967706,
+            0.017759589301747848,
+            0.01780001752573609,
+            0.01476915724193297,
+            0.016462941336642205,
+            0.010766216273880776,
+            0.007416408416080788,
+            0.008253268548862887,
+            0.004593504034554574,
+            0.006713297125807638,
+            0.003760302742142291,
+            0.004697084783684634,
+            0.003378159790437778,
+            0.0022085426171938524,
+            0.003171324302107369,
+            0.0021355365258528738,
+            0.0023087984847704073,
+            0.0012507847899999305,
+            0.0019058763904860202
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 139,
+            "minimum_pair_margin": 1.126631571014552,
+            "optimizer_iterations": 130,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.94176621959811,
+            "projected_gradient_density": 1.829094771360515e-08
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_translated",
+        "case_pass": true,
+        "core_or_centre_anchor_used": false,
+        "declared_action": "compatible P1 Dirichlet plus Whitney-cup quadratic two- and three-minor energies plus mass potential on the normalized-affine admissible sector",
+        "extent": 29,
+        "final": {
+          "active_solver_wall_edges": 0,
+          "admissible": true,
+          "minimum_pair_dot": 0.8066260723346848,
+          "minimum_pair_margin": 1.1266260723346848,
+          "physical_energy": 79.94176622080664,
+          "projected_gradient_density": 7.149872434680629e-08,
+          "solver_wall_energy": 0.0
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.017274121751847754,
+              "minimum_hit_positive_cone_margin": 0.0392935075994525,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.042594547095013854,
+              "minimum_hit_positive_cone_margin": 0.07418102720572313,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.00994514983918836,
+              "minimum_hit_positive_cone_margin": 0.053138562003547406,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "initial_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "three regular values of the same normalized-affine map defined by the radially dressed third cup cochain",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.018593650432987018,
+              "minimum_hit_positive_cone_margin": 0.020351930465268123,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.05234649759669419,
+              "minimum_hit_positive_cone_margin": 0.11530731624510283,
+              "preimage_tetrahedra": 1
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.011622449174618774,
+              "minimum_hit_positive_cone_margin": 0.027334335290377744,
+              "preimage_tetrahedra": 1
+            }
+          ],
+          "targets_agree": true
+        },
+        "length": 7.0,
+        "mesh": "five_tet_phase1",
+        "quotient_observables": {
+          "anisotropy_ratio": 2.525807055412459e-07,
+          "barycentre": [
+            -6.997629238119924e-06,
+            -5.045359828059578e-05,
+            -4.3820168115866894e-05
+          ],
+          "barycentre_norm": 6.719181146625506e-05,
+          "centered_covariance_eigenvalues": [
+            0.5290463381053041,
+            0.5290463937103714,
+            0.5290467389861114
+          ],
+          "centered_rms": 1.2598172370632923,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.0017716524587253163,
+            0.0,
+            0.043051097068954575,
+            0.01677187487809357,
+            0.04945059681664463,
+            0.11507492807184866,
+            0.021236046005905677,
+            0.11490759031994191,
+            0.0645771411752263,
+            0.06959775941791943,
+            0.10941822158013793,
+            0.059203878555576704,
+            0.05638552502068381,
+            0.0445046911706755,
+            0.042876132645497333,
+            0.01403688805341256,
+            0.0477845884963049,
+            0.017759643784081222,
+            0.017800079800990496,
+            0.014769221876758332,
+            0.01646301249619085,
+            0.01076627287439189,
+            0.007416445676795045,
+            0.00825331272590234,
+            0.0045935359312363035,
+            0.006713329371817521,
+            0.0037603242763804908,
+            0.004697110294937525,
+            0.0033781786007516744,
+            0.0022085553005278266,
+            0.003171338668963856,
+            0.0021355455653488523,
+            0.0023088068225560606,
+            0.0012507902772178467,
+            0.001905883919603082
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "chart": 0,
+            "function_evaluations": 364,
+            "minimum_pair_margin": 1.1266260723346848,
+            "optimizer_iterations": 354,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true,
+            "physical_energy": 79.94176622080664,
+            "projected_gradient_density": 7.149872434680629e-08
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "spacing": 0.25,
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      }
+    ],
+    "gate": {
+      "all_cases_pass": true,
+      "observed": {
+        "joint_tail_centered_rms_relative_spread": 0.034888780392555815,
+        "joint_tail_energy_relative_spread": 0.004369370582836945,
+        "joint_tail_maximum_successive_profile_CDF_distance": 0.040669156375591486,
+        "translation_centered_rms_relative_spread": 7.163019542304552e-07,
+        "translation_energy_relative_spread": 8.328664960755397e-12,
+        "translation_maximum_profile_CDF_distance": 5.914073181179091e-07,
+        "triangulation_centered_rms_relative_spread": 0.007522367232417055,
+        "triangulation_energy_relative_spread": 0.004625479107390669,
+        "triangulation_maximum_profile_CDF_distance": 0.03556020372352145
+      },
+      "production_coverage": true,
+      "quotient_continuum_gate_pass": true,
+      "threshold_pass": true,
+      "thresholds": {
+        "joint_energy": 0.03,
+        "joint_profile": 0.05,
+        "joint_radius": 0.05,
+        "translation_energy": 0.01,
+        "translation_profile": 0.03,
+        "translation_radius": 0.02,
+        "triangulation_energy": 0.03,
+        "triangulation_profile": 0.05,
+        "triangulation_radius": 0.05
+      }
+    },
+    "plan": [
+      {
+        "case_id": "joint_N17_L5.5",
+        "extent": 17,
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N21_L6",
+        "extent": 21,
+        "length": 6.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N25_L6.5",
+        "extent": 25,
+        "length": 6.5,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N29_L7",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up",
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N33_L7.5",
+        "extent": 33,
+        "length": 7.5,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "joint_N37_L8",
+        "extent": 37,
+        "length": 8.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "translation_0_N29",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      },
+      {
+        "case_id": "translation_1_N29",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "case_id": "translation_2_N29",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "uniform_ppp",
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          -0.41,
+          0.19,
+          0.33
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_center",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "five_tet_phase0",
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_translated",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "five_tet_phase0",
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_center",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "five_tet_phase1",
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_translated",
+        "extent": 29,
+        "length": 7.0,
+        "mesh": "five_tet_phase1",
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ]
+      }
+    ],
+    "resumed_case_ids": [
+      "joint_N17_L5.5",
+      "joint_N21_L6",
+      "joint_N25_L6.5",
+      "joint_N29_L7",
+      "joint_N33_L7.5",
+      "joint_N37_L8",
+      "translation_0_N29",
+      "translation_1_N29",
+      "translation_2_N29",
+      "mesh_five_tet_phase0_center",
+      "mesh_five_tet_phase0_translated",
+      "mesh_five_tet_phase1_center",
+      "mesh_five_tet_phase1_translated"
+    ]
+  },
+  "regulator_stable": false,
+  "relaxed_regulator_stable": true,
+  "scipy": "1.13.1",
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e11_compatible_cochain_action.py",
+      "sha256": "616102db5266aacd7a11d96a125b73bf60c4fa3ea07966b65f33de0a3d060f49",
+      "size_bytes": 68540
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/ap_e9_triangulation_tools.py",
+      "sha256": "89230d6e623acb9a3292b7a69d43a929882961901a90b6df807c4af3e881e910",
+      "size_bytes": 23616
+    }
+  ],
+  "status": "production_compatible_action_density_and_quotient_audit",
+  "theory": {
+    "classical_action_identification_requires": "a fixed-degree graph-norm density theorem or independent regularity of the continuum minimizer",
+    "configuration": "nodal S3 fields; P1 affine interpolation v_h; normalized-affine u_h=v_h/|v_h|; pairwise tetrahedral dot products greater than epsilon",
+    "current_equiintegrability": "the positive third-cochain Hodge term gives all third minors in L2; together with the affine-norm lower bound and strong finite-Lp convergence of v_h, the normalized-affine topological currents are uniformly integrable and converge weakly",
+    "degree_sector_closure": true,
+    "equicoercivity": "the Dirichlet term bounds v_h in H1; nodal unit length and the interpolation estimate ||1-|v_h|||_L2 <= C a ||Dv_h||_L2 force every strong-L2 limit to be S3-valued",
+    "full_unrelaxed_density_blocker": "density of smooth fixed-degree maps in the exact finite-energy Skyrme graph norm is not proved here; unconditional Gamma convergence is therefore stated for the fixed-degree lower-semicontinuous relaxation",
+    "full_unrelaxed_density_theorem": false,
+    "liminf": "convex lower semicontinuity in the complete minor vector (Dv, wedge^2 Dv, wedge^3 Dv) proves the compatible polyconvex liminf",
+    "relaxed_fixed_degree_gamma_theorem": true,
+    "smooth_recovery": "nodal interpolation of every smooth S3 map is eventually admissible; Whitney exactness gives convergence of the Dirichlet and Skyrme terms and preserves degree",
+    "third_minor_identification": "bounded nodal fields converge strongly in every finite Lp; Piola writes each third minor as div(v_h cof Dv_h)/3, so weak-L2 convergence of the second minors identifies the third minors distributionally",
+    "two_minor_compensated_compactness": "the Whitney two-cochain is exactly the de Rham cochain of dv_h^A wedge dv_h^B; its L2 bound and the distributional null-Lagrangian identity identify every weak limit with the two-minor of Dv"
+  }
+}
