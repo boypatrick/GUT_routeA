@@ -1,0 +1,2037 @@
+{
+  "algebraic_symbol": {
+    "density": "W(F)=1/2(|F|^2+R|M2(F)|^2+K|M3(F)|^2)",
+    "maximum_rank_one_symbol_identity_residual": 2.8421709430404007e-13,
+    "maximum_singular_value_identity_residual": 3.552713678800501e-14,
+    "minimum_rank_one_symbol_lower_margin": 0.8492753695752107,
+    "rank_one_formula": "D2W(F)[a tensor xi,a tensor xi]=|a tensor xi|^2+R|DM2(F)[a tensor xi]|^2+K|DM3(F)[a tensor xi]|^2",
+    "rows": [
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 33.86439008064839,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 55.05907828794373,
+        "singular_value_identity_residual": 1.0658141036401503e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 162.65796881451195,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.4210854715202004e-13,
+        "rank_one_symbol_lower_margin": 68.53918130100952,
+        "singular_value_identity_residual": 5.329070518200751e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.1316282072803006e-14,
+        "rank_one_symbol_lower_margin": 28.37581145636737,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 96.90952189975394,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.1316282072803006e-14,
+        "rank_one_symbol_lower_margin": 9.336622216815261,
+        "singular_value_identity_residual": 2.842170943040401e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.1316282072803006e-14,
+        "rank_one_symbol_lower_margin": 34.267482224047114,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.4210854715202004e-14,
+        "rank_one_symbol_lower_margin": 37.83922949944383,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 5.95007889036446,
+        "singular_value_identity_residual": 2.1316282072803006e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.842170943040401e-14,
+        "rank_one_symbol_lower_margin": 53.13064106748911,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.0658141036401503e-14,
+        "rank_one_symbol_lower_margin": 15.542974741462505,
+        "singular_value_identity_residual": 1.0658141036401503e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.1368683772161603e-13,
+        "rank_one_symbol_lower_margin": 111.93855247000576,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 54.806868008242915,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.375077994860476e-14,
+        "rank_one_symbol_lower_margin": 2.1915474122758187,
+        "singular_value_identity_residual": 2.842170943040401e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 63.95851737778347,
+        "singular_value_identity_residual": 1.2434497875801753e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 109.96589159224645,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.842170943040401e-14,
+        "rank_one_symbol_lower_margin": 121.0620268939179,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-14,
+        "rank_one_symbol_lower_margin": 60.312982496568026,
+        "singular_value_identity_residual": 1.7763568394002505e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-14,
+        "rank_one_symbol_lower_margin": 26.57492982030189,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 33.87612251084623,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-15,
+        "rank_one_symbol_lower_margin": 3.194121063450499,
+        "singular_value_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.5543122344752192e-15,
+        "rank_one_symbol_lower_margin": 0.8492753695752107,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 118.15095413529465,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 4.263256414560601e-14,
+        "rank_one_symbol_lower_margin": 78.28671093407917,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.7763568394002505e-15,
+        "rank_one_symbol_lower_margin": 4.980808140148057,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.7053025658242404e-13,
+        "rank_one_symbol_lower_margin": 205.28004404571112,
+        "singular_value_identity_residual": 4.440892098500626e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 49.65957771703991,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.1316282072803006e-14,
+        "rank_one_symbol_lower_margin": 31.278421535501003,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 239.15228346727017,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.842170943040401e-14,
+        "rank_one_symbol_lower_margin": 140.77785931119604,
+        "singular_value_identity_residual": 3.552713678800501e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-14,
+        "rank_one_symbol_lower_margin": 39.26366131223511,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.1546319456101628e-14,
+        "rank_one_symbol_lower_margin": 6.687397447461435,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 102.0714960777098,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 4.263256414560601e-14,
+        "rank_one_symbol_lower_margin": 109.04392768269065,
+        "singular_value_identity_residual": 2.842170943040401e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.0658141036401503e-14,
+        "rank_one_symbol_lower_margin": 23.48094063556826,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.7763568394002505e-14,
+        "rank_one_symbol_lower_margin": 13.853718296354597,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.0658141036401503e-14,
+        "rank_one_symbol_lower_margin": 18.60611672498532,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.1368683772161603e-13,
+        "rank_one_symbol_lower_margin": 418.53868392675645,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-15,
+        "rank_one_symbol_lower_margin": 9.391611137050928,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.6645352591003757e-15,
+        "rank_one_symbol_lower_margin": 2.660213086644788,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.5579538487363607e-13,
+        "rank_one_symbol_lower_margin": 111.93623238772535,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.9968028886505635e-15,
+        "rank_one_symbol_lower_margin": 3.166358077641137,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.2737367544323206e-13,
+        "rank_one_symbol_lower_margin": 252.14482560306158,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-15,
+        "rank_one_symbol_lower_margin": 25.125748223589447,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.4210854715202004e-14,
+        "rank_one_symbol_lower_margin": 107.13777758739495,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.4210854715202004e-14,
+        "rank_one_symbol_lower_margin": 16.061161060022624,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-14,
+        "rank_one_symbol_lower_margin": 19.727990089299904,
+        "singular_value_identity_residual": 1.4210854715202004e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 13.831108809586821,
+        "singular_value_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 8.881784197001252e-16,
+        "rank_one_symbol_lower_margin": 4.5164154361453175,
+        "singular_value_identity_residual": 2.6645352591003757e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 124.98281039879514,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.1368683772161603e-13,
+        "rank_one_symbol_lower_margin": 404.15119298624904,
+        "singular_value_identity_residual": 7.105427357601002e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 5.562687227926882,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 123.27143817968712,
+        "singular_value_identity_residual": 2.6645352591003757e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 5.684341886080802e-14,
+        "rank_one_symbol_lower_margin": 122.90946023063361,
+        "singular_value_identity_residual": 1.0658141036401503e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 64.27599542032415,
+        "singular_value_identity_residual": 8.881784197001252e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 1.7763568394002505e-15,
+        "rank_one_symbol_lower_margin": 6.603638993139993,
+        "singular_value_identity_residual": 6.217248937900877e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 55.287776063400415,
+        "singular_value_identity_residual": 2.842170943040401e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 3.552713678800501e-15,
+        "rank_one_symbol_lower_margin": 13.721526505698161,
+        "singular_value_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "rank_one_symbol_identity_residual": 7.105427357601002e-15,
+        "rank_one_symbol_lower_margin": 24.507019590632524,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 0.0,
+        "rank_one_symbol_lower_margin": 30.1561175549478,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 2.8421709430404007e-13,
+        "rank_one_symbol_lower_margin": 288.4001605263103,
+        "singular_value_identity_residual": 0.0
+      },
+      {
+        "rank_one_symbol_identity_residual": 4.263256414560601e-14,
+        "rank_one_symbol_lower_margin": 80.63397972150386,
+        "singular_value_identity_residual": 2.1316282072803006e-14
+      },
+      {
+        "rank_one_symbol_identity_residual": 4.263256414560601e-14,
+        "rank_one_symbol_lower_margin": 46.833380045315636,
+        "singular_value_identity_residual": 5.329070518200751e-15
+      }
+    ],
+    "singular_value_formula": "2W=sum s_i^2+R sum_{i<j}s_i^2 s_j^2+K product_i s_i^2",
+    "uniform_legendre_hadamard_constant": 1.0
+  },
+  "artifact": "AP-E12 endpoint graph-density and relaxed-minimizer audit",
+  "checks": [
+    {
+      "detail": "residual=3.553e-14",
+      "group": "A1",
+      "name": "complete-minor singular-value identity",
+      "pass": true
+    },
+    {
+      "detail": "residual=2.842e-13",
+      "group": "A2",
+      "name": "uniform rank-one symbol identity",
+      "pass": true
+    },
+    {
+      "detail": "identity=3.553e-15",
+      "group": "A3",
+      "name": "periodic strong-quasiconvex identity",
+      "pass": true
+    },
+    {
+      "detail": "M2 L2 needs alpha>1/2 while the forced endpoint gap needs alpha<1/2",
+      "group": "D1",
+      "name": "power-law Mal\u00fd obstruction excluded by M2 L2",
+      "pass": true
+    },
+    {
+      "detail": "M2 L2 needs beta>1/4, forcing a(r)^4/r^2 to zero",
+      "group": "D2",
+      "name": "logarithmic borderline closes without overlap",
+      "pass": true
+    },
+    {
+      "detail": "quadrature=2.246e-07",
+      "group": "D3",
+      "name": "rank-one discontinuity is approximable and not a counterexample",
+      "pass": true
+    },
+    {
+      "detail": "cases=6",
+      "group": "N1",
+      "name": "same-action backgrounds and perturbed starts",
+      "pass": true
+    },
+    {
+      "detail": "energy=3.379e-11",
+      "group": "N2",
+      "name": "finite-grid isolation proxy",
+      "pass": true
+    },
+    {
+      "detail": "no finite-grid proxy promotes an endpoint density or continuum theorem",
+      "group": "G1",
+      "name": "theorem gates fail closed",
+      "pass": true
+    }
+  ],
+  "checks_passed": 9,
+  "checks_total": 9,
+  "determinant_variation_gate_open": false,
+  "endpoint_scaling": {
+    "borderline_log": {
+      "amplitude": "a(r)=r^(1/2) log(e/r)^(-beta)",
+      "forced_fill_bound": "a(r)^4/r^2=log(e/r)^(-4 beta)",
+      "no_overlap": true,
+      "rows": [
+        {
+          "beta": -0.5,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "infinity",
+          "second_minor_L2_finite": false
+        },
+        {
+          "beta": -0.25,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "infinity",
+          "second_minor_L2_finite": false
+        },
+        {
+          "beta": 0.0,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "constant",
+          "second_minor_L2_finite": false
+        },
+        {
+          "beta": 0.2,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "zero",
+          "second_minor_L2_finite": false
+        },
+        {
+          "beta": 0.3,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "zero",
+          "second_minor_L2_finite": true
+        },
+        {
+          "beta": 0.5,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "zero",
+          "second_minor_L2_finite": true
+        },
+        {
+          "beta": 1.0,
+          "forbidden_overlap": false,
+          "forced_fill_bound_limit": "zero",
+          "second_minor_L2_finite": true
+        }
+      ],
+      "second_minor_L2_condition": "beta>1/4"
+    },
+    "conclusion": "the classical two-hole/dipole endpoint obstruction cannot coexist with the AP-E11 L2 second-minor bound; this excludes that mechanism but is not a general density theorem",
+    "model": "u(r,theta)=a(r) gamma(theta), where gamma is the two-hole Mal\u00fd loop",
+    "power_law": {
+      "amplitude": "a(r)=r^alpha",
+      "dirichlet_condition": "alpha>0",
+      "forced_endpoint_gap_condition": "alpha<1/2",
+      "no_overlap": true,
+      "rows": [
+        {
+          "alpha": 0.05,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.9,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -1.8,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -2.8
+        },
+        {
+          "alpha": 0.1,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.8,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -1.6,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -2.6
+        },
+        {
+          "alpha": 0.15,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.7,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -1.4,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -2.4
+        },
+        {
+          "alpha": 0.2,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.6,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -1.2,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -2.2
+        },
+        {
+          "alpha": 0.25,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.5,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -1.0,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -2.0
+        },
+        {
+          "alpha": 0.3,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.4,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -0.8,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -1.8
+        },
+        {
+          "alpha": 0.35,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.30000000000000004,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -0.6000000000000001,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -1.6
+        },
+        {
+          "alpha": 0.39999999999999997,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.20000000000000007,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -0.40000000000000013,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -1.4000000000000001
+        },
+        {
+          "alpha": 0.44999999999999996,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -0.10000000000000009,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -0.20000000000000018,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -1.2000000000000002
+        },
+        {
+          "alpha": 0.49999999999999994,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": -1.1102230246251565e-16,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": true,
+          "forced_fill_L2_lower_bound_power": -2.220446049250313e-16,
+          "second_minor_L2_finite": false,
+          "second_minor_squared_integrand_power": -1.0000000000000002
+        },
+        {
+          "alpha": 0.5499999999999999,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.09999999999999987,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 0.19999999999999973,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": -0.8000000000000003
+        },
+        {
+          "alpha": 0.6,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.19999999999999996,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 0.3999999999999999,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": -0.6000000000000001
+        },
+        {
+          "alpha": 0.65,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.30000000000000004,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 0.6000000000000001,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": -0.3999999999999999
+        },
+        {
+          "alpha": 0.7,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.3999999999999999,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 0.7999999999999998,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": -0.20000000000000018
+        },
+        {
+          "alpha": 0.75,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.5,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 1.0,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": 0.0
+        },
+        {
+          "alpha": 0.7999999999999999,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.5999999999999999,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 1.1999999999999997,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": 0.19999999999999973
+        },
+        {
+          "alpha": 0.85,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.7,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 1.4,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": 0.3999999999999999
+        },
+        {
+          "alpha": 0.9,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.8,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 1.6,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": 0.6000000000000001
+        },
+        {
+          "alpha": 0.95,
+          "dirichlet_finite": true,
+          "dirichlet_integrand_power": 0.8999999999999999,
+          "forbidden_overlap": false,
+          "forced_endpoint_gap": false,
+          "forced_fill_L2_lower_bound_power": 1.7999999999999998,
+          "second_minor_L2_finite": true,
+          "second_minor_squared_integrand_power": 0.7999999999999998
+        }
+      ],
+      "second_minor_L2_condition": "alpha>1/2"
+    }
+  },
+  "hessian_gate_open": false,
+  "numerical_background": {
+    "all_cases_pass": true,
+    "background_rows": [
+      {
+        "admissible": true,
+        "case_id": "density_N17",
+        "case_pass": true,
+        "concentration": {
+          "ball_rows": [
+            {
+              "components": {
+                "dirichlet": 6.684851843178796,
+                "potential": 0.24491733202292704,
+                "second_minor": 19.162395791494934,
+                "third_minor": 6.4609561245791305
+              },
+              "energy_fraction": 0.41961794973778116,
+              "harmonic_scale_ratio_E_over_r": 47.34999431458297,
+              "radius": 0.6875,
+              "total_energy": 32.55312109127579
+            },
+            {
+              "components": {
+                "dirichlet": 7.208498200542989,
+                "potential": 0.26533798923362706,
+                "second_minor": 20.200905603958326,
+                "third_minor": 6.684210410490005
+              },
+              "energy_fraction": 0.4428955687121258,
+              "harmonic_scale_ratio_E_over_r": 45.81193627229993,
+              "radius": 0.75,
+              "total_energy": 34.35895220422495
+            },
+            {
+              "components": {
+                "dirichlet": 13.78413401429253,
+                "potential": 0.5314626838452636,
+                "second_minor": 29.4770828836498,
+                "third_minor": 8.131083034900302
+              },
+              "energy_fraction": 0.6693104096161466,
+              "harmonic_scale_ratio_E_over_r": 51.923762616687895,
+              "radius": 1.0,
+              "total_energy": 51.923762616687895
+            },
+            {
+              "components": {
+                "dirichlet": 14.119340678601553,
+                "potential": 0.5432749033657998,
+                "second_minor": 29.820312293293483,
+                "third_minor": 8.165813092852098
+              },
+              "energy_fraction": 0.6786555636054143,
+              "harmonic_scale_ratio_E_over_r": 51.05332457513981,
+              "radius": 1.03125,
+              "total_energy": 52.64874096811293
+            },
+            {
+              "components": {
+                "dirichlet": 18.758447492755497,
+                "potential": 0.7389485585736916,
+                "second_minor": 33.15532834624791,
+                "third_minor": 8.413573087215973
+              },
+              "energy_fraction": 0.7871599923336886,
+              "harmonic_scale_ratio_E_over_r": 48.853037987834455,
+              "radius": 1.25,
+              "total_energy": 61.06629748479307
+            }
+          ],
+          "component_totals": {
+            "dirichlet": 32.28493218679985,
+            "potential": 1.285331544472537,
+            "second_minor": 35.523037247844634,
+            "third_minor": 8.4846985121302
+          },
+          "density_quantiles": {
+            "q50": 0.02560656021742415,
+            "q90": 0.5397176583266345,
+            "q99": 10.308077879334041,
+            "q999": 31.18657846107798
+          },
+          "energy_barycentre": [
+            -8.850166315349582e-09,
+            5.569450051159718e-09,
+            2.2885232513579308e-09
+          ],
+          "maximum_tetrahedron_energy_fraction": 0.003966308218787651,
+          "total_energy": 77.57799949124723
+        },
+        "extent": 17,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 81,
+            "optimizer_success": true,
+            "physical_energy": 77.57799949124723,
+            "projected_gradient_density": 1.5386001493392752e-07
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.27243744073619164,
+        "perturb_amplitude": 0.0,
+        "perturb_seed": null,
+        "physical_energy": 77.57799949124723,
+        "projected_gradient_density": 1.5386001493392752e-07,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.041821135083236746,
+          "barycentre": [
+            -8.850166070555487e-09,
+            5.569450162273594e-09,
+            2.2885232539547535e-09
+          ],
+          "barycentre_norm": 1.0704277335268952e-08,
+          "centered_covariance_eigenvalues": [
+            0.3855925810384789,
+            0.38559258117691014,
+            0.4360818581799699
+          ],
+          "centered_rms": 1.0987570342870887,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.020071303045672673,
+            0.0,
+            0.0,
+            0.08996655502969197,
+            0.13424832358011046,
+            0.06714093897266799,
+            0.03988629097994221,
+            0.1220171983926879,
+            0.09453215053164586,
+            0.03040395760944354,
+            0.10377896491085635,
+            0.04340900751292093,
+            0.06397939775958379,
+            0.003896939381274528,
+            0.05235796957524528,
+            0.023807282830103704,
+            0.011623259026845276,
+            0.023961054936993794,
+            0.015038956274436556,
+            0.005371346585375039,
+            0.011188008316185988,
+            0.005671329395418439,
+            0.00843517860418538,
+            0.004318950824424797,
+            0.005659909775452252,
+            0.005558286434275922,
+            0.002589471233167014,
+            0.0035675122218936173,
+            0.002050945544612621,
+            0.00198961248499719,
+            0.0013530135540142305,
+            0.0008103239537663019,
+            0.0006664982557684897,
+            0.0002918523781787759,
+            0.0003582100881608966
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "density"
+        ],
+        "spacing": 0.34375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "admissible": true,
+        "case_id": "density_N21",
+        "case_pass": true,
+        "concentration": {
+          "ball_rows": [
+            {
+              "components": {
+                "dirichlet": 4.371966783728467,
+                "potential": 0.18835497722220323,
+                "second_minor": 12.326343666378234,
+                "third_minor": 4.046372256083618
+              },
+              "energy_fraction": 0.26415367179561383,
+              "harmonic_scale_ratio_E_over_r": 34.88839613902089,
+              "radius": 0.5999999999999996,
+              "total_energy": 20.933037683412522
+            },
+            {
+              "components": {
+                "dirichlet": 6.666298499394548,
+                "potential": 0.2908434741812517,
+                "second_minor": 17.159207062498062,
+                "third_minor": 5.201006648009748
+              },
+              "energy_fraction": 0.36995524817811415,
+              "harmonic_scale_ratio_E_over_r": 39.08980757877815,
+              "radius": 0.75,
+              "total_energy": 29.317355684083612
+            },
+            {
+              "components": {
+                "dirichlet": 10.431323466615549,
+                "potential": 0.4597619303988373,
+                "second_minor": 23.386345128585916,
+                "third_minor": 6.33169016838843
+              },
+              "energy_fraction": 0.512445852433952,
+              "harmonic_scale_ratio_E_over_r": 45.12124521554307,
+              "radius": 0.8999999999999995,
+              "total_energy": 40.609120693988736
+            },
+            {
+              "components": {
+                "dirichlet": 12.674519016555,
+                "potential": 0.5655491583836668,
+                "second_minor": 26.20249374003637,
+                "third_minor": 6.713937365688499
+              },
+              "energy_fraction": 0.5824481351734357,
+              "harmonic_scale_ratio_E_over_r": 46.15649928066354,
+              "radius": 1.0,
+              "total_energy": 46.15649928066354
+            },
+            {
+              "components": {
+                "dirichlet": 18.55760671304497,
+                "potential": 0.8390247377042959,
+                "second_minor": 31.36788833023825,
+                "third_minor": 7.203620495244192
+              },
+              "energy_fraction": 0.731499046278579,
+              "harmonic_scale_ratio_E_over_r": 46.374512220985366,
+              "radius": 1.25,
+              "total_energy": 57.96814027623171
+            }
+          ],
+          "component_totals": {
+            "dirichlet": 35.35675624111662,
+            "potential": 1.6146339740267885,
+            "second_minor": 34.93612637062219,
+            "third_minor": 7.338164691794858
+          },
+          "density_quantiles": {
+            "q50": 0.019552171166092886,
+            "q90": 0.42305907376683677,
+            "q99": 8.519276253899355,
+            "q999": 24.90037253412591
+          },
+          "energy_barycentre": [
+            -4.839430858682956e-07,
+            7.513299505844032e-08,
+            4.624034365731345e-07
+          ],
+          "maximum_tetrahedron_energy_fraction": 0.0018491698408660362,
+          "total_energy": 79.24568127756045
+        },
+        "extent": 21,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 105,
+            "optimizer_success": true,
+            "physical_energy": 79.24568127756045,
+            "projected_gradient_density": 5.003372377802873e-08
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 6.0,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.5070033649973116,
+        "perturb_amplitude": 0.0,
+        "perturb_seed": null,
+        "physical_energy": 79.24568127756045,
+        "projected_gradient_density": 5.003372377802873e-08,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.02825599941295359,
+          "barycentre": [
+            -4.839430848421351e-07,
+            7.513299515671041e-08,
+            4.624034366439317e-07
+          ],
+          "barycentre_norm": 6.735449610440707e-07,
+          "centered_covariance_eigenvalues": [
+            0.4565646379163173,
+            0.4565646388627842,
+            0.49639207232926896
+          ],
+          "centered_rms": 1.1872326432120919,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.010106988564219445,
+            0.0,
+            0.025172763677291796,
+            0.02517274344833645,
+            0.0838015583623816,
+            0.061467042914668236,
+            0.11448142980243069,
+            0.08413950525362397,
+            0.06350792946461878,
+            0.11841673732308915,
+            0.04119531245557691,
+            0.05480047650035669,
+            0.06297144747382948,
+            0.049984893136865306,
+            0.023226460889313554,
+            0.03404812491884038,
+            0.02736967875598035,
+            0.02241072282598808,
+            0.014575241929829891,
+            0.015391660759977738,
+            0.00938598405961142,
+            0.01156071326458725,
+            0.007618537648513858,
+            0.006383031493293547,
+            0.007577165802279681,
+            0.004670963206059724,
+            0.002953333216772811,
+            0.004334886338653522,
+            0.003236939958234908,
+            0.0024177465014778134,
+            0.00254453138829472,
+            0.0017571099027803903,
+            0.0015485065460405065,
+            0.0009190140163255912,
+            0.0008508181998560091
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "density"
+        ],
+        "spacing": 0.3,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "admissible": true,
+        "case_id": "density_N25",
+        "case_pass": true,
+        "concentration": {
+          "ball_rows": [
+            {
+              "components": {
+                "dirichlet": 3.1822212263952587,
+                "potential": 0.1479210106054577,
+                "second_minor": 8.89763662339384,
+                "third_minor": 2.8953112798073857
+              },
+              "energy_fraction": 0.18915685611131502,
+              "harmonic_scale_ratio_E_over_r": 27.919551028065108,
+              "radius": 0.541666666666667,
+              "total_energy": 15.123090140201942
+            },
+            {
+              "components": {
+                "dirichlet": 6.350740348133132,
+                "potential": 0.2980162682595682,
+                "second_minor": 15.728265239222743,
+                "third_minor": 4.573874398394199
+              },
+              "energy_fraction": 0.33709690000714415,
+              "harmonic_scale_ratio_E_over_r": 35.93452833867953,
+              "radius": 0.75,
+              "total_energy": 26.950896254009646
+            },
+            {
+              "components": {
+                "dirichlet": 8.044939865375637,
+                "potential": 0.3795468631796641,
+                "second_minor": 18.754284890035482,
+                "third_minor": 5.176971308085404
+              },
+              "energy_fraction": 0.40469973744891397,
+              "harmonic_scale_ratio_E_over_r": 39.822452832832205,
+              "radius": 0.8125000000000004,
+              "total_energy": 32.355742926676186
+            },
+            {
+              "components": {
+                "dirichlet": 12.24968728812008,
+                "potential": 0.5847890800525278,
+                "second_minor": 24.74267440015092,
+                "third_minor": 6.121593155616039
+              },
+              "energy_fraction": 0.5465759272764251,
+              "harmonic_scale_ratio_E_over_r": 43.698743923939574,
+              "radius": 1.0,
+              "total_energy": 43.698743923939574
+            },
+            {
+              "components": {
+                "dirichlet": 18.359855687315637,
+                "potential": 0.8889848655804471,
+                "second_minor": 30.354173322820706,
+                "third_minor": 6.682510431423006
+              },
+              "energy_fraction": 0.7040090830519508,
+              "harmonic_scale_ratio_E_over_r": 45.02841944571183,
+              "radius": 1.25,
+              "total_energy": 56.285524307139795
+            }
+          ],
+          "component_totals": {
+            "dirichlet": 36.727033878946,
+            "potential": 1.829630152023439,
+            "second_minor": 34.54040483896471,
+            "third_minor": 6.852928455578102
+          },
+          "density_quantiles": {
+            "q50": 0.013226983083389696,
+            "q90": 0.3044869668197271,
+            "q99": 6.832843106070581,
+            "q999": 20.97098892945911
+          },
+          "energy_barycentre": [
+            -5.291732376910333e-06,
+            -1.0947684747794322e-06,
+            5.973917151476644e-06
+          ],
+          "maximum_tetrahedron_energy_fraction": 0.0011734321897537159,
+          "total_energy": 79.94999732551226
+        },
+        "extent": 25,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 135,
+            "optimizer_success": true,
+            "physical_energy": 79.94999732551224,
+            "projected_gradient_density": 3.9566181419579484e-08
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 6.5,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.6230707031820327,
+        "perturb_amplitude": 0.0,
+        "perturb_seed": null,
+        "physical_energy": 79.94999732551224,
+        "projected_gradient_density": 3.9566181419579484e-08,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0215104034903204,
+          "barycentre": [
+            -5.2917323755482615e-06,
+            -1.0947684747820455e-06,
+            5.973917151441597e-06
+          ],
+          "barycentre_norm": 8.055348265599094e-06,
+          "centered_covariance_eigenvalues": [
+            0.49794041702151437,
+            0.49794041749757745,
+            0.530779496739554
+          ],
+          "centered_rms": 1.235580969122884,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.006599678679304821,
+            0.0,
+            0.03444370705879143,
+            0.06002068083854508,
+            0.034928407675255596,
+            0.0230121397731688,
+            0.15148791515867926,
+            0.027594830346420844,
+            0.14361860437398846,
+            0.042325743631766874,
+            0.06091607005809077,
+            0.08448982792238183,
+            0.054830497628350384,
+            0.04866545030551685,
+            0.04398238595391432,
+            0.021991220386550422,
+            0.028137377960453007,
+            0.024939710585090827,
+            0.015531300655744507,
+            0.020204249335808465,
+            0.008906850227861952,
+            0.00970251536365406,
+            0.009847321642952461,
+            0.00811510060982326,
+            0.005535516592409941,
+            0.005837839285312412,
+            0.003857509153210319,
+            0.004067829273533852,
+            0.003343330475053042,
+            0.002951131583071332,
+            0.003110015894108601,
+            0.0020512929774874544,
+            0.0017749517780602574,
+            0.0018111949368045045,
+            0.0013678018788341089
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "density"
+        ],
+        "spacing": 0.2708333333333333,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "finite_grid_isolation_proxy": {
+      "energy_relative_spread": 3.3793690437120517e-11,
+      "maximum_profile_CDF_distance": 5.702611299840399e-07,
+      "maximum_translation_and_target_SO3_quotiented_field_RMS": 1.3076582581248828e-05,
+      "pass": true,
+      "scope": "finite-dimensional same-action basin evidence only; not a continuum isolation theorem",
+      "thresholds": {
+        "energy": 2e-06,
+        "field_RMS": 0.006,
+        "profile": 0.0002
+      }
+    },
+    "perturbation_rows": [
+      {
+        "admissible": true,
+        "best_symmetry_quotient": {
+          "integer_spatial_shift": [
+            0,
+            0,
+            0
+          ],
+          "rms_field_distance": 1.3076582581248828e-05,
+          "target_rotation": [
+            [
+              0.9997721715221518,
+              0.019930106322128376,
+              0.007641721786946062
+            ],
+            [
+              -0.01977299744048902,
+              0.9996022013772955,
+              -0.020111379213827003
+            ],
+            [
+              -0.008039503846560287,
+              0.01995569752358007,
+              0.999768541470598
+            ]
+          ],
+          "target_rotation_determinant": 0.9999999999999983
+        },
+        "case_id": "perturb_101_N17",
+        "case_pass": true,
+        "extent": 17,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 146,
+            "optimizer_success": true,
+            "physical_energy": 77.57799949386887,
+            "projected_gradient_density": 9.945529812842397e-08
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.2723941504091966,
+        "perturb_amplitude": 0.24,
+        "perturb_seed": 101,
+        "physical_energy": 77.57799949386887,
+        "profile_CDF_distance_to_reference": 2.1072434042146426e-07,
+        "projected_gradient_density": 9.945529812842397e-08,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.04182121110590262,
+          "barycentre": [
+            -5.76137662815494e-05,
+            -3.543771466827857e-05,
+            6.496207233943763e-06
+          ],
+          "barycentre_norm": 6.79512942811369e-05,
+          "centered_covariance_eigenvalues": [
+            0.38559227532659773,
+            0.3855923282136104,
+            0.4360816105260881
+          ],
+          "centered_rms": 1.0987566673592004,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.020071320185822576,
+            0.0,
+            0.0,
+            0.08996660779841477,
+            0.1342483867070466,
+            0.0671409673370822,
+            0.039886301047825236,
+            0.1220172243747771,
+            0.09453216380579098,
+            0.030403955883810632,
+            0.10377894037257139,
+            0.0434089925248065,
+            0.06397937540551135,
+            0.003896936686206088,
+            0.052357946153920386,
+            0.023807273344830134,
+            0.011623253956183691,
+            0.023961046106109243,
+            0.015038949491492056,
+            0.005371344623068503,
+            0.01118800318656118,
+            0.0056713252262637305,
+            0.008435169471876768,
+            0.004318944640265476,
+            0.005659903610774726,
+            0.0055582770581021615,
+            0.002589464492665478,
+            0.003567502919386764,
+            0.002050939775891917,
+            0.001989603801449538,
+            0.0013530062959419857,
+            0.000810319706616414,
+            0.0006664944228897871,
+            0.00029185123599166223,
+            0.00035820835005283784
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "finite_grid_isolation"
+        ],
+        "spacing": 0.34375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "admissible": true,
+        "best_symmetry_quotient": {
+          "integer_spatial_shift": [
+            0,
+            0,
+            0
+          ],
+          "rms_field_distance": 7.498783546373311e-06,
+          "target_rotation": [
+            [
+              0.9994484676143279,
+              -0.02804338558976811,
+              -0.017785643312335883
+            ],
+            [
+              0.02823540413434522,
+              0.9995446874375248,
+              0.01063859806503835
+            ],
+            [
+              0.017479202977833105,
+              -0.011134915360380346,
+              0.9997852224968996
+            ]
+          ],
+          "target_rotation_determinant": 0.9999999999999974
+        },
+        "case_id": "perturb_202_N17",
+        "case_pass": true,
+        "extent": 17,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 184,
+            "optimizer_success": true,
+            "physical_energy": 77.57799949236046,
+            "projected_gradient_density": 4.302343105492222e-07
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.2724274299318595,
+        "perturb_amplitude": 0.24,
+        "perturb_seed": 202,
+        "physical_energy": 77.57799949236046,
+        "profile_CDF_distance_to_reference": 5.702611299840399e-07,
+        "projected_gradient_density": 4.302343105492222e-07,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.041821151009560624,
+          "barycentre": [
+            3.4307767974868305e-05,
+            -1.7565666542577536e-05,
+            5.579153804797073e-06
+          ],
+          "barycentre_norm": 3.894486540842077e-05,
+          "centered_covariance_eigenvalues": [
+            0.3855932529066234,
+            0.385593273373238,
+            0.4360826389759739
+          ],
+          "centered_rms": 1.0987580103261296,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.020071267211698305,
+            0.0,
+            0.0,
+            0.0899663977439812,
+            0.13424813597359087,
+            0.0671408733528877,
+            0.03988625541878765,
+            0.12201713489906207,
+            0.09453212717925662,
+            0.03040395610146826,
+            0.1037789795924208,
+            0.04340902108727762,
+            0.06397943541786623,
+            0.003896942714459948,
+            0.05235803532080801,
+            0.02380732551603569,
+            0.01162328901582483,
+            0.0239611175915091,
+            0.015039003933981715,
+            0.005371362988738469,
+            0.01118804930867748,
+            0.005671352070340785,
+            0.008435215538483759,
+            0.004318970079754757,
+            0.005659937496885049,
+            0.005558311588649519,
+            0.0025894825812939346,
+            0.00356752954678082,
+            0.0020509546275405167,
+            0.0019896212889340703,
+            0.001353019491998235,
+            0.0008103277394336613,
+            0.0006665014744127451,
+            0.00029185416340472126,
+            0.0003582119437548469
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "finite_grid_isolation"
+        ],
+        "spacing": 0.34375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "admissible": true,
+        "best_symmetry_quotient": {
+          "integer_spatial_shift": [
+            0,
+            0,
+            0
+          ],
+          "rms_field_distance": 5.25383755178378e-07,
+          "target_rotation": [
+            [
+              0.9983905487300492,
+              -0.03419757008815091,
+              -0.04524199826021083
+            ],
+            [
+              0.03344485124958251,
+              0.9992909725081458,
+              -0.017291448424513745
+            ],
+            [
+              0.04580124595908093,
+              0.015750506778841062,
+              0.9988263950280877
+            ]
+          ],
+          "target_rotation_determinant": 1.0
+        },
+        "case_id": "perturb_303_N17",
+        "case_pass": true,
+        "extent": 17,
+        "final_B": [
+          1,
+          1,
+          1
+        ],
+        "history": [
+          {
+            "chart": 0,
+            "iterations": 228,
+            "optimizer_success": true,
+            "physical_energy": 77.577999491252,
+            "projected_gradient_density": 6.232428984783495e-08
+          }
+        ],
+        "initial_B": [
+          1,
+          1,
+          1
+        ],
+        "length": 5.5,
+        "mesh": "uniform_ppp",
+        "minimum_pair_dot": 0.272436187885099,
+        "perturb_amplitude": 0.24,
+        "perturb_seed": 303,
+        "physical_energy": 77.577999491252,
+        "profile_CDF_distance_to_reference": 4.05261876279539e-08,
+        "projected_gradient_density": 6.232428984783495e-08,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0418211090736614,
+          "barycentre": [
+            2.0653664884407643e-06,
+            1.2496628247812554e-06,
+            -8.83039746989302e-07
+          ],
+          "barycentre_norm": 2.5704386983504065e-06,
+          "centered_covariance_eigenvalues": [
+            0.38559260700802933,
+            0.38559268613764297,
+            0.4360818582266184
+          ],
+          "centered_rms": 1.0987570938894051,
+          "density": "positive compatible-action energy density",
+          "normalized_centered_radial_profile": [
+            0.020071308214799754,
+            0.0,
+            0.0,
+            0.08996655183481608,
+            0.13424832294966657,
+            0.0671409428501833,
+            0.03988628655709222,
+            0.1220171995069161,
+            0.09453215219600027,
+            0.030403955511221898,
+            0.10377894702933721,
+            0.043408999323911984,
+            0.0639793886807866,
+            0.003896937270372206,
+            0.05235796483045205,
+            0.023807285958226412,
+            0.011623263329124589,
+            0.023961063433163465,
+            0.015038963564109836,
+            0.005371348047061494,
+            0.01118801499511642,
+            0.005671332377543495,
+            0.008435179381554136,
+            0.004318949704652618,
+            0.005659913028757186,
+            0.005558289110688729,
+            0.0025894714690132487,
+            0.0035675129474046006,
+            0.0020509466057656916,
+            0.0019896115622152614,
+            0.0013530127656391487,
+            0.0008103236382584137,
+            0.0006664980231874946,
+            0.00029185273910348067,
+            0.00035821056385804053
+          ],
+          "quadrature": "each exact tetrahedral action contribution lumped equally to its four vertices",
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "roles": [
+          "finite_grid_isolation"
+        ],
+        "spacing": 0.34375,
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "numpy": "2.0.2",
+  "portal_start_allowed": false,
+  "python": "3.9.6",
+  "quick": false,
+  "rank_one_discontinuity": {
+    "conclusion": "finite complete-minor energy does not imply continuity, so continuous-Cartesian approximation theorems are insufficient; the example itself is nevertheless graph-norm approximable",
+    "exact_radial_energy_to_r0_0p2": 0.3317327924375555,
+    "map": "u(r,z)=(cos(log log(e/r)),sin(log log(e/r)),0,0) around an axis",
+    "numerical_radial_energy": 0.33173301698785784,
+    "property": "finite W12 energy but no continuous representative on the axis; derivative rank one, hence M2=M3=0",
+    "quadrature_residual": 2.245503023523554e-07,
+    "smooth_rank_one_truncations_converge": true,
+    "truncation_rows": [
+      {
+        "M2_error": 0.0,
+        "M3_error": 0.0,
+        "W12_tail_energy": 0.17840671501818423,
+        "epsilon": 0.01
+      },
+      {
+        "M2_error": 0.0,
+        "M3_error": 0.0,
+        "W12_tail_energy": 0.12645813694537056,
+        "epsilon": 0.001
+      },
+      {
+        "M2_error": 0.0,
+        "M3_error": 0.0,
+        "W12_tail_energy": 0.0979399279131429,
+        "epsilon": 0.0001
+      },
+      {
+        "M2_error": 0.0,
+        "M3_error": 0.0,
+        "W12_tail_energy": 0.06749683016913897,
+        "epsilon": 1e-06
+      },
+      {
+        "M2_error": 0.0,
+        "M3_error": 0.0,
+        "W12_tail_energy": 0.0514915008996995,
+        "epsilon": 1e-08
+      }
+    ]
+  },
+  "scipy": "1.13.1",
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e12_graph_density_regular_minimizer.py",
+      "sha256": "3c7013d480734adfe4938766762c375db99e2d94b50f65e0c0c4c008f1ecaabb",
+      "size_bytes": 34381
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e11_compatible_cochain_action.py",
+      "sha256": "616102db5266aacd7a11d96a125b73bf60c4fa3ea07966b65f33de0a3d060f49",
+      "size_bytes": 68540
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e11_compatible_cochain_action.json",
+      "sha256": "0d414ef820b97534d2deb191364ab26f733b6831fecb0c5b12ce0d409059e2e2",
+      "size_bytes": 116929
+    }
+  ],
+  "status": "production_endpoint_density_regular_minimizer_fail_closed",
+  "strong_quasiconvexity": {
+    "identity": "integral[W(F+Dphi)-W(F)]=1/2 integral(|Dphi|^2+R|M2(F+Dphi)-M2(F)|^2+K|M3(F+Dphi)-M3(F)|^2)",
+    "maximum_identity_residual": 3.552713678800501e-15,
+    "maximum_mean_residual": 6.661338147750939e-16,
+    "proof": "all complete-minor cross terms vanish because periodic first, second, and third minors have their affine means",
+    "rows": [
+      {
+        "excess": 4.178374728890116,
+        "mean_gradient_residual": 4.996003610813204e-16,
+        "mean_second_minor_residual": 2.220446049250313e-16,
+        "mean_third_minor_residual": 1.1102230246251565e-16,
+        "mesh": "uniform_ppp",
+        "sample": 0,
+        "strong_quasiconvex_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "excess": 5.947480260607826,
+        "mean_gradient_residual": 4.440892098500626e-16,
+        "mean_second_minor_residual": 2.220446049250313e-16,
+        "mean_third_minor_residual": 1.457167719820518e-16,
+        "mesh": "uniform_ppp",
+        "sample": 1,
+        "strong_quasiconvex_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "excess": 4.84718048339993,
+        "mean_gradient_residual": 1.1102230246251565e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 8.326672684688674e-17,
+        "mesh": "uniform_ppp",
+        "sample": 2,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 6.798611189751384,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 3.3306690738754696e-16,
+        "mesh": "uniform_ppp",
+        "sample": 3,
+        "strong_quasiconvex_identity_residual": 1.7763568394002505e-15
+      },
+      {
+        "excess": 4.672930538413544,
+        "mean_gradient_residual": 4.440892098500626e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 2.220446049250313e-16,
+        "mesh": "uniform_ppp",
+        "sample": 4,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 4.542080316081596,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 2.220446049250313e-16,
+        "mean_third_minor_residual": 2.7755575615628914e-17,
+        "mesh": "five_tet_phase0",
+        "sample": 0,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 4.766486214249957,
+        "mean_gradient_residual": 5.551115123125783e-16,
+        "mean_second_minor_residual": 3.3306690738754696e-16,
+        "mean_third_minor_residual": 8.326672684688674e-17,
+        "mesh": "five_tet_phase0",
+        "sample": 1,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 2.7720547822674755,
+        "mean_gradient_residual": 3.3306690738754696e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 2.0816681711721685e-17,
+        "mesh": "five_tet_phase0",
+        "sample": 2,
+        "strong_quasiconvex_identity_residual": 0.0
+      },
+      {
+        "excess": 5.003123241907612,
+        "mean_gradient_residual": 6.661338147750939e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 2.7755575615628914e-17,
+        "mesh": "five_tet_phase0",
+        "sample": 3,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 10.595554851171254,
+        "mean_gradient_residual": 4.440892098500626e-16,
+        "mean_second_minor_residual": 4.440892098500626e-16,
+        "mean_third_minor_residual": 2.220446049250313e-16,
+        "mesh": "five_tet_phase0",
+        "sample": 4,
+        "strong_quasiconvex_identity_residual": 3.552713678800501e-15
+      },
+      {
+        "excess": 3.234143192287648,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 2.220446049250313e-16,
+        "mean_third_minor_residual": 4.163336342344337e-17,
+        "mesh": "five_tet_phase1",
+        "sample": 0,
+        "strong_quasiconvex_identity_residual": 0.0
+      },
+      {
+        "excess": 1.8582577799462472,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 1.6653345369377348e-16,
+        "mean_third_minor_residual": 1.3877787807814457e-17,
+        "mesh": "five_tet_phase1",
+        "sample": 1,
+        "strong_quasiconvex_identity_residual": 2.220446049250313e-16
+      },
+      {
+        "excess": 3.9916399573896353,
+        "mean_gradient_residual": 2.7755575615628914e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 1.3877787807814457e-17,
+        "mesh": "five_tet_phase1",
+        "sample": 2,
+        "strong_quasiconvex_identity_residual": 8.881784197001252e-16
+      },
+      {
+        "excess": 2.3238599446614407,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 8.326672684688674e-17,
+        "mean_third_minor_residual": 5.551115123125783e-17,
+        "mesh": "five_tet_phase1",
+        "sample": 3,
+        "strong_quasiconvex_identity_residual": 0.0
+      },
+      {
+        "excess": 4.566577203396038,
+        "mean_gradient_residual": 2.220446049250313e-16,
+        "mean_second_minor_residual": 1.1102230246251565e-16,
+        "mean_third_minor_residual": 2.7755575615628914e-17,
+        "mesh": "five_tet_phase1",
+        "sample": 4,
+        "strong_quasiconvex_identity_residual": 0.0
+      }
+    ]
+  },
+  "theory": {
+    "Maly_dipole_mechanism_excluded": true,
+    "classicality_theorem": false,
+    "complete_minor_endpoint_density": {
+      "disproved": false,
+      "reason": "known Cartesian approximation gives exponent loss q<p; the endpoint p=q=2 requires an additional equiintegrability/extension theorem not supplied by ordinary W12 density",
+      "status": false
+    },
+    "continuum_isolation_theorem_mod_translations": false,
+    "graph_norm_degree_continuity": {
+      "consequence": "a smooth target-valued graph recovery sequence is eventually in the same integer degree",
+      "estimate": "2 pi^2 |B(u_j)-B(u)| <= ||u_j-u||_2 ||M3(Du_j)||_2 + |Omega|^(1/2) ||M3(Du_j)-M3(Du)||_2",
+      "status": true
+    },
+    "growth_obstruction": "the autonomous density has 2-to-6 growth (q/p=3); available generic (p,q)-regularity theorems require substantially smaller growth ratio and do not cover a sphere constraint plus relaxation gap",
+    "ordered_next_gate": "prove a local endpoint recovery/equiintegrability lemma or prove L^(2+delta) higher integrability of the complete-minor vector for the selected minimizer; only then derive weak EL and epsilon regularity",
+    "ordinary_W12_density": {
+      "does_not_control": "strong L2 convergence of M2 and M3",
+      "reason": "pi_2(S3)=0 removes the ordinary Bethuel obstruction",
+      "status": true
+    },
+    "partial_regularity_theorem": false,
+    "projected_Euler_Lagrange_for_classical_map": "(I-u tensor u)(-div P(Du)-m^2 e0)=0, P=DW",
+    "relaxed_minimizer_local_recovery": false,
+    "strong_quasiconvexity": true,
+    "sufficient_supercritical_route": {
+      "higher_integrability_for_this_minimizer": false,
+      "proved_as_implication": true,
+      "statement": "if the complete-minor vector belongs locally to L^(2+delta) and the map is in the appropriate Cartesian closure, Mal\u00fd approximation with q=2 gives graph-L2 recovery"
+    },
+    "uniform_Legendre_Hadamard": true,
+    "weak_Euler_Lagrange_for_relaxed_minimizer": false
+  }
+}

@@ -10,7 +10,40 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E11 compatible cochain update (2026-07-19; current authority)
+## AP-E12 endpoint density/regularity update (2026-07-20; current authority)
+
+No Route-E dependency or portal is promoted.  AP-E12 proves that degree is
+continuous in the complete-minor graph norm, so any target-valued endpoint
+smooth recovery is automatically eventually fixed-degree.  It also proves
+that the AP-E11 continuum density has uniform rank-one ellipticity with
+constant one and an exact strong-quasiconvexity identity obtained from the
+null-Lagrangian means of all first, second, and third minors.
+
+The prioritized density proof does not close.  Malý's Cartesian theorem gives
+strong minor approximation only after lowering exponents, while area-graph
+approximation is an `L1` result.  A sharp audit excludes the direct radial
+Malý dipole: `M_2 in L2` requires `alpha>1/2`, but non-vanishing filling cost
+requires `alpha<=1/2`, including the logarithmic borderline.  This is not a
+general density theorem or counterexample.
+
+The requested relaxed-minimizer fallback also remains open.  The formal
+stress is explicit, but local fixed-trace recovery is required before a
+relaxed minimizer can be assigned the naive weak Euler--Lagrange system.  The
+available 2024 relaxed-quasiconvex partial-regularity theorem requires `q<3`
+for `(n,p)=(3,2)`; the present pointwise growth reaches `q=6` and adds an `S3`
+constraint and degree relaxation.  Therefore endpoint density is neither
+proved nor disproved, and weak EL, partial regularity, classicality,
+continuum isolation, Hessian, determinant, and the degree-one portal all
+remain false.
+
+The `9/9` production card finds decreasing one-tetrahedron concentration and
+a very tight perturbed-start basin after translation/target-`SO(3)`
+quotienting.  This is only finite-grid evidence.  Ordered work is now an
+annular target-valued endpoint replacement/equiintegrability lemma or a
+reverse-Hölder `L^(2+delta)` estimate for the complete-minor vector, followed
+by controlled target projection.  No Riemann Hessian is authorized first.
+
+## AP-E11 compatible cochain update (2026-07-19; superseded above)
 
 No Route-E dependency or portal is promoted.  AP-E11 replaces the refuted
 one-corner stencil by a genuine tetrahedral cochain complex.  The

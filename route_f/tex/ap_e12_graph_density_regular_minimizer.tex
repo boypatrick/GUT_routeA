@@ -1,0 +1,444 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\cof}{\operatorname{cof}}
+\newcommand{\MM}{\mathcal M}
+\newcommand{\GG}{\mathcal G}
+
+\title{AP-E12 Fixed-Degree Complete-Minor Graph Density:\
+Exact Strong Quasiconvexity, an Endpoint Dipole No-Go,\
+and the Fail-Closed Relaxed-Minimizer Regularity Branch}
+\author{Route-F derivation ledger}
+\date{20 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AP-E11 left one precise continuum gate: strong smooth density, at fixed
+degree, for maps whose first, second, and third derivative minors all belong
+to $L^2$.  AP-E12 audits that endpoint instead of assuming it.  Two useful
+model-specific theorems are proved.  First, graph-norm convergence of
+sphere-valued maps automatically preserves degree, so ``fixed degree'' adds
+no second repair once target-valued graph density is known.  Second, the
+complete-minor density has an exact strong-quasiconvexity identity and
+uniform Legendre--Hadamard constant one.  A scale-sharp calculation also
+excludes the direct Mal\'y two-hole/dipole mechanism: finite $L^2$ second-
+minor energy requires $\alpha>1/2$, while a non-vanishing forced filling cost
+requires $\alpha\leq1/2$, including the logarithmic borderline.
+
+These results do not prove the endpoint density theorem.  The classical
+Cartesian approximation theorem loses exponent, and area-approximation
+results control all minors only in $L^1$.  The fallback partial-regularity
+theory also does not apply: the present density has $(p,q)=(2,6)$ growth in
+dimension three, outside the recent relaxed-quasiconvex range $q<3$, and it
+has an additional $\mathbb S^3$ constraint and fixed-degree relaxation.  A
+finite-grid concentration and perturbed-start card passes $9/9$ and gives a
+very strong same-basin proxy after quotienting translations and target
+$SO(3)$, but is not a continuum isolation theorem.  Therefore endpoint
+density is neither proved nor disproved; partial regularity, classicality,
+continuum isolation, the Riemann Hessian, and determinant variation all
+remain false in the authorization ledger.
+\end{abstract}
+
+\tableofcontents
+
+\section{The exact endpoint statement}
+
+Let $\Omega\subset\RR^3$ be a bounded Lipschitz domain, with constant vacuum
+trace $e_0=(1,0,0,0)$, and let $M_k(F)$ denote the vector of all $k\times k$
+minors of $F\in\RR^{4\times3}$.  Define the complete-minor graph class
+\begin{equation}
+ \GG^2_B(\Omega,\SSS^3)=\left\{
+ \begin{array}{l|l}
+ u\in W^{1,2}(\Omega;\SSS^3)&
+ \operatorname{tr}u=e_0,\quad M_2(Du),M_3(Du)\in L^2,\\[-2mm]
+ &\deg u=B,\quad M_k(Du)\text{ are distributional minors}
+ \end{array}\right\}.
+ \label{eq:graph-class}
+\end{equation}
+The strong graph distance is
+\begin{equation}
+ d_{\GG}(u,v)=\|u-v\|_{L^2}+\|Du-Dv\|_{L^2}
+ +\|M_2(Du)-M_2(Dv)\|_{L^2}
+ +\|M_3(Du)-M_3(Dv)\|_{L^2}.
+ \label{eq:graph-distance}
+\end{equation}
+For sphere-valued maps the degree is
+\begin{equation}
+ B(u)=\frac1{2\pi^2}\int_\Omega
+ \det[u,\partial_1u,\partial_2u,\partial_3u]\,\dd x .
+ \label{eq:degree}
+\end{equation}
+It is integrable because $u\in L^\infty$ and $M_3(Du)\in L^2$.
+
+The missing AP-E11 assertion is
+\begin{equation}
+ \boxed{\overline{C^\infty_{e_0}(\overline\Omega;\SSS^3)
+ \cap\{\deg=B\}}^{\ d_{\GG}}=\GG^2_B(\Omega,\SSS^3).}
+ \qquad(D_{\rm end})\label{eq:endpoint-density}
+\end{equation}
+Ordinary $W^{1,2}$ density is available because the relevant obstruction is
+$\pi_2(\SSS^3)=0$ \cite{Bethuel1991}; it does not imply
+\eqref{eq:endpoint-density}.  In particular, strong $L^2$ convergence of
+$Du_j$ gives only $L^1$ control of quadratic products, not strong $L^2$
+control of $M_2(Du_j)$, and gives no endpoint control of cubic products.
+
+\begin{proposition}[Degree is automatically closed in the graph norm]
+Suppose $u_j,u\in W^{1,2}(\Omega;\SSS^3)$ have the vacuum trace and
+$d_{\GG}(u_j,u)\to0$.  Then $B(u_j)\to B(u)$.  If the $u_j$ are smooth, their
+integer degrees therefore equal $B(u)$ for all sufficiently large $j$.
+\end{proposition}
+
+\begin{proof}
+Write $J_3(Du)$ for the signed four-vector dual to $M_3(Du)$.  Since
+$\|u_j\|_\infty=\|u\|_\infty=1$,
+\begin{align}
+ 2\pi^2|B(u_j)-B(u)|
+ &\leq\int_\Omega |(u_j-u)\cdot J_3(Du_j)|
+       +|u\cdot[J_3(Du_j)-J_3(Du)]|\,\dd x\notag\\
+ &\leq \|u_j-u\|_2\|M_3(Du_j)\|_2
+   +|\Omega|^{1/2}\|M_3(Du_j)-M_3(Du)\|_2.
+ \label{eq:degree-continuity}
+\end{align}
+The right side tends to zero, because the second graph component also bounds
+$\|M_3(Du_j)\|_2$.  Integers converging to the integer $B(u)$ are eventually
+equal to it.
+\end{proof}
+
+Thus the real missing theorem is target-valued endpoint graph density.  A
+separate degree-changing patch must not be inserted; if graph convergence is
+proved, degree follows from \eqref{eq:degree-continuity}.
+
+\section{Exact algebra of the AP-E11 continuum density}
+
+For $R,K>0$ put
+\begin{equation}
+ W(F)=\frac12\left(|F|^2+R|M_2(F)|^2+K|M_3(F)|^2\right).
+ \label{eq:density}
+\end{equation}
+If $s_1,s_2,s_3$ are the singular values of $F$, Cauchy--Binet gives
+\begin{equation}
+ 2W(F)=\sum_i s_i^2+R\sum_{i<j}s_i^2s_j^2
+       +K s_1^2s_2^2s_3^2.
+ \label{eq:singular}
+\end{equation}
+This is convex in the complete-minor vector $(F,M_2(F),M_3(F))$, but not in
+$F$ itself.
+
+\begin{theorem}[Uniform rank-one symbol]
+For every $F\in\RR^{4\times3}$ and every rank-one
+$H=a\otimes\xi$,
+\begin{equation}
+ D^2W(F)[H,H]=|H|^2+R|DM_2(F)[H]|^2+K|DM_3(F)[H]|^2
+ \geq |a|^2|\xi|^2.
+ \label{eq:rank-one}
+\end{equation}
+Hence the Legendre--Hadamard constant is one, independently of $F$.
+\end{theorem}
+
+\begin{proof}
+Every minor of $F+t(a\otimes\xi)$ is affine in $t$: a determinant cannot
+contain two columns from the same rank-one update.  Taking two derivatives of
+the squared Euclidean norms in \eqref{eq:density} gives
+\eqref{eq:rank-one}.  Finally $|a\otimes\xi|^2=|a|^2|\xi|^2$.
+\end{proof}
+
+\begin{theorem}[Exact strong quasiconvexity identity]
+Let $U$ be a periodic cell, $F$ constant, and
+$\varphi\in W^{1,\infty}_{\rm per}(U;\RR^4)$ have zero mean.  Then
+\begin{align}
+ &\int_U\{W(F+D\varphi)-W(F)\}\,\dd x\notag\\
+ &\quad=\frac12\int_U\bigl\{|D\varphi|^2
+ +R|M_2(F+D\varphi)-M_2(F)|^2
+ +K|M_3(F+D\varphi)-M_3(F)|^2\bigr\}\,\dd x.
+ \label{eq:strong-qc}
+\end{align}
+The same formula holds for zero-boundary variations on a bounded domain.
+\end{theorem}
+
+\begin{proof}
+Every first, second, and third minor is a null Lagrangian.  Periodicity gives
+\begin{equation}
+ \frac1{|U|}\int_U D\varphi=0,\qquad
+ \frac1{|U|}\int_U M_k(F+D\varphi)=M_k(F),\quad k=2,3.
+ \label{eq:null-means}
+\end{equation}
+Expand each squared norm in \eqref{eq:density}.  All cross terms integrate to
+zero by \eqref{eq:null-means}; the remaining squares are precisely
+\eqref{eq:strong-qc}.
+\end{proof}
+
+Equation \eqref{eq:strong-qc} is stronger than a generic quasiconvexity
+estimate and is the main positive analytic structure discovered in AP-E12.
+It controls complete-minor excess whenever one can construct a competitor
+with the correct trace.  It does not itself construct the trace-preserving,
+target-valued endpoint recovery sequence needed in
+\eqref{eq:endpoint-density}.
+
+\section{What the Cartesian approximation theorems do and do not give}
+
+Mal\'y's approximation theorem for Cartesian maps gives strong convergence
+of all minors in exponents $q_k<p_k$; it explicitly does not claim a bounded
+approximating sequence at the endpoint \cite{Maly1991}.  Mucci's slicing
+characterization treats strong area approximation, equivalently
+$W^{1,1}$ plus $L^1$ convergence of all minors \cite{Mucci2001}.  The
+Cartesian-current framework supplies the correct closure language for maps
+into spheres \cite{GiaquintaModicaSoucek1989}.  None of these statements is
+the $L^2$ endpoint \eqref{eq:endpoint-density}.
+
+There is a useful conditional implication.  If the selected map belongs to
+the appropriate target-valued Cartesian closure, its complete-minor vector
+has local $L^{2+\delta}$ control for some $\delta>0$, and the boundary/
+$\mathbb S^3$ projection step can be performed without losing that control,
+then Mal\'y's exponent-loss theorem may be applied with output exponent two.
+This reduces one route to the higher-integrability estimate
+\begin{equation}
+ (Du,M_2(Du),M_3(Du))\in L^{2+\delta}_{\rm loc}.
+ \qquad(H_\delta)\label{eq:higher-int}
+\end{equation}
+The target projection hypothesis is essential: ambient smooth approximation
+alone does not keep values on $\mathbb S^3$.
+
+\section{A scale-sharp dipole audit}
+
+The natural counterexample attempt is a shrinking two-dimensional
+Cartesian dipole extended along a third coordinate.  In a target chart write
+\begin{equation}
+ u(r,\theta,z)=a(r)\gamma(\theta),
+ \label{eq:dipole}
+\end{equation}
+where $\gamma$ carries the nontrivial two-hole filling datum.  Up to harmless
+angular constants,
+\begin{align}
+ \int |Du|^2&\sim\int_0 a'(r)^2r+\frac{a(r)^2}{r}\,\dd r,
+ \label{eq:dipole-d1}\\
+ \int |M_2(Du)|^2&\sim\int_0\frac{a(r)^2a'(r)^2}{r}\,\dd r.
+ \label{eq:dipole-m2}
+\end{align}
+
+\begin{lemma}[No power-law overlap]
+For $a(r)=r^\alpha$, finite Dirichlet energy requires $\alpha>0$, while
+finite $L^2$ second-minor energy requires $\alpha>1/2$.  Any smoothing that
+fills a fixed nonzero signed target area on a disk of radius $r$ obeys
+\begin{equation}
+ \int_{D_r}|\det Dv|^2\,\dd x
+ \geq\frac1{\pi r^2}\left|\int_{D_r}\det Dv\,\dd x\right|^2
+ \gtrsim\frac{a(r)^4}{r^2}=r^{4\alpha-2}.
+ \label{eq:fill-lower}
+\end{equation}
+Thus a non-vanishing or divergent endpoint filling cost requires
+$\alpha\leq1/2$, which has no overlap with \eqref{eq:dipole-m2}.
+\end{lemma}
+
+\begin{proof}
+Substitution into \eqref{eq:dipole-d1} gives an integrand proportional to
+$r^{2\alpha-1}$; substitution into \eqref{eq:dipole-m2} gives
+$r^{4\alpha-3}$.  The stated integrability thresholds follow.  Inequality
+\eqref{eq:fill-lower} is Cauchy--Schwarz on $D_r$, and the signed filling area
+scales as $a(r)^2$.
+\end{proof}
+
+The logarithmic borderline also fails to open a gap.  For
+\begin{equation}
+ a(r)=r^{1/2}[\log(e/r)]^{-\beta},
+\end{equation}
+the second-minor integral is finite exactly when $\beta>1/4$, whereas the
+lower bound in \eqref{eq:fill-lower} is
+$[\log(e/r)]^{-4\beta}\to0$ for every $\beta>0$.  Consequently:
+\begin{equation}
+ \boxed{\text{the direct self-similar Mal\'y dipole mechanism cannot refute
+ the AP-E12 endpoint.}}
+ \label{eq:dipole-no-go}
+\end{equation}
+This is a mechanism-specific no-go, not a proof that no more anisotropic or
+iterated concentration construction exists.
+
+\section{Finite energy does not imply continuity}
+
+The regularity fallback cannot begin by assuming that every graph-space map
+is continuous.  Around a spatial axis set
+\begin{equation}
+ u(r,z)=\bigl(\cos\ell(r),\sin\ell(r),0,0\bigr),\qquad
+ \ell(r)=\log\log(e/r).
+ \label{eq:rank-one-discontinuous}
+\end{equation}
+Then $Du$ has rank one, so $M_2(Du)=M_3(Du)=0$, while
+\begin{equation}
+ \int_0^{r_0}|\partial_ru|^2r\,\dd r
+ =\int_0^{r_0}\frac{\dd r}{r\log^2(e/r)}<\infty.
+ \label{eq:rank-one-energy}
+\end{equation}
+The phase has no limit as $r\downarrow0$, so there is no continuous
+representative on the axis.  Nevertheless, making $\ell$ constant below
+$\epsilon$ produces smooth rank-one truncations with zero higher minors and
+$W^{1,2}$ tail energy tending to zero.  This example is therefore not a
+density counterexample.  It proves only that results assuming continuous
+Cartesian maps cannot cover the full energy class without another argument.
+
+\section{The relaxed-minimizer fallback and its exact obstruction}
+
+Add the lower-order mass potential and define
+\begin{equation}
+ E_B(u)=\int_\Omega\{W(Du)+m^2(1-u^0)\}\,\dd x,\qquad u\in\GG_B^2,
+ \label{eq:energy}
+\end{equation}
+and let $\overline E_B$ be its lower-semicontinuous relaxation from smooth
+fixed-degree maps.  AP-E11 proves convergence to minimizers of
+$\overline E_B$, not equality $\overline E_B=E_B$ on all of $\GG_B^2$.
+
+For a classical map, put $F=Du$ and $G=F^TF$.  Cauchy--Binet gives
+$|M_3(F)|^2=\det G$ and
+$|M_2(F)|^2=((\tr G)^2-\tr G^2)/2$.  Hence the exact first Piola stress is
+\begin{equation}
+ P(F)=DW(F)=F+R\{(\tr G)F-FG\}+KF\cof G.
+ \label{eq:stress}
+\end{equation}
+The formal tangent Euler--Lagrange system is
+\begin{equation}
+ (I-u\otimes u)\{-\operatorname{div}P(Du)-m^2e_0\}=0.
+ \label{eq:projected-el}
+\end{equation}
+
+\begin{proposition}[Dependency chain for the fallback]
+A global minimizer of $\overline E_B$ may be promoted to a classical isolated
+solution of \eqref{eq:projected-el} only after the following independent
+steps are supplied:
+\begin{enumerate}
+ \item local target-valued recovery with fixed trace, identifying relaxed
+       compactly supported variations with variations of $E_B$;
+ \item a weak Euler--Lagrange theorem for the resulting graph-space local
+       minimizer;
+ \item an $\epsilon$-regularity or partial-regularity theorem compatible with
+       the $\mathbb S^3$ constraint and complete-minor energy;
+ \item removal of the possible singular set and a strict local growth
+       estimate modulo translations and the global target $SO(3)$ orbit.
+\end{enumerate}
+Without item 1, minimality of the relaxation does not logically imply
+\eqref{eq:projected-el} for the naive integral.
+\end{proposition}
+
+The recent theorem of Gmeineder and Kristensen proves smooth partial
+regularity of relaxed minimizers for strongly quasiconvex $(p,q)$ integrands
+in the range
+\begin{equation}
+ 1\leq p\leq q<\min\left\{\frac{np}{n-1},p+1\right\}
+ \cite{GmeinederKristensen2024}.
+ \label{eq:gk-range}
+\end{equation}
+Here the pointwise bounds are $c|F|^2\lesssim W(F)\lesssim C(1+|F|^6)$, so
+$(n,p,q)=(3,2,6)$ and \eqref{eq:gk-range} would require $q<3$.
+Sch\"affner's higher-integrability theorem for convex nonstandard-growth
+integrands requires $q/p<1+2/(n-1)=2$, whereas the present ratio is three
+and $W$ is polyconvex rather than convex in $F$ \cite{Schaffner2021}.  Neither
+theorem includes the sphere constraint or fixed-degree graph relaxation.
+The exact identity \eqref{eq:strong-qc} is promising additional structure,
+but applying it requires the missing trace-preserving graph competitor.
+
+Consequently the requested fallback has been executed as far as presently
+justified and stops before its first promotion:
+\begin{equation}
+ \boxed{C_{\rm local\ recovery}=C_{\rm weak\ EL}
+ =C_{\rm partial\ regularity}=C_{\rm classicality}
+ =C_{\rm isolation}=\mathrm{false}.}
+ \label{eq:fallback-false}
+\end{equation}
+This is an absence of proof, not a counterexample to regularity of the
+particular numerical $B=1$ minimizer.
+
+\section{Numerical concentration and isolation proxy}
+
+The production script re-relaxes the same AP-E11 action at three spacings and
+volumes.  No center or core value is pinned.  The maximum fraction of total
+energy in one tetrahedron decreases under refinement, as does the $99.9$th
+percentile of the local energy density:
+\begin{center}
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$N$&$L$&$a$&$E$&max tet fraction&density $q_{0.999}$\\
+\midrule
+17&5.5&0.343750&77.5780&$3.966\times10^{-3}$&31.187\\
+21&6.0&0.300000&79.2457&$1.849\times10^{-3}$&24.900\\
+25&6.5&0.270833&79.9500&$1.173\times10^{-3}$&20.971\\
+\bottomrule
+\end{tabular}
+\end{center}
+All three have $B=(1,1,1)$, minimum pair dot at least $0.2724$, and projected
+gradient density at most $1.54\times10^{-7}$.  In the smallest audited balls,
+whose radii are approximately two lattice spacings, the energy fractions
+decrease $0.420\to0.264\to0.189$.  These observations exclude a visible
+one-cell concentration in this range; they are not a compensated-compactness
+or $\epsilon$-regularity theorem.
+
+Three independent smooth tangent perturbations of amplitude $0.24$ are then
+re-relaxed on the $N=17$ action.  Field distance is evaluated after quotienting
+integer spatial translations and the unbroken target $SO(3)$.  If the pion
+parts of reference and candidate are matrices $X,Y$, the proper Procrustes
+rotation is
+\begin{equation}
+ Y^TX=U\Sigma V^T,\qquad
+ Q_*=U\operatorname{diag}(1,1,\det(UV^T))V^T\in SO(3).
+ \label{eq:procrustes}
+\end{equation}
+The maximum results over the three starts are
+\begin{equation}
+ \frac{\max E-\min E}{\overline E}=3.38\times10^{-11},\qquad
+ d_{\rm CDF}=5.70\times10^{-7},\qquad
+ d_{\rm field/(trans\times SO(3))}=1.31\times10^{-5}.
+ \label{eq:finite-isolation}
+\end{equation}
+All endpoints remain $B=(1,1,1)$ and stationary below
+$4.31\times10^{-7}$.  The predeclared finite-dimensional basin proxy passes.
+It is deliberately not promoted to continuum isolation because it samples
+only three perturbations on one finite grid and does not give a quantitative
+neighbourhood theorem.
+
+\section{Decision and next theorem}
+
+The reproducible card
+\begin{center}
+\texttt{route\_f/code/verify\_ap\_e12\_graph\_density\_regular\_minimizer.py}
+\end{center}
+passes $9/9$ algebraic, scaling, quadrature, concentration, and finite-basin
+checks.  The logical authorization is nevertheless
+\begin{equation}
+ \boxed{\begin{gathered}
+ C_{\rm degree\ closed\ in\ graph}=C_{\rm LH}
+ =C_{\rm strong\ QC}=C_{\rm dipole\ no\mbox{-}go}=\mathrm{true},\\
+ C_{D_{\rm end}}=\mathrm{false\ (not\ disproved)},\\
+ C_{\rm partial\ regularity}=C_{\rm classicality}=C_{\rm isolation}
+ =C_{\rm Hessian}=C_{\det}=\mathrm{false}.
+ \end{gathered}}
+ \label{eq:decision}
+\end{equation}
+
+The most targeted next lemma is an annular, target-valued endpoint replacement:
+given a low-energy shell, choose a good sphere and replace its interior while
+preserving the trace and obtaining equiintegrability of all three $L^2$ minor
+families.  Combined with \eqref{eq:strong-qc}, such a lemma would yield either
+a graph-density proof or the Caccioppoli inequality needed for the fallback.
+The second route is to prove \eqref{eq:higher-int} directly for the selected
+relaxed minimizer and then establish the sphere-valued projection/retraction
+step.  Only after one route proves classicality and continuum isolation is it
+legal to assemble the same-action Riemann Hessian.  The general danger that a
+relaxed and a smooth variational problem need not have the same infimum is
+precisely the Lavrentiev boundary emphasized in recent reviews
+\cite{CerfMariconda2024}; it must not be removed by numerical agreement alone.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e12_graph_density_regular_minimizer}
+
+\end{document}

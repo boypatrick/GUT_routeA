@@ -1,7 +1,30 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-19.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-20.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
+
+## AP-E12 transfer boundary
+
+The closest current result is Gmeineder--Kristensen's 2024 smooth partial-
+regularity theorem for relaxed strongly quasiconvex `(p,q)` functionals.  Its
+range is `q<min(np/(n-1),p+1)`, which becomes `q<3` for `(n,p)=(3,2)`.
+AP-E11's continuum density reaches pointwise sixth-order growth, so this
+theorem cannot be cited as partial regularity for the present `(2,6)` model.
+It also treats Euclidean vector-valued maps, not the `S3` constraint plus a
+fixed-degree complete-minor graph relaxation.
+
+Cerf--Mariconda's 2024 review is used only to keep the Lavrentiev boundary
+visible: existence in a relaxed class does not by itself identify the smooth
+problem.  The endpoint-minor statements instead rely on foundational primary
+work by Malý (strong approximation with strict exponent loss), Mucci (`L1`
+area/minor approximation), and Giaquinta--Modica--Souček (Cartesian-current
+closure).  The scoped 2023--2026 search found no primary theorem proving
+fixed-degree `L2` density of all first/second/third minors in dimension three.
+
+| Source | Main result relevant to AP-E12 | Transfer boundary |
+|---|---|---|
+| Gmeineder and Kristensen, [Quasiconvex Functionals of `(p,q)`-Growth and the Partial Regularity of Relaxed Minimizers](https://doi.org/10.1007/s00205-024-02013-8), Arch. Ration. Mech. Anal. 248, 80 (2024) | Proves smooth partial regularity for relaxed strongly quasiconvex integrals in the essentially maximal range `q<min(np/(n-1),p+1)`. | For `(n,p)=(3,2)` the theorem requires `q<3`, not the present `q=6`; the target manifold and degree graph closure are also absent. |
+| Cerf and Mariconda, [The Lavrentiev Phenomenon](https://arxiv.org/abs/2404.02901), Am. Math. Monthly 131 (2024) 881 | Reviews why a relaxed minimizer and smooth approximation problem can have different values and why recovery must be proved. | Conceptual warning only; it supplies no complete-minor endpoint density, sphere-valued recovery, or regularity theorem for AP-E12. |
 
 ## AP-E11 transfer boundary
 
@@ -86,7 +109,7 @@ transferred to the three-dimensional `S3` stencil.
 | Bartels, Palus, Wang, [Quasi-optimal error estimates for the approximation of stable harmonic maps](https://doi.org/10.1137/22M1524497), SIAM J. Numer. Anal. 61 (2023) 1819 | Gives local finite-element error control for geometrically stable sphere-valued harmonic maps under regularity and stability hypotheses. | Use only after a regulator-stable continuum stationary background and its local stability are independently established; it cannot prove their existence. |
 | Cicalese, Reggiani, Solombrino, [From discrete to continuum in the helical XY-model](https://arxiv.org/abs/2412.15994) (2024) | Identifies a critical parameter-growth threshold at which a spin-system Gamma limit changes which chirality transitions survive. | Supports an explicit regime split in `gamma(a),epsilon(a)`; it contains neither the AP-E8 logarithmic barrier nor a three-dimensional degree theorem. |
 
-## Foundational sources used by the 2026-07-16 checkpoint
+## Foundational sources used through the 2026-07-20 checkpoint
 
 These sources fall outside the three-year search window but are needed for
 the global definitions and the independent moduli-space construction.  They
@@ -94,6 +117,9 @@ are not substitutes for recent model-specific evidence.
 
 | Source | Exact role in the checkpoint | Boundary retained |
 |---|---|---|
+| Malý, [$L^p$-approximation of Jacobians](https://dml.cz/dmlcz/118445), Comment. Math. Univ. Carol. 32 (1991) 659 | Gives strong smooth approximation of Cartesian maps in the all-minor topology after a strict exponent reduction `q<p`. | It does not claim the endpoint `q=p=2`, uniform endpoint bounds, sphere-valued recovery, or fixed trace. |
+| Mucci, [A characterization of graphs which can be approximated in area by smooth graphs](https://doi.org/10.1007/s100970000025), JEMS 3 (2001) 1 | Characterizes strong graph/area approximation using `W1,1` and `L1` convergence of every minor, with a slicing criterion. | Its `L1` topology is weaker than the AP-E12 `L2` complete-minor graph norm. |
+| Giaquinta, Modica, and Souček, [Cartesian currents and variational problems for mappings into spheres](https://www.numdam.org/item/ASNSP_1989_4_16_3_393_0/), Ann. SNS Pisa 16 (1989) 393 | Supplies the sphere-valued Cartesian-current closure and topology-sensitive variational setting. | Closure language is not an endpoint smooth-density theorem for the present exponents. |
 | Davighi, Gripaios, and Randal-Williams, [Differential cohomology and topological actions in physics](https://arxiv.org/abs/2011.05768), Commun. Math. Phys. 396 (2022) 1205 | Supplies the differential-character formulation of Wess--Zumino and related topological actions directly on cycles, without demanding a chosen spacetime extension. | Differential cohomology fixes the bosonic holonomy at fixed integral curvature here; it does not choose the two spin-bordism torsion phases of a fermionic UV regulator. |
 | Aldrovandi and Schaposnik, [Non-Abelian vortices in Chern--Simons theories and their induced effective theory](https://arxiv.org/abs/hep-th/0702209), Phys. Rev. D 76 (2007) 045010 | Provides an explicit supersymmetric non-Abelian-vortex mother model with internal projective moduli and a low-energy sigma-model description. | This independently realizes a physical moduli fermion, but it is not the charged two-colour `B=1` soliton and supplies no automatic AP-E3 `O(2)` coefficient line. |
 | Witten, [Supersymmetry and Morse theory](https://doi.org/10.4310/jdg/1214437492), J. Differential Geom. 17 (1982) 661 | Identifies supersymmetric quantum mechanics with the differential-form complex and its cohomological ground states. | The ordinary tangent fermion produces the Clifford/Dolbeault module; an extra coefficient line must be independently derived before using `H0(O(2))`. |
@@ -261,6 +287,21 @@ are not substitutes for recent model-specific evidence.
     Keep the same-action Hessian and determinant variation embargoed until a
     discrete Skyrme-minor Gamma theorem, the required barrier cell formula,
     and a regulator-stable background are all available.
+34. AP-E10 disproves compensated compactness for the old one-corner forward
+    minor stencil and proves finite-`R` five-/six-tetrahedron cell
+    inequivalence.  Do not use continuum div--curl literature to repair a
+    product which is not a compatible discrete differential algebra.
+35. AP-E11 replaces that stencil by a compatible complete-minor cochain
+    action and proves its mesh-independent cell formula and Gamma convergence
+    to the fixed-degree lower-semicontinuous relaxation.  Keep equality with
+    the unrelaxed classical functional as an independent graph-density gate.
+36. AP-E12 proves graph-norm continuity of degree, exact strong
+    quasiconvexity, and a no-go for the direct radial Malý dipole mechanism.
+    Do not infer endpoint density from exponent-losing Cartesian
+    approximation, and do not import the 2024 relaxed partial-regularity
+    theorem across its `q<3` boundary to this `(2,6)` sphere-constrained
+    problem.  The next analytic object is a target-valued annular replacement
+    with `L2` minor equiintegrability or a model-specific reverse-Hölder gain.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,

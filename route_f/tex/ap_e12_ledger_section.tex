@@ -1,0 +1,101 @@
+\section{AP-E12: endpoint graph density and relaxed-minimizer audit}
+
+AP-E12 makes the AP-E11 regularity gate precise.  For fixed vacuum trace,
+define
+\begin{equation}
+ \mathcal G_B^2=\{u\in W^{1,2}(\Omega;S^3):
+ M_2(Du),M_3(Du)\in L^2,\ \deg u=B\}
+ \label{eq:e12-graph}
+\end{equation}
+with strong $L^2$ convergence of $u$, $Du$, $M_2(Du)$, and $M_3(Du)$.
+Graph convergence already closes degree: if $u_j,u$ are sphere-valued, then
+\begin{equation}
+ 2\pi^2|B(u_j)-B(u)|\leq
+ \|u_j-u\|_2\|M_3(Du_j)\|_2
+ +|\Omega|^{1/2}\|M_3(Du_j)-M_3(Du)\|_2.
+ \label{eq:e12-degree-continuity}
+\end{equation}
+Therefore a target-valued graph-dense smooth sequence is automatically in the
+same integer degree for all sufficiently large indices.  The missing theorem
+is target-valued endpoint graph density, not a separate degree repair.
+
+For the AP-E11 continuum density
+\begin{equation}
+ W(F)=\frac12\{|F|^2+R|M_2(F)|^2+K|M_3(F)|^2\},
+ \label{eq:e12-density}
+\end{equation}
+every minor of $F+t(a\otimes\xi)$ is affine in $t$.  Hence
+\begin{equation}
+ D^2W(F)[a\otimes\xi,a\otimes\xi]
+ =|a|^2|\xi|^2+R|DM_2(F)[a\otimes\xi]|^2
+ +K|DM_3(F)[a\otimes\xi]|^2,
+ \label{eq:e12-lh}
+\end{equation}
+so the uniform Legendre--Hadamard constant is one.  More strongly, periodic
+null-Lagrangian means give the exact identity
+\begin{align}
+ \int\{W(F+D\varphi)-W(F)\}
+ =\frac12\int\{&|D\varphi|^2
+ +R|M_2(F+D\varphi)-M_2(F)|^2\notag\\
+ &+K|M_3(F+D\varphi)-M_3(F)|^2\}.
+ \label{eq:e12-strong-qc}
+\end{align}
+This proves model-specific strong quasiconvexity but does not construct the
+trace-preserving $S^3$ recovery sequence.
+
+The classical Cartesian approximation result is exponent-losing:
+$\operatorname{Cart}^{\bm p}$ is strongly approximable in every
+$\mathcal A^{\bm q}$ with $\bm q<\bm p$, not at the endpoint
+\cite{Maly1991}.  Area approximation controls all minors in $L^1$
+\cite{Mucci2001}.  A scale-sharp audit also shows why the direct Mal\'y
+two-hole dipole does not provide the missing counterexample here.  For
+$u(r,\theta,z)=r^\alpha\gamma(\theta)$,
+\begin{equation}
+ \int|M_2(Du)|^2\sim\int r^{4\alpha-3}\,dr<\infty
+ \quad\Longleftrightarrow\quad\alpha>\frac12,
+ \label{eq:e12-dipole-energy}
+\end{equation}
+whereas Cauchy--Schwarz forces every core filling to pay at least
+$c r^{4\alpha-2}$; a non-vanishing cost requires $\alpha\leq1/2$.  For
+$r^{1/2}\log(e/r)^{-\beta}$, minor integrability requires $\beta>1/4$
+while the filling bound tends to zero.  This excludes that mechanism, not
+all possible endpoint concentrations.
+
+The fallback cannot presently be closed by importing generic regularity.
+The formal stress and classical equation are
+\begin{align}
+ P(F)&=F+R\{(\operatorname{tr}G)F-FG\}+KF\operatorname{cof}G,
+ \qquad G=F^TF,\label{eq:e12-stress}\\
+ (I-u\otimes u)&\{-\operatorname{div}P(Du)-m^2e_0\}=0.
+ \label{eq:e12-el}
+\end{align}
+A relaxed minimizer is not authorized to satisfy \eqref{eq:e12-el} until a
+local fixed-trace recovery theorem is supplied.  Moreover
+$W(F)\lesssim1+|F|^6$ with $(n,p,q)=(3,2,6)$, while the 2024 smooth partial-
+regularity theorem for relaxed strongly quasiconvex integrands requires
+$q<\min\{np/(n-1),p+1\}=3$ \cite{GmeinederKristensen2024}.  It also does not
+include the $S^3$ constraint and degree relaxation.
+
+The production card passes $9/9$.  Three successively finer backgrounds have
+maximum one-tetrahedron energy fractions
+$3.966\times10^{-3}$, $1.849\times10^{-3}$, and
+$1.173\times10^{-3}$.  Three amplitude-$0.24$ tangent perturbations re-relax
+to energy spread $3.38\times10^{-11}$, maximum radial-CDF distance
+$5.70\times10^{-7}$, and field RMS $1.31\times10^{-5}$ after quotienting
+integer translations and proper target $SO(3)$.  This is finite-dimensional
+same-basin evidence only, not continuum isolation.  The authorization is
+\begin{equation}
+ \boxed{\begin{gathered}
+ C_{\rm graph\ degree}=C_{\rm strong\ QC}=C_{\rm dipole\ no\mbox{-}go}
+ =\mathrm{true},\\
+ C_{\rm endpoint\ density}=\mathrm{false\ (not\ disproved)},\\
+ C_{\rm weak\ EL}=C_{\rm partial\ regularity}=C_{\rm classicality}
+ =C_{\rm isolation}=C_{\rm Hessian}=C_{\det}=\mathrm{false}.
+ \end{gathered}}
+ \label{eq:e12-decision}
+\end{equation}
+The next theorem must be an annular target-valued endpoint replacement with
+equiintegrable complete minors, or a reverse-H\"older estimate giving local
+$L^{2+\delta}$ control of the complete-minor vector followed by a controlled
+$S^3$ projection.  No same-action Riemann Hessian is assembled before one of
+those paths also establishes classicality and continuum isolation.

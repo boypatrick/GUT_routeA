@@ -1,8 +1,47 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
-## AP-E11 compatible-cochain checkpoint (2026-07-19; current authority)
+## AP-E12 endpoint density/regularity checkpoint (2026-07-20; current authority)
+
+AP-E12 executes the fixed-degree complete-minor graph-density priority and,
+after it does not close, audits the relaxed-minimizer regularity fallback.
+Four statements are now separated exactly:
+
+- Complete-minor graph convergence automatically preserves the degree
+  integral, hence smooth integer degrees are eventually equal.  Fixed degree
+  is not an extra repair once target-valued graph density exists.
+- The AP-E11 density has uniform Legendre--Hadamard constant one and an exact
+  strong-quasiconvexity identity: its integrated affine excess is the sum of
+  squared first-, second-, and third-minor increments.
+- The direct radial Malý dipole cannot be a counterexample at this endpoint:
+  finite `L2` second-minor energy needs `alpha>1/2`, whereas a non-vanishing
+  forced filling cost needs `alpha<=1/2`; logarithmic corrections do not
+  create overlap.
+- This mechanism-specific no-go is not the missing density theorem.  Known
+  Cartesian approximation loses exponent, and known area approximation is
+  only `L1` in the minors.
+
+The fallback is likewise fail-closed.  The classical stress
+`P=F+R[(tr G)F-FG]+K F cof(G)` is explicit, but a minimizer of the relaxed
+functional first needs local fixed-trace recovery before it satisfies the
+naive weak Euler--Lagrange equation.  The present pointwise `(2,6)` growth in
+dimension three lies outside the 2024 relaxed strongly-quasiconvex partial-
+regularity range `q<3`, in addition to the unresolved `S3` constraint and
+degree relaxation.
+
+The production card passes `9/9`.  Three refined backgrounds show decreasing
+single-tetrahedron energy fractions (`3.966e-3 -> 1.849e-3 -> 1.173e-3`), and
+three strongly perturbed starts return to one finite-grid basin with relative
+energy spread `3.38e-11` and symmetry-quotiented field RMS `1.31e-5`.
+Numerics do not promote a continuum theorem.  Thus endpoint density remains
+neither proved nor disproved; partial regularity, classicality, continuum
+isolation, same-action Hessian, determinant variation, and portal remain
+false.  Next target: an annular target-valued endpoint replacement with
+minor equiintegrability, or a complete-minor reverse-Hölder theorem yielding
+local `L^(2+delta)` control and a controlled `S3` projection.
+
+## AP-E11 compatible-cochain checkpoint (2026-07-19; superseded above)
 
 AP-E11 implements the requested structural repair.  On oriented tetrahedra,
 `dn` is a primal one-cochain and the Alexander--Whitney front/back cup obeys

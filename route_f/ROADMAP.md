@@ -1,12 +1,79 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E11 compatible cochain checkpoint (2026-07-19; current authority)
+## AP-E12 endpoint density/regularity checkpoint (2026-07-20; current authority)
+
+Status: **the endpoint was audited but not closed.  Degree is continuous in
+the complete-minor graph norm, the AP-E11 density is exactly strongly
+quasiconvex with Legendre--Hadamard constant one, and the direct Malý dipole
+counterexample mechanism is excluded by a sharp scaling incompatibility.
+Neither full endpoint graph density nor the relaxed-minimizer fallback is
+proved.  The Hessian, determinant, and portal gates remain false.**  The
+production card passes `9/9` without promoting its finite-grid basin proxy.
+
+### New exact results
+
+- Strong graph convergence of `u`, `Du`, `M_2(Du)`, and `M_3(Du)` implies
+  convergence of the degree integral.  Since smooth degrees are integers, a
+  target-valued graph recovery sequence is automatically fixed-degree for all
+  sufficiently large indices.  No separate topology patch is needed.
+- For `W(F)=(|F|^2+R|M_2(F)|^2+K|M_3(F)|^2)/2` and rank-one `H`, every minor
+  is affine along `F+tH`, giving
+  `D2W(F)[H,H]=|H|^2+R|DM_2(F)H|^2+K|DM_3(F)H|^2 >= |H|^2`.
+- Periodic null-Lagrangian means give an exact strong-quasiconvexity identity:
+  the integral excess over an affine gradient is one half the sum of the
+  squared first-, second-, and third-minor increments.
+- A radial dipole `r^alpha gamma(theta)` has finite `L2` second-minor energy
+  only for `alpha>1/2`, while a non-vanishing forced filling cost requires
+  `alpha<=1/2`.  The logarithmic borderline has the same incompatibility.
+  This rules out that counterexample family, not every possible endpoint
+  concentration.
+
+### Why the two requested routes remain open
+
+- Malý's Cartesian approximation theorem loses exponent (`q<p`); Mucci's
+  area approximation controls all minors in `L1`.  Ordinary `W1,2(S3)`
+  density does not control the endpoint `L2` minors.  The fixed-degree
+  complete-minor density theorem is therefore **not proved and not
+  disproved**.
+- The formal classical stress is
+  `P=F+R[(tr G)F-FG]+K F cof(G)`, `G=F^T F`, but a minimizer of the relaxed
+  fixed-degree functional is not yet authorized to satisfy its naive
+  Euler--Lagrange equation without local fixed-trace recovery.
+- The model has pointwise `(p,q)=(2,6)` growth in dimension three.  The 2024
+  partial-regularity theorem for relaxed strongly quasiconvex integrands
+  requires `q<min(np/(n-1),p+1)=3`, and does not contain the sphere constraint
+  or this graph relaxation.  Thus weak EL, partial regularity, classicality,
+  and continuum isolation remain false.
+
+### Numerical evidence and ordered continuation
+
+- On `(N,L)=(17,5.5),(21,6),(25,6.5)`, maximum one-tetrahedron energy
+  fractions decrease `3.966e-3 -> 1.849e-3 -> 1.173e-3`; all fields are
+  stationary, admissible, and have three-target `B=[1,1,1]`.
+- Three amplitude-`0.24` tangent perturbations re-relax to relative energy
+  spread `3.38e-11`, radial-CDF distance `5.70e-7`, and field RMS `1.31e-5`
+  after quotienting lattice translations and proper target `SO(3)`.  This is
+  finite-dimensional same-basin evidence only.
+- Next prove an annular target-valued endpoint replacement/equiintegrability
+  lemma.  The parallel analytic route is a reverse-Hölder estimate giving
+  local `L^(2+delta)` control of the complete-minor vector, followed by a
+  controlled `S3` projection.  Only after classicality and continuum
+  isolation close may the same-action Riemann Hessian be assembled.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e12_graph_density_regular_minimizer.tex` and PDF;
+- `route_f/code/verify_ap_e12_graph_density_regular_minimizer.py`;
+- `route_f/output/ap_e12_graph_density_regular_minimizer.{json,md}`;
+- AP-E12 section in the master Route-E derivation ledger.
+
+## AP-E11 compatible cochain checkpoint (2026-07-19; superseded above)
 
 Status: **the tetrahedral discrete-de-Rham replacement, its exact cell
 formula, and the declared translation/triangulation quotient gate are

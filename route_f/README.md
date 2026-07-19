@@ -26,7 +26,29 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-19 AP-E11 compatible tetrahedral cochain action
+## 2026-07-20 AP-E12 endpoint graph-density and regularity audit
+
+AP-E12 attacks the last AP-E11 classical-continuum gate.  It proves three
+useful facts: graph-norm convergence makes the degree continuous; the
+complete-minor density has uniform Legendre--Hadamard constant one and an
+exact strong-quasiconvexity identity; and the direct radial Malý dipole has no
+endpoint scaling window.  For `r^alpha gamma(theta)`, finite `L2` second-minor
+energy needs `alpha>1/2`, while non-vanishing forced filling cost needs
+`alpha<=1/2`.
+
+The endpoint density theorem is still neither proved nor disproved.  Known
+Cartesian smooth approximation loses exponent, and the fallback regularity
+theorem for relaxed quasiconvex minimizers does not reach this model's
+dimension-three `(2,6)` growth or its sphere/degree constraints.  The `9/9`
+card finds decreasing cell concentration and a tight finite-grid basin after
+translation/target-`SO(3)` quotienting, but does not promote continuum
+isolation.  Weak Euler--Lagrange, partial regularity, classicality, Hessian,
+determinant, and portal gates remain false.  See
+`tex/ap_e12_graph_density_regular_minimizer.tex`,
+`code/verify_ap_e12_graph_density_regular_minimizer.py`, and
+`output/ap_e12_graph_density_regular_minimizer.{json,md}`.
+
+## 2026-07-19 AP-E11 compatible tetrahedral cochain action (superseded by AP-E12 for the classical gate)
 
 AP-E11 replaces the AP-E10-refuted one-corner stencil by one compatible
 discrete-de-Rham evidence chain.  Primal `dn` is combined with the
@@ -506,8 +528,10 @@ Artifacts:
   `output/pdf/ap_e4_tangent_dirac_spectrum.pdf`: clean-built, warning-free,
   page-by-page checked AP-E3 UV (12-page) and AP-E4 (9-page) notes.
 - `output/another_physics_route_e_derivation_ledger.pdf`: clean-built,
-  visually checked 31-page rendering of the derivation ledger; the same
+  visually checked 41-page rendering of the derivation ledger; the same
   current build is mirrored under `output/pdf/`.
+- `output/pdf/ap_e12_graph_density_regular_minimizer.pdf`: warning-free,
+  page-by-page checked 6-page endpoint-density/regularity note.
 - `tex/ap_e6_sp4_eta_bordism_threshold.tex`,
   `tex/ap_e6_relaxed_b1_multigrid_hessian.tex`, and
   `tex/ap_e6_same_soliton_yukawa_callias.tex`: complete AP-E6 formula,
