@@ -10,7 +10,75 @@ Categories: **[remove]** = prove in-repo, dependency eliminated;
 principles of the P0-P3 kind; **[impossible]** = provably not closable;
 **[scope]** = inherited Route-A obligations, untouched by Route E.
 
-## AP-E8 topology-preserving finite-grid update (2026-07-17; current authority)
+## AP-E10 stencil/cell/translation update (2026-07-18; current authority)
+
+No Route-E dependency or portal is promoted.  AP-E10 instead proves that the
+current AP-E7/AP-E8 mainline cannot supply the missing continuum background.
+The exact three-periodic sequence
+`n_a=(sqrt(1-eta^2 a^2), eta a cos(theta), eta a sin(theta), 0)` converges
+uniformly to the vacuum while a one-corner forward Skyrme two-minor remains
+`(3 sqrt(3)/2) eta^2`.  A separate two-periodic hemisphere-valued sequence
+has geometric degree zero but forward topological current tending to
+`-16 eta^3`.  An `L^(4/3)` estimate excludes singular concentration, but not
+this diffuse oscillatory defect.  Hence the required compensated-compactness
+and current-identification assumptions are false for the declared stencil.
+
+The critical finite-`R` cell problem is fully evaluated: cycle balance and
+Jensen force the periodic corrector to zero for both six- and five-tet graphs.
+The resulting homogenized quartics are inequivalent, with six/five ratios
+`4/3` and `3` on two gradients.  This proves finite-`R` mesh dependence rather
+than removing it.
+
+Eleven same-action quotient backgrounds extend the numerical range to
+`a=0.208333`, `L=7.5`.  All are stationary/admissible `B=1`, but centered
+size, profile, and cross-triangulation thresholds fail.  Thus
+`C_B1_physical_continuum=false`, Hessian and determinant authorization remain
+false, and the degree-one portal remains prohibited.  The required repair is
+a compatible tetrahedral cochain/cup-product/Hodge-star Skyrme action whose
+topological three-cochain agrees with normalized-affine degree.  This is a
+new prerequisite before any further Route-E portal work.
+
+## AP-E9 scaling/Gamma-limit update (2026-07-18; superseded above)
+
+AP-E9 proves that the AP-E8 full action is equicoercive on every fixed box in
+strong `L2 x L2`: the original coordinate-edge Dirichlet term bounds the
+piecewise-affine `H1` norm.  This is ordinary compactness, not degree-sector
+compactness.  With `d=1-epsilon`, `w=gamma*a`, and
+`R=gamma*a^2/d^2`, the exact barrier calculus gives
+
+`b_epsilon(n_x dot n_y) >= |n_x-n_y|^4/(8d^2)`
+
+and a Lambert-`W` edge margin.  On every positive bounded sublevel, uniform
+relative distance from the barrier floor holds iff `inf w>0`; smooth recovery
+fields lose the barrier only when
+`R->0`.  Thus for fixed epsilon and `gamma=c*a^(-p)` the only simultaneous
+window is `1<=p<2`, with `p=1` preferred.  A shrinking degree-one bubble
+shows that the vanishing barrier alone cannot preserve degree.  For
+`inf R>0`, the barrier does give `W1,4` compactness and closes degree.
+At critical `p=2`, the raw six-tet and five-tet smooth-sampling quartics are
+not scalar multiples, but a checkerboard finite-`R` Gamma density must first
+be computed by periodic cell homogenization; that identification remains open.
+
+The complete same-action Gamma limit remains conditional on an unproved
+Gamma-liminf/compactness theorem for the one-corner forward Skyrme minors and
+energy-dense fixed-smooth recovery.  The finite-`R` barrier cell problem is a
+separate missing theorem.  The 23-case production scan reinforces that
+boundary: every field is stationary, admissible, and has `B=[1,1,1]`, but
+the relaxed barrier slope (`0.2196`), large-volume radius spread (`8.521%`),
+cross-triangulation energy spreads (`5.442%`, `5.355%`), and `p=0` versus
+`p=1` energy spread (`6.446%`) fail their declared gates.
+
+Therefore `C_B1_finite_grid=true` remains valid while
+`C_B1_physical_continuum=false`,
+`regulator_stable_continuum_background=false`, and both same-action Hessian
+and determinant-variation authorizations remain false.  No Route-E dependency
+or portal is promoted.  Ordered work is now the discrete Skyrme-minor theorem
+and the periodic barrier cell formula, then a smaller-`a` adaptive-box scan
+with translation tightness, and only after those succeed the full Riemann Hessian.
+The finite GW/domain-wall kernel
+and actual `SO(3)` mapping-torus mod-two index remain parallel lanes.
+
+## AP-E8 topology-preserving finite-grid update (2026-07-17; superseded above)
 
 AP-E8 deliberately chose the one route that changes the AP-E7 finite-site
 blocker.  It adds a subtracted logarithmic barrier on every unique

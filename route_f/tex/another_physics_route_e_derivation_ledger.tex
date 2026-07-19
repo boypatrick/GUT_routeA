@@ -2223,6 +2223,258 @@ gauge/ghost blocks, four-dimensional QC2D dynamics, and the quantum continuum
 limit remain open.  Hence the full Lane-B conjunction, portal authorization,
 and physics promotion remain false.
 
+\section{AP-E9: scaling regimes, Gamma-limit audit, and regulator no-go}
+
+AP-E9 resolves ordinary compactness and the barrier scaling while retaining
+the stronger topology and complete-action obligations.  Put
+\begin{equation}
+ d_a=1-\epsilon_a,\qquad w_a=\gamma_a a,\qquad
+ R_a=\frac{\gamma_a a^2}{d_a^2}.
+ \label{eq:e9-scales}
+\end{equation}
+For one admissible edge define
+\begin{equation}
+ x_e=\frac{n_x\cdot n_y-\epsilon_a}{d_a},\qquad
+ z_e=1-x_e=\frac{|n_x-n_y|^2}{2d_a}.
+\end{equation}
+The subtracted logarithmic barrier is
+$\phi(x_e)=-\log x_e-1+x_e$, with
+\begin{equation}
+ \phi(1-z)=\sum_{k\ge2}\frac{z^k}{k},\qquad
+ \frac{z^2}{2}\le\phi(1-z)\le\frac{z^2}{2(1-z)}.
+\end{equation}
+Consequently
+\begin{equation}
+ \boxed{b_{\epsilon_a}(n_x\cdot n_y)
+ \ge\frac{|n_x-n_y|^4}{8d_a^2}.}
+ \label{eq:e9-quartic-bound}
+\end{equation}
+
+For every fixed $C>0$, if the total barrier is at most $C$, inversion by the
+principal Lambert
+branch gives the exact per-edge estimate
+\begin{equation}
+ x_e\ge -W_0(-e^{-1-C/w_a})
+ \ge e^{-1-C/w_a}.
+ \label{eq:e9-lambert}
+\end{equation}
+Thus uniform relative edge interiority on every positive bounded sublevel
+holds exactly
+when $\inf_a w_a>0$; a uniform absolute margin also requires
+$\inf_a d_a>0$.  A single rotated vertex in a vacuum collar, with
+$x_e=e^{-\alpha/w_a}$, gives a bounded-action countersequence when
+$w_a\to0$.
+
+Independently, the declared base coordinate Dirichlet term has a
+mesh-uniform positive coefficient and gives an affine
+$H^1$ bound on every fixed physical box.  Rellich compactness therefore
+proves strong $L^2\times L^2$ equicoercivity for every positive $\gamma_a$
+and $-1/3<\epsilon_a<1$.  This is not topological equicoercivity: strong
+$L^2$ convergence does not preserve three-dimensional degree.
+
+For a fixed smooth sphere-valued field and a periodic shape-regular mesh,
+\begin{equation}
+ \mathcal B_a[S_an]=\frac{R_a}{8}\int Q_{\mathcal T}(\nabla n)\,\dd x
+ +O\!\left(R_a\left(a+\frac{a^2}{d_a}\right)\right).
+ \label{eq:e9-smooth}
+\end{equation}
+At fixed $d$ and $\gamma_a=ca^{-p}$,
+$w_a=ca^{1-p}$ and $R_a=ca^{2-p}/d^2$.  Uniform edge interiority needs
+$p\ge1$, while smooth disappearance needs $p<2$; hence
+\begin{equation}
+ \boxed{1\le p<2,\qquad p=1\text{ is the minimal matched scaling}.}
+ \label{eq:e9-window}
+\end{equation}
+If $d_a\sim d_0a^\alpha$, this becomes $p\ge1$ and
+$p+2\alpha<2$; an absolute margin additionally rules out $\alpha>0$.
+
+For the barrier alone, use the explicitly declared dual-cell
+piecewise-constant embedding in $L^2(\Omega;\RR^4)$.  When $R_a\to0$, its
+strong-$L^2$ Gamma limit is zero on $L^2(\Omega;S^3)$ and $+\infty$ outside;
+it forgets trace and degree.  If $\inf R_a>0$, the quartic lower bound gives
+$W^{1,4}$ and $C^{0,\beta}$ compactness, closing degree; if
+$R_a\to\infty$, bounded sublevels converge to the vacuum.  At finite
+nonzero $R$, the displayed $Q_{\mathcal T}$ is only the Cauchy--Born density
+on fixed smooth samples.  A periodic multi-cell mesh generally requires a
+homogenized cell formula, which is not evaluated here.  A resolved degree-one
+bubble of radius
+$r_a=\max\{R_a^{1/2},a^{1/2}\}$ has
+$\mathcal B_a=O(R_a/r_a)\to0$ while converging in $L^2$ to the vacuum.
+Therefore a continuum-vanishing barrier cannot by itself close degree.
+
+At the critical scaling, the uncorrected smooth-sampling tensors are
+algebraically different.  The uniform positive Freudenthal and checkerboard
+five-tetrahedron quartics are
+\begin{align}
+ Q_{6,+}(A)&=\sum_i|Ae_i|^4+\sum_{i<j}|A(e_i+e_j)|^4
+              +|A(e_1+e_2+e_3)|^4,\\
+ Q_5(A)&=\sum_i|Ae_i|^4+\frac12\sum_{i<j}
+ \left(|A(e_i+e_j)|^4+|A(e_i-e_j)|^4\right).
+\end{align}
+For $(Ae_1,Ae_2,Ae_3)=(v,0,0)$ their ratio is $4/3$, whereas for
+$(v,v,0)$ it is $3$.  No scalar change of $\gamma$ equates these raw
+Cauchy--Born tensors; equivalence of the homogenized densities remains an
+open cell problem.
+
+A complete same-action Gamma theorem is conditional: if the AP-E7 base
+actions are equicoercive and Gamma-converge in strong $L^2\times L^2$, every
+finite-energy limit has an energy-dense sequence of fixed smooth pairs, and
+the nodal samples of each fixed pair recover the base energy, then a slow
+diagonal argument together with
+$a^2/d_a\to0$ and $R_a\to0$ imply that adding the barrier leaves that limit
+unchanged.  The discrete forward-Skyrme-minor liminf, fixed-boundary
+fixed-degree density, topological-current defect control, and translation
+tightness for growing boxes remain unproved.
+
+The production scan re-relaxes 23 fields over six fixed-box spacings, four
+fixed-spacing volumes, $p=0,1,2$, both checkerboard phases, the original
+six-tet mesh, and centered/translated starts at $a=0.4$ and $0.3$.  Every
+case is stationary below $2\times10^{-6}$, admissible, and has three-target
+$B=(1,1,1)$.  Nevertheless the predeclared continuum diagnostics are
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+diagnostic&observed&threshold&pass\\
+\midrule
+relaxed $p=1$ barrier slope&0.2196&$1.0\pm0.4$&no\\
+largest-three-volume radius spread&8.521\%&5\%&no\\
+cross-mesh energy spread, $a=0.4$&5.442\%&3\%&no\\
+cross-mesh energy spread, $a=0.3$&5.355\%&3\%&no\\
+$p=0$ versus $p=1$ energy spread&6.446\%&3\%&no\\
+\bottomrule
+\end{tabular}
+\end{center}
+The energy-only volume spread is $0.1001\%$, demonstrating why energy alone
+is an insufficient continuum gate.  The card passes $8/8$ implementation
+and provenance checks but gives
+\begin{equation}
+ \begin{gathered}
+ C_{B1}^{\rm physical\ continuum}=\mathrm{false},\\
+ \texttt{regulator\_stable\_background}=\texttt{false},\\
+ \texttt{same\_action\_Hessian\_allowed}=\texttt{false}.
+ \end{gathered}
+ \label{eq:e9-decision}
+\end{equation}
+The regulated determinant variation remains equally unauthorized.  The
+finite GW/domain-wall kernel and actual $SO(3)$ Yukawa mapping-torus mod-two
+index remain parallel lanes; the degree-one Route-E portal remains last.
+
+\section{AP-E10: exact stencil no-go, finite-R cell formula, and translation quotient}
+
+AP-E10 gives a decisive negative answer to the proposed compensated-
+compactness route for the actual AP-E7 one-corner forward stencil.  On a
+three-periodic torus let
+\begin{equation}
+ \theta_z=\frac{2\pi}{3}(z_1+2z_2),\qquad
+ n_a(z)=\left(\sqrt{1-\eta^2a^2},
+ \eta a\cos\theta_z,\eta a\sin\theta_z,0\right).
+ \label{eq:e10-minor-sequence}
+\end{equation}
+Then $n_a\to e_0$ uniformly, but the target-component $(1,2)$ entry of the
+spatial $(1,2)$ forward minor is identically
+\begin{equation}
+ \boxed{(D_1^an_a\wedge D_2^an_a)_{12}
+ =\frac{3\sqrt3}{2}\eta^2.}
+ \label{eq:e10-minor-defect}
+\end{equation}
+The continuum minor of the limit is zero.  Both the coordinate Dirichlet and
+the AP-E7 forward Skyrme energy remain bounded.  Thus the minor weak-
+continuity hypothesis needed in AP-E9 is false, not merely unproved.
+This is consistent with div--curl theory requiring compatible differential
+constraints \cite{BrianeCasadoDiaz2016} and with the FEEC requirement of a
+discrete subcomplex and bounded cochain projection
+\cite{ArnoldFalkWinther2010}.
+
+A separate two-periodic construction tracks the current defect.  Put
+\begin{equation}
+ u_1=(-1)^{z_1+z_2},\quad u_2=(-1)^{z_2+z_3},\quad
+ u_3=(-1)^{z_3+z_1},\qquad
+ n_a=(\sqrt{1-3\eta^2a^2},\eta a u_1,\eta a u_2,\eta a u_3).
+\end{equation}
+Its image lies in an open hemisphere, so geometric degree is zero, whereas
+the forward algebraic current is
+\begin{equation}
+ J_a=-16\eta^3\sqrt{1-3\eta^2a^2}\longrightarrow-16\eta^3.
+ \label{eq:e10-current-defect}
+\end{equation}
+After multiplication by the exact-boundary cutoff
+$\chi=\prod_i\sin^2(\pi x_i)$ and normalization, the weak limit is the
+diffuse defect $-16\eta^3\chi^3\dd x$.  It is not a concentration measure.
+Indeed, if $s_i$ are the three singular values of the forward derivative,
+arithmetic--geometric mean gives
+\begin{equation}
+ \boxed{\int|J_a|^{4/3}\dd x\le
+ \frac13\int|\wedge^2D^an_a|^2\dd x.}
+ \label{eq:e10-l43}
+\end{equation}
+Thus singular forward-current concentration is excluded, but a diffuse
+lattice alias survives and the forward current is not the normalized-affine
+degree current.  Recent two-dimensional discrete Skyrmion compactness
+\cite{BrianiCicaleseKreutz2026} supplies a useful architecture, not a theorem
+for this noncompatible three-dimensional stencil.
+
+The AP-E9 finite-$R$ cell problem is now solved.  For periodic bonds
+$\mathcal B_Y$,
+\begin{equation}
+ Q_{\rm hom}(A)=\frac1{|Y|}\inf_{\varphi:Y\to\RR^m}
+ \sum_{(p,r)\in\mathcal B_Y}|Ar+\varphi(p+r)-\varphi(p)|^4.
+ \label{eq:e10-cell}
+\end{equation}
+Every fixed-direction bond graph in both the uniform six-tet and checkerboard
+five-tet period-two cells is cycle-balanced.  Hence the mean periodic
+corrector increment vanishes direction by direction; convex Jensen
+inequality proves that $\varphi=0$ is the exact minimizer.  Therefore the
+homogenized densities are precisely
+\begin{align}
+ Q_6^{\rm hom}(A)&=\sum_i|Ae_i|^4+\sum_{i<j}|A(e_i+e_j)|^4
+ +|A(e_1+e_2+e_3)|^4,\\
+ Q_5^{\rm hom}(A)&=\sum_i|Ae_i|^4+\frac12\sum_{i<j}
+ \bigl(|A(e_i+e_j)|^4+|A(e_i-e_j)|^4\bigr).
+\end{align}
+The two checkerboard phases agree, but six/five ratios remain $4/3$ on
+$(v,0,0)$ and $3$ on $(v,v,0)$.  Thus triangulation dependence survives
+homogenization; a single rescaling of $R$ cannot remove it.  Random-start cell
+solves reproduce the closed formulas to relative residual
+$9.1\times10^{-15}$.
+
+Finally, AP-E10 defines the translation quotient by the density
+$\rho=1-n_0$, its barycentre, centered covariance, and barycentre-aligned
+radial profile.  Dynamic shifts are accepted only if admissibility and all
+three degree targets persist, after which the same action is re-relaxed.
+Eleven production cases extend to $a=0.208333$ and $L=7.5$.  Every case is
+stationary below $2\times10^{-6}$, has edge margin at least $0.1064$, and
+gives $B=(1,1,1)$.  The predeclared continuum diagnostics are
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+diagnostic&observed&threshold&pass\\
+\midrule
+joint-tail energy spread&1.656\%&3\%&yes\\
+joint-tail centered-radius spread&9.612\%&5\%&no\\
+joint successive profile $L^1$&7.072\%&5\%&no\\
+translated-start profile $L^1$&3.500\%&3\%&no\\
+five-/six-tet energy spread&5.143\%&3\%&no\\
+five-/six-tet centered-radius spread&11.378\%&5\%&no\\
+\bottomrule
+\end{tabular}
+\end{center}
+The production card passes $10/10$, but the exact stencil counterexample and
+failed mesh/shape gates force
+\begin{equation}
+ \boxed{\begin{gathered}
+ \texttt{full\_Gamma\_liminf=false},\\
+ \texttt{regulator\_stable\_background=false},\\
+ \texttt{same\_action\_Hessian\_allowed=false}.
+ \end{gathered}}
+ \label{eq:e10-decision}
+\end{equation}
+The required repair is a complete tetrahedral cochain action: $dn$ as a
+primal one-cochain, a graded shifted cup product satisfying a discrete
+Leibniz rule, a positive calibrated Hodge star, and a topological three-
+cochain whose evaluation agrees with normalized-affine degree.  The Hessian
+and determinant variation remain embargoed until that replacement passes its
+own cell and quotient continuum gates.
+
 \section{Reproducibility ledger}
 
 The independent arithmetic/symbolic card is
@@ -2263,6 +2515,16 @@ promotion booleans remain false.  AP-E8's topology-preserving finite-grid card
 passes \(13/13\), promotes only the finite-grid sector/stationarity
 subcondition, and explicitly keeps the physical-continuum Lane-B conjunction,
 every complete lane, portal authorization, and promotion false.
+AP-E9's scaling/triangulation card passes $8/8$, proves fixed-box strong-
+$L^2$ equicoercivity, the barrier zero-limit, and the positive-$R$ compactness
+regimes, while keeping the finite-$R$ homogenized density, numerical
+continuum, same-action Hessian, and regulated-determinant gates false.
+AP-E10's stencil/cell/quotient card passes $10/10$, explicitly disproves
+one-corner forward-minor compensated compactness, excludes only singular
+forward-current concentration, computes the finite-$R$ zero-corrector cell
+densities, and proves their six-/five-tet inequivalence.  Its extended
+stationary scan keeps the physical continuum, Hessian, and determinant gates
+false.
 The JSON explicitly retains all
 cross-theory identifications as non-derived bridge axioms and sets
 \texttt{physics\_promotion\_allowed=false}.

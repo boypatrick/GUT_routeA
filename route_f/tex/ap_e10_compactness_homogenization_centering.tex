@@ -1,0 +1,479 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype,xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\TT}{\mathbb T}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ezer}{e_0}
+\newcommand{\whom}{W_{\mathrm{hom}}}
+
+\title{AP-E10 Exact Stencil No-Go and Finite-$R$ Cell Formula:\\
+Discrete Skyrme Defects, Periodic Homogenization,\\
+and a Translation-Quotient Continuum Audit}
+\author{Route F research note}
+\date{18 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note closes two AP-E9 questions and gives a negative answer to the first
+physical conjunction.  The one-corner forward Skyrme stencil does not satisfy
+the compensated-compactness property required by the proposed continuum
+argument.  An exact three-periodic sequence $n_a:\TT^3\to\SSS^3$ converges
+uniformly to the vacuum while one of its forward two-minors remains the
+nonzero constant $3\sqrt3\eta^2/2$.  A second two-periodic sequence has
+geometric degree zero but forward topological current converging to
+$-16\eta^3$.  Localizing it with an exact vacuum boundary produces the diffuse
+defect $-16\eta^3\chi^3\dd x$.  On the other hand the Skyrme bound implies
+$|J_a|^{4/3}\le |\wedge^2D^an_a|^2/3$, so singular concentration of this
+forward current is excluded.  The obstruction is a diffuse lattice-scale
+aliasing defect, not loss of mass into an atomic measure.
+
+The finite-$R$ barrier problem is solved exactly.  On both the uniform
+six-tetrahedron graph and the two checkerboard five-tetrahedron phases, every
+bond-direction subgraph is cycle-balanced.  Direction-wise Jensen inequality
+therefore proves that the periodic corrector is zero and that the AP-E9 raw
+Cauchy--Born quartics are the homogenized densities.  Their ratios are $4/3$
+and $3$ on two gradients, so triangulation dependence survives homogenization.
+An eleven-case production scan then adds a physical translation quotient,
+dynamic centering, $a\downarrow0.20833$, and $L\uparrow7.5$.  All cases are
+stationary, admissible, and have three-target degree one, but size, radial
+profile, and cross-triangulation gates fail.  Consequently the complete
+Gamma-liminf, continuum background, same-action Hessian, and regulated
+determinant variation remain prohibited.  The exact repair is structural: a
+compatible discrete de Rham/cup-product Skyrme term must replace the
+one-corner product before the continuum program can resume.
+\end{abstract}
+
+\tableofcontents
+
+\section{Declared stencil and proof obligations}
+
+Let $a>0$ and write the forward differences on a cubic lattice as
+\begin{equation}
+ D_i^a n(z)=\frac{n(z+e_i)-n(z)}{a},\qquad i=1,2,3.
+ \label{eq:forward}
+\end{equation}
+The AP-E7 Skyrme density at the lower corner of a cube is
+\begin{equation}
+ S_a(z)=\sum_{1\le i<j\le3}
+ \left|D_i^an(z)\wedge D_j^an(z)\right|^2.
+ \label{eq:skyrme-density}
+\end{equation}
+It is sampled once per cube rather than assembled from the gradients of all
+tetrahedral interpolants.  The associated algebraic forward current is
+\begin{equation}
+ J_a(z)=\det\bigl[n(z),D_1^an(z),D_2^an(z),D_3^an(z)\bigr].
+ \label{eq:forward-current}
+\end{equation}
+
+For genuine gradients, minors are null Lagrangians and div--curl arguments can
+give weak continuity under appropriate hypotheses
+\cite{BrianeCasadoDiaz2016}.  Such an argument is not automatic for a finite
+difference product: the ordinary product rule contains shifts, and the
+unshifted expression in Eq.~\eqref{eq:skyrme-density} is not a cochain cup
+product.  Compatible discretizations instead preserve a differential complex
+and a bounded cochain projection \cite{ArnoldFalkWinther2010}.  AP-E10 tests
+the actual AP-E7 stencil, not an ideal compatible replacement.
+
+Three statements must be separated:
+\begin{enumerate}[label=(\roman*)]
+\item weak continuity of the two-minors in Eq.~\eqref{eq:skyrme-density};
+\item exclusion of a singular concentration measure for $J_a$;
+\item identification of the weak limit of $J_a$ with the geometric degree
+current of the normalized-affine map.
+\end{enumerate}
+The first and third statements fail; a quantitative version of the second is
+true.
+
+\section{Exact failure of compensated compactness}
+
+\subsection{A three-periodic two-minor defect}
+
+Work first on the unit torus with $a=(3m)^{-1}$.  For lattice index
+$z=(z_1,z_2,z_3)$ put
+\begin{equation}
+ \theta_z=\frac{2\pi}{3}(z_1+2z_2),\qquad
+ n_a(z)=\left(\sqrt{1-\eta^2a^2},
+ \eta a\cos\theta_z,\eta a\sin\theta_z,0\right),
+ \label{eq:minor-sequence}
+\end{equation}
+where $\eta>0$ is fixed and $a<\eta^{-1}$.  The sequence is exactly
+sphere-valued and $n_a\to\ezer$ uniformly.
+
+\begin{lemma}[Forward phase identity]
+Let $f_z=\cos\theta_z$, $g_z=\sin\theta_z$, and suppose a forward step in
+direction $i$ changes the phase by $\alpha_i$.  Then
+\begin{equation}
+ (\Delta_i f)(\Delta_j g)-(\Delta_i g)(\Delta_j f)
+ =4\sin\frac{\alpha_i}{2}\sin\frac{\alpha_j}{2}
+   \sin\frac{\alpha_j-\alpha_i}{2}.
+ \label{eq:phase-identity}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Use
+$\Delta_i f=-2\sin(\alpha_i/2)\sin(\theta+\alpha_i/2)$ and
+$\Delta_i g=2\sin(\alpha_i/2)\cos(\theta+\alpha_i/2)$, expand the determinant,
+and apply the sine subtraction identity.  The result is independent of
+$\theta$.
+\end{proof}
+
+Here $\alpha_1=2\pi/3$ and $\alpha_2=4\pi/3$.  Therefore the target-component
+$(1,2)$ entry of the spatial $(1,2)$ Skyrme minor is exactly
+\begin{equation}
+ \left(D_1^an\wedge D_2^an\right)_{12}
+ =\frac{3\sqrt3}{2}\eta^2
+ \label{eq:minor-constant}
+\end{equation}
+at every lattice site.
+
+\begin{theorem}[One-corner compensated compactness is false]
+There exists an $\SSS^3$-valued sequence converging uniformly, hence strongly
+in every finite $L^p$, to the vacuum, whose AP-E7 forward two-minors converge
+weakly to a nonzero constant although the continuum minor of the limit is
+zero.  Its discrete Dirichlet and Skyrme energies remain uniformly bounded.
+\end{theorem}
+
+\begin{proof}
+The sequence \eqref{eq:minor-sequence} has
+$\|n_a-\ezer\|_{L^\infty}=O(a)$.  Its forward derivatives are $O(\eta)$ and
+its two-minors are $O(\eta^2)$; summation with cell volume $a^3$ therefore
+gives uniform Dirichlet and Skyrme bounds.  Equation
+\eqref{eq:minor-constant} contradicts weak continuity.  Multiplication of the
+tangent components by a fixed $\chi\in C_c^\infty(\Omega)$ followed by exact
+normalization gives an exact-vacuum-boundary version whose defect tends to
+$(3\sqrt3/2)\eta^2\chi^2$ on the support of $\chi$.
+\end{proof}
+
+For $\eta=0.2$, the verifier obtains the same value
+$0.1039230484541327$ at $a=1/6,1/12,1/24,1/48$, with maximum exact residual
+$5.6\times10^{-17}$ while the uniform distance to the vacuum decreases to
+$4.17\times10^{-3}$.
+
+\subsection{A two-periodic diffuse topological-current defect}
+
+On an even lattice set
+\begin{equation}
+ u_1=(-1)^{z_1+z_2},\qquad
+ u_2=(-1)^{z_2+z_3},\qquad
+ u_3=(-1)^{z_3+z_1}
+ \label{eq:checker-u}
+\end{equation}
+and define
+\begin{equation}
+ n_a(z)=\left(\sqrt{1-3\eta^2a^2},\eta a u_1,\eta a u_2,\eta a u_3\right).
+ \label{eq:current-sequence}
+\end{equation}
+Again $n_a\to\ezer$ uniformly and the image lies in the open northern
+hemisphere, so every geometric degree is zero.  The tangent derivative matrix
+is
+\begin{equation}
+ \eta\begin{pmatrix}
+ -2u_1&-2u_1&0\\
+ 0&-2u_2&-2u_2\\
+ -2u_3&0&-2u_3
+ \end{pmatrix}.
+ \label{eq:checker-matrix}
+\end{equation}
+Since $u_1u_2u_3=1$, its determinant is $-16\eta^3$.  Thus
+\begin{equation}
+ \boxed{J_a=-16\eta^3\sqrt{1-3\eta^2a^2}
+ \longrightarrow -16\eta^3,}
+ \label{eq:diffuse-current}
+\end{equation}
+while the geometric degree and continuum current of the limit are zero.
+
+For a fixed-boundary form, let
+\begin{equation}
+ \chi(x)=\prod_{i=1}^3\sin^2(\pi x_i)
+ \label{eq:cutoff}
+\end{equation}
+on $[0,1]^3$, replace the tangent part by $\eta a\chi u$, and normalize.
+Then the boundary is exactly the vacuum and
+\begin{equation}
+ J_a\rightharpoonup -16\eta^3\chi^3\dd x,\qquad
+ \int J_a\dd x\longrightarrow
+ -16\eta^3\left(\frac5{16}\right)^3.
+ \label{eq:localized-current}
+\end{equation}
+For $\eta=0.2$ the limit is $-0.00390625$.  At $a=1/8$ and $1/48$ the
+computed integrals are respectively $-0.00295055$ and $-0.00387605$; the
+Dirichlet and Skyrme energies stay below $0.026$ and $0.0024$.
+
+\section{What the Skyrme bound still proves about concentration}
+
+Let $A_a$ be the $4\times3$ matrix with columns $D_i^an$, and let
+$s_1,s_2,s_3$ be its singular values.  Pointwise,
+\begin{align}
+ |J_a|&\le |\wedge^3A_a|=s_1s_2s_3,\\
+ |\wedge^2A_a|^2
+ &=s_1^2s_2^2+s_1^2s_3^2+s_2^2s_3^2.
+\end{align}
+Arithmetic--geometric mean gives
+\begin{equation}
+ |\wedge^2A_a|^2\ge
+ 3(s_1s_2s_3)^{4/3}.
+ \label{eq:amgm}
+\end{equation}
+
+\begin{theorem}[No singular forward-current concentration]
+Every sequence with uniformly bounded AP-E7 Skyrme energy satisfies
+\begin{equation}
+ \boxed{\int_\Omega |J_a|^{4/3}\dd x
+ \le\frac13\int_\Omega|\wedge^2D^an_a|^2\dd x.}
+ \label{eq:l43}
+\end{equation}
+Hence $J_a$ is weakly precompact in $L^{4/3}$ and cannot acquire an atomic or
+other singular-measure concentration defect.
+\end{theorem}
+
+\begin{remark}
+Equation \eqref{eq:l43} excludes concentration but does not identify the weak
+limit.  Equations \eqref{eq:minor-constant} and \eqref{eq:diffuse-current}
+show that a diffuse oscillatory defect survives.  Nor does
+Eq.~\eqref{eq:l43} control the geometric normalized-affine current, because
+the AP-E7 action samples only one forward triad per cube.  A theorem for
+geometric degree requires a compatible simplex-wise action and current.
+Recent two-dimensional charge-measure compactness results
+\cite{BrianiCicaleseKreutz2026} demonstrate the needed architecture but do
+not transfer to this three-dimensional, noncompatible stencil.
+\end{remark}
+
+\section{Finite-R periodic cell problem}
+
+At the AP-E9 critical scale let $R_a=\gamma_a a^2/d_a^2\to R\in(0,\infty)$.
+Around a fixed target point, a bounded microscopic tangent corrector gives a
+bond increment $a(Ar+D_r\varphi)+o(a)$.  The logarithmic barrier expansion
+therefore yields
+\begin{equation}
+ \cB_a\longrightarrow \frac{R}{8}\int_\Omega
+ Q_{\mathrm{hom}}(\nabla n)\dd x.
+ \label{eq:barrier-limit}
+\end{equation}
+
+Let $Y=(\mathbb Z/P\mathbb Z)^3$ and let $\mathcal B_Y$ be the unique periodic
+bonds per cell, written as $(p,r)$ from $p$ to $p+r$.  The exact convex cell
+problem is
+\begin{equation}
+ Q_{\mathrm{hom}}(A)=\frac1{|Y|}
+ \inf_{\varphi:Y\to\RR^m}
+ \sum_{(p,r)\in\mathcal B_Y}
+ |Ar+\varphi(p+r)-\varphi(p)|^4.
+ \label{eq:cell-problem}
+\end{equation}
+The additive constant of $\varphi$ is immaterial.
+
+\begin{definition}[Direction-wise cycle balance]
+For each bond direction $r$, let $\mathcal B_{Y,r}$ be its directed periodic
+subgraph.  It is cycle-balanced if every vertex has the same incoming and
+outgoing multiplicity.
+\end{definition}
+
+\begin{lemma}[Zero-corrector criterion]
+If every $\mathcal B_{Y,r}$ is cycle-balanced, then the zero corrector solves
+Eq.~\eqref{eq:cell-problem} exactly.
+\end{lemma}
+
+\begin{proof}
+Cycle balance gives
+\begin{equation}
+ \sum_{(p,r)\in\mathcal B_{Y,r}}
+ [\varphi(p+r)-\varphi(p)]=0.
+\end{equation}
+Because $v\mapsto|v|^4$ is convex, Jensen's inequality gives
+\begin{equation}
+ \frac1{|\mathcal B_{Y,r}|}\sum_{(p,r)\in\mathcal B_{Y,r}}
+ |Ar+D_r\varphi(p)|^4\ge |Ar|^4.
+\end{equation}
+Summing directions proves the lower bound, and $\varphi=0$ attains it.
+\end{proof}
+
+The uniform six-tet graph has, per primitive cell, the seven directions
+\begin{equation}
+ e_1,e_2,e_3,e_1+e_2,e_1+e_3,e_2+e_3,e_1+e_2+e_3.
+\end{equation}
+The checkerboard five-tet graph has the three coordinate directions and both
+signs of every face diagonal with weight $1/2$.  Exact enumeration on the
+period-two cell gives nodewise in-degree equal to out-degree for every one of
+these direction graphs.  Thus
+\begin{align}
+ Q_6^{\mathrm{hom}}(A)
+ &=\sum_i|Ae_i|^4+\sum_{i<j}|A(e_i+e_j)|^4
+   +|A(e_1+e_2+e_3)|^4,
+ \label{eq:q6}\\
+ Q_5^{\mathrm{hom}}(A)
+ &=\sum_i|Ae_i|^4+\frac12\sum_{i<j}
+ \bigl(|A(e_i+e_j)|^4+|A(e_i-e_j)|^4\bigr).
+ \label{eq:q5}
+\end{align}
+The two checkerboard phases are lattice translates and have the same
+$Q_5^{\mathrm{hom}}$.  Random-start numerical corrector solves for four fixed
+and four random $3\times3$ gradients reproduce Eqs.~\eqref{eq:q6}--
+\eqref{eq:q5} with maximum relative residual $9.1\times10^{-15}$.
+
+\begin{theorem}[Finite-$R$ mesh dependence survives homogenization]
+The six- and five-tet homogenized densities are not scalar multiples.  If
+$(Ae_1,Ae_2,Ae_3)=(v,0,0)$, then
+$Q_6^{\mathrm{hom}}/Q_5^{\mathrm{hom}}=4/3$; if it is $(v,v,0)$, the ratio is
+$3$.  No renormalization of the single coefficient $R$ can equate them.
+\end{theorem}
+
+This closes the AP-E9 cell problem, but negatively: a finite critical barrier
+is a mesh-dependent physical quartic.  General discrete homogenization
+frameworks \cite{AlicandroBraidesCicaleseSolci2023} justify the cell-formula
+architecture; here the cycle certificate makes the minimization explicit.
+
+\section{Translation quotient and dynamic centering}
+
+For a localized soliton define the nonnegative density, barycentre, and
+covariance
+\begin{equation}
+ \rho=1-n_0,\qquad
+ c[n]=\frac{\int x\rho\dd x}{\int\rho\dd x},\qquad
+ \Sigma[n]=\frac{\int(x-c)(x-c)^T\rho\dd x}{\int\rho\dd x}.
+ \label{eq:quotient}
+\end{equation}
+The translation quotient compares $\operatorname{tr}\Sigma$, its eigenvalues,
+and the normalized radial histogram about $c[n]$.  It therefore identifies
+fields differing only by physical translation without adding an optimizer
+anchor.  This distinction matters on growing boxes, for which ordinary
+strong-$L^2$ equicoercivity fails unless translations are quotiented or made
+tight.
+
+The production driver also attempts a dynamic representative: after a
+stationary solve it shifts the field by $-c[n]$ using normalized linear
+interpolation, accepts the shift only if the logarithmic edge condition and
+all three geometric degree targets remain valid, and then re-relaxes the
+same action.  Re-relaxation can return the field to a mesh-preferred Peierls
+position.  Consequently the physical quotient, not a small raw barycentre,
+is the primary translation gate.  Convergence of harmonic-map discretizations
+likewise requires declared triangulation and weight hypotheses rather than
+an informal refinement argument \cite{GasterLoustauMonsaingeon2023}.
+
+\section{Production scan}
+
+The scan contains eleven independent unanchored solutions.  The joint
+sequence is
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+$N$&$L$&$a$&total energy&centered RMS&gradient density\\
+\midrule
+25&6.0&0.250000&76.672058&1.18660&$3.04\times10^{-7}$\\
+29&6.5&0.232143&77.679545&1.22405&$1.64\times10^{-6}$\\
+33&7.0&0.218750&78.552231&1.26582&$5.34\times10^{-7}$\\
+37&7.5&0.208333&78.987847&1.35422&$1.70\times10^{-6}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All eleven cases have direct tangent-plus-scalar gradient density below
+$2\times10^{-6}$, positive edge margin at least $0.1064$, and three-target
+$B=(1,1,1)$.  Production coverage and mechanical checks pass.  The
+predeclared quotient diagnostics are
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+diagnostic&observed&threshold&pass\\
+\midrule
+joint-tail energy spread&1.656\%&3\%&yes\\
+joint-tail centered-RMS spread&9.612\%&5\%&no\\
+joint maximum successive profile $L^1$&7.072\%&5\%&no\\
+translated-start energy spread&0.00192\%&1\%&yes\\
+translated-start centered-RMS spread&0.0602\%&2\%&yes\\
+translated-start profile $L^1$&3.500\%&3\%&no\\
+five-/six-tet energy spread&5.143\%&3\%&no\\
+five-/six-tet centered-RMS spread&11.378\%&5\%&no\\
+\bottomrule
+\end{tabular}
+\end{center}
+The maximum post-relaxation barycentre residual is $0.740a$, confirming
+Peierls locking and the need for the quotient.  The cross-mesh discrepancy
+agrees in sign with the exact finite-$R$ no-go and is not an optimizer
+failure.
+
+\section{Fail-closed decision and structural repair}
+
+\begin{gate}[Continuum and Hessian authorization]
+The current AP-E7/AP-E8 lattice action cannot authorize a full Gamma-liminf,
+regulator-stable continuum background, Riemann Hessian, or regulated
+determinant variation because:
+\begin{enumerate}
+\item the one-corner two-minors are not weakly continuous;
+\item the forward topological current has a nonzero diffuse defect at
+geometric degree zero;
+\item finite-$R$ five- and six-tet homogenized quartics are inequivalent;
+\item the joint size/profile and cross-mesh numerical gates fail.
+\end{enumerate}
+\end{gate}
+
+Thus
+\begin{align}
+ \texttt{forward\_minor\_compensated\_compactness}&=\texttt{false},\\
+ \texttt{finite\_R\_cell\_density\_computed}&=\texttt{true},\\
+ \texttt{finite\_R\_triangulation\_independence}&=\texttt{false},\\
+ \texttt{regulator\_stable\_background}&=\texttt{false},\\
+ \texttt{same\_action\_Hessian\_allowed}&=\texttt{false}.
+\end{align}
+
+The next action should change the stencil rather than extend the same scan:
+\begin{enumerate}
+\item define $dn$ as a primal one-cochain on the complete tetrahedral complex;
+\item form the Skyrme two-form with a graded, shifted cup product satisfying a
+discrete Leibniz rule and $d^2=0$;
+\item use a positive discrete Hodge star, averaged over the four body-diagonal
+six-tet meshes or calibrated by a cubic fourth-order design;
+\item define the topological three-cochain from the same cup product and prove
+that its evaluation equals normalized-affine degree on admissible fields;
+\item rerun the cell certificate and only then repeat the quotient continuum
+scan.
+\end{enumerate}
+The FEEC principle is that stability requires a subcomplex and bounded
+cochain projection \cite{ArnoldFalkWinther2010}; this is the appropriate
+first-principles repair.  Historical lattice-Skyrme work already warns that a
+topology-preserving cutoff can become part of the model
+\cite{SchrammSvetitsky2000}.  The finite GW/domain-wall kernel and actual
+$SO(3)$ mapping-torus mod-two index remain parallel lanes, and the degree-one
+Route-E portal remains last.
+
+\section{Reproducibility}
+
+Run from the repository root:
+\begin{verbatim}
+PYTHONPYCACHEPREFIX=/tmp/ap_e10_pycache python3 \
+  route_f/code/scan_ap_e10_compactness_homogenization_centering.py
+\end{verbatim}
+The deterministic result is written to
+\begin{center}
+\path{route_f/output/ap_e10_compactness_homogenization_centering.json}
+\end{center}
+and its Markdown companion.  The production card passes $10/10$ exact,
+numerical, provenance, and fail-closed checks.  A pass means that each claimed
+calculation was executed; it does not turn a deliberately false physics gate
+true.
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e10_compactness_homogenization_centering}
+
+\end{document}

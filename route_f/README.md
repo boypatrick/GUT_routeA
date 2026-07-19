@@ -26,7 +26,57 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-17 AP-E8 topology-preserving finite-grid result
+## 2026-07-18 AP-E10 stencil no-go, cell formula, and translation quotient
+
+AP-E10 proves that the AP-E7 one-corner forward Skyrme stencil cannot support
+the proposed continuum proof.  Exact three- and two-periodic sphere-valued
+sequences converge uniformly to the vacuum while retaining respectively a
+nonzero two-minor and a nonzero diffuse forward topological current.  The
+Skyrme energy controls the current in `L^(4/3)`, so the failure is a diffuse
+lattice alias rather than singular concentration.
+
+The finite-`R` periodic cell problem is also solved.  Direction-wise cycle
+balance and Jensen prove the zero corrector exactly for both six- and
+five-tet graphs.  Their homogenized quartics remain nonproportional; finite-
+`R` triangulation dependence is therefore physical to this regulator.
+
+An 11-case production scan implements a barycentre-aligned translation
+quotient, dynamic degree-preserving centering, and the joint range
+`a=0.25 -> 0.208333`, `L=6 -> 7.5`.  All backgrounds are stationary,
+admissible, and `B=1`, but centered-size, radial-profile, and cross-mesh gates
+fail.  The same-action Hessian and regulated determinant variation are not
+built.  The next mainline is a compatible tetrahedral cochain/cup-product/
+Hodge-star Skyrme action, not another refinement of the one-corner stencil.
+See `tex/ap_e10_compactness_homogenization_centering.tex`,
+`code/scan_ap_e10_compactness_homogenization_centering.py`, and
+`output/ap_e10_compactness_homogenization_centering.{json,md}`.
+
+## 2026-07-18 AP-E9 scaling and regulator-stability result (superseded by AP-E10)
+
+AP-E9 proves fixed-box strong-`L2` equicoercivity but disproves the stronger
+claim that the AP-E8 barrier can both vanish in the continuum and by itself
+close degree sectors.  With `d=1-epsilon`, `w=gamma*a`, and
+`R=gamma*a^2/d^2`, uniform edge-floor separation requires `inf w>0`, while
+the smooth barrier disappears only for `R->0`.  For fixed epsilon and
+`gamma=c*a^(-p)`, the unique overlap is `1<=p<2`.  For `inf R>0` the
+barrier gives `W1,4` compactness and closes degree.  At critical `p=2`, the
+raw six-tet/five-tet Cauchy--Born quartics are not scalar multiples; their
+finite-`R` Gamma densities require a still-unevaluated homogenized cell
+problem, so no continuum-density identification is claimed.
+
+The reproducible 23-case scan tests six spacings, four volumes, three scaling
+exponents, two checkerboard five-tet phases, the original six-tet mesh, and
+centered/translated starts at two spacings.  All cases are stationary,
+admissible `B=1` backgrounds, but the barrier-slope, volume-radius,
+cross-triangulation, and regulator-trajectory gates fail.  Consequently the
+continuum background, full same-action Hessian, and regulated determinant
+variation remain fail-closed.  See
+`tex/ap_e9_gamma_limit_regulator.tex`,
+`code/ap_e9_triangulation_tools.py`,
+`code/scan_ap_e9_gamma_triangulation.py`, and
+`output/ap_e9_gamma_triangulation.{json,md}`.
+
+## 2026-07-17 AP-E8 topology-preserving finite-grid result (superseded by AP-E9 for continuum scaling)
 
 AP-E8 selects the topology-preserving-action route and genuinely changes one
 AP-E7 blocker.  A subtracted logarithmic barrier on all unique Freudenthal

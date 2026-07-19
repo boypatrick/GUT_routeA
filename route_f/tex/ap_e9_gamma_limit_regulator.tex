@@ -1,0 +1,826 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor,microtype,xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{gate}[theorem]{Fail-closed gate}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\TP}{\mathrm{TP}}
+\newcommand{\ezer}{e_0}
+
+\title{AP-E9 Scaling Trichotomy and Regulator-Stability Audit:\\
+Equicoercivity, Gamma Limits, Alternative Triangulations,\\
+and Translated Starts}
+\author{Route F research note}
+\date{18 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note resolves the first mathematical layer left open by AP-E8 and gives
+a negative result for the stronger layer.  On a fixed physical box, the
+original coordinate-edge Dirichlet term already makes the full discrete
+action equicoercive in strong $L^2\times L^2$, independently of the barrier
+scaling.  This compactness is too weak to close a degree sector.  Writing
+$d_a=1-\epsilon_a$, $w_a=\gamma_a a$, and
+$R_a=\gamma_a a^2/d_a^2$, the logarithmic barrier has an exact Lambert-
+$W$ edge-margin bound and the global estimate
+
+\[
+ b_{\epsilon_a}(n_x\!\cdot n_y)
+ \ge \frac{|n_x-n_y|^4}{8d_a^2}.
+\]
+
+For fixed $\epsilon$ and $\gamma(a)=c a^{-p}$, uniform distance from the
+edge floor requires $p\ge1$, whereas the barrier disappears on smooth
+fields only for $p<2$.  Hence $1\le p<2$, with the minimal choice
+$p=1$, is the unique edge-interior and smooth-vanishing power window.
+Nevertheless $R_a\to0$ supplies no $C^0$ compactness and the explicitly
+embedded barrier-only Gamma limit forgets trace and degree.  At the critical
+value $p=2$, the barrier does give $W^{1,4}$ compactness and closes degree.
+Its raw six-tetrahedron and checkerboard five-tetrahedron Cauchy--Born
+quartics are not scalar multiples.  The actual finite-$R$ Gamma density,
+however, requires a periodic homogenized cell problem and is not identified
+with either raw quartic in this note.
+
+This is a no-free-lunch theorem for the AP-E8 barrier: no scaling makes that
+barrier both continuum-vanishing and, by itself, degree-sector compact.  A
+full Gamma theorem for the same-action Skyrme model is therefore reduced to
+a precise remaining question about compactness of the discrete Skyrme
+minors and density of smooth fixed-degree recovery sequences.  The
+accompanying card tests the recommended $p=1$ trajectory, the critical
+$p=2$ control, two checkerboard five-tetrahedron meshes, translated starts,
+and enlarged $(a,L)$ ranges.  The physical Hessian and determinant variation
+remain prohibited unless those tests and the missing minor-compactness
+theorem produce one regulator-stable continuum background.
+\end{abstract}
+
+\tableofcontents
+
+\section{Claim ledger and notation}
+
+Let $\Omega\subset\RR^3$ be a fixed cube and let $a\downarrow0$ run over
+shape-regular cubic grids.  A conforming tetrahedral complex $\cT_a$ is
+placed on every grid, and $\cE_a$ denotes the unique unordered vertex pairs
+that occur together in at least one tetrahedron.  The nodal variables are
+
+\[
+ n_x\in\SSS^3,\qquad s_x\in\RR,
+\]
+
+with exact vacuum boundary data $n=\ezer=(1,0,0,0)$ and $s=1$.  The AP-E8
+functional is
+
+\begin{equation}
+ \cF_a[n,s]
+ =E_a[n,s]+\cB_a[n],\qquad
+ \cB_a[n]=w_a\sum_{\{x,y\}\in\cE_a}
+ b_{\epsilon_a}(n_x\cdot n_y),
+ \label{eq:functional}
+\end{equation}
+
+where
+
+\begin{equation}
+ b_\epsilon(q)=
+ \begin{cases}
+ -\log\dfrac{q-\epsilon}{1-\epsilon}
+ +\dfrac{q-1}{1-\epsilon},&q>\epsilon,\\[5pt]
+ +\infty,&q\le\epsilon.
+ \end{cases}
+ \label{eq:barrier}
+\end{equation}
+
+The base action $E_a$ is the AP-E7 coordinate-difference (n+s) action,
+including its nonnegative Skyrme-minor, breathing-mass, and pion-mass terms.
+We separate four statements that must not be conflated:
+
+\begin{enumerate}[label=(\roman*)]
+\item ordinary $L^2$ equicoercivity of all bounded sublevels;
+\item uniform distance from the barrier floor;
+\item compactness strong enough to preserve normalized-affine degree;
+\item Gamma convergence of the complete base-plus-barrier action.
+\end{enumerate}
+
+This note proves (i), gives a sharp answer to (ii), proves the barrier
+compactness regimes controlling (iii), and gives a conditional reduction
+rather than an unsupported identification for (iv).
+
+\section{Exact barrier calculus}
+
+Put
+
+\begin{equation}
+ d_a:=1-\epsilon_a,\qquad
+ w_a:=\gamma_a a,\qquad
+ R_a:=\frac{\gamma_a a^2}{d_a^2}
+      =\frac{w_a a}{d_a^2}.
+ \label{eq:three-scales}
+\end{equation}
+
+For one admissible edge define
+
+\begin{equation}
+ x_e:=\frac{q_e-\epsilon_a}{d_a}\in(0,1],
+ \qquad
+ z_e:=1-x_e
+ =\frac{1-q_e}{d_a}
+ =\frac{|n_x-n_y|^2}{2d_a}.
+ \label{eq:xz}
+\end{equation}
+
+Then the dependence on $\epsilon_a$ is isolated:
+
+\begin{equation}
+ b_{\epsilon_a}(q_e)=\phi(x_e),\qquad
+ \phi(x):=-\log x-1+x.
+ \label{eq:phi}
+\end{equation}
+
+\begin{lemma}[Sharp elementary bounds]
+For $0\le z<1$,
+\begin{equation}
+ \phi(1-z)=\sum_{k=2}^{\infty}\frac{z^k}{k},\qquad
+ \frac{z^2}{2}\le\phi(1-z)
+ \le\frac{z^2}{2(1-z)}.
+ \label{eq:phi-bounds}
+\end{equation}
+Consequently every admissible edge obeys the global lower bound
+\begin{equation}
+ \boxed{
+ b_{\epsilon_a}(n_x\cdot n_y)
+ \ge\frac{|n_x-n_y|^4}{8d_a^2}.}
+ \label{eq:quartic-lower}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The Taylor series of $-\log(1-z)-z$ gives the equality and lower bound.
+For the upper bound, $1/k\le1/2$ for $k\ge2$, hence
+
+\[
+ \sum_{k=2}^{\infty}\frac{z^k}{k}
+ \le\frac12\sum_{k=2}^{\infty}z^k
+ =\frac{z^2}{2(1-z)}.
+\]
+
+Substituting $z=|n_x-n_y|^2/(2d_a)$ proves
+Eq.~\eqref{eq:quartic-lower}.
+\end{proof}
+
+\section{Sharp bounded-sublevel edge margin}
+
+Let $W_0$ be the principal real branch of Lambert $W$ and define
+
+\begin{equation}
+ \chi(r):=-W_0(-e^{-1-r}),\qquad r\ge0.
+ \label{eq:chi}
+\end{equation}
+
+Because $\phi$ decreases from $+\infty$ to zero on $(0,1]$,
+$\phi(\chi(r))=r$.
+
+\begin{theorem}[Exact positive-sublevel margin]
+Fix $C>0$.  If $\cB_a[n]\le C$, then every barrier edge satisfies
+\begin{equation}
+ x_e\ge\chi(C/w_a),\qquad
+ q_e-\epsilon_a\ge d_a\chi(C/w_a)
+ \ge d_a e^{-1-C/w_a}.
+ \label{eq:margin}
+\end{equation}
+For every fixed $C>0$, uniform relative interiority
+$x_e\ge\delta_C>0$ on the $C$-sublevels holds if and only if
+\begin{equation}
+ \inf_a w_a>0.
+ \label{eq:w-condition}
+\end{equation}
+Uniform absolute interiority $q_e-\epsilon_a\ge\delta_C>0$ additionally
+requires and is implied by $\inf_a d_a>0$.
+\end{theorem}
+
+\begin{proof}
+Nonnegativity of every summand gives
+$w_a\phi(x_e)\le C$, and inversion gives the first inequality.  Since
+$\phi(x)=-\log x-1+x\ge-\log x-1$, the same sublevel inequality gives
+$x_e\ge e^{-1-C/w_a}$.  If $w_a\ge w_*>0$, the right-hand side is a
+positive number depending only on $C,w_*$.  Multiplication by
+$d_a\ge d_*>0$ proves the absolute statement.
+
+For necessity, pass to any subsequence on which $w_a\to0$.  Choose one
+interior vertex in the exact
+vacuum collar and leave all other collar vertices equal to $\ezer$.  Rotate
+that vertex on a great circle so that, for a fixed $\alpha>0$ chosen smaller
+than $C$ divided by twice the maximum incident-edge count,
+
+\[
+ n_z\cdot\ezer=\epsilon_a+d_a e^{-\alpha/w_a}.
+\]
+
+The number of incident co-tetrahedral edges is bounded independently of
+$a$, and each contributes
+
+\[
+ w_a\phi(e^{-\alpha/w_a})
+ =\alpha-w_a+o(w_a).
+\]
+
+The coordinate-edge Dirichlet cost is $O(a)$, the local potential cost is
+$O(a^3)$, and every affected forward Skyrme minor has rank at most one and
+therefore vanishes.  Thus the field lies in the prescribed $C$-sublevel for
+all sufficiently small $a$ while the relative edge margin tends to zero.
+For absolute necessity, if $d_a\to0$, the vacuum itself has zero barrier and
+$q_e-\epsilon_a=d_a\to0$.
+\end{proof}
+
+\begin{remark}
+The restriction $C>0$ is essential to the equivalence: on the zero sublevel
+every connected-edge value has $x_e=1$, independently of $w_a$.
+\end{remark}
+
+\begin{remark}[Margin is not the no-zero bound]
+If $\inf_a\epsilon_a>-1/3$, every finite-energy tetrahedron still obeys
+\begin{equation}
+ \left\|\sum_{i=0}^3\lambda_i n_i\right\|^2
+ \ge\epsilon_a+(1-\epsilon_a)\sum_i\lambda_i^2
+ \ge\frac{1+3\epsilon_a}{4}>0.
+ \label{eq:no-zero}
+\end{equation}
+Hence $w_a\to0$ destroys uniform distance from the artificial barrier
+floor, not the definition of degree on each individual grid.
+\end{remark}
+
+\section{Ordinary equicoercivity is already present}
+
+Let $I_a$ denote the affine interpolant on any of the finitely many
+shape-regular triangulation families used below.
+
+\begin{theorem}[Fixed-box $L^2$ equicoercivity]
+Assume, as in the declared AP-E7 action, that the coordinate-edge Dirichlet
+part is bounded below by
+\begin{equation}
+ c_Da\sum_{xy}\bigl(|n_x-n_y|^2+|s_x-s_y|^2\bigr)
+ \label{eq:base-coercivity}
+\end{equation}
+with a mesh-independent $c_D>0$.  On a fixed bounded cube with the declared
+boundary data, the family
+$\{\cF_a\}$ is equicoercive in strong
+$L^2(\Omega;\RR^4)\times L^2(\Omega)$ for every positive choice of
+$\gamma_a$ and every $\epsilon_a\in(-1/3,1)$.
+\end{theorem}
+
+\begin{proof}
+Shape regularity gives a mesh-independent constant $C_T$ such that
+
+\begin{equation}
+ \|\nabla I_an_a\|_{L^2}^2+
+ \|\nabla I_as_a\|_{L^2}^2
+ \le C_T a\sum_{\text{coordinate edges }xy}
+ \bigl(|n_x-n_y|^2+|s_x-s_y|^2\bigr)
+ \le \frac{C_T}{c_D}\cF_a.
+ \label{eq:H1-control}
+\end{equation}
+
+The first $L^2$ norm is bounded because the nodal values have unit norm.
+For $s_a-1$, either Poincare's inequality and the exact boundary value or
+the positive breathing-mass term supplies the $L^2$ bound.  Rellich
+compactness gives strong $L^2\times L^2$ precompactness.  Finally,
+
+\[
+ \int_\Omega\operatorname{dist}(I_an_a,\SSS^3)^2\dd x
+ \le C a^2\|\nabla I_an_a\|_{L^2}^2\longrightarrow0,
+\]
+
+so the limiting field is sphere-valued almost everywhere.  The barrier is
+nonnegative and therefore cannot weaken these estimates.
+\end{proof}
+
+\begin{remark}
+Strong $L^2$ convergence does not preserve the degree of a three-
+dimensional sphere-valued map.  Calling Eq.~\eqref{eq:H1-control}
+``topological equicoercivity'' would therefore be incorrect.
+\end{remark}
+
+\section{Smooth expansion and the power-law window}
+
+Suppose $n\in C^3(\overline\Omega,\SSS^3)$, and let $S_an$ denote nodal
+sampling.  For an edge $y=x+av$,
+
+\[
+ 1-n(x)\cdot n(x+av)
+ =\frac{a^2}{2}|D_vn(x)|^2+O(a^3).
+\]
+
+If $a^2/d_a\to0$, Eqs.~\eqref{eq:phi-bounds}--\eqref{eq:xz} and a Riemann-
+sum estimate give
+
+\begin{proposition}[Smooth-field asymptotics]
+For a periodic shape-regular triangulation family,
+\begin{equation}
+ \cB_a[S_an]
+ =\frac{R_a}{8}\int_\Omega Q_{\cT}(\nabla n)\dd x
+ +O\!\left(R_a\left(a+\frac{a^2}{d_a}\right)\right),
+ \label{eq:smooth-expansion}
+\end{equation}
+where $Q_{\cT}$ is the sum of $|D_vn|^4$ with the asymptotic edge
+direction densities of the selected mesh.
+\end{proposition}
+
+For the AP-E8 uniform positive Freudenthal split,
+
+\begin{equation}
+ Q_{6,+}(A)=
+ \sum_{i=1}^3|Ae_i|^4
+ +\sum_{1\le i<j\le3}|A(e_i+e_j)|^4
+ +|A(e_1+e_2+e_3)|^4.
+ \label{eq:Q6}
+\end{equation}
+
+For the checkerboard five-tetrahedron mesh, each face-diagonal sign occurs at
+density one half and there is no body diagonal, so
+
+\begin{equation}
+ Q_5(A)=\sum_{i=1}^3|Ae_i|^4
+ +\frac12\sum_{1\le i<j\le3}
+ \left(|A(e_i+e_j)|^4+|A(e_i-e_j)|^4\right).
+ \label{eq:Q5}
+\end{equation}
+
+Now set $\gamma_a=c a^{-p}$ and first keep $d_a=d>0$ fixed.  Then
+
+\begin{equation}
+ w_a=c a^{1-p},\qquad R_a=\frac{c}{d^2}a^{2-p}.
+ \label{eq:p-scaling}
+\end{equation}
+
+\begin{corollary}[Unique edge-stable, smooth-vanishing window]
+The bounded sublevels have a uniform relative edge margin precisely for
+$p\ge1$, while the barrier vanishes on every smooth field precisely for
+$p<2$.  Thus the only power window with both properties is
+\begin{equation}
+ \boxed{1\le p<2.}
+ \label{eq:window}
+\end{equation}
+The minimal choice is $p=1$, namely
+$\gamma(a)=\bar\gamma/a$, for which $w_a=\bar\gamma$ and a smooth barrier
+is $O(a)$.
+\end{corollary}
+
+More generally, if $d_a\sim d_0a^\alpha$, the two requirements become
+
+\begin{equation}
+ p\ge1,\qquad p+2\alpha<2.
+ \label{eq:alpha-window}
+\end{equation}
+
+The window is nonempty only for $\alpha<1/2$.  An absolute edge margin also
+requires $\alpha=0$.  We therefore retain the fixed value
+$\epsilon_a=0.01$ and do not send $\epsilon_a$ either to $1$ or to the
+no-zero threshold $-1/3$.
+
+\section{Barrier regimes, the zero Gamma limit, and the no-free-lunch theorem}
+
+Let $P_an$ be the dual-cell piecewise-constant extension of the nodal field
+and $I_an$ its tetrahedral affine interpolant.  On the explicitly declared
+state space $L^2(\Omega;\RR^4)$ define
+
+\begin{equation}
+ \mathfrak B_a(u)=
+ \begin{cases}
+ \cB_a[n],&u=P_an\text{ for an admissible nodal field},\\
+ +\infty,&\text{otherwise}.
+ \end{cases}
+ \label{eq:embedded-barrier}
+\end{equation}
+
+Boundary-node values have zero volume measure, so a zero-energy strong-$L^2$
+limit cannot retain a trace unless a coercive base term is also present.
+
+\begin{theorem}[Rigorous barrier regimes]
+Fix $d=1-\epsilon>0$ and a periodic shape-regular triangulation family.
+
+\begin{enumerate}[label=(\roman*)]
+\item If $R_a\to0$, then in strong $L^2$
+\begin{equation}
+ \mathfrak B_a\xrightarrow{\Gamma}
+ \mathfrak B_0(u):=
+ \begin{cases}
+ 0,&u\in L^2(\Omega;\SSS^3),\\
+ +\infty,&\text{otherwise}.
+ \end{cases}
+ \label{eq:gamma-zero}
+\end{equation}
+This limit forgets both trace and degree.
+
+\item If $\inf_aR_a>0$, every bounded barrier sublevel gives a uniform
+discrete $W^{1,4}$ bound on $I_an$.  The affine fields are precompact in
+$C^{0,\beta}$ for every $\beta<1/4$, and normalized-affine degree is closed.
+
+\item If $R_a\to\infty$, the $W^{1,4}$ seminorm tends to zero on a bounded
+sublevel.  With the fixed vacuum boundary trace, the only possible limit is
+$\ezer$.
+
+\item If $R_a\to R\in(0,\infty)$, Eq.~\eqref{eq:smooth-expansion} identifies
+the Cauchy--Born density on fixed smooth sampled fields.  It does not by
+itself identify the Gamma limit.  For a periodic multi-cell stencil the
+candidate integral density must be obtained from the corresponding
+homogenized cell problem; oscillatory correctors may lower the raw
+$Q_{\cT}$.  That cell formula is not evaluated here.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For (i), strong $L^2$ limits of the sphere-valued piecewise-constant fields
+remain sphere-valued almost everywhere, giving the $+\infty$ part and the
+nonnegative liminf.  Smooth sphere-valued maps which equal the vacuum in a
+shrinking boundary collar are dense in $L^2(\Omega;\SSS^3)$.  For each fixed
+smooth map, nodal sampling converges strongly and
+Eq.~\eqref{eq:smooth-expansion} makes the barrier vanish.  A slow diagonal
+choice gives the recovery sequence.
+
+For (ii), Eq.~\eqref{eq:quartic-lower} on the tetrahedral edges and shape
+regularity give
+\begin{equation}
+ \|\nabla I_an\|_{L^4}^4
+ \le \frac{C}{R_a}\cB_a[n].
+ \label{eq:W14-control}
+\end{equation}
+Moreover
+$\|P_an-I_an\|_{L^4}\le Ca\|\nabla I_an\|_{L^4}$, so both extensions have
+the same limit.  Morrey compactness gives the asserted uniform convergence,
+which preserves the no-zero interpolation and degree.  If $R_a\to\infty$,
+Eq.~\eqref{eq:W14-control} makes the seminorm vanish; the fixed trace and
+Poincare's inequality select the vacuum.  Statement (iv) is precisely the
+boundary of Eq.~\eqref{eq:smooth-expansion}: periodic discrete-to-continuum
+identification requires minimization over cell correctors, not merely
+evaluation on the uncorrected affine sample.
+\end{proof}
+
+\begin{theorem}[Fixed-$\epsilon$ no-free-lunch theorem]
+No scaling of the AP-E8 logarithmic barrier with fixed
+$\epsilon\in(-1/3,1)$ makes it both
+
+\begin{enumerate}[label=(\alph*)]
+\item vanish on every smooth continuum field, and
+\item by itself provide compactness strong enough to close continuum degree
+sectors.
+\end{enumerate}
+
+At the critical compactness scaling $p=2$, the raw Cauchy--Born consistency
+tensors for the six- and five-tetrahedron meshes cannot be made equal by
+multiplying one of them by a constant.  Equality or inequivalence of their
+homogenized Gamma densities is a separate, unevaluated cell problem.
+\end{theorem}
+
+\begin{proof}
+Smooth vanishing on every smooth field is equivalent to $R_a\to0$, whereas
+the $W^{1,4}$ estimate from the barrier is uniform only when
+$\liminf R_a>0$.  Failure of degree closure in the vanishing regime is
+explicit.  Choose a smooth map
+$U:B_1\to\SSS^3$ of degree one which equals $\ezer$ on a collar of
+$\partial B_1$, and put
+
+\[
+ n^{(r)}(x)=
+ \begin{cases}
+ U((x-x_0)/r),&x\in B_r(x_0),\\
+ \ezer,&x\notin B_r(x_0).
+ \end{cases}
+\]
+
+It has degree one and
+
+\[
+ \int|\nabla n^{(r)}|^2=O(r),\qquad
+ \int|\nabla n^{(r)}|^4=O(r^{-1}).
+\]
+
+For a resolved nodal sample, $a/r$ sufficiently small makes every edge
+admissible.  Equation~\eqref{eq:phi-bounds} and edge counting in $B_r$
+then give $\cB_a[S_an^{(r)}]\le C R_a/r$.  Choose
+$r_a=\max\{R_a^{1/2},a^{1/2}\}$.  Then $r_a\to0$,
+$r_a/a\to\infty$, and $R_a/r_a\to0$.  The sampled normalized-affine maps
+therefore have degree one and bounded, indeed vanishing, barrier energy,
+but converge strongly in $L^2$ to the degree-zero vacuum.  Thus a vanishing
+barrier cannot close degree sectors.
+
+For the final assertion, take a linear gradient with
+$Ae_1=v$, $Ae_2=Ae_3=0$.  Equations~\eqref{eq:Q6}--\eqref{eq:Q5} give
+$Q_{6,+}=4|v|^4$ and $Q_5=3|v|^4$.  If a scalar rescaling matched these,
+it would use a factor $4/3$.  Instead take
+$Ae_1=Ae_2=v$, $Ae_3=0$; then $Q_{6,+}=36|v|^4$ and
+$Q_5=12|v|^4$, whose ratio is $3$.  Hence the two uncorrected smooth-sampling
+quartics are not proportional.
+\end{proof}
+
+\begin{remark}[What the no-go does not prove]
+The degree-one bubble has base Skyrme energy of order $1/r$.  Consequently
+the preceding construction concerns the barrier alone and does not prove
+that bounded sublevels of the \emph{complete} Skyrme action lose degree.
+Whether the base Skyrme minors themselves supply topological-current
+compactness is exactly the remaining theorem-level blocker.
+\end{remark}
+
+\section{Conditional Gamma theorem for the complete action}
+
+\begin{theorem}[Stable addition of a vanishing barrier]
+Assume that the AP-E7 base functionals $E_a$ satisfy, in strong
+$L^2\times L^2$,
+
+\begin{enumerate}[label=(\roman*)]
+\item $E_a\xrightarrow{\Gamma}E_0$;
+\item their sublevels are equicoercive;
+\item for every $u=(n,s)$ with $E_0(u)<\infty$, there are smooth pairs
+$u^k=(n^k,s^k)$, with the declared boundary data, such that
+\begin{equation}
+ u^k\to u\text{ in }L^2\times L^2,\qquad E_0(u^k)\to E_0(u);
+ \label{eq:smooth-density}
+\end{equation}
+\item for every fixed $k$, the nodal samples $S_au^k$ recover the base
+energy:
+\begin{equation}
+ S_au^k\to u^k,\qquad E_a(S_au^k)\to E_0(u^k).
+ \label{eq:fixed-smooth-recovery}
+\end{equation}
+\end{enumerate}
+
+If
+\begin{equation}
+ \frac{a^2}{d_a}\longrightarrow0,
+ \qquad
+ R_a=\frac{\gamma_a a^2}{d_a^2}\longrightarrow0,
+ \label{eq:conditional-hypotheses}
+\end{equation}
+then
+\begin{equation}
+ E_a+\cB_a\xrightarrow{\Gamma}E_0.
+ \label{eq:conditional-gamma}
+\end{equation}
+The full family inherits $L^2\times L^2$ equicoercivity from $E_a$.
+\end{theorem}
+
+\begin{proof}
+The liminf follows from $\cB_a\ge0$.  For every fixed $k$,
+Eq.~\eqref{eq:smooth-expansion} and
+Eq.~\eqref{eq:conditional-hypotheses} give
+$\cB_a[S_an^k]\to0$; the constants hidden in the expansion may depend on
+$k$ but not on $a$.  First take $a\to0$ at fixed $k$, then choose a slow
+diagonal $k=k(a)\to\infty$.  Equations~\eqref{eq:smooth-density} and
+\eqref{eq:fixed-smooth-recovery} give the required full recovery sequence.
+Finally,
+$E_a\le E_a+\cB_a$, so every full-action sublevel lies in the corresponding
+equicoercive base sublevel.
+\end{proof}
+
+This theorem is unconditional as an abstract stability statement, but its
+four hypotheses have not yet been proved for the specific one-corner forward
+Skyrme discretization.  The missing statements are:
+
+\begin{enumerate}
+\item a discrete compensated-compactness and liminf theorem for the three
+forward Skyrme minors;
+\item smooth fixed-boundary, fixed-degree density in the natural class
+\[
+ \{n\in W^{1,2}:\partial_i n\wedge\partial_j n\in L^2\};
+\]
+\item exclusion or accounting of a topological-current concentration defect;
+\item translation tightness when $L\to\infty$.
+\end{enumerate}
+
+Without centering or quotienting translations, joint $a\downarrow0$,
+$L\uparrow\infty$ equicoercivity is false: a localized soliton can translate
+to infinity while retaining its energy and norm.
+
+\section{Alternative triangulations and translated starts}
+
+The numerical card uses exactly the same tetrahedral complex for its barrier
+edges and its normalized-affine degree.  It tests:
+
+\begin{enumerate}
+\item the original uniform six-tetrahedron Freudenthal mesh;
+\item both phases of the conforming checkerboard five-tetrahedron mesh, whose
+central parity is $\mathrm{phase}+i+j+k\pmod2$;
+\item starts translated by noninteger lattice offsets before imposing the
+exact vacuum boundary;
+\item wider fixed-$L$ spacing and fixed-$a$ volume sequences;
+\item the matched trajectories $p=0,1,2$, normalized so that
+$\gamma(0.4)=1$.
+\end{enumerate}
+
+The five-tetrahedron mesh has one central tetrahedron of determinant magnitude
+two and four corner tetrahedra of determinant magnitude one in every cube.
+The checkerboard parity flip makes every shared face diagonal agree.  Exact
+combinatorial tests check nonzero volume, spatial orientation, face
+multiplicity, Euler characteristic one, and degree on regular targets.
+
+For each relaxed background, the card records total, base, and barrier
+energies; direct tangent-plus-scalar stationarity; minimum edge dot; degree at
+three generic regular targets; the $1-n_0$ barycentre and centered radius;
+an absolute-baryon-density proxy radius; and high-quantile local gradient
+concentration.  A translated start is therefore not silently recentered in
+the reported observables.
+
+\section{Numerical verdict}
+
+The production values in this section are generated by
+
+\begin{center}
+\path{route_f/code/scan_ap_e9_gamma_triangulation.py}.
+\end{center}
+
+The machine-readable and human-readable cards are
+
+\begin{center}
+\path{route_f/output/ap_e9_gamma_triangulation.json},\qquad
+\path{route_f/output/ap_e9_gamma_triangulation.md}.
+\end{center}
+
+All $23$ independently relaxed cases are stationary within the declared
+$2\times10^{-6}$ projected-gradient-density tolerance, remain admissible,
+and return degree $(1,1,1)$ at the three regular targets.  The largest
+gradient density is $1.7224\times10^{-6}$ and the smallest pair margin is
+$0.067786$.  The smooth compact-support test gives
+
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$p$&fitted barrier slope&predicted $2-p$&$R^2$\\
+\midrule
+0&2.159102&2&0.999141\\
+1&1.159102&1&0.997025\\
+2&0.159102&0&0.863298\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus the fixed-profile calculation detects the predicted smooth-sampling
+exponent split.  It
+does not imply that a relaxed branch has entered that asymptotic regime.
+For the matched $p=1$, fixed-$L=6$ branch the production sequence is
+
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$a$&$E_a$&$\cB_a$&$\cF_a$&centered RMS&gradient density\\
+\midrule
+0.428571&55.307957&18.487241&73.795198&1.298396&$2.36\times10^{-7}$\\
+0.375000&55.677145&17.909776&73.586921&1.261284&$1.94\times10^{-7}$\\
+0.333333&56.448068&17.495634&73.943702&1.232911&$1.08\times10^{-6}$\\
+0.300000&57.507365&17.148880&74.656246&1.211449&$2.28\times10^{-7}$\\
+0.272727&58.801673&16.793372&75.595045&1.196040&$3.21\times10^{-7}$\\
+0.250000&60.320889&16.351169&76.672058&1.186597&$5.16\times10^{-7}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The finest-three total-energy and radius spreads are $2.629\%$ and
+$2.051\%$, respectively, but the fitted barrier slope is only $0.2196$,
+outside the predeclared $1.0\pm0.4$ window.  Hence the relaxed fields have
+not demonstrated the predicted $O(a)$ barrier disappearance.
+
+At fixed $a=0.4$, increasing the box gives
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$L$&$N$&$\cF_a$&centered RMS&pair margin\\
+\midrule
+6&16&73.627393&1.274459&0.080722\\
+8&21&73.346860&1.425707&0.085418\\
+10&26&73.289479&1.510286&0.085975\\
+12&31&73.273437&1.558499&0.086231\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The largest-three energy spread is only $0.1001\%$, whereas the radius
+spread is $8.521\%$, exceeding its $5\%$ gate.  Energy stabilization alone
+therefore does not establish volume stabilization.
+
+The alternative-mesh screen was repeated at two spacings, with both
+centered and translated starts:
+
+\begin{center}
+\small
+\begin{tabular}{llrrrr}
+\toprule
+$a$&mesh&centered $\cF_a$&translated $\cF_a$&centered RMS&pair margin\\
+\midrule
+0.4&six-tet&73.627393&73.614920&1.274459&0.080722\\
+0.4&five-tet phase 0&69.630225&69.630225&1.210207&0.085973\\
+0.4&five-tet phase 1&69.620878&69.620878&1.212765&0.086169\\
+0.3&six-tet&74.656246&74.656246&1.211449&0.109410\\
+0.3&five-tet phase 0&70.659350&70.659350&1.128126&0.100946\\
+0.3&five-tet phase 1&70.658169&70.658169&1.128277&0.101019\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Translation changes the terminal energy negligibly, but six-versus-five-tet
+energy spreads remain $5.442\%$ at $a=0.4$ and $5.355\%$ at $a=0.3$,
+above the $3\%$ gate.  They are not visibly shrinking.  On the common
+$N=21,L=6$ grid, the two smooth-vanishing controls $p=0$ and $p=1$ give
+$\cF_a=69.844123$ and $74.656246$: their $6.446\%$ spread also exceeds
+the $3\%$ regulator gate, although their radius spread $3.897\%$ passes.
+
+Consequently the strict card passes all eight implementation and provenance
+checks but returns
+
+\[
+ \boxed{\texttt{numerical\_regulator\_stability=false},\qquad
+        \texttt{continuum\_background=false}.}
+\]
+
+The failure is informative rather than an optimizer failure: every required
+stationary, admissibility, and degree check passes, while four independent
+continuum diagnostics fail.  Irrespective of that empirical verdict, a
+finite collection of convergent observables could not replace the missing
+Skyrme-minor liminf and topological-current compactness proof.
+
+\section{Recent literature and exact transfer boundary}
+
+No located paper proves the three-dimensional $\SSS^3$-valued AP-E8
+functional with its logarithmic edge barrier.  The closest recent rigorous
+work proves charge-measure compactness and Gamma convergence for a two-
+dimensional $\SSS^2$ baby-Skyrme setting
+\cite{BrianiCicaleseKreutz2026}; it is a proof architecture, not a theorem
+that transfers dimensions and targets.  Recent sphere-valued finite-element
+and triangulation analyses identify the need for shape regularity,
+consistent weights, and stability hypotheses
+\cite{BartelsBoehnleinPalusSander2025,GasterLoustauMonsaingeon2023,
+BartelsPalusWang2023}.  Scaling thresholds can change Gamma limits in other
+spin systems \cite{CicaleseReggianiSolombrino2024}, but that result does not
+contain this barrier.
+
+The checkerboard five-tetrahedron construction and the warning that a lattice
+cutoff can be part of the model have a direct three-dimensional predecessor
+\cite{SchrammSvetitsky2000}.  Earlier geometric degree and admissibility ideas
+\cite{BergLuescher1981,Luescher1982} motivate the design but do not imply a
+continuum theorem here.  Three-dimensional lattice Skyrmion branches are
+known to be numerically sensitive near continuum regimes
+\cite{CharalampidisIoannidouKevrekidis2015}, which is why translated starts
+and branch diagnostics are mandatory rather than cosmetic.
+
+\section{Fail-closed decision and ordered continuation}
+
+\begin{gate}[Hessian authorization]
+The full same-action Riemann Hessian and regulated determinant variation may
+start only after all of the following are true:
+
+\begin{enumerate}
+\item one $p<2$ background sequence is stationary and stable under spacing,
+volume, triangulation, translation, and regulator changes;
+\item the barrier fraction vanishes with the predicted scaling;
+\item the base Skyrme-minor liminf and fixed-degree recovery problem is
+closed, or an explicitly modified continuum action is adopted;
+\item translation tightness is fixed by a declared quotient or a physical
+centering condition, not by an optimization anchor.
+\end{enumerate}
+\end{gate}
+
+Until then:
+
+\begin{align*}
+ \texttt{regulator\_stable\_continuum\_background}&=\texttt{false},\\
+ \texttt{same\_action\_hessian\_authorized}&=\texttt{false}.
+\end{align*}
+
+and the degree-one Route-E portal remains prohibited.  The finite
+GW/domain-wall kernel and the actual $SO(3)$ mapping-torus mod-two index
+remain parallel lanes.  The mathematically preferred next choices are:
+
+\begin{enumerate}
+\item prove compactness of the discrete Skyrme topological current in the
+natural minor-bounded class;
+\item evaluate the periodic finite-$R$ homogenized cell problem before
+identifying any raw $Q_{\cT}$ with a Gamma density;
+\item if the base-minor route fails, adopt the critical $p=2$ term as a declared physical
+quartic and replace the raw stencil by a rotationally calibrated,
+triangulation-independent discretization;
+\item continue the $p=1$, fixed-$\epsilon$ numerical sequence only as a
+vanishing-regulator candidate, never as a proof of degree closure.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{route_f/tex/ap_e9_gamma_limit_regulator}
+
+\end{document}

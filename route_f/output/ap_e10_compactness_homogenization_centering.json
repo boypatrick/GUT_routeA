@@ -1,0 +1,5631 @@
+{
+  "artifact": "AP-E10 compactness, finite-R homogenization, and translation quotient",
+  "canonical_profile_checksum": "81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+  "checks": [
+    {
+      "detail": "maximum exact-minor residual=5.551e-17",
+      "group": "P1_compactness",
+      "name": "the exact three-periodic sphere-valued sequence disproves weak continuity of the one-corner forward Skyrme minors",
+      "pass": true
+    },
+    {
+      "detail": "maximum exact-current residual=2.776e-17",
+      "group": "P1_compactness",
+      "name": "the exact two-periodic sequence gives a nonzero diffuse forward-current defect at degree zero",
+      "pass": true
+    },
+    {
+      "detail": "current errors=[0.0009556968073467283, 0.0004570032274550423, 0.0002638296709164575, 0.00011946738997125434, 6.764248562813723e-05, 3.0204675367241553e-05]",
+      "group": "P1_current",
+      "name": "the fixed-boundary localization remains energy-bounded and approaches a nonzero diffuse current defect",
+      "pass": true
+    },
+    {
+      "detail": "maximum normalized inequality ratio=0.8376195805027069",
+      "group": "P1_current",
+      "name": "the Skyrme-minor bound enforces the pointwise L4/3 current estimate and excludes singular concentration",
+      "pass": true
+    },
+    {
+      "detail": "balances=[('uniform_ppp', True), ('five_tet_phase0', True), ('five_tet_phase1', True)]",
+      "group": "P2_cell",
+      "name": "all six- and five-tet bond directions are cycle-balanced, proving zero corrector by Jensen",
+      "pass": true
+    },
+    {
+      "detail": "maximum relative residual=9.02981393361794e-15",
+      "group": "P2_cell",
+      "name": "random-start corrector solves reproduce the exact closed cell formulas",
+      "pass": true
+    },
+    {
+      "detail": "{'six_over_five_rank_one_x': 1.3333333333333333, 'six_over_five_equal_x_y': 3.0, 'homogenized_densities_scalar_multiples': False}",
+      "group": "P2_cell",
+      "name": "six- and five-tet homogenized quartics are nonproportional",
+      "pass": true
+    },
+    {
+      "detail": "checksum=81104f59a5f3f4337739fc2a217cafc8da91581c9f1fb40b4fdba6ce0f948d59",
+      "group": "P0_provenance",
+      "name": "the canonical AP-E6 seed checksum remains frozen",
+      "pass": true
+    },
+    {
+      "detail": "failed=[]",
+      "group": "P3_quotient",
+      "name": "all quotient representatives are unanchored stationary admissible B=1 fields",
+      "pass": true
+    },
+    {
+      "detail": "numerical quotient gate=False; production=True",
+      "group": "P3_quotient",
+      "name": "the smaller-a/larger-L and translation/triangulation thresholds are evaluated without promoting failed mathematics",
+      "pass": true
+    }
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "compactness_counterexample": {
+    "current_integrability_theorem": "|J_a|^(4/3) <= |wedge^3 D^a n|^(4/3) <= (1/3)|wedge^2 D^a n|^2 pointwise",
+    "eta": 0.2,
+    "exact_minor_identity": "for theta=2 pi (x+2y)/3 and (n1,n2)=eta a(cos theta,sin theta), M_12^(1,2)=(3 sqrt(3)/2) eta^2 although the continuum-limit minor is zero",
+    "exact_torus_identity": "J_forward=-16 eta^3 sqrt(1-3 eta^2 a^2)",
+    "fixed_boundary_rows": [
+      {
+        "L43_bound_ratio": 0.7582268476272415,
+        "N": 9,
+        "a": 0.125,
+        "cells": 8,
+        "current_error_from_predicted_limit": 0.0009556968073467283,
+        "dirichlet_energy_unit_coefficient": 0.024677433826127436,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0009121884121692807,
+        "forward_current_integral": -0.0029505531926532725,
+        "forward_current_maximum": 0.0,
+        "forward_current_minimum": -0.08957291049650817,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.043270860800026456,
+        "minimum_n0": 0.9990638163028122,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.0018045821280738852,
+        "wedge2_L2_power": 0.0036091642561477703
+      },
+      {
+        "L43_bound_ratio": 0.8030965345331409,
+        "N": 13,
+        "a": 0.08333333333333333,
+        "cells": 12,
+        "current_error_from_predicted_limit": 0.0004570032274550423,
+        "dirichlet_energy_unit_coefficient": 0.025021956433082894,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0011201672463983128,
+        "forward_current_integral": -0.0034492467725449586,
+        "forward_current_maximum": 1.0936181461953856e-41,
+        "forward_current_minimum": -0.10939492044596054,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.028858497213581313,
+        "minimum_n0": 0.9995835935692868,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.0020922153157767504,
+        "wedge2_L2_power": 0.004184430631553501
+      },
+      {
+        "L43_bound_ratio": 0.8191151954867392,
+        "N": 17,
+        "a": 0.0625,
+        "cells": 16,
+        "current_error_from_predicted_limit": 0.0002638296709164575,
+        "dirichlet_energy_unit_coefficient": 0.025147409327000582,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0012032420135768044,
+        "forward_current_integral": -0.0036424203290835433,
+        "forward_current_maximum": 0.0,
+        "forward_current_minimum": -0.117211261582007,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.021646830470642798,
+        "minimum_n0": 0.9997657073652875,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.0022034300307329923,
+        "wedge2_L2_power": 0.0044068600614659845
+      },
+      {
+        "L43_bound_ratio": 0.8306558485560716,
+        "N": 25,
+        "a": 0.041666666666666664,
+        "cells": 24,
+        "current_error_from_predicted_limit": 0.00011946738997125434,
+        "dirichlet_energy_unit_coefficient": 0.02523859548914163,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0012661900019562682,
+        "forward_current_integral": -0.0037867826100287465,
+        "forward_current_maximum": 1.8811423607739644e-47,
+        "forward_current_minimum": -0.12309889443830295,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.014432629244194329,
+        "minimum_n0": 0.9998958496065498,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.002286488449140433,
+        "wedge2_L2_power": 0.004572976898280866
+      },
+      {
+        "L43_bound_ratio": 0.8347144459067822,
+        "N": 33,
+        "a": 0.03125,
+        "cells": 32,
+        "current_error_from_predicted_limit": 6.764248562813723e-05,
+        "dirichlet_energy_unit_coefficient": 0.02527082375940293,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0012889638032289792,
+        "forward_current_integral": -0.0038386075143718636,
+        "forward_current_maximum": 0.0,
+        "forward_current_minimum": -0.1252218442386173,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.010824841861344123,
+        "minimum_n0": 0.9999414113993385,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.002316295967231156,
+        "wedge2_L2_power": 0.004632591934462312
+      },
+      {
+        "L43_bound_ratio": 0.8376195805027069,
+        "N": 49,
+        "a": 0.020833333333333332,
+        "cells": 48,
+        "current_error_from_predicted_limit": 3.0204675367241553e-05,
+        "dirichlet_energy_unit_coefficient": 0.02529394384612331,
+        "exact_vacuum_boundary": true,
+        "forward_current_L43_power": 0.0013054723871985382,
+        "forward_current_integral": -0.0038760453246327593,
+        "forward_current_maximum": 5.6324096879453285e-49,
+        "forward_current_minimum": -0.1267584508678759,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.007216737414955884,
+        "minimum_n0": 0.9999739593505417,
+        "predicted_diffuse_current_limit": -0.003906250000000001,
+        "skyrme_energy_unit_coefficient": 0.0023378256984185664,
+        "wedge2_L2_power": 0.004675651396837133
+      }
+    ],
+    "localized_limit": "J_forward converges weakly to -16 eta^3 chi^3 dx",
+    "minor_rows": [
+      {
+        "a": 0.16666666666666666,
+        "cells": 6,
+        "continuum_limit_minor": 0.0,
+        "exact_expected_minor_12": 0.10392304845413267,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.03333796521495203,
+        "maximum_minor_residual": 4.163336342344337e-17,
+        "minor_12_mean": 0.10392304845413268
+      },
+      {
+        "a": 0.08333333333333333,
+        "cells": 12,
+        "continuum_limit_minor": 0.0,
+        "exact_expected_minor_12": 0.10392304845413267,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.016667245440710462,
+        "maximum_minor_residual": 4.163336342344337e-17,
+        "minor_12_mean": 0.10392304845413268
+      },
+      {
+        "a": 0.041666666666666664,
+        "cells": 24,
+        "continuum_limit_minor": 0.0,
+        "exact_expected_minor_12": 0.10392304845413267,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.008333405673494155,
+        "maximum_minor_residual": 5.551115123125783e-17,
+        "minor_12_mean": 0.10392304845413267
+      },
+      {
+        "a": 0.020833333333333332,
+        "cells": 48,
+        "continuum_limit_minor": 0.0,
+        "exact_expected_minor_12": 0.10392304845413267,
+        "hemisphere_degree_certificate": 0,
+        "maximum_distance_from_vacuum": 0.004166675708980719,
+        "maximum_minor_residual": 5.551115123125783e-17,
+        "minor_12_mean": 0.10392304845413268
+      }
+    ],
+    "sequence": "u=( (-1)^(x+y), (-1)^(y+z), (-1)^(z+x) ); n_a=(sqrt(1-3 eta^2 a^2), eta a u) on the torus, localized by chi=prod_i sin^2(pi x_i) for the fixed-vacuum cube",
+    "torus_rows": [
+      {
+        "a": 0.125,
+        "cells": 8,
+        "exact_expected_forward_current": -0.12787994369720376,
+        "forward_current_integral": -0.12787994369720376,
+        "hemisphere_degree_certificate": 0,
+        "maximum_current_residual": 0.0,
+        "maximum_distance_from_vacuum": 0.043311427258767105,
+        "minimum_n0": 0.9990620601344042
+      },
+      {
+        "a": 0.0625,
+        "cells": 16,
+        "exact_expected_forward_current": -0.1279699964835508,
+        "forward_current_integral": -0.1279699964835508,
+        "hemisphere_degree_certificate": 0,
+        "maximum_current_residual": 2.7755575615628914e-17,
+        "maximum_distance_from_vacuum": 0.021651903946743378,
+        "minimum_n0": 0.9997655975277405
+      },
+      {
+        "a": 0.03125,
+        "cells": 32,
+        "exact_expected_forward_current": -0.1279924997802606,
+        "forward_current_integral": -0.1279924997802606,
+        "hemisphere_degree_certificate": 0,
+        "maximum_current_residual": 2.7755575615628914e-17,
+        "maximum_distance_from_vacuum": 0.01082547612942357,
+        "minimum_n0": 0.9999414045332856
+      },
+      {
+        "a": 0.015625,
+        "cells": 64,
+        "exact_expected_forward_current": -0.12799812498626692,
+        "forward_current_integral": -0.12799812498626692,
+        "hemisphere_degree_certificate": 0,
+        "maximum_current_residual": 0.0,
+        "maximum_distance_from_vacuum": 0.005412678595655248,
+        "minimum_n0": 0.9999853514552101
+      }
+    ],
+    "verdict": "singular concentration is excluded by the L^(4/3) bound, but compensated compactness fails through a nonzero diffuse oscillatory defect"
+  },
+  "determinant_variation_gate_open": false,
+  "fail_closed": {
+    "diffuse_oscillatory_topological_current_defect_present": true,
+    "dynamic_centering_implemented": true,
+    "finite_R_density_triangulation_independent": false,
+    "finite_R_periodic_cell_density_computed": true,
+    "finite_R_zero_corrector_proven": true,
+    "forward_skyrme_compensated_compactness": false,
+    "full_action_gamma_liminf_proven": false,
+    "geometric_degree_current_controlled_by_forward_skyrme_stencil": false,
+    "gw_domain_wall_parallel_lane_retained": true,
+    "regulated_determinant_variation_allowed": false,
+    "regulator_stable_continuum_background": false,
+    "same_action_riemann_hessian_allowed": false,
+    "singular_topological_current_concentration_excluded_for_forward_current": true,
+    "so3_mod_two_index_parallel_lane_retained": true,
+    "translation_quotient_implemented": true
+  },
+  "finite_R_cell_problem": {
+    "cell_formula": "Q_hom(A)=|Y|^(-1) inf_phi sum_(p,r in B_Y) |A r + phi(p+r)-phi(p)|^4",
+    "direction_balances": [
+      {
+        "all_directions_cycle_balanced": true,
+        "bonds": 56,
+        "directions": [
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              1,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              1,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          }
+        ],
+        "mesh": "uniform_ppp",
+        "period": 2
+      },
+      {
+        "all_directions_cycle_balanced": true,
+        "bonds": 48,
+        "directions": [
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              0,
+              1,
+              -1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              0,
+              1,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              -1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              0,
+              -1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          }
+        ],
+        "mesh": "five_tet_phase0",
+        "period": 2
+      },
+      {
+        "all_directions_cycle_balanced": true,
+        "bonds": 48,
+        "directions": [
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              0,
+              1,
+              -1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              0,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              0,
+              1,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              -1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              0,
+              -1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 8,
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              0,
+              1
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          },
+          {
+            "bonds_per_period_cell": 4,
+            "direction": [
+              1,
+              1,
+              0
+            ],
+            "maximum_node_imbalance": 0,
+            "nodewise_incoming_equals_outgoing": true
+          }
+        ],
+        "mesh": "five_tet_phase1",
+        "period": 2
+      }
+    ],
+    "five_tet_closed_formula": "sum_i |A e_i|^4 + 1/2 sum_(i<j)(|A(e_i+e_j)|^4+|A(e_i-e_j)|^4)",
+    "nonproportionality": {
+      "homogenized_densities_scalar_multiples": false,
+      "six_over_five_equal_x_y": 3.0,
+      "six_over_five_rank_one_x": 1.3333333333333333
+    },
+    "optimization_rows": [
+      {
+        "bonds": 56,
+        "cell_minimum": 3.9999999999999996,
+        "closed_formula_energy": 4.0,
+        "corrector_maximum_absolute_value": 1.7079839246410427e-08,
+        "gradient_infinity_norm": 2.657584670222093e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 24,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.1102230246251565e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 4.0
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 36.00000000000001,
+        "closed_formula_energy": 36.0,
+        "corrector_maximum_absolute_value": 3.258615317312246e-08,
+        "gradient_infinity_norm": 5.366647304327898e-07,
+        "matrix": [
+          [
+            1.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 29,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.9737298215558337e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 36.0
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 24.000000000000004,
+        "closed_formula_energy": 24.0,
+        "corrector_maximum_absolute_value": 5.246795623444348e-09,
+        "gradient_infinity_norm": 5.327609930994015e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 22,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.4802973661668753e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 24.0
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 14.798800000000014,
+        "closed_formula_energy": 14.798800000000004,
+        "corrector_maximum_absolute_value": 4.0238097233529135e-08,
+        "gradient_infinity_norm": 1.4779524182273462e-07,
+        "matrix": [
+          [
+            1.0,
+            0.3,
+            -0.2
+          ],
+          [
+            0.4,
+            -0.7,
+            0.1
+          ],
+          [
+            0.0,
+            0.2,
+            0.8
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 26,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 7.202030594643823e-16,
+        "relative_zero_vs_formula_residual": 1.200338432440637e-16,
+        "zero_corrector_energy": 14.798800000000005
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 841.1244771175201,
+        "closed_formula_energy": 841.1244771175202,
+        "corrector_maximum_absolute_value": 3.846050976843166e-08,
+        "gradient_infinity_norm": 1.4765131292060474e-06,
+        "matrix": [
+          [
+            1.3018691205014803,
+            0.9725759772440161,
+            -0.03871380512095362
+          ],
+          [
+            -0.6876492507542383,
+            1.212814356105692,
+            -3.180693393427618
+          ],
+          [
+            0.6233296203543326,
+            -1.8677571458610267,
+            -0.6421155744267669
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 23,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.3516053903366784e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 841.1244771175202
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 346.12379892342864,
+        "closed_formula_energy": 346.12379892342807,
+        "corrector_maximum_absolute_value": 1.6166593490239792e-07,
+        "gradient_infinity_norm": 1.8224451983073209e-06,
+        "matrix": [
+          [
+            0.5931196762049228,
+            -2.056807067501596,
+            -0.9638622818632393
+          ],
+          [
+            1.144722275869721,
+            0.3740397393694232,
+            0.4797343394761778
+          ],
+          [
+            -0.003225309309658699,
+            -0.5945355205906132,
+            1.7219854093137636
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 23,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.6422857670467009e-15,
+        "relative_zero_vs_formula_residual": 1.6422857670467008e-16,
+        "zero_corrector_energy": 346.123798923428
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 203.05566074109313,
+        "closed_formula_energy": 203.05566074109316,
+        "corrector_maximum_absolute_value": 4.3613441805628335e-08,
+        "gradient_infinity_norm": 8.734538532451097e-07,
+        "matrix": [
+          [
+            0.2436776052163348,
+            1.0047914434611582,
+            -0.8323711736750761
+          ],
+          [
+            0.40950802366116335,
+            -0.6729914774540666,
+            0.0614503626542449
+          ],
+          [
+            -0.09390834401934897,
+            2.378633435650083,
+            0.2963283477243544
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 26,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.3997004233555058e-16,
+        "relative_zero_vs_formula_residual": 4.1991012700665174e-16,
+        "zero_corrector_energy": 203.05566074109308
+      },
+      {
+        "bonds": 56,
+        "cell_minimum": 250.24871760587112,
+        "closed_formula_energy": 250.24871760587027,
+        "corrector_maximum_absolute_value": 1.2104798649926072e-07,
+        "gradient_infinity_norm": 6.397765123455912e-06,
+        "matrix": [
+          [
+            -0.11235436710480427,
+            -0.6775891917327089,
+            1.5030582530461736
+          ],
+          [
+            0.23091902536514897,
+            -0.6381992373390819,
+            -0.6836627677038997
+          ],
+          [
+            2.147067660766278,
+            1.2419401051351815,
+            -1.260064933715429
+          ]
+        ],
+        "mesh": "uniform_ppp",
+        "optimizer_iterations": 24,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 3.4072153938267333e-15,
+        "relative_zero_vs_formula_residual": 2.271476929217822e-16,
+        "zero_corrector_energy": 250.24871760587033
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 3.000000000000001,
+        "closed_formula_energy": 3.0,
+        "corrector_maximum_absolute_value": 3.573643311756573e-08,
+        "gradient_infinity_norm": 3.5736433117565975e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 41,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 2.9605947323337506e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 3.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 12.000000000000004,
+        "closed_formula_energy": 12.0,
+        "corrector_maximum_absolute_value": 2.337001928065806e-08,
+        "gradient_infinity_norm": 9.572910208976992e-08,
+        "matrix": [
+          [
+            1.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 37,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 2.9605947323337506e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 12.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 14.999999999999998,
+        "closed_formula_energy": 15.0,
+        "corrector_maximum_absolute_value": 1.0199768273782778e-08,
+        "gradient_infinity_norm": 2.7146302975110064e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 24,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.1842378929335003e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 15.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 10.620700000000003,
+        "closed_formula_energy": 10.620700000000001,
+        "corrector_maximum_absolute_value": 1.9928989855589772e-08,
+        "gradient_infinity_norm": 5.354498844312161e-08,
+        "matrix": [
+          [
+            1.0,
+            0.3,
+            -0.2
+          ],
+          [
+            0.4,
+            -0.7,
+            0.1
+          ],
+          [
+            0.0,
+            0.2,
+            0.8
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 32,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.6725421482578834e-16,
+        "relative_zero_vs_formula_residual": 1.6725421482578834e-16,
+        "zero_corrector_energy": 10.620700000000003
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 708.5857943357562,
+        "closed_formula_energy": 708.5857943357553,
+        "corrector_maximum_absolute_value": 6.134008712943364e-08,
+        "gradient_infinity_norm": 1.0556363390534784e-05,
+        "matrix": [
+          [
+            1.3018691205014803,
+            0.9725759772440161,
+            -0.03871380512095362
+          ],
+          [
+            -0.6876492507542383,
+            1.212814356105692,
+            -3.180693393427618
+          ],
+          [
+            0.6233296203543326,
+            -1.8677571458610267,
+            -0.6421155744267669
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 31,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.2835350483218614e-15,
+        "relative_zero_vs_formula_residual": 3.2088376208046534e-16,
+        "zero_corrector_energy": 708.5857943357555
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 202.3256592094038,
+        "closed_formula_energy": 202.32565920940357,
+        "corrector_maximum_absolute_value": 8.84396751228958e-08,
+        "gradient_infinity_norm": 1.2095629665551631e-06,
+        "matrix": [
+          [
+            0.5931196762049228,
+            -2.056807067501596,
+            -0.9638622818632393
+          ],
+          [
+            1.144722275869721,
+            0.3740397393694232,
+            0.4797343394761778
+          ],
+          [
+            -0.003225309309658699,
+            -0.5945355205906132,
+            1.7219854093137636
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 31,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.123800492392832e-15,
+        "relative_zero_vs_formula_residual": 2.80950123098208e-16,
+        "zero_corrector_energy": 202.32565920940363
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 169.56116691417134,
+        "closed_formula_energy": 169.56116691417134,
+        "corrector_maximum_absolute_value": 5.3522704288059256e-08,
+        "gradient_infinity_norm": 8.492985852370794e-07,
+        "matrix": [
+          [
+            0.2436776052163348,
+            1.0047914434611582,
+            -0.8323711736750761
+          ],
+          [
+            0.40950802366116335,
+            -0.6729914774540666,
+            0.0614503626542449
+          ],
+          [
+            -0.09390834401934897,
+            2.378633435650083,
+            0.2963283477243544
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 37,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 0.0,
+        "relative_zero_vs_formula_residual": 3.352384269069172e-16,
+        "zero_corrector_energy": 169.56116691417128
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 304.65547997309363,
+        "closed_formula_energy": 304.6554799730935,
+        "corrector_maximum_absolute_value": 7.722979191048509e-08,
+        "gradient_infinity_norm": 1.244336666816892e-06,
+        "matrix": [
+          [
+            -0.11235436710480427,
+            -0.6775891917327089,
+            1.5030582530461736
+          ],
+          [
+            0.23091902536514897,
+            -0.6381992373390819,
+            -0.6836627677038997
+          ],
+          [
+            2.147067660766278,
+            1.2419401051351815,
+            -1.260064933715429
+          ]
+        ],
+        "mesh": "five_tet_phase0",
+        "optimizer_iterations": 33,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 3.73165247943863e-16,
+        "relative_zero_vs_formula_residual": 3.73165247943863e-16,
+        "zero_corrector_energy": 304.65547997309363
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 3.000000000000027,
+        "closed_formula_energy": 3.0,
+        "corrector_maximum_absolute_value": 2.3713440847178656e-07,
+        "gradient_infinity_norm": 4.538472087034506e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 60,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 9.02981393361794e-15,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 3.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 12.000000000000046,
+        "closed_formula_energy": 12.0,
+        "corrector_maximum_absolute_value": 1.869431111748423e-07,
+        "gradient_infinity_norm": 4.930696462235318e-07,
+        "matrix": [
+          [
+            1.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 58,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 3.848773152033876e-15,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 12.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 15.000000000000002,
+        "closed_formula_energy": 15.0,
+        "corrector_maximum_absolute_value": 5.4361101407863234e-08,
+        "gradient_infinity_norm": 8.998171163732138e-08,
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 29,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.1842378929335003e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 15.0
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 10.620700000000006,
+        "closed_formula_energy": 10.620700000000001,
+        "corrector_maximum_absolute_value": 2.9104319494539756e-08,
+        "gradient_infinity_norm": 1.523946412396171e-07,
+        "matrix": [
+          [
+            1.0,
+            0.3,
+            -0.2
+          ],
+          [
+            0.4,
+            -0.7,
+            0.1
+          ],
+          [
+            0.0,
+            0.2,
+            0.8
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 52,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 5.017626444773651e-16,
+        "relative_zero_vs_formula_residual": 0.0,
+        "zero_corrector_energy": 10.620700000000001
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 708.5857943357563,
+        "closed_formula_energy": 708.5857943357553,
+        "corrector_maximum_absolute_value": 3.259184698792614e-07,
+        "gradient_infinity_norm": 2.7366484260937796e-06,
+        "matrix": [
+          [
+            1.3018691205014803,
+            0.9725759772440161,
+            -0.03871380512095362
+          ],
+          [
+            -0.6876492507542383,
+            1.212814356105692,
+            -3.180693393427618
+          ],
+          [
+            0.6233296203543326,
+            -1.8677571458610267,
+            -0.6421155744267669
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 55,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.4439769293620941e-15,
+        "relative_zero_vs_formula_residual": 3.2088376208046534e-16,
+        "zero_corrector_energy": 708.5857943357555
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 202.3256592094039,
+        "closed_formula_energy": 202.32565920940357,
+        "corrector_maximum_absolute_value": 2.1385680381607784e-07,
+        "gradient_infinity_norm": 9.869994938580332e-07,
+        "matrix": [
+          [
+            0.5931196762049228,
+            -2.056807067501596,
+            -0.9638622818632393
+          ],
+          [
+            1.144722275869721,
+            0.3740397393694232,
+            0.4797343394761778
+          ],
+          [
+            -0.003225309309658699,
+            -0.5945355205906132,
+            1.7219854093137636
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 51,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.6857007385892481e-15,
+        "relative_zero_vs_formula_residual": 1.40475061549104e-16,
+        "zero_corrector_energy": 202.3256592094036
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 169.56116691417145,
+        "closed_formula_energy": 169.56116691417134,
+        "corrector_maximum_absolute_value": 1.1037433882865931e-07,
+        "gradient_infinity_norm": 1.2560120037363731e-06,
+        "matrix": [
+          [
+            0.2436776052163348,
+            1.0047914434611582,
+            -0.8323711736750761
+          ],
+          [
+            0.40950802366116335,
+            -0.6729914774540666,
+            0.0614503626542449
+          ],
+          [
+            -0.09390834401934897,
+            2.378633435650083,
+            0.2963283477243544
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 66,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 6.704768538138344e-16,
+        "relative_zero_vs_formula_residual": 3.352384269069172e-16,
+        "zero_corrector_energy": 169.56116691417128
+      },
+      {
+        "bonds": 48,
+        "cell_minimum": 304.6554799730939,
+        "closed_formula_energy": 304.6554799730935,
+        "corrector_maximum_absolute_value": 2.3208633927033265e-07,
+        "gradient_infinity_norm": 1.8530440483166544e-06,
+        "matrix": [
+          [
+            -0.11235436710480427,
+            -0.6775891917327089,
+            1.5030582530461736
+          ],
+          [
+            0.23091902536514897,
+            -0.6381992373390819,
+            -0.6836627677038997
+          ],
+          [
+            2.147067660766278,
+            1.2419401051351815,
+            -1.260064933715429
+          ]
+        ],
+        "mesh": "five_tet_phase1",
+        "optimizer_iterations": 57,
+        "optimizer_success": true,
+        "period": 2,
+        "relative_cell_vs_formula_residual": 1.3060783678035206e-15,
+        "relative_zero_vs_formula_residual": 3.73165247943863e-16,
+        "zero_corrector_energy": 304.65547997309363
+      }
+    ],
+    "proof_certificate": "for every bond direction the periodic directed graph is cycle-balanced; the mean corrector increment is zero and convex Jensen gives phi=0 exactly",
+    "six_tet_closed_formula": "sum_i |A e_i|^4 + sum_(i<j)|A(e_i+e_j)|^4 + |A(e1+e2+e3)|^4",
+    "verdict": "the finite-R barrier density is computed, but triangulation dependence survives homogenization and therefore blocks regulator universality"
+  },
+  "generated_utc": "deterministic-no-wall-clock",
+  "hessian_gate_open": false,
+  "numpy": "2.0.2",
+  "portal_start_allowed": false,
+  "python": "3.9.6",
+  "quick": false,
+  "quotient_scan": {
+    "cases": [
+      {
+        "L": 6.0,
+        "N": 25,
+        "R_equals_gamma_a2_over_d2": 0.1020304050607081,
+        "a": 0.25,
+        "case_id": "joint_N25_L6",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              -0.012252451520206376,
+              0.11959075238085737,
+              0.06139323045491534
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.041563285642229504,
+            "physical_shift": [
+              0.006126225760103188,
+              -0.059795376190428684,
+              -0.03069661522745767
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              -0.012252266860625307,
+              0.11959073895129706,
+              0.061393473031866076
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.04156338248245429,
+            "physical_shift": [
+              0.006126133430312653,
+              -0.05979536947564853,
+              -0.030696736515933038
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 16.351171950139207,
+          "base_energy": 60.320886003031355,
+          "direct_projected_gradient_l2_density": 3.043238797250162e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.0490056025214816e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 54.372590263895674,
+            "fraction_of_sites_containing_90_percent": 0.36270239171529545,
+            "interior_sites": 12167,
+            "inverse_participation_ratio": 0.0183916196588489,
+            "maximum_site_fraction": 0.07492221800392841,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 4413
+          },
+          "minimum_pair_dot": 0.15092129247240077,
+          "minimum_pair_margin": 0.14092129247240076,
+          "total_energy": 76.67205795317057
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.08761958033362847,
+              "minimum_hit_positive_cone_margin": 0.007564693902839665,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.05147023390166748,
+              "minimum_hit_positive_cone_margin": 0.033180407808460724,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.3843518768698405,
+              "minimum_hit_positive_cone_margin": 0.03977729396951882,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.6,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 5.045958262723289e-15,
+          "barycentre": [
+            -3.733374223343653e-17,
+            -2.6144175758193535e-17,
+            1.2209998638079619e-17
+          ],
+          "barycentre_norm": 4.7184852463157107e-17,
+          "centered_covariance_eigenvalues": [
+            0.7407415311346803,
+            0.7407415311346807,
+            0.7407415311346915
+          ],
+          "centered_rms": 1.4907127803182114,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0025479617115473476,
+            0.0,
+            0.014152080289580822,
+            0.0262507833787181,
+            0.018148233731026354,
+            0.051719810044826814,
+            0.03941633543603041,
+            0.08745600126909114,
+            0.03696697726473992,
+            0.07116469960159058,
+            0.08760567448101152,
+            0.0601950612160441,
+            0.07501812389340075,
+            0.04610058489868531,
+            0.047047400709492655,
+            0.03691348570382439,
+            0.05878058702491693,
+            0.02682507805432401,
+            0.032875358898254076,
+            0.02354632340533582,
+            0.02884188273422868,
+            0.020389172337334605,
+            0.014758764166950772,
+            0.017714390666950762,
+            0.011074109879582532,
+            0.01355295119418123,
+            0.00976321446030202,
+            0.009498374641892524,
+            0.008962994863189366,
+            0.0051477672271532295,
+            0.006123580724570279,
+            0.003577355969292413,
+            0.003989330946857647,
+            0.0015896562894762946,
+            0.0022858928855967486
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.031583947462389836,
+          "barycentre": [
+            -0.012251626594104873,
+            0.11959043521723153,
+            0.06139345555457296
+          ],
+          "barycentre_norm": 0.1349856693674538,
+          "centered_covariance_eigenvalues": [
+            0.4540841392453697,
+            0.455373252938849,
+            0.4985547198172321
+          ],
+          "centered_rms": 1.1865968616179006,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.013571998057164806,
+            0.03270041830103994,
+            0.03563457274687506,
+            0.0685253755135171,
+            0.06590105784895302,
+            0.08617608061106245,
+            0.07236709528889611,
+            0.08048244852141306,
+            0.07219498284967678,
+            0.07322805209928572,
+            0.062055140555202955,
+            0.056332160795998606,
+            0.046452181749400454,
+            0.04154987972055705,
+            0.03660642609277445,
+            0.02796061626202051,
+            0.025426018556330053,
+            0.020912824841966143,
+            0.016391563135780954,
+            0.014687570017722527,
+            0.011049354348506981,
+            0.009888243895815007,
+            0.007136636999548958,
+            0.006141992862741823,
+            0.004622391945178669,
+            0.003591876706985886,
+            0.0026824725337239773,
+            0.001947611224210379,
+            0.001374468322873963,
+            0.0009278669616288361,
+            0.000638969988451847,
+            0.00041108515746162154,
+            0.0002642985450452132,
+            0.00016626694218908178
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 76.67205795317093,
+            "function_evaluations": 577,
+            "gradient_density": 5.156704634558605e-07,
+            "iterations": 563,
+            "minimum_pair_margin": 0.14092144040080412,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 76.6720579531701,
+            "function_evaluations": 487,
+            "gradient_density": 3.2833615959028903e-07,
+            "iterations": 469,
+            "minimum_pair_margin": 0.14092139037409163,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 76.67205795317057,
+            "function_evaluations": 462,
+            "gradient_density": 3.043238797250162e-07,
+            "iterations": 447,
+            "minimum_pair_margin": 0.14092129247240076,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "joint_N29_L6.5",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.12918008485092977,
+              0.06916999928754802,
+              -0.003909401707703677
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.07774102215995328,
+            "physical_shift": [
+              -0.06459004242546489,
+              -0.03458499964377401,
+              0.0019547008538518384
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.12918002452735905,
+              0.0691701275690779,
+              -0.00390932530939601
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.07774112744960211,
+            "physical_shift": [
+              -0.06459001226367952,
+              -0.03458506378453895,
+              0.001954662654698005
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 15.665137054923449,
+          "base_energy": 62.01440832354566,
+          "direct_projected_gradient_l2_density": 1.6445641990032312e-06,
+          "direct_tangent_plus_scalar_gradient_l2": 5.772878930879456e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 8.677447304897605,
+            "fraction_of_sites_containing_90_percent": 0.0013717421124828531,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.11524126449440883,
+            "maximum_site_fraction": 0.23937792511573927,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 27
+          },
+          "minimum_pair_dot": 0.1719025975359377,
+          "minimum_pair_margin": 0.1619025975359377,
+          "total_energy": 77.6795453784691
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.18214304645155632,
+              "minimum_hit_positive_cone_margin": 0.023087295292088767,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.028601344067287166,
+              "minimum_hit_positive_cone_margin": 0.05257073566146608,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.11181418177468314,
+              "minimum_hit_positive_cone_margin": 0.039259374333823774,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 2.4372044231750044e-15,
+          "barycentre": [
+            -4.4080784881376465e-17,
+            -4.7302484956204213e-17,
+            -3.819808780886732e-17
+          ],
+          "barycentre_norm": 7.509816636272853e-17,
+          "centered_covariance_eigenvalues": [
+            0.774403297448487,
+            0.7744032974484871,
+            0.7744032974484927
+          ],
+          "centered_rms": 1.5242079557414292,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.002027892331730566,
+            0.0,
+            0.01138254612139148,
+            0.02132702896650991,
+            0.0227299862370722,
+            0.06855188538225561,
+            0.04950601513697344,
+            0.05101320463997874,
+            0.07173415638092316,
+            0.0652749666498233,
+            0.0730459998375599,
+            0.05961528126640437,
+            0.0601528376609748,
+            0.05668935442225014,
+            0.05147643746586446,
+            0.04152213643712802,
+            0.0421386577566644,
+            0.03358184358688398,
+            0.03260578904838178,
+            0.029088411573858622,
+            0.019292312863292773,
+            0.022051028963526027,
+            0.017217178755260232,
+            0.015570381321468514,
+            0.012692330631166397,
+            0.012780679347919936,
+            0.010766396498559223,
+            0.007605655105333078,
+            0.009596431660313215,
+            0.006628456341986517,
+            0.005958442101786613,
+            0.0062046621192414515,
+            0.003887765413022702,
+            0.0034799517225273646,
+            0.002803896251967075
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.02351342418106409,
+          "barycentre": [
+            0.12917972623029977,
+            0.06916992856658756,
+            -0.003909852596374764
+          ],
+          "barycentre_norm": 0.1465850184506159,
+          "centered_covariance_eigenvalues": [
+            0.48736138199573775,
+            0.48833923667531215,
+            0.5225913567611598
+          ],
+          "centered_rms": 1.2240473746682394,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.014360281863870658,
+            0.026166601379013717,
+            0.04351744170596869,
+            0.0626467320949566,
+            0.0721477075250302,
+            0.06973313130107604,
+            0.08272952249298006,
+            0.07442789375058624,
+            0.0780501728402546,
+            0.06446897449939688,
+            0.06164691334211278,
+            0.054019721295347656,
+            0.04752683078511947,
+            0.042022182334566734,
+            0.0354087614533524,
+            0.029785317673236375,
+            0.02504820403742849,
+            0.02140634048056868,
+            0.01738241641771249,
+            0.015062107027029295,
+            0.012454873582990843,
+            0.010572953838180035,
+            0.008434586260649702,
+            0.007245434442015185,
+            0.005706227872696128,
+            0.004577156674030002,
+            0.0036620754994484525,
+            0.0028473518036860944,
+            0.0022342976731251503,
+            0.0016385315497858884,
+            0.0011949881104538144,
+            0.0008765463514990459,
+            0.0005863969064624362,
+            0.0004113251353691535
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 77.67954561515704,
+            "function_evaluations": 662,
+            "gradient_density": 0.0001182745389960585,
+            "iterations": 650,
+            "minimum_pair_margin": 0.16178015334856105,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 77.67954537846624,
+            "function_evaluations": 318,
+            "gradient_density": 3.273615053437888e-07,
+            "iterations": 308,
+            "minimum_pair_margin": 0.16190262428296168,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 77.6795453787836,
+            "function_evaluations": 671,
+            "gradient_density": 3.530838813543235e-06,
+            "iterations": 650,
+            "minimum_pair_margin": 0.16190617753180275,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 1,
+            "chart": 1,
+            "energy": 77.6795453784667,
+            "function_evaluations": 213,
+            "gradient_density": 2.72593343166614e-07,
+            "iterations": 208,
+            "minimum_pair_margin": 0.1619025831237425,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 77.67954537889213,
+            "function_evaluations": 671,
+            "gradient_density": 6.623128833877293e-06,
+            "iterations": 650,
+            "minimum_pair_margin": 0.1619052041556343,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 2,
+            "chart": 1,
+            "energy": 77.67954537852975,
+            "function_evaluations": 83,
+            "gradient_density": 2.196425855889803e-06,
+            "iterations": 77,
+            "minimum_pair_margin": 0.16190479205228014,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 2,
+            "energy": 77.6795453784691,
+            "function_evaluations": 147,
+            "gradient_density": 1.6445641990032312e-06,
+            "iterations": 137,
+            "minimum_pair_margin": 0.1619025975359377,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up",
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 7.0,
+        "N": 33,
+        "R_equals_gamma_a2_over_d2": 0.08927660442811959,
+        "a": 0.21875,
+        "case_id": "joint_N33_L7",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.029346717811118594,
+              -0.04937701556562785,
+              -0.11274643449045033
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 1.0,
+            "minimum_pair_margin_after_shift": 0.007339213446873114,
+            "physical_shift": [
+              -0.029346717811118594,
+              0.04937701556562785,
+              0.11274643449045033
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.029346615561998687,
+              -0.11274645577562974,
+              -0.04937764440478704
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 1.0,
+            "minimum_pair_margin_after_shift": 0.007339348587256165,
+            "physical_shift": [
+              -0.029346615561998687,
+              0.11274645577562974,
+              0.04937764440478704
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 14.74759578583145,
+          "base_energy": 63.804635162722455,
+          "direct_projected_gradient_l2_density": 5.337399994976469e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.928619139600972e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 22.897960806125795,
+            "fraction_of_sites_containing_90_percent": 0.02648450874425162,
+            "interior_sites": 29791,
+            "inverse_participation_ratio": 0.04367201116583597,
+            "maximum_site_fraction": 0.1297334487379245,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 789
+          },
+          "minimum_pair_dot": 0.20314845759817524,
+          "minimum_pair_margin": 0.19314845759817523,
+          "total_energy": 78.5522309485539
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.12378240971480102,
+              "minimum_hit_positive_cone_margin": 0.00044388196813029715,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.0260829678086596,
+              "minimum_hit_positive_cone_margin": 0.09909561106308075,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.22414382562650517,
+              "minimum_hit_positive_cone_margin": 0.00036984611331351917,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.8285714285714287,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 2.629598986128579e-15,
+          "barycentre": [
+            -3.7475231906818504e-17,
+            4.519975396214385e-19,
+            2.735164598734859e-18
+          ],
+          "barycentre_norm": 3.757763209181526e-17,
+          "centered_covariance_eigenvalues": [
+            0.8021845756388072,
+            0.8021845756388075,
+            0.8021845756388135
+          ],
+          "centered_rms": 1.551307102709334,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0016932537161416573,
+            0.0,
+            0.009574790511252079,
+            0.029444513353851544,
+            0.038593699267410984,
+            0.02890570942479079,
+            0.06716305546905361,
+            0.04929276481399466,
+            0.04245025754375835,
+            0.08540631966269269,
+            0.06565336383478193,
+            0.09125241101496716,
+            0.048604569913031435,
+            0.03941156676184079,
+            0.06523234696675607,
+            0.0447057598978275,
+            0.03604885987989633,
+            0.03751723022507726,
+            0.03361885198226311,
+            0.024022104292545615,
+            0.02543739855415881,
+            0.021063930062006034,
+            0.017284048594647824,
+            0.012724145349028082,
+            0.01387644722687052,
+            0.01273511580094439,
+            0.00978045731124089,
+            0.008604761043921223,
+            0.008549873613527681,
+            0.007097445469450948,
+            0.005625843487637787,
+            0.006009878957290358,
+            0.004676657678622122,
+            0.004153977803812994,
+            0.0037885905149067835
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.019511464025724456,
+          "barycentre": [
+            0.029346635690386716,
+            -0.04937758630655858,
+            -0.11274657377096906
+          ],
+          "barycentre_norm": 0.12653521625578584,
+          "centered_covariance_eigenvalues": [
+            0.5235188347353108,
+            0.523988526032981,
+            0.554781842891322
+          ],
+          "centered_rms": 1.265815627830378,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.0073715701605619605,
+            0.033026297398789733,
+            0.03432574680621105,
+            0.06277569876763041,
+            0.0701273288068986,
+            0.06973971908838804,
+            0.074446842160973,
+            0.07764064314585743,
+            0.0729041248878969,
+            0.07268284415032061,
+            0.05879738338082809,
+            0.056246779626148255,
+            0.0481460430510986,
+            0.03989848432707489,
+            0.03562808560569327,
+            0.030873858754521248,
+            0.025577027535889887,
+            0.022403993288015314,
+            0.018653210337272567,
+            0.015819507209765236,
+            0.013441650681976648,
+            0.011124180353513093,
+            0.009453329186314583,
+            0.007861069479538902,
+            0.006619643937743293,
+            0.005559030000299986,
+            0.0046174249854355025,
+            0.0036755433173497106,
+            0.0029955802776413065,
+            0.0024063662682877224,
+            0.0018567980164385712,
+            0.0014190962182742757,
+            0.0010933173502317437,
+            0.0007917814371195647
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 78.55223224818549,
+            "function_evaluations": 668,
+            "gradient_density": 0.000459491936036059,
+            "iterations": 650,
+            "minimum_pair_margin": 0.19325574020446612,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 78.55223094855398,
+            "function_evaluations": 445,
+            "gradient_density": 3.5602681973539834e-07,
+            "iterations": 434,
+            "minimum_pair_margin": 0.19314860302722875,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 78.55223110704762,
+            "function_evaluations": 669,
+            "gradient_density": 3.795767105398874e-05,
+            "iterations": 650,
+            "minimum_pair_margin": 0.1930923408427404,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 1,
+            "chart": 1,
+            "energy": 78.55223094855477,
+            "function_evaluations": 334,
+            "gradient_density": 3.503558306959587e-07,
+            "iterations": 326,
+            "minimum_pair_margin": 0.19314889730282045,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 78.55223099553102,
+            "function_evaluations": 665,
+            "gradient_density": 1.9307245563218045e-05,
+            "iterations": 650,
+            "minimum_pair_margin": 0.19313488368641057,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 2,
+            "chart": 1,
+            "energy": 78.5522309485539,
+            "function_evaluations": 335,
+            "gradient_density": 5.337399994976469e-07,
+            "iterations": 326,
+            "minimum_pair_margin": 0.19314845759817523,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 7.5,
+        "N": 37,
+        "R_equals_gamma_a2_over_d2": 0.08502533755059015,
+        "a": 0.20833333333333348,
+        "case_id": "joint_N37_L7.5",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.014840456822271557,
+              0.014840553609976843,
+              0.014840068695764307
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 1.0,
+            "minimum_pair_margin_after_shift": 0.4607144079555149,
+            "physical_shift": [
+              -0.014840456822271557,
+              -0.014840553609976843,
+              -0.014840068695764307
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.014840494903207649,
+              0.014840495169148017,
+              0.014840496265913312
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 1.0,
+            "minimum_pair_margin_after_shift": 0.46071458072752003,
+            "physical_shift": [
+              -0.014840494903207649,
+              -0.014840495169148017,
+              -0.014840496265913312
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 12.777755997522775,
+          "base_energy": 66.21009080991784,
+          "direct_projected_gradient_l2_density": 1.7011585906248145e-06,
+          "direct_tangent_plus_scalar_gradient_l2": 6.370201246102074e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 28.40897119641588,
+            "fraction_of_sites_containing_90_percent": 0.0013994169096209913,
+            "interior_sites": 42875,
+            "inverse_participation_ratio": 0.03520014832941791,
+            "maximum_site_fraction": 0.08964407078071741,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 60
+          },
+          "minimum_pair_dot": 0.4678890568848681,
+          "minimum_pair_margin": 0.4578890568848681,
+          "total_energy": 78.98784680744062
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.19669257736389598,
+              "minimum_hit_positive_cone_margin": 0.08211873733309759,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.01947316712201016,
+              "minimum_hit_positive_cone_margin": 0.02031814792331911,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.3145563483008026,
+              "minimum_hit_positive_cone_margin": 0.00964403056424623,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.9199999999999988,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 5.561880984098001e-15,
+          "barycentre": [
+            -1.7437634247503244e-17,
+            -5.455244034491221e-17,
+            -2.66311772192746e-17
+          ],
+          "barycentre_norm": 6.31605845113811e-17,
+          "centered_covariance_eigenvalues": [
+            0.8250665284347996,
+            0.8250665284348123,
+            0.8250665284348133
+          ],
+          "centered_rms": 1.5732767033501847,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.001462171494099181,
+            0.0,
+            0.024083855988354632,
+            0.009980775382641412,
+            0.034157473954340045,
+            0.037394986077123625,
+            0.06920156532229772,
+            0.06001038263766925,
+            0.05668542228364585,
+            0.0653891857153478,
+            0.06890711962559946,
+            0.06408563017797816,
+            0.06279408965099681,
+            0.06323335011806898,
+            0.041340643658055974,
+            0.04357065393978296,
+            0.046302936230969725,
+            0.0342589761378877,
+            0.030032312005057005,
+            0.027715105866721206,
+            0.023109818537320165,
+            0.019066536155455883,
+            0.015888132681727393,
+            0.0167810250806756,
+            0.011905312097698526,
+            0.014313663637185071,
+            0.008759773052839202,
+            0.009473994901072359,
+            0.007181984151861319,
+            0.00828365200123814,
+            0.0061028748908516575,
+            0.005539519382066495,
+            0.004804009191366144,
+            0.004402636383227832,
+            0.0037804315887767217
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.045080414019690006,
+          "barycentre": [
+            0.01484078610667182,
+            0.014840788900004478,
+            0.014840773604419093
+          ],
+          "barycentre_norm": 0.025704989955572865,
+          "centered_covariance_eigenvalues": [
+            0.5837417917218918,
+            0.5837417923309827,
+            0.6664146849589371
+          ],
+          "centered_rms": 1.35421500102894,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0030408175905326743,
+            0.007693544786695019,
+            0.02804094698560265,
+            0.02518609513014903,
+            0.060087755402392064,
+            0.03505423843235943,
+            0.0849777362913004,
+            0.07250484378614194,
+            0.06798078748937429,
+            0.06790679897733007,
+            0.070447058403718,
+            0.059437500686443406,
+            0.05980202242360014,
+            0.05480352814583987,
+            0.04274109448737742,
+            0.03877051067877451,
+            0.03405856046891283,
+            0.0297776713558596,
+            0.02523323052693922,
+            0.023171333608303448,
+            0.016886841803375914,
+            0.01605130256129146,
+            0.012956041462629794,
+            0.012063868303374367,
+            0.009081246209258391,
+            0.009108887788794814,
+            0.0063930063578798565,
+            0.006059739029475861,
+            0.004900011756031125,
+            0.0041991069808776154,
+            0.003260444749596251,
+            0.002930421680948307,
+            0.002268324435064851,
+            0.0017204988213033272,
+            0.0014041824024520692
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 78.9878468074353,
+            "function_evaluations": 630,
+            "gradient_density": 2.64346692699823e-07,
+            "iterations": 605,
+            "minimum_pair_margin": 0.4578890655101432,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 78.98784680743418,
+            "function_evaluations": 473,
+            "gradient_density": 2.7665560065115035e-07,
+            "iterations": 458,
+            "minimum_pair_margin": 0.45788914455993457,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 78.98784680744062,
+            "function_evaluations": 439,
+            "gradient_density": 1.7011585906248145e-06,
+            "iterations": 425,
+            "minimum_pair_margin": 0.4578890568848681,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "translation_0_N29",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.0029441835369808586,
+              -0.08389061034882547,
+              0.07412508199585824
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.0941696214132446,
+            "physical_shift": [
+              -0.0014720917684904293,
+              0.041945305174412736,
+              -0.03706254099792912
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.002944379269489456,
+              -0.08389061219673036,
+              0.07412548442803661
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.09416896420206146,
+            "physical_shift": [
+              -0.001472189634744728,
+              0.04194530609836518,
+              -0.037062742214018306
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 15.66316046462947,
+          "base_energy": 62.014894285516036,
+          "direct_projected_gradient_l2_density": 2.9720110498322173e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.0432587540405063e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 199.376204319155,
+            "fraction_of_sites_containing_90_percent": 0.4603972971599858,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.005015643684334728,
+            "maximum_site_fraction": 0.051952780485499096,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 9062
+          },
+          "minimum_pair_dot": 0.16968106699928093,
+          "minimum_pair_margin": 0.15968106699928092,
+          "total_energy": 77.6780547501455
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.10057505509640371,
+              "minimum_hit_positive_cone_margin": 0.05320847373159024,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.0223095877578387,
+              "minimum_hit_positive_cone_margin": 0.048270205027500776,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.2230351633816315,
+              "minimum_hit_positive_cone_margin": 0.012458875512982734,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 0.00011378641745396736,
+          "barycentre": [
+            0.08302204352740246,
+            -0.05161064929166874,
+            0.0919958413233015
+          ],
+          "barycentre_norm": 0.13423693103075474,
+          "centered_covariance_eigenvalues": [
+            0.7739259171698588,
+            0.7740360562109089,
+            0.7741901465403678
+          ],
+          "centered_rms": 1.5238609253869382,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.0058828762170151485,
+            0.00945500165958339,
+            0.024230809899753354,
+            0.033334154905942916,
+            0.038070870077235405,
+            0.06161386238238266,
+            0.0499459810390678,
+            0.0742399135122467,
+            0.06057779219491561,
+            0.07022865856888941,
+            0.06668732758140233,
+            0.059473574969742496,
+            0.06105442944551307,
+            0.04715404196390889,
+            0.04711666207909811,
+            0.03949455247127893,
+            0.03457285122869157,
+            0.03119069258976922,
+            0.026698145876138963,
+            0.02400850199299528,
+            0.019617715073259837,
+            0.017512474375963746,
+            0.01558773045172144,
+            0.013621414323322024,
+            0.01182886148061493,
+            0.010197718524080733,
+            0.009391365073775903,
+            0.007933708501621535,
+            0.007214587269829805,
+            0.006007449669505767,
+            0.0055107019527020126,
+            0.0042966343439658035,
+            0.0034874147747953168,
+            0.002761523529269907
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.022955688332869158,
+          "barycentre": [
+            0.0029444767874425067,
+            -0.0838901266621329,
+            0.07412526592324804
+          ],
+          "barycentre_norm": 0.1119856166797001,
+          "centered_covariance_eigenvalues": [
+            0.4882613013773651,
+            0.48914020284356646,
+            0.5226970973434499
+          ],
+          "centered_rms": 1.22478512465019,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.014549324398283313,
+            0.02930119185648159,
+            0.03805031904124052,
+            0.07082760742796824,
+            0.0579621455331035,
+            0.0794796564321336,
+            0.07736576794403938,
+            0.08011645550181902,
+            0.07267993667115537,
+            0.06514985741080752,
+            0.06181564720877059,
+            0.057829107457813625,
+            0.0463889415614729,
+            0.04276337622240031,
+            0.03386183255950764,
+            0.028678722350193666,
+            0.026383096311944836,
+            0.02112948547056392,
+            0.017927491153565334,
+            0.015373354332278178,
+            0.012416163023662975,
+            0.010418986608784283,
+            0.008206657491733644,
+            0.007454135874609551,
+            0.005821718189703397,
+            0.004472369629110871,
+            0.0037424455456739245,
+            0.0028622648572961995,
+            0.0022186980649542276,
+            0.0016698596160392713,
+            0.0011972046724509611,
+            0.0008848913770081057,
+            0.0005904645275684636,
+            0.00041082367586107527
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 77.67805475279279,
+            "function_evaluations": 668,
+            "gradient_density": 1.09183425532349e-05,
+            "iterations": 650,
+            "minimum_pair_margin": 0.15968629544887336,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 77.67805475014634,
+            "function_evaluations": 239,
+            "gradient_density": 3.577312401727281e-07,
+            "iterations": 232,
+            "minimum_pair_margin": 0.15968121058343065,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 77.67805475014556,
+            "function_evaluations": 643,
+            "gradient_density": 4.279815725423816e-07,
+            "iterations": 620,
+            "minimum_pair_margin": 0.15968112800723067,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 77.6780547501455,
+            "function_evaluations": 642,
+            "gradient_density": 2.9720110498322173e-07,
+            "iterations": 621,
+            "minimum_pair_margin": 0.15968106699928092,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "translation_physical_units": [
+          0.08589285714285716,
+          -0.05339285714285716,
+          0.09517857142857145
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "translation_1_N29",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              -0.003909342562976838,
+              0.06917016804852075,
+              0.12918039476656706
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.07774075212281752,
+            "physical_shift": [
+              0.001954671281488419,
+              -0.034585084024260374,
+              -0.06459019738328353
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              -0.003913192895525194,
+              0.0691671960975067,
+              0.12917686590992514
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.07774129396329922,
+            "physical_shift": [
+              0.001956596447762597,
+              -0.03458359804875335,
+              -0.06458843295496257
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 15.665134573132415,
+          "base_energy": 62.01441080533433,
+          "direct_projected_gradient_l2_density": 3.724903416701172e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.307544969473876e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 29.58090386579571,
+            "fraction_of_sites_containing_90_percent": 0.1484021744652746,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.03380559311293717,
+            "maximum_site_fraction": 0.10535782420960316,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 2921
+          },
+          "minimum_pair_dot": 0.17190256032346252,
+          "minimum_pair_margin": 0.1619025603234625,
+          "total_energy": 77.67954537846674
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.1960260362680153,
+              "minimum_hit_positive_cone_margin": 0.18154398678383332,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.030479491906280777,
+              "minimum_hit_positive_cone_margin": 0.03495250345137612,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.2143055790698075,
+              "minimum_hit_positive_cone_margin": 0.0060711845776330675,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 0.00011389794876219452,
+          "barycentre": [
+            0.11218754328259577,
+            0.11218754328259956,
+            0.11218754328259983
+          ],
+          "barycentre_norm": 0.1943145249417929,
+          "centered_covariance_eigenvalues": [
+            0.7735762454125895,
+            0.773576245412597,
+            0.7738406017649267
+          ],
+          "centered_rms": 1.5234805849075048,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.007718160596176989,
+            0.007718160596176989,
+            0.040668466299383275,
+            0.00448529308904988,
+            0.04463815288079381,
+            0.08559121155292493,
+            0.02514167132474104,
+            0.10506487587942316,
+            0.022667909130775477,
+            0.07632648630963246,
+            0.07708456693075087,
+            0.05226655644942637,
+            0.06050365633896825,
+            0.04401850742742356,
+            0.05531021975852119,
+            0.03880542339824337,
+            0.03077799884592582,
+            0.03701171247277723,
+            0.02092485866030832,
+            0.028501398197737973,
+            0.018887068034371204,
+            0.01718454242597478,
+            0.017705683577583474,
+            0.012574948590148953,
+            0.01225622681140301,
+            0.01122215711176629,
+            0.008450211459677906,
+            0.0073227273491441505,
+            0.007495010365551811,
+            0.00596974758465357,
+            0.005497034465978638,
+            0.0038359988275257256,
+            0.003665241485890571,
+            0.002708115771168945
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.02351340172608736,
+          "barycentre": [
+            -0.003909201446427158,
+            0.06917031047992538,
+            0.12918010718002362
+          ],
+          "barycentre_norm": 0.14658551701611047,
+          "centered_covariance_eigenvalues": [
+            0.48736164276646704,
+            0.488339564021978,
+            0.5225916035185232
+          ],
+          "centered_rms": 1.2240477156986032,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.014360288297290266,
+            0.026166597190798727,
+            0.043517427191274764,
+            0.06264671294275986,
+            0.07214766279048969,
+            0.06973310543811168,
+            0.08272948135700971,
+            0.07442787395871613,
+            0.07805014720539201,
+            0.06446896267964305,
+            0.06164691501608147,
+            0.05401972055398024,
+            0.04752683293512944,
+            0.04202219333821138,
+            0.03540877429876857,
+            0.029785333343742747,
+            0.025048217619603706,
+            0.021406356546274243,
+            0.01738243259898128,
+            0.015062121822756756,
+            0.012454888316858105,
+            0.010572967737379643,
+            0.008434598957944038,
+            0.007245446201811369,
+            0.0057062377760815,
+            0.00457716542626541,
+            0.0036620828308553226,
+            0.0028473575385772297,
+            0.0022343023552285654,
+            0.0016385347849547352,
+            0.0011949902450504482,
+            0.000876547649046288,
+            0.000586397576012868,
+            0.0004113254789187568
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 77.67954537944168,
+            "function_evaluations": 671,
+            "gradient_density": 6.13611349224085e-06,
+            "iterations": 650,
+            "minimum_pair_margin": 0.16191150970642734,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 77.67954537846664,
+            "function_evaluations": 228,
+            "gradient_density": 2.819255544159921e-07,
+            "iterations": 220,
+            "minimum_pair_margin": 0.16190263468189034,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 77.67954537848831,
+            "function_evaluations": 631,
+            "gradient_density": 3.1272396413349905e-07,
+            "iterations": 615,
+            "minimum_pair_margin": 0.16190392164472067,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 77.67954537865225,
+            "function_evaluations": 669,
+            "gradient_density": 2.537370308070029e-06,
+            "iterations": 650,
+            "minimum_pair_margin": 0.16190586756458913,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 2,
+            "chart": 1,
+            "energy": 77.67954537846674,
+            "function_evaluations": 184,
+            "gradient_density": 3.724903416701172e-07,
+            "iterations": 179,
+            "minimum_pair_margin": 0.1619025603234625,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "translation_physical_units": [
+          0.1160714285714286,
+          0.1160714285714286,
+          0.1160714285714286
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "translation_2_N29",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              -0.08389117031994481,
+              0.0029437071217199478,
+              0.07412512321394059
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.09416906616400646,
+            "physical_shift": [
+              0.041945585159972404,
+              -0.0014718535608599739,
+              -0.037062561606970294
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              -0.08389128007910228,
+              0.0029438448068744645,
+              0.07412512590816261
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.5,
+            "minimum_pair_margin_after_shift": 0.09416905236459365,
+            "physical_shift": [
+              0.04194564003955114,
+              -0.0014719224034372323,
+              -0.03706256295408131
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 15.663161058109615,
+          "base_energy": 62.01489369203557,
+          "direct_projected_gradient_l2_density": 3.770391112613896e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.3235124191792736e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 48.87784162239143,
+            "fraction_of_sites_containing_90_percent": 0.2818676014835137,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.02045916854769401,
+            "maximum_site_fraction": 0.07432952954169568,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 5548
+          },
+          "minimum_pair_dot": 0.16968110513302795,
+          "minimum_pair_margin": 0.15968110513302794,
+          "total_energy": 77.67805475014518
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.18589846592650675,
+              "minimum_hit_positive_cone_margin": 0.15980915952852132,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.0656828416319629,
+              "minimum_hit_positive_cone_margin": 0.18505554854267664,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.23728365760617673,
+              "minimum_hit_positive_cone_margin": 0.0996471384060085,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 0.00011938605945927318,
+          "barycentre": [
+            -0.09199560864902563,
+            0.04263516485126417,
+            0.07404762549191139
+          ],
+          "barycentre_norm": 0.12555476945775304,
+          "centered_covariance_eigenvalues": [
+            0.773955253215411,
+            0.7740967604768333,
+            0.7742325016126366
+          ],
+          "centered_rms": 1.5239043655377067,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.005890108837064556,
+            0.011226985903921956,
+            0.019146628134456056,
+            0.03662437279723538,
+            0.039384477079046784,
+            0.058040213046696,
+            0.05413339987692381,
+            0.0690822967901987,
+            0.06654981133151062,
+            0.0675353709298733,
+            0.06578375089866209,
+            0.06073041803902455,
+            0.05846777346544132,
+            0.04981033801834371,
+            0.04665410095886003,
+            0.03897361019092303,
+            0.0356242823527415,
+            0.030719260983793975,
+            0.026659178104294537,
+            0.02388798270084558,
+            0.01972333180317698,
+            0.017822639008226872,
+            0.015242369898857399,
+            0.013703949435936568,
+            0.01180621769274881,
+            0.010267478227310091,
+            0.009383036343049704,
+            0.007898135815180675,
+            0.007149719303804776,
+            0.006090303675048127,
+            0.005373223198539802,
+            0.004353226298659402,
+            0.0035088240093939485,
+            0.002753184850209339
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.02295569503326218,
+          "barycentre": [
+            -0.08389021681799914,
+            0.002944254260363775,
+            0.07412501302517754
+          ],
+          "barycentre_norm": 0.11198551096862182,
+          "centered_covariance_eigenvalues": [
+            0.48826124518805797,
+            0.4891401355180801,
+            0.5226970472193925
+          ],
+          "centered_rms": 1.2247850537647536,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.01454932061358317,
+            0.029301189693320757,
+            0.03805031831424167,
+            0.07082761445173276,
+            0.05796215479560726,
+            0.07947966815981632,
+            0.07736577515290367,
+            0.08011646285949725,
+            0.07267994144025246,
+            0.06514986019519434,
+            0.06181564752348148,
+            0.057829107986194166,
+            0.04638894008800088,
+            0.04276337466283392,
+            0.03386182941611526,
+            0.028678719168224242,
+            0.026383093258876042,
+            0.02112948187231364,
+            0.017927487927708523,
+            0.01537335057548496,
+            0.012416159585950288,
+            0.010418983438039403,
+            0.00820665443437446,
+            0.007454133008073835,
+            0.005821716103938128,
+            0.004472367843218303,
+            0.003742443833913264,
+            0.0028622636691219617,
+            0.0022186973196195395,
+            0.0016698590420836002,
+            0.0011972042224781252,
+            0.0008848911915325794,
+            0.0005904645003949841,
+            0.0004108236518787641
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 77.67805475014903,
+            "function_evaluations": 668,
+            "gradient_density": 6.385934111930229e-07,
+            "iterations": 650,
+            "minimum_pair_margin": 0.1596811803242412,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 77.67805475014788,
+            "function_evaluations": 639,
+            "gradient_density": 1.6882559083866455e-06,
+            "iterations": 616,
+            "minimum_pair_margin": 0.15968123375936133,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 77.67805475014518,
+            "function_evaluations": 635,
+            "gradient_density": 3.770391112613896e-07,
+            "iterations": 618,
+            "minimum_pair_margin": 0.15968110513302794,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          -0.41,
+          0.19,
+          0.33
+        ],
+        "translation_physical_units": [
+          -0.09517857142857145,
+          0.04410714285714287,
+          0.07660714285714289
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "alternation": [
+            0,
+            0,
+            0
+          ],
+          "base_signs": [
+            1,
+            1,
+            1
+          ],
+          "name": "uniform_ppp"
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "mesh_five_tet_phase0_center",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "accepted": false,
+            "reason": "no admissible degree-preserving interpolation fraction",
+            "step": 0
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 22.39224453232839,
+          "base_energy": 51.33936675017189,
+          "direct_projected_gradient_l2_density": 1.0067188894264265e-06,
+          "direct_tangent_plus_scalar_gradient_l2": 3.533864028908466e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 17.864346927175504,
+            "fraction_of_sites_containing_90_percent": 0.09764771630340903,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.0559774171469311,
+            "maximum_site_fraction": 0.15827893930189987,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 1922
+          },
+          "minimum_pair_dot": 0.11640687893049095,
+          "minimum_pair_margin": 0.10640687893049096,
+          "total_energy": 73.73161128250028
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.48245029423234576,
+              "minimum_hit_positive_cone_margin": 0.0116722403400699,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.4824502872843964,
+              "minimum_hit_positive_cone_margin": 0.10777224916690244,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.6484668601613955,
+              "minimum_hit_positive_cone_margin": 0.05141217538586799,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 2.4372044231750044e-15,
+          "barycentre": [
+            -4.4080784881376465e-17,
+            -4.7302484956204213e-17,
+            -3.819808780886732e-17
+          ],
+          "barycentre_norm": 7.509816636272853e-17,
+          "centered_covariance_eigenvalues": [
+            0.774403297448487,
+            0.7744032974484871,
+            0.7744032974484927
+          ],
+          "centered_rms": 1.5242079557414292,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.002027892331730566,
+            0.0,
+            0.01138254612139148,
+            0.02132702896650991,
+            0.0227299862370722,
+            0.06855188538225561,
+            0.04950601513697344,
+            0.05101320463997874,
+            0.07173415638092316,
+            0.0652749666498233,
+            0.0730459998375599,
+            0.05961528126640437,
+            0.0601528376609748,
+            0.05668935442225014,
+            0.05147643746586446,
+            0.04152213643712802,
+            0.0421386577566644,
+            0.03358184358688398,
+            0.03260578904838178,
+            0.029088411573858622,
+            0.019292312863292773,
+            0.022051028963526027,
+            0.017217178755260232,
+            0.015570381321468514,
+            0.012692330631166397,
+            0.012780679347919936,
+            0.010766396498559223,
+            0.007605655105333078,
+            0.009596431660313215,
+            0.006628456341986517,
+            0.005958442101786613,
+            0.0062046621192414515,
+            0.003887765413022702,
+            0.0034799517225273646,
+            0.002803896251967075
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0792032313899701,
+          "barycentre": [
+            -0.12461897876256357,
+            0.08352277810787467,
+            0.08352269649936897
+          ],
+          "barycentre_norm": 0.17170318914105012,
+          "centered_covariance_eigenvalues": [
+            0.344106652025925,
+            0.4257568691981943,
+            0.439925882068005
+          ],
+          "centered_rms": 1.0999042700581374,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.023299092912197377,
+            0.04466948287250379,
+            0.07848407510211021,
+            0.07904139143481138,
+            0.07600289572458911,
+            0.09246168061936329,
+            0.0763329267816571,
+            0.08396015889987109,
+            0.06499585563766684,
+            0.06292025085226667,
+            0.05659682014025111,
+            0.03834941038493645,
+            0.04175343637179891,
+            0.028262826668993796,
+            0.029084597252019687,
+            0.021471969546409092,
+            0.017382463343661975,
+            0.016906447075419818,
+            0.011994322451007042,
+            0.011380171041019632,
+            0.008705864104265836,
+            0.007594778900975863,
+            0.006249257577840651,
+            0.004963156276468893,
+            0.004131232945179504,
+            0.0033331946279093207,
+            0.0026541810312615123,
+            0.002023241591504355,
+            0.001598808509545662,
+            0.001161516520256458,
+            0.00090304711107393,
+            0.0005800972076359437,
+            0.0004510787370084714,
+            0.00030026974651924153
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 73.73161128250028,
+            "function_evaluations": 681,
+            "gradient_density": 1.0067188894264265e-06,
+            "iterations": 650,
+            "minimum_pair_margin": 0.10640687893049096,
+            "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+            "optimizer_success": false
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "name": "five_tet_phase0",
+          "phase": 0
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "mesh_five_tet_phase0_translated",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "accepted": false,
+            "reason": "no admissible degree-preserving interpolation fraction",
+            "step": 0
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 22.392244827930707,
+          "base_energy": 51.33936645456491,
+          "direct_projected_gradient_l2_density": 1.2262657952004962e-06,
+          "direct_tangent_plus_scalar_gradient_l2": 4.304534889584555e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 6.834809892940697,
+            "fraction_of_sites_containing_90_percent": 0.0016257684296093074,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.14630984850549325,
+            "maximum_site_fraction": 0.27742884291209835,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 32
+          },
+          "minimum_pair_dot": 0.11640687970551218,
+          "minimum_pair_margin": 0.10640687970551219,
+          "total_energy": 73.73161128249562
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.15353308462857085,
+              "minimum_hit_positive_cone_margin": 0.08169709575489931,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.2686110462133361,
+              "minimum_hit_positive_cone_margin": 0.03352078719556876,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.648466851367523,
+              "minimum_hit_positive_cone_margin": 0.06887736816018741,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 0.00011378641745396736,
+          "barycentre": [
+            0.08302204352740246,
+            -0.05161064929166874,
+            0.0919958413233015
+          ],
+          "barycentre_norm": 0.13423693103075474,
+          "centered_covariance_eigenvalues": [
+            0.7739259171698588,
+            0.7740360562109089,
+            0.7741901465403678
+          ],
+          "centered_rms": 1.5238609253869382,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.0058828762170151485,
+            0.00945500165958339,
+            0.024230809899753354,
+            0.033334154905942916,
+            0.038070870077235405,
+            0.06161386238238266,
+            0.0499459810390678,
+            0.0742399135122467,
+            0.06057779219491561,
+            0.07022865856888941,
+            0.06668732758140233,
+            0.059473574969742496,
+            0.06105442944551307,
+            0.04715404196390889,
+            0.04711666207909811,
+            0.03949455247127893,
+            0.03457285122869157,
+            0.03119069258976922,
+            0.026698145876138963,
+            0.02400850199299528,
+            0.019617715073259837,
+            0.017512474375963746,
+            0.01558773045172144,
+            0.013621414323322024,
+            0.01182886148061493,
+            0.010197718524080733,
+            0.009391365073775903,
+            0.007933708501621535,
+            0.007214587269829805,
+            0.006007449669505767,
+            0.0055107019527020126,
+            0.0042966343439658035,
+            0.0034874147747953168,
+            0.002761523529269907
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.0792035037048281,
+          "barycentre": [
+            0.08352266301993735,
+            -0.12461851607334788,
+            0.08352267807826436
+          ],
+          "barycentre_norm": 0.1717027883863004,
+          "centered_covariance_eigenvalues": [
+            0.34410646604788747,
+            0.42575691490495315,
+            0.43992602580836
+          ],
+          "centered_rms": 1.0999042716351277,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.02329909358779691,
+            0.04466948345880544,
+            0.07848407539480341,
+            0.07904139193793956,
+            0.07600289204314947,
+            0.09246168351598294,
+            0.07633292195562434,
+            0.08396015951843222,
+            0.06499585281150763,
+            0.06292024536432905,
+            0.056596820145736554,
+            0.038349407345220736,
+            0.04175343490864489,
+            0.028262823510996456,
+            0.029084597423530926,
+            0.021471969929434166,
+            0.017382463365074857,
+            0.016906450775558066,
+            0.011994324122524493,
+            0.011380176277576225,
+            0.008705866393165276,
+            0.007594781432215845,
+            0.006249260478613773,
+            0.004963157256320969,
+            0.004131234636576514,
+            0.003333194818859101,
+            0.0026541815929741665,
+            0.0020232420219698515,
+            0.0015988080372887562,
+            0.0011615160890447046,
+            0.000903046650832242,
+            0.000580096167457169,
+            0.00045107804427556763,
+            0.00030026898773788814
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 73.73161128249562,
+            "function_evaluations": 607,
+            "gradient_density": 1.2262657952004962e-06,
+            "iterations": 585,
+            "minimum_pair_margin": 0.10640687970551219,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "translation_physical_units": [
+          0.08589285714285716,
+          -0.05339285714285716,
+          0.09517857142857145
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "name": "five_tet_phase0",
+          "phase": 0
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "mesh_five_tet_phase1_center",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.07673007774434237,
+              0.07673007766884574,
+              0.07673007762307255
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.25,
+            "minimum_pair_margin_after_shift": 0.036543602908194035,
+            "physical_shift": [
+              -0.019182519436085593,
+              -0.019182519417211434,
+              -0.019182519405768136
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.07673021626636481,
+              0.0767302162862938,
+              0.07673021631536364
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.25,
+            "minimum_pair_margin_after_shift": 0.03654343788274813,
+            "physical_shift": [
+              -0.019182554066591202,
+              -0.01918255407157345,
+              -0.01918255407884091
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 22.999646573676955,
+          "base_energy": 50.79743836417772,
+          "direct_projected_gradient_l2_density": 6.264677943187022e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 2.199076650755824e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 8.258572553738194,
+            "fraction_of_sites_containing_90_percent": 0.018086673779403546,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.12108630074907509,
+            "maximum_site_fraction": 0.22939629860520253,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 356
+          },
+          "minimum_pair_dot": 0.1188566010755388,
+          "minimum_pair_margin": 0.10885660107553881,
+          "total_energy": 73.79708493785468
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.9043955188403543,
+              "minimum_hit_positive_cone_margin": 0.021346219137196944,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.3366445228367036,
+              "minimum_hit_positive_cone_margin": 0.13125999952453907,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.6560398011506836,
+              "minimum_hit_positive_cone_margin": 0.18775839329242394,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 2.4372044231750044e-15,
+          "barycentre": [
+            -4.4080784881376465e-17,
+            -4.7302484956204213e-17,
+            -3.819808780886732e-17
+          ],
+          "barycentre_norm": 7.509816636272853e-17,
+          "centered_covariance_eigenvalues": [
+            0.774403297448487,
+            0.7744032974484871,
+            0.7744032974484927
+          ],
+          "centered_rms": 1.5242079557414292,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.002027892331730566,
+            0.0,
+            0.01138254612139148,
+            0.02132702896650991,
+            0.0227299862370722,
+            0.06855188538225561,
+            0.04950601513697344,
+            0.05101320463997874,
+            0.07173415638092316,
+            0.0652749666498233,
+            0.0730459998375599,
+            0.05961528126640437,
+            0.0601528376609748,
+            0.05668935442225014,
+            0.05147643746586446,
+            0.04152213643712802,
+            0.0421386577566644,
+            0.03358184358688398,
+            0.03260578904838178,
+            0.029088411573858622,
+            0.019292312863292773,
+            0.022051028963526027,
+            0.017217178755260232,
+            0.015570381321468514,
+            0.012692330631166397,
+            0.012780679347919936,
+            0.010766396498559223,
+            0.007605655105333078,
+            0.009596431660313215,
+            0.006628456341986517,
+            0.005958442101786613,
+            0.0062046621192414515,
+            0.003887765413022702,
+            0.0034799517225273646,
+            0.002803896251967075
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.06409592402903788,
+          "barycentre": [
+            0.07673000116429342,
+            0.07673000117851013,
+            0.0767300011795107
+          ],
+          "barycentre_norm": 0.13290026049836903,
+          "centered_covariance_eigenvalues": [
+            0.3423771343983384,
+            0.4178925287368338,
+            0.41789252874283594
+          ],
+          "centered_rms": 1.0854317997359428,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.047476548503348065,
+            0.023493681006090505,
+            0.0700875297116627,
+            0.07567860872523052,
+            0.09741236666591477,
+            0.10047122993335622,
+            0.07509086648151093,
+            0.07189774041870292,
+            0.06947598908394863,
+            0.06514614024461317,
+            0.04999357208624362,
+            0.03936496221743378,
+            0.04048002218331181,
+            0.027349005370749333,
+            0.027764500734686018,
+            0.019733825396169018,
+            0.017491234330516855,
+            0.01587312904518017,
+            0.011979357697826942,
+            0.01027375930439092,
+            0.008840951794957015,
+            0.00709335971464728,
+            0.0060730654195039506,
+            0.005057791532568103,
+            0.0037950726876401757,
+            0.0032074461946034884,
+            0.0025969058368768955,
+            0.002002226834755291,
+            0.0015016489245130741,
+            0.0011578267927284944,
+            0.0008503647341040209,
+            0.0005832710787058614,
+            0.000425719633423393,
+            0.0002802796800860486
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 73.79708493785976,
+            "function_evaluations": 646,
+            "gradient_density": 2.760707816968352e-06,
+            "iterations": 617,
+            "minimum_pair_margin": 0.10885655252839117,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 73.79708493785921,
+            "function_evaluations": 5,
+            "gradient_density": 6.071922554288538e-07,
+            "iterations": 2,
+            "minimum_pair_margin": 0.10885662889948454,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 73.79708493785512,
+            "function_evaluations": 505,
+            "gradient_density": 3.9607343612841866e-07,
+            "iterations": 477,
+            "minimum_pair_margin": 0.10885660785823113,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 73.79708493785468,
+            "function_evaluations": 504,
+            "gradient_density": 6.264677943187022e-07,
+            "iterations": 473,
+            "minimum_pair_margin": 0.10885660107553881,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_physical_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "name": "five_tet_phase1",
+          "phase": 1
+        },
+        "w_equals_gamma_a": 0.4
+      },
+      {
+        "L": 6.5,
+        "N": 29,
+        "R_equals_gamma_a2_over_d2": 0.09474251898494326,
+        "a": 0.2321428571428572,
+        "case_id": "mesh_five_tet_phase1_translated",
+        "case_pass": true,
+        "centering_history": [
+          {
+            "barycentre_before": [
+              0.08578410712794615,
+              0.07778890823548536,
+              0.08578410946652174
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.25,
+            "minimum_pair_margin_after_shift": 0.0414472310613295,
+            "physical_shift": [
+              -0.021446026781986538,
+              -0.01944722705887134,
+              -0.021446027366630434
+            ],
+            "step": 0
+          },
+          {
+            "barycentre_before": [
+              0.08578371416465726,
+              0.07778750254309814,
+              0.08578371429266463
+            ],
+            "degree_after_shift": [
+              1,
+              1,
+              1
+            ],
+            "fraction": 0.25,
+            "minimum_pair_margin_after_shift": 0.04144811781955186,
+            "physical_shift": [
+              -0.021445928541164314,
+              -0.019446875635774536,
+              -0.021445928573166156
+            ],
+            "step": 1
+          }
+        ],
+        "core_or_centre_anchor_used": false,
+        "d_equals_one_minus_epsilon": 0.99,
+        "dynamic_centering_projection_used": true,
+        "epsilon": 0.01,
+        "final": {
+          "barrier_energy": 22.75345053857523,
+          "base_energy": 50.930931415551946,
+          "direct_projected_gradient_l2_density": 5.140463953419948e-07,
+          "direct_tangent_plus_scalar_gradient_l2": 1.8044461912541626e-06,
+          "invalid_edges": 0,
+          "local_gradient_concentration": {
+            "effective_sites": 18.287282288121236,
+            "fraction_of_sites_containing_90_percent": 0.17446527460244882,
+            "interior_sites": 19683,
+            "inverse_participation_ratio": 0.05468281094176384,
+            "maximum_site_fraction": 0.1821348965340133,
+            "site_measure": "sum over three tangent components plus breathing-gradient squared",
+            "sites_containing_90_percent": 3434
+          },
+          "minimum_pair_dot": 0.11688252074452249,
+          "minimum_pair_margin": 0.1068825207445225,
+          "total_energy": 73.68438195412718
+        },
+        "final_topology": {
+          "all_targets_B1": true,
+          "baryon_numbers": [
+            1,
+            1,
+            1
+          ],
+          "method": "orientation-aware normalized-affine degree on the same tetrahedral complex used by the barrier",
+          "target_rows": [
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.9005478722518695,
+              "minimum_hit_positive_cone_margin": 0.00867622939214891,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.0,
+                0.2672612419124244,
+                0.5345224838248488,
+                0.8017837257372732
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.5618606754720121,
+              "minimum_hit_positive_cone_margin": 0.13889284644275407,
+              "preimage_tetrahedra": 1,
+              "target": [
+                0.24945491291459204,
+                -0.4490188432462657,
+                0.6984737561608577,
+                0.4982857982996319
+              ]
+            },
+            {
+              "baryon_number": 1,
+              "map_degree": -1,
+              "minimum_hit_absolute_determinant": 0.6444648382274512,
+              "minimum_hit_positive_cone_margin": 0.13691947281265487,
+              "preimage_tetrahedra": 1,
+              "target": [
+                -0.33045369391587887,
+                0.6108386463293518,
+                0.22030246261058592,
+                -0.6849403837529127
+              ]
+            }
+          ],
+          "targets_agree": true
+        },
+        "gamma": 1.7230769230769227,
+        "initial_quotient_observables": {
+          "anisotropy_ratio": 0.00011378641745396736,
+          "barycentre": [
+            0.08302204352740246,
+            -0.05161064929166874,
+            0.0919958413233015
+          ],
+          "barycentre_norm": 0.13423693103075474,
+          "centered_covariance_eigenvalues": [
+            0.7739259171698588,
+            0.7740360562109089,
+            0.7741901465403678
+          ],
+          "centered_rms": 1.5238609253869382,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.0058828762170151485,
+            0.00945500165958339,
+            0.024230809899753354,
+            0.033334154905942916,
+            0.038070870077235405,
+            0.06161386238238266,
+            0.0499459810390678,
+            0.0742399135122467,
+            0.06057779219491561,
+            0.07022865856888941,
+            0.06668732758140233,
+            0.059473574969742496,
+            0.06105442944551307,
+            0.04715404196390889,
+            0.04711666207909811,
+            0.03949455247127893,
+            0.03457285122869157,
+            0.03119069258976922,
+            0.026698145876138963,
+            0.02400850199299528,
+            0.019617715073259837,
+            0.017512474375963746,
+            0.01558773045172144,
+            0.013621414323322024,
+            0.01182886148061493,
+            0.010197718524080733,
+            0.009391365073775903,
+            0.007933708501621535,
+            0.007214587269829805,
+            0.006007449669505767,
+            0.0055107019527020126,
+            0.0042966343439658035,
+            0.0034874147747953168,
+            0.002761523529269907
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "p": 1.0,
+        "quotient_observables": {
+          "anisotropy_ratio": 0.07741482897616067,
+          "barycentre": [
+            0.08578391298712196,
+            0.0777876800288192,
+            0.08578391298184149
+          ],
+          "barycentre_norm": 0.1441134366328283,
+          "centered_covariance_eigenvalues": [
+            0.342678967120549,
+            0.4161298148896989,
+            0.4351056485766001
+          ],
+          "centered_rms": 1.0926639147454482,
+          "density": "1-n0",
+          "normalized_centered_radial_profile": [
+            0.0,
+            0.0452584076785307,
+            0.024259838125868058,
+            0.07830230233488808,
+            0.07409747023132189,
+            0.08681544193464463,
+            0.08810193843229211,
+            0.08437040239035812,
+            0.07544421554496877,
+            0.06460432964133683,
+            0.06777645431453971,
+            0.05268369479252071,
+            0.03930427083499453,
+            0.042346979879531794,
+            0.027323456345967254,
+            0.027555799601246305,
+            0.021511331781118834,
+            0.016887661432283502,
+            0.016549239175068772,
+            0.011920557903477524,
+            0.010888751067355458,
+            0.008869442268186598,
+            0.00712474704735847,
+            0.006334160361075585,
+            0.004903849145999896,
+            0.003943696118245384,
+            0.0033692699746095426,
+            0.00255155681893315,
+            0.002002003695311476,
+            0.0015689631786605439,
+            0.0011515108069948502,
+            0.000875741798787729,
+            0.0005884693114065503,
+            0.0004271134903287248,
+            0.00028693254178792566
+          ],
+          "radial_profile_edges": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0,
+            1.1,
+            1.2000000000000002,
+            1.3,
+            1.4000000000000001,
+            1.5,
+            1.6,
+            1.7000000000000002,
+            1.8,
+            1.9000000000000001,
+            2.0,
+            2.1,
+            2.2,
+            2.3000000000000003,
+            2.4000000000000004,
+            2.5,
+            2.6,
+            2.7,
+            2.8000000000000003,
+            2.9000000000000004,
+            3.0,
+            3.1,
+            3.2,
+            3.3000000000000003,
+            3.4000000000000004,
+            3.5
+          ]
+        },
+        "relaxation_history": [
+          {
+            "centering_step": 0,
+            "chart": 0,
+            "energy": 73.68438195413447,
+            "function_evaluations": 589,
+            "gradient_density": 2.2849595874020147e-06,
+            "iterations": 566,
+            "minimum_pair_margin": 0.10688250581203623,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 0,
+            "chart": 1,
+            "energy": 73.68438195413401,
+            "function_evaluations": 5,
+            "gradient_density": 5.350468047188703e-07,
+            "iterations": 2,
+            "minimum_pair_margin": 0.1068825192628347,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 1,
+            "chart": 0,
+            "energy": 73.6843819541269,
+            "function_evaluations": 487,
+            "gradient_density": 7.565856202357049e-07,
+            "iterations": 472,
+            "minimum_pair_margin": 0.10688251319440471,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          },
+          {
+            "centering_step": 2,
+            "chart": 0,
+            "energy": 73.68438195412718,
+            "function_evaluations": 491,
+            "gradient_density": 5.140463953419948e-07,
+            "iterations": 468,
+            "minimum_pair_margin": 0.1068825207445225,
+            "optimizer_message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+            "optimizer_success": true
+          }
+        ],
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "translation_physical_units": [
+          0.08589285714285716,
+          -0.05339285714285716,
+          0.09517857142857145
+        ],
+        "translation_quotient": "barycentre-aligned 1-n0 density",
+        "triangulation": {
+          "name": "five_tet_phase1",
+          "phase": 1
+        },
+        "w_equals_gamma_a": 0.4
+      }
+    ],
+    "gate": {
+      "all_cases_pass": true,
+      "barycentre_residual_over_a_threshold": 0.15,
+      "centering_interpretation": "translation quotient is the primary gate; barycentre residual is a Peierls-locking diagnostic because re-relaxation may return a shifted field to a mesh-preferred representative",
+      "dynamic_centering_threshold_pass": false,
+      "joint_maximum_successive_profile_L1": 0.07072100151751025,
+      "joint_profile_L1_threshold": 0.05,
+      "joint_tail_centered_rms_relative_spread": 0.09612035478989561,
+      "joint_tail_centered_rms_threshold": 0.05,
+      "joint_tail_energy_relative_spread": 0.01656332564882977,
+      "joint_tail_energy_threshold": 0.03,
+      "maximum_barycentre_residual_over_a": 0.7396445070691388,
+      "numerical_quotient_gate_pass": false,
+      "production_coverage": true,
+      "translation_centered_rms_relative_spread": 0.0006023505405988981,
+      "translation_centered_rms_threshold": 0.02,
+      "translation_energy_relative_spread": 1.9189457361763786e-05,
+      "translation_energy_threshold": 0.01,
+      "translation_maximum_profile_L1": 0.03499644160011553,
+      "translation_profile_L1_threshold": 0.03,
+      "translation_quotient_thresholds_pass": false,
+      "triangulation_centered_rms_relative_spread": 0.11377777383934813,
+      "triangulation_centered_rms_threshold": 0.05,
+      "triangulation_energy_relative_spread": 0.05143134405430349,
+      "triangulation_energy_threshold": 0.03
+    },
+    "plan": [
+      {
+        "case_id": "joint_N25_L6",
+        "extent": 25,
+        "length": 6.0,
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "joint_N29_L6.5",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "joint_a_down_L_up",
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "joint_N33_L7",
+        "extent": 33,
+        "length": 7.0,
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "joint_N37_L7.5",
+        "extent": 37,
+        "length": 7.5,
+        "roles": [
+          "joint_a_down_L_up"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "translation_0_N29",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "translation_quotient",
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "translation_1_N29",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "translation_2_N29",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "translation_quotient"
+        ],
+        "translation_lattice_units": [
+          -0.41,
+          0.19,
+          0.33
+        ],
+        "triangulation": "uniform_ppp"
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_center",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "five_tet_phase0"
+      },
+      {
+        "case_id": "mesh_five_tet_phase0_translated",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "triangulation": "five_tet_phase0"
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_center",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "triangulation": "five_tet_phase1"
+      },
+      {
+        "case_id": "mesh_five_tet_phase1_translated",
+        "extent": 29,
+        "length": 6.5,
+        "roles": [
+          "triangulation_quotient"
+        ],
+        "translation_lattice_units": [
+          0.37,
+          -0.23,
+          0.41
+        ],
+        "triangulation": "five_tet_phase1"
+      }
+    ]
+  },
+  "regulator_stable": false,
+  "scipy": "1.13.1",
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e10_compactness_homogenization_centering.py",
+      "sha256": "324c14c9000c6a29c63dbca61ebb327e0b3575a381ff1c1c8250e767d713d145",
+      "size_bytes": 49097
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e9_gamma_triangulation.py",
+      "sha256": "f3e6a65ae6dc4a2fd35038bdd063834b9b112e8e167e01d11eb7f5acbfae59f8",
+      "size_bytes": 43248
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/ap_e9_triangulation_tools.py",
+      "sha256": "89230d6e623acb9a3292b7a69d43a929882961901a90b6df807c4af3e881e910",
+      "size_bytes": 23616
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e8_topology_preserving_b1.py",
+      "sha256": "f473391024a16a5e83ed1c62431e9b1262c9ba37ce444245b843cd79981f5727",
+      "size_bytes": 43334
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e7_discrete_rerelax_superhessian.py",
+      "sha256": "74a4685c0ceb74bc87a14129e37f6b950ae5e263ca2122ddcc89eca323221dde",
+      "size_bytes": 62370
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/scan_ap_e6_relaxed_b1_multigrid_hessian.py",
+      "sha256": "393a1a1948b65bceb3c04167e452140a643a482a5035ed419d892fdd9cc1f10d",
+      "size_bytes": 59596
+    }
+  ],
+  "status": "production_exact_stencil_no_go_fail_closed"
+}

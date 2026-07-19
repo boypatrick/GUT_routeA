@@ -1,12 +1,188 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-17
+Last updated: 2026-07-18
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; current authority)
+## AP-E10 stencil/cell/translation checkpoint (2026-07-18; current authority)
+
+Status: **the current one-corner forward Skyrme mainline is refuted as a
+continuum regulator; the finite-`R` cell problem is closed with a negative
+universality result; translation quotienting is implemented; the continuum,
+Hessian, determinant, and portal gates remain false.**  The production card
+passes `10/10`, and all 11 relaxed fields pass stationarity, admissibility,
+and three-target degree.
+
+### Exact compensated-compactness and current result
+
+- A three-periodic exact `S3` sequence converges uniformly to the vacuum while
+  one forward two-minor equals `(3 sqrt(3)/2) eta^2` at every site.  Uniform
+  Dirichlet and Skyrme energy bounds therefore do not imply weak continuity
+  of the declared one-corner minors.
+- A two-periodic hemisphere-valued sequence has normalized-affine degree zero
+  but forward current `J_a=-16 eta^3 sqrt(1-3 eta^2 a^2)`.  With the exact
+  vacuum cutoff `chi=prod sin^2(pi x_i)`, the weak current defect is
+  `-16 eta^3 chi^3 dx`.
+- The singular-value inequality
+  `integral |J_a|^(4/3) <= (1/3) integral |wedge^2 D^a n|^2` excludes singular
+  concentration of the forward current.  It does not remove the diffuse
+  oscillatory defect or control the geometric normalized-affine current.
+
+### Exact finite-R cell formula
+
+For periodic bonds `B_Y`,
+
+`Q_hom(A)=|Y|^(-1) inf_phi sum_(p,r in B_Y) |A r + phi(p+r)-phi(p)|^4`.
+
+Every bond-direction graph is cycle-balanced for the uniform six-tet and
+checkerboard five-tet period-two cells.  Direction-wise Jensen proves
+`phi=0` exactly.  Therefore the AP-E9 displayed `Q_6` and `Q_5` are the true
+homogenized barrier densities.  They remain nonproportional: the six/five
+ratios are `4/3` on `(v,0,0)` and `3` on `(v,v,0)`.  The two checkerboard
+phases agree, but five- and six-tet regulators do not.
+
+### Quotient scan and gate
+
+- The joint sequence `(N,L)=(25,6),(29,6.5),(33,7),(37,7.5)` reaches
+  `a=0.208333`.  Four translated starts and both five-tet phases are compared
+  on the common `N=29,L=6.5` grid.
+- All 11 fields have projected-gradient density below `1.71e-6`, edge margin
+  at least `0.1064`, and `B=[1,1,1]`.
+- Translation quotienting uses the `1-n0` barycentre, covariance, and aligned
+  radial profile.  Dynamic shifts are accepted only if admissibility and
+  degree persist, then the same action is re-relaxed.  Re-relaxation exhibits
+  Peierls locking, so the quotient rather than raw center is authoritative.
+- Joint-tail energy spread is `1.656%` and passes, but centered-RMS spread is
+  `9.612%` and successive profile distance is `7.072%`.  Translated-start
+  profile distance is `3.500%`.  Cross-mesh energy and radius spreads are
+  `5.143%` and `11.378%`.  Those four gates fail.
+
+### Ordered continuation
+
+1. Replace the one-corner product by a complete tetrahedral discrete de Rham
+   construction: primal one-cochain `dn`, graded shifted cup product with a
+   discrete Leibniz identity, and positive Hodge star.
+2. Construct the topological three-cochain from that same cup product and
+   prove equality with normalized-affine degree on the admissible set.
+3. Calibrate or symmetrize the Hodge star across body diagonals, solve the new
+   cell problem, and demand triangulation-independent quartic response.
+4. Re-run the translation-quotient `a,L` scan only for that replacement.
+5. Build the same-action Riemann Hessian and regulated determinant variation
+   only if the replacement closes both theorem and numerical gates.
+6. Retain finite GW/domain-wall and actual `SO(3)` mod-two-index lanes in
+   parallel; the degree-one Route-E portal remains last.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e10_compactness_homogenization_centering.tex` and PDF;
+- `route_f/code/scan_ap_e10_compactness_homogenization_centering.py`;
+- `route_f/output/ap_e10_compactness_homogenization_centering.{json,md}`;
+- AP-E10 section in `route_f/tex/another_physics_route_e_derivation_ledger.tex`.
+
+## AP-E9 scaling/Gamma-limit checkpoint (2026-07-18; superseded above)
+
+Status: **fixed-box strong-`L2` equicoercivity, the barrier zero-Gamma-limit,
+and positive-`R` degree compactness are closed; the finite-`R` homogenized
+density, full-action Gamma limit, and a regulator-stable continuum background
+are not.**  The production
+card passes `8/8` implementation/provenance checks and all 23 relaxed cases
+pass stationarity, admissibility, and three-target degree, but the predeclared
+continuum gate returns false.  The Hessian/determinant embargo remains active.
+
+### Exact scaling result
+
+Write
+`d(a)=1-epsilon(a)`, `w(a)=gamma(a)*a`, and
+`R(a)=gamma(a)*a^2/d(a)^2`.  For
+`x_e=(n_x dot n_y-epsilon)/d`, the edge function is
+`phi(x)=-log(x)-1+x`, and
+
+`b_epsilon(n_x dot n_y) >= |n_x-n_y|^4/(8 d(a)^2)`.
+
+- Every full-action sublevel on a fixed box is strongly `L2 x L2`
+  equicoercive for every positive `gamma(a)` and
+  `-1/3<epsilon(a)<1`; the coordinate-edge Dirichlet term supplies a uniform
+  piecewise-affine `H1` bound.  This compactness does **not** preserve degree.
+- On every fixed `C>0` sublevel the exact Lambert bound is
+  `x_e >= -W_0(-exp(-1-C/w)) >= exp(-1-C/w)`.  Uniform relative distance from
+  the edge floor holds iff `inf w>0`; an absolute margin also needs
+  `inf d>0`.  A one-vertex vacuum-collar sequence disproves the margin when
+  `w->0`.
+- For a smooth field, the barrier is
+  `(R/8) integral Q_T(grad n) + o(R)`.  With fixed epsilon and
+  `gamma=c*a^(-p)`, uniform edge interiority needs `p>=1`, while smooth
+  disappearance needs `p<2`.  The unique window is therefore `1<=p<2`; the
+  recommended minimal path is `p=1`, `gamma=bar_gamma/a`.
+- With the barrier embedded by dual-cell piecewise-constant fields, its
+  strong-`L2` Gamma limit for `R->0` is zero on `L2(S3)` and infinity outside;
+  it forgets trace and degree.  For `inf R>0`, the quartic lower bound gives
+  `W1,4`/Holder compactness and closes degree; `R->infinity` forces the vacuum.
+  At finite nonzero `R`, however, the smooth-sampling `Q_T` is only a raw
+  Cauchy--Born density.  Checkerboard meshes require a homogenized cell
+  formula that has not been evaluated.  The six-tet and five-tet raw tensors
+  have ratios `4/3` and `3` on two test gradients, so they are not scalar
+  multiples before corrector minimization.
+- A complete same-action Gamma theorem follows conditionally if the AP-E7
+  base actions are equicoercive/Gamma-convergent, finite-energy limits admit
+  energy-dense fixed smooth approximants, and nodal samples recover each fixed
+  approximant, with `a^2/d->0` and `R->0`.  Those hypotheses remain unproved
+  for the one-corner forward Skyrme minors.
+
+### Production scan and negative continuum verdict
+
+- The scan covers six spacings at fixed `L=6`, four volumes through `L=12` at
+  fixed `a=0.4`, `p=0,1,2` controls, both checkerboard five-tet phases, the
+  uniform six-tet mesh, and centered/noninteger-translated starts at
+  `a=0.4` and `a=0.3`.
+- All 23 fields are unanchored stationary points with projected-gradient
+  density at most `1.723e-6`, pair margin at least `0.067786`, and
+  `B=[1,1,1]`.  Translated starts return the same mesh-specific branches.
+- The relaxed `p=1` fixed-box barrier has fitted slope `0.2196`, outside the
+  required `1.0+-0.4`.  The largest-three-volume energy spread is only
+  `0.1001%`, but the centered-radius spread is `8.521%`, above `5%`.
+- Six-versus-five-tet total-energy spreads are `5.442%` at `a=0.4` and
+  `5.355%` at `a=0.3`, both above `3%` and not visibly decreasing.  On the
+  common `N=21,L=6` grid, the two vanishing-regulator controls `p=0,1` differ
+  by `6.446%` in total energy, above `3%`.
+- Therefore
+  `numerical_regulator_stability=false`,
+  `C_B1_physical_continuum=false`,
+  `same_action_riemann_hessian_allowed=false`, and
+  `regulated_determinant_variation_allowed=false`.
+
+### Remaining theorem blockers and ordered continuation
+
+1. Prove a discrete compensated-compactness/Gamma-liminf theorem for the
+   forward Skyrme minors, smooth fixed-boundary fixed-degree density in the
+   natural minor-bounded class, and exclusion/accounting of topological-current
+   concentration defects.
+2. Evaluate the finite-`R` periodic homogenized cell formula before treating
+   either displayed `Q_T` as a Gamma density; this is mandatory if a critical
+   quartic branch is retained.
+3. Continue the `p=1`, fixed-epsilon branch to smaller `a` only with adaptive
+   boxes and a translation quotient/physical centering condition; require the
+   barrier, radius, triangulation, and regulator gates simultaneously.
+4. If the base-minor theorem fails, declare the critical quartic as physical
+   and replace the raw stencil by a rotationally calibrated,
+   triangulation-independent discretization before restarting the continuum
+   study.
+5. Build the complete same-action Riemann Hessian and regulated determinant
+   variation only after one continuum background passes all gates.
+6. Retain the finite GW/domain-wall kernel and actual `SO(3)` Yukawa
+   mapping-torus mod-two index as parallel lanes.  The degree-one Route-E
+   portal remains last.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e9_gamma_limit_regulator.tex` and its PDF;
+- `route_f/code/ap_e9_triangulation_tools.py`;
+- `route_f/code/scan_ap_e9_gamma_triangulation.py`;
+- `route_f/output/ap_e9_gamma_triangulation.{json,md}`;
+- AP-E9 section in `route_f/tex/another_physics_route_e_derivation_ledger.tex`.
+
+## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; superseded above)
 
 Status: **the finite-grid topology/stationarity sub-blocker is closed; the
 physical continuum Lane-B conjunction, the other two lanes, and the portal

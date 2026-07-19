@@ -1,8 +1,86 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-17
+Last updated: 2026-07-18
 
-## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; current authority)
+## AP-E10 stencil/cell/translation checkpoint (2026-07-18; current authority)
+
+AP-E10 resolves the two mathematical questions left first in AP-E9, with a
+negative physical verdict.  The one-corner forward Skyrme stencil does not
+have the required compensated compactness.  An exact three-periodic
+sphere-valued sequence converges uniformly to the vacuum while one forward
+two-minor remains `(3 sqrt(3)/2) eta^2`.  A two-periodic degree-zero sequence
+has forward current `J_a -> -16 eta^3`; after an exact-boundary cutoff it
+converges to the diffuse defect `-16 eta^3 chi^3 dx`.  The Skyrme bound still
+proves `|J_a|^(4/3) <= |wedge^2 D^a n|^2/3`, so singular concentration of the
+forward current is excluded.  What survives is a diffuse stencil alias, and
+the algebraic forward current is not the normalized-affine degree current.
+
+The finite-`R` periodic cell problem is now closed.  Every fixed-direction
+bond graph in the uniform six-tet and checkerboard five-tet period-two cells
+is cycle-balanced.  Jensen therefore proves the periodic corrector is exactly
+zero.  The AP-E9 raw quartics are the homogenized densities, and their ratios
+remain `4/3` and `3` on the two test gradients.  Thus finite-`R`
+triangulation dependence survives homogenization and cannot be removed by one
+rescaling of `gamma`.
+
+The production scan adds a barycentre-aligned translation quotient, dynamic
+centering followed by same-action re-relaxation, and 11 backgrounds through
+`a=0.208333`, `L=7.5`.  All pass stationarity, admissibility, and
+`B=[1,1,1]`.  The joint-tail energy spread passes at `1.656%`, but the
+centered-radius spread (`9.612%`), successive profile distance (`7.072%`),
+translated profile distance (`3.500%`), and five-/six-tet energy/radius
+spreads (`5.143%`, `11.378%`) fail their gates.
+
+Therefore the present action has an exact structural blocker:
+`full_action_gamma_liminf=false`,
+`regulator_stable_continuum_background=false`, and Hessian/determinant
+authorization remains false.  The next mainline task is no longer a denser
+scan.  Replace the one-corner term by a complete tetrahedral cochain action:
+primal `dn`, compatible shifted cup product, positive calibrated Hodge star,
+and a topological three-cochain agreeing with normalized-affine degree.  Only
+after that replacement passes its own cell and quotient continuum gates may
+the same-action Hessian start.  GW/domain-wall and the actual `SO(3)` mod-two
+index remain parallel; the portal remains last.
+
+## AP-E9 scaling/Gamma-limit checkpoint (2026-07-18; superseded above)
+
+AP-E9 separates three claims that AP-E8 had left coupled.  First, the full
+fixed-box family is strongly `L2 x L2` equicoercive for every positive
+`gamma(a)` and `-1/3<epsilon(a)<1`, because the base coordinate Dirichlet
+term has a mesh-uniform positive coefficient and gives an affine-`H1` bound.
+Second, this compactness is too weak to preserve degree.  Third, the
+logarithmic barrier has sharp zero- and positive-`R` regimes, while its finite-
+`R` homogenized density is still open.
+
+Let `d=1-epsilon`, `w=gamma*a`, and `R=gamma*a^2/d^2`.  The exact edge bound
+is `b_epsilon >= |Delta n|^4/(8d^2)`, and every fixed positive bounded
+sublevel has a uniform relative edge margin iff `inf w>0`.  Smooth-field barrier disappearance is
+equivalent to `R->0`.  For fixed epsilon and `gamma=c*a^(-p)`, the unique
+joint window is therefore `1<=p<2`; `p=1` is the minimal recommended path.
+Under the declared dual-cell embedding, the barrier-only Gamma limit is zero
+on `L2(S3)` for `R->0` and forgets trace/degree.  For `inf R>0`, it gives
+`W1,4`/Holder compactness and closes degree; `R->infinity` forces the vacuum.
+A shrinking degree-one bubble disproves degree closure in the vanishing
+regime.  At `p=2` the raw six-tet and five-tet Cauchy--Born tensors are
+nonproportional, but the checkerboard Gamma density requires an unevaluated
+periodic homogenized cell problem.
+
+The 23-case scan covers six spacings, four volumes, `p=0,1,2`, both
+checkerboard five-tet phases, the uniform six-tet mesh, and translated starts
+at two spacings.  Every case is stationary, admissible, and `B=[1,1,1]`, but
+the continuum gate fails: relaxed barrier slope `0.2196` versus expected one,
+volume-radius spread `8.521%`, cross-mesh energy spreads about `5.4%` at both
+`a=0.4` and `a=0.3`, and vanishing-regulator `p=0/p=1` energy spread `6.446%`.
+
+Thus `C_B1_finite_grid=true` but `C_B1_physical_continuum=false`.  The full
+Skyrme Gamma-liminf/recovery theorem, topological-current compactness, and the
+finite-`R` barrier cell formula are the primary theorem blockers.  The
+same-action Riemann Hessian and determinant
+variation remain forbidden until that theorem and a regulator-stable
+background both exist.  GW/domain-wall and the actual `SO(3)` mod-two index
+remain parallel; the degree-one portal remains last.
+
+## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; superseded above)
 
 The topology-preserving route was selected because it directly changes
 AP-E7's proved finite-site no-sector obstruction.  The new action is

@@ -1,7 +1,26 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-17.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-18.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
+
+## AP-E10 transfer boundary
+
+The AP-E10 counterexamples are derived in-repo and do not depend on a
+literature no-go theorem.  They identify why standard weak-Jacobian and
+div--curl results cannot be invoked: the AP-E7 unshifted one-corner products
+are not a compatible discrete differential/cup-product complex.  Briane and
+Casado-Diaz give the continuum differential-constraint hypotheses; Arnold,
+Falk, and Winther give the discrete subcomplex/cochain-projection repair
+principle.  Neither source proves the repaired Skyrme model in advance.
+
+For the finite-`R` barrier, the general discrete-variational literature
+motivates a periodic cell formula, but AP-E10 evaluates the model-specific
+formula directly: direction-wise cycle balance plus Jensen forces a zero
+corrector.  This turns AP-E9's raw nonproportionality warning into an exact
+homogenized nonuniversality theorem.  Briani--Cicalese--Kreutz remains the
+closest recent topology-sensitive Gamma-convergence architecture, but its
+two-dimensional `S2` charge-concentration regime is deliberately not
+transferred to the three-dimensional `S3` stencil.
 
 | Source | Main result relevant to Route F | Required response |
 |---|---|---|
@@ -37,6 +56,12 @@ that the present model inherits their results.
 | Cuomo et al., [Numerical tests of the large charge expansion](https://arxiv.org/abs/2305.00499), JHEP 05 (2024) 161 | Lattice measurements in the three-dimensional critical `O(2)` model agree with large-charge superfluid EFT predictions over the tested charges. | Treat fixed-charge EFT as a testable expansion, not a universal derivation of AP-E1 coefficients or a justification for identifying macroscopic Q with Chern level two. |
 | Sheu and Shifman, [More on Classical Stability of Hopf-like Solitons of the Toroidal-Twisted type](https://arxiv.org/abs/2605.00757) (2026 preprint) | In two-flavor scalar QED, a low-energy Faddeev--Hopf description and large-size numerical/vorton analysis find locally stable twisted configurations in the studied regime. | This is the closest recent doublet-to-Hopf bridge, but it is a preprint and not a global stability theorem under all perturbations or a derivation of Route-E `O(2)`. |
 | Balakrishnan, Dandoloff, Saxena, [Exact Hopfion Vortices in a 3D Heisenberg Ferromagnet](https://arxiv.org/abs/2202.07195), Phys. Lett. A 480, 128975 (2023) | Exact Hopf-labelled static configurations are stabilized because spatial inhomogeneity supplies a length scale that changes Derrick scaling. | Use as evidence that topology alone is insufficient and a stabilizing scale is essential; do not transfer the condensed-matter Hamiltonian to a Lorentz-invariant UV theory. |
+| Briani, Cicalese, Kreutz, [Energy Concentration in a Two-Dimensional Magnetic Skyrmion Model](https://arxiv.org/abs/2503.15151), Commun. Math. Phys. 407, 28 (2026) | Proves weak-star compactness of quantized topological-charge measures and a discrete/continuum Gamma limit for a two-dimensional `S2` baby-Skyrme-type scaling. | Use its compactness--liminf--recovery architecture as the closest rigorous modern analogue.  It does not transfer to the three-dimensional `S3` AP-E8 action or its logarithmic edge barrier. |
+| Alicandro, Braides, Cicalese, Solci, [Discrete Variational Problems with Interfaces](https://doi.org/10.1017/9781009298766), Cambridge University Press (2023) | Develops discrete variational and discrete-to-continuum methods, including cell-formula and interface architectures for lattice energies. | Use the general homogenization architecture only.  AP-E10 separately enumerates the actual bond graphs and proves the zero corrector; the book does not imply five-/six-tet equivalence. |
+| Bartels, Bohnlein, Palus, Sander, [Benchmarking numerical algorithms for harmonic maps into the sphere](https://doi.org/10.1515/jnma-2024-0149), J. Numer. Math. (2025) | Compares nodal and projected sphere-valued finite-element discretizations and their Riemannian solvers; the underlying Dirichlet setting has a controlled discrete-to-continuum theory. | Use its manifold-optimization and interpolation checks, but do not import them across the Skyrme quartic, fixed-degree sector, or topology barrier. |
+| Gaster, Loustau, Monsaingeon, [Computing harmonic maps between Riemannian manifolds](https://doi.org/10.4153/S0008414X22000074), Can. J. Math. 75 (2023) 531 | Gives conditions on weighted triangulations, including almost-asymptotically-Laplacian weights, under which discrete harmonic maps approach smooth ones. | Alternative triangulation scans are only a necessary diagnostic.  A theorem also needs shape regularity, weight consistency, and a same-action stability argument. |
+| Bartels, Palus, Wang, [Quasi-optimal error estimates for the approximation of stable harmonic maps](https://doi.org/10.1137/22M1524497), SIAM J. Numer. Anal. 61 (2023) 1819 | Gives local finite-element error control for geometrically stable sphere-valued harmonic maps under regularity and stability hypotheses. | Use only after a regulator-stable continuum stationary background and its local stability are independently established; it cannot prove their existence. |
+| Cicalese, Reggiani, Solombrino, [From discrete to continuum in the helical XY-model](https://arxiv.org/abs/2412.15994) (2024) | Identifies a critical parameter-growth threshold at which a spin-system Gamma limit changes which chirality transitions survive. | Supports an explicit regime split in `gamma(a),epsilon(a)`; it contains neither the AP-E8 logarithmic barrier nor a three-dimensional degree theorem. |
 
 ## Foundational sources used by the 2026-07-16 checkpoint
 
@@ -56,6 +81,8 @@ are not substitutes for recent model-specific evidence.
 | Berg and Luescher, [Definition and statistical distributions of a topological number in the lattice O(3) sigma-model](https://doi.org/10.1016/0550-3213(81)90568-X), Nucl. Phys. B 190 (1981) 412 | Defines geometric lattice degree using spherical simplices and exposes the role of exceptional/dislocation configurations. | AP-E7 uses the analogous Freudenthal regular-value construction only on the admissible subset.  The unrestricted finite-site configuration space is connected, so a naive optimizer may unwind through the exceptional locus. |
 | Ward, [Stable topological Skyrmions on the 2-D lattice](https://arxiv.org/abs/hep-th/9502048), Lett. Math. Phys. 35 (1995) 385 | Demonstrates that a lattice action can be designed so topology-changing configurations carry an energetic obstruction and stable discrete solitons become possible. | AP-E8 adopts the design lesson, not Ward's two-dimensional action.  Its own three-dimensional Freudenthal barrier, finite-grid existence theorem, and continuum caveats are derived independently. |
 | Schramm and Svetitsky, [Topology and metastability in the lattice Skyrme model](https://arxiv.org/abs/hep-lat/0008003), Phys. Rev. D 62 (2000) 114020 | Uses spherical tetrahedra and a topology-sensitive lattice construction for Skyrmions, emphasizing exceptional configurations and metastability. | AP-E8 uses normalized-affine degree plus a unique-edge subtracted logarithmic barrier.  It does not claim an exact spherical-volume implementation or inherit continuum/regulator independence from this paper. |
+| Briane and Casado-Diaz, [A new div-curl result](https://arxiv.org/abs/1501.02152), J. Math. Pures Appl. 106 (2016) 377 | Proves div--curl and weak-Jacobian results under explicit integrability and differential-compactness hypotheses. | The AP-E7 forward products fail before these hypotheses can be used: an exact three-periodic sequence has a nonzero weak minor defect.  A replacement must supply compatible discrete curl/div identities. |
+| Arnold, Falk, Winther, [Finite element exterior calculus](https://arxiv.org/abs/0906.4325), Bull. AMS 47 (2010) 281 | Shows that stable differential-form discretizations are organized by a Hilbert subcomplex and bounded cochain projection. | Use this as the structural blueprint for the next Skyrme action: primal cochains, compatible cup product, and positive Hodge star.  It does not choose the model's weights or prove degree equality. |
 
 ## Literature-driven design decisions
 
@@ -196,6 +223,21 @@ are not substitutes for recent model-specific evidence.
     Require equicoercivity or a Gamma-limit/counterexample, alternative
     triangulations, and joint `(a,L,gamma,epsilon)` extrapolation before any
     continuum or regulator-independent interpretation.
+33. AP-E9 closes only the first layer of item 32.  On a fixed box the base
+    coordinate Dirichlet term proves strong-`L2` equicoercivity.  With
+    `d=1-epsilon`, `w=gamma*a`, and `R=gamma*a^2/d^2`, uniform relative
+    edge interiority requires `inf w>0`, whereas smooth barrier disappearance
+    requires `R->0`; for fixed epsilon and `gamma=c*a^(-p)` this gives the
+    unique window `1<=p<2`.  The barrier alone still cannot close degree when
+    `R->0`; for `inf R>0` it gives `W1,4` degree compactness.  At critical
+    `p=2`, the raw smooth-sampling quartics are mesh-dependent, but the actual
+    checkerboard Gamma density requires an unevaluated periodic homogenized
+    cell problem and must not be identified with the raw `Q_T`.
+    The 23-case production scan also fails the predeclared volume-radius,
+    barrier-slope, cross-triangulation, and `p=0` versus `p=1` regulator gates.
+    Keep the same-action Hessian and determinant variation embargoed until a
+    discrete Skyrme-minor Gamma theorem, the required barrier cell formula,
+    and a regulator-stable background are all available.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,
