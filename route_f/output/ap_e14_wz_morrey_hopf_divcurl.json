@@ -1,0 +1,402 @@
+{
+  "artifact": "AP-E14 WZ-flux Morrey and Hopf base-gauge div-curl audit",
+  "checks": [
+    {
+      "detail": "first=7.105e-15",
+      "group": "H1",
+      "name": "Hopf metric and target constraints",
+      "pass": true
+    },
+    {
+      "detail": "residual=8.527e-14",
+      "group": "H2",
+      "name": "Hopf second-minor identity",
+      "pass": true
+    },
+    {
+      "detail": "residual=5.684e-14",
+      "group": "H3",
+      "name": "Hopf third-minor identity",
+      "pass": true
+    },
+    {
+      "detail": "residual=2.665e-15",
+      "group": "H4",
+      "name": "Hopf Chern-Simons degree orientation",
+      "pass": true
+    },
+    {
+      "detail": "slow endpoint mass=4.389e-01",
+      "group": "W1",
+      "name": "fixed-map WZ flux decays by L2 absolute continuity",
+      "pass": true
+    },
+    {
+      "detail": "rank-one circle-valued defect has zero WZ flux and full oscillation",
+      "group": "M1",
+      "name": "WZ decay does not imply linear Morrey oscillation",
+      "pass": true
+    },
+    {
+      "detail": "integral=1.215446e+00",
+      "group": "D1",
+      "name": "periodic Hopf shear leaves positive non-curl remainder",
+      "pass": true
+    },
+    {
+      "detail": "increase=2.232452e+01",
+      "group": "D2",
+      "name": "exact phase preserves Chern-Simons integral but not squared energy",
+      "pass": true
+    },
+    {
+      "detail": "cases=3",
+      "group": "N1",
+      "name": "same-action backgrounds remain stationary admissible B=1",
+      "pass": true
+    },
+    {
+      "detail": "maximum ratio=0.972327697",
+      "group": "N2",
+      "name": "normalized-affine local WZ Cauchy inequality",
+      "pass": true
+    },
+    {
+      "detail": "bounded/decreasing edge-angle quotients are evidence only",
+      "group": "N3",
+      "name": "finite-grid linear Morrey proxy",
+      "pass": true
+    },
+    {
+      "detail": "WZ is closed, but Morrey/classicality and full div-curl cancellation are not",
+      "group": "G1",
+      "name": "downstream gates fail closed",
+      "pass": true
+    }
+  ],
+  "checks_passed": 12,
+  "checks_total": 12,
+  "divcurl": {
+    "chern_simons_phase_test": {
+      "a": "sin(z) dx+cos(z) dy+c dz",
+      "chi": "epsilon sin(x)",
+      "cs_L2_after": 270.3747326522144,
+      "cs_L2_before": 248.05021344239853,
+      "cs_L2_increase": 22.32451920981587,
+      "cs_integral_after_a_plus_2dchi": 248.05021344239853,
+      "cs_integral_before": 248.05021344239853,
+      "cs_integral_residual": 0.0,
+      "epsilon": 0.3,
+      "meaning": "a wedge da changes by the exact form 2 d(chi da), but its squared energy does not; exact topological cancellation does not remove the sextic cutoff stress"
+    },
+    "full_cutoff_exact_divcurl": false,
+    "periodic_shear": {
+      "a": "2 B cos(x2) dx2",
+      "a_wedge_da": 0.0,
+      "base_rank": 1,
+      "da": 0.0,
+      "integral_M2_squared": 1.215446045867753,
+      "lift": "u=(exp(i chi) cos(t/2), exp(i chi) sin(t/2)), t=A sin x1, chi=B sin x2",
+      "meaning": "the positive vertical-horizontal shear |a wedge Dn|^2 survives when every curl/Chern-Simons term vanishes",
+      "positive": true
+    },
+    "surviving_positive_remainder": "r^(-2)|u-q|^2[|a wedge Dn|^2+|da|^2]/16"
+  },
+  "fixed_map_wz_flux": {
+    "radii": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07,
+      1e-08,
+      1e-09,
+      1e-10,
+      1e-11,
+      1e-12
+    ],
+    "scope": "applies to the selected relaxed B=1 graph representative; minimality is not needed",
+    "slow_integrable_local_m3_squared_mass": [
+      2.2419249010088613,
+      1.5891198160569127,
+      1.2307494321001746,
+      1.0042711953762182,
+      0.8481901831998597,
+      0.734098632849716,
+      0.6470612837952326,
+      0.5784752029773806,
+      0.5230354026170725,
+      0.4772927113259861,
+      0.4389075249351834
+    ],
+    "smallest_radius_mass": 0.4389075249351834,
+    "strictly_decreasing": true,
+    "theorem": "for fixed u with M3(Du) in L2, sup_x dist(V_u(x,r),2 pi^2 Z)^2/r^3 <= (4 pi/3) sup_x int_Br(x)|M3(Du)|^2 -> 0"
+  },
+  "hopf_algebra": {
+    "identities": {
+      "connection": "a=2 u*theta and da=-n*omega_S2 for the stated standard S2 orientation",
+      "degree_orientation": "det[u,Du]=*(a wedge da)/8 and B=(16 pi^2)^(-1) int a wedge da",
+      "first": "|Du|^2=(|a|^2+|Dn|^2)/4",
+      "second": "|M2(Du)|^2=(|a wedge Dn|^2+|da|^2)/16",
+      "third": "|M3(Du)|^2=|a wedge da|^2/64"
+    },
+    "maximum_residuals": {
+      "base_tangency_residual": 1.5626922583649297e-15,
+      "first_residual": 7.105427357601002e-15,
+      "hopf_unit_residual": 8.881784197001252e-16,
+      "second_residual": 8.526512829121202e-14,
+      "third_residual": 5.684341886080802e-14,
+      "volume_residual": 2.6645352591003757e-15
+    },
+    "samples": 128
+  },
+  "numerical_background": {
+    "all_backgrounds_stationary_admissible_B1": true,
+    "finite_grid_linear_morrey_proxy": true,
+    "local_wz_cauchy_pass": true,
+    "maximum_local_wz_cauchy_ratio": 0.972327697024991,
+    "rows": [
+      {
+        "B": [
+          1,
+          1,
+          1
+        ],
+        "admissible": true,
+        "extent": 17,
+        "length": 5.5,
+        "maximum_edge_angle_over_spacing": 3.766897266072227,
+        "morrey_rows": [
+          {
+            "angle_over_radius": 2.202230461493916,
+            "maximum_target_angle": 0.7570167211385337,
+            "radius": 0.34375,
+            "radius_in_spacing_units": 1.0
+          },
+          {
+            "angle_over_radius": 2.05351623494968,
+            "maximum_target_angle": 1.4117924115279048,
+            "radius": 0.6875,
+            "radius_in_spacing_units": 2.0
+          },
+          {
+            "angle_over_radius": 1.9152466947501483,
+            "maximum_target_angle": 1.9750981539610903,
+            "radius": 1.03125,
+            "radius_in_spacing_units": 3.0
+          }
+        ],
+        "q99_edge_angle_over_spacing": 1.9147300087899881,
+        "runtime_seconds": 7.396862290999999,
+        "spacing": 0.34375,
+        "stationarity": 1.5386001493392752e-07,
+        "wz_rows": [
+          {
+            "cauchy_ratio": 0.851199537333649,
+            "flux_squared_over_radius_cubed": 260.31178953997244,
+            "normalized_m3_squared_integral": 64.38265013639692,
+            "physical_wz_flux": -9.197207242630363,
+            "radius": 0.6875,
+            "radius_in_spacing_units": 2.0,
+            "selected_union_volume": 1.54351806640625
+          },
+          {
+            "cauchy_ratio": 0.6323546028560942,
+            "flux_squared_over_radius_cubed": 208.93552235959677,
+            "normalized_m3_squared_integral": 76.90549539426615,
+            "physical_wz_flux": -15.13742777274589,
+            "radius": 1.03125,
+            "radius_in_spacing_units": 3.0,
+            "selected_union_volume": 4.7117919921875
+          }
+        ]
+      },
+      {
+        "B": [
+          1,
+          1,
+          1
+        ],
+        "admissible": true,
+        "extent": 21,
+        "length": 6.0,
+        "maximum_edge_angle_over_spacing": 3.463639019604028,
+        "morrey_rows": [
+          {
+            "angle_over_radius": 1.9639696872934964,
+            "maximum_target_angle": 0.5891909061880486,
+            "radius": 0.2999999999999998,
+            "radius_in_spacing_units": 1.0
+          },
+          {
+            "angle_over_radius": 1.9124604390977133,
+            "maximum_target_angle": 1.1474762634586273,
+            "radius": 0.5999999999999996,
+            "radius_in_spacing_units": 2.0
+          },
+          {
+            "angle_over_radius": 1.8491890761542682,
+            "maximum_target_angle": 1.6642701685388404,
+            "radius": 0.8999999999999995,
+            "radius_in_spacing_units": 3.0
+          }
+        ],
+        "q99_edge_angle_over_spacing": 1.8114832031617987,
+        "runtime_seconds": 16.697746958,
+        "spacing": 0.2999999999999998,
+        "stationarity": 5.003372377802873e-08,
+        "wz_rows": [
+          {
+            "cauchy_ratio": 0.9480755766801658,
+            "flux_squared_over_radius_cubed": 150.09427264818973,
+            "normalized_m3_squared_integral": 33.32940434176378,
+            "physical_wz_flux": -5.6938882050852495,
+            "radius": 0.5999999999999996,
+            "radius_in_spacing_units": 2.0,
+            "selected_union_volume": 1.0259999999999994
+          },
+          {
+            "cauchy_ratio": 0.8362158615153161,
+            "flux_squared_over_radius_cubed": 178.74571631144644,
+            "normalized_m3_squared_integral": 49.75342886637483,
+            "physical_wz_flux": -11.415149021850054,
+            "radius": 0.8999999999999995,
+            "radius_in_spacing_units": 3.0,
+            "selected_union_volume": 3.1319999999999983
+          }
+        ]
+      },
+      {
+        "B": [
+          1,
+          1,
+          1
+        ],
+        "admissible": true,
+        "extent": 25,
+        "length": 6.5,
+        "maximum_edge_angle_over_spacing": 3.3161864634536355,
+        "morrey_rows": [
+          {
+            "angle_over_radius": 1.8775234790544277,
+            "maximum_target_angle": 0.5084959422439078,
+            "radius": 0.2708333333333335,
+            "radius_in_spacing_units": 1.0
+          },
+          {
+            "angle_over_radius": 1.8463411964379277,
+            "maximum_target_angle": 1.000101481403878,
+            "radius": 0.541666666666667,
+            "radius_in_spacing_units": 2.0
+          },
+          {
+            "angle_over_radius": 1.8138069954819445,
+            "maximum_target_angle": 1.4737181838290807,
+            "radius": 0.8125000000000004,
+            "radius_in_spacing_units": 3.0
+          }
+        ],
+        "q99_edge_angle_over_spacing": 1.7043460598458346,
+        "runtime_seconds": 35.58474566700001,
+        "spacing": 0.2708333333333335,
+        "stationarity": 3.9566181419579484e-08,
+        "wz_rows": [
+          {
+            "cauchy_ratio": 0.972327697024991,
+            "flux_squared_over_radius_cubed": 101.47295129705691,
+            "normalized_m3_squared_integral": 21.970706639559047,
+            "physical_wz_flux": -4.015811432835701,
+            "radius": 0.541666666666667,
+            "radius_in_spacing_units": 2.0,
+            "selected_union_volume": 0.7549008969907406
+          },
+          {
+            "cauchy_ratio": 0.9081099863310536,
+            "flux_squared_over_radius_cubed": 147.9596716630176,
+            "normalized_m3_squared_integral": 37.923698243996085,
+            "physical_wz_flux": -8.90854409384524,
+            "radius": 0.8125000000000004,
+            "radius_in_spacing_units": 3.0,
+            "selected_union_volume": 2.3044343171296298
+          }
+        ]
+      }
+    ],
+    "scope": "finite P1 evidence only; bounded/decreasing edge quotients do not prove a continuum L-infinity gradient bound"
+  },
+  "numpy": "2.0.2",
+  "python": "3.9.6",
+  "quick": false,
+  "rank_one_morrey_obstruction": {
+    "M2": 0.0,
+    "M3": 0.0,
+    "consequence": "WZ decay plus graph energy and fixed degree do not imply continuity or O(r) oscillation; a theorem using actual relaxed minimality is still required",
+    "derivative_rank": 1,
+    "dirichlet_tail_per_unit_axis": [
+      1.1209624505044307,
+      0.7945599080284563,
+      0.6153747160500873,
+      0.5021355976881091,
+      0.42409509159992986,
+      0.367049316424858,
+      0.3235306418976163,
+      0.2892376014886903,
+      0.26151770130853624,
+      0.23864635566299305,
+      0.2194537624675917
+    ],
+    "fixed_degree_insertion": "insert the localized circle-valued defect into a vacuum cylinder of a smooth compactly supported B=1 map; smooth truncations have degree zero locally and preserve global B=1",
+    "linear_morrey_bound": false,
+    "map": "u(r,z)=(cos ell(r),sin ell(r),0,0), ell=log log(e/r), localized inside a vacuum cylinder",
+    "oscillation_diameter_on_every_axis_neighbourhood": 2.0,
+    "smallest_radius_tail": 0.2194537624675917,
+    "wz_flux": 0.0
+  },
+  "source_manifest": [
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e14_wz_morrey_hopf_divcurl.py",
+      "sha256": "0a71ec13ad58aee596491c7800ade4e494bfab9a7c034639b7f8af5f31e29854",
+      "size_bytes": 22635
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_ap_e12_graph_density_regular_minimizer.py",
+      "sha256": "3c7013d480734adfe4938766762c375db99e2d94b50f65e0c0c4c008f1ecaabb",
+      "size_bytes": 34381
+    },
+    {
+      "exists": true,
+      "path": "route_f/output/ap_e13_annular_replacement_reverse_holder.json",
+      "sha256": "0f581971ea94bbd0015f4eecc0dcb60ec460d584e43cf8a9dc933bd40761f703",
+      "size_bytes": 9343
+    }
+  ],
+  "status": "production_wz_closed_morrey_divcurl_fail_closed",
+  "theory": {
+    "classicality": false,
+    "continuum_isolation": false,
+    "determinant_variation_gate_open": false,
+    "endpoint_graph_density": false,
+    "fixed_graph_map_wz_flux_decay": true,
+    "full_cutoff_remainder_exact_divcurl": false,
+    "full_divcurl_statement_disproved": true,
+    "hessian_gate_open": false,
+    "hopf_complete_minor_decomposition": true,
+    "linear_scale_morrey_for_selected_relaxed_minimizer": false,
+    "linear_scale_morrey_status": "open; graph energy, fixed degree, and WZ decay are insufficient",
+    "ordered_next_gate": [
+      "derive a defect-measure inner-variation/monotonicity formula for the lower-semicontinuous relaxation itself",
+      "prove that its rank-one vertical-horizontal defect measure vanishes, or construct a degree-preserving local comparison that removes it",
+      "then seek epsilon regularity and upgrade mean Morrey decay to an L-infinity oscillation estimate"
+    ],
+    "portal_start_allowed": false,
+    "reason": "periodic rank-one-base/vertical-phase shear has da=a wedge da=0 but strictly positive |a wedge Dn|^2; phase exactness preserves int a wedge da but not int |a wedge da|^2",
+    "selected_relaxed_B1_wz_flux_decay": true,
+    "signed_chern_simons_exact_pairing": true,
+    "uses_minimality": false,
+    "weak_euler_lagrange_for_naive_integral": false
+  }
+}

@@ -2,7 +2,44 @@
 
 Last updated: 2026-07-20
 
-## AP-E13 annular endpoint checkpoint (2026-07-20; current authority)
+## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; current authority)
+
+The requested Wess--Zumino part is now closed for the actual fixed relaxed
+`B=1` representative.  If `J_u=det[u,Du]`, then
+
+`sup_x dist(int_Br J_u,2 pi^2 Z)^2/r^3
+ <= (4 pi/3) sup_x int_Br |M3(Du)|^2 -> 0`.
+
+This is uniform absolute continuity of the fixed `L1` density `|M3|^2`; it
+does not use minimality.  AP-E13's obstruction used a different,
+non-equiintegrable map at every scale and therefore remains consistent.
+
+Linear target oscillation is not closed.  The localized circle-valued defect
+`u=(cos(log log(e/r)),sin(log log(e/r)),0,0)` has finite first-order energy,
+zero second/third minors and WZ flux, but diameter-two oscillation at every
+axis scale.  It can be inserted in a vacuum region without changing an
+exterior smooth degree-one map.  Thus WZ decay, graph energy, and fixed degree
+are insufficient; a theorem using actual relaxed minimality is still needed.
+
+The parallel Hopf test is exact and decisive.  For `n=h(u)` and `a=2u*theta`,
+
+`|Du|^2=(|a|^2+|Dn|^2)/4`,
+`|M2|^2=(|a wedge Dn|^2+|da|^2)/16`, and
+`|M3|^2=|a wedge da|^2/64`.
+
+Only the signed Chern--Simons integral has exact phase cancellation.  A
+periodic lift with rank-one base has `da=a wedge da=0` but strictly positive
+`|a wedge Dn|^2`, so the full positive cutoff remainder cannot universally
+become an exact div--curl pairing.  Three independently relaxed grids pass
+the finite WZ/Morrey checks and the complete production card passes `12/12`,
+but the grid trend is not a continuum Lipschitz theorem.
+
+Next derive an inner-variation/monotonicity formula for the lower-
+semicontinuous relaxation with an explicit defect stress, then eliminate its
+rank-one vertical--horizontal Hopf defect and prove epsilon regularity.  The
+same-action Hessian, determinant variation, and portal remain embargoed.
+
+## AP-E13 annular endpoint checkpoint (2026-07-20; superseded above)
 
 The requested universal annular target-valued endpoint replacement is false.
 For the geodesic-sphere trace

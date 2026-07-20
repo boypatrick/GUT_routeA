@@ -6,7 +6,66 @@ Last updated: 2026-07-20
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E13 annular replacement/reverse-Hölder checkpoint (2026-07-20; current authority)
+## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; current authority)
+
+Status: **WZ-flux decay is proved for every fixed complete-minor graph map,
+and therefore for the selected relaxed `B=1` representative.  This decay
+does not imply the required linear Morrey oscillation.  The exact Hopf
+base/fibre split is closed, while a universal exact div--curl collapse of the
+full positive cutoff remainder is disproved.  Hessian, determinant, and
+portal remain closed.**  The production card passes `12/12`.
+
+### Closed theorem: fixed-map WZ decay
+
+- With `J_u=det[u,du]` and `|J_u|<=|M3(Du)|`, every fixed graph map obeys
+  `sup_x dist(int_Br J_u,2 pi^2 Z)^2/r^3 <= (4 pi/3)
+  sup_x int_Br |M3|^2 -> 0`.
+- The convergence is uniform on compact interior sets by absolute continuity
+  of the one fixed `L1` density `|M3|^2`.  Minimality is not used.
+- AP-E13 is not a contradiction: its counterexample chooses a different,
+  non-equiintegrable map at each scale.
+
+### Morrey and Hopf decisions
+
+- `u=(cos ell(r),sin ell(r),0,0)`, `ell=log log(e/r)`, has finite Dirichlet
+  tail `2 pi/log(e/R)`, rank-one derivative, `M2=M3=WZ=0`, but oscillation
+  diameter two at every axis scale.  It can be localized in a vacuum cylinder
+  without changing an exterior smooth `B=1` degree.  Thus graph energy,
+  degree, and WZ decay do not prove linear Morrey oscillation; actual relaxed
+  minimality remains essential.
+- For Hopf projection `n=h(u)` and contact form `a=2u*theta`, with the stated
+  orientations, `da=-n*omega_S2` and
+  `|Du|^2=(|a|^2+|Dn|^2)/4`,
+  `|M2|^2=(|a wedge Dn|^2+|da|^2)/16`,
+  `|M3|^2=|a wedge da|^2/64`, and
+  `B=(16 pi^2)^(-1) int a wedge da`.
+- Only the signed Chern--Simons integral changes by an exact form under fibre
+  phase.  A periodic rank-one-base lift has `da=a wedge da=0` but
+  `int |M2|^2=A^2 B^2 pi^3/2>0`, disproving universal full cancellation of
+  the positive cutoff remainder.
+
+### Numerical scope and ordered continuation
+
+- Three newly relaxed compatible-action backgrounds (`N=17,21,25`) are
+  stationary, admissible, and `B=[1,1,1]`.  Maximum edge-angle quotients
+  decrease `3.7669 -> 3.4636 -> 3.3162`; the exact normalized-affine local WZ
+  Cauchy ratio never exceeds `0.972327697`.  This is evidence only.
+- Next derive an inner-variation/monotonicity identity for the lower-
+  semicontinuous relaxation with explicit stress defect measure.  Then prove
+  its rank-one vertical--horizontal Hopf defect vanishes, or remove it by a
+  degree-preserving local comparison, before attempting epsilon regularity
+  and an `L-infinity` Morrey upgrade.
+- Same-action Hessian, determinant variation, and degree-one portal stay
+  embargoed until local recovery, classicality, and continuum isolation close.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e14_wz_morrey_hopf_divcurl.tex` and PDF;
+- `route_f/code/verify_ap_e14_wz_morrey_hopf_divcurl.py`;
+- `route_f/output/ap_e14_wz_morrey_hopf_divcurl.{json,md}`;
+- AP-E14 section in the master Route-E derivation ledger.
+
+## AP-E13 annular replacement/reverse-Hölder checkpoint (2026-07-20; superseded above)
 
 Status: **the unconditional good-sphere annular replacement is disproved by
 an explicit Wess--Zumino filling obstruction.  A scale-compatible conditional

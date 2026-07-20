@@ -2,7 +2,31 @@
 
 Date: 2026-07-13
 
-## 2026-07-20 AP-E13 analytic addendum (current continuum authority)
+## 2026-07-20 AP-E14 analytic addendum (current continuum authority)
+
+For any fixed complete-minor graph map, including the selected relaxed `B=1`
+representative, local Wess--Zumino flux satisfies
+`dist(flux,2 pi^2 Z)^2/r^3 <= (4 pi/3) int_Br |M3|^2 -> 0`, uniformly on
+compact interior sets.  This is an unconditional fixed-map theorem and uses
+no minimality.
+
+The AP-E13 linear-scale target oscillation does not follow from that result.
+A finite-energy localized circle-valued rank-one defect has zero higher
+minors and zero WZ flux but full oscillation at every scale.  Thus regularity
+of the actual minimizer remains open and requires a variational statement for
+the lower-semicontinuous relaxation.
+
+The exact Hopf decomposition isolates the obstruction:
+`|M2|^2=(|a wedge Dn|^2+|da|^2)/16` and
+`|M3|^2=|a wedge da|^2/64`.  The signed Chern--Simons integral is exact under
+fibre-phase change, but its square is not, and a periodic shear has `da=0`
+while `|a wedge Dn|^2>0`.  Hence a universal exact div--curl reduction of the
+full cutoff remainder is disproved.  The production verifier passes `12/12`;
+finite-grid Morrey improvement remains evidence only.  Classicality,
+continuum isolation, same-action Hessian, determinant variation, and portal
+authorization remain false.
+
+## 2026-07-20 AP-E13 analytic addendum (superseded above)
 
 The AP-E12 proposal of a universal good-sphere annular replacement is now
 disproved.  A geodesic-cap trace of target radius `eps=sqrt(rho)` has shell

@@ -3,7 +3,32 @@
 Checked on 2026-07-20.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
-## AP-E13 annular/reverse-Hölder transfer boundary
+## AP-E14 WZ/Morrey and Hopf-transfer boundary
+
+AP-E14 uses the Hopf split as an exact in-repository algebraic change of
+variables, not as a transfer of a regularity theorem.  Auckly--Kapitanski's
+Sobolev Pontryagin--Hopf theory supports the meaning of weak lifts and
+invariants.  Guerra--Lamy--Zemas (2026) proves constraint-preserving Hopf
+lifting/approximation in `W1,2 x L2`, and their companion work proves a
+special global-minimality theorem for the Faddeev--Skyrme Hopf map.  Neither
+controls the present `L2` second- and third-complete-minor graph norm or the
+relaxed `S3` minimizer's linear Morrey oscillation.
+
+Bousquet--Ponce--Van Schaftingen (2025) gives powerful generic topological
+screening and smooth approximation results for ordinary Sobolev maps.  It
+does not provide the complete-minor endpoint recovery needed to identify the
+present relaxation with the classical integral.  The scoped 2023--2026
+search found no primary theorem that removes AP-E14's rank-one vertical--
+horizontal defect measure or proves the required `O(r)` target oscillation.
+
+| Source | Relevant result | Transfer boundary |
+|---|---|---|
+| Auckly and Kapitanski, [The Pontryagin--Hopf invariants for Sobolev maps](https://doi.org/10.1142/S0219199710003752), Commun. Contemp. Math. 12 (2010) 121 | Defines Sobolev Pontryagin--Hopf invariants and develops weak lifting machinery. | Supports the invariant/lift framework, not `L2` complete-minor density or Morrey regularity of this relaxed minimizer. |
+| Bousquet, Ponce, and Van Schaftingen, [Generic topological screening and approximation of Sobolev maps](https://arxiv.org/abs/2501.18149) (2025) | Establishes broad topological screening and approximation mechanisms in Sobolev mapping spaces. | Ordinary Sobolev approximation does not control simultaneous strong `L2` convergence of `Du`, `M2`, and `M3`. |
+| Guerra, Lamy, and Zemas, [Global Minimality of the Hopf Map in the Faddeev--Skyrme Model with Large Coupling Constant](https://doi.org/10.1007/s00220-026-05702-5), Commun. Math. Phys. 407, 171 (2026) | Proves global minimality/uniqueness in a special Hopf sector. | Different target, functional, homogeneous background, and coupling regime; it is not a regularity theorem for Route-E's relaxed `S3` map. |
+| Guerra, Lamy, and Zemas, [Some lifting and approximation properties for maps in `W1,2(B3;S2)`](https://arxiv.org/abs/2605.14507) (2026) | Preserves the exact curvature constraint in smooth Hopf approximation. | Gives first-order base and `L2` gauge control, not the positive shear/sextic endpoint bounds exposed by AP-E14. |
+
+## AP-E13 annular/reverse-Hölder transfer boundary (superseded by AP-E14 for the Hopf test)
 
 Luckhaus's foundational manifold-valued interpolation controls ordinary
 first-order Sobolev energy; Mironescu--Van Schaftingen explains why critical
@@ -344,6 +369,13 @@ are not substitutes for recent model-specific evidence.
     highest cutoff remainder requires that oscillation or prior higher
     integrability.  Seek WZ/Morrey decay or a Noether/Maurer--Cartan
     compensation before any Hessian construction.
+38. AP-E14 closes fixed-map WZ-flux decay by `L2` absolute continuity, but
+    disproves both its sufficiency for linear Morrey oscillation and a
+    universal exact div--curl collapse of the full Hopf cutoff remainder.
+    Seek an inner-variation formula for the lower-semicontinuous relaxation,
+    retain its stress defect measure explicitly, and eliminate the rank-one
+    vertical--horizontal defect before attempting epsilon regularity.  Keep
+    Hessian, determinant, and portal closed.
 
 The scoped recent search did not identify a 2023--2026 primary paper that
 already supplies the exact global `Spin(10)` F-theory geometry, quantized flux,

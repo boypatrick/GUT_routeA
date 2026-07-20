@@ -1,0 +1,60 @@
+\section{AP-E14: fixed-map WZ decay, Morrey boundary, and Hopf div--curl test}
+
+For every fixed complete-minor graph map, including the selected relaxed
+$B=1$ representative,
+\begin{equation}
+ \sup_x\frac{\operatorname{dist}(\int_{B_r(x)}u^*\omega_3,
+ 2\pi^2\mathbb Z)^2}{r^3}
+ \leq\frac{4\pi}{3}\sup_x\int_{B_r(x)}|M_3(Du)|^2=o(1).
+ \label{eq:e14-wz}
+\end{equation}
+This is uniform absolute continuity of one fixed $L^1$ density and uses no
+minimality.  It does not contradict AP-E13's scale-dependent,
+non-equiintegrable cap family.
+
+WZ decay is insufficient for the required linear Morrey estimate.  The
+circle-valued cylindrical defect
+\begin{equation}
+ u(r,z)=(\cos\ell(r),\sin\ell(r),0,0),\qquad
+ \ell(r)=\log\log(e/r),
+\end{equation}
+has rank-one derivative, $M_2=M_3=0$, zero WZ flux, and Dirichlet tail
+$2\pi/\log(e/R)\to0$, but oscillation diameter two in every axis
+neighbourhood.  It can be localized in a vacuum region without changing a
+smooth exterior $B=1$ degree.  This does not prove irregularity of the
+minimizer; it proves that actual relaxed minimality is the missing input.
+
+For $u=(z,w)\in\mathbb S^3$, the Hopf variables
+\begin{equation}
+ n=(2\Re z\bar w,2\Im z\bar w,|z|^2-|w|^2),\qquad
+ a=2u^*\theta
+\end{equation}
+obey $da=-n^*\omega_2$ in the stated standard orientation and give
+\begin{align}
+ |Du|^2&=(|a|^2+|Dn|^2)/4,\notag\\
+ |M_2(Du)|^2&=(|a\wedge Dn|^2+|da|^2)/16,\notag\\
+ |M_3(Du)|^2&=|a\wedge da|^2/64,\qquad
+ B=(16\pi^2)^{-1}\int a\wedge da.                    \label{eq:e14-hopf}
+\end{align}
+Only the signed last integral has exact phase cancellation.  On $T^3$, take
+\begin{equation}
+ u=(e^{i\chi}\cos(t/2),e^{i\chi}\sin(t/2)),\qquad
+ t=A\sin x_1,\quad\chi=B\sin x_2 .
+\end{equation}
+This lift has $da=a\wedge da=0$ but
+\begin{equation}
+ \int_{T^3}|M_2(Du)|^2=A^2B^2\pi^3/2>0.
+\end{equation}
+It therefore disproves a universal exact div--curl collapse of the full
+positive cutoff remainder, whose exact Hopf form is
+$|u-q|^2(|a\wedge Dn|^2+|da|^2)/(16r^2)$.
+
+The AP-E14 production card passes $12/12$.  Three independently re-relaxed
+compatible-action grids are stationary, admissible, and have degree
+$[1,1,1]$; their maximum edge-angle quotients decrease
+$3.767\to3.464\to3.316$.  This is evidence, not a continuum Morrey theorem.
+The next admissible route is an inner-variation/monotonicity theory for the
+lower-semicontinuous relaxation with explicit defect measure, followed by
+elimination of the rank-one vertical--horizontal defect and an
+$\varepsilon$-regularity theorem.  Hessian, determinant, and portal remain
+closed.

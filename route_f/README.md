@@ -26,7 +26,32 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-20 AP-E13 annular replacement and reverse-Hölder audit
+## 2026-07-20 AP-E14 WZ/Morrey and Hopf div--curl audit
+
+AP-E14 proves the Wess--Zumino decay requested after AP-E13 for every fixed
+complete-minor graph map, hence also for the selected relaxed `B=1`
+representative.  The proof is the uniform absolute continuity of
+`|M3(Du)|^2`: local squared flux divided by `r^3` tends to zero without using
+minimality.
+
+The stronger linear Morrey estimate remains open.  A localized rank-one
+circle-valued defect has finite Dirichlet energy, zero higher minors and zero
+WZ flux, yet oscillates across the full circle at every scale.  Therefore the
+missing estimate must exploit actual relaxed minimality, not only graph
+bounds and topology.
+
+The Hopf projection and fibre form give exact identities for all three minor
+orders.  They show that signed Chern--Simons flux has exact phase
+cancellation, but a positive vertical--horizontal shear survives even when
+all curl/Chern--Simons terms vanish.  This disproves universal full div--curl
+cancellation of the cutoff remainder.  The `12/12` card and three re-relaxed
+grids provide algebraic and numerical checks without promoting continuum
+regularity.  Hessian, determinant, and portal remain closed.  See
+`tex/ap_e14_wz_morrey_hopf_divcurl.tex`,
+`code/verify_ap_e14_wz_morrey_hopf_divcurl.py`, and
+`output/ap_e14_wz_morrey_hopf_divcurl.{json,md}`.
+
+## 2026-07-20 AP-E13 annular replacement and reverse-Hölder audit (superseded by AP-E14 for WZ/Morrey)
 
 AP-E13 disproves the unconditional annular endpoint-replacement strategy with
 an exact `S3` geodesic-cap family.  At cap radius `eps=sqrt(rho)`, the shell's

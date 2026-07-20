@@ -1,0 +1,432 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\osc}{\operatorname{osc}}
+\newcommand{\vol}{\operatorname{vol}}
+
+\title{AP-E14 Wess--Zumino Flux Decay and Morrey Regularity:\\
+The Exact Hopf Base/Fibre Split and a Div--Curl No-Go}
+\author{Route-F derivation ledger}
+\date{20 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note executes the two continuations left by AP-E13.  First, for every
+\emph{fixed} complete-minor graph map $u:\Omega\to\SSS^3$, including the
+selected relaxed $B=1$ representative, the local Wess--Zumino flux obeys
+\[
+ \sup_x\frac{\dist(\int_{B_r(x)}u^*\omega_3,
+ 2\pi^2\mathbb Z)^2}{r^3}
+ \leq \frac{4\pi}{3}\sup_x\int_{B_r(x)}|M_3(Du)|^2\dd x=o(1).
+\]
+This is an unconditional consequence of $L^2$ absolute continuity and does
+not use minimality.  It does not imply the linear target oscillation needed
+by the AP-E13 replacement: a localized circle-valued rank-one defect has
+$M_2=M_3=0$, zero Wess--Zumino flux, finite Dirichlet energy, and oscillation
+diameter two at every scale.  Hence the Morrey statement for the actual
+relaxed minimizer remains a genuinely variational regularity problem.
+
+Second, writing $n=h(u)$ for the Hopf projection and $a=2u^*\theta$ for the
+fibre one-form gives the exact identities
+\[
+ |Du|^2=\tfrac14(|a|^2+|Dn|^2),\quad
+ |M_2(Du)|^2=\tfrac1{16}(|a\wedge Dn|^2+|da|^2),\quad
+ |M_3(Du)|^2=\tfrac1{64}|a\wedge da|^2.
+\]
+Only the signed Chern--Simons integral has exact differential cancellation.
+A periodic lift with $da=a\wedge da=0$ but
+$\int|M_2(Du)|^2>0$ isolates the surviving vertical--horizontal shear and
+disproves a universal reduction of the full cutoff remainder to an exact
+div--curl pairing.  A $12/12$ verification card checks the algebra,
+counterexamples, exact local Wess--Zumino quadrature, and three independently
+relaxed compatible-action $B=1$ grids.  The finite-grid Morrey proxy improves,
+but it is not a continuum theorem.  Hessian, determinant, and portal gates
+remain closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope and conventions}
+
+Let $\Omega\subset\RR^3$ and let $u:\Omega\to\SSS^3\subset\RR^4$ belong to
+the complete-minor graph class
+\begin{equation}
+ u\in W^{1,2},\qquad M_2(Du),M_3(Du)\in L^2.
+ \label{eq:graph-class}
+\end{equation}
+The derivative part of the Route-E continuum action is
+\begin{equation}
+ W(Du)=\frac12\bigl(|Du|^2+R|M_2(Du)|^2+K|M_3(Du)|^2\bigr),
+ \qquad R,K>0.
+ \label{eq:W}
+\end{equation}
+We orient $\SSS^3$ as the boundary of the standard unit ball in $\RR^4$ and
+write $\omega_3$ for its volume form, so
+$\int_{\SSS^3}\omega_3=2\pi^2$.  For an $\SSS^3$-valued graph map,
+\begin{equation}
+ u^*\omega_3=J_u\dd x,\qquad
+ J_u=\det[u,\partial_1u,\partial_2u,\partial_3u],\qquad
+ |J_u|\leq |M_3(Du)|.
+ \label{eq:Jbound}
+\end{equation}
+All statements below distinguish a fixed graph representative from an
+arbitrary scale-dependent family.  This distinction is precisely why the
+AP-E13 cap sequence is not a counterexample to the next theorem.
+
+\section{Unconditional Wess--Zumino flux decay for a fixed map}
+
+For $\Omega'\Subset\Omega$ and $0<r<\dist(\Omega',\partial\Omega)$ define the
+local relative class and its least representative by
+\begin{equation}
+ \mathcal V_u(x,r)=\left[\int_{B_r(x)}J_u\dd y\right]
+ \in\RR/(2\pi^2\mathbb Z),\qquad
+ \delta_u(x,r)=\dist\left(\int_{B_r(x)}J_u\dd y,
+                         2\pi^2\mathbb Z\right).
+ \label{eq:local-flux}
+\end{equation}
+
+\begin{theorem}[Uniform fixed-map WZ-flux decay]
+Every $u$ satisfying \eqref{eq:graph-class} obeys
+\begin{equation}
+ \boxed{\quad
+ \sup_{x\in\Omega'}\frac{\delta_u(x,r)^2}{r^3}
+ \leq \frac{4\pi}{3}
+       \sup_{x\in\Omega'}\int_{B_r(x)}|M_3(Du)|^2\dd y
+ \xrightarrow[r\downarrow0]{}0.\quad}
+ \label{eq:wz-decay}
+\end{equation}
+In particular this applies to any fixed relaxed $B=1$ minimizer represented
+in the complete-minor graph class; neither minimality nor an Euler--Lagrange
+equation is used.
+\end{theorem}
+
+\begin{proof}
+The zero lattice element is an admissible comparison in \eqref{eq:local-flux}.
+Using \eqref{eq:Jbound} and Cauchy--Schwarz,
+\begin{align}
+ \delta_u(x,r)^2
+ &\leq\left|\int_{B_r(x)}J_u\dd y\right|^2
+ \leq |B_r|\int_{B_r(x)}|M_3(Du)|^2\dd y.       \label{eq:wz-cs}
+\end{align}
+Since $|B_r|/r^3=4\pi/3$, this gives the inequality.  Put
+$f=|M_3(Du)|^2\in L^1(\Omega)$ and
+\[
+ \alpha_f(t)=\sup\left\{\int_E f\dd y:E\subset\Omega\text{ measurable},
+ |E|\leq t\right\}.
+\]
+Absolute continuity of the Lebesgue integral says $\alpha_f(t)\to0$ as
+$t\downarrow0$.  Every $B_r(x)$ has measure $4\pi r^3/3$, uniformly in $x$,
+so the right-hand side of \eqref{eq:wz-decay} is at most
+$(4\pi/3)\alpha_f(4\pi r^3/3)=o(1)$.
+\end{proof}
+
+\begin{remark}[Sharp logical scope]
+The conclusion is $\delta_u(x,r)=o(r^{3/2})$, uniformly on compact subsets.
+AP-E13 instead chose a different filling candidate $u_r$ at each shrinking
+scale and kept a fixed amount of $|M_3|^2$ inside the associated ball.
+Absolute continuity for one fixed $L^1$ density gives no uniform estimate
+over such a non-equiintegrable family.
+\end{remark}
+
+The decay can be arbitrarily slow.  For example the radial majorant
+\begin{equation}
+ f(y)=\frac{\mathbf1_{|y|<1}}{|y|^3\log^2(e/|y|)}
+ \label{eq:slow-density}
+\end{equation}
+is locally integrable and
+$\int_{B_r}f\dd y=4\pi/\log(e/r)$.  Thus no power improvement follows from
+$L^2$ control alone.
+
+\section{Why WZ decay does not give linear Morrey oscillation}
+
+The AP-E13 recovery lemma needs a normal-ball trace estimate of the form
+\begin{equation}
+ \osc_{B_r(x)}u\leq \Lambda r
+ \label{eq:linear-morrey}
+\end{equation}
+or a comparable $L^\infty$ bound.  Graph energy, fixed degree, and
+\eqref{eq:wz-decay} cannot imply it.
+
+\begin{proposition}[Rank-one zero-flux obstruction]
+There exists an $\SSS^3$-valued finite graph-energy map, localizable in a
+vacuum cylinder of a smooth compactly supported $B=1$ map, for which
+$M_2=M_3=J_u=0$ almost everywhere but the essential target oscillation has
+diameter two in every neighbourhood of the cylinder axis.
+\end{proposition}
+
+\begin{proof}
+In cylindrical coordinates $(r,\varphi,z)$ take
+\begin{equation}
+ u(r,z)=\bigl(\cos\ell(r),\sin\ell(r),0,0\bigr),\qquad
+ \ell(r)=\log\log(e/r),\qquad 0<r<r_0<1.        \label{eq:rank-one}
+\end{equation}
+Because $u=\gamma\circ\ell$ for a circle-valued curve $\gamma$, $Du$ has
+rank at most one; hence every second and third minor and the WZ density
+vanish.  Per unit length of the axis,
+\begin{equation}
+ \int_{0<r<R}|Du|^2\dd x
+ =2\pi\int_0^R\frac{\dd r}{r\log^2(e/r)}
+ =\frac{2\pi}{\log(e/R)}\xrightarrow[R\downarrow0]{}0.   \label{eq:tail}
+\end{equation}
+Nevertheless $\ell(r)\to\infty$ and traverses every phase infinitely often,
+so every axis neighbourhood has essential image diameter two.
+
+To localize, replace $\ell$ by a scalar phase $\psi(r,z)$ which equals it in
+a smaller cylinder and vanishes near the cylinder boundary.  The composite
+$\gamma\circ\psi$ remains rank one.  Insert it where a smooth compactly
+supported degree-one map is constant.  Smooth radial truncations of $\psi$
+have zero local degree and preserve the exterior degree, so the resulting
+graph limit has $B=1$.
+\end{proof}
+
+This proposition does \emph{not} prove that the selected relaxed minimizer is
+irregular.  It proves the sharper methodological statement that its
+minimality must be used.  At present the relaxed functional is not known to
+admit the fixed-trace local recovery required to identify it with the naive
+integral \eqref{eq:W}; consequently inserting the formal classical
+Euler--Lagrange equation here would be circular.
+
+\section{Exact Hopf base/fibre decomposition}
+
+Write $u=(z,w)=(x_1+ix_2,x_3+ix_4)\in\SSS^3\subset\mathbb C^2$ and define
+\begin{align}
+ h(u)=n&=\bigl(2\Re(z\bar w),\,2\Im(z\bar w),\,|z|^2-|w|^2\bigr),
+ \label{eq:hopf}\\
+ \theta&=-x_2\dd x_1+x_1\dd x_2-x_4\dd x_3+x_3\dd x_4,
+ \qquad a=2u^*\theta.                                  \label{eq:connection}
+\end{align}
+For the standard orientation
+$\omega_2=\frac12\epsilon_{abc}n_a\dd n_b\wedge\dd n_c$ on $\SSS^2$,
+direct differentiation gives
+\begin{equation}
+ da=-n^*\omega_2.                                      \label{eq:curvature}
+\end{equation}
+Under the fibre-coordinate change $u\mapsto e^{i\chi}u$,
+\begin{equation}
+ n\mapsto n,\qquad a\mapsto a+2\dd\chi.               \label{eq:gauge}
+\end{equation}
+This is a useful coordinate split, but not a gauge redundancy of the full
+Route-E model: the lift $u$ is physical, and the mass term as well as the
+$|a|^2$ energy can depend on its fibre phase.
+
+\begin{theorem}[Complete-minor Hopf identities]
+For every tangent derivative $Du\in\RR^{4\times3}$,
+\begin{align}
+ |Du|^2
+ &=\frac14\bigl(|a|^2+|Dn|^2\bigr),                    \label{eq:hopf1}\\
+ |M_2(Du)|^2
+ &=\frac1{16}\bigl(|a\wedge Dn|^2+|da|^2\bigr),       \label{eq:hopf2}\\
+ |M_3(Du)|^2
+ &=\frac1{64}|a\wedge da|^2,                          \label{eq:hopf3}\\
+ \det[u,Du]
+ &=\frac18*(a\wedge da),\qquad
+ B=\frac1{16\pi^2}\int_\Omega a\wedge da.            \label{eq:hopfdegree}
+\end{align}
+The sign in \eqref{eq:hopfdegree} follows from the stated $\theta$ and the
+boundary orientation of $\SSS^3$; reversing either orientation reverses both
+displayed signs and changes no energy identity.
+\end{theorem}
+
+\begin{proof}
+The identities are invariant under the transitive $U(2)$ action, so evaluate
+at $u=(1,0,0,0)$.  A tangent column has coordinates
+$p=(0,v,p_3,p_4)$.  At this point
+\begin{equation}
+ a(p)=2v,\qquad Dn(p)=(2p_3,-2p_4,0),\qquad
+ da(p,q)=4(p_3q_4-p_4q_3).                              \label{eq:frame}
+\end{equation}
+The vertical line and horizontal two-plane are orthogonal, proving
+\eqref{eq:hopf1}.  For each pair of domain columns, the squared two-area is
+the sum of the vertical--horizontal parallelogram and horizontal determinant
+squares.  Equation \eqref{eq:frame} multiplies each by sixteen, proving
+\eqref{eq:hopf2}.  The three-volume is the determinant of the one vertical
+and two horizontal components; $a\wedge da$ multiplies it by eight.  This
+proves \eqref{eq:hopf3} and \eqref{eq:hopfdegree}.
+\end{proof}
+
+Consequently \eqref{eq:W} becomes
+\begin{equation}
+ W=\frac18(|a|^2+|Dn|^2)
+  +\frac{R}{32}(|a\wedge Dn|^2+|da|^2)
+  +\frac{K}{128}|a\wedge da|^2.                        \label{eq:splitW}
+\end{equation}
+The split is compatible with Sobolev Hopf-lifting theory
+\cite{AucklyKapitanski2008,GuerraLamyZemas2026Lifting} and with recent
+special Faddeev--Skyrme minimality results \cite{GuerraLamyZemas2026Hopf},
+but those theorems do not supply $L^2$ control of every complete minor in the
+present $\SSS^3$ problem.
+
+\section{The exact div--curl test}
+
+The signed Chern--Simons density has the expected exact cancellation:
+\begin{equation}
+ (a+2\dd\chi)\wedge d(a+2\dd\chi)
+ =a\wedge da+2\dd(\chi\,da).                           \label{eq:cs-exact}
+\end{equation}
+Thus $\int a\wedge da$ is invariant on a torus or under fixed boundary data.
+The positive terms in \eqref{eq:splitW} do not share this cancellation.
+
+\begin{proposition}[Chern--Simons exactness does not remove the cutoff stress]
+The AP-E13 positive cutoff remainder cannot, in general, be rewritten only
+as an exact divergence or a curl-controlled pairing in the Hopf variables.
+\end{proposition}
+
+\begin{proof}
+Two independent periodic tests isolate the failure.
+
+First let $T^3=(\RR/2\pi\mathbb Z)^3$ and
+\begin{equation}
+ u=\left(e^{i\chi}\cos\frac t2,
+          e^{i\chi}\sin\frac t2\right),\qquad
+ t=A\sin x_1,\quad \chi=B\sin x_2.                    \label{eq:shear-lift}
+\end{equation}
+Then $n=(\sin t,0,\cos t)$ has rank one,
+$a=2B\cos x_2\dd x_2$, and
+\begin{equation}
+ da=a\wedge da=0,\qquad
+ \int_{T^3}|M_2(Du)|^2\dd x
+ =\frac1{16}\int_{T^3}|a\wedge Dn|^2\dd x
+ =\frac{A^2B^2\pi^3}{2}>0.                            \label{eq:shear-positive}
+\end{equation}
+Every expression depending only on $da$ or $a\wedge da$ vanishes, whereas
+the vertical--horizontal shear remains strictly positive.
+
+Second take
+\begin{equation}
+ a=\sin z\dd x+\cos z\dd y+c\dd z,\qquad
+ \chi=\varepsilon\sin x.                              \label{eq:cs-test}
+\end{equation}
+Here $*(a\wedge da)=1$, while
+$*((a+2\dd\chi)\wedge da)=1+2\varepsilon\cos x\sin z$.
+The signed integrals both equal $(2\pi)^3$, but
+\begin{equation}
+ \int_{T^3}|(a+2\dd\chi)\wedge da|^2
+ =(2\pi)^3(1+\varepsilon^2)>(2\pi)^3.                 \label{eq:cs-square}
+\end{equation}
+Thus exactness controls the signed integral, not its squared density.
+\end{proof}
+
+In particular the problematic AP-E13 term transforms exactly as
+\begin{equation}
+ \frac{|u-q|^2}{r^2}|M_2(Du)|^2
+ =\frac{|u-q|^2}{16r^2}
+   \bigl(|a\wedge Dn|^2+|da|^2\bigr).                 \label{eq:remainder}
+\end{equation}
+The counterexample disproves the \emph{universal full cancellation}; it does
+not exclude a model-specific compensation theorem which also uses relaxed
+minimality, a Noether identity, or elimination of a defect measure.
+
+\section{Same-action finite-grid audit}
+
+The verifier re-relaxes the AP-E12 compatible-cochain action, rather than
+recycling stationary files.  The normalized-affine map on a tetrahedron $T$
+is $u=v/|v|$, $v(\lambda)=\sum_{i=0}^3\lambda_i u_i$.  With orientation
+$\sigma_T$, determinant $D_T=\det[u_0,u_1,u_2,u_3]$, and physical volume
+$V_T$, the exact radial identities used in quadrature are
+\begin{align}
+ \int_Tu^*\omega_3
+ &=\sigma_TD_T\int_\Delta|v(\lambda)|^{-4}\dd\lambda, \label{eq:tetwz}\\
+ \int_T|M_3(Du)|^2\dd x
+ &=\frac{D_T^2}{6V_T}\int_\Delta|v(\lambda)|^{-8}\dd\lambda. \label{eq:tetm3}
+\end{align}
+They reproduce the local Cauchy bound
+$|\int_Au^*\omega_3|^2\leq |A|\int_A|M_3|^2$.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$N$ & $a$ & projected stationarity & $\max\angle/a$ & q99 $\angle/a$
+& $\max$ WZ ratio\\
+\midrule
+17 & 0.343750 & $1.539\times10^{-7}$ & 3.7669 & 1.9147 & 0.8512\\
+21 & 0.300000 & $5.003\times10^{-8}$ & 3.4636 & 1.8115 & 0.9481\\
+25 & 0.270833 & $3.957\times10^{-8}$ & 3.3162 & 1.7043 & 0.9723\\
+\bottomrule
+\end{tabular}
+\caption{All three backgrounds are independently relaxed, admissible, and
+have the three normalized-affine degree evaluations $[1,1,1]$.  The last
+column is the largest local ratio $\Phi^2/(|A|\int_A|M_3|^2)$ among the
+reported $2a$ and $3a$ balls.}
+\label{tab:grid}
+\end{table}
+
+At centre-node radii $r=a,2a,3a$, the maximum target-angle quotients are
+$(2.202,2.054,1.915)$, $(1.964,1.912,1.849)$, and
+$(1.878,1.846,1.814)$ for $N=17,21,25$, respectively.  At $r=2a$ the measured
+$\Phi^2/r^3$ decreases $260.31\to150.09\to101.47$.  These trends support a
+regular continuum representative, but a three-grid bounded edge quotient is
+not a uniform continuum Lipschitz estimate and cannot promote
+\eqref{eq:linear-morrey}.
+
+The production card evaluates 128 random tangent jets.  Its largest residual
+is $8.53\times10^{-14}$ in \eqref{eq:hopf2}; the largest local WZ Cauchy ratio
+is $0.972327697$.  All twelve algebraic, analytic, topological, numerical,
+and fail-closed gate checks pass.
+
+\section{Gate decision and the next theorem}
+
+The results separate three claims which AP-E13 had left coupled:
+\begin{enumerate}
+ \item Fixed-representative WZ-flux decay is \textbf{proved} and needs no
+       variational input.
+ \item Linear-scale Morrey oscillation for the selected relaxed minimizer is
+       \textbf{open}; graph bounds, degree, and WZ decay alone are
+       insufficient.
+ \item A universal Hopf exact-div--curl reduction of the full positive cutoff
+       remainder is \textbf{disproved}.  Only the signed Chern--Simons part is
+       exact.
+\end{enumerate}
+
+The blocker-changing continuation is therefore not another reformulation of
+the WZ flux.  It is a theorem about the lower-semicontinuous relaxation
+itself:
+\begin{enumerate}
+ \item derive an inner-variation or monotonicity identity for the relaxed
+       energy measure, allowing an explicit stress/defect measure;
+ \item prove that its rank-one vertical--horizontal Hopf defect vanishes, or
+       construct a degree-preserving local comparison which removes it;
+ \item obtain an $\varepsilon$-regularity decay estimate and then upgrade
+       mean Morrey decay to the $L^\infty$ oscillation in
+       \eqref{eq:linear-morrey}.
+\end{enumerate}
+Only after local recovery, classicality, and continuum isolation are proved
+may the same-action Riemann Hessian and determinant variation be assembled.
+The degree-one portal remains later still.  Recent general Sobolev screening
+results \cite{BousquetPonceVanSchaftingen2025} do not presently control the
+$L^2$ complete-minor endpoint required here.
+
+\section*{Reproducibility}
+
+Run
+\begin{verbatim}
+python3 route_f/code/verify_ap_e14_wz_morrey_hopf_divcurl.py
+\end{verbatim}
+from the repository root.  The machine-readable outputs are
+\begin{itemize}
+ \item \path{route_f/output/ap_e14_wz_morrey_hopf_divcurl.json},
+ \item \path{route_f/output/ap_e14_wz_morrey_hopf_divcurl.md}.
+\end{itemize}
+Production reports
+\path{12/12; wz=True; morrey=False; divcurl=False; hessian=False}.
+
+\bibliographystyle{plain}
+\bibliography{route_f/tex/ap_e14_wz_morrey_hopf_divcurl}
+
+\end{document}
