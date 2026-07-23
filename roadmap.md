@@ -1,8 +1,59 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-20
+Last updated: 2026-07-23
 
-## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; current authority)
+## AP-E15 relaxation-defect and fibre-purification checkpoint (2026-07-23; current authority)
+
+The AP-E11 action is now frozen at
+`(R,K,m^2)=(1,0.35,0.12)`.  No further lattice, triangulation, translated-
+start, or grid-spacing scan belongs to the mainline.
+
+For every recovery sequence whose complete minors have the selected weak
+graph limit, the derivative-energy measures define a canonical nonnegative
+Radon defect
+
+`|Xi(Du_j)|^2 dx/2 ->* |Xi(Du)|^2 dx/2 + mu`,
+
+where `Xi=(Du,sqrt(R) M2,sqrt(K) M3)`.  Its total mass is exactly the
+relaxed-minus-naive energy gap, and `mu=0` is equivalent to strong convergence
+of all three minor levels.
+
+The Hopf fibre part is now sharply resolved.  Under `u -> exp(i chi)u`,
+`n=h(u)` and `da` stay fixed while `a -> a+2 dchi`.  On `B_r`, the exact
+phase functional has Hessian
+
+`|dphi|^2 + (R/4)|dphi wedge Dn|^2
+ + (K/16)|dphi wedge da|^2
+ + m^2 Re(exp(i chi) z) phi^2`.
+
+Poincare therefore gives strong convexity for
+`lambda_r=1-m^2 r^2/pi^2>0`.  For a smooth fixed-degree minimizing sequence,
+the optimal compact phase drop satisfies
+`0<=Delta_j(B_r)<=E(u_j)-I_B->0`, and its minimizing phase obeys
+`||dchi_j||^2<=2 Delta_j/lambda_r->0`.  Thus the compact-fibre-phase-reducible
+vertical defect is zero.  This does not eliminate mixed concentration carried
+by simultaneous Hopf-base oscillation.
+
+The weighted cutoff defect is also proved to vanish at Lebesgue-a.e. centre:
+
+`r^(-2) int_Br |u-u(x)|^2 |M2(Du)|^2 = O(r^3)+o(r) -> 0`.
+
+The key new insight is a two-limit obstruction.  Fixed-map a.e. decay does
+not exchange `r->0` with `j->infinity` along a recovery sequence.  A singular
+`mu` may live on the exceptional set, while a diffuse base/mixed component
+is not yet tied to the fixed-map estimate.  The next theorem must prove
+
+`lim_(r->0) limsup_j r^-2 int_Br |u_j-q_(j,r)|^2 |M2(Du_j)|^2 = 0`
+
+for `mu`-a.e. points, or an equivalent sequence-uniform excess contraction.
+Only then may the chain proceed through full `mu=0`, local recovery,
+regularity, and continuum isolation.  The bosonic Hessian remains forbidden
+before classicality.  Dirac/Callias mathematics on the same prescribed
+smooth Hopf base may proceed in parallel, but determinant and degree-one
+portal promotion remain false.  The AP-E15 continuum card passes `11/11`
+without a lattice scan.
+
+## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; superseded above)
 
 The requested Wess--Zumino part is now closed for the actual fixed relaxed
 `B=1` representative.  If `J_u=det[u,Du]`, then

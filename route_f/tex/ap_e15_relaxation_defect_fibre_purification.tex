@@ -1,0 +1,439 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\supp}{\operatorname{supp}}
+
+\title{AP-E15 Relaxation Defect and Fibre-Phase Purification:\\
+What Is Now Proved and Where the Hopf-Base Blocker Lives}
+\author{Route-F derivation ledger}
+\date{23 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note freezes the AP-E11 action and replaces the preceding sequence of
+lattice refinements by one continuum defect problem.  If a smooth
+fixed-degree minimizing sequence converges weakly in the complete-minor graph
+space, the quadratic derivative-energy measures have the canonical
+decomposition
+\[
+ \frac12|\Xi_j|^2\dd x\stackrel{*}{\rightharpoonup}
+ \frac12|\Xi_u|^2\dd x+\mu,\qquad \mu\geq0.
+\]
+The total mass of $\mu$ is exactly the local relaxation gap, and $\mu=0$ is
+equivalent to strong complete-minor graph convergence.
+
+For the Hopf split $n=h(u)$, $a=2u^*\theta$, compact fibre changes
+$u\mapsto e^{i\chi}u$ send $a$ to $a+2\dd\chi$ and preserve both the base
+and degree.  On every ball of radius $r$ satisfying
+$1-m^2r^2/\pi^2>0$, the exact phase functional is strongly convex.  Hence an
+asymptotically minimizing recovery sequence has zero local phase-relaxation
+drop.  In a precise sense, every compact-fibre-phase-reducible vertical
+defect is therefore zero.  This eliminates the AP-E14 rank-one fibre
+oscillator, but not mixed defects carried by simultaneous oscillation of the
+Hopf base.
+
+The weighted cutoff quantity left by AP-E13,
+\[
+ r^{-2}\int_{B_r(x)}|u-u(x)|^2|M_2(Du)|^2,
+\]
+is proved to vanish at almost every Lebesgue point of every fixed graph map.
+That result is sharp in logical scope: it does not interchange the shrinking
+radius with the recovery-sequence limit.  A singular defect can be supported
+on the exceptional set, while a diffuse base/mixed defect is not yet linked
+to the fixed-map estimate.  The remaining theorem must establish
+sequence-uniform decay at $\mu$-almost every point, or an excess-decay
+estimate which controls both limits.  Full $\mu=0$, local recovery,
+regularity, isolation, the bosonic Hessian, determinant promotion, and the
+Route-E portal therefore remain fail-closed.  No new lattice scan is
+introduced.
+\end{abstract}
+
+\tableofcontents
+
+\section{Frozen action and admissible relaxation}
+
+Let $\Omega\subset\RR^3$ be bounded, let $e_0=(1,0,0,0)$ be the boundary
+vacuum, and fix degree $B=1$.  From AP-E11 onward the only admissible
+continuum density is
+\begin{equation}
+ W(F)=\frac12|F|^2+\frac R2|M_2(F)|^2
+      +\frac K2|M_3(F)|^2,\qquad
+ V(u)=m^2(1-u^0),
+ \label{eq:frozen-density}
+\end{equation}
+with production normalization
+\begin{equation}
+ \boxed{(R,K,m^2)=(1,0.35,0.12).}
+ \label{eq:production}
+\end{equation}
+No coefficient, stencil, triangulation, anchoring rule, or new lattice
+sequence is varied in AP-E15.
+
+Define the complete-minor graph class
+\begin{equation}
+ \cG_B=\left\{u:\Omega\to\SSS^3:
+ \begin{array}{l}
+ u-e_0\in W^{1,2}_0,\quad M_2(Du),M_3(Du)\in L^2,\\
+ (2\pi^2)^{-1}\int_\Omega\det[u,Du]\dd x=B
+ \end{array}\right\}.
+ \label{eq:graph-class}
+\end{equation}
+For smooth admissible maps put
+\begin{equation}
+ \cE(u)=\int_\Omega\bigl(W(Du)+V(u)\bigr)\dd x.
+ \label{eq:energy}
+\end{equation}
+Its fixed-degree lower-semicontinuous relaxation is
+\begin{equation}
+ \overline{\cE}(u)=
+ \inf_{\substack{u_j\in C^\infty(\overline\Omega,\SSS^3)\\
+                  u_j|_{\partial\Omega}=e_0,\ \deg u_j=B\\
+                  u_j\to u\ {\rm in}\ L^2}}
+ \liminf_{j\to\infty}\cE(u_j),
+ \label{eq:relaxation}
+\end{equation}
+where sequences of unbounded energy are irrelevant.  AP-E11 identifies this
+relaxation as the regulator limit.  It does not identify
+$\overline{\cE}$ with the naive integral \eqref{eq:energy}.
+
+\section{The canonical relaxation defect measure}
+
+Introduce the Hilbert-valued complete-minor vector
+\begin{equation}
+ \Xi(F)=\bigl(F,\sqrt R\,M_2(F),\sqrt K\,M_3(F)\bigr),
+ \qquad W(F)=\frac12|\Xi(F)|^2.
+ \label{eq:Xi}
+\end{equation}
+Let $u_j$ be a recovery sequence for a fixed $u\in\cG_B$, and pass to a
+subsequence such that
+\begin{equation}
+ u_j\to u\quad\hbox{strongly in }L^2,\qquad
+ \Xi(Du_j)\rightharpoonup\Xi(Du)\quad\hbox{weakly in }L^2.
+ \label{eq:graph-weak}
+\end{equation}
+The second convergence is an explicit hypothesis: it says that the weak
+limits of the minors are the minors of the selected graph representative.
+
+\begin{theorem}[Defect-measure decomposition]
+Under \eqref{eq:graph-weak}, after a further subsequence there is a unique
+nonnegative Radon measure $\mu$ on $\overline\Omega$ such that
+\begin{equation}
+ \boxed{\quad
+ \frac12|\Xi(Du_j)|^2\dd x
+ \stackrel{*}{\rightharpoonup}
+ \frac12|\Xi(Du)|^2\dd x+\mu.\quad}
+ \label{eq:defect-measure}
+\end{equation}
+If $u_j$ is an exact recovery sequence, then
+\begin{equation}
+ \mu(\overline\Omega)
+ =\overline{\cE}(u)-\cE_{\rm naive}(u),\qquad
+ \cE_{\rm naive}(u)=\int_\Omega(W(Du)+V(u))\dd x.
+ \label{eq:total-gap}
+\end{equation}
+Moreover,
+\begin{equation}
+ \boxed{\quad
+ \mu=0\ \Longleftrightarrow\
+ \Xi(Du_j)\to\Xi(Du)\ \hbox{strongly in }L^2
+ \quad}
+ \label{eq:zero-iff-strong}
+\end{equation}
+for that recovery subsequence.
+\end{theorem}
+
+\begin{proof}
+The bounded positive measures
+$\frac12|\Xi(Du_j)|^2\dd x$ have a weak-star convergent subsequence.  For
+every nonnegative $\varphi\in C(\overline\Omega)$, weak lower
+semicontinuity applied to $\sqrt\varphi\,\Xi(Du_j)$ gives
+\[
+ \frac12\int_\Omega\varphi|\Xi(Du)|^2\dd x
+ \leq\liminf_j\frac12\int_\Omega\varphi|\Xi(Du_j)|^2\dd x.
+\]
+The difference between the limiting measure and the absolutely continuous
+measure on the left is therefore a nonnegative Radon measure $\mu$.
+Because $V$ is linear and bounded on $\SSS^3$, strong $L^2$ convergence
+implies $\int V(u_j)\to\int V(u)$, proving \eqref{eq:total-gap}.
+
+If $\mu=0$, testing \eqref{eq:defect-measure} by one gives convergence of
+the Hilbert norms.  Together with weak convergence this implies strong
+convergence.  The converse follows by taking the strong limit in every
+weighted quadratic integral.
+\end{proof}
+
+\begin{remark}[What $\mu=0$ does and does not mean]
+For the selected map, $\mu=0$ closes the local Lavrentiev/recovery gap and
+gives complete-minor graph recovery.  It does not, by itself, prove
+continuity, the Euler--Lagrange equation, partial regularity, or isolation.
+Those require a local comparison theorem and an excess-decay argument.
+\end{remark}
+
+\section{Exact Hopf fibre functional}
+
+Write $u=(z,w)\in\SSS^3\subset\mathbb C^2$, let $n=h(u)\in\SSS^2$, and let
+$a=2u^*\theta$.  With the AP-E14 orientations,
+\begin{align}
+ |Du|^2&=\frac14(|a|^2+|Dn|^2),\notag\\
+ |M_2(Du)|^2&=\frac1{16}(|a\wedge Dn|^2+|da|^2),\notag\\
+ |M_3(Du)|^2&=\frac1{64}|a\wedge da|^2.              \label{eq:hopf}
+\end{align}
+For a compact fibre phase,
+\begin{equation}
+ T_\chi u=e^{i\chi}u,\qquad
+ n_\chi=n,\quad a_\chi=a+2\dd\chi,\quad da_\chi=da.
+ \label{eq:phase}
+\end{equation}
+If $\chi$ has zero trace on a ball, the transformation preserves the
+exterior trace and the degree because
+\begin{equation}
+ (a+2\dd\chi)\wedge d(a+2\dd\chi)-a\wedge da
+ =2\dd(\chi\,da).
+ \label{eq:degree-invariance}
+\end{equation}
+
+For a smooth $u$ on $B_r$ define
+\begin{align}
+ \mathcal F_u(\chi)
+ =\int_{B_r}\bigg\{&
+ \frac18\bigl(|a+2\dd\chi|^2+|Dn|^2\bigr)\notag\\
+ &+\frac R{32}\bigl(|(a+2\dd\chi)\wedge Dn|^2+|da|^2\bigr)\notag\\
+ &+\frac K{128}|(a+2\dd\chi)\wedge da|^2
+ +m^2\bigl(1-\Re(e^{i\chi}z)\bigr)\bigg\}\dd x
+ \label{eq:phase-functional}
+\end{align}
+on $H^1_0(B_r)$.  Smoothness of $u$ makes all coefficients bounded, so this
+functional is well-defined, coercive, and weakly lower semicontinuous.
+
+\begin{theorem}[Local fibre-phase purification]
+Set
+\begin{equation}
+ \lambda_r=1-\frac{m^2r^2}{\pi^2}.
+ \label{eq:lambda}
+\end{equation}
+If $\lambda_r>0$, then $\mathcal F_u$ is
+$\lambda_r$-strongly convex with respect to the seminorm
+$\|\dd\chi\|_{L^2}$.  It has a unique minimizer $\chi_u\in H^1_0(B_r)$ and
+\begin{equation}
+ \mathcal F_u(0)-\mathcal F_u(\chi_u)
+ \geq\frac{\lambda_r}{2}\|\dd\chi_u\|_{L^2(B_r)}^2.
+ \label{eq:purification-gap}
+\end{equation}
+For \eqref{eq:production}, every $r<\pi/\sqrt{0.12}=9.0689968\ldots$ is
+admissible.
+\end{theorem}
+
+\begin{proof}
+For $\phi\in H^1_0(B_r)$, exact differentiation gives
+\begin{align}
+ D^2\mathcal F_u(\chi)[\phi,\phi]
+ =\int_{B_r}\bigg\{&
+ |\dd\phi|^2+\frac R4|\dd\phi\wedge Dn|^2
+ +\frac K{16}|\dd\phi\wedge da|^2\notag\\
+ &+m^2\Re(e^{i\chi}z)\phi^2\bigg\}\dd x.             \label{eq:second-var}
+\end{align}
+Since $|z|\leq1$, the last term is bounded below by $-m^2\phi^2$.
+The exact first Dirichlet eigenvalue of the three-ball is
+$\lambda_1(B_r)=\pi^2/r^2$, hence
+\begin{equation}
+ \int_{B_r}\phi^2\dd x\leq\frac{r^2}{\pi^2}
+ \int_{B_r}|\dd\phi|^2\dd x.
+ \label{eq:poincare}
+\end{equation}
+Dropping the two nonnegative wedge terms proves
+\[
+ D^2\mathcal F_u(\chi)[\phi,\phi]\geq
+ \lambda_r\|\dd\phi\|_2^2.
+\]
+The direct method gives existence; strong convexity gives uniqueness and
+the standard Bregman inequality \eqref{eq:purification-gap}.
+\end{proof}
+
+\section{The vertical defect which really vanishes}
+
+Let
+\begin{equation}
+ I_B=\inf\{\cE(v):v\in C^\infty(\overline\Omega,\SSS^3),\
+ v|_{\partial\Omega}=e_0,\ \deg v=B\},
+ \label{eq:IB}
+\end{equation}
+and let $u_j$ be a smooth sequence with $\cE(u_j)\to I_B$.  On an interior
+ball $Q=B_r(x)$ with $\lambda_r>0$, define the compact-phase relaxation drop
+\begin{equation}
+ \Delta_j(Q)=\mathcal F_{u_j}(0)-
+ \inf_{\chi\in C^\infty_c(Q)}\mathcal F_{u_j}(\chi)\geq0.
+ \label{eq:drop}
+\end{equation}
+
+\begin{theorem}[Zero compact-phase-reducible vertical defect]
+For every fixed admissible ball $Q$,
+\begin{equation}
+ 0\leq\Delta_j(Q)\leq\cE(u_j)-I_B\longrightarrow0.
+ \label{eq:drop-zero}
+\end{equation}
+If $\chi_j$ is the unique $H^1_0(Q)$ phase minimizer, then
+\begin{equation}
+ \|\dd\chi_j\|_{L^2(Q)}^2
+ \leq\frac{2\Delta_j(Q)}{\lambda_r}\longrightarrow0.
+ \label{eq:phase-zero}
+\end{equation}
+Consequently the outer defect obtained by covering sets with admissible
+balls and assigning each ball the asymptotic cost
+$\limsup_j\Delta_j(Q)$ is identically zero.  Equivalently, every component
+of $\mu$ which can be exposed by a compact fibre-phase energy reduction is
+zero.
+\end{theorem}
+
+\begin{proof}
+For any $\chi\in C^\infty_c(Q)$, extend it by zero and set
+$v_j=e^{i\chi}u_j$.  Equation \eqref{eq:degree-invariance} shows that $v_j$
+has the same boundary value and degree as $u_j$.  Therefore
+\[
+ I_B\leq\cE(v_j)
+ =\cE(u_j)-\bigl(\mathcal F_{u_j}(0)-\mathcal F_{u_j}(\chi)\bigr).
+\]
+Take the supremum over smooth compact phases to obtain
+\eqref{eq:drop-zero}.  Smooth phases are dense for the functional with the
+fixed smooth coefficients of $u_j$, so the infimum equals the $H^1_0$
+minimum.  Equation \eqref{eq:phase-zero} follows from
+\eqref{eq:purification-gap}.  Since every fixed admissible ball has zero
+asymptotic cost and such balls form a countable basis, the associated
+covering outer measure is zero.
+\end{proof}
+
+\begin{remark}[No overclaim about the full vertical-looking energy]
+The theorem eliminates pure exact fibre oscillation, including the AP-E14
+rank-one phase oscillator with fixed Hopf base.  It does \emph{not} prove
+strong convergence of $a_j$, $a_j\wedge Dn_j$, or $a_j\wedge da_j$ when
+$n_j$ and its curvature oscillate simultaneously.  Such a sequence can be
+stationary along each fibre orbit while retaining base/mixed concentration.
+Calling that remaining mass ``vertical defect'' would obscure the actual
+blocker; hence AP-E15 reserves that name for the phase-reducible component
+proved zero above.
+\end{remark}
+
+\section{Weighted cutoff decay on the Hopf base}
+
+The AP-E13 replacement leaves the dimensionless cutoff defect
+\begin{equation}
+ \mathfrak D_u(x,r;q)=
+ \frac1{r^2}\int_{B_r(x)}|u-q|^2|M_2(Du)|^2\dd y.
+ \label{eq:weighted-defect}
+\end{equation}
+Using \eqref{eq:hopf},
+\begin{equation}
+ \mathfrak D_u(x,r;q)=\frac1{16r^2}\int_{B_r(x)}
+ |u-q|^2\bigl(|a\wedge Dn|^2+|da|^2\bigr)\dd y.
+ \label{eq:weighted-hopf}
+\end{equation}
+
+\begin{theorem}[Almost-everywhere weighted decay]
+For every fixed $u\in\cG_B$, at almost every $x\in\Omega$, with the precise
+representative $q=u(x)$,
+\begin{equation}
+ \boxed{\qquad
+ \mathfrak D_u(x,r;u(x))\longrightarrow0
+ \quad\text{as }r\downarrow0.\qquad}
+ \label{eq:ae-decay}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Put $f=|M_2(Du)|^2\in L^1$.  At almost every point, $x$ is both a Lebesgue
+point of $f$ and an $L^2$ differentiability point of the Sobolev map $u$.
+Thus
+\begin{equation}
+ \int_{B_r(x)}|u(y)-u(x)|^2\dd y=O(r^5),\qquad
+ \int_{B_r(x)}|f(y)-f(x)|\dd y=o(r^3).
+ \label{eq:leb-points}
+\end{equation}
+Since two points of $\SSS^3$ have squared distance at most four,
+\begin{align}
+ \mathfrak D_u(x,r;u(x))
+ &\leq\frac{f(x)}{r^2}
+ \int_{B_r(x)}|u-u(x)|^2\dd y
+ \frac4{r^2}\int_{B_r(x)}|f-f(x)|\dd y\notag\\
+ &=O(r^3)+o(r)\longrightarrow0.                       \label{eq:ae-proof}
+\end{align}
+\end{proof}
+
+\begin{remark}[The remaining two-limit theorem]
+Equation \eqref{eq:ae-decay} is a genuine advance, but not the desired
+regularity gate.  It first fixes $u$ and then sends $r$ to zero.  The
+relaxation measure instead records a limit of $u_j$, so the required estimate
+has the stronger order
+\begin{equation}
+ \lim_{r\downarrow0}\limsup_{j\to\infty}
+ \frac1{r^2}\int_{B_r(x)}|u_j-q_{j,r}|^2
+ |M_2(Du_j)|^2\dd y=0
+ \qquad\text{for $\mu$-a.e.\ }x,                    \label{eq:two-limit}
+\end{equation}
+for controlled centres $q_{j,r}\in\SSS^3$, or a quantitatively equivalent
+equiintegrability statement.  A singular $\mu$ may sit on the Lebesgue-null
+exceptional set; even an absolutely continuous base/mixed component is not
+eliminated until the recovery limit is tied to the fixed-map estimate.
+One natural route is a scale-invariant excess inequality of the form
+\begin{equation}
+ \cX(x,\vartheta r)\leq c\vartheta^\alpha\cX(x,r)
+ +c\,\mathfrak D_u(x,r;u_{x,r}),
+ \qquad 0<\vartheta<\tfrac12,
+ \label{eq:excess}
+\end{equation}
+together with a sequence-uniform version of the second term.  Ordinary
+Lebesgue differentiation neither exchanges these limits nor controls a
+singular support.
+\end{remark}
+
+\section{Revised closure chain and embargoes}
+
+The streamlined mainline is now:
+\begin{enumerate}
+ \item \textbf{Frozen action---done.}  AP-E11
+       \eqref{eq:frozen-density}--\eqref{eq:production} is final; no more
+       lattice scans are authorized.
+ \item \textbf{Defect and fibre purification---partly done.}  The Radon
+       measure $\mu$ is canonical, and its compact-fibre-phase-reducible
+       component is zero.  The base/mixed component remains.
+ \item \textbf{Hopf-base regularity---in progress.}  Weighted cutoff decay is
+       proved at Lebesgue-a.e.\ centres for each fixed map.  It must be
+       upgraded to the sequence-uniform $\mu$-a.e.\ estimate
+       \eqref{eq:two-limit}; only then may one conclude full $\mu=0$, local
+       graph recovery, regularity, and continuum isolation.
+ \item \textbf{Second variation---closed by policy.}  A bosonic Riemann
+       Hessian may be assembled only after classicality and isolation are
+       theorems for the same action and representative.
+\end{enumerate}
+
+The tangent Dirac/Callias operator on the same \emph{prescribed} smooth Hopf
+base may be studied in parallel as an independent mathematical family.
+Such work does not authorize a determinant, a physical fermion assignment,
+or a degree-one portal.  Determinant and portal promotion remain false until
+the classical bosonic background gate closes.
+
+\enlargethispage{3\baselineskip}
+\paragraph{Reproducibility.}
+Run \texttt{python3}
+\path{route_f/code/verify_ap_e15_relaxation_defect_fibre_purification.py}
+from the repository root.  The verifier checks the phase Hessian
+coefficients, the production convexity radius, the Hilbert defect identity,
+the $r^3$ smooth weighted-cutoff scaling, and all fail-closed gates.  It does
+not relax or scan a lattice.
+
+\end{document}

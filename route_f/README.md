@@ -26,7 +26,34 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-20 AP-E14 WZ/Morrey and Hopf div--curl audit
+## 2026-07-23 AP-E15 relaxation defect and fibre purification
+
+AP-E15 freezes the AP-E11 action and ends the lattice-scan branch.  It defines
+the nonnegative Radon relaxation defect `mu`; its total mass is the
+relaxed-minus-naive energy gap, and `mu=0` is exactly strong complete-minor
+graph recovery.
+
+The exact Hopf phase functional is strongly convex on sufficiently small
+balls.  A fixed-degree minimizing sequence therefore has vanishing compact
+phase-relaxation drop, proving that every fibre-phase-reducible vertical
+defect is zero.  This removes pure fibre oscillation but deliberately does
+not relabel simultaneous base/fibre concentration as solved.
+
+The AP-E13 weighted cutoff term vanishes at Lebesgue-a.e. centre of every
+fixed graph map.  The remaining issue is narrower and harder: this limit does
+not commute automatically with the recovery-sequence limit.  A singular
+`mu` may sit on the exceptional set, and a diffuse base/mixed defect is not
+yet linked to fixed-map decay.  A sequence-uniform `lim_r limsup_j` estimate
+at `mu`-a.e. points is required before full `mu=0`, recovery, regularity, and
+isolation can be promoted.  The `11/11` verifier is continuum/algebraic and
+performs no new lattice scan.  The bosonic Hessian remains downstream of
+classicality; parallel Dirac/Callias mathematics is allowed, but determinant
+and portal promotion remain false.  See
+`tex/ap_e15_relaxation_defect_fibre_purification.tex`,
+`code/verify_ap_e15_relaxation_defect_fibre_purification.py`, and
+`output/ap_e15_relaxation_defect_fibre_purification.{json,md}`.
+
+## 2026-07-20 AP-E14 WZ/Morrey and Hopf div--curl audit (superseded by AP-E15 for the defect mainline)
 
 AP-E14 proves the Wess--Zumino decay requested after AP-E13 for every fixed
 complete-minor graph map, hence also for the selected relaxed `B=1`

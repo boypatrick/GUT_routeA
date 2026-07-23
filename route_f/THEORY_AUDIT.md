@@ -2,7 +2,36 @@
 
 Date: 2026-07-13
 
-## 2026-07-20 AP-E14 analytic addendum (current continuum authority)
+## 2026-07-23 AP-E15 analytic addendum (current continuum authority)
+
+The AP-E11 action is frozen; additional lattice scans are no longer part of
+the proof strategy.  For a recovery sequence with the correct weak graph
+limit, the quadratic complete-minor energy defines a nonnegative Radon defect
+measure `mu`.  Its total mass is the relaxation gap, and `mu=0` is equivalent
+to strong graph recovery.
+
+The exact Hopf fibre variation gives a new unconditional theorem.  On every
+sufficiently small ball the phase functional is strongly convex with modulus
+`1-m^2 r^2/pi^2`.  Since a compact phase preserves degree and boundary data,
+the local phase-relaxation drop of a global fixed-degree minimizing sequence
+is bounded by its global energy excess and tends to zero.  Hence the
+compact-fibre-phase-reducible vertical defect vanishes.
+
+This is not full `mu=0`: simultaneous oscillation of the Hopf base can retain
+mixed shear/curvature concentration while being phase-stationary.  The
+weighted cutoff defect is now proved to decay at Lebesgue-a.e. centre for
+each fixed map, but this does not exchange `r->0` with the recovery limit.
+A singular `mu` may be supported on the exceptional set, and a diffuse
+base/mixed component is not yet linked to fixed-map decay.  The remaining
+main theorem must therefore establish a sequence-uniform `lim_r limsup_j`
+weighted estimate for `mu`-a.e. points, or an equivalent excess contraction.
+Until it yields full `mu=0`, local recovery, regularity, and isolation, the
+bosonic Hessian is unauthorized.  Dirac/Callias mathematics on a prescribed
+smooth Hopf base may run in parallel, while determinant and portal promotion
+remain false.  The AP-E15 card passes `11/11` without a new lattice
+calculation.
+
+## 2026-07-20 AP-E14 analytic addendum (superseded above)
 
 For any fixed complete-minor graph map, including the selected relaxed `B=1`
 representative, local Wess--Zumino flux satisfies

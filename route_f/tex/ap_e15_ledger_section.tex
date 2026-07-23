@@ -1,0 +1,61 @@
+\section{AP-E15: relaxation defect and fibre-phase purification}
+
+AP-E15 freezes the AP-E11 action at
+\begin{equation}
+ W(F)=\frac12|F|^2+\frac R2|M_2(F)|^2+\frac K2|M_3(F)|^2,
+ \qquad (R,K,m^2)=(1,0.35,0.12),
+\end{equation}
+and authorizes no further lattice scans.  For a recovery sequence with weak
+complete-minor graph limit, define
+\begin{equation}
+ \Xi(F)=(F,\sqrt R\,M_2(F),\sqrt K\,M_3(F)).
+\end{equation}
+The canonical nonnegative relaxation defect measure is
+\begin{equation}
+ \frac12|\Xi(Du_j)|^2\dd x\stackrel{*}{\rightharpoonup}
+ \frac12|\Xi(Du)|^2\dd x+\mu .
+\end{equation}
+Its total mass is the gap between the relaxed and naive energies, and
+$\mu=0$ is equivalent to strong convergence of all three minor levels.
+
+For the Hopf split $n=h(u)$, $a=2u^*\theta$, a compact phase sends
+$a\mapsto a+2\dd\chi$ while preserving $n$, $da$, boundary data, and degree.
+The exact local phase functional has second variation
+\begin{align}
+ D^2\mathcal F_u(\chi)[\phi,\phi]
+ =\int\bigl(&|\dd\phi|^2+\tfrac R4|\dd\phi\wedge Dn|^2
+ +\tfrac K{16}|\dd\phi\wedge da|^2\notag\\
+ &+m^2\Re(e^{i\chi}z)\phi^2\bigr).
+\end{align}
+On a three-ball it is therefore strongly convex whenever
+$\lambda_r=1-m^2r^2/\pi^2>0$.  If $u_j$ is a smooth fixed-degree minimizing
+sequence, its optimal compact-phase energy drop satisfies
+\begin{equation}
+ 0\leq\Delta_j(B_r)\leq\mathcal E(u_j)-I_B\to0,\qquad
+ \|\dd\chi_j\|_2^2\leq2\Delta_j(B_r)/\lambda_r\to0.
+\end{equation}
+Thus every compact-fibre-phase-reducible vertical defect is zero.  This does
+not eliminate mixed concentration produced by simultaneous oscillation of
+the Hopf base.
+
+The remaining AP-E13 cutoff defect has the exact Hopf form
+\begin{equation}
+ \mathfrak D_u(x,r;q)=\frac1{16r^2}\int_{B_r(x)}|u-q|^2
+ (|a\wedge Dn|^2+|da|^2).
+\end{equation}
+At almost every Lebesgue point, with $q=u(x)$, Sobolev differentiability and
+$|M_2|^2\in L^1$ give
+$\mathfrak D_u=O(r^3)+o(r)\to0$.  This fixed-map limit does not commute
+automatically with the recovery limit.  A singular $\mu$ can live on the
+exceptional set, and a diffuse base/mixed component is not yet tied to this
+estimate.  The next theorem must prove
+\[
+ \lim_{r\downarrow0}\limsup_j r^{-2}\int_{B_r(x)}
+ |u_j-q_{j,r}|^2|M_2(Du_j)|^2=0
+ \quad\text{for $\mu$-a.e.\ }x,
+\]
+or an equivalent sequence-uniform excess contraction.  Only after that
+theorem yields full $\mu=0$, local recovery, regularity, and isolation may
+the same-action bosonic Hessian be assembled.  Parallel Dirac/Callias
+mathematics on a prescribed smooth Hopf base is allowed, but determinant and
+portal promotion remain false.

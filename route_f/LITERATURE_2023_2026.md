@@ -1,9 +1,24 @@
 # 2023--2026 Primary-Literature Matrix
 
-Checked on 2026-07-20.  These papers are inputs for Route-F design, not proof
+Checked on 2026-07-23.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
-## AP-E14 WZ/Morrey and Hopf-transfer boundary
+## AP-E15 defect-support boundary
+
+AP-E15 adds no transferred theorem and no new literature-dependent claim.
+Its defect-measure decomposition, compact fibre-phase convexity, and
+Lebesgue-a.e. weighted-cutoff decay are derived directly.  The AP-E14 sources
+remain relevant only as structural context for the Hopf split.
+
+The literature boundary is now sharper: a fixed-map theorem valid
+Lebesgue-a.e. neither controls a possibly singular relaxation measure nor
+interchanges the shrinking-radius limit with a recovery-sequence limit.
+None of the sources below is being cited as proving the required
+sequence-uniform `lim_r limsup_j` cutoff decay for `mu`-a.e. points, local
+recovery for the present complete-minor relaxation, or isolation of its
+degree-one minimizer.
+
+## AP-E14 WZ/Morrey and Hopf-transfer boundary (superseded by AP-E15 for the defect mainline)
 
 AP-E14 uses the Hopf split as an exact in-repository algebraic change of
 variables, not as a transfer of a regularity theorem.  Auckly--Kapitanski's

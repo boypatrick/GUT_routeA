@@ -1,0 +1,198 @@
+{
+  "card": "AP-E15 relaxation defect and fibre-phase purification",
+  "mode": "production",
+  "status": "PASS",
+  "summary": {
+    "passed": 11,
+    "total": 11
+  },
+  "parameters": {
+    "R": 1.0,
+    "K": 0.35,
+    "mass_squared": 0.12
+  },
+  "phase_hessian": {
+    "samples": 160,
+    "max_absolute_residual": 8.42314575422165e-07,
+    "formula": "|dphi|^2+(R/4)|dphi wedge Dn|^2+(K/16)|dphi wedge da|^2+m^2 Re(exp(i chi)z) phi^2"
+  },
+  "convexity": {
+    "mass_squared": 0.12,
+    "critical_radius": 9.068996821171089,
+    "radii": [
+      0.25,
+      1.0,
+      5.0,
+      9.0,
+      9.068996821171089,
+      9.2
+    ],
+    "lambda_r": [
+      0.9992400911226824,
+      0.9878414579629194,
+      0.6960364490729867,
+      0.015158094996476912,
+      2.220446049250313e-16,
+      -0.029098998018496136
+    ],
+    "production_local_balls_are_available": true,
+    "strong_convexity_condition": "r < pi/sqrt(m^2)"
+  },
+  "hilbert_defect": {
+    "polarization_residual": 0.0,
+    "toy_defect_masses": [
+      0.125,
+      0.03125,
+      0.0078125,
+      0.0
+    ],
+    "toy_strong_distances": [
+      0.5,
+      0.25,
+      0.125,
+      0.0
+    ],
+    "identity": "weak convergence plus convergence of Hilbert norms is equivalent to strong complete-minor graph convergence"
+  },
+  "weighted_cutoff": {
+    "radii": [
+      0.1,
+      0.03162277660168379,
+      0.01,
+      0.0031622776601683794,
+      0.001,
+      0.00031622776601683794,
+      0.0001,
+      3.1622776601683795e-05,
+      1e-05
+    ],
+    "affine_weighted_defect": [
+      0.006111801452791128,
+      0.00019327213197546024,
+      6.111801452791128e-06,
+      1.9327213197546025e-07,
+      6.111801452791127e-09,
+      1.9327213197546028e-10,
+      6.111801452791128e-12,
+      1.9327213197546033e-13,
+      6.111801452791129e-15
+    ],
+    "log_log_slope": 3.000000000000001,
+    "exact_scaling": "for u=q+A(x-x0), f=|M2|^2=f0, r^-2 int_Br |u-q|^2 f0=(4 pi/15)f0|A|^2 r^3",
+    "proved_scope": "Lebesgue-a.e. centres of each fixed graph map",
+    "not_proved_scope": "defect-support or all centres"
+  },
+  "policy": {
+    "ap_e11_action_frozen": true,
+    "new_lattice_scans_authorized": false,
+    "forbidden_scan_calls_found": [],
+    "only_algebraic_continuum_checks": true
+  },
+  "gates": {
+    "ap_e11_action_frozen": true,
+    "new_lattice_scan": false,
+    "relaxation_defect_measure_defined": true,
+    "compact_fibre_phase_strong_convexity": true,
+    "phase_reducible_vertical_defect_zero": true,
+    "mixed_hopf_base_defect_zero": false,
+    "weighted_cutoff_decay_lebesgue_a.e.": true,
+    "weighted_cutoff_decay_on_defect_support": false,
+    "sequence_uniform_weighted_cutoff_mu_a.e.": false,
+    "full_mu_zero": false,
+    "local_recovery": false,
+    "regularity": false,
+    "continuum_isolation": false,
+    "bosonic_hessian_authorized": false,
+    "parallel_dirac_callias_mathematics_allowed": true,
+    "determinant_promotion": false,
+    "degree_one_portal_promotion": false,
+    "physics_promotion_allowed": false
+  },
+  "checks": [
+    {
+      "group": "algebra",
+      "name": "phase Hessian coefficients",
+      "pass": true,
+      "detail": "maximum five-point finite-difference residual 8.423e-07"
+    },
+    {
+      "group": "analysis",
+      "name": "production convexity radius",
+      "pass": true,
+      "detail": "lambda_r=1-m^2 r^2/pi^2 and m^2=0.12"
+    },
+    {
+      "group": "analysis",
+      "name": "small-ball strong convexity",
+      "pass": true,
+      "detail": "r=0.25 and r=9 lie below the exact critical radius"
+    },
+    {
+      "group": "defect",
+      "name": "Hilbert polarization identity",
+      "pass": true,
+      "detail": "residual 0.000e+00"
+    },
+    {
+      "group": "defect",
+      "name": "nonnegative toy defect masses",
+      "pass": true,
+      "detail": "quadratic norm gaps are nonnegative"
+    },
+    {
+      "group": "purification",
+      "name": "degree-preserving local drop bound",
+      "pass": true,
+      "detail": "Delta_j(Q)<=E(u_j)-I_B -> 0 for every fixed admissible ball"
+    },
+    {
+      "group": "cutoff",
+      "name": "smooth weighted-cutoff exponent",
+      "pass": true,
+      "detail": "fitted affine exponent 3.000000000000"
+    },
+    {
+      "group": "cutoff",
+      "name": "a.e. versus singular-support scope",
+      "pass": true,
+      "detail": "fixed-map Lebesgue differentiation does not exchange r and recovery limits"
+    },
+    {
+      "group": "policy",
+      "name": "no new lattice scan",
+      "pass": true,
+      "detail": "forbidden scan calls found: []"
+    },
+    {
+      "group": "gates",
+      "name": "classicality chain remains closed",
+      "pass": true,
+      "detail": "full mu=0, recovery, regularity, isolation, and Hessian remain false"
+    },
+    {
+      "group": "gates",
+      "name": "determinant and portal embargo",
+      "pass": true,
+      "detail": "parallel operator mathematics is allowed without downstream promotion"
+    }
+  ],
+  "sources": [
+    {
+      "path": "route_f/code/verify_ap_e15_relaxation_defect_fibre_purification.py",
+      "exists": true,
+      "size_bytes": 14953,
+      "sha256": "b6984123ebd14c507967f9aee86398aa5af8c4c9dd43137cfe98221e8b07bdfd"
+    },
+    {
+      "path": "route_f/tex/ap_e15_relaxation_defect_fibre_purification.tex",
+      "exists": true,
+      "size_bytes": 16517,
+      "sha256": "7457b730e674324a54a2d7814246f0b3cd967888b72780fe56cb9eae8e01183b"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  }
+}

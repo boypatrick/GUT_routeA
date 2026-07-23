@@ -1,12 +1,59 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-20
+Last updated: 2026-07-23
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; current authority)
+## AP-E15 relaxation-defect/fibre-purification checkpoint (2026-07-23; current authority)
+
+Status: **the AP-E11 action is frozen and no further lattice scans are
+authorized.  The relaxation defect measure is defined, and every
+compact-fibre-phase-reducible vertical defect is proved zero.  Weighted
+cutoff decay is proved at Lebesgue-a.e. centres, but not yet on possible
+singular defect support.  Full `mu=0`, classicality, isolation, Hessian,
+determinant, and portal remain closed.**  The continuum card passes `11/11`.
+
+### Closed continuum statements
+
+- For `Xi=(Du,sqrt(R)M2,sqrt(K)M3)`,
+  `|Xi_j|^2 dx/2 ->* |Xi_u|^2 dx/2+mu` defines a nonnegative Radon measure.
+  Its mass is the relaxed-minus-naive gap, and `mu=0` is equivalent to strong
+  complete-minor graph convergence of the recovery subsequence.
+- For compact phase variations, `n` and `da` are unchanged and
+  `a -> a+2dchi`.  The exact phase Hessian is bounded below by
+  `(1-m^2 r^2/pi^2)||dphi||_2^2` on `B_r`.
+- If `E(u_j)->I_B`, the local optimal phase drop obeys
+  `Delta_j(B_r)<=E(u_j)-I_B->0`; strong convexity then gives
+  `||dchi_j||_2->0`.  This proves that the phase-reducible vertical component
+  is zero, without claiming that all mixed `a_j,Dn_j,da_j` defects vanish.
+- At almost every Lebesgue point of a fixed graph map,
+  `r^-2 int_Br |u-u(x)|^2|M2|^2=O(r^3)+o(r)->0`.
+
+### Remaining theorem and strict ordering
+
+1. Prove the sequence-uniform two-limit estimate
+   `lim_(r->0) limsup_j r^-2 int_Br |u_j-q_(j,r)|^2|M2(Du_j)|^2=0`
+   for `mu`-a.e. points, or a scale-invariant excess contraction which implies
+   it.  Fixed-map a.e. differentiation neither exchanges the recovery limit
+   nor excludes a diffuse base/mixed defect.
+2. Use that estimate to prove full `mu=0`, then local graph recovery,
+   regularity, and continuum isolation for the selected `B=1` minimizer.
+3. Only after classicality and isolation close may the same-action bosonic
+   Riemann Hessian be assembled.
+4. Dirac/Callias operators on a prescribed smooth representative may be
+   studied as parallel mathematics.  Determinant and portal promotion remain
+   false.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e15_relaxation_defect_fibre_purification.tex` and PDF;
+- `route_f/code/verify_ap_e15_relaxation_defect_fibre_purification.py`;
+- `route_f/output/ap_e15_relaxation_defect_fibre_purification.{json,md}`;
+- AP-E15 section in the master Route-E derivation ledger.
+
+## AP-E14 WZ/Morrey and Hopf div--curl checkpoint (2026-07-20; superseded above)
 
 Status: **WZ-flux decay is proved for every fixed complete-minor graph map,
 and therefore for the selected relaxed `B=1` representative.  This decay
