@@ -1,8 +1,78 @@
 # Route A--E Theory Audit and Route-F Synthesis
 
-Date: 2026-07-13
+Date: 2026-07-24
 
-## 2026-07-23 AP-E15 analytic addendum (current continuum authority)
+## 2026-07-24 AP-E17 analytic addendum (current continuum authority)
+
+The requested volumetric argument separates into two logically distinct
+parts.  First, the AP-E16 diagonal already satisfies normalized full
+relative-homotopy local quasiminimality.  Second, transferring it to the
+homogeneous tangent requires replacement of the oscillatory trace by its
+affine barycenter.  AP-E17 proves this replacement under the explicit
+graph-tight annulus condition (GTA), using radial projection to preserve the
+`S3` target, exact trace, relative homotopy, and degree.
+
+Under GTA, the AP-E12 identity gives
+
+`Wbar-W(F0)=1/2 <|Xi(F)-Xi(F0)|^2> + lambda/2`.
+
+The affine comparison makes the left side nonpositive.  Hence the homogeneous
+generalized graph Young measure is exactly Dirac and has zero concentration
+mass.  The volumetric defect is eliminated at every GTA point.
+
+This is conditional closure, not a proof of GTA.  A rank-two microball with
+amplitude `h^(1/4)` has bounded second-minor energy while the GTA weighted
+remainder diverges as `h^(-3/2)`.  Therefore neither strong `L2` convergence
+nor an ordinary `W1,2` decomposition theorem supplies the endpoint
+complete-minor trace estimate.
+
+The nonvolumetric result is unconditional.  The WZ-capacity inequality
+`E_3(B_r)>=3K pi^3|b(r)|^2/(2r^3)` forces every local WZ number to vanish
+like `r^((d+3)/2)` at an `r^d` defect.  Nonzero integer point degree and a
+Hopf-base monopole are excluded.  Each remaining tangent is either
+capacity-active with a positive normalized sextic fraction, or WZ-neutral
+and analytically—not topologically—obstructed.
+
+The AP-E17 card passes `12/12`.  GTA for the actual minimizing diagonal is
+the remaining mainline theorem.  Full `mu=0`, local recovery, classicality,
+isolation, Hessian, determinant, and portal remain false.
+
+## 2026-07-24 AP-E16 analytic addendum (superseded above)
+
+The AP-E15 defect split now has a rigorous tangent-level formulation.  At
+`mu`-almost every point, the five nonnegative Hopf defect components converge
+under one normalized blow-up to their Radon--Nikodym weights times a common
+tangent.  A diagonal recovery sequence can be chosen with vanishing
+normalized exact-fibre phase drop.  The action's three minor orders admit one
+ordinary field normalization only in the volumetric case
+`target amplitude~r`, `mu(B_r)~r^3`; all other tangent dimensions require
+order-specific concentration variables.
+
+The normal-ball geodesic cutoff gives a valid conditional Caccioppoli
+inequality, including the second-/third-minor weighted cutoff terms and the
+full local relative-homotopy comparison deficit.  It is a hole-filling
+estimate, not yet an excess improvement.
+
+The attempted unconditional improvement is false.  The exact sphere-valued
+oscillation with tangent generator
+`F_31=cos(theta_1), F_42=cos(theta_2)` remains after exact fibre-phase
+purification.  It has `<F>=<M2(F)>=0`, vanishing weighted cutoff, and
+positive diffuse graph-energy defect `1/2+R/8`.  This is a precise
+homogeneous pure-base Young-measure counterexample to the implication
+`purification + weighted decay => mu=0`.
+
+The counterexample has positive full local comparison deficit and is not
+asymptotically minimizing.  It therefore does not disprove regularity of the
+selected relaxed `B=1` minimizer.  It does prove that AP-E15's proposed
+two-limit estimate was insufficient.  Promotion now requires (i) a
+recovery-compatible boundary modification transferring normalized full local
+quasiminimality to volumetric tangent Young measures, followed by
+strong-quasiconvex rigidity, and (ii) an independent concentration-capacity
+or topological alternative for nonvolumetric tangents.  Full `mu=0`,
+classicality, isolation, Hessian, determinant, and portal remain false.  The
+AP-E16 card passes `12/12`.
+
+## 2026-07-23 AP-E15 analytic addendum (superseded above)
 
 The AP-E11 action is frozen; additional lattice scans are no longer part of
 the proof strategy.  For a recovery sequence with the correct weak graph

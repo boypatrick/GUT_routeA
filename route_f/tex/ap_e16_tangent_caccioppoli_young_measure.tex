@@ -1,0 +1,538 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\TT}{\mathbb T}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\Tan}{\operatorname{Tan}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\push}{_{\#}}
+
+\title{AP-E16 Tangent Defects, Purified Caccioppoli Control,\\
+and a Homogeneous Hopf-Base Young-Measure Obstruction}
+\author{Route-F derivation ledger}
+\date{24 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note executes the AP-E15 continuation without reopening the lattice
+branch.  The complete-minor relaxation defect is split into five nonnegative
+Hopf Radon measures.  At $\mu$-almost every point, one normalized tangent
+sequence carries all five components with their Radon--Nikodym weights, and a
+diagonal smooth recovery sequence can be chosen so that its normalized
+compact-fibre-phase relaxation drop tends to zero.
+
+A new scaling obstruction appears.  If the spatial radius is $r$, the target
+amplitude is $s$, and first-, second-, and third-minor energies all contribute
+to one defect mass, then their local scales are
+\[
+ s^2r,\qquad s^4/r,\qquad s^6/r^3.
+\]
+They admit one ordinary field blow-up only when $s\sim r$ and
+$\mu(B_r)\sim r^3$.  Nonvolumetric tangents must be treated as order-specific
+measure or generalized-Young-measure limits.
+
+Inside one normal target ball, a degree-preserving geodesic cutoff gives a
+conditional Caccioppoli inequality with exactly the AP-E13 weighted terms and
+the normalized local comparison deficit.  It does not by itself yield excess
+contraction.  Indeed an explicit smooth sphere-valued family, after exact
+fibre-phase purification, generates the homogeneous pure-base Young measure
+\[
+ F_{31}=\cos\theta_1,\qquad F_{42}=\cos\theta_2.
+\]
+Its barycentric gradient and minors vanish, its weighted cutoff tends to
+zero, but its diffuse graph-energy defect is
+$\frac12+\frac R8>0$.  This disproves any unconditional inference
+``phase purification plus two-limit weighted decay implies $\mu=0$''.  The
+family is not asymptotically minimizing, so it does not refute the desired
+theorem for the selected $B=1$ minimizer.  It proves that normalized full
+local quasiminimality and a strong-quasiconvex boundary comparison are
+indispensable.  Hessian, determinant, and portal promotion remain closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Frozen energy and the Hopf defect vector}
+
+The AP-E11 action remains
+\begin{align}
+ \cE(u)&=\int_\Omega\left[
+ \frac12|Du|^2+\frac R2|M_2(Du)|^2+\frac K2|M_3(Du)|^2
+ +m^2(1-u^0)\right]\dd x,\notag\\
+ (R,K,m^2)&=(1,0.35,0.12).
+ \label{eq:energy}
+\end{align}
+Let $u_j$ be a smooth boundary-preserving degree-$B$ sequence with
+$\cE(u_j)\to I_B$, strongly convergent in $L^2$ to a graph representative
+$u$, and weakly convergent at all three complete-minor levels.  AP-E15
+defines
+\begin{equation}
+ e_j\dd x\stackrel{*}{\rightharpoonup}e_u\dd x+\mu,
+ \qquad
+ e_j=\frac12|Du_j|^2+\frac R2|M_2(Du_j)|^2
+      +\frac K2|M_3(Du_j)|^2,\qquad \mu\geq0.
+ \label{eq:mu}
+\end{equation}
+
+For $n_j=h(u_j)$ and $a_j=2u_j^*\theta$, set
+\begin{align}
+ \nu_j^a&=\frac18|a_j|^2\dd x,&
+ \nu_j^n&=\frac18|Dn_j|^2\dd x,\notag\\
+ \nu_j^{an}&=\frac R{32}|a_j\wedge Dn_j|^2\dd x,&
+ \nu_j^c&=\frac R{32}|da_j|^2\dd x,\notag\\
+ \nu_j^{cs}&=\frac K{128}|a_j\wedge da_j|^2\dd x.
+ \label{eq:hopf-measures}
+\end{align}
+The exact AP-E14 identities imply
+\begin{equation}
+ e_j\dd x=\nu_j^a+\nu_j^n+\nu_j^{an}+\nu_j^c+\nu_j^{cs}.
+ \label{eq:hopf-sum}
+\end{equation}
+Strong convergence of $u_j$ and weak graph convergence imply weak $L^2$
+convergence of each Hopf factor to its counterpart for $u$.  Weighted lower
+semicontinuity therefore gives, after one subsequence,
+\begin{equation}
+ \nu_j^\beta\stackrel{*}{\rightharpoonup}\nu_u^\beta+\mu_\beta,
+ \qquad \mu_\beta\geq0,\qquad
+ \mu=\sum_{\beta\in\{a,n,an,c,cs\}}\mu_\beta.
+ \label{eq:component-defects}
+\end{equation}
+
+\begin{definition}[Hopf Radon--Nikodym weights]
+Because every $\mu_\beta\leq\mu$, define
+\begin{equation}
+ \vartheta_\beta(x)=\frac{\dd\mu_\beta}{\dd\mu}(x),\qquad
+ \vartheta_\beta\geq0,\qquad
+ \sum_\beta\vartheta_\beta=1\quad\mu\text{-a.e.}
+ \label{eq:weights}
+\end{equation}
+These weights distinguish fibre, base, shear, curvature, and
+Chern--Simons-square defect.  Fibre-phase purification does not assert
+$\vartheta_a=\vartheta_{an}=\vartheta_{cs}=0$; it removes only the part
+exposed by an exact compact phase relaxation.
+\end{definition}
+
+\section[A common tangent and diagonal recovery]
+{A common \(\mu\)-a.e. tangent and diagonal recovery}
+
+Let $T_{x_0,r}(x)=(x-x_0)/r$.  At $\mu$-almost every $x_0$, standard
+doubling-radius selection gives $r_\ell\downarrow0$ such that the normalized
+measures
+\begin{equation}
+ \mu_{x_0,r_\ell}
+ =\frac{(T_{x_0,r_\ell})_\#\mu}{\mu(B_{r_\ell}(x_0))}
+ \stackrel{*}{\rightharpoonup}\tau\neq0
+ \quad\text{locally in }\RR^3.
+ \label{eq:tangent}
+\end{equation}
+The normalization can be chosen with
+$\tau(B_1)=1$ after avoiding boundary-mass radii.
+
+\begin{theorem}[Common Hopf tangent and phase-stationary diagonal]
+For $\mu$-almost every $x_0$, the radii in \eqref{eq:tangent} may be chosen so
+that
+\begin{equation}
+ \frac{(T_{x_0,r_\ell})_\#\mu_\beta}
+      {\mu(B_{r_\ell}(x_0))}
+ \stackrel{*}{\rightharpoonup}
+ \vartheta_\beta(x_0)\tau
+ \qquad\text{for every }\beta.
+ \label{eq:component-tangent}
+\end{equation}
+There is also a diagonal $j_\ell\to\infty$ for which the scaled signed
+recovery defects converge to the same measures and, for every fixed $L>0$,
+\begin{equation}
+ \frac{\Delta_{j_\ell}(B_{Lr_\ell}(x_0))}
+      {\mu(B_{r_\ell}(x_0))}\longrightarrow0.
+ \label{eq:normalized-phase-drop}
+\end{equation}
+Thus every tangent is stationary, in normalized energy, against compact
+exact fibre shifts.
+\end{theorem}
+
+\begin{proof}
+The Radon--Nikodym differentiation theorem for the finite family
+$\mu_\beta=\vartheta_\beta\mu$ gives
+\[
+ \frac{\mu_\beta(B_r(x_0))}{\mu(B_r(x_0))}
+ \longrightarrow\vartheta_\beta(x_0)
+ \quad\text{for $\mu$-a.e. }x_0.
+\]
+Apply this simultaneously to a countable dense set of compactly supported
+test functions after the doubling-radius selection.  This proves
+\eqref{eq:component-tangent}.
+
+Let $\sigma_j^\beta=\nu_j^\beta-\nu_u^\beta$.  For each already chosen
+$r_\ell$, weak-star convergence permits $j_\ell$ to be so large that the
+scaled errors against the first $\ell$ test functions are smaller than
+$1/\ell$.  Since $\cE(u_j)-I_B\to0$, enlarge $j_\ell$ again so that
+\begin{equation}
+ \frac{\cE(u_{j_\ell})-I_B}{\mu(B_{r_\ell}(x_0))}
+ <\frac1\ell.                                        \label{eq:diag-excess}
+\end{equation}
+AP-E15 proves
+$0\leq\Delta_j(Q)\leq\cE(u_j)-I_B$ on every fixed admissible phase ball.
+For fixed $L$, $Lr_\ell$ eventually lies below the phase-convexity radius.
+Equations \eqref{eq:diag-excess} and the AP-E15 bound give
+\eqref{eq:normalized-phase-drop}.
+\end{proof}
+
+\begin{remark}[Precise consequence of purification]
+Equation \eqref{eq:normalized-phase-drop} is stronger than unnormalized
+stationarity, but weaker than strong convergence of $a_j$.  A co-closed or
+base-induced connection oscillation can be stationary along the exact fibre
+orbit.  The tangent weights in \eqref{eq:weights} must therefore remain in
+the ledger until a full local comparison eliminates them.
+\end{remark}
+
+\section{Why one field blow-up exists only in the volumetric branch}
+
+Suppose a tangent is represented in a target chart by
+\begin{equation}
+ u(x_0+ry)=\exp_q\bigl(s\,v(y)\bigr),
+ \label{eq:chart-blowup}
+\end{equation}
+where $r$ is the spatial scale and $s$ the target amplitude.  Up to uniformly
+bounded chart factors, homogeneity of complete minors gives
+\begin{align}
+ \int_{B_r}|Du|^2\dd x
+ &\sim s^2r\int_{B_1}|Dv|^2\dd y,\notag\\
+ \int_{B_r}|M_2(Du)|^2\dd x
+ &\sim \frac{s^4}{r}\int_{B_1}|M_2(Dv)|^2\dd y,\notag\\
+ \int_{B_r}|M_3(Du)|^2\dd x
+ &\sim \frac{s^6}{r^3}\int_{B_1}|M_3(Dv)|^2\dd y.
+ \label{eq:three-scales}
+\end{align}
+
+\begin{proposition}[Simultaneous-normalization obstruction]
+Assume $s=r^\alpha$ and $\mu(B_r)\asymp r^d$.  All three expressions in
+\eqref{eq:three-scales} can be simultaneously of order $\mu(B_r)$ only if
+\begin{equation}
+ 2\alpha+1=d,\qquad4\alpha-1=d,\qquad6\alpha-3=d,
+ \label{eq:scaling-system}
+\end{equation}
+whose unique solution is
+\begin{equation}
+ \boxed{\alpha=1,\qquad d=3.}
+ \label{eq:volumetric}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The exponents in \eqref{eq:scaling-system} are the powers of $r$ in
+\eqref{eq:three-scales}.  Subtracting the first equation from the second
+gives $2\alpha=2$; hence $\alpha=1$, and then $d=3$.  The third equation is
+consistent and gives no second branch.
+\end{proof}
+
+Thus a volumetric defect can have an ordinary tangent-gradient Young measure
+with $s\sim r$.  At a nonvolumetric point, normalizing the first-order field
+necessarily sends at least one higher-minor scale to zero or infinity.
+The correct object is then the component tangent
+\eqref{eq:component-tangent}, or a generalized Young measure with separate
+concentration coordinates.  Treating every tangent as one $W^{1,2}$ field
+would silently discard precisely the endpoint concentration under study.
+
+\section{Conditional purified Hopf-base Caccioppoli inequality}
+
+For a ball $B_t\Subset\Omega$, define the relative-homotopy local comparison
+deficit
+\begin{equation}
+ \epsilon_j(B_t)=\cE(u_j;B_t)-
+ \inf\left\{\cE(v;B_t):
+ \begin{array}{l}
+ v=u_j\text{ near }\partial B_t,\\
+ v\simeq u_j\text{ relative }\partial B_t
+ \end{array}\right\}.
+ \label{eq:local-deficit}
+\end{equation}
+Replacing $u_j$ by an allowed $v$ in the full map preserves boundary data
+and global degree.  Consequently
+\begin{equation}
+ 0\leq\epsilon_j(B_t)\leq\cE(u_j)-I_B.
+ \label{eq:deficit-global}
+\end{equation}
+
+Let the image of $u_j$ on $B_t$ lie in one fixed normal ball centred at
+$q\in\SSS^3$, and put $\xi_j=\log_q u_j$.  For
+$0<s<t$, choose $\eta=1$ on $B_s$, $\eta=0$ outside $B_t$, and
+$|D\eta|\leq2/(t-s)$.  The comparison
+\begin{equation}
+ v_j=\exp_q\bigl((1-\eta)\xi_j\bigr)
+ \label{eq:competitor}
+\end{equation}
+equals $q$ in $B_s$, equals $u_j$ near $\partial B_t$, and is homotopic to
+$u_j$ relative to the boundary.
+
+\begin{lemma}[Rank-one cutoff minor bounds]
+With $A=D\xi_j$, $B=-\xi_j\otimes D\eta$, and $c=1-\eta$,
+\begin{align}
+ |D((1-\eta)\xi_j)|^2
+ &\leq C(c^2|A|^2+|\xi_j|^2|D\eta|^2),\notag\\
+ |M_2(cA+B)|^2
+ &\leq C(c^4|M_2(A)|^2
+          +c^2|\xi_j|^2|D\eta|^2|A|^2),\notag\\
+ |M_3(cA+B)|^2
+ &\leq C(c^6|M_3(A)|^2
+          +c^4|\xi_j|^2|D\eta|^2|M_2(A)|^2).
+ \label{eq:rank-one-bounds}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+$B$ has rank one.  Hence
+\[
+ M_2(cA+B)=c^2M_2(A)+cL_2(A,B),\qquad
+ M_3(cA+B)=c^3M_3(A)+c^2L_3(A,A,B),
+\]
+because every term containing two columns from $B$ vanishes.  Exterior
+algebra gives
+$|L_2|^2\leq C|A|^2|B|^2$ and
+$|L_3|^2\leq C|M_2(A)|^2|B|^2$.  Together with
+$|B|=|\xi_j||D\eta|$, this proves \eqref{eq:rank-one-bounds}.  The derivatives
+of $\exp_q$ and its inverse only change $C$ on the fixed normal ball.
+\end{proof}
+
+Write
+\begin{equation}
+ \Phi_j(r)=\int_{B_r}\left[
+ \frac12|Du_j|^2+\frac R2|M_2(Du_j)|^2
+ +\frac K2|M_3(Du_j)|^2\right]\dd x.
+ \label{eq:Phi}
+\end{equation}
+
+\begin{theorem}[Conditional Caccioppoli/hole-filling estimate]
+There is a constant $C$ depending only on the normal ball and the frozen
+coefficients such that
+\begin{align}
+ \Phi_j(s)
+ \leq{}&C\bigl[\Phi_j(t)-\Phi_j(s)\bigr]\notag\\
+ &+\frac{C}{(t-s)^2}\int_{B_t\setminus B_s}
+ |\xi_j|^2\bigl(1+R|Du_j|^2+K|M_2(Du_j)|^2\bigr)\dd x\notag\\
+ &+Cm^2\int_{B_t}|\xi_j|\dd x+\epsilon_j(B_t).
+ \label{eq:caccioppoli}
+\end{align}
+Equivalently, with $\theta=C/(1+C)<1$,
+\begin{align}
+ \Phi_j(s)
+ \leq{}&\theta\Phi_j(t)
+ +\frac{C}{(t-s)^2}\int_{B_t\setminus B_s}
+ |\xi_j|^2\bigl(1+R|Du_j|^2+K|M_2(Du_j)|^2\bigr)\dd x\notag\\
+ &+Cm^2\int_{B_t}|\xi_j|\dd x+C\epsilon_j(B_t).
+ \label{eq:hole-filling}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+Use \eqref{eq:competitor} in \eqref{eq:local-deficit}.  The derivative energy
+of $v_j$ vanishes on $B_s$.  Cancel the unchanged exterior, discard the
+nonnegative derivative energy of $u_j$ on the annulus, and apply
+\eqref{eq:rank-one-bounds}.  Because $V(u)=m^2(1-u^0)$ is $m^2$-Lipschitz on
+$\SSS^3$,
+\[
+ \int_{B_t}|V(v_j)-V(u_j)|\dd x
+ \leq Cm^2\int_{B_t}|\xi_j|\dd x.
+\]
+This proves \eqref{eq:caccioppoli}.  Moving
+$C\Phi_j(s)$ to the left gives \eqref{eq:hole-filling}.
+\end{proof}
+
+After AP-E15 purification, the exact fibre-phase part of the normalized
+comparison deficit vanishes.  The estimate above is therefore the legitimate
+local inequality for the remaining base/mixed problem.  It still needs four
+inputs before it becomes an excess theorem:
+\begin{enumerate}
+ \item normal-ball control or a trace-preserving endpoint replacement;
+ \item sequence-uniform control of the weighted second- and third-order
+       cutoff terms;
+ \item normalized full local quasiminimality, not only phase stationarity;
+ \item a strong-quasiconvex harmonic-approximation step which improves the
+       scale exponent, rather than only $\theta<1$ hole filling.
+\end{enumerate}
+
+\section{A homogeneous phase-purified base Young measure}
+
+The preceding list is not a technical luxury.  There is an exact obstruction
+if the third input is omitted.  On $\TT^3=(\RR/2\pi\mathbb Z)^3$, for an
+integer $N\geq2$, define
+\begin{equation}
+ u_N(x)=\left(
+ \sqrt{1-\frac{\sin^2(Nx_1)+\sin^2(Nx_2)}{N^2}},\
+ 0,\
+ \frac{\sin(Nx_1)}N,\
+ \frac{\sin(Nx_2)}N
+ \right).
+ \label{eq:uN}
+\end{equation}
+It lies exactly in $\SSS^3$, converges uniformly to $e_0$, has rank at most
+two, and is null-homotopic because its image lies in the open hemisphere
+$u^0>0$.
+
+\begin{proposition}[Positive diffuse pure-base defect]
+The family \eqref{eq:uN} satisfies
+\begin{align}
+ Du_N&\rightharpoonup0,&
+ M_2(Du_N)&\rightharpoonup0,&M_3(Du_N)&=0,\notag\\
+ \frac1{|\TT^3|}\int_{\TT^3}|Du_N|^2\dd x&\longrightarrow1,&
+ \frac1{|\TT^3|}\int_{\TT^3}|M_2(Du_N)|^2\dd x
+ &\longrightarrow\frac14.
+ \label{eq:uN-limits}
+\end{align}
+Its graph-energy measures converge to the nonzero diffuse defect
+\begin{equation}
+ e_N\dd x\stackrel{*}{\rightharpoonup}
+ \left(\frac12+\frac R8\right)\dd x.
+ \label{eq:diffuse-defect}
+\end{equation}
+Meanwhile its Hopf connection is
+\begin{equation}
+ a_N=\frac2N\left[
+ -\sin(Nx_2)\cos(Nx_1)\dd x_1
+ +\sin(Nx_1)\cos(Nx_2)\dd x_2\right],
+ \label{eq:aN}
+\end{equation}
+so $\|a_N\|_2=O(N^{-1})$, while
+\begin{equation}
+ da_N=4\cos(Nx_1)\cos(Nx_2)\dd x_1\wedge\dd x_2.
+ \label{eq:daN}
+\end{equation}
+The leading defect is therefore Hopf-base derivative/curvature, not an exact
+fibre oscillation.
+\end{proposition}
+
+\begin{proof}
+Write $\theta_i=Nx_i$.  The leading tangent derivatives are
+\[
+ \partial_1u_N=(0,0,\cos\theta_1,0)+O(N^{-1}),\qquad
+ \partial_2u_N=(0,0,0,\cos\theta_2)+O(N^{-1}).
+\]
+All other columns vanish.  Periodic averaging gives
+$\langle\cos\theta_i\rangle=0$,
+$\langle\cos^2\theta_i\rangle=1/2$, and
+$\langle\cos^2\theta_1\cos^2\theta_2\rangle=1/4$, proving
+\eqref{eq:uN-limits}--\eqref{eq:diffuse-defect}.  Direct substitution in
+$a=2u^*\theta$ gives \eqref{eq:aN}; differentiation gives \eqref{eq:daN}.
+\end{proof}
+
+Let $\chi_N$ minimize the periodic fibre-phase functional of $u_N$.  Since
+$z_N=u_N^0>0$ is real, the potential contribution relative to $\chi=0$ is
+$m^2z_N(1-\cos\chi)\geq0$.  Expanding every derivative term in
+$a_N+2d\chi$ gives a coercive quadratic form in $d\chi$ plus a linear form
+bounded by $C\|a_N\|_2\|d\chi\|_2$.  Comparison with $\chi=0$ therefore yields
+\begin{equation}
+ \|d\chi_N\|_2\leq C\|a_N\|_2=O(N^{-1}).
+ \label{eq:phase-correction}
+\end{equation}
+Elliptic regularity makes $\chi_N$ smooth.  Thus
+$\widetilde u_N=e^{i\chi_N}u_N$ is exactly phase-purified and has the same
+leading defect.
+
+The associated homogeneous tangent-gradient Young measure is the pushforward
+of $(2\pi)^{-2}\dd\theta_1\dd\theta_2$ by
+\begin{equation}
+ F(\theta_1,\theta_2)=
+ \begin{pmatrix}
+ 0&0&0\\
+ 0&0&0\\
+ \cos\theta_1&0&0\\
+ 0&\cos\theta_2&0
+ \end{pmatrix}.
+ \label{eq:young-generator}
+\end{equation}
+It obeys
+\begin{equation}
+ \langle F\rangle=0,\qquad
+ \langle M_2(F)\rangle=0,\qquad
+ \left\langle\frac12|F|^2+\frac R2|M_2(F)|^2\right\rangle
+ =\frac12+\frac R8.
+ \label{eq:young-gap}
+\end{equation}
+It is therefore a nontrivial homogeneous complete-minor Young measure with
+zero barycentric graph vector.
+
+Most importantly,
+\begin{equation}
+ \frac1{|\TT^3|}\int_{\TT^3}
+ |u_N-e_0|^2|M_2(Du_N)|^2\dd x
+ =O(N^{-2})\longrightarrow0.
+ \label{eq:weighted-zero}
+\end{equation}
+Hence even the AP-E15 two-limit weighted quantity can vanish while a diffuse
+base defect remains positive.
+
+\begin{theorem}[Exact scope of the no-go]
+Phase purification, weak complete-minor graph convergence, and
+sequence-uniform weighted cutoff decay do not imply $\mu=0$ or unconditional
+normalized excess contraction.  The family $\widetilde u_N$ is a precise
+counterexample.
+
+It is not a counterexample to the desired theorem for the selected minimizer:
+$u_N$ has degree zero and positive energy while the constant map has zero
+energy.  Equivalently, its normalized full local comparison deficit does not
+vanish.  The construction may be inserted into a vacuum region of a smooth
+degree-one map without changing degree, but it still adds a removable
+positive energy.
+\end{theorem}
+
+\section{Gate decision and next theorem}
+
+AP-E16 changes the blocker in three ways:
+\begin{enumerate}
+ \item The $\mu$-a.e. common tangent, Hopf component weights, and normalized
+       phase-stationary diagonal are \textbf{proved}.
+ \item The geodesic-cutoff Caccioppoli inequality
+       \eqref{eq:caccioppoli} is \textbf{proved conditionally} in one normal
+       target ball, with every missing term displayed.
+ \item Unconditional excess contraction from phase purification and weighted
+       cutoff decay is \textbf{disproved} by the homogeneous base Young
+       measure \eqref{eq:young-generator}.
+\end{enumerate}
+
+The next theorem must combine, rather than separate, recovery and
+quasiminimality:
+\begin{enumerate}
+ \item On the volumetric branch \eqref{eq:volumetric}, prove a
+       boundary-modification theorem which transfers normalized local
+       quasiminimality to the tangent Young measure:
+       \[
+        \frac{\epsilon_{j_\ell}(B_{r_\ell})}
+             {\mu(B_{r_\ell})}\longrightarrow0.
+       \]
+       Exact strong quasiconvexity would then force that measure to be Dirac
+       and eliminate the diffuse branch.
+ \item On nonvolumetric branches, work with the order-specific tangents
+       \eqref{eq:component-tangent}; prove a concentration-capacity or
+       topological lower-bound alternative rather than forcing one field
+       normalization.
+ \item Only after both branches are excluded may one assert full $\mu=0$,
+       local recovery, regularity, and isolation.
+\end{enumerate}
+
+The bosonic Hessian remains unauthorized.  Dirac/Callias operators on a
+prescribed smooth Hopf base may continue as parallel mathematics, but
+determinant and degree-one portal promotion remain false.
+
+\paragraph{Reproducibility.}
+Run \texttt{python3}
+\path{route_f/code/verify_ap_e16_tangent_caccioppoli_young_measure.py}
+from the repository root.  The production card checks the scaling system,
+rank-one minor algebra, homogeneous Young measure, exact sphere generator,
+weighted-cutoff asymptotics, and all fail-closed gates.  It performs no
+lattice relaxation or grid scan.
+
+\end{document}

@@ -1,12 +1,143 @@
 # Route F Roadmap: One Action, One Evidence Chain
 
 Created: 2026-07-13
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E15 relaxation-defect/fibre-purification checkpoint (2026-07-23; current authority)
+## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; current authority)
+
+Status: **normalized full local quasiminimality is proved on the AP-E16
+diagonal.  A recovery-compatible sphere-valued boundary modification and
+Dirac rigidity are proved under the explicit graph-tight annulus condition
+(GTA).  GTA is not derived from the present endpoint graph bounds.  The
+nonvolumetric WZ-capacity/topology alternative is proved unconditionally.**
+The production card passes `12/12`.
+
+### Volumetric transfer and rigidity
+
+- The global minimizing excess already gives
+  `epsilon_(j_l)(B_(rho r_l))/mu(B_(r_l))->0` for every fixed `rho<1`.
+  This is full relative-homotopy quasiminimality, not phase stationarity.
+- GTA requires a one-hemisphere transition layer, vanishing annular graph
+  energy, and the exact weighted cutoff remainder tending to zero.
+- Under GTA,
+  `P[q+r_l(eta_l v_l+(1-eta_l)F_0 y)]` equals the original map near the
+  boundary and preserves relative homotopy and degree.  Its normalized
+  energy tends to `|B_1|W(F_0)`.
+- Null-Lagrangian moments give the exact generalized Young-measure variance
+  identity.  The affine comparison forces every ordinary graph variance and
+  the complete concentration mass to vanish:
+  `nu=delta_(F_0), lambda=0`.
+- Hence the volumetric part of `mu` vanishes at every GTA point.
+
+### Exact remaining endpoint blocker
+
+- GTA does not follow from strong `L2` convergence plus bounded graph energy.
+  A rank-two microball with radius `h` and amplitude `h^(1/4)` has
+  `int|z_h|^2~h^(7/2)`, `int|Dz_h|^2~h^(3/2)`,
+  `int|M2(Dz_h)|^2~1`, `M3=0`, but its thickness-`h` weighted gluing term is
+  `h^(-3/2)`.
+- Classical gradient decomposition/equiintegrability controls one
+  `L^p` gradient scale.  It does not preserve the simultaneous endpoint
+  `L2` graph of `Du,M2,M3`, the `S3` target, and relative degree.
+- The next mainline theorem is therefore GTA for the actual minimizing
+  diagonal, not another abstract Young-measure classification.
+
+### Nonvolumetric alternative
+
+- With `b(r)=(2pi^2)^(-1) int_(B_r) J_u`,
+  `E_3(B_r)>=3K pi^3 |b(r)|^2/(2r^3)`.
+- If local energy is `O(r^d)`, then
+  `|b(r)|=O(r^((d+3)/2))->0`.  A nonzero integer point degree is impossible.
+  The Hopf base also has zero monopole charge because `da` is exact on the
+  ball.
+- A normalized tangent is either WZ-capacity-active, with a positive sextic
+  fraction but vanishing absolute charge, or WZ-neutral.  In the neutral
+  branch any remaining defect is analytic, not protected by Route-E
+  topology.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e17_boundary_transfer_dirac_capacity.tex` and PDF;
+- `route_f/code/verify_ap_e17_boundary_transfer_dirac_capacity.py`;
+- `route_f/output/ap_e17_boundary_transfer_dirac_capacity.{json,md}`;
+- AP-E17 section in the master Route-E derivation ledger.
+
+Full `mu=0`, local recovery, classicality, isolation, Hessian, determinant,
+and portal remain closed.
+
+## AP-E16 tangent/Caccioppoli/Young-measure checkpoint (2026-07-24; superseded above)
+
+Status: **the common `mu`-a.e. tangent and a conditional purified Hopf-base
+Caccioppoli inequality are proved.  Unconditional excess contraction from
+phase purification plus weighted cutoff decay is disproved by an exact
+homogeneous pure-base Young measure.  The counterexample is not
+asymptotically minimizing, so the minimizer theorem remains open but its
+missing hypothesis is now identified: normalized full local quasiminimality
+must survive the blow-up.**  The production card passes `12/12`.
+
+### Closed tangent statements
+
+- The Hopf energy split defines five nonnegative defect measures
+  `mu_a,mu_n,mu_an,mu_c,mu_cs`, whose sum is `mu`.  At `mu`-a.e. `x_0`,
+  every component has the same normalized tangent `tau` with
+  Radon--Nikodym weight `theta_beta(x_0)`.
+- A diagonal recovery sequence realizes those component tangents and obeys
+  `Delta_j(B_(Lr))/mu(B_r)->0` for each fixed `L`.  This proves normalized
+  stationarity against compact exact fibre shifts, not strong convergence
+  of `a_j`.
+- If the target amplitude is `s=r^alpha` and `mu(B_r)~r^d`, simultaneous
+  normalization of first-, second-, and third-minor energies requires
+  `2alpha+1=4alpha-1=6alpha-3=d`.  The unique solution is
+  `(alpha,d)=(1,3)`.  Nonvolumetric tangents must retain order-specific
+  concentration coordinates.
+
+### Conditional local inequality and exact no-go
+
+- In one normal target ball, the geodesic cutoff
+  `v=exp_q((1-eta)log_q u)` gives
+  `Phi_j(s)<=theta Phi_j(t)+weighted cutoff+potential+C epsilon_j(B_t)`,
+  where `theta<1` and `epsilon_j` is the full relative-homotopy local
+  comparison deficit.  All rank-one second- and third-minor cutoff terms are
+  displayed explicitly in the AP-E16 ledger.
+- The exact maps
+  `u_N=(sqrt(1-N^-2(sin^2 Nx1+sin^2 Nx2)),0,
+  N^-1 sin Nx1,N^-1 sin Nx2)` lie in `S3`, have degree zero, and remain
+  nontrivial after exact phase minimization.  They generate
+  `F_31=cos(theta_1), F_42=cos(theta_2)`, with
+  `<F>=<M2(F)>=0` but graph-energy gap `1/2+R/8`.
+- Their weighted cutoff tends to zero while their Hopf-base curvature
+  persists.  Thus the AP-E15 two-limit weighted estimate is necessary for
+  the cutoff argument but not sufficient for `mu=0`.
+- This is not a minimizing counterexample: the constant map removes the
+  positive local energy.  Its role is to prove that an excess theorem must
+  use normalized full local quasiminimality, not only phase stationarity.
+
+### Ordered continuation
+
+1. **Volumetric branch:** prove a recovery-compatible boundary-modification
+   theorem transferring
+   `epsilon_(j_l)(B_(r_l))/mu(B_(r_l))->0` to the tangent Young measure.
+   Combine it with the exact strong-quasiconvex identity to force the tangent
+   to be Dirac.
+2. **Nonvolumetric branch:** retain the component tangents and prove a
+   concentration-capacity or topological lower-bound alternative.
+3. Only after both branches exclude nonzero defect may full `mu=0`, local
+   recovery, regularity, isolation, and the same-action bosonic Hessian be
+   promoted.
+4. Parallel Dirac/Callias operator mathematics remains allowed.  Determinant
+   and degree-one portal promotion remain false.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e16_tangent_caccioppoli_young_measure.tex` and PDF;
+- `route_f/code/verify_ap_e16_tangent_caccioppoli_young_measure.py`;
+- `route_f/output/ap_e16_tangent_caccioppoli_young_measure.{json,md}`;
+- AP-E16 section in the master Route-E derivation ledger.
+
+## AP-E15 relaxation-defect/fibre-purification checkpoint (2026-07-23; superseded above)
 
 Status: **the AP-E11 action is frozen and no further lattice scans are
 authorized.  The relaxation defect measure is defined, and every

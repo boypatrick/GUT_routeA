@@ -1,0 +1,62 @@
+\section{AP-E17: boundary transfer, Dirac rigidity, and WZ capacity}
+
+On the volumetric set
+\[
+ 0<\vartheta(x_0)=
+ \lim_{r\downarrow0}\frac{\mu(B_r(x_0))}{|B_r|}<\infty ,
+\]
+choose the AP-E16 diagonal so that both the global energy excess and the
+strong-$L^2$ tangent error are negligible relative to $\mu(B_r)$.  The full
+relative-homotopy local comparison deficit then already obeys
+\[
+ \frac{\epsilon_{j_\ell}(B_{\rho r_\ell}(x_0))}
+ {\mu(B_{r_\ell}(x_0))}\longrightarrow0 .
+\]
+Thus the missing operation is not quasiminimality but replacement of the
+oscillatory boundary trace by the affine tangent $v_0(y)=F_0y$.
+
+AP-E17 defines the graph-tight annulus condition (GTA): on a shrinking
+rescaled annulus the trace lies in one hemisphere, its complete-minor energy
+vanishes, and
+\[
+ \int\frac{|v_\ell-v_0|^2}{\delta_\ell^2}
+ \bigl(1+R|Dv_\ell|^2+K|M_2(Dv_\ell)|^2\bigr)\longrightarrow0 .
+\]
+Under GTA, radial projection of
+$q+r_\ell[\eta_\ell v_\ell+(1-\eta_\ell)v_0]$ gives a sphere-valued
+comparison with the exact original trace, relative homotopy, and degree, and
+with normalized energy $|B_1|W(F_0)+o(1)$.
+
+For the homogeneous generalized graph Young measure
+$(\nu,\lambda,\nu^\infty)$, null-Lagrangian moments and the AP-E12 identity
+give
+\begin{align}
+ \overline W-W(F_0)
+ ={}&\frac12\int\bigl(
+ |F-F_0|^2+R|M_2(F)-M_2(F_0)|^2\notag\\
+ &\hspace{25mm}+K|M_3(F)-M_3(F_0)|^2\bigr)\dd\nu
+ +\frac12\lambda(B_1).
+\end{align}
+Transferred quasiminimality makes the left side nonpositive, so every term
+vanishes:
+\[
+ \nu=\delta_{F_0},\qquad\lambda=0.
+\]
+This eliminates volumetric defect wherever GTA holds.  GTA is not yet
+derived from the endpoint graph bounds: a rank-two microball of radius $h$
+and amplitude $h^{1/4}$ has strong-$L^2$ norm tending to zero, bounded
+second-minor energy, and weighted gluing cost of order $h^{-3/2}$.
+
+For nonvolumetric tangents, the local Wess--Zumino number satisfies the sharp
+capacity bound
+\[
+ \frac K2\int_{B_r}|M_3(Du)|^2
+ \geq\frac{3K\pi^3}{2r^3}|\mathsf b_u(r)|^2.
+\]
+Hence energy of order $r^d$ implies
+$|\mathsf b_u(r)|=O(r^{(d+3)/2})$ and excludes a nonzero quantized point
+degree.  The normalized tangent is either WZ-capacity-active, with a positive
+sextic fraction but vanishing absolute charge, or WZ-neutral, in which case
+any surviving obstruction is analytic rather than topological.  Full
+$\mu=0$, classicality, Hessian, determinant, and portal remain closed until
+GTA is proved for the actual minimizing diagonal.

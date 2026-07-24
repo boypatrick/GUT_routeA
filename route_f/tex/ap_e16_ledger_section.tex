@@ -1,0 +1,58 @@
+\section{AP-E16: tangent defects, Caccioppoli control, and a base Young measure}
+
+The AP-E15 defect has the exact Hopf decomposition
+\begin{equation}
+ \mu=\mu_a+\mu_n+\mu_{an}+\mu_c+\mu_{cs},
+\end{equation}
+corresponding to $|a|^2$, $|Dn|^2$, $|a\wedge Dn|^2$, $|da|^2$, and
+$|a\wedge da|^2$ with the frozen action coefficients.  At $\mu$-almost every
+$x_0$, one normalized tangent $\tau$ carries all components:
+\begin{equation}
+ \frac{(T_{x_0,r_\ell})_\#\mu_\beta}{\mu(B_{r_\ell}(x_0))}
+ \stackrel{*}{\rightharpoonup}
+ \frac{\dd\mu_\beta}{\dd\mu}(x_0)\tau .
+\end{equation}
+A diagonal recovery sequence can be chosen so that its normalized compact
+phase-relaxation drop tends to zero on every fixed rescaled ball.
+
+If the target amplitude is $s=r^\alpha$ and the tangent mass scales as
+$r^d$, the first-, second-, and third-minor energies scale as
+$s^2r$, $s^4/r$, and $s^6/r^3$.  Simultaneous field normalization requires
+\begin{equation}
+ 2\alpha+1=4\alpha-1=6\alpha-3=d,
+ \qquad\text{hence}\qquad(\alpha,d)=(1,3).
+\end{equation}
+Nonvolumetric defects therefore require order-specific tangent measures.
+
+In one normal target ball, the geodesic cutoff
+$v=\exp_q((1-\eta)\log_q u)$ gives
+\begin{align}
+ \Phi_j(s)\leq{}&C[\Phi_j(t)-\Phi_j(s)]\notag\\
+ &+\frac{C}{(t-s)^2}\int_{B_t\setminus B_s}|\log_q u_j|^2
+ (1+R|Du_j|^2+K|M_2(Du_j)|^2)\notag\\
+ &+Cm^2\int_{B_t}|\log_q u_j|+\epsilon_j(B_t).
+\end{align}
+This closes the conditional purified-base Caccioppoli inequality, but not an
+excess improvement.
+
+The exact obstruction is
+\begin{equation}
+ u_N=\left(
+ \sqrt{1-N^{-2}(\sin^2Nx_1+\sin^2Nx_2)},0,
+ N^{-1}\sin Nx_1,N^{-1}\sin Nx_2\right).
+\end{equation}
+After exact fibre-phase purification, its connection is still $O(N^{-1})$,
+while its homogeneous base Young measure has
+\begin{equation}
+ \langle F\rangle=\langle M_2(F)\rangle=0,\qquad
+ \left\langle\tfrac12|F|^2+\tfrac R2|M_2(F)|^2\right\rangle
+ =\tfrac12+\tfrac R8.
+\end{equation}
+Its weighted cutoff tends to zero.  Thus phase purification plus two-limit
+weighted decay is not sufficient for $\mu=0$.  The sequence is not
+asymptotically minimizing: its normalized full local comparison deficit is
+positive.  The next gate is therefore a recovery-compatible boundary
+modification which transfers normalized quasiminimality to volumetric
+tangent Young measures; strong quasiconvexity can then force them to be
+Dirac.  Nonvolumetric tangents require a separate concentration-capacity or
+topological alternative.  Hessian, determinant, and portal remain closed.

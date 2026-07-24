@@ -1,8 +1,129 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
-## AP-E15 relaxation-defect and fibre-purification checkpoint (2026-07-23; current authority)
+## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; current authority)
+
+The AP-E16 diagonal already transfers **normalized full local
+quasiminimality** at every tangent scale:
+
+`epsilon_(j_l)(B_(rho r_l))/mu(B_(r_l)) -> 0`.
+
+The missing step was identified more precisely: the comparison still has the
+oscillatory recovery-sequence trace, whereas strong quasiconvexity needs an
+affine-barycenter interior comparison.
+
+AP-E17 defines a graph-tight annulus condition (GTA).  On a shrinking
+rescaled annulus it requires one target hemisphere, vanishing annular
+complete-minor energy, and
+
+`int |v_l-v_0|^2/delta_l^2
+ (1+R|Dv_l|^2+K|M2(Dv_l)|^2) -> 0`.
+
+Under GTA, radial projection of
+`q+r_l[eta_l v_l+(1-eta_l)v_0]` is an exact sphere-valued boundary
+modification.  It preserves the original trace, relative homotopy, and global
+degree, while its normalized energy tends to the affine value `W(F_0)`.
+
+The requested Dirac theorem is then closed.  For the homogeneous generalized
+graph Young measure `(nu,lambda,nu_infinity)`,
+
+`Wbar-W(F_0) = 1/2 <|F-F_0|^2
+ +R|M2(F)-M2(F_0)|^2+K|M3(F)-M3(F_0)|^2> + lambda/2`.
+
+Transferred quasiminimality makes the left side nonpositive; the right side
+is nonnegative.  Therefore `nu=delta_(F_0)` and `lambda=0`, eliminating the
+volumetric defect wherever GTA holds.
+
+GTA is not yet a consequence of the current endpoint bounds.  A rank-two
+microball of radius `h` and amplitude `h^(1/4)` has strong `L2` norm and
+first-minor energy tending to zero, bounded second-minor energy, zero third
+minor, but weighted gluing cost `h^(-3/2)`.  This proves that an ordinary
+`W1,2` decomposition lemma cannot supply the missing complete-minor trace
+estimate by itself.
+
+For nonvolumetric tangents, AP-E17 proves the sharp WZ-capacity bound
+
+`E_3(B_r) >= 3 K pi^3 |b(r)|^2/(2 r^3)`.
+
+Thus energy of order `r^d` forces
+`|b(r)|=O(r^((d+3)/2))`; a shrinking tangent cannot carry a nonzero integer
+local degree.  Every nonvolumetric tangent is now classified as either:
+
+1. **capacity-active:** a positive normalized sextic/WZ fraction survives,
+   although its absolute charge tends to zero; or
+2. **WZ-neutral:** no normalized topological capacity survives, so any
+   remaining defect is analytic rather than topologically protected.
+
+The AP-E17 card passes `12/12`.  The next single mainline theorem is GTA for
+the actual minimizing diagonal, via complete-minor equiintegrability or a
+model-specific reverse-Hölder estimate.  Full `mu=0`, classicality,
+isolation, Hessian, determinant, and portal remain closed.
+
+## AP-E16 tangent/Caccioppoli/Young-measure checkpoint (2026-07-24; superseded above)
+
+The AP-E15 defect now has five nonnegative Hopf components
+`mu_a,mu_n,mu_an,mu_c,mu_cs`.  At `mu`-a.e. point they share one normalized
+tangent measure `tau`, with component limits
+
+`(T_x,r)# mu_beta / mu(B_r(x)) -> theta_beta(x) tau`.
+
+A diagonal smooth recovery sequence can simultaneously realize these
+tangents and make the normalized compact-phase relaxation drop tend to zero.
+This is the precise tangent-level content of fibre purification; it is not
+strong convergence of the Hopf connection.
+
+There is a new multi-order scaling obstruction.  For target amplitude
+`s=r^alpha` and tangent mass `mu(B_r)~r^d`, the three graph energies scale as
+`s^2 r`, `s^4/r`, and `s^6/r^3`.  One ordinary field blow-up can normalize
+all three only for `(alpha,d)=(1,3)`.  Nonvolumetric defect points require
+component tangents or generalized Young measures rather than a fictitious
+single `W1,2` tangent field.
+
+Inside a normal target ball, geodesic cutoff gives the conditional estimate
+
+`Phi_j(s) <= theta Phi_j(t)
+ + C/(t-s)^2 int_A |log_q u_j|^2
+   (1+R|Du_j|^2+K|M2(Du_j)|^2)
+ + C m^2 int_Bt |log_q u_j| + C epsilon_j(B_t)`,
+
+where `theta<1` and `epsilon_j` is the full relative-homotopy local comparison
+deficit.  Thus the purified Hopf-base Caccioppoli inequality is proved, but
+an excess contraction still needs normal-ball control, uniform weighted
+control, normalized full quasiminimality, and harmonic approximation.
+
+Most importantly, unconditional contraction is false.  The exact
+sphere-valued sequence
+
+`u_N=(sqrt(1-N^-2(sin^2 Nx1+sin^2 Nx2)),0,
+      N^-1 sin Nx1,N^-1 sin Nx2)`
+
+remains nontrivial after exact fibre-phase purification and generates the
+homogeneous base Young measure
+`F_31=cos(theta_1), F_42=cos(theta_2)`.  Its barycentric gradient and
+second minor vanish, its weighted cutoff tends to zero, but its diffuse
+energy defect is `1/2+R/8`.  Therefore purification plus the AP-E15
+two-limit weighted decay is not sufficient for `mu=0`.  The sequence is not
+asymptotically minimizing—the constant comparison removes its positive
+energy—so it does not refute the desired theorem for the selected `B=1`
+minimizer.
+
+The next valid gate has two branches:
+
+1. in the volumetric branch, prove a recovery-compatible boundary
+   modification which transfers normalized full local quasiminimality to the
+   tangent Young measure; then use exact strong quasiconvexity to force a
+   Dirac measure;
+2. in nonvolumetric branches, use order-specific tangents and prove a
+   concentration-capacity or topological lower-bound alternative.
+
+Only after both branches exclude nonzero defects may one promote `mu=0`,
+local recovery, regularity, isolation, and the bosonic Hessian.  Parallel
+Dirac/Callias mathematics remains allowed, but determinant and portal
+promotion remain false.  The AP-E16 continuum/algebraic card passes `12/12`
+and performs no lattice scan.
+
+## AP-E15 relaxation-defect and fibre-purification checkpoint (2026-07-23; superseded above)
 
 The AP-E11 action is now frozen at
 `(R,K,m^2)=(1,0.35,0.12)`.  No further lattice, triangulation, translated-

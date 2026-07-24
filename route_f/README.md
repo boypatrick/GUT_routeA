@@ -26,7 +26,66 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-23 AP-E15 relaxation defect and fibre purification
+## 2026-07-24 AP-E17 boundary transfer, Dirac rigidity, and WZ capacity
+
+AP-E17 shows that normalized full local quasiminimality was already available
+from the AP-E16 diagonal.  The missing step is an endpoint boundary-trace
+replacement.  It defines the graph-tight annulus condition (GTA) and proves
+that, under GTA, radial projection gives an exact `S3`-valued comparison
+preserving trace, relative homotopy, and degree while replacing the interior
+by the affine tangent.
+
+The AP-E12 strong-quasiconvexity identity then becomes an exact generalized
+Young-measure variance formula.  The comparison forces both ordinary
+oscillation and graph concentration to vanish, so the tangent measure is
+Dirac.  This eliminates volumetric defect at GTA points.
+
+GTA itself remains open.  A rank-two microball scaling proves that strong
+`L2` convergence and bounded complete-minor energy do not control its
+weighted gluing term; standard one-exponent gradient decomposition therefore
+does not close the present target-valued endpoint problem.
+
+For nonvolumetric tangents, the sharp bound
+`E_3(B_r)>=3K pi^3|b(r)|^2/(2r^3)` excludes quantized point-degree
+concentration and gives a capacity-active/WZ-neutral dichotomy.  The `12/12`
+card performs no lattice scan.  GTA for the actual minimizing diagonal is
+now the only mainline continuum gate; Hessian, determinant, and portal remain
+closed.  See `tex/ap_e17_boundary_transfer_dirac_capacity.tex`,
+`code/verify_ap_e17_boundary_transfer_dirac_capacity.py`, and
+`output/ap_e17_boundary_transfer_dirac_capacity.{json,md}`.
+
+## 2026-07-24 AP-E16 tangent defects, Caccioppoli control, and Young-measure no-go (superseded by AP-E17)
+
+AP-E16 resolves the next layer without reopening the lattice branch.  The
+five Hopf components of the relaxation defect have a common normalized
+tangent at `mu`-a.e. point, with their Radon--Nikodym weights, and a diagonal
+recovery sequence is normalized-stationary against exact compact fibre
+phases.
+
+The complete-minor action has only one common ordinary-field blow-up:
+target amplitude `s~r` and volumetric mass `mu(B_r)~r^3`.  Other-dimensional
+defects require component tangents or generalized Young measures.  In a
+normal target ball, rank-one minor algebra gives a conditional geodesic-cutoff
+Caccioppoli inequality containing the full local comparison deficit.
+
+An exact pure-base obstruction shows why this remains conditional.  A smooth
+`S3` sequence generates the homogeneous Young measure
+`F_31=cos(theta_1), F_42=cos(theta_2)`.  It is exactly phase-purifiable, has
+zero barycentric gradient and second minor, and satisfies the weighted-cutoff
+decay, yet retains diffuse graph energy `1/2+R/8`.  Hence AP-E15's
+two-limit weighted condition is not sufficient for `mu=0`.  The family is
+not asymptotically minimizing, so it instead isolates the missing input:
+normalized full local quasiminimality must transfer to the tangent measure.
+
+The next gate is a recovery-compatible boundary modification plus strong
+quasiconvex rigidity in the volumetric branch, and a separate
+concentration-capacity/topological alternative in nonvolumetric branches.
+Hessian, determinant, and portal stay closed.  The `12/12` verifier performs
+no grid scan.  See `tex/ap_e16_tangent_caccioppoli_young_measure.tex`,
+`code/verify_ap_e16_tangent_caccioppoli_young_measure.py`, and
+`output/ap_e16_tangent_caccioppoli_young_measure.{json,md}`.
+
+## 2026-07-23 AP-E15 relaxation defect and fibre purification (superseded by AP-E16 for the tangent gate)
 
 AP-E15 freezes the AP-E11 action and ends the lattice-scan branch.  It defines
 the nonnegative Radon relaxation defect `mu`; its total mass is the

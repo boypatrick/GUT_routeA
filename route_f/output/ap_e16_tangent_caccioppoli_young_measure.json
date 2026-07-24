@@ -1,0 +1,293 @@
+{
+  "card": "AP-E16 tangent measure, Caccioppoli, and Young measure",
+  "mode": "production",
+  "status": "PASS",
+  "summary": {
+    "passed": 12,
+    "total": 12
+  },
+  "parameters": {
+    "R": 1.0,
+    "K": 0.35,
+    "mass_squared": 0.12
+  },
+  "scaling": {
+    "energy_scaling": {
+      "first": "s^2 r",
+      "second": "s^4/r",
+      "third": "s^6/r^3"
+    },
+    "solution": {
+      "alpha": 1.0000000000000002,
+      "dimension": 3.0
+    },
+    "residual_sum_squares": 4.141519752410312e-30,
+    "common_exponents": [
+      3.0000000000000004,
+      3.000000000000001,
+      3.0000000000000018
+    ],
+    "test_dimensions": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "second_mismatch_after_first_normalization": [
+      -2.5,
+      -2.0,
+      -1.5,
+      -1.0,
+      -0.5,
+      0.0
+    ],
+    "third_mismatch_after_first_normalization": [
+      -5.0,
+      -4.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      0.0
+    ],
+    "conclusion": "one ordinary field blow-up normalizes all minor orders only for target amplitude s~r and volumetric defect mass mu(Br)~r^3"
+  },
+  "cutoff_minor_algebra": {
+    "samples": 192,
+    "maximum_second_minor_polynomial_residual": 1.4210854715202004e-14,
+    "maximum_third_minor_polynomial_residual": 2.1316282072803006e-14,
+    "maximum_second_rank_one_bound_ratio": 0.9210481090424427,
+    "maximum_third_rank_one_bound_ratio": 0.7682284748116743,
+    "identities": {
+      "second": "M2(cA+B)=c^2 M2(A)+c L2(A,B) for rank(B)=1",
+      "third": "M3(cA+B)=c^3 M3(A)+c^2 L3(A,A,B) for rank(B)=1"
+    }
+  },
+  "tangent_measure": {
+    "defect_components": [
+      "mu_a",
+      "mu_Dn",
+      "mu_a_wedge_Dn",
+      "mu_da",
+      "mu_a_wedge_da"
+    ],
+    "radon_nikodym_weights": "theta_alpha=d mu_alpha/d mu, theta_alpha>=0, sum theta_alpha=1",
+    "common_tangent": "at mu-a.e. x0, along one normalized tangent sequence, Tan(mu_alpha,x0)=theta_alpha(x0) tau",
+    "diagonal_recovery": "choose j_l after r_l so weak-star errors and global energy excess are o(mu(B_r_l)); normalized compact-phase drop then tends to zero",
+    "what_purification_imposes": "tangent stationarity under exact fibre shifts; it does not set all a-containing Radon-Nikodym weights to zero"
+  },
+  "caccioppoli": {
+    "status": "conditional theorem proved",
+    "competitor": "v=exp_q((1-eta) log_q u) in one normal target ball",
+    "derivative_bound": "Eder(B_s)<=C Eder(B_t\\B_s)+C(t-s)^-2 int_A |u-q|^2(1+R|Du|^2+K|M2|^2)+C m^2 int_Bt |u-q|+local comparison deficit",
+    "hole_filling": "Eder(B_s)<=theta Eder(B_t)+weighted terms+normalized deficit, theta=C/(1+C)<1",
+    "required_inputs_for_actual_minimizer": [
+      "normal-ball or endpoint replacement control",
+      "sequence-uniform weighted equiintegrability",
+      "normalized local quasiminimality",
+      "strong-quasiconvex harmonic approximation for excess contraction"
+    ],
+    "not_sufficient": "phase purification plus weighted cutoff decay alone; the homogeneous base Young measure has both and retains positive defect"
+  },
+  "young_measure": {
+    "grid": 384,
+    "generator": "F(theta1,theta2) has F_31=cos(theta1), F_42=cos(theta2), all other entries zero",
+    "mean_gradient_components": [
+      -3.0839528461809905e-17,
+      -7.37257477290143e-17
+    ],
+    "mean_only_nonzero_second_minor": 6.264279218805137e-19,
+    "mean_first_squared": 1.0,
+    "mean_second_squared": 0.25,
+    "mean_third_squared": 0.0,
+    "graph_energy_jensen_gap": 0.625,
+    "exact_gap": 0.625,
+    "gap_residual": 0.0,
+    "base_fibre_content": {
+      "limiting_connection_a": 0.0,
+      "hopf_base_derivative_nonzero": true,
+      "hopf_curvature_nonzero": true,
+      "third_minor": 0.0
+    }
+  },
+  "sphere_generator": {
+    "family": "u_N=(sqrt(1-N^-2(sin^2 Nx1+sin^2 Nx2)),0,N^-1 sin Nx1,N^-1 sin Nx2)",
+    "rows": [
+      {
+        "ell": 0.125,
+        "sphere_residual": 2.220446049250313e-16,
+        "mean_first_squared": 1.0039684414526933,
+        "mean_second_squared": 0.251976346462563,
+        "mean_third_squared": 0.0,
+        "mean_connection_squared": 0.03125,
+        "connection_squared_over_ell_squared": 2.0,
+        "mean_weighted_cutoff_integrand": 0.0019821939195800936,
+        "mean_weighted_over_ell_squared": 0.126860410853126
+      },
+      {
+        "ell": 0.0625,
+        "sphere_residual": 2.220446049250313e-16,
+        "mean_first_squared": 1.0009803949838476,
+        "mean_second_squared": 0.2504897169047617,
+        "mean_third_squared": 0.0,
+        "mean_connection_squared": 0.0078125,
+        "connection_squared_over_ell_squared": 2.0,
+        "mean_weighted_cutoff_integrand": 0.000490076463009918,
+        "mean_weighted_over_ell_squared": 0.12545957453053902
+      },
+      {
+        "ell": 0.03125,
+        "sphere_residual": 2.220446049250313e-16,
+        "mean_first_squared": 1.0002443793204212,
+        "mean_second_squared": 0.25012215979958446,
+        "mean_third_squared": 0.0,
+        "mean_connection_squared": 0.001953125,
+        "connection_squared_over_ell_squared": 2.0,
+        "mean_weighted_cutoff_integrand": 0.00012218218137668993,
+        "mean_weighted_over_ell_squared": 0.1251145537297305
+      },
+      {
+        "ell": 0.015625,
+        "sphere_residual": 2.220446049250313e-16,
+        "mean_first_squared": 1.0000610500617326,
+        "mean_second_squared": 0.2500305231673112,
+        "mean_third_squared": 0.0,
+        "mean_connection_squared": 0.00048828125,
+        "connection_squared_over_ell_squared": 2.0,
+        "mean_weighted_cutoff_integrand": 3.0524564764286994e-05,
+        "mean_weighted_over_ell_squared": 0.12502861727451953
+      }
+    ],
+    "weighted_cutoff_log_log_slope": 2.006692368061061,
+    "limits": {
+      "mean_first_squared": 1.0,
+      "mean_second_squared": 0.25,
+      "mean_third_squared": 0.0,
+      "connection_L2": 0.0,
+      "weighted_cutoff": 0.0,
+      "positive_defect_density": 0.625
+    },
+    "phase_purification_estimate": "the periodic phase minimizer satisfies ||dchi_N||_2<=C||a_N||_2=O(N^-1), so it preserves the leading base Young measure"
+  },
+  "policy": {
+    "ap_e11_action_frozen": true,
+    "new_lattice_scan": false,
+    "forbidden_scan_calls_found": [],
+    "continuum_algebra_only": true
+  },
+  "gates": {
+    "tangent_measure_blowup": true,
+    "hopf_defect_radon_nikodym_split": true,
+    "normalized_phase_stationarity": true,
+    "single_field_all_order_tangent_general": false,
+    "single_field_volumetric_branch": true,
+    "conditional_hopf_base_caccioppoli": true,
+    "unconditional_excess_contraction": false,
+    "homogeneous_base_young_measure_counterexample": true,
+    "counterexample_is_asymptotically_minimizing": false,
+    "two_limit_weighted_decay_sufficient_alone": false,
+    "full_mu_zero": false,
+    "local_recovery": false,
+    "regularity": false,
+    "continuum_isolation": false,
+    "bosonic_hessian_authorized": false,
+    "parallel_dirac_callias_mathematics_allowed": true,
+    "determinant_promotion": false,
+    "degree_one_portal_promotion": false,
+    "physics_promotion_allowed": false
+  },
+  "checks": [
+    {
+      "group": "scaling",
+      "name": "unique simultaneous complete-minor scaling",
+      "pass": true,
+      "detail": "the three equations give target amplitude s~r and mu(B_r)~r^3"
+    },
+    {
+      "group": "scaling",
+      "name": "nonvolumetric branches require order-specific tangents",
+      "pass": true,
+      "detail": "a first-order field normalization does not retain all higher orders for d!=3"
+    },
+    {
+      "group": "cutoff",
+      "name": "rank-one second-minor expansion",
+      "pass": true,
+      "detail": "maximum residual 1.421e-14"
+    },
+    {
+      "group": "cutoff",
+      "name": "rank-one third-minor expansion",
+      "pass": true,
+      "detail": "maximum residual 2.132e-14"
+    },
+    {
+      "group": "young measure",
+      "name": "zero barycentric gradient",
+      "pass": true,
+      "detail": "means [-3.0839528461809905e-17, -7.37257477290143e-17]"
+    },
+    {
+      "group": "young measure",
+      "name": "zero barycentric second minor",
+      "pass": true,
+      "detail": "mean minor 6.264e-19"
+    },
+    {
+      "group": "young measure",
+      "name": "positive exact Jensen gap",
+      "pass": true,
+      "detail": "gap 0.625000000000"
+    },
+    {
+      "group": "sphere generator",
+      "name": "exact target constraint",
+      "pass": true,
+      "detail": "all sampled generators lie on S3 to machine precision"
+    },
+    {
+      "group": "sphere generator",
+      "name": "pure-base leading limits",
+      "pass": true,
+      "detail": "first/second energy persist while the Hopf connection vanishes"
+    },
+    {
+      "group": "sphere generator",
+      "name": "weighted cutoff vanishes with positive defect",
+      "pass": true,
+      "detail": "weighted slope 2.006692368"
+    },
+    {
+      "group": "analysis",
+      "name": "conditional Caccioppoli versus unconditional contraction",
+      "pass": true,
+      "detail": "Caccioppoli needs normalized full quasiminimality for excess contraction"
+    },
+    {
+      "group": "policy",
+      "name": "no new lattice scan and downstream embargo",
+      "pass": true,
+      "detail": "forbidden scan calls found: []"
+    }
+  ],
+  "sources": [
+    {
+      "path": "route_f/code/verify_ap_e16_tangent_caccioppoli_young_measure.py",
+      "exists": true,
+      "size_bytes": 20297,
+      "sha256": "87f1897403b845acf8ef3eff264f3e0fef889c40233b788be3b40f6d2f0a2f9e"
+    },
+    {
+      "path": "route_f/tex/ap_e16_tangent_caccioppoli_young_measure.tex",
+      "exists": true,
+      "size_bytes": 19930,
+      "sha256": "d2f3497f42bde55d6fdbdafb9fbb31c0eff51167deac2344169275f885788152"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  }
+}

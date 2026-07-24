@@ -1,0 +1,528 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\Id}{\mathrm{Id}}
+
+\title{AP-E17 Recovery-Compatible Boundary Transfer,\\
+Strong-Quasiconvex Dirac Rigidity, and the\\
+Nonvolumetric WZ-Capacity Alternative}
+\author{Route-F derivation ledger}
+\date{24 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note executes the three AP-E16 continuation gates and separates the
+closed statements from the remaining endpoint assumption.  On the
+volumetric part of the relaxation defect, a diagonal minimizing sequence
+already has vanishing normalized \emph{full} local comparison deficit.  The
+missing operation is not quasiminimality but replacement of its oscillatory
+boundary trace by the affine barycentric tangent.
+
+We formulate an explicit graph-tight annulus condition and prove a
+recovery-compatible, sphere-valued boundary modification under precisely
+that condition.  The comparison preserves the original trace, relative
+homotopy, and global degree, while its normalized energy converges to the
+affine tangent energy.  Combining it with the AP-E12 exact
+strong-quasiconvexity identity gives an exact variance formula for the
+homogeneous tangent graph Young measure.  Normalized quasiminimality then
+forces both its ordinary variance and its concentration mass to vanish; the
+measure is Dirac.  Consequently the volumetric defect is zero wherever the
+graph-tight annulus condition holds.
+
+The condition is not derived from the present endpoint graph bounds.  A
+rank-two microball scaling shows why ordinary $W^{1,2}$ decomposition is
+insufficient: strong $L^2$ convergence and bounded first/second-minor energy
+can coexist with a divergent weighted gluing term.  Thus the result closes
+the Young-measure rigidity implication, but not the endpoint annular
+replacement theorem.
+
+For every nonvolumetric tangent we prove an independent alternative.  The
+local Wess--Zumino number $\mathsf b(r)$ obeys the sharp capacity inequality
+\[
+ \cE_3(B_r)\geq\frac{3K\pi^3}{2r^3}|\mathsf b(r)|^2 .
+\]
+Hence a defect of scale $r^d$ has
+$|\mathsf b(r)|=O(r^{(d+3)/2})$ and cannot carry a nonzero quantized local
+degree.  After normalization, either a positive fraction of the tangent is
+forced by this vanishing but capacity-active WZ flux, or the tangent is
+WZ-neutral and any remaining obstruction is analytic rather than
+topological.  Hessian, determinant, and portal promotion remain closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{Frozen graph energy and the volumetric tangent}
+
+The AP-E11 derivative density and complete-minor graph map are
+\begin{align}
+ W(F)&=\frac12|F|^2+\frac R2|M_2(F)|^2+\frac K2|M_3(F)|^2,
+ & (R,K)&=(1,0.35),                                      \label{eq:W}\\
+ \Xi(F)&=\bigl(F,\sqrt R\,M_2(F),\sqrt K\,M_3(F)\bigr),
+ & W(F)&=\frac12|\Xi(F)|^2.                              \label{eq:Xi}
+\end{align}
+Let $u_j$ be the smooth degree-$B$ recovery sequence of AP-E15,
+$\cE(u_j)\to I_B$, with derivative-energy defect
+\begin{equation}
+ W(Du_j)\dd x\stackrel{*}{\rightharpoonup}
+ W(Du)\dd x+\mu .                                       \label{eq:defect}
+\end{equation}
+
+Define the volumetric set
+\begin{equation}
+ \cV=\left\{x_0:
+ 0<\vartheta(x_0)=
+ \lim_{r\downarrow0}\frac{\mu(B_r(x_0))}{|B_r|}<\infty
+ \right\}.                                               \label{eq:V}
+\end{equation}
+On $\cV$, $\mu$ is absolutely continuous with respect to Lebesgue measure.
+We may therefore choose $x_0$ to be simultaneously a density point of
+\eqref{eq:defect}, a Sobolev differentiability point of $u$, and a
+localization point of all complete-minor Young-measure moments.  Put
+\begin{equation}
+ q=u(x_0),\qquad F_0=Du(x_0),\qquad F_0^Tq=0.             \label{eq:qF}
+\end{equation}
+
+Choose $r_\ell\downarrow0$ and then the diagonal $j_\ell$ so that
+\begin{align}
+ \frac{\cE(u_{j_\ell})-I_B}{{\mu(B_{r_\ell}(x_0))}}
+ &\longrightarrow0,                                    \label{eq:global-diag}\\
+ \frac1{r_\ell^5}\int_{B_{r_\ell}(x_0)}
+ |u_{j_\ell}-u|^2\dd x&\longrightarrow0.                \label{eq:L2-diag}
+\end{align}
+The second choice is possible after the radii are fixed because
+$u_j\to u$ strongly in $L^2$.  With $B=B_1(0)$, define the chordal tangent
+\begin{equation}
+ v_\ell(y)=\frac{u_{j_\ell}(x_0+r_\ell y)-q}{r_\ell},
+ \qquad v_0(y)=F_0y.                                    \label{eq:v}
+\end{equation}
+Sobolev differentiability and \eqref{eq:L2-diag} give
+\begin{equation}
+ v_\ell\longrightarrow v_0\quad\hbox{strongly in }L^2(B).
+ \label{eq:v-strong}
+\end{equation}
+Notice the exact scaling identity
+$D_yv_\ell=Du_{j_\ell}(x_0+r_\ell y)$.
+
+\section{What full local quasiminimality already gives}
+
+For $Q\Subset\Omega$, AP-E16 defines the relative-homotopy local deficit
+\begin{equation}
+ \epsilon_j(Q)=\cE(u_j;Q)-
+ \inf\{\cE(w;Q):w=u_j\text{ near }\partial Q,\
+ w\simeq u_j\text{ rel. }\partial Q\}.                  \label{eq:eps}
+\end{equation}
+Replacing the map only in $Q$ preserves its exterior boundary value and
+global degree, hence
+\begin{equation}
+ 0\leq\epsilon_j(Q)\leq\cE(u_j)-I_B.                    \label{eq:eps-global}
+\end{equation}
+
+\begin{proposition}[Normalized full local quasiminimality]
+For every fixed $0<\rho<1$, the diagonal
+\eqref{eq:global-diag} satisfies
+\begin{equation}
+ \frac{\epsilon_{j_\ell}(B_{\rho r_\ell}(x_0))}
+      {\mu(B_{r_\ell}(x_0))}\longrightarrow0.            \label{eq:normalized-eps}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Apply \eqref{eq:eps-global} and divide by
+$\mu(B_{r_\ell}(x_0))$.  This uses every target-valued, trace-preserving,
+relative-homotopy comparison, not merely the compact fibre phase.
+\end{proof}
+
+Thus AP-E16's desired normalized quasiminimality was already contained in
+the global diagonal.  The actual missing step is to build a comparison whose
+trace is $u_{j_\ell}$ but whose interior is the affine tangent.
+
+\section{Graph-tight annuli and boundary modification}
+
+Let $A_\delta=B\setminus\overline{B_{1-\delta}}$.  Choose
+$\eta_\ell\in C^\infty(B;[0,1])$ with
+\begin{equation}
+ \eta_\ell=0\text{ on }B_{1-2\delta_\ell},\qquad
+ \eta_\ell=1\text{ near }\partial B,\qquad
+ |D\eta_\ell|\leq C/\delta_\ell.                         \label{eq:eta}
+\end{equation}
+
+\begin{definition}[Graph-tight annulus condition, GTA]
+The tangent sequence has a graph-tight annulus if there are
+$\delta_\ell\downarrow0$ and $\eta_\ell$ as above such that
+\begin{align}
+ q\cdot u_{j_\ell}(x_0+r_\ell y)&\geq c_0>0
+ \quad\text{on }A_{2\delta_\ell},                        \label{eq:hemisphere}\\
+ \int_{A_{2\delta_\ell}}\!\!
+ \bigl[W(Dv_\ell)+W(F_0)\bigr]\dd y&\longrightarrow0,    \label{eq:annular-energy}\\
+ \int_{A_{2\delta_\ell}}\!\!
+ \frac{|v_\ell-v_0|^2}{\delta_\ell^2}
+ \bigl(1+R|Dv_\ell|^2+K|M_2(Dv_\ell)|^2\bigr)\dd y
+ &\longrightarrow0.                                    \label{eq:annular-weight}
+\end{align}
+\end{definition}
+
+Condition \eqref{eq:hemisphere} is the target-valued trace gate;
+\eqref{eq:annular-energy} prevents energy from being trapped on the chosen
+boundary layer; and \eqref{eq:annular-weight} is exactly the rank-one cutoff
+remainder at all three minor orders.  No unspecified $o(1)$ is hidden in the
+definition.
+
+Set
+\begin{equation}
+ \widehat v_\ell
+ =\eta_\ell v_\ell+(1-\eta_\ell)v_0,\qquad
+ \widehat u_\ell(x_0+r_\ell y)
+ =\frac{q+r_\ell\widehat v_\ell(y)}
+ {|q+r_\ell\widehat v_\ell(y)|}.                        \label{eq:uhat}
+\end{equation}
+Outside $B_{r_\ell}(x_0)$ leave $\widehat u_\ell=u_{j_\ell}$.
+
+\begin{lemma}[Rank-one graph estimate]
+On the transition annulus,
+\begin{equation}
+ D\widehat v_\ell
+ =\eta_\ell Dv_\ell+(1-\eta_\ell)F_0
+ +(v_\ell-v_0)\otimes D\eta_\ell.                       \label{eq:Dvhat}
+\end{equation}
+The last term has rank one.  Consequently
+\begin{align}
+ W(D\widehat v_\ell)
+ \leq C\bigg[&
+ 1+W(Dv_\ell)+W(F_0)\notag\\
+ &+\frac{|v_\ell-v_0|^2}{\delta_\ell^2}
+ \bigl(1+R|Dv_\ell|^2+K|M_2(Dv_\ell)|^2\bigr)\bigg].
+ \label{eq:graph-cutoff}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+The first-order estimate follows directly from \eqref{eq:Dvhat}.  If
+$A=\eta_\ell Dv_\ell+(1-\eta_\ell)F_0$ and
+$H=(v_\ell-v_0)\otimes D\eta_\ell$, then $\operatorname{rank}H\leq1$.
+Multilinearity of determinants gives
+\[
+ M_2(A+H)=M_2(A)+L_2(A,H),\qquad
+ M_3(A+H)=M_3(A)+L_3(A,A,H),
+\]
+with
+$|L_2|^2\leq C|A|^2|H|^2$ and
+$|L_3|^2\leq C|M_2(A)|^2|H|^2$.
+Convex interpolation bounds the minors of $A$ by the corresponding
+quantities for $Dv_\ell$ and $F_0$.  Using
+$|H|\leq C|v_\ell-v_0|/\delta_\ell$ proves
+\eqref{eq:graph-cutoff}.
+\end{proof}
+
+\begin{theorem}[Recovery-compatible boundary modification]
+If GTA holds, then \eqref{eq:uhat} is well defined for all sufficiently
+large $\ell$, is sphere valued, equals $u_{j_\ell}$ near
+$\partial B_{r_\ell}(x_0)$, and is homotopic to it relative to that boundary.
+Moreover
+\begin{equation}
+ \limsup_{\ell\to\infty}\frac1{r_\ell^3}
+ \int_{B_{r_\ell}(x_0)}
+ W(D\widehat u_\ell)\dd x
+ \leq |B|W(F_0).                                       \label{eq:competitor-energy}
+\end{equation}
+The normalized difference of the potential terms also tends to zero.
+\end{theorem}
+
+\begin{proof}
+Near the boundary, $\widehat v_\ell=v_\ell$, so
+$q+r_\ell\widehat v_\ell=u_{j_\ell}$ and
+$\widehat u_\ell=u_{j_\ell}$ exactly.  In the transition layer,
+\eqref{eq:hemisphere} and $q+r_\ell v_0\to q$ uniformly keep the straight
+interpolation away from the origin.  Radial projection therefore supplies a
+relative-boundary homotopy and preserves global degree.
+
+For $\mathcal P(z)=z/|z|$,
+\begin{equation}
+ D\mathcal P(z)=\frac{\Id-\mathcal P(z)\otimes\mathcal P(z)}{|z|}.
+ \label{eq:DP}
+\end{equation}
+After the change of variables $x=x_0+r_\ell y$,
+\[
+ D_x\widehat u_\ell
+ =D\mathcal P(q+r_\ell\widehat v_\ell)D_y\widehat v_\ell.
+\]
+On $B_{1-2\delta_\ell}$, $\widehat v_\ell=v_0$, and
+$D_x\widehat u_\ell\to F_0$ uniformly.  On the annulus,
+$D\mathcal P$ and its exterior powers are uniformly bounded.  Therefore
+\eqref{eq:graph-cutoff} together with
+\eqref{eq:annular-energy}--\eqref{eq:annular-weight} makes the annular
+energy $o(1)$.  This proves \eqref{eq:competitor-energy}.
+
+The potential $m^2(1-u^0)$ is Lipschitz on $\SSS^3$.  Both the affine
+interior and the GTA transition converge in measure to $q$, while the
+annular volume tends to zero.  Its normalized comparison error is therefore
+$o(1)$.
+\end{proof}
+
+\section{Transfer to the tangent and exact Dirac rigidity}
+
+\begin{theorem}[Volumetric quasiminimality transfer]
+At a point $x_0\in\cV$ satisfying GTA,
+\begin{equation}
+ \limsup_{\ell\to\infty}\frac1{r_\ell^3}
+ \int_{B_{r_\ell}(x_0)}W(Du_{j_\ell})\dd x
+ \leq |B|W(F_0).                                       \label{eq:transfer}
+\end{equation}
+Consequently $\vartheta(x_0)=0$.
+\end{theorem}
+
+\begin{proof}
+Use $\widehat u_\ell$ in \eqref{eq:eps} and combine
+\eqref{eq:normalized-eps} with \eqref{eq:competitor-energy}.  Since
+$\mu(B_{r_\ell})\sim\vartheta(x_0)|B|r_\ell^3$, the normalized local deficit
+is $o(r_\ell^3)$.  On the other hand, differentiation of
+\eqref{eq:defect} gives
+\[
+ \lim_{\ell\to\infty}\frac1{r_\ell^3}
+ \int_{B_{r_\ell}(x_0)}W(Du_{j_\ell})\dd x
+ =|B|\{W(F_0)+\vartheta(x_0)\}.
+\]
+Comparison with \eqref{eq:transfer} forces $\vartheta(x_0)=0$.
+\end{proof}
+
+The same conclusion has a more informative Young-measure form.  Let
+$(\nu,\lambda,\nu^\infty)$ be the homogeneous generalized tangent Young
+measure generated by the graph vectors $\Xi(Dv_\ell)$.  Here $\nu$ is the
+ordinary oscillation measure, while $\lambda$ and $\nu^\infty$ record
+quadratic graph concentration.  Localization and the null-Lagrangian moment
+identities give
+\begin{equation}
+ \langle F\rangle_\nu=F_0,\qquad
+ \langle M_k(F)\rangle_\nu=M_k(F_0),\quad k=2,3.
+ \label{eq:moments}
+\end{equation}
+
+\begin{theorem}[Exact graph-variance identity and Dirac rigidity]
+For the homogeneous tangent,
+\begin{align}
+ \overline W-W(F_0)
+ ={}&\frac12\int\bigl[
+ |F-F_0|^2
+ +R|M_2(F)-M_2(F_0)|^2\notag\\
+ &\hspace{35mm}
+ +K|M_3(F)-M_3(F_0)|^2\bigr]\dd\nu(F)
+ +\frac12\lambda(B).                                   \label{eq:variance}
+\end{align}
+If normalized quasiminimality is transferred by GTA, then
+$\overline W\leq W(F_0)$ and every term on the right vanishes.  Hence
+\begin{equation}
+ \boxed{\nu=\delta_{F_0},\qquad\lambda=0.}               \label{eq:Dirac}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Expand the three squares in $W$.  The cross terms vanish by
+\eqref{eq:moments}; the quadratic recession of
+$\frac12|\Xi|^2$ equals $\frac12$ on the graph unit sphere and contributes
+$\lambda(B)/2$.  This proves \eqref{eq:variance}.  The transfer theorem gives
+the reverse inequality, whereas \eqref{eq:variance} is nonnegative.  Equality
+forces $F=F_0$ $\nu$-a.s. and zero concentration mass.
+\end{proof}
+
+This is the requested strong-quasiconvex conclusion: once the correct
+boundary comparison exists, there is no nontrivial homogeneous tangent
+Young measure left to classify.
+
+\section{Why GTA is not yet a consequence of the graph bound}
+
+The classical decomposition lemma for an $L^p$-bounded sequence of gradients
+can separate an $L^p$-equiintegrable part from concentration
+\cite{FonsecaMullerPedregal1998}.  Generalized gradient Young-measure theory
+also describes boundary concentration for one fixed $p$-growth
+\cite{Kruzik2012}.  Neither statement modifies one map while simultaneously
+preserving the algebraic identities
+\[
+ M_2(Dv)=Dv\wedge Dv,\qquad M_3(Dv)=Dv\wedge Dv\wedge Dv,
+\]
+their separate endpoint $L^2$ bounds, the $\SSS^3$ target, and relative
+degree.
+
+The missing weighted estimate cannot be recovered from strong $L^2$
+convergence by H\"older alone.  Let $\psi\in C_c^\infty(B_1;\RR^2)$ have a
+nonzero second minor, embed it in $\RR^4$, and set on a ball of radius $h$
+\begin{equation}
+ z_h(x)=a_h\psi(x/h),\qquad a_h=h^{1/4}.                 \label{eq:microball}
+\end{equation}
+Its derivative has rank at most two, and scaling gives
+\begin{align}
+ \int|z_h|^2&\asymp h^{7/2},&
+ \int|Dz_h|^2&\asymp h^{3/2},\notag\\
+ \int|M_2(Dz_h)|^2&\asymp1,&
+ M_3(Dz_h)&=0.                                         \label{eq:micro-scales}
+\end{align}
+Yet if the cutoff thickness is $\delta=h$,
+\begin{equation}
+ \delta^{-2}\int|z_h|^2|M_2(Dz_h)|^2
+ \asymp h^{-3/2}\longrightarrow\infty.                  \label{eq:micro-weight}
+\end{equation}
+Radial projection of $(1,z_h)$ to $\SSS^3$ preserves these leading powers.
+This example does not prove that every annulus is bad; it proves the precise
+logical point that the current strong $L^2$ and complete-minor energy bounds
+do not imply \eqref{eq:annular-weight}.  A complete-minor
+equiintegrability/trace theorem, or a model-specific reverse-H\"older
+estimate, is still required.
+
+\section{Nonvolumetric concentration and WZ capacity}
+
+For a smooth $u:B_r\to\SSS^3$, write
+\begin{equation}
+ J_u=\det[u,\partial_1u,\partial_2u,\partial_3u],\qquad
+ \mathsf b_u(r)=\frac1{2\pi^2}\int_{B_r}J_u\dd x.        \label{eq:b}
+\end{equation}
+With the AP-E14 orientation, $\mathsf b$ is also
+$(16\pi^2)^{-1}\int a\wedge da$.  Pointwise
+$|J_u|\leq|M_3(Du)|$.
+
+\begin{theorem}[Sharp local WZ-capacity lower bound]
+For every ball,
+\begin{equation}
+ \boxed{\;
+ \cE_3(u;B_r)=\frac K2\int_{B_r}|M_3(Du)|^2\dd x
+ \geq\frac{3K\pi^3}{2r^3}|\mathsf b_u(r)|^2 .\;}
+ \label{eq:wz-capacity}
+\end{equation}
+In Hopf variables the first/curvature components also obey
+\begin{equation}
+ \left(\frac18\int_{B_r}|a|^2\right)
+ \left(\frac R{32}\int_{B_r}|da|^2\right)
+ \geq R\pi^4|\mathsf b_u(r)|^2.                         \label{eq:hopf-capacity}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Cauchy--Schwarz and $|B_r|=4\pi r^3/3$ give
+\[
+ (2\pi^2|\mathsf b|)^2
+ \leq |B_r|\int_{B_r}|M_3(Du)|^2.
+\]
+Multiplication by $K/2$ proves \eqref{eq:wz-capacity}.
+For \eqref{eq:hopf-capacity}, use
+$(16\pi^2\mathsf b)^2\leq
+(\int|a|^2)(\int|da|^2)$.
+\end{proof}
+
+\begin{corollary}[No quantized point-degree concentration]
+Suppose along a tangent sequence
+\begin{equation}
+ \cE(u_{j_\ell};B_{r_\ell}(x_0))\leq Cr_\ell^d
+ \quad(d\geq0).
+ \label{eq:dscale}
+\end{equation}
+Then
+\begin{equation}
+ |\mathsf b_{u_{j_\ell}}(r_\ell)|
+ \leq\left(\frac{2C}{3K\pi^3}\right)^{1/2}
+ r_\ell^{(d+3)/2}\longrightarrow0.                     \label{eq:bdecay}
+\end{equation}
+If the boundary is constant so that $\mathsf b$ is an integer relative
+degree, it is therefore zero for all sufficiently large $\ell$.
+\end{corollary}
+
+Thus no nonvolumetric defect can hide a nonzero integer $B=1$ bubble at a
+point.  The Hopf base has no separate monopole charge either: since $a$ is a
+globally defined one-form on the ball,
+\begin{equation}
+ \int_{\partial B_r}da=\int_{B_r}d(da)=0.               \label{eq:no-monopole}
+\end{equation}
+
+For rational $0<\rho<1$, define the normalized capacity fraction
+\begin{equation}
+ \kappa_\ell(\rho)=
+ \frac{3K\pi^3}{2}
+ \frac{|\mathsf b_{u_{j_\ell}}(\rho r_\ell)|^2}
+ {(\rho r_\ell)^3\mu(B_{r_\ell}(x_0))}.                 \label{eq:kappa}
+\end{equation}
+After one diagonal subsequence, every $\kappa_\ell(\rho)$ has a limit.
+Equation \eqref{eq:wz-capacity} gives the following exhaustive alternative.
+
+\begin{theorem}[Nonvolumetric capacity/topology alternative]
+At every nonvolumetric tangent point, exactly one of the following occurs.
+\begin{enumerate}
+ \item \textbf{Capacity-active branch.}  For some rational $\rho$,
+ $\lim\kappa_\ell(\rho)>0$.  A positive fraction of the normalized tangent
+ energy is forced into the sextic/WZ component.  Its absolute WZ number still
+ tends to zero by \eqref{eq:bdecay}, so it is a fractional capacity effect,
+ not a quantized topological atom.
+ \item \textbf{WZ-neutral branch.}  For every rational $\rho$,
+ $\kappa_\ell(\rho)\to0$.  The tangent carries neither an integer local
+ degree nor a positive normalized WZ-capacity fraction.  Any surviving
+ defect is analytically concentrated in the graph variables and is not
+ protected by Route-E topology.
+\end{enumerate}
+\label{thm:alternative}
+\end{theorem}
+
+The alternative is a classification, not yet an exclusion theorem.  The
+capacity-active branch must be retained as an order-specific concentration
+coordinate.  The WZ-neutral branch can be removed only after a GTA-type
+trace theorem is proved for generalized graph tangents.
+
+\section{Gate decision}
+
+The three requested tasks now have the following exact status.
+\begin{enumerate}
+ \item \textbf{Boundary transfer: conditional theorem proved.}
+ Normalized full local quasiminimality is unconditional on the AP-E16
+ diagonal.  Its transfer to the affine tangent is proved under GTA.  GTA
+ itself is not implied by the present endpoint graph bounds.
+ \item \textbf{Dirac rigidity: proved once transfer holds.}
+ Equation \eqref{eq:variance} forces both oscillation variance and
+ concentration mass to vanish, so the homogeneous tangent is exactly
+ $\delta_{F_0}$.
+ \item \textbf{Nonvolumetric alternative: proved unconditionally.}
+ Equations \eqref{eq:wz-capacity}--\eqref{eq:kappa} exclude quantized
+ point-degree concentration and split every remaining tangent into the
+ capacity-active or WZ-neutral branch.
+\end{enumerate}
+
+The new mainline blocker is therefore narrower than AP-E16: prove GTA for
+the actual minimizing diagonal, most plausibly by a complete-minor
+equiintegrability theorem or a model-specific reverse-H\"older estimate.
+Until that endpoint trace theorem closes, full $\mu=0$, local recovery,
+classicality, isolation, and the bosonic Hessian remain false.  Determinant
+and degree-one portal promotion also remain false.
+
+\paragraph{Reproducibility.}
+Run \texttt{python3}
+\path{route_f/code/verify_ap_e17_boundary_transfer_dirac_capacity.py}
+from the repository root.  The card verifies radial projection, exact
+strong-quasiconvex variance, the microball scaling obstruction, WZ-capacity
+constants, the nonvolumetric exponent, and every fail-closed gate.  It
+performs no lattice relaxation or grid scan.
+
+\begin{thebibliography}{9}
+\bibitem{FonsecaMullerPedregal1998}
+I.~Fonseca, S.~M\"uller, and P.~Pedregal,
+\emph{Analysis of concentration and oscillation effects generated by
+gradients}, SIAM J. Math. Anal. \textbf{29} (1998), 736--756,
+\url{https://doi.org/10.1137/S0036141096306534}.
+
+\bibitem{Kruzik2012}
+M.~K\v{r}u\v{z}\'ik,
+\emph{Quasiconvexity at the boundary and concentration effects generated by
+gradients}, ESAIM Control Optim. Calc. Var. \textbf{19} (2013), 679--700,
+\url{https://arxiv.org/abs/1009.0795}.
+\end{thebibliography}
+
+\end{document}

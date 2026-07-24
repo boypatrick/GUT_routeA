@@ -1,0 +1,247 @@
+{
+  "card": "AP-E17 boundary transfer / Dirac rigidity / WZ capacity",
+  "mode": "continuum algebraic audit; no lattice scan",
+  "status": "PASS",
+  "summary": {
+    "passed": 12,
+    "total": 12
+  },
+  "parameters": {
+    "R": 1.0,
+    "K": 0.35,
+    "samples": 64,
+    "periodic_grid": 24
+  },
+  "boundary_projection": {
+    "samples": 64,
+    "finite_difference_step": 1e-07,
+    "maximum_projection_derivative_residual": 1.5871329805960954e-09,
+    "maximum_tangent_residual": 2.597032670710829e-16,
+    "maximum_exact_boundary_recovery_residual": 2.220446049250313e-16,
+    "identity": "DP(z)=(I-P(z) tensor P(z))/|z|"
+  },
+  "strong_quasiconvexity": {
+    "grid": 24,
+    "energy_excess": 0.08949585057445196,
+    "graph_variance": 0.08949585057445196,
+    "identity_residual": 0.0,
+    "mean_gradient_residual": 1.0477729794899915e-14,
+    "mean_second_minor_residual": 3.0531133177191805e-16,
+    "mean_third_minor_residual": 9.540979117872439e-18,
+    "dirac_implication": "if transferred quasiminimality makes the energy excess nonpositive, the nonnegative graph variance and concentration mass both vanish"
+  },
+  "microball_obstruction": {
+    "amplitude": "a_h=h^(1/4)",
+    "scales": {
+      "L2_map": "a_h^2 h^3",
+      "first_minor_energy": "a_h^2 h",
+      "second_minor_energy": "a_h^4/h",
+      "third_minor_energy": 0.0,
+      "weighted_gluing_at_delta_h": "a_h^6/h^3"
+    },
+    "slopes": {
+      "L2_map": 3.499999999999999,
+      "first_minor_energy": 1.4999999999999998,
+      "second_minor_energy": -5.339044173024847e-18,
+      "weighted_gluing": -1.5
+    },
+    "smallest_h_values": {
+      "h": 0.000244140625,
+      "L2_map": 2.2737367544323206e-13,
+      "first_minor_energy": 3.814697265625e-06,
+      "second_minor_energy": 1.0,
+      "weighted_gluing": 262144.0
+    },
+    "conclusion": "strong L2 convergence plus bounded graph energy does not imply the GTA weighted annular remainder"
+  },
+  "wz_capacity": {
+    "wz_rows": [
+      {
+        "radius": 0.8,
+        "constant_J": 3.4054373491061227,
+        "direct_sextic_energy": 4.352536368564155,
+        "capacity_lower_bound": 4.352536368564155
+      },
+      {
+        "radius": 0.4,
+        "constant_J": 27.243498792848982,
+        "direct_sextic_energy": 34.82029094851324,
+        "capacity_lower_bound": 34.82029094851324
+      },
+      {
+        "radius": 0.2,
+        "constant_J": 217.94799034279185,
+        "direct_sextic_energy": 278.5623275881059,
+        "capacity_lower_bound": 278.5623275881059
+      },
+      {
+        "radius": 0.1,
+        "constant_J": 1743.5839227423348,
+        "direct_sextic_energy": 2228.4986207048473,
+        "capacity_lower_bound": 2228.4986207048473
+      }
+    ],
+    "maximum_sharp_constant_residual": 0.0,
+    "capacity_formula": "E3 >= 3 K pi^3 |b|^2/(2 r^3)",
+    "hopf_component_test": {
+      "left_component_product": 0.30078125,
+      "right_topological_bound": 0.30078125,
+      "residual": 0.0
+    }
+  },
+  "nonvolumetric": {
+    "dimensions": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "wz_decay_exponents": [
+      1.5,
+      1.75,
+      2.0,
+      2.25,
+      2.5,
+      2.75
+    ],
+    "relative_wz_decay_at_r_1e-4": [
+      1.0000000000000002e-06,
+      1.0000000000000001e-07,
+      1e-08,
+      1e-09,
+      1.0000000000000002e-10,
+      1.0000000000000001e-11
+    ],
+    "all_quantized_charges_eventually_zero": true,
+    "alternative": {
+      "capacity_active": "positive normalized kappa forces a positive sextic tangent fraction but the absolute WZ number still vanishes",
+      "wz_neutral": "kappa vanishes at every rational radius; any remaining defect is analytic and not a quantized topological atom"
+    }
+  },
+  "policy": {
+    "forbidden_execution_tokens": [
+      "subprocess",
+      "scipy.optimize",
+      "lattice_relax",
+      "translated_starts",
+      "triangulation_scan"
+    ],
+    "hits": [],
+    "no_lattice_or_mesh_scan": true
+  },
+  "gates": {
+    "normalized_full_local_quasiminimality": true,
+    "graph_tight_annulus_derived_from_current_bounds": false,
+    "conditional_recovery_compatible_boundary_modification": true,
+    "quasiminimality_transfer_under_gta": true,
+    "strong_quasiconvex_dirac_rigidity_under_transfer": true,
+    "volumetric_defect_eliminated_without_gta": false,
+    "nonvolumetric_wz_capacity_bound": true,
+    "quantized_point_degree_concentration": false,
+    "nonvolumetric_capacity_topology_alternative": true,
+    "full_mu_zero": false,
+    "local_recovery": false,
+    "classicality": false,
+    "continuum_isolation": false,
+    "bosonic_hessian_authorized": false,
+    "parallel_dirac_callias_mathematics_allowed": true,
+    "determinant_promotion": false,
+    "degree_one_portal_promotion": false,
+    "physics_promotion_allowed": false
+  },
+  "checks": [
+    {
+      "group": "boundary",
+      "name": "radial projection derivative",
+      "pass": true,
+      "detail": "maximum finite-difference residual 1.587e-09"
+    },
+    {
+      "group": "boundary",
+      "name": "exact original trace recovery",
+      "pass": true,
+      "detail": "P(q+r(u-q)/r)=u residual 2.220e-16"
+    },
+    {
+      "group": "strong quasiconvexity",
+      "name": "null-Lagrangian moment identities",
+      "pass": true,
+      "detail": "periodic gradient means reproduce all affine complete minors"
+    },
+    {
+      "group": "strong quasiconvexity",
+      "name": "exact graph variance identity",
+      "pass": true,
+      "detail": "identity residual 0.000e+00"
+    },
+    {
+      "group": "strong quasiconvexity",
+      "name": "Dirac gap is strictly positive for a nonconstant generator",
+      "pass": true,
+      "detail": "positive graph variance 0.089495850574"
+    },
+    {
+      "group": "endpoint",
+      "name": "rank-two microball keeps bounded second-minor energy",
+      "pass": true,
+      "detail": "a_h=h^(1/4) gives integral |M2|^2 of order one"
+    },
+    {
+      "group": "endpoint",
+      "name": "weighted annular gluing is not automatic",
+      "pass": true,
+      "detail": "the cutoff remainder diverges like h^(-3/2)"
+    },
+    {
+      "group": "capacity",
+      "name": "sharp WZ-capacity constant",
+      "pass": true,
+      "detail": "maximum constant-field equality residual 0.000e+00"
+    },
+    {
+      "group": "capacity",
+      "name": "Hopf component capacity product",
+      "pass": true,
+      "detail": "Cauchy equality residual 0.000e+00"
+    },
+    {
+      "group": "capacity",
+      "name": "nonvolumetric defect cannot carry quantized point degree",
+      "pass": true,
+      "detail": "all b(r)=O(r^((d+3)/2)) exponents are positive for d>=0"
+    },
+    {
+      "group": "gates",
+      "name": "conditional closure and downstream embargo",
+      "pass": true,
+      "detail": "GTA remains open; classicality, Hessian, determinant, and portal remain false"
+    },
+    {
+      "group": "policy",
+      "name": "no lattice relaxation or mesh scan",
+      "pass": true,
+      "detail": "forbidden execution calls found: []"
+    }
+  ],
+  "sources": [
+    {
+      "path": "route_f/code/verify_ap_e17_boundary_transfer_dirac_capacity.py",
+      "exists": true,
+      "size_bytes": 20081,
+      "sha256": "f3dab329998d22c97c198d4d98f0998ef7a6dc2e490b9b4b958f802a2e307a67"
+    },
+    {
+      "path": "route_f/tex/ap_e17_boundary_transfer_dirac_capacity.tex",
+      "exists": true,
+      "size_bytes": 20962,
+      "sha256": "53cc253178d8b84177bbad90afad2992e647bb4a707361791dc3466fc26fe744"
+    }
+  ],
+  "runtime": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  }
+}
