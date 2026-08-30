@@ -1,0 +1,398 @@
+{
+  "admitted_invariant_multiplicities": {
+    "A A": 1,
+    "A A A": 1,
+    "A A A A": 2,
+    "A A B C": 2,
+    "A A H Hb": 2,
+    "A A S Sb": 1,
+    "A B B S": 1,
+    "A H H Sb": 1,
+    "A H Hb": 1,
+    "B B C C": 4,
+    "B B C H": 1,
+    "B B H H": 1,
+    "B C": 1,
+    "B C H Hb": 2,
+    "B C S Sb": 1,
+    "H H Hb Hb": 2,
+    "H H Sb": 1,
+    "H Hb": 1,
+    "H Hb S Sb": 1,
+    "S S Sb Sb": 1,
+    "S Sb": 1
+  },
+  "anomaly": {
+    "PQ_cubed": -48,
+    "QCD_instanton_coefficient_Nhat": -12,
+    "SU3c^2_PQ": -6,
+    "Spin10^2_PQ": -6,
+    "diagonal_Z4_phase_residual": 2.4492935982947064e-16,
+    "gravitational_PQ": -48,
+    "naive_domain_wall_number": 6,
+    "physical_domain_wall_number": 3,
+    "scalar_charge_gcd": 2
+  },
+  "channel_intersections": {
+    "A A A A": [
+      "1",
+      "54",
+      "660",
+      "770"
+    ],
+    "A A B C": [
+      "1",
+      "770"
+    ],
+    "A A H Hb": [
+      "1",
+      "54"
+    ],
+    "A B B S": [
+      "54"
+    ],
+    "A H H Sb": [
+      "54"
+    ],
+    "B B C C": [
+      "54",
+      "1050",
+      "2772",
+      "4125"
+    ],
+    "B B C H": [
+      "1050"
+    ],
+    "B B H H": [
+      "54"
+    ],
+    "B C H Hb": [
+      "1",
+      "45"
+    ],
+    "H H Hb Hb": [
+      "1",
+      "54"
+    ]
+  },
+  "checks": [
+    {
+      "detail": "admitted=21",
+      "group": "basis",
+      "name": "every admitted multidegree is PQ neutral",
+      "pass": true
+    },
+    {
+      "detail": "neutral=44, excluded=18",
+      "group": "basis",
+      "name": "every neutral multidegree is admitted or explicitly excluded by Spin(10) channels",
+      "pass": true
+    },
+    {
+      "detail": "all 21 representative multidegrees",
+      "group": "basis",
+      "name": "coefficient multiplicity matches invariant multiplicity",
+      "pass": true
+    },
+    {
+      "detail": "24 real + 5 complex",
+      "group": "parameters",
+      "name": "corrected scalar action has 34 raw real coefficients",
+      "pass": true
+    },
+    {
+      "detail": "PQ is the one-dimensional null direction",
+      "group": "parameters",
+      "name": "five coupling phases have rank-two rephasing orbit",
+      "pass": true
+    },
+    {
+      "detail": "delta1, delta2, delta3",
+      "group": "parameters",
+      "name": "three scalar CP invariants remain",
+      "pass": true
+    },
+    {
+      "detail": "raw/classical/quantum-PQ",
+      "group": "parameters",
+      "name": "full corrected counts are 60/49/48",
+      "pass": true
+    },
+    {
+      "detail": "max norm=4.464e-15",
+      "group": "tensor",
+      "name": "126 x 126bar has no symmetric-traceless 54 bilinear",
+      "pass": true
+    },
+    {
+      "detail": "min antisymmetric norm=2.790e-01",
+      "group": "tensor",
+      "name": "the absent 54 test is non-vacuous because the 45 bilinear survives",
+      "pass": true
+    },
+    {
+      "detail": "orbit rank=24",
+      "group": "alignment",
+      "name": "54 breaks Spin(10) to the 21-generator Pati-Salam algebra",
+      "pass": true
+    },
+    {
+      "detail": "orbit rank=33, unbroken=12",
+      "group": "alignment",
+      "name": "54 plus 126 leaves exactly the 12-generator SM algebra",
+      "pass": true
+    },
+    {
+      "detail": "3 families, q16=-1, T(16)=2",
+      "group": "anomaly",
+      "name": "Spin(10)^2-PQ coefficient is -6",
+      "pass": true
+    },
+    {
+      "detail": "each 16 contributes A3=-2",
+      "group": "anomaly",
+      "name": "QCD instanton coefficient is Nhat=-12",
+      "pass": true
+    },
+    {
+      "detail": "max phase residual=2.449e-16",
+      "group": "global-form",
+      "name": "a pi/2 PQ rotation is the inverse Spin(10) Z4 center action",
+      "pass": true
+    },
+    {
+      "detail": "12 QCD phases / Z4 gauge identification",
+      "group": "domain-wall",
+      "name": "naive N_DW=6 is reduced to physical N_DW=3",
+      "pass": true
+    },
+    {
+      "detail": "N_DW=3; inflation or extra anomalous matter is required",
+      "group": "domain-wall",
+      "name": "minimal model retains a post-inflation domain-wall problem",
+      "pass": true
+    },
+    {
+      "detail": "tokens=5",
+      "group": "artifact",
+      "name": "companion TeX contains basis, anomaly, and global-form interfaces",
+      "pass": true
+    }
+  ],
+  "coefficient_map": {
+    "A A": [
+      "mu2"
+    ],
+    "A A A": [
+      "c"
+    ],
+    "A A A A": [
+      "a",
+      "b"
+    ],
+    "A A B C": [
+      "alpha",
+      "beta"
+    ],
+    "A A H Hb": [
+      "eta0",
+      "eta2"
+    ],
+    "A A S Sb": [
+      "chi3"
+    ],
+    "A B B S": [
+      "chi4"
+    ],
+    "A H H Sb": [
+      "chi7"
+    ],
+    "A H Hb": [
+      "xi3"
+    ],
+    "B B C C": [
+      "lambda0",
+      "lambda2",
+      "lambda4",
+      "lambda4p"
+    ],
+    "B B C H": [
+      "eta1"
+    ],
+    "B B H H": [
+      "eta3"
+    ],
+    "B C": [
+      "nu2"
+    ],
+    "B C H Hb": [
+      "gamma1",
+      "gamma2"
+    ],
+    "B C S Sb": [
+      "chi2"
+    ],
+    "H H Hb Hb": [
+      "xi1",
+      "xi2"
+    ],
+    "H H Sb": [
+      "chi6"
+    ],
+    "H Hb": [
+      "xi02"
+    ],
+    "H Hb S Sb": [
+      "chi5"
+    ],
+    "S S Sb Sb": [
+      "chi1"
+    ],
+    "S Sb": [
+      "mus2"
+    ]
+  },
+  "date": "2026-08-30",
+  "excluded_neutral_multidegrees": [
+    "A A B H",
+    "A A C Hb",
+    "A B C",
+    "A B H",
+    "A B Hb S",
+    "A C H Sb",
+    "A C Hb",
+    "A S Sb",
+    "B B S",
+    "B H",
+    "B H H Hb",
+    "B H S Sb",
+    "B Hb S",
+    "C C Sb",
+    "C H Hb Hb",
+    "C H Sb",
+    "C Hb",
+    "C Hb S Sb"
+  ],
+  "model_id": "P54PQ-v2",
+  "neutral_multidegrees": {
+    "2": [
+      "A A",
+      "B C",
+      "B H",
+      "C Hb",
+      "H Hb",
+      "S Sb"
+    ],
+    "3": [
+      "A A A",
+      "A B C",
+      "A B H",
+      "A C Hb",
+      "A H Hb",
+      "A S Sb",
+      "B B S",
+      "B Hb S",
+      "C C Sb",
+      "C H Sb",
+      "H H Sb",
+      "Hb Hb S"
+    ],
+    "4": [
+      "A A A A",
+      "A A B C",
+      "A A B H",
+      "A A C Hb",
+      "A A H Hb",
+      "A A S Sb",
+      "A B B S",
+      "A B Hb S",
+      "A C C Sb",
+      "A C H Sb",
+      "A H H Sb",
+      "A Hb Hb S",
+      "B B C C",
+      "B B C H",
+      "B B H H",
+      "B C C Hb",
+      "B C H Hb",
+      "B C S Sb",
+      "B H H Hb",
+      "B H S Sb",
+      "C C Hb Hb",
+      "C H Hb Hb",
+      "C Hb S Sb",
+      "H H Hb Hb",
+      "H Hb S Sb",
+      "S S Sb Sb"
+    ]
+  },
+  "new_operator": {
+    "channel": "54 in Sym^2(10)",
+    "coefficient": "chi7",
+    "consequence": "P54PQ-v1 superseded by P54PQ-v2",
+    "monomial": "Phi_ij phi_i phi_j S* + h.c.",
+    "pq_charge": 0
+  },
+  "parameter_count": {
+    "physical_scalar_cp_phases": [
+      "arg(eta3)-2arg(eta1)",
+      "arg(chi4)+arg(chi6)-2arg(eta1)",
+      "arg(chi7)-arg(chi6)"
+    ],
+    "scalar_quotient_reals": 32,
+    "scalar_raw_reals": 34,
+    "scalar_rephasing_rank": 2,
+    "total_classical_quotient_reals": 49,
+    "total_quantum_pq_observable_reals": 48,
+    "total_raw_reals": 60
+  },
+  "representation_products": {
+    "10x10": "1_s + 45_a + 54_s",
+    "126x10": "210 + 1050",
+    "126x126": "54 + 945 + 1050 + 2772 + 4125 + 6930",
+    "126x126bar": "1 + 45 + 210 + 770 + 5940 + 8910",
+    "126x54": "126 + 1728 + 4950",
+    "54x54": "1 + 45 + 54 + 660 + 770 + 1386",
+    "Sym2_126": "54 + 1050 + 2772 + 4125",
+    "Sym2_54": "1 + 54 + 660 + 770"
+  },
+  "schema": "route-f-p54-spin10-pq-audit-v1",
+  "sources": [
+    {
+      "path": "route_f/tex/p54_spin10_pq_audit.tex",
+      "sha256": "336218d95805c9f5c6c6f42e17451b3db82cb409e7bcf3e9b72b3001307a64f0"
+    },
+    {
+      "path": "route_f/code/verify_p54_spin10_pq_audit.py",
+      "sha256": "8b66b071fd6c8f891d704e5d6f178a411d1581cfa221f8ad47258f8955ee52f2"
+    }
+  ],
+  "status": {
+    "invariant_basis_closed_through_dimension_four": true,
+    "p1_authorized_on_v2_only": true,
+    "pq_anomaly_domain_wall_closed": true,
+    "previous_action_card_v1_superseded": true
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 17,
+    "total": 17
+  },
+  "tensor_diagnostics": {
+    "antisymmetric_norms_126x126bar": [
+      0.31253795963944236,
+      0.28613744360746246,
+      0.2789567113052181,
+      0.3371205561045278
+    ],
+    "orbit_rank_54": 24,
+    "orbit_rank_54_plus_126": 33,
+    "symmetric_traceless_norms_126x126bar": [
+      3.9760654525440385e-15,
+      4.46441529500765e-15,
+      3.2381847248368435e-15,
+      4.145435625060695e-15
+    ],
+    "unbroken_generator_count": 12
+  }
+}

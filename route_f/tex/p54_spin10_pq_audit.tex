@@ -1,0 +1,285 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,longtable,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={P54 Spin(10) invariant-basis and PQ audit}}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\hc}{\mathrm{h.c.}}
+\newcommand{\A}{\mathcal A}
+\title{Independent $\Spin(10)$ Invariant-Basis and PQ Audit\\
+\large Action correction, global quotient, and the domain-wall gate}
+\author{Route-F four-dimensional mainline}
+\date{30 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We audit the scalar action of
+$3(16_F)+54_{\mathbb R}+126_{\mathbb C}+10_{\mathbb C}+1_{\mathbb C}$
+without assuming that the previously printed tensor list is complete.  The
+representation ring and an exhaustive PQ-neutral multidegree enumeration
+find one missing renormalizable invariant,
+$\chi_7\Phi_{ij}\phi_i\phi_jS^*+\hc$.  Thus \texttt{P54PQ-v1} is superseded
+by \texttt{P54PQ-v2}; the parameter counts become $60/49/48$ and three
+scalar CP phases survive.  We also obtain
+$\A_{\Spin(10)^2-\mathrm{PQ}}=-6$, the QCD instanton coefficient
+$\widehat N=-12$, and physical $N_{\rm DW}=3$ after the diagonal
+$\mathbb Z_4$ center identification.  The latter is a genuine cosmological
+debt, not a convention-dependent factor of two.
+\end{abstract}
+
+\section{Audit contract}
+
+Write
+\begin{equation}
+ A=54,\quad B=126,\quad C=\overline{126},\quad
+ H=10,\quad \bar H=10^*,\quad S=1,\quad \bar S=1^*,
+\end{equation}
+with PQ charges
+\begin{equation}
+ q(A,B,C,H,\bar H,S,\bar S)=(0,2,-2,-2,2,-4,4).
+ \label{eq:charges}
+\end{equation}
+Because a bosonic monomial uses symmetric powers whenever identical fields
+occur, a tensor-product singlet count without the appropriate permutation
+projection is not sufficient.  We therefore use both the full products and
+their symmetric parts.
+
+The required product data are \cite{Slansky1981}
+\begin{align}
+10\otimes10&=1_s\oplus45_a\oplus54_s,\label{eq:10sq}\\
+54\otimes54&=1\oplus45\oplus54\oplus660\oplus770\oplus1386,\nonumber\\
+126\otimes10&=210\oplus1050,\nonumber\\
+126\otimes54&=126\oplus1728\oplus4950,\nonumber\\
+126\otimes126&=54\oplus945\oplus1050\oplus2772\oplus4125\oplus6930,
+\nonumber\\
+126\otimes\overline{126}
+ &=1\oplus45\oplus210\oplus770\oplus5940\oplus8910.
+ \label{eq:products}
+\end{align}
+The dimensions determine the permutation projections:
+\begin{align}
+\Sym^2(54)&=1\oplus54\oplus660\oplus770,
+&\wedge^2(54)&=45\oplus1386,\nonumber\\
+\mathrm{Sym}^2(126)&=54\oplus1050\oplus2772\oplus4125,
+&\wedge^2(126)&=945\oplus6930.
+\label{eq:symmetric-products}
+\end{align}
+For example, $54+1050+2772+4125=8001=126\cdot127/2$.
+
+\section{Complete invariant basis through dimension four}
+
+The following table gives one representative of a complex-conjugate pair;
+``multiplicity'' is the dimension of the singlet space at that multidegree.
+The coefficient labels coincide with the corrected action card.
+\begin{longtable}{@{}llll@{}}
+\toprule
+Degree & multidegree & multiplicity & coefficient(s)\\
+\midrule
+\endhead
+2&$A^2$&1&$\mu^2$\\
+2&$BC$&1&$\nu^2$\\
+2&$H\bar H$&1&$\xi_0^2$\\
+2&$S\bar S$&1&$\mu_s^2$\\
+\midrule
+3&$A^3$&1&$c$\\
+3&$AH\bar H$&1&$\xi_3$\\
+3&$H^2\bar S+\hc$&1&$\chi_6$ complex\\
+\midrule
+4&$A^4$&2&$a,b$\\
+4&$A^2BC$&2&$\alpha,\beta$\\
+4&$A^2H\bar H$&2&$\eta_0,\eta_2$\\
+4&$A^2S\bar S$&1&$\chi_3$\\
+4&$B^2C^2$&4&$\lambda_0,\lambda_2,\lambda_4,\lambda'_4$\\
+4&$BCH\bar H$&2&$\gamma_1,\gamma_2$\\
+4&$BCS\bar S$&1&$\chi_2$\\
+4&$H^2\bar H^2$&2&$\xi_1,\xi_2$\\
+4&$H\bar HS\bar S$&1&$\chi_5$\\
+4&$S^2\bar S^2$&1&$\chi_1$\\
+4&$AB^2S+\hc$&1&$\chi_4$ complex\\
+4&$AH^2\bar S+\hc$&1&$\boxed{\chi_7\ \text{complex}}$\\
+4&$B^2CH+\hc$&1&$\eta_1$ complex\\
+4&$B^2H^2+\hc$&1&$\eta_3$ complex\\
+\bottomrule
+\end{longtable}
+
+The nontrivial multiplicities follow by common-channel intersection:
+\begin{align}
+ A^2BC &: (1\oplus54\oplus660\oplus770)
+ \cap(1\oplus45\oplus210\oplus770\oplus\cdots)=1\oplus770,\nonumber\\
+ A^2H\bar H &: \Sym^2(54)\cap(10\otimes10)=1\oplus54,\nonumber\\
+ B^2C^2 &: \mathrm{Sym}^2(126)\cap\mathrm{Sym}^2(\overline{126})
+ =54\oplus1050\oplus2772\oplus4125,\nonumber\\
+ BCH\bar H &: (126\otimes\overline{126})\cap(10\otimes10)=1\oplus45,
+ \label{eq:intersections}\\
+ AB^2S &: 54,\qquad AH^2\bar S:54,qquad
+ B^2CH:1050,\qquad B^2H^2:54.\nonumber
+\end{align}
+For $A^4$, the orthogonal conjugation invariants of a real traceless
+symmetric matrix at degree four are
+$(\operatorname{tr}A^2)^2$ and $\operatorname{tr}A^4$; the four channels in
+$\Sym^2(54)$ do not give four independent fully symmetric fourth powers.
+
+The new term is therefore unavoidable:
+\begin{equation}
+ \boxed{V\supset\chi_7\Phi_{ij}\phi_i\phi_jS^*
+ +\chi_7^*\Phi_{ij}\phi_i^*\phi_j^*S.}
+ \label{eq:chi7}
+\end{equation}
+Equation~\eqref{eq:10sq} gives the unique $54$ contraction, while
+$0+2(-2)+4=0$ verifies PQ neutrality.  Its multidegree differs from every
+other operator, so equations of motion or integration by parts cannot remove
+it from a non-derivative renormalizable basis.
+
+For completeness, the machine ledger enumerates all $6+12+26=44$
+PQ-neutral multidegrees of degrees two, three, and four.  Every entry not in
+the table fails a displayed channel intersection.  Two useful examples are
+\begin{equation}
+ BH:\quad126\otimes10=210\oplus1050\not\ni1,
+ \qquad
+ ABC:\quad126\otimes\overline{126}\not\ni54.
+\end{equation}
+The second statement is independently checked using random self-dual
+five-forms: the symmetric-traceless part of
+$K_{ij}=\Sigma_{iabcd}\Sigma^*_{jabcd}/4!$ vanishes at machine precision,
+whereas its antisymmetric $45$ part is nonzero.
+
+\section{Corrected parameter quotient}
+
+There are 24 real scalar coefficients and five complex ones, hence 34 raw
+scalar reals.  Under independent rephasings of $(\Sigma,\phi,S)$ the five
+complex-coupling phase vectors are
+\begin{equation}
+ v_{\eta_1}=(1,1,0),\quad v_{\eta_3}=(2,2,0),\quad
+ v_{\chi_4}=(2,0,1),\quad
+ v_{\chi_6}=v_{\chi_7}=(0,2,-1).
+\end{equation}
+Their exact rank is two and their common null direction is the PQ action.
+Thus three invariant phases remain; a convenient basis is
+\begin{align}
+ \delta_1&=\arg\eta_3-2\arg\eta_1,\nonumber\\
+ \delta_2&=\arg\chi_4+\arg\chi_6-2\arg\eta_1,\nonumber\\
+ \delta_3&=\arg\chi_7-\arg\chi_6.
+\end{align}
+Including two gauge/topological reals and 24 raw Yukawa reals gives
+\begin{equation}
+ \boxed{N_{\rm raw}=60,\qquad N_{\rm classical}=49,\qquad
+ N_{\rm quantum\ PQ}=48.}
+\end{equation}
+The second count removes the two scalar rephasings and the nine-dimensional
+$U(3)$ family orbit.  The third trades the unified theta angle against the
+anomalous PQ origin.
+
+\section{PQ anomaly from first principles}
+
+For left-handed Weyl fermions define
+\begin{equation}
+ \A_{G^2-\mathrm{PQ}}\delta^{AB}
+ =\sum_f q_f\operatorname{tr}_{R_f}(T^AT^B).
+\end{equation}
+With $\operatorname{tr}_{16}(T^AT^B)=2\delta^{AB}$ and three
+$q_{16}=-1$ families,
+\begin{equation}
+ \boxed{\mathcal A_{10}\equiv\A_{\Spin(10)^2-\mathrm{PQ}}
+ =3(-1)T(16)=-6.}
+ \label{eq:a10}
+\end{equation}
+The QCD result can be checked without unification.  One family contains two
+colored Weyl triplets in $q_L$ and one antitriplet in each of $u^c,d^c$.
+Using $T(3)=T(\bar3)=1/2$,
+\begin{equation}
+ \A_{3}^{(1)}=(-1)\left[2T(3)+T(\bar3)+T(\bar3)\right]=-2,
+ \qquad \A_3=-6.
+\end{equation}
+For an integer instanton number $\nu$, a PQ rotation by $\alpha$ changes the
+measure by
+\begin{equation}
+ \exp(i\widehat N\alpha\nu),\qquad
+ \widehat N=2\A_3=-12.
+ \label{eq:nhat}
+\end{equation}
+The gravitational and cubic global-anomaly ledger is similarly
+\begin{equation}
+ \A_{\mathrm{grav}^2-\mathrm{PQ}}=3\cdot16(-1)=-48,
+ \qquad \A_{\mathrm{PQ}^3}=3\cdot16(-1)^3=-48.
+\end{equation}
+Scalars do not contribute to chiral triangle anomalies.
+
+\section{Global form and domain-wall number}
+
+The charge normalization alone gives $\gcd(|q_B|,|q_H|,|q_S|)=2$ and the
+often quoted naive result $|\widehat N|/2=6$.  This is not yet the number of
+physically distinct vacua because the matter spinor fixes the gauge group to
+$\Spin(10)$, whose center is $\mathbb Z_4$.
+
+Choose its generator $z$ to act on
+$(16,54,126,10,1)$ as
+\begin{equation}
+ z=(i,1,-1,-1,1).
+\end{equation}
+At $\alpha=\pi/2$, the PQ action is
+\begin{equation}
+ e^{i\alpha q}=(-i,1,-1,-1,1).
+\end{equation}
+Their product is the identity on every field.  Hence the faithful global
+group is
+\begin{equation}
+ \frac{\Spin(10)\times U(1)_{\rm PQ}}{\mathbb Z_4^{\rm diag}},
+ \label{eq:globalform}
+\end{equation}
+and the physical PQ orbit has $\alpha\sim\alpha+\pi/2$.  The QCD potential
+is proportional to $\cos(12\alpha+\bar\theta)$, so its number of minima in
+one physical orbit is
+\begin{equation}
+ \boxed{N_{\rm DW}=\frac{12(\pi/2)}{2\pi}=3.}
+ \label{eq:ndw}
+\end{equation}
+This agrees with the center-quotient prescription and explicit axion
+alignment analysis of Ref.~\cite{Ernst2018}.  It also explains why dividing
+the naive answer by four would be wrong: the naive six has already divided
+by the common scalar charge two.  Starting from $|\widehat N|=12$, the
+single diagonal $\mathbb Z_4$ quotient gives three directly.
+
+$N_{\rm DW}=3>1$ means that a post-inflation PQ transition is excluded
+without an additional repair.  Viable options are: PQ breaking before or
+during inflation with no later restoration; extra colored chiral matter
+chosen to change the anomaly while preserving unification; or an explicitly
+declared small bias whose induced strong-CP shift is separately bounded.
+None is part of \texttt{P54PQ-v2}; therefore the domain-wall problem remains
+an honest model-level debt.
+
+\section{Gate decision}
+
+The independent invariant and anomaly audits are closed, but their result is
+not ``the old action is confirmed.''  Instead:
+\begin{enumerate}
+\item \texttt{P54PQ-v1} is superseded because it omitted \eqref{eq:chi7}.
+\item \texttt{P54PQ-v2} is the only action on which P1 may construct a
+stationary point, Hessian, or spectrum.
+\item The exact gauge-orbit calculation gives rank 24 for the $54$ direction
+and rank 33 for $54+126$, leaving the 12 Standard-Model generators.  The P1
+Hessian must therefore contain exactly 33 gauge Goldstones before gauge
+fixing, plus the PQ axion direction prior to QCD effects.
+\item $N_{\rm DW}=3$ is carried forward as a phenomenological blocker, not
+silently reset to one.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{Slansky1981}
+R.~Slansky, ``Group theory for unified model building,''
+\href{https://doi.org/10.1016/0370-1573(81)90092-2}{Phys. Rept. 79 (1981) 1--128}.
+
+\bibitem{Ernst2018}
+A.~Ernst, A.~Ringwald, and C.~Tamarit,
+``Axion Predictions in $SO(10)\times U(1)_{\rm PQ}$ Models,''
+\href{https://arxiv.org/abs/1801.04906}{JHEP 02 (2018) 103}.
+
+\bibitem{BabuKhan2015}
+K.~S.~Babu and S.~Khan,
+``A Minimal Non-Supersymmetric SO(10) Model,''
+\href{https://arxiv.org/abs/1507.06712}{arXiv:1507.06712}.
+\end{thebibliography}
+\end{document}

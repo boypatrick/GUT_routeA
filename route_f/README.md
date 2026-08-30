@@ -3,9 +3,66 @@
 Route F is the integration route for Routes A--E.  It is not a sixth claim of
 new fundamental physics.  Its job is to turn the useful representation,
 geometry, messenger, amplitude, dynamics, and string ideas into one auditable
-theory with one action and one evidence chain.
+program with one action per physical branch, explicit claim boundaries, and
+separate evidence chains for four-dimensional physics, family UV, and soliton
+mathematics.
 
-The review found three immediate blockers:
+## 2026-08-30 three-layer program reset (current authority)
+
+Route F now has three independent layers.  **P** is the four-dimensional
+testable mainline: freeze one non-supersymmetric `Spin(10)` action and derive
+its vacuum, spectrum, thresholds, flavor, proton decay, amplitudes, and
+out-of-fit predictions.  **U** is the optional family-UV line: construct
+three complete chiral `16`s through a representation-valued Dirac index and
+anomaly-safe microscopic model.  **S** is the independent AP-E soliton/
+complete-minor mathematics line.
+
+GTA, `mu=0`, AP-E11 classicality, the same-action Hessian, determinant
+variation, and the former degree-one portal no longer block P or U.  AP-E1--18
+remain preserved and publishable in their stated mathematical domains.  A
+future soliton--family portal would be a new optional model, not an automatic
+consequence of matching `CP1`, `O(2)`, or `c1=2`.
+
+The primary P baseline is now the predictive non-SUSY `P54PQ-v2` branch:
+`Spin(10) x U(1)_PQ` with
+`3 x 16_F + 54_H,R + 126_H,C + 10_H,C + 1_H,C`.  The gauge singlet is a
+required part of the PQ action.  The exact shorter no-PQ field list is the
+three-Yukawa-matrix comparison `P54N`; the `210_H + 120_H` branch remains a
+comparison/rescue model.  The primary U target separates spin from gauge
+flux on `CP1`:
+
+```text
+K^(1/2)=O(-1), L_F=O(3), K^(1/2) tensor L_F=O(2),
+h0(O(2))=3, h1(O(2))=0.
+```
+
+Thus the microscopic family question is an anomaly-safe
+`Ind D_UV = 3 x 16` construction, not necessarily an exactly-two
+colour/orbital rule.  See `ROADMAP.md` for the authoritative dependencies.
+
+The complete P0-A action/parameter/convention card is in
+`tex/p54_action_parameter_convention_card.tex`, with a compiled PDF in
+`output/pdf/`, a `20/20` verifier, and JSON/Markdown production cards.  The
+independent representation-ring audit found one omitted operator,
+`chi7 Phi_ij phi_i phi_j S* + h.c.`, so version 1 is superseded.  Version 2
+also corrects the printed eta1 conjugation and the index-invalid chi4
+contraction.  The phase-orbit rank is two: the action has three invariant
+scalar CP phases and `60/49/48` raw/classical-quotient/quantum-PQ continuous
+parameter counts.
+
+The invariant/PQ audit in `tex/p54_spin10_pq_audit.tex` passes `17/17` and
+finds `A[Spin(10)^2-PQ]=-6`, `Nhat_QCD=-12`, and physical `N_DW=3` after the
+diagonal `Z4` center quotient.  The P1 artifact
+`tex/p54_p1_stationary_hessian_spectrum.tex` passes `14/14`: it builds the
+full `328 x 328` Hessian, verifies 33 gauge plus one PQ zero direction,
+tunes exactly one `(1,2,+/-1/2)` light doublet, and exports a 35-row SM-irrep
+spectrum covering all 328 real scalar coordinates with no negative modes.
+These are tree-level algebraic closures, not yet a running, flavor, or
+phenomenological fit.
+
+The prior single-chain review found three blockers.  Their calculations remain
+valid, but after the three-layer reset only branch-relevant items block their
+own layer:
 
 1. Route B's stated `U(1)_R` rule does not forbid the post-breaking operator
    `X L H_u`, and integrating out a canonical propagating messenger also gives
@@ -26,7 +83,40 @@ The review found three immediate blockers:
    evidence card checks a 29-item dynamics P0 subset plus 4 core artifacts,
    not every path mentioned anywhere in the roadmap.
 
-## 2026-07-24 AP-E17 boundary transfer, Dirac rigidity, and WZ capacity
+## 2026-07-24 AP-E18 GTA instability and scale-polished recovery
+
+AP-E18 tests GTA against the actual accuracy supplied by the AP-E17
+minimizing diagonal.  That accuracy is additive at the tangent-ball scale;
+it is not uniform relative to arbitrarily smaller balls.  Consequently it
+does not provide a reverse-Hölder seed at unresolved microscales.
+
+The coarse `(p,q)=(2,6)` growth is outside the current `q<3` relaxed
+strongly-quasiconvex range in three dimensions.  An `A`-free reformulation
+also cannot be imported: the complete-minor vector obeys linear curl/div
+identities, but its Plücker graph, sphere target, and tangency identities are
+nonlinear competitor constraints.
+
+The exact obstruction is a rank-two needle with
+`A_e=e^(-1/2)` and `b_e=h_e=e^2`, placed across the tangent-ball boundary.
+Its tangent `L2` mass is `O(e^5)` and graph energy is `O(e)`, but both
+first- and second-minor energy-amplitude correlations are order one.  It
+therefore violates every shrinking GTA annulus.  At physical radius `r=e`
+the perturbation has amplitude `sqrt(e)` and energy `O(r^4)=o(r^3)`, so it
+preserves degree and is invisible to the tangent defect measure and the
+current additive comparison accuracy.
+
+Thus GTA is not derivable from the additive tangent estimates alone.  This
+does not assert that the selected repository diagonal contains the needle.
+A scale-polished or exact-local-minimizer selection remains possible but
+unproved.  The optional S-layer gate is uniform microscale quasiminimality, or
+a direct energy-amplitude tightness theorem plus a hemisphere collar.  The
+`14/14` card performs no lattice scan.  The S-layer Hessian and determinant
+remain open; the former portal is retired from the main dependency graph.
+See `tex/ap_e18_gta_minimizing_diagonal.tex`,
+`code/verify_ap_e18_gta_minimizing_diagonal.py`, and
+`output/ap_e18_gta_minimizing_diagonal.{json,md}`.
+
+## 2026-07-24 AP-E17 boundary transfer, Dirac rigidity, and WZ capacity (superseded by AP-E18)
 
 AP-E17 shows that normalized full local quasiminimality was already available
 from the AP-E16 diagonal.  The missing step is an endpoint boundary-trace
@@ -49,8 +139,9 @@ For nonvolumetric tangents, the sharp bound
 `E_3(B_r)>=3K pi^3|b(r)|^2/(2r^3)` excludes quantized point-degree
 concentration and gives a capacity-active/WZ-neutral dichotomy.  The `12/12`
 card performs no lattice scan.  GTA for the actual minimizing diagonal is
-now the only mainline continuum gate; Hessian, determinant, and portal remain
-closed.  See `tex/ap_e17_boundary_transfer_dirac_capacity.tex`,
+the historical next AP-E continuum gate.  Under the 2026-08-30 reset it is
+an optional Layer-S problem and does not block Layers P or U.  See
+`tex/ap_e17_boundary_transfer_dirac_capacity.tex`,
 `code/verify_ap_e17_boundary_transfer_dirac_capacity.py`, and
 `output/ap_e17_boundary_transfer_dirac_capacity.{json,md}`.
 

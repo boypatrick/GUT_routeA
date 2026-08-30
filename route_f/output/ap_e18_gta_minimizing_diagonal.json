@@ -1,0 +1,263 @@
+{
+  "title": "AP-E18 GTA minimizing-diagonal audit",
+  "status": "PASS",
+  "summary": {
+    "passed": 14,
+    "total": 14,
+    "universal_GTA": false,
+    "rank_two_counterexample": true,
+    "scale_polished_diagonal_open": true
+  },
+  "needle": {
+    "definition": {
+      "A_epsilon": "epsilon^(-1/2)",
+      "b_epsilon": "epsilon^2",
+      "h_epsilon": "epsilon^2",
+      "physical_tangent_radius": "rho_epsilon=epsilon"
+    },
+    "slopes": {
+      "amplitude_1": -0.5000000000000001,
+      "amplitude_2": 2.0000000000000004,
+      "needle_radius": 2.0000000000000004,
+      "L2_primary": 5.000000000000001,
+      "first_primary": 1.0000000000000002,
+      "first_secondary": 6.0,
+      "second_minor": 1.0000000000000002,
+      "weighted_first": 1.3431703998420782e-17,
+      "weighted_second": 5.1660399993926054e-18,
+      "physical_amplitude": 0.5000000000000001,
+      "physical_energy": 4.000000000001088
+    },
+    "smallest_epsilon": {
+      "epsilon": 1e-09,
+      "L2_primary": 1e-45,
+      "normalized_graph_energy": 1.9999999999999997e-09,
+      "weighted_first": 0.9999999999999998,
+      "weighted_second": 0.9999999999999999,
+      "physical_chart_amplitude": 3.1622776601683795e-05,
+      "physical_energy": 2.0000000000000002e-36
+    }
+  },
+  "rank": {
+    "epsilon": 0.0001,
+    "matrix_rank": 2,
+    "singular_values": [
+      10000000000.0,
+      1.0,
+      0.0
+    ],
+    "nonzero_second_minor": 10000000000.0,
+    "all_third_minors_zero": true
+  },
+  "annulus": {
+    "rows": [
+      {
+        "delta": "epsilon^0.5",
+        "annular_energy_slope": 1.0000000000000002,
+        "weighted_GTA_quotient_slope": -1.0000000000000002,
+        "smallest_epsilon_annular_energy": 1e-09,
+        "smallest_epsilon_weighted_quotient": 999999999.9999999
+      },
+      {
+        "delta": "epsilon^1",
+        "annular_energy_slope": 1.0000000000000002,
+        "weighted_GTA_quotient_slope": -2.0000000000000004,
+        "smallest_epsilon_annular_energy": 1e-09,
+        "smallest_epsilon_weighted_quotient": 9.999999999999999e+17
+      },
+      {
+        "delta": "epsilon^2",
+        "annular_energy_slope": 1.0000000000000002,
+        "weighted_GTA_quotient_slope": -4.000000000000001,
+        "smallest_epsilon_annular_energy": 1e-09,
+        "smallest_epsilon_weighted_quotient": 9.999999999999999e+35
+      },
+      {
+        "delta": "epsilon^3",
+        "annular_energy_slope": 2.0000000000000004,
+        "weighted_GTA_quotient_slope": -5.000000000000001,
+        "smallest_epsilon_annular_energy": 1e-18,
+        "smallest_epsilon_weighted_quotient": 9.999999999999998e+44
+      },
+      {
+        "delta": "epsilon^5",
+        "annular_energy_slope": 4.000000000000001,
+        "weighted_GTA_quotient_slope": -7.000000000000001,
+        "smallest_epsilon_annular_energy": 1.0000000000000003e-36,
+        "smallest_epsilon_weighted_quotient": 9.999999999999997e+62
+      }
+    ],
+    "all_tested_annular_energies_vanish": true,
+    "all_tested_weighted_quotients_diverge": true,
+    "analytic_dichotomy": "delta>=h: Q>=c/delta^2; delta<h: Q>=c/(epsilon^2 delta)"
+  },
+  "reverse_holder": {
+    "rows": [
+      {
+        "sigma": 0.01,
+        "integral_G_power_slope": 0.9499999999999998,
+        "reverse_holder_ratio_slope": -0.05940594059405946,
+        "smallest_epsilon_ratio": 3.4249439246820024,
+        "expected_ratio_slope": -0.0594059405940594
+      },
+      {
+        "sigma": 0.05,
+        "integral_G_power_slope": 0.75,
+        "reverse_holder_ratio_slope": -0.28571428571428575,
+        "smallest_epsilon_ratio": 372.7593720314943,
+        "expected_ratio_slope": -0.28571428571428575
+      },
+      {
+        "sigma": 0.1,
+        "integral_G_power_slope": 0.5000000000000001,
+        "reverse_holder_ratio_slope": -0.5454545454545454,
+        "smallest_epsilon_ratio": 81113.08307896873,
+        "expected_ratio_slope": -0.5454545454545455
+      },
+      {
+        "sigma": 0.3,
+        "integral_G_power_slope": -0.5000000000000001,
+        "reverse_holder_ratio_slope": -1.3846153846153848,
+        "smallest_epsilon_ratio": 2894266124716.7485,
+        "expected_ratio_slope": -1.3846153846153844
+      }
+    ],
+    "conclusion": "for every sigma>0 the fixed-ball L^(1+sigma)-to-L1 ratio diverges, so current additive quasiminimality gives no sequence-uniform Gehring seed"
+  },
+  "literature_scope": {
+    "ambient_growth": {
+      "n": 3.0,
+      "p": 2.0,
+      "q": 6.0
+    },
+    "gmeineder_kristensen_threshold": 3.0,
+    "q_below_threshold": false,
+    "a_free_linear_constraints_present": true,
+    "complete_minor_graph_is_full_A_free_class": false,
+    "sphere_and_plucker_constraints_are_nonlinear": true,
+    "conclusion": "the 2024 (p,q)-growth theorem is outside its exponent range, and the 2025 A-free theorem cannot be imported because minimality is only on the nonlinear complete-minor graph"
+  },
+  "gates": {
+    "GTA_implied_by_AP_E17_additive_diagonal": false,
+    "universal_reverse_holder_from_current_hypotheses": false,
+    "rank_two_boundary_needle_counterexample": true,
+    "counterexample_changes_tangent_defect_measure": false,
+    "counterexample_changes_degree": false,
+    "existence_of_a_scale_polished_GTA_diagonal": false,
+    "required_new_gate_uniform_microscale_quasiminimality": true,
+    "full_mu_zero": false,
+    "local_recovery": false,
+    "classicality": false,
+    "continuum_isolation": false,
+    "bosonic_hessian_authorized": false,
+    "parallel_dirac_callias_mathematics_allowed": true,
+    "determinant_promotion": false,
+    "degree_one_portal_promotion": false,
+    "physics_promotion_allowed": false
+  },
+  "checks": [
+    {
+      "group": "needle",
+      "name": "exact scaling exponents",
+      "pass": true,
+      "detail": "maximum log-slope residual 1.088e-12"
+    },
+    {
+      "group": "needle",
+      "name": "strong tangent L2 convergence",
+      "pass": true,
+      "detail": "the primary L2 mass is epsilon^5"
+    },
+    {
+      "group": "needle",
+      "name": "normalized graph-energy perturbation is o(1)",
+      "pass": true,
+      "detail": "both leading first- and second-minor energies are O(epsilon)"
+    },
+    {
+      "group": "needle",
+      "name": "energy-amplitude correlation does not vanish",
+      "pass": true,
+      "detail": "both leading weighted correlations are order one"
+    },
+    {
+      "group": "geometry",
+      "name": "the perturbation is genuinely rank two",
+      "pass": true,
+      "detail": "rank=2, one second minor is nonzero, and all pure third minors vanish"
+    },
+    {
+      "group": "geometry",
+      "name": "sphere-chart amplitude remains in one hemisphere",
+      "pass": true,
+      "detail": "rho_epsilon A_epsilon=epsilon^(1/2)->0"
+    },
+    {
+      "group": "minimizing diagonal",
+      "name": "physical added energy is o(rho^3)",
+      "pass": true,
+      "detail": "added energy is O(rho^4), hence normalized additive deficit is O(rho)"
+    },
+    {
+      "group": "GTA",
+      "name": "annular graph energy still vanishes",
+      "pass": true,
+      "detail": "both delta>=h and delta<h branches tend to zero"
+    },
+    {
+      "group": "GTA",
+      "name": "every boundary-straddling thickness has divergent weighted quotient",
+      "pass": true,
+      "detail": "delta>=h: Q>=c/delta^2; delta<h: Q>=c/(epsilon^2 delta)"
+    },
+    {
+      "group": "reverse Holder",
+      "name": "no positive fixed-ball integrability gain",
+      "pass": true,
+      "detail": "the ratio diverges for every tested sigma>0 with the exact negative exponent"
+    },
+    {
+      "group": "literature",
+      "name": "standard (p,q) theorem is outside range",
+      "pass": true,
+      "detail": "n=3,p=2 gives q<3, whereas the ambient upper growth is q=6"
+    },
+    {
+      "group": "literature",
+      "name": "A-free theorem is not directly transferable",
+      "pass": true,
+      "detail": "curl/div constraints do not remove nonlinear Plucker and S3 restrictions"
+    },
+    {
+      "group": "gates",
+      "name": "fail-closed decision",
+      "pass": true,
+      "detail": "GTA is refuted for arbitrary additive diagonals; scale-polished recovery is open"
+    },
+    {
+      "group": "policy",
+      "name": "no lattice relaxation or mesh scan",
+      "pass": true,
+      "detail": "forbidden execution calls found: []"
+    }
+  ],
+  "sources": [
+    {
+      "path": "route_f/code/verify_ap_e18_gta_minimizing_diagonal.py",
+      "exists": true,
+      "size_bytes": 16296,
+      "sha256": "6c75bb070fa702d851eab887fa74b0b96666cacd6be376114eb172a3e875c939"
+    },
+    {
+      "path": "route_f/tex/ap_e18_gta_minimizing_diagonal.tex",
+      "exists": true,
+      "size_bytes": 18378,
+      "sha256": "d2a124dda70416838193011a1c0e7a0e3a2f904c080253df27136700731b8d7f"
+    }
+  ],
+  "environment": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  }
+}

@@ -1,12 +1,479 @@
-# Route F Roadmap: One Action, One Evidence Chain
+# Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-07-24
+Last updated: 2026-08-30
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
-## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; current authority)
+## Governing decision (2026-08-30; current program authority)
+
+Route F is no longer one serial chain in which a bespoke soliton regulator
+must become classical before the four-dimensional theory may advance.  The
+program is split into three logically independent layers:
+
+1. **P -- four-dimensional testable mainline.**  Freeze one renormalizable
+   non-supersymmetric `Spin(10)` action and compute its vacuum, full spectrum,
+   running, flavor, proton decay, amplitudes, and out-of-fit predictions.
+   This is the only layer that can close the conditional four-dimensional
+   physical theory.
+2. **U -- family-UV line.**  Seek a microscopic origin of three complete
+   chiral `16`s.  This line is required only to upgrade the family carrier
+   from a transparent geometric axiom to a first-principles result.  It does
+   not block a correctly labelled conditional four-dimensional theory.
+3. **S -- independent soliton mathematics.**  AP-E1--AP-E18, the AP-E11
+   complete-minor action, GTA, the relaxation defect `mu`, classicality,
+   Callias lines, and related Hessian questions remain valid standalone
+   mathematical research.  They do not block P or U and cannot promote a
+   four-dimensional or family-UV claim by themselves.
+
+This section overrides every historical use below of `single mainline`,
+`portal remains last`, or `Hessian/determinant/classicality blocks physics`.
+Those phrases are retained only as records of the earlier AP-E program.  In
+particular,
+
+```text
+GTA -> S-layer classicality only
+GTA -/-> P action/vacuum/RG/flavor/proton/amplitudes
+GTA -/-> U Spin^c index/anomaly/zero-mode construction
+```
+
+No new AP-E lattice scan is authorized.  A future soliton--family portal is
+optional and starts a new hypothesis class; it is not part of the dependency
+graph below.  Equality of `CP1`, `O(2)`, or `c1=2` is never sufficient to
+identify two physical sectors.
+
+The fail-closed program flags are now
+
+```text
+gta_blocks_layer_P = false
+gta_blocks_layer_U = false
+soliton_portal_required = false
+soliton_results_promote_4d_physics = false
+layer_P_conditional_closure_independent_of_U = true
+```
+
+## Layer P -- four-dimensional testable mainline
+
+### P0 Claim and action freeze (`in-progress`; highest priority)
+
+The baseline is the predictive two-Yukawa-matrix non-supersymmetric branch
+
+```text
+P54PQ-v2: Spin(10) x U(1)_PQ with
+3 x 16_F + 54_H,R + 126_H,C + 10_H,C + 1_H,C.
+```
+
+The complex gauge singlet is part of the action, not optional decoration.  It
+is required by the PQ branch.  The shorter no-PQ field list is now named
+
+```text
+P54N: Spin(10) with 3 x 16_F + 54_H,R + 126_H,C + 10_H,C,
+      no PQ and three complex symmetric Yukawa matrices.
+```
+
+P54N is comparison-only.  It may not be described as the same two-matrix
+theory with the singlet omitted.
+
+The continuity branch
+
+```text
+P-210: 210_H + 10_H + 120_H + overline{126}_H
+```
+
+is comparison/rescue only until P-54 fails a predeclared vacuum, flavor, or
+proton-decay gate.  The minimal `45_H + 126_H + complex 10_H` model remains a
+stress test.  P0 must write the full normalized action, scalar potential,
+Yukawa terms, symmetry-breaking chain, light-doublet assumptions, cutoff,
+and physical parameter count.  Route-B messenger data are optional; an
+invalid or absent messenger may not delay the baseline action.
+
+Acceptance:
+
+- one primary action and one convention card, with every other branch marked
+  comparison-only;
+- an observable map `F: Theta/G_basis -> O` and an initial Jacobian-rank and
+  parameter-count ledger;
+- compact physical family symmetry stated as `SU(2)_F` when used;
+  `SL(2,C)` is its holomorphic complexification, not a positive-energy global
+  symmetry;
+- `M_V`, `zeta K_tr`, and every family-breaking spurion counted separately;
+  an arbitrary symmetric `M_V` may not be advertised as a predictive
+  `K_tr` texture.
+
+#### P0-A action/parameter/convention card (`done`; 2026-08-30)
+
+The frozen renormalizable candidate is `P54PQ-v2`.  Its card fixes Minkowski,
+generator, self-duality, tensor, PQ-charge, vacuum, Clebsch, light-doublet,
+cutoff, and basis-quotient conventions; writes gauge, kinetic, Yukawa, and all
+declared scalar terms; and exposes the P1 spectrum interface.  Artifacts:
+
+- `tex/p54_action_parameter_convention_card.tex` and
+  `output/pdf/p54_action_parameter_convention_card.pdf`;
+- `code/verify_p54_action_card.py`;
+- `output/p54_action_parameter_convention_card.{json,md}`.
+
+The verifier passes `20/20`.  It audits 29 scalar coefficient-monomial pairs,
+operator dimensions, Hermiticity, continuous PQ charge, field content,
+Pati--Salam dimensions, and exact rational fingerprints of the 54 vacuum.
+
+Two definition-level corrections are authoritative.  With
+
+```text
+q_PQ(Psi,Phi,Sigma,phi,S)=(-1,0,+2,-2,-4),
+```
+
+the frequently printed `eta1 Sigma Sigma* Sigma* phi` term has charge `-4`.
+The frozen term is the uniquely charge-neutral
+`eta1 Sigma Sigma* Sigma phi + h.c.`.  Likewise the printed chi4 contraction
+must use `Phi_mn`, the two free five-form indices; `Phi_ij` repeats indices
+three times and leaves `m,n` free.
+
+The independent basis audit found that version 1 omitted the allowed
+renormalizable invariant `chi7 Phi_ij phi_i phi_j S* + h.c.`.  It is unique
+because `54` occurs once in `Sym^2(10)`, and it is PQ neutral.  Version 1 is
+therefore superseded, not retained as an alternative convention.
+
+The corrected five complex-coupling phase vectors have exact rank two.
+Consequently three invariant scalar CP phases survive:
+
+```text
+delta1 = arg(eta3) - 2 arg(eta1),
+delta2 = arg(chi4) + arg(chi6) - 2 arg(eta1).
+delta3 = arg(chi7) - arg(chi6).
+```
+
+The count is `60` raw real action coefficients, `49` after the classical
+field-basis quotient, and `48` continuous zero-temperature observable
+parameters after the anomalous PQ reparametrization.  This closes the P0-A
+definition subgate.  The audit and P1 results below supersede the former open
+items; the remaining P0 debt is the higher-dimension PQ-quality policy.
+
+#### P0-B invariant basis and PQ anomaly/global form (`done`; 2026-08-30)
+
+Artifacts:
+
+- `tex/p54_spin10_pq_audit.tex` and
+  `output/pdf/p54_spin10_pq_audit.pdf`;
+- `code/verify_p54_spin10_pq_audit.py`;
+- `output/p54_spin10_pq_audit.{json,md}`.
+
+The independent verifier passes `17/17`.  It enumerates all PQ-neutral
+multidegrees through degree four, proves the singlet multiplicities from
+`Spin(10)` symmetric-product channels, and numerically checks that
+`126 x 126bar` has no symmetric-traceless `54` bilinear.  The exact anomaly
+ledger is
+
+```text
+A[Spin(10)^2-PQ] = -6,
+A[SU(3)c^2-PQ] = -6,
+Nhat_QCD = -12,
+A[grav^2-PQ] = A[PQ^3] = -48.
+```
+
+The faithful global group is
+`(Spin(10) x U(1)_PQ)/Z4_diag`: a PQ rotation by `pi/2` is undone by the
+`Spin(10)` center on every field.  Hence the naive scalar-gcd value 6 is
+reduced to the physical `N_DW=3`.  This closes the normalization audit but
+opens an honest cosmology choice: pre-inflationary PQ breaking, extra
+anomalous matter, or a bounded explicit bias.  `N_DW` may not be reset to one
+by convention.
+
+### P1 Vacuum, spectrum, and exact group data (`done` at tree-level algebraic gate; 2026-08-30)
+
+Solve all stationarity equations of P0, verify Goldstone/gauge-orbit
+alignment, and export every heavy and light SM irrep with its mass and
+uncertainty.  Build the exact `Spin(10)` generator/Clebsch package for the
+selected scalar content.  A local minimum is not a metastability theorem
+without competing vacua and a bounce estimate.
+
+Completed artifacts:
+
+- `tex/p54_p1_stationary_hessian_spectrum.tex` and
+  `output/pdf/p54_p1_stationary_hessian_spectrum.pdf`;
+- `code/verify_p54_p1_hessian_spectrum.py` and
+  `requirements-p54-p1.txt`;
+- `output/p54_p1_stationary_hessian_spectrum.{json,md}`.
+
+The JAX verifier passes `14/14`.  It differentiates the complete corrected
+tensor action on all
+`328 = 54 + 2*126 + 2*10 + 2*1` canonical real scalar coordinates.  The full
+gradient residual is `3.80e-16`; the `328 x 328` Hessian has 38 zeros and no
+negative modes.  Projection and Casimir tests identify them as exactly
+`33 gauge + 1 PQ + 4 real light-doublet` modes.  The light zero subspace has
+
+```text
+(C3,C2,Y^2) = (0,3/4,1/4),
+field weight = 0.9999920937 in 10_H + 7.9063e-6 in 126_H.
+```
+
+The 35-row SM-irrep ledger covers all 328 real coordinates with maximum
+unbroken-algebra leakage `1.93e-10`.  The vector spectrum in `g10^2` units is
+
+```text
+0 x12, 0.1225 x8, 0.6125 x1, 1 x12, 1.1225 x12.
+```
+
+The radial solver finds 27 signed roots; the declared `omega=+1` orientation
+is the lowest enumerated branch.  This is a dimensionless tree-level
+existence benchmark, not a measured-scale phenomenological fit or a
+nonperturbative lifetime theorem.  P2 must run/match this actual spectrum,
+propagate covariance, and reimpose the doublet condition after loop
+corrections.
+
+### P2 Running and threshold covariance (`open`)
+
+Perform two-loop running and one-loop matching using the actual P1 spectrum,
+with perturbativity, threshold nuisance parameters, and correlated scale
+uncertainties.  No fixed-ratio or degenerate-threshold surrogate can close
+this gate.
+
+### P3 Global flavor, seesaw, and identifiability (`open`)
+
+Fit quarks, charged leptons, CKM, neutrinos, and PMNS simultaneously at the
+matched scale.  Publish `chi2/dof`, priors, pulls, parameter count, and the
+rank of the observable Jacobian/Hessian.  Compare at least
+
+```text
+P3-0: generic allowed Majorana matrix,
+P3-1: M_R = M_V + zeta K_tr,
+P3-2: a UV-restricted M_V and zeta, if Layer U supplies them.
+```
+
+No datum used in a fit is a prediction.  The first useful outputs are
+out-of-fit intervals for `m_bb`, the light-neutrino mass sum, CP phases,
+heavy-neutrino hierarchy, and flavor ratios relevant to proton decay.
+
+### P4 Proton decay and amplitude consistency (`open`)
+
+Use physical mass eigenstates and P3 flavor rotations to calculate the
+complete relevant dimension-six channels and any branch-valid scalar
+channels.  Route C is reclassified as a post-action amplitude-consistency
+audit: residues must be extracted from complete amplitudes, with Ward/
+Goldstone identities, crossing, partial waves, and applicable positivity
+bounds checked after P0--P1.
+
+### P5 Model comparison and conditional closure (`open`)
+
+Compare P-54, P-210, the generic-Majorana null, and the `K_tr`-restricted
+variant with parameter penalties and uncertainties, not best-fit residuals
+alone.  Layer P closes when one action has a stable or declared metastable
+vacuum, complete spectrum, two-loop matched running, identifiable flavor fit,
+proton amplitudes, and at least two predeclared out-of-fit predictions.
+
+Layer-P closure establishes a **conditional four-dimensional theory**.  It
+does not claim a first-principles origin of the family curve, `zeta`, or a
+global compactification.
+
+## Layer U -- family UV
+
+### U0 Object separation and claim boundary (`in-progress`)
+
+Use distinct symbols for the family curve `Sigma_F`, order-parameter target
+`P(Z)`, soliton moduli `M_B`, Berry base, and string matter curve `C_m`.  A
+map between them must specify bundle, gauge representation, chirality,
+locality, scale, anomaly, and kinetic data.  A degree-one map or equal Chern
+number alone is not a portal.
+
+The Route-E theorem is retained in its exact conditional form:
+
+```text
+H3 gives N_fam <= 3;
+H3+ selects the semisimple/Killing branch and hence N_fam = 3.
+```
+
+H3+ is a selection axiom until U derives it or replaces it with a more direct
+flux/index mechanism.
+
+### U1 Direct Spin^c family construction (`open`; primary U target)
+
+Prioritize a six-dimensional or defect construction in which a field in the
+`Spin(10)` half-spinor `16` produces three four-dimensional chiral zero
+modes.  On `CP1`, the microscopic bookkeeping target is
+
+```text
+K_CP1 = O(-2),
+K_CP1^(1/2) = O(-1),
+L_F = O(3),
+K_CP1^(1/2) tensor L_F = O(2),
+h0(O(2)) = 3, h1(O(2)) = 0.
+```
+
+Thus `O(2)` is the effective positive-spinor bundle after including the spin
+connection; it need not mean two colours, two orbitals, or two unit cells.
+The target theorem is representation-valued,
+
+```text
+Ind D_UV = 3 x 16,
+```
+
+not merely `c1=2` for a quantum-mechanical determinant line.
+
+### U2 Anomaly, flux selection, and exact spectrum (`open`)
+
+Acceptance requires flux quantization or boundary data, dimension-appropriate
+bulk/defect anomaly cancellation or inflow, exactly three complete chiral
+`16`s, no other massless chiral SM-charged states, and a nonzero fourth-mode/
+KK gap throughout a predeclared deformation neighborhood.  Vectorlike pairs
+must be listed and lifted explicitly.  The reason for the `O(3)` gauge line/
+flux sector must be stated as topology, tadpole, boundary data, or dynamics
+rather than hidden in the final `O(2)` notation.
+
+### U3 Yukawa overlaps and four-dimensional matching (`open`)
+
+Derive normalized zero-mode wavefunctions, overlap-generated Yukawa
+structures, family-symmetry breaking, and matching onto the P0 action.  U3
+passes only if the construction restricts parameters or produces an
+out-of-fit relation; reproducing a fitted matrix by adjustable overlaps is
+inverse reconstruction.
+
+### U4 Optional global string realization (`open`, permanently optional)
+
+Route D remains an optional implementation after U1--U3: resolved geometry,
+quantized flux, tadpole cancellation, massless hypercharge, exotic-free
+spectrum, instanton zero modes, and unwanted-operator veto are required for
+promotion.  Failure of U4 does not fail Layers P or a non-string U branch.
+
+Layer-U closure upgrades the geometric family ansatz to a first-principles
+family origin.  It is not required to publish or test the conditional P
+theory.
+
+## Layer S -- independent soliton mathematics
+
+### S0 Scope and non-promotion rule (`done`)
+
+AP-E1--AP-E18 and the AP-E11 action are preserved as a standalone research
+program.  Its valid questions include Gamma relaxation, graph-norm density,
+defect measures, GTA, regularity, isolated `B=1` solutions, Hessians,
+Callias/APS determinant lines, and WZW descent.  Results may be published as
+mathematics or as properties of a declared hidden-sector EFT.
+
+They do not prove four-dimensional family replication unless a future common
+microscopic action independently supplies the full U0 bundle/gauge/chirality
+map.  In particular,
+
+```text
+mu = 0 or GTA  does not imply  Ind D_UV = 3 x 16,
+c1(det Callias) = 2 does not imply three SM families,
+classical B=1 isolation does not select the Spin(10) action.
+```
+
+### S1 Current mathematical frontier (`open`, optional priority)
+
+AP-E18 proves that GTA is not a universal consequence of the available
+additive tangent estimates.  A scale-polished recovery sequence or direct
+energy-amplitude tightness theorem remains a legitimate S-layer goal.  It is
+not an urgent Route-F blocker.  No P or U task waits on `mu=0`, classicality,
+the same-action Hessian, determinant variation, or a soliton portal.
+
+### S2 Portal retirement from the main dependency graph (`done`)
+
+The former degree-one Route-E portal is retired as a required milestone.  A
+future portal proposal must begin as a new optional model with one common
+microscopic action and must pass U0--U3 independently.  Topological degree,
+an `O(2)` isomorphism, or a matching Berry number is supporting evidence only.
+
+## Authoritative dependency graph and immediate actions
+
+```text
+P0 action freeze -> P1 vacuum+spectrum -> P2 running+thresholds
+P0 + P1 + P2 -> P3 flavor+identifiability
+P1 + P2 + P3 -> P4 proton decay+amplitudes
+P2 + P3 + P4 -> P5 model comparison+conditional 4d closure
+
+U0 -> U1 Spin^c construction -> U2 anomaly+exact spectrum
+U1 + U2 -> U3 Yukawa matching -> first-principles family-origin claim
+U4 string realization is optional after U2
+
+S0 -> S1 mathematical regularity (optional)
+S has no blocking arrow into P or U
+```
+
+Next execution order:
+
+1. **P:** keep `P54PQ-v2` frozen.  P0-B and the tree-level P1 algebraic gate
+   are closed.  Next perform P2 two-loop running plus one-loop matching on
+   the actual 35-row spectrum, including threshold covariance and loop-level
+   retuning of the unique light doublet.  In parallel, state the PQ-quality/
+   `N_DW=3` cosmology choice.  Write the P-210 comparison contract before any
+   new flavor or proton scan.
+2. **U:** write the `O(3) gauge line + O(-1) spin bundle -> O(2)` Spin^c toy
+   construction, including the representation-valued index and anomaly debt
+   ledger.
+3. **S:** freeze new computation.  Continue GTA only as a separately chosen
+   mathematical task; it is no longer the default next action.
+4. Keep the evidence clean-run and document registry as parallel
+   reproducibility work.  Mechanical replay is not a substitute for P0--P5.
+
+## S-layer archive: AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S authority)
+
+Status: **GTA is not a universal consequence of the AP-E17 additive
+minimizing-diagonal estimates.  The standard reverse-Hölder imports fail,
+and a boundary-straddling rank-two needle is invisible to those normalized
+limits while violating every GTA thickness.  Existence of a scale-polished
+recovery sequence remains open.**  The production card passes `14/14`.
+
+### Reverse-Hölder verdict
+
+- The AP-E17 comparison deficit is `o(r_l^3)` on each fixed tangent
+  subball.  It is not controlled relative to an unresolved ball
+  `s_l << r_l`, so it supplies no scale-uniform Gehring seed.
+- The coarse derivative growth is `(p,q)=(2,6)`.  For `n=3,p=2`, the 2024
+  relaxed strongly-quasiconvex theorem requires
+  `q<min(np/(n-1),p+1)=3`; it cannot be imported.
+- `Xi=(Du,sqrt(R)M2,sqrt(K)M3)` obeys curl/div identities and has quadratic
+  energy, but admissible graph fields also obey nonlinear Plücker,
+  `|u|=1`, and `u^T Du=0` constraints.  The map is not minimizing over the
+  full linear `A`-free competitor class required by the 2025 theorem.
+
+### Boundary-straddling rank-two needle
+
+- Set
+  `A_e=e^(-1/2)`, `b_e=h_e=e^2`.
+  The tangent `L2` mass is `O(e^5)`, while the leading first- and
+  second-minor energies are both `O(e)` and the pure third minor vanishes.
+- The energy-amplitude correlations do not vanish:
+  `int |z_e|^2|Dz_e|^2 ~ 1` and
+  `int |z_e|^2|M2(Dz_e)|^2 ~ 1`.
+- If the needle straddles the tangent-ball boundary, every shrinking
+  thickness fails:
+  `GTA(e,delta)>=c/delta^2` for `delta>=h_e`, and
+  `GTA(e,delta)>=c/(e^2 delta)` for `delta<h_e`.
+  The unweighted annular graph energy still tends to zero in both branches.
+- At physical radius `r_e=e`, the target displacement is `sqrt(e)` and the
+  physical added energy is `O(r_e^4)=o(r_e^3)`.  A compact chart homotopy
+  preserves degree, and the perturbation is invisible to the tangent defect
+  measure and normalized additive comparison error.
+- Therefore GTA cannot be derived from the additive tangent estimates alone.
+  This does not prove that the selected repository sequence contains the
+  needle or disprove a specially selected, scale-polished, or exactly
+  locally minimizing GTA sequence.
+
+### Optional S-layer continuation
+
+1. Construct a **scale-polished recovery sequence** with
+   `epsilon_l(B_s(y)) <= omega_l s^3`, `omega_l->0`, uniformly down to a
+   declared microscopic cutoff.
+2. Alternatively prove energy-amplitude tightness
+   `int |v_l-v_0|^2(1+R|Dv_l|^2+K|M2(Dv_l)|^2)->0`
+   together with a one-hemisphere collar.  This condition plus no boundary
+   mass yields a slow GTA annulus.
+3. If both constructions fail, the relaxation must retain a
+   representative-dependent boundary concentration coordinate; AP-E17
+   Dirac rigidity remains only conditional.
+
+Canonical artifacts:
+
+- `route_f/tex/ap_e18_gta_minimizing_diagonal.tex` and PDF;
+- `route_f/code/verify_ap_e18_gta_minimizing_diagonal.py`;
+- `route_f/output/ap_e18_gta_minimizing_diagonal.{json,md}`;
+- AP-E18 section in the master Route-E derivation ledger.
+
+Within Layer S, full `mu=0`, local recovery, classicality, isolation, Hessian,
+and determinant remain open.  They do not block Layers P or U.  The former
+portal dependency is retired by S2.
+
+## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; superseded above)
 
 Status: **normalized full local quasiminimality is proved on the AP-E16
 diagonal.  A recovery-compatible sphere-valued boundary modification and
@@ -514,7 +981,8 @@ phases agree, but five- and six-tet regulators do not.
 5. Build the same-action Riemann Hessian and regulated determinant variation
    only if the replacement closes both theorem and numerical gates.
 6. Retain finite GW/domain-wall and actual `SO(3)` mod-two-index lanes in
-   parallel; the degree-one Route-E portal remains last.
+   parallel; historically the degree-one Route-E portal remained last.  The
+   required portal is now retired by S2.
 
 Canonical artifacts:
 
@@ -613,8 +1081,9 @@ Write
 5. Build the complete same-action Riemann Hessian and regulated determinant
    variation only after one continuum background passes all gates.
 6. Retain the finite GW/domain-wall kernel and actual `SO(3)` Yukawa
-   mapping-torus mod-two index as parallel lanes.  The degree-one Route-E
-   portal remains last.
+   mapping-torus mod-two index as parallel lanes.  Historically the
+   degree-one Route-E portal remained last; the required portal is now
+   retired by S2.
 
 Canonical artifacts:
 
@@ -1430,7 +1899,19 @@ authorization state.
 10. **AP-E10:** keep the gravity/information-density tests independent until
     an explicit operator connects them to AP-E1--9.
 
-## Definition of done
+## Legacy single-chain crosswalk (retained for provenance)
+
+The F0--F11 plan below predates the three-layer decision.  Its calculations
+and acceptance tests remain useful, but its ordering is superseded:
+
+- `F1--F8` map to Layer P;
+- `F9--F10` map to Layer U;
+- the AP-E/GTA program maps to Layer S and has no blocking arrow into either;
+- `F0-A` is parallel reproducibility work;
+- `F0-C` Route-B messenger work is optional unless P0 selects a branch that
+  actually uses it.
+
+### Legacy definition of done
 
 Route F is complete only when one active branch has:
 
@@ -1446,7 +1927,7 @@ The value of `zeta` need not be derived for the conditional theory to close.
 If it remains a fit parameter, it must be labelled as such.  A UV completion is
 optional and may remain permanently open.
 
-## Dependency graph
+### Legacy dependency graph (superseded by the authoritative graph above)
 
 ```text
 F0-A/B/C -> F1 branch/action freeze
@@ -1467,7 +1948,7 @@ its Q-ball, phase, and H3+ mechanisms may enter F0-B/C or F5 only after their
 declared action, symmetry, stability, matching, and phenomenology gates pass.
 ```
 
-## P0: blockers
+## Legacy P0: historical blockers (remapped to P/U or parallel evidence)
 
 ### F0-A Evidence recovery and single status registry
 
@@ -1623,10 +2104,11 @@ qualify.
 
 Status: `in-progress`.
 
-Compare, using identical conventions:
+Compare, using identical conventions, with F-54 now the primary baseline:
 
-- F-210: non-SUSY `210_H + 10_H + 120_H + overline{126}_H`;
-- F-54: non-SUSY `54_H + 10_H,C + 126_H`;
+- F-54 primary: non-SUSY `54_H + 10_H,C + 126_H`;
+- F-210 comparison/rescue: non-SUSY
+  `210_H + 10_H + 120_H + overline{126}_H`;
 - minimal `45_H + 126_H + 10_H,C` only as a stress-test branch because of the
   published perturbative/light-doublet problem.
 
@@ -1695,7 +2177,7 @@ include exactly the selected scalar representations and do not import the
 F-210 flavor content by assumption.  In every case the package must supply
 the actual Route-C Branch-S and scalar-mediated proton channels of F1.
 
-## P1: physical closure
+## Legacy P1: historical physical closure (now Layer P)
 
 ### F4 Two-loop running and threshold covariance
 
@@ -1782,7 +2264,7 @@ Acceptance:
 - publish identifiable predictions and kill criteria with likelihoods;
 - no datum used in a fit may be presented as a prediction.
 
-## P2: optional UV and publication
+## Legacy P2: historical optional UV and publication (now Layer U)
 
 ### F9 Physical origin of the family carrier
 
@@ -1792,6 +2274,14 @@ Two creative options may be developed in parallel:
 
 - a 6D `Spin(10) x U(1)_F` flux model on `P1`;
 - a 4D defect/deconstructed index model producing three localized `16`s.
+
+For the 6D branch, distinguish the microscopic gauge line from the effective
+positive-spinor bundle:
+
+`K_P1^(1/2)=O(-1)`, `L_F=O(3)`, and
+`K_P1^(1/2) tensor L_F=O(2)`.  The first target is therefore an anomaly-safe
+degree-three gauge flux whose spin-twisted kernel is the Route-E triplet, not
+an exactly-two colour/orbital rule inferred from the final `O(2)` label.
 
 Acceptance: quantized flux/boundary data, anomaly cancellation or inflow,
 exactly three complete chiral `16` zero modes, no additional massless chiral
@@ -1836,7 +2326,7 @@ Acceptance:
 - all PDFs build from one clean-clone command and the root `roadmap.md` points to
   the canonical Route-F statuses.
 
-## Immediate next action
+## Legacy immediate next action (superseded 2026-08-30)
 
 Run the 21-node full numerical DAG (19 recovered lanes plus DYN-5V/DYN-7F
 guards) from a clean clone with the now-present RE-SC3/4/5 cards, and compare
@@ -1846,3 +2336,6 @@ interacting messenger/selection sector for DYN-5 and supply branch-local
 thermal inputs for a two-flavor or density-matrix DYN-7/9b-3 calculation.
 F0-B may proceed independently.  Do not spend more compute on new flavor or
 proton scans until F1 fixes the action and F2 exports the actual spectrum.
+The current immediate actions are the P/U/S list in the authoritative section
+at the top of this file; in particular the clean DAG is parallel evidence
+work, not the next physics milestone.

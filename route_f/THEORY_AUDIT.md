@@ -1,8 +1,84 @@
 # Route A--E Theory Audit and Route-F Synthesis
 
-Date: 2026-07-24
+Date: 2026-08-30
 
-## 2026-07-24 AP-E17 analytic addendum (current continuum authority)
+## 2026-08-30 structural re-audit (current program authority)
+
+The post-AP-E18 review changes the program architecture rather than any local
+theorem.  The same symbols `CP1`, `O(2)`, and `c1=2` occur as a family curve,
+an order-parameter target, a soliton moduli space, a Berry/prequantum line, a
+Callias determinant line, and a string matter curve.  Isomorphism of those
+topological data does not identify their Hilbert spaces, gauge
+representations, chirality, dynamics, or scales.  The former serial portal
+program therefore imposed mathematical blockers that were not necessary for
+the four-dimensional theory.
+
+Route F is now split into:
+
+1. **P:** a testable four-dimensional non-SUSY `Spin(10)` action, with the
+   two-matrix `P54PQ-v2` (including its required complex singlet) frozen as
+   the baseline, `P54N` as the no-PQ three-matrix comparison, and P-210 as
+   the comparison/rescue branch;
+2. **U:** a direct family-UV construction whose target is the
+   representation-valued index `Ind D_UV = 3 x 16`;
+3. **S:** AP-E1--18 and the complete-minor/soliton regularity program as
+   independent non-promoting mathematics.
+
+The new microscopic family bookkeeping is
+
+`K_CP1^(1/2)=O(-1)`, `L_F=O(3)`, and
+`K_CP1^(1/2) tensor L_F=O(2)`.
+
+Hence `h0(O(2))=3` may arise from a degree-three gauge line after the spin
+connection is included.  The effective `O(2)` does not by itself require two
+colours, orbitals, or unit cells.  This direct Spin^c route is now the primary
+U hypothesis; its anomaly, flux-selection, exact-spectrum, and Yukawa-overlap
+debts are explicit.
+
+GTA remains an open S-layer question but no longer blocks P or U.  The
+former degree-one soliton--Route-E portal is retired from the main dependency
+graph.  Any future revival must start from one common microscopic action and
+must establish the bundle/gauge/chirality map independently of equal Chern
+numbers.  The authoritative implementation is at the top of `ROADMAP.md`.
+
+## 2026-07-24 AP-E18 analytic addendum (current S-layer continuum authority)
+
+AP-E18 distinguishes tangent-scale additive quasiminimality from a comparison
+gauge uniform at all smaller scales.  AP-E17 proves only
+`epsilon_j(B_(rho r))/mu(B_r)->0` for fixed `rho`; at a microscopic
+`s/r->0` the same additive error can dominate the entire local energy.  A
+sequence-uniform reverse-Hölder estimate therefore does not follow.
+
+The literature transfer test is negative.  The ambient upper derivative
+growth is `q=6`, outside the 2024 relaxed strongly-quasiconvex range `q<3`
+for `n=3,p=2`.  The quadratic complete-minor vector cannot instead be treated
+as an unconstrained `A`-free minimizer: curl/div identities are linear, but
+the Plücker graph, `S3` target, and tangency constraints are nonlinear.
+
+The exact scale obstruction is a boundary-straddling rank-two needle:
+
+`A_e=e^(-1/2), b_e=h_e=e^2`.
+
+Its tangent `L2` mass is `O(e^5)` and its first-/second-minor energies are
+`O(e)`, but each weighted energy-amplitude correlation is order one.
+For any `delta_e->0`, the GTA quotient is bounded below by
+`c/delta_e^2` when `delta_e>=h_e`, and by
+`c/(e^2 delta_e)` otherwise.  The unweighted annular energy still vanishes.
+
+At physical radius `r=e`, the perturbation costs `O(r^4)=o(r^3)`, stays in
+one target hemisphere, preserves degree by a compact chart homotopy, and
+does not change the tangent defect measure.  Thus GTA is not a stable
+consequence of the additive diagonal axioms.  This is not a theorem that
+every possible recovery selection fails GTA.
+
+The optional S-layer continuation is construction of a scale-polished
+sequence with `epsilon_l(B_s)<=omega_l s^3`, uniformly down to a declared
+cutoff, or a direct energy-amplitude tightness theorem plus a hemisphere
+collar.  The AP-E18 card passes `14/14`.  Full `mu=0`, local recovery, classicality,
+isolation, Hessian, and determinant remain open within S; they do not block P
+or U.  The former portal dependency is retired.
+
+## 2026-07-24 AP-E17 analytic addendum (superseded above)
 
 The requested volumetric argument separates into two logically distinct
 parts.  First, the AP-E16 diagonal already satisfies normalized full
@@ -603,15 +679,18 @@ are repaired.
 
 ### Three candidate action branches
 
-1. **F-210 continuity branch (recommended first audit):** non-SUSY
-   `Spin(10)` with `210_H` for flexible Pati--Salam/left-right breaking and
-   `10_H + 120_H + overline{126}_H` for flavor.  It best reuses the current
-   Route-E geometry and the modern minimal-Yukawa phenomenology, but it needs a
-   complete non-SUSY scalar potential and two-loop thresholds.
-2. **F-54 conservative branch:** `54_H + 126_H + 10_H,C`, close to a published
-   non-SUSY two-step model.  It is a strong cross-check and may be simpler, but
-   its parity/intermediate-scale constraints must be tested against proton
-   decay and thresholds.
+1. **F-54 primary baseline:** `P54PQ-v2`, the independently corrected non-SUSY
+   two-step model with `54_H + 126_H + 10_H,C`, the required complex gauge
+   singlet, and a continuous PQ symmetry.  This is the predictive
+   two-Yukawa-matrix null.  The exact shorter no-PQ field list is `P54N` and
+   instead allows three symmetric Yukawa matrices.  Neither branch is viable
+   by definition: parity/intermediate-scale constraints, the full vacuum,
+   proton decay, and thresholds remain tests.
+2. **F-210 continuity comparison/rescue:** non-SUSY `Spin(10)` with `210_H`
+   for flexible Pati--Salam/left-right breaking and
+   `10_H + 120_H + overline{126}_H` for flavor.  It reuses more of the current
+   Route-E phenomenology but has greater fit flexibility and must not replace
+   F-54 unless a predeclared F-54 gate fails.
 3. **F-string branch:** keep D1/D2 as optional interpretations until a global
    compactification and zero-mode audit pass.  It must not carry any core
    phenomenology before then.
@@ -667,10 +746,22 @@ and an uncertainty budget before applying experimental bounds.
 
 The theory is not ready to be called complete.  The H3 logic and evidence
 deployment blockers are repaired, with the former correctly demoted to a
-conditional H3+ theorem and the latter kept fail-closed.  The next decisive
-work is not another texture scan: it is (i) build a valid interacting Route-B
-messenger/selection action, (ii) complete the clean-clone numerical DAG,
-(iii) perform the global branch-local non-SUSY flavor and flavored-thermal
-calculation, and (iv) freeze one non-SUSY action whose vacuum, running,
-amplitudes, and proton decay are computed in a single chain.  The concrete
-execution order and kill criteria are in `ROADMAP.md`.
+conditional H3+ theorem and the latter kept fail-closed.  The 2026-08-30
+structural review changes the next decisive work:
+
+1. keep the completed `P54PQ-v2` action frozen: its independent basis audit
+   adds `chi7 Phi phi phi S*`, fixes the counts to `60/49/48`, and derives
+   `N_DW=3`; keep P-210 comparison-only until a declared P-54 failure;
+2. carry the closed tree-level P1 result (full 328-real Hessian, 38 zeros =
+   33 gauge + 1 PQ + one complex light doublet, no tachyons, complete
+   35-row SM-irrep spectrum) into thresholds, identifiable flavor fit, proton
+   amplitudes, and out-of-fit predictions in one four-dimensional chain;
+3. in parallel, test the direct Spin^c family construction
+   `O(-1) tensor O(3)=O(2)` with representation-valued index `3 x 16`, anomaly
+   cancellation, exact zero-mode spectrum, and Yukawa matching;
+4. keep Route-B, the clean DAG, and flavored thermal work parallel or
+   branch-conditional rather than prerequisites for action freeze;
+5. keep GTA and AP-E soliton classicality in independent Layer S, with no
+   blocking arrow into the four-dimensional or family-UV programs.
+
+The concrete execution order and kill criteria are in `ROADMAP.md`.

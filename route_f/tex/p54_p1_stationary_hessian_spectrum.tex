@@ -1,0 +1,355 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,longtable,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={P54PQ-v2 P1 stationary points, Hessian, and spectrum}}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\hc}{\mathrm{h.c.}}
+\title{P1: Stationary Points, Goldstone Alignment,\\
+Complete Hessian, and Spectrum in \texttt{P54PQ-v2}}
+\author{Route-F four-dimensional mainline}
+\date{30 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct P1 directly from the corrected \texttt{P54PQ-v2} tensor
+action.  The differentiable field space has
+$54+2(126)+2(10)+2=328$ canonically normalized real coordinates.  We derive
+the radial stationary equations in the action card's own normalization,
+enumerate competing radial branches, construct the complete
+$328\times328$ scalar Hessian by automatic differentiation, and independently
+construct the 45-generator gauge orbit.  Gauge invariance requires 33 gauge
+zero modes; the faithful PQ symmetry adds one physical axion direction after
+projecting away the gauge orbit.  The calculation is fail-closed: a
+stationary saddle is reported as a saddle, and the electroweak doublet tuning
+is not silently identified with vacuum stability.
+\end{abstract}
+
+\section{Why P1 is restarted on version 2}
+
+The independent invariant audit found
+\begin{equation}
+ V_7=\chi_7\Phi_{ij}\phi_i\phi_jS^*+\chi_7^*\Phi_{ij}\phi_i^*\phi_j^*S.
+ \label{eq:chi7}
+\end{equation}
+It contributes at second order in the $10_H$ fluctuation whenever
+$\langle\Phi\rangle$ and $\langle S\rangle$ are nonzero.  Therefore it changes
+the $10_H$ diagonal and holomorphic mass blocks even though it does not alter
+the high-scale radial stationarity equations at $\langle\phi\rangle=0$.
+Computing a ``complete'' Hessian from version~1 and appending \eqref{eq:chi7}
+after diagonalization would be mathematically invalid.
+
+The earlier literature potential also contains printed conjugation and index
+errors, and its displayed radial coefficients are not all reproduced by its
+displayed factorials under a single tensor normalization.  P1 consequently
+uses one source of truth: the explicit tensor action in the corrected action
+card.  Literature mass tables are comparisons, not definitions.
+
+\section{Canonical field coordinates}
+
+Let $E^a_{ij}$, $a=1,\ldots,54$, be an orthonormal basis of real symmetric
+traceless matrices,
+\begin{equation}
+ E^a_{ij}E^b_{ij}=\delta^{ab},\qquad \Phi_{ij}=x_aE^a_{ij}.
+\end{equation}
+Let $U_{A\alpha}$ be an orthonormal basis of one Hodge eigenspace in the 252
+independent five-form components, $\alpha=1,\ldots,126$.  The complex fields
+are written
+\begin{align}
+ z_\alpha&=\frac{x_{54+\alpha}+i x_{180+\alpha}}{\sqrt2},
+ &\Sigma_A&=U_{A\alpha}z_\alpha,\nonumber\\
+ h_i&=\frac{x_{306+i}+i x_{316+i}}{\sqrt2},
+ &S&=\frac{x_{326}+ix_{327}}{\sqrt2}.
+\end{align}
+In these variables the kinetic term is $\frac12\partial x_I\partial x_I$.
+The full scalar coordinate count is
+\begin{equation}
+ \boxed{N_{\mathbb R}=54+252+20+2=328.}
+\end{equation}
+
+The high-scale background is
+\begin{align}
+ \Phi_0&=\omega X,\qquad
+ X=\operatorname{diag}(-2/5,-2/5,-2/5,-2/5,-2/5,-2/5,
+ 3/5,3/5,3/5,3/5),\nonumber\\
+ \Sigma_0&=\sigma\,\Omega,qquad
+ \|\Omega\|^2_{\wedge^5}=1,qquad
+ S_0=\frac{v_s}{\sqrt2},\qquad h_0=0.
+ \label{eq:background}
+\end{align}
+The ordered component of the holomorphic form has magnitude
+$|\Omega_{246810}|=1/(4\sqrt2)$, matching the action card.
+
+\section{Stationary equations in the card normalization}
+
+Direct substitution of \eqref{eq:background} into the tensor action gives
+\begin{align}
+V_{\rm rad}={}&-\frac65\mu^2\omega^2+\frac4{25}c\omega^3
++A_4\omega^4-\frac12\nu^2\sigma^2+\frac14\lambda_0\sigma^4
++\frac65d\,\omega^2\sigma^2\nonumber\\
+&-\frac12\mu_s^2v_s^2+\frac14\chi_1v_s^4
++60\chi_2\sigma^2v_s^2+\frac65\chi_3\omega^2v_s^2,
+\label{eq:vrad}\
+A_4={}&\frac{36}{25}a+\frac{42}{125}b,qquad d=\alpha-\beta.
+\end{align}
+The $\lambda_{2,4,4'}$ and $\chi_4$ contractions vanish on the decomposable
+holomorphic five-form, but their second variations do not vanish and they
+remain in the full Hessian.  Equation~\eqref{eq:vrad} is not imported from a
+radial formula; it is an executable contraction fingerprint of the card.
+
+For the fully nonzero branch, stationarity is equivalent to
+\begin{align}
+\mu^2&=\frac15c\omega+\frac53A_4\omega^2+d\sigma^2+\chi_3v_s^2,
+\label{eq:stat1}\\
+\nu^2&=\lambda_0\sigma^2+\frac{12}{5}d\omega^2
++120\chi_2v_s^2,
+\label{eq:stat2}\\
+\mu_s^2&=\chi_1v_s^2+120\chi_2\sigma^2
++\frac{12}{5}\chi_3\omega^2.
+\label{eq:stat3}
+\end{align}
+The factors of 60 and 120 are not physical enhancements; they are the
+declared normalization of the coefficient $\chi_2$ in the tensor card.  A
+rescaled coefficient $\widehat\chi_2=120\chi_2$ would remove them, but mixing
+the two parameter conventions is forbidden.
+
+The radial curvature before conversion to the canonical metric is
+\begin{equation}
+K_{\rm rad}=\begin{pmatrix}
+\frac{12}{25}c\omega+8A_4\omega^2&\frac{24}{5}d\omega\sigma&\frac{24}{5}\chi_3\omega v_s\\
+\frac{24}{5}d\omega\sigma&2\lambda_0\sigma^2&240\chi_2\sigma v_s\\
+\frac{24}{5}\chi_3\omega v_s&240\chi_2\sigma v_s&2\chi_1v_s^2
+\end{pmatrix}.
+\label{eq:radialH}
+\end{equation}
+Its generalized eigenvalues use
+$G_{\rm rad}=\operatorname{diag}(12/5,2,1)$, since the coordinates
+$(\omega,\sigma,v_s)$ are not all canonical.  Positivity of
+\eqref{eq:radialH} is necessary but not sufficient for a vacuum.
+
+Every subset of $\{\omega,\sigma,v_s\}$ can vanish, so the radial problem has
+eight algebraic branch types before sign and multiplicity are resolved.  The
+machine audit starts from a grid of positive, negative, and zero initial
+conditions, deduplicates all roots, evaluates $V_{\rm rad}$, and records the
+three radial curvatures.  This prevents the desired nonzero branch from being
+declared the vacuum merely because its mass squares were solved from
+\eqref{eq:stat1}--\eqref{eq:stat3}.
+
+\section{Complete Hessian}
+
+The scalar Hessian is defined without a representation-level truncation:
+\begin{equation}
+ \boxed{\cH_{IJ}=\left.\frac{\partial^2V}{\partial x_I\partial x_J}
+ \right|_{x=x_0},\qquad I,J=1,\ldots,328.}
+ \label{eq:fullH}
+\end{equation}
+Automatic differentiation is applied to every indexed contraction in
+$V_{\Phi\Sigma}+V_{\Phi\Sigma\phi}+V_S$, including all Hermitian partners.
+The block layout is
+\begin{equation}
+\cH=\begin{pmatrix}
+H_{54,54}&H_{54,126}&H_{54,10}&H_{54,S}\\
+H_{126,54}&H_{126,126}&H_{126,10}&H_{126,S}\\
+H_{10,54}&H_{10,126}&H_{10,10}&H_{10,S}\\
+H_{S,54}&H_{S,126}&H_{S,10}&H_{S,S}
+\end{pmatrix}_{(54+252+20+2)\times(54+252+20+2)}.
+\end{equation}
+At $h_0=0$, symmetry makes some displayed blocks vanish, but they are
+computed rather than omitted.  In particular, $\eta_1$ can mix the 126 and
+10 sectors at quadratic order, $\chi_4$ mixes singlet sectors, and
+\eqref{eq:chi7} changes the $10$ block.  The verifier repeats the Hessian with
+$\chi_7=0$ and requires a nonzero Frobenius difference.
+
+\section{Goldstone alignment theorem and its numerical form}
+
+For a generator $T_A$, gauge invariance says
+\begin{equation}
+0=\frac{d}{dt}V(e^{tT_A}x)\big|_{t=0}
+=\partial_IV(x)(T_Ax)^I.
+\end{equation}
+Differentiating with respect to $x^J$ and imposing stationarity gives
+\begin{equation}
+ \cH_{JI}(T_Ax_0)^I=0.
+ \label{eq:goldstoneproof}
+\end{equation}
+Thus the theorem compares actual vectors, not just the number of small
+eigenvalues.  The 45-column orbit matrix is
+\begin{equation}
+ \cM_G=\bigl(T_1x_0\ \cdots\ T_{45}x_0\bigr).
+\end{equation}
+The independent tensor construction gives
+\begin{equation}
+ \operatorname{rank}\cM_G(\Phi_0)=24,qquad
+ \operatorname{rank}\cM_G(\Phi_0,\Sigma_0)=33,
+\end{equation}
+so the unbroken algebra has dimension $45-33=12$, as required for
+$SU(3)_C\times SU(2)_L\times U(1)_Y$.
+
+Let $q x_0$ be the infinitesimal PQ direction.  Its component parallel to
+the gauge orbit is unphysical, so the physical axion direction is
+\begin{equation}
+ a_0=\left[1-\cM_G\cM_G^+\right]q x_0,
+ \label{eq:axionproject}
+\end{equation}
+where $+$ denotes the Moore--Penrose inverse.  P1 requires
+\begin{equation}
+ \operatorname{rank}(\cM_G,a_0)=34,qquad
+ \frac{\|\cH\cM_G\|}{\|\cH\|\|\cM_G\|}\ll1,qquad
+ \frac{\|\cH a_0\|}{\|\cH\|\|a_0\|}\ll1.
+\end{equation}
+The QCD anomaly does not enter this tree-level Hessian; it lifts the axion
+only in the low-energy nonperturbative effective action.
+
+\section{Scalar and vector spectra}
+
+The scalar spectrum is the complete eigenvalue multiset
+\begin{equation}
+ \operatorname{Spec}_{\rm scalar}=\operatorname{eigvalsh}(\cH).
+\end{equation}
+Degeneracies are grouped only after the Goldstone residual fixes an absolute
+tolerance.  A negative physical eigenvalue classifies the background as a
+stationary saddle even when the radial $3\times3$ block is positive.
+
+The vector spectrum follows from the same orbit matrix and not from the
+potential:
+\begin{equation}
+ \frac{M_V^2}{g_{10}^2}=\cM_G^T\cM_G.
+ \label{eq:vectorM}
+\end{equation}
+Its nullity must be 12 and its positive rank 33.  Equation~\eqref{eq:vectorM}
+also fixes the generator normalization and prevents an arbitrary rescaling
+of the scalar Goldstone vectors.
+
+This P1 benchmark is dimensionless and exercises every Hessian block; it is
+not a flavor, unification, or proton-decay fit.  It has no negative physical
+scalar mode and exactly one tuned complex electroweak doublet.  The doublet
+tuning is a rank condition on the full mixed doublet block, not an
+independent free mass.
+
+\section{Executed benchmark and complete spectrum}
+
+We measure all dimensionful quantities in units of $\omega=1$ and choose
+\begin{align*}
+&(\sigma,v_s)=(0.35,0.25),\quad
+(a,b,c)=(0.50,0.40,-0.10),\\
+&(\lambda_0,\lambda_2,\lambda_4,\lambda'_4)=(0.90,0.80,0.60,0.40),
+\quad(\alpha,\beta)=(0.25,0.10),\\
+&(\chi_1,\chi_2,\chi_3,\chi_4,\chi_5,\chi_6,\chi_7)
+=(0.80,0.001,0.05,0.03,0.20,0.025,0.03),\\
+&(\eta_0,\eta_1,\eta_2,\eta_3)=(0.20,0.025,0.10,0.018),
+\quad(\gamma_1,\gamma_2)=(0.12,-0.07),\\
+&(\xi_1,\xi_2,\xi_3)=(0.35,0.08,-0.20).
+\end{align*}
+Equations~\eqref{eq:stat1}--\eqref{eq:stat3} then give
+\begin{equation}
+ (\mu^2,\nu^2,\mu_s^2)=(1.4255,0.47775,0.1847).
+\end{equation}
+The single doublet determinant condition fixes
+\begin{equation}
+ \xi_0^2=0.14616372381894022.
+\end{equation}
+This decimal is an exported root of the matrix rank condition, not an input
+used to fit a measured mass.  At the present high-scale tree-level gate the
+light eigenvalue is exactly zero; P2--P3 will replace that condition by the
+renormalized electroweak matching condition.
+
+The full gradient residual is $3.80\times10^{-16}$.  The radial solver finds
+27 signed stationary roots; the desired $\omega=+1$ branch has
+$V=-0.87681703125$ and is the lowest enumerated branch.  The Hessian has 38
+zero modes and no negative modes at tolerance $8.50\times10^{-7}$.  Direct
+projection accounts for 33 gauge modes, one PQ mode, and four light-doublet
+real modes.  For the latter,
+\begin{equation}
+ (C_3,C_2,Y^2)=(0,3/4,1/4),qquad
+ \|h_{10}\|^2=0.9999920937,quad
+ \|h_{126}\|^2=7.9063\times10^{-6}.
+\end{equation}
+Thus it is one $(1,2,\pm1/2)$ real multiplet, not an accidental quartet.
+
+The complete Standard-Model Casimir decomposition is below.  ``3-pair'' and
+``6-pair'' denote an irrep and its conjugate in the real Hessian.  Equal
+masses on distinct rows are genuine degeneracies, not merged labels.
+\begin{longtable}{@{}rrrrr@{}}
+\toprule
+$m^2$ & $SU(3)$ & $\dim SU(2)$ & $|Y|$ & real mult.\\
+\midrule
+\endhead
+$0$&1&1&0&2\\
+$0$&1&2&$1/2$&4\\
+$0$&3-pair&2&$1/6$&12\\
+$0$&3-pair&1&$2/3$&6\\
+$0$&1&1&1&2\\
+$0$&3-pair&2&$5/6$&12\\
+$0.0382803065$&1&2&$1/2$&4\\
+$0.0888808155$&1&1&0&1\\
+$0.1121882733$&3-pair&2&$1/6$&12\\
+$0.1159441884$&1&1&0&1\\
+$0.1866355208$&3-pair&1&$1/3$&6\\
+$0.2116296538$&3-pair&1&$1/3$&6\\
+$0.2600000000$&8&1&0&8\\
+$0.2722422827$&6-pair&1&$2/3$&12\\
+$0.3939174318$&1&2&$1/2$&4\\
+$0.4006848071$&3-pair&1&$1/3$&6\\
+$0.5400000000$&1&3&0&3\\
+$0.5522408476$&1&3&1&6\\
+$1.4210000000$&6-pair&1&$1/3$&12\\
+$1.4210000000$&3-pair&3&$1/3$&18\\
+$1.4210000000$&3-pair&1&$4/3$&6\\
+$1.4700000000$&6-pair&3&$1/3$&36\\
+$1.4700000000$&6-pair&1&$4/3$&12\\
+$1.4700000000$&1&1&2&2\\
+$1.5188026219$&8&2&$1/2$&32\\
+$1.5188026219$&3-pair&2&$7/6$&12\\
+$1.5210998141$&1&2&$1/2$&4\\
+$1.5721973781$&8&2&$1/2$&32\\
+$1.5721973781$&3-pair&2&$7/6$&12\\
+$1.7576694975$&3-pair&1&$1/3$&6\\
+$1.8266780732$&3-pair&1&$1/3$&6\\
+$2.0580077173$&6-pair&1&$2/3$&12\\
+$2.0580091524$&1&3&1&6\\
+$2.1580617267$&3-pair&2&$1/6$&12\\
+$2.8334249961$&1&1&0&1\\
+\bottomrule
+\end{longtable}
+The real multiplicities sum to 328, and the maximum leakage of any mass
+eigenspace under the 12 unbroken generators is $1.93\times10^{-10}$.
+The independent vector result is
+\begin{equation}
+\frac{m_V^2}{g_{10}^2}:quad
+0^{\times12},\quad0.1225^{\times8},\quad0.6125^{\times1},
+\quad1^{\times12},\quad1.1225^{\times12}.
+\end{equation}
+The $\chi_7$-only Hessian has Frobenius norm $2.32379\times10^{-2}$, which
+explicitly verifies that the invariant-basis correction enters P1.
+
+\section{Acceptance and next gate}
+
+P1 has four logically separate outputs:
+\begin{enumerate}
+\item a complete stationary-branch ledger from the corrected action;
+\item a $328\times328$ Hessian whose field count and symmetry are checked;
+\item vector-by-vector Goldstone alignment for 33 gauge modes and one
+projected PQ mode;
+\item the full scalar and vector eigenvalue multisets for the declared point.
+\end{enumerate}
+The executed benchmark passes all four items: the verifier reports 14/14
+checks, a semidefinite radial-global branch, and exactly the required light
+doublet.  This closes the tree-level algebraic P1 gate.  It does not assert
+loop stability, a measured-scale fit, or cosmological longevity outside the
+enumerated singlet branches.  The next mainline task is P2: run and match the
+actual spectrum, propagate parameter/scale covariance, and reimpose the
+light-doublet condition on the renormalized mass matrix.
+
+\begin{thebibliography}{9}
+\bibitem{BabuKhan2015}
+K.~S.~Babu and S.~Khan,
+``A Minimal Non-Supersymmetric SO(10) Model,''
+\href{https://arxiv.org/abs/1507.06712}{arXiv:1507.06712}.
+\end{thebibliography}
+\end{document}

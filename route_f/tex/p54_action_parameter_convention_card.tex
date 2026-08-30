@@ -1,0 +1,534 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,array,longtable,microtype,xurl,hyperref}
+\hypersetup{
+ colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={P-54 Action, Parameter, and Convention Card},
+ pdfauthor={Route-F four-dimensional mainline}
+}
+\setlength{\emergencystretch}{1em}
+
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PS}{G_{\rm PS}}
+\newcommand{\SM}{G_{\rm SM}}
+\newcommand{\hc}{\mathrm{h.c.}}
+\newcommand{\Lag}{\mathcal L}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\ThetaP}{\Theta_{\rm P54}}
+\newcommand{\OO}{\mathcal O}
+
+\title{P-54 Action, Parameter, and Convention Card\\
+\large A fail-closed definition of the four-dimensional Route-F baseline}
+\author{Route-F four-dimensional mainline}
+\date{30 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This card removes an ambiguity hidden in the shorthand
+$54_H+126_H+10_{H,\mathbb C}$.  With only those gauge representations and no
+extra symmetry, both $10_H$ and $10_H^*$ couple to the three chiral $16_F$s;
+the Yukawa sector therefore contains three complex symmetric matrices.  The
+predictive two-matrix model instead needs a global Peccei--Quinn symmetry and
+a complex gauge singlet $S$.  We freeze that latter theory as
+\texttt{P54PQ-v2}; the no-PQ theory is retained as the comparison model
+\texttt{P54N}, not silently mixed with it.
+
+The complete canonically normalized renormalizable action, tensor and charge
+conventions, scalar potential, vacuum coordinates, parameter quotient, and
+interfaces to the spectrum, flavor, and proton-decay calculations are given
+below.  A direct charge audit finds that the often-quoted printed $\eta_1$
+contraction in Eq.~(24) of Babu--Khan is incompatible with the PQ charges
+printed in their Eq.~(23).  Charge conservation uniquely moves one complex
+conjugation.  An independent representation-ring audit also finds the
+previously omitted invariant
+$\chi_7\Phi_{ij}\phi_i\phi_jS^*+\hc$.  The corrected action has three
+rephasing-invariant scalar CP phases.  These are definition-level corrections: a calculation that
+uses the printed monomial and simultaneously claims continuous PQ symmetry
+or omits $\chi_7$ is not a calculation in \texttt{P54PQ-v2}.
+\end{abstract}
+
+\tableofcontents
+
+\section{Status and branch identity}
+
+The primary P-layer action is
+\begin{equation}
+ \boxed{\texttt{P54PQ-v2}:\quad
+ \Spin(10)\times U(1)_{\rm PQ},\qquad
+ 3(16_F)+54_{H,\mathbb R}+126_{H,\mathbb C}
+ +10_{H,\mathbb C}+1_{H,\mathbb C}.}
+ \label{eq:model}
+\end{equation}
+The singlet is not cosmetic: after the $126_H$ expectation value, it removes
+the additional spontaneously broken global direction and supplies the axion
+sector.  The gauge group is $\Spin(10)$, not merely $SO(10)$, because the
+matter representation is a chiral half-spinor.
+
+Two nearby theories are explicitly outside the frozen action:
+\begin{align*}
+ \texttt{P54N}:&\quad 3(16_F)+54_{\mathbb R}+126_{\mathbb C}
+ +10_{\mathbb C},\quad\hbox{no PQ and no singlet};\\
+ \texttt{P210}:&\quad 210_H+10_H+120_H+\overline{126}_H,
+ \quad\hbox{comparison/rescue only}.
+\end{align*}
+The first has the exact shorter field list but a different, three-matrix
+Yukawa action.  The second has different vacuum and flavor freedom.  Neither
+may lend parameters, thresholds, or Clebsch coefficients to
+\texttt{P54PQ-v2}.
+
+\section{Spacetime, generators, and fields}
+
+We use Minkowski signature $\eta_{\mu\nu}=\mathrm{diag}(+,-,-,-)$,
+$\epsilon^{0123}=+1$, and two-component left-handed Weyl spinors.  Long roots
+have length squared two.  Hermitian generators obey
+\begin{equation}
+ [T^A,T^B]=i f^{ABC}T^C,\qquad
+ \tr_{16}(T^AT^B)=2\delta^{AB}.
+ \label{eq:generator-normalization}
+\end{equation}
+The gauge field and curvature are
+\begin{equation}
+ D_\mu=\partial_\mu-i g_{10}A_\mu^AT^A,\qquad
+ F_{\mu\nu}^A=\partial_\mu A_\nu^A-\partial_\nu A_\mu^A
+ +g_{10}f^{ABC}A_\mu^BA_\nu^C.
+\end{equation}
+
+Vector indices $i,j,\ldots=1,\ldots,10$ are contracted with $\delta_{ij}$.
+The scalar tensors are
+\begin{align}
+ \Phi_{ij}&=\Phi_{ji}=\Phi_{ij}^*,& \Phi_{ii}&=0,
+ &\Phi&\sim54_{\mathbb R},\label{eq:54def}\\
+ \Sigma_{ijklm}&=\Sigma_{[ijklm]},& \star_{10}\Sigma&=+i\Sigma,
+ &\Sigma&\sim126_{\mathbb C},\label{eq:126def}\\
+ \phi_i&\in\mathbb C^{10},&&&\phi&\sim10_{\mathbb C},\\
+ S&\in\mathbb C,&&&S&\sim1_{\mathbb C}.
+\end{align}
+Interchanging $126\leftrightarrow\overline{126}$ and the sign in
+\eqref{eq:126def} everywhere is a representation-label convention, not a
+second model.  Our sign is fixed by the Yukawa contraction below.
+
+The covariant derivatives in tensor notation are
+\begin{align}
+ (D_\mu\Phi)_{ij}&=\partial_\mu\Phi_{ij}
+ -ig_{10}A_\mu^A\big[(T^A_{10})_i{}^k\Phi_{kj}
+ +(T^A_{10})_j{}^k\Phi_{ik}\big],\\
+ (D_\mu\phi)_i&=\partial_\mu\phi_i
+ -ig_{10}A_\mu^A(T^A_{10})_i{}^j\phi_j,\\
+ (D_\mu\Sigma)_{i_1\ldots i_5}&=\partial_\mu\Sigma_{i_1\ldots i_5}
+ -ig_{10}A_\mu^A\sum_{r=1}^5(T^A_{10})_{i_r}{}^j
+ \Sigma_{i_1\ldots i_{r-1}j i_{r+1}\ldots i_5},\\
+ D_\mu S&=\partial_\mu S.
+\end{align}
+
+The continuous PQ charges are fixed, rather than defined only up to a sign,
+by
+\begin{equation}
+ q_{\rm PQ}(\Psi,\Phi,\Sigma,\phi,S)=(-1,0,+2,-2,-4).
+ \label{eq:pqcharges}
+\end{equation}
+Here $\Psi_a\sim16_F$, $a=1,2,3$.  Multiplying all charges by $-1$ is of
+course equivalent, but changing only one entry is not.
+
+\section{The complete renormalizable action}
+
+The Lagrangian is
+\begin{equation}
+ \Lag_{\rm P54PQ}=\Lag_{\rm gauge}+\Lag_{\rm kin}
+ +\Lag_Y-V(\Phi,\Sigma,\phi,S),
+ \label{eq:full-action}
+\end{equation}
+with
+\begin{align}
+ \Lag_{\rm gauge}&=-\frac14F^A_{\mu\nu}F^{A\mu\nu}
+ +\frac{\theta_{10}g_{10}^2}{32\pi^2}
+ F^A_{\mu\nu}\widetilde F^{A\mu\nu},\\
+ \Lag_{\rm kin}&=i\Psi_a^\dagger\bar\sigma^\mu D_\mu\Psi_a
+ +\frac12(D_\mu\Phi_{ij})(D^\mu\Phi_{ij})
+ +\frac1{5!}(D_\mu\Sigma_{ijklm})^*(D^\mu\Sigma_{ijklm})\nonumber\\
+ &\hspace{13mm}+(D_\mu\phi_i)^*(D^\mu\phi_i)
+ +(\partial_\mu S)^*(\partial^\mu S),
+ \label{eq:kinetic}
+\end{align}
+where $\widetilde F^{\mu\nu}=\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}/2$.
+Gauge fixing, Faddeev--Popov ghosts, and counterterms are introduced only
+after a gauge and renormalization scheme are declared; they are not new
+parameters of the gauge-invariant action.
+
+\subsection{Yukawa sector}
+
+Let $C_{10}$ denote the charge-conjugation matrix on the spinor indices and
+$\Gamma_{i_1\ldots i_5}$ the antisymmetrized Clifford product projected onto
+the self-duality selected in \eqref{eq:126def}.  Our normalization is
+\begin{equation}
+ -\Lag_Y=
+ \frac12(Y_{10})_{ab}\,Psi_a^TC_{10}\Gamma_i\Psi_b\,\phi_i^*
+ +\frac{1}{2\,5!}(Y_{126})_{ab}\,Psi_a^TC_{10}
+ \Gamma_{ijklm}\Psi_b\,\Sigma_{ijklm}+\hc .
+ \label{eq:yukawa}
+\end{equation}
+Both terms have total PQ charge zero.  Because
+\begin{equation}
+ 16\otimes16=10_s\oplus120_a\oplus126_s,
+\end{equation}
+$Y_{10}=Y_{10}^T$ and $Y_{126}=Y_{126}^T$.  The coupling to $\phi$, as
+opposed to $\phi^*$, has PQ charge $-4$ and is absent.  A $120_H$ and its
+antisymmetric Yukawa matrix are absent, not set to a small fitted value.
+
+After Pati--Salam and electroweak breaking, define $h=Y_{10}$,
+$f=Y_{126}$ and the four bidoublet vacuum coordinates
+$v_{10}^{u,d},v_{126}^{u,d}$.  The Clebsch convention is
+\begin{align}
+ M_u&=h v_{10}^u+f v_{126}^u,&
+ M_d&=h v_{10}^d+f v_{126}^d,\label{eq:masssum1}\\
+ M_D&=h v_{10}^u-3f v_{126}^u,&
+ M_e&=h v_{10}^d-3f v_{126}^d,\label{eq:masssum2}\\
+ M_R&=f\,\sigma,&
+ M_\nu&=M_L-M_D M_R^{-1}M_D^T.
+ \label{eq:seesaw}
+\end{align}
+Equation \eqref{eq:seesaw} keeps both type-I and type-II terms; setting
+$M_L=0$ is a later fit hypothesis, not part of this action card.
+
+\subsection{Scalar potential}
+
+All repeated vector indices are summed.  With the tensor normalizations in
+\eqref{eq:54def}--\eqref{eq:126def}, the full PQ-invariant potential is
+\begin{equation}
+ V=V_{\Phi\Sigma}+V_{\Phi\Sigma\phi}+V_S,
+ \label{eq:potential-split}
+\end{equation}
+where
+\begin{align}
+V_{\Phi\Sigma}={}&-\frac{\mu^2}{2}\Phi_{ij}\Phi_{ij}
+ +\frac c3\Phi_{ij}\Phi_{jk}\Phi_{ki}
+ +\frac a4(\Phi_{ij}\Phi_{ij})^2
+ +\frac b2\Phi_{ij}\Phi_{jk}\Phi_{kl}\Phi_{li}
+ -\frac{\nu^2}{2\,5!}\Sigma_{ijklm}\Sigma^*_{ijklm}\nonumber\\
+&+\frac{\lambda_0}{(2!)^2(5!)^2}
+ (\Sigma_{ijklm}\Sigma^*_{ijklm})
+ (\Sigma_{nopqr}\Sigma^*_{nopqr})\nonumber\\
+&+\frac{\lambda_2}{(4!)^2}
+ \Sigma_{ijklm}\Sigma^*_{ijkln}
+ \Sigma_{opqrm}\Sigma^*_{opqrn}\nonumber\\
+&+\frac{\lambda_4}{(3!)^2(2!)^2}
+ \Sigma_{ijklm}\Sigma^*_{ijkno}
+ \Sigma_{pqrlm}\Sigma^*_{pqrno}\nonumber\\
+&+\frac{\lambda'_4}{(3!)^2}
+ \Sigma_{ijklm}\Sigma^*_{ijkno}
+ \Sigma_{pqrln}\Sigma^*_{pqrmo}
+ +\frac{\alpha}{2!5!}\Phi_{ij}\Phi_{ij}
+ \Sigma_{pqrlm}\Sigma^*_{pqrlm}\nonumber\\
+&+\frac\beta{3!}\Phi_{ij}\Phi_{kl}
+ \Sigma_{mnoik}\Sigma^*_{mnojl},
+\label{eq:Vphisigma}
+\end{align}
+\begin{align}
+V_{\Phi\Sigma\phi}={}&-\xi_0^2\phi_i\phi_i^*
+ +\xi_1(\phi_i\phi_i^*)(\phi_j\phi_j^*)
+ +\xi_2(\phi_i\phi_i)(\phi_j^*\phi_j^*)
+ +\xi_3\Phi_{ij}\phi_i\phi_j^*\nonumber\\
+&+\frac{\gamma_1}{4!}\Sigma_{ijklm}\Sigma^*_{ijkln}
+ \phi_m\phi_n^*
+ +\frac{\gamma_2}{4!}\Sigma_{ijklm}\Sigma^*_{ijkln}
+ \phi_n\phi_m^*
+ +\frac{\eta_0}{2}\Phi_{ij}\Phi_{ij}\phi_k\phi_k^*\nonumber\\
+&+\frac{\eta_1}{(3!)^2(2!)^2}
+ \underbrace{\Sigma_{ijklm}\Sigma^*_{ijkpq}
+ \Sigma_{lmpqn}\phi_n}_{q_{\rm PQ}=2-2+2-2=0}
+ +\frac{\eta_1^*}{(3!)^2(2!)^2}
+ \Sigma^*_{ijklm}\Sigma_{ijkpq}\Sigma^*_{lmpqn}\phi_n^*\nonumber\\
+&+\eta_2\Phi_{ij}\Phi_{ik}\phi_j\phi_k^*
+ +\frac{\eta_3}{4!}\Sigma_{ijklm}\Sigma_{ijkln}\phi_m\phi_n
+ +\frac{\eta_3^*}{4!}\Sigma^*_{ijklm}\Sigma^*_{ijkln}
+ \phi_m^*\phi_n^*,
+\label{eq:Vmix}
+\end{align}
+and
+\begin{align}
+V_S={}&-\mu_s^2SS^*+\chi_1(SS^*)^2
+ +\chi_2\Sigma_{ijklm}\Sigma^*_{ijklm}SS^*
+ +\chi_3\Phi_{ij}\Phi_{ij}SS^*\nonumber\\
+&+\frac{\chi_4}{4!}\Sigma_{ijklm}\Sigma_{ijkln}\Phi_{mn}S
+ +\frac{\chi_4^*}{4!}\Sigma^*_{ijklm}\Sigma^*_{ijkln}\Phi_{mn}S^*
+ +\chi_5\phi_i\phi_i^*SS^*\nonumber\\
+&+\chi_6\phi_i\phi_iS^*+\chi_6^*\phi_i^*\phi_i^*S
++\chi_7\Phi_{ij}\phi_i\phi_jS^*
++\chi_7^*\Phi_{ij}\phi_i^*\phi_j^*S.
+\label{eq:VS}
+\end{align}
+The $\Phi_{mn}$ contraction in the $\chi_4$ term is forced by its two free
+five-form indices.  The often-reproduced $\Phi_{ij}$ version repeats $i,j$
+more than twice and is not valid Einstein notation; this card uses the
+index-balanced contraction.  Couplings
+$\eta_1,\eta_3,\chi_4,\chi_6,\chi_7$ are complex; all other displayed scalar
+couplings are real.  Reality of the action follows from the explicit
+Hermitian pairs.
+
+The $\chi_7$ term is forced by the unique $54$ channel in
+$\mathrm{Sym}^2(10)=1\oplus54$: its charge is
+$q(\Phi)+2q(\phi)+q(S^*)=0-4+4=0$.  It was absent from the published-style
+list used for version~1, so the independent basis audit changes the frozen
+model rather than treating the omission as a numerical uncertainty.
+
+\subsection{The corrected eta1 convention}
+
+The printed expression in Ref.~\cite{BabuKhan2015} contains
+$\Sigma\Sigma^*\Sigma^*\phi$.  With its printed charges, that monomial has
+charge $-4$ and cannot occur in a continuously PQ-invariant action.  For a
+quartic with three $\Sigma$-type fields and one $\phi$-type field, charge
+neutrality requires
+\begin{equation}
+ 2(n_\Sigma-n_{\Sigma^*})-2(n_\phi-n_{\phi^*})=0.
+\end{equation}
+The monomial inducing the $126$ bidoublet expectation value and paired with
+its Hermitian conjugate is therefore uniquely
+$\Sigma\Sigma^*\Sigma\phi+\hc$, which is the term in
+\eqref{eq:Vmix}.  We interpret the extra star in the printed formula as a
+conjugation typo.  The no-PQ branch may use the printed contraction, but then
+it is not \texttt{P54PQ-v2}.
+
+There is a second, purely index-level correction in the same printed
+potential.  In $\Sigma_{ijklm}\Sigma_{ijkln}\Phi S$, the unpaired indices are
+$m,n$, so the only displayed contraction is $\Phi_{mn}$, as in
+\eqref{eq:VS}.  Writing $\Phi_{ij}$ would make $i,j$ occur three times and
+leave $m,n$ free.  This correction changes neither PQ charge nor parameter
+count.
+
+\section{Parameter card and quotient}
+
+Every scalar has engineering dimension one.  The coefficient card is
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{36mm}
+ >{\raggedright\arraybackslash}p{101mm}@{\hspace{3mm}}r@{}}
+\toprule
+Class & Parameters & Raw reals\\
+\midrule
+Gauge/topological & $g_{10},\theta_{10}$ & 2\\
+Scalar, dimension 2 & $\mu^2,\nu^2,\xi_0^2,\mu_s^2$ & 4\\
+Scalar, dimension 1 & $c,\xi_3$ real; $\chi_6$ complex & 4\\
+Scalar, dimension 0, real &
+$a,b,\lambda_0,\lambda_2,\lambda_4,\lambda'_4,\alpha,\beta,
+\xi_1,\xi_2,\gamma_1,\gamma_2,\eta_0,\eta_2,
+\chi_1,\chi_2,\chi_3,\chi_5$ & 18\\
+Scalar, dimension 0, complex & $\eta_1,\eta_3,\chi_4,\chi_7$ & 8\\
+Yukawa & two complex symmetric $3\times3$ matrices & 24\\
+\midrule
+Total & before field-basis quotient & 60\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The phase-charge vectors of the five complex scalar couplings are computed
+under the field redefinition
+\begin{equation}
+ (\Sigma,\phi,S)\longmapsto
+ (e^{i\alpha_\Sigma}\Sigma,e^{i\alpha_\phi}\phi,e^{i\alpha_S}S).
+\end{equation}
+They are
+\begin{equation}
+ v_{\eta_1}=(1,1,0),\quad v_{\eta_3}=(2,2,0),\quad
+ v_{\chi_4}=(2,0,1),\quad v_{\chi_6}=(0,2,-1),\quad
+ v_{\chi_7}=(0,2,-1).
+ \label{eq:phasevectors}
+\end{equation}
+Their rank is two and their common null vector is $(1,-1,-2)$, the PQ
+direction in \eqref{eq:pqcharges}.  Hence only two coupling phases can be
+removed.  We choose
+\begin{equation}
+ \eta_1\ge0,\qquad\chi_4\ge0,\qquad
+ \begin{aligned}
+ \delta_1&=\arg\eta_3-2\arg\eta_1,
+ &\delta_2&=\arg\chi_4+\arg\chi_6-2\arg\eta_1,\\
+ \delta_3&=\arg\chi_7-\arg\chi_6.&&
+ \end{aligned}
+ \label{eq:physicalphases}
+\end{equation}
+There are therefore $34-2=32$ scalar parameters after scalar-field
+rephasing, including three physical scalar CP phases.
+
+The two Yukawa matrices contain 24 real numbers.  A generic $U(3)$ family
+basis removes nine; equivalently one may Takagi-diagonalize
+\begin{equation}
+ Y_{10}=\mathrm{diag}(y_1,y_2,y_3),\qquad y_i\ge0,
+\end{equation}
+and leave $Y_{126}$ complex symmetric.  This gives 15 physical Yukawa
+parameters.  The classical parameter space is thus
+\begin{equation}
+ \dim_{\mathbb R}\bigl(\ThetaP/\mathcal G_{\rm basis}\bigr)
+ =2+32+15=49.
+ \label{eq:classicalcount}
+\end{equation}
+At the quantum level the anomalous PQ redefinition trades $\theta_{10}$ for
+the axion origin, so there are 48 independent continuous parameters in
+zero-temperature observables, plus discrete anomaly/domain-wall data.  This
+last reduction is valid only if PQ quality is not spoiled by higher-dimension
+operators.
+
+For contrast, \texttt{P54N} has three complex symmetric Yukawa matrices,
+36 raw real Yukawa entries and $36-9=27$ after the generic family quotient.
+It is not a two-Yukawa-matrix realization of the shorter field list.
+
+\section{Vacuum and breaking conventions}
+
+The intended chain, including the global symmetry bookkeeping, is
+\begin{equation}
+ \Spin(10)\times U(1)_{\rm PQ}
+ \xrightarrow{\langle\Phi\rangle}
+ \PS\rtimes D\times U(1)_{\rm PQ}
+ \xrightarrow{\langle\Sigma\rangle}
+ \SM\times U(1)'_{\rm PQ}
+ \xrightarrow{\langle S\rangle}\SM
+ \xrightarrow{\langle h\rangle}SU(3)_C\times U(1)_{\rm em},
+ \label{eq:chain}
+\end{equation}
+where $\PS=(SU(4)_C\times SU(2)_L\times SU(2)_R)/\mathbb Z_2$ in the
+global form inherited from $\Spin(10)$.  The $54$ expectation value is
+\begin{equation}
+ \langle\Phi\rangle=\omega_s\,
+ \mathrm{diag}\left(
+ -\frac25,-\frac25,-\frac25,-\frac25,-\frac25,-\frac25,
+ \frac35,\frac35,\frac35,\frac35\right).
+ \label{eq:54vev}
+\end{equation}
+It is traceless, preserves $SO(6)\times SO(4)\simeq\PS$, and is $D$ even.
+Our remaining radial coordinates are
+\begin{equation}
+ \langle\Sigma_{246810}\rangle=\frac{\sigma}{4\sqrt2},
+ \qquad \langle S\rangle=\frac{v_s}{\sqrt2},
+ \qquad \langle h^0\rangle=\frac{v}{\sqrt2},
+ \label{eq:othervevs}
+\end{equation}
+with $\omega_s,\sigma,v_s,v\ge0$ after the stated phase conventions.
+
+The relevant Pati--Salam decompositions are
+\begin{align}
+10&=(6,1,1)\oplus(1,2,2),\\
+54&=(1,3,3)\oplus(6,2,2)\oplus(20',1,1)\oplus(1,1,1),\\
+126&=(6,1,1)\oplus(10,3,1)\oplus(\overline{10},1,3)
+ \oplus(15,2,2).
+\end{align}
+The neutral member of $(\overline{10},1,3)$ carries $\sigma$.  The $54$
+keeps $D$ parity, so $g_L=g_R$ at the Pati--Salam matching scale in this
+branch.
+
+Substituting \eqref{eq:54vev} into its self-potential gives the exact check
+\begin{equation}
+ V_{54}(\omega_s)=-\frac65\mu^2\omega_s^2
+ +\frac4{25}c\omega_s^3
+ +\frac{36}{25}a\omega_s^4
+ +\frac{42}{125}b\omega_s^4.
+ \label{eq:54radial}
+\end{equation}
+Indeed $\tr X^2=12/5$, $\tr X^3=12/25$, and
+$\tr X^4=84/125$ for the diagonal matrix $X$ in
+\eqref{eq:54vev}.  These rational coefficients are convention fingerprints:
+a spectrum code with different values is not using this card.
+
+The electroweak doublet is one normalized zero mode of the four-doublet
+system
+\begin{equation}
+ h_{\rm SM}=c_1 H_u+c_2\epsilon H_d^*+c_3\Phi_u
+ +c_4\epsilon\Phi_d^*,\qquad \sum_{i=1}^4|c_i|^2=1.
+ \label{eq:lightdoublet}
+\end{equation}
+The $H$ doublets are from $(1,2,2)_{10}$ and the $\Phi$ doublets here are
+from $(15,2,2)_{126}$; this reuse of $\Phi$ is common in Pati--Salam papers
+but must not be confused with the $SO(10)$ tensor $\Phi_{ij}$ in this card.
+In code they shall be named \texttt{H10u,H10d,H126u,H126d}.  The required
+fine tuning is exactly one small eigenvalue of the complete doublet mass
+matrix.  The color-triplet matrix must remain nonsingular and is never tuned
+by hand independently.
+
+\section{Observable map and P1 interface}
+
+The action defines, but this card does not yet numerically evaluate, the map
+\begin{equation}
+ \mathcal F:\ThetaP/\mathcal G_{\rm basis}\longrightarrow\OO,
+ \label{eq:observablemap}
+\end{equation}
+where $\OO$ contains the full scalar and vector spectrum, matched gauge
+couplings, fermion singular values and mixing matrices, neutrino observables,
+proton partial widths, and axion observables.  The future Jacobian is
+\begin{equation}
+ J_{Ai}=\frac{\partial\OO_A}{\partial\vartheta_i},\qquad
+ \operatorname{rank}J\le\min(N_{\OO},48)
+ \label{eq:jacobian}
+\end{equation}
+after the quantum PQ quotient.  No numerical rank is claimed before P1
+exports a differentiable spectrum and P2--P4 fix matching conventions.
+The rank must be reported from a scaled SVD with singular-value tolerance and
+uncertainty propagation, not inferred from the number of fitted data.
+
+The P1 spectrum exporter must consume exactly
+\begin{equation}
+ \{g_{10};\ \mu^2,\nu^2,\xi_0^2,\mu_s^2;
+ c,\xi_3,\chi_6;\ \text{all dimensionless scalar couplings including }\chi_7;
+ Y_{10},Y_{126}\}
+\end{equation}
+in the conventions above and return, for every physical state,
+\begin{equation}
+ \{\SM\text{ irrep},\ D\text{ parity},\ m^2,\text{mixing vector},
+ \partial m^2/\partial\vartheta_i,\text{Goldstone flag}\}.
+\end{equation}
+Acceptance requires: all stationarity equations; equality between broken
+generator directions and scalar zero modes; positive physical Hessian at the
+candidate vacuum; the complete doublet and triplet matrices; and comparison
+against competing stationary points.  ``Extended survival'' may be a scan
+prior but may not replace this returned spectrum.
+
+The Wilsonian action is taken at a matching scale $\mu_0$ below a declared
+cutoff $\Lambda_{\rm P54}$.  The minimal consistency contract is
+\begin{equation}
+ M_U<\Lambda_{\rm P54}\le M_{\rm Pl},\qquad
+ \max\{|\lambda_i|,|Y_{ij}|^2,g_{10}^2\}<4\pi,
+ \label{eq:cutoff}
+\end{equation}
+supplemented in P2 by running perturbative-unitarity eigenvalues.  Planck-
+suppressed PQ-violating operators are an explicit PQ-quality debt, not part
+of the renormalizable fit.
+
+\section{Freeze rules and remaining debts}
+
+The action card is frozen under the following rules.
+\begin{enumerate}
+\item The corrected $\eta_1$ term in \eqref{eq:Vmix} and the $\chi_7$ term
+in \eqref{eq:VS} are authoritative.  Changing either requires a new version
+and a new charge audit.
+\item No $120_H$, $210_H$, extra $10_H$, generic $M_R$, or arbitrary
+threshold mass may be imported into the primary branch.
+\item The singlet $S$ and PQ anomaly data are part of \texttt{P54PQ-v2}.
+Dropping $S$ defines another theory.
+\item Doublet fractions are derived eigenvectors of one scalar mass matrix;
+they are not independent fit parameters in the final parameter count.
+\item $M_I$, $M_U$, and every heavy mass are derived from the vacuum and
+couplings.  They may be scan coordinates only with the corresponding
+stationarity equations imposed.
+\end{enumerate}
+
+Version~2 is the result of the independent invariant-basis audit; its proof
+and the PQ anomaly/global-form audit are recorded in the companion audit.
+The machine-generated P1 Hessian/spectrum is now recorded in its own
+companion and closes the tree-level algebraic vacuum gate.  The remaining
+card-level debt is PQ quality above $\Lambda_{\rm P54}$; running, matching,
+flavor, and proton tests remain outside this card.  The label is therefore
+``tree-level candidate'', not ``phenomenologically viable theory''.
+
+\begin{thebibliography}{9}
+\bibitem{BabuKhan2015}
+K.~S.~Babu and S.~Khan,
+``A Minimal Non-Supersymmetric SO(10) Model: Gauge Coupling Unification,
+Proton Decay and Fermion masses,''
+\href{https://arxiv.org/abs/1507.06712}{arXiv:1507.06712} (2015).
+
+\bibitem{Haba2023}
+N.~Haba, Y.~Shimizu, and T.~Yamada,
+``Neutrino Mass in Non-Supersymmetric SO(10) GUT,''
+\href{https://arxiv.org/abs/2304.06263}{arXiv:2304.06263},
+Phys. Rev. D 108, 095005 (2023).
+\end{thebibliography}
+
+\end{document}

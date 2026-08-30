@@ -1,8 +1,125 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-07-24
+Last updated: 2026-08-30
 
-## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; current authority)
+## Route-F three-layer reset (2026-08-30; current authority)
+
+The overall program is no longer serialized through the AP-E soliton
+regularity problem.  Route F now has three independent layers:
+
+- **P -- four-dimensional testable mainline:** the frozen renormalizable
+  candidate is `P54PQ-v2`, namely `Spin(10) x U(1)_PQ` with
+  `3 x 16_F + 54_H,R + 126_H,C + 10_H,C + 1_H,C`.  The singlet is required
+  by the predictive two-Yukawa-matrix branch.  The shorter no-PQ theory is
+  `P54N` and has three symmetric Yukawa matrices.  The corrected P54PQ-v2
+  vacuum and complete tree-level spectrum are now computed; next perform
+  two-loop running and thresholds, global flavor
+  fit, proton decay, amplitudes, and out-of-fit predictions.  The more
+  flexible `210_H + 120_H` model is comparison/rescue only.
+- **U -- family UV:** seek an anomaly-safe representation-valued index
+  `Ind D_UV = 3 x 16`.  On `CP1` the primary hypothesis is
+  `K^(1/2)=O(-1)`, `L_F=O(3)`, so the effective chiral bundle is
+  `O(2)` with three positive zero modes.  The final `O(2)` is not assumed to
+  mean exactly two colours, orbitals, or unit cells.
+- **S -- independent soliton mathematics:** preserve AP-E1--18, the AP-E11
+  complete-minor action, GTA, defect measures, Hessians, and Callias/WZW work
+  as a standalone research line.
+
+GTA, `mu=0`, classicality, determinant variation, and the former degree-one
+portal no longer block P or U.  A future soliton--family portal would require
+one common microscopic action; matching `CP1`, `O(2)`, or `c1=2` is not
+physical identification.  The authoritative dependency graph and acceptance
+gates are in `route_f/ROADMAP.md`.  The AP-E checkpoints below are retained as
+the S-layer historical ledger.
+
+P0-A action card completed 2026-08-30 Asia/Taipei:
+
+- Wrote the complete corrected `P54PQ-v2` gauge, kinetic, two-matrix Yukawa,
+  and scalar action together with tensor, self-duality, generator, PQ,
+  vacuum, Clebsch, light-doublet, cutoff, and spectrum-interface conventions.
+- The commonly printed eta1 contraction has PQ charge `-4`; the frozen card
+  moves one conjugation to obtain the unique neutral
+  `Sigma Sigma* Sigma phi + h.c.` term.  It also replaces the index-invalid
+  chi4 `Phi_ij` by the forced free-index contraction `Phi_mn`.
+- The independent invariant audit adds the previously omitted
+  `chi7 Phi_ij phi_i phi_j S* + h.c.` term.  Exact scalar rephasing rank is
+  two.  Three scalar CP phases survive, and the action counts are `60` raw,
+  `49` classical quotient, and `48` continuous
+  quantum-PQ observable parameters.
+- `route_f/code/verify_p54_action_card.py` passes `20/20`.  The independent
+  invariant/anomaly verifier passes `17/17`, with
+  `A[Spin(10)^2-PQ]=-6`, `Nhat_QCD=-12`, and physical `N_DW=3` after the
+  diagonal center quotient.
+- P1 passes `14/14`: a full `328 x 328` Hessian has 38 zero modes
+  (`33 gauge + 1 PQ + one complex light doublet`), no negative modes, and a
+  35-row Standard-Model irrep spectrum whose real multiplicities sum to 328.
+  The specified `omega>0` orientation is the lowest of 27 enumerated signed
+  radial roots.  This closes the tree-level algebraic P1 gate, not running or
+  phenomenological viability.  P2 running/matching and the PQ-quality/
+  `N_DW=3` cosmology decision are next.
+
+## AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S-layer authority)
+
+AP-E18 resolves the requested GTA test with a negative universal result.
+AP-E17 gives the additive estimate
+
+`epsilon_(j_l)(B_(rho r_l)) = o(r_l^3)`
+
+for every fixed `rho`.  It does not give an error small relative to a
+microscopic ball `s_l << r_l`, so it is insufficient for a uniform
+reverse-Hölder/Gehring argument.
+
+Two recent regularity routes were checked and cannot be imported:
+
+- the ambient derivative growth is `(p,q)=(2,6)`, whereas the 2024 relaxed
+  strongly-quasiconvex theorem requires `q<3` for `n=3,p=2`;
+- the complete-minor vector is curl/div constrained and has quadratic
+  energy, but the Plücker graph and `S3` target constraints are nonlinear.
+  Minimality is not available in the full linear `A`-free class used by the
+  2025 higher-integrability theorem.
+
+The decisive counterexample is a smooth rank-two needle straddling the
+tangent-ball boundary:
+
+`A_e=e^(-1/2), b_e=h_e=e^2`.
+
+It obeys
+
+`int|z_e|^2 ~ e^5`,
+`int|Dz_e|^2 ~ e`,
+`int|M2(Dz_e)|^2 ~ e`,
+`M3(Dz_e)=0`,
+
+but
+
+`int|z_e|^2|Dz_e|^2 ~ 1`,
+`int|z_e|^2|M2(Dz_e)|^2 ~ 1`.
+
+For every annulus thickness `delta_e->0`, its GTA quotient is at least
+`c/delta_e^2` if `delta_e>=h_e`, and at least
+`c/(e^2 delta_e)` otherwise.  Both diverge, even though its annular graph
+energy tends to zero.
+
+At physical tangent radius `r_e=e`, the target displacement is only
+`sqrt(e)` and the added energy is `O(r_e^4)=o(r_e^3)`.  The perturbation is
+compactly homotopic to the identity, preserves degree, and is invisible to
+the tangent defect measure.  Hence GTA is not stable under perturbations
+allowed by the current additive minimizing-diagonal accuracy.
+
+This does not prove that no well-selected GTA sequence exists.  The optional
+S-layer continuation is to construct a **scale-polished recovery sequence**
+
+`epsilon_l(B_s(y)) <= omega_l s^3`, `omega_l->0`,
+
+uniformly down to a microscopic cutoff, or directly prove
+
+`int |v_l-v_0|^2(1+R|Dv_l|^2+K|M2(Dv_l)|^2) -> 0`
+
+plus a one-hemisphere collar.  The AP-E18 card passes `14/14`.  Within S,
+full `mu=0`, local recovery, classicality, isolation, Hessian, and determinant
+remain open; none blocks P or U.  The former portal dependency is retired.
+
+## AP-E17 boundary-transfer/Dirac/capacity checkpoint (2026-07-24; superseded above)
 
 The AP-E16 diagonal already transfers **normalized full local
 quasiminimality** at every tangent scale:
@@ -55,10 +172,9 @@ local degree.  Every nonvolumetric tangent is now classified as either:
 2. **WZ-neutral:** no normalized topological capacity survives, so any
    remaining defect is analytic rather than topologically protected.
 
-The AP-E17 card passes `12/12`.  The next single mainline theorem is GTA for
-the actual minimizing diagonal, via complete-minor equiintegrability or a
-model-specific reverse-Hölder estimate.  Full `mu=0`, classicality,
-isolation, Hessian, determinant, and portal remain closed.
+The AP-E17 card passes `12/12`.  In the historical AP-E ordering the next
+theorem was GTA for the actual minimizing diagonal.  Under the 2026-08-30
+reset it is an optional S-layer problem and no longer blocks P or U.
 
 ## AP-E16 tangent/Caccioppoli/Young-measure checkpoint (2026-07-24; superseded above)
 
@@ -357,8 +473,9 @@ scan.  Replace the one-corner term by a complete tetrahedral cochain action:
 primal `dn`, compatible shifted cup product, positive calibrated Hodge star,
 and a topological three-cochain agreeing with normalized-affine degree.  Only
 after that replacement passes its own cell and quotient continuum gates may
-the same-action Hessian start.  GW/domain-wall and the actual `SO(3)` mod-two
-index remain parallel; the portal remains last.
+the same-action Hessian start within the historical S program.  GW/domain-wall
+and the actual `SO(3)` mod-two index remain parallel; the required portal is
+now retired from the P/U dependency graph.
 
 ## AP-E9 scaling/Gamma-limit checkpoint (2026-07-18; superseded above)
 
@@ -396,7 +513,8 @@ finite-`R` barrier cell formula are the primary theorem blockers.  The
 same-action Riemann Hessian and determinant
 variation remain forbidden until that theorem and a regulator-stable
 background both exist.  GW/domain-wall and the actual `SO(3)` mod-two index
-remain parallel; the degree-one portal remains last.
+remain parallel; the required degree-one portal is now retired from the P/U
+dependency graph.
 
 ## AP-E8 topology-preserving finite-grid checkpoint (2026-07-17; superseded above)
 

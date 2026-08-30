@@ -3,7 +3,32 @@
 Checked on 2026-07-24.  These papers are inputs for Route-F design, not proof
 that the present model inherits their results.
 
-## AP-E17 boundary-transfer/Dirac/capacity boundary
+## AP-E18 GTA/reverse-Hölder transfer boundary
+
+AP-E18 checks the two most plausible recent higher-integrability imports and
+records why neither applies.  Gmeineder--Kristensen treats relaxed strongly
+quasiconvex `(p,q)` integrals in the essentially optimal range
+`q<min(np/(n-1),p+1)`.  Route-F's coarse ordinary-gradient exponents are
+`(n,p,q)=(3,2,6)`, whereas the theorem requires `q<3`.
+
+Schiffer proves higher integrability for minimizers under a linear
+constant-rank `A`-free constraint and natural single-`p` growth/coercivity.
+The Route-F vector `(Du,M2,M3)` does obey curl/div identities, but its
+admissible values also satisfy nonlinear Plücker, sphere, and tangency
+constraints.  The selected recovery map is not known to minimize over the
+full linear `A`-free class.
+
+The boundary-straddling rank-two needle, failure of every GTA thickness, and
+the scale-polished replacement gate are derived directly in the repository.
+Neither source is cited as proving that the selected degree-one recovery
+sequence has GTA or higher complete-minor integrability.
+
+| Source | Relevant result | Transfer boundary |
+|---|---|---|
+| Gmeineder and Kristensen, [Quasiconvex Functionals of `(p,q)`-Growth and the Partial Regularity of Relaxed Minimizers](https://doi.org/10.1007/s00205-024-02013-8), Arch. Rational Mech. Anal. 248, 80 (2024) | Proves smooth partial regularity for relaxed strongly quasiconvex functionals for `q<min(np/(n-1),p+1)`. | For `n=3,p=2` the limit is `q<3`; the AP-E11 density has coarse upper growth `q=6`, sphere constraints, and a separate complete-minor graph relaxation. |
+| Schiffer, [`A`-free truncation and higher integrability of minimisers](https://doi.org/10.1007/s00526-024-02855-w), Calc. Var. 64, 30 (2025) | Gives higher integrability under suitable linear `A`-free truncation and `p`-growth assumptions. | The nonlinear identities `M2=Du wedge Du`, `M3=Du wedge Du wedge Du`, `|u|=1`, and `u^T Du=0` are not encoded by the enlarged linear `A`-free competitor class. |
+
+## AP-E17 boundary-transfer/Dirac/capacity boundary (superseded by AP-E18)
 
 AP-E17 uses the classical gradient Young-measure/decomposition literature
 only to delimit what cannot be transferred.  Fonseca--Müller--Pedregal
@@ -179,10 +204,33 @@ closest recent topology-sensitive Gamma-convergence architecture, but its
 two-dimensional `S2` charge-concentration regime is deliberately not
 transferred to the three-dimensional `S3` stencil.
 
+## P54PQ-v2 action, invariant, anomaly, and P1 boundary
+
+The frozen P-layer candidate separates two models that the shorthand
+`54+126+10_C` often conflates.  Babu--Khan's predictive two-matrix model adds
+a continuous PQ symmetry and a complex gauge singlet.  Haba--Shimizu--Yamada
+keep the shorter no-PQ field list, for which both `10_C` orientations couple
+and the UV Yukawa action contains three complex symmetric matrices.
+
+The Route-F card does not copy the 2015 printed scalar potential blindly.
+Using its printed charges, the displayed eta1
+`Sigma Sigma* Sigma* phi` monomial has charge `-4`; continuous PQ uniquely
+requires `Sigma Sigma* Sigma phi + h.c.`.  The printed chi4 `Phi_ij` also has
+invalid index multiplicities; the two unpaired five-form indices require
+`Phi_mn`.  These are in-repository charge/index derivations, not claims that
+either cited paper already made the corrections.  The now-completed
+representation-ring audit further finds the omitted invariant
+`chi7 Phi_ij phi_i phi_j S* + h.c.` from the unique `54` in `Sym^2(10)`.
+This supersedes version 1, changes the counts to `60/49/48`, and is included
+in the complete P1 Hessian.
+
 | Source | Main result relevant to Route F | Required response |
 |---|---|---|
+| Slansky, [Group theory for unified model building](https://doi.org/10.1016/0370-1573(81)90092-2) (1981; foundational pre-window source) | Gives the `Spin(10)` tensor products needed to distinguish full products from bosonic symmetric powers. | Use channel intersections to prove every multiplicity; this audit finds the missing `chi7` invariant and excludes neutral but nonsinglet multidegrees. |
+| Ernst, Ringwald, Tamarit, [Axion Predictions in SO(10) x U(1)PQ Models](https://arxiv.org/abs/1801.04906) (2018; foundational pre-window source) | Derives physical axion alignment and explains the gauge-center quotient of the naive domain-wall count. | The independent Route-F charge trace and faithful `(Spin(10) x U(1)_PQ)/Z4_diag` derivation reproduce physical `N_DW=3`; keep its cosmological problem explicit. |
+| Babu and Khan, [A Minimal Non-Supersymmetric SO(10) Model: Gauge Coupling Unification, Proton Decay and Fermion masses](https://arxiv.org/abs/1507.06712) (2015; foundational pre-window source) | Supplies the `54+126+10_C` Pati--Salam breaking branch, PQ singlet extension, two-matrix Yukawa sum rules, tensor potential, and spectrum conventions. | Use only after the eta1/chi4/chi7 action corrections; the independent `328 x 328` P1 Hessian and 35-row SM spectrum replace imported benchmark viability. |
 | Jarkovska, Malinsky, Susic, [The trouble with the minimal renormalizable SO(10) GUT](https://arxiv.org/abs/2304.14227) (2023) | The minimal non-SUSY `45 + 126 + 10_C` model has a low-scale/proton problem and difficulty supporting a perturbative SM-like Higgs doublet. | Do not select this field content by minimality alone; require a full light-doublet and perturbativity gate. |
-| Haba, Shimizu, Yamada, [Neutrino Mass in Non-Supersymmetric SO(10) GUT](https://arxiv.org/abs/2304.06263) (2023) | A `54 + 126 + 10_C` two-step branch performs gauge-unification and fermion/neutrino fits, including both mass orderings. | Use as the independent F-54 comparison branch and reproduce its scale/matching assumptions. |
+| Haba, Shimizu, Yamada, [Neutrino Mass in Non-Supersymmetric SO(10) GUT](https://arxiv.org/abs/2304.06263) (2023) | A no-PQ `54 + 126 + 10_C` two-step branch performs gauge-unification and fermion/neutrino fits, with three symmetric UV Yukawa matrices and both mass orderings. | Register as `P54N`, not the two-matrix `P54PQ-v2`; reproduce its scale, doublet-mixing, and matching assumptions before comparison. |
 | Djouadi, Fonseca, Ouyang, Raidal, [Non-supersymmetric SO(10) models with Gauge and Yukawa coupling unification](https://arxiv.org/abs/2212.11315), revised/published 2023 | Two-loop gauge/Yukawa running for Pati--Salam and left-right intermediate groups shows strong proton and threshold sensitivity. | Route F must use two-loop running and explicit matching; one-loop central values are triage only. |
 | Fu et al., [Testing Realistic SO(10) SUSY GUTs with Proton Decay and Gravitational Waves](https://arxiv.org/abs/2308.05799) (2023) | Demonstrates the appropriate joint scale of analysis: two-loop RGEs, thresholds, flavor, leptogenesis, dark matter, proton decay, and gravitational waves. | Use as a benchmark for scope and uncertainty discipline; do not transfer its SUSY conclusions to the non-SUSY branch. |
 | Kaladharan and Saad, [Fermion mass, Axion dark matter, and Leptogenesis in SO(10) GUT](https://arxiv.org/abs/2308.04497) (2023) | Shows how vectorlike fermion/scalar extensions can relieve minimal Yukawa-fit tension and simultaneously affect axion/leptogenesis predictions. | If the Route-F minimal flavor fit fails, pre-register this as an extension rather than adding ad hoc texture parameters. |

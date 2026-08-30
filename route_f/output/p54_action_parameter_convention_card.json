@@ -1,0 +1,575 @@
+{
+  "branch_contract": {
+    "comparison_branches": [
+      "P54N",
+      "P210"
+    ],
+    "forbidden_imports": [
+      "120H",
+      "210H",
+      "extra10H"
+    ],
+    "gauge_group": "Spin(10)",
+    "global_symmetry": "U(1)_PQ",
+    "primary_fields": [
+      "10C",
+      "126C",
+      "1C",
+      "3x16F",
+      "54R"
+    ]
+  },
+  "charges": {
+    "Phi": 0,
+    "Psi": -1,
+    "S": -4,
+    "S*": 4,
+    "Sigma": 2,
+    "Sigma*": -2,
+    "phi": -2,
+    "phi*": 2
+  },
+  "checks": [
+    {
+      "detail": "audited 29 coefficient-monomial pairs",
+      "group": "action",
+      "name": "all scalar operators have dimension four",
+      "pass": true
+    },
+    {
+      "detail": "charges are q(Psi,Phi,Sigma,phi,S)=(-1,0,+2,-2,-4)",
+      "group": "action",
+      "name": "all scalar operators are PQ neutral",
+      "pass": true
+    },
+    {
+      "detail": "eta1, eta3, chi4, chi6, and chi7 are declared complex_plus_hc",
+      "group": "action",
+      "name": "complex scalar operators carry an explicit Hermitian partner",
+      "pass": true
+    },
+    {
+      "detail": "q(Sigma Sigma* Sigma* phi)=-4",
+      "group": "correction",
+      "name": "printed eta1 monomial fails continuous PQ",
+      "pass": true
+    },
+    {
+      "detail": "q(Sigma Sigma* Sigma phi)=0",
+      "group": "correction",
+      "name": "corrected eta1 monomial is PQ neutral",
+      "pass": true
+    },
+    {
+      "detail": "eta1 and corrected Phi_mn have every index twice; printed Phi_ij does not",
+      "group": "correction",
+      "name": "corrected eta1 and chi4 contractions are index balanced",
+      "pass": true
+    },
+    {
+      "detail": "24 real coefficients + 5 complex coefficients = 34 reals",
+      "group": "parameters",
+      "name": "scalar raw count",
+      "pass": true
+    },
+    {
+      "detail": "five complex-coupling phase vectors have exact rank 2",
+      "group": "parameters",
+      "name": "scalar rephasing rank",
+      "pass": true
+    },
+    {
+      "detail": "delta1=arg(eta3)-2arg(eta1); delta2=arg(chi4)+arg(chi6)-2arg(eta1); delta3=arg(chi7)-arg(chi6)",
+      "group": "parameters",
+      "name": "three scalar CP phases survive",
+      "pass": true
+    },
+    {
+      "detail": "24 raw reals minus dim U(3)=9",
+      "group": "parameters",
+      "name": "two symmetric Yukawa matrices give 15 physical reals",
+      "pass": true
+    },
+    {
+      "detail": "raw=60, classical quotient=49, anomalous-PQ observable quotient=48",
+      "group": "parameters",
+      "name": "joint classical and quantum counts",
+      "pass": true
+    },
+    {
+      "detail": "6(-2/5)+4(3/5)=0",
+      "group": "vacuum",
+      "name": "54 Pati--Salam direction is traceless",
+      "pass": true
+    },
+    {
+      "detail": "(-6/5,4/25,36/25,42/125)",
+      "group": "vacuum",
+      "name": "54 radial potential fingerprints",
+      "pass": true
+    },
+    {
+      "detail": "dim so(6)+dim so(4)=21=dim su(4)+dim su(2)+dim su(2)",
+      "group": "vacuum",
+      "name": "54 commutant has Pati--Salam dimension",
+      "pass": true
+    },
+    {
+      "detail": "{\"10\": 10, \"126\": 126, \"54\": 54}",
+      "group": "representations",
+      "name": "Pati--Salam decompositions preserve dimensions",
+      "pass": true
+    },
+    {
+      "detail": "16 tensor 16 = 10_s + 120_a + 126_s; only symmetric channels are present",
+      "group": "representations",
+      "name": "Yukawa symmetry follows from representation channel",
+      "pass": true
+    },
+    {
+      "detail": "10C+126C+1C+3x16F+54R",
+      "group": "branch",
+      "name": "primary field contract is exact",
+      "pass": true
+    },
+    {
+      "detail": "120H, 210H, and an extra 10H are fail-closed",
+      "group": "branch",
+      "name": "comparison representations are absent from primary",
+      "pass": true
+    },
+    {
+      "detail": "allowed={'PsiPsi_phi*': 0, 'PsiPsi_Sigma': 0}; q(PsiPsi phi)=-4",
+      "group": "branch",
+      "name": "exactly two PQ-allowed Yukawa channels",
+      "pass": true
+    },
+    {
+      "detail": "required token count=8",
+      "group": "artifact",
+      "name": "TeX card contains all required interfaces",
+      "pass": true
+    }
+  ],
+  "date": "2026-08-30",
+  "eta1_correction": {
+    "chi4_corrected_index_multiplicities": {
+      "i": 2,
+      "j": 2,
+      "k": 2,
+      "l": 2,
+      "m": 2,
+      "n": 2
+    },
+    "chi4_printed_index_multiplicities": {
+      "i": 3,
+      "j": 3,
+      "k": 2,
+      "l": 2,
+      "m": 1,
+      "n": 1
+    },
+    "corrected_charge": 0,
+    "corrected_index_multiplicities": {
+      "i": 2,
+      "j": 2,
+      "k": 2,
+      "l": 2,
+      "m": 2,
+      "n": 2,
+      "p": 2,
+      "q": 2
+    },
+    "corrected_monomial": "Sigma Sigma* Sigma phi + h.c.",
+    "printed_charge": -4,
+    "printed_monomial": "Sigma Sigma* Sigma* phi"
+  },
+  "model_id": "P54PQ-v2",
+  "open_debts": [
+    "PQ-quality policy for higher-dimension operators",
+    "P2 running and threshold matching on the completed P1 spectrum",
+    "scaled-SVD Jacobian rank after the spectrum and matching maps exist"
+  ],
+  "operator_audit": [
+    {
+      "coefficient": "mu2",
+      "coefficient_dimension": 2,
+      "field_dimension": 2,
+      "hermiticity": "real",
+      "name": "Phi mass",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "c",
+      "coefficient_dimension": 1,
+      "field_dimension": 3,
+      "hermiticity": "real",
+      "name": "Phi cubic",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "a",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Phi quartic trace-square",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "b",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Phi quartic trace-four",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "nu2",
+      "coefficient_dimension": 2,
+      "field_dimension": 2,
+      "hermiticity": "real",
+      "name": "Sigma mass",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "lambda0",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Sigma quartic singlet",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "lambda2",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Sigma quartic 2",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "lambda4",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Sigma quartic 4",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "lambda4p",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Sigma quartic 4 prime",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "alpha",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Phi2 SigmaSigma*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "beta",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "PhiPhi SigmaSigma*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "xi02",
+      "coefficient_dimension": 2,
+      "field_dimension": 2,
+      "hermiticity": "real",
+      "name": "phi mass",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "xi1",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "phi quartic norm",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "xi2",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "phi quartic holomorphic norm",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "xi3",
+      "coefficient_dimension": 1,
+      "field_dimension": 3,
+      "hermiticity": "real",
+      "name": "Phi phi phi*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "gamma1",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "SigmaSigma* phi phi* first",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "gamma2",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "SigmaSigma* phi phi* second",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "eta0",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Phi2 phi phi*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "eta1",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "complex_plus_hc",
+      "name": "corrected eta1",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "eta2",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "PhiPhi phi phi*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "eta3",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "complex_plus_hc",
+      "name": "SigmaSigma phiphi",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "mus2",
+      "coefficient_dimension": 2,
+      "field_dimension": 2,
+      "hermiticity": "real",
+      "name": "S mass",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi1",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "S quartic",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi2",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "SigmaSigma* SS*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi3",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "Phi2 SS*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi4",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "complex_plus_hc",
+      "name": "SigmaSigma Phi S",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi5",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "real",
+      "name": "phi phi* SS*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi6",
+      "coefficient_dimension": 1,
+      "field_dimension": 3,
+      "hermiticity": "complex_plus_hc",
+      "name": "phiphi S*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    },
+    {
+      "coefficient": "chi7",
+      "coefficient_dimension": 0,
+      "field_dimension": 4,
+      "hermiticity": "complex_plus_hc",
+      "name": "Phi phiphi S*",
+      "pass": true,
+      "pq_charge": 0,
+      "total_dimension": 4
+    }
+  ],
+  "parameter_count": {
+    "family_basis_dimension": 9,
+    "gauge_topological_raw_reals": 2,
+    "physical_scalar_cp_phases": [
+      "arg(eta3)-2arg(eta1)",
+      "arg(chi4)+arg(chi6)-2arg(eta1)",
+      "arg(chi7)-arg(chi6)"
+    ],
+    "scalar_phase_orbit_rank": 2,
+    "scalar_quotient_reals": 32,
+    "scalar_raw_reals": 34,
+    "total_classical_quotient_reals": 49,
+    "total_quantum_pq_observable_reals": 48,
+    "total_raw_reals": 60,
+    "yukawa_quotient_reals": 15,
+    "yukawa_raw_reals": 24
+  },
+  "phase_vectors": {
+    "chi4": [
+      2,
+      0,
+      1
+    ],
+    "chi6": [
+      0,
+      2,
+      -1
+    ],
+    "chi7": [
+      0,
+      2,
+      -1
+    ],
+    "eta1": [
+      1,
+      1,
+      0
+    ],
+    "eta3": [
+      2,
+      2,
+      0
+    ]
+  },
+  "schema": "route-f-p54-action-card-v2",
+  "sources": [
+    {
+      "exists": true,
+      "path": "route_f/tex/p54_action_parameter_convention_card.tex",
+      "sha256": "de806383f139293a6ef1da88cb7110af0ad99eff4b4f855061c3f71fa05bcbe7",
+      "size_bytes": 21483
+    },
+    {
+      "exists": true,
+      "path": "route_f/code/verify_p54_action_card.py",
+      "sha256": "918f2faf18376e560b5da2e801e3979e29bdd5dfb5716ebf7dea254645b2f970",
+      "size_bytes": 19329
+    }
+  ],
+  "status": {
+    "action_definition_subgate": "done",
+    "frozen_renormalizable_candidate": true,
+    "p0_overall": "action-and-renormalizable-audit-done",
+    "phenomenological_viability_claimed": false,
+    "printed_eta1_used": false
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 20,
+    "total": 20
+  },
+  "vacuum_fingerprints": {
+    "ps_dimensions": {
+      "10": 10,
+      "126": 126,
+      "54": 54
+    },
+    "radial_coefficients": {
+      "a": "36/25",
+      "b": "42/125",
+      "c": "4/25",
+      "mu2": "-6/5"
+    },
+    "traces": {
+      "trX": "0",
+      "trX2": "12/5",
+      "trX3": "12/25",
+      "trX4": "84/125"
+    }
+  }
+}

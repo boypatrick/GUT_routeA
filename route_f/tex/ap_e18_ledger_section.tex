@@ -1,0 +1,68 @@
+\section{AP-E18: GTA instability and the scale-polished gate}
+
+AP-E18 tests whether AP-E17's graph-tight annulus condition follows from the
+actual minimizing diagonal.  The decisive distinction is between additive
+near-minimality on the tangent ball and a comparison gauge uniform over all
+unresolved subballs.  AP-E17 supplies only
+\[
+ \epsilon_{j_\ell}(B_{\rho r_\ell})=o(r_\ell^3)
+ \qquad(0<\rho<1\text{ fixed}),
+\]
+which gives no control of
+$\epsilon_{j_\ell}(B_s)/s^3$ when $s/r_\ell\to0$.
+
+The standard reverse-H\"older imports do not close this gap.  The ambient
+growth exponents are $(p,q)=(2,6)$, outside the
+$q<\min\{np/(n-1),p+1\}=3$ range in dimension three.  Although
+\[
+ \Xi(Du)=(Du,\sqrt R\,M_2(Du),\sqrt K\,M_3(Du))
+\]
+obeys curl/div identities and has quadratic energy, it is not a free linear
+$\mathscr A$-field: the Pl\"ucker identities, $|u|=1$, and $u^TDu=0$ remain
+nonlinear constraints.  Minimality is not available in the enlarged
+$\mathscr A$-free class.
+
+The exact obstruction is a rank-two needle straddling the tangent-ball
+boundary.  With
+\[
+ A_\varepsilon=\varepsilon^{-1/2},\qquad
+ b_\varepsilon=h_\varepsilon=\varepsilon^2,
+\]
+its strong tangent $L^2$ mass is $O(\varepsilon^5)$ and both its leading
+first- and second-minor energies are $O(\varepsilon)$, while
+\[
+ \int|z_\varepsilon|^2|Dz_\varepsilon|^2\asymp1,\qquad
+ \int|z_\varepsilon|^2|M_2(Dz_\varepsilon)|^2\asymp1.
+\]
+For every annulus thickness $\delta_\varepsilon\downarrow0$, the GTA
+quotient is bounded below by
+\[
+ c\delta_\varepsilon^{-2}\quad(\delta_\varepsilon\geq h_\varepsilon),
+ \qquad
+ \frac{c}{\varepsilon^2\delta_\varepsilon}
+ \quad(\delta_\varepsilon<h_\varepsilon).
+\]
+Both diverge, even though the annular graph energy tends to zero.
+
+At physical radius $r_\varepsilon=\varepsilon$, the chart displacement is
+$\sqrt\varepsilon$ and the extra energy is
+$O(r_\varepsilon^4)=o(r_\varepsilon^3)$.  A compact chart homotopy preserves
+degree and the perturbation is invisible to the tangent defect measure.
+Consequently GTA is not a stable consequence of the present additive
+diagonal axioms.  This is not a proof that no specially selected recovery
+sequence has GTA.
+
+The replacement mainline is a scale-polished recovery sequence satisfying,
+down to a declared cutoff scale,
+\[
+ \epsilon_\ell(B_s(y))\leq\omega_\ell s^3,
+ \qquad\omega_\ell\to0,
+\]
+or a direct proof of energy--amplitude tightness
+\[
+ \int|v_\ell-v_0|^2
+ \{1+R|Dv_\ell|^2+K|M_2(Dv_\ell)|^2\}\to0
+\]
+together with a one-hemisphere collar.  Existence of such a diagonal remains
+open.  The AP-E18 continuum card passes $14/14$; full $\mu=0$, classicality,
+isolation, Hessian, determinant, and portal promotion remain closed.

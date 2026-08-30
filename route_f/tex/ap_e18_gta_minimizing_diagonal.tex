@@ -1,0 +1,446 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{mathrsfs}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\SSS}{\mathbb S}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cP}{\mathcal P}
+
+\title{AP-E18 Graph-Tight Annuli on a Minimizing Diagonal:\\
+Failure of the Reverse-H\"older Import, a Boundary-Straddling\\
+Rank-Two Needle, and the Scale-Polished Repair}
+\author{Route-F derivation ledger}
+\date{24 July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AP-E17 reduced the volumetric relaxation gate to the graph-tight annulus
+condition (GTA).  This note tests whether GTA follows from the actual
+minimizing diagonal, rather than from an arbitrary bounded graph sequence.
+The answer separates two notions of minimality.
+
+The AP-E17 diagonal has an \emph{additive} comparison error bounded by its
+global energy excess.  After normalization on a tangent ball this error is
+$o(1)$, but it is not controlled relative to every unresolved microscopic
+subball.  Consequently it gives no uniform reverse-H\"older seed.  Standard
+$(p,q)$-growth regularity cannot be imported: in dimension three the current
+ambient bounds have $(p,q)=(2,6)$, outside the 2024 relaxed-quasiconvex range
+$q<\min\{3,3\}=3$.  Treating the complete-minor vector as an
+$\mathscr A$-free quadratic field also fails, because the admissible graph is
+cut out by nonlinear Pl\"ucker identities and the $\SSS^3$ constraint; the
+map is not minimizing over the full linear $\mathscr A$-free class.
+
+More decisively, we construct a smooth, boundary-straddling rank-two needle.
+In tangent variables its primary amplitude, secondary amplitude, and radius
+are
+\[
+ A_\varepsilon=\varepsilon^{-1/2},\qquad
+ b_\varepsilon=h_\varepsilon=\varepsilon^2 .
+\]
+It has strong $L^2$ mass $O(\varepsilon^5)$, first- and second-minor energy
+$O(\varepsilon)$, and zero pure third minor.  Nevertheless
+\[
+ \int |z_\varepsilon|^2|Dz_\varepsilon|^2\asymp1,\qquad
+ \int |z_\varepsilon|^2|M_2(Dz_\varepsilon)|^2\asymp1 .
+\]
+Placed across the boundary of the tangent ball, it defeats \emph{every}
+shrinking annulus thickness.  At physical tangent radius
+$r_\varepsilon=\varepsilon$, its target amplitude is only
+$r_\varepsilon A_\varepsilon=\sqrt\varepsilon$ and its added energy is
+$O(r_\varepsilon^4)=o(r_\varepsilon^3)$.  It is compactly homotopic to the
+identity, preserves degree, does not change the tangent defect measure, and
+remains within the normalized additive quasiminimality error.
+
+Thus GTA is false as a universal consequence of the AP-E17
+\emph{additive} minimizing-diagonal axioms.  This does not disprove the
+existence of a specially selected GTA recovery sequence or regularity of an
+exact local minimizer.  The correct replacement gate is now explicit:
+construct a scale-polished recovery sequence with a comparison gauge that is
+uniform down to the needle scale, or prove the corresponding
+energy--amplitude tightness directly.  All downstream promotions remain
+closed.
+\end{abstract}
+
+\tableofcontents
+
+\section{The exact logical input from AP-E17}
+
+The frozen complete-minor density is
+\begin{equation}
+ W(F)=\frac12\left(|F|^2+R|M_2(F)|^2+K|M_3(F)|^2\right),
+ \qquad R=1,\quad K=0.35.                              \label{eq:W}
+\end{equation}
+Let $u_{j_\ell}$ be the AP-E17 diagonal at a volumetric tangent point
+$x_0$, with tangent radii $r_\ell\downarrow0$.  Its local relative-homotopy
+deficit satisfies, for every fixed $0<\rho<1$,
+\begin{equation}
+ 0\leq\epsilon_{j_\ell}(B_{\rho r_\ell}(x_0))
+ \leq \cE(u_{j_\ell})-I_B
+ =o\!\left(\mu(B_{r_\ell}(x_0))\right)
+ =o(r_\ell^3).                                        \label{eq:additive}
+\end{equation}
+This is a strong statement at the tangent-ball scale.  It is only an
+\emph{additive} statement: if $s_\ell\ll r_\ell$, then
+\eqref{eq:additive} gives no useful estimate for
+$\epsilon_{j_\ell}(B_{s_\ell})/s_\ell^3$.
+
+In scaled coordinates put
+\begin{equation}
+ v_\ell(y)=\frac{u_{j_\ell}(x_0+r_\ell y)-q}{r_\ell},
+ \qquad v_0(y)=F_0y,\qquad z_\ell=v_\ell-v_0.           \label{eq:tangent}
+\end{equation}
+The GTA weighted term is
+\begin{equation}
+ \cA_\ell(\delta)=
+ \frac1{\delta^2}\int_{A_{2\delta}}
+ |z_\ell|^2\left(1+R|Dv_\ell|^2
+                 +K|M_2(Dv_\ell)|^2\right)\dd y .      \label{eq:GTA}
+\end{equation}
+AP-E17 proves the full boundary transfer if there exists
+$\delta_\ell\downarrow0$ for which \eqref{eq:GTA} tends to zero, the
+annular graph energy vanishes, and the annulus stays in one target
+hemisphere.
+
+\section{Why a standard reverse-H\"older theorem cannot be imported}
+
+\subsection{The ambient \texorpdfstring{\((p,q)\)}{(p,q)} exponent test}
+
+As a function of the ordinary derivative,
+\begin{equation}
+ c|F|^2\leq 1+W(F)\leq C(1+|F|^6).                     \label{eq:pq}
+\end{equation}
+Thus the coarse ambient exponents are $(p,q)=(2,6)$.  The 2024 partial
+regularity theorem for relaxed strongly quasiconvex $(p,q)$ functionals
+requires
+\begin{equation}
+ 1\leq p\leq q<
+ \min\left\{\frac{np}{n-1},p+1\right\}.                \label{eq:GK-range}
+\end{equation}
+For $n=3$ and $p=2$ the right side is $3$, whereas $q=6$.  Moreover, that
+theorem explicitly does not derive the higher-gradient integrability which
+would be needed to bridge this gap \cite{GmeinederKristensen2024}.
+
+\subsection{The tempting \texorpdfstring{\(\mathscr A\)}{A}-free lift and its obstruction}
+
+The complete-minor vector
+\begin{equation}
+ \Xi(Du)=\bigl(Du,\sqrt R\,M_2(Du),\sqrt K\,M_3(Du)\bigr) \label{eq:Xi}
+\end{equation}
+does satisfy linear differential identities: the first block is curl free,
+and the Hodge duals of the second-minor forms are divergence free.  Since
+$W=|\Xi|^2/2$, the 2025 $\mathscr A$-free higher-integrability theorem is a
+natural candidate \cite{Schiffer2025}.
+
+It does not apply to the present minimizer.  The range of $\Xi$ is not the
+full kernel of a linear constant-rank operator.  It also satisfies
+\begin{equation}
+ M_2=Du\wedge Du,\qquad
+ M_3=Du\wedge Du\wedge Du,\qquad
+ |u|=1,\qquad u^TDu=0,                                 \label{eq:nonlinear}
+\end{equation}
+which are nonlinear algebraic and target constraints.  Local minimality is
+known only among fields obeying \eqref{eq:nonlinear}, not among all
+$\mathscr A$-free variations.  Enlarging the competitor class would assume
+the very graph-recovery theorem under investigation.
+
+\begin{proposition}[Reverse-H\"older import verdict]
+Neither \eqref{eq:GK-range} nor the quadratic $\mathscr A$-free theorem
+supplies a reverse-H\"older estimate for the AP-E17 minimizing diagonal.
+Any valid proof must use new scale-aware minimality on the nonlinear
+complete-minor graph.
+\end{proposition}
+
+\section{The boundary-straddling rank-two needle}
+
+Fix a point $y_\ast\in\partial B_1$.  In a boundary chart, choose
+$\psi,\phi\in C_c^\infty(B_1)$ such that on a smaller open set crossing the
+flat interface through the origin,
+\begin{equation}
+ |\psi|+|D\psi|\geq c,\qquad |D\psi\wedge D\phi|\geq c. \label{eq:profiles}
+\end{equation}
+Take two orthonormal target directions $e_1,e_2\in T_q\SSS^3$.  For
+$\varepsilon\downarrow0$ set
+\begin{equation}
+ A_\varepsilon=\varepsilon^{-1/2},\qquad
+ b_\varepsilon=\varepsilon^2,\qquad
+ h_\varepsilon=\varepsilon^2,                         \label{eq:scales}
+\end{equation}
+and define the tangent perturbation
+\begin{equation}
+ z_\varepsilon(y)=
+ A_\varepsilon\psi\!\left(\frac{y-y_\ast}{h_\varepsilon}\right)e_1+
+ b_\varepsilon\phi\!\left(\frac{y-y_\ast}{h_\varepsilon}\right)e_2 .
+ \label{eq:needle}
+\end{equation}
+The support is a ball of radius $h_\varepsilon$ straddling
+$\partial B_1$.  On the set in \eqref{eq:profiles}, $Dz_\varepsilon$ has
+rank exactly two.
+
+\begin{theorem}[Exact needle scaling]
+Up to profile-dependent positive constants,
+\begin{align}
+ \int|z_\varepsilon|^2
+ &\asymp A_\varepsilon^2h_\varepsilon^3
+ =\varepsilon^5,                                      \label{eq:L2}\\
+ \int|Dz_\varepsilon|^2
+ &\asymp A_\varepsilon^2h_\varepsilon
+ =\varepsilon,                                        \label{eq:E1}\\
+ \int|M_2(Dz_\varepsilon)|^2
+ &\asymp
+ \frac{A_\varepsilon^2b_\varepsilon^2}{h_\varepsilon}
+ =\varepsilon,                                        \label{eq:E2}\\
+ M_3(Dz_\varepsilon)&=0.                              \label{eq:E3}
+\end{align}
+Nevertheless,
+\begin{align}
+ \int|z_\varepsilon|^2|Dz_\varepsilon|^2
+ &\asymp A_\varepsilon^4h_\varepsilon=1,               \label{eq:weighted1}\\
+ \int|z_\varepsilon|^2|M_2(Dz_\varepsilon)|^2
+ &\asymp
+ A_\varepsilon^2
+ \frac{A_\varepsilon^2b_\varepsilon^2}{h_\varepsilon}
+ =1.                                                   \label{eq:weighted2}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+The support volume is comparable to $h_\varepsilon^3$.  The two derivative
+sizes are $A_\varepsilon/h_\varepsilon$ and
+$b_\varepsilon/h_\varepsilon=1$.  Equations
+\eqref{eq:L2}--\eqref{eq:E2} follow by multiplying the corresponding
+pointwise powers by the support volume.  The derivative has only two target
+rows, so every pure third minor is zero.  On the active profile set,
+$|z_\varepsilon|\asymp A_\varepsilon$; multiplying
+\eqref{eq:E1} and \eqref{eq:E2} by $A_\varepsilon^2$ gives
+\eqref{eq:weighted1}--\eqref{eq:weighted2}.
+\end{proof}
+
+Adding a bounded affine matrix $F_0$ does not alter these powers.  Since the
+rank-two update has no term cubic in itself,
+\begin{align}
+ M_2(F_0+Dz)-M_2(F_0)&=L_2(F_0,Dz)+M_2(Dz),\notag\\
+ M_3(F_0+Dz)-M_3(F_0)&=L_3(F_0,F_0,Dz)
+ +L_3(F_0,Dz,Dz),                                    \label{eq:minor-expand}
+\end{align}
+and every displayed contribution has squared integral $O(\varepsilon)$.
+
+\section{Failure for every shrinking annulus}
+
+Let $0<\delta_\varepsilon<1/4$.  The active region in the intersection of
+the needle and $A_{2\delta_\varepsilon}$ has volume bounded below by
+\[
+ c h_\varepsilon^3\quad\hbox{if }\delta_\varepsilon\geq h_\varepsilon,
+ \qquad
+ c h_\varepsilon^2\delta_\varepsilon
+ \quad\hbox{if }\delta_\varepsilon<h_\varepsilon .
+\]
+It follows from \eqref{eq:weighted1} that
+\begin{equation}
+ \cA_\varepsilon(\delta_\varepsilon)\geq
+ \begin{cases}
+ c\,\delta_\varepsilon^{-2},
+   &\delta_\varepsilon\geq h_\varepsilon,\\[1mm]
+ c\,(\varepsilon^2\delta_\varepsilon)^{-1},
+   &0<\delta_\varepsilon<h_\varepsilon.
+ \end{cases}                                           \label{eq:all-delta}
+\end{equation}
+Both branches diverge for every choice
+$\delta_\varepsilon\downarrow0$.  In contrast, the unweighted annular graph
+energy obeys
+\begin{equation}
+ \int_{A_{2\delta_\varepsilon}}W(F_0+Dz_\varepsilon)
+ \leq C
+ \begin{cases}
+ \varepsilon,&\delta_\varepsilon\geq h_\varepsilon,\\
+ \delta_\varepsilon/\varepsilon,
+    &\delta_\varepsilon<h_\varepsilon,
+ \end{cases}
+ \longrightarrow0,                                    \label{eq:ann-energy}
+\end{equation}
+because the second branch has
+$\delta_\varepsilon<h_\varepsilon=\varepsilon^2$.
+
+\begin{theorem}[GTA instability]
+The strong tangent convergence, vanishing annular graph energy, and
+vanishing normalized added energy do not imply GTA, even for a genuinely
+rank-two perturbation whose physical image stays in one target hemisphere.
+\end{theorem}
+
+\section{Compatibility with an additive minimizing diagonal}
+
+Take the physical tangent radius to be
+\begin{equation}
+ r_\varepsilon=\varepsilon.                            \label{eq:r}
+\end{equation}
+First insert \eqref{eq:needle} through the exponential chart over the
+bounded affine background $v_0=F_0y$.  More generally the same calculation
+holds on a recovery patch whose background complete-minor graph is
+equiintegrable at the needle scale.  Its largest target displacement is
+\begin{equation}
+ r_\varepsilon A_\varepsilon=\sqrt\varepsilon\to0,     \label{eq:hemisphere}
+\end{equation}
+so radial projection and its exterior powers have uniform constants.  The
+physical added derivative energy is
+\begin{equation}
+ r_\varepsilon^3\,O(\varepsilon)
+ =O(r_\varepsilon^4)=o(r_\varepsilon^3).               \label{eq:physical}
+\end{equation}
+The perturbation is supported in a contractible target chart and the
+homotopy obtained by multiplying \eqref{eq:needle} by $t\in[0,1]$ is compact.
+It therefore preserves the exterior trace and global degree.
+
+\begin{theorem}[Instability of the AP-E17 additive tangent axioms]
+On the affine tangent background, the rank-two needle has
+$o(r_\varepsilon^3)$ physical cost.  It does not change the weak tangent
+graph measure, and its removable energy is compatible with
+\begin{equation}
+ \frac{\epsilon_{j_\ell}(B_{\rho r_\ell})}
+      {\mu(B_{r_\ell})}\longrightarrow0
+\end{equation}
+for every fixed $\rho$ whenever it is inserted into a controlled recovery
+patch.  Nevertheless it violates
+\eqref{eq:GTA} for every $\delta_\ell\downarrow0$.
+\end{theorem}
+
+\begin{proof}
+For the affine background, \eqref{eq:minor-expand} and
+\eqref{eq:E1}--\eqref{eq:E2} make the normalized graph-energy change
+$O(\varepsilon)$; hence it disappears from the weak tangent measure and is
+$o(1)$ at the additive comparison normalization.  The same conclusion holds
+on a patch for which the background mixed terms in
+\eqref{eq:minor-expand} are equiintegrable at that scale.  Degree and trace
+are unchanged by the compact homotopy.  Equation \eqref{eq:all-delta} proves
+failure of the remaining GTA condition.
+\end{proof}
+
+This theorem has a deliberately precise scope.  It disproves a theorem
+which tries to derive GTA from the AP-E17 additive tangent estimates alone:
+those estimates cannot distinguish the needle.  It does not prove that the
+repository's selected diagonal actually contains the needle, that no
+carefully selected recovery sequence has GTA, or that the degree-one
+minimizer has a nonzero relaxation defect.
+
+\section{The corresponding reverse-H\"older no-go}
+
+On its active set the needle graph density satisfies
+\begin{equation}
+ G_\varepsilon\asymp\varepsilon^{-5},
+ \qquad
+ |\operatorname{supp}G_\varepsilon|\asymp\varepsilon^6,
+ \qquad
+ \int G_\varepsilon\asymp\varepsilon.                  \label{eq:G}
+\end{equation}
+For every $\sigma>0$,
+\begin{equation}
+ \int G_\varepsilon^{1+\sigma}
+ \asymp\varepsilon^{1-5\sigma},\qquad
+ \frac{\left(\int G_\varepsilon^{1+\sigma}\right)^{1/(1+\sigma)}}
+      {\int G_\varepsilon}
+ \asymp\varepsilon^{-6\sigma/(1+\sigma)}
+ \longrightarrow\infty.                               \label{eq:RHfail}
+\end{equation}
+Thus no sequence-uniform fixed-ball $L^{1+\sigma}$ gain follows from
+\eqref{eq:additive}.  At the needle scale the removable energy is
+$O(\varepsilon)$, exactly the size allowed by the additive error.
+
+\section{The scale-polished repair}
+
+\begin{definition}[Uniform microscale comparison gauge]
+A tangent recovery sequence is scale polished if there are
+$\omega_\ell\downarrow0$ and $s_\ell\downarrow0$ such that for every ball
+$B_s(y)\Subset B_1$ with $s_\ell\leq s\leq1/4$,
+\begin{equation}
+ \epsilon_\ell(B_s(y))
+ \leq \omega_\ell s^3.                                \label{eq:polished}
+\end{equation}
+An exact local minimizer has $\omega_\ell=0$.
+\end{definition}
+
+The needle violates \eqref{eq:polished} at
+$s=h_\varepsilon=\varepsilon^2$, since its removable energy is
+$\asymp\varepsilon$ whereas $s^3=\varepsilon^6$.  Thus
+\eqref{eq:polished} detects exactly what the global additive estimate misses.
+It is not yet proved that a degree-preserving recovery sequence satisfying
+\eqref{eq:polished} exists.
+
+A second, weaker sufficient target is the energy--amplitude tightness
+\begin{equation}
+ \int_{B_1}|z_\ell|^2
+ \left(1+R|Dv_\ell|^2+K|M_2(Dv_\ell)|^2\right)\dd y
+ \longrightarrow0.                                    \label{eq:EAT}
+\end{equation}
+Together with no boundary mass and a one-hemisphere collar,
+\eqref{eq:EAT} permits a slow diagonal choice
+$\delta_\ell\downarrow0$ with
+\[
+ \delta_\ell^{-2}\times\text{the left side of \eqref{eq:EAT}}\to0
+\]
+and vanishing annular graph energy, hence GTA.  The needle has left side
+$\asymp1$ and is the sharp obstruction.
+
+\section{Gate decision}
+
+The requested GTA investigation therefore closes with a negative universal
+result and a narrower positive target:
+\begin{enumerate}
+ \item \textbf{Reverse-H\"older from the current diagonal: false.}
+ The additive error is not scale uniform; current $(p,q)$ and
+ $\mathscr A$-free theorems do not apply.
+ \item \textbf{GTA from the additive tangent axioms alone: false.}
+ The boundary-straddling rank-two needle is invisible to those normalized
+ limits while violating every annulus thickness.  Whether the selected
+ repository diagonal contains or can be polished to exclude it remains open.
+ \item \textbf{GTA for a scale-polished diagonal: open.}
+ The next theorem must construct \eqref{eq:polished}, or prove
+ \eqref{eq:EAT} plus the hemisphere collar by another exact local-selection
+ argument.
+\end{enumerate}
+
+The counterexample does not reopen lattice work and does not authorize the
+bosonic Hessian.  Full $\mu=0$, local recovery, classicality, continuum
+isolation, determinant promotion, and the degree-one portal remain false.
+Parallel Dirac/Callias mathematics on a prescribed smooth background remains
+allowed.
+
+The independent verifier
+\begin{center}
+\texttt{route\_f/code/verify\_ap\_e18\_gta\_minimizing\_diagonal.py}
+\end{center}
+checks the rank, every scaling exponent, both annulus branches,
+reverse-H\"older divergence, literature applicability, and all fail-closed
+gates.
+
+\begin{thebibliography}{9}
+
+\bibitem{GmeinederKristensen2024}
+F.~Gmeineder and J.~Kristensen,
+\newblock Quasiconvex functionals of \((p,q)\)-growth and the partial
+regularity of relaxed minimizers,
+\newblock \emph{Arch. Rational Mech. Anal.} \textbf{248} (2024), 80,
+\newblock \url{https://doi.org/10.1007/s00205-024-02013-8}.
+
+\bibitem{Schiffer2025}
+S.~Schiffer,
+\newblock \(\mathscr A\)-free truncation and higher integrability of
+minimisers,
+\newblock \emph{Calc. Var. Partial Differential Equations} \textbf{64}
+(2025), 30,
+\newblock \url{https://doi.org/10.1007/s00526-024-02855-w}.
+
+\end{thebibliography}
+
+\end{document}
