@@ -12,9 +12,12 @@ regularity problem.  Route F now has three independent layers:
   `3 x 16_F + 54_H,R + 126_H,C + 10_H,C + 1_H,C`.  The singlet is required
   by the predictive two-Yukawa-matrix branch.  The shorter no-PQ theory is
   `P54N` and has three symmetric Yukawa matrices.  The corrected P54PQ-v2
-  vacuum and complete tree-level spectrum are now computed; next perform
-  two-loop running and thresholds, global flavor
-  fit, proton decay, amplitudes, and out-of-fit predictions.  The more
+  vacuum and complete tree-level spectrum are now computed.  P2 first
+  falsified the historical `sigma/omega=0.35` benchmark, then closed a
+  parent-resolved threshold fixed point at `sigma/omega=0.1265`.  Running,
+  two-site matching, and covariance are closed; the finite one-loop Higgs
+  self-energy remains before global flavor, proton decay, amplitudes, and
+  out-of-fit predictions.  The more
   flexible `210_H + 120_H` model is comparison/rescue only.
 - **U -- family UV:** seek an anomaly-safe representation-valued index
   `Ind D_UV = 3 x 16`.  On `CP1` the primary hypothesis is
@@ -55,8 +58,55 @@ P0-A action card completed 2026-08-30 Asia/Taipei:
   35-row Standard-Model irrep spectrum whose real multiplicities sum to 328.
   The specified `omega>0` orientation is the lowest of 27 enumerated signed
   radial roots.  This closes the tree-level algebraic P1 gate, not running or
-  phenomenological viability.  P2 running/matching and the PQ-quality/
-  `N_DW=3` cosmology decision are next.
+  phenomenological viability.  The hierarchy-restored P2 replay below
+  supersedes this original next-step sentence.
+
+P2 running/threshold fixed-point checkpoint completed 2026-08-30 Asia/Taipei:
+
+- The two-loop SM/Pati--Salam engine reproduces the published no-threshold
+  scales and, with current inputs, gives `MI=4.60943e13 GeV`,
+  `MU=1.18126e15 GeV`, `alphaU^-1=37.60198`, and `MI/MU=0.0390213`.
+- The historical `sigma/omega=0.35` point is retained as a falsified
+  regression.  Holding every cubic/quartic P1 coupling fixed and re-deriving
+  only the radial quadratic masses yields a stable 35-sector branch with a
+  single light doublet.  Exact PS Casimir projectors identify the
+  `Sigma126:(10-pair,1,3)` breaking parent and avoid nearest-mass assignment.
+- Scalar spectral traces plus the nine intermediate and 24 GUT vector
+  thresholds give a fixed point at `sigma/omega=0.1265`, returning
+  `MI/MU=0.126524923`.  The physical scales are `MI=1.07986e14 GeV`,
+  `MU=8.53475e14 GeV`, and `alphaU^-1=39.70141`.  The parent-resolved verifier
+  passes `11/11`; the integrated P2 verifier passes `21/21`.
+- Independent 10% log-mass errors on 27 exactly degenerate mass blocks give
+  total sigma `(0.04031,0.03829,0.24826)` in
+  `(log10 MI,log10 MU,alphaU^-1)`.  Full matrices and the `6 x 27` Jacobian
+  are stored in `route_f/output/p54_p2_two_site_matching.json`.
+- The loop condition is reimposed exactly by
+  `delta xi02=1.00000252572 h^T Pi_D h/omega^2`; the heavy-doublet gap is
+  `0.0305570303 omega^2`.  The declared Landau-`MSbar` hard-mode calculation
+  now gives `Pi_B^hard/omega^2=-0.0202366510950 I4` and
+  `delta xi02,B=-0.0202367022071` at `muU=gU*omega`.  The full pole mass is
+  not claimed; the heavy-Yukawa projection remains the explicit matching
+  nuisance `eta_Y(mu)`.
+- A parallel candidate repair adds two charge-`+2` Weyl `10_F` fields.  The
+  operator `S 10_F 10_F` changes `A[Spin(10)^2-PQ]` from `-6` to `-2`, hence
+  `Nhat=-4` and physical `N_DW=1` after the existing diagonal `Z4` quotient.
+  Its universal one-loop shifts preserve differential unification.  Explicit
+  two-loop replays at `y_F=(0.5,1,2)` keep `M_F` inside the PS interval and
+  give `MI/MU=(0.125482,0.125873,0.126263)`; the extension remains separate
+  because `y_F` is a new threshold parameter.
+
+P2 bosonic CW checkpoint completed 2026-09-02 Asia/Taipei:
+
+- `route_f/code/verify_p54_p2_bosonic_cw.py` passes `14/14`, using the exact
+  Fréchet second variation of 290 hard scalar and 33 hard vector modes;
+- the scalar/vector coefficients are respectively
+  `-0.0182525705951 I4` and `-0.00198408049986 I4` in units of `omega^2`;
+- the finite scale replay confirms that this is a running matching
+  coefficient, not a physical uncertainty band;
+- P3 may open only with
+  `delta xi02(mu)=[kappa_B(mu)/omega^2+eta_Y(mu)]/w10` and an explicit test of
+  the heavy-doublet gap.  The nuisance `eta_Y` may not be fixed to zero by
+  convention.
 
 ## AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S-layer authority)
 

@@ -1,0 +1,599 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,longtable,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={P54PQ-v2 P2 running, thresholds, covariance, and PQ repair}}
+\setlength{\emergencystretch}{1em}
+\newcommand{\Spin}{\operatorname{Spin}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\PS}{G_{\rm PS}}
+\newcommand{\SM}{G_{\rm SM}}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\hc}{\mathrm{h.c.}}
+\title{P2: Two-Loop Running, Spectrum Thresholds,\\
+Covariance, and the PQ Cosmology Repair}
+\author{Route-F four-dimensional mainline}
+\date{30 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We execute the P2 gate on the complete 35-row scalar spectrum of
+\texttt{P54PQ-v2}.  The two-loop
+$\SM\to SU(4)_c\times SU(2)_L\times SU(2)_R\to\Spin(10)$ engine reproduces
+the published no-threshold reference scales, and the one-loop threshold
+Jacobian uses all 290 positive physical scalar directions.  The original
+$\sigma/\omega=0.35$ diagnostic fails, but re-deriving only the radial
+quadratic masses and retaining every cubic/quartic P1 coupling produces a
+stable one-doublet branch.  Exact Pati--Salam Casimir projectors and spectral
+traces then give the self-consistent threshold fixed point
+$\sigma/\omega=0.1265$, $M_I/M_U=0.126525$.  Two-site scale covariance and
+the loop-level one-doublet renormalization condition are closed.  The
+follow-up Landau-$\overline{\rm MS}$ hard-mode calculation gives the bosonic
+matching curvature
+$\Pi_B/\omega^2=-0.0202366510950\,\bm1_4$; the heavy-Yukawa projection is
+retained as an explicit nuisance rather than set to zero.  In parallel, two
+Weyl $10_F$ fields of PQ charge $+2$
+give a minimal candidate extension with physical $N_{\rm DW}=1$.
+\end{abstract}
+
+\tableofcontents
+
+\section{Scope, conventions, and promotion boundary}
+
+The input action is the corrected \texttt{P54PQ-v2} action.  The historical
+P1 stationary point
+\begin{equation}
+ (\omega,\sigma,v_s)=(1,0.35,0.25).
+ \label{eq:p1vevs}
+\end{equation}
+The scalar Hessian is not replaced by an extended-survival ansatz: every
+threshold trace below is computed from its 35 Standard-Model Casimir rows.
+The two-loop coefficients and finite matching convention follow the general
+product-group RGE and one-loop decoupling formulas used in
+Refs.~\cite{MachacekVaughn,BabuKhan2015,Haba2023}.  Low-energy central values
+are updated to
+\begin{equation}
+ M_Z=91.1876\ {\rm GeV},\quad
+ \widehat\alpha^{-1}(M_Z)=127.955,\quad
+ \widehat s_W^2=0.23122,\quad
+ \alpha_s(M_Z)=0.1180,
+ \label{eq:inputs}
+\end{equation}
+with the last value taken from the 2024 PDG review~\cite{PDG2024}.
+
+There are two different meanings of ``threshold calculation'' that must not
+be conflated:
+\begin{enumerate}
+\item the lower-group trace $\tr t_i^2\log(M/\mu)$ of a physical mass
+  eigenstate is defined once its $\SM$ representation and mass are known;
+\item assigning that state to the $M_I$ or $M_U$ matching functional requires
+  a parametrically separated EFT interval and its parent $\PS$ multiplet.
+\end{enumerate}
+The historical point supplies the first datum but not the second.  We retain
+it as a fail-closed regression in Sec.~\ref{sec:hierarchy}; the new fixed
+point in Sec.~\ref{sec:fixedpoint} supplies both.  The bosonic zero-momentum
+matching coefficient is now closed in a declared scheme.  A
+gauge-independent pole mass remains outside this artifact because it needs
+momentum dependence and the globally fitted heavy Yukawas.
+
+\section{Two-loop running and finite matching}
+
+Write $t=\log\mu$ and $\alpha_i=g_i^2/(4\pi)$.  In each effective theory,
+\begin{equation}
+ \frac{d\alpha_i^{-1}}{dt}
+ =-\frac{a_i}{2\pi}
+  -\sum_j\frac{b_{ij}}{8\pi^2\alpha_j^{-1}}.
+ \label{eq:rge}
+\end{equation}
+Below $M_I$ the ordering is $(3_c,2_L,1_Y)$, with GUT-normalized
+$g_1^2=5g_Y^2/3$, and
+\begin{align}
+ a^{\rm SM}&=\left(-7,-\frac{19}{6},\frac{41}{10}\right),\nonumber\\
+ b^{\rm SM}&=
+ \begin{pmatrix}
+ -26&9/2&11/10\\
+ 12&35/6&9/10\\
+ 44/5&27/10&199/50
+ \end{pmatrix}.
+ \label{eq:smcoeff}
+\end{align}
+Above $M_I$ the ordering is $(4_c,2_L,2_R)$ and the D-parity spectrum gives
+\begin{align}
+ a^{\rm PS}&=\left(1,\frac{26}{3},\frac{26}{3}\right),\nonumber\\
+ b^{\rm PS}&=
+ \begin{pmatrix}
+ 1209/2&249/2&249/2\\
+ 1245/2&779/3&48\\
+ 1245/2&48&779/3
+ \end{pmatrix}.
+ \label{eq:pscoeff}
+\end{align}
+These matrices include the intermediate scalar content specified by the
+traditional extended-survival Pati--Salam baseline.  Their role here is to
+determine the interval demanded by low-energy data; they are not silently
+identified with the nonhierarchical P1 spectrum.
+
+For a simple group $G$ broken to $G_i$, one-loop $\overline{\rm MS}$ matching
+is~\cite{BabuKhan2015}
+\begin{equation}
+ \alpha_i^{-1}(\mu)=\alpha_G^{-1}(\mu)-\frac{\lambda_i(\mu)}{12\pi},
+ \label{eq:matching}
+\end{equation}
+where
+\begin{equation}
+ \lambda_i=(C_G-C_i)
+ -21\tr\!\left[t_{iV}^2\log\frac{M_V}{\mu}\right]
+ +\tr\!\left[t_{iS}^2\cP_{\rm PGB}\log\frac{M_S}{\mu}\right]
+ +8\tr\!\left[t_{iF}^2\log\frac{M_F}{\mu}\right].
+ \label{eq:lambda}
+\end{equation}
+The projector removes eaten Goldstones.  With logarithmic thresholds set to
+zero, the finite Casimir terms give
+\begin{align}
+ \alpha_4^{-1}(M_I^+)&=\alpha_3^{-1}(M_I^-)+\frac1{12\pi},\nonumber\\
+ \alpha_{2L}^{-1}(M_I^+)&=\alpha_2^{-1}(M_I^-),\nonumber\\
+ \alpha_{2R}^{-1}(M_I^+)&=\frac53\alpha_1^{-1}(M_I^-)
+ -\frac23\alpha_4^{-1}(M_I^+)+\frac{14}{36\pi}.
+ \label{eq:matchingMI}
+\end{align}
+At $M_U$, the three implied unified inverse couplings are
+\begin{equation}
+ \alpha_{10,a}^{-1}=\alpha_a^{-1}
+ +\frac{8-C_a}{12\pi},\qquad (C_4,C_{2L},C_{2R})=(4,2,2).
+ \label{eq:matchingMU}
+\end{equation}
+Equating them supplies two nonlinear equations for
+$(\log M_I,\log M_U)$.
+
+Using the historical inputs of Ref.~\cite{BabuKhan2015}, the implementation
+returns
+\begin{equation}
+ M_I=4.61890\times10^{13}\ {\rm GeV},\qquad
+ M_U=1.21714\times10^{15}\ {\rm GeV},
+ \label{eq:validation}
+\end{equation}
+reproducing the published $4.62\times10^{13}$ and
+$1.22\times10^{15}$ GeV values.  With Eq.~\eqref{eq:inputs},
+\begin{equation}
+ \boxed{
+ M_I=4.60943\times10^{13}\ {\rm GeV},\quad
+ M_U=1.18126\times10^{15}\ {\rm GeV},\quad
+ \alpha_U^{-1}=37.60198.}
+ \label{eq:baseline}
+\end{equation}
+Thus
+\begin{equation}
+ \left(\frac{M_I}{M_U}\right)_{\rm 2L}=0.0390213,\qquad
+ \log\frac{M_U}{M_I}=3.24365.
+ \label{eq:requiredinterval}
+\end{equation}
+
+\section{The exact 35-sector scalar threshold trace}
+
+For row $k$, let $d_k$ be its real multiplicity, $C_{3,k}$ and $C_{2,k}$
+its Casimirs, and $Y_k^2$ its hypercharge square.  The trace on canonical
+real coordinates is
+\begin{equation}
+ \bm c_k=\left(
+ \frac{d_kC_{3,k}}8,
+ \frac{d_kC_{2,k}}3,
+ \frac35d_kY_k^2\right).
+ \label{eq:rowtrace}
+\end{equation}
+This automatically gives $2T(R)$ for a complex representation written as
+$R\oplus\bar R$ and $T(R)$ for a real scalar.  Therefore no ad hoc
+``complex-factor'' is attached to individual rows.
+
+As a normalization theorem, summing all 328 coordinates gives
+\begin{equation}
+ \sum_{k=1}^{35}\bm c_k=(84,84,84).
+ \label{eq:universal84}
+\end{equation}
+This is exactly the index of
+$54_{\mathbb R}\oplus126_{\mathbb C}\oplus10_{\mathbb C}$ restricted to
+each canonically normalized Standard-Model factor.  Removing 33 gauge
+Goldstones, the PQ Goldstone, and the four real light-doublet coordinates
+leaves 290 positive directions in 29 rows, with
+\begin{equation}
+ \sum_{k\in +}\bm c_k=(79,77,75.4).
+ \label{eq:positiveindices}
+\end{equation}
+Their masses occupy
+\begin{equation}
+ 0.116278\,\omega\le M_{S,k}\le1.682012\,\omega.
+ \label{eq:scalarband}
+\end{equation}
+At the single reference $\mu=\omega$, the fully correlated scalar trace is
+\begin{equation}
+ \bm\lambda_S(\omega)
+ =\sum_{k\in+}\bm c_k\log\frac{M_{S,k}}\omega
+ =(-56.89360,-56.33640,-53.16705).
+ \label{eq:collapsedlambda}
+\end{equation}
+Equation~\eqref{eq:collapsedlambda} is a valid lower-group trace.  It is not
+yet a prescription for distributing rows between Eqs.~\eqref{eq:matchingMI}
+and \eqref{eq:matchingMU}.
+
+\section{Covariance and what it does not prove}
+
+Let $\bm y=(\log_{10}M_I,\log_{10}M_U,\alpha_U^{-1})$ and let the two
+unification equations be $\bm F(\bm y,\bm x)=0$.  The implicit-function
+Jacobian is
+\begin{equation}
+ J_{yx}=-\left(\frac{\partial\bm F}{\partial\bm y}\right)^{-1}
+          \frac{\partial\bm F}{\partial\bm x},\qquad
+ \Sigma_y=J_{yx}\Sigma_xJ_{yx}^{T}.
+ \label{eq:covariance}
+\end{equation}
+For low-energy errors
+$(0.010,3\times10^{-5},9\times10^{-4})$ in
+$(\alpha_{\rm em}^{-1},s_W^2,\alpha_s)$, the propagated standard deviations
+are
+\begin{equation}
+ \bm\sigma_y^{\rm exp}=(0.00794,0.02557,0.06226).
+ \label{eq:expsigma}
+\end{equation}
+
+The JSON artifact also exports the exact $3\times29$ matrix with columns
+$\bm c_k$.  To test the covariance machinery, not to assert a physical
+prior, we assign independent $10\%$ log-mass errors and collapse all rows at
+$M_I$ through
+\begin{equation}
+ \delta\bm\alpha^{-1}=-\frac1{12\pi}
+ \sum_{k\in+}\bm c_k\,\delta\log M_k.
+ \label{eq:collapsedprojection}
+\end{equation}
+This gives
+\begin{equation}
+ \bm\sigma_y^{\rm thr,coll}=(0.02102,0.01492,0.07812),\qquad
+ \bm\sigma_y^{\rm total,coll}=(0.02247,0.02961,0.09989).
+ \label{eq:thresholdsigma}
+\end{equation}
+The threshold covariance is positive semidefinite and retains all
+off-diagonal correlations.  However, ``coll'' is an essential qualifier:
+matching-scale covariance cannot cure a missing EFT interval.
+
+\section{Historical hierarchy obstruction}\label{sec:hierarchy}
+
+The physical vector spectrum in units of $g_{10}^2\omega^2$ is
+\begin{equation}
+ 0\times12,\quad0.1225\times8,\quad0.6125\times1,\quad
+ 1\times12,\quad1.1225\times12.
+ \label{eq:vectors}
+\end{equation}
+The first eight massive vectors have $M_I/(g\omega)=0.35$ while the first
+unification band has $M_U/(g\omega)=1$.  Hence the action itself fixes
+\begin{equation}
+ \left(\frac{M_I}{M_U}\right)_{\rm P1}=\frac\sigma\omega=0.35,
+ \end{equation}
+a factor
+\begin{equation}
+ \frac{0.35}{0.0390213}=8.96946
+ \label{eq:ratiomismatch}
+\end{equation}
+above the RGE-preferred ratio.  If this ratio is frozen and only the overall
+scale is varied, the least-squares point is
+\begin{equation}
+ M_I=1.33989\times10^{14}\ {\rm GeV},\qquad
+ M_U=3.82827\times10^{14}\ {\rm GeV},
+\end{equation}
+but the two independent unified-coupling residuals are
+\begin{equation}
+ (\Delta_{4L},\Delta_{4R})=(-2.06910,0.43300),\qquad
+ \|\Delta\|_2=2.11392.
+ \label{eq:fixedresidual}
+\end{equation}
+This is a mismatch in inverse couplings, not a numerical integration error.
+
+At the no-threshold solution $g_U=0.57810$, the representative vector bands
+are $0.20233\omega$ and $0.57810\omega$.  Equation~\eqref{eq:scalarband}
+crosses both.  Thus there is neither a large logarithmic Pati--Salam interval
+nor a disjoint scalar allocation to two matching surfaces.  Applying all 29
+rows at whichever surface improves a fit would be a scheme-dependent
+assignment, not one-loop EFT matching.
+
+The necessary repair is therefore structural:
+\begin{equation}
+ \boxed{\text{rebuild a stationary P1 branch near }
+ \sigma/\omega\simeq0.039,\text{ then recompute its full Hessian.}}
+ \label{eq:p1repair}
+\end{equation}
+Only that new spectrum can decide whether threshold corrections preserve or
+destroy the hierarchy.  The following section performs this calculation;
+therefore Eq.~\eqref{eq:p1repair} is now a completed action item, not the
+current blocker.
+
+\section{Parent-resolved threshold fixed point}\label{sec:fixedpoint}
+
+Set $r=\sigma/\omega$.  All cubic and quartic couplings are held at their P1
+values.  At each $r$ the three radial quadratic coefficients are fixed by the
+stationarity equations.  The fixed point is
+\begin{equation}
+ r=0.1265,\qquad
+ (\mu^2,\nu^2,\mu_s^2)=(1.40952534,0.38190203,0.17192027)\,\omega^2,
+ \label{eq:fixedparameters}
+\end{equation}
+and the unique first physical crossing occurs at
+$\xi_0^2=0.147371094\,\omega^2$.  The complete Hessian has 38 zero modes---33
+gauge, one PQ, and four real coordinates of a single Higgs doublet---and no
+negative mode.
+
+Let $C_4,C_L,C_R$ be the three Casimir operators on all 328 real scalar
+coordinates.  Their joint projectors reproduce
+\begin{align}
+54&=(1,1,1)\oplus(6,2,2)\oplus(20',1,1)\oplus(1,3,3),\nonumber\\
+126_{\mathbb C}&=(6,1,1)\oplus(10,3,1)\oplus(15,2,2)
+                 \oplus(\overline{10},1,3),\nonumber\\
+10_{\mathbb C}&=(6,1,1)\oplus(1,2,2).
+\end{align}
+The VEV lies in $(\overline{10},1,3)$ with projector weight
+$1-3.3\times10^{-16}$.  We therefore define $P_I$ as this exact parent
+projector and $P_U=1-P_I$.  No broken-phase state is assigned by its nearest
+mass.  Instead the scalar thresholds are the basis-independent traces
+\begin{equation}
+ \lambda^S_{I,i}=\tr[t_{i,\SM}^2P_I\log(M_S/\mu_I)],\qquad
+ \lambda^S_{U,a}=\tr[t_{a,\PS}^2P_U\log(M_S/\mu_U)].
+ \label{eq:spectraltrace}
+\end{equation}
+The 45-dimensional adjoint mass operator gives nine $M_I$-site and 24
+$M_U$-site massive vectors; their $-21\tr$ terms are evaluated in the same
+way.  With $\mu_I=g_U\sigma$, $\mu_U=g_U\omega$, iteration of $g_U$ and the
+two matching equations converges to
+\begin{equation}
+ \boxed{M_I=1.07986\times10^{14}\ {\rm GeV},\quad
+ M_U=8.53475\times10^{14}\ {\rm GeV},\quad
+ \alpha_U^{-1}=39.70141,}
+ \label{eq:thresholdfixedpoint}
+\end{equation}
+with $M_I/M_U=0.126524923$.  Relative to the input $r=0.1265$, the replay
+factor is $1.000197$.
+
+The total logarithmic threshold vectors are
+\begin{equation}
+ \lambda_I=(31.21384,0,51.86696),\qquad
+ \lambda_U=(-8.46162,-12.54752,-3.02191).
+ \label{eq:twositelambda}
+\end{equation}
+For independent 10\% log-mass errors on each of the 27 exactly degenerate
+scalar/vector mass blocks, the propagated standard deviations in
+$(\log_{10}M_I,\log_{10}M_U,\alpha_U^{-1})$ are
+\begin{align}
+ \bm\sigma_{\rm exp}&=(0.00794,0.02559,0.06130),\nonumber\\
+ \bm\sigma_{\rm thr}&=(0.03952,0.02848,0.24057),\nonumber\\
+ \bm\sigma_{\rm total}&=(0.04031,0.03829,0.24826).
+ \label{eq:twositecovariance}
+\end{align}
+The full covariance matrices and the $6\times27$ mass-to-matching Jacobian
+are exported in the machine artifact.
+
+\section{Renormalized one-doublet condition}
+
+Let $D(\xi_0^2)$ be the tree-level doublet mass matrix and $u$ its normalized
+light eigenvector.  From P1,
+\begin{equation}
+ \|\cP_{10}u\|^2=0.999997474290,\qquad
+ \|\cP_{126}u\|^2=2.52571049\times10^{-6}.
+ \label{eq:doubletweights}
+\end{equation}
+Since the action contains $-\xi_0^2\phi^\dagger\phi$, the
+Hellmann--Feynman theorem gives
+\begin{equation}
+ \kappa\equiv\frac{\partial m_h^2}{\partial\xi_0^2}
+ =-\langle u,\cP_{10}u\rangle=-0.999997474290.
+ \label{eq:kappa}
+\end{equation}
+For a finite renormalized self-energy $\Pi_D(0;\mu)$, first-order matching of
+the light eigenvalue gives the unique counter-retuning
+\begin{equation}
+ \boxed{
+ \delta\xi_0^2
+ =-\frac{u^\dagger\Pi_D(0;\mu)u}{\kappa}
+ =1.00000252572\,\frac{\Pi_{hh}(0;\mu)}{\omega^2}.}
+ \label{eq:retune}
+\end{equation}
+The nearest positive doublet eigenvalue is
+\begin{equation}
+ \Delta_D=0.0305570303\,\omega^2.
+ \label{eq:doubletgap}
+\end{equation}
+With $Q=1-uu^\dagger$, a sufficient single-doublet condition is
+\begin{equation}
+ \left\|Q\left[\Pi_D+\delta\xi_0^2
+ \frac{\partial D}{\partial\xi_0^2}\right]Q\right\|_2<\Delta_D.
+ \label{eq:gapcriterion}
+\end{equation}
+This completes the retuning theorem but not its numerical evaluation.  The
+Coleman--Weinberg Hessian
+\begin{equation}
+ \Delta\cH_{IJ}=\partial_I\partial_J
+ \frac{1}{64\pi^2}\operatorname{STr}\left[
+ M^4(\varphi)\left(\log\frac{M^2(\varphi)}{\mu^2}-c_s\right)\right]
+ \label{eq:CW}
+\end{equation}
+requires field-dependent scalar, gauge, ghost, and fermion masses.  The
+heavy fermion part also requires the renormalized $Y_{10},Y_{126}$ matrices
+that P3 has not yet fit.  Substituting only the vacuum eigenvalues into
+Eq.~\eqref{eq:CW} would miss the derivatives and is not a valid Hessian.
+
+\section{Parallel PQ domain-wall repair}
+
+The baseline anomaly audit gave
+\begin{equation}
+ \mathcal A_{\Spin(10)^2-\mathrm{PQ}}=-6,\qquad
+ \widehat N_{\rm QCD}=-12,\qquad
+ N_{\rm DW}=\frac{12}{|\mathbb Z_4^{\rm diag}|}=3.
+ \label{eq:baselineDW}
+\end{equation}
+This agrees with the gauge-center identification emphasized in
+Ref.~\cite{Ernst2018}.  Post-inflationary PQ breaking is therefore unsafe
+without additional physics.
+
+A minimal matter repair is to add two left-handed Weyl fields
+\begin{equation}
+ X_1,X_2\sim10_F,\qquad q_{\rm PQ}(X_a)=+2,\qquad
+ \mathcal L\supset-\frac12y_{ab}S X_aX_b+\hc.
+ \label{eq:F10}
+\end{equation}
+The $10$ is a real gauge representation, so there is no perturbative
+$\Spin(10)^3$ anomaly.  Each field contributes $qT(10)=2$, and hence
+\begin{equation}
+ \Delta\mathcal A=4,\qquad
+ \mathcal A'=-2,\qquad \widehat N'=-4,\qquad
+ \boxed{N'_{\rm DW}=|-4|/4=1.}
+ \label{eq:NDW1}
+\end{equation}
+The diagonal quotient survives: the generator of the $\Spin(10)$ center acts
+as $-1$ on $10_F$, while the $\pi/2$ PQ rotation gives
+$e^{iq\pi/2}=e^{i\pi}=-1$.
+
+Below $M_I$, a Dirac $10_F$ gives
+\begin{equation}
+ \Delta a^{\rm SM}=(2/3,2/3,2/3),\qquad
+ \Delta b^{\rm SM}=
+ \begin{pmatrix}
+ 38/3&0&2/15\\0&49/6&3/10\\16/15&9/10&7/30
+ \end{pmatrix}.
+ \label{eq:F10SM}
+\end{equation}
+Above $M_I$,
+\begin{equation}
+ \Delta a^{\rm PS}=(4/3,4/3,4/3),\qquad
+ \Delta b^{\rm PS}=
+ \begin{pmatrix}
+ 110/3&0&0\\0&49/3&3\\0&3&49/3
+ \end{pmatrix}.
+ \label{eq:F10PS}
+\end{equation}
+Thus one-loop differential unification is unchanged, although
+$\alpha_U$ and the two-loop solution depend on
+$M_F\sim y_Fv_s/\sqrt2$.  We label this extension
+\texttt{P54PQ-F10}; it is not silently added to \texttt{P54PQ-v2}.  Its
+mass-dependent replay is instead performed explicitly.  For three benchmark
+values, $M_F$ lies inside the PS interval and gives
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$y_F$ & $M_F/M_U$ & $M_I/M_U$ & $\alpha_U^{-1}$\\
+\midrule
+$0.5$ & $0.156270$ & $0.125482$ & $39.27980$\\
+$1.0$ & $0.313169$ & $0.125873$ & $39.43828$\\
+$2.0$ & $0.627590$ & $0.126263$ & $39.59606$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The extension therefore preserves a perturbative two-stage solution across
+this declared mass window.  It remains a separate branch because $y_F$ is a
+new threshold parameter and the baseline action is frozen.
+
+Pre-inflationary PQ breaking remains a cosmological boundary condition, not
+a particle-theory repair: it requires reheating, abundance, initial-angle,
+and isocurvature inputs.  A small explicit bias likewise requires a common
+window satisfying both wall decay and $|\bar\theta|<10^{-10}$; recent work
+illustrates mechanisms of this type~\cite{Zhang2023}, but no such operator is
+promoted here.
+
+\section{Bosonic Coleman--Weinberg matching addendum}
+
+The dedicated follow-up calculation uses background-field Landau gauge and
+$\overline{\rm MS}$ at $\mu_U=g_U\omega$.  The hard spectral functional
+retains 290 positive scalar modes and 33 positive vector modes.  The 38
+scalar and 12 vector infrared modes remain in the low-energy theory, while
+Landau ghosts have $m_{\rm gh}^2=\xi_{\rm gf}M_V^2=0$ and no hard term.  The
+Fr\'echet second variation of the complete field-dependent scalar and vector
+mass operators gives
+\begin{align}
+ \Pi_s^{\rm hard}/\omega^2&=-0.0182525705951\,\bm1_4,\nonumber\\
+ \Pi_v^{\rm hard}/\omega^2&=-0.00198408049986\,\bm1_4,\nonumber\\
+ \Pi_B^{\rm hard}/\omega^2&=-0.0202366510950\,\bm1_4.
+ \label{eq:cwaddendum}
+\end{align}
+Since the light vector has $10_H$ weight
+$w_{10}=0.999997474290$, the bosonic retuning is
+\begin{equation}
+ \delta\xi_{02,B}(\mu_U)=-0.0202367022071.
+ \label{eq:cwretune}
+\end{equation}
+This is a scheme-dependent zero-momentum matching curvature, not a pole
+mass.  The unfit heavy-Yukawa projection is kept as
+\begin{equation}
+ \eta_Y(\mu)=\frac{\langle h|\Pi_{\rm heavy-Y}(0;\mu)|h\rangle}{\omega^2},
+ \qquad
+ \delta\xi_{02}(\mu)=
+ \frac{\kappa_B(\mu)/\omega^2+\eta_Y(\mu)}{w_{10}}.
+ \label{eq:yukawanuisance}
+\end{equation}
+The full derivation, scale replay, and numerical checks are in
+\texttt{tex/p54\_p2\_bosonic\_cw.tex}.
+
+\section{Gate status and next calculation}
+
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.55\linewidth}
+                    >{\raggedright\arraybackslash}p{0.34\linewidth}@{}}
+\toprule
+Gate & Status\\
+\midrule
+two-loop SM/PS engine and finite matching & closed\\
+historical no-threshold reproduction & closed\\
+all 35 P1 rows and scalar threshold Jacobian & closed\\
+historical collapsed covariance regression & closed, diagnostic only\\
+PS parent projectors and two-site spectral traces & closed\\
+hierarchy/threshold fixed point & closed at $r=0.1265$\\
+two-site experimental and log-mass covariance & closed\\
+loop retuning theorem, condition, and heavy gap & closed\\
+bosonic zero-momentum CW matching curvature & closed in declared scheme\\
+heavy-Yukawa projection & explicit P3 matching nuisance\\
+gauge-independent pole mass & not claimed\\
+baseline $N_{\rm DW}=3$ audit & closed, unsafe post inflation\\
+candidate $10_F+10_F$ repair to $N_{\rm DW}=1$ & derived; three two-loop mass benchmarks close\\
+P2 bosonic matching gate & \textbf{closed}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The hierarchy-restored P1 search, two-site P2 replay, and bosonic CW
+coefficient are complete.  P3 may now profile the explicit nuisance
+$\eta_Y(\mu)$ and must test the corrected heavy-doublet norm against the
+$0.0305570303\,\omega^2$ gap.  Neither $\eta_Y=0$ nor a gauge-independent
+pole mass is inferred from the vacuum spectrum.
+
+\small
+\begin{thebibliography}{9}
+\bibitem{MachacekVaughn}
+M.~E.~Machacek and M.~T.~Vaughn,
+``Two-Loop Renormalization Group Equations in a General Quantum Field
+Theory,'' Nucl. Phys. B \textbf{222}, 83 (1983); \textbf{236}, 221 (1984);
+\textbf{249}, 70 (1985).
+
+\bibitem{BabuKhan2015}
+K.~S.~Babu and S.~Khan,
+``A Minimal Non-Supersymmetric SO(10) Model: Gauge Coupling Unification,
+Proton Decay and Fermion masses,''
+\href{https://arxiv.org/abs/1507.06712}{Phys. Rev. D 92, 075018 (2015)}.
+
+\bibitem{Haba2023}
+N.~Haba, Y.~Shimizu, and T.~Yamada,
+``Neutrino Mass in Non-Supersymmetric SO(10) GUT,''
+\href{https://arxiv.org/abs/2304.06263}{arXiv:2304.06263}.
+
+\bibitem{PDG2024}
+S.~Navas et al. (Particle Data Group),
+``Review of Particle Physics,''
+\href{https://pdg.lbl.gov/2024/}{Phys. Rev. D 110, 030001 (2024)}.
+
+\bibitem{Ernst2018}
+A.~Ernst, A.~Ringwald, and C.~Tamarit,
+``Axion Predictions in SO(10)$\times U(1)_{\rm PQ}$ Models,''
+\href{https://arxiv.org/abs/1801.04906}{JHEP 02 (2018) 103}.
+
+\bibitem{Zhang2023}
+Y.~Zhang,
+``Imperfect Axion Precludes the Domain Wall Problem,''
+\href{https://arxiv.org/abs/2305.15495}{arXiv:2305.15495}.
+\end{thebibliography}
+
+\end{document}

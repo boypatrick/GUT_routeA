@@ -1,0 +1,282 @@
+{
+  "background": {
+    "alphaU_inverse": 39.70141141877963,
+    "gU": 0.5626028899853225,
+    "nearest_heavy_doublet_gap_m2_over_omega2": 0.03055703025613425,
+    "scalar_hard_min_m2_over_omega2": 0.013520470032804119,
+    "sigma_over_omega": 0.1265,
+    "tree_negative_count": 0,
+    "tree_xi02": 0.14737109402314083,
+    "tree_zero_count": 38,
+    "vector_hard_min_m2_over_omega2": 0.00506506436364393,
+    "vs_over_omega": 0.25
+  },
+  "checks": [
+    {
+      "name": "tree background has 38 soft modes and no tachyon",
+      "pass": true
+    },
+    {
+      "name": "hard scalar cluster contains 290 positive modes",
+      "pass": true
+    },
+    {
+      "name": "hard vector cluster contains 33 positive modes",
+      "pass": true
+    },
+    {
+      "name": "light subspace is one real four-plane",
+      "pass": true
+    },
+    {
+      "name": "quartic Hessian first derivative is step stable",
+      "pass": true
+    },
+    {
+      "name": "quartic Hessian second derivative is step stable",
+      "pass": true
+    },
+    {
+      "name": "soft scalar block has no linear mass splitting",
+      "pass": true
+    },
+    {
+      "name": "Frechet trace Hessian matches direct finite difference",
+      "pass": true
+    },
+    {
+      "name": "scalar CW curvature agrees on two doublet directions",
+      "pass": true
+    },
+    {
+      "name": "scalar CW mixed curvature vanishes",
+      "pass": true
+    },
+    {
+      "name": "vector CW Hessian is SM-isotropic",
+      "pass": true
+    },
+    {
+      "name": "Landau ghost hard contribution vanishes",
+      "pass": true
+    },
+    {
+      "name": "bosonic xi02 counterterm retunes all four light modes",
+      "pass": true
+    },
+    {
+      "name": "heavy-Yukawa term is retained as a matching nuisance",
+      "pass": true
+    }
+  ],
+  "cw_hessian_over_omega2": {
+    "bosonic_kappa": -0.020236651095007527,
+    "bosonic_total": [
+      [
+        -0.02023665109500753,
+        -8.753888281520376e-19,
+        -1.894963885096776e-19,
+        4.531436393195995e-19
+      ],
+      [
+        -8.753888281520376e-19,
+        -0.020236651095007527,
+        1.0669360322508375e-18,
+        -8.568552631076196e-19
+      ],
+      [
+        -1.894963885096776e-19,
+        1.0669360322508375e-18,
+        -0.020236651095007527,
+        3.5427362036441492e-19
+      ],
+      [
+        4.531436393195995e-19,
+        -8.568552631076196e-19,
+        3.5427362036441492e-19,
+        -0.020236651095007527
+      ]
+    ],
+    "ghost": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "scalar": [
+      [
+        -0.018252570595142827,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.018252570595142827,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.018252570595142827,
+        -0.0
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.018252570595142827
+      ]
+    ],
+    "vector": [
+      [
+        -0.0019840804998647026,
+        -8.753888281520376e-19,
+        -1.894963885096776e-19,
+        4.531436393195995e-19
+      ],
+      [
+        -8.753888281520376e-19,
+        -0.0019840804998647005,
+        1.0669360322508375e-18,
+        -8.568552631076196e-19
+      ],
+      [
+        -1.894963885096776e-19,
+        1.0669360322508375e-18,
+        -0.0019840804998647018,
+        3.5427362036441492e-19
+      ],
+      [
+        4.531436393195995e-19,
+        -8.568552631076196e-19,
+        3.5427362036441492e-19,
+        -0.0019840804998647013
+      ]
+    ]
+  },
+  "date": "2026-09-02",
+  "matching_condition": {
+    "bosonic_delta_xi02_at_muU": -0.020236702207058536,
+    "heavy_doublet_safety_condition": "||Q[Pi_B+Pi_Y-delta_xi02 P10]Q||/omega^2 < 0.03055703025613425",
+    "heavy_yukawa_projection_nuisance": "eta_Y(mu)=h^T Pi_heavy-Y(0;mu) h / omega^2",
+    "light_field_weight_10": 0.9999974742895119,
+    "nuisance_is_not_set_to_zero": true,
+    "pole_mass_claimed": false,
+    "total_counterterm": "delta_xi02(mu)=[kappa_B(mu)+eta_Y(mu)]/w10"
+  },
+  "model_id": "P54PQ-v2",
+  "numerics": {
+    "check_epsilon_over_omega": 0.01,
+    "field_hessian_dimension": 328,
+    "field_hessian_evaluations": 8,
+    "first_derivative_step_residual": 2.320978146975565e-14,
+    "frechet_random_matrix_regression_residual": 2.473115951612259e-09,
+    "main_epsilon_over_omega": 0.02,
+    "scalar_diagonal_mismatch": 2.291292156009206e-13,
+    "scalar_direction0_check_kappa_over_omega2": -0.01825257059391283,
+    "scalar_direction0_kappa_over_omega2": -0.018252570595028262,
+    "scalar_direction1_kappa_over_omega2": -0.01825257059525739,
+    "scalar_mixed01_over_omega2": -7.695129251932027e-14,
+    "scalar_mixed_ratio": 7.695129251932027e-14,
+    "second_derivative_step_residual": 2.146839191183145e-11,
+    "soft_block_first_derivative_norm_direction0": 3.875535458914073e-15,
+    "soft_block_first_derivative_norm_direction1": 3.07635372405072e-15,
+    "total_isotropy_residual": 4.24832860138997e-18,
+    "vector_isotropy_residual": 2.9401260345110648e-18
+  },
+  "runtime_seconds": 153.6850941181183,
+  "scale_variation": [
+    {
+      "bosonic_kappa_over_omega2": 0.01681860519195896,
+      "delta_xi02_bosonic": 0.016818647670993777,
+      "mu_over_muU": 0.5,
+      "scalar_kappa_over_omega2": 0.010781459910023165,
+      "vector_kappa_over_omega2": 0.006037145281935796
+    },
+    {
+      "bosonic_kappa_over_omega2": -0.020236651095007527,
+      "delta_xi02_bosonic": -0.020236702207058536,
+      "mu_over_muU": 1.0,
+      "scalar_kappa_over_omega2": -0.018252570595142827,
+      "vector_kappa_over_omega2": -0.0019840804998647018
+    },
+    {
+      "bosonic_kappa_over_omega2": -0.05729190738197401,
+      "delta_xi02_bosonic": -0.057292052085110845,
+      "mu_over_muU": 2.0,
+      "scalar_kappa_over_omega2": -0.047286601100308814,
+      "vector_kappa_over_omega2": -0.010005306281665198
+    }
+  ],
+  "schema": "route-f-p54-p2-bosonic-cw-v1",
+  "scheme": {
+    "claim_boundary": "scheme-dependent zero-momentum matching curvature, not a gauge-independent pole mass",
+    "effective_action": "zero-momentum hard-mode Coleman-Weinberg matching functional",
+    "gauge": "background-field Landau gauge (xi_gf=0)",
+    "ghost_statement": "FP ghosts have xi_gf*M_V^2=0 and therefore no hard CW term in Landau gauge",
+    "goldstone_statement": "33 gauge Goldstones, one PQ Goldstone, and the tuned doublet are EFT modes excluded from the hard trace",
+    "hard_scalar_count": 290,
+    "hard_vector_count": 33,
+    "matching_scale": "muU=gU*omega",
+    "muU_over_omega": 0.5626028899853225,
+    "renormalization": "MSbar",
+    "scalar_constant": 1.5,
+    "soft_scalar_count": 38,
+    "soft_vector_count": 12,
+    "vector_constant": 0.8333333333333334,
+    "vector_polarizations": 3
+  },
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/code/search_p54_hierarchical_p1.py",
+      "sha256": "36525f08aa8539bc01e977de261c60aa8257bd2da50ffbcd64af6fd227c00d11"
+    },
+    {
+      "path": "route_f/output/p54_p2_two_site_matching.json",
+      "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+    },
+    {
+      "path": "route_f/code/verify_p54_p2_bosonic_cw.py",
+      "sha256": "b596191a36b740c7b659981714fa3ae1ecad7932ce21bc92bc56594f2ed7255c"
+    }
+  ],
+  "status": {
+    "bosonic_cw_light_doublet_hessian_computed": true,
+    "full_pole_mass_predicted": false,
+    "gauge_ghost_scheme_declared": true,
+    "global_flavor_fit_performed": false,
+    "heavy_yukawa_projection_exposed_as_nuisance": true,
+    "p2_matching_relation_closed_conditionally": true
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 14,
+    "total": 14
+  }
+}

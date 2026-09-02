@@ -60,6 +60,29 @@ spectrum covering all 328 real scalar coordinates with no negative modes.
 These are tree-level algebraic closures, not yet a running, flavor, or
 phenomenological fit.
 
+The P2 artifact `tex/p54_p2_running_thresholds_cosmology.tex`, its `21/21`
+integrated verifier, and the `11/11` parent-resolved verifier now execute the
+two-loop baseline, all 35 scalar sectors, exact PS spectral thresholds,
+two-site covariance, the loop retuning theorem, and the parallel PQ repair
+audit.  The old `sigma/omega=0.35` point is a failed regression, not the
+current benchmark.  Holding the cubic/quartic P1 couplings fixed gives the
+self-consistent threshold point `sigma/omega=0.1265`,
+`MI=1.07986e14 GeV`, `MU=8.53475e14 GeV`, and
+`alphaU^-1=39.70141`.  The follow-up bosonic artifact
+`tex/p54_p2_bosonic_cw.tex` passes `14/14` checks in background-field Landau
+gauge and gives
+`Pi_B^hard/omega^2=-0.0202366510950 I4`, hence
+`delta xi02,B=-0.0202367022071` at `muU=gU*omega`.  This closes the bosonic
+zero-momentum matching coefficient, not a gauge-independent pole mass.  The
+unfitted heavy-Yukawa projection is carried into P3 as
+`eta_Y(mu)=h^T Pi_heavy-Y h/omega^2`, with
+`delta xi02=[kappa_B/omega^2+eta_Y]/w10`; it is not set to zero.  Running,
+two-site matching, covariance, and the renormalized single-doublet condition
+are closed.  A
+distinct candidate extension, `P54PQ-F10`, uses two
+charge-`+2` Weyl `10_F` fields to obtain physical `N_DW=1`; it is not yet
+part of the frozen baseline.
+
 The prior single-chain review found three blockers.  Their calculations remain
 valid, but after the three-layer reset only branch-relevant items block their
 own layer:

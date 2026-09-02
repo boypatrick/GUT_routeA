@@ -1,0 +1,333 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={P54PQ-v2 bosonic Coleman-Weinberg matching Hessian}}
+\setlength{\emergencystretch}{1em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\MSbar}{\overline{\mathrm{MS}}}
+\newcommand{\PiB}{\Pi_{B}^{\rm hard}}
+\title{P2 Bosonic Coleman--Weinberg Matching Hessian\\
+for the Hierarchical \(P54PQ\)-v2 Vacuum}
+\author{Route-F four-dimensional mainline}
+\date{2 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We compute the bosonic one-loop zero-momentum matching curvature on the real
+four-plane of the tuned Standard-Model Higgs doublet.  The declared scheme is
+background-field Landau gauge and \(\MSbar\) at
+\(\mu_U=g_U\omega\).  A hard/soft spectral split retains all 290 massive
+physical scalar directions and 33 massive vector directions while leaving
+the 38 scalar and 12 vector infrared degrees of freedom in the lower-energy
+theory.  A matrix-function Fr\'echet formula differentiates the complete
+field-dependent \(328\times328\) scalar Hessian without subtracting nearly
+equal one-loop potentials.  At the fixed point
+\(\sigma/\omega=0.1265\), the result is
+\[
+ \PiB/\omega^2=-0.0202366510950\,\bm 1_4,
+ \qquad \delta\xi_{02,B}=-0.0202367022071.
+\]
+This is a scheme-dependent matching coefficient, not a gauge-independent
+pole mass.  The unfit heavy-fermion projection is retained explicitly as
+\(\eta_Y(\mu)\), so the renormalization condition is
+\(\delta\xi_{02}=[\kappa_B+\eta_Y]/w_{10}\).
+\end{abstract}
+
+\tableofcontents
+
+\section{Background and the precise claim}
+
+The input is the previously verified hierarchical stationary point
+\begin{equation}
+ \frac{\sigma}{\omega}=0.1265,\qquad
+ \frac{v_s}{\omega}=0.25,\qquad
+ g_U=0.562602889985,
+ \label{eq:background}
+\end{equation}
+with tree parameter \(\xi_{02}=0.147371094023\).  Its complete real scalar
+Hessian has dimension
+\[
+ 54+2(126)+2(10)+2=328.
+\]
+There are 38 zero directions: 33 gauge-orbit directions, one physical PQ
+Goldstone, and a real four-plane \(L\) carrying one
+\((\bm1,\bm2,|Y|=1/2)\) multiplet.  There are no negative modes.  The next
+doublet has
+\begin{equation}
+ \Delta_D=0.0305570302561\,\omega^2.
+ \label{eq:gap}
+\end{equation}
+
+The calculation below determines the heavy-boson part of the one-loop
+zero-momentum matching matrix on \(L\).  It does \emph{not} determine a
+gauge-independent pole mass.  The latter additionally requires the
+momentum-dependent self-energy, wave-function matching, a consistent
+counterterm prescription, and the fitted heavy-Yukawa matrices.  This
+distinction is compulsory because an effective potential away from a
+stationary point is gauge dependent; the Nielsen identity does not turn an
+arbitrary Hessian entry into an observable~\cite{Nielsen1975}.
+
+\section{Gauge, ghost, and infrared prescription}
+
+We use background-field \(R_\xi\) gauge at
+\begin{equation}
+ \xi_{\rm gf}=0
+ \qquad\text{(Landau gauge)}
+ \label{eq:landau}
+\end{equation}
+and \(\MSbar\).  At constant background the hard bosonic functional is
+\begin{align}
+ V_{1,B}^{\rm hard}(x;\mu)
+ =\frac{1}{64\pi^2}\bigg[&
+ \tr_{290} f_s\!\left(M_s^2(x)\right)
+ +3\tr_{33} f_v\!\left(M_v^2(x)\right)\bigg],
+ \label{eq:cw}\\
+ f_s(z)&=z^2\left(\log\frac{z}{\mu^2}-\frac32\right),
+ &f_v(z)&=z^2\left(\log\frac{z}{\mu^2}-\frac56\right).
+ \label{eq:fdefs}
+\end{align}
+The vector coefficient three and the \(5/6\) finite constant are the usual
+Landau-\(\MSbar\) vector result~\cite{ColemanWeinberg1973,Martin2001}.  The
+Faddeev--Popov eigenvalues are
+\(m_{\rm gh}^2=\xi_{\rm gf}M_v^2=0\); hence there is no hard ghost term in
+this declared scheme.
+
+The subscripts on the traces are a Wilsonian spectral split.  The 290
+positive scalar eigenvalues are retained; the 38 zero modes are assigned to
+the infrared theory.  Similarly, the 33 positive vector eigenvalues are
+retained and the 12 unbroken vectors are infrared fields.  This split is
+locally unambiguous because
+\begin{equation}
+ \lambda_{s,\min}^{\rm hard}=0.0135204700328\,\omega^2,
+ \qquad
+ \lambda_{v,\min}^{\rm hard}=0.01600225\,g_U^2\omega^2,
+ \label{eq:hardgaps}
+\end{equation}
+whereas all soft eigenvalues vanish at the matching background.  Hard--soft
+mixing is retained in the divided-difference term below; ``remove the soft
+trace'' therefore does not mean projecting every derivative onto the hard
+subspace.
+
+\section{First-principles second variation}
+
+Let \(z^a\), \(a=1,\ldots,4\), be orthonormal canonical coordinates on
+\(L\).  For either bosonic mass operator, write
+\begin{equation}
+ M^2(z)=M_0^2+z^a A_a+\frac12z^az^b B_{ab}+O(|z|^3).
+ \label{eq:massjet}
+\end{equation}
+If \(M_0^2=U\diag(\lambda_i)U^T\), define all matrices below in this
+eigenbasis.  Differentiating \(\tr f(M^2)\) once gives
+\begin{equation}
+ \partial_a\tr f(M^2)=\tr\!\left[f'(M^2)\partial_aM^2\right].
+ \label{eq:first}
+\end{equation}
+The Fr\'echet derivative of \(f'\) has components
+\begin{equation}
+ \left[D f'(M_0^2)[A_b]\right]_{ij}
+ =f'^{[1]}(\lambda_i,\lambda_j)(A_b)_{ij},
+ \label{eq:frechet}
+\end{equation}
+where
+\begin{equation}
+ f'^{[1]}(x,y)=
+ \begin{cases}
+ \dfrac{f'(x)-f'(y)}{x-y},&x\ne y,\\[6pt]
+ f''(x),&x=y.
+ \end{cases}
+ \label{eq:divdiff}
+\end{equation}
+Therefore the exact second variation is
+\begin{equation}
+ \boxed{
+ \partial_a\partial_b\tr f(M^2)=
+ \sum_i f'(\lambda_i)(B_{ab})_{ii}
+ +\sum_{i,j}f'^{[1]}(\lambda_i,\lambda_j)
+ (A_a)_{ij}(A_b)_{ji}.}
+ \label{eq:master}
+\end{equation}
+For a soft eigenvalue we set \(f'=f''=0\), the derivative of the locally
+flat infrared subtraction.  Equation~\eqref{eq:master} still includes the
+hard--soft terms because their divided differences are nonzero.
+
+For \(f_c(z)=z^2[\log(z/\mu^2)-c]\), the derivatives used in the code are
+\begin{align}
+ f_c'(z)&=z\left[2\log\frac{z}{\mu^2}-2c+1\right],\nonumber\\
+ f_c''(z)&=2\log\frac{z}{\mu^2}-2c+3.
+ \label{eq:fderivatives}
+\end{align}
+The scalar mass operator is not reconstructed from a tabulated spectrum:
+it is the automatic second derivative of the full tensor potential,
+\begin{equation}
+ M_s^2(x)=\frac{\partial^2V_{\rm tree}}
+ {\partial x^I\partial x^J}.
+ \label{eq:scalaroperator}
+\end{equation}
+Because the action is quartic, \(M_s^2(x)\) is exactly quadratic in \(x\).
+Thus centered evaluations at \(\epsilon/\omega=0.02\) determine \(A_a\)
+and \(B_{aa}\), and a combined displacement determines \(B_{01}\).
+Repeating one direction at \(\epsilon/\omega=0.01\) gives relative residuals
+\begin{equation}
+ r_A=2.32\times10^{-14},\qquad r_B=2.15\times10^{-11}.
+ \label{eq:steps}
+\end{equation}
+
+For vectors the derivation is analytic.  If
+\(O_A(x)=T_Ax\) is the gauge-orbit matrix, then
+\begin{equation}
+ M_v^2(x)=g_U^2O(x)^TO(x),
+ \label{eq:vectormass}
+\end{equation}
+so, with \(O_a=Tq_a\),
+\begin{align}
+ A_a^{(v)}&=g_U^2(O_a^TO_0+O_0^TO_a),\nonumber\\
+ B_{ab}^{(v)}&=g_U^2(O_a^TO_b+O_b^TO_a).
+ \label{eq:vectorjet}
+\end{align}
+
+\section{Light-doublet basis and symmetry reduction}
+
+Let \(Z\) be the tree zero-eigenspace and let \(S\) contain the 33 gauge
+directions plus the physical PQ direction.  The numerical light projector is
+obtained from
+\begin{equation}
+ L=\operatorname{range}\!\left[(1-SS^+)Z\right].
+ \label{eq:lightprojector}
+\end{equation}
+Its rank is four and its Casimirs are
+\(C_3=0\), \(C_2=3/4\), and \(Y^2=1/4\).  The hard spectral traces commute
+with the unbroken Standard Model.  The realification of this charged complex
+doublet has a unique invariant symmetric bilinear form.  Consequently
+\begin{equation}
+ \PiB\big|_L=\kappa_B\bm1_4.
+ \label{eq:schur}
+\end{equation}
+This is a symmetry statement, not a numerical fit.  Numerically, two
+independent diagonal directions agree to \(2.29\times10^{-13}\), the tested
+mixed component is \(7.70\times10^{-14}\omega^2\), and the complete vector
+block has isotropy residual \(2.94\times10^{-18}\).
+
+\section{Numerical result and scale dependence}
+
+At \(\mu_U=g_U\omega\), Eq.~\eqref{eq:master} gives
+\begin{align}
+ \frac{\Pi_s^{\rm hard}}{\omega^2}
+ &=-0.0182525705951\,\bm1_4,\nonumber\\
+ \frac{\Pi_v^{\rm hard}}{\omega^2}
+ &=-0.00198408049986\,\bm1_4,\nonumber\\
+ &\boxed{\frac{\PiB}{\omega^2}
+ =-0.0202366510950\,\bm1_4}
+ \label{eq:result}
+\end{align}
+The off-diagonal entries of the directly assembled vector matrix are below
+\(1.1\times10^{-18}\omega^2\).  The four equal components in
+Eq.~\eqref{eq:result} are fixed by Eq.~\eqref{eq:schur}; only two diagonal
+directions and one mixed direction need expensive scalar evaluations.
+
+The coefficient is scale dependent, as a matching coefficient must be:
+\begin{center}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+\(\mu/\mu_U\)&\(\kappa_s/\omega^2\)&\(\kappa_v/\omega^2\)&
+\(\kappa_B/\omega^2\)&\(\delta\xi_{02,B}\)\\
+\midrule
+0.5& \( 0.0107814599\)&\( 0.0060371453\)&\( 0.0168186052\)&\( 0.0168186477\)\\
+1.0& \(-0.0182525706\)&\(-0.0019840805\)&\(-0.0202366511\)&\(-0.0202367022\)\\
+2.0& \(-0.0472866011\)&\(-0.0100053063\)&\(-0.0572919074\)&\(-0.0572920521\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The large finite-scale movement is not an uncertainty band.  It is cancelled
+order by order by the running renormalized parameter and by the scale
+dependence of the fermionic matching contribution.  Quoting only the middle
+number as a physical prediction would therefore be incorrect.
+
+\section{Retuning and the heavy-Yukawa nuisance}
+
+The normalized light mode has
+\begin{equation}
+ w_{10}=\langle h|P_{10}|h\rangle=0.999997474290.
+ \label{eq:w10}
+\end{equation}
+Since the tree Hessian responds to \(\delta\xi_{02}\) as
+\(-\delta\xi_{02}P_{10}\), the bosonic counterterm required to keep the
+doublet massless at the matching surface is
+\begin{equation}
+ \delta\xi_{02,B}(\mu_U)
+ =\frac{\kappa_B(\mu_U)/\omega^2}{w_{10}}
+ =-0.0202367022071.
+ \label{eq:bosretune}
+\end{equation}
+
+The heavy-fermion contribution is deliberately not guessed.  Define the
+matching nuisance
+\begin{equation}
+ \eta_Y(\mu)=\frac{1}{\omega^2}
+ \langle h|\Pi_{\rm heavy-Y}(0;\mu)|h\rangle.
+ \label{eq:etay}
+\end{equation}
+The complete matching relation carried into the global flavor analysis is
+then
+\begin{equation}
+ \boxed{\delta\xi_{02}(\mu)=
+ \frac{\kappa_B(\mu)/\omega^2+\eta_Y(\mu)}{w_{10}}.}
+ \label{eq:fullretune}
+\end{equation}
+No value or prior for \(\eta_Y\) is fabricated here.  The independent
+one-light-doublet safety gate remains
+\begin{equation}
+ \left\|Q\left[\Pi_B+\Pi_Y-\delta\xi_{02}P_{10}\right]Q\right\|
+ <\Delta_D,
+ \qquad Q=1-|h\rangle\langle h|,
+ \label{eq:safety}
+\end{equation}
+with \(\Delta_D\) from Eq.~\eqref{eq:gap}.  A global heavy-Yukawa fit must
+evaluate Eq.~\eqref{eq:safety}; the present calculation closes the bosonic
+matching coefficient, not that later flavor-dependent norm bound.
+
+\section{Reproducibility and promotion boundary}
+
+The machine calculation is
+\begin{verbatim}
+route_f/code/verify_p54_p2_bosonic_cw.py
+route_f/output/p54_p2_bosonic_cw.json
+route_f/output/p54_p2_bosonic_cw.md
+\end{verbatim}
+It evaluates eight complete field-dependent scalar Hessians and passes 14 of
+14 physics/numerical checks.  The soft--soft first-derivative norms are
+\(3.88\times10^{-15}\) and \(3.08\times10^{-15}\), closing the declared IR
+split.  An independent random-matrix regression of Eq.~\eqref{eq:master}
+against a direct four-point finite difference has relative residual
+\(2.47\times10^{-9}\).
+
+The P2 bosonic matching task is therefore closed in the declared scheme.
+The full pole mass remains unpredicted, and \(\eta_Y\) is now an explicit
+matching nuisance rather than a hidden assumption.  This is the appropriate
+boundary at which P3 may begin a global flavor/seesaw fit: P3 must fit or
+profile \(\eta_Y\), propagate it through Eq.~\eqref{eq:fullretune}, and test
+Eq.~\eqref{eq:safety}.
+
+\begin{thebibliography}{9}
+\bibitem{ColemanWeinberg1973}
+S.~Coleman and E.~Weinberg,
+``Radiative Corrections as the Origin of Spontaneous Symmetry Breaking,''
+Phys. Rev. D \textbf{7} (1973) 1888.
+
+\bibitem{Nielsen1975}
+N.~K. Nielsen,
+``On the Gauge Dependence of Spontaneous Symmetry Breaking in Gauge
+Theories,'' Nucl. Phys. B \textbf{101} (1975) 173.
+
+\bibitem{Martin2001}
+S.~P. Martin,
+``Two-loop effective potential for a general renormalizable theory and
+softly broken supersymmetry,'' Phys. Rev. D \textbf{65} (2002) 116003,
+arXiv:hep-ph/0111209.
+\end{thebibliography}
+
+\end{document}

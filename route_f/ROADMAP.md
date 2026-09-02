@@ -221,12 +221,118 @@ nonperturbative lifetime theorem.  P2 must run/match this actual spectrum,
 propagate covariance, and reimpose the doublet condition after loop
 corrections.
 
-### P2 Running and threshold covariance (`open`)
+### P2 Running, thresholds, and bosonic CW matching (`bosonic gate closed 2026-09-02`; Yukawa nuisance handed to P3)
 
-Perform two-loop running and one-loop matching using the actual P1 spectrum,
-with perturbativity, threshold nuisance parameters, and correlated scale
-uncertainties.  No fixed-ratio or degenerate-threshold surrogate can close
-this gate.
+Artifacts:
+
+- `tex/p54_p2_running_thresholds_cosmology.tex` and
+  `output/pdf/p54_p2_running_thresholds_cosmology.pdf`;
+- `code/verify_p54_p2_running_thresholds.py`;
+- `output/p54_p2_running_thresholds_cosmology.{json,md}`;
+- `code/search_p54_hierarchical_p1.py` and
+  `output/p54_hierarchical_p1_search.{json,md}`;
+- `code/verify_p54_p2_two_site_matching.py` and
+  `output/p54_p2_two_site_matching.{json,md}`;
+- `tex/p54_p2_bosonic_cw.tex`,
+  `output/pdf/p54_p2_bosonic_cw.pdf`,
+  `code/verify_p54_p2_bosonic_cw.py`, and
+  `output/p54_p2_bosonic_cw.{json,md}`.
+
+The integrated verifier passes `21/21`; the parent-resolved fixed-point
+verifier passes `11/11`.  The historical no-threshold regression is
+
+```text
+MI = 4.60943e13 GeV,
+MU = 1.18126e15 GeV,
+alphaU^-1 = 37.60198,
+MI/MU = 0.0390213.
+```
+
+The original `sigma/omega=0.35` point remains a deliberately failed
+regression: its no-threshold mismatch factor is `8.969`.  It is no longer the
+active blocker.  Keeping every P1 cubic/quartic coupling fixed and deriving
+only the three radial quadratic masses at each hierarchy gives an isolated
+stationary branch with 38 zero modes, no tachyon, and exactly one light
+doublet.  At the threshold fixed point,
+
+```text
+sigma/omega input = 0.1265,
+MI/MU output       = 0.126524923,
+MI                 = 1.07986e14 GeV,
+MU                 = 8.53475e14 GeV,
+alphaU^-1          = 39.70141.
+```
+
+The fixed-point mismatch is only `1.97e-4` fractionally.  Exact joint
+Pati--Salam Casimir projectors decompose all 328 real coordinates and place
+the 126 VEV uniquely in `Sigma126:(10-pair,1,3)`.  Thresholds use the spectral
+operators `Tr(P_parent t_i^2 log M)`, so mixed broken-phase states are never
+assigned by their nearest mass.  The adjoint ledger independently finds nine
+intermediate and 24 GUT massive vectors.
+
+The full 35-sector ledger and universal `(84,84,84)` index are retained.
+Two-site covariance now propagates the experimental inputs and independent
+10% log-mass errors on 27 exactly degenerate scalar/vector blocks.  In
+`(log10 MI,log10 MU,alphaU^-1)`,
+
+```text
+sigma_exp   = (0.00794,0.02559,0.06130),
+sigma_thr   = (0.03952,0.02848,0.24057),
+sigma_total = (0.04031,0.03829,0.24826).
+```
+
+The loop-level one-doublet theorem is nevertheless fixed.  With
+
+```text
+kappa = d mh^2/d xi02 = -0.999997474290,
+gap to the next doublet = 0.0305570303 omega^2,
+delta xi02 = 1.00000252572 h^T Pi_D h/omega^2,
+```
+
+the projected self-energy norm must remain below the gap.
+
+The requested bosonic calculation is now complete in a declared
+background-field Landau-`MSbar` hard-matching scheme at `muU=gU*omega`.
+The Fréchet second variation of the field-dependent `328 x 328` scalar
+operator and exact vector orbit mass operator retains 290 hard scalars and
+33 hard vectors, with the 38 scalar and 12 vector EFT modes removed.  It
+passes `14/14` checks and gives
+
+```text
+Pi_scalar^hard/omega^2 = -0.0182525705951 I4,
+Pi_vector^hard/omega^2 = -0.00198408049986 I4,
+Pi_B^hard/omega^2      = -0.0202366510950 I4,
+delta xi02,B(muU)      = -0.0202367022071.
+```
+
+This is a scheme-dependent zero-momentum matching curvature, not a pole
+mass.  Its scale replay at `mu/muU=(0.5,1,2)` gives
+`kappa_B/omega^2=(+0.0168186,-0.0202367,-0.0572919)`, which must be cancelled
+by parameter running and the fermionic matching term rather than interpreted
+as an error bar.  The heavy-Yukawa projection is therefore retained without
+being set to zero:
+
+```text
+eta_Y(mu) = h^T Pi_heavy-Y(0;mu) h / omega^2,
+delta xi02(mu) = [kappa_B(mu)/omega^2 + eta_Y(mu)] / w10.
+```
+
+The nearest-heavy-doublet norm inequality remains a P3 profiling check.
+
+In parallel, the minimal domain-wall repair candidate `P54PQ-F10` adds two
+left-handed `10_F` fields with `qPQ=+2` and mass operator `S 10_F 10_F`.
+It shifts the mixed anomaly from `-6` to `-2`, so `Nhat=-4` and the same
+diagonal `Z4` quotient gives physical `N_DW=1`.  Its one-loop beta shifts are
+universal.  Its explicit two-loop benchmarks at `y_F=(0.5,1,2)` place
+`M_F/MU=(0.1563,0.3132,0.6276)` inside the PS interval and retain
+`MI/MU=(0.12548,0.12587,0.12626)`.  It remains a separate branch because
+`y_F` is a new threshold parameter.
+
+Running, two-site thresholds, hierarchy closure, covariance, the bosonic CW
+coefficient, and the one-doublet matching relation are closed.  A complete
+gauge-independent pole mass is deliberately not claimed.  P3 may now open,
+but it must fit/profile `eta_Y(mu)` and test the heavy-doublet norm bound;
+neither quantity may be silently set to zero.
 
 ### P3 Global flavor, seesaw, and identifiability (`open`)
 

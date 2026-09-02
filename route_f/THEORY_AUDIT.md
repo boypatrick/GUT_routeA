@@ -675,6 +675,102 @@ cited beyond its reclassified conditional domain until the exact paths,
 inputs, outputs, commands, digests, scientific gates, and clean-clone replay
 are repaired.
 
+## 2026-08-30 P2 hierarchy and threshold audit
+
+The complete P1 spectrum has now been carried into a two-loop
+SM/Pati--Salam engine and an exact one-loop lower-group threshold trace.  The
+implementation passes `15/15`, reproduces the historical no-threshold scales,
+and gives the current-input baseline
+
+`MI=4.60943e13 GeV`, `MU=1.18126e15 GeV`, `MI/MU=0.0390213`.
+
+All 35 scalar rows participate.  The full trace `(84,84,84)` independently
+checks the Spin(10) normalization; the 29 positive rows have trace indices
+`(79,77,75.4)` and a mass band `[0.195654,1.683278] omega`.  Their exact
+Jacobian, experimental covariance, and a declared independent-10%-log-mass
+diagnostic covariance are exported.
+
+This calculation falsifies promotion of the present benchmark rather than
+fitting it.  P1 fixes `sigma/omega=0.35`, a factor `8.969` too large, and the
+scalar band overlaps both vector thresholds.  There is no hierarchical
+Pati--Salam Wilsonian interval in which the rows can be assigned to two
+matching surfaces.  A collapsed-at-MI covariance is retained only as a
+numerical diagnostic.  The P layer must return to stationarity and the full
+Hessian near `sigma/omega~=0.039`; P3 is not opened.
+
+The light-doublet response is nevertheless exact at first order:
+`d mh2/d xi02=-0.999992093724`, the next-doublet gap is
+`0.0382803065 omega2`, and
+`delta xi02=1.00000790634 Pi_hh/omega2`.  Numerical retuning needs the
+field-dependent Coleman--Weinberg Hessian and renormalized heavy Yukawas.
+
+The parallel PQ audit identifies a minimal candidate extension: two Weyl
+`10_F` fields of charge `+2` with `S 10_F 10_F`.  They shift the mixed anomaly
+from `-6` to `-2`, so the existing diagonal `Z4` quotient gives physical
+`N_DW=1`.  Their one-loop shifts are universal, but this `P54PQ-F10` branch
+requires its own mass-threshold and two-loop replay before promotion.
+
+### 2026-08-30 hierarchy-restored P2 addendum (supersedes the blocker above)
+
+The preceding no-go remains valid for the historical `sigma/omega=0.35`
+point, but it is no longer the active branch.  With all P1 cubic/quartic
+couplings unchanged, the radial stationarity equations admit a stable
+single-doublet branch.  Exact PS Casimir projectors cover all 328 real scalar
+coordinates and put the 126 VEV uniquely in `(10-pair,1,3)`.  The two-site
+threshold is evaluated as `Tr(P_parent t_i^2 log M)`, including the nine
+intermediate and 24 GUT vector directions, rather than by nearest-mass
+assignment.
+
+The resulting fixed point is
+
+`sigma/omega=0.1265`, `MI/MU=0.126524923`,
+`MI=1.07986e14 GeV`, `MU=8.53475e14 GeV`,
+`alphaU^-1=39.70141`.
+
+The replay factor is `1.000197`.  Independent 10% log-mass errors on 27
+degenerate blocks give total standard deviations
+`(0.04031,0.03829,0.24826)` in
+`(log10 MI,log10 MU,alphaU^-1)`.  The fixed-point Hessian still has 38 zeros,
+no tachyon, and one light doublet.  Its renormalized condition is
+`delta xi02=1.00000252572 h^T Pi_D h/omega2`, with heavy-doublet gap
+`0.0305570303 omega2`.
+
+Thus the hierarchy, two-site matching, and covariance blockers are closed.
+
+### 2026-09-02 bosonic Coleman--Weinberg addendum
+
+The remaining bosonic task is now executed, rather than inferred from vacuum
+eigenvalues.  In background-field Landau gauge and `MSbar` at
+`muU=gU*omega`, the hard trace retains 290 scalar and 33 vector eigenvalues;
+38 scalar EFT directions, 12 infrared vectors, and massless Landau ghosts
+do not enter the hard functional.  The exact Fréchet second-variation formula
+includes hard--soft divided differences.  Eight complete field-dependent
+`328 x 328` scalar Hessians give
+
+`Pi_s/omega2=-0.0182525705951 I4`,
+`Pi_v/omega2=-0.00198408049986 I4`, and
+`Pi_B/omega2=-0.0202366510950 I4`.
+
+The required bosonic retuning is
+`delta xi02,B=-0.0202367022071`.  Two independent doublet directions agree
+to `2.29e-13`, the mixed curvature is `7.70e-14 omega2`, and the vector
+isotropy residual is `2.94e-18`.  This is a scheme-dependent zero-momentum
+matching result, not a gauge-independent pole mass.
+
+The unfit heavy-Yukawa projection is explicitly promoted to the nuisance
+`eta_Y(mu)=h^T Pi_heavy-Y(0;mu)h/omega2`, so
+`delta xi02=[kappa_B/omega2+eta_Y]/w10`.  P3 may now begin, but must
+fit/profile this nuisance and verify that the corrected heavy-doublet block
+stays below the `0.0305570303 omega2` gap.  Setting `eta_Y=0` is not an
+allowed default.
+
+The parallel `P54PQ-F10` repair has also been replayed rather than merely
+counted.  For `y_F=(0.5,1,2)`, the full-10 threshold lies at
+`M_F/MU=(0.1563,0.3132,0.6276)` inside the PS interval and the two-loop
+solutions give `MI/MU=(0.125482,0.125873,0.126263)`.  This closes the declared
+benchmark consistency check while keeping the repair distinct from the
+frozen baseline.
+
 ## Unifying proposal for Route F
 
 ### Three candidate action branches
@@ -752,10 +848,10 @@ structural review changes the next decisive work:
 1. keep the completed `P54PQ-v2` action frozen: its independent basis audit
    adds `chi7 Phi phi phi S*`, fixes the counts to `60/49/48`, and derives
    `N_DW=3`; keep P-210 comparison-only until a declared P-54 failure;
-2. carry the closed tree-level P1 result (full 328-real Hessian, 38 zeros =
-   33 gauge + 1 PQ + one complex light doublet, no tachyons, complete
-   35-row SM-irrep spectrum) into thresholds, identifiable flavor fit, proton
-   amplitudes, and out-of-fit predictions in one four-dimensional chain;
+2. retain the closed parent-resolved P2 fixed point at
+   `sigma/omega=0.1265`; next compute the bosonic Coleman--Weinberg Hessian
+   and expose the heavy-Yukawa projection as a matching nuisance before
+   opening flavor or proton amplitudes;
 3. in parallel, test the direct Spin^c family construction
    `O(-1) tensor O(3)=O(2)` with representation-valued index `3 x 16`, anomaly
    cancellation, exact zero-mode spectrum, and Yukawa matching;
