@@ -1,0 +1,99 @@
+{
+  "basis": {
+    "hypercharge_eigenspace": "R_Y eigenvalue -i/2, physical Y=+1/2",
+    "legacy_key_warning": "coefficient labels H10u etc are historical geometric keys; use geometric_sector_magnitudes and corrected sum_rule_overlap_map",
+    "light_doublet_definition": "geometric copy order: phi_hol, phi_anti, Sigma_hol, Sigma_anti",
+    "loop_order": "tree Hessian only; no loop-corrected light eigenvector is computed",
+    "phase_policy": "absolute overlaps only; the downstream no-go bound is uniform in all relative phases",
+    "yukawa_conjugation": "h couples phi*, f couples Sigma; up overlaps are phi_anti and Sigma_hol"
+  },
+  "checks": [
+    {
+      "name": "one complex SM doublet is recovered",
+      "pass": true
+    },
+    {
+      "name": "two weak components have identical sector weights",
+      "pass": true
+    },
+    {
+      "name": "four overlap weights are normalized",
+      "pass": true
+    },
+    {
+      "name": "10_H weight agrees with the P2 ledger",
+      "pass": true
+    },
+    {
+      "name": "126_H weight is the complement",
+      "pass": true
+    }
+  ],
+  "coefficient_magnitudes": {
+    "abs_c1_H10u": 0.6710153955538309,
+    "abs_c2_eps_H10d_star": 0.7414417126242954,
+    "abs_c3_H126u": 5.8975403433190694e-05,
+    "abs_c4_eps_H126d_star": 0.001588153767505468
+  },
+  "coefficient_squares": {
+    "H10u_sq": 0.45026166107026416,
+    "H126u_sq": 3.478098210107601e-09,
+    "eps_H10d_star_sq": 0.5497358132192482,
+    "eps_H126d_star_sq": 2.5222323892418116e-06
+  },
+  "date": "2026-09-05",
+  "field_weights": {
+    "10_H": 0.9999974742895124,
+    "126_H": 2.5257104874519194e-06
+  },
+  "geometric_sector_magnitudes": {
+    "Sigma_anti": 0.001588153767505468,
+    "Sigma_hol": 5.8975403433190694e-05,
+    "phi_anti": 0.7414417126242954,
+    "phi_hol": 0.6710153955538309
+  },
+  "model_id": "P54PQ-v2",
+  "runtime_seconds": 33.28559494018555,
+  "schema": "route-f-p54-p3-light-overlaps-v2",
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/code/search_p54_hierarchical_p1.py",
+      "sha256": "36525f08aa8539bc01e977de261c60aa8257bd2da50ffbcd64af6fd227c00d11"
+    },
+    {
+      "path": "route_f/output/p54_p2_two_site_matching.json",
+      "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+    },
+    {
+      "path": "route_f/output/p54_hierarchical_p1_search.json",
+      "sha256": "4a8e4326c8439972bb8fca99cd35763df7da8decc1ec463d9e0c6c5661f8da0f"
+    },
+    {
+      "path": "route_f/code/extract_p54_p3_light_overlaps.py",
+      "sha256": "a5df1184741745ae6755e05184d88fc279cd68872ea33519e8509f51358ee46a"
+    }
+  ],
+  "sum_rule_overlap_map": {
+    "abs_alpha1_down_10": 0.6710153955538309,
+    "abs_alpha2_down_126": 0.001588153767505468,
+    "abs_beta1_up_10": 0.7414417126242954,
+    "abs_beta2_up_126": 5.8975403433190694e-05,
+    "abs_r_beta1_over_alpha1": 1.1049548453539388,
+    "abs_s_alpha1beta2_over_alpha2beta1": 0.033607316853461425
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 5,
+    "total": 5
+  },
+  "weak_component_spread": {
+    "H10u_sq": 1.1102230246251565e-16,
+    "H126u_sq": 1.8743912680451607e-21,
+    "eps_H10d_star_sq": 1.1102230246251565e-16,
+    "eps_H126d_star_sq": 3.4304834363799164e-20
+  }
+}

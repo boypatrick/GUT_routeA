@@ -1,0 +1,463 @@
+{
+  "checks": [
+    {
+      "name": "corrected overlap normalization",
+      "pass": true
+    },
+    {
+      "name": "conjugate invariants use opposite hol/anti maps",
+      "pass": true
+    },
+    {
+      "name": "sharp phase bound agrees with dense maximization",
+      "pass": true
+    },
+    {
+      "name": "both charge conventions fail tree diagnostic gate",
+      "pass": true
+    },
+    {
+      "name": "complex skew singular pairing on 200 samples",
+      "pass": true
+    },
+    {
+      "name": "skew plus symmetric spectral-gap theorem on 200 samples",
+      "pass": true
+    },
+    {
+      "name": "exact complex CW against independent 4-real-direction differences",
+      "pass": true
+    },
+    {
+      "name": "conditional CW Hermiticity",
+      "pass": true
+    },
+    {
+      "name": "projected zero mass can hide negative eigenvalue",
+      "pass": true
+    },
+    {
+      "name": "Schur retuning produces exact zero eigenpair",
+      "pass": true
+    },
+    {
+      "name": "rank-one symmetric mirror operator matches third-family toy",
+      "pass": true
+    },
+    {
+      "name": "all mediator vertices conserve PQ",
+      "pass": true
+    },
+    {
+      "name": "vectorlike mediator adds zero PQ anomalies",
+      "pass": true
+    },
+    {
+      "name": "exact mediator mixing reproduces all three effective norms",
+      "pass": true
+    }
+  ],
+  "conditional_complex_CW": {
+    "Q_norm_over_tree_gap": 0.03168157329880297,
+    "eta_Y": 1.28882417781816e-08,
+    "f_norm": 0.5668700937468258,
+    "full_complex_copy_pi_over_omega2": {
+      "imag": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -3.2869302391973412e-06,
+          0.0
+        ],
+        [
+          0.0,
+          3.2869302391973412e-06,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "real": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.2953811756435647e-08,
+          3.045525416995215e-06,
+          0.0
+        ],
+        [
+          0.0,
+          3.045525416995215e-06,
+          0.0009680857247160964,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "geometric_copy_order": [
+      "phi_hol",
+      "phi_anti",
+      "Sigma_hol",
+      "Sigma_anti"
+    ],
+    "h_norm": 0.008636225097662613,
+    "retuned_Q_norm": 0.0009680947938534574,
+    "scope": "published Hprime,Fprime transported using positive-real corrected overlaps; no fit or scalar-relative-phase match",
+    "synthetic_full_complex_finite_difference_relative_error": 3.630872064237919e-08,
+    "total_boson_fermion_Q_certified": false,
+    "up_copy_pi_over_omega2": {
+      "imag": [
+        [
+          0.0,
+          -3.2869302391973412e-06
+        ],
+        [
+          3.2869302391973412e-06,
+          0.0
+        ]
+      ],
+      "real": [
+        [
+          2.2953811756435647e-08,
+          3.045525416995215e-06
+        ],
+        [
+          3.045525416995215e-06,
+          0.0009680857247160964
+        ]
+      ]
+    }
+  },
+  "corrected_cases": {
+    "declared_R_equals_minus_iY": {
+      "abs_r": 1.1049548453539388,
+      "abs_s": 0.033607316853461425,
+      "adversarial_30pct_ratio": 31.224374209188305,
+      "alpha10": 0.6710153955538309,
+      "alpha126": 0.001588153767505468,
+      "beta10": 0.7414417126242954,
+      "beta126": 5.8975403433190694e-05,
+      "conditional_gaussian_chi2_lower_10pct": 96.51478789796093,
+      "fundamental_f_lower_from_down_lepton_norms": 0.5547403797251098,
+      "maximizing_cos_phase_s": -1.0,
+      "minimum_126_weight_with_f_below_4pi": 0.000597366068740321,
+      "minimum_amplitude_rotation": 0.022854258355861707,
+      "required_additive_defect_norm": 0.4567108711617653,
+      "sharp_phase_uniform_bound": 0.008014141243140323,
+      "single_120_available_symmetric_norm_upper": 0.008014141243140323,
+      "single_120_fixed_overlap_excluded_at_diagnostic_targets": true,
+      "single_120_required_symmetric_norm": 0.23158827806170187,
+      "target_over_sharp_bound": 57.988123531349714,
+      "tree_126_weight": 2.52571048745192e-06,
+      "triangle_bound": 0.008131900367203642
+    },
+    "global_charge_conjugate_stress_test": {
+      "abs_r": 0.9050143580117794,
+      "abs_s": 29.75542511651012,
+      "adversarial_30pct_ratio": 2.250459433359077,
+      "alpha10": 0.7414417126242954,
+      "alpha126": 5.8975403433190694e-05,
+      "beta10": 0.6710153955538309,
+      "beta126": 0.001588153767505468,
+      "conditional_gaussian_chi2_lower_10pct": 54.666658244154,
+      "fundamental_f_lower_from_down_lepton_norms": 14.938651925389335,
+      "maximizing_cos_phase_s": 1.0,
+      "minimum_126_weight_with_f_below_4pi": 0.0007333860826106414,
+      "minimum_amplitude_rotation": 0.02549516411715197,
+      "required_additive_defect_norm": 0.35353147501792176,
+      "sharp_phase_uniform_bound": 0.11119353738698384,
+      "single_120_available_symmetric_norm_upper": 0.11119353738698384,
+      "single_120_fixed_overlap_excluded_at_diagnostic_targets": true,
+      "single_120_required_symmetric_norm": 0.23158827806170187,
+      "target_over_sharp_bound": 4.179424661952572,
+      "tree_126_weight": 2.52571048745192e-06,
+      "triangle_bound": 0.11565812864243388
+    }
+  },
+  "corrections": [
+    "phi* and Sigma conjugation was conflated",
+    "tree eigenvector was called loop-corrected",
+    "diagnostic SM running was over-promoted",
+    "a large Gaussian chi2 does not empty the parameter domain",
+    "real-slice CW omitted imaginary copy mixing",
+    "semidefinite Hessian alone omits heavy-relaxed quartic",
+    "torsion NDA was misreported as a universal Yukawa correction"
+  ],
+  "date": "2026-09-05",
+  "diagnostic_targets": {
+    "CKM_abs_at_high": [
+      [
+        0.9743403604245524,
+        0.2250408188077126,
+        0.004182334050208407
+      ],
+      [
+        0.22487402185808728,
+        0.9732596007708465,
+        0.0468766871775425
+      ],
+      [
+        0.009619581130265793,
+        0.046069288878025444,
+        0.9988919282290509
+      ]
+    ],
+    "gauge_at_high": [
+      0.5640470885964108,
+      0.533747927231985,
+      0.5479607031564661
+    ],
+    "mu_high_GeV": 853475084236845.8,
+    "mu_low_GeV": 173.1,
+    "source_ckm": "PDG 2024 CKM review, Eq. (12.28)",
+    "source_common_scale_inputs": "Mummidi--Patel JHEP 12 (2021) 042, Table II",
+    "status": "diagnostic_only_missing_Pati_Salam_Yukawa_RGE_and_threshold_matching",
+    "yukawa_singular_values_at_high": {
+      "charged_lepton": [
+        2.7988414995962304e-06,
+        0.0005833257425905409,
+        0.009866343480468703
+      ],
+      "down": [
+        6.740671224080737e-06,
+        0.00013776316909886696,
+        0.006342291384277315
+      ],
+      "up": [
+        3.0715238501522585e-06,
+        0.0015484562815018257,
+        0.4647250124049056
+      ]
+    }
+  },
+  "geometric_overlaps": [
+    0.6710153955538309,
+    0.7414417126242954,
+    5.8975403433190694e-05,
+    0.001588153767505468
+  ],
+  "mirror_10_rank_one_toy": {
+    "PQ_domain_wall_number_unchanged": 3,
+    "bare_M_over_omega": 0.5626028899853225,
+    "coefficient_k": -0.14824421735790697,
+    "exact_mediator_theta": 0.4237524859014672,
+    "f33": -0.5547403797251098,
+    "f_UV_norm": 0.6676156395116208,
+    "g33": -3.081241962607939,
+    "h33": 3.415397973518398,
+    "h_UV_norm": 4.110342757826773,
+    "kappa_UV_for_bare_M_equal_old_MU": 1.435593355533763,
+    "largest_vertex_loop_parameter": 0.10698831546476568,
+    "max_matrix_residual": 4.440892098500626e-16,
+    "new_threshold_recalculation_required": true,
+    "operator": "S* (16_i 16_j)_10 phi / Lambda",
+    "physical_heavy_M_over_omega": 0.6171920451905415,
+    "scope": "only third family; all first/second family masses and mixings set to zero; not a viable fit",
+    "y_UV_norm": 4.110342757826774
+  },
+  "relaxed_quartic": {
+    "checks": [
+      {
+        "name": "four real light directions",
+        "pass": true
+      },
+      {
+        "name": "290 positive scalar modes",
+        "pass": true
+      },
+      {
+        "name": "no negative quadratic modes",
+        "pass": true
+      },
+      {
+        "name": "source orthogonal to all zero modes",
+        "pass": true
+      },
+      {
+        "name": "quartic stable under derivative step change",
+        "pass": true
+      },
+      {
+        "name": "SM-equivalent directions agree",
+        "pass": true
+      },
+      {
+        "name": "direct relaxed-path check",
+        "pass": true
+      }
+    ],
+    "date": "2026-09-05",
+    "directions": [
+      {
+        "direct_path": [
+          {
+            "relaxed_path_quartic_estimate": 0.40915593083650226,
+            "t": 0.04
+          },
+          {
+            "relaxed_path_quartic_estimate": 0.40915413834370357,
+            "t": 0.02
+          },
+          {
+            "relaxed_path_quartic_estimate": 0.40915359987341277,
+            "t": 0.01
+          }
+        ],
+        "jets": [
+          {
+            "direct_lambda": 0.4292062996292787,
+            "epsilon": 0.02,
+            "heavy_exchange_subtraction": 0.020052760213575133,
+            "relaxed_lambda": 0.40915353941570354,
+            "source_zero_space_norm": 1.4029322083559492e-16
+          },
+          {
+            "direct_lambda": 0.42920629962921897,
+            "epsilon": 0.01,
+            "heavy_exchange_subtraction": 0.020052760213575133,
+            "relaxed_lambda": 0.4091535394156438,
+            "source_zero_space_norm": 1.4037731462353575e-16
+          }
+        ],
+        "light_direction": 0
+      },
+      {
+        "direct_path": [
+          {
+            "relaxed_path_quartic_estimate": 0.40915593083652674,
+            "t": 0.04
+          },
+          {
+            "relaxed_path_quartic_estimate": 0.40915413834380143,
+            "t": 0.02
+          },
+          {
+            "relaxed_path_quartic_estimate": 0.4091535998738041,
+            "t": 0.01
+          }
+        ],
+        "jets": [
+          {
+            "direct_lambda": 0.4292062996292947,
+            "epsilon": 0.02,
+            "heavy_exchange_subtraction": 0.020052760213575105,
+            "relaxed_lambda": 0.4091535394157196,
+            "source_zero_space_norm": 1.6232284349461382e-16
+          },
+          {
+            "direct_lambda": 0.4292062996292296,
+            "epsilon": 0.01,
+            "heavy_exchange_subtraction": 0.020052760213575105,
+            "relaxed_lambda": 0.4091535394156545,
+            "source_zero_space_norm": 1.6223653779727566e-16
+          }
+        ],
+        "light_direction": 1
+      }
+    ],
+    "formula": "lambda_EFT=V4[q,q,q,q]/6-J^T H_heavy^{-1} J/2; J=V3[.,q,q]",
+    "global_stability_proved": false,
+    "local_light_quartic_positive": true,
+    "loop_stationarity_proved": false,
+    "model": "P54PQ-v2",
+    "relaxed_lambda": 0.4091535394156438,
+    "scope": "tree background; full massive-scalar relaxation at quartic order",
+    "sigma_over_omega": 0.1265,
+    "sources": [
+      {
+        "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+        "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+      },
+      {
+        "path": "route_f/code/search_p54_hierarchical_p1.py",
+        "sha256": "36525f08aa8539bc01e977de261c60aa8257bd2da50ffbcd64af6fd227c00d11"
+      },
+      {
+        "path": "route_f/output/p54_p2_two_site_matching.json",
+        "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+      },
+      {
+        "path": "route_f/output/p54_hierarchical_p1_search.json",
+        "sha256": "4a8e4326c8439972bb8fca99cd35763df7da8decc1ec463d9e0c6c5661f8da0f"
+      },
+      {
+        "path": "route_f/code/verify_p54_relaxed_light_quartic.py",
+        "sha256": "5f725b264d7c061ea5207f3dcde885e6fffb2f61db0a2cd15278c98f08fe62fe"
+      }
+    ],
+    "summary": {
+      "all_pass": true,
+      "passed": 7,
+      "total": 7
+    },
+    "vs_over_omega": 0.25,
+    "xi02": 0.14737109402314083
+  },
+  "schema": "route-f-p54-theory-audit-v1",
+  "schur_counterexample": {
+    "exact_retuning": 3.272569328949276e-05,
+    "fixed_eigenvalues": [
+      -9.823244323405978e-22,
+      0.030589755949423744
+    ],
+    "gap": 0.03055703025613425,
+    "light_rotation_radians": 0.03271401803472066,
+    "naive_eigenvalues": [
+      -3.269071989194413e-05,
+      0.030589720976026195
+    ],
+    "off_diagonal": 0.001
+  },
+  "sources": [
+    {
+      "path": "route_f/output/p54_p3_light_doublet_overlaps.json",
+      "sha256": "d87505e811f471cc311768b7591530010d35e0eae23f1f7370879433e90dfada"
+    },
+    {
+      "path": "route_f/output/p54_p2_two_site_matching.json",
+      "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+    },
+    {
+      "path": "route_f/code/verify_p54_p3_flavor_cw_gate.py",
+      "sha256": "a27d75cbfaff854ac22d44c714293f6d3e330902341e24e2ee702c54787bd3a7"
+    },
+    {
+      "path": "route_f/code/verify_p54_theory_audit.py",
+      "sha256": "cedd7fe94047c8f684680ba34a6cd6f48b842f3456ae70d81f841e6feb8ee536"
+    }
+  ],
+  "status": {
+    "eta_profile_domain_proven_empty": false,
+    "full_loop_corrected_branch_excluded": false,
+    "global_flavor_seesaw_fit_performed": false,
+    "new_UV_extension_fitted": false,
+    "physical_pole_mass_computed": false,
+    "tree_flavor_diagnostic_tension": true
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 14,
+    "total": 14
+  }
+}

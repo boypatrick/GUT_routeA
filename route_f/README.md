@@ -77,13 +77,51 @@ zero-momentum matching coefficient, not a gauge-independent pole mass.  The
 unfitted heavy-Yukawa projection is carried into P3 as
 `eta_Y(mu)=h^T Pi_heavy-Y h/omega^2`, with
 `delta xi02=[kappa_B/omega^2+eta_Y]/w10`; it is not set to zero.  Running,
-two-site matching, covariance, and the renormalized single-doublet condition
-are closed.  A
+two-site matching, covariance, and projected first-order light-mass matching
+are computed; the full complex loop eigenpair and tadpole scheme remain open. A
 distinct candidate extension, `P54PQ-F10`, uses two
 charge-`+2` Weyl `10_F` fields to obtain physical `N_DW=1`; it is not yet
 part of the frozen baseline.
 
-The prior single-chain review found three blockers.  Their calculations remain
+The P3 audit was corrected on 2026-09-05. See
+`tex/p54_theory_audit_and_repair.tex`, its PDF, and
+`output/p54_theory_audit.{json,md}` (`14/14`).
+The shorter `tex/p54_p3_flavor_fermionic_cw_gate.tex` and compatibility
+output now carry the correction, not the superseded exclusion.
+
+The action uses `h Psi Psi phi*` but `f Psi Psi Sigma`.
+Its geometric tree overlaps imply `|r|=1.104954845`,
+`|s|=0.033607317`; the sharp top-norm bound is `0.00801414124`
+against the SM-only diagnostic `0.464725012`.
+The earlier conjugation assignment, `r>=62.9` repair target and empty
+`eta_Y` profile-domain claim are withdrawn. This is a tree diagnostic
+tension; PS Yukawa matching and the full loop-corrected light vector
+have not been computed, so the complete model is not excluded.
+
+A new same-action calculation relaxes all 290 massive scalar modes and
+gives `lambda_EFT=0.409153539>0` (`7/7` checks). This supports local
+tree stability, not a global theorem or Higgs pole mass.
+The exact complex Majorana CW formula and an independent finite-difference
+test replace the old real-slice calculation. The conditional external
+matrix pair gives `eta_Y=1.28882418e-8` and Q/gap ratio `0.03168157`;
+it remains neither a fit nor the total boson-plus-fermion Q block.
+
+The detailed audit derives the full Schur light-state condition, a
+normalized-overlap feasibility theorem, and a semidefinite inverse
+scalar/flavor problem. It also proves that antisymmetric-only 120
+spurions cannot fix the frozen geometry, while a PQ-preserving
+mirror-10 operator has an explicit rank-one third-family escape and a
+vectorlike mediator. The latter is an unfitted alternative with sizable
+UV couplings and new threshold obligations, and does not fix `N_DW=3`.
+Minimal Einstein--Cartan torsion/central twists do not automatically
+supply a missing symmetric Yukawa or anomaly repair.
+
+Next: declare the tadpole prescription, assemble the full complex doublet
+P/Q blocks and corrected eigenvector, then couple PS Yukawa matching to
+the inverse scalar/flavor problem. Do not replace those matrix constraints
+by one free `eta_Y`, or restart soliton scans as a P-layer prerequisite.
+
+The prior single-chain review found three blockers. Their calculations remain
 valid, but after the three-layer reset only branch-relevant items block their
 own layer:
 

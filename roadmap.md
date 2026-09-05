@@ -1,6 +1,6 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-08-30
+Last updated: 2026-09-05
 
 ## Route-F three-layer reset (2026-08-30; current authority)
 
@@ -15,9 +15,11 @@ regularity problem.  Route F now has three independent layers:
   vacuum and complete tree-level spectrum are now computed.  P2 first
   falsified the historical `sigma/omega=0.35` benchmark, then closed a
   parent-resolved threshold fixed point at `sigma/omega=0.1265`.  Running,
-  two-site matching, and covariance are closed; the finite one-loop Higgs
-  self-energy remains before global flavor, proton decay, amplitudes, and
-  out-of-fit predictions.  The more
+  two-site matching, covariance, and the light-subspace bosonic CW coefficient
+  are computed within their declared truncation. The corrected P3 audit
+  finds strong frozen-tree flavor tension, not a full-model exclusion.
+  The complete loop light eigenpair and PS Yukawa matching remain open;
+  the same-action heavy-relaxed tree quartic is positive. The more
   flexible `210_H + 120_H` model is comparison/rescue only.
 - **U -- family UV:** seek an anomaly-safe representation-valued index
   `Ind D_UV = 3 x 16`.  On `CP1` the primary hypothesis is
@@ -80,7 +82,7 @@ P2 running/threshold fixed-point checkpoint completed 2026-08-30 Asia/Taipei:
   total sigma `(0.04031,0.03829,0.24826)` in
   `(log10 MI,log10 MU,alphaU^-1)`.  Full matrices and the `6 x 27` Jacobian
   are stored in `route_f/output/p54_p2_two_site_matching.json`.
-- The loop condition is reimposed exactly by
+- The projected first-order loop condition is reimposed by
   `delta xi02=1.00000252572 h^T Pi_D h/omega^2`; the heavy-doublet gap is
   `0.0305570303 omega^2`.  The declared Landau-`MSbar` hard-mode calculation
   now gives `Pi_B^hard/omega^2=-0.0202366510950 I4` and
@@ -107,6 +109,48 @@ P2 bosonic CW checkpoint completed 2026-09-02 Asia/Taipei:
   `delta xi02(mu)=[kappa_B(mu)/omega^2+eta_Y(mu)]/w10` and an explicit test of
   the heavy-doublet gap.  The nuisance `eta_Y` may not be fixed to zero by
   convention.
+
+P3 theory audit and correction completed 2026-09-05 Asia/Taipei:
+
+- Corrected the distinct conjugations in `h Psi Psi phi*` and
+  `f Psi Psi Sigma`. The geometric tree overlaps imply
+  `|r|=1.104954845`, `|s|=0.033607317`, not the old pair.
+  The sharp phase-uniform top bound is `0.00801414124` versus diagnostic
+  `0.464725012`. This is substantial *tree* tension, not an unconditional
+  exclusion of the loop-corrected model. PS Yukawa matching is missing.
+- Withdraw the earlier `69.49`, `r>=62.9`, and empty `eta_Y`
+  profile-domain claims. Gaussian chi-square bounds do not empty parameter
+  domains. No global flavor/seesaw fit has been performed.
+- P2 computed only the tree-light projection `P Pi_B P`.
+  Full complex P/Q blocks, tadpoles and light-vector rotation remain open.
+  The exact Schur condition is `A=b^dagger C^-1 b`, not merely `A=0`.
+  Its vector rotation is first loop order and must be included in flavor.
+- The newly computed same-action heavy-relaxed quartic is
+  `lambda_EFT=V4[q^4]/6-J^T C^-1 J/2=0.409153539>0`.
+  All 290 massive scalar modes, zero-mode orthogonality, two light directions,
+  derivative-step and direct-path checks pass `7/7`.
+  This supports local tree stability, not global/loop stability or a pole mass.
+- The exact complex Majorana CW formula retains imaginary copy mixing.
+  For an external published matrix pair only, conditional
+  `eta_Y=1.28882418e-8` and retuned Q norm
+  `9.68094794e-4 omega^2` give ratio `0.03168157` to the tree gap.
+  This is not an actual fit or total boson-plus-fermion certificate.
+- A fixed-geometry antisymmetric-only repair obeys `yt-yc<=2U` and
+  cannot meet the diagnostic target. A PQ-preserving mirror operator
+  `S*(16_i16_j)_10 phi/Lambda` adds the missing symmetric direction.
+  Its rank-one example exactly reproduces three third-family diagonal
+  entries; a vectorlike `16(+3)+anti16(-3)` completion has explicit
+  kinetic/mixing/threshold costs, sizable UV couplings, and leaves
+  `N_DW=3`. It is a proposal, not a fitted new branch.
+- Minimal EC torsion is not a universal Yukawa correction; a central twist
+  or Nieh--Yan term does not automatically repair flavor or PQ cosmology.
+- Artifacts: `route_f/tex/p54_theory_audit_and_repair.tex`, its PDF,
+  `output/p54_theory_audit.{json,md}`, and corrected P3 short report.
+  Audit `14/14`, overlap extraction `5/5`, relaxed quartic `7/7`.
+- Next: declare tadpole scheme -> full complex loop eigenpair -> PS
+  Yukawa matching and action-derived inverse scalar/flavor feasibility.
+  Only then assess extensions and physical predictions. U/S remain
+  independent; no new soliton/lattice scan is required.
 
 ## AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S-layer authority)
 

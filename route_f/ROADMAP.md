@@ -1,7 +1,7 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-08-30
+Last updated: 2026-09-05
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
@@ -328,29 +328,175 @@ universal.  Its explicit two-loop benchmarks at `y_F=(0.5,1,2)` place
 `MI/MU=(0.12548,0.12587,0.12626)`.  It remains a separate branch because
 `y_F` is a new threshold parameter.
 
-Running, two-site thresholds, hierarchy closure, covariance, the bosonic CW
-coefficient, and the one-doublet matching relation are closed.  A complete
+Running, two-site thresholds, hierarchy closure, covariance, the projected
+bosonic CW coefficient, and first-order light-mass matching are computed.
+The complete complex loop eigenpair and tadpole scheme remain open. A complete
 gauge-independent pole mass is deliberately not claimed.  P3 may now open,
 but it must fit/profile `eta_Y(mu)` and test the heavy-doublet norm bound;
 neither quantity may be silently set to zero.
 
-### P3 Global flavor, seesaw, and identifiability (`open`)
+### P3 Global flavor, seesaw, and identifiability (`in-progress; corrected audit 2026-09-05`)
 
-Fit quarks, charged leptons, CKM, neutrinos, and PMNS simultaneously at the
-matched scale.  Publish `chi2/dof`, priors, pulls, parameter count, and the
-rank of the observable Jacobian/Hessian.  Compare at least
+Authoritative artifacts:
+
+- `tex/p54_theory_audit_and_repair.tex` and its PDF: complete derivations,
+  corrections, EC assessment, and two constructive repair routes;
+- `code/verify_p54_theory_audit.py` and
+  `output/p54_theory_audit.{json,md}` (`14/14`);
+- `code/verify_p54_relaxed_light_quartic.py` and
+  `output/p54_relaxed_light_quartic.json` (`7/7`);
+- corrected `code/extract_p54_p3_light_overlaps.py` and its ledgers
+  (`5/5`);
+- `tex/p54_p3_flavor_fermionic_cw_gate.tex` is now the corrected short
+  P3 report. Its compatibility verifier/output delegates to the new audit.
+
+**Corrections, not a new fit:** the earlier P3 report conflated the
+conjugations in `h Psi Psi phi*` and `f Psi Psi Sigma`. The four extracted
+magnitudes are geometric holomorphic/antiholomorphic sector weights:
 
 ```text
-P3-0: generic allowed Majorana matrix,
-P3-1: M_R = M_V + zeta K_tr,
-P3-2: a UV-restricted M_V and zeta, if Layer U supplies them.
+c = (phi_hol, phi_anti, Sigma_hol, Sigma_anti)
+  = (0.6710154,0.7414417,5.89754e-5,1.588154e-3).
+Yd=a h+d f; Ye=a h-3d f; Yu=b h+e f.
+(|a|,|b|,|d|,|e|)=(c1,c2,c4,c3) for the declared R=-iY convention.
+|r|=1.104954845; |s|=0.033607317.
 ```
 
-No datum used in a fit is a prediction.  The first useful outputs are
-out-of-fit intervals for `m_bb`, the light-neutrino mass sum, CP phases,
-heavy-neutrino hierarchy, and flavor ratios relevant to proton decay.
+The exact two-matrix identity remains
+`Yu=r[(3+s)Yd+(1-s)Ye]/4`. Maximizing its norm bound with the *same*
+phase of `s` in both terms gives `yt<=0.00801414124` against the
+SM-only diagnostic `yt=0.464725012`. The charge-conjugate convention
+stress test gives `|r|=0.905014358, |s|=29.7554251` and upper
+`0.111193537`; it is not another free convention inside a fit.
 
-### P4 Proton decay and amplitude consistency (`open`)
+The earlier factors `69.49`, repair target `|r|>=62.9`, and empty
+`eta_Y` profile-domain claim are **withdrawn**. A large Gaussian
+chi-square lower bound does not empty a parameter domain. The frozen
+tree geometry has strong diagnostic tension, but complete PS Yukawa
+running/thresholds and the loop-corrected scalar eigenvector are missing.
+A user-chosen percentage envelope does not bound those effects.
+No global flavor/seesaw fit, neutrino prediction interval, or full-model
+exclusion is claimed.
+
+#### P3-A: scalar/loop interface repair (`open; highest priority`)
+
+P2 computed only `P Pi_B P`. It did not compute `Q Pi_B P`,
+`Q Pi_B Q`, or the tadpole/vacuum shift. For the full complex copy matrix
+`M=[[A,b^dagger],[b,C]]`, with `C>0`, the exact zero condition is
+`A=b^dagger C^-1 b`, with light vector proportional to
+`c0-Q C^-1 b`. The missing mass is formally second order in loops, but
+the missing eigenvector rotation is first order and matters for flavor.
+A projected mass retune plus a Q-block norm bound is insufficient.
+Declare the tadpole prescription and assemble all complex P/Q blocks
+before calling the eigenpair loop-corrected.
+
+The missing heavy-relaxed *tree* quartic has now been computed from the
+same 328-real-coordinate action:
+
+```text
+J_i=V3[e_i,q,q]; C=positive physical scalar Hessian.
+lambda_EFT=V4[q,q,q,q]/6-J^T C^-1 J/2
+          =0.429206300-0.0200527602=0.409153539>0.
+```
+
+All 290 massive scalars are included; two light directions, two derivative
+steps, zero-mode source orthogonality and direct relaxed paths pass
+`7/7`. This supports local tree stability modulo symmetries, not a
+global boundedness theorem, loop vacuum, or physical Higgs mass.
+
+#### P3-B: complex fermionic projection (`conditional diagnostic done; fit open`)
+
+For fixed symmetric invertible `MR`, `D(z)=sum z_a Y_a`, the exact
+complex hard-Majorana Hessian is
+`Pi_ab=-Tr(Y_a^dagger Y_b W)/(8 pi^2)`,
+where `W=MR^dagger MR [log(MR^dagger MR/mu^2)-1]`.
+Its real form retains the imaginary off-diagonal blocks.
+An independent four-real-coordinate finite difference test gives relative
+error `3.7e-8`.
+
+The published Mummidi--Patel matrix pair, transported with positive-real
+corrected overlaps, gives conditional `eta_Y=1.28882418e-8` and
+`||Q(Pi_F-delta_xi_F P10)Q||=9.68094794e-4 omega^2`, or
+`0.03168157` of the tree gap. This is a complex-copy heavy-neutrino
+diagnostic, not fitted matrices, an actual scalar-phase match, or the
+total boson-plus-fermion Q certificate. New heavy fermions would add terms.
+
+#### P3-C: constructive inverse problem (`derived; not solved`)
+
+Prefer an action-derived inverse scalar/flavor solve to a blind optimizer.
+For effective `H,F,r,s` and declared norm caps, normalized overlap
+magnitudes exist iff
+
+```text
+(1+|r|^2)||H||^2/h_*^2+(1+|rs|^2)||F||^2/f_*^2 <= 1.
+```
+
+For fixed VEVs and candidate light vector `c`, the action Hessian is affine
+in real invariant couplings. Solve `M_D(p)c=0`,
+`Q_c M_D(p) Q_c >= Delta Q_c`, stationarity and other-irrep positivity
+as a semidefinite inner problem. Searching over `c` and recomputing loops
+remain nonlinear. Every candidate must rerun the relaxed quartic, complete
+spectrum, perturbativity, competing-vacuum tests and P2 thresholds.
+
+At the declared diagnostic `r`, even the permissive cap `||f||<=4pi`
+requires `w126>=5.97366e-4` versus tree `2.52571e-6`, corresponding to
+a minimum amplitude rotation `0.0228543 rad`. This is a necessary gate,
+not a prediction of the unknown loop mixing.
+
+#### P3-D: explicit alternatives and no-go filters (`proposed; not adopted/fitted`)
+
+- **Antisymmetric-only repair:** at fixed geometry, even complex
+  `120` spurions obey `yt-yc<=2U`, since a complex 3-by-3
+  antisymmetric matrix has singular values `(g,g,0)`. The diagnostic
+  target fails. This does not exclude a full 120 scalar extension
+  that also changes the light state.
+- **PQ mirror-10:** the allowed dimension-five operator
+  `S* (16_i 16_j)_10 phi / Lambda` adds a symmetric `g` and yields
+  `Yu-r[(3+s)Yd+(1-s)Ye]/4=(|a|^2-|b|^2)g/a`.
+  A rank-one third-family example reproduces its three diagonal targets
+  with `(h33,f33,g33)=(3.41540,-0.55474,-3.08124)`.
+  It is not a global fit. A vectorlike
+  `16(+3)+anti16(-3)` pair realizes rank at most two.
+  Exact VEV mixing rescales both original Yukawas and gives
+  `h_UV=y_UV=4.11034` in the toy; the vertex loop factor is about
+  `0.107` before multiplicities, so weak perturbativity is not certified.
+  New thresholds, running, scalar corrections and fit are required.
+  Its PQ anomalies cancel and `N_DW=3` is unchanged.
+- **Two-doublet EFT:** remains an openly different branch with new
+  spectrum, running and flavor-changing-neutral-current obligations.
+- **Einstein--Cartan/central twist:** minimal Planck-scale algebraic
+  torsion produces a suppressed dimension-six current interaction, not
+  an automatic independent symmetric Yukawa. Its NDA estimate is not a
+  calculated universal correction. A low-scale propagating torsion sector
+  requires its own healthy action; a contact EFT cannot be used above its
+  mediator mass. Discrete central quotients and Nieh--Yan terms do not
+  automatically repair the PQ anomaly/domain-wall number.
+
+Recent connections checked: Haba--Shimizu--Yamada (2023), PRD 108 095005
+(three symmetric Yukawas without visible PQ); Erdmenger et al. (2024),
+arXiv:2409.06766 (torsional anomaly/renormalization); Gao (2025), PRD 111
+055013 (a distinct spontaneous-CP/two-doublet model). Vectorlike rank-one
+flavor has older precedent, arXiv:0911.2242; no global novelty claim is made.
+
+#### P3-E: retained global-fit/reporting contract (`open`)
+
+Fit quarks, charged leptons, CKM, neutrinos and PMNS simultaneously with
+the matched action. Publish likelihood, priors, pulls, parameter count,
+`chi2/dof`, and observable-Jacobian rank/identifiability. The baseline
+Majorana tensor is action-related to `f`; do not silently make it generic.
+Retain the original comparison program as explicitly different hypotheses:
+
+```text
+P3-0: generic allowed Majorana matrix (null/comparison, not the frozen baseline),
+P3-1: M_R = M_V + zeta K_tr (declared extra matching hypothesis),
+P3-2: UV-restricted M_V and zeta only if Layer U derives them.
+```
+
+No fitted datum counts as a prediction. Only after a viable fit publish
+out-of-fit intervals for `m_bb`, neutrino mass sum, CP phases, heavy-neutrino
+hierarchy and flavor ratios relevant to proton decay.
+
+### P4 Proton decay and amplitude consistency (`blocked by viable P3 matching/fit`)
 
 Use physical mass eigenstates and P3 flavor rotations to calculate the
 complete relevant dimension-six channels and any branch-valid scalar
@@ -359,7 +505,7 @@ audit: residues must be extracted from complete amplitudes, with Ward/
 Goldstone identities, crossing, partial waves, and applicable positivity
 bounds checked after P0--P1.
 
-### P5 Model comparison and conditional closure (`open`)
+### P5 Model comparison and conditional closure (`blocked by P3/P4`)
 
 Compare P-54, P-210, the generic-Majorana null, and the `K_tr`-restricted
 variant with parameter penalties and uncertainties, not best-fit residuals
@@ -483,9 +629,11 @@ an `O(2)` isomorphism, or a matching Berry number is supporting evidence only.
 
 ```text
 P0 action freeze -> P1 vacuum+spectrum -> P2 running+thresholds
-P0 + P1 + P2 -> P3 flavor+identifiability
-P1 + P2 + P3 -> P4 proton decay+amplitudes
-P2 + P3 + P4 -> P5 model comparison+conditional 4d closure
+P0 + P1 + projected P2 -> full complex loop eigenpair + PS Yukawa matching
+corrected eigenpair + PS matching -> P3 inverse scalar/flavor feasibility
+P3 failure -> declared alternative -> rerun P1 + P2 -> restart P3
+P3 viable -> P4 proton decay+amplitudes
+P2 + viable P3 + P4 -> P5 model comparison+conditional 4d closure
 
 U0 -> U1 Spin^c construction -> U2 anomaly+exact spectrum
 U1 + U2 -> U3 Yukawa matching -> first-principles family-origin claim
@@ -497,19 +645,24 @@ S has no blocking arrow into P or U
 
 Next execution order:
 
-1. **P:** keep `P54PQ-v2` frozen.  P0-B and the tree-level P1 algebraic gate
-   are closed.  Next perform P2 two-loop running plus one-loop matching on
-   the actual 35-row spectrum, including threshold covariance and loop-level
-   retuning of the unique light doublet.  In parallel, state the PQ-quality/
-   `N_DW=3` cosmology choice.  Write the P-210 comparison contract before any
-   new flavor or proton scan.
-2. **U:** write the `O(3) gauge line + O(-1) spin bundle -> O(2)` Spin^c toy
-   construction, including the representation-valued index and anomaly debt
-   ledger.
-3. **S:** freeze new computation.  Continue GTA only as a separately chosen
-   mathematical task; it is no longer the default next action.
-4. Keep the evidence clean-run and document registry as parallel
-   reproducibility work.  Mechanical replay is not a substitute for P0--P5.
+1. **P:** declare a tadpole scheme, complete the complex doublet P/Q
+   blocks and corrected light eigenpair, then couple PS Yukawa matching to
+   the inverse scalar/flavor feasibility problem. The heavy-relaxed tree
+   quartic is complete and need not be repeated unless the action or
+   background changes. Keep `eta_Y` as a matrix-derived profile quantity.
+2. **P alternatives:** only if a baseline repair fails, compare the explicit
+   mirror-10/vectorlike completion, a two-doublet EFT or a full enlarged
+   scalar model. Do not add these inside an unrestricted nuisance.
+   Momentum-dependent pole and proton predictions require viable matched
+   flavor matrices; the full Q-block computation itself is now necessary
+   diagnostic work and is no longer incorrectly blocked by the tree no-go.
+3. **U:** retain the `O(3) gauge line + O(-1) spin bundle -> O(2)`
+   representation-valued index/anomaly ledger. Flux selection and physical
+   carrier remain independent assumptions to derive.
+4. **S:** freeze new scans. GTA/regularity is a separate mathematical
+   task with no blocking arrow into P or U.
+5. Keep clean-run/source hashes and document registry synchronized.
+   Mechanical replay is not a substitute for a physical fit.
 
 ## S-layer archive: AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S authority)
 

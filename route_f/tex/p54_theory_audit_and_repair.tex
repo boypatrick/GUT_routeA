@@ -1,0 +1,674 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Route-F P54 theory audit and constructive repairs}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert_2}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\title{Route-F Theory Audit:\\Corrected Flavor Geometry, Vacuum Matching,\\and Constructive Repair Mechanisms}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This audit corrects a scalar-conjugation error and an overstatement of a
+tree-level flavor exclusion. The declared action fixes $|r|=1.10495$,
+$|s|=0.0336073$, not the earlier pair $(0.905014,0.0410320)$.
+The exact two-matrix identity still gives strong diagnostic tension, but
+the complete loop-corrected light eigenvector and Pati--Salam Yukawa
+matching have not been computed. The full model is not thereby excluded.
+
+A missing same-action calculation gives a positive heavy-relaxed quartic
+$\lambda_{\rm EFT}=0.409154$. We derive the Schur-complement light-state
+condition, the complex Majorana Coleman--Weinberg projection, an
+antisymmetric-only flavor obstruction, a normalized-overlap feasibility
+theorem, and a PQ-preserving mirror-$10$ operator with a vectorlike
+mediator. The last construction exactly matches a third-family toy, not
+a global fit. Minimal Einstein--Cartan torsion and central quotients do
+not automatically supply the missing symmetric flavor structure.
+These are conditional results, not an unconditional proof of nature.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\section{Assumptions and claim boundaries}
+The retained renormalizable baseline is P54PQ-v2, with the declared
+diagonal center identification in $\mathrm{Spin}(10)\times U(1)_{\rm PQ}$,
+and fields
+\[
+3\,16_F+\Phi_{54,\mathbb R}+\Sigma_{126,\mathbb C}
++\phi_{10,\mathbb C}+S_{\mathbb C}.
+\]
+The name $\Sigma$ follows the action-card tensor convention; replacing it
+by its conjugate without changing the Yukawa formula is not allowed.
+The PQ charges and Yukawa contractions are
+\begin{equation}
+(q_\Psi,q_\Phi,q_\Sigma,q_\phi,q_S)=(-1,0,+2,-2,-4),
+\end{equation}
+\begin{equation}
+-\mathcal L_Y=\tfrac12h_{ij}(\Psi_i\Psi_j)_{10}\phi^*
++\tfrac12f_{ij}(\Psi_i\Psi_j)_{\overline{126}}\Sigma+\mathrm{h.c.},
+\qquad h^T=h,\quad f^T=f.
+\label{eq:action}
+\end{equation}
+The charged-lepton $\Sigma$ Clebsch is $-3$ relative to down quarks.
+A complete numerical spinor Clebsch tensor has not been independently
+exported: an explicit contraction regression remains useful. Here we use
+the canonical Yukawa normalization of the action card.
+
+The stored threshold benchmark is
+\begin{align}
+\sigma/\omega&=0.1265,&v_s/\omega&=0.25,&
+\langle S\rangle&=v_s/\sqrt2,\\
+M_U&=8.5347508424\,10^{14}\ {\rm GeV},&
+g_U&=0.562602889985,&
+\Delta_D/\omega^2&=0.0305570302561 .
+\end{align}
+P2 determines the hard bosonic curvature on the tree light four-plane,
+\[
+P\Pi_BP/\omega^2=-0.0202366510950P,
+\]
+but not $Q\Pi_BP$, $Q\Pi_BQ$, or the tadpole-induced vacuum shift.
+Its light-mass retuning is a projected first-order result, not a
+complete corrected eigenpair.
+
+Layer P tests this four-dimensional action. Layer U seeks a
+representation-valued family index. Layer S studies an independently
+specified soliton action. S does not block P or U.
+On $\mathbb{CP}^1$, choosing $K^{1/2}=\mathcal O(-1)$ and
+$L_F=\mathcal O(3)$ gives
+\[
+\operatorname{ind}D_{L_F}=\int c_1(L_F)=3,\quad
+h^0(\mathcal O(2))=3,\quad h^1(\mathcal O(2))=0.
+\]
+This derives the count after choosing flux three, not the flux,
+the $16$ representation, anomaly cancellation, or absence of other
+light states. Likewise the older Route-E upper bound and extra
+Killing-contact axiom are not an unconditional three-family theorem.
+
+\section{Corrected geometry and the exact flavor inequality}
+\subsection{Conjugation before fitting}
+The reconstructed \emph{tree} light vector has geometric magnitudes
+\begin{equation}
+(c_1,c_2,c_3,c_4)=
+(0.6710153956,0.7414417126,0.00005897540343,0.001588153768).
+\label{eq:c}
+\end{equation}
+Their order is
+$(\phi_{\rm hol},\phi_{\rm anti},\Sigma_{\rm hol},\Sigma_{\rm anti})$.
+They are not pre-labelled up/down Yukawa coefficients.
+The implementation uses the real generator associated with $-iY$;
+eigenvalue $-i/2$ selects physical hypercharge $+1/2$.
+Because $h$ couples $\phi^*$ and $f$ couples $\Sigma$, in
+\begin{equation}
+Y_d=ah+df,\quad Y_e=ah-3df,\quad Y_u=bh+ef
+\end{equation}
+the declared magnitudes are
+\begin{equation}
+(|a|,|b|,|d|,|e|)=(c_1,c_2,c_4,c_3).
+\label{eq:map}
+\end{equation}
+Phases remain arbitrary in the algebra. Positive-real coefficients below
+are explicitly conditional examples, not a scalar-phase match.
+
+Define $H=ah$, $F=df$, $r=b/a$, $s=ae/(db)$. Eliminating $H,F$ from
+$Y_d=H+F$, $Y_e=H-3F$, $Y_u=r(H+sF)$ proves
+\begin{equation}
+\boxed{Y_u=\frac r4[(3+s)Y_d+(1-s)Y_e].}
+\label{eq:identity}
+\end{equation}
+This identity holds in a common unified flavor basis.
+Low-energy matrices cannot be independently basis-rotated inside it.
+
+\subsection{Sharp phase-uniform norm bound}
+Write $\rho=|s|$, $B=y_b=\norm{Y_d}$, $E=y_\tau=\norm{Y_e}$.
+The triangle inequality gives
+\[
+y_t\le\tfrac{|r|}{4}(|3+s|B+|1-s|E).
+\]
+The two factors share one phase. With $x=\cos\arg s$ define
+\[
+F(x)=B\sqrt{9+\rho^2+6\rho x}
++E\sqrt{1+\rho^2-2\rho x}.
+\]
+It is concave. Differentiation gives the maximizer, for $\rho>0$,
+\begin{equation}
+x_*=\operatorname{clip}_{[-1,1]}
+\frac{9B^2(1+\rho^2)-E^2(9+\rho^2)}
+{6\rho(E^2+3B^2)}.
+\end{equation}
+Endpoint inspection covers a stationary point outside the interval.
+Thus
+\begin{equation}
+\boxed{y_t\le U:=|r|F(x_*)/4.}
+\label{eq:bound}
+\end{equation}
+For $\rho=0$, $U=|r|(3B+E)/4$.
+The bound is sharp given only $B,E$: proportional rank-one matrices
+can align the two summands. It is necessary, not sufficient, for a fit.
+
+Historical common-scale inputs transported with a one-loop
+\emph{SM-only diagnostic} to $M_U$ give
+\[
+(y_t,y_b,y_\tau)=(0.464725012,0.00634229,0.00986634).
+\]
+The declared map gives
+\[
+(|r|,\rho)=(1.104954845,0.033607317),\qquad U=0.00801414124,
+\]
+a factor $57.99$ below the target. A global charge-conjugate assignment,
+used only as a convention stress test, gives
+$(|r|,\rho)=(0.905014358,29.7554251)$ and $U=0.111193537$.
+It is not an extra fit parameter of the declared action.
+
+The older factor $69.49$, repair target $|r|\ge62.9$, and empty
+$\eta_Y$ profile-domain claim are withdrawn.
+The corrected tree diagnostic still has substantial tension.
+However, a chosen 10- or 30-percent error box is not a proven bound on
+missing Pati--Salam running, thresholds, or light-vector rotations.
+Gaussian likelihood tails also do not vanish: a large lower bound on
+$\chi^2$ does not empty its mathematical parameter domain. The profile
+\[
+\chi^2_{\rm prof}(\eta)
+=\min_{\theta:\eta_Y(\theta)=\eta}\chi^2(\theta)
+\]
+has not been computed.
+
+\section{The full light eigenpair: Schur complement and tadpoles}
+In the tree light/heavy copy decomposition let
+\[
+\mathcal M_D^2=\begin{pmatrix}A&b^\dagger\\b&C\end{pmatrix},\qquad C>0.
+\]
+The electroweak degeneracy is implicit. Solving the heavy equation at
+zero eigenvalue gives $z=-C^{-1}bu$, hence
+\begin{equation}
+\boxed{A=b^\dagger C^{-1}b,\qquad
+c_{\rm light}=\frac{c_0-QC^{-1}b}
+{\sqrt{1+\norm{C^{-1}b}^2}}.}
+\label{eq:schur}
+\end{equation}
+Completing the square gives
+\[
+(u,z)^\dagger\mathcal M_D^2(u,z)
+=(z+C^{-1}bu)^\dagger C(z+C^{-1}bu).
+\]
+The condition is necessary and sufficient for one zero copy with a
+positive heavy block. When $b=O(\hbar)$, the missed mass is
+$O(\hbar^2)$ but the vector rotates at $O(\hbar)$.
+
+For example, in $\omega^2$ units,
+\[
+\begin{pmatrix}0&0.001\\0.001&0.0305570303\end{pmatrix}
+\]
+has lowest eigenvalue $-3.26907\,10^{-5}$. Retuning its upper-left
+entry to $3.27257\,10^{-5}$ restores a zero and rotates its vector
+by $0.0327140$ radians. This is an algebraic counterexample to a
+projected-only criterion, not a computed P54 loop matrix.
+If $E$ is the full correction and $\Delta$ the tree heavy gap, then
+\begin{equation}
+\tan\theta\le
+\frac{\norm{QEc_0}}{\Delta-\norm{QEQ}},\qquad \norm{QEQ}<\Delta.
+\label{eq:rotation}
+\end{equation}
+A $Q$ norm test alone does not supply the numerator.
+
+At fixed renormalized parameters on a physical radial slice,
+\begin{equation}
+\delta v=-H_{\rm rad}^{-1}\nabla V_1(v_0),\qquad
+\delta\mathcal M_D^2=\Pi_D+
+\sum_a\delta v_a\,\partial_{v_a}\mathcal M_{D,0}^2+
+\delta\mathcal M_{\rm ct}^2.
+\end{equation}
+Alternatively declare fixed-VEV tadpole counterterms.
+Landau gauge and $\MS$ alone do not select this choice.
+The Schur formula is exact for the assembled truncated matrix; it
+does not replace omitted two-loop diagrams.
+
+\section{Heavy-relaxed quartic: a missing stability check now performed}
+Work modulo exact gauge and PQ zero modes. Let $q$ be a unit real light
+vector, $z$ physical heavy coordinates, $C=V^{(2)}|_{\rm heavy}$,
+and $J_i=V^{(3)}[e_i,q,q]$. Electroweak symmetry forbids a pure light
+cubic. Taylor expansion gives
+\[
+V(v_0+tq+z)=V_0+\tfrac12z^TCz+\tfrac12t^2J^Tz+
+\tfrac1{24}V^{(4)}[q^4]t^4+\cdots .
+\]
+Since $C>0$, heavy stationarity gives
+$z_*(t)=-t^2C^{-1}J/2+O(t^3)$. Using $H^\dagger H=t^2/2$,
+\begin{equation}
+\boxed{\lambda_{\rm EFT}
+=\tfrac16V^{(4)}[q^4]-\tfrac12J^TC^{-1}J.}
+\label{eq:quartic}
+\end{equation}
+The heavy exchange is non-positive. A full-Hessian pseudoinverse is
+valid only when $J$ is orthogonal to every zero mode; this is checked.
+
+For the actual 328-real-coordinate potential, all 290 positive scalar
+modes give
+\[
+\lambda_{\rm direct}=0.429206300,\qquad
+\tfrac12J^TC^{-1}J=0.0200527602,\qquad
+\boxed{\lambda_{\rm EFT}=0.409153539>0.}
+\]
+Two light directions and derivative steps $0.02,0.01$ agree.
+The direct paths $v_0\pm tq-t^2C^{-1}J/2$ independently give
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+$t$ & direct-path quartic estimate\\
+\midrule
+0.04 & 0.409155931\\
+0.02 & 0.409154138\\
+0.01 & 0.409153600\\
+\bottomrule
+\end{tabular}
+\end{center}
+The zero-space source norm is below $1.7\,10^{-16}$.
+No coupling was fitted to these results. The potential is quartic, so
+these centered differences extract its polynomial jets up to roundoff.
+For one complex doublet the quartic invariant is uniquely
+$(H^\dagger H)^2$. Together with the heavy positive Hessian and no
+other physical zero modes, this supports local tree stability modulo
+symmetries. It is numerical evidence, not an interval-arithmetic proof,
+global boundedness theorem, loop vacuum result, or physical Higgs mass.
+The quartic itself still needs running and threshold matching.
+
+\section{Exact complex hard-Majorana CW projection}
+Let $z_a=(q_{Ra}+iq_{Ia})/\sqrt2$,
+\[
+D(z)=\sum_a z_aY_a,\qquad
+\mathbb M(z)=\begin{pmatrix}0&D(z)\\D(z)^T&M_R\end{pmatrix},
+\quad M_R^T=M_R,\quad \det M_R\ne0.
+\]
+Keep $M_R$ independent of these doublet coordinates.
+The hard Majorana potential is
+\[
+V_F^{\rm hard}=-\frac1{32\pi^2}\sum_{\rm heavy}\lambda_i(z)^2
+\left[\log\frac{\lambda_i(z)}{\mu^2}-\frac32\right].
+\]
+In a Takagi basis, the direct heavy-block correction and mixing through
+the light block each contribute $(D^\dagger D)_{ii}$, so
+$\delta\lambda_i=2(D^\dagger D)_{ii}$.
+Differentiating $\lambda^2(\log(\lambda/\mu^2)-3/2)$ gives
+$2\lambda(\log(\lambda/\mu^2)-1)$, proving
+\begin{equation}
+V_F^{(2)}=z^\dagger\Pi z,\qquad
+\boxed{\Pi_{ab}=-\frac1{8\pi^2}\tr(Y_a^\dagger Y_bW),}
+\label{eq:cw}
+\end{equation}
+\[
+W=(M_R^\dagger M_R)\left[\log\frac{M_R^\dagger M_R}{\mu^2}-1\right].
+\]
+Positive degeneracies follow by continuity. Light seesaw masses are
+$O(z^2)$ and cannot affect this Hessian.
+Its real form is
+\[
+\Pi_{\mathbb R}=
+\begin{pmatrix}\Re\Pi&-\Im\Pi\\\Im\Pi&\Re\Pi\end{pmatrix};
+\]
+discarding imaginary off-diagonal copy mixing is incorrect.
+
+As a conditional scale diagnostic use the published $H',F'$ of
+Mummidi--Patel \cite{mp}, $h=H'/a$, $f=F'/d$,
+$M_R=\sigma f$, $(Y_1,Y_2)=(h,-3f)$, $\mu=g_U\omega$.
+The up-coupled copies are $(\phi_{\rm anti},\Sigma_{\rm hol})$.
+With positive-real overlaps,
+\[
+\frac{\Pi_{\rm up}}{\omega^2}=
+\begin{pmatrix}
+2.2953812\,10^{-8}&(3.0455254-3.2869302i)\,10^{-6}\\
+(3.0455254+3.2869302i)\,10^{-6}&9.6808572\,10^{-4}
+\end{pmatrix}.
+\]
+Embedding all four complex copies gives
+\begin{align}
+\eta_Y&=1.28882418\,10^{-8},&
+\delta\xi_F&=\eta_Y/w_{10},\\
+\norm{Q(\Pi_F-\delta\xi_FP_{10})Q}/\omega^2&=9.68094794\,10^{-4},&
+\frac{\norm{Q(\Pi_F-\delta\xi_FP_{10})Q}}{\Delta_D}&=0.03168157.
+\end{align}
+This is the heavy-neutrino contribution for one externally supplied
+matrix pair, not a fitted prediction or a total boson--fermion
+certificate. The actual scalar relative phases are unmatched.
+Independent finite differences for random complex symmetric matrices
+on all four real coordinates give relative error $3.7\,10^{-8}$.
+Majorana-field variation or new heavy fermions require additional terms.
+
+A Higgs pole instead solves a matched inverse-propagator equation,
+schematically
+\[
+\det[p^2Z(\mu)-M^2(\mu)-\Pi(p^2,\mu)]=0,
+\]
+with consistent self-energy conventions, tadpoles, field matching, and
+gauge/Nielsen consistency. CW curvature at zero momentum is not this pole.
+
+\section{An antisymmetric-only obstruction at fixed geometry}
+A $120$ Yukawa adds antisymmetric tensors:
+$Y_x=S_x+A_x$, $A_x^T=-A_x$. With the original symmetric sector and
+fixed $r,s$,
+\[
+S_u=\tfrac r4[(3+s)S_d+(1-s)S_e].
+\]
+For complex matrices $\norm{\Sym Y}\le(\norm Y+\norm{Y^T})/2=\norm Y$.
+Hence $\norm{S_u}\le U$ remains valid.
+
+\begin{lemma}
+Every complex $3\times3$ antisymmetric matrix has singular values $(g,g,0)$.
+\end{lemma}
+\begin{proof}
+Write $A_{ij}=\epsilon_{ijk}z_k$. Contraction gives
+$A^\dagger A=|z|^2I-zz^\dagger$, with eigenvalues $|z|^2,|z|^2,0$.
+\end{proof}
+\begin{proposition}
+A three-family, fixed-geometry, antisymmetric-only repair obeys
+\begin{equation}
+\boxed{y_t-y_c\le2\norm{S_u}\le2U.}
+\label{eq:120}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The singular-value perturbation inequality gives
+$|\sigma_j(A_u+S_u)-\sigma_j(A_u)|\le\norm{S_u}$.
+Subtract the first two singular values, equal for $A_u$.
+A sum of antisymmetric tensors is still antisymmetric.
+\end{proof}
+The target requires $\norm{S_u}\ge0.231588278$, versus
+$U=0.008014141$ (or $0.111193537$ in the conjugate stress test).
+Two hundred random complex tests reproduce the pairing and bound.
+This excludes only the stated fixed-geometry mechanism, not a full
+$120_H$ extension whose potential changes the light vector.
+Naming a composite $120$ therefore does not yet solve the problem.
+
+\section{Constructive route I: inverse scalar--flavor feasibility}
+Suppose an effective fit supplies $H,F,r,s$. Impose declared operator
+norm caps $\norm h\le h_*$, $\norm f\le f_*$.
+With no additional light components,
+\[
+(1+|r|^2)|a|^2+(1+|rs|^2)|d|^2=1.
+\]
+The caps imply $|a|^2\ge\norm H^2/h_*^2$,
+$|d|^2\ge\norm F^2/f_*^2$. Conversely any leftover nonnegative
+normalization can be distributed to these weights. Thus
+\begin{equation}
+\boxed{(1+|r|^2)\frac{\norm H^2}{h_*^2}
++(1+|rs|^2)\frac{\norm F^2}{f_*^2}\le1}
+\label{eq:norm}
+\end{equation}
+is necessary and sufficient for normalized \emph{magnitudes} under
+only these caps. Nonzero denominators are understood; zero tensors
+are treated by continuous limits. This does not assert scalar realization.
+
+A weaker necessary gate follows from $Y_u=rY_d+(e-rd)f$.
+With $w_{126}=|d|^2+|e|^2$,
+$|e-rd|\le\sqrt{1+|r|^2}\sqrt{w_{126}}$, so, when $y_t>|r|y_b$,
+\begin{equation}
+w_{126}\ge
+\frac{(y_t-|r|y_b)^2}{f_*^2(1+|r|^2)}.
+\end{equation}
+At the permissive $f_*=4\pi$ and declared diagnostic $r$,
+$w_{126}\ge5.97366\,10^{-4}$ versus tree $2.52571\,10^{-6}$.
+The corresponding minimum amplitude rotation is
+\[
+\arcsin\sqrt{w_{\rm required}}-\arcsin\sqrt{w_{\rm tree}}
+=0.0228543\ {\rm rad}.
+\]
+Thus the tiny $126$ weight, not small decimal residuals, is structural.
+This rotation is not excluded by an uncomputed off-diagonal loop block;
+its sign and size are not predicted by the lower bound.
+The cap $4\pi$ is not a perturbative-convergence certificate.
+
+At fixed VEVs, the action Hessian is affine in real invariant couplings:
+\[
+\mathcal M_D^2(p)=M_0+\sum_\alpha p_\alpha M_\alpha.
+\]
+For a fixed candidate normalized complex $c$, set $Q_c=I-cc^\dagger$
+and impose
+\begin{equation}
+\mathcal M_D^2(p)c=0,\quad
+Q_c\mathcal M_D^2(p)Q_c\succeq\Delta Q_c,\quad
+\nabla V(v;p)=0,
+\label{eq:sdp}
+\end{equation}
+plus positivity of other physical irreps.
+These are linear equalities and semidefinite inequalities in $p$.
+The outer search over $c$ remains nonconvex; variable VEVs and loops
+are also not affine. Every feasible inner solution must pass the
+relaxed quartic, global/competing-vacuum tests, perturbativity, full
+loop eigenpair and P2 threshold replay. This is a targeted inverse
+problem rather than a new lattice scan.
+
+\section{Constructive route II: PQ-preserving mirror-10}
+\subsection{The symmetry allows the needed effective operator}
+The renormalizable truncation forbids $(\Psi\Psi)_{10}\phi$, but permits
+\begin{equation}
+-\Delta\mathcal L=
+\frac{S^*}{2\Lambda}C_{ij}(\Psi_i\Psi_j)_{10}\phi+\mathrm{h.c.},
+\qquad C^T=C.
+\end{equation}
+Its PQ charge is $+4-1-1-2=0$. Set $g=C\langle S^*\rangle/\Lambda$.
+The conjugate overlaps give
+\begin{align}
+Y_u&=bh+ef+a^*g,\\
+Y_d&=ah+df+b^*g,&Y_e&=ah-3df+b^*g .
+\end{align}
+Now $H=ah+b^*g$, $F=df$. Elimination proves
+\begin{equation}
+\boxed{
+Y_u-\tfrac r4[(3+s)Y_d+(1-s)Y_e]=\kappa_{\rm mir}g,\quad
+\kappa_{\rm mir}=\frac{|a|^2-|b|^2}{a}.}
+\label{eq:mirror}
+\end{equation}
+This new symmetric direction escapes the antisymmetric obstruction.
+It fails when $|a|=|b|$. At the positive-real declared point,
+$\kappa_{\rm mir}=-0.148244217$.
+A necessary size is $\norm g\ge(y_t-U)/|\kappa_{\rm mir}|$.
+
+An explicit third-family toy uses matrices proportional to
+$P_3=\operatorname{diag}(0,0,1)$ and
+\begin{align}
+H_3&=(3y_b+y_\tau)/4,&F_3&=(y_b-y_\tau)/4,\\
+f_3&=F_3/d,&
+g_3&=(y_t-rH_3-ef_3)/\kappa_{\rm mir},&
+h_3&=(H_3-bg_3)/a .
+\end{align}
+It gives
+\[
+(h_3,f_3,g_3)=(3.41539797,-0.55474038,-3.08124196)
+\]
+and reproduces the three targets with residual below $5\,10^{-16}$.
+All lighter families, mixing and neutrino observables are absent:
+this is an algebraic escape, not a viable fit.
+The down/lepton cancellations also require a sensitivity audit.
+
+\subsection{Mediator construction with exact VEV mixing}
+Add left-handed Weyl fields
+$X\sim16$ with $q_X=+3$ and
+$\overline X\sim\overline{16}$ with $q_{\overline X}=-3$, with
+\begin{equation}
+-\mathcal L_{\rm med}=M\overline XX+
+\kappa_iS^*\overline X\Psi_i+
+y_i(\Psi_iX)_{10}\phi+\mathrm{h.c.}
+\end{equation}
+Every vertex is neutral. Leading-order elimination gives
+\[
+g_{ij}=-\frac{\langle S^*\rangle}{M}
+(y_i\kappa_j+y_j\kappa_i).
+\]
+One pair gives rank at most two; aligned vectors give rank one.
+It is not a completion of arbitrary full-rank $C$ with one pair.
+The same elimination yields
+\[
+Z_\Psi=I+\frac{|\langle S\rangle|^2}{|M|^2}\kappa^*\kappa^T+\cdots,
+\]
+which cannot be dropped for non-small mixing.
+
+In the aligned one-family case rephase the VEV mixing real and set
+$\tan\theta=|\kappa\langle S\rangle|/M$.
+The light state has $\Psi=\cos\theta\,\chi+\cdots$ and
+$X=-\sin\theta\,\chi+\cdots$, giving exactly
+\begin{equation}
+h=h_{\rm UV}\cos^2\theta,\quad f=f_{\rm UV}\cos^2\theta,\quad
+g=-y_{\rm UV}\sin2\theta,\quad M_{\rm phys}=M/\cos\theta .
+\label{eq:mix}
+\end{equation}
+The phase of $y_{\rm UV}$ supplies the sign of $g$.
+Balancing the largest toy vertex norms gives
+\[
+\tan\theta=\frac{|g_3|}{2|h_3|},\qquad
+\max(|h_{\rm UV}|,|y_{\rm UV}|)
+=|h_3|+\frac{|g_3|^2}{4|h_3|}.
+\]
+Here $\theta=0.42375249$ and
+$|h_{\rm UV}|=|y_{\rm UV}|=4.11034$; $f$ must also be divided
+by $\cos^2\theta$. Choosing illustrative bare $M=g_U\omega$ gives
+$|\kappa|=1.43559$ and $M_{\rm phys}=0.617192\,\omega$.
+The vertex loop parameter is about $0.107$ even before representation
+multiplicities: weak perturbativity is not established.
+New thresholds, beta functions, CW terms, scalar counterterms and
+Landau-pole checks are obligatory. Exact mixing avoids falsely using
+an uncontrolled dimension-five VEV expansion.
+
+The pair adds zero PQ--gauge anomaly,
+$3T(16)-3T(\overline{16})=0$; gravitational and cubic PQ anomalies
+also cancel. It descends under the existing diagonal center quotient.
+The baseline physical $N_{\rm DW}=3$ is unchanged, so axion cosmology
+is not repaired. The separate charge-$+2$ $10_F$ branch must not be
+silently combined with this proposal. Rank-one flavor from vectorlike
+$16$s has precedent \cite{dmm}; the contribution here is a specific
+PQ-compatible opposite-conjugation mechanism and its obstruction tests,
+not a claim of priority for the general idea.
+
+\section{Einstein--Cartan torsion and central twists}
+Write a metric-compatible connection as $\omega=\omega(e)+K$.
+The Einstein--Hilbert action is quadratic in algebraic contorsion
+up to a divergence; minimal fermions source its axial component.
+In abstract notation,
+\[
+\mathcal L_s=\tfrac12sAs+sJ
+\quad\Longrightarrow\quad
+s=-A^{-1}J,\quad \Delta\mathcal L=-\tfrac12JA^{-1}J.
+\]
+In conventional Einstein--Cartan normalization the induced axial
+current-current coefficient has magnitude $3/(16M_P^2)$ \cite{ec};
+its displayed sign follows the chosen curvature, metric and axial
+conventions. It is a dimension-six interaction, not an independent
+renormalizable symmetric Yukawa matrix, and preserves local gauge/PQ
+selection rules. Loop renormalization of allowed operators depends on
+spurions and matching; NDA does not give a universal nonzero $\delta Y$.
+For $M_P=2.435\,10^{18}$ GeV and the stored $M_U$,
+\[
+M_U^2/M_P^2=1.2285\,10^{-7},\qquad
+(3/16)M_U^2/M_P^2=2.3035\,10^{-8}.
+\]
+An extra loop factor gives an NDA size $1.46\,10^{-10}$, only a
+suppression diagnostic. Low-scale propagating torsion or a condensate
+is a new theory with kinetic-sign, unitarity, symmetry-breaking, gap
+and spectrum requirements. Inferring a torsion mass below $M_U$ from
+a contact interaction, then applying that contact EFT at $M_U$,
+is inconsistent.
+
+A central twist is distinct from spacetime contorsion and from torsion
+cohomology. The center of $\mathrm{Spin}(10)$ is discrete; its Lie
+algebra has no extra central generator. A global quotient can change
+bundles and line operators without adding local Yukawa tensors.
+The Nieh--Yan identity is
+\[
+d(e^a\wedge T_a)=T^a\wedge T_a-e^a\wedge e^b\wedge R_{ab}.
+\]
+It does not supply an arbitrary quantized QCD anomaly shift.
+The 2024 boundary/renormalization analysis \cite{ny} emphasizes
+counterterms and renormalization conditions for torsional anomalies.
+A PQ repair must compute the actual fermion measure and vacuum
+identifications. Since the gauge-singlet $S$ has charge $-4$, a gauge
+center cannot compensate its phase except when $e^{-4i\alpha}=1$.
+The existing quotient already accounts for that periodicity;
+minimal EC does not turn the stored $N_{\rm DW}=3$ into one.
+
+\section{Recent literature and execution order}
+The 2023 $54+126+10$ model of Haba--Shimizu--Yamada \cite{hsy} keeps
+both conjugate $10$ Yukawas by not imposing visible-sector PQ charges.
+It is a close comparison for a three-symmetric-tensor branch, not
+evidence of a fit for our frozen two-tensor PQ branch.
+The mirror operator restores that structural freedom after PQ breaking
+with explicit mediator and matching costs.
+The 2025 spontaneous-CP study \cite{gao}, in a different
+$45+126+10$ model, illustrates an extra-light-doublet option with
+correlated flavor constraints. Its conclusion cannot be transplanted
+to P54PQ without a separate action and flavor analysis.
+
+The next order is:
+\begin{enumerate}
+\item Retain the corrected conjugation map and positive relaxed quartic.
+Declare a tadpole scheme, compute all complex doublet $P/Q$ blocks,
+and obtain the corrected light eigenvector, not only its projected mass.
+\item Couple Pati--Salam Yukawa running and finite matching to the inverse
+scalar--flavor problem \eqref{eq:norm}--\eqref{eq:sdp}.
+Profile $\eta_Y$ from actual matrices; one scalar nuisance cannot
+replace a matrix-valued spectrum constraint.
+\item If the baseline has no viable region, compare the rank-restricted
+mirror-$10$ completion, two-doublet EFT, and enlarged scalar sector.
+Recalculate parameter costs, perturbativity, thresholds and cosmology.
+\item Promote neutrino intervals, proton amplitudes and Higgs poles only
+after their fit/matching gates. Keep family UV and soliton mathematics
+independent of these tasks.
+\end{enumerate}
+No calculation here proves nature selects this gauge group,
+representations, PQ charges, couplings or vacuum.
+The defensible first-principles program derives consequences from
+explicit assumptions and tests the resulting models.
+
+\appendix
+\section{Reproduction and status ledger}
+The authoritative ledger is
+\path{route_f/output/p54_theory_audit.json};
+the compatibility P3 output now uses the same corrected schema.
+The superseded conjugation/real-slice implementation cannot regenerate
+its earlier exclusion. From the repository root:
+\begin{verbatim}
+python3 route_f/code/extract_p54_p3_light_overlaps.py
+python3 route_f/code/verify_p54_relaxed_light_quartic.py
+python3 route_f/code/verify_p54_theory_audit.py
+\end{verbatim}
+The first two require JAX double precision, NumPy and SciPy; this run
+used Python 3.9, JAX/JAXlib 0.4.30, NumPy 2.0.2, SciPy 1.13.1.
+The third needs only NumPy/SciPy.
+Source hashes are stored. Overlap extraction passes $5/5$, relaxed
+quartic $7/7$, and independent audit $14/14$ checks.
+These validate the stated implementations, not the entire theory.
+Still uncompleted: full loop eigenpair, global flavor/seesaw fit,
+$\eta_Y$ profile, fitted mirror UV branch, full $Q$ certificate,
+and physical Higgs pole.
+
+\begin{thebibliography}{9}
+\bibitem{mp} V.~S.~Mummidi and K.~M.~Patel,
+Leptogenesis and fermion mass fit in a renormalizable SO(10) model,
+JHEP 12 (2021) 042,
+\href{https://arxiv.org/abs/2109.04050}{arXiv:2109.04050}.
+\bibitem{hsy} N.~Haba, Y.~Shimizu and T.~Yamada,
+Neutrino mass in nonsupersymmetric SO(10) GUT,
+Phys.\ Rev.\ D 108 (2023) 095005,
+\href{https://doi.org/10.1103/PhysRevD.108.095005}{doi:10.1103/PhysRevD.108.095005}.
+\bibitem{gao} X.~Gao,
+Spontaneous CP violation and flavor changing neutral currents in minimal
+SO(10), Phys.\ Rev.\ D 111 (2025) 055013,
+\href{https://doi.org/10.1103/PhysRevD.111.055013}{doi:10.1103/PhysRevD.111.055013}.
+\bibitem{dmm} B.~Dutta, Y.~Mimura and R.~N.~Mohapatra,
+An SO(10) Grand Unified Theory of Flavor,
+JHEP 05 (2010) 034,
+\href{https://arxiv.org/abs/0911.2242}{arXiv:0911.2242}.
+\bibitem{ec} M.~Shaposhnikov, A.~Shkerin, I.~Timiryasov and S.~Zell,
+Einstein--Cartan Portal to Dark Matter,
+Phys.\ Rev.\ Lett.\ 126 (2021) 161301,
+\href{https://doi.org/10.1103/PhysRevLett.126.161301}{doi:10.1103/PhysRevLett.126.161301}.
+\bibitem{ny} J.~Erdmenger, I.~Matthaiakakis, R.~Meyer and D.~Vassilevich,
+The chiral torsional anomaly and the Nieh--Yan invariant with and without
+boundaries (2024),
+\href{https://arxiv.org/abs/2409.06766}{arXiv:2409.06766}.
+\end{thebibliography}
+\end{document}

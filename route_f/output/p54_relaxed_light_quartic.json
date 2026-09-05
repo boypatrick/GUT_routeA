@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "name": "four real light directions",
+      "pass": true
+    },
+    {
+      "name": "290 positive scalar modes",
+      "pass": true
+    },
+    {
+      "name": "no negative quadratic modes",
+      "pass": true
+    },
+    {
+      "name": "source orthogonal to all zero modes",
+      "pass": true
+    },
+    {
+      "name": "quartic stable under derivative step change",
+      "pass": true
+    },
+    {
+      "name": "SM-equivalent directions agree",
+      "pass": true
+    },
+    {
+      "name": "direct relaxed-path check",
+      "pass": true
+    }
+  ],
+  "date": "2026-09-05",
+  "directions": [
+    {
+      "direct_path": [
+        {
+          "relaxed_path_quartic_estimate": 0.40915593083650226,
+          "t": 0.04
+        },
+        {
+          "relaxed_path_quartic_estimate": 0.40915413834370357,
+          "t": 0.02
+        },
+        {
+          "relaxed_path_quartic_estimate": 0.40915359987341277,
+          "t": 0.01
+        }
+      ],
+      "jets": [
+        {
+          "direct_lambda": 0.4292062996292787,
+          "epsilon": 0.02,
+          "heavy_exchange_subtraction": 0.020052760213575133,
+          "relaxed_lambda": 0.40915353941570354,
+          "source_zero_space_norm": 1.4029322083559492e-16
+        },
+        {
+          "direct_lambda": 0.42920629962921897,
+          "epsilon": 0.01,
+          "heavy_exchange_subtraction": 0.020052760213575133,
+          "relaxed_lambda": 0.4091535394156438,
+          "source_zero_space_norm": 1.4037731462353575e-16
+        }
+      ],
+      "light_direction": 0
+    },
+    {
+      "direct_path": [
+        {
+          "relaxed_path_quartic_estimate": 0.40915593083652674,
+          "t": 0.04
+        },
+        {
+          "relaxed_path_quartic_estimate": 0.40915413834380143,
+          "t": 0.02
+        },
+        {
+          "relaxed_path_quartic_estimate": 0.4091535998738041,
+          "t": 0.01
+        }
+      ],
+      "jets": [
+        {
+          "direct_lambda": 0.4292062996292947,
+          "epsilon": 0.02,
+          "heavy_exchange_subtraction": 0.020052760213575105,
+          "relaxed_lambda": 0.4091535394157196,
+          "source_zero_space_norm": 1.6232284349461382e-16
+        },
+        {
+          "direct_lambda": 0.4292062996292296,
+          "epsilon": 0.01,
+          "heavy_exchange_subtraction": 0.020052760213575105,
+          "relaxed_lambda": 0.4091535394156545,
+          "source_zero_space_norm": 1.6223653779727566e-16
+        }
+      ],
+      "light_direction": 1
+    }
+  ],
+  "formula": "lambda_EFT=V4[q,q,q,q]/6-J^T H_heavy^{-1} J/2; J=V3[.,q,q]",
+  "global_stability_proved": false,
+  "local_light_quartic_positive": true,
+  "loop_stationarity_proved": false,
+  "model": "P54PQ-v2",
+  "relaxed_lambda": 0.4091535394156438,
+  "scope": "tree background; full massive-scalar relaxation at quartic order",
+  "sigma_over_omega": 0.1265,
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/code/search_p54_hierarchical_p1.py",
+      "sha256": "36525f08aa8539bc01e977de261c60aa8257bd2da50ffbcd64af6fd227c00d11"
+    },
+    {
+      "path": "route_f/output/p54_p2_two_site_matching.json",
+      "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+    },
+    {
+      "path": "route_f/output/p54_hierarchical_p1_search.json",
+      "sha256": "4a8e4326c8439972bb8fca99cd35763df7da8decc1ec463d9e0c6c5661f8da0f"
+    },
+    {
+      "path": "route_f/code/verify_p54_relaxed_light_quartic.py",
+      "sha256": "5f725b264d7c061ea5207f3dcde885e6fffb2f61db0a2cd15278c98f08fe62fe"
+    }
+  ],
+  "summary": {
+    "all_pass": true,
+    "passed": 7,
+    "total": 7
+  },
+  "vs_over_omega": 0.25,
+  "xi02": 0.14737109402314083
+}

@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\emergencystretch}{2em}
+\title{P54 P3 Flavor and Fermionic CW Gate:\\Corrected Status}
+\author{Route-F four-dimensional mainline}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\section{Corrigendum and authoritative derivation}
+This document supersedes the 2 September P3 report.
+The old conjugation assignment, factor $69.49$, proposed $|r|\ge62.9$
+repair target, and empty $\eta_Y$ profile-domain claim are withdrawn.
+The full derivations, new stability calculation and constructive repair
+mechanisms are in
+\path{route_f/tex/p54_theory_audit_and_repair.tex}
+and its PDF. The authoritative numerical ledger is
+\path{route_f/output/p54_theory_audit.json};
+the compatibility P3 JSON has the same corrected schema.
+
+The declared Yukawas are $h\Psi\Psi\phi^*+f\Psi\Psi\Sigma$.
+For the implementation's $-iY$ generator, eigenvalue $-i/2$ selects
+physical $Y=+1/2$. The geometric weights
+\[
+(c_1,c_2,c_3,c_4)=
+(0.6710153956,0.7414417126,0.00005897540343,0.001588153768)
+\]
+refer to $(\phi_{\rm hol},\phi_{\rm anti},\Sigma_{\rm hol},
+\Sigma_{\rm anti})$, not pre-labelled up/down Yukawas.
+Thus in $Y_d=ah+df$, $Y_e=ah-3df$, $Y_u=bh+ef$,
+\[
+(|a|,|b|,|d|,|e|)=(c_1,c_2,c_4,c_3),\qquad
+(|r|,|s|)=(1.104954845,0.033607317),
+\]
+where $r=b/a$, $s=ae/(db)$. The exact identity remains
+\[
+Y_u=\frac r4[(3+s)Y_d+(1-s)Y_e].
+\]
+Its sharp phase-uniform norm bound gives $y_t\le0.00801414124$
+at the diagnostic $(y_b,y_\tau)$, versus $y_t=0.464725012$.
+This is a frozen-tree-geometry diagnostic, not an unconditional
+exclusion of the loop-corrected model. SM-only target transport is not
+the missing Pati--Salam Yukawa matching calculation.
+No global fit or $\eta_Y$ likelihood profile has been performed.
+
+\section{What the existing loop calculation does not determine}
+P2 computed $P\Pi_BP$ on the tree light four-plane.
+It did not compute $Q\Pi_BP$, $Q\Pi_BQ$, or tadpole shifts.
+For the full copy matrix
+\[
+\mathcal M_D^2=\begin{pmatrix}A&b^\dagger\\b&C\end{pmatrix},\quad C>0,
+\]
+the exact zero condition and vector are
+\[
+A=b^\dagger C^{-1}b,\qquad
+c_{\rm light}=\frac{c_0-QC^{-1}b}
+{\sqrt{1+\|C^{-1}b\|^2}}.
+\]
+Projected mass retuning alone is not a complete eigenpair condition.
+The omitted vector rotation is first order in loops, even though the
+Schur mass correction is second order.
+
+A newly computed tree stability gate gives
+\[
+\lambda_{\rm EFT}
+=\frac16V^{(4)}[q^4]-\frac12J^TC^{-1}J
+=0.429206300-0.0200527602=0.409153539>0,
+\]
+where $J_i=V^{(3)}[e_i,q,q]$ and all 290 massive scalar modes relax.
+Two light directions, two derivative steps, zero-source orthogonality
+and direct relaxed paths pass $7/7$ checks.
+This supports local tree stability, not global/loop stability or a pole mass.
+
+\section{Correct complex heavy-neutrino projection}
+For $D(z)=\sum_a z_aY_a$, symmetric invertible fixed $M_R$, and
+$z_a=(q_{Ra}+iq_{Ia})/\sqrt2$, the exact hard quadratic term is
+\[
+V_F^{(2)}=z^\dagger\Pi z,\quad
+\Pi_{ab}=-\frac1{8\pi^2}\operatorname{Tr}(Y_a^\dagger Y_bW),\quad
+W=M_R^\dagger M_R
+\left[\log\frac{M_R^\dagger M_R}{\mu^2}-1\right].
+\]
+Its real Hessian retains the imaginary off-diagonal blocks:
+\[
+\Pi_{\mathbb R}=
+\begin{pmatrix}\Re\Pi&-\Im\Pi\\\Im\Pi&\Re\Pi\end{pmatrix}.
+\]
+For the published Mummidi--Patel $H',F'$ transported with positive-real
+corrected overlaps, not fitted to this model, the conditional values are
+\[
+\eta_Y=1.28882418\,10^{-8},\qquad
+\|Q(\Pi_F-\delta\xi_FP_{10})Q\|/\omega^2
+=9.68094794\,10^{-4}.
+\]
+The ratio to the tree gap $0.0305570303\,\omega^2$ is $0.03168157$.
+This is not a total boson--fermion certificate or a predicted $\eta_Y$.
+Independent complex finite differences agree at relative error
+$3.7\,10^{-8}$. The audit passes $14/14$ and overlap extraction $5/5$.
+
+\section{Next decision}
+First calculate the complete corrected light eigenpair with a declared
+tadpole scheme, then couple it to PS Yukawa running and an inverse
+scalar--flavor feasibility problem. A single scalar $\eta_Y$ nuisance
+cannot substitute for the full matrix constraints.
+If an extension is required, the detailed note gives a PQ-preserving
+$S^*(16\,16)_{10}\phi/\Lambda$ operator and rank-restricted vectorlike
+completion. Its explicit third-family toy is not a global fit.
+A purely antisymmetric $120$ repair at fixed geometry instead obeys
+$y_t-y_c\le2U$ and fails the diagnostic target.
+Minimal Einstein--Cartan torsion does not supply an automatic escape.
+Neutrino intervals, proton predictions, determinant/portal promotion
+and a physical Higgs pole remain unclaimed.
+\end{document}
