@@ -7,6 +7,33 @@ program with one action per physical branch, explicit claim boundaries, and
 separate evidence chains for four-dimensional physics, family UV, and soliton
 mathematics.
 
+## Latest P-layer checkpoint (2026-09-05)
+
+The prior fixed-VEV checkpoint was committed/pushed as `b8e7398` before
+the current work. See `tex/p54_complex_phase_ps_matching.tex`, its
+`output/pdf/` PDF and `output/p54_complex_matching_checkpoint.md`.
+
+The common complex scalar/spinor dictionary is now computed, including
+actual up/down conjugations and the relative Majorana/type-II phases.
+The finite **upper** PS gauge threshold is computed on a same-action
+stationary saddle. The full four-parent **all-active one-loop** PS Yukawa
+system, its two-loop gauge Yukawa trace, and a differentiable local
+fermion/scalar Schur solve are implemented and tested. Type-II sources
+are recomputed when the light vector changes. A finite kinetic-matching
+interface uses explicit inputs and does not default missing diagrams to zero.
+
+New insight: the parity-symmetric Spin(10) boundary
+`F=sqrt(2)L=sqrt(2)R` is an invariant one-loop PS subflow, not four new
+independent family matrices. Conversely the old magnitude-only copy
+dictionary is superseded. Use the four complex coefficients directly;
+their small down-type 126 component crosses zero and makes ratio `s`
+an unstable fit coordinate.
+
+Finite lower gauge matching, P54 finite Yukawa diagrams, the full
+mass-ordered/sequential-seesaw EFT evolution and a physical global fit
+remain open. The numerical family examples are synthetic, not best fits.
+Historical results below are read subject to these newer scope corrections.
+
 ## 2026-08-30 three-layer program reset (current authority)
 
 Route F now has three independent layers.  **P** is the four-dimensional

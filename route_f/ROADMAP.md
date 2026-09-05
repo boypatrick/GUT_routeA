@@ -149,22 +149,25 @@ parameters after the anomalous PQ reparametrization.  This closes the P0-A
 definition subgate.  The audit and P1 results below supersede the former open
 items; the remaining P0 debt is the higher-dimension PQ-quality policy.
 
-**Canonical Yukawa correction (2026-09-05, latest authority):** the explicit
-Clifford intertwiner on the actual normalized P1 scalar basis gives
-`h_D=sqrt(2) Y10`, `f_D=2 Y126/sqrt(3)`, and
-`f_M=4 sqrt(2) Y126=2 sqrt(6) f_D`. Thus
-`M_R=sigma f_M=2 sqrt(6) sigma f_D`, not `sigma f_D` if the doublet
-coupling is normalized to one. The action card is corrected; no field or
-independent parameter is added. The relative `-3` Clebsch is verified.
-The Clifford/covariance/normalization audit passes `20/20`, including
-raw canonical LL-triplet coefficient `4 sqrt(2)`, equal to the singlet
-Majorana coefficient. Its actual exported triplet conjugation is checked;
-the common phase needed for type-I/type-II interference remains open.
-The P1 self-duality selects conjugate-matter hypercharges in the explicit
-Clifford orientation; a global conjugation must also conjugate the scalar
-copy map. Full phase-resolved spinor/scalar projection remains required.
-Do not reuse the historical external-matrix CW numbers as physical
-predictions after this normalization correction.
+**Canonical complex Yukawa dictionary (2026-09-05, latest authority):**
+the `20/20` absolute Clifford audit is now completed by the `28/28`
+common-phase audit `code/verify_p54_common_yukawa_phase.py`. It conjugates
+the actual scalar embedding and spinor chirality together and verifies
+standard-matter hypercharges and all 45 covariance equations. With raw
+couplings in that dictionary, `h_D=sqrt(2) h_raw`,
+`f_D=2 f_raw/sqrt(3)`, `kappa_R=+i 4sqrt(2)` and
+`kappa_LL=-i 4sqrt(2)`. Thus `f_M=i 2sqrt(6) f_D` at the Spin(10)
+boundary; the old positive `2sqrt(6)` was an absolute-CG convention.
+The `i` is transported component phase, not an extra CP parameter.
+The action card records both conventions without adding a field/matrix.
+In the actual retained copy order, up/nu use `(c1,c4)` and down/e use
+`(conj(c2),conj(c3))`, with `-3` on lepton 126 vertices. Random full
+copy/family transformations and independent neutrino rephasings preserve
+the complete type-I+II contraction. The UV ratio remains protected on
+the complete-parent one-loop parity submanifold proved below; do not
+impose it on finite-matched off-locus data or after arbitrary decoupling.
+Do not reuse old magnitude-only copy maps or historical external-matrix
+CW numbers as physical predictions.
 
 #### P0-B invariant basis and PQ anomaly/global form (`done`; 2026-08-30)
 
@@ -391,30 +394,35 @@ Authoritative artifacts:
 - `tex/p54_p3_flavor_fermionic_cw_gate.tex` is now the corrected short
   P3 report. Its compatibility verifier/output delegates to the new audit.
 
-**Corrections, not a new fit:** the earlier P3 report conflated the
-conjugations in `h Psi Psi phi*` and `f Psi Psi Sigma`. The four extracted
-magnitudes are geometric holomorphic/antiholomorphic sector weights:
+**Latest phase correction, not a new fit:** the earlier magnitude-only
+P3 report and its subsequent convention stress test are historical. The
+explicit standard-matter Clifford dictionary now fixes the actual map:
 
 ```text
-c = (phi_hol, phi_anti, Sigma_hol, Sigma_anti)
-  = (0.6710154,0.7414417,5.89754e-5,1.588154e-3).
+c = (phi_hol, phi_anti, Sigma_hol, Sigma_anti), with complex signs retained.
 Yd=a h+d f; Ye=a h-3d f; Yu=b h+e f.
-(|a|,|b|,|d|,|e|)=(c1,c2,c4,c3) for the declared R=-iY convention.
-|r|=1.104954845; |s|=0.033607317.
+(a,b,d,e)=(conj(c2),c1,conj(c3),c4).
+tree: r=-0.905014358012, s=-29.7554251165.
+bosonic: (a,b,d,e)=(-.7631652014906,.6462011667549,
+                    1.2183583687513e-5,-.001710897393866)
+          up to the complete tiny imaginary parts recorded in JSON.
+bosonic: r=-.846738249455, s=+165.843989136.
 ```
 
 The exact two-matrix identity remains
-`Yu=r[(3+s)Yd+(1-s)Ye]/4`. Maximizing its norm bound with the *same*
-phase of `s` in both terms gives `yt<=0.00801414124` against the
-SM-only diagnostic `yt=0.464725012`. The charge-conjugate convention
-stress test gives `|r|=0.905014358, |s|=29.7554251` and upper
-`0.111193537`; it is not another free convention inside a fit.
+`Yu=r[(3+s)Yd+(1-s)Ye]/4`, at one common PS matching scale before
+finite corrections. But the earlier `yt<=0.00801414124`/`0.111193537`
+bounds used obsolete maps or magnitude envelopes and are not current
+constraints. The small coefficient `d` crosses zero under the bosonic
+correction. Use `(a,b,d,e)` directly in the fit, not the near-singular
+ratio `s=ae/(bd)`. Large `s` is not itself a large physical rotation.
 
 The earlier factors `69.49`, repair target `|r|>=62.9`, and empty
 `eta_Y` profile-domain claim are **withdrawn**. A large Gaussian
 chi-square lower bound does not empty a parameter domain. The frozen
-tree geometry has strong diagnostic tension, but complete PS Yukawa
-running/thresholds and the loop-corrected scalar eigenvector are missing.
+tree geometry has diagnostic tension, but complete physical PS
+running/thresholds and the fitted fermion-inclusive scalar eigenvector
+are still needed to assess it.
 A user-chosen percentage envelope does not bound those effects.
 No global flavor/seesaw fit, neutrino prediction interval, or full-model
 exclusion is claimed.
@@ -494,7 +502,8 @@ diagnostic, not fitted matrices, an actual scalar-phase match, or the
 total boson-plus-fermion Q certificate. New heavy fermions would add terms.
 
 **Latest completion/correction:** use `f_M`, not the unit-Dirac `f_D`, in
-`MR=sigma f_M`; their conversion is `f_M=2 sqrt(6) f_D` above. The
+`MR=sigma f_M`; the actual common-phase UV conversion is
+`f_M=i 2sqrt(6) f_D` (the former positive ratio was a magnitude convention). The
 fixed-VEV fermionic term is
 
 ```text
@@ -516,8 +525,85 @@ The 54 source through mixing partly cancels the direct 126 source;
 neglecting mixing would miss a 5.84% reduction relative to the unmixed
 response. This uses tree K/V3 and the bosonic-improved light direction,
 not a loop-accurate Wilson coefficient. Compute the canonical LL
-intertwiner and use `C5II=-Y_LL K^-1 J`, together with
+intertwiner is now contracted in the common phase dictionary below; use
+`C5II=-Y_LL K^-1 J`, together with
 `C5I=-Ynu MR^-1 Ynu^T`; type II is not authorized to be set to zero.
+
+#### P2/P3 complex phase, full PS flow and local-feedback checkpoint (`bounded subgates done; physical fit open`; 2026-09-05)
+
+The prior fixed-VEV checkpoint was committed/pushed as `b8e7398` on
+`origin/main` before these calculations. Current detailed derivations:
+`tex/p54_complex_phase_ps_matching.tex` and its PDF. Reproduction/source
+hashes are in the five same-named Python/JSON/MD artifact sets below.
+
+| Artifact prefix | Tests | Precisely completed scope |
+|---|---:|---|
+| `p54_common_yukawa_phase` | 28/28 | Actual four-copy/standard-matter complex dictionary, including common type-I+II phases |
+| `p54_ps_finite_thresholds` | 25/25 | Finite upper gauge threshold, actual lower tree heavy valley and one-step regression; not lower finite matching |
+| `p54_ps_yukawa_flow` | 29/29 | All-active four-parent one-loop matrix flow and two-loop gauge Yukawa trace, actual tensors and nonzero ODE |
+| `p54_finite_yukawa_interface` | 17/17 | Canonical finite matching algebra/kernels with synthetic finite arrays, not P54 diagram values |
+| `p54_self_consistent_light` | 36/36 | Actual Clebsch-constrained local Schur feedback on two synthetic family choices; no data fit |
+
+1. **Phase dictionary closed.** The common LL/singlet coefficients are
+   `kappa_LL=-i4sqrt(2)`, `kappa_R=+i4sqrt(2)`. At the bosonic light
+   point the mixed-order seesaw is
+   `Mnu=(v^2/omega)[(.01628382104964 i) f_D +
+   (.80681480328827 i) Ynu f_D^-1 Ynu^T]`.
+   Both phases and the 54/126 scalar source are transported, not replaced
+   by absolute values. This is not full loop Weinberg matching.
+2. **Upper finite gauge matching closed locally.** Keep all scalar
+   parameters fixed and solve the PS-symmetric heavy radial saddle:
+   `(omega,vs)=(1.00081030592,.254277697084)`. The 55 integrated real
+   modes have `m2_min=.102882040959`; the 124 tachyons lie exclusively in
+   retained fields. At `mu=gU*omega_PS`,
+   `lambda_U=(2.94405268936,7.60297883009,7.60297883009)`, including
+   finite vector constants `(4,6,6)`. All six site-log identities still
+   close. The retained/integrated masses have no uniform hierarchy;
+   this does not certify the entire two-site renormalizable truncation.
+3. **Lower tree geometry computed, finite functional open.** The same
+   55-heavy block remains positive at the actual broken vacuum:
+   `m2_min=.099450257411`. On `B=(I-PGupper)Bactive`, form
+   `W=BH^T H B`, `E=-C^-1W`, `S=B^T H B-W^T C^-1W`,
+   `G=B^T B+E^T E`. The metric spectrum is `[.984249788817,1.01800727050]`;
+   `(S,G)` has 13 zeros and no negative modes. The API exports the full
+   matrices. The finite lower coefficient must still include the
+   momentum-dependent Schur operator and its induced covariant vertices;
+   neither old weighted logs nor generalized `(S,G)` masses alone suffice.
+   The one-step SM finite result is only an independent regression.
+4. **Full all-active PS flow closed at the declared orders.** Canonical
+   boundary units are `H=sqrt(2)h_raw`, `F=4f_raw`,
+   `L=R=2sqrt(2)f_raw`; lower Dirac projection uses `F/(2sqrt(3))`,
+   while `MR=+2i sigma_dimful R`, `ML=-2i Delta_L L`.
+   Generic 248-real-scalar/48-Weyl beta tensors equal the closed four-matrix
+   system to `2.28e-16`. SM-top, no-DeltaL, independent family covariance,
+   and nonzero coupled ODE regressions pass. The two-loop gauge flow now
+   includes its actual Yukawa trace, not only gauge/matter coefficients.
+   **New exact insight:** with `gL=gR`, symmetric `H,F` and
+   `F=sqrt(2)L=sqrt(2)R`, the full one-loop system preserves all these
+   relations. Do not invent four independent UV family matrices to fit
+   data. Off-locus finite matching and partial decoupling still require
+   the general flow. Complete SM/sequential-seesaw evolution is not yet
+   replaced by this all-active PS subroutine.
+5. **Differentiable local scalar/flavor solve closed.** Two synthetic
+   actual-Clebsch examples retune to positive gaps `.03026151664` and
+   `.03026452622`. The analytic
+   `xi'=c†DeltaF'c/(c†P10c)` and
+   `c'=-D^+(DeltaF'-xi'P10)c` agree with re-solved finite differences.
+   Rebuild `J_A(c)=T_Apq cR_p cR_q` for every new light vector using eight
+   existing cached Hessians; do not freeze the old type-II source.
+   Tree triplet K/J remains a mixed-order approximation. The finite
+   kinetic interface transforms both D and Yukawa vertices together:
+   a zero-mode's original-coordinate direction changes only by
+   `1/sqrt(c†ZHc)`, not an independent kinetic-induced rotation.
+
+**Remaining physical gate:** derive the upper-matched covariant PS scalar
+and gauge functional, finish lower finite gauge matching and both-site
+finite Yukawa vertex/kinetic diagrams, and decide the actual mass-ordered
+decoupling intervals from this spectrum. Then propagate the matched
+matrices through SM/sterile-neutrino/Weinberg EFTs and iterate the local
+scalar solve inside the constrained likelihood. Missing diagram values
+must not default to zero. No new physical scales, best fit, neutrino
+prediction, pole Higgs mass or full-model exclusion is asserted.
 
 #### P3-C: constructive inverse problem (`derived; not solved`)
 
@@ -536,10 +622,11 @@ as a semidefinite inner problem. Searching over `c` and recomputing loops
 remain nonlinear. Every candidate must rerun the relaxed quartic, complete
 spectrum, perturbativity, competing-vacuum tests and P2 thresholds.
 
-At the declared diagnostic `r`, even the permissive cap `||f||<=4pi`
-requires `w126>=5.97366e-4` versus tree `2.52571e-6`, corresponding to
-a minimum amplitude rotation `0.0228543 rad`. This is a necessary gate,
-not a prediction of the unknown loop mixing.
+The historical numerical overlap bound at the old diagnostic `r` is
+superseded by the actual complex copy dictionary above. The abstract
+norm/feasibility identity can be reused only with the correct evolved
+normalizations and declared threshold terms; no old decimal bound is a
+constraint on the repaired fit.
 
 #### P3-D: explicit alternatives and no-go filters (`proposed; not adopted/fitted`)
 
@@ -745,12 +832,13 @@ Next execution order:
 
 1. **P:** retain the completed fixed-VEV rule and complete bosonic complex
    doublet matrix; do not repeat the cached Hessian calculation unchanged.
-   Finish the phase-resolved canonical spinor projection using
-   `f_M=2 sqrt(6) f_D`, the same-action type-II LL contraction, and the
-   four-parent PS EFT with finite, site-resolved gauge/Goldstone matching.
-   Generate its full left/right Yukawa beta system (including DeltaL) and
-   rerun the scales. Then iterate actual fitted fermionic tadpoles/CW,
-   the Schur light eigenpair, and constrained flavor/seesaw likelihood.
+   Reuse the completed common complex dictionary, full all-active PS
+   one-loop flow, upper finite gauge matching and differentiable local
+   Schur/source solve. Complete the upper-matched covariant scalar/gauge
+   functional, lower finite gauge matching and both-site finite Yukawa
+   diagrams; handle actual mass-ordered decoupling and sequential
+   neutrino/Weinberg running. Only then rerun the physical scales and
+   iterate the fitted Schur light eigenpair and constrained likelihood.
    Treat `eta_Y` as a derived correlated profile quantity, not a free scalar.
    The repaired six logarithmic identities are required regression tests;
    they do not replace finite matching or a physical fit.

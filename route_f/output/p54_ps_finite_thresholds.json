@@ -1,0 +1,695 @@
+{
+  "active_parent_labels": [
+    "phi10:(1,2,2)",
+    "Sigma126:(15,2,2)",
+    "Sigma126:(10-pair,3,1)",
+    "Sigma126:(10-pair,1,3)"
+  ],
+  "actual_vacuum_tree_heavy_valley": {
+    "SM_covariance_residuals": {
+      "Schur_mass": 1.3307140461769702e-15,
+      "heavy_projector": 0.0,
+      "pullback_metric": 1.0416044019697378e-15
+    },
+    "Schur_generalized_eigenvalue_groups": [
+      {
+        "m2": 2.342879786392243e-16,
+        "multiplicity": 13,
+        "spread": 1.35049222842561e-15
+      },
+      {
+        "m2": 0.013525378815468215,
+        "multiplicity": 1,
+        "spread": 0.0
+      },
+      {
+        "m2": 0.03055703025613411,
+        "multiplicity": 4,
+        "spread": 2.463307335887066e-16
+      },
+      {
+        "m2": 0.07848796872561953,
+        "multiplicity": 6,
+        "spread": 2.914335439641036e-16
+      },
+      {
+        "m2": 0.10117319710058066,
+        "multiplicity": 12,
+        "spread": 3.469446951953614e-16
+      },
+      {
+        "m2": 0.1376460590919381,
+        "multiplicity": 4,
+        "spread": 4.996003610813204e-16
+      },
+      {
+        "m2": 0.18562609999999982,
+        "multiplicity": 36,
+        "spread": 5.828670879282072e-16
+      },
+      {
+        "m2": 0.19202699999999975,
+        "multiplicity": 50,
+        "spread": 8.049116928532385e-16
+      },
+      {
+        "m2": 0.2688238465830442,
+        "multiplicity": 12,
+        "spread": 8.326672684688674e-16
+      },
+      {
+        "m2": 0.2688328261458582,
+        "multiplicity": 6,
+        "spread": 8.326672684688674e-16
+      },
+      {
+        "m2": 0.2777476114135418,
+        "multiplicity": 44,
+        "spread": 1.4432899320127035e-15
+      },
+      {
+        "m2": 0.2863863351056445,
+        "multiplicity": 4,
+        "spread": 7.216449660063518e-16
+      },
+      {
+        "m2": 0.2999054885864574,
+        "multiplicity": 44,
+        "spread": 1.6653345369377348e-15
+      },
+      {
+        "m2": 0.3692648278994188,
+        "multiplicity": 12,
+        "spread": 4.996003610813204e-16
+      }
+    ],
+    "Schur_negative_count": 0,
+    "Schur_zero_count": 13,
+    "active_real_dimension": 248,
+    "basis_construction": "Bactive=range(sum of four exact PS tensor parent projectors); Bheavy_upper=range(I-Pactive-PGupper_PS-PQupper); PGupper_actual=image(O(actual) Padjoint_SO10/PS)",
+    "coordinate_formula": "B=(I-PGupper)Bactive; W=BH^T H B; Keff(p^2)=p^2 G0+B^T H B-W^T(p^2 I+C)^-1 W; G0=B^T B",
+    "heavy_max_m2": 2.828549742589108,
+    "heavy_min_m2": 0.09945025741089239,
+    "heavy_real_dimension": 55,
+    "heavy_response_Jacobian_norm": 0.13419117146091478,
+    "lower_Goldstone_Ward_residual": 3.2072323299797227e-16,
+    "missing_for_lower_finite_matching": "upper-matched scalar interactions and gauge higher-dimensional operators, full induced covariant kinetic vertices, lower vector/Goldstone/ghost functional, and consistent matching-scale transport; generalized(S,G) masses are low-momentum approximations, not full poles for threshold logs",
+    "public_source_API": "heavy_valley_api(H0, Bactive, Bheavy_upper, PGupper_actual) returns embedding,C,linear_heavy_source,heavy_response_jacobian,G0,S,G,valley_tangent",
+    "pullback_metric_eigenvalue_max": 1.0180072704980527,
+    "pullback_metric_eigenvalue_min": 0.984249788816904,
+    "scope": "same-action quadratic tree heavy-valley and derivative-expansion diagnostic, not finite lower one-loop matching",
+    "slice_metric_G0_eigenvalue_min": 0.984249788816904,
+    "slice_partition_residual": 2.350136710042624e-15,
+    "source_linear_norm": 0.18236229427983464
+  },
+  "cache": {
+    "cache_hits": 2,
+    "evaluated": 0
+  },
+  "checks": [
+    {
+      "name": "four-parent active projector is orthogonal and has rank 248",
+      "pass": true
+    },
+    {
+      "name": "same-action upper PS background is fully stationary",
+      "pass": true
+    },
+    {
+      "name": "upper PS orbit has 24 gauge Goldstones",
+      "pass": true
+    },
+    {
+      "name": "upper PS orbit obeys stationary Ward identity",
+      "pass": true
+    },
+    {
+      "name": "upper retained plus integrated plus gauge/PQ planes partition fields",
+      "pass": true
+    },
+    {
+      "name": "PS-preserving Hessian commutes with active projector",
+      "pass": true
+    },
+    {
+      "name": "upper heavy block positive despite retained tachyons",
+      "pass": true
+    },
+    {
+      "name": "upper Goldstone projector commutes with active projector",
+      "pass": true
+    },
+    {
+      "name": "broken-vacuum site orbit ranks are 24 and 9",
+      "pass": true
+    },
+    {
+      "name": "site orbit projectors are orthogonal and sum to full orbit",
+      "pass": true
+    },
+    {
+      "name": "actual 55-dimensional heavy valley is positive and gauge-orthogonal",
+      "pass": true
+    },
+    {
+      "name": "upper-gauge-slice active plus heavy and symmetry planes are complete",
+      "pass": true
+    },
+    {
+      "name": "heavy valley pullback metric is positive",
+      "pass": true
+    },
+    {
+      "name": "heavy valley kinetic and mass tensors are SM covariant",
+      "pass": true
+    },
+    {
+      "name": "heavy valley preserves nine lower gauge plus four Higgs zeros",
+      "pass": true
+    },
+    {
+      "name": "momentum Schur determinant identity holds while weighted-log shortcut fails",
+      "pass": true
+    },
+    {
+      "name": "full broken scalar physical hard rank is 290",
+      "pass": true
+    },
+    {
+      "name": "one-step unbroken generators commute with scalar mass",
+      "pass": true
+    },
+    {
+      "name": "one-step SM indices are physical scalars 79,77,377/5",
+      "pass": true
+    },
+    {
+      "name": "one-step finite vector constants are 5,6,8",
+      "pass": true
+    },
+    {
+      "name": "one-step finite threshold scale derivative agrees with beta difference",
+      "pass": true
+    },
+    {
+      "name": "all six staged logarithmic identities close",
+      "pass": true
+    },
+    {
+      "name": "staged slopes compose to one-step slope",
+      "pass": true
+    },
+    {
+      "name": "actual upper finite scalar/vector indices realize repaired upper slopes",
+      "pass": true
+    },
+    {
+      "name": "upper finite threshold scale variation reproduces all three slopes",
+      "pass": true
+    }
+  ],
+  "date": "2026-09-05",
+  "one_step_SM_regression": {
+    "finite_threshold": {
+      "dlambda_dlogmu": [
+        25.99999999999997,
+        48.99999999999996,
+        92.59999999999992
+      ],
+      "lambda_total": [
+        36.63010815544616,
+        -6.547522795837455,
+        119.73803707594224
+      ],
+      "scalar_log": [
+        -11.454277393523439,
+        -12.047442538633293,
+        -9.798386924140218
+      ],
+      "scalar_real_indices": [
+        78.99999999999997,
+        76.99999999999997,
+        75.39999999999996
+      ],
+      "vector_finite_constant": [
+        4.999999999999997,
+        5.9999999999999964,
+        7.999999999999995
+      ],
+      "vector_log": [
+        43.0843855489696,
+        -0.5000802572041582,
+        121.53642400008246
+      ],
+      "vector_real_indices": [
+        4.999999999999997,
+        5.9999999999999964,
+        7.999999999999995
+      ]
+    },
+    "measured_scale_derivative": [
+      25.999999999999954,
+      48.99999999999997,
+      92.5999999999999
+    ],
+    "mu_over_omega": 0.5626028899853225,
+    "required_scale_derivative": [
+      26.000000000000004,
+      49.00000000000001,
+      92.6
+    ],
+    "scale_variation": [
+      {
+        "lambda_SM_3_2_1": [
+          18.608281460887603,
+          -40.511734643274764,
+          55.55260815609135
+        ],
+        "mu_over_reference": 0.5
+      },
+      {
+        "lambda_SM_3_2_1": [
+          36.63010815544616,
+          -6.547522795837455,
+          119.73803707594224
+        ],
+        "mu_over_reference": 1.0
+      },
+      {
+        "lambda_SM_3_2_1": [
+          54.65193485000469,
+          27.41668905159983,
+          183.9234659957931
+        ],
+        "mu_over_reference": 2.0
+      }
+    ],
+    "scope": "same broken tree spectrum; complete one-step matching only, not a replacement of the selected two-stage branch"
+  },
+  "primary_threshold_references": [
+    {
+      "title": "Threshold effects in SO(10) models with one intermediate breaking scale",
+      "url": "https://doi.org/10.1140/epjc/s10052-020-8308-9"
+    },
+    {
+      "title": "Grand Unification of Effective Gauge Theories",
+      "url": "https://doi.org/10.1016/0550-3213(81)90498-3"
+    }
+  ],
+  "runtime_seconds": 2.3658440113067627,
+  "schema": "p54-ps-finite-thresholds-v1",
+  "scheme": {
+    "Goldstone": "one real Goldstone per massive vector removed from scalar trace; vector coefficient -21 includes vector/Goldstone/ghost package",
+    "background_shift_order": "a one-loop shift of this upper saddle changes one-loop gauge mass logarithms only at two-loop order; the finite tree displacement from the nonzero-sigma vacuum is retained exactly",
+    "finite_formula": "lambda_i=Tr_V I_i -21 Tr_V[I_i log(MV/mu)] +Tr_physicalS[I_i log(MS/mu)]",
+    "matching": "alpha_low^-1=alpha_high^-1-lambda/(12pi), MSbar one-loop zero-momentum gauge matching",
+    "neutral_fermions": "heavy RH neutrinos are unbroken-SM singlets; no gauge threshold at this order",
+    "nu_CT": -5.469744089909078,
+    "nu_CT_normalization": "deltaH=-delta_nu2 P126/2; inserting this one-loop CT into one-loop gauge mass logs would add selected two-loop terms and is not done",
+    "quadratic_mass_scheme": "same declared tree masses; finite fixed-VEV invariant CTs inherited from full-doublet ledger, not rederived at sigma=0",
+    "upper_stationary_saddle_scheme": "tree heavy-radial stationary saddle at sigma=0 in the same frozen renormalized parameters; not the one-loop fixed-VEV retuned action's stationary point"
+  },
+  "simultaneous_background_obstruction": {
+    "Schur_operator": "in orthonormal block coordinates Keff(p)=p^2+A-B(p^2+C)^-1 Bdagger, so Keff(0)=A-BC^-1 Bdagger and Zeff=I+BC^-2 Bdagger",
+    "active_mass_commutator_norm": 0.26532199084322045,
+    "active_upperGoldstone_commutator_norm": 0.6099601697970098,
+    "active_upperGoldstone_overlap_trace": 0.18900253419714375,
+    "equal_charge_2x2_counterexample": {
+      "difference": 0.008888689987111675,
+      "full_momentum_determinant_residual": 0.0,
+      "induced_kinetic_coefficient": 1.01,
+      "log_zero_momentum_Schur_mass": 0.6678293725756554,
+      "mass_squared_matrix": [
+        [
+          2.0,
+          0.5
+        ],
+        [
+          0.5,
+          5.0
+        ]
+      ],
+      "parent_weighted_log": 0.6767180625627671
+    },
+    "required_lower_EFT": "derive the PS-covariant functional with all heavy fields eliminated and transport it to the broken background; its scalar Schur operator is momentum-dependent",
+    "site_Goldstone_index_MI_SM": [
+      1.0000000000000002,
+      4.115712291155523e-30,
+      2.799999999999999
+    ],
+    "site_Goldstone_index_MU_SM": [
+      3.999999999999998,
+      5.9999999999999964,
+      5.199999999999997
+    ],
+    "site_Goldstone_ranks": [
+      24,
+      9
+    ],
+    "upper_active_mass_commutator_norm": 0.0,
+    "upper_background_limit": "upper matching is the dimension-four PS coefficient at sigma=0; finite sigma generates higher-dimensional gauge operators and must not be silently equated to the broken weighted-log partition",
+    "why_weighted_log_is_insufficient": "Tr(Pactive I log H) is not log det of the active EFT; replacing it by log of zero-momentum Schur mass also omits induced kinetic/gauge vertices"
+  },
+  "six_stage_log_identities": [
+    {
+      "beta_required_slope": -46.0,
+      "derived_slope": -46.0,
+      "group": "3",
+      "residual": 0.0,
+      "stage": "I"
+    },
+    {
+      "beta_required_slope": -71.0,
+      "derived_slope": -71.0,
+      "group": "2",
+      "residual": 0.0,
+      "stage": "I"
+    },
+    {
+      "beta_required_slope": -8.199999999999998,
+      "derived_slope": -8.200000000000003,
+      "group": "1",
+      "residual": -5.329070518200751e-15,
+      "stage": "I"
+    },
+    {
+      "beta_required_slope": 72.0,
+      "derived_slope": 72.0,
+      "group": "4",
+      "residual": 0.0,
+      "stage": "U"
+    },
+    {
+      "beta_required_slope": 120.0,
+      "derived_slope": 120.0,
+      "group": "L",
+      "residual": 0.0,
+      "stage": "U"
+    },
+    {
+      "beta_required_slope": 120.0,
+      "derived_slope": 120.0,
+      "group": "R",
+      "residual": 0.0,
+      "stage": "U"
+    }
+  ],
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/code/verify_p54_p2_two_site_matching.py",
+      "sha256": "5f83192a153bfa8ea6afc9a99aeca68e8b11746bf2945a0a40e198489f214f2e"
+    },
+    {
+      "path": "route_f/output/p54_full_doublet_cw.json",
+      "sha256": "e422ade78b283e7baecdc1eb80523aad2ec3a48e7ad58a0623ba827b980eb6c6"
+    },
+    {
+      "path": "route_f/output/p54_ps_active_census.json",
+      "sha256": "10db9b2894fe4af8e47780ad8f466f793c698dfd99f14aa41654d3d6b7f62fa4"
+    },
+    {
+      "path": "route_f/code/verify_p54_ps_finite_thresholds.py",
+      "sha256": "93cc7c8b8fcea5de6f17084ad99cd3157242b621dda11bdc7cc944a5ba0eb8db"
+    }
+  ],
+  "status": {
+    "lower_PS_to_SM_finite_matching_computed": false,
+    "one_step_SM_finite_regression_computed": true,
+    "physical_branch_changed": false,
+    "scales_refitted": false,
+    "six_stage_log_identities_closed": true,
+    "upper_PS_finite_matching_computed": true,
+    "whole_model_excluded": false
+  },
+  "summary": {
+    "all_pass": true,
+    "passed": 25,
+    "total": 25
+  },
+  "upper_PS": {
+    "Schur_mass_difference_from_active_norm": 0.0,
+    "active_heavy_mass_mixing_norm": 0.0,
+    "active_mass_eigenvalue_max": 0.10417920218405986,
+    "active_mass_eigenvalue_min": -0.006779755346980998,
+    "active_real_dimension": 248,
+    "active_tachyon_count": 124,
+    "finite_scale_variation": [
+      {
+        "lambda_4_L_R": [
+          -46.96254431095652,
+          -75.57468283709926,
+          -75.57468283709926
+        ],
+        "mu_over_reference": 0.5
+      },
+      {
+        "lambda_4_L_R": [
+          2.944052689359527,
+          7.602978830094123,
+          7.602978830094121
+        ],
+        "mu_over_reference": 1.0
+      },
+      {
+        "lambda_4_L_R": [
+          52.85064968967556,
+          90.78064049728752,
+          90.78064049728752
+        ],
+        "mu_over_reference": 2.0
+      }
+    ],
+    "finite_threshold": {
+      "dlambda_dlogmu": [
+        71.99999999999996,
+        119.99999999999994,
+        119.99999999999993
+      ],
+      "lambda_total": [
+        2.944052689359527,
+        7.602978830094123,
+        7.602978830094121
+      ],
+      "scalar_log": [
+        -1.0559473106405086,
+        1.6029788300940693,
+        1.6029788300940684
+      ],
+      "scalar_real_indices": [
+        11.999999999999996,
+        5.999999999999998,
+        5.9999999999999964
+      ],
+      "vector_finite_constant": [
+        3.9999999999999982,
+        5.999999999999997,
+        5.9999999999999964
+      ],
+      "vector_log": [
+        3.7303493627405253e-14,
+        5.595524044110787e-14,
+        5.595524044110787e-14
+      ],
+      "vector_real_indices": [
+        3.9999999999999982,
+        5.999999999999997,
+        5.9999999999999964
+      ]
+    },
+    "gauge_rank": 24,
+    "gradient_norm": 7.729074025584787e-16,
+    "heavy_mass_eigenvalue_max": 2.8331705610105007,
+    "heavy_mass_eigenvalue_min": 0.1028820409592166,
+    "heavy_mass_eigenvalues": [
+      0.1028820409592166,
+      0.190903147973557,
+      0.190903147973557,
+      0.190903147973557,
+      0.19090314797355706,
+      0.19090314797355706,
+      0.1909031479735571,
+      0.2002458318150599,
+      0.20024583181505995,
+      0.20024583181505998,
+      0.20024583181506,
+      0.20024583181506003,
+      0.20024583181506003,
+      0.26034043354234293,
+      0.26034043354234293,
+      0.260340433542343,
+      0.260340433542343,
+      0.26034043354234304,
+      0.26034043354234304,
+      0.26034043354234315,
+      0.26034043354234315,
+      0.26034043354234315,
+      0.26034043354234315,
+      0.26034043354234315,
+      0.2603404335423432,
+      0.26034043354234326,
+      0.26034043354234326,
+      0.2603404335423433,
+      0.2603404335423433,
+      0.2603404335423434,
+      0.2603404335423434,
+      0.26034043354234343,
+      0.2603404335423436,
+      0.3722750906541616,
+      0.37227509065416176,
+      0.37227509065416187,
+      0.3722750906541619,
+      0.37227509065416203,
+      0.3722750906541623,
+      0.4154624134028414,
+      0.4154624134028417,
+      0.41546241340284185,
+      0.41546241340284185,
+      0.41546241340284196,
+      0.41546241340284196,
+      0.5409565812086202,
+      0.5409565812086202,
+      0.5409565812086203,
+      0.5409565812086204,
+      0.5409565812086206,
+      0.5409565812086207,
+      0.540956581208621,
+      0.5409565812086212,
+      0.5409565812086213,
+      2.8331705610105007
+    ],
+    "heavy_tachyon_count": 0,
+    "largest_retained_to_smallest_integrated_abs_m2_ratio": 1.0126082376744203,
+    "mu_over_omega_reference": 0.5630587704385367,
+    "parent_spectrum": [
+      {
+        "active": false,
+        "dimension": 1,
+        "label": "Phi54:(1,1,1)",
+        "max_m2": 2.8326011663950075,
+        "min_m2": 2.8326011663950075,
+        "negative_count": 0
+      },
+      {
+        "active": false,
+        "dimension": 24,
+        "label": "Phi54:(6,2,2)",
+        "max_m2": -1.0990647210786423e-15,
+        "min_m2": -1.4130832128153975e-15,
+        "negative_count": 0
+      },
+      {
+        "active": false,
+        "dimension": 20,
+        "label": "Phi54:(20prime,1,1)",
+        "max_m2": 0.2603404335423433,
+        "min_m2": 0.2603404335423428,
+        "negative_count": 0
+      },
+      {
+        "active": false,
+        "dimension": 9,
+        "label": "Phi54:(1,3,3)",
+        "max_m2": 0.5409565812086216,
+        "min_m2": 0.5409565812086204,
+        "negative_count": 0
+      },
+      {
+        "active": false,
+        "dimension": 12,
+        "label": "Sigma126:(6,1,1)",
+        "max_m2": 0.41546241340284185,
+        "min_m2": 0.37227509065416187,
+        "negative_count": 0
+      },
+      {
+        "active": true,
+        "dimension": 60,
+        "label": "Sigma126:(10-pair,3,1)",
+        "max_m2": -0.006779755346980968,
+        "min_m2": -0.006779755346980991,
+        "negative_count": 60
+      },
+      {
+        "active": true,
+        "dimension": 120,
+        "label": "Sigma126:(15,2,2)",
+        "max_m2": 0.10417920218405986,
+        "min_m2": 0.0825855408097198,
+        "negative_count": 0
+      },
+      {
+        "active": true,
+        "dimension": 60,
+        "label": "Sigma126:(10-pair,1,3)",
+        "max_m2": -0.006779755346980968,
+        "min_m2": -0.006779755346980991,
+        "negative_count": 60
+      },
+      {
+        "active": false,
+        "dimension": 12,
+        "label": "phi10:(6,1,1)",
+        "max_m2": 0.20024583181505998,
+        "min_m2": 0.1909031479735571,
+        "negative_count": 0
+      },
+      {
+        "active": true,
+        "dimension": 8,
+        "label": "phi10:(1,2,2)",
+        "max_m2": 0.030913026686702004,
+        "min_m2": -2.331852914081127e-05,
+        "negative_count": 4
+      },
+      {
+        "active": false,
+        "dimension": 2,
+        "label": "S:(1,1,1)",
+        "max_m2": 0.10345143557471,
+        "min_m2": -3.925231146709437e-17,
+        "negative_count": 0
+      }
+    ],
+    "physical_integrated_dimension": 55,
+    "same_action_parameters": {
+      "a": 0.5,
+      "alpha": 0.25,
+      "b": 0.4,
+      "beta": 0.1,
+      "c": -0.1,
+      "chi1": 0.8,
+      "chi2": 0.001,
+      "chi3": 0.05,
+      "chi4": 0.03,
+      "chi5": 0.2,
+      "chi6": 0.025,
+      "chi7": 0.03,
+      "eta0": 0.2,
+      "eta1": 0.025,
+      "eta2": 0.1,
+      "eta3": 0.018,
+      "gamma1": 0.12,
+      "gamma2": -0.07,
+      "lambda0": 0.9,
+      "lambda2": 0.8,
+      "lambda4": 0.6,
+      "lambda4p": 0.4,
+      "mu2": 1.4095253375,
+      "mus2": 0.17192027,
+      "nu2": 0.381902025,
+      "xi02": 0.14737109402314083,
+      "xi1": 0.35,
+      "xi2": 0.08,
+      "xi3": -0.2
+    },
+    "vacuum": {
+      "omega": 1.0008103059215108,
+      "sigma": 0.0,
+      "vs": 0.2542776970837077
+    }
+  }
+}

@@ -214,6 +214,26 @@ orientation and scalar/spinor relative phases must be carried consistently
 when exporting the four doublet copies. No old CW numerical example may
 silently mix the Dirac and Majorana conventions.
 
+\paragraph{Phase-resolved implementation (5 September 2026).}
+The preceding positive CG factors are a magnitude convention, not a
+license to omit relative phases in the seesaw. The completed common
+standard-matter dictionary in
+\path{code/verify_p54_common_yukawa_phase.py} conjugates the scalar embedding
+and spinor chirality together. It fixes the actual component phases and gives
+\[
+ \kappa_R=+i4\sqrt2,\qquad \kappa_{LL}=-i4\sqrt2,\qquad
+ f_M^{\rm common}=i2\sqrt6 f_D,\qquad M_R=\sigma f_M^{\rm common}.
+\]
+Thus the $f_M$ in the positive-factor convention above and
+$f_M^{\rm common}$ differ by $i$; they must not be substituted for each
+other without transporting the Dirac and LL vertices as well. This $i$
+is a basis convention, not a new CP parameter. In the retained four-copy
+scalar order, $Y_u=c_1h_D+c_4f_D$ and
+$Y_d=c_2^*h_D+c_3^*f_D$, with the usual $-3$ for the corresponding
+lepton $f_D$ terms. The phase-resolved matching note records the complete
+type-I/type-II covariance proof and replaces the old magnitude-only copy
+map; neither note declares an experimental flavor fit.
+
 \subsection{Scalar potential}
 
 All repeated vector indices are summed.  With the tensor normalizations in
@@ -432,9 +452,14 @@ The relevant Pati--Salam decompositions are
 126&=(6,1,1)\oplus(10,3,1)\oplus(\overline{10},1,3)
  \oplus(15,2,2).
 \end{align}
-The neutral member of $(\overline{10},1,3)$ carries $\sigma$.  The $54$
-keeps $D$ parity, so $g_L=g_R$ at the Pati--Salam matching scale in this
-branch.
+These labels refer to the original self-duality orientation. In the common
+standard-matter dictionary of Section 3.1, the conjugated physical scalar
+parents are $(\overline{10},3,1)$ for LL and $(10,1,3)$ for the
+right-handed-conjugate pair; the latter carries the conjugated $\sigma$
+background. No index or beta coefficient changes under this relabelling.
+In the original orientation the neutral member of $(\overline{10},1,3)$
+carries $\sigma$. The $54$ keeps $D$ parity, so $g_L=g_R$ at the
+Pati--Salam matching scale in this branch.
 
 Substituting \eqref{eq:54vev} into its self-potential gives the exact check
 \begin{equation}

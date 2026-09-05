@@ -194,6 +194,48 @@ P3 fixed-VEV/full-doublet checkpoint completed 2026-09-05 Asia/Taipei:
   iterate the fermion-inclusive Schur eigenpair in a constrained global
   flavor/seesaw fit. No physical best fit or model exclusion is claimed.
 
+P2/P3 common-phase / PS-flow / local-feedback checkpoint (2026-09-05; latest P authority):
+
+- The previous checkpoint was committed and pushed first as `b8e7398`.
+  The subsequent work is documented in
+  `route_f/tex/p54_complex_phase_ps_matching.tex` and its PDF.
+- Actual standard-matter/common-scalar phases are now matched (`28/28`).
+  Up uses `(c1,c4)`, down uses `(conj(c2),conj(c3))` in the retained copy
+  order. Old reciprocal/magnitude-only maps and their numerical bounds
+  are superseded. At the bosonic point `(r,s)=(-.846738249455,165.843989136)`;
+  use `(a,b,d,e)` in computation because small `d` crosses zero.
+  `kappa_R=+i4sqrt(2)` and `kappa_LL=-i4sqrt(2)` are a common component
+  convention, not a new physical CP phase. The type-I+II interference is
+  now contracted in that same basis.
+- Finite upper PS gauge matching is computed (`25/25` audit), retaining
+  the same parameters at a PS stationary saddle. The integrated 55-real
+  scalar block is positive, and `lambda_U=(2.94405268936,7.60297883009,
+  7.60297883009)` includes the finite vector constants. Active tachyons
+  remain in the EFT. The same heavy block is gapped at the actual broken
+  vacuum; a covariant tree Schur mass/pullback metric has 13 exact zeros
+  and no negatives. This is not the lower finite functional: induced
+  kinetic/gauge operators and all site-resolved diagrams remain required.
+- The complete four-parent PS one-loop matrix beta functions and two-loop
+  gauge Yukawa trace are derived from actual 248-real-scalar/48-Weyl
+  tensors, checked against SM-top and no-DeltaL limits, and numerically
+  evolved. On the exact parity locus the tree boundary
+  `F=sqrt(2)L=sqrt(2)R` is protected at one loop; four independent fitted
+  family matrices are not justified. Finite matching/decoupling off that
+  locus must use the general complex flow. Physical labels after global
+  conjugation are `L:(bar10,3,1)`, `R:(10,1,3)`.
+- Finite canonical matching algebra and stable loop kernels pass `17/17`
+  synthetic-input tests. Actual P54 finite Yukawa diagrams are not filled
+  with zeros. A same-phase, actual-Clebsch local feedback solver passes
+  `36/36` on two synthetic family choices, including analytic eigenvector
+  derivatives and a recomputed type-II source for every new light vector.
+  Existing cubic jets were reused; no new lattice scan was performed.
+- Next: upper-matched covariant PS action -> finite lower gauge and
+  both-site Yukawa matching -> actual mass-ordered/SM/sequential-seesaw
+  evolution -> physical scale and constrained self-consistent flavor fit.
+  The all-active PS flow and local scalar inner solve are completed
+  subroutines, not the full EFT tower or an experimental fit. No new
+  physical best fit, scales, exclusion or pole-mass prediction is asserted.
+
 ## AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S-layer authority)
 
 AP-E18 resolves the requested GTA test with a negative universal result.

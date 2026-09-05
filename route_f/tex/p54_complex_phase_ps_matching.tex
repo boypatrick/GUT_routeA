@@ -1,0 +1,659 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={P54 complex phases and Pati--Salam matching}}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert_2}
+\newtheorem{proposition}{Proposition}
+\title{Route-F P54: Common Complex Phases,\\Finite Pati--Salam Matching,\\and the Self-Consistency Interface}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We transport the actual four-copy scalar eigenvector into a single
+standard-hypercharge spinor convention. This fixes the up/down conjugation,
+the relative Majorana/triplet phases, and the interference of the two seesaw
+terms. The previous magnitude-only light-copy dictionary is superseded.
+We also construct a nearby Pati--Salam-symmetric stationary saddle of the
+same frozen action, whose integrated 55-real-dimensional scalar block is
+positive. It yields a finite upper gauge threshold, including the vector
+constant. Retained tachyons do not invalidate this heavy-field matching.
+The lower effective-action matching and finite Yukawa diagrams must still
+be supplied before a physical global fit is defined. Numerical algebraic
+regressions and synthetic family choices are not experimental fits.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\section{Scope and the fixed action}
+The action, field content and scalar benchmark remain P54PQ-v2:
+$3\,16_F+54_{H,\mathbb R}+126_{H,\mathbb C}+10_{H,\mathbb C}+1_{H,\mathbb C}$,
+with PQ charges $(-1,0,+2,-2,-4)$ in the order
+$(\Psi,\Phi,\Sigma,\phi,S)$. No extra family matrix, scalar multiplet,
+torsion sector or lattice scan is introduced. The previous checkpoint was
+committed and pushed as \texttt{b8e7398}; the calculations below are the
+subsequent checkpoint.
+
+We retain 328 canonical real scalar coordinates and the fixed-VEV
+background-field Landau-$\MS$ curvature prescription from the companion
+\texttt{p54\_fixed\_vev\_full\_doublet\_matching.tex}. Numerical masses below
+are in units of the historical $\omega=1$. The old physical values of
+$M_I,M_U$ remain unrecertified: the earlier threshold census was inconsistent
+with its PS beta functions. New dimensionless matching tensors do not by
+themselves supply replacement physical scales.
+
+\section{One complex scalar--spinor dictionary}
+\subsection{Construction from Clifford intertwiners}
+On five qubits define
+\begin{align}
+ \Gamma_{2j-1}&=Z^{\otimes(j-1)}\otimes X\otimes I^{\otimes(5-j)},&
+ \Gamma_{2j}&=Z^{\otimes(j-1)}\otimes Y\otimes I^{\otimes(5-j)},\\
+ \Gamma_*&=(-i)^5\Gamma_1\cdots\Gamma_{10},&
+ C&=\Gamma_2\Gamma_4\Gamma_6\Gamma_8\Gamma_{10}.
+\end{align}
+They obey $\{\Gamma_i,\Gamma_j\}=2\delta_{ij}$ and $C^T=-C$.
+The restrictions of $C\Gamma_i$ and $C\Gamma_{[5]}$ to the appropriate
+chiral subspace are symmetric, as required by two left-handed Weyl fields.
+For an antisymmetric vector generator $R$,
+\begin{equation}
+ S(R)=\frac12\sum_{i<j}R_{ij}\Gamma_i\Gamma_j,
+ \qquad S(R)^T B_a+B_a S(R)+\sum_bB_b R_{ba}=0.
+\end{equation}
+The five-form version uses the induced wedge representation. The numerical
+audit tests all 45 generators, not only the hypercharge eigenvalues.
+
+Let $U_{126}$ be the existing orthonormal ordered-five-form embedding.
+Its old orientation selects the conjugate standard-matter hypercharges.
+We make an explicit global coordinate change, rather than conjugating an
+isolated Clebsch coefficient:
+\begin{equation}
+ x_{\rm phys}=Kx_{\rm old},\qquad U_{126,\rm phys}=\overline U_{126},
+ \qquad \Gamma_*\Psi_{\rm phys}=+\Psi_{\rm phys}.
+\end{equation}
+Here $K$ flips the imaginary real-coordinate blocks of $\Sigma,\phi,S$ and
+leaves all other coordinates unchanged. Consequently
+\begin{equation}
+ V_{\rm phys}(x)=V_{\rm old}(Kx),\quad H_{\rm phys}=KH_{\rm old}K,
+ \quad B_{\rm phys}=KB_{\rm old}.
+\end{equation}
+If complex old-action couplings had been fixed, their conjugation is
+transported too. In the new raw convention
+\begin{equation}
+ -\mathcal L_Y=\frac12h_{ij}\Psi_i^TC\Gamma_a\Psi_j\phi_a^*
+ +\frac1{2\cdot5!}f_{ij}\Psi_i^TC\Gamma_{a_1\cdots a_5}\Psi_j
+ \Sigma_{a_1\cdots a_5}+\mathrm{h.c.}
+\end{equation}
+The physical spinor has hypercharge multiset
+$(1/6)^6,(-2/3)^3,(1/3)^3,(-1/2)^2,1,0$.
+
+The actual old copy order is retained:
+\begin{equation}
+ B=(B_{\phi,\rm hol},B_{\phi,\rm anti},
+ B_{\Sigma,\rm hol},B_{\Sigma,\rm anti}),\qquad
+ x_{\rm phys}=2\operatorname{Re}(B_{\rm phys}c H^0),\quad
+ \langle H^0\rangle=v/\sqrt2.
+\end{equation}
+All right-handed-conjugate component phases are fixed once by requiring
+the corresponding reference $10_H$ coefficient to be positive. The same
+states are then used for every $126_H$, Majorana and triplet entry. Direct
+matrix-element contraction gives
+\begin{equation}
+\begin{array}{c|cc}
+ &h_{\rm raw}&f_{\rm raw}\\\hline
+ Y_u&\sqrt2\,c_1&2c_4/\sqrt3\\
+ Y_d&\sqrt2\,c_2^*&2c_3^*/\sqrt3\\
+ Y_e&\sqrt2\,c_2^*&-6c_3^*/\sqrt3\\
+ Y_\nu&\sqrt2\,c_1&-6c_4/\sqrt3
+\end{array}
+\label{eq:copy}
+\end{equation}
+These are matrix coefficients: each entry multiplies its raw family matrix.
+The $c$ versus $c^*$ distinction is required by $H^0$ versus $H^{0*}$.
+It cannot be inferred from $|c_a|$.
+
+\subsection{The corrected bosonic light map}
+Define Dirac-unit couplings $h_D=\sqrt2h_{\rm raw}$ and
+$f_D=2f_{\rm raw}/\sqrt3$. Equation~\eqref{eq:copy} implies
+\begin{align}
+Y_d&=a h_D+d f_D,&Y_e&=a h_D-3d f_D,\\
+Y_u&=b h_D+e f_D,&Y_\nu&=b h_D-3e f_D,\qquad
+(a,b,d,e)=(c_2^*,c_1,c_3^*,c_4).
+\end{align}
+At the fixed-VEV bosonic-retuned point,
+\begin{align}
+a&=-0.7631652014906-1.03\times10^{-12}i,&b&=0.6462011667549,\\
+d&=1.2183583687513\times10^{-5}+5.47\times10^{-15}i,&
+e&=-0.001710897393866-1.02\times10^{-14}i.
+\end{align}
+For nonzero $a,b,d$ the conventional ratios are
+\begin{equation}
+r=b/a=-0.846738249455,\qquad s=ae/(bd)=165.843989136.
+\end{equation}
+The same dictionary at the tree point gives
+$r=-0.905014358012$, $s=-29.7554251165$.
+In particular the small coefficient $d$ crosses zero under the bosonic
+correction. A large change in $s$, which divides by $d$, is not a
+large rotation of the entire scalar eigenvector. Numerically stable fits
+must use $(a,b,d,e)$ directly, not $(r,s)$ near $d=0$.
+Earlier reciprocal/magnitude-only copy maps, and bounds using those maps,
+are not current physical constraints. This is not a claim that flavor
+tension has disappeared, nor a whole-model exclusion.
+
+\subsection{Majorana and triplet phases in the same basis}
+The canonical singlet and LL-triplet contractions are
+\begin{equation}
+ \kappa_R=+i4\sqrt2,\qquad \kappa_{LL}=-i4\sqrt2,\qquad
+ f_M=\kappa_R f_{\rm raw}=i2\sqrt6 f_D,
+ \qquad M_R=\sigma\omega f_M.
+\end{equation}
+Here the numerical $\sigma=0.1265$ is dimensionless and $\omega$ restores
+mass units. The $i$ is a component-basis convention, not an additional
+physical CP parameter. Dropping it in only one term would nevertheless
+change the declared matching map.
+
+The existing two-triplet tree Hessian and cubic source, evaluated along the
+bosonic-improved light direction, induce
+\begin{equation}
+ \frac{\omega\Delta_{126}}{v^2}=-0.003323921052868.
+\end{equation}
+The $54$ triplet has zero renormalizable LL coupling but contributes to this
+response through its mixing with $126$. Contracting the full response in
+the common dictionary yields
+\begin{align}
+ M_\nu&=M_L-\frac{v^2}{2}Y_\nu M_R^{-1}Y_\nu^T\\
+ &=\frac{v^2}{\omega}
+ \left[C_{II,D}f_D+C_{I,D}Y_\nu f_D^{-1}Y_\nu^T\right],\\
+ C_{II,D}&=0.01628382104964i,&
+ C_{I,D}&=\frac{-1}{2\sigma i2\sqrt6}=0.80681480328827i.
+\end{align}
+This formula requires invertible $f_D$. If a neutrino is not hard at the
+matching scale it must remain in the EFT; the inverse is not to be
+regularized by hand. The scalar response is still mixed-order
+(tree $K,J$ with bosonic one-loop $c$), not complete one-loop Weinberg
+matching.
+
+For independent neutrino basis changes $\nu_L=U_L\nu_L'$,
+$\nu^c=U_R\nu^{c\prime}$, one has
+\begin{equation}
+Y_\nu'=U_L^TY_\nu U_R,\quad M_R'=U_R^TM_RU_R,\quad
+M_L'=U_L^TM_LU_L,
+\end{equation}
+so the full seesaw transforms as $M_\nu'=U_L^TM_\nu U_L$.
+The proof follows by inserting
+$(U_R^TM_RU_R)^{-1}=U_R^\dagger M_R^{-1}U_R^*$.
+The verifier also rotates actual scalar copies by random $U(4)$ and tests
+the conjugate down rule. Deliberately replacing down $c^*$ with $c$ gives
+an order-one residual, so the regression is not insensitive to this error.
+
+\section{A controlled upper PS finite gauge threshold}
+\subsection{Same-action stationary saddle and heavy-field elimination}
+Retain the four complex PS parents
+\begin{equation}
+ (1,2,2)_{10},\quad(15,2,2)_{126},\quad
+ (\overline{10},3,1)_{126},\quad(10,1,3)_{126}.
+\end{equation}
+These are the common standard-matter labels, with
+$4=(3,1/3)+(1,-1)$ under $SU(3)\times U(1)_{B-L}$.
+The old literal-P1 labels are conjugated by the dictionary change.
+The LL scalar has $B-L=+2$ and its singlet triplet has $Y=+1$;
+the right-handed-conjugate pair instead requires scalar $B-L=-2$.
+Their Casimirs and real index traces are unchanged.
+Their real dimension is $8+120+60+60=248$.
+At $\sigma=0$ solve the two heavy radial equations
+\begin{equation}
+ \partial_\omega V(\omega,0,v_s)=0,\qquad
+ \partial_{v_s}V(\omega,0,v_s)=0
+\end{equation}
+with every existing parameter, including the three quadratic masses,
+unchanged. This gives
+\begin{equation}
+ \omega_{PS}=1.0008103059,\qquad v_{s,PS}=0.2542776971.
+\end{equation}
+The full gradient vanishes. There are 24 upper gauge Goldstones and one PQ
+direction. The complement of these and the active 248-plane has dimension
+55 and satisfies
+\begin{equation}
+\lambda_{\min}(H_{HH})=0.10288204>0.
+\end{equation}
+All 124 negative directions are retained active fields, rather than modes
+being integrated out. Thus this point is a stationary saddle, not a proposed
+stable vacuum of the full theory.
+
+\begin{proposition}[Local heavy-field EFT]
+On a fixed gauge slice, let $h$ be heavy and $\ell$ retained coordinates.
+If $V_h(h_0,\ell_0)=0$ and $V_{hh}>0$, the implicit-function theorem yields
+a unique local heavy valley $h=h_*(\ell)$ and a real local tree EFT
+$V_{\rm EFT}(\ell)=V(h_*(\ell),\ell)$. No positivity assumption on the
+retained Hessian is needed.
+\end{proposition}
+\begin{proof}
+Invertibility of $V_{hh}$ applies the implicit-function theorem to $V_h=0$.
+Differentiating gives $h_*'=-V_{hh}^{-1}V_{h\ell}$. At a stationary point,
+\begin{equation}
+ (V_{\rm EFT})_{\ell\ell}
+ =V_{\ell\ell}-V_{\ell h}V_{hh}^{-1}V_{h\ell}.
+\label{eq:schurEFT}
+\end{equation}
+The positive heavy block fixes the local branch and its real Gaussian
+functional. Tachyons in $\ell$ are represented by the EFT itself.
+\end{proof}
+This is local existence, not a global heavy valley or a proof that a
+renormalizable truncation captures all powers of $\sigma/\omega$.
+
+\subsection{Finite constants and logarithmic consistency}
+Use real-representation index operators normalized to
+$\tr I_i=T_i(R_{\mathbb R})$. For the present upper threshold, with no
+massive charged fermions removed, the gauge matching is \cite{Hall}
+\begin{align}
+ \alpha_i^{-1}(\mu)&=\alpha_{10}^{-1}(\mu)-\frac{\lambda_{U,i}(\mu)}{12\pi},\\
+ \lambda_{U,i}&=\tr_{V_H} I_i
+ -21\tr_{V_H}\!\left[I_i\log\frac{M_V}{\mu}\right]
+ +\tr_{S_H}\!\left[I_i\log\frac{M_S}{\mu}\right].
+\label{eq:finiteGauge}
+\end{align}
+Goldstone directions are removed once from the physical scalar trace; the
+massive vector coefficient includes the corresponding gauge/ghost sector.
+The finite vector constant cannot be recovered by matching logarithmic
+slopes alone. At the PS saddle the active, mass and Goldstone projectors
+commute. Thus the heavy traces are genuine spectral restrictions.
+
+At $\mu_U=g_U\omega_{PS}$, in group order $(4,L,R)$,
+\begin{equation}
+ \lambda_U=(2.944052689,\ 7.602978830,\ 7.602978830),
+ \qquad \lambda_U^{V,\rm const}=(4,6,6).
+\end{equation}
+The upper physical real scalar indices are $(12,6,6)$, so
+\begin{equation}
+ \lambda_U'=21(4,6,6)-(12,6,6)=(72,120,120).
+\end{equation}
+These equal $-6(a_{10}-a_{PS})$ with
+$a_{10}=-34/3$ and $a_{PS}=(2/3,26/3,26/3)$, as follows directly by
+differentiating the inverse-coupling matching equation.
+The largest retained absolute squared mass divided by the smallest
+integrated squared mass is $1.01260824$: there is no uniform hierarchy
+between every retained and integrated scalar. Positivity defines the local
+heavy functional, but does not prove a controlled two-site renormalizable
+truncation for all intermediate loop momenta.
+
+At the lower site the repaired census fixes, in SM order $(3,2,1)$,
+\begin{equation}
+ I_V=(1,0,14/5),\quad I_S=(67,71,67),\quad
+ \lambda_I'=(-46,-71,-41/5).
+\end{equation}
+The hypercharge projection is
+$a_1^{PS}=2a_4/5+3a_R/5$. These three lower slopes, together with the three
+upper slopes, reproduce all six beta discontinuities. This does not
+calculate the finite lower constants.
+
+At the simultaneous broken vacuum the old active projector $P_A$ obeys
+\begin{equation}
+ \lVert[P_A,H]\rVert_F\simeq0.265322,\qquad
+ \lVert[P_A,P_{G_U}]\rVert_F\simeq0.609960,
+ \qquad\tr(P_A P_{G_U})\simeq0.189003.
+\end{equation}
+These are structural violations, not eigensolver rounding. A trace of
+$P_A\log H$ there cannot replace the lower EFT determinant.
+As a separate check, the complete one-step $SO(10)\to SM$ hard spectrum gives
+\begin{equation}
+ \lambda_{\rm one\ step}=(36.63010816,-6.54752280,119.73803708),
+ \quad\lambda'=(26,49,92.6).
+\end{equation}
+It is a full-spectrum regression, not an adopted change from the two-stage
+physical branch. Finite shifts of tree masses from the one-loop tadpole
+counterterms inside a one-loop threshold enter at higher order; all such
+order choices and the background prescription must remain common when the
+full finite EFT is assembled.
+
+\subsection{The actual lower heavy valley is gapped, but is not a mass-log shortcut}
+Transport the upper heavy 55-plane to the actual broken vacuum. Let its
+orthonormal basis be $B_H$, let $B_A$ span the retained parent plane, and
+remove the upper orbit from the latter:
+\begin{equation}
+B=(I-P_{G_U})B_A,\quad C=B_H^THB_H,\quad
+A=B^THB,\quad W=B_H^THB,\quad E=-C^{-1}W.
+\end{equation}
+The calculation verifies $B_H^TB=0$, SM covariance, and
+$\lambda_{\min}(C)=0.099450257411$. The tree heavy-valley action has
+\begin{equation}
+S=A-W^TC^{-1}W,\qquad G=B^TB+E^TE.
+\end{equation}
+The generalized problem $Sv=m^2Gv$ has no negative eigenvalues and exactly
+13 zero directions (nine lower Goldstones and four real Higgs components).
+Its Ward residual is $3.21\times10^{-16}$, and
+\begin{equation}
+\lambda(G)\subset[0.984249788817,1.01800727050],\qquad
+\norm{E}=0.134191171461.
+\end{equation}
+This verifies a local derivative-expansion interface on the actual vacuum.
+It does not make these generalized eigenvalues full pole masses. Indeed,
+the exact Euclidean quadratic Schur operator is
+\begin{align}
+\mathcal K_{\rm EFT}(p^2)
+ &=p^2G_0+A-W^T(p^2I+C)^{-1}W,\quad G_0=B^TB,\\
+ &=S+p^2G-p^4W^TC^{-3}W+O(p^6).
+\end{align}
+At the operator level
+$\det\mathcal K_{\rm full}=\det\mathcal K_{HH}\det\mathcal K_{\rm EFT}$.
+Gauging this identity also generates covariant vertices and commutators;
+replacing it by $\tr\log S$ loses those terms. The implemented
+two-state, equal-gauge-charge counterexample distinguishes the exact Schur
+determinant from a projector-weighted mass logarithm. Completing the lower
+finite matching means using the induced action, not merely another spectral
+assignment rule.
+
+\section{Complete four-parent one-loop PS Yukawa system}
+\subsection{Derivation and normalization from the actual tensors}
+Write the real-scalar Weyl Lagrangian as
+$-\mathcal L_Y=\frac12\mathcal Y^a_{IJ}\psi_I\psi_J q_a+\mathrm{h.c.}$,
+where each full $\mathcal Y^a$ is symmetric. For the two-component
+convention, the general one-loop coefficient is \cite{LWX}
+\begin{align}
+16\pi^2\beta_{\mathcal Y^a}
+={}&\tfrac12(S^T\mathcal Y^a+\mathcal Y^aS)
+ +2\sum_b\mathcal Y^b\mathcal Y^{a\dagger}\mathcal Y^b\nonumber\\
+&+\sum_b\mathcal Y^b\operatorname{Re}\tr(\mathcal Y^{b\dagger}\mathcal Y^a)
+ -3\sum_i g_i^2(C_i^T\mathcal Y^a+\mathcal Y^a C_i),\qquad
+ S=\sum_b\mathcal Y^{b\dagger}\mathcal Y^b.
+\end{align}
+Every complex scalar supplies a pair
+$\mathcal Y^{\rm Re}=\mathcal Y/\sqrt2$ and
+$\mathcal Y^{\rm Im}=\pm i\mathcal Y/\sqrt2$. For each internal pair,
+$\mathcal Y^{\rm Re}\mathcal Y^{a\dagger}\mathcal Y^{\rm Re}
++\mathcal Y^{\rm Im}\mathcal Y^{a\dagger}\mathcal Y^{\rm Im}=0$.
+This cancels the vertex sum without deleting any scalar parent.
+
+The actual 124 complex PS intertwiners are projections of the common
+Clifford tensors, not arbitrary Clebsch tables. In a PS fermion order
+$(\psi_L,\psi_R)$, a bidoublet family matrix $H$ enters opposite off-diagonal
+blocks as $H$ and $H^T$; thus the full Weyl tensor is symmetric even when
+$H$ itself is not. The canonical PS normalizations at the tree upper
+boundary are
+\begin{equation}
+H=\sqrt2h_{\rm raw},\quad F=4f_{\rm raw},\quad
+L=R=2\sqrt2f_{\rm raw}.
+\label{eq:PSboundary}
+\end{equation}
+In particular $F=2\sqrt3 f_D$ and $f_M=i2R$ in the common phase convention.
+Different normalizations in a reference must be converted before importing
+coefficients. The $\Delta_R$-only system in Ref.~\cite{MOR} is a comparison
+limit, not this active census.
+
+Define
+\begin{align}
+A_L&=HH^\dagger+\tfrac{15}{4}FF^\dagger+\tfrac{15}{2}LL^\dagger,\\
+A_R&=H^\dagger H+\tfrac{15}{4}F^\dagger F+\tfrac{15}{2}R^\dagger R,\\
+G_D&=\tfrac94(g_L^2+g_R^2+5g_4^2),&
+G_L&=\tfrac94(2g_L^2+5g_4^2),&G_R&=\tfrac94(2g_R^2+5g_4^2).
+\end{align}
+The complete matrix equations are
+\begin{align}
+16\pi^2\dot H&=A_LH+HA_R+[4\tr(H^\dagger H)-G_D]H,\\
+16\pi^2\dot F&=A_LF+FA_R+[\tr(F^\dagger F)-G_D]F,\\
+16\pi^2\dot L&=A_LL+LA_L^T+[2\tr(L^\dagger L)-G_L]L,\\
+16\pi^2\dot R&=A_R^TR+RA_R+[2\tr(R^\dagger R)-G_R]R,
+\qquad\dot{}=d/d\log\mu.
+\label{eq:PSbeta}
+\end{align}
+Here $L=L^T,R=R^T$ are preserved. Away from the appropriate parity locus,
+$H,F$ are general complex matrices; projecting their antisymmetric parts
+away at every step would change the differential equation.
+The actual 248-real-scalar, 48-Weyl-component tensors reproduce
+Eq.~\eqref{eq:PSbeta} component by component for unequal left/right inputs.
+
+The associated Yukawa contribution to the two-loop gauge flow is
+\begin{equation}
+Y_4=\big(2\tr(A_L+A_R),\ 4\tr A_L,\ 4\tr A_R\big),
+\quad
+\dot g_i=\frac{g_i^3a_i}{16\pi^2}
++\frac{g_i^3}{(16\pi^2)^2}\left[\sum_jb_{ij}g_j^2-Y_{4,i}\right],
+\end{equation}
+with
+\begin{equation}
+a=(2/3,26/3,26/3),\qquad
+b=\begin{pmatrix}3551/6&249/2&249/2\\
+1245/2&779/3&48\\1245/2&48&779/3\end{pmatrix}.
+\end{equation}
+For example the SU(4) factor follows from $C_4(4)=15/8$, eight left and
+eight right gauge components, and $\dim SU(4)=15$ in
+$\tr(C_iS)/\dim G_i$. The implementation checks this trace using the
+actual tensors and also includes a Standard-Model top-only normalization
+regression.
+
+\subsection{A protected one-loop submanifold, not new independent matrices}
+There is a useful exact simplification of the frozen tree boundary.
+Suppose
+\begin{equation}
+g_L=g_R,\qquad H=H^T,\quad F=F^T,\quad
+L=R=F/\sqrt2.
+\label{eq:protected}
+\end{equation}
+Then $A_R=A_L^T$, $G_D=G_L=G_R$, and
+$\tr F^\dagger F=2\tr R^\dagger R$.
+Inserting these identities into Eq.~\eqref{eq:PSbeta} gives
+\begin{equation}
+\beta_H=\beta_H^T,\qquad \beta_F=\beta_F^T,\qquad
+\beta_F=\sqrt2\beta_L=\sqrt2\beta_R.
+\end{equation}
+The gauge beta functions also give $\beta_{g_L}=\beta_{g_R}$, since their
+rows and $\tr A_L,\tr A_R$ agree on this locus. Uniqueness of the ODE
+therefore proves invariance of \eqref{eq:protected}. This is a conditional
+one-loop protection, not merely a numerical coincidence.
+
+It follows that the tree Spin(10) boundary does \emph{not} acquire three
+independent arbitrary $126$ family matrices just by PS running. On this
+locus the ratio $f_M/f_D=i2\sqrt6$ is preserved at one loop. For finite
+matching that moves the boundary off the locus, unequal left/right
+thresholds, decoupling, or higher-loop evolution, the general system must
+instead transport $F,L,R$ separately. The lower dictionary is always
+\begin{equation}
+Y_d=aH+\frac{d}{2\sqrt3}F,\quad
+Y_u=bH+\frac{e}{2\sqrt3}F,\quad
+M_R=i2\sigma\omega R,\quad M_L=-i2\Delta_L L,
+\end{equation}
+with the same lepton $-3$ replacements. All four PS matrices remain
+correlated outputs of two UV matrices plus calculated thresholds. They
+are not four newly fitted free matrices.
+
+\section{Finite complex kinetic matching: an executable interface}
+\subsection{Canonical normalization and the scalar curvature}
+In the Weyl convention $\psi_L^T Y_a\psi_R z_a$, write the hard local
+kinetics as $Z_L=I+K_L$, $Z_R=I+K_R$, $Z_H=I+K_H$ and the vertex as
+$\widetilde Y_a=Y_a+\delta Y_a$. If these Hermitian metrics are positive,
+set $S_j=Z_j^{-1/2}$. Direct field substitution gives
+\begin{align}
+ Y^{\rm can}_a&=\sum_b S_L^T\widetilde Y_b S_R(S_H)_{ba},\\
+ D_{\rm can}&=S_H^\dagger D S_H,\\
+ Y^{\rm can}_a&=Y_a+\delta Y_a-\frac12\left[
+ K_L^TY_a+Y_aK_R+\sum_bY_b(K_H)_{ba}\right]+O(\hbar^2).
+\label{eq:finiteY}
+\end{align}
+The linear formula is the general canonical matching algebra; see also
+Appendix A of Ref.~\cite{PatelShukla}. Its model-specific finite matrices
+must still be computed from UV-minus-EFT amplitudes. SU(5) group factors
+from that paper are not P54 coefficients.
+
+If $Dc=0$ and $c^\dagger c=1$, then
+\begin{equation}
+ c_{\rm can}=\frac{Z_H^{1/2}c}{\sqrt{c^\dagger Z_H c}},\qquad
+ D_{\rm can}c_{\rm can}=0,\qquad
+ S_Hc_{\rm can}=\frac{c}{\sqrt{c^\dagger Z_Hc}}.
+\label{eq:kineticzero}
+\end{equation}
+Thus at an exact zero the original-coordinate light direction changes only
+by kinetic normalization. An apparent rotation in canonical coordinates
+is not an additional independent scalar-mixing correction. Vertices and
+curvature must be transformed together to see this cancellation.
+For down/e vertices multiplying $z^*$, use $Z_H^*$ and $c^*$, not the up
+formula. The executable tests use the actual four-copy embedding and
+curvature with synthetic complex finite matrices. They verify independent
+left/right family transformations, arbitrary $U(4)$ copy rotations, and
+the conjugate-copy rule.
+
+\subsection{Stable finite kernels and what they do not calculate}
+For squared masses $x,y\geq0$, at least one nonzero, define
+\begin{align}
+ f(x,y;\mu)&=-\frac1{16\pi^2}\int_0^1
+ \log\frac{(1-t)x+ty}{\mu^2}\,dt,\\
+ h(x,y;\mu)&=\frac1{16\pi^2}\int_0^1(1-t)
+ \log\frac{(1-t)x+ty}{\mu^2}\,dt.
+\end{align}
+Integrating gives, for unequal positive masses,
+\begin{align}
+16\pi^2 f&=1-\frac{x\log(x/\mu^2)-y\log(y/\mu^2)}{x-y},\\
+16\pi^2 h&=\frac12\log(x/\mu^2)
+ +\frac{\frac12r^2\log r-\frac34r^2+r-\frac14}{(1-r)^2},\quad r=y/x.
+\end{align}
+The integral form avoids subtractive cancellation near equality. At
+$x=y$, $(16\pi^2f,16\pi^2h)=(-\log(x/\mu^2),\frac12\log(x/\mu^2))$.
+At $y=0$ they become
+$(1-\log(x/\mu^2),\frac12\log(x/\mu^2)-\frac14)$; at $x=0$ the last
+constant is $-3/4$. Also
+\begin{equation}
+ \frac{d(f,h)}{d\log\mu}=\frac{(2,-1)}{16\pi^2}.
+\end{equation}
+These kernels agree with Appendix B of Ref.~\cite{PatelShukla} and are
+implemented with equal/unequal/one-zero mass regressions. They are building
+blocks, not the complete tensor contractions of P54 diagrams. The API
+rejects missing finite vertices, nonpositive kinetic metrics and purely
+light kernels rather than filling absent physical inputs with zeros.
+Using exact square roots of one-loop input matrices is an algebraic
+regression, not a calculation of two-loop terms.
+
+\section{Local scalar--flavor feedback and its analytic derivative}
+\subsection{An actual Clebsch-constrained inner solve}
+Two deterministic small complex symmetric raw family choices test the
+inner scalar calculation. They are not measured or globally fitted
+matrices. The actual copy dictionary supplies all $Y_{\nu,a}$ and
+$M_R=\kappa_R\sigma f_{\rm raw}$ in $\omega=1$ units. With
+$X=M_R^\dagger M_R$ and $W=X[\log(X/\mu^2)-1]$, use
+\begin{align}
+\Pi_{F,ab}&=-\frac1{8\pi^2}\tr(Y_{\nu,a}^\dagger Y_{\nu,b}W),\\
+\delta\nu_F^2&=-\frac1{8\pi^2\sigma^2}\tr\{X^2[\log(X/\mu^2)-1]\},\\
+\Delta_F&=\Pi_F-\tfrac12\delta\nu_F^2P_{126},\\
+D(\theta,\xi)&=D_0+\Delta_B+\Delta_F(\theta)-\xi P_{10}.
+\end{align}
+The subtraction scale is held fixed in all field derivatives. The scalar
+$\xi$ is tuned to the first stable zero of the complete complex matrix,
+not just to a scalar projection. At a gapped zero $Dc=0$, $c^\dagger c=1$,
+choose $c^\dagger c'=0$. Differentiation gives
+\begin{equation}
+\xi'=\frac{c^\dagger\Delta_F'c}{c^\dagger P_{10}c},\qquad
+c'=-D^+(\Delta_F'-\xi'P_{10})c.
+\label{eq:implicit}
+\end{equation}
+Here $D^+$ is the inverse on the heavy complement, zero on the light
+direction. The formula is valid while the heavy gap and
+$c^\dagger P_{10}c$ are nonzero.
+
+For the explicit test $f_{\rm raw}(\theta)=(1+\theta)f_{\rm raw}$,
+\begin{equation}
+X'=2X,\quad W'=2X\log(X/\mu^2),\qquad
+(\delta\nu_F^2)'=-\frac{\tr\{X^2[4\log(X/\mu^2)-2]\}}
+{8\pi^2\sigma^2}.
+\end{equation}
+Apply the product rule also to both $Y_{\nu,a}$ in $\Pi_F$ to obtain
+$\Delta_F'$ without a finite difference. Then Eq.~\eqref{eq:implicit}
+agrees with two independent finite-difference steps of the retuned
+eigenpair. Representative results are
+\begin{center}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+case&$\xi$&heavy gap/$\omega^2$&$\norm{dc/d\theta}$\\\midrule
+0&$-0.02025044324$&$0.03026151664$&$0.0008092458$\\
+1&$-0.02024289530$&$0.03026452622$&$0.0012951028$\\\bottomrule
+\end{tabular}
+\end{center}
+The small-step relative error of $c'$ is about $6\times10^{-9}$.
+This validates a differentiable local inner solver. It neither selects
+physical family parameters nor replaces the finite PS map.
+
+\subsection{Recompute the type-II source when the light direction changes}
+The previous type-II number cannot be kept fixed while $c$ changes.
+Using the quartic action, reconstruct the exact cubic jet tensor
+\begin{equation}
+T_{Apq}=V'''[e_A,q_p,q_q],\qquad
+J_A(c)=\sum_{pq}T_{Apq}c_{\mathbb R,p}c_{\mathbb R,q},\quad
+c_{\mathbb R}=(\operatorname{Re}c,\operatorname{Im}c).
+\end{equation}
+Centered differences of the Hessian are algebraically exact cubic jets
+for a quartic potential. Eight already cached Hessians give the four real
+Higgs-direction jets; hypercharge covariance supplies the four imaginary
+ones. This introduces no new parameter or lattice scan and reproduces
+the old source to $4.4\times10^{-16}$ relative error.
+For each new eigenvector recompute
+\begin{equation}
+z_{\mathbb R}(c)=-\tfrac12K_{\rm tree}^{-1}J(c),\quad
+\Delta_A(c)=\frac{z_{R,A}+iz_{I,A}}{\sqrt2},\quad
+C_{II,\rm raw}(c)=\sum_A\kappa_{LL,A}\Delta_A(c).
+\end{equation}
+For the two examples $|\Delta C_{II,\rm raw}|$ relative to the old
+bosonic direction is $2.295\times10^{-5}$ and $3.623\times10^{-5}$.
+All inputs, including the cubic tensor, triplet Hessian, source and LL
+coefficient, are transported in the CP-conjugation test. This tests
+covariance, not CP invariance of a chosen complex benchmark.
+The triplet Hessian and cubic vertices are still tree quantities;
+their complete loop correction, evolved $L/R$ inputs off the protected
+locus, and finite Weinberg matching remain necessary for a physical fit.
+
+\section{Research interpretation and completion boundary}
+The executable checkpoint passes the following tests on a fresh replay:
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Verifier suffix (all under \texttt{route\_f/code/})&passed\\\midrule
+\texttt{common\_yukawa\_phase}&28/28\\
+\texttt{ps\_finite\_thresholds}&25/25\\
+\texttt{ps\_yukawa\_flow}&29/29\\
+\texttt{finite\_yukawa\_interface}&17/17\\
+\texttt{self\_consistent\_light}&36/36\\\bottomrule
+\end{tabular}
+\end{center}
+The full filenames begin with \texttt{verify\_p54\_} and end in
+\texttt{.py}; each exports a same-named JSON/Markdown ledger, with input
+hashes and individual residuals, under \texttt{route\_f/output/}.
+The phase-annotated action card separately passes its existing 20 checks.
+These 135 new regression assertions are not 135 independent empirical
+tests of P54. Family choices and finite-array examples remain synthetic.
+
+The recent analyses of Refs.~\cite{PatelShukla,Shukla} motivate checking
+finite heavy thresholds before turning a tree Yukawa relation into an
+exclusion. Their field content and fitted parameters are not those of P54;
+neither their coefficients nor their viability conclusions are imported.
+Here the calculable advance is a common phase dictionary and a valid
+upper heavy-field matching branch, with explicit algebra for transporting
+finite corrections into the light state.
+
+The remaining physical map must contain both-site finite gauge and Yukawa
+matching, the appropriate active-field evolution, sequential neutrino and
+Weinberg matching, and same-action scalar feedback. An optimization over
+an undefined map is neither a global fit nor evidence that the fit domain
+is empty. The code therefore distinguishes missing prerequisites from a
+computed infeasible point.
+
+\begin{thebibliography}{9}
+\bibitem{PatelShukla} K. M. Patel and S. K. Shukla,
+\emph{Quantum corrections and the minimal Yukawa sector of SU(5)},
+\href{https://arxiv.org/abs/2310.16563}{arXiv:2310.16563v2} (2024),
+especially Appendices A and B.
+\bibitem{Shukla} S. K. Shukla,
+\emph{Revisiting SU(5) Yukawa Sectors Through Quantum Corrections},
+\href{https://arxiv.org/abs/2411.06906}{arXiv:2411.06906v2},
+revised 25 August 2026.
+\bibitem{LWX} M. Luo, H. Wang and Y. Xiao,
+\emph{Two-loop Renormalization Group Equations in General Gauge Field Theories},
+\href{https://arxiv.org/abs/hep-ph/0211440}{arXiv:hep-ph/0211440}.
+\bibitem{MOR} D. Meloni, T. Ohlsson and S. Riad,
+\emph{Renormalization Group Running of Fermion Observables in an Extended
+Non-Supersymmetric SO(10) Model},
+\href{https://arxiv.org/abs/1612.07973}{arXiv:1612.07973}.
+\bibitem{Hall} L. J. Hall, \emph{Grand Unification of Effective Gauge Theories},
+\href{https://doi.org/10.1016/0550-3213(81)90498-3}{Nucl. Phys. B 178 (1981) 75}.
+\end{thebibliography}
+\end{document}
