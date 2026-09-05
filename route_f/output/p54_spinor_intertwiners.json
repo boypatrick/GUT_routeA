@@ -1,0 +1,230 @@
+{
+  "schema": "route-f-p54-spinor-intertwiner-v1",
+  "date": "2026-09-05",
+  "status": "explicit Clifford and Yukawa intertwiners verified; normalization translation required",
+  "conventions": {
+    "Clifford": "{Gamma_i,Gamma_j}=2 delta_ij; Hermitian 32x32 Jordan-Wigner matrices",
+    "chirality": "Gamma_star=(-i)^5 Gamma_1...Gamma_10",
+    "charge_conjugation": "C=Gamma_2 Gamma_4 Gamma_6 Gamma_8 Gamma_10",
+    "tensor_contraction": "sum_{i1<...<i5} Sigma_i1...i5 C Gamma_i1...i5 = (1/5!) full antisymmetric contraction",
+    "P1_scalar_metric": "U126^dagger U126=I; ||omega||=1",
+    "spin_generator": "R_ij=Gamma_i Gamma_j/2 for vector R_ij[i,j]=+1; physical Hermitian generator i R"
+  },
+  "selected_chirality": -1,
+  "SM_matter_orientation": -1,
+  "orientation_warning": "For the literal P1 U126 and C Gamma[5] contraction, the selected chiral matter has conjugate SM hypercharges. Standard matter charges require conjugating scalar irrep and spinor chirality together (or an equivalent global embedding conjugation). Earlier geometric overlap keys cannot be assigned physical u/d labels without this dictionary.",
+  "hypercharge_eigenvalues": [
+    -1.0,
+    -0.33333333333333337,
+    -0.33333333333333337,
+    -0.33333333333333337,
+    -0.16666666666666666,
+    -0.16666666666666666,
+    -0.16666666666666666,
+    -0.16666666666666663,
+    -0.16666666666666663,
+    -0.16666666666666663,
+    0.0,
+    0.5,
+    0.5,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666
+  ],
+  "spin_trace_raw_plane_generator": 4.0,
+  "generator_normalization_note": "raw vector plane generator has T10=2 and T16=4; divide generator by sqrt(2) for action-card tr16(TaTb)=2 delta_ab",
+  "majorana_singular_values_sigma1_raw": [
+    5.656854249492379,
+    5.551115123125783e-17,
+    5.551115123125783e-17,
+    5.551115123125783e-17,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "absolute_CG": {
+    "raw_majorana_per_sigma": 5.656854249492379,
+    "factor_for_MR_equal_sigma_f": 0.17677669529663692,
+    "raw_vector_down_doublet": 1.414213562373095,
+    "factor_for_unit_vector_Dirac_h": 0.7071067811865476,
+    "raw_126_down_doublet": 1.1547005383792524,
+    "126_down_doublet_if_MR_equal_sigma_f": 0.2041241452319317,
+    "126_lepton_doublet_if_MR_equal_sigma_f": 0.6123724356957948,
+    "canonical_MR_over_Dirac126_ratio": 4.898979485566351,
+    "raw_LL_triplet_coefficient_magnitude": 5.6568542494923815,
+    "LL_triplet_if_MR_equal_sigma_f": 1.0000000000000004,
+    "signed_relative_lepton_down_CG": {
+      "re": -3.0000000000000013,
+      "im": 1.9783251369615097e-16
+    }
+  },
+  "actual_triplet_export_alignment": {
+    "source": "route_f/output/p54_typeii_triplet_source.json",
+    "exported_Y": 1,
+    "Sigma_hol_norm": 9.344993116571242e-16,
+    "Sigma_anti_norm": 1.0000000000000002,
+    "conjugated_export_overlap_with_canonical_LL_triplet": 1.0000000000000007,
+    "raw_LL_coefficient_for_conjugated_export": {
+      "re": 2.0741570962246126e-15,
+      "im": 5.656854249492382
+    },
+    "phase_scope": "Matrix coefficient uses deterministic eigensolver fermion phases; phase alignment to fitted h/f and the exported Higgs direction remains a joint matching task."
+  },
+  "remaining_gates": [
+    "Translate the action-card h,f and four VEV/overlap symbols to these canonically normalized matrix intertwiners before fitting.",
+    "Build all actual heavy/light fermion matrices on the P1/P2 scalar background with one fixed normalization and re-evaluate the CW projection.",
+    "The minus-three Clebsch is verified; defining both unit doublet coupling f and MR=sigma f requires a nontrivial conversion of the canonical singlet sigma or of the doublet VEV.",
+    "The absolute LL-triplet coefficient is verified; carry its complex phase with the same fermion/scalar dictionary into the actual type-II source response.",
+    "No global flavor/seesaw fit or two-loop PS Yukawa transport is supplied by this algebraic audit."
+  ],
+  "checks": [
+    {
+      "name": "Clifford anticommutators",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "chirality squares to identity",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "charge conjugation antisymmetry",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "charge conjugation covariance",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "10 Yukawa tensors symmetric",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "120 Yukawa tensors antisymmetric",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "five-form Yukawa tensors symmetric",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "all 45 vector covariance equations",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "all 45 self-dual 126 covariance equations",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "opposite chirality annihilates P1 self-duality",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "P1 omega produces rank-one Majorana mass",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "P1 omega acts only on the SM-singlet fermion",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "raw Majorana coefficient is 4 sqrt(2)",
+      "residual": 1.7763568394002505e-15,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "raw unit vector doublet coefficient is sqrt(2)",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "raw unit 126 doublet coefficient is 2/sqrt(3)",
+      "residual": 6.661338147750939e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "canonical singlet/Dirac 126 ratio is 2 sqrt(6)",
+      "residual": 4.440892098500626e-15,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "lepton/down relative Clebsch is minus three",
+      "residual": 1.3468759186438127e-15,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conjugating chirality and scalar irrep preserves Majorana norm",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "canonical LL triplet and RR singlet magnitudes agree",
+      "residual": 2.6645352591003757e-15,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
+      "name": "conjugated exported triplet is the canonical LL direction",
+      "residual": 6.661338147750939e-16,
+      "tolerance": 1e-11,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 20,
+    "total": 20,
+    "all_pass": true
+  },
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_spinor_intertwiners.py",
+      "sha256": "20c17dc3b444b02d8337d6904babdb0895d4e35652b295ad4a5661a9347f9478"
+    },
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/output/p54_typeii_triplet_source.json",
+      "sha256": "223eb24ccbfbe58d425d1dd1c7df53cd585d65e153dc9d01d7569993c1359690"
+    }
+  ]
+}

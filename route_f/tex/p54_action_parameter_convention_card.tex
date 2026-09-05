@@ -165,8 +165,8 @@ $\Gamma_{i_1\ldots i_5}$ the antisymmetrized Clifford product projected onto
 the self-duality selected in \eqref{eq:126def}.  Our normalization is
 \begin{equation}
  -\Lag_Y=
- \frac12(Y_{10})_{ab}\,Psi_a^TC_{10}\Gamma_i\Psi_b\,\phi_i^*
- +\frac{1}{2\,5!}(Y_{126})_{ab}\,Psi_a^TC_{10}
+ \frac12(Y_{10})_{ab}\,\Psi_a^TC_{10}\Gamma_i\Psi_b\,\phi_i^*
+ +\frac{1}{2\,5!}(Y_{126})_{ab}\,\Psi_a^TC_{10}
  \Gamma_{ijklm}\Psi_b\,\Sigma_{ijklm}+\hc .
  \label{eq:yukawa}
 \end{equation}
@@ -178,20 +178,41 @@ $Y_{10}=Y_{10}^T$ and $Y_{126}=Y_{126}^T$.  The coupling to $\phi$, as
 opposed to $\phi^*$, has PQ charge $-4$ and is absent.  A $120_H$ and its
 antisymmetric Yukawa matrix are absent, not set to a small fitted value.
 
-After Pati--Salam and electroweak breaking, define $h=Y_{10}$,
-$f=Y_{126}$ and the four bidoublet vacuum coordinates
-$v_{10}^{u,d},v_{126}^{u,d}$.  The Clebsch convention is
+\paragraph{Canonical-normalization correction (5 September 2026).}
+An explicit Clifford-matrix contraction on the normalized P1 five-form
+basis gives the raw unit-doublet coefficients $\sqrt2Y_{10}$ and
+$2Y_{126}/\sqrt3$, while the singlet Majorana coefficient is
+$4\sqrt2\,\sigma Y_{126}$. The previous simultaneous identifications
+$h=Y_{10}$, $f=Y_{126}$ and $M_R=\sigma f$ omitted these factors.
+The scalar action and radial $\sigma$ are unchanged. Define instead
+\[
+ h_D=\sqrt2Y_{10},\qquad f_D=\frac2{\sqrt3}Y_{126},\qquad
+ f_M=4\sqrt2Y_{126}=2\sqrt6 f_D.
+\]
+After Pati--Salam and electroweak breaking, use $h=h_D$, $f=f_D$ in
+the unit-canonical-bidoublet formulae, with vacuum coordinates
+$v_{10}^{u,d},v_{126}^{u,d}$. The relative Clebsch convention is
 \begin{align}
  M_u&=h v_{10}^u+f v_{126}^u,&
  M_d&=h v_{10}^d+f v_{126}^d,\label{eq:masssum1}\\
  M_D&=h v_{10}^u-3f v_{126}^u,&
  M_e&=h v_{10}^d-3f v_{126}^d,\label{eq:masssum2}\\
- M_R&=f\,\sigma,&
+ M_R&=2\sqrt6\,f\,\sigma=f_M\sigma,&
  M_\nu&=M_L-M_D M_R^{-1}M_D^T.
  \label{eq:seesaw}
 \end{align}
 Equation \eqref{eq:seesaw} keeps both type-I and type-II terms; setting
 $M_L=0$ is a later fit hypothesis, not part of this action card.
+Equivalently one may use $f_M$ as the family matrix, but then each
+canonical $126$ Dirac coupling contains $f_M/(2\sqrt6)$. These are
+parameter translations, not a third Yukawa matrix. The CG normalization
+constants are positive magnitudes; complex vertices must also carry their
+scalar/spinor phase conventions. These factors and the relative $-3$
+Clebsch are checked in
+\path{code/verify_p54_spinor_intertwiners.py}; the global matter-conjugation
+orientation and scalar/spinor relative phases must be carried consistently
+when exporting the four doublet copies. No old CW numerical example may
+silently mix the Dirac and Majorana conventions.
 
 \subsection{Scalar potential}
 

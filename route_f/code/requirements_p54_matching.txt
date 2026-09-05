@@ -1,0 +1,5 @@
+# Tested with CPython 3.9 on macOS. P1 enables JAX x64 explicitly.
+numpy==2.0.2
+scipy==1.13.1
+jax==0.4.30
+jaxlib==0.4.30

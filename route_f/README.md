@@ -60,6 +60,15 @@ spectrum covering all 328 real scalar coordinates with no negative modes.
 These are tree-level algebraic closures, not yet a running, flavor, or
 phenomenological fit.
 
+**Latest matching correction (2026-09-05):** P2 physical closure is reopened.
+`output/p54_ps_active_census.json` (`14/14` audit tests) shows that the
+historical beta table assumes an extra complex six, while the lower
+threshold omits SU(2)L-charged active parents. Its required matching-log
+slope is `-71`, not zero. All six repaired logarithmic identities are now
+derived, but finite staged matching and new scales remain uncomputed.
+The P2 numbers below are historical regression outputs, not certified
+physical matching results; this notice supersedes their earlier labels.
+
 The P2 artifact `tex/p54_p2_running_thresholds_cosmology.tex`, its `21/21`
 integrated verifier, and the `11/11` parent-resolved verifier now execute the
 two-loop baseline, all 35 scalar sectors, exact PS spectral thresholds,
@@ -116,10 +125,29 @@ UV couplings and new threshold obligations, and does not fix `N_DW=3`.
 Minimal Einstein--Cartan torsion/central twists do not automatically
 supply a missing symmetric Yukawa or anomaly repair.
 
-Next: declare the tadpole prescription, assemble the full complex doublet
-P/Q blocks and corrected eigenvector, then couple PS Yukawa matching to
-the inverse scalar/flavor problem. Do not replace those matrix constraints
-by one free `eta_Y`, or restart soliton scans as a P-layer prerequisite.
+The next checkpoint is now implemented in
+`tex/p54_fixed_vev_full_doublet_matching.tex` and its PDF. The fixed-VEV
+bosonic full-complex-matrix verifier passes `18/18`; the corrected light
+magnitudes are `(0.6462012,0.7631652,0.0000121836,0.0017108974)` and the
+heavy eigenvalues are `(0.0302567,0.199798,0.432639) omega^2`.
+The old Q/gap norm criterion fails but the exact relative heavy-block
+test proves positivity at the declared one-loop truncation, not all-orders
+control. Fermionic fixed-VEV synthetic tests pass `11/11`; complete mixed
+triplet scalar-source tests pass `10/10`. Neither is a global fit.
+
+The explicit Clifford audit additionally corrects the action-card
+normalization: for unit canonical doublet coupling `f_D`,
+`MR=2 sqrt(6) sigma f_D`, while `MR=sigma f_M` requires
+`f_M=2 sqrt(6) f_D`. This does not add a new matrix. The signed `-3`
+Clebsch is independently verified; global matter conjugation and all
+four-copy phases still must be exported consistently. Historical
+external-matrix CW values may not be reused without this conversion.
+
+Next: phase-resolved Spin(10)/PS Yukawa projection and type-II LL
+contraction -> consistent four-parent finite PS thresholds/betas and
+new scales -> actual fermionic tadpoles/CW plus Schur eigenvector in a
+constrained global flavor/seesaw fit. Do not replace those constraints by
+one free `eta_Y`, or restart soliton scans as a P-layer prerequisite.
 
 The prior single-chain review found three blockers. Their calculations remain
 valid, but after the three-layer reset only branch-relevant items block their

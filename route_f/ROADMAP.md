@@ -149,6 +149,23 @@ parameters after the anomalous PQ reparametrization.  This closes the P0-A
 definition subgate.  The audit and P1 results below supersede the former open
 items; the remaining P0 debt is the higher-dimension PQ-quality policy.
 
+**Canonical Yukawa correction (2026-09-05, latest authority):** the explicit
+Clifford intertwiner on the actual normalized P1 scalar basis gives
+`h_D=sqrt(2) Y10`, `f_D=2 Y126/sqrt(3)`, and
+`f_M=4 sqrt(2) Y126=2 sqrt(6) f_D`. Thus
+`M_R=sigma f_M=2 sqrt(6) sigma f_D`, not `sigma f_D` if the doublet
+coupling is normalized to one. The action card is corrected; no field or
+independent parameter is added. The relative `-3` Clebsch is verified.
+The Clifford/covariance/normalization audit passes `20/20`, including
+raw canonical LL-triplet coefficient `4 sqrt(2)`, equal to the singlet
+Majorana coefficient. Its actual exported triplet conjugation is checked;
+the common phase needed for type-I/type-II interference remains open.
+The P1 self-duality selects conjugate-matter hypercharges in the explicit
+Clifford orientation; a global conjugation must also conjugate the scalar
+copy map. Full phase-resolved spinor/scalar projection remains required.
+Do not reuse the historical external-matrix CW numbers as physical
+predictions after this normalization correction.
+
 #### P0-B invariant basis and PQ anomaly/global form (`done`; 2026-08-30)
 
 Artifacts:
@@ -221,7 +238,31 @@ nonperturbative lifetime theorem.  P2 must run/match this actual spectrum,
 propagate covariance, and reimpose the doublet condition after loop
 corrections.
 
-### P2 Running, thresholds, and bosonic CW matching (`bosonic gate closed 2026-09-02`; Yukawa nuisance handed to P3)
+### P2 Running, thresholds, and bosonic CW matching (`physical matching reopened 2026-09-05`)
+
+**The following historical P2 numbers are reproducible algebraic outputs,
+not a certified Wilsonian matching solution.** The new independent
+`code/verify_p54_ps_active_census.py` / `output/p54_ps_active_census.json`
+passes `14/14` audit checks and finds two failed historical physical gates:
+
+- The four active parents `(1,2,2)10`, `(15,2,2)126`, `DeltaL`, `DeltaR`
+  give `a_PS=(2/3,26/3,26/3)` and `b44=3551/6`. The stored table needs
+  one extra complex `(6,1,1)` to obtain `a4=1,b44=1209/2`.
+- The lower threshold includes only the SU(2)L-singlet DeltaR parent,
+  so `lambda_I,L'=0`, but its own beta discontinuity requires `-71`.
+  The matching residual derivative is exactly `71/(12 pi)`, not a small
+  numerical tolerance. Old scale/covariance and PQ-extension scale replays
+  therefore cannot be promoted to physical results.
+
+A same-field-content four-parent repair closes all six logarithmic
+identities: physical scalar indices are `(12,6,6)` at U and `(67,71,67)`
+at I; `lambda_U'=(72,120,120)`, `lambda_I'=(-46,-71,-41/5)`.
+Finite staged thresholds and a new scale solution remain open. At the
+simultaneously broken background the parent/mass/Goldstone projectors need
+not commute, so replacing a projector in the old formula is insufficient.
+See `output/p54_ps_yukawa_matching_research.md` and the new full matching
+TeX below. This correction supersedes every closure statement in the
+historical P2 ledger that follows; no old outputs are erased.
 
 Artifacts:
 
@@ -378,7 +419,7 @@ A user-chosen percentage envelope does not bound those effects.
 No global flavor/seesaw fit, neutrino prediction interval, or full-model
 exclusion is claimed.
 
-#### P3-A: scalar/loop interface repair (`open; highest priority`)
+#### P3-A: scalar/loop interface repair (`bosonic subgate done; full physical gate open`)
 
 P2 computed only `P Pi_B P`. It did not compute `Q Pi_B P`,
 `Q Pi_B Q`, or the tadpole/vacuum shift. For the full complex copy matrix
@@ -387,8 +428,39 @@ P2 computed only `P Pi_B P`. It did not compute `Q Pi_B P`,
 `c0-Q C^-1 b`. The missing mass is formally second order in loops, but
 the missing eigenvector rotation is first order and matters for flavor.
 A projected mass retune plus a Q-block norm bound is insufficient.
-Declare the tadpole prescription and assemble all complex P/Q blocks
-before calling the eigenpair loop-corrected.
+The new `tex/p54_fixed_vev_full_doublet_matching.tex` and PDF give the
+complete derivation. `code/verify_p54_full_doublet_cw.py` and its JSON/MD
+pass `18/18`. At the historical background, the SM-singlet tangent is
+exactly three radial plus two gauge/PQ phase directions. The invariant
+fixed-VEV prescription is
+
+```text
+delta_mu2=5 t_omega/(12 omega), delta_nu2=t_sigma/sigma,
+delta_mus2=t_s/vs;
+H_ct=-delta_mu2 P54-(delta_nu2/2)P126-delta_mus2 PS.
+```
+
+The factor `1/2` on the canonical 126 counterterm is essential. Two phase
+Ward checks close below `1.3e-13 omega^2`. All 4 complex neutral doublet
+copies are retained, including independently checked imaginary jets.
+The retuned **bosonic one-loop-truncated** matrix gives
+
+```text
+delta_xi02=-0.0202627041913 omega^2,
+eigenvalues/omega^2=(0,0.03025666325,0.19979763559,0.43263922302),
+|c|=(0.6462011668,0.7631652015,0.00001218358,0.0017108974),
+angle(c_tree,c_B)=0.0329814289 rad,
+Schur residual=6.2e-18 omega^2.
+```
+
+The original coarse Q/gap bound **fails**, with ratio `4.79545`, but this
+does not prove a tachyon. The sharper exact congruence test gives
+`spec(C0^-1/2 DeltaC C0^-1/2)=(-0.0109064,0.4393631,0.5234555)`, hence
+`C >= 0.9890936 C0 > 0` at this truncation. This is a positivity
+certificate, not proof of small higher loops; the 52% relative correction
+and large raw tadpole subtraction require a control audit. Other-irrep
+loop stability and physical pole masses are not computed. Most of the
+light rotation is in the 10 pair; `w126=2.92732e-6` remains small.
 
 The missing heavy-relaxed *tree* quartic has now been computed from the
 same 328-real-coordinate action:
@@ -420,6 +492,32 @@ corrected overlaps, gives conditional `eta_Y=1.28882418e-8` and
 `0.03168157` of the tree gap. This is a complex-copy heavy-neutrino
 diagnostic, not fitted matrices, an actual scalar-phase match, or the
 total boson-plus-fermion Q certificate. New heavy fermions would add terms.
+
+**Latest completion/correction:** use `f_M`, not the unit-Dirac `f_D`, in
+`MR=sigma f_M`; their conversion is `f_M=2 sqrt(6) f_D` above. The
+fixed-VEV fermionic term is
+
+```text
+t_sigma,F=-Tr[X^2(log(X/mu^2)-1)]/(8 pi^2 sigma),
+delta_nu2,F=t_sigma,F/sigma,
+DeltaD_F=Pi_F-(delta_nu2,F/2)P126, X=MR^dagger MR.
+```
+
+The scale is held fixed under field differentiation.
+`code/verify_p54_fermion_tadpole.py` and JSON/MD pass `11/11` on three
+synthetic complex families, four copies/eight real directions, degenerate
+Takagi masses and family/copy basis changes. A synthetic assembly checks
+the Schur solve but is explicitly not fitted heavy Yukawa data.
+
+`code/verify_p54_typeii_triplet_source.py` and JSON pass `10/10`.
+The complete two-copy 54/126 neutral-triplet inverse gives
+`omega*z126,canonical/v^2=-0.004700734233` in its exported phase convention.
+The 54 source through mixing partly cancels the direct 126 source;
+neglecting mixing would miss a 5.84% reduction relative to the unmixed
+response. This uses tree K/V3 and the bosonic-improved light direction,
+not a loop-accurate Wilson coefficient. Compute the canonical LL
+intertwiner and use `C5II=-Y_LL K^-1 J`, together with
+`C5I=-Ynu MR^-1 Ynu^T`; type II is not authorized to be set to zero.
 
 #### P3-C: constructive inverse problem (`derived; not solved`)
 
@@ -645,11 +743,17 @@ S has no blocking arrow into P or U
 
 Next execution order:
 
-1. **P:** declare a tadpole scheme, complete the complex doublet P/Q
-   blocks and corrected light eigenpair, then couple PS Yukawa matching to
-   the inverse scalar/flavor feasibility problem. The heavy-relaxed tree
-   quartic is complete and need not be repeated unless the action or
-   background changes. Keep `eta_Y` as a matrix-derived profile quantity.
+1. **P:** retain the completed fixed-VEV rule and complete bosonic complex
+   doublet matrix; do not repeat the cached Hessian calculation unchanged.
+   Finish the phase-resolved canonical spinor projection using
+   `f_M=2 sqrt(6) f_D`, the same-action type-II LL contraction, and the
+   four-parent PS EFT with finite, site-resolved gauge/Goldstone matching.
+   Generate its full left/right Yukawa beta system (including DeltaL) and
+   rerun the scales. Then iterate actual fitted fermionic tadpoles/CW,
+   the Schur light eigenpair, and constrained flavor/seesaw likelihood.
+   Treat `eta_Y` as a derived correlated profile quantity, not a free scalar.
+   The repaired six logarithmic identities are required regression tests;
+   they do not replace finite matching or a physical fit.
 2. **P alternatives:** only if a baseline repair fails, compare the explicit
    mirror-10/vectorlike completion, a two-doublet EFT or a full enlarged
    scalar model. Do not add these inside an unrestricted nuisance.

@@ -1,0 +1,535 @@
+{
+  "SU2L_matching_scale_audit": {
+    "actual_dlambda_dlogmu_from_DeltaR_only_projector": {
+      "exact": "0",
+      "value": 0.0
+    },
+    "beta_discontinuity": {
+      "exact": "71/6",
+      "value": 11.833333333333334
+    },
+    "derivative_after_required_log_coefficient": 1.8318679906315083e-14,
+    "finite_difference_derivative": 1.8833334932541135,
+    "matching_identity": "alpha_SM^-1=alpha_PS^-1-lambda_I/(12*pi)",
+    "required_dlambda_dlogmu": {
+      "exact": "-71",
+      "value": -71.0
+    },
+    "residual_derivative": 1.883333493254095,
+    "residual_derivative_exact": "71/(12*pi)"
+  },
+  "active_scalar_census": [
+    {
+      "C": [
+        {
+          "exact": "0",
+          "value": 0.0
+        },
+        {
+          "exact": "3/4",
+          "value": 0.75
+        },
+        {
+          "exact": "3/4",
+          "value": 0.75
+        }
+      ],
+      "T_complex": [
+        {
+          "exact": "0",
+          "value": 0.0
+        },
+        {
+          "exact": "1",
+          "value": 1.0
+        },
+        {
+          "exact": "1",
+          "value": 1.0
+        }
+      ],
+      "dimension_complex": {
+        "exact": "4",
+        "value": 4.0
+      },
+      "label": "phi10:(1,2,2)"
+    },
+    {
+      "C": [
+        {
+          "exact": "4",
+          "value": 4.0
+        },
+        {
+          "exact": "3/4",
+          "value": 0.75
+        },
+        {
+          "exact": "3/4",
+          "value": 0.75
+        }
+      ],
+      "T_complex": [
+        {
+          "exact": "16",
+          "value": 16.0
+        },
+        {
+          "exact": "15",
+          "value": 15.0
+        },
+        {
+          "exact": "15",
+          "value": 15.0
+        }
+      ],
+      "dimension_complex": {
+        "exact": "60",
+        "value": 60.0
+      },
+      "label": "Sigma126:(15,2,2)"
+    },
+    {
+      "C": [
+        {
+          "exact": "9/2",
+          "value": 4.5
+        },
+        {
+          "exact": "2",
+          "value": 2.0
+        },
+        {
+          "exact": "0",
+          "value": 0.0
+        }
+      ],
+      "T_complex": [
+        {
+          "exact": "9",
+          "value": 9.0
+        },
+        {
+          "exact": "20",
+          "value": 20.0
+        },
+        {
+          "exact": "0",
+          "value": 0.0
+        }
+      ],
+      "dimension_complex": {
+        "exact": "30",
+        "value": 30.0
+      },
+      "label": "Sigma126:(10-pair,3,1)"
+    },
+    {
+      "C": [
+        {
+          "exact": "9/2",
+          "value": 4.5
+        },
+        {
+          "exact": "0",
+          "value": 0.0
+        },
+        {
+          "exact": "2",
+          "value": 2.0
+        }
+      ],
+      "T_complex": [
+        {
+          "exact": "9",
+          "value": 9.0
+        },
+        {
+          "exact": "0",
+          "value": 0.0
+        },
+        {
+          "exact": "20",
+          "value": 20.0
+        }
+      ],
+      "dimension_complex": {
+        "exact": "30",
+        "value": 30.0
+      },
+      "label": "Sigma126:(10-pair,1,3)"
+    }
+  ],
+  "checks": [
+    {
+      "name": "parent dimensions and Casimirs give (2/3,26/3,26/3)",
+      "pass": true
+    },
+    {
+      "name": "two-loop discrepancy is only b44=38/3",
+      "pass": true
+    },
+    {
+      "name": "one-loop discrepancy is only a4=1/3",
+      "pass": true
+    },
+    {
+      "name": "one extra complex six exactly reproduces historical a and b",
+      "pass": true
+    },
+    {
+      "name": "selected intermediate parent is SU2L singlet",
+      "pass": true
+    },
+    {
+      "name": "exported scalar and vector MI SU2L thresholds vanish",
+      "pass": true
+    },
+    {
+      "name": "required SU2L threshold slope is -71",
+      "pass": true
+    },
+    {
+      "name": "independent scalar census gives same beta discontinuity",
+      "pass": true
+    },
+    {
+      "name": "finite difference reproduces nonzero historical matching-scale defect",
+      "pass": true
+    },
+    {
+      "name": "required logarithmic coefficient cancels scale derivative",
+      "pass": true
+    },
+    {
+      "name": "complete scalar real trace index is 84 in all PS factors",
+      "pass": true
+    },
+    {
+      "name": "minimal repaired MI slope cancels all three gauge directions",
+      "pass": true
+    },
+    {
+      "name": "minimal repaired MU slope cancels all three gauge directions",
+      "pass": true
+    },
+    {
+      "name": "repaired slopes are (-46,-71,-41/5) and (72,120,120)",
+      "pass": true
+    }
+  ],
+  "date": "2026-09-05",
+  "extra_six_interpretation": "historical coefficients require one additional complex (6,1,1); its 10/126 origin is not determined by gauge indices",
+  "historical_minus_reconstructed_a": [
+    {
+      "exact": "1/3",
+      "value": 0.3333333333333333
+    },
+    {
+      "exact": "0",
+      "value": 0.0
+    },
+    {
+      "exact": "0",
+      "value": 0.0
+    }
+  ],
+  "historical_minus_reconstructed_b": [
+    [
+      {
+        "exact": "38/3",
+        "value": 12.666666666666666
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      }
+    ],
+    [
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      }
+    ],
+    [
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      }
+    ]
+  ],
+  "minimal_stage_consistent_repair": {
+    "Goldstone_prescription": "exclude one real Goldstone per massive vector from scalar trace; use the same site-resolved orbit projector as the vector",
+    "a_SO10_full_model": {
+      "exact": "-34/3",
+      "value": -11.333333333333334
+    },
+    "active_parent_labels": [
+      "phi10:(1,2,2)",
+      "Sigma126:(15,2,2)",
+      "Sigma126:(10-pair,3,1)",
+      "Sigma126:(10-pair,1,3)"
+    ],
+    "active_scalar_real_indices_PS": [
+      {
+        "exact": "68",
+        "value": 68.0
+      },
+      {
+        "exact": "72",
+        "value": 72.0
+      },
+      {
+        "exact": "72",
+        "value": 72.0
+      }
+    ],
+    "finite_background_warning": "at simultaneous nonzero vevs, parent and mass/orbit projectors need not commute; the finite matching must be derived in a common staged scheme rather than inferred from these index identities alone",
+    "full_scalar_real_indices_PS": [
+      {
+        "exact": "84",
+        "value": 84.0
+      },
+      {
+        "exact": "84",
+        "value": 84.0
+      },
+      {
+        "exact": "84",
+        "value": 84.0
+      }
+    ],
+    "heavy_vector_real_indices_MI_SM": [
+      {
+        "exact": "1",
+        "value": 1.0
+      },
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "14/5",
+        "value": 2.8
+      }
+    ],
+    "heavy_vector_real_indices_MU_PS": [
+      {
+        "exact": "4",
+        "value": 4.0
+      },
+      {
+        "exact": "6",
+        "value": 6.0
+      },
+      {
+        "exact": "6",
+        "value": 6.0
+      }
+    ],
+    "light_scalar_real_indices_SM": [
+      {
+        "exact": "0",
+        "value": 0.0
+      },
+      {
+        "exact": "1",
+        "value": 1.0
+      },
+      {
+        "exact": "3/5",
+        "value": 0.6
+      }
+    ],
+    "physical_heavy_scalar_real_indices_MI_SM": [
+      {
+        "exact": "67",
+        "value": 67.0
+      },
+      {
+        "exact": "71",
+        "value": 71.0
+      },
+      {
+        "exact": "67",
+        "value": 67.0
+      }
+    ],
+    "physical_heavy_scalar_real_indices_MU_PS": [
+      {
+        "exact": "12",
+        "value": 12.0
+      },
+      {
+        "exact": "6",
+        "value": 6.0
+      },
+      {
+        "exact": "6",
+        "value": 6.0
+      }
+    ],
+    "required_lambda_slope_MI": [
+      {
+        "exact": "-46",
+        "value": -46.0
+      },
+      {
+        "exact": "-71",
+        "value": -71.0
+      },
+      {
+        "exact": "-41/5",
+        "value": -8.2
+      }
+    ],
+    "required_lambda_slope_MU": [
+      {
+        "exact": "72",
+        "value": 72.0
+      },
+      {
+        "exact": "120",
+        "value": 120.0
+      },
+      {
+        "exact": "120",
+        "value": 120.0
+      }
+    ],
+    "scalar_plus_vector_lambda_slope_MI": [
+      {
+        "exact": "-46",
+        "value": -46.0
+      },
+      {
+        "exact": "-71",
+        "value": -71.0
+      },
+      {
+        "exact": "-41/5",
+        "value": -8.2
+      }
+    ],
+    "scalar_plus_vector_lambda_slope_MU": [
+      {
+        "exact": "72",
+        "value": 72.0
+      },
+      {
+        "exact": "120",
+        "value": 120.0
+      },
+      {
+        "exact": "120",
+        "value": 120.0
+      }
+    ],
+    "status": "all group-theoretic logarithmic sum rules closed; finite threshold matrices and scale refit not performed"
+  },
+  "physical_gates": {
+    "historical_MI_matching_is_scale_covariant_at_one_loop": false,
+    "historical_beta_table_matches_stated_four_parent_active_census": false,
+    "required_next_step": "declare one PS active census, regenerate its betas and complementary U/I thresholds, then solve scales again",
+    "whole_P54_model_excluded": false
+  },
+  "reconstructed_a_PS": [
+    {
+      "exact": "2/3",
+      "value": 0.6666666666666666
+    },
+    {
+      "exact": "26/3",
+      "value": 8.666666666666666
+    },
+    {
+      "exact": "26/3",
+      "value": 8.666666666666666
+    }
+  ],
+  "reconstructed_b_PS_gauge_and_matter_only": [
+    [
+      {
+        "exact": "3551/6",
+        "value": 591.8333333333334
+      },
+      {
+        "exact": "249/2",
+        "value": 124.5
+      },
+      {
+        "exact": "249/2",
+        "value": 124.5
+      }
+    ],
+    [
+      {
+        "exact": "1245/2",
+        "value": 622.5
+      },
+      {
+        "exact": "779/3",
+        "value": 259.6666666666667
+      },
+      {
+        "exact": "48",
+        "value": 48.0
+      }
+    ],
+    [
+      {
+        "exact": "1245/2",
+        "value": 622.5
+      },
+      {
+        "exact": "48",
+        "value": 48.0
+      },
+      {
+        "exact": "779/3",
+        "value": 259.6666666666667
+      }
+    ]
+  ],
+  "schema": "route-f-p54-ps-active-census-v1",
+  "scope": "algebraic consistency audit; no refit and no change to historical P2 ledgers",
+  "sources": [
+    {
+      "path": "route_f/output/p54_p2_two_site_matching.json",
+      "sha256": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b"
+    },
+    {
+      "path": "route_f/output/p54_p2_running_thresholds_cosmology.json",
+      "sha256": "1eadb0ea90ef83847551b576ccfa6c3f46a7796d42a126cd7036945f1f69d693"
+    },
+    {
+      "path": "route_f/code/verify_p54_ps_active_census.py",
+      "sha256": "781f089b8cbb1d20b8a260f5864b777740454ca4fadbd8557900289cb73f992b"
+    }
+  ],
+  "summary": {
+    "all_pass": true,
+    "passed": 14,
+    "total": 14
+  }
+}

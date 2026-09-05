@@ -12,13 +12,13 @@ regularity problem.  Route F now has three independent layers:
   `3 x 16_F + 54_H,R + 126_H,C + 10_H,C + 1_H,C`.  The singlet is required
   by the predictive two-Yukawa-matrix branch.  The shorter no-PQ theory is
   `P54N` and has three symmetric Yukawa matrices.  The corrected P54PQ-v2
-  vacuum and complete tree-level spectrum are now computed.  P2 first
-  falsified the historical `sigma/omega=0.35` benchmark, then closed a
-  parent-resolved threshold fixed point at `sigma/omega=0.1265`.  Running,
-  two-site matching, covariance, and the light-subspace bosonic CW coefficient
-  are computed within their declared truncation. The corrected P3 audit
+  vacuum and complete tree-level spectrum are now computed. P2's historical
+  threshold root at `sigma/omega=0.1265` is reproducible, but its physical
+  matching interpretation is reopened by the 2026-09-05 active-census/
+  matching-scale audit. The finite fixed-VEV bosonic full complex doublet
+  matrix and corrected bosonic eigenpair are now computed. The corrected P3 audit
   finds strong frozen-tree flavor tension, not a full-model exclusion.
-  The complete loop light eigenpair and PS Yukawa matching remain open;
+  The full fermion-inclusive eigenpair and PS Yukawa matching remain open;
   the same-action heavy-relaxed tree quartic is positive. The more
   flexible `210_H + 120_H` model is comparison/rescue only.
 - **U -- family UV:** seek an anomaly-safe representation-valued index
@@ -64,6 +64,10 @@ P0-A action card completed 2026-08-30 Asia/Taipei:
   supersedes this original next-step sentence.
 
 P2 running/threshold fixed-point checkpoint completed 2026-08-30 Asia/Taipei:
+
+Historical ledger only: the latest checkpoint below supersedes its physical
+matching, scale and covariance interpretation. Numerical roots remain
+available for regression; their existence did not validate the EFT census.
 
 - The two-loop SM/Pati--Salam engine reproduces the published no-threshold
   scales and, with current inputs, gives `MI=4.60943e13 GeV`,
@@ -151,6 +155,44 @@ P3 theory audit and correction completed 2026-09-05 Asia/Taipei:
   Yukawa matching and action-derived inverse scalar/flavor feasibility.
   Only then assess extensions and physical predictions. U/S remain
   independent; no new soliton/lattice scan is required.
+
+P3 fixed-VEV/full-doublet checkpoint completed 2026-09-05 Asia/Taipei:
+
+- Previous audit committed and pushed as `cb60bdf` to `origin/main` before
+  this checkpoint. The following calculations are new work after that push.
+- A complete three-radial/two-phase singlet census fixes the invariant
+  tadpole prescription. The canonical 126 mass counterterm is
+  `-delta_nu2/2`, verified by both phase Ward identities.
+- Full bosonic complex doublet matrix, all imaginary cross directions,
+  corrected eigenpair and exact Schur retuning pass `18/18`.
+  `delta_xi02=-0.0202627041913 omega^2`, heavy eigenvalues are
+  `(0.03025666325,0.19979763559,0.43263922302) omega^2`, and light rotation
+  is `0.0329814289 rad`. The original Q/gap norm test fails; the exact
+  relative matrix bound nevertheless gives `C>=0.9890936 C0>0` at this
+  truncation. Higher-loop control and all-sector loop stability are open.
+- Independent Spin(10) Clifford matrices expose an absolute-normalization
+  omission: `h_D=sqrt(2)Y10`, `f_D=2Y126/sqrt(3)`,
+  `f_M=2sqrt(6)f_D`, hence `MR=sigma f_M`. The action card is corrected.
+  The scalar action is unchanged; scalar/spinor phase and global
+  matter-conjugation assignments must be consistently transported.
+- Same-scheme fermionic tadpole/CW interface passes `11/11` synthetic
+  tests, including basis covariance and all eight real doublet directions.
+  These tests supply no fitted matrices. A mixed 54/126 triplet source
+  calculation passes `10/10` and prohibits omitting type II by assumption.
+- PS active-census audit `14/14` finds two failed historical physical
+  consistency gates: the beta table needs an undeclared complex six, and
+  the lower SU(2)L threshold has slope zero instead of the exact `-71`.
+  The same-field-content four-parent logarithmic repair closes all six
+  gauge directions. Finite staged matching and a new scale fit are open;
+  the old scales/covariance are not certified physical outputs.
+- Full derivations: `route_f/tex/p54_fixed_vev_full_doublet_matching.tex`
+  and its PDF. New numerical ledgers are `p54_full_doublet_cw`,
+  `p54_fermion_tadpole`, `p54_typeii_triplet_source`,
+  `p54_spinor_intertwiners` and `p54_ps_active_census` under Route F.
+- Next: complete canonical phase-resolved PS projection, finite
+  site-resolved thresholds and full left/right Yukawa beta system, then
+  iterate the fermion-inclusive Schur eigenpair in a constrained global
+  flavor/seesaw fit. No physical best fit or model exclusion is claimed.
 
 ## AP-E18 GTA/minimizing-diagonal checkpoint (2026-07-24; current S-layer authority)
 
