@@ -1,0 +1,456 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 Common Spectrum, Physical Channels, and Nested Elimination}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\HH}{\mathcal H}
+\newtheorem{proposition}{Proposition}
+\input{../output/p54_spectral_channels_tables.tex}
+\title{Route-F P54: Common Scalar Spectrum,\\Interaction-Defined Channels,\\and Source-Preserving Nested Elimination}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{10 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We keep the existing action and stationary benchmark fixed and construct
+tree scalar-exchange form factors from actual Higgs, Yukawa and vector
+vertices. The complete physical scalar space has 295 real dimensions;
+33 declared real current slots generate a 21-dimensional invariant
+spectral subspace, with 12 visible eigenvalue clusters. This is a
+channel-dependent exact reduction, not an additional spatial dimension
+or a new particle fit. A precise Gaussian elimination law transports the
+kernel, vertices and induced source-source term together. Omitting the
+last term loses the entire Higgs-pair scalar-exchange response in the
+tested final chart. An initial nonzero $NN$--PQ coupling conjecture is
+rejected: the physical PQ tangent is the gauge-singlet phase and has no
+linear residue in the declared channels. All \ChecksPassed/\ChecksTotal\
+checks pass without recomputing cached Hessians or changing parameters.
+\end{abstract}
+
+\section{Scope and unchanged theory}
+The frozen action remains P54PQ-v2, with
+\begin{equation}
+3\,16_F+54_{H,\mathbb R}+126_{H,\mathbb C}
++10_{H,\mathbb C}+1_{H,\mathbb C},
+\end{equation}
+and only two symmetric UV family matrices $h_{\rm raw},f_{\rm raw}$.
+We reuse its 328-real-coordinate polynomial and the stationary benchmark
+$(\omega,\sigma,v_s)=(1,0.1265,0.25)$ in program units. The gauge coupling
+is read from the historical P2 iteration, with the reference convention
+$\mu_U=g_U\omega$. Neither its dimensionful unification scales nor the
+benchmark's phenomenological viability are recertified here.
+
+The primary Higgs direction is the \emph{exact tree} light eigenvector.
+The bosonic-improved vector is not substituted into a claimed tree or
+loop-complete amplitude. All numerical Yukawa residues below are
+coefficients with $h_{\rm raw},f_{\rm raw}$ factored out. Fermion masses,
+flavor mixing and rates are not fitted. The result is a set of amputated
+tree \emph{scalar-exchange} kernels, not a complete gauge-invariant
+scattering calculation including vector exchange, contact diagrams,
+loops and external-leg matching.
+
+The conceptual motivation is the proposed ``visible energy spectrum''
+in Ref.~\cite{chen}. Here visibility is defined by actual interaction
+vertices, not an arbitrarily chosen geometrical projection. Different
+description layers do not imply different numbers of spatial dimensions.
+No mechanical rotation, helical orbit or particle-specific geometry is
+introduced.
+
+\section{Physical scalar spectrum and interaction vertices}
+\subsection{Remove gauge directions, retain physical zero modes}
+Let $H=V^{(2)}(x_0)$ and let $G$ be an orthonormal basis of the rank-33
+broken gauge orbit $\{R_Ax_0\}$. At a stationary vacuum, gauge invariance
+gives $HG=0$. Choose an orthonormal physical slice $B$ such that
+\begin{equation}
+ BB^T=P_{\rm phys}=I-GG^T,\qquad B^TB=I_{295},\qquad
+ H_p=B^THB.
+\end{equation}
+The full physical tree spectrum has 290 positive eigenvalues and five
+zeros: four real Higgs components and one physical PQ mode. A zero
+eigenvalue is not by itself a reason to discard a state. Conversely,
+eaten Goldstones are not additional physical scalar particles.
+
+For orthogonal eigenspace projectors $\Pi_\lambda$ of $H_p$,
+\begin{equation}
+ H_p=\sum_\lambda\lambda\Pi_\lambda,\qquad
+ \sum_\lambda\Pi_\lambda=I_{295}.
+\end{equation}
+For canonical free propagation about this vacuum, the corresponding
+energy branches are $E_\lambda(\mathbf p)=\sqrt{|\mathbf p|^2+\lambda}$
+in natural units. Thus mass is the rest-energy gap of a branch, not an
+additional coordinate or an observer-selected energy value.
+There are 24 distinct numerical tree eigenvalue clusters, including
+zero. This count is not the earlier 35-row SM-irrep census: distinct
+irreps can share a mass, and gauge directions have now been removed.
+
+\subsection{Higgs-pair source from the same potential}
+Let $q_\alpha$, $\alpha=1,\ldots,4$, be the canonical real components of
+the unique tree light doublet, and
+$\rho=H_{\rm light}^\dagger H_{\rm light}
+=\tfrac12\sum_\alpha h_\alpha^2$.
+For SM-singlet scalar fluctuations $s_A$, the potential contains
+\begin{equation}
+ V\supset\frac12s^TKs+s^TJ_\rho\rho,\qquad
+ (J_\rho)_A=\frac14\sum_{\alpha=1}^4
+ V^{(3)}[e_A,q_\alpha,q_\alpha]. \label{eq:hsource}
+\end{equation}
+Equivalently $J_\rho=P_{\rm SM\,singlet}V^{(3)}[\cdot,q,q]$ for one
+canonical neutral component $q$. We verify this equality by the full
+four-component trace, not by selecting a neutral triplet as a detector.
+Differentiating the gauge identity twice gives
+\begin{equation}
+ (R x_0)^T V^{(3)}[\cdot,q,q]+2(Rq)^THq=0.
+\end{equation}
+Thus the exact tree condition $Hq=0$ eliminates gauge-orbit contamination
+of this source. The cubic jets are recovered from content-addressed
+Hessian differences; a central difference of the Hessian of a quartic
+polynomial is exact algebraically. No new lattice or parameter scan is
+performed.
+
+\subsection{Yukawa sources and their selection rules}
+In the fixed common complex scalar/spinor convention,
+\begin{equation}
+ M_F(x)=h_{\rm raw}\otimes\sum_A Z_h^A x_A
+       +f_{\rm raw}\otimes\sum_A Z_f^A x_A.
+\end{equation}
+For the declared spinor components $l,r$, define
+\begin{equation}
+ g_{A,h}^{lr}=l^T Z_h^A r,\qquad
+ g_{A,f}^{lr}=l^T Z_f^A r. \label{eq:yvertex}
+\end{equation}
+The real and imaginary parts label Hermitian-current components; the
+actual family matrices multiply the corresponding bilinears and are
+not new independent fit parameters for different channels. The seven
+component pairs are $u_Lu^c,d_Ld^c,e_Le^c,\nu_LN,NN,\nu_L\nu_L,u^cd^c$.
+Quark pairs use the first matched colour of the common-phase dictionary;
+these are not colour-averaged bilinears. Zero components are retained as
+explicit selection-rule tests.
+
+For an unbroken generator the full tensor identity is
+\begin{equation}
+ R_F^T Z^A+Z^A R_F+\sum_B Z^B(R_s)_{BA}=0. \label{eq:ward}
+\end{equation}
+This is checked for both tensors and all 12 SM generators. For hypercharge
+eigenstates $l,r$ with charges $y_l,y_r$, it implies, in the real scalar
+coordinates used here,
+\begin{equation}
+ iR_Y g^{lr}=(y_l+y_r)g^{lr}.
+\end{equation}
+This defines allowed support independently of the scalar eigenvalues.
+In particular $g_h^{NN}=g_h^{\nu_L\nu_L}=0$, whereas the corresponding
+$126$ vertices are nonzero. A zero for a selected coloured component
+must not be generalized to all colour contractions.
+
+\subsection{Vector-pair sources from the kinetic term}
+With $D=\partial+g A_aR_a$ and canonical real fields,
+\begin{equation}
+ (M_V^2)_{ab}=g^2(R_a x_0)^T(R_b x_0).
+\end{equation}
+For a complete degenerate vector eigenspace with projector $P_\beta$,
+dimension $d_\beta$ and corresponding generators $\widetilde R_b$, the
+averaged scalar--vector--vector vertex is
+\begin{equation}
+ (J_\beta)_A=\frac1{d_\beta}\tr
+ \left(P_\beta\frac{\partial M_V^2}{\partial x_A}\right)
+ =\frac{2g^2}{d_\beta}\sum_{b\in\beta}
+ e_A^T\widetilde R_b^T\widetilde R_bx_0. \label{eq:vv}
+\end{equation}
+It multiplies the metric contraction of the two external vector
+polarizations; it is not yet a decay rate. The four positive mass
+eigenspaces have real multiplicities $8,1,12,12$ and mass squares
+$0.00506506,0.02532532,0.31652201,0.32158708$ in $\omega^2$.
+Degeneracy averaging is fixed before the probe is evaluated. Every such
+source is an SM singlet. For unbroken massless vectors $R_bx_0=0$, so
+this tree single-scalar mass vertex vanishes. An independent finite
+difference of the kinetic-term mass trace checks its factor of two.
+
+\section{Common poles, channel residues and a minimal realization}
+Collect all physical source columns into $J=B^TJ_{\rm raw}$.
+In units $\omega=1$ there are 33 real current slots: one Higgs-pair
+source, 28 Yukawa slots and four vector-pair sources. Different current
+dimensions are explicitly recorded; the Yukawa spurions are factored
+out. At Euclidean $t=p_E^2$ the scalar-exchange response is
+\begin{equation}
+ F_E(t)=J^T(H_p+tI)^{-1}J
+       =\sum_\lambda\frac{R_\lambda}{t+\lambda},\qquad
+ R_\lambda=J^T\Pi_\lambda J\succeq0. \label{eq:spectral}
+\end{equation}
+Minkowski continuation is $t=-p^2-i0$. The pole positions are properties
+of the common operator; the residues record which channels can access
+each pole. Vanishing residue does not change the spectrum or turn an
+unseen state into negative mass. These are finite tree spectral-theorem
+statements, not an all-orders spectral representation for gauge-fixed
+unphysical fields.
+
+For any real channel vector $c$,
+$c^TR_\lambda c=\|\Pi_\lambda Jc\|^2\geq0$. Degenerate eigenvectors may
+be relabelled without changing $R_\lambda$. The two independent moment
+checks are
+\begin{equation}
+ \sum_\lambda R_\lambda=J^TJ,\qquad
+ \sum_\lambda\lambda R_\lambda=J^TH_pJ. \label{eq:moments}
+\end{equation}
+The machine-readable artifact retains full cross-channel residues,
+not only squared diagonal couplings. Relative phases and interference
+cannot in general be reconstructed from diagonal weights alone.
+
+\begin{proposition}[Interaction-generated minimal spectral space]
+For finite self-adjoint $H_p$, let
+\begin{equation}
+ \HH_J=\Span\{\ran(\Pi_\lambda J):\lambda\in\operatorname{spec}H_p\}.
+\end{equation}
+Then $\HH_J$ is the smallest $H_p$-invariant subspace containing
+$\ran J$. Its orthogonal complement is invariant and does not contribute
+to $F_E$ for this current set. Restricting $H_p,J$ to $\HH_J$ reproduces
+the response exactly at every point of the resolvent set.
+\end{proposition}
+\begin{proof}
+Each generator $\Pi_\lambda Jc$ is an eigenvector or zero, so the span
+is invariant, and $\sum_\lambda\Pi_\lambda J=J$ puts $\ran J$ inside it.
+Conversely, on a finite spectrum each $\Pi_\lambda$ is a polynomial in
+$H_p$ by Lagrange interpolation. Any invariant subspace containing $J$
+therefore contains every $\Pi_\lambda J$. Self-adjointness makes its
+orthogonal complement invariant. In this decomposition $J$ has zero
+component on the complement, proving the resolvent identity.
+\end{proof}
+
+For the declared component currents, $\operatorname{rank}J=19$ but
+$\dim\HH_J=21$, with 12 visible eigenvalue clusters. Thus a mere
+projection onto the instantaneous source range loses dynamically
+accessible directions. The 21-dimensional exact realization is verified
+against the full 295-dimensional response at five momenta. This is not
+a universal claim that P54 has only 21 scalar degrees of freedom:
+different probes or special fitted family cancellations change the
+observable subspace. In particular the component-current set is not
+closed under every possible external colour/isospin choice.
+
+\section{Actual singlet response and a rejected PQ hypothesis}
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$m^2/\omega^2$ & $R_{\rho\rho}/\omega^2$ & $R_{NN}^{\rm unit\ spurion}$\\
+\midrule
+\SingletPoleRows
+\bottomrule
+\end{tabular}
+\end{center}
+The last column means the sum of the two real unit-spurion residue
+components, not a numerical flavor-matrix norm. The same three radial
+poles appear in both channels but with very different weights. No
+mass-list fitting was used to produce this result.
+
+\subsection{The physical PQ zero mode is not an NN pole here}
+An initial hypothesis that the $NN$ channel necessarily sees the PQ
+zero mode failed in the first run. The reason follows from support,
+not from a numerical tuning. At this vacuum the phase variation of the
+$126$ vacuum lies in the broken gauge orbit. The physical PQ tangent is
+\begin{equation}
+ a=\frac{P_{\rm phys}\,\delta_{\rm PQ}x_0}
+ {\|P_{\rm phys}\,\delta_{\rm PQ}x_0\|},\qquad
+ (I-P_S)a=0.
+\end{equation}
+There is no renormalizable $S16_F16_F$ term in the frozen action, hence
+\begin{equation}
+ Z_h^A=Z_f^A=0\quad(A\in S),\qquad g_{NN}^Ta=0.
+\end{equation}
+The actual $J_\rho$ and vector-pair vertices are also orthogonal to $a$.
+All declared linear scalar residues vanish on this physical mode. The
+verifier separately checks its support, Yukawa tensor zero, $Ha=0$
+and all current contractions. This does not imply that the axion is
+unphysical, absent, globally decoupled or massless after QCD effects.
+Other vertices, derivative descriptions and anomalies are outside the
+declared tree scalar-exchange current set.
+
+\subsection{Recover the existing nonzero sterile--Higgs coefficient as a spectral moment}
+Let $B_s$ embed the three massive radial modes and define
+$K_s=B_s^THB_s$, $j_\rho=B_s^TJ_\rho$ and
+$G_A=(g_{NN}^TB_s)_A f_{\rm raw}$. Then
+\begin{equation}
+ \mathcal L\supset-\tfrac12s^TK_s s-s^Tj_\rho\rho
+ -\left[\tfrac12N^T(M_R+G_As_A)N+\mathrm{h.c.}\right].
+\end{equation}
+Solving the scalar equation at leading order gives
+$s=-K_s^{-1}j_\rho\rho+\cdots$. In the convention
+$\mathcal L\supset C_{HN}^{ij}N_iN_j\rho+\mathrm{h.c.}$, with no
+$1/2$ in this operator, define physical-slice columns
+$\bar g=B^Tg_{NN}$ and $\bar J_\rho=B^TJ_\rho$. Then
+\begin{align}
+ C_{HN}&=\frac12G^TK_s^{-1}j_\rho
+ =\frac{f_{\rm raw}}2\sum_{\lambda>0}
+       \frac{\bar g^T\Pi_\lambda\bar J_\rho}{\lambda},\\
+ \omega C_{HN}&=-0.0848692011507\,i\,f_{\rm raw}.
+\end{align}
+This reproduces the prior same-action coefficient and its common
+component phase. The use of $g^T$, not $g^\dagger$, is required for this
+holomorphic Majorana operator. Positivity applies instead to the
+Hermitian-current residue matrix in Eq.~\eqref{eq:spectral}. No singular
+zero-mode inverse is used, and no absolute physical Yukawa rate is claimed.
+
+\section{Nested elimination preserves a triple, not just a mass matrix}
+\subsection{Exact Gaussian derivation with external currents}
+Let $x=(x_r,x_h)$ and let $\eta$ collect real external current sources.
+Define the quadratic Euclidean functional
+\begin{equation}
+ S_E[x,\eta]=\frac12x^TKx-x^TJ\eta-\frac12\eta^TC\eta.
+\end{equation}
+At its stationary point, the current response is
+$F=C+J^TK^{-1}J$. Solving the heavy equation gives
+\begin{equation}
+ x_h=K_{hh}^{-1}(J_h\eta-K_{hr}x_r).
+\end{equation}
+Completing the square then gives the exact transformation
+\begin{align}
+ K'&=K_{rr}-K_{rh}K_{hh}^{-1}K_{hr},\label{eq:schurk}\\
+ J'&=J_r-K_{rh}K_{hh}^{-1}J_h,\label{eq:schurj}\\
+ C'&=C+J_h^TK_{hh}^{-1}J_h.\label{eq:schurc}
+\end{align}
+Subsequent integration of $x_r$ yields
+\begin{equation}
+ \boxed{C+J^TK^{-1}J=C'+J'^TK'^{-1}J'.} \label{eq:response}
+\end{equation}
+This is the source-dependent form of the Feshbach--Schur construction
+\cite{feshbach,cde}. At complex $p_E^2$ these are analytic transposes,
+not Hermitian conjugates of the continued kernel. Hermitian positivity
+was established on the real spectral residues before continuation.
+
+\begin{proposition}[Nested consistency]
+For nested retained coordinate sets and invertible eliminated blocks,
+successive exact transformations of $(K,J,C)$ give the same final triple
+as simultaneous elimination. Changing the order of the eliminated
+blocks gives the same response on their common domain of definition.
+\end{proposition}
+\begin{proof}
+The heavy linear equations have a unique solution for each retained
+field and source. Successive substitutions and a simultaneous solution
+therefore give the same heavy stationary value. Substitution into the
+same quadratic functional fixes separately the coefficients of
+$x_r^2$, $x_r\eta$ and $\eta^2$, which are $K',J',C'$. This proves the
+triple identity. Alternatively it follows by block Gaussian elimination
+on the augmented matrix
+\begin{equation}
+ \begin{pmatrix}K&-J\\-J^T&-C\end{pmatrix}.
+\end{equation}
+At exceptional block singularities one must change the split or use
+analytic continuation of the full response, not invert a zero mode by
+an undeclared regulator.
+\end{proof}
+
+The induced $C'(p^2)$ is a source-source term with no retained-field
+propagator, but it is generally \emph{nonlocal} and can contain poles.
+It becomes a local Wilson expansion only inside a valid momentum
+domain. Calling it a ``contact term'' does not mean it is constant or
+dispensable. In particular an eigenvalue of an eliminated block can
+produce singularities in individual $K',J',C'$ which cancel in the
+complete response; it must not automatically be advertised as a new
+physical pole.
+
+\subsection{Actual P54 factorization and negative control}
+We reuse the upper 55-scalar physical embedding $B_U$. The final chart
+$B_L$ contains the actual eight-real-dimensional $10_H$ bidoublet parent
+and the physical PQ tangent. The remaining physical coordinates define
+$B_M$, giving the exact split
+\begin{equation}
+ 295=9_L+231_M+55_U.
+\end{equation}
+This is a coordinate factorization of the same quadratic theory, not
+an assertion that the nine-coordinate chart is a local SM EFT.
+The test keeps the full momentum dependence, all sources and the
+induced source-source functional.
+
+At $p_E^2/\omega^2=0.001,0.03,0.2,-0.02+0.003i,-0.265+0.001i$,
+direct elimination, $U$ then $M$, and $M$ then $U$ agree. The full
+response also agrees with its pole-residue sum and with passive
+noncanonical coordinate rescaling, provided the kinetic metric and
+vertices are transformed together. These operations are tests of
+representation covariance, not physical rotations of matter.
+
+The final chart has no massive SM-singlet scalar. Selection rules give
+$J'_\rho=0$, although $F_{\rho\rho}\ne0$. All its scalar-exchange response
+therefore resides in $C'_{\rho\rho}$. Omitting $C'$ loses 100\% of this
+response at every tested momentum. For the entire normalized current
+matrix, the analogous relative Frobenius error ranges from about
+$0.366$ to $1$. That matrix norm depends on the declared current units;
+it is not a universal percentage error in a physical cross section.
+The single-channel $\rho\rho$ negative control needs no fitted Yukawa
+matrix and does not depend on relative current rescaling.
+
+\subsection{What this does not close}
+An interacting loop-level elimination must transport higher vertices,
+the functional measure and regulated determinant as well. The Gaussian
+determinant at this fixed background is source independent; dropping it
+is harmless for the present tree quadratic response but not for a
+claimed full effective action or finite matching. The exact identities
+do not complete the outstanding common gauge/Goldstone/ghost/scalar
+hard-minus-EFT calculation. A finite derivative truncation preserves
+them only to its declared order and within its validity domain.
+
+\section{Extra spatial dimensions: a separate, constrained comparison}
+No extra direction is used above. If one independently postulates a
+flat interval $y\in[0,L]$ and a free real five-dimensional scalar,
+\begin{equation}
+ S=\frac12\int\dd^4x\int_0^L\dd y\,
+ \left[(\partial_\mu\Phi)^2-(\partial_y\Phi)^2-M_5^2\Phi^2\right],
+\end{equation}
+Neumann conditions and the self-adjoint eigenproblem give
+\begin{equation}
+ -f_n''=\lambda_nf_n,\quad f_n'(0)=f_n'(L)=0,\quad
+ f_0=L^{-1/2},\quad f_{n>0}=\sqrt{2/L}\cos(n\pi y/L).
+\end{equation}
+Expanding $\Phi=\sum_n\phi_n f_n$ and using orthonormality yields
+\begin{equation}
+ m_n^2=M_5^2+(n\pi/L)^2,\qquad
+ \frac{m_2^2-m_0^2}{m_1^2-m_0^2}=4.
+\end{equation}
+Thus two common parameters predict an entire tower. For a declared
+probe profile $w(y)$, residues are also fixed by
+$|\int_0^L w(y)f_n(y)\dd y|^2$; $w$ may not be chosen separately for
+each particle. Changing boundary conditions, potentials or particle
+assignments adds assumptions and must be counted. This conditional
+construction is not adopted or fitted, and it does not derive chiral
+families, charges or the observed SM spectrum. The plane-wave/normal-mode
+energy is not a mechanical helical trajectory.
+
+\section{Reproducibility and next gate}
+The verifier is \texttt{code/verify\_p54\_spectral\_channels.py}; its JSON
+contains all source columns, complete physical mass eigenvalues, residue
+matrices, selection rules, source hashes and content-addressed cache
+reads. It never overwrites or recomputes the supplied Hessian cache.
+Use the pinned \texttt{code/requirements\_p54\_matching.txt} environment:
+\begin{quote}\small\ttfamily
+python3 route\_f/code/verify\_p54\_spectral\_channels.py\ {\normalfont\textbackslash}\newline
+\hspace*{1em}--cache-dir /path/to/tmp/p54\_full\_doublet\_cw
+\end{quote}
+The matching card, common-phase dictionary and prior $C_{HN}$ output
+are required inputs. \ChecksPassed/\ChecksTotal\ tests pass. This count
+is a computational regression ledger; the propositions state separately
+the assumptions of the mathematical identities.
+
+The next mainline task is to incorporate the complete source-dependent
+functional into the same-scheme finite matching workflow. The unknown
+family matrices must remain correlated inputs until a constrained fit
+exists. The present scalar tree gate is closed; full finite matching,
+fermion-inclusive light-state iteration, physical pole widths and a
+global flavor/seesaw fit remain open. The extra-dimensional comparison
+and the independent soliton line do not block this sequence.
+
+\begin{thebibliography}{9}
+\bibitem{chen} B. Chen, \emph{Energy spectrum for elementary particles}
+(2022), six-page manuscript,
+\url{https://indico.cern.ch/event/1109513/contributions/4969967/}.
+Used as conceptual motivation, not evidence of established extra dimensions.
+\bibitem{feshbach} G. Dusson, I. M. Sigal and B. Stamm,
+\emph{The Feshbach--Schur map and perturbation theory} (2021),
+\url{https://arxiv.org/abs/2105.02058}.
+\bibitem{cde} B. Henning, X. Lu and H. Murayama,
+\emph{One-loop Matching and Running with Covariant Derivative Expansion}
+(2016), \url{https://arxiv.org/abs/1604.01019}.
+The source-response algebra above is tree level, not their completed
+one-loop matching calculation.
+\end{thebibliography}
+\end{document}

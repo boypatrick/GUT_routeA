@@ -1,0 +1,214 @@
+{
+  "schema": "p54-lower-finite-scalar-subtraction-v1",
+  "date": "2026-09-11",
+  "scheme": "same broken background, MSbar scalar c=3/2, exact quadratic PS Schur kernel; not full gauge/ghost functional",
+  "vacuum": {
+    "omega": 1.0,
+    "sigma": 0.1265,
+    "vs": 0.25
+  },
+  "mu": 0.5626028899853225,
+  "cache_key": "5249e67655c850ab250a568dd1c1abca2d97084f0cb4cb6bd7cf4b9fc01cc34c",
+  "dimensions": {
+    "full_quotient": 303,
+    "upper_heavy": 55,
+    "PS_local": 248,
+    "soft_zeros": 13
+  },
+  "finite_values": {
+    "V_full": -0.04307001295455113,
+    "V_C": -0.005964439308191641,
+    "V_PS_nonlocal": -0.03710557364635949,
+    "V_PS_local": -0.03705904934774003,
+    "finite_local_truncation_difference": -4.652429861946167e-05
+  },
+  "UV_delta_trace_M4": 0.07786290864380874,
+  "momentum_rows": [
+    {
+      "p_E2": 0.0001,
+      "exact_logdet_defect": 3.979039320256561e-13,
+      "nonlocal_minus_local_logdet": -4.213876536596217e-08
+    },
+    {
+      "p_E2": 0.003,
+      "exact_logdet_defect": -7.958078640513122e-13,
+      "nonlocal_minus_local_logdet": -3.395879957679426e-05
+    },
+    {
+      "p_E2": 0.03,
+      "exact_logdet_defect": -2.2737367544323206e-13,
+      "nonlocal_minus_local_logdet": -0.0019212542868558558
+    },
+    {
+      "p_E2": 0.3,
+      "exact_logdet_defect": 3.694822225952521e-13,
+      "nonlocal_minus_local_logdet": -0.03193207413454502
+    },
+    {
+      "p_E2": 3.0,
+      "exact_logdet_defect": -2.8421709430404007e-13,
+      "nonlocal_minus_local_logdet": -0.09094222075339076
+    },
+    {
+      "p_E2": 30.0,
+      "exact_logdet_defect": 9.094947017729282e-13,
+      "nonlocal_minus_local_logdet": -0.10773672653090216
+    }
+  ],
+  "complete_lower_gauge_covariant_matching": false,
+  "source_derivatives_completed": false,
+  "physical_fit_enabled": false,
+  "missing": [
+    "background/source derivatives of the finite functional",
+    "transverse gauge and ghost/Goldstone package",
+    "upper loop Wilson insertion and lower EFT subtraction",
+    "finite kinetic/Yukawa/box operator matching"
+  ],
+  "source_sha256": {
+    "code/verify_p54_lower_scalar_finite_subtraction.py": "238b1c5b8eb493d9103fb92a503fc7868c972b1d2999df354ea7aba3c543467a",
+    "code/verify_p54_lower_covariant_eft.py": "2b8d3a680b8da0cbe90ac87e8a2a1d48e6337c6b1decb71ad27e29104888eefb",
+    "code/verify_p54_upper_yukawa_thresholds.py": "d89310d59bd8aec7687352c387ad71a8914eaafce5065cbc2ea4a050ed159775",
+    "code/verify_p54_upper_vector_matching.py": "8efa059d99feed4127378b9cdfc68397d85347a7102d335104f42ef713884deb",
+    "code/verify_p54_p1_hessian_spectrum.py": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282",
+    "output/p54_full_doublet_cw.json": "e422ade78b283e7baecdc1eb80523aad2ec3a48e7ad58a0623ba827b980eb6c6"
+  },
+  "checks": [
+    {
+      "name": "upper_heavy_basis_horizontal_at_broken_background",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "full_kinetic_block_structure",
+      "residual": 1.687551007930319e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "quotient_full_290_positive_scalar_poles",
+      "residual": 7.606003638744224e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "full_303_chart_has_13_zero_modes",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "local_248_chart_has_13_zero_modes",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "local_metric_includes_heavy_response",
+      "residual": 1.055513918831185e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.0001_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.0001_exact_nonlocal_logdet_subtraction",
+      "residual": 3.979039320256561e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.003_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.003_exact_nonlocal_logdet_subtraction",
+      "residual": 7.958078640513122e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.03_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.03_exact_nonlocal_logdet_subtraction",
+      "residual": 2.2737367544323206e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.3_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=0.3_exact_nonlocal_logdet_subtraction",
+      "residual": 3.694822225952521e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=3.0_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=3.0_exact_nonlocal_logdet_subtraction",
+      "residual": 2.8421709430404007e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=30.0_positive_Euclidean_kernels",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "p2=30.0_exact_nonlocal_logdet_subtraction",
+      "residual": 9.094947017729282e-13,
+      "tolerance": 5e-08,
+      "pass": true
+    },
+    {
+      "name": "full_generalized_spectrum_logdet",
+      "residual": 2.0212773553096114e-15,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "finite_subtraction_scale_derivative",
+      "residual": 2.788269832035284e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "local_determinant_is_not_exact",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "finite_scalar_subtraction_broken_PS_covariance",
+      "residual": 4.163336342344337e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 22,
+    "total": 22,
+    "all_pass": true
+  }
+}

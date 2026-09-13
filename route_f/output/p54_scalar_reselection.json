@@ -1,0 +1,756 @@
+{
+  "schema": "p54-bounded-scalar-reselection-v1",
+  "date": "2026-09-13",
+  "scope": "four declared weak-coupling/less-hierarchical engineering probes; no measured input fit or default mutation",
+  "coupling_scale_rule": "scale every existing scalar coefficient by z; re-solve mu2,nu2,mus2 at new radii; retune xi02 at first physical doublet crossing",
+  "gauge_and_mu_held_at_reference": 0.5626028899853225,
+  "engineering_margin": 0.3,
+  "candidates": [
+    {
+      "z": 0.03,
+      "sigma": 0.3,
+      "vs": 0.25,
+      "tree_parameters": {
+        "a": 0.015,
+        "alpha": 0.0075,
+        "b": 0.012,
+        "beta": 0.003,
+        "c": -0.003,
+        "chi1": 0.024,
+        "chi2": 3e-05,
+        "chi3": 0.0015,
+        "chi4": 0.0009,
+        "chi5": 0.006,
+        "chi6": 0.00075,
+        "chi7": 0.0009,
+        "eta0": 0.006,
+        "eta1": 0.00075,
+        "eta2": 0.003,
+        "eta3": 0.0005399999999999999,
+        "gamma1": 0.0036,
+        "gamma2": -0.0021000000000000003,
+        "lambda0": 0.027,
+        "lambda2": 0.024,
+        "lambda4": 0.018,
+        "lambda4p": 0.012,
+        "mu2": 0.042618750000000004,
+        "mus2": 0.005424,
+        "nu2": 0.013454999999999998,
+        "xi02": 0.004411654725012215,
+        "xi1": 0.010499999999999999,
+        "xi2": 0.0024,
+        "xi3": -0.006
+      },
+      "tree_tuning": {
+        "tunable": true,
+        "xi02": 0.004411654725012215,
+        "minimum_at_xi02_zero": 0.00218008943887596,
+        "zero_tolerance": 3e-07,
+        "physical_zero_count": 4,
+        "physical_negative_count": 0,
+        "nearest_positive_m2": 0.00104634040176988,
+        "maximum_m2": 0.08496285563422756
+      },
+      "extra_zero_mode_classification": {
+        "rank": 4,
+        "field_weights": {
+          "Phi54": 5.557565488496002e-32,
+          "Sigma126": 8.625370614545229e-06,
+          "phi10": 0.9999913746293857,
+          "S": 3.461532863412891e-36
+        },
+        "casimir_eigenvalues": {
+          "SU3": [
+            3.716096085165564e-63,
+            1.0761764509181437e-62,
+            9.573385058106264e-62,
+            9.66710446949786e-62
+          ],
+          "SU2": [
+            0.75,
+            0.75,
+            0.7500000000000007,
+            0.7500000000000013
+          ],
+          "Y": [
+            0.24999999999999983,
+            0.24999999999999994,
+            0.2500000000000001,
+            0.2500000000000003
+          ]
+        },
+        "invariance_leakage": {
+          "SU3": 1.400824298036978e-15,
+          "SU2": 2.901151211218074e-15,
+          "Y": 3.291820626749996e-15
+        }
+      },
+      "tree_min_hard_mass2": 0.001046340401769884,
+      "tree_radial_eigenvalues": [
+        0.0021800894388759244,
+        0.0031270549268950006,
+        0.08496285563422776
+      ],
+      "radial_hard_Hessian": [
+        [
+          0.26403409781786286,
+          0.011385834732472212,
+          0.0017377546848587721
+        ],
+        [
+          0.011385834732472212,
+          -0.08131697659573463,
+          0.00021405597918742157
+        ],
+        [
+          0.0017377546848587721,
+          0.00021405597918742168,
+          0.0029787154566961404
+        ]
+      ],
+      "radial_hard_eigenvalues": [
+        -0.04083781308472808,
+        0.0029671753207845034,
+        0.11020507234688195
+      ],
+      "relative_radial_insertions": [
+        -18.864839629393735,
+        -0.0067181813118968045,
+        0.2992620087287416
+      ],
+      "hard_scalar_kinetic_eigenvalues": [
+        0.0002636654577110141,
+        0.009688275503376571,
+        0.09009746118398262
+      ],
+      "common_finite_mass_CT": [
+        -0.0065092677278859555,
+        -0.07697804672048252,
+        -0.0003241025216766614
+      ],
+      "accepted_for_next_radial_audit": false,
+      "is_new_physical_benchmark": false
+    },
+    {
+      "z": 0.03,
+      "sigma": 0.5,
+      "vs": 0.25,
+      "tree_parameters": {
+        "a": 0.015,
+        "alpha": 0.0075,
+        "b": 0.012,
+        "beta": 0.003,
+        "c": -0.003,
+        "chi1": 0.024,
+        "chi2": 3e-05,
+        "chi3": 0.0015,
+        "chi4": 0.0009,
+        "chi5": 0.006,
+        "chi6": 0.00075,
+        "chi7": 0.0009,
+        "eta0": 0.006,
+        "eta1": 0.00075,
+        "eta2": 0.003,
+        "eta3": 0.0005399999999999999,
+        "gamma1": 0.0036,
+        "gamma2": -0.0021000000000000003,
+        "lambda0": 0.027,
+        "lambda2": 0.024,
+        "lambda4": 0.018,
+        "lambda4p": 0.012,
+        "mu2": 0.04333875,
+        "mus2": 0.006,
+        "nu2": 0.017775,
+        "xi02": 0.0042089398244320115,
+        "xi1": 0.010499999999999999,
+        "xi2": 0.0024,
+        "xi3": -0.006
+      },
+      "tree_tuning": {
+        "tunable": true,
+        "xi02": 0.0042089398244320115,
+        "minimum_at_xi02_zero": 0.0028933805951509013,
+        "zero_tolerance": 3e-07,
+        "physical_zero_count": 4,
+        "physical_negative_count": 0,
+        "nearest_positive_m2": 0.0016909141930316134,
+        "maximum_m2": 0.1290010104708869
+      },
+      "extra_zero_mode_classification": {
+        "rank": 4,
+        "field_weights": {
+          "Phi54": 1.797805809106085e-30,
+          "Sigma126": 4.198122661367369e-06,
+          "phi10": 0.9999958018773393,
+          "S": 1.60866459337213e-35
+        },
+        "casimir_eigenvalues": {
+          "SU3": [
+            1.274911745368808e-61,
+            3.788022656896847e-61,
+            7.08124747610092e-61,
+            1.0483193193233416e-60
+          ],
+          "SU2": [
+            0.7500000000000003,
+            0.7500000000000011,
+            0.7500000000000011,
+            0.7500000000000017
+          ],
+          "Y": [
+            0.24999999999999975,
+            0.24999999999999994,
+            0.2500000000000004,
+            0.25000000000000044
+          ]
+        },
+        "invariance_leakage": {
+          "SU3": 2.963923322583668e-15,
+          "SU2": 1.4747382003880856e-14,
+          "Y": 1.3092853693760877e-14
+        }
+      },
+      "tree_min_hard_mass2": 0.0016909141930316846,
+      "tree_radial_eigenvalues": [
+        0.0028933805951509035,
+        0.006529157603266155,
+        0.08516746180157662
+      ],
+      "radial_hard_Hessian": [
+        [
+          0.2702491053741413,
+          0.026005368110035308,
+          0.0017477174918180205
+        ],
+        [
+          0.026005368110035308,
+          -0.08632460440214731,
+          0.0005983863485387172
+        ],
+        [
+          0.0017477174918180205,
+          0.0005983863485387172,
+          0.0029793322071239377
+        ]
+      ],
+      "radial_hard_eigenvalues": [
+        -0.04406402686149476,
+        0.002969633956856107,
+        0.11351521681658117
+      ],
+      "relative_radial_insertions": [
+        -7.956108375186914,
+        -0.006631893862111259,
+        0.3360669295201678
+      ],
+      "hard_scalar_kinetic_eigenvalues": [
+        0.00025863951868960696,
+        0.011184529439071748,
+        0.09296438760567327
+      ],
+      "common_finite_mass_CT": [
+        -0.005678747729375367,
+        -0.1257090315590285,
+        -0.0005696034587191929
+      ],
+      "accepted_for_next_radial_audit": false,
+      "is_new_physical_benchmark": false
+    },
+    {
+      "z": 0.1,
+      "sigma": 0.3,
+      "vs": 0.25,
+      "tree_parameters": {
+        "a": 0.05,
+        "alpha": 0.025,
+        "b": 0.04000000000000001,
+        "beta": 0.010000000000000002,
+        "c": -0.010000000000000002,
+        "chi1": 0.08000000000000002,
+        "chi2": 0.0001,
+        "chi3": 0.005000000000000001,
+        "chi4": 0.003,
+        "chi5": 0.020000000000000004,
+        "chi6": 0.0025000000000000005,
+        "chi7": 0.003,
+        "eta0": 0.020000000000000004,
+        "eta1": 0.0025000000000000005,
+        "eta2": 0.010000000000000002,
+        "eta3": 0.0018,
+        "gamma1": 0.012,
+        "gamma2": -0.007000000000000001,
+        "lambda0": 0.09000000000000001,
+        "lambda2": 0.08000000000000002,
+        "lambda4": 0.06,
+        "lambda4p": 0.04000000000000001,
+        "mu2": 0.14206249999999998,
+        "mus2": 0.018080000000000002,
+        "nu2": 0.044849999999999994,
+        "xi02": 0.014705515749958573,
+        "xi1": 0.034999999999999996,
+        "xi2": 0.008,
+        "xi3": -0.020000000000000004
+      },
+      "tree_tuning": {
+        "tunable": true,
+        "xi02": 0.014705515749958573,
+        "minimum_at_xi02_zero": 0.007266964796253144,
+        "zero_tolerance": 3e-07,
+        "physical_zero_count": 4,
+        "physical_negative_count": 0,
+        "nearest_positive_m2": 0.003487801339315124,
+        "maximum_m2": 0.2832095187807592
+      },
+      "extra_zero_mode_classification": {
+        "rank": 4,
+        "field_weights": {
+          "Phi54": 8.081194129911094e-32,
+          "Sigma126": 8.625370614590381e-06,
+          "phi10": 0.9999913746293853,
+          "S": 1.1548520622484533e-34
+        },
+        "casimir_eigenvalues": {
+          "SU3": [
+            1.4521422424518775e-62,
+            1.9777331137265915e-62,
+            5.773747631279427e-62,
+            6.541910026992229e-62
+          ],
+          "SU2": [
+            0.7499999999999997,
+            0.7499999999999999,
+            0.7500000000000001,
+            0.7500000000000008
+          ],
+          "Y": [
+            0.2499999999999997,
+            0.2499999999999998,
+            0.25000000000000006,
+            0.25000000000000006
+          ]
+        },
+        "invariance_leakage": {
+          "SU3": 1.350648699635633e-15,
+          "SU2": 3.58368277290323e-15,
+          "Y": 3.0046930351440706e-15
+        }
+      },
+      "tree_min_hard_mass2": 0.0034878013393151194,
+      "tree_radial_eigenvalues": [
+        0.007266964796253056,
+        0.010423516422983335,
+        0.28320951878075934
+      ],
+      "radial_hard_Hessian": [
+        [
+          0.7140171173398155,
+          0.004647704310347634,
+          0.005591229330361099
+        ],
+        [
+          0.004647704310347627,
+          -0.397171001832604,
+          0.00016505380355493447
+        ],
+        [
+          0.005591229330361099,
+          0.0001650538035549347,
+          0.009829346696707052
+        ]
+      ],
+      "radial_hard_eigenvalues": [
+        -0.19859462134052275,
+        0.009784113749821563,
+        0.29756148559602935
+      ],
+      "relative_radial_insertions": [
+        -27.00003238045387,
+        -0.016568677916136226,
+        0.054077664514545716
+      ],
+      "hard_scalar_kinetic_eigenvalues": [
+        0.0008788848590345833,
+        0.0322942516779087,
+        0.30032487061327395
+      ],
+      "common_finite_mass_CT": [
+        -0.011197616923121568,
+        -0.4427162766602729,
+        -0.002279863121485654
+      ],
+      "accepted_for_next_radial_audit": false,
+      "is_new_physical_benchmark": false
+    },
+    {
+      "z": 0.1,
+      "sigma": 0.5,
+      "vs": 0.25,
+      "tree_parameters": {
+        "a": 0.05,
+        "alpha": 0.025,
+        "b": 0.04000000000000001,
+        "beta": 0.010000000000000002,
+        "c": -0.010000000000000002,
+        "chi1": 0.08000000000000002,
+        "chi2": 0.0001,
+        "chi3": 0.005000000000000001,
+        "chi4": 0.003,
+        "chi5": 0.020000000000000004,
+        "chi6": 0.0025000000000000005,
+        "chi7": 0.003,
+        "eta0": 0.020000000000000004,
+        "eta1": 0.0025000000000000005,
+        "eta2": 0.010000000000000002,
+        "eta3": 0.0018,
+        "gamma1": 0.012,
+        "gamma2": -0.007000000000000001,
+        "lambda0": 0.09000000000000001,
+        "lambda2": 0.08000000000000002,
+        "lambda4": 0.06,
+        "lambda4p": 0.04000000000000001,
+        "mu2": 0.1444625,
+        "mus2": 0.020000000000000004,
+        "nu2": 0.05925,
+        "xi02": 0.014029799414774027,
+        "xi1": 0.034999999999999996,
+        "xi2": 0.008,
+        "xi3": -0.020000000000000004
+      },
+      "tree_tuning": {
+        "tunable": true,
+        "xi02": 0.014029799414774027,
+        "minimum_at_xi02_zero": 0.009644601983836423,
+        "zero_tolerance": 3e-07,
+        "physical_zero_count": 4,
+        "physical_negative_count": 0,
+        "nearest_positive_m2": 0.005636380643437801,
+        "maximum_m2": 0.43000336823628976
+      },
+      "extra_zero_mode_classification": {
+        "rank": 4,
+        "field_weights": {
+          "Phi54": 3.694266340298776e-30,
+          "Sigma126": 4.1981226613673536e-06,
+          "phi10": 0.9999958018773389,
+          "S": 3.1117250102867995e-35
+        },
+        "casimir_eigenvalues": {
+          "SU3": [
+            9.339982813710585e-61,
+            2.0780749097199965e-60,
+            4.0579583565341935e-59,
+            4.315614282581746e-59
+          ],
+          "SU2": [
+            0.7499999999999999,
+            0.7500000000000002,
+            0.7500000000000003,
+            0.7500000000000006
+          ],
+          "Y": [
+            0.2499999999999999,
+            0.25,
+            0.2500000000000001,
+            0.2500000000000003
+          ]
+        },
+        "invariance_leakage": {
+          "SU3": 4.924704559614436e-15,
+          "SU2": 1.4827771667661997e-14,
+          "Y": 1.443606652116367e-14
+        }
+      },
+      "tree_min_hard_mass2": 0.005636380643438184,
+      "tree_radial_eigenvalues": [
+        0.009644601983836343,
+        0.021763858677553868,
+        0.2838915393385888
+      ],
+      "radial_hard_Hessian": [
+        [
+          0.720469512836338,
+          0.05420346819360856,
+          0.0057033497327677145
+        ],
+        [
+          0.05420346819360856,
+          0.1071360207958516,
+          0.0029595154581836484
+        ],
+        [
+          0.0057033497327677145,
+          0.0029595154581836484,
+          0.009836141957138366
+        ]
+      ],
+      "radial_hard_eigenvalues": [
+        0.00971366201018577,
+        0.051182000495961597,
+        0.3027041201973911
+      ],
+      "relative_radial_insertions": [
+        -0.016470898435105533,
+        0.055702891502744205,
+        1.4322991865134829
+      ],
+      "hard_scalar_kinetic_eigenvalues": [
+        0.0008621317289653544,
+        0.03728176479690573,
+        0.30988129201891085
+      ],
+      "common_finite_mass_CT": [
+        -0.011166402865080145,
+        -0.5794984090050398,
+        -0.002973608813212137
+      ],
+      "accepted_for_next_radial_audit": false,
+      "is_new_physical_benchmark": false
+    }
+  ],
+  "accepted_candidate_indices": [],
+  "selected_physical_benchmark": null,
+  "missing": [
+    "full nonradial one-loop stability and complete gauge/fermion momentum consistency",
+    "one-loop light-doublet retuning and actual new upper PS saddle/matching",
+    "two-loop gauge running and full thresholds at any reselected point"
+  ],
+  "old_matching_inputs_changed": false,
+  "physical_fit_enabled": false,
+  "cache": {
+    "hits": 10,
+    "new_Hessian_evaluations": 0
+  },
+  "source_sha256": {
+    "code/verify_p54_scalar_reselection.py": "629a3e0d2f949896edc37067df7063f52cdc873a68cfd97288188d95f408b5d7",
+    "code/verify_p54_p1_hessian_spectrum.py": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282",
+    "code/verify_p54_p2_bosonic_cw.py": "b596191a36b740c7b659981714fa3ae1ecad7932ce21bc92bc56594f2ed7255c",
+    "code/search_p54_hierarchical_p1.py": "36525f08aa8539bc01e977de261c60aa8257bd2da50ffbcd64af6fd227c00d11",
+    "code/verify_p54_common_renormalization.py": "d302ce675c1d4c940d98dd102ce48dffe067f4eec9c65f5aa11f4323158b56ca",
+    "code/verify_p54_upper_scalar_matching.py": "a3ca8eab079f837d823d3f59938327ea6a0621d98b32c9cf0cd057f48e64f67d",
+    "output/p54_full_doublet_cw.json": "e422ade78b283e7baecdc1eb80523aad2ec3a48e7ad58a0623ba827b980eb6c6",
+    "output/p54_goldstone_ir.json": "1c1eee4a9a02d6b930d7e9aa09d41eb272920eae6643489f798d3ace65144a4a"
+  },
+  "checks": [
+    {
+      "name": "z0.03_sigma0.3_stationary",
+      "residual": 3.745036801453456e-18,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_exact_polynomial_tree_Goldstones",
+      "residual": 3.704455063254637e-15,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_38_zero_modes",
+      "residual": 5.751497247324042e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_positive_tree_complement",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_one_complex_doublet_rank",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_doublet_Casimir_SU3",
+      "residual": 1.3652796773907181e-61,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_doublet_Casimir_SU2",
+      "residual": 9.930136612989087e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_doublet_Casimir_Y",
+      "residual": 3.466670283279959e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.3_common_fixed_VEV_condition",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_stationary",
+      "residual": 1.1240887918208864e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_exact_polynomial_tree_Goldstones",
+      "residual": 1.7499843325983814e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_38_zero_modes",
+      "residual": 1.7085206788874557e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_positive_tree_complement",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_one_complex_doublet_rank",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_doublet_Casimir_SU3",
+      "residual": 1.3267099191310973e-60,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_doublet_Casimir_SU2",
+      "residual": 1.5419270790554372e-15,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_doublet_Casimir_Y",
+      "residual": 6.431871827503859e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.03_sigma0.5_common_fixed_VEV_condition",
+      "residual": 1.3985787785349405e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_stationary",
+      "residual": 6.190986653168085e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_exact_polynomial_tree_Goldstones",
+      "residual": 1.2238063789108849e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_38_zero_modes",
+      "residual": 2.966892324741783e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_positive_tree_complement",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_one_complex_doublet_rank",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_doublet_Casimir_SU3",
+      "residual": 9.063823358407317e-62,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_doublet_Casimir_SU2",
+      "residual": 5.73316704659901e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_doublet_Casimir_Y",
+      "residual": 3.7030556577017743e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.3_common_fixed_VEV_condition",
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_stationary",
+      "residual": 1.8809579732426032e-17,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_exact_polynomial_tree_Goldstones",
+      "residual": 5.822999215639551e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_38_zero_modes",
+      "residual": 5.671037216789011e-14,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_positive_tree_complement",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_one_complex_doublet_rank",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_doublet_Casimir_SU3",
+      "residual": 5.928191979059836e-59,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_doublet_Casimir_SU2",
+      "residual": 4.622227044373277e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_doublet_Casimir_Y",
+      "residual": 3.188872858294072e-16,
+      "tolerance": 2e-08,
+      "pass": true
+    },
+    {
+      "name": "z0.1_sigma0.5_common_fixed_VEV_condition",
+      "residual": 3.469446951953614e-18,
+      "tolerance": 2e-08,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 36,
+    "total": 36,
+    "all_pass": true
+  }
+}

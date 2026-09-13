@@ -1,7 +1,7 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-09-05
+Last updated: 2026-09-14
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
@@ -54,6 +54,606 @@ layer_P_conditional_closure_independent_of_U = true
 ```
 
 ## Layer P -- four-dimensional testable mainline
+
+### P-INV1: invariant attribution, inverse-gap obstruction and radial fermions (`scalar audit done; no controlled replacement`; 2026-09-14)
+
+This supersedes the **next-step instructions** of P-IR1, not its results.
+The unchanged P54PQ-v2 action has now been decomposed invariant by
+invariant, on the original real-coupling radial slice. No observed mass
+or flavor objective was fitted. No default parameter or old matching
+trajectory was overwritten. The phrase original point refers to the
+broken background `r=(1,.1265,.25)`, not the symmetric field origin.
+
+Artifacts:
+
+- `code/verify_p54_invariant_decomposition.py`, JSON/Markdown: **445/445**.
+  All 29 coefficient directions, full ordered interference tensors,
+  seagull/common-CT pieces and signed allocations are retained.
+- `code/verify_p54_nonuniform_reselection.py`, JSON/Markdown: **183/183**.
+  Six first-stage nonuniform cards, own spectra and tadpoles, necessary
+  pure-H BFB gates, and independent final-action jet checks.
+- `code/verify_p54_joint_portal_probes.py`, JSON/Markdown: **36/36**.
+  Two explicitly declared second-stage joint mixed-coupling cards;
+  zero new Hessians, not an adaptive optimizer.
+- `code/verify_p54_transverse_gap_obstruction.py` and its reports:
+  **112/112**, the two reducing scalar blocks and conditional inverse-gap
+  bound. Both explicit sparse integer projectors and all 29 unit-action
+  residuals are retained, with 27 cache-content hashes.
+- `code/verify_p54_radial_fermion_momentum.py`, JSON/Markdown: **56/56**;
+  `notes/p54_gauge_fermion_momentum_audit.md`.
+- Full derivation: `tex/p54_invariant_attribution_nonuniform_control.tex`
+  and PDF under `output/pdf/`.
+
+The five new verifiers total **832/832** passing algebra/regression
+checks; that includes correctly rejecting all eight engineering cards.
+All **49/49** recorded source-hash entries match current files. The
+eight-page PDF was compiled without overfull/undefined-reference warnings
+and visually checked on every page. Python compilation and
+`git diff --check` pass. No commit or push was requested in this step.
+
+**What changed in our understanding.**
+
+1. Multihomogeneity reconstructs every radial `H,T,U` block from a single
+   unit-coefficient Hessian. The first build used 27 unit Hessians plus
+   one new independent full-action radial point; `xi1,xi2` have algebraic
+   zero radial jets. This is an exact polynomial method, not a fitted
+   mass formula. It includes real/imaginary field coordinates, but new
+   imaginary coupling directions still need their own basis.
+2. At the original point, `lambda2,lambda4,lambda4p` carry **94.11%** of
+   the leading scalar kinetic insertion and **96.13%** of the negative
+   canonical-sigma scalar-plus-CT curvature in the declared equal-share
+   interference ledger. The kinetic self terms sum to only **0.9071**,
+   versus the full **2.6103**: interference cannot be dropped. These
+   basis-dependent allocations are not separate observables or total
+   parameter derivatives. Mass terms have zero vertex allocations but
+   still determine propagators.
+3. The three transverse quartics do not stiffen the tree radial
+   potential, whereas `H_tree[sigma,sigma]=2 lambda0 sigma^2`. Nevertheless
+   reducing them alone is not a repair: the small propagator gap exposes
+   the still-large mixed-field vertices. From `tau=.1` to `.03`, the
+   minimum hard gap falls `.00883111 -> .00267622 omega^2`, the leading
+   canonical-Phi fraction rises `.667676 -> .824065`, and `rho_Z` rises
+   `.713427 -> 1.099954`.
+4. There is a conditional analytic explanation, not just a scan:
+   pure-Sigma reducing blocks of ranks 50 and 36 have
+   `m^2=(12,11.6) tau sigma^2`, while their fixed-parameter `T_w=.36`
+   stays nonzero. The stationary mass counterterm relation cancels
+   static portal contributions, **not their fluctuation derivatives**.
+   Positive scalar-pair weights imply `rho_Z >= .01294651897/tau`;
+   a fixed three-component witness strengthens it to
+   `rho_Z >= .01471609503/tau`. Thus `tau<.04905365` fails the `.3`
+   scalar engineering margin on this ray under those identities.
+   Integer-over-eight projector algebra is exact; the action-to-block
+   identities have strong numerical verification, **not yet a symbolic
+   or interval certificate**. This is not an unconditional whole-model
+   exclusion, nor a bound on the complete gauged pole kernel.
+5. All **eight** nonuniform cards fail control. In the second stage,
+   `lambda0=.2`, transverse quartics/chi4 multiplied by `.01`, and
+   alpha/beta/chi2 by `.1` give, at `sigma=.5`, a positive lowest hard
+   radial curvature `.0229910 omega^2`, but `rho_H=.538986` and
+   `rho_Z=1.89903`. Positive curvature alone remains insufficient.
+6. A structural blind spot is now explicit: changing `xi1` to a negative
+   value leaves all these radial jets unchanged but makes the classical
+   potential unbounded on a complex-null H direction. Necessary gates
+   `xi1>=0`, `xi1+xi2>=0` are implemented. Complete mixed-field BFB,
+   flat-direction lower-degree terms and competing vacua remain open.
+7. The radial fermion subset no longer needs a global family fit:
+   with three input Takagi masses `M_i=sigma f_i`, only the sigma-sigma
+   entry is nonzero,
+   `Pi_F^FV(s)=-sum[(M_i/sigma)^2(4 M_i^2+s)L(M_i^2,M_i^2;s)]/(16 pi^2)`.
+   Its finite kinetic derivative and old Majorana cap are independently
+   verified. Synthetic mass cards are not fitted physical families.
+   The full nonradial fermion kernel still needs the complex Yukawas.
+8. The explicit background gauge fixing produces a derivative mixed
+   vertex `W=-2g T^a partial_mu X`. Its scalar-vector bubble cannot be
+   recovered by differentiating the constant-background CW spectrum.
+   Actual vector mass first/second vertices are now saved, but the
+   finite vector/mixed integrals, dimensional rational terms and
+   finite-xi/Nielsen consistency remain unfinished. Direct scalar ghost
+   vertices may vanish in this strict Landau fixing; that does not close
+   the general ghost/matching audit.
+
+**Next priority -- bounded, not another blind scalar scan.**
+
+1. Complete the same-prescription radial vector/scalar-vector momentum
+   integrals with the already constructed vertices, common counterterms
+   and finite-xi/BRST/Nielsen checks; combine with the existing scalar
+   and exact radial fermion subsets. Determine the relevant physical
+   block before interpreting poles or residues.
+2. In parallel, obtain a symbolic/interval certificate for the two
+   reducing action blocks. Use their vertex-to-gap criterion to design
+   any further change; alternatively test an EFT retaining the light
+   blocks explicitly with consistent momentum power counting. Merely
+   weakening tau further, absorbing a large finite Z, or integrating out
+   these blocks without checking the expansion does not prove control.
+3. Any future candidate also needs mixed BFB/global-vacuum comparison,
+   full nonradial stability, loop light-doublet retuning and its own
+   running/thresholds. **No replacement benchmark or physical fit is
+   promoted.** Full Wilson/box, lower gauge/ghost/Yukawa matching and the
+   complete finite seesaw including `C_HN` remain open.
+
+### P-IR1: actual Goldstone/IR audit, scalar momentum and bounded reselection (`scalar subgate done; no controlled replacement point selected`; 2026-09-13)
+
+The requested first test was performed at the **unchanged original P54
+action and scalar point**, with its common fixed-VEV DR/MSbar Landau
+prescription. Only after a quantitative control failure was established
+were four separate engineering parameter cards tested. The model's
+operators/family content, default parameters and old matching trajectories
+are not modified. This checkpoint does not close full gauged background
+stability, physical pole masses or the finite matching chain.
+
+Artifacts:
+
+- `code/verify_p54_goldstone_ir.py` and its JSON/Markdown reports:
+  **65/65** checks;
+- `code/verify_p54_scalar_reselection.py` and its JSON/Markdown reports:
+  **36/36** checks;
+- detailed derivation: `tex/p54_goldstone_ir_background_control.tex`
+  and its PDF under `output/pdf/`.
+
+Both verifiers reuse the ten existing polynomial Hessian cache entries;
+**zero new full Hessian evaluations** are needed. Scalar momentum
+integrals use actual degenerate mass blocks, with independent integral
+and quadrature checks. These are not fitted mass formulas. Test success
+includes correctly rejecting physical promotion.
+
+The six-page PDF was compiled and visually checked on all pages, with no
+remaining overfull-box or unresolved-reference warnings. All 15 source-hash
+entries in the two reports match current files; `git diff --check` passes.
+
+**What the Goldstone test closes and what it does not:**
+
+1. For an invariant functional, `H T X = T grad V`. Applying this to
+   the same hard functional and common counterterms fixes the entire
+   34-dimensional Goldstone shift: the two contributions cancel, with
+   matrix residual `7.8e-15 omega^2`. The actual radial cubic tensors
+   independently satisfy the differentiated Ward identity. A positive
+   Goldstone mass cannot be introduced as a free repair parameter.
+2. The soft one-loop tadpoles vanish as `epsilon log(epsilon)`, but the
+   potential Hessian contains `B log(epsilon/mu0^2)` with
+   `B_rs=Tr[(Q^T T_r Q)(Q^T T_s Q)]/(32 pi^2)`, a positive Gram matrix.
+   Its projection on the old negative witness is `0.000313131 omega^2`;
+   this does **not** say that every component of B is small. Restoring
+   these modes does not give a finite positive mass correction. The
+   zero-momentum full Hessian remains IR singular.
+3. The complete one-loop **scalar** momentum dependence on the radial
+   slice is now evaluated from cubic/quartic vertices, including all
+   hard/soft pairs. At nonzero Euclidean momentum the singular log is
+   replaced by `log(pE^2/mu0^2)-2`; regulator cancellation is explicit.
+   This is not the complete gauge/ghost/fermion pole kernel. The old
+   zero-momentum vector term is retained only in labelled diagnostics.
+   Neither their low-momentum negative eigenvalues nor high-momentum
+   positive eigenvalues decide the physical pole/background question.
+4. The hard scalar kinetic correction relative to the tree radial metric
+   has eigenvalues `(0.00900848,0.27686405,2.61031989)`. Thus the original
+   scalar small-insertion expansion fails in this prescription even
+   apart from the zero-momentum IR problem. Exact canonical normalization
+   alone does not bound omitted orders or change a curvature's inertia.
+   Full two-loop Goldstone resummation is not declared complete.
+
+**A repair direction is now ruled out analytically, not by scanning.**
+For `V0 -> z V0` with all existing scalar coefficients scaled, but the
+old radii, gauge coupling and matching scale fixed,
+
+```text
+H_hard(z) = z H_tree + z^2 (S + log(z) L_S) + V
+deltaZ_scalar,h(z) = z deltaZ_scalar,h(1).
+```
+
+The sigma coordinate obeys, for every `0<z<=1`,
+`H_sigma,sigma(z)/omega^2 <= 0.02880405 z - 1.54130008 z^2 - 0.00402215`
+`<= -0.00388757 < 0`. The omitted logarithmic term is nonpositive.
+This excludes the **entire bosonic uniform-weakening ray**, not general
+scalar choices or fermionic corrections at new points.
+
+**Actual bounded reselection attempt -- no accepted point.**
+Four coarse `(z,sigma/omega)` choices were tested: `(.03,.3)`,
+`(.03,.5)`, `(.1,.3)`, `(.1,.5)`, with `w=1`, `vs=.25`. Each has its
+own re-solved dependent mass parameters, tree light-doublet condition,
+full ambient tree spectrum, actual Goldstone/SM Casimir classification,
+new finite tadpoles and hard radial/kinetic matrices. No observation
+enters the selection. Three have a negative hard radial eigenvalue.
+The fourth has minimum `+0.00971366 omega^2`, but its maximum relative
+radial insertion is `1.4323` and hard kinetic correction `0.30988`, so
+it also fails control. The declared `0.3` engineering margin is not a
+convergence theorem; the fourth point already fails the weaker mass
+insertion criterion `<1`. Its positive spectrum is not promoted.
+All parameter cards and rejections are saved; no replacement physical
+benchmark is selected. Changing sigma would also require recomputing,
+not reusing, the historical P2 unification/threshold solution.
+
+**Revised next options:**
+
+1. Before another parameter search, decompose the independent scalar
+   invariants' contributions to the basis-invariant relative mass and
+   kinetic corrections, particularly the independent 126 quartics.
+   Test nonuniform coupling changes against both quantities, not just
+   the signs of selected masses or the sizes of bare couplings.
+2. To decide the physical fate of the original point, complete the
+   same-prescription vector/Goldstone/ghost mixed and fermionic momentum
+   maps with Nielsen consistency. The computed scalar subset alone
+   is insufficient; the original point has not been excluded to all orders.
+3. Only a controlled common point can feed a recomputed full nonradial
+   response, loop light-doublet condition, upper PS saddle and running/
+   thresholds. Full Wilson/box, lower gauge/ghost/Yukawa matching and
+   finite CHN seesaw remain open. Their formal work need not wait for
+   physical promotion, but physical flavor fit remains disabled.
+
+### P-REN1: same-bare transport, radial obstruction and CHN operator closure (`scheme algebra done; frozen hard benchmark fails stability; full matching open`; 2026-09-12)
+
+This is the current checkpoint for the requested order **common parameters
+and tadpoles before complete Wilson/box, lower matching and finite seesaw**.
+It changes the assessment of the existing scalar point without changing
+the P54PQ-v2 action, scalar parameters or two UV family matrices. The
+following are bounded completed calculations, not completion of that chain:
+
+- `code/verify_p54_common_renormalization.py`: **46/46** checks;
+- `code/verify_p54_chn_threshold_closure.py`: **20/20** checks;
+- strengthened `code/verify_p54_finite_yukawa_interface.py`: **18/18**;
+- existing upper-vector matching regression/source inventory: **38/38**;
+- complete derivations: `tex/p54_common_renormalization_radial_bound_chn.tex`
+  and its PDF in `output/pdf/`; numerical matrices, checks and source
+  hashes are in the corresponding JSON/Markdown reports.
+
+The seven-page PDF was compiled and visually checked on every page;
+no overfull-box or unresolved-reference warnings remain. All 24 recorded
+source-hash entries in these four reports match current files. The 122
+checks include successful detection of a failed physical stability
+condition; they are not 122 passed physical acceptance conditions.
+
+**Common parameter/tadpole transport -- algebra closed, physical control open.**
+The dependent mass parameters obey `p_MS = p_fixed + delta_p` at one loop
+for the same bare action. The finite shifts, in units of omega squared,
+are `(-0.05633071, -5.46974409, -0.03423771)` for `(mu2,nu2,mus2)`.
+The complex-126 factor of one half is required and passes independent
+radial/phase normalization checks. Removing its large counterterm at the
+old numerical input is **not** a scheme conversion. Tree backgrounds,
+mass kernels and Wilson responses must also transform: if
+`q=f(p)+Delta`, `p'=p+a`, `q'=q+b`, then
+`Delta'=Delta+b-Df*a`. The actual upper scalar-exchange response obeys
+this identity, including the induced tree-valley displacement.
+The broken MS tree displacement and explicit-loop displacement cancel
+formally at first order. Their large individual coefficients do not
+justify a small finite displacement or a resummed physical MS benchmark.
+Tiny formal loop-parameter continuations test this identity only.
+
+**New physical working-point obstruction -- not a decimal-level fit issue.**
+The previously untested physical radial block has metric
+`G=diag(12/5,2,1)`. The bosonic hard-plus-common-counterterm generalized
+mass squares are `(-0.758448, 0.094119, 3.093105) omega^2`.
+The negative direction is orthogonal to the actual gauge orbit and PQ
+phase; doublet retuning has zero radial projection. Full spectral finite
+differences at two steps verify the radial Fréchet Hessian. Large scalar
+multiplicities dominate the effect; no spectrum formula is fitted.
+
+For the actual radial fermion tensor, only the three masses
+`M_i=sigma*f_i` are nonzero. Their fixed-VEV one-loop radial correction is
+
+```text
+F_sigma,sigma = -4 sum_i M_i^4 log(M_i^2/mu0^2)/(16 pi^2 sigma^2)
+             <= 6 mu0^4/(e 16 pi^2 sigma^2)
+             = 0.08751124 omega^2.
+```
+
+The bound is analytical for every three-family Yukawa matrix, not a
+sampling bound. Even adding the maximal positive correction leaves a
+negative generalized eigenvalue `-0.7146953 omega^2`. Thus a subsequent
+family fit cannot rescue **this fixed-point one-loop hard-potential
+truncation**. This is not an all-orders, soft-IR-complete or
+gauge-independent pole-mass exclusion of the Spin(10) theory. The earlier
+doublet-only positivity and the 6.76 upper insertion warning remain
+historical subset results, not whole-background stability certificates.
+
+**CHN finite subset and sequential operator closure.**
+For `M(rho)=M-2 C_HN rho`, the direct linear-CHN Yukawa bubble gives
+`deltaY = 2 Y diag[M_i(1+log(mu^2/M_i^2))] C_HN/(16 pi^2)` in a positive
+Takagi chart. Its terminal C5 contribution and finite Higgs-mass tadpole
+are calculated at leading `qH=0`; integral, RG, determinant and complex
+family-covariance checks pass. These are not the complete finite seesaw
+coefficients. At a partial threshold, exact field-dependent elimination
+also gives `D6=2 Y_h M_h^-1 C_hr` multiplying
+`-D6 (LH) N_r (Hdagger H)+h.c.`. Its mass down-mixing
+`2(D6 M_r Y_r^T + Y_r M_r D6^T)/(16 pi^2)` closes a specific mixed-block
+RG residual. The retained-line bubble belongs to the EFT subtraction,
+not a second hard matching contribution.
+
+Existing synthetic-family trajectories develop nonzero mixed CHN
+Takagi entries despite input alignment with MR; their first two D6
+norms are nonzero. No new terms were silently applied to these old
+trajectories. A further controlled expansion in `M_r/M_h` can place this
+feedback beyond leading dimension-five accuracy. Without that additional
+hierarchy approximation, retained-mass finite matching needs the generated
+operator or a remainder bound. No physical fitted-trajectory bound or
+full dimension-six anomalous-dimension system is claimed.
+
+**Remaining order and explicit acceptance gates:**
+
+1. Keep the action and resolve background/control consistently: organize
+   the scalar/Goldstone IR contribution and momentum/gauge treatment in
+   the same parameter prescription. Do not delete the counterterm or
+   delegate the failed radial block to flavor fitting. If this point
+   cannot support a controlled background, a separately declared,
+   consistently reselected scalar point is needed; none is chosen here.
+2. Complete the source-dependent Wilson/box and lower gauge/ghost/Yukawa
+   functional in that common convention. Formal diagram/operator work
+   can proceed independently of physical background promotion; its
+   algebraic completion must not be mistaken for a viable spectrum.
+3. Close finite seesaw using either an enlarged basis with retained-mass
+   feedback or an explicitly justified hierarchy expansion. Correlated
+   finite MR, lambda, nonzero-qH, wave-function, pre-existing-C5 and mixed
+   diagrams remain open. Only then return to the full light state/fit.
+
+The shared fit consumer now additionally requires
+`common_parameter_tadpole_consistency`, `full_background_stability`,
+`mass_operator_control`, and `CHN_operator_closure`; a payload containing
+all the older flags but missing these is rejected. Physical fit remains
+disabled. No new vacuum/lattice scan, UV parameter, action change, commit
+or push is made in this checkpoint. Only three new mixed polynomial
+radial Hessians were required; subsequent verification reuses their cache.
+
+### P-MATCH-SCALAR2: common tadpole anchor, scalar/Wilson subsets and finite seesaw (`subgates done; full matching and control open`; 2026-09-11)
+
+This checkpoint advances the requested upper scalar/tadpole/Wilson,
+lower finite matching and sequential seesaw chain. It **does not finish
+the entire chain**. The P54 action, scalar parameter point and two UV
+family matrices remain unchanged. No new lattice or vacuum scan was
+performed. Missing cubic/quartic action vertices were obtained by exact
+central differences of the polynomial Hessian, cached separately from
+the original read-only Hessian cache; this is not fitting a spectrum.
+
+Artifacts and bounded validation:
+
+- `code/verify_p54_upper_scalar_matching.py`: **14/14**;
+- `code/verify_p54_upper_wilson_exchange.py`: **16/16**;
+- `code/verify_p54_lower_scalar_finite_subtraction.py`: **22/22**;
+- `code/verify_p54_finite_seesaw_matching.py`: **24/24**;
+- corresponding JSON/Markdown records in `output/`;
+- `tex/p54_scalar_tadpole_wilson_seesaw_matching.tex` and its PDF;
+- original default sequential-seesaw evolution rerun: **46/46**, refreshing
+  its tree-threshold report/source hash (separate from the finite report).
+
+The nine-page PDF was compiled and visually checked on every page;
+no overfull-box or unresolved-reference warnings remain. The five
+reported source-hash inventories match the current files (122/122
+combined new/default-regression checks).
+
+**New findings that change the next decision:**
+
+1. Eight PS-invariant real bilinears reconstruct the full **248 by 248**
+   scalar-cubic hard kinetic and seagull/bubble mass kernels. Both
+   heavy-heavy and heavy-soft lines are included at leading retained-mass
+   hard order, including the upper Landau Goldstones. Independent phase/
+   parent probes, a second polynomial step and all PS Ward commutators
+   validate the reconstruction. Scalar kinetic eigenvalues range from
+   `0.0000938883` to `0.00450338`. This is not a retained-mass error bound.
+2. The historical **broken-vacuum fixed-VEV counterterms are one common
+   prescription**, not permission to set both backgrounds' tadpoles to
+   zero independently. At their exact common scale
+   `mu0/omega=0.5626028899853225`, the upper hard-plus-bosonic-CT radial
+   tadpole is `(0.09810775,0.00660187) omega^3`. Its linear heavy-valley
+   response is `(-0.01393190,-0.05559093) omega` in `(w,vs)`, about 22%
+   of the upper `vs`. This is a factorizable hard matching insertion,
+   **not the full quantum upper saddle**: retained EFT tadpoles,
+   fermionic fixed-VEV counterterms and the final light retuning are absent.
+3. All **24 Yukawa-coupled upper real six modes**, including ten real
+   invariant mass mixings, now enter the factorizable scalar-exchange
+   response `delta C = delta J^T D^-1 J + J^T D^-1 delta J
+   - J^T D^-1 delta D D^-1 J`. Scalar/vector mass diagrams, the common
+   bosonic CT and heavy-valley response accompany the previous proper
+   Yukawa/vector vertices and fermion legs. Heavy scalar normalization
+   cancels between D and J and must not be counted twice.
+4. **A substantive control warning:** the computed subset has
+   `rho(D^-1/2 deltaD D^-1/2)=6.755926`, with eigenvalue range
+   `[-0.131468,6.755926]`. Its inverse-kernel Neumann series therefore
+   fails at unit loop parameter, although the resummed subset mass is
+   positive. The two synthetic source-projection ratios, `0.0441` and
+   `0.3605`, do not certify control of the full propagator. This does not
+   exclude the full model, since diagrams, parameter feedback and
+   retained-mass corrections are missing. **Do not promote this point
+   to a fit or present a selective resummation as a prediction.** Passing
+   the algebra tests does not mean this perturbative-control test passes.
+   On the dominant normalized mass direction the scalar, vector,
+   common bosonic CT and valley contributions are respectively
+   `(-0.538946,-0.016987,+7.346374,-0.034515)`: the transported finite
+   counterterm dominates, not decimal-level loop-kernel error. These
+   are contractions on one common direction, not separate eigenvalues.
+5. At the actual lower broken background, the exact 303-dimensional
+   scalar quotient determinant factorizes into the 55-dimensional
+   heavy block and the nonlocal PS kernel. Its finite MSbar nonlocal-minus-
+   local-two-derivative vacuum contribution is
+   `-4.652429862e-5 omega^4`, with independently verified scale derivative
+   and broken-PS covariance. This constant-background **scalar** result
+   is not a full gauge/ghost/source functional. It demonstrates why a
+   local kinetic truncation cannot simply replace the nonlocal kernel
+   inside a loop integral; the corresponding Wilson subtraction is needed.
+6. The canonical terminal type-I finite C5 formula is implemented and
+   checked against its full beta difference, but **rejects actual P54
+   input** with nonzero CHN/type-II C5. For that input only the universal
+   gauge/quartic finite C5 term is now applied at each moving Takagi
+   block, retaining CHN in the running/tree map. Two existing synthetic
+   families have three live thresholds; relative C5 shifts versus tree
+   thresholds are `0.00221120` and `0.00224041`. These are not physical
+   fits, neutrino predictions or calibrated matching errors.
+
+**Next order / exact remaining scope:**
+
+1. Resolve the common tadpole/parameter and full mass-operator control
+   issue, alongside upper source-dependent scalar three/four-point
+   Wilson vertices and nonfactorizable boxes/direct-vector operators.
+   The large insertion requires diagnosis of missing contributions and
+   the common renormalized parameters. If it persists after completion,
+   compare a consistently converted prescription or reject the benchmark;
+   do not change the action or fit isolated mass formulas by default.
+2. Complete the lower source-dependent hard-minus-EFT finite functional:
+   derivatives of the scalar contribution, gauge/ghost/Goldstone package,
+   Yukawa/kinetic/contact operators, tree/loop Wilson insertions and
+   controlled retained-mass dependence. Do not relabel the constant
+   scalar determinant subtraction as full covariant finite matching.
+3. Complete finite seesaw with actual CHN and pre-existing C5 insertions,
+   mixed removed/retained sterile graphs and correlated finite
+   Yukawa/MR/Higgs/wave-function maps. The canonical terminal limit and
+   block beta-difference tests are regressions, not substitutes.
+4. Only then solve the common-prescription complete complex fermionic
+   light eigenstate, single-light-doublet retuning and positive heavy
+   block, followed by a constrained two-spurion global fit.
+
+`full_upper_Wilson_matching=false`, `full_lower_matching=false`,
+`full_P54_finite_seesaw_matching=false`, `physical_fit_enabled=false`.
+The computed bosonic mass subset additionally has
+`Neumann_series_converges_at_unit_loop_parameter=false`.
+No commit or push was requested or performed in this checkpoint.
+
+### P-MATCH-KJC1: one-loop source transport and upper vector contribution (`subgates done; full matching open`; 2026-09-11)
+
+The next matching step preserves the frozen action and separates **complete
+transport algebra** from **incomplete diagram content**. Artifacts:
+
+- `code/verify_p54_upper_vector_matching.py`, `output/p54_upper_vector_matching.{json,md}`;
+- `code/verify_p54_kjc_finite_matching.py`, `output/p54_kjc_finite_matching.{json,md}`;
+- `tex/p54_source_preserving_finite_matching.tex` and its eight-page PDF.
+
+The actual upper stationary PS background, not the lower broken vacuum,
+is used throughout. Its 24 coset vectors have `M_V^2=0.317035178968` in
+the historical reference units. The DR/MSbar background-field Landau
+calculation closes the **upper heavy-vector active Yukawa vertex,
+fermion kinetic metric and vector--scalar active kinetic contribution**
+at leading retained-mass order; **38/38** checks pass. The dimensionally
+finite numerator constants are retained before subtraction. Actual
+Clifford/real-scalar state sums reproduce coset Casimirs `CF=3`,
+`CS(H,F,L,R)=(3,7,6,6)` and the complete removed-vector beta difference.
+This does not close all gauge-dependent potential or Wilson matching.
+
+New results that must not be repeated or discarded:
+
+1. The vector--scalar metric generates **mirror H/F Yukawa increments**,
+   in addition to the earlier pure-Yukawa cubic-spurion mirrors. Their
+   coefficients in the fixed mirror basis are
+   `+0.0001280086893 i h_raw` and `-0.0003536675766 i f_raw`.
+   Six PS invariants remain necessary; their coefficients are determined
+   by two UV spurions, not new free family matrices.
+2. The earlier same-colour diquark probes do not see the upper triplets
+   because their antisymmetric colour contractions vanish. Adding the
+   actual `uc(colour1)dc(colour2)` and `uL(colour1)dL(colour2)` vertices
+   gives 36 real source slots and nonzero upper induced **delta C**.
+   This extends a deliberately restricted probe set; it is not a claim
+   that the earlier P-SPEC1 channel ledger was a complete operator basis.
+3. Differentiating exact Gaussian elimination transports all of
+   `(delta K,delta J,delta C)`. Actual upper `304 -> 249 -> 129` transport,
+   direct and reversed order, canonical normalization and finite
+   differences pass **108/108**. The extra elimination of whole L/R
+   parents is an off-shell algebra regression, not a physical upper-scale
+   decoupling. No source-free mass-only matching is promoted.
+4. The unnormalized K carrier must not also contain scalar external-leg
+   normalization in J. Canonicalization transports the curvature and J
+   together. Double-counted scalar legs and dropped induced delta C are
+   detected. The contribution composer rejects mismatched backgrounds,
+   scales, source bases and prescriptions, plus duplicate diagrams.
+
+`verify_p54_finite_yukawa_interface.py` now has a shared fail-closed fit
+guard requiring full upper/lower KJC, all-six PS evolution, finite
+sequential seesaw, complete fermionic light feedback, and retained-mass
+error control, in addition to the existing requirements. Its canonical
+algebra still passes **17/17**. These metadata guards do not prove a
+diagram inventory complete. The existing upper pure-Yukawa verifier was
+also rerun in memory and remains **44/44**, without overwriting its
+historical numerical report. The geometry reader accepts an optional
+read-only cache directory; no Hessian or lattice scan was recomputed.
+The compiled eight-page PDF was rendered and visually checked on every
+page; no unresolved references or overfull-box warnings remained.
+
+**Remaining limits / next order:**
+
+1. Complete upper scalar-cubic kinetic, source-dependent potential,
+   fixed-VEV counterterms and Wilson/operator matching in this same PS
+   chart. The vector bubble keeps all eliminated scalar masses, but
+   retained masses are expanded: `max |m_retained^2|/M_V^2=0.328605`.
+   Establish a remainder bound or add the required higher orders before
+   assigning precision-fit accuracy.
+2. Complete the lower covariant **hard minus EFT** finite functional,
+   including contact/box operators, and the finite sequential seesaw map.
+   Do not add a broken-background one-step scalar metric to the upper PS
+   threshold. A limited scalar-current response does not replace a full
+   gauge/Lorentz operator basis or complete scattering amplitudes.
+3. Only after that, solve the same-prescription full complex fermionic
+   light eigenstate with one retuning and positive heavy block, then the
+   constrained two-spurion global fit. The precise generalized eigenstate
+   and first-order retuning formulas are recorded in the new TeX.
+
+`full_finite_matching_complete=false`, `physical_fit_enabled=false`.
+The KJC algebra and this vector subset are closed, but the requested
+complete matching -> full light state -> physical fit chain is **not**
+finished. No missing finite term is set to zero for that chain. No commit
+or push was requested or performed in this checkpoint.
+
+### P-SPEC1: common spectrum and interaction-defined channels (`tree subgate done`; 2026-09-10)
+
+The adopted energy-spectrum interpretation preserves P54PQ-v2, its
+stationary benchmark and its two correlated UV family matrices. Description
+layers denote retained field coordinates, **not** extra spatial dimensions.
+No mechanical rotation, helix, arbitrary observation projector, new scalar
+parameter or lattice scan is introduced. The next physical matching gates
+below remain open; this entry is not an alternative flavor fit.
+
+Artifacts:
+
+- `code/verify_p54_spectral_channels.py`;
+- `output/p54_spectral_channels.{json,md}` and generated numerical TeX table;
+- `tex/p54_spectral_channels_nested_elimination.tex` and its PDF.
+
+The verifier passes **153/153**, reading the existing content-addressed
+Hessians without recomputation. It uses the **exact tree** light doublet,
+not the mixed-order bosonic-improved ray. The 33 real current slots consist
+of the actual `HdaggerH` cubic source, real/imaginary h/f coefficients for
+seven fixed fermion-component pairs, and four complete-eigenspace-averaged
+vector-pair mass vertices. The Yukawa coefficients retain their unknown
+family spurions explicitly. All SM intertwiner Ward identities and the
+component hypercharge selection rules are checked; coloured examples use
+declared matched components, not every possible colour channel.
+
+After excluding 33 eaten directions, all **295 physical real scalar modes**
+are kept, including the four tree Higgs zeros and the physical PQ zero.
+The artifact exports 24 mass-eigenvalue clusters and full cross-channel
+residues `R_lambda=J^T Pi_lambda J`, with positivity and two spectral-moment
+checks. The declared current set has source rank 19 and generates a
+**21-dimensional H-invariant observable subspace**, seeing 12 pole clusters.
+The full and minimal response agree. These counts belong to this current
+set with unit-spurion tensors, not to a new 21-field physical theory.
+
+Two structural findings supersede the earlier pictorial projection idea:
+
+1. Exact elimination must propagate the triple `(K,J,C)`, not K alone:
+   `K'=Krr-Krh Khh^-1 Khr`, `J'=Jr-Krh Khh^-1 Jh`,
+   `C'=C+Jh^T Khh^-1 Jh`. The source-source term is nonlocal before a
+   derivative expansion and may carry poles. Actual `295=9+231+55`
+   factorization, direct vs staged vs opposite order, and passive metric/
+   coordinate covariance agree at five spacelike/complex momenta. Omitting
+   C loses **100% of the HH-to-HH scalar-exchange response** in the final
+   chart. That chart is a factorization tool, not a new local EFT census.
+2. The initial expectation of a nonzero NN coupling to the physical PQ
+   mode was **rejected**. After gauge removal the PQ tangent lies wholly
+   in S, whose direct Yukawa tensor vanishes. All declared linear probe
+   residues on it vanish. This does not remove the physical axion or claim
+   it is globally decoupled/massless after QCD. The massive spectral moment
+   nevertheless reproduces `omega CHN=-0.0848692011507 i f_raw` exactly in
+   the existing common-phase convention.
+
+The singlet channels see common radial m2/omega2 values approximately
+`0.01352047, 0.09971569, 2.82916586` with different residues. These are
+tree benchmark poles, not loop-complete or experimentally fitted masses.
+
+Next: carry this **source-dependent** functional, including its nonlocal
+contact and induced vertices, into the common finite hard-minus-EFT
+matching. Do not replace the missing gauge/Goldstone/ghost/scalar diagrams
+or the fitted fermion-inclusive light state by pole-visibility arguments.
+Do not repeat this unchanged tree audit as a new physical milestone.
+
+**Extra-dimensional comparison-only contract:** a single fixed geometry,
+boundary condition and action must predict an entire tower and its probe
+overlaps. For the unadopted flat Neumann interval, two shared parameters
+give `m_n^2=M5^2+(n*pi/L)^2` and the n=2/n=1 squared-gap ratio 4. A common
+probe profile fixes all residues. No separate geometry, profile or freely
+chosen boundary condition per particle is allowed. No extra-dimensional
+model has been fitted or merged into P54, and it does not block P.
 
 ### P0 Claim and action freeze (`in-progress`; highest priority)
 
@@ -529,7 +1129,93 @@ intertwiner is now contracted in the common phase dictionary below; use
 `C5II=-Y_LL K^-1 J`, together with
 `C5I=-Ynu MR^-1 Ynu^T`; type II is not authorized to be set to zero.
 
-#### P2/P3 complex phase, full PS flow and local-feedback checkpoint (`bounded subgates done; physical fit open`; 2026-09-05)
+#### P2/P3 covariant EFT, finite operators and moving thresholds (`latest authority`; 2026-09-06)
+
+The preceding checkpoint was committed and pushed first as `4ad74e7` to
+`origin/main` (`boypatrick/GUT_routeA`). The following work is subsequent
+uncommitted research. Detailed derivations are in
+`tex/p54_covariant_eft_finite_yukawa_seesaw.tex` and its PDF. This entry
+supersedes the older four-holomorphic-matrix/zero-CHN matching assumptions,
+without changing the frozen P54PQ-v2 action or adding UV family parameters.
+
+**Structural results, not decimal fitting:**
+
+1. **Local lower covariant tree action constructed.** The 55-heavy scalar
+   valley and algebraic elimination of the 24 upper vectors give
+   `g=T^T(1-O(O^TO)^-1O^T)T` and actual derivative vertices. The 24
+   directions form a coset, not a subgroup. The full nine lower gauge
+   masses/Goldstone norms and previous Schur metric are reproduced.
+   The tree upper-relaxed quartic on the improved ray is `.407929900088`,
+   with an accompanying `.024787549073 h²(∂h)²/omega²` operator; it is not
+   an already matched SM quartic. The exact quadratic resolvent is
+   exposed in the API. Only 25 retained eigenmodes couple linearly to the
+   integrated block; 12 have a pole-expansion ratio `1.0276132` but small
+   mixing. Handle those with the exact resolvent, not a new global
+   scale-separation blocker or another parameter scan.
+2. **Actual finite upper pure-Yukawa diagrams computed.** All 55 scalar
+   eigenstates are included, with 24 nonzero six-parent couplings.
+   Real/imaginary mass splitting generates two conjugate-bidoublet
+   operators `Htilde,Ftilde`. Their coefficients are cubic polynomials
+   in the original `h_raw,f_raw`, times exact split logarithms, not free
+   nuisance matrices. The four-parent finite boundary is **not closed**.
+   The six-invariant real-Weyl beta tensor **is closed**; the original
+   four-parent routine remains a valid holomorphic zeroth-order subflow,
+   not the full resummed finite-matched flow. The generated mirrors carry
+   the required PQ/axion phase and vanish in the degenerate-mass limit.
+3. **Actual scalar kinetic matching subset computed.** A same-action
+   one-step scalar-cubic bubble gives the full four-complex-doublet
+   kinetic matrix, including hard-soft pairs and charged partners.
+   On `c_B`, `delta Z=.00243676715822`. All electroweak Ward tests pass.
+   This is the background-field Landau scalar contribution, not a
+   gauge-independent pole result or the complete two-site subtraction.
+   Its 290-hard result must not be added to an upper subset a second time.
+4. **The actual tree lower boundary has nonzero CHN.** Eliminating the
+   three massive neutral radial scalars gives
+   `omega C_HN/f_raw = -.0848692011507 i` on the exact tree light ray,
+   for `L += C_HN NN H†H+h.c.` without a factor 1/2. Gauge/PQ zero modes
+   are retained, never inverted. This is independently checked by
+   solving the same radial potential at finite Higgs field. Thus
+   `C_HN=0` is false for the frozen P54 tree matching, even though it
+   defines a one-loop invariant sterile-EFT subspace. Improved-light
+   frozen-tree projections are recorded separately as mixed-order data.
+5. **Moving sterile thresholds are implemented.** Matrix running solves
+   `mu=M_i(mu)` with level crossings and degenerate Takagi clusters,
+   uses exact block-tree Schur matching, and continues below the final
+   sterile state. The 2024 Weinberg feedback correction is included;
+   old Antusch equations are negative controls only. Actual nonzero
+   `C_HN` must accompany the lower boundary, including its feedback into
+   `Ynu`, `MR`, the Higgs quadratic term and quartic. The current engine
+   is a dipole-free dimension-five subsystem with the PQ axion held as
+   a spectator; finite dipole matching and quantum axion effects are
+   not proven absent. Neither these
+   synthetic trajectories nor terminal mass proxies constitute a fit.
+   Starting with diagnostic `qH=0` generates terminal values about
+   `2.22e-6, 2.98e-6` in omega² units, above the terminal scale squared.
+   Thus a light-Higgs endpoint is not consistent without the already
+   required quadratic finite matching/retuning. The mass-independent
+   MS-bar continuation is diagnostic, not a physical low-energy EFT.
+
+Artifacts are `verify_p54_lower_covariant_eft.py`,
+`verify_p54_upper_yukawa_thresholds.py`,
+`verify_p54_scalar_kinetic_matching.py`, `verify_p54_scalar_chn.py`,
+`verify_p54_sequential_seesaw.py`, with same-stem JSON/MD records.
+The generated records retain exact matrices, source hashes, scope and
+tests, so subsequent work does not reconstruct formulas from rounded text.
+Final regression counts are respectively `24/24`, `44/44`, `24/24`,
+`18/18`, `46/46` (156 passing checks). These count bounded mathematical
+and numerical regressions, not completed physical matching conditions.
+
+**Still open, and now precisely narrowed:** upper vector fermion
+kinetic/vertex diagrams, vector/scalar/Goldstone/ghost scalar kinetic
+matching, upper scalar/tadpole Wilson data, lower covariant hard-minus-EFT
+matching, and finite sequential type-I/type-II matching in the enlarged
+operator basis, including the appropriate PQ/axion Wilson couplings
+before full physical promotion. A completed tree action or one-loop RGE is not a finite
+matching coefficient. After these are assembled, rerun physical scales
+and the constrained scalar/flavor fixed point. No physical fit, full-model
+exclusion, Higgs pole, determinant or portal is promoted by this checkpoint.
+
+#### P2/P3 complex phase, full PS flow and local-feedback checkpoint (`historical; read with the 2026-09-06 operator-basis correction`)
 
 The prior fixed-VEV checkpoint was committed/pushed as `b8e7398` on
 `origin/main` before these calculations. Current detailed derivations:
@@ -830,14 +1516,21 @@ S has no blocking arrow into P or U
 
 Next execution order:
 
-1. **P:** retain the completed fixed-VEV rule and complete bosonic complex
+1. **P:** the P-SPEC1 common scalar spectrum and source-preserving nested
+   elimination tree subgate above is complete. Reuse `(K,J,C)` and the
+   interaction-derived residues; do not repeat the unchanged tree audit
+   or infer that a massless physical mode must appear in every channel.
+   Retain the completed fixed-VEV rule and complete bosonic complex
    doublet matrix; do not repeat the cached Hessian calculation unchanged.
-   Reuse the completed common complex dictionary, full all-active PS
-   one-loop flow, upper finite gauge matching and differentiable local
-   Schur/source solve. Complete the upper-matched covariant scalar/gauge
-   functional, lower finite gauge matching and both-site finite Yukawa
-   diagrams; handle actual mass-ordered decoupling and sequential
-   neutrino/Weinberg running. Only then rerun the physical scales and
+   Reuse the common complex dictionary, six-invariant PS tensor flow,
+   upper finite gauge and pure-Yukawa matching, lower covariant tree
+   action, scalar kinetic subset, nonzero tree CHN and moving-threshold
+   engine. Complete the missing vector/Goldstone/ghost and scalar
+   Wilson diagrams, lower hard-minus-EFT matching, and finite sequential
+   neutrino matching; carry the actual nonzero CHN through the enlarged
+   dimension-five EFT. Use the exact heavy resolvent for the few coupled
+   modes requiring it rather than a new global hierarchy condition.
+   Only then rerun the physical scales and
    iterate the fitted Schur light eigenpair and constrained likelihood.
    Treat `eta_Y` as a derived correlated profile quantity, not a free scalar.
    The repaired six logarithmic identities are required regression tests;

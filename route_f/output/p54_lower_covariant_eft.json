@@ -1,0 +1,820 @@
+{
+  "Higgs_local_vertices": {
+    "L_h2_dh2_coefficient": 0.02478754907290794,
+    "coordinate_convention": "h is the specified UV-projection ray coordinate with unit metric at the origin, not a globally/geodesically canonical coordinate; all 248 active parents are still retained, so this is not SM lambda",
+    "g_hh_h2_coefficient": 0.04957509814581588,
+    "heavy_valley_curvature_norm": 0.2226546611814266,
+    "tree_direct_V4": 2.5669418356796503,
+    "tree_direct_lambda": 0.4278236392799417,
+    "tree_ray_m2": 3.323280521937418e-05,
+    "upper_current_selection_rule_residual": 1.1273569926081607e-19,
+    "upper_heavy_exchange_J_Cinv_J": 0.039787478384692945,
+    "upper_relaxed_lambda": 0.4079299000875952
+  },
+  "Lie_algebra": {
+    "PS_U_closure_error": 7.850462293418876e-17,
+    "U_U_PS_closure_error": 1.1102230246251565e-16,
+    "nonzero_U_U_PS_bracket_max_norm": 0.7071067811865472
+  },
+  "active_parent_labels": [
+    "phi10:(1,2,2)",
+    "Sigma126:(15,2,2)",
+    "Sigma126:(10-pair,3,1)",
+    "Sigma126:(10-pair,1,3)"
+  ],
+  "cache": {
+    "cache_hits": 5,
+    "evaluated": 0
+  },
+  "checks": [
+    {
+      "name": "raw PS-invariant chart has 248 active and 55 integrated real scalars",
+      "pass": true
+    },
+    {
+      "name": "positive scalar block gives a local analytic heavy valley",
+      "pass": true
+    },
+    {
+      "name": "upper 24-vector inertia is positive",
+      "pass": true
+    },
+    {
+      "name": "SO10/PS is a symmetric coset, not a subgroup",
+      "pass": true
+    },
+    {
+      "name": "scalar-heavy directions are orthogonal to actual upper gauge orbit",
+      "pass": true
+    },
+    {
+      "name": "raw scalar valley followed by vector elimination reproduces prior horizontal G and S",
+      "pass": true
+    },
+    {
+      "name": "two-derivative metric is positive",
+      "pass": true
+    },
+    {
+      "name": "actual unbroken SM tangent, mass and metric Ward identities",
+      "pass": true
+    },
+    {
+      "name": "finite broken-PS rotation preserves vector-eliminated metric",
+      "pass": true
+    },
+    {
+      "name": "lower PS/SM orbit has rank nine and correct tangent",
+      "pass": true
+    },
+    {
+      "name": "lower gauge mass normalization agrees before and after elimination",
+      "pass": true
+    },
+    {
+      "name": "all nine lower Goldstones are metric-normalized zero modes",
+      "pass": true
+    },
+    {
+      "name": "retained spectrum has thirteen zero and no negative tree modes",
+      "pass": true
+    },
+    {
+      "name": "exported Higgs lies in the raw valley tangent with no linear heavy response",
+      "pass": true
+    },
+    {
+      "name": "full cubic and quartic jets agree at two cached steps",
+      "pass": true
+    },
+    {
+      "name": "nonlinear heavy-valley equivariance passes q-orbit V3 test",
+      "pass": true
+    },
+    {
+      "name": "full scalar cubic obeys differentiated PS potential Ward identity",
+      "pass": true
+    },
+    {
+      "name": "covariant response one-form and metric derivatives pass independent finite difference",
+      "pass": true
+    },
+    {
+      "name": "Higgs-ray upper vector current vanishes by color selection",
+      "pass": true
+    },
+    {
+      "name": "retained canonical triplet block remains positive",
+      "pass": true
+    },
+    {
+      "name": "upper-relaxed triplet cubic reproduces full 54/126 mixed response",
+      "pass": true
+    },
+    {
+      "name": "upper scalar exchange produces negative semidefinite p4 quadratic kernel",
+      "pass": true
+    },
+    {
+      "name": "exact scalar Schur resolvent reproduces S, G and p4 with cubic remainder",
+      "pass": true
+    },
+    {
+      "name": "near-crossing is an invariant canonical 2x2 block with positive exact poles",
+      "pass": true
+    }
+  ],
+  "date": "2026-09-06",
+  "derivative_expansion_gate": {
+    "coupled_modes_at_or_beyond_Taylor_radius": 12,
+    "coupling_resolved_groups": [
+      {
+        "mass_to_coupled_C_ratio": 0.13600144602528563,
+        "multiplicity": 1,
+        "retained_m2": 0.013525378815468218,
+        "smallest_actually_coupled_C_eigenvalue": 0.09945025741089221,
+        "source_norm": 0.04186435755285956,
+        "source_support_C_eigenvalues": [
+          0.099450257411,
+          2.828549742589
+        ]
+      },
+      {
+        "mass_to_coupled_C_ratio": 0.4121447999738233,
+        "multiplicity": 6,
+        "retained_m2": 0.07848796872561946,
+        "smallest_actually_coupled_C_eigenvalue": 0.1904378478889082,
+        "source_norm": 0.07177505476769216,
+        "source_support_C_eigenvalues": [
+          0.190437847889,
+          0.200119972815,
+          0.532370146488,
+          0.594075857261
+        ]
+      },
+      {
+        "mass_to_coupled_C_ratio": 1.0276132086011949,
+        "multiplicity": 12,
+        "retained_m2": 0.26882384658304387,
+        "smallest_actually_coupled_C_eigenvalue": 0.26160022499999935,
+        "source_norm": 0.0013417174697047908,
+        "source_support_C_eigenvalues": [
+          0.261600225
+        ]
+      },
+      {
+        "mass_to_coupled_C_ratio": 0.4963676411800942,
+        "multiplicity": 6,
+        "retained_m2": 0.2688328261458579,
+        "smallest_actually_coupled_C_eigenvalue": 0.5416002249999993,
+        "source_norm": 0.0013417310000187162,
+        "source_support_C_eigenvalues": [
+          0.541600225
+        ]
+      }
+    ],
+    "exact_resolvent_zero_error": 2.943923360032078e-17,
+    "interpretation": "The global smallest-gap comparison is only sufficient and is overconservative for W-decoupled sectors. Actual source support leaves 25 linearly coupled retained modes; 12 lie just beyond their coupled C Taylor radius and require the exact resolvent, despite small mixing. This does not invalidate the local two-derivative EFT or prove a model no-go. Generalized masses must not be blindly promoted to finite-threshold logarithms.",
+    "linearly_coupled_retained_modes": 25,
+    "linearly_decoupled_retained_modes": 223,
+    "near_crossing_exact_block": {
+      "canonical_mass_matrix": [
+        [
+          0.26883779999999957,
+          0.001341735117301472
+        ],
+        [
+          0.001341735117301472,
+          0.26160022499999996
+        ]
+      ],
+      "exact_tree_poles_m2": [
+        0.26135949490123755,
+        0.269078530098762
+      ],
+      "full_Hessian_closure_error": 5.447695688770993e-12,
+      "interpretation": "The source-selected two-dimensional block is invariant under the full 328-field Hessian. Exact diagonalization resolves the local near-crossing; no one-loop threshold is inferred.",
+      "relative_retained_O_p2_error": 0.0009465025530823072,
+      "retained_O_p2_m2": 0.26882384658304387
+    },
+    "p4_subtracted_remainder_at_pE2_0p001_0p0005": [
+      2.764765221494982e-10,
+      3.468997852254784e-11
+    ],
+    "retained_generalized_m2_max": 0.3692648278994191,
+    "retained_generalized_modes_above_smallest_integrated_m2": 224,
+    "retained_to_integrated_min_m2_ratio": 3.713060554220094
+  },
+  "functional_definition": {
+    "Higgs_kinetic": "Along X(h)=x0+q h+BH z_qq h^2/2+..., g_hh=1+||z_qq||^2 h^2+O(h^3), for this zero-upper-current Higgs ray",
+    "Higgs_quartic": "lambda_upper=V''''[q,q,q,q]/6-(BH^T V'''[q,q])^T C^-1(BH^T V'''[q,q])/2",
+    "PS_transformation": "k_p(y)=BA^T R_p(x0+BA y); z transforms in BH; k is affine, not purely linear at broken vacuum",
+    "coset_warning": "[PS,U] subset U and [U,U] subset PS is nonzero: I^-1 O^T T is a PS-covariant heavy-vector one-form, not a principal connection for an upper subgroup",
+    "current_current": "Delta L2=-1/2 j^T M_U^-2 j",
+    "effective_cubic": "Veff,abc=V'''[T_a,T_b,T_c] at the stationary valley, since BH^T H T=0",
+    "gauge_convention": "R=-iT, D=partial-ig A T=partial+g A R; scalar kinetic is |D_PS X+g O A_U|^2/2",
+    "scalar_metric": "g_ab=T_a^T (1-O I^-1 O^T) T_b; L2=1/2 g_ab D y^a D y^b-V(X)",
+    "scalar_p4": "K_eff(p)=S+p^2 G-p^4 W^T C^-3 W+... before additional vector-kinetic p4 terms",
+    "upper_vector": "O_A=R_A X, I=O^T O, j=g O^T D_PS X, M_U^2=g^2 I; A_U*=-g^-1 I^-1 O^T D_PS X",
+    "valley": "X(y)=x0+BA y+BH z(y); BH^T grad V(X)=0; z(0)=0",
+    "valley_first_jet": "C=BH^T H BH, W=BH^T H BA, D=-C^-1 W, T=BA+BH D",
+    "valley_second_jet": "X_,ab=-BH C^-1 BH^T V'''[T_a,T_b]",
+    "vector_p4": "Reinsert A_U* into F_U=D_PS A_U* and F_PS=F_PS^(0)+g[A_U*,A_U*]_PS; their squares/cross terms are required beyond the declared scalar O(D^2) truncation"
+  },
+  "gauge_coupling": 0.5626028899853225,
+  "local_tensors": {
+    "C_eigenvalues": [
+      0.09945025741089239,
+      0.1904378478889082,
+      0.1904378478889082,
+      0.19043784788890827,
+      0.19043784788890827,
+      0.19043784788890836,
+      0.19043784788890838,
+      0.20011997281519292,
+      0.2001199728151932,
+      0.20011997281519328,
+      0.2001199728151933,
+      0.20011997281519334,
+      0.2001199728151934,
+      0.25999999999999934,
+      0.2599999999999994,
+      0.2599999999999994,
+      0.2599999999999996,
+      0.2599999999999996,
+      0.2599999999999998,
+      0.25999999999999984,
+      0.2600000000000001,
+      0.26160022499999924,
+      0.2616002249999994,
+      0.2616002249999994,
+      0.2616002249999995,
+      0.2616002249999995,
+      0.26160022499999963,
+      0.2616002249999997,
+      0.26160022499999974,
+      0.2616002249999998,
+      0.26160022499999985,
+      0.2616002249999999,
+      0.26160022500000013,
+      0.5323701464883228,
+      0.5323701464883234,
+      0.5323701464883234,
+      0.5323701464883235,
+      0.5323701464883236,
+      0.532370146488324,
+      0.54,
+      0.5400000000000003,
+      0.5400000000000005,
+      0.5416002249999994,
+      0.5416002249999998,
+      0.5416002249999999,
+      0.5416002250000003,
+      0.5416002250000005,
+      0.5416002250000006,
+      0.5940758572612915,
+      0.5940758572612921,
+      0.5940758572612922,
+      0.5940758572612922,
+      0.5940758572612925,
+      0.5940758572612929,
+      2.828549742589108
+    ],
+    "D_operator_norm": 0.13419117146091478,
+    "current_current_metric": {
+      "max": 0.01575021118309532,
+      "min": -5.37725085511529e-18,
+      "nonzero_eigenvalues": [
+        0.015750211183095306,
+        0.01575021118309531,
+        0.015750211183095313,
+        0.015750211183095313,
+        0.015750211183095313,
+        0.015750211183095317,
+        0.015750211183095317,
+        0.015750211183095317,
+        0.015750211183095317,
+        0.015750211183095317,
+        0.01575021118309532,
+        0.01575021118309532
+      ],
+      "rank": 12,
+      "trace": 0.1890025341971438
+    },
+    "metric_q_Frobenius_norm": 0.010200564452388771,
+    "metric_q_operator_norm": 0.00716183316691135,
+    "prior_horizontal_mass_error": 1.035384351482359e-15,
+    "prior_horizontal_metric_error": 1.0415147448282837e-15,
+    "quotient_metric_max": 1.0180072704980527,
+    "quotient_metric_min": 0.9842497888169042,
+    "raw_metric": {
+      "max": 1.0180072704980527,
+      "min": 0.9999999999999976,
+      "nonzero_eigenvalues": [
+        0.9999999999999976,
+        0.999999999999998,
+        0.9999999999999981,
+        0.9999999999999983,
+        0.9999999999999984,
+        0.9999999999999986,
+        0.9999999999999986,
+        0.9999999999999986,
+        0.9999999999999987,
+        0.9999999999999988,
+        0.9999999999999988,
+        0.9999999999999988,
+        0.9999999999999989,
+        0.9999999999999989,
+        0.9999999999999989,
+        0.999999999999999,
+        0.9999999999999991,
+        0.9999999999999991,
+        0.9999999999999991,
+        0.9999999999999991,
+        0.9999999999999992,
+        0.9999999999999993,
+        0.9999999999999994,
+        0.9999999999999994,
+        0.9999999999999994,
+        0.9999999999999994,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0000000000000004,
+        1.0000000000000004,
+        1.0000000000000004,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000007,
+        1.0000000000000009,
+        1.0000000000000009,
+        1.0000000000000013,
+        1.0000000000000013,
+        1.0000000000000016,
+        1.0000061372794877,
+        1.0000061372794877,
+        1.0000061372794882,
+        1.0000061372794886,
+        1.0000061372794888,
+        1.0000061372794895,
+        1.000026306153326,
+        1.0000263061533263,
+        1.0000263061533265,
+        1.0000263061533265,
+        1.0000263061533268,
+        1.000026306153327,
+        1.000026306153327,
+        1.0000263061533272,
+        1.0000263061533272,
+        1.0000263061533272,
+        1.0000263061533274,
+        1.0000263061533277,
+        1.002523425214357,
+        1.0180072704980518,
+        1.0180072704980525,
+        1.0180072704980525,
+        1.0180072704980527,
+        1.0180072704980527,
+        1.0180072704980527
+      ],
+      "rank": 248,
+      "trace": 248.1109195457195
+    },
+    "scalar_p4_kernel_max": 1.0448301725180441e-17,
+    "scalar_p4_kernel_min": -0.03343551717461431,
+    "selected_one_form_q_entry": {
+      "active_chart_column": 53,
+      "coefficient": -0.0008846701492603431,
+      "coset_generator_pair": [
+        1,
+        9
+      ],
+      "warning": "Raw basis component depends on deterministic tensor eigenspace basis; operator norms are basis-independent."
+    },
+    "upper_inertia_eigenvalues": [
+      0.999999999999999,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999993,
+      0.9999999999999996,
+      0.9999999999999996,
+      0.9999999999999996,
+      0.9999999999999996,
+      1.0160022499999992,
+      1.0160022499999994,
+      1.0160022499999994,
+      1.0160022499999994,
+      1.0160022499999994,
+      1.0160022499999994,
+      1.0160022499999994,
+      1.0160022499999997,
+      1.0160022499999997,
+      1.0160022499999997,
+      1.0160022499999997,
+      1.01600225
+    ],
+    "upper_one_form_operator_norm": 0.12450759828533851,
+    "upper_one_form_q_operator_norm": 0.0014116702519220091,
+    "upper_vector_m2_eigenvalues": [
+      0.3165220118198365,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.31652201181983664,
+      0.3165220118198367,
+      0.3165220118198367,
+      0.3165220118198367,
+      0.3165220118198367,
+      0.3215870761834806,
+      0.32158707618348065,
+      0.32158707618348065,
+      0.32158707618348065,
+      0.32158707618348065,
+      0.32158707618348065,
+      0.32158707618348065,
+      0.32158707618348076,
+      0.32158707618348076,
+      0.32158707618348076,
+      0.32158707618348076,
+      0.32158707618348087
+    ]
+  },
+  "lower_gauge": {
+    "m2_eigenvalues": [
+      -2.055090698099256e-18,
+      -4.33745736946334e-19,
+      -5.462718950562691e-20,
+      -1.0671003783629769e-20,
+      0.0,
+      0.0,
+      0.0,
+      6.701122190246914e-19,
+      8.735643706143459e-19,
+      1.482004665750366e-18,
+      1.796763498298537e-18,
+      4.185529307622787e-18,
+      0.0050650643636439814,
+      0.0050650643636439814,
+      0.0050650643636439814,
+      0.005065064363643982,
+      0.005065064363643983,
+      0.005065064363643983,
+      0.005065064363643986,
+      0.005065064363643986,
+      0.025325321818219913
+    ],
+    "massive_rank": 9,
+    "metric_normalized_Goldstone_count": 9
+  },
+  "references": [
+    {
+      "title": "Henning, Lu, Murayama, One-loop Matching and Running with Covariant Derivative Expansion",
+      "url": "https://arxiv.org/abs/1604.01019",
+      "use": "Gauge-covariant heavy-field functional matching; present calculation is tree-level only"
+    },
+    {
+      "title": "Henning, Lu, Murayama, How to use the Standard Model effective field theory",
+      "url": "https://arxiv.org/abs/1412.1837",
+      "use": "Covariant derivative expansion and operator-level EFT matching"
+    }
+  ],
+  "retained_126_neutral_triplet_vertices": {
+    "Schur_m2": [
+      [
+        0.26883447604804805,
+        4.907279475417847e-17
+      ],
+      [
+        4.907279475417847e-17,
+        0.26883447604804833
+      ]
+    ],
+    "canonical_cubic_J_hh": [
+      0.002527431093495623,
+      1.7899039645361203e-16
+    ],
+    "canonical_m2": [
+      [
+        0.26883282614585824,
+        -4.42945263999292e-17
+      ],
+      [
+        -4.42945263999292e-17,
+        0.2688328261458582
+      ]
+    ],
+    "cubic_J_hh": [
+      0.002527438849259228,
+      1.7942604273189001e-16
+    ],
+    "metric": [
+      [
+        1.000006137279489,
+        1.8254018847963698e-16
+      ],
+      [
+        1.8254018847963698e-16,
+        1.0000061372794897
+      ]
+    ],
+    "no_fermionic_Clebsch_or_neutrino_matrix_claim": true,
+    "real_basis_order": [
+      "sqrt2 Re B126",
+      "-sqrt2 Im B126"
+    ],
+    "reconstructed_full_triplet_over_h2": [
+      8.076115328464409e-14,
+      -0.0047007342332229494,
+      0.058421207024456044,
+      -3.337109982497589e-16
+    ],
+    "retained_coordinate_over_h2": [
+      -0.004700734233222947,
+      -3.328529306030343e-16
+    ]
+  },
+  "reusable_API": {
+    "available_full_local_tensors": "C,W,D,T,S,G; upper inertia I and current K; covariant response one-form; X_,qa, one-form derivative and metric derivative; scalar p4 quadratic kernel; exact scalar quadratic Schur resolvent at supplied p_E^2",
+    "functions": [
+      "run(include_tensors=True)",
+      "scalar_valley_api",
+      "scalar_nonlocal_kernel_api",
+      "scalar_valley_directional_jet_api",
+      "upper_vector_api",
+      "upper_vector_directional_jet_api"
+    ],
+    "input_basis": "BA is raw sum-of-four-PS-parent image; BH is upper physical heavy image exported by the prior finite-threshold construction; RU are the actual 24 canonical SO10/PS scalar representation matrices",
+    "lower_matcher_still_needs": [
+      "upper one-loop Wilson action including higher-dimensional scalar/vector/fermion operators in a common scheme",
+      "full lower covariant gauge-scalar-ghost quadratic fluctuation operator using this metric and connection",
+      "consistent hard-minus-EFT subtraction, ghosts and site-resolved Goldstone measure",
+      "regulator and momentum/derivative-order declaration beyond the displayed local jets"
+    ],
+    "module": "route_f/code/verify_p54_lower_covariant_eft.py"
+  },
+  "runtime_seconds": 1.7952611446380615,
+  "schema": "p54-lower-covariant-tree-eft-v1",
+  "scope": {
+    "Higgs_ray": "Exported bosonic-improved complex light eigenvector; evaluating frozen tree tensors along it is a mixed-order diagnostic, not a loop-complete Higgs Wilson coefficient",
+    "action": "Same frozen tree parameters and actual stationary vacuum as P1/P2; no scalar CT inserted in these tree jets",
+    "chart": "Four declared PS scalar parents, upper Phi54 unitary gauge; gauge-neutral axion fixed as spectator",
+    "derivative_counting": "Scalar two-covariant-derivative action plus leading PS Yang-Mills. Induced F_U and [A_U,A_U]_PS terms are covariant p4, not computed finite matching.",
+    "local_validity": "Analytic implicit-function germ at actual vacuum while C and upper inertia remain positive; no global upper-to-lower path or all-momentum separation is inferred",
+    "loop_scheme": "One-loop fixed-VEV retuning needs CT and loop shifts of Veff and metric at O(hbar); these are not included. Insertion of such shifts into an already one-loop gauge threshold is O(hbar^2), but tree EFT coefficients themselves shift at O(hbar)."
+  },
+  "sources": [
+    {
+      "path": "route_f/code/verify_p54_p1_hessian_spectrum.py",
+      "sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282"
+    },
+    {
+      "path": "route_f/code/verify_p54_ps_finite_thresholds.py",
+      "sha256": "93cc7c8b8fcea5de6f17084ad99cd3157242b621dda11bdc7cc944a5ba0eb8db"
+    },
+    {
+      "path": "route_f/code/verify_p54_p2_two_site_matching.py",
+      "sha256": "5f83192a153bfa8ea6afc9a99aeca68e8b11746bf2945a0a40e198489f214f2e"
+    },
+    {
+      "path": "route_f/output/p54_full_doublet_cw.json",
+      "sha256": "e422ade78b283e7baecdc1eb80523aad2ec3a48e7ad58a0623ba827b980eb6c6"
+    },
+    {
+      "path": "route_f/output/p54_ps_finite_thresholds.json",
+      "sha256": "17958241c01da912cfd92047ffdcabc1a9ab5dd801ab0ef53105da4ac4daf8a0"
+    },
+    {
+      "path": "route_f/output/p54_typeii_triplet_source.json",
+      "sha256": "223eb24ccbfbe58d425d1dd1c7df53cd585d65e153dc9d01d7569993c1359690"
+    },
+    {
+      "path": "route_f/code/verify_p54_lower_covariant_eft.py",
+      "sha256": "2b8d3a680b8da0cbe90ac87e8a2a1d48e6337c6b1decb71ad27e29104888eefb"
+    }
+  ],
+  "status": {
+    "fermionic_matching_completed": false,
+    "global_valley_continuation_proved": false,
+    "local_tree_two_derivative_EFT_constructed": true,
+    "lower_one_loop_finite_gauge_matching_completed": false,
+    "upper_one_loop_Wilson_vertices_completed": false
+  },
+  "summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "tensor_residuals": {
+    "SM_mass": 1.2430933188497087e-15,
+    "SM_metric": 1.0414989272258405e-15,
+    "SM_valley_tangent": 8.100707766644868e-17,
+    "active_PS_projector": 0.0,
+    "connection_directional_jet_finite_difference": 1.6585422279006182e-13,
+    "cubic_step_relative": 3.135995832713411e-29,
+    "finite_broken_PS_metric_covariance": 1.9420140191003983e-15,
+    "full_V3_q_orbit_Ward": 9.801411912703387e-18,
+    "heavy_PS_projector": 0.0,
+    "lower_Goldstone_mass_Ward": 3.1867919254819495e-16,
+    "lower_Goldstone_metric_normalization": 1.7340003137445353e-15,
+    "lower_orbit_tangent": 5.702515885798265e-16,
+    "lower_vector_mass": 4.829265774454144e-18,
+    "metric_directional_jet_finite_difference": 1.9878032853831316e-14,
+    "nonlinear_valley_q_orbit_Ward": 3.845302814304196e-19,
+    "quartic_step_relative": 3.892572508944606e-14,
+    "triplet_source_response_reconstruction": 6.959972005825845e-17
+  },
+  "vacuum": {
+    "omega": 1.0,
+    "sigma": 0.1265,
+    "vs": 0.25
+  }
+}

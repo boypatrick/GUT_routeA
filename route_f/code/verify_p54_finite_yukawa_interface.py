@@ -86,10 +86,19 @@ def first_order_match(tree, delta_vertex, kl, kr, kh):
 
 def require_physical_inputs(payload):
     """Fail closed rather than promote a synthetic assembly to a fit."""
+    scheme = {"action": "P54PQ-v2", "subtraction": "MSbar-DR",
+              "gauge": "background-field Landau", "tadpoles": "fixed-VEV"}
+    if any(payload.get(key) != value for key, value in scheme.items()):
+        raise ValueError("physical fit requires one common action and matching prescription")
     required = ("upper_finite_gauge", "lower_finite_gauge",
                 "upper_finite_Yukawa", "lower_finite_Yukawa",
                 "all_active_PS_flow", "lower_EFT_flow",
-                "sequential_Weinberg_matching", "same_action_scalar_feedback")
+                "sequential_Weinberg_matching", "same_action_scalar_feedback",
+                "upper_full_KJC", "lower_covariant_full_KJC",
+                "all_six_PS_Yukawas_run", "sequential_finite_seesaw",
+                "fermion_full_light_feedback", "retained_mass_error_control",
+                "common_parameter_tadpole_consistency", "full_background_stability",
+                "mass_operator_control", "CHN_operator_closure")
     missing = [name for name in required if payload.get(name) is not True]
     if missing:
         raise ValueError("physical fit map incomplete: " + ", ".join(missing))
@@ -173,11 +182,19 @@ def run():
         slope_error = max(slope_error, float(np.max(abs(derivative-np.array([2., -1.])/LOOP))))
         kernels.append({"squared_masses": [x, yy], "f_h": got.tolist()})
     rejected = {}
+    old_complete={"action":"P54PQ-v2","subtraction":"MSbar-DR",
+                  "gauge":"background-field Landau","tadpoles":"fixed-VEV"}
+    old_complete.update({key:True for key in (
+        "upper_finite_gauge","lower_finite_gauge","upper_finite_Yukawa","lower_finite_Yukawa",
+        "all_active_PS_flow","lower_EFT_flow","sequential_Weinberg_matching","same_action_scalar_feedback",
+        "upper_full_KJC","lower_covariant_full_KJC","all_six_PS_Yukawas_run","sequential_finite_seesaw",
+        "fermion_full_light_feedback","retained_mass_error_control")})
     for name, function in (
         ("pure_light_kernel", lambda: loop_f_h(0, 0, mu)),
         ("negative_kinetic_metric", lambda: finite_match(y, kl, kr, -2*np.eye(4))),
         ("missing_finite_vertex", lambda: finite_match(None, kl, kr, kh)),
         ("incomplete_physical_fit", lambda: require_physical_inputs({"upper_finite_gauge": True})),
+        ("old_flags_without_background_and_CHN_closure", lambda: require_physical_inputs(old_complete)),
     ):
         try:
             function(); rejected[name] = False

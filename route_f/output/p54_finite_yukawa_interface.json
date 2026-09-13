@@ -544,6 +544,12 @@
       "pass": true
     },
     {
+      "name": "reject old_flags_without_background_and_CHN_closure",
+      "residual": 0.0,
+      "tolerance": 1e-11,
+      "pass": true
+    },
+    {
       "name": "linear matching agrees through first order",
       "residual": 0.009283745128592091,
       "tolerance": 0.25,
@@ -551,8 +557,8 @@
     }
   ],
   "summary": {
-    "passed": 17,
-    "total": 17,
+    "passed": 18,
+    "total": 18,
     "all_pass": true
   },
   "references": [
@@ -564,7 +570,7 @@
   "sources": [
     {
       "path": "route_f/code/verify_p54_finite_yukawa_interface.py",
-      "sha256": "4e1d84c7451678eaf2d0f9bbded54db366dd90b986f79c2f4bb94a9035ab1665"
+      "sha256": "07f17143f4b8f555d4e6e5adead91a3cc7f4a5ed7a2d76d86a37ef0b5618bc15"
     },
     {
       "path": "route_f/output/p54_common_yukawa_phase.json",

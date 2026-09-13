@@ -1,6 +1,170 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-09-05
+Last updated: 2026-09-14
+
+## Latest Route-F checkpoint: invariant attribution and inverse-gap control (2026-09-14)
+
+P-INV1 decomposes the unchanged P54 action into its 29 real coefficient
+directions, retaining all loop interference (445/445). The three
+transverse Sigma quartics carry about 94% of the original leading kinetic
+insertion, but weakening them alone closes propagator gaps and exposes
+large Phi/mixed-field vertices. Two reducing blocks of ranks 50 and 36
+give the conditional analytic bound `rho_Z >= .01471609503/tau`.
+Projector integer algebra is exact; the action-to-block identities are
+numerically checked (112/112) and still need symbolic/interval certification.
+
+Six first-stage and two explicitly declared joint mixed-coupling cards
+were recomputed with their own stationary masses, doublet tuning,
+spectra, tadpoles and loop weights (183/183 and 36/36). All fail control;
+positive curvature at one card coexists with `rho_Z=1.899`. Necessary
+pure-H boundedness gates now expose a radial-test blind spot, but complete
+mixed BFB and global vacua remain open. No default parameter is changed.
+
+The radial fermion momentum subset is complete in terms of three
+unfitted Majorana masses (56/56). Actual gauge vertices are saved, including
+the nonzero-momentum scalar-vector derivative vertex absent from the CW
+spectrum. Gauge/mixed integrals, dimensional rational terms and
+finite-xi/Nielsen consistency still block a full physical stability claim.
+Next priority is that common-prescription momentum completion and a
+certified vertex-to-gap criterion, not further blind quartic scans.
+
+Full derivation: `route_f/tex/p54_invariant_attribution_nonuniform_control.tex`
+and its eight-page, visually verified PDF. The five new verifiers total
+832/832 checks, with 49/49 source hashes verified. Full Wilson/box,
+lower matching, finite `C_HN` seesaw and
+physical fit remain unfinished. See **P-INV1** in `route_f/ROADMAP.md`.
+
+## Previous Route-F checkpoint: Goldstone/IR control and bounded reselection (2026-09-13)
+
+P-IR1 computes the actual Goldstone Ward and scalar momentum subgate
+(65/65). Common counterterms cancel all 34 Goldstone hard mass shifts;
+soft tadpoles vanish, but the zero-momentum potential Hessian has an
+IR-singular Gram logarithm. External momentum cancels that regulator
+dependence in the calculated scalar self-energy. Full gauge/ghost/
+fermion momentum maps and a physical pole decision remain open.
+
+The old point also has hard scalar kinetic correction **2.61** relative
+to its tree metric. An analytical bound rules out uniform weakening of
+all scalar coefficients at the old radii, gauge coupling and scale
+as a BOSONIC repair. Four less-hierarchical parameter cards were then
+tested (36/36 algebra/spectrum checks); none passes physical control.
+One positive hard radial spectrum still has relative insertion **1.43**.
+No accepted replacement point, default input change or flavor fit results.
+Both new verifiers reuse cached action jets without new Hessian evaluations.
+
+Detailed formulas and rejections are in
+`route_f/tex/p54_goldstone_ir_background_control.tex`, its PDF, and the
+`p54_goldstone_ir` / `p54_scalar_reselection` reports. The next useful
+choices are invariant-resolved nonuniform parameter control or complete
+gauged momentum/Nielsen analysis, not positivity-only fitting. Full
+Wilson/box, lower gauge/ghost/Yukawa matching and finite CHN seesaw
+remain unfinished. See **P-IR1** in `route_f/ROADMAP.md`.
+
+## Previous Route-F checkpoint: common renormalization and a radial obstruction (2026-09-12)
+
+P-REN1 closes the **common bosonic same-bare parameter/tadpole algebra**
+(46/46), including tree-valley, mass-kernel and Wilson transport. The
+finite counterterms cannot be removed at the old renormalized input.
+The current action and scalar point have not been changed.
+
+The actual radial hard-potential Hessian instead gives a negative mass
+square `-0.758448 omega^2`. A global analytical bound on the three
+Majorana masses proves that their maximal fixed-VEV one-loop correction
+still leaves a negative direction (`-0.7146953 omega^2`). This excludes
+a flavor-only rescue of the **frozen one-loop hard truncation**, not the
+full model, soft-IR completion or gauge-independent pole spectrum.
+Common background/perturbative control must precede a physical fit.
+
+A new linear-CHN finite vertex/C5/Higgs-mass subset and induced
+`D6=2 Y_h M_h^-1 C_hr` operator pass 20/20 checks. The latter feeds C5
+through retained Majorana masses and resolves a mixed-threshold RG
+residual. It must be tracked at that accuracy, or excluded with a
+controlled additional mass-hierarchy expansion; full seesaw matching
+and dimension-six evolution are not yet closed. Existing diagnostic
+trajectories are unchanged. The fit interface now rejects missing
+common-parameter, full-background, mass-control and CHN-closure flags
+(18/18); the existing upper-vector regression remains 38/38.
+
+Derivations: `route_f/tex/p54_common_renormalization_radial_bound_chn.tex`
+and its PDF. Full evidence, scope and next options: **P-REN1** in
+`route_f/ROADMAP.md`. Complete Wilson/box and lower gauge/ghost/Yukawa
+matching remain open. Their formal calculation can continue without
+promoting this benchmark to a viable physical fit. No new scalar point,
+action parameter, vacuum/lattice scan, commit or push is introduced.
+
+## Previous Route-F checkpoint: scalar/tadpole/Wilson and finite seesaw (2026-09-11)
+
+P-MATCH-SCALAR2 adds four bounded calculations: upper scalar hard
+matching/common tadpole propagation (**14/14**), factorizable upper
+scalar-exchange Wilson response (**16/16**), lower finite scalar
+determinant subtraction (**22/22**) and live finite gauge/quartic seesaw
+terms (**24/24**). The original sequential regression remains **46/46**.
+Detailed formulas are in
+`route_f/tex/p54_scalar_tadpole_wilson_seesaw_matching.tex` and its PDF;
+the authoritative completion limits are in `route_f/ROADMAP.md`.
+
+The common broken-anchored counterterms cannot independently retune
+the upper PS saddle. Its computed hard-plus-CT singlet response is about
+22% of the VEV, and the heavy mass insertion has relative spectral radius
+**6.76**. The current subset's inverse-propagator expansion is therefore
+not controlled. Small projected source corrections do not resolve this;
+the algebra tests are not a perturbativity certificate. This finding
+does not yet exclude the complete model or authorize changing its action.
+
+The lower nonlocal-minus-local scalar determinant has a nonzero finite
+term, but its full source derivatives and gauge/ghost/Yukawa package
+remain open. The actual nonzero CHN/type-II boundary cannot use the
+restricted canonical type-I terminal formula as complete matching.
+Finish those diagrams, common parameter/background control and correlated
+finite seesaw before the full fermionic light eigenstate and global fit.
+No new vacuum/lattice scan, fitted mass formula, commit or push was made.
+
+## Previous Route-F checkpoint: source-preserving finite matching (2026-09-11)
+
+P-MATCH-KJC1 closes the one-loop `(K,J,C)` transport algebra and a new
+actual **upper heavy-vector Yukawa/kinetic subset**, not the full matching
+or physical fit. See `route_f/tex/p54_source_preserving_finite_matching.tex`
+and its PDF; details and future order are in `route_f/ROADMAP.md`.
+
+- The vector calculation passes **38/38**, with the existing PS saddle,
+  actual Spin(10) generators and DR/MSbar Landau prescription. It retains
+  dimensionally finite numerator constants and generates mirror H/F
+  Yukawa contributions without new family parameters.
+- One-loop source/contact transport passes **108/108**. Different-colour
+  action-defined probes detect upper triplet contact response; field
+  normalization must transport both the kernel and sources. Dropping
+  induced delta C or double-counting scalar legs is rejected.
+- Full upper scalar/potential/Wilson matching, controlled retained-mass
+  expansion, lower covariant finite matching and finite sequential
+  seesaw remain open. The full fermionic light state and constrained fit
+  have not been performed. Their shared guard now explicitly requires
+  complete upper/lower KJC; the old canonical interface still passes 17/17.
+
+## Previous Route-F checkpoint: common spectrum and physical channels (2026-09-10)
+
+P-SPEC1 preserves the frozen P54 action and benchmark and closes a bounded
+**tree scalar-exchange** subgate, not physical P2/P3 matching. See
+`route_f/output/p54_spectral_channels.md` and
+`route_f/tex/p54_spectral_channels_nested_elimination.tex`.
+The new verifier passes **153/153** using the existing Hessian cache.
+
+- Actual scalar, Yukawa and gauge-kinetic vertices define 33 real current
+  slots. Pole-residue matrices retain all 295 physical real scalar modes;
+  the declared currents have rank 19 and generate a 21-dimensional exact
+  spectral realization. No observation projector, new action parameter,
+  extra spatial dimension or particle-mass fit is introduced.
+- Nested elimination preserves `(K,J,C)`: kernel, interaction sources and
+  induced source-source term. Direct/staged/opposite-order reduction of
+  the actual `9+231+55` split agrees. Dropping C loses the entire HH scalar
+  exchange even when the retained mass kernel is correct.
+- A hypothesized NN-PQ pole was rejected: the physical PQ tangent is in S,
+  which has no direct Yukawa tensor. It remains a physical zero mode while
+  invisible to these linear channels. This does not claim general axion
+  decoupling. The massive spectral moment reproduces the existing CHN.
+- Next: use the full source-dependent functional in the remaining common
+  finite matching and subsequently the constrained flavor/light-state
+  iteration. Extra-dimensional spectra are comparison-only and must use
+  one shared geometry, boundary condition and probe profile for a tower.
 
 ## Route-F three-layer reset (2026-08-30; current authority)
 
@@ -194,7 +358,35 @@ P3 fixed-VEV/full-doublet checkpoint completed 2026-09-05 Asia/Taipei:
   iterate the fermion-inclusive Schur eigenpair in a constrained global
   flavor/seesaw fit. No physical best fit or model exclusion is claimed.
 
-P2/P3 common-phase / PS-flow / local-feedback checkpoint (2026-09-05; latest P authority):
+P2/P3 covariant EFT / finite operators / moving thresholds (2026-09-06; latest P authority):
+
+- First committed and pushed the previous checkpoint as `4ad74e7` to
+  `boypatrick/GUT_routeA`, `main`. The following new work is not part of
+  that pushed checkpoint.
+- Constructed the local lower PS-covariant scalar/vector action, including
+  actual valley/metric vertices and an exact heavy resolvent API. No new
+  scan or arbitrary global scale-separation condition is introduced.
+- Actual upper pure-Yukawa finite diagrams generate calculable mirror
+  bidoublet operators. The original four-matrix finite boundary is not
+  closed; six PS invariants close the general real-Weyl beta system.
+  These are not additional free UV family matrices.
+- Computed the full scalar-cubic four-doublet kinetic subset, including
+  hard-soft states and electroweak Ward identities. This is not the full
+  two-site finite or gauge-independent pole matching.
+- Proved by same-action tree exchange and finite-field radial relaxation
+  that `omega C_HN/f_raw=-.0848692011507 i` on the exact tree light ray.
+  The sterile EFT must include `NN H†H`; setting it to zero is not a P54
+  matching condition. Gauge and PQ zero modes are not inverted.
+- Implemented matrix running with live `mu=M_i(mu)` events, crossings,
+  degenerate clusters, exact block-tree matching and below-last evolution,
+  including the 2024 correction to Weinberg feedback. The enlarged CHN
+  boundary and all finite sequential thresholds must be treated consistently.
+- Detailed proof/code ledger: `route_f/tex/p54_covariant_eft_finite_yukawa_seesaw.tex`
+  and its PDF; authoritative next actions are in `route_f/ROADMAP.md`.
+  Full vector/ghost/scalar finite matching, physical scales and constrained
+  global fit remain open; synthetic mass proxies are not predictions.
+
+P2/P3 common-phase / PS-flow / local-feedback checkpoint (2026-09-05; historical):
 
 - The previous checkpoint was committed and pushed first as `b8e7398`.
   The subsequent work is documented in

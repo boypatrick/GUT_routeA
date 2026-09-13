@@ -1,0 +1,508 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 common renormalization, radial obstruction and CHN closure}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\LOOP}{\mathcal L}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\title{Route-F P54: Common Renormalization,\\
+a Radial Stability Obstruction and $C_{HN}$ Threshold Closure}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{12 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We verify the finite-parameter conversion linking the existing fixed-VEV
+and minimal-subtraction descriptions of the same bare scalar action.
+Deleting the large finite counterterm while retaining the original
+renormalized parameters is not such a conversion. We calculate the
+previously untested three-dimensional physical radial bosonic Hessian.
+It has a negative eigenvalue in the declared one-loop hard-potential
+truncation. An analytical bound proves that no choice of the three
+Majorana masses can remove this negative direction in that
+truncation at the frozen scalar point. This is a conditional benchmark
+obstruction, not an all-orders or gauge-independent exclusion of the model.
+Separately, we calculate the linear-$C_{HN}$ finite Yukawa vertex and
+associated terminal Weinberg and Higgs-mass contributions. At partial
+sterile thresholds the field-dependent Schur map generates a dimension-six
+$LNH(H^\dagger H)$ operator. Its mass-dependent mixing explains a precise
+residual left by a dimension-five-only sequential treatment when retained
+Majorana mass effects are not additionally expanded away.
+\end{abstract}
+
+\section{Scope and fixed input}
+The action remains P54PQ-v2:
+$3\,16_F+54_{H,\mathbb R}+126_{H,\mathbb C}+10_{H,\mathbb C}
++1_{H,\mathbb C}$, with the two complex symmetric family matrices
+$h_{\rm raw},f_{\rm raw}$. No phenomenological fit, new family parameter,
+lattice scan or replacement scalar point is introduced. The historical
+broken tree vacuum and upper tree PS saddle are respectively
+\begin{align}
+ r_B&=(w,\sigma,v_s)=(1,0.1265,0.25)\,\omega,\\
+ r_U&=(1.0008103059,0,0.2542776971)\,\omega.
+\end{align}
+Here the notation $w=1\,\omega$ uses the same historical reference scale
+as the earlier files. Both points use the same scalar parameters.
+We retain DR/$\MS$, background-field Landau gauge, and the existing
+finite invariant fixed-VEV mass counterterms at
+$\mu_0=0.5626028899853225\,\omega$. Write $\LOOP=16\pi^2$.
+
+``Hard potential'' means the previously declared trace over 290 positive
+scalar and 33 massive vector eigenvalues at $r_B$, with the 38 scalar
+and 12 vector soft directions excluded and mixed hard/soft divided
+differences retained. It is not the complete soft-IR-resummed effective
+action. Its Hessian is not a pole mass. This scope applies to every
+stability statement below.
+
+\section{Finite counterterms cannot be removed at fixed numerical input}
+Let $p=(\mu^2,\nu^2,\mu_s^2)$ be the three dependent mass parameters.
+The canonical real-field Hessian of their finite counterterm is
+\begin{equation}
+ \mathsf H_{\rm CT}=\diag\left(-\Delta\mu^2 I_{54},
+ -\tfrac12\Delta\nu^2 I_{252},0_{20},-\Delta\mu_s^2 I_2\right).
+ \label{eq:massCT}
+\end{equation}
+The factor $1/2$ for the complex $126$ is required by the action's
+normalization and is independently consistent with the radial and phase
+Ward tests. It is not a missing factor causing the large correction.
+
+Introduce a formal loop-counting parameter $\ell$. Holding the other
+counterterm conventions fixed, equality of the bare parameters gives
+\begin{equation}
+ p_0=p_F+\delta p_{\rm pole}+\ell\Delta p
+     =p_{\MS}+\delta p_{\rm pole}+O(\ell^2),\qquad
+ p_{\MS}=p_F+\ell\Delta p+O(\ell^2).
+ \label{eq:scheme}
+\end{equation}
+Because these mass parameters enter $V_0$ linearly, at fixed fields
+\begin{equation}
+ V_0(X;p_F+\ell\Delta p)
+ =V_0(X;p_F)+\tfrac\ell2 X^T\mathsf H_{\rm CT}X
+ \label{eq:exactmass}
+\end{equation}
+is an exact polynomial identity. Replacing $p_F$ by $p_{\MS}$ inside a
+one-loop diagram changes it only at formal two-loop order; that order
+statement does not guarantee a numerically small remainder at $\ell=1$.
+
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Parameter / $\omega^2$ & $p_F$ & $\Delta p$ & $p_F+\Delta p$\\
+\midrule
+$\mu^2$ & $1.4095253$ & $-0.0563307$ & $1.3531946$\\
+$\nu^2$ & $0.3819020$ & $-5.4697441$ & $-5.0878421$\\
+$\mu_s^2$ & $0.1719203$ & $-0.0342377$ & $0.1376826$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus using zero finite counterterms with the old $p_F$ does not describe
+the same bare point. Conversely, a literal resummation of the large
+converted mass shift is not automatically a controlled implementation
+of the formal scheme change. The finite scheme and VEV issues are
+distinct from gauge invariance of observables \cite{vev}; the present
+fixed-Landau calculation does not establish an FJ or GIVS gauge-independent
+parameter construction.
+
+\subsection{Vacuum transport and the common tadpole condition}
+On the radial slice, the canonical metric and mixed parameter derivative
+are
+\begin{equation}
+ G_r=\diag(12/5,2,1),\qquad
+ A_{ri}=\frac{\partial^2V_0}{\partial r_r\partial p_i}
+ =-\diag(12w/5,\sigma,v_s).
+\end{equation}
+Let $H_r=\partial_r^2V_0$ and $t=\partial_rV_{1,h}$ at $r_B$.
+The fixed-VEV condition is exactly
+\begin{equation}
+ t+A\Delta p=0.
+ \label{eq:tad}
+\end{equation}
+In the converted MS description the tree stationary point shifts by
+\begin{equation}
+ \delta r_{\rm tree}^{\MS}=-H_r^{-1}A\Delta p=H_r^{-1}t,
+ \qquad \delta r_{\rm explicit\ loop}=-H_r^{-1}t.
+ \label{eq:vevshift}
+\end{equation}
+Their sum vanishes at first order; neither contribution may be discarded.
+The calculated tree conversion coefficient is
+\begin{equation}
+ \delta r_{\rm tree}^{\MS}/\omega
+ =(0.306642,-25.428874,1.660472).
+\end{equation}
+This coefficient is far too large to assert a small shift at $\ell=1$.
+Three tiny formal values $\ell=10^{-5},5\times10^{-6},2.5\times10^{-6}$
+verify the stationary-point identity and quadratic remainder. They are
+local scheme-identity tests, not a new physical vacuum scan.
+
+At the upper PS saddle, only the two singlet radii $w,v_s$ carry tadpoles.
+Let $H_U$ be their tree Hessian. Then the previously calculated hard-plus-CT
+response separates unambiguously as
+\begin{equation}
+ \delta r_U=-H_U^{-1}(t_{U,h}+t_{U,\rm CT})
+ =\delta r_{U,\rm loop}+\delta r_{U,\rm scheme}.
+\end{equation}
+The same mass counterterms apply at both backgrounds. Their upper
+$\sigma=0$ tadpole cannot determine a second independent $\Delta\nu^2$.
+This is the scalar-valley version of the tadpole-insertion issue in
+matching \cite{matching}; that reference excludes heavy gauge bosons and
+is not being used as a complete gauge-matching formula.
+
+\subsection{Wilson matching must transform with the parameters}
+For an EFT relation $q=f(p)+\ell\Delta(p)$ and finite definitions
+$p'=p+\ell a$, $q'=q+\ell b$, expansion of the same relation yields
+\begin{equation}
+ \Delta'=\Delta+b-Df\,a.
+ \label{eq:matchingconversion}
+\end{equation}
+The finite UV and EFT parameter cards therefore both matter. For the
+upper scalar exchange $C_0=J^TD^{-1}J$, let
+\begin{equation}
+ D_p=\mathsf H_{{\rm CT},h}
+ +\sum_{r=w,v_s}\delta r_{U,\rm scheme}^r\,\partial_rD_0.
+\end{equation}
+The original upper eigenbasis is held fixed as a field-coordinate chart,
+so its Yukawa source tensor $J$ does not independently change. The tree
+Wilson coefficient shifts by
+\begin{equation}
+ \delta_pC_0=-J^TD_0^{-1}D_pD_0^{-1}J,
+ \qquad \Delta C_{\MS}=\Delta C_F-\delta_pC_0.
+\end{equation}
+Their sum is the old full first-order response. Exact-resolvent finite
+differences test the tree derivative on the existing two synthetic source
+cases. These identities close the stated common bosonic scheme algebra,
+not the missing Wilson boxes or gauge/ghost/Yukawa diagrams.
+
+\section{Previously untested physical radial block}
+\subsection{Actual action derivatives and an independent spectral check}
+Let $R$ embed the three radial coordinates in the 328 real fields and
+$\mathsf H(X)=V_0''(X)$. The quartic action makes $\mathsf H$ quadratic.
+Using cached first and diagonal second derivatives, three new mixed
+Hessian evaluations determine all $\mathsf H_{,rs}$ exactly as a
+polynomial identity. No spectrum formula is fitted.
+
+Let $F_{c,h}$ equal $x^2[\log(x/\mu_0^2)-c]$ in neighborhoods of the
+hard eigenvalues and zero near the excluded soft eigenvalues. The
+spectral gap makes this a smooth local spectral function. Define
+\begin{equation}
+ F_{c,h}'^{[1]}(x,y)=\begin{cases}
+ [F_{c,h}'(x)-F_{c,h}'(y)]/(x-y),&x\ne y,\\
+ F_{c,h}''(x),&x=y.
+ \end{cases}
+\end{equation}
+Both sums below include hard and soft indices; a mixed divided
+difference need not vanish. In the common eigenbasis,
+\begin{equation}
+ \partial_r\partial_s\tr F_{c,h}(\mathsf H)
+ =\sum_i F_{c,h}'(m_i^2)(\mathsf H_{,rs})_{ii}
+ +\sum_{ij}F_{c,h}'^{[1]}(m_i^2,m_j^2)
+                   (\mathsf H_{,r})_{ij}(\mathsf H_{,s})_{ji}.
+ \label{eq:frechet}
+\end{equation}
+Scalar and vector multiplicities are $1$ and $3$, with $c=3/2$ and
+$5/6$, divided by $64\pi^2$. Direct finite differences of the actual
+spectral potential at two step sizes independently verify the resulting
+radial Hessian, not just its symmetry.
+
+The tree and corrected bosonic generalized squared masses solve
+$H_rv=m^2G_rv$ and are
+\begin{align}
+ \operatorname{spec}(G_r^{-1}H_{r,0})/\omega^2
+   &=(0.0135205,0.0997157,2.8291659),\\
+ \operatorname{spec}(G_r^{-1}H_{r,B})/\omega^2
+   &=(-0.7584480,0.0941189,3.0931051),\label{eq:radialvalues}\\
+ H_{r,B}&=H_{r,0}+\Pi_{r,S}+\Pi_{r,V}+R^T\mathsf H_{\rm CT}R.
+\end{align}
+The actual matrix is approximately
+\begin{equation}
+ H_{r,B}/\omega^2=
+ \begin{pmatrix}
+ 7.421952&-0.056046&0.057186\\
+ -0.056046&-1.516518&-0.006028\\
+ 0.057186&-0.006028&0.094555
+ \end{pmatrix}.
+ \label{eq:radialmatrix}
+\end{equation}
+Its negative direction is orthogonal to both the gauge orbit and the PQ
+phase. It is not an unremoved gauge zero mode. The relative insertion
+$H_{r,0}^{-1/2}(H_{r,B}-H_{r,0})H_{r,0}^{-1/2}$ has a smallest eigenvalue
+about $-56.8$. The earlier doublet-only positivity check was never a
+whole-vacuum stability certificate.
+
+The large $\Delta\nu^2$ is dominated by actual high-multiplicity scalar
+clusters. Four leading degenerate groups have multiplicities
+$50,44,44,36$ and contribute approximately
+$-1.1353$, $-1.0839$, $-1.0669$, and $-0.7821$ to $\Delta\nu^2/\omega^2$.
+These are basis-invariant spectral traces. The complete group inventory
+is in the JSON report; there is no evidence of a decimal-level kernel
+error explaining the instability.
+
+\section{An all-family bound within the declared hard truncation}
+At the broken radial background the actual Yukawa tensors give one
+massive spinor direction per family, namely the Majorana neutrino.
+The three Takagi masses are $M_i=\sigma f_i$, $f_i\geq0$.
+There is no $h_{\rm raw}$ radial fermion mass, and $w,v_s$ do not enter
+these masses. The scalar doublet retuning also has zero radial Hessian.
+These statements are checked directly in the existing Clifford dictionary.
+
+\begin{theorem}[Fixed-point Majorana bound]
+Fix the scalar parameters, $r_B$, $\mu_0$, the hard-potential truncation
+specified above, and the common fixed-VEV prescription. For any three
+Majorana Takagi masses, including their zero limits, adding their
+one-loop potential and associated finite tadpole counterterm leaves a
+negative radial direction. This statement does not include soft-IR
+completion, higher loops, pole matching, or a changed scalar point.
+\end{theorem}
+\begin{proof}
+The fermion potential is
+\begin{equation}
+ V_F=-\frac1{32\pi^2}\sum_{i=1}^3M_i^4
+        \left(\log\frac{M_i^2}{\mu_0^2}-\frac32\right).
+\end{equation}
+Differentiate with respect to $\sigma$ at fixed $f_i,\mu_0$. The finite
+fixed-VEV counterterm has $\Delta\nu_F^2=(\partial_\sigma V_F)/\sigma$.
+Consequently its only nonzero radial curvature is
+\begin{align}
+ F_{\sigma\sigma}
+ &=\partial_\sigma^2V_F-\frac{\partial_\sigma V_F}{\sigma}\\
+ &=-\frac4{\LOOP\sigma^2}\sum_{i=1}^3M_i^4
+                        \log\frac{M_i^2}{\mu_0^2}.
+ \label{eq:fermioncurvature}
+\end{align}
+For $x\geq0$, the continuous function $-x^2\log(x/\mu_0^2)$ has its global
+maximum $\mu_0^4/(2e)$ at $x=\mu_0^2e^{-1/2}$. Thus
+\begin{equation}
+ F_{\sigma\sigma}\leq
+ F_{\max}=\frac{6\mu_0^4}{e\LOOP\sigma^2}
+          =0.08751124\,\omega^2.
+ \label{eq:fermioncap}
+\end{equation}
+This bound allows arbitrarily large $f_i$; no perturbativity cutoff or
+flavor fit is needed for the inequality. In the Loewner order,
+\begin{equation}
+ H_{r,B}+H_{r,F}\preceq H_{r,B}+F_{\max}e_\sigma e_\sigma^T.
+\end{equation}
+Already the fixed normalized direction $q=e_\sigma/\sqrt2$ obeys
+\begin{equation}
+ q^TG_rq=1,\qquad
+ q^T(H_{r,B}+H_{r,F})q
+ \leq\frac{-1.51651817+0.08751124}{2}\,\omega^2<0.
+\end{equation}
+An optimized generalized-eigenvector witness for the upper-bound matrix
+gives the slightly stronger value $-0.7146953\,\omega^2$. This one fixed
+witness works for every allowed family matrix. Hence all choices have
+a negative radial direction in the stated truncation.
+\end{proof}
+
+Equation~\eqref{eq:fermioncurvature} is independently checked by direct
+finite differences of $V_F$ plus its counterterm, and
+Eq.~\eqref{eq:fermioncap} is saturated by three equal masses
+$M_i=\mu_0e^{-1/4}$. These checks do not replace the analytical global
+bound. The result rules out ``let a later family fit repair the current
+hard radial block''; it does not rule out the Spin(10) action. A
+controlled scalar/IR reorganization or a new consistently defined scalar
+point must be considered before a physical fit.
+
+\section{A computed linear-\texorpdfstring{$C_{HN}$}{CHN} finite threshold subset}
+\subsection{Direct vertex integral and terminal matching}
+Use the existing no-half convention
+\begin{equation}
+ \mathcal L\supset-\tfrac12N^TMN-Y_{\alpha i}(L_\alpha H)N_i
+                  +C_{ij}N_iN_j(H^\dagger H)+\mathrm{h.c.},
+ \qquad M(\rho)=M-2C\rho,
+\end{equation}
+where $C=C_{HN}$, $\rho=H^\dagger H$ and $C^T=C$. The Weinberg convention
+is $C_{5,\rm tree}^{I}=-YM^{-1}Y^T$. This is the convention used by the
+existing RG implementation and its 2024 dimension-five checks
+\cite{zhang2024}. Work at leading $q_H/M_i^2=0$ and linear order in $C$.
+
+In a positive Takagi basis, the Yukawa--$C$ bubble contains a
+chirality-flipping propagator $M_i/(k^2-M_i^2)$ and a massless scalar
+propagator. The no-half $C NN\rho$ vertex supplies a factor two. The
+renormalized scalar integral at zero external momenta is
+\begin{equation}
+ b_i=-\int_0^1\log\frac{tM_i^2}{\mu^2}\,\dd t
+       =1+\log\frac{\mu^2}{M_i^2}.
+\end{equation}
+With the displayed interaction signs, the proper Yukawa correction is
+\begin{equation}
+ \Delta Y=\frac2{\LOOP}Y\diag(M_i b_i)C.
+ \label{eq:CHNY}
+\end{equation}
+At this order a one-$C$ Higgs tadpole changes its mass but not its
+kinetic metric; the corresponding massless Higgs tadpole on a sterile
+line is scaleless. This does not discard other canonical type-I wave
+functions, which belong to different spurion contributions.
+
+When all sterile fields are removed, the linear-$C$ contribution from
+this vertex is
+\begin{equation}
+ \Delta C_5^{(C)}=-\Delta Y M^{-1}Y^T-YM^{-1}\Delta Y^T.
+ \label{eq:CHNC5}
+\end{equation}
+Differentiating the same fermion determinant at $M(\rho)=M-2C\rho$ gives
+the finite Higgs mass contribution
+\begin{equation}
+ \Delta q_H^{(C)}=\frac4{\LOOP}\sum_i M_i^3\operatorname{Re}C_{ii}
+               \left(\log\frac{M_i^2}{\mu^2}-1\right).
+ \label{eq:CHNqH}
+\end{equation}
+Here $q_H$ denotes the coefficient of $+\rho$ in the potential, in the
+repository's reference units. Equations~\eqref{eq:CHNY}--\eqref{eq:CHNqH}
+are a calculated subset, not the full $C_{HN}$ seesaw matching map.
+
+Their scale derivatives reproduce the independently implemented
+$C$-linear beta differences. For example,
+\begin{equation}
+ \frac{\dd\Delta C_5^{(C)}}{\dd\log\mu}
+ =-\frac4{\LOOP}
+ \left(YMC M^{-1}Y^T+YM^{-1}CMY^T\right).
+ \label{eq:CHNRG}
+\end{equation}
+The masses in this expression are diagonal positive Takagi masses.
+The implementation tests generic complex family covariance, degenerate
+$O(3)$ invariance, an independent Feynman-parameter integral and direct
+fermion-determinant differentiation. Finite constants are supplied by
+the integral, not inferred solely from a beta function.
+
+\subsection{Tree elimination generates a further operator}
+Partition the Takagi basis into removed $h$ and retained $r$ blocks.
+Although $M_{hr}=0$ at $\rho=0$, generally $C_{hr}\ne0$. Exact algebraic
+elimination at nonzero $\rho$ gives
+\begin{align}
+ Y_r^{\rm eff}(\rho)
+ &=Y_r-Y_h(M_h-2C_{hh}\rho)^{-1}(-2C_{hr}\rho)\\
+ &=Y_r+D_6\rho+O(\rho^2),\qquad
+ D_6=2Y_hM_h^{-1}C_{hr}.
+ \label{eq:D6}
+\end{align}
+In the present sign convention the Lagrangian therefore contains
+$-D_6(LH)N_r(H^\dagger H)+\mathrm{h.c.}$.
+This is a known class of dimension-six sterile-neutrino operators
+\cite{basis}; its coefficient here is derived from the existing action,
+not added as a new free matrix. The same expansion gives
+\begin{align}
+ M_r^{\rm eff}(\rho)&=M_r-2C_{rr}\rho
+              -4C_{rh}M_h^{-1}C_{hr}\rho^2+O(\rho^3),\\
+ C_5^{\rm eff}(\rho)&=C_5-Y_hM_h^{-1}Y_h^T
+              -2Y_hM_h^{-1}C_{hh}M_h^{-1}Y_h^T\rho+O(\rho^2).
+\end{align}
+Only Eq.~\eqref{eq:D6} is needed for the particular linear-$C$ mixed
+threshold consistency check below; the other generated higher operators
+have not been declared irrelevant for full matching.
+
+\subsection{A precise mixed-block RG residual}
+Let $\mathcal C=C_5-Y_rM_r^{-1}Y_r^T$ denote the active-seesaw composite
+below the threshold. In Eq.~\eqref{eq:CHNY} restrict the internal massive
+line to the removed block. This determines the hard $\Delta Y_r$ and
+the heavy--heavy contribution to $\Delta C_5$. Their contribution to
+$\Delta\mathcal C$ is
+\begin{equation}
+ \Delta\mathcal C_h=\Delta C_{5,hh}
+ -\Delta Y_rM_r^{-1}Y_r^T-Y_rM_r^{-1}\Delta Y_r^T.
+\end{equation}
+Subtracting the existing dimension-five-only beta functions leaves the
+identity
+\begin{equation}
+ \frac{\dd\Delta\mathcal C_h}{\dd\log\mu}
+ -\big(\beta_{\mathcal C}^{r}-\beta_{\mathcal C}^{h+r}\big)_{C}
+ =\frac2{\LOOP}\left(D_6M_rY_r^T+Y_rM_rD_6^T\right).
+ \label{eq:D6mix}
+\end{equation}
+One can see its origin without fitting coefficients: the omitted terms
+in Eq.~\eqref{eq:CHNRG} have an internal retained index and an external
+removed index. Replacing their removed propagator by $M_h^{-1}$ gives
+the tree vertex in Eq.~\eqref{eq:D6}. A retained $N_r$--Higgs bubble with
+one $D_6$ and one $Y_r$ insertion contributes
+\begin{equation}
+ \beta_{C_5}\big|_{D_6 M_r}=
+ \frac2{\LOOP}(D_6M_rY_r^T+Y_rM_rD_6^T)
+\end{equation}
+in this convention, closing precisely this residual. The finite
+retained-line bubble is an EFT graph to subtract, not a missing hard
+term to add a second time to $C_5$.
+
+This is not a claim that every dimension-six contribution must always be
+kept in a leading dimension-five calculation. If $M_r/M_h$ is treated
+as a further small expansion parameter, the displayed effect can be
+consistently higher order. However, a finite matching calculation that
+keeps the retained masses without this extra hierarchy truncation needs
+the generated operator or an explicit bound on what was dropped. No such
+bound has yet been established for a physical fitted P54 trajectory.
+
+The actual scalar-tree boundary can have $C\propto M$, but the existing
+RG equations do not preserve that alignment for generic $Y_\nu$.
+Reading the old two synthetic-family trajectories at their live thresholds
+gives $\|D_6\|_F\omega^2$ of
+\begin{equation}
+ (1.1505\times10^{-4},7.9314\times10^{-5},0),\qquad
+ (1.1899\times10^{-4},1.5040\times10^{-4},0).
+\end{equation}
+The last entry vanishes because no sterile field remains. These are
+operator-closure diagnostics, not fitted observables. The old trajectories
+were inspected without applying the incomplete new matcher. Full
+dimension-six running, nonzero-$q_H$ terms, correlated finite $M_R$,
+$\lambda$, wave-function maps and the remaining $C_5$/mixed/box diagrams
+are still missing.
+
+\section{Updated acceptance gates and reproducibility}
+The common-renormalization verifier passes 46/46 checks; the
+$C_{HN}$ closure verifier passes 20/20. The strengthened canonical fit
+interface passes 18/18 and the existing upper-vector subset remains
+38/38. Passing tests includes correctly detecting a failed physical
+stability condition; it is not a claim that all physical gates passed.
+
+The shared fit consumer now additionally requires common parameter/tadpole
+consistency, whole-background stability, mass-operator control and
+$C_{HN}$ operator closure. Its previous doublet and diagram flags alone
+are insufficient. The frozen point is not promoted to a fit. No full
+Wilson/box or lower gauge/ghost/Yukawa completion is claimed.
+
+The immediate research choices are:
+\begin{enumerate}
+\item Keep the action and first test a consistently organized scalar
+background with the required Goldstone/IR and momentum/gauge treatment.
+The theorem above specifies exactly which previous truncation cannot be
+rescued by a family fit; it does not substitute for this further analysis.
+\item If a controlled background cannot be obtained at this scalar point,
+reselect common scalar parameters subject to stationarity and full radial
+and nonradial stability, then recompute the common spectrum/matching.
+Changing only the finite counterterm or fitting an isolated mass formula
+is not a consistent alternative. No such parameter change is made here.
+\item For sequential seesaw, choose and document either the enlarged
+operator basis with retained-mass feedback or a justified hierarchy
+expansion and remainder bound. Then finish the finite diagrams and
+lower matching before the complete light-state and flavor fit.
+\end{enumerate}
+
+New artifacts, relative to \texttt{route\_f/}, are
+\path{code/verify_p54_common_renormalization.py} and
+\path{code/verify_p54_chn_threshold_closure.py}, with matching JSON/Markdown
+files under \path{output/}. The first takes \texttt{--cache-dir} pointing
+to the old \path{tmp/p54_full_doublet_cw} cache. Only three new mixed
+polynomial Hessians were needed, stored in the worktree cache; all later
+runs reuse them. Reports record current source hashes, matrices,
+individual checks and explicit non-completion flags.
+
+\begin{thebibliography}{9}
+\bibitem{vev} V. D\=ud\.enas and M. L\"oschner,
+Vacuum expectation value renormalization in the Standard Model and beyond,
+\href{https://arxiv.org/abs/2010.15076}{arXiv:2010.15076}.
+\bibitem{matching} J. Braathen, M. D. Goodsell and P. Slavich,
+Matching renormalisable couplings: simple schemes and a plot,
+especially Secs.~2.3 and 4,
+\href{https://arxiv.org/html/1810.09388v2}{arXiv:1810.09388v2}.
+\bibitem{zhang2024} D. Zhang,
+Threshold Effects on the Massless Neutrino in the Canonical Seesaw Mechanism,
+\href{https://arxiv.org/html/2405.18017v2}{arXiv:2405.18017v2}.
+\bibitem{basis} H.-L. Li, Z. Ren, M.-L. Xiao, J.-H. Yu and Y.-H. Zheng,
+Operator Bases in Effective Field Theories with Sterile Neutrinos:
+$d\leq9$,
+\href{https://arxiv.org/abs/2105.09329}{arXiv:2105.09329}.
+\end{thebibliography}
+\end{document}

@@ -7,7 +7,211 @@ program with one action per physical branch, explicit claim boundaries, and
 separate evidence chains for four-dimensional physics, family UV, and soliton
 mathematics.
 
-## Latest P-layer checkpoint (2026-09-05)
+## Latest P-layer checkpoint (2026-09-14)
+
+**P-INV1 completes invariant-resolved scalar attribution and eight
+bounded nonuniform tests; no controlled replacement point is selected.**
+The three transverse Sigma quartics account for about 94% of the old
+leading kinetic insertion in the explicitly interference-preserving
+ledger. Weakening them closes scalar gaps and transfers the problem to
+Phi/mixed-field vertices. Two rank-50/rank-36 blocks yield the conditional
+bound `rho_Z >= .01471609503/tau`; the projector algebra is exact, while
+the action identities still await symbolic/interval certification.
+
+All eight cards fail control. One has positive radial curvature but
+kinetic correction **1.899**, so positivity alone is not promoted.
+Pure-H necessary boundedness gates are added; full mixed-field BFB and
+global-vacuum comparison are still required. The radial Majorana
+momentum subset is now known in terms of three unfitted masses, and
+the missing scalar-vector derivative vertex is explicitly constructed.
+The complete gauged physical stability/pole verdict remains open.
+
+See `tex/p54_invariant_attribution_nonuniform_control.tex`, its PDF,
+the `p54_invariant_decomposition`, `p54_nonuniform_reselection`,
+`p54_joint_portal_probes`, `p54_transverse_gap_obstruction` and
+`p54_radial_fermion_momentum` reports. The five verifiers pass
+**445/445, 183/183, 36/36, 112/112 and 56/56**, respectively
+(**832/832** total; **49/49** source hashes verified).
+The eight-page PDF was compiled and visually checked on all pages.
+Next: complete the same-prescription radial gauge/mixed momentum kernel,
+and certify/use the vertex-to-gap obstruction instead of another blind
+scalar scan. No default parameters or matching inputs are changed;
+Wilson/box, lower matching, finite seesaw and physical fit remain open.
+
+## Previous P-layer checkpoint (2026-09-13)
+
+**P-IR1 computes the actual Goldstone/IR and scalar momentum subgate,
+but does not select a controlled replacement scalar point.** All 34
+Goldstone hard shifts cancel with the existing common counterterms.
+Soft tadpoles vanish, whereas the zero-momentum radial Hessian has a
+nonzero Gram-matrix IR logarithm; Goldstone resummation alone does not
+turn this into a finite physical mass matrix.
+
+The full one-loop scalar momentum dependence on the radial slice is
+now calculated. Its hard kinetic correction has a largest generalized
+eigenvalue **2.61**, exposing a small-insertion control failure at the
+old point. The gauge/ghost/fermion momentum completion remains absent,
+so no pole or full-background stability claim follows.
+
+An analytical bound rules out the entire bosonic uniform-weakening
+ray at the old radii and fixed gauge/scale. Four less-hierarchical
+engineering points were then tested with re-solved masses, tree
+doublet tuning and their own loop data. None is accepted: even the
+one with positive hard radial masses has relative insertion **1.43**.
+All four parameter cards are saved, not promoted or used for flavor fitting.
+The default scalar parameters and old matching inputs remain unchanged.
+
+The new verifiers pass **65/65 and 36/36**, reusing cached polynomial
+vertices with no new full Hessian evaluations. See
+`tex/p54_goldstone_ir_background_control.tex`, its PDF and the
+`p54_goldstone_ir` / `p54_scalar_reselection` JSON/Markdown reports.
+Next work should separate the invariant couplings' collective loop
+effects before further nonuniform parameter changes, or complete the
+gauged momentum calculation to decide the original point's fate.
+Full matching and physical fit remain open; **P-IR1** in `ROADMAP.md`
+records the exact decision boundaries.
+
+## Previous P-layer checkpoint: common renormalization (2026-09-12)
+
+**P-REN1 closes the common bosonic parameter/tadpole transport algebra,
+but exposes a failed radial stability condition at the frozen benchmark.**
+Same-bare conversion requires shifting the renormalized parameters,
+tree vacuum, mass kernels and Wilson coefficients together. Deleting
+the large finite counterterm at unchanged input is not a repair.
+
+The actual hard-plus-counterterm radial Hessian has a generalized
+eigenvalue `-0.758448 omega^2`. An analytical bound on all three Majorana
+masses proves that even their maximal positive fixed-VEV one-loop
+contribution leaves a negative direction (`-0.7146953 omega^2`). A later
+family fit cannot rescue this **fixed-parameter, one-loop hard-potential
+truncation**. This is not a full-model, soft-IR-complete or pole-mass
+exclusion, and the action/parameters have not been changed.
+
+Separately, a linear-CHN finite Yukawa/C5/Higgs-mass subset is calculated.
+Partial sterile elimination generates the dimension-six coefficient
+`D6=2 Y_h M_h^-1 C_hr`; its retained-Majorana-mass feedback resolves an
+explicit RG residual. It needs tracking when that retained-mass accuracy
+is claimed, or a controlled hierarchy truncation with a remainder bound.
+The original dimension-five diagnostic trajectories are not silently
+modified, and full finite seesaw remains open.
+
+New verifiers pass **46/46 and 20/20**; the strengthened fit gate passes
+**18/18**, and the existing upper-vector subset still passes **38/38**.
+Derivations are in `tex/p54_common_renormalization_radial_bound_chn.tex`
+and its PDF in `output/pdf/`; corresponding JSON/Markdown reports retain
+the full matrices and source hashes. Passing includes correctly detecting
+the failed physical stability condition, not passing that condition.
+
+Next: resolve common scalar/background control, finish Wilson/box and
+lower gauge/ghost/Yukawa matching, and close the specified seesaw operator
+basis before the full light state and physical fit. Formal matching can
+continue without promoting the unstable hard benchmark. See **P-REN1**
+in `ROADMAP.md` for the exact scope and options.
+
+## Previous P-layer checkpoint: scalar matching (2026-09-11)
+
+P-MATCH-SCALAR2 adds actual **upper scalar hard matching and common
+tadpole propagation**, a factorizable scalar-exchange Wilson response,
+the lower finite scalar determinant subtraction, and universal finite
+seesaw terms at live thresholds. The four new verifiers pass **14/14,
+16/16, 22/22 and 24/24**; the original sequential evolution remains
+**46/46**, with its default tree-threshold report refreshed. Derivations are in
+`tex/p54_scalar_tadpole_wilson_seesaw_matching.tex` and its PDF under
+`output/pdf/`; full matrices and source hashes accompany the four
+`upper_scalar_matching`, `upper_wilson_exchange`,
+`lower_scalar_finite_subtraction`, and `finite_seesaw_matching` reports.
+
+**The important new result is a control warning, not another precise
+mass fit.** The historical broken-anchored tadpole counterterms cannot
+be independently reset at the upper PS saddle. Propagating the common
+prescription gives a hard-plus-CT singlet response about 22% of its VEV,
+not a completed quantum background. The computed heavy mass subset has
+relative spectral radius **6.76**: its propagator expansion is not
+controlled even though some source projections are much smaller.
+This is not a full-model exclusion; missing diagrams, parameter feedback
+and retained-mass corrections still matter.
+
+Full upper Wilson/box matching, the lower gauge/ghost/Yukawa finite
+functional and finite seesaw with actual nonzero CHN/type-II C5 remain
+open. The canonical type-I terminal formula explicitly rejects that
+more general input; only its justified universal subset enters current
+trajectories. The full fermionic light state and fit remain disabled.
+See **P-MATCH-SCALAR2** in `ROADMAP.md` for the revised next order.
+
+## Previous P-layer checkpoint: source transport (2026-09-11)
+
+The one-loop **source-preserving (K,J,C) transport** and the actual upper
+heavy-vector Yukawa/kinetic subset are now derived and tested:
+
+- `code/verify_p54_upper_vector_matching.py`: **38/38**;
+- `code/verify_p54_kjc_finite_matching.py`: **108/108**;
+- derivation: `tex/p54_source_preserving_finite_matching.tex` and
+  `output/pdf/p54_source_preserving_finite_matching.pdf`.
+
+The same upper PS saddle, DR/MSbar Landau gauge and fixed-VEV convention
+are retained. Vector-induced scalar kinetic matching also generates
+conjugate H/F Yukawa coefficients; the six PS invariants cannot be
+replaced by the four original ones. Different-colour diquark probes
+reveal upper induced contact terms missed by the restricted same-colour
+probe set. No UV family parameters were added.
+
+**Complete transport algebra is not complete finite matching.** Retained
+scalar masses are expanded at leading hard order, with maximal
+`|m^2|/M_V^2=0.328605`; precision error control remains open. Upper scalar
+potential/kinetic/Wilson pieces, lower covariant finite matching and
+finite sequential seesaw still precede the full fermionic light-state
+and constrained fit. The shared fit gate rejects incomplete KJC maps.
+See the P-MATCH-KJC1 entry in `ROADMAP.md` for the exact remaining order.
+
+## Previous P-layer checkpoint (2026-09-10)
+
+The frozen action now has an interaction-defined **common scalar spectrum**
+audit: `code/verify_p54_spectral_channels.py`, its JSON/Markdown output,
+and `tex/p54_spectral_channels_nested_elimination.tex` with compiled PDF.
+All **153/153** checks pass, without recomputing existing Hessians. Actual
+Higgs-pair, Yukawa and vector-pair vertices define the channels. Unknown
+family matrices remain symbolic; no masses or couplings were fitted.
+
+All 295 physical real scalar modes are retained in the spectral ledger;
+the declared 33 current slots generate an exact 21-dimensional observable
+subspace. This is not a spacetime dimension or new field-content claim.
+The physical PQ mode is invisible to these particular linear vertices:
+its direction lies in S, whose direct Yukawa tensor is zero. The initial
+nonzero NN-PQ coupling expectation was rejected, not fitted away.
+
+Exact nested elimination must transport **kernel, sources and induced
+source-source response** together. In the actual `9+231+55` factorization,
+omitting the last term loses the full HH scalar-exchange response.
+The existing nonzero CHN is independently recovered as a massive spectral
+moment. Full finite matching, fitted flavor and loop pole predictions
+remain open. Extra spatial dimensions remain comparison-only, with one
+common geometry/action/probe profile required for an entire predicted tower.
+
+## Previous P-layer checkpoint (2026-09-06)
+
+The common-phase/PS-flow checkpoint was committed and pushed as `4ad74e7`
+before this work. New derivations and numerical records are in
+`tex/p54_covariant_eft_finite_yukawa_seesaw.tex`, its `output/pdf/` PDF,
+and the five `p54_lower_covariant_eft`, `p54_upper_yukawa_thresholds`,
+`p54_scalar_kinetic_matching`, `p54_scalar_chn`, `p54_sequential_seesaw`
+Python/JSON/MD sets.
+
+The local lower covariant scalar/vector action is now constructed.
+Actual finite upper pure-Yukawa diagrams generate calculable conjugate
+bidoublet operators; the former four-matrix finite boundary is not closed,
+but the six-invariant real-Weyl system is. The full four-doublet
+scalar-cubic kinetic correction is computed as a separate one-step subset.
+The same tree action also generates **nonzero `NN H†H`**, so the lower
+sterile EFT must retain `C_HN`, not only a Weinberg coefficient.
+Moving/degenerate seesaw thresholds, exact block-tree matching and the
+2024 dimension-five feedback correction are implemented and tested.
+
+These additional EFT operators are determined by the original two UV
+family matrices and scalar action, not free fit parameters. Full finite
+vector/ghost/scalar matching and finite sequential neutrino thresholds
+remain open. No physical global fit or Higgs pole mass is claimed.
+
+## Previous P-layer checkpoint (2026-09-05; historical)
 
 The prior fixed-VEV checkpoint was committed/pushed as `b8e7398` before
 the current work. See `tex/p54_complex_phase_ps_matching.tex`, its

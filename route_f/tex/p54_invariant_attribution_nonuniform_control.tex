@@ -1,0 +1,569 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,slashed,bm,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 invariant attribution and nonuniform background control}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newtheorem{proposition}{Proposition}
+\title{Route-F P54: Exact Invariant Attribution,\\
+Nonuniform Scalar Control and the Radial Fermion Kernel}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{14 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We resolve the scalar one-loop radial mass and kinetic corrections into
+the actual invariants of the unchanged P54PQ-v2 action, retaining all
+interference. Multihomogeneity determines the full radial Hessian jets
+from one ambient Hessian per invariant, avoiding a repeated numerical
+derivative scan. Fixed-propagator attribution is distinguished from
+constrained parameter changes, which require new spectra, counterterms
+and light-doublet tuning. This calculation concerns engineering control
+of candidate backgrounds, not a fit to observed particle masses. The
+radial Majorana determinant can be evaluated independently of a complete
+flavor fit, but a full gauged physical stability verdict still requires
+the consistently regulated momentum-dependent bosonic kernel.
+\end{abstract}
+
+\section{Unchanged theory and scope}
+The action, 328 canonical real scalar coordinates and tensor
+normalizations are exactly those of
+\texttt{verify\_p54\_p1\_hessian\_spectrum.py}.
+The reference point is
+\begin{equation}
+ r_0=(w,\sigma,v_s)=(1,0.1265,0.25)\omega,
+ \qquad g_U=\mu_0/\omega=0.5626028899853225.
+\end{equation}
+Here ``original point'' means this broken background, not the symmetric
+configuration $X=0$. We use the same DR/$\MS$, background-field Landau,
+fixed-VEV invariant-mass counterterm prescription as P-REN1 and P-IR1.
+Let $X=Rr$, with
+\begin{equation}
+ G=R^TR=\diag(12/5,2,1),\qquad
+ H=V_0''(X),\quad T_j=\partial_{r_j}H,\quad
+ U_{jk}=\partial_{r_j}\partial_{r_k}H.
+\end{equation}
+Thus a coordinate $\sigma\sigma$ entry must be divided by two to
+obtain its value on a unit canonical $\sigma$ direction. The 38 tree
+soft modes are 33 gauge Goldstones, one physical PQ mode and the four
+real components of one tuned complex light doublet. There are 290
+positive scalar modes. Their mass weights are recomputed for every
+candidate, not copied from the original point.
+
+\section{One Hessian per invariant: exact block Euler reconstruction}
+Write the real-parameter slice of the action as
+\begin{equation}
+ V_0=\sum_\alpha p_\alpha I_\alpha,\qquad
+ (\Phi,\Sigma,H_{10},S)=(w\Phi_0,\sigma\Sigma_0,0,v_sS_0).
+\end{equation}
+The real and imaginary canonical coordinates of each complex field
+belong to the same scaling sector. If $I_\alpha$ has multidegree
+$d_\alpha=(d_\Phi,d_\Sigma,d_H,d_S)$, the Hessian block with external
+fields in sectors $A,B$ has degrees
+\begin{equation}
+ e_{\alpha,AB,k}=d_{\alpha,k}-\delta_{Ak}-\delta_{Bk}.
+\end{equation}
+Negative degrees signify a zero derivative, not a negative-power
+continuation. At $H_{10}=0$, blocks with remaining $e_H>0$ also vanish.
+For the other blocks and positive radial coordinates,
+\begin{align}
+ H^\alpha_{AB}(r')&=H^\alpha_{AB}(r_0)
+     \prod_{k\in\{\Phi,\Sigma,S\}}(r'_k/r_{0k})^{e_k},\\
+ (T^\alpha_j)_{AB}&=\frac{e_j}{r_j}H^\alpha_{AB},\qquad
+ (U^\alpha_{jk})_{AB}=
+ \frac{e_j(e_k-\delta_{jk})}{r_jr_k}H^\alpha_{AB}.
+ \label{eq:Euler}
+\end{align}
+These identities follow by differentiating each homogeneous polynomial
+block. They are exact for the fixed angular background, not a truncated
+Taylor approximation or a fit. At a zero radius one must use polynomial
+coefficients directly instead of dividing by that radius.
+
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule Couplings & Multidegree $(\Phi,\Sigma,H,S)$\\\midrule
+$\mu^2;\ c;\ a,b$ & $(2,0,0,0);\ (3,0,0,0);\ (4,0,0,0)$\\
+$\nu^2;\ \lambda_0,\lambda_2,\lambda_4,\lambda'_4$ & $(0,2,0,0);\ (0,4,0,0)$\\
+$\alpha,\beta;\ \xi_0^2;\ \xi_1,\xi_2$ & $(2,2,0,0);\ (0,0,2,0);\ (0,0,4,0)$\\
+$\xi_3;\ \gamma_1,\gamma_2,\eta_3$ & $(1,0,2,0);\ (0,2,2,0)$\\
+$\eta_0,\eta_2;\ \eta_1$ & $(2,0,2,0);\ (0,3,1,0)$\\
+$\mu_s^2;\ \chi_1;\ \chi_2$ & $(0,0,0,2);\ (0,0,0,4);\ (0,2,0,2)$\\
+$\chi_3;\ \chi_4;\ \chi_5$ & $(2,0,0,2);\ (1,2,0,1);\ (0,0,2,2)$\\
+$\chi_6;\ \chi_7$ & $(0,0,2,1);\ (1,0,2,1)$\\\bottomrule
+\end{tabular}
+\end{center}
+
+For a complex coupling, $cI+c^*I^*=2c_R\Re I-2c_I\Im I$.
+This checkpoint varies the real directions only. A CP-phase study
+requires the independent imaginary basis and new angular-stationarity
+tests. Also, a vanishing radial potential does not imply a vanishing
+ambient Hessian: transverse states can couple strongly to that radius.
+Conversely, $\xi_1,\xi_2$ multiply $H_{10}^4$ and have identically zero
+$H,T,U$ on this entire radial slice. Changing them cannot repair this
+particular one-loop radial failure, although they affect boundedness,
+nonzero-$H_{10}$ backgrounds and other amplitudes.
+
+\begin{proposition}[A structural blind spot of radial tests]
+Passing every radial mass/kinetic test on $H_{10}=0$ does not imply
+boundedness of the scalar action.
+\end{proposition}
+\begin{proof}
+Set $\Phi=\Sigma=S=0$. The quartic potential is
+\begin{equation}
+ V_4=\xi_1(H^\dagger H)^2+\xi_2|H^TH|^2.
+\end{equation}
+For a complex null vector $H=t(1,i,0,\ldots)/\sqrt2$, one has
+$H^TH=0$ and $V_4=\xi_1t^4$. Thus $\xi_1<0$ makes the potential
+unbounded below without changing any of the radial $H,T,U$ computed
+above. A real $H$ similarly requires $\xi_1+\xi_2\ge0$. Since
+$0\le |H^TH|^2/(H^\dagger H)^2\le1$, these two conditions characterize
+nonnegativity of this pure-$H$ quartic. They are only necessary for the
+full action; equality still requires lower-degree terms on flat rays,
+and mixed-field directions have not been bounded.
+\end{proof}
+Both necessary inequalities are now explicit rejection gates. The
+global mixed-quartic and competing-vacuum problems remain separate;
+additional radial decimal accuracy cannot replace either one.
+
+\section{Attribution with all interference retained}
+Diagonalize only the complete action:
+\begin{equation}
+ Q^THQ=\diag(m_i^2),\qquad
+ \widetilde T^\alpha_j=Q^TT^\alpha_jQ,\qquad
+ \widetilde U^\alpha_{jk}=Q^TU^\alpha_{jk}Q.
+\end{equation}
+Here component jets include the actual coefficient $p_\alpha$.
+Individual invariants need not have positive Hessians and do not define
+separate physical determinants. Fix $Q,m_i^2$ and the hard projector
+only for the following attribution. Define
+\begin{align}
+ A_i&=m_i^2[\ln(m_i^2/\mu_0^2)-1]\quad (i\text{ hard}),\quad A_i=0\ (i\text{ soft}),\\
+ L(a,b;s)&=\int_0^1\ln\frac{(1-x)a+xb+x(1-x)s}{\mu_0^2}\,dx,\quad s=p_E^2,\\
+ W(a,b)&=\int_0^1\frac{x(1-x)}{(1-x)a+xb}\,dx.
+\end{align}
+In the local hard kernels below, at least one internal line is hard.
+Hard--soft terms are retained. Pure soft--soft terms instead contain
+$L(0,0;s)=\ln(s/\mu_0^2)-2$ and are not a local kinetic coefficient.
+
+The scalar tadpole and common finite counterterm for component $\alpha$
+are linear:
+\begin{align}
+ t^\alpha_j&=\frac{1}{32\pi^2}\sum_i A_i(\widetilde T^\alpha_j)_{ii},\\
+ \mathcal A(r)&=-\diag(12w/5,\sigma,v_s),\qquad
+ \Delta p^\alpha=-\mathcal A(r)^{-1}t^\alpha,\\
+ R^TH_{\mathrm{CT}}^\alpha R
+ &=-\diag(t^\alpha_w/w,t^\alpha_\sigma/\sigma,t^\alpha_v/v_s).
+\end{align}
+Hence define
+\begin{equation}
+ C^\alpha_{jk}=\frac{1}{32\pi^2}\sum_i A_i
+ (\widetilde U^\alpha_{jk})_{ii}
+ +(R^TH_{\mathrm{CT}}^\alpha R)_{jk}.
+\end{equation}
+The ordered bubble and kinetic interference blocks are
+\begin{align}
+ B^{\alpha\beta}_{jk}&=\frac{1}{32\pi^2}\sum_{il}'
+ (\widetilde T^\alpha_j)_{il}(\widetilde T^\beta_k)_{li}
+ L(m_i^2,m_l^2;0),\\
+ Z^{\alpha\beta}_{jk}&=\frac{1}{32\pi^2}\sum_{il}'
+ (\widetilde T^\alpha_j)_{il}(\widetilde T^\beta_k)_{li}
+ W(m_i^2,m_l^2).
+\end{align}
+The prime excludes only two-soft-line pairs. All ordered blocks are
+saved, including $\alpha\ne\beta$. Their exact sums give
+\begin{equation}
+ H_{S+\mathrm{CT}}=\sum_\alpha C^\alpha+\sum_{\alpha\beta}B^{\alpha\beta},
+ \qquad \Delta Z_S=\sum_{\alpha\beta}Z^{\alpha\beta}.
+\end{equation}
+The joint $(\alpha,j)$ kinetic Gram matrix is positive semidefinite,
+but a cross block need not be positive. The signed equal-share ledger
+\begin{align}
+ \mathscr M^\alpha&=C^\alpha+\tfrac12\sum_\beta
+ (B^{\alpha\beta}+B^{\beta\alpha}),\\
+ \mathscr Z^\alpha&=\tfrac12\sum_\beta
+ (Z^{\alpha\beta}+Z^{\beta\alpha})
+\end{align}
+is a specified accounting convention, not a separately measurable
+``contribution percentage.'' Its sums reconstruct the full matrices.
+
+\subsection{Why the ledger is not a parameter derivative}
+If $\kappa_\alpha$ scales only vertices at fixed propagators,
+\begin{equation}
+ F(\kappa)=\sum_\alpha\kappa_\alpha C^\alpha+
+ \sum_{\alpha\beta}\kappa_\alpha\kappa_\beta B^{\alpha\beta},\qquad
+ \partial_{\kappa_\alpha}F\big|_1
+ =C^\alpha+\sum_\beta(B^{\alpha\beta}+B^{\beta\alpha}).
+\end{equation}
+Even this frozen derivative differs from the signed allocation. Actual
+parameter changes also differentiate masses, eigenprojectors, loop
+weights and the stationarity/light-doublet constraints. The three
+dependent mass terms illustrate the distinction: their cubic/quartic
+jets vanish, but they still change all propagators.
+
+\section{Actual invariant ledger at the original point}
+The exact reconstruction, random independently reweighted vertex tests,
+full joint kinetic Gram positivity and source comparisons pass 445/445
+checks. The first run required 27 unit-coefficient Hessians (the two
+$H^4$ zeros are algebraic) and one new independent full-action radial
+point. Subsequent runs use those caches without new evaluations.
+For the canonical $\sigma$ direction $e_\sigma/\sqrt2$ and the
+$G$-normalized leading kinetic eigenvector $z$, the signed ledger is
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule Invariant & $\mathscr M_{\sigma\sigma}/(2\omega^2)$ &
+$z^T\mathscr Z z$ & $z^TZ^{\alpha\alpha}z$\\\midrule
+$\lambda'_4$ & $-0.29460220$ & $0.89223875$ & $0.37939853$\\
+$\lambda_2$ & $-0.25234309$ & $0.85449316$ & $0.29839039$\\
+$\lambda_4$ & $-0.19391061$ & $0.70984670$ & $0.21519366$\\
+$\lambda_0$ & $-0.02977324$ & $0.09307175$ & $0.00598139$\\
+$\alpha$ & $-0.00000790$ & $0.06652577$ & $0.00226620$\\
+$\beta$ & $0.00000601$ & $-0.01376498$ & $0.00206069$\\\bottomrule
+\end{tabular}
+\end{center}
+The three transverse $\Sigma$ quartics account for $2.45657860$ of
+the leading $2.61031989$ kinetic insertion (94.11\% in this specified
+allocation), and $-0.74085590\,\omega^2$ of the scalar-plus-CT canonical
+$\sigma$ curvature (96.13\%). These percentages are not invariant
+observables. In particular all kinetic self terms sum to only
+$0.90706619$; discarding interference misses $1.70325369$.
+
+The radial restriction of the actual tensor action contains
+$\lambda_0\sigma^4/4$, but not these three transverse quartics.
+At a stationary background
+\begin{equation}
+ (H_0)_{\sigma\sigma}=2\lambda_0\sigma^2,
+ \qquad R^TH^{\lambda_2,\lambda_4,\lambda'_4}R=0.
+\end{equation}
+The latter projected numerical norms are below $2\times10^{-16}$ at
+the original card. Thus transverse quartics can be weakened without
+simultaneously weakening this tree radial restoring term. This is a
+directional reason to test nonuniform changes, not a guarantee of
+success: the propagator spectrum still changes.
+
+\section{Constrained nonuniform re-evaluation}
+At each separately declared candidate card, assemble the full polynomial
+$H,T,U$ by Eq.~\eqref{eq:Euler}. Re-solve the three mass parameters by
+\begin{equation}
+ \delta p=-\mathcal A(r)^{-1}\nabla_r V_0,
+ \qquad H\mapsto H+H_{\mathrm{mass}}(\delta p),
+\end{equation}
+and tune $\xi_0^2$ to the first physical eigenvalue crossing, after
+removing the 34 symmetry directions. Verify the four extra zero modes
+have $(C_2^{SU(3)},C_2^{SU(2)},Y^2)=(0,3/4,1/4)$ and all other scalar
+tree modes are positive. Then recompute every scalar/vector mass,
+radial jet contraction and the common finite tadpole shift.
+
+The engineering tests are
+\begin{equation}
+ H_b^{\rm hard}>0,\qquad
+ \rho_H=\max|\lambda(H_b^{\rm hard}-H_0,H_0)|<0.3,
+ \qquad \rho_Z=\lambda_{\max}(\Delta Z_S,G)<0.3.
+\end{equation}
+The margin $0.3$ is declared, not a theorem bounding omitted loops.
+Passing these radial tests does not prove full nonradial stability,
+boundedness from below, a physical pole, or a valid unification fit.
+No observed mass or flavor data are used, and no default matching input
+is overwritten.
+
+\subsection{First-stage cards: weakening quartics alone is insufficient}
+The six declared cards use
+$(\lambda_2,\lambda_4,\lambda'_4)\mapsto
+\tau(\lambda_2,\lambda_4,\lambda'_4)$.
+Except as labelled, $r=r_0$ and all other independent coefficients are
+unchanged. L2 doubles $\lambda_0$; X multiplies $\chi_4$ by $0.03$;
+S30 also changes $\sigma/\omega$ to $0.3$.
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule Card & $\tau$ & $\min\lambda(H_b^{\rm hard},G)/\omega^2$
+& $\rho_H$ & $\rho_Z$\\\midrule
+T30 & $0.30$ & $-0.434370$ & $32.3860$ & $0.902652$\\
+T10 & $0.10$ & $-0.106794$ & $8.59012$ & $0.713427$\\
+T03 & $0.03$ & $-0.026376$ & $2.84877$ & $1.099954$\\
+T03 L2 & $0.03$ & $-0.067918$ & $3.31182$ & $1.370839$\\
+T03 X & $0.03$ & $-0.026349$ & $2.84547$ & $1.099232$\\
+T03 X S30 & $0.03$ & $-0.052148$ & $1.66116$ & $0.632098$\\\bottomrule
+\end{tabular}
+\end{center}
+All six fail. Their actual action reconstruction, necessary BFB negative
+controls and 80 independent bubble integrals pass 183/183 numerical
+checks; rejection is a physical-control result, not a failed code test.
+At T03 X S30, a separate evaluation of the final retuned full action,
+three coordinate-direction jets and a mixed-direction jet confirms
+that the invariant assembly is not merely an assumed input identity.
+
+The nonmonotonic kinetic insertion has a concrete spectral origin.
+Between T10 and T03 the positive scalar gap drops from
+$0.00883111$ to $0.00267622\,\omega^2$, while the leading kinetic
+eigenvector's canonical $\Phi$ fraction rises from $0.667676$ to
+$0.824065$. In this new mass basis the signed $\alpha$ allocation
+rises from $0.437312$ to $1.081219$ (the accompanying $\beta$
+interference is negative). Thus the original leading-$\Sigma$
+quartic problem is replaced by a large mixed-coupling response in the
+$\Phi$ direction. Merely shrinking a vertex does not uniformly shrink
+a loop with a simultaneously closing propagator gap.
+
+For example, any positive hard squared-mass gap $\Delta$ gives
+\begin{equation}
+ W(a,b)\le\frac{1}{6\Delta}\quad(a,b\ge\Delta),\qquad
+ W(0,b)\le\frac{1}{2\Delta}\quad(b\ge\Delta).
+\end{equation}
+Therefore a useful control estimate must constrain both the vertex
+norm and the inverse gap. A fixed-parameter derivative of a mass is
+not a derivative along the reanchored stationary-mass curve; confusing
+the two would incorrectly remove precisely the response measured here.
+
+\subsection{Second-stage joint mixed-coupling probes}
+After identifying this response, two additional coarse cards were
+declared, not optimized: $\lambda_0=0.2$ as an absolute value;
+$(\lambda_2,\lambda_4,\lambda'_4,\chi_4)$ are multiplied by $0.01$;
+$(\alpha,\beta,\chi_2)$ by $0.1$. All other independent coefficients
+are retained, with $w=1$, $v_s=0.25$ and $\sigma=0.3$ or $0.5$.
+Dependent masses and the tree doublet are re-solved as above.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule $\sigma/\omega$ & $\min\lambda(H_b^{\rm hard},G)/\omega^2$
+& $\rho_H$ & $\rho_Z$\\\midrule
+$0.3$ & $-0.00317747$ & $1.176951$ & $1.131599$\\
+$0.5$ & $0.02299103$ & $0.538986$ & $1.899032$\\\bottomrule
+\end{tabular}
+\end{center}
+The 36 checks pass with zero new Hessian evaluations, but neither card
+passes the declared control gates. The second is an explicit example
+of positive hard curvature without small loop insertions. Its leading
+kinetic vector is 99.9798\% in the canonical $\Phi$ direction. Neither
+is retained, so no new independent full-action Hessian calculation is
+spent on these two rejected cards; their assembly uses the checked
+invariant library. This is the end of this bounded eight-card test,
+not the start of an unrestricted optimization.
+
+\subsection{A conditional inverse-gap obstruction, not a decimal fit}
+On the ray changing only the three transverse quartics at fixed $r_0$,
+two mutually orthogonal scalar eigenspaces have numerically verified
+projector identities (the following numerical matrices use $\omega=1$)
+\begin{align}
+ P_{50}H P_{50}&=12\tau\sigma^2P_{50},&
+ P_{36}H P_{36}&=\frac{58}{5}\tau\sigma^2P_{36},\\
+ P_j T_w P_j&=\frac9{25}P_j,& j&=50,36.
+\end{align}
+The projectors are pure $\Sigma$, with ranks indicated by their
+subscripts. Their entries admit exact integer-over-eight projector
+certificates. The action-to-projector identities above are checked
+against the actual tensor action, but a symbolic or interval
+certificate for those action identities is not yet supplied. The
+following implication is therefore an exact conditional bound, not
+an unconditional theorem about the entire Spin(10) action.
+
+The separately tested invariant coefficients give the useful mass
+branch formula
+\begin{equation}
+ m_\kappa^2=-\frac{\nu^2}{2}
+ +(\lambda_0/2+\tau\kappa)\sigma^2
+ +\frac65(\alpha-\beta)w^2+60\chi_2v_s^2,
+ \quad (N,\kappa)=(50,12),(36,58/5).
+\end{equation}
+For general transverse quartics the two $\kappa$ combinations are
+$4\lambda_2+4\lambda_4+16\lambda'_4$ and
+$6\lambda_2+6\lambda_4+8\lambda'_4$ before multiplying by $\tau$.
+The stationary $\nu^2$ cancels all but $\tau\kappa\sigma^2$ in the
+mass, but \emph{does not} cancel the fixed-Lagrangian mass derivative
+\begin{equation}
+ b_\kappa=\nabla_r m_\kappa^2
+ =\left(\frac{12}{5}(\alpha-\beta)w,
+ (\lambda_0+2\tau\kappa)\sigma,120\chi_2v_s\right).
+\end{equation}
+This is the concrete reason that a light stationary spectrum can have
+large couplings to background fluctuations.
+
+\begin{proposition}[Conditional scalar kinetic lower bound]
+Assuming these reducing-projector identities and a well-defined
+positive hard complement, the scalar hard kinetic matrix obeys
+\begin{align}
+ (\Delta Z_S)_{ww}&\ge
+ \frac{(9/25)^2}{192\pi^2\tau\sigma^2}
+ \left(\frac{50}{12}+\frac{36}{58/5}\right)
+ =\frac{0.03107164552}{\tau},\\
+ \rho_Z&\ge\frac{(\Delta Z_S)_{ww}}{G_{ww}}
+ \ge\frac{0.01294651897}{\tau}.
+\end{align}
+\end{proposition}
+\begin{proof}
+Each of the rank-$N$ degenerate blocks contributes
+$N(9/25)^2W(m^2,m^2)/(32\pi^2)$ to this diagonal kinetic entry.
+Since $W(m^2,m^2)=1/(6m^2)$ and every omitted scalar-pair square has
+nonnegative weight, retaining the two blocks is a lower bound.
+The generalized Rayleigh quotient in the $w$ direction supplies
+the second inequality.
+\end{proof}
+Consequently $\tau<0.0431551$ cannot satisfy the declared $\rho_Z<0.3$
+scalar gate on this ray under the stated identities. If another mode
+becomes tachyonic first, the candidate already fails its tree gate.
+The coefficient is obtained from the block masses and ranks, not a
+fit to the sampled $\rho_Z$ values. This says nothing by itself about
+the complete gauge-dependent kinetic matrix or physical pole stability.
+It does show why continued weakening of these quartics alone is not
+a reliable repair strategy.
+
+One can strengthen the bound without any further spectrum scan. Put
+$b_0=(0.36,0.11385,0.03)$ and
+$z_0=G^{-1}b_0/\sqrt{b_0^TG^{-1}b_0}$. Since all these components and
+$\tau$ are positive, $z_0^Tb_\kappa\ge\sqrt{b_0^TG^{-1}b_0}$.
+Applying this single fixed witness to the sum of the two actual
+rank-one Gram blocks yields
+\begin{equation}
+ \rho_Z\ge\frac{b_0^TG^{-1}b_0}{192\pi^2\tau\sigma^2}
+ \left(\frac{50}{12}+\frac{36}{58/5}\right)
+ =\frac{0.01471609503}{\tau}.
+\end{equation}
+Thus $\tau<0.0490537$ already fails the $0.3$ scalar margin under the
+same verified-but-not-symbolically-certified action identities.
+This witness proof does not assume the generally false matrix inequality
+$b_\kappa b_\kappa^T\succeq b_0b_0^T$.
+
+\section{Radial fermion kernel without a global family fit}
+The already checked Yukawa tensor map on this same radial family is
+$M_F=\sigma F_M$, with no $w$ or $v_s$ vertex. A Takagi transformation
+therefore simultaneously diagonalizes the radial mass and its vertex:
+$M_i=\sigma f_i$, $y_i=\partial_\sigma M_i=f_i$, for three Majorana
+masses. The remaining family spinor directions have zero radial mass
+and vertex. The three $f_i$ are inputs, not fitted numbers.
+
+For one four-component Majorana fermion, expansion of
+$-\tfrac12\Tr\log(\slashed\partial+M+y\delta\sigma)$ gives
+\begin{align}
+ \Pi_F^{\rm raw}(s)&=2y^2\int_k
+ \frac{M^2-k\cdot(k+p)}{(k^2+M^2)((k+p)^2+M^2)}\\
+ &=-\frac{y^2}{16\pi^2}\left[
+ (4M^2+s)L(M^2,M^2;s)+2M^2(\ln(M^2/\mu_0^2)-1)\right].
+\end{align}
+The factor one half is Majorana counting; a Dirac field with the same
+couplings would contribute twice as much. The same determinant gives
+\begin{equation}
+ V_F=-\frac{M^4}{32\pi^2}[\ln(M^2/\mu_0^2)-3/2],\qquad
+ t_\sigma^F/\sigma=-\frac{2y^2M^2}{16\pi^2}[\ln(M^2/\mu_0^2)-1].
+\end{equation}
+Subtracting $t_\sigma^F/\sigma$ by the same invariant finite mass
+counterterm, with no momentum-dependent tadpole subtraction, yields
+\begin{equation}
+ \boxed{\Pi^{F,\mathrm{FV}}_{\sigma\sigma}(s)=
+ -\frac{1}{16\pi^2}\sum_{i=1}^3\frac{M_i^2}{\sigma^2}
+ (4M_i^2+s)L(M_i^2,M_i^2;s).}
+\end{equation}
+All other radial entries are zero. Its local finite kinetic term is
+\begin{equation}
+ \boxed{\Delta Z^F_{\sigma\sigma}=-\frac{1}{16\pi^2}
+ \sum_{i=1}^3\frac{M_i^2}{\sigma^2}
+ [\ln(M_i^2/\mu_0^2)+2/3].}
+\end{equation}
+The canonical $\sigma$ coefficient is half this expression because
+$G_{\sigma\sigma}=2$. Both expressions have the continuous zero-Yukawa
+limit; no artificial $\log 0$ is evaluated. At zero momentum,
+\begin{equation}
+ \Pi^{F,\mathrm{FV}}_{\sigma\sigma}(0)
+ \le\frac{6\mu_0^4}{e\,16\pi^2\sigma^2}
+ =0.0875112373\,\omega^2,
+\end{equation}
+recovering P-REN1 by maximizing $-x^2\ln(x/\mu_0^2)$ at
+$x=\mu_0^2e^{-1/2}$. This bound is not asserted at nonzero momentum.
+
+The independent verifier compares the closed form with the shifted
+spin-trace numerator integral
+\begin{equation}
+ \Pi_F^{\rm raw}(s)=\frac{2y^2}{16\pi^2}\int_0^1
+ D(x)[1-3\ln(D(x)/\mu_0^2)]\,dx,\quad D(x)=M^2+x(1-x)s,
+\end{equation}
+followed by its tadpole subtraction. Five synthetic mass cards at five
+momenta, independent kinetic finite differences, zero-mass limits,
+the old curvature function and its exact cap pass 56/56 tests together
+with the gauge tensor checks below. These are regression inputs,
+not observed or fitted families. A full nonradial fermion kernel still
+requires the complex $h_{\rm raw},f_{\rm raw}$ matrices.
+
+\section{What the gauge spectrum misses at nonzero momentum}
+To make the background-field label operational, choose the Euclidean
+quadratic gauge fixing, with real antisymmetric generators $T^a$,
+\begin{equation}
+ D_\mu X=\partial_\mu X+g a_\mu^aT^aX,\quad
+ X=\bar X+\eta,\quad v_a=T^a\bar X,\quad
+ F^a=\partial_\mu a_\mu^a+\xi g v_a^T\eta.
+\end{equation}
+The quadratic bosonic operator and ghost operator are
+\begin{align}
+ Q_B&=\begin{pmatrix}Q_{SS}&W^T\\W&Q_{VV}\end{pmatrix},\qquad
+ Q_{SS}=-\partial^2+V''+\xi g^2\sum_a v_av_a^T,\\
+ (Q_{VV})^{ab}_{\mu\nu}&=
+ [-\partial^2\delta_{\mu\nu}+(1-\xi^{-1})\partial_\mu\partial_\nu]\delta^{ab}
+ +M_{ab}^2\delta_{\mu\nu},\\
+ M_{ab}^2&=g^2v_a^Tv_b,\qquad
+ W^a_{\mu I}=-2g(T^a\partial_\mu\bar X)_I,\qquad
+ Q_c=-\partial^2+\xi M^2.
+\end{align}
+The mixed vertex follows directly from integrating the gauge-fixing
+cross term by parts. The scalar kinetic cross term is
+$g a_\mu[v_a^T\partial_\mu\eta-(\partial_\mu v_a)^T\eta]$;
+gauge fixing cancels the first term and doubles the second. Consequently
+$W=0$ for a constant background, but not for a radial external momentum.
+With $d_{ar}=T^aR_r$, the actual additional tensors are
+\begin{align}
+ B_{r,ab}&=g^2(d_{ar}^Tv_b+v_a^Td_{br}),\\
+ C_{rs,ab}&=g^2(d_{ar}^Td_{bs}+d_{as}^Td_{br}),\qquad
+ W^a_{r,\mu I}(p)=-2igp_\mu(d_{ar})_I.
+\end{align}
+Their numerical values and the identities
+$r_rB_r=2M^2$, $r_rr_sC_{rs}=2M^2$ are saved. The generalized eigenvalues
+of $g^2\sum_a d_{ar}^Td_{as}$ are $(0,3.1652201,3.9565251)$.
+This is a vertex Gram matrix, \emph{not} a loop kinetic correction.
+
+The exact diagram generator is
+\begin{equation}
+ \Gamma_1^B=\tfrac12\Tr\log Q_B-\Tr\log Q_c+\Gamma_{\rm CT},\quad
+ \Pi^B_{rs}=\tfrac12\Tr[Q_B^{-1}Q_{B,rs}
+ -Q_B^{-1}Q_{B,r}Q_B^{-1}Q_{B,s}]+\Pi^c_{rs}+\Pi^{\rm CT}_{rs}.
+\end{equation}
+The remaining integrals include the two-vector bubble, vector seagull
+and scalar--vector derivative bubble. In strict Landau,
+$D_{a,\mu\nu}(k)=(\delta_{\mu\nu}-k_\mu k_\nu/k^2)/(k^2+m_a^2)$,
+and the latter contains
+\begin{equation}
+ \Pi^{SV}_{rs}(p)=-4g^2\sum_{a,k}(d_{ar}\cdot u_k)(d_{as}\cdot u_k)
+ \int_q\frac{p_\mu D_{a,\mu\nu}(q)p_\nu}{(q+p)^2+m_k^2}.
+\end{equation}
+Gauge generators must be rotated by the vector mass eigenbasis here.
+This dimensionally regulated integral has not yet been evaluated in the
+complete P54 prescription. Replacing the Lorentz trace by the integer
+three before pole subtraction loses finite $\epsilon\times1/\epsilon$
+terms. Similarly, direct background-scalar ghost vertices are proportional
+to $\xi$ in this explicit fixing and can vanish in the strict Landau
+limit, but the finite-$\xi$/Nielsen check, and ghost terms in general
+matching, remain necessary. No guessed ghost counterterm is introduced.
+
+\section{Physical interpretation and outstanding work}
+Goldstone resummation of tadpoles alone does not make the second
+derivative of the Landau effective potential finite. External momentum
+is required; beyond one loop it must be combined with the appropriate
+resummation \cite{BG}. The cited two-loop mass construction specializes
+to the gaugeless limit and cannot be substituted wholesale for the
+present gauged theory. The VEV/tadpole convention must also be kept
+consistent with gauge dependence \cite{DL}.
+
+A physical stability claim requires the complete BRST-consistent
+inverse propagator and physical projection, including scalar--vector
+mixing when allowed, vector/longitudinal/ghost contributions, fermions,
+counterterms, analytic continuation and the relevant Ward/Nielsen
+identities. Neither a negative partial hard curvature nor an isolated
+root of a scalar-only kernel is such a claim. Full Wilson/box matching,
+lower gauge/ghost/Yukawa finite matching and the complete finite
+seesaw including $C_{HN}$ remain open. A flavor fit is not promoted.
+
+\begin{thebibliography}{9}
+\bibitem{BG} J. Braathen and M. D. Goodsell,
+``Avoiding the Goldstone Boson Catastrophe in general renormalisable
+field theories at two loops,'' \href{https://arxiv.org/abs/1609.06977}{arXiv:1609.06977}.
+\bibitem{DL} V. D\={u}d\.{e}nas and M. L\"oschner,
+``Vacuum expectation value renormalization in the Standard Model and
+beyond,'' \href{https://arxiv.org/abs/2010.15076}{arXiv:2010.15076}.
+\end{thebibliography}
+\end{document}

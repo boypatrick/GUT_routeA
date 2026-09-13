@@ -1,0 +1,426 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 Goldstone IR audit and background control}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newtheorem{proposition}{Proposition}
+\title{Route-F P54: Goldstone Infrared Audit,\\
+Scalar Momentum Dependence and Background Control}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{13 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We retain the P54PQ-v2 action and first audit its frozen scalar point.
+All 34 Goldstone hard mass shifts cancel against the same finite
+fixed-VEV counterterms by the full orbit Ward identity. The excluded
+soft scalar tadpoles vanish, but their radial potential Hessian has a
+nonzero logarithmic infrared singularity. We compute its actual Gram
+coefficient and the complete one-loop scalar momentum dependence on
+the three-dimensional radial slice. The hard scalar kinetic correction
+has a largest generalized eigenvalue 2.61, independently exposing a
+failure of a small-insertion expansion. We then analytically rule out
+an entire uniformly weakened bosonic parameter ray at fixed radii.
+Four less-hierarchical scalar engineering points are tested separately;
+none passes both radial positivity and perturbative-control criteria.
+No physical benchmark, flavor fit, full gauged pole kernel, or complete
+finite matching is claimed. The original inputs are not overwritten.
+\end{abstract}
+
+\section{Fixed action, conventions and acceptance boundary}
+The scalar content is real $54$, complex $126$, complex $10$ and complex
+$S$, with three chiral $16_F$ families. The original radial point is
+\begin{equation}
+ r_0=(w,\sigma,v_s)=(1,0.1265,0.25)\omega,
+ \qquad \mu_0=g_U\omega=0.5626028899853225\omega.
+\end{equation}
+The same DR/$\MS$ background-field Landau convention and common
+fixed-VEV mass counterterms of P-REN1 are used. The 328-dimensional
+real canonical scalar Hessian has 38 soft tree modes: 33 gauge
+Goldstones, one physical PQ mode, and four components of the tuned
+light doublet. There are 290 positive hard scalar modes and 33 massive
+gauge bosons. The 12 unbroken vectors remain massless along this radial
+slice. Their vanishing potential contribution does not eliminate all
+momentum-dependent gauge diagrams.
+
+Let $R$ embed $r$ in the canonical field $X$, so
+\begin{equation}
+ G=R^TR=\diag(12/5,2,1),\quad
+ \mathsf H=V_0''(X),\quad T_r=\partial_r\mathsf H,\quad
+ U_{rs}=\partial_r\partial_s\mathsf H.
+\end{equation}
+All these are obtained from the actual polynomial action. Its quartic
+degree makes $\mathsf H$ quadratic, hence cached radial jets determine
+its exact radial dependence without a new Hessian evaluation or a fitted
+mass formula. Floating-point residuals only test these identities.
+
+Goldstone resummation and a finite physical scalar mass are distinct
+questions. The former does not by itself render the second derivative
+of a zero-momentum potential finite; external-momentum self-energies
+are needed \cite{bg}. Hard/soft separation also matters in organizing
+the resummation \cite{ek}. We apply these distinctions rather than
+introduce a positive Goldstone mass as an adjustable input.
+
+\section{Common tadpoles fix the Goldstone shift}
+For any antisymmetric generator $T$ of a scalar symmetry and invariant
+function $V$, differentiating $\nabla V\cdot TX=0$ gives
+\begin{equation}
+ V''(X)TX=T\nabla V(X).
+ \label{eq:ward}
+\end{equation}
+This applies separately to the locally separated hard spectral
+functional $V_{1,h}$ and to its invariant finite counterterm. On the
+radial background, $\nabla V_{1,h}=RG^{-1}t_h$. The common tadpole
+condition is $t_h+\partial_r V_{\rm CT}=0$. Consequently
+\begin{equation}
+ (V_{1,h}''+V_{\rm CT}'')TX=0.
+ \label{eq:goldmass}
+\end{equation}
+Collecting the 45 gauge generators and the PQ generator into the
+redundant orbit matrix $B=(T_aX)$, Eq.~\eqref{eq:ward} determines the
+whole Goldstone block as
+\begin{equation}
+ B^T V_{1,h}'' B=B^T(T_a\nabla V_{1,h})_a.
+\end{equation}
+Its normalized 34-dimensional hard block has eigenvalues between
+$-2.7348720\omega^2$ and $-0.0342377\omega^2$. The common counterterm
+cancels it; the matrix residual is $7.8\times10^{-15}\omega^2$.
+The actual tree cubic vertices independently obey the differentiated
+identity
+\begin{equation}
+ Q^T T_r(T_aX)=Q^TT_a\mathsf H R_r,
+ \label{eq:cubicward}
+\end{equation}
+where $Q$ spans the full tree kernel. This follows by differentiating
+Eq.~\eqref{eq:ward} for $V_0$ and using $Q^T\mathsf H=0$.
+All three radial derivatives are checked directly.
+
+In a reorganized propagator the Goldstone shift must include its
+counterterm in this convention. Resumming the bare hard shift alone,
+or replacing it by a freely chosen positive regulator, would not
+describe the same prescribed point. Equation~\eqref{eq:goldmass} is
+a one-loop Ward result, not a completed two-loop resummation calculation.
+
+\section{The actual soft infrared singularity}
+\subsection{Gaussian determinant and the soft graph coefficient}
+For real scalar fluctuations, Gaussian integration gives
+\begin{equation}
+ \Gamma_1^S=\tfrac12\Tr\log(-\partial_E^2+\mathsf H),\qquad
+ V_1^S=\frac1{64\pi^2}\tr\left[
+ \mathsf H^2\left(\log\frac{\mathsf H}{\mu_0^2}-\frac32\right)\right].
+\end{equation}
+Let $Q$ span the 38 soft modes and let $P_h$ span their massive
+complement. Set
+\begin{align}
+ A_r&=Q^TT_rQ,\\
+ \mathcal B_{rs}&=\frac{\tr(A_rA_s)}{32\pi^2},\label{eq:gram}\\
+ \mathcal E_{rs}&=\frac1{32\pi^2}\left[
+ \tr(Q^TU_{rs}Q)
+ -2\sum_{a\in s,\,i\in h}
+ \frac{(T_r)_{ai}(T_s)_{ia}}{m_i^2}\right].
+\end{align}
+The last term is essential: second-order eigenvalue perturbation
+contains mixing with the hard complement. Freezing the soft projector
+through second order would omit it.
+
+Regulate the soft eigenvalue branches by adding a common mass squared
+$\epsilon>0$, without changing the hard eigenvalues. Their tadpole
+and Hessian at the reference point are
+\begin{align}
+ t^s_r(\epsilon)&=\frac{\epsilon}{32\pi^2}
+ \left(\log\frac{\epsilon}{\mu_0^2}-1\right)\tr A_r
+ \longrightarrow0,\label{eq:softtad}\\
+ H^s_{rs}(\epsilon)&=\mathcal B_{rs}\log\frac{\epsilon}{\mu_0^2}
+ +\epsilon\left(\log\frac{\epsilon}{\mu_0^2}-1\right)\mathcal E_{rs}.
+ \label{eq:softH}
+\end{align}
+These follow from $f'(\epsilon)=2\epsilon(\log(\epsilon/\mu_0^2)-1)$,
+$f''(\epsilon)=2\log(\epsilon/\mu_0^2)$ and the reduced second
+eigenvalue derivative. Direct spectral finite differences independently
+verify Eq.~\eqref{eq:softH}.
+
+For a real radial vector $v$,
+\begin{equation}
+ v^T\mathcal Bv=\frac1{32\pi^2}
+ \left\|\sum_r v_rA_r\right\|_F^2\geq0.
+ \label{eq:psd}
+\end{equation}
+Thus the leading infrared logarithm is negative semidefinite as
+$\epsilon\to0$. It is not a finite positive repair of a negative hard
+curvature. In the declared radial coordinates, the actual matrix is
+\begin{equation}
+ \frac{\mathcal B}{\omega^2}\simeq
+ \begin{pmatrix}
+ 0.60561772&0.00943837&0.00589905\\
+ 0.00943837&0.00048543&0.00020861\\
+ 0.00589905&0.00020861&0.00058130
+ \end{pmatrix}.
+\end{equation}
+The smallness of its projection on one negative direction does not
+mean that the whole matrix is small.
+
+For the normalized negative witness $q$ retained from P-REN1,
+$q^TGq=1$, its decomposition is
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Soft sector & $q^T\mathcal Bq/\omega^2$\\
+\midrule
+Gauge Goldstones & $3.1096973\times10^{-4}$\\
+Physical PQ & $1.8983181\times10^{-6}$\\
+Light Higgs & $2.6290000\times10^{-7}$\\
+Total & $3.1313095\times10^{-4}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Mixed sector contributions vanish for these radial vertices, as
+verified with the actual projectors. At $\epsilon/\omega^2=10^{-4}$
+and $10^{-10}$, respectively, $q^TH^sq/\omega^2$ is approximately
+$-0.00255$ and $-0.00685$. This is regulator dependence, not a pair
+of physical mass predictions. The zero-momentum full potential Hessian
+cannot be promoted to a pole mass by merely restoring the missing modes.
+
+\section{Infrared cancellation at nonzero momentum}
+\subsection{Complete one-loop scalar term on the radial slice}
+Define the Euclidean finite bubble with $s=p_E^2>0$:
+\begin{equation}
+ L(a,b;s)=\int_0^1\log\frac{(1-x)a+xb+x(1-x)s}{\mu_0^2}\,dx.
+ \label{eq:bubble}
+\end{equation}
+It is the negative of the usual finite $B_0$ in this convention.
+Differentiating the scalar functional determinant twice gives
+\begin{equation}
+ \Pi^S_{rs}(s)=\frac1{32\pi^2}\left[
+ \sum_i(U_{rs})_{ii}\,m_i^2\left(\log\frac{m_i^2}{\mu_0^2}-1\right)
+ +\sum_{ij}(T_r)_{ij}(T_s)_{ji}L(m_i^2,m_j^2;s)\right].
+ \label{eq:scalarself}
+\end{equation}
+The first term is the seagull and the second the two-cubic-vertex
+bubble; ordered real-field indices account for the symmetry factor.
+The sums include all 328 scalars, including mixed hard/soft pairs.
+At $s=0$, removing only the soft--soft bubble reproduces the old scalar
+hard Fr\'echet Hessian to relative residual $1.4\times10^{-16}$.
+
+For two massless lines,
+\begin{equation}
+ L(0,0;s)=\log\frac{s}{\mu_0^2}-2.
+ \label{eq:masslessbubble}
+\end{equation}
+For one massive line $m^2$ and $z=s/m^2$,
+\begin{equation}
+ L(0,m^2;s)=\log\frac{m^2}{\mu_0^2}-2
+                +(1+z^{-1})\log(1+z).
+\end{equation}
+Independent Feynman-parameter integrals check both finite constants.
+The logarithmic regulator cancels explicitly:
+\begin{align}
+ H^s(\epsilon)&+\mathcal B
+ \left[L(\epsilon,\epsilon;s)-\log\frac{\epsilon}{\mu_0^2}\right]
+ \nonumber\\
+ &\longrightarrow\mathcal B\left(\log\frac{s}{\mu_0^2}-2\right).
+ \label{eq:cancel}
+\end{align}
+At fixed $s>0$ this is finite. It does not license taking a physical
+mass from the $s=0$ potential curvature.
+
+For at least one massive line,
+\begin{equation}
+ L(a,b;s)-L(a,b;0)
+ =\int_0^1\log\left[1+\frac{x(1-x)s}{(1-x)a+xb}\right]dx\geq0.
+\end{equation}
+Combined with the vertex Gram form, the hard scalar momentum
+difference $\Delta\Pi^S_h(s)$ is positive semidefinite. By contrast,
+the massless contribution is negative semidefinite for
+$0<s\leq e^2\mu_0^2$ in this MS prescription.
+
+The displayed diagnostic kernel is
+\begin{equation}
+ K_{\rm diag}(s)=sG+H_{r,B}
+ +\Delta\Pi^S_h(s)+\mathcal B[\log(s/\mu_0^2)-2],
+ \label{eq:diag}
+\end{equation}
+where $H_{r,B}$ is the old bosonic hard-plus-counterterm radial block.
+The vector contribution is still evaluated at zero momentum.
+\begin{center}
+\begin{tabular}{rrrrrrr}
+\toprule
+$s/\omega^2$ & $.001$ & $.01$ & $.05$ & $.1$ & $.5$ & $1$\\
+\midrule
+$\lambda_{\min}(K_{\rm diag},G)/\omega^2$
+& $-.75843$ & $-.72498$ & $-.58421$ & $-.41369$ & $.59623$ & $1.09859$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are kinematic probes, not a parameter scan or physical pole
+locations. Missing vector/Goldstone/ghost mixed diagrams, fermion
+momentum maps and Nielsen consistency prevent interpreting a zero of
+this partial kernel as a physical tachyon or a stable-particle pole.
+
+\subsection{A separate quantitative failure of small-insertion control}
+The finite hard scalar kinetic matrix is
+\begin{equation}
+ (\Delta Z_h^S)_{rs}=\frac1{32\pi^2}
+ \sum_{(i,j)\notin(s,s)}(T_r)_{ij}(T_s)_{ji}
+ \int_0^1\frac{x(1-x)\,dx}{(1-x)m_i^2+x m_j^2}.
+ \label{eq:kinetic}
+\end{equation}
+It is positive semidefinite and its generalized eigenvalues relative
+to $G$ are
+\begin{equation}
+ (0.00900848,\;0.27686405,\;2.61031989).
+\end{equation}
+Finite differences of the actual momentum kernel verify this derivative.
+The soft--soft contribution is nonlocal and is not included in
+Eq.~\eqref{eq:kinetic}. The largest hard correction already exceeds
+the tree metric, so the naive small-insertion expansion fails this
+necessary engineering check at the frozen point.
+
+A finite canonical field transformation can absorb a positive metric,
+but is not by itself a bound on omitted loop orders. Moreover, an
+invertible congruence of a fixed curvature matrix preserves its inertia.
+It cannot turn its negative direction positive simply by renormalizing
+the fields. These statements are not an all-orders exclusion.
+
+\section{An entire simple repair ray fails analytically}
+Uniformly multiply every existing scalar coefficient by $z>0$, including
+the dependent masses and the cubic coefficient, keeping $r_0,g_U,\mu_0$
+fixed. Then $V_0\mapsto zV_0$ exactly: stationarity, the tree kernel and
+tree inertia are unchanged, while $\mathsf H,T_r,U_{rs}$ each scale by $z$.
+The common fixed-VEV scalar contribution therefore obeys
+\begin{equation}
+ H_h(z)=zH_0+z^2[S+\log z\,L_S]+V,
+ \qquad \Delta Z_h^S(z)=z\Delta Z_h^S(1).
+ \label{eq:ray}
+\end{equation}
+Here $S$ includes the scalar loop and its own share of the common
+counterterm, $V$ the vector loop and its share, and $L_S$ the coefficient
+of the scalar logarithm including its tadpole conversion. Direct
+rescaled Fr\'echet calculations check Eq.~\eqref{eq:ray}; the following
+bound is not inferred from the sampled points.
+
+\begin{proposition}
+For every $0<z\leq1$, the bosonic hard fixed-VEV radial block on this
+ray has a negative direction.
+\end{proposition}
+\begin{proof}
+In the sigma coordinate the actual coefficients, in units of
+$\omega^2$, are
+\begin{equation}
+ \begin{aligned}
+ a=(H_0)_{\sigma\sigma}=0.02880405,\quad
+ &b=-S_{\sigma\sigma}=1.54130008,\\
+ (L_S)_{\sigma\sigma}=7.61695881,\quad
+ &c=V_{\sigma\sigma}=-0.00402215.
+ \end{aligned}
+\end{equation}
+Since $\log z\leq0$, one has
+\begin{equation}
+ (H_h(z))_{\sigma\sigma}/\omega^2
+ \leq az-bz^2+c\leq c+\frac{a^2}{4b}
+ =-0.00388757<0.
+\end{equation}
+The normalized radial direction is $e_\sigma/\sqrt2$, and remains
+negative for the entire interval.
+\end{proof}
+The theorem concerns this bosonic ray only. It does not exclude
+nonuniform scalar choices, different radial hierarchies, or fermionic
+corrections at new scalar points. It shows why merely reducing all
+scalar couplings is not enough in the fixed gauge/scale convention.
+
+\section{Bounded reselection without fitting observations}
+After the original control failure, four coarse engineering points
+were tested with $(z,\sigma/\omega)=(.03,.3),(.03,.5),(.1,.3),(.1,.5)$
+and $w/\omega=1$, $v_s/\omega=.25$. All existing scalar coefficients
+are first scaled by $z$. The dependent masses are then re-solved from
+\begin{equation}
+ A(r)\,\delta p=-\partial_r V_0(r;zp),\qquad
+ A(r)=-\diag(12w/5,\sigma,v_s).
+\end{equation}
+The tree $\xi_{02}$ condition is reimposed at the first physical
+doublet crossing. Every point has 34 symmetry zero modes plus precisely
+one complex light doublet, checked with the actual SM Casimirs.
+
+The polynomial identity
+\begin{equation}
+ \mathsf H(r_0+\Delta\sigma e_\sigma;p)
+ =\mathsf H_0+\Delta\sigma T_\sigma
+   +\tfrac12(\Delta\sigma)^2 U_{\sigma\sigma}
+\end{equation}
+and the exact mass-parameter operator give the new full ambient tree
+Hessian without a fresh large tensor differentiation. New tadpoles,
+common counterterms and radial hard/kinetic matrices are then evaluated
+from each point's own spectrum, not borrowed from the old point.
+
+We demand radial hard positivity and test two dimensionless control
+quantities, with a declared engineering margin $0.3$:
+\begin{equation}
+ \rho_H=\max|\operatorname{spec}(H_h-H_0,H_0)|,
+ \qquad \rho_Z=\max\operatorname{spec}(\Delta Z_h^S,G).
+\end{equation}
+This margin is not a theorem of perturbative convergence; importantly,
+the rejected positive point even fails the weaker $\rho_H<1$ test.
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$z$ & $\sigma/\omega$ & $\lambda_{\min}(H_h,G)/\omega^2$ & $\rho_H$ & $\rho_Z$\\
+\midrule
+$.03$ & $.3$ & $-.040838$ & $18.8648$ & $.09010$\\
+$.03$ & $.5$ & $-.044064$ & $7.9561$ & $.09296$\\
+$.1$ & $.3$ & $-.198595$ & $27.0000$ & $.30032$\\
+$.1$ & $.5$ & $.009714$ & $1.4323$ & $.30988$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus none is accepted. The last point illustrates why positivity alone
+cannot certify a controlled background. This is not a no-go theorem
+for all less-hierarchical points. Full parameter cards, finite tadpole
+shifts, tree classifications and rejection evidence are retained in
+the reselection JSON. No measured mass or flavor datum enters.
+Changing the hierarchy invalidates reuse of the old two-loop
+unification/threshold solution; $g_U$ was held only as a reference
+coupling for these engineering probes.
+
+\section{Status and next mathematical tasks}
+The IR verifier passes 65/65 checks and the bounded reselection verifier
+passes 36/36. Passing includes correctly rejecting physical promotion.
+Both reuse ten cached Hessians and require no new Hessian evaluations.
+The new artifacts are \path{code/verify_p54_goldstone_ir.py} and
+\path{code/verify_p54_scalar_reselection.py}, with matching JSON/Markdown
+reports under \path{output/}; sources and hashes are recorded.
+
+The useful next options are now more specific:
+\begin{enumerate}
+\item Decompose the actual scalar-invariant contributions to
+$\rho_H$ and $\rho_Z$, especially the independent $126$ quartics,
+before nonuniform parameter adjustment. Bare couplings smaller than
+one and positive selected masses are not sufficient control criteria.
+Do not fine-tune against the displayed Euclidean subset.
+\item Complete the same-prescription gauge/Goldstone/ghost and fermion
+momentum maps with Nielsen consistency if deciding the physical fate
+of the original point. A true pole/background claim cannot follow
+from a scalar-only repair or the partial kernel in Eq.~\eqref{eq:diag}.
+\item After finding a controlled common scalar point, recompute its
+full nonradial response, one-loop light state, upper PS saddle and
+threshold/running system. Complete Wilson/box, lower finite matching
+and finite seesaw remain independent unfinished calculations. None
+is promoted to a physical fit by this audit.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{bg} J. Braathen and M. D. Goodsell,
+Avoiding the Goldstone Boson Catastrophe in general renormalisable field
+theories at two loops, especially the distinction between tadpole
+resummation and momentum-regulated masses,
+\href{https://arxiv.org/html/1609.06977v2}{arXiv:1609.06977v2}.
+The two-loop mass results in that work specialize to the gaugeless limit;
+they are not a completed P54 gauge-sector calculation.
+\bibitem{ek} J. R. Espinosa and T. Konstandin,
+Resummation of Goldstone Infrared Divergences: A Proof to All Orders,
+\href{https://arxiv.org/abs/1712.08068}{arXiv:1712.08068}.
+\end{thebibliography}
+\end{document}

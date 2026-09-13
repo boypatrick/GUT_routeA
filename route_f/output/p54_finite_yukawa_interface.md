@@ -2,7 +2,7 @@
 
 actual scalar/copy dictionary and curvature; synthetic family matrices and synthetic finite diagrams; not physical PS thresholds or a fit
 
-Checks: 17/17.
+Checks: 18/18.
 
 Canonical normalization must transform vertices and curvature with the same scalar map. At an exact zero, the original-coordinate light direction changes only by its kinetic normalization, not an independent wavefunction-induced rotation.
 

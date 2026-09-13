@@ -1,0 +1,580 @@
+{
+  "schema": "p54-linear-CHN-finite-and-operator-closure-v1",
+  "date": "2026-09-12",
+  "scope": "linear CHN, leading qH=0 finite vertex/C5/Higgs-mass subset; induced D6 required in sequential mass-dependent RG",
+  "terminal_linear_CHN": {
+    "delta_C5": {
+      "real": [
+        [
+          -3.462312146887437e-06,
+          -8.386556757769085e-07,
+          -5.730406892401382e-06
+        ],
+        [
+          -8.386556757769085e-07,
+          7.670793438142527e-06,
+          7.632324751736268e-06
+        ],
+        [
+          -5.730406892401382e-06,
+          7.632324751736268e-06,
+          -4.807514831100335e-06
+        ]
+      ],
+      "imag": [
+        [
+          -6.132611385982283e-06,
+          -6.4731277123324135e-06,
+          -6.396764407092873e-06
+        ],
+        [
+          -6.4731277123324135e-06,
+          5.1235548931916074e-06,
+          -5.354783829897016e-06
+        ],
+        [
+          -6.396764407092873e-06,
+          -5.354783829897016e-06,
+          -1.0223679222217512e-05
+        ]
+      ]
+    },
+    "delta_qH": 4.915942700937479e-08,
+    "complete_finite_seesaw": false
+  },
+  "partial_block_closure_tests": [
+    {
+      "removed": 1,
+      "naive_RG_residual_norm": 1.2455824540344444e-05,
+      "D6": {
+        "real": [
+          [
+            -0.010783138524308176,
+            0.02439223646551872
+          ],
+          [
+            -0.012936003490367689,
+            0.07310530408663114
+          ],
+          [
+            -0.006251573423925949,
+            0.008382946106584575
+          ]
+        ],
+        "imag": [
+          [
+            0.009684475390909181,
+            -0.07745349758701613
+          ],
+          [
+            -0.0037583692050347935,
+            -0.01875865416409085
+          ],
+          [
+            0.007634222104859371,
+            -0.054644345087126706
+          ]
+        ]
+      },
+      "mass_downmix": {
+        "real": [
+          [
+            1.4889028090432637e-06,
+            -1.939807580533755e-06,
+            3.4097873458306578e-06
+          ],
+          [
+            -1.939807580533755e-06,
+            -3.741944721597838e-07,
+            9.042371029980161e-07
+          ],
+          [
+            3.4097873458306578e-06,
+            9.042371029980161e-07,
+            3.611998181509388e-06
+          ]
+        ],
+        "imag": [
+          [
+            7.148623508173383e-06,
+            2.8996633661208274e-06,
+            3.2736931085960673e-06
+          ],
+          [
+            2.8996633661208274e-06,
+            1.362270198585191e-06,
+            2.789598216874571e-06
+          ],
+          [
+            3.2736931085960673e-06,
+            2.789598216874571e-06,
+            7.465535401237938e-07
+          ]
+        ]
+      }
+    },
+    {
+      "removed": 2,
+      "naive_RG_residual_norm": 2.5487801332483955e-05,
+      "D6": {
+        "real": [
+          [
+            -0.18853816797440698
+          ],
+          [
+            -0.036732695062514774
+          ],
+          [
+            -0.17462475040291447
+          ]
+        ],
+        "imag": [
+          [
+            -0.13048991140166993
+          ],
+          [
+            -0.034100800130847445
+          ],
+          [
+            0.03948315965086375
+          ]
+        ]
+      },
+      "mass_downmix": {
+        "real": [
+          [
+            3.64565904331005e-06,
+            3.6155596449918433e-06,
+            8.969706089096863e-06
+          ],
+          [
+            3.6155596449918433e-06,
+            8.912049743916774e-07,
+            8.096249068391591e-06
+          ],
+          [
+            8.969706089096863e-06,
+            8.096249068391591e-06,
+            7.796808522506612e-06
+          ]
+        ],
+        "imag": [
+          [
+            6.960748403060406e-07,
+            8.284389860691794e-06,
+            -1.2561748922558153e-06
+          ],
+          [
+            8.284389860691794e-06,
+            3.7289535899811495e-06,
+            2.606032888559174e-06
+          ],
+          [
+            -1.2561748922558153e-06,
+            2.606032888559174e-06,
+            -9.391901321406842e-06
+          ]
+        ]
+      }
+    },
+    {
+      "removed": 3,
+      "naive_RG_residual_norm": 2.484358897470298e-16,
+      "D6": {
+        "real": [
+          [],
+          [],
+          []
+        ],
+        "imag": [
+          [],
+          [],
+          []
+        ]
+      },
+      "mass_downmix": {
+        "real": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "imag": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    }
+  ],
+  "actual_trajectory_operator_audit": [
+    {
+      "synthetic_case_with_actual_group_dictionary": 0,
+      "events": [
+        {
+          "mu": 0.04648959955565277,
+          "removed": 1,
+          "retained": 2,
+          "D6": {
+            "real": [
+              [
+                -3.7135870984170843e-05,
+                -1.1234095200022468e-05
+              ],
+              [
+                -4.949150803906192e-05,
+                -4.586686501415997e-05
+              ],
+              [
+                -2.087401574665002e-05,
+                -2.2566795703202574e-06
+              ]
+            ],
+            "imag": [
+              [
+                3.961240105254661e-05,
+                5.112127684493607e-05
+              ],
+              [
+                -9.877381530251967e-06,
+                1.6216369014025207e-05
+              ],
+              [
+                3.049754552346137e-05,
+                3.555393037647639e-05
+              ]
+            ]
+          },
+          "D6_norm": 0.00011505006049744983,
+          "CHN_hr_norm": 1.1635675423691507e-05,
+          "mass_downmix_norm": 1.3805044461993135e-08,
+          "finite_Yr_hard_norm": 1.574630770884596e-09,
+          "new_terms_applied_to_trajectory": false
+        },
+        {
+          "mu": 0.028611949025300714,
+          "removed": 1,
+          "retained": 1,
+          "D6": {
+            "real": [
+              [
+                5.9130518104852726e-05
+              ],
+              [
+                1.0636546121773217e-05
+              ],
+              [
+                1.7527101246576227e-05
+              ]
+            ],
+            "imag": [
+              [
+                -2.0752177432048323e-05
+              ],
+              [
+                -1.0993662618082883e-06
+              ],
+              [
+                -4.406939776398338e-05
+              ]
+            ]
+          },
+          "D6_norm": 7.931410250696695e-05,
+          "CHN_hr_norm": 7.06594907435875e-06,
+          "mass_downmix_norm": 6.746177906650825e-09,
+          "finite_Yr_hard_norm": 4.111739305343951e-10,
+          "new_terms_applied_to_trajectory": false
+        },
+        {
+          "mu": 0.01786943772943756,
+          "removed": 1,
+          "retained": 0,
+          "D6": {
+            "real": [
+              [],
+              [],
+              []
+            ],
+            "imag": [
+              [],
+              [],
+              []
+            ]
+          },
+          "D6_norm": 0.0,
+          "CHN_hr_norm": 0.0,
+          "mass_downmix_norm": 0.0,
+          "finite_Yr_hard_norm": 0.0,
+          "new_terms_applied_to_trajectory": false
+        }
+      ]
+    },
+    {
+      "synthetic_case_with_actual_group_dictionary": 1,
+      "events": [
+        {
+          "mu": 0.060809953183251206,
+          "removed": 1,
+          "retained": 2,
+          "D6": {
+            "real": [
+              [
+                3.694150617169952e-06,
+                2.05801574199857e-06
+              ],
+              [
+                4.1983470011899775e-06,
+                1.0810601390753934e-05
+              ],
+              [
+                1.9972555384733355e-05,
+                5.7037197198781064e-05
+              ]
+            ],
+            "imag": [
+              [
+                -3.2597450875708595e-05,
+                -8.804784518845838e-05
+              ],
+              [
+                -1.7311249019587128e-06,
+                -5.635948149775773e-06
+              ],
+              [
+                1.5144573673613489e-05,
+                3.570361740411463e-05
+              ]
+            ]
+          },
+          "D6_norm": 0.00011898910113464475,
+          "CHN_hr_norm": 1.8081431043634673e-05,
+          "mass_downmix_norm": 3.1410151199647307e-08,
+          "finite_Yr_hard_norm": 2.7863572216070112e-09,
+          "new_terms_applied_to_trajectory": false
+        },
+        {
+          "mu": 0.039325266679062394,
+          "removed": 1,
+          "retained": 1,
+          "D6": {
+            "real": [
+              [
+                2.0424539882093505e-05
+              ],
+              [
+                -3.472228957829932e-05
+              ],
+              [
+                -4.861417863773618e-05
+              ]
+            ],
+            "imag": [
+              [
+                0.00012142410233628508
+              ],
+              [
+                -6.004591960305493e-08
+              ],
+              [
+                -6.237492128926685e-05
+              ]
+            ]
+          },
+          "D6_norm": 0.00015040141165262896,
+          "CHN_hr_norm": 1.1229459506929604e-05,
+          "mass_downmix_norm": 1.1149459848053395e-08,
+          "finite_Yr_hard_norm": 1.4729077160931013e-09,
+          "new_terms_applied_to_trajectory": false
+        },
+        {
+          "mu": 0.025038806776882135,
+          "removed": 1,
+          "retained": 0,
+          "D6": {
+            "real": [
+              [],
+              [],
+              []
+            ],
+            "imag": [
+              [],
+              [],
+              []
+            ]
+          },
+          "D6_norm": 0.0,
+          "CHN_hr_norm": 0.0,
+          "mass_downmix_norm": 0.0,
+          "finite_Yr_hard_norm": 0.0,
+          "new_terms_applied_to_trajectory": false
+        }
+      ]
+    }
+  ],
+  "old_trajectories_modified": false,
+  "full_D6_anomalous_dimensions": false,
+  "complete_finite_CHN_matching": false,
+  "physical_fit_enabled": false,
+  "missing": [
+    "full dimension-six operator matching/running and its mass-suppressed feedback",
+    "nonzero-qH terms and finite correlated MR,lambda and field maps",
+    "remaining pre-existing-C5/mixed-sterile/box diagrams and lower scalar/gauge matching"
+  ],
+  "source_sha256": {
+    "code/verify_p54_chn_threshold_closure.py": "1a827c8257f2732929f8108429fe6728a0deed63f691e8efdcf56777d60698e3",
+    "code/verify_p54_sequential_seesaw.py": "ef41801caa8f700303a5f87da333b880e483b26094e3163b547c350c2097196f",
+    "code/verify_p54_finite_seesaw_matching.py": "699244087611f638d062de2d5871f8cb9dbd6039d5ef756cc7adb9b84e4db931",
+    "output/p54_self_consistent_light.json": "d7afc850efb2beea0adb043593828abc41a23486674fdd0a7f15e948e8fee760",
+    "output/p54_scalar_chn.json": "6412f71fb7995e6c177dc5010b35ec5bbcd7333d49d2821fd13ab93f8ddd6dc1"
+  },
+  "checks": [
+    {
+      "name": "massive_massless_vertex_integral_0",
+      "residual": 3.225120607609188e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "massive_massless_vertex_integral_1",
+      "residual": 2.448213968599113e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "massive_massless_vertex_integral_2",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "all_removed_CHN_C5_scale_derivative_beta_difference",
+      "residual": 5.881382173864998e-17,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "terminal_CHN_C5_family_covariance",
+      "residual": 9.905007442763701e-20,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "terminal_CHN_Higgs_tadpole_family_invariance",
+      "residual": 3.970466940254533e-23,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "CHN_finite_Higgs_mass_direct_determinant",
+      "residual": 2.4038199473036005e-18,
+      "tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "CHN_finite_Higgs_mass_scale_derivative",
+      "residual": 1.6612433678024965e-19,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "degenerate_CHN_vertex_O3_covariance",
+      "residual": 6.549630833278046e-22,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "partial_CHN_matching_RG_closes_with_D6_1",
+      "residual": 1.882469721948029e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "tree_LNH_equals_exact_field_Schur_derivative_1",
+      "residual": 9.32622833971154e-12,
+      "tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "dimension5_only_mixed_block_residual_detected_1",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "partial_CHN_matching_RG_closes_with_D6_2",
+      "residual": 1.963189394043763e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "tree_LNH_equals_exact_field_Schur_derivative_2",
+      "residual": 8.515701037921449e-12,
+      "tolerance": 1e-08,
+      "pass": true
+    },
+    {
+      "name": "dimension5_only_mixed_block_residual_detected_2",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "partial_CHN_matching_RG_closes_with_D6_3",
+      "residual": 2.484358897470298e-16,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "actual_trajectory_three_events_0",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "actual_running_mixed_CHN_generates_D6_0",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "actual_trajectory_three_events_1",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    },
+    {
+      "name": "actual_running_mixed_CHN_generates_D6_1",
+      "residual": 0.0,
+      "tolerance": 2e-09,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "passed": 20,
+    "total": 20,
+    "all_pass": true
+  }
+}

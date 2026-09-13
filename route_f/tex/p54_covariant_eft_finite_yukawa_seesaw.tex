@@ -1,0 +1,585 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,array,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+pdftitle={P54 covariant EFT, finite Yukawa operators, and sequential seesaw}}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\B}{\mathcal B}
+\newtheorem{proposition}{Proposition}
+\title{Route-F P54: Covariant Lower Action,\\Finite Yukawa Operators,\\and Moving Seesaw Thresholds}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The previous common-phase/PS-flow checkpoint was committed and pushed as
+\texttt{4ad74e7}. Keeping that same action fixed, we construct a local
+PS-covariant scalar/vector effective action and compute actual finite
+pure-Yukawa diagrams at the upper saddle. Split real six-plet masses
+generate conjugate-bidoublet operators outside the former four-matrix
+boundary. Their coefficients are calculable functions of the original two
+family matrices, not additional fitting parameters. Independently, we
+compute the full four-doublet scalar-cubic kinetic matrix and implement
+moving, possibly crossing or degenerate, sterile-neutrino thresholds.
+The latter includes the corrected dimension-five feedback found in 2024.
+These are bounded matching results, not a completed gauge/ghost finite
+matching calculation, physical flavor fit, or Higgs pole prediction.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\section{Frozen action and approximation ledger}
+The field content remains $3\,16_F+54_{H,\mathbb R}+126_{H,\mathbb C}
++10_{H,\mathbb C}+1_{H,\mathbb C}$ with the action and common phase
+dictionary in the preceding P54 cards. There are still only two symmetric
+UV family spurions $h=h_{\rm raw}$ and $f=f_{\rm raw}$. All scalar masses
+and vertices below come from that same 328-real-coordinate polynomial.
+No new vacuum or lattice scan, field multiplet, free mirror matrix, or
+physical scale is fitted here.
+
+The actual broken background has $(\omega,\sigma,v_s)=(1,0.1265,0.25)$.
+The nearby PS saddle has $(1.00081030592151,0,0.254277697083708)$.
+Historical dimensionful unification scales remain unrecertified. A
+synthetic family benchmark demonstrates covariance and implementation,
+not agreement with measured masses or mixings.
+
+There are three distinct approximations: (i) a tree local two-derivative
+PS action after upper-field elimination; (ii) finite one-loop diagram
+subsets with frozen tree propagators; (iii) one-loop dimension-five
+running with tree threshold matching. They cannot simply be summed into
+a claimed two-site one-loop prediction. The appropriate common
+hard-minus-EFT subtraction is still required.
+
+\section{A covariant lower action, not parent-weighted logarithms}
+\subsection{Local scalar valley}
+Let $B_A$ be the raw 248-real-dimensional PS parent embedding and $B_H$
+the 55-dimensional upper physical scalar embedding. In a local slice,
+\begin{equation}
+ X(y)=x_0+B_Ay+B_Hz(y),\qquad B_H^T\nabla V(X(y))=0.
+\end{equation}
+At $y=0$, define $H=V^{(2)}(x_0)$ and
+\begin{align}
+ C&=B_H^THB_H,& W&=B_H^THB_A,& D&=-C^{-1}W,\\
+ T&=X_{,y}=B_A+B_HD,&
+ X_{,ab}&=-B_HC^{-1}B_H^TV^{(3)}[T_a,T_b].
+\end{align}
+The measured $\lambda_{\min}(C)=0.099450257411\,\omega^2>0$ proves
+existence of an analytic valley germ by the implicit-function theorem.
+It proves neither global continuation nor uniform scale separation.
+Its local potential Hessian is $S=T^THT$.
+
+\subsection{The 24-vector response}
+For the real generators $R_A=-iT_A$, the convention $D=\partial-igAT$
+means $D=\partial+gAR$. Write $O_A=R_AX$, $I=O^TO$ and
+$j=gO^TD_{\rm PS}X$. The scalar kinetic term is
+\begin{equation}
+ \frac12\lVert D_{\rm PS}X+gOA_U\rVert^2.
+\end{equation}
+Its algebraic heavy-vector solution and substitution are
+\begin{align}
+ A_U^*&=-g^{-1}I^{-1}O^TD_{\rm PS}X,\\
+ \Delta\mathcal L_2&=-\frac12j^T(g^2I)^{-1}j,\\
+ \mathcal L_{\rm EFT}^{(2)}&=\frac12(Dy)^Tg(y)(Dy)-V(X(y)),\qquad
+ g=T^T(1-OI^{-1}O^T)T. \label{eq:metric}
+\end{align}
+The 24 directions are a symmetric coset, not a gauge subgroup:
+$[\mathfrak p,\mathfrak u]\subset\mathfrak u$ and
+$[\mathfrak u,\mathfrak u]\subset\mathfrak p\ne0$. Thus
+$I^{-1}O^TT$ is a PS-covariant response one-form, not a principal
+connection for an invented 24-dimensional group. The axion is held fixed
+as a gauge-neutral spectator in this chart.
+
+For a direction $q$, with $O_q=(R_AX_q)_A$,
+\begin{align}
+ I_q&=O_q^TO+O^TO_q,& K&=O^TT,& K_q&=O_q^TT+O^TT_q,\\
+ a&=I^{-1}K,& a_q&=I^{-1}(K_q-I_qa),\\
+ g_q&=T_q^TT+T^TT_q-K_q^Ta-K^Ta_q.
+\end{align}
+These supply actual derivative vertices, not merely a mass census.
+The previous horizontal Schur metric is reproduced to $1.1\times10^{-15}$;
+its eigenvalue interval is $[0.984249788817,1.01800727050]$.
+All nine lower gauge masses and Goldstone normalizations agree with
+the full action. The current-current subtraction has rank 12 and trace
+$0.189002534197$.
+
+\subsection{Nonlinear vertices and limits of the derivative expansion}
+For the exported corrected neutral ray $q$, put
+$J_H=B_H^TV^{(3)}[q,q]$. With $H^0=h/\sqrt2$,
+\begin{equation}
+ \lambda_{\rm upper}=\frac16V^{(4)}[q^4]
+ -\frac12J_H^TC^{-1}J_H=0.407929900088,
+ \quad \lambda_{\rm direct}=0.427823639280.
+\end{equation}
+The induced derivative term is
+$0.024787549073\,h^2(\partial h)^2/\omega^2$.
+These are the projected tree potential and metric on a bosonic-improved
+ray, not an SM quartic or a pole mass. The retained, canonically
+normalized 126 triplet has $m^2=0.268832826146\,\omega^2$ and
+$hh$ source $0.00252743109350\,\omega$; eliminating it reconstructs
+the full mixed 54/126 tree response.
+
+Already at quadratic order a heavy scalar gives the exact Euclidean
+kernel, in a raw scalar chart,
+\begin{equation}
+ K_E(p^2)=p^2G_0+A-W^T(C+p^2I)^{-1}W
+ =S+p^2G-p^4W^TC^{-3}W+\cdots. \label{eq:resolvent}
+\end{equation}
+The corresponding exact pole calculation uses analytic continuation,
+not a replacement of all generalized eigenvalues by exact masses.
+The Yang--Mills term likewise yields higher-derivative operators upon
+substituting $A_U^*$ into $F_U$ and $F_{\rm PS}$.
+Only modes coupled through $W$ need this resolvent test; comparing every
+retained mass to a single global minimum heavy mass would impose an
+unnecessary restriction. The public API retains the matrices needed
+to handle the genuinely coupled modes exactly.
+For the twelve near-crossing modes, a source-selected invariant block is
+\begin{equation}
+ H_2/\omega^2=\begin{pmatrix}.2688378&.0013417351173\\
+ .0013417351173&.261600225\end{pmatrix}.
+\end{equation}
+Its exact eigenvalues are $.261359494901$ and $.269078530099$.
+This is a finite resolvent repair, not a reason to redesign the action.
+
+\section{Actual finite upper Yukawa diagrams}
+\subsection{Kernels, signs and scale consistency}
+Use $\mathcal L_Y=-Y^a_{IJ}\psi_I\psi_Js_a/2+\mathrm{h.c.}$
+with real canonical scalars and symmetric Weyl matrices. At the PS
+saddle all 48 Weyl fermions are massless. For a positive heavy scalar
+mass $M_b^2$ define
+\begin{align}
+ f_b&=-\frac1{16\pi^2}\int_0^1\log\frac{(1-t)M_b^2}{\mu^2}\dd t
+ =\frac{1-\log(M_b^2/\mu^2)}{16\pi^2},\\
+ h_b&=\frac1{16\pi^2}\int_0^1(1-t)
+ \log\frac{(1-t)M_b^2}{\mu^2}\dd t
+ =\frac{\frac12\log(M_b^2/\mu^2)-\frac14}{16\pi^2}.
+\end{align}
+The fermion self-energy shift supplies the factor $(1-t)$; the two
+massless Weyl numerators in the triangle cancel one denominator.
+Differentiating the two fermions cancels the action's symmetry factor.
+The finite result, with $Z_\psi=1+K_\psi$, is
+\begin{align}
+ K_\psi&=-\sum_{b\in H}Y_b^\dagger Y_bh_b,\\
+ \delta Y_a^{\rm 1PI}&=-\sum_{b\in H}Y_bY_a^\dagger Y_bf_b,\\
+ \Delta Y_a&=\delta Y_a^{\rm 1PI}
+ -\tfrac12(K_\psi^TY_a+Y_aK_\psi). \label{eq:finiteY}
+\end{align}
+The tensor normalization is computed from the actual Clifford
+intertwiners, not imported from a different GUT. As an independent test,
+\begin{equation}
+ \frac{\dd\Delta Y_a}{\dd\log\mu}=-\frac1{16\pi^2}
+ \left[\frac12(S_H^TY_a+Y_aS_H)
+ +2\sum_bY_bY_a^\dagger Y_b\right],\quad S_H=\sum_bY_b^\dagger Y_b.
+\end{equation}
+This equals minus the actual UV-minus-PS beta contraction. All-massless
+fermion contributions to scalar wave functions cancel in the upper
+hard subtraction. A scalar-cubic/two-Yukawa triangle has no dimension-four
+zero-momentum contribution with a massless internal fermion; it requires
+a chirality flip or external momentum. This does not eliminate scalar
+cubic wave-function diagrams.
+
+\subsection{Finite conjugate-bidoublet operators}
+Only 24 of the 55 heavy real scalars have nonzero Yukawa couplings:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Parent & Squared masses / $\omega^2$ & Multiplicities\\
+\midrule
+$10$ six & $0.190903147974,\ 0.200245831815$ & $6,6$\\
+$126$ six & $0.372275090654,\ 0.415462413403$ & $6,6$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For a complete degenerate pair $Y_I=\pm iY_R$,
+$Y_RY_a^\dagger Y_R+Y_IY_a^\dagger Y_I=0$.
+Unequal real masses weight these terms differently. Hence this
+cancellation fails by an exact split logarithm, not roundoff.
+
+Write $\Delta_x=\log(m_{x,+}^2/m_{x,-}^2)/(16\pi^2)$.
+In the exported normalized mirror-intertwiner phase convention,
+\begin{align}
+ \widetilde H&=i\bigl(3\sqrt2\Delta_h\,hh^\dagger h
+ -6\sqrt2\Delta_f\,fh^\dagger f\bigr),\\
+ \widetilde F&=i\bigl(-4\Delta_h\,hf^\dagger h
+ +8\Delta_f\,ff^\dagger f\bigr). \label{eq:mirror}
+\end{align}
+Their four real coefficients, in the displayed order, are
+\begin{equation}
+ (0.00128368533616,\ -0.00589775824991,\
+ -0.00121027014148,\ 0.00556045980308).
+\end{equation}
+The fermion metric is $K_\psi=I_{16}\otimes k$, where
+\begin{equation}
+ k=0.0186815380325\,h^\dagger h+0.0108097087894\,f^\dagger f
+\end{equation}
+at $\mu/\omega=0.563058770439$.
+
+The holomorphic projection still satisfies $F=\sqrt2R$ and $L=R$ in
+this subset. But it is not the whole finite boundary. The mirror
+matrices are orthogonal intertwiner directions and must be retained.
+They are nonlinear functions of the same $h,f$, not new UV parameters.
+The displayed $i$ is a tensor-basis phase. Restoring the PQ orbit gives
+the required $e^{-4i\theta}$ spurion phase; there is no explicit PQ
+breaking. Mirror terms vanish in the degenerate limit and are matching
+scale independent.
+
+A strict one-loop matching-plus-running expansion need not feed an
+already one-loop mirror threshold back into a one-loop beta function:
+that effect starts at two loops. A resummed flow retaining mirror
+matrices must, however, evolve the complete real-scalar Weyl tensor.
+It cannot use the former four-holomorphic-parent equations as a closed
+system. In particular the paired-holomorphic fast cancellation cannot
+be assumed for a scalar with both orientations of Yukawa coupling.
+
+The six invariant families $H,F,L,R,\widetilde H,\widetilde F$ do close
+under the generic one-loop real-Weyl contraction. The four bidoublet
+matrices are general $3\times3$ matrices; $L,R$ are symmetric, giving
+$4\cdot9+2\cdot6=48$ complex tensor components, not 48 new UV parameters.
+PS representation decomposition excludes further dimension-four
+Yukawa tensors. Both generic six-family and actual finite-boundary
+tests reconstruct the complete beta tensor with relative error below
+$5\times10^{-15}$. Restriction to four families leaves a nonzero
+$3.09\times10^{-4}$ beta-tensor norm in the actual diagnostic.
+For reproducibility the evolved object is the symmetric real-scalar
+Weyl tensor $Y_a$, with $S_Y=\sum_bY_b^\dagger Y_b$:
+\begin{align}
+ \B_{Y_a}&=\tfrac12(S_Y^TY_a+Y_aS_Y)
+ +2\sum_bY_bY_a^\dagger Y_b\nonumber\\
+ &\quad+\sum_bY_b\operatorname{Re}\tr(Y_b^\dagger Y_a)
+ -3\sum_i g_i^2(C_i^TY_a+Y_aC_i). \label{eq:genericbeta}
+\end{align}
+Projecting \eqref{eq:genericbeta} onto all six actual intertwiners
+defines the closed family flow without presuming a holomorphic-pair
+cancellation. The scalar and Weyl ordering is unchanged from the
+248-real-parent and 48-Weyl common basis.
+
+\section{A genuine momentum-dependent scalar matching subset}
+For $V\supset\eta_i(M^2_{ij}+T_{aij}q_a)\eta_j/2$,
+the real-scalar functional determinant yields
+\begin{equation}
+ \Gamma_1=\tfrac12\tr\log(K_0+Tq+\cdots),\qquad
+ \Gamma_{1,qq}=-\tfrac14\tr(GTqGTq)+\cdots.
+\end{equation}
+The UV-finite Euclidean two-point difference is
+\begin{multline}
+ \Pi_{ab}(p_E^2)-\Pi_{ab}(0)=\frac1{32\pi^2}
+ \sum_{ij}^{\text{at least one hard}} T_{aij}T_{bji}\\
+ \times\int_0^1\log\left(1+
+ \frac{t(1-t)p_E^2}{(1-t)m_i^2+tm_j^2}\right)\dd t.
+\end{multline}
+Both hard-hard and hard-soft pairs are required. Purely soft pairs
+belong to the EFT and are subtracted. Differentiation gives
+\begin{align}
+ K_{ab}^{S}&=\frac1{32\pi^2}\sum_{ij}^{\rm hard}
+ T_{aij}T_{bji}I(m_i^2,m_j^2),\\
+ I(x,y)&=\frac{x^2-y^2-2xy\log(x/y)}{2(x-y)^3},&
+ I(x,x)&=\frac1{6x},&I(x,0)&=\frac1{2x}.
+\end{align}
+This is positive semidefinite as a weighted Gram matrix. The single
+real-heavy test $ghS^2/2$ gives $K_h=g^2/(192\pi^2M^2)$.
+Quartic tadpoles are momentum independent. One-loop mass counterterms
+inside this one-loop graph would be selected two-loop contributions.
+The massless Goldstone propagators inherit background-field Landau
+$\xi=0$; this scalar subset is not separately gauge independent.
+With exactly zero soft masses, mixed-bubble soft-region momentum
+expansions are scaleless in dimensional regularization. Finite soft
+masses or a staged subtraction require a fresh EFT calculation.
+
+All 16 real components of the four doublets are assembled using
+the actual scalar Hessian jets and electroweak rotations. The result
+obeys all four electroweak Ward identities. Its neutral complex matrix is
+\begin{equation}
+ K_4^S\simeq\begin{pmatrix}
+ .00206838&-.00033316&-.00000208&-.00009074\\
+ -.00033316&.00213591&-.00001766&.00000379\\
+ -.00000208&-.00001766&.07100660&-.00045735\\
+ -.00009074&.00000379&-.00045735&.08599460
+ \end{pmatrix},
+\end{equation}
+with imaginary norm $3.5\times10^{-18}$, checked rather than imposed.
+On the bosonic-improved light vector,
+\begin{equation}
+ \delta Z_h=c_B^\dagger K_4^Sc_B=0.00243676715822.
+\end{equation}
+The covariant quadratic operator is $(D_\mu H)^\dagger K_4^S(D^\mu H)$.
+Gauge vertices required by this operator are not a substitute for
+independent gauge-loop, ghost and Nielsen calculations.
+
+For $Z=1+K_4^S$, the canonical operation is
+\begin{equation}
+ D_c=Z^{-1/2}DZ^{-1/2},\quad
+ c_c=\frac{Z^{1/2}c}{\sqrt{c^\dagger Zc}},\quad
+ Y_c(c_c)=\frac{Y(c)}{\sqrt{c^\dagger Zc}}.
+\end{equation}
+The down/lepton expressions use conjugate scalar factors. The zero
+eigenvector survives by congruence; its copy-coordinate changes are
+not an additional physical light-state rotation. The scalar-leg-only
+factor is $0.998783838597$. Exact square roots verify the algebra,
+not a two-loop resummation claim. No 55-upper contribution is added
+again to this one-step 290-hard calculation.
+
+\section{Mass-ordered seesaw as a changing effective theory}
+\subsection{Conventions and running}
+Let $H^0=v/\sqrt2$, $V=-m^2H^\dagger H+\lambda(H^\dagger H)^2$ and
+\begin{equation}
+ M_\nu=\frac{v^2}{2}(C_5-Q),\qquad Q=Y_\nu M_R^{-1}Y_\nu^T.
+ \label{eq:Cconvention}
+\end{equation}
+Store $\widehat M=M_R/\omega$, $\widehat C_5=\omega C_5$.
+The actual local type-II input obeys
+$\widehat C_5^{II}=2C_{II,\rm raw}f_{\rm raw}$; this factor is tested
+against the previous full local I+II matrix. The diagnostic boundary
+$g=(.53,.55,.60)$, $\lambda=.12$, $\mu_{\rm start}/\omega=.1$ is
+explicitly not a solved P54 matching condition.
+
+Define $H_x=Y_xY_x^\dagger$, $S_N=Y_\nu^\dagger Y_\nu$,
+$T=\tr(3H_u+3H_d+H_e+H_\nu)$,
+$T_4=\tr(3H_u^2+3H_d^2+H_e^2+H_\nu^2)$ and
+$\B=16\pi^2\dd/\dd\log\mu$. In GUT hypercharge normalization,
+the $C_{HN}=C_{BN}=0$ subsystem is
+\begin{align}
+ \B_{Y_u}&=[\tfrac32(H_u-H_d)+T-\tfrac{17}{20}g_1^2
+ -\tfrac94g_2^2-8g_3^2]Y_u,\\
+ \B_{Y_d}&=[\tfrac32(H_d-H_u)+T-\tfrac14g_1^2
+ -\tfrac94g_2^2-8g_3^2]Y_d,\\
+ \B_{Y_e}&=[\tfrac32(H_e-H_\nu)+T-\tfrac94g_1^2
+ -\tfrac94g_2^2]Y_e,\\
+ \B_{Y_\nu}&=[\tfrac32(H_\nu-H_e)+T-\tfrac9{20}g_1^2
+ -\tfrac94g_2^2]Y_\nu+3C_5Y_\nu^*M_R,\\
+ \B_{M_R}&=S_N^TM_R+M_RS_N,\qquad
+ \B_{g_i}=b_ig_i^3,\quad b=(41/10,-19/6,-7),\\
+ \B_{C_5}&=P_CC_5+C_5P_C^T+\alpha_CC_5,\\
+ P_C&=-\tfrac32H_e+\tfrac72H_\nu,\qquad
+ \alpha_C=4\lambda-3g_2^2+2T,\\
+ \B_\lambda&=24\lambda^2-3\lambda(3g_2^2+\tfrac35g_1^2)
+ +\tfrac34g_2^4+\tfrac38(g_2^2+\tfrac35g_1^2)^2\nonumber\\
+ &\quad+4\lambda T-2T_4
+ -4\operatorname{Re}\tr(C_5Y_\nu^*M_RY_\nu^\dagger).
+\end{align}
+The $7/2$, $C_5$ contribution to $\B_{Y_\nu}$ and the last quartic
+term include the 2024 correction \cite{Zhang2024}. Our $C_5$ is the
+negative of that reference's coefficient, accounting for the two signs.
+The former $1/2$ equations are retained only as a negative regression.
+This distinction changes tensor trajectories even when its numerical
+effect in one chosen benchmark is small.
+
+By the inverse-matrix product rule, with
+$P=-3H_e/2+H_\nu/2$,
+\begin{align}
+ \B_Q&=PQ+QP^T+\alpha_QQ+3(H_\nu C_5+C_5H_\nu^T),\\
+ \alpha_Q&=2T-\tfrac9{10}g_1^2-\tfrac92g_2^2,\\
+ \B_{C_5-Q}&=P(C_5-Q)+(C_5-Q)P^T+\alpha_C(C_5-Q)
+ +(4\lambda+\tfrac9{10}g_1^2+\tfrac32g_2^2)Q. \label{eq:sumflow}
+\end{align}
+The new terms cancel instantaneously in the difference, but change
+$Y_\nu$ and $\lambda$ and thus its later trajectory. Evolving one
+initial Weinberg sum above all thresholds would omit the source in
+\eqref{eq:sumflow}. The separate II tag is a source decomposition
+along one common trajectory, not a new independently fitted matrix.
+
+\subsection{Exact block-tree matching and live events}
+At a sterile split let
+\begin{equation}
+ M'=U^TM_RU=\begin{pmatrix}A&B\\B^T&D\end{pmatrix},\qquad
+ Y'=Y_\nu U=(Y_r,Y_h).
+\end{equation}
+Eliminating $N_h=-D^{-1}(B^TN_r+Y_h^T\ell H)$ gives
+\begin{equation}
+ \boxed{\ C_5^-=C_5^+-Y_hD^{-1}Y_h^T,\quad
+ Y_r^-=Y_r-Y_hD^{-1}B^T,\quad M_r^-=A-BD^{-1}B^T.\ }
+\end{equation}
+The block inverse identity proves continuity of $C_5-Q$ and
+associativity of sequential Schur complements. This is exact matrix
+algebra at leading seesaw order, not exact finite-$v$ diagonalization.
+For a genuinely mixed non-Takagi block, substituting the heavy solution
+also induces a retained kinetic metric; the displayed algebra is not
+by itself a canonical EFT matching prescription. Physical threshold
+events here use a Takagi basis, where $B=0$ and this issue is absent.
+
+The next event solves
+\begin{equation}
+ t-\log\sigma_{\max}[\widehat M_R(t)]=0,\qquad t=\log(\mu/\omega),
+\end{equation}
+with a freshly evaluated Takagi spectrum at each event call.
+An entire degenerate cluster is removed at once. Neither frozen
+eigenvalues nor a fixed initial ordering defines the event. Tests
+include complex family covariance, an actual running level crossing,
+non-diagonal Schur matching, a degenerate three-state block and a
+minimal two-sterile massless-light-neutrino regression.
+
+The two initial local-light examples have moving event scales
+$(.04648960,.02861195,.01786944)$ and
+$(.06080995,.03932527,.02503881)$ in $\omega$ units, respectively,
+in the displayed zero-$C_{HN}$ diagnostic subsystem. Running continues
+after each event and below the last one. These are not certified
+physical seesaw scales.
+
+\subsection{The operator-completeness question}
+The dimension-five sterile EFT also allows
+\begin{equation}
+ \mathcal O_{HN}=\overline{N^c}N H^\dagger H,\qquad
+ \mathcal O_{BN}=\overline{N^c}i\sigma^{\mu\nu}N B_{\mu\nu}.
+\end{equation}
+The zero-$C_{HN},C_{BN}$ subspace is invariant under the one-loop
+equations, but this does not prove the P54 scalar matching lies in it.
+For a heavy real neutral scalar vector $s$, write
+\begin{equation}
+ V=\tfrac12s^TKs+s^TJH^\dagger H+\cdots,\qquad
+ \mathcal L_Y\supset-\tfrac12N^TG_As_AN+\mathrm{h.c.}
+\end{equation}
+Its tree equation $s=-K^{-1}JH^\dagger H+\cdots$ gives, in the
+operator convention with no $1/2$ in $C_{HN}\mathcal O_{HN}$,
+\begin{equation}
+ C_{HN}=\tfrac12\sum_A G_A(K^{-1}J)_A,\qquad
+ \frac{\partial M_R(H)}{\partial(H^\dagger H)}=-2C_{HN}.
+ \label{eq:CHNtree}
+\end{equation}
+Thus it must be computed from the actual neutral scalar source and
+Majorana intertwiner. Gauge and PQ zero modes must not be inverted.
+This is an operator-basis issue; declaring the coefficient small or
+zero without its matching calculation would not repair it.
+
+That calculation is now performed on the exact tree light ray. The
+five-real-dimensional SM-singlet scalar plane contains three positive
+radial modes and two gauge/PQ zero modes. Inverting only the positive
+block in \eqref{eq:CHNtree} gives
+\begin{equation}
+ \boxed{\quad \omega C_{HN}=-0.0848692011507\,i f_{\rm raw}\ne0.\quad}
+\end{equation}
+The actual common-phase Majorana intertwiner is used, and its vacuum
+contraction reproduces $M_R=i4\sqrt2\sigma f_{\rm raw}$.
+An independent check restricts the original potential to the three
+radial modes, solves its stationary equations at three nonzero Higgs
+fields and extracts $-\Delta M_R/h^2$. It converges to the displayed
+coefficient. This is not an assumption inferred from allowed operators.
+On the bosonic-improved ray the frozen-tree projection is
+$-0.252600617\,i f_{\rm raw}/\omega$; the two local-light projections
+are $-0.255045272\,i f_{\rm raw}/\omega$ and
+$-0.256536567\,i f_{\rm raw}/\omega$. Those are explicitly mixed-order
+projections, not loop-complete Wilson coefficients. The exact-tree
+result already disproves a zero-$C_{HN}$ P54 boundary.
+
+\subsection{Required nonzero-$C_{HN}$ evolution and threshold transport}
+Keep $C=C_{HN}$, $C_{BN}=0$, and the already declared
+$V=-m^2H^\dagger H+\lambda(H^\dagger H)^2$. The additional terms are
+\begin{align}
+ \Delta\B_{Y_\nu}&=-4Y_\nu M_R^\dagger C,&
+ \Delta\B_{M_R}&=+8m^2C,\\
+ \Delta\B_\lambda&=16\operatorname{Re}\tr(C^\dagger M_RS_N),\label{eq:CHNlambda}\\
+ \B_C&=a_H C+4(CS_N+S_N^TC),&
+ a_H&=2T-\tfrac9{10}g_1^2-\tfrac92g_2^2+12\lambda,\\
+ \B_{m^2}&=a_Hm^2+4\tr(M_R^\dagger M_RS_N)
+ -8\operatorname{Re}\tr(M_R^\dagger M_RM_R^\dagger C).
+ \label{eq:CHNflow}
+\end{align}
+The sign of the last mass equations follows because the cited reference
+uses $V=+m_Z^2H^\dagger H+\cdots$, so $m_Z^2=-m^2$ here.
+The implementation stores $q_H=m_Z^2/\omega^2=-m^2/\omega^2$
+directly, together with $M_R/\omega$ and $\omega C$; this explicit
+conversion avoids inferring a sign from the label ``Higgs mass.''
+$C_5$ has no direct $C$ mixing at this order. The zero dipole
+subsystem is one-loop invariant, and this nonderivative scalar tree
+exchange does not generate it. A finite loop dipole coefficient has
+not thereby been proven zero.
+
+An independent normalization check uses one real family and
+$\mathcal M(h)=\bigl(\begin{smallmatrix}0&yh/\sqrt2\\
+yh/\sqrt2&M-Ch^2\end{smallmatrix}\bigr)$.
+The coefficient of $h^4$ in $\tr[(\mathcal M^\dagger\mathcal M)^2]$
+is $y^4/2-4y^2MC+O(C^2)$. The same Coleman--Weinberg divergence
+that gives $\B_\lambda=-2y^4$ therefore gives $+16y^2MC$,
+independently checking the coefficient and sign in \eqref{eq:CHNlambda}.
+
+For a non-diagonal sterile split, expand
+$M_R(\rho)=M_R-2C\rho$ with $\rho=H^\dagger H$ before taking its
+Schur complement. Differentiating once yields
+\begin{multline}
+ C^-=C_{rr}-C_{rh}D^{-1}B^T-BD^{-1}C_{hr}\\
+ +BD^{-1}C_{hh}D^{-1}B^T. \label{eq:CHNSchur}
+\end{multline}
+This reduces to the retained block in an exact Takagi basis. The
+$\rho$-dependent Yukawa shift and Weinberg denominator produce operators
+of dimension six and seven, respectively, outside this linear
+dimension-five truncation. They must not be mistaken for additional
+dimension-five matching terms.
+
+Equation \eqref{eq:sumflow} is expressly the zero-$C$ identity. With
+nonzero $C$, its additional source is minus
+\begin{equation}
+ \Delta\B_Q=(\Delta\B_{Y_\nu})M_R^{-1}Y_\nu^T
+ +Y_\nu M_R^{-1}(\Delta\B_{Y_\nu})^T
+ -Y_\nu M_R^{-1}(\Delta\B_{M_R})M_R^{-1}Y_\nu^T.
+\end{equation}
+Thus a full model run cannot continue to assert the zero-$C$ sum-flow
+identity after the nonzero boundary is inserted. A diagnostic choice
+$m^2=0$ at one starting scale is not radiatively invariant and is not
+a physical electroweak matching condition.
+In the two nonzero-$C$ diagnostic runs the terminal values are
+$q_H=2.22133\times10^{-6}$ and $2.98359\times10^{-6}$, respectively.
+They exceed the squared terminal scale in $\omega$ units: a Higgs
+kept light all the way to that endpoint is not self-consistent without
+quadratic matching and retuning. The mass-independent $\MS$ ODE can
+be continued as a mathematical diagnostic, but its fixed-$v$ terminal
+mass proxies are not a physically valid light-Higgs EFT endpoint.
+
+\section{Reproducibility and remaining physical work}
+The code and JSON/Markdown records under \texttt{route\_f/code} and
+\texttt{route\_f/output} are named
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Stem after \texttt{verify\_} & Computed scope\\
+\midrule
+\texttt{p54\_lower\_covariant\_eft} & scalar valley, vector response, local vertices\\
+\texttt{p54\_upper\_yukawa\_thresholds} & actual pure-Yukawa finite state sums\\
+\texttt{p54\_scalar\_kinetic\_matching} & full scalar-cubic four-doublet metric\\
+\texttt{p54\_scalar\_chn} & actual neutral-scalar tree $NNH^\dagger H$ coefficient\\
+\texttt{p54\_sequential\_seesaw} & moving thresholds and dimension-five flow\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each record declares its boundary data, source hashes, conventions,
+scope restrictions and executable positive and negative tests.
+Previously computed expensive Hessians are reused.
+
+The next physical matching calculation must include the omitted
+heavy-vector fermion kinetic/vertex graphs, the vector/scalar/Goldstone/
+ghost scalar kinetic package, upper scalar matching and tadpole
+responses, and the lower covariant hard-minus-EFT subtraction.
+Sequential finite one-loop type-I/type-II matching is separate from
+the tree Schur rule: an all-sterile formula cannot silently be reused
+when lighter sterile states and an existing type-II operator remain.
+Only after these matched inputs are assembled is a constrained global
+fit meaningful. Momentum-dependent pole self-energies and Nielsen
+consistency remain separate from a zero-momentum curvature condition.
+No soliton regularity result, determinant or portal is promoted here.
+The sterile running engine is a specified $C_{BN}=0$ dimension-five
+subsystem with the PQ axion held as a background spectator. An invariant
+dipole-free RGE subspace is not a proof of zero finite dipole matching,
+and freezing the axion background is not a calculation of quantum axion
+loops. Its Wilson couplings and quantum effects must be accounted for
+before calling the result the full physical P54 lower evolution.
+
+\begin{thebibliography}{9}
+\bibitem{Zhang2024} D. Zhang, \emph{Threshold Effects on the Massless
+Neutrino in the Canonical Seesaw Mechanism} (2024),
+\url{https://arxiv.org/abs/2405.18017}.
+\bibitem{Antusch} S. Antusch et al., \emph{Running Neutrino Mass
+Parameters in See-Saw Scenarios} (2005),
+\url{https://arxiv.org/abs/hep-ph/0501272}.
+\bibitem{Patel} K. M. Patel and V. Shukla, finite Yukawa matching
+conventions and kernels, \url{https://arxiv.org/abs/2310.16563}.
+\bibitem{Luo} M. Luo, H. Wang and Y. Xiao, general renormalization-group
+equations, \url{https://arxiv.org/abs/hep-ph/0211440}.
+\bibitem{Matching} M. Gabelmann, M. Muehlleitner and F. Staub,
+\emph{Automatised matching between two scalar sectors at the one-loop level},
+\url{https://doi.org/10.1140/epjc/s10052-019-6570-5}.
+\bibitem{TypeI} D. Zhang and S. Zhou, complete one-loop type-I matching,
+\url{https://arxiv.org/abs/2107.12133}.
+\end{thebibliography}
+\end{document}
