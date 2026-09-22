@@ -29,14 +29,31 @@ tree-level scope: 262/262 checks, plus the unchanged 331/331 G1 regression.
 The old one-body bulk-emission no-go remains valid; incoming detector
 recoil changes the physical process, not that proof.
 
-Next physical option: recoil-resolved conversion. An absolute
-finite-encounter probability additionally requires specified 4D packets;
-the common-overlap averaged sigma*v is only a rate coefficient.
+**G2-R adds the joint output-mode/recoil prediction** without changing
+the action or card. This bounded tree-level stage is complete, with
+357/357 reproducible checks and a reviewed four-page derivation PDF.
+Its 25 open channels give the all-scattering
+output marginal m=(-2,-1,0,1) with weights
+(.00785985,.27119405,.60288929,.11805680), the last elastic.
+Detector mass resolves |j| but not sign. For nonelastic events, known
+incoming conditions and outgoing ordinary momentum give model-dependent
+sign reconstruction. For m=0, |j|=1, the two lines are
+1.02175458 and 1.36191317; elastic sign ambiguity remains.
+This reconstruction is not independent verification of the conservation
+law used to derive it, nor a detector/localization model.
+
+Next physical option: a specified finite-resolution readout for these
+joint lines. An absolute finite-encounter probability additionally
+requires specified 4D packets; the common-overlap averaged sigma*v is
+only a rate coefficient.
 Tree-level EFT success is not quantum loop control or a particle fit.
 See [the Route-G roadmap](route_g/ROADMAP.md). Background stabilization,
 spin/chirality and a Route-F bridge remain separate open hypotheses.
 G1 does not repair or promote the Route-F physical fit; the Route-F
 priority recorded below is retained within that independent program.
+
+Checkpoint 92ee811 (Route-F pending audits plus Route-G G1/G2) was
+committed and pushed before starting G2-R on 2026-09-23, as requested.
 
 ## Current Route-F priority: physics-first feasibility (2026-09-22)
 

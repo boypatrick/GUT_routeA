@@ -1,0 +1,5500 @@
+{
+  "status": "bounded tree-level conditional event-rate prediction, not absolute collision probabilities",
+  "card": {
+    "R": 1.0,
+    "M5": 0.5,
+    "alpha": 0.25,
+    "MD": 5.0,
+    "g": 0.05,
+    "incoming_phi_n": 1,
+    "target_phi_m": 0,
+    "incoming_com_momentum": 0.2
+  },
+  "packet": {
+    "min_l": -4,
+    "max_l": 4,
+    "width": 1.2,
+    "theta0": 0.7,
+    "l_labels": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "incident_weights": [
+      0.0012853808857911965,
+      0.014608603546452452,
+      0.0829071867573189,
+      0.2349536867203471,
+      0.3324902841801804,
+      0.2349536867203471,
+      0.0829071867573189,
+      0.014608603546452452,
+      0.0012853808857911965
+    ]
+  },
+  "assumptions": [
+    "Unchanged G2 local action, exact finite prepared packet and tree contact amplitude.",
+    "Common incoming COM momentum magnitude p_i and common dilute external-space overlap across l.",
+    "K=sigma*v_Moller, weighted by |c_l|^2. All-scattering and mode-conversion ensembles normalized separately.",
+    "Elastic m=n denotes scattered events only; unscattered identity probability is absent.",
+    "Signed j is theoretical. Neutral-X mass determines only |j|; mass readout sums the orthogonal degenerate subspace.",
+    "Exact outgoing COM momentum infers signed conversion labels only under the known shared spectrum and common p_i.",
+    "Inference uses compact conservation and is not an independent test of that premise.",
+    "No external-space collision packet, luminosity, duration, efficiency or absolute probability is specified."
+  ],
+  "equations": {
+    "weight": "W_mj=|c_(m+j-n)|^2 K_(m+j-n,m) on open channels",
+    "joint": "P_A=W/K_A; P_C=1_(m!=n) W/K_C",
+    "transfer": "j-l=n-m; l=m+j-n",
+    "differential": "dP_E(m,j,Omega)=P_E(m,j)dOmega/(4pi); p_Phi=+p_f u, p_X=-p_f u",
+    "coarse": "P_E(m,r)=sum_(j:|j|=r)P_E(m,j), r=0 counted once",
+    "infer_s": "S_f=sqrt(m_m^2+p_f^2)+sqrt(MD^2+r^2/R^2+p_f^2)",
+    "infer_l2": "L^2=R^2[(S_f-sqrt(m_n^2+p_i^2))^2-MD^2-p_i^2]",
+    "infer_j": "d=m-n !=0: j=(L^2-d^2-r^2)/(2d), l=j+d",
+    "means": "<j>=<l>+n-<m> in the same selected-event ensemble",
+    "covariance": "Var(j)=Var(l)+Var(m)-2Cov(l,m); Cov(m,j)=Cov(m,l)-Var(m)"
+  },
+  "events": [
+    {
+      "n": 1,
+      "l": -4,
+      "m": -2,
+      "j": -1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 1.8200274723201295,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 6.919046985912914,
+      "available_energy": 0.8482657241874927,
+      "open": true,
+      "final_phi_energy": 2.423209167794708,
+      "final_detector_energy": 5.344103542305699,
+      "energy_residual": 0.0,
+      "phi_energy_change": 1.062143408913088,
+      "detector_energy_change": -1.0621434089130881,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 1.5998258251710782,
+      "sigma": 6.594339168471195e-06,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 1.1748685597445923e-06,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 1.5101535900127314e-09,
+      "r": 1,
+      "delta_j": 3,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.8531475569614404,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.8531475569614404,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.8531475569614404
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.8531475569614404,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.8531475569614404,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.8531475569614404
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0008133910582130043,
+      "probability_conditional_mode_conversion": 0.0009222714816794525
+    },
+    {
+      "n": 1,
+      "l": -4,
+      "m": -1,
+      "j": -2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 0.9013878188659973,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 6.286552626000501,
+      "available_energy": 1.4807600840999058,
+      "open": true,
+      "final_phi_energy": 2.069161364823679,
+      "final_detector_energy": 5.698151345276728,
+      "energy_residual": 8.881784197001252e-16,
+      "phi_energy_change": 0.7080956059420591,
+      "detector_energy_change": -0.7080956059420584,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 1.862506041246307,
+      "sigma": 7.677083558762634e-06,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 1.3677737637224694e-06,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 1.7581102519755465e-09,
+      "r": 2,
+      "delta_j": 2,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          1.1563095845596634,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.1563095845596634,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.1563095845596634
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -1.1563095845596634,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -1.1563095845596634,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -1.1563095845596634
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0009469441835366332,
+      "probability_conditional_mode_conversion": 0.0010737020113508143
+    },
+    {
+      "n": 1,
+      "l": -4,
+      "m": 0,
+      "j": -3,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.830951894845301,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 6.389968889220248,
+      "available_energy": 1.3773438208801583,
+      "open": true,
+      "final_phi_energy": 1.7151135618526487,
+      "final_detector_energy": 6.052199148247757,
+      "energy_residual": -8.881784197001252e-16,
+      "phi_energy_change": 0.3540478029710288,
+      "detector_energy_change": -0.35404780297102967,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 1.6214544489596,
+      "sigma": 6.68349042404211e-06,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 1.1907520326076216e-06,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 1.5305699024308524e-09,
+      "r": 3,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.8763715100169599,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.8763715100169599,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.8763715100169599
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.8763715100169599,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.8763715100169599,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.8763715100169599
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.000824387586031372,
+      "probability_conditional_mode_conversion": 0.000934740003311171
+    },
+    {
+      "n": 1,
+      "l": -4,
+      "m": 1,
+      "j": -4,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 6.4031242374328485,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 7.749415439216475,
+      "available_energy": 0.017897270883931782,
+      "open": true,
+      "final_phi_energy": 1.3610657588816197,
+      "final_detector_energy": 6.406246951218787,
+      "energy_residual": 0.0,
+      "phi_energy_change": -2.220446049250313e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 0.19999999999999893,
+      "sigma": 8.243821376950193e-07,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 1.4687455862502414e-07,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 1.8878975026562455e-10,
+      "r": 4,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.01333333333333319,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.01333333333333319,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.01333333333333319
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.01333333333333319,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.01333333333333319,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.01333333333333319
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.00010168495162603333
+    },
+    {
+      "n": 1,
+      "l": -3,
+      "m": -2,
+      "j": 0,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 1.8200274723201295,
+      "final_detector_mass": 5.0,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 6.820027472320129,
+      "available_energy": 0.37541914488741934,
+      "open": true,
+      "final_phi_energy": 2.0906938527715657,
+      "final_detector_energy": 5.104752764435983,
+      "energy_residual": 8.881784197001252e-16,
+      "phi_energy_change": 0.7296280938899458,
+      "detector_energy_change": -0.7296280938899455,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 1.028834673801779,
+      "sigma": 4.941630161206634e-06,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 8.955381801869663e-07,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 1.308256223506289e-08,
+      "r": 0,
+      "delta_j": 3,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.3528335953389377,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3528335953389377,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.3528335953389377
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.3528335953389377,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.3528335953389377,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.3528335953389377
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.007046461506227045,
+      "probability_conditional_mode_conversion": 0.007989699946078585
+    },
+    {
+      "n": 1,
+      "l": -3,
+      "m": -1,
+      "j": -1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 0.9013878188659973,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 6.000407332458781,
+      "available_energy": 1.1950392847487672,
+      "open": true,
+      "final_phi_energy": 1.847484488141584,
+      "final_detector_energy": 5.347962129065965,
+      "energy_residual": 0.0,
+      "phi_energy_change": 0.486418729259964,
+      "detector_energy_change": -0.486418729259964,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 1.6126682653055993,
+      "sigma": 7.745860771203287e-06,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 1.4037299095105114e-06,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 2.0506533734336636e-08,
+      "r": 1,
+      "delta_j": 2,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.8668996446412569,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.8668996446412569,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.8668996446412569
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.8668996446412569,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.8668996446412569,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.8668996446412569
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.011045122353622407,
+      "probability_conditional_mode_conversion": 0.012523621025273914
+    },
+    {
+      "n": 1,
+      "l": -3,
+      "m": 0,
+      "j": -2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 5.944181801509451,
+      "available_energy": 1.2512648156980974,
+      "open": true,
+      "final_phi_energy": 1.604275123511602,
+      "final_detector_energy": 5.5911714936959465,
+      "energy_residual": 0.0,
+      "phi_energy_change": 0.243209364629982,
+      "detector_energy_change": -0.24320936462998244,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 1.5037282573384612,
+      "sigma": 7.222607382839921e-06,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 1.3089042402667466e-06,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 1.9121263126327447e-08,
+      "r": 2,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.7537328906393884,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.7537328906393884,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.7537328906393884
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.7537328906393884,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.7537328906393884,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.7537328906393884
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.010298995116491204,
+      "probability_conditional_mode_conversion": 0.011677617291200176
+    },
+    {
+      "n": 1,
+      "l": -3,
+      "m": 1,
+      "j": -3,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.830951894845301,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 7.177243096628927,
+      "available_energy": 0.018203520578621735,
+      "open": true,
+      "final_phi_energy": 1.3610657588816195,
+      "final_detector_energy": 5.834380858325929,
+      "energy_residual": 0.0,
+      "phi_energy_change": -4.440892098500626e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 0.19999999999999785,
+      "sigma": 9.60626675410565e-07,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 1.740878691185122e-07,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 2.5431806621990476e-09,
+      "r": 3,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333333046,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333333046,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333333046
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333333046,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333333046,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333333046
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0013697947173939393
+    },
+    {
+      "n": 1,
+      "l": -2,
+      "m": -1,
+      "j": 0,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.385164807134504,
+      "final_phi_mass": 0.9013878188659973,
+      "final_detector_mass": 5.0,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.388877434122992,
+      "sqrt_s": 6.749943193004611,
+      "s": 45.56173310878929,
+      "final_threshold": 5.901387818865997,
+      "available_energy": 0.8485553741386145,
+      "open": true,
+      "final_phi_energy": 1.58328985130873,
+      "final_detector_energy": 5.1666533416958815,
+      "energy_residual": 0.0,
+      "phi_energy_change": 0.22222409242710994,
+      "detector_energy_change": -0.22222409242711016,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999896,
+      "outgoing_momentum": 1.301655389593275,
+      "sigma": 7.1045396583590725e-06,
+      "relative_velocity": 0.18405715262538833,
+      "rate_coefficient": 1.30764134023172e-06,
+      "packet_weight": 0.0829071867573189,
+      "weighted_rate": 1.0841286480618199e-07,
+      "r": 0,
+      "delta_j": 2,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.5647689177524068,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.5647689177524068,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5647689177524068
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.5647689177524068,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.5647689177524068,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.5647689177524068
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.05839277237215343,
+      "probability_conditional_mode_conversion": 0.06620922144552774
+    },
+    {
+      "n": 1,
+      "l": -2,
+      "m": 0,
+      "j": -1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.385164807134504,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.388877434122992,
+      "sqrt_s": 6.749943193004611,
+      "s": 45.56173310878929,
+      "final_threshold": 5.658036507967732,
+      "available_energy": 1.0919066850368795,
+      "open": true,
+      "final_phi_energy": 1.4721778050951748,
+      "final_detector_energy": 5.277765387909437,
+      "energy_residual": 0.0,
+      "phi_energy_change": 0.11111204621355486,
+      "detector_energy_change": -0.11111204621355508,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999896,
+      "outgoing_momentum": 1.3619131726416507,
+      "sigma": 7.433431477818101e-06,
+      "relative_velocity": 0.18405715262538833,
+      "rate_coefficient": 1.3681762320431322e-06,
+      "packet_weight": 0.0829071867573189,
+      "weighted_rate": 1.1343164238692484e-07,
+      "r": 1,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.6182691632716155,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.6182691632716155,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.6182691632716155
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.6182691632716155,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.6182691632716155,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.6182691632716155
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.06109596020306916,
+      "probability_conditional_mode_conversion": 0.06927425765523691
+    },
+    {
+      "n": 1,
+      "l": -2,
+      "m": 1,
+      "j": -2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.385164807134504,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.388877434122992,
+      "sqrt_s": 6.749943193004611,
+      "s": 45.56173310878929,
+      "final_threshold": 6.73145600891813,
+      "available_energy": 0.018487184086481534,
+      "open": true,
+      "final_phi_energy": 1.3610657588816197,
+      "final_detector_energy": 5.388877434122992,
+      "energy_residual": 0.0,
+      "phi_energy_change": -2.220446049250313e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999896,
+      "outgoing_momentum": 0.19999999999999896,
+      "sigma": 1.0916160629241467e-06,
+      "relative_velocity": 0.18405715262538833,
+      "rate_coefficient": 2.0091974430195518e-07,
+      "packet_weight": 0.0829071867573189,
+      "weighted_rate": 1.6657690764074957e-08,
+      "r": 2,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333333195,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333333195,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333333195
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333333195,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333333195,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333333195
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0089720786068268
+    },
+    {
+      "n": 1,
+      "l": -1,
+      "m": -1,
+      "j": 1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0990195135927845,
+      "final_phi_mass": 0.9013878188659973,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.102940328869229,
+      "sqrt_s": 6.464006087750849,
+      "s": 41.78337470248003,
+      "final_threshold": 6.000407332458781,
+      "available_energy": 0.4635987552920673,
+      "open": true,
+      "final_phi_energy": 1.2837143465821343,
+      "final_detector_energy": 5.180291741168714,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.07735141229948561,
+      "detector_energy_change": 0.07735141229948539,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999726,
+      "outgoing_momentum": 0.9140145095242178,
+      "sigma": 5.43988519223851e-06,
+      "relative_velocity": 0.18613676175760754,
+      "rate_coefficient": 1.0125626140164366e-06,
+      "packet_weight": 0.2349536867203471,
+      "weighted_rate": 2.379053191983536e-07,
+      "r": 1,
+      "delta_j": 2,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.2784741745402655,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2784741745402655,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.2784741745402655
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.2784741745402655,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.2784741745402655,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.2784741745402655
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.1281393234549209,
+      "probability_conditional_mode_conversion": 0.14529203697396031
+    },
+    {
+      "n": 1,
+      "l": -1,
+      "m": 0,
+      "j": 0,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0990195135927845,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.0,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.102940328869229,
+      "sqrt_s": 6.464006087750849,
+      "s": 41.78337470248003,
+      "final_threshold": 5.5590169943749475,
+      "available_energy": 0.9049890933759013,
+      "open": true,
+      "final_phi_energy": 1.3223900527318766,
+      "final_detector_energy": 5.141616035018972,
+      "energy_residual": -8.881784197001252e-16,
+      "phi_energy_change": -0.03867570614974336,
+      "detector_energy_change": 0.038675706149742695,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999726,
+      "outgoing_momentum": 1.1984220673720154,
+      "sigma": 7.132576551484333e-06,
+      "relative_velocity": 0.18613676175760754,
+      "rate_coefficient": 1.3276347022815373e-06,
+      "packet_weight": 0.2349536867203471,
+      "weighted_rate": 3.119326679189176e-07,
+      "r": 0,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.47873848385473844,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.47873848385473844,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.47873848385473844
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.47873848385473844,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.47873848385473844,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.47873848385473844
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.16801154831386061,
+      "probability_conditional_mode_conversion": 0.19050155277476075
+    },
+    {
+      "n": 1,
+      "l": -1,
+      "m": 1,
+      "j": -1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0990195135927845,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.102940328869229,
+      "sqrt_s": 6.464006087750849,
+      "s": 41.78337470248003,
+      "final_threshold": 6.445310715376411,
+      "available_energy": 0.01869537237443808,
+      "open": true,
+      "final_phi_energy": 1.3610657588816195,
+      "final_detector_energy": 5.102940328869229,
+      "energy_residual": 0.0,
+      "phi_energy_change": -4.440892098500626e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999726,
+      "outgoing_momentum": 0.19999999999999726,
+      "sigma": 1.1903279730362532e-06,
+      "relative_velocity": 0.18613676175760754,
+      "rate_coefficient": 2.2156379433046496e-07,
+      "packet_weight": 0.2349536867203471,
+      "weighted_rate": 5.205723032169148e-08,
+      "r": 1,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333332968,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333332968,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333332968
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333332968,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333332968,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333332968
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.028038794159103878
+    },
+    {
+      "n": 1,
+      "l": 0,
+      "m": -1,
+      "j": 2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0,
+      "final_phi_mass": 0.9013878188659973,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.0039984012787215,
+      "sqrt_s": 6.365064160160341,
+      "s": 40.51404176295767,
+      "final_threshold": 6.286552626000501,
+      "available_energy": 0.07851153415984058,
+      "open": true,
+      "final_phi_energy": 0.9682967408334153,
+      "final_detector_energy": 5.396767419326926,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.39276901804820463,
+      "detector_energy_change": 0.3927690180482042,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999862,
+      "outgoing_momentum": 0.3536927738993467,
+      "sigma": 2.171004748154755e-06,
+      "relative_velocity": 0.18691171002299933,
+      "rate_coefficient": 4.0578620994565627e-07,
+      "packet_weight": 0.3324902841801804,
+      "weighted_rate": 1.349199722612296e-07,
+      "r": 2,
+      "delta_j": 2,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.04169952610287147,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04169952610287147,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.04169952610287147
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.04169952610287147,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.04169952610287147,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.04169952610287147
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0726698924780926,
+      "probability_conditional_mode_conversion": 0.08239747503064626
+    },
+    {
+      "n": 1,
+      "l": 0,
+      "m": 0,
+      "j": 1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.0039984012787215,
+      "sqrt_s": 6.365064160160341,
+      "s": 40.51404176295767,
+      "final_threshold": 5.658036507967732,
+      "available_energy": 0.7070276521926093,
+      "open": true,
+      "final_phi_energy": 1.1646812498575176,
+      "final_detector_energy": 5.200382910302824,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.19638450902410232,
+      "detector_energy_change": 0.1963845090241021,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999862,
+      "outgoing_momentum": 1.0217545760943132,
+      "sigma": 6.271640813280692e-06,
+      "relative_velocity": 0.18691171002299933,
+      "rate_coefficient": 1.1722431090603284e-06,
+      "packet_weight": 0.3324902841801804,
+      "weighted_rate": 3.897594444597268e-07,
+      "r": 1,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.3479941379232232,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3479941379232232,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.3479941379232232
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.3479941379232232,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.3479941379232232,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.3479941379232232
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.20993020118896458,
+      "probability_conditional_mode_conversion": 0.23803143118535514
+    },
+    {
+      "n": 1,
+      "l": 0,
+      "m": 1,
+      "j": 0,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.0,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.0039984012787215,
+      "sqrt_s": 6.365064160160341,
+      "s": 40.51404176295767,
+      "final_threshold": 6.346291201783626,
+      "available_energy": 0.01877295837671511,
+      "open": true,
+      "final_phi_energy": 1.3610657588816197,
+      "final_detector_energy": 5.0039984012787215,
+      "energy_residual": 0.0,
+      "phi_energy_change": -2.220446049250313e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999862,
+      "outgoing_momentum": 0.19999999999999862,
+      "sigma": 1.2276217714148498e-06,
+      "relative_velocity": 0.18691171002299933,
+      "rate_coefficient": 2.2945688455661319e-07,
+      "packet_weight": 0.3324902841801804,
+      "weighted_rate": 7.629218475332716e-08,
+      "r": 0,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.01333333333333315,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.01333333333333315,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.01333333333333315
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.01333333333333315,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.01333333333333315,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.01333333333333315
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.041092099042301815
+    },
+    {
+      "n": 1,
+      "l": 1,
+      "m": 0,
+      "j": 2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0990195135927845,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.102940328869229,
+      "sqrt_s": 6.464006087750849,
+      "s": 41.78337470248003,
+      "final_threshold": 5.944181801509451,
+      "available_energy": 0.5198242862413975,
+      "open": true,
+      "final_phi_energy": 1.012984403533935,
+      "final_detector_energy": 5.451021684216913,
+      "energy_residual": -8.881784197001252e-16,
+      "phi_energy_change": -0.3480813553476849,
+      "detector_energy_change": 0.34808135534768425,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999726,
+      "outgoing_momentum": 0.844770620821417,
+      "sigma": 5.0277705038147405e-06,
+      "relative_velocity": 0.18613676175760754,
+      "rate_coefficient": 9.358529204404908e-07,
+      "packet_weight": 0.2349536867203471,
+      "weighted_rate": 2.19882093885497e-07,
+      "r": 2,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.2378791339343341,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2378791339343341,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.2378791339343341
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.2378791339343341,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.2378791339343341,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.2378791339343341
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.11843174774435213,
+      "probability_conditional_mode_conversion": 0.13428500641504165
+    },
+    {
+      "n": 1,
+      "l": 1,
+      "m": 1,
+      "j": 1,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.0990195135927845,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.0990195135927845,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.102940328869229,
+      "sqrt_s": 6.464006087750849,
+      "s": 41.78337470248003,
+      "final_threshold": 6.445310715376411,
+      "available_energy": 0.01869537237443808,
+      "open": true,
+      "final_phi_energy": 1.3610657588816195,
+      "final_detector_energy": 5.102940328869229,
+      "energy_residual": 0.0,
+      "phi_energy_change": -4.440892098500626e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999726,
+      "outgoing_momentum": 0.19999999999999726,
+      "sigma": 1.1903279730362532e-06,
+      "relative_velocity": 0.18613676175760754,
+      "rate_coefficient": 2.2156379433046496e-07,
+      "packet_weight": 0.2349536867203471,
+      "weighted_rate": 5.205723032169148e-08,
+      "r": 1,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333332968,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333332968,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333332968
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333332968,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333332968,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333332968
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.028038794159103878
+    },
+    {
+      "n": 1,
+      "l": 2,
+      "m": 0,
+      "j": 3,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.385164807134504,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 5.830951894845301,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.388877434122992,
+      "sqrt_s": 6.749943193004611,
+      "s": 45.56173310878929,
+      "final_threshold": 6.389968889220248,
+      "available_energy": 0.35997430378436324,
+      "open": true,
+      "final_phi_energy": 0.8795802252895474,
+      "final_detector_energy": 5.870362967715064,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.4814855335920726,
+      "detector_energy_change": 0.481485533592072,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999896,
+      "outgoing_momentum": 0.6790886339207945,
+      "sigma": 3.7065203046857934e-06,
+      "relative_velocity": 0.18405715262538833,
+      "rate_coefficient": 6.822115734286539e-07,
+      "packet_weight": 0.0829071867573189,
+      "weighted_rate": 5.656024232625378e-08,
+      "r": 3,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.1537204575734703,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.1537204575734703,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.1537204575734703
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.1537204575734703,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.1537204575734703,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.1537204575734703
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.03046418302270014,
+      "probability_conditional_mode_conversion": 0.034542114682482854
+    },
+    {
+      "n": 1,
+      "l": 2,
+      "m": 1,
+      "j": 2,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.385164807134504,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.385164807134504,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.388877434122992,
+      "sqrt_s": 6.749943193004611,
+      "s": 45.56173310878929,
+      "final_threshold": 6.73145600891813,
+      "available_energy": 0.018487184086481534,
+      "open": true,
+      "final_phi_energy": 1.3610657588816197,
+      "final_detector_energy": 5.388877434122992,
+      "energy_residual": 0.0,
+      "phi_energy_change": -2.220446049250313e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999896,
+      "outgoing_momentum": 0.19999999999999896,
+      "sigma": 1.0916160629241467e-06,
+      "relative_velocity": 0.18405715262538833,
+      "rate_coefficient": 2.0091974430195518e-07,
+      "packet_weight": 0.0829071867573189,
+      "weighted_rate": 1.6657690764074957e-08,
+      "r": 2,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333333195,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333333195,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333333195
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333333195,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333333195,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333333195
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0089720786068268
+    },
+    {
+      "n": 1,
+      "l": 3,
+      "m": 0,
+      "j": 4,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 6.4031242374328485,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 6.962141231807796,
+      "available_energy": 0.23330538539975265,
+      "open": true,
+      "final_phi_energy": 0.7704144447802357,
+      "final_detector_energy": 6.425032172427313,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.5906513141013843,
+      "detector_energy_change": 0.5906513141013843,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 0.5301305657345544,
+      "sigma": 2.5462878144755625e-06,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 4.614465027166047e-07,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 6.741089016083873e-09,
+      "r": 4,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.09367947224201291,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.09367947224201291,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.09367947224201291
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.09367947224201291,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.09367947224201291,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.09367947224201291
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.003630850242361305,
+      "probability_conditional_mode_conversion": 0.004116875393412363
+    },
+    {
+      "n": 1,
+      "l": 3,
+      "m": 1,
+      "j": 3,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 5.830951894845301,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 5.830951894845301,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 5.834380858325929,
+      "sqrt_s": 7.195446617207549,
+      "s": 51.774452021083555,
+      "final_threshold": 7.177243096628927,
+      "available_energy": 0.018203520578621735,
+      "open": true,
+      "final_phi_energy": 1.3610657588816195,
+      "final_detector_energy": 5.834380858325929,
+      "energy_residual": 0.0,
+      "phi_energy_change": -4.440892098500626e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999785,
+      "outgoing_momentum": 0.19999999999999785,
+      "sigma": 9.60626675410565e-07,
+      "relative_velocity": 0.18122323018368014,
+      "rate_coefficient": 1.740878691185122e-07,
+      "packet_weight": 0.014608603546452452,
+      "weighted_rate": 2.5431806621990476e-09,
+      "r": 3,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.013333333333333046,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.013333333333333046,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.013333333333333046
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.013333333333333046,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.013333333333333046,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.013333333333333046
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0013697947173939393
+    },
+    {
+      "n": 1,
+      "l": 4,
+      "m": 0,
+      "j": 5,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 0.5590169943749475,
+      "final_detector_mass": 7.0710678118654755,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 7.630084806240423,
+      "available_energy": 0.1372279038599835,
+      "open": true,
+      "final_phi_energy": 0.6851563168460183,
+      "final_detector_energy": 7.0821563932543885,
+      "energy_residual": 0.0,
+      "phi_energy_change": -0.6759094420356017,
+      "detector_energy_change": 0.6759094420356018,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 0.39615549789697646,
+      "sigma": 1.63291758107973e-06,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 2.909258195024771e-07,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 3.7395048757162375e-10,
+      "r": 5,
+      "delta_j": 1,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.05231305950466711,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.05231305950466711,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.05231305950466711
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.05231305950466711,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.05231305950466711,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.05231305950466711
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.0002014152632002071,
+      "probability_conditional_mode_conversion": 0.00022837668468180615
+    },
+    {
+      "n": 1,
+      "l": 4,
+      "m": 1,
+      "j": 4,
+      "initial_phi_mass": 1.346291201783626,
+      "initial_detector_mass": 6.4031242374328485,
+      "final_phi_mass": 1.346291201783626,
+      "final_detector_mass": 6.4031242374328485,
+      "initial_phi_energy": 1.36106575888162,
+      "initial_detector_energy": 6.406246951218787,
+      "sqrt_s": 7.7673127101004065,
+      "s": 60.33114673648732,
+      "final_threshold": 7.749415439216475,
+      "available_energy": 0.017897270883931782,
+      "open": true,
+      "final_phi_energy": 1.3610657588816197,
+      "final_detector_energy": 6.406246951218787,
+      "energy_residual": 0.0,
+      "phi_energy_change": -2.220446049250313e-16,
+      "detector_energy_change": 0.0,
+      "compact_momentum_residual": 0.0,
+      "incoming_momentum": 0.19999999999999893,
+      "outgoing_momentum": 0.19999999999999893,
+      "sigma": 8.243821376950193e-07,
+      "relative_velocity": 0.1781631987268512,
+      "rate_coefficient": 1.4687455862502414e-07,
+      "packet_weight": 0.0012853808857911965,
+      "weighted_rate": 1.8878975026562455e-10,
+      "r": 4,
+      "delta_j": 0,
+      "angular_momentum_mean": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "angular_phi_covariance": [
+        [
+          0.01333333333333319,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.01333333333333319,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.01333333333333319
+        ]
+      ],
+      "angular_phi_X_cross_covariance": [
+        [
+          -0.01333333333333319,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.01333333333333319,
+          -0.0
+        ],
+        [
+          -0.0,
+          -0.0,
+          -0.01333333333333319
+        ]
+      ],
+      "probability_conditional_all_scattering": 0.00010168495162603333
+    }
+  ],
+  "ensembles": {
+    "all_scattering": {
+      "condition": "scattering event",
+      "total_rate_coefficient": 1.8566144473366765e-06,
+      "event_rows": 25,
+      "m_labels": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "j_labels": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "r_labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "l_labels": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "signed_joint_probability": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0008133910582130043,
+          0.007046461506227045,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0009469441835366332,
+          0.011045122353622407,
+          0.05839277237215343,
+          0.1281393234549209,
+          0.0726698924780926,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000824387586031372,
+          0.010298995116491204,
+          0.06109596020306916,
+          0.16801154831386061,
+          0.20993020118896458,
+          0.11843174774435213,
+          0.03046418302270014,
+          0.003630850242361305,
+          0.0002014152632002071
+        ],
+        [
+          0.00010168495162603333,
+          0.0013697947173939393,
+          0.0089720786068268,
+          0.028038794159103878,
+          0.041092099042301815,
+          0.028038794159103878,
+          0.0089720786068268,
+          0.0013697947173939393,
+          0.00010168495162603333,
+          0.0
+        ]
+      ],
+      "abs_recoil_joint_probability": [
+        [
+          0.007046461506227045,
+          0.0008133910582130043,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.05839277237215343,
+          0.1391844458085433,
+          0.07361683666162923,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.16801154831386061,
+          0.2710261613920337,
+          0.12873074286084332,
+          0.03128857060873151,
+          0.003630850242361305,
+          0.0002014152632002071
+        ],
+        [
+          0.041092099042301815,
+          0.056077588318207756,
+          0.0179441572136536,
+          0.0027395894347878786,
+          0.00020336990325206666,
+          0.0
+        ]
+      ],
+      "marginal_m": [
+        0.007859852564440049,
+        0.271194054842326,
+        0.6028892886810308,
+        0.11805680391220312
+      ],
+      "marginal_j": [
+        0.00010168495162603333,
+        0.002194182303425311,
+        0.020218017906854638,
+        0.10099326777400845,
+        0.2745428812345429,
+        0.3661083188029894,
+        0.20007371882927152,
+        0.031833977740094076,
+        0.0037325351939873387,
+        0.0002014152632002071
+      ],
+      "marginal_r": [
+        0.2745428812345429,
+        0.4671015865769978,
+        0.22029173673612618,
+        0.03402816004351939,
+        0.003834220145613372,
+        0.0002014152632002071
+      ],
+      "selected_initial_l": [
+        0.002686407779407043,
+        0.029760373693734594,
+        0.12846081118204938,
+        0.3241896659278854,
+        0.323692192709359,
+        0.14647054190345601,
+        0.03943626162952694,
+        0.005000644959755244,
+        0.00030310021482624045
+      ],
+      "conditionals": {
+        "j_given_m": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.10348680863213518,
+            0.8965131913678649,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0034917586378771935,
+            0.04072774515667061,
+            0.21531730260865553,
+            0.4725004887346146,
+            0.267962704862182,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0013673946469258452,
+            0.017082730295346266,
+            0.10133860619207827,
+            0.27867728199555075,
+            0.34820688496264174,
+            0.19644029172163738,
+            0.05053031061365854,
+            0.006022416238816727,
+            0.0003340833333444234
+          ],
+          [
+            0.0008613222470570585,
+            0.0116028443257928,
+            0.0759979798665326,
+            0.2375025685089346,
+            0.3480705701033659,
+            0.2375025685089346,
+            0.0759979798665326,
+            0.0116028443257928,
+            0.0008613222470570585,
+            0.0
+          ]
+        ],
+        "m_given_j": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.37571517405113997,
+            0.6242848259488601
+          ],
+          [
+            0.0,
+            0.04683664778116479,
+            0.5093968738151861,
+            0.44376647840364913
+          ],
+          [
+            0.008053913653265687,
+            0.10936493686230608,
+            0.6049508204822418,
+            0.2776303290021864
+          ],
+          [
+            0.025666159962119833,
+            0.2126908995402736,
+            0.6119683291672304,
+            0.1496746113303761
+          ],
+          [
+            0.0,
+            0.3500038564375681,
+            0.5734100822274198,
+            0.07658606133501202
+          ],
+          [
+            0.0,
+            0.36321558325261016,
+            0.5919405528989704,
+            0.044843863848419416
+          ],
+          [
+            0.0,
+            0.0,
+            0.9569706705025205,
+            0.04302932949747961
+          ],
+          [
+            0.0,
+            0.0,
+            0.9727571352066993,
+            0.027242864793300663
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "r_given_m": [
+          [
+            0.8965131913678649,
+            0.10348680863213518,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.21531730260865556,
+            0.5132282338912852,
+            0.27145446350005925,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.2786772819955508,
+            0.44954549115472003,
+            0.21352302201698367,
+            0.051897705260584404,
+            0.006022416238816728,
+            0.00033408333334442345
+          ],
+          [
+            0.3480705701033659,
+            0.47500513701786923,
+            0.15199595973306523,
+            0.023205688651585604,
+            0.0017226444941141172,
+            0.0
+          ]
+        ],
+        "m_given_r": [
+          [
+            0.025666159962119833,
+            0.2126908995402736,
+            0.6119683291672304,
+            0.1496746113303761
+          ],
+          [
+            0.0017413579435121948,
+            0.2979746800444659,
+            0.5802295885530188,
+            0.12005437345900309
+          ],
+          [
+            0.0,
+            0.3341788382639621,
+            0.5843648280599917,
+            0.08145633367604611
+          ],
+          [
+            0.0,
+            0.0,
+            0.9194905210483272,
+            0.08050947895167282
+          ],
+          [
+            0.0,
+            0.0,
+            0.9469592523306893,
+            0.05304074766931072
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "signed_recoil_posteriors_given_m_r": [
+        {
+          "m": -2,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.028834673801779
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -2,
+          "r": 1,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -1,
+              "probability": 1.0,
+              "outgoing_momentum": 1.5998258251710782
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -1,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -2,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.301655389593275
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -1,
+          "r": 1,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": -1,
+              "probability": 0.07935601057617922,
+              "outgoing_momentum": 1.6126682653055993
+            },
+            {
+              "l": -1,
+              "j": 1,
+              "probability": 0.9206439894238208,
+              "outgoing_momentum": 0.9140145095242178
+            }
+          ],
+          "momentum_separation": 0.6986537557813814
+        },
+        {
+          "m": -1,
+          "r": 2,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -2,
+              "probability": 0.01286314688974135,
+              "outgoing_momentum": 1.862506041246307
+            },
+            {
+              "l": 0,
+              "j": 2,
+              "probability": 0.9871368531102586,
+              "outgoing_momentum": 0.3536927738993467
+            }
+          ],
+          "momentum_separation": 1.5088132673469603
+        },
+        {
+          "m": 0,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -1,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.1984220673720154
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 0,
+          "r": 1,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -2,
+              "j": -1,
+              "probability": 0.2254245859118195,
+              "outgoing_momentum": 1.3619131726416507
+            },
+            {
+              "l": 0,
+              "j": 1,
+              "probability": 0.7745754140881804,
+              "outgoing_momentum": 1.0217545760943132
+            }
+          ],
+          "momentum_separation": 0.3401585965473375
+        },
+        {
+          "m": 0,
+          "r": 2,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": -2,
+              "probability": 0.08000416130297887,
+              "outgoing_momentum": 1.5037282573384612
+            },
+            {
+              "l": 1,
+              "j": 2,
+              "probability": 0.9199958386970212,
+              "outgoing_momentum": 0.844770620821417
+            }
+          ],
+          "momentum_separation": 0.6589576365170442
+        },
+        {
+          "m": 0,
+          "r": 3,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -3,
+              "probability": 0.026347882629106586,
+              "outgoing_momentum": 1.6214544489596
+            },
+            {
+              "l": 2,
+              "j": 3,
+              "probability": 0.9736521173708934,
+              "outgoing_momentum": 0.6790886339207945
+            }
+          ],
+          "momentum_separation": 0.9423658150388053
+        },
+        {
+          "m": 0,
+          "r": 4,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": 3,
+              "j": 4,
+              "probability": 1.0,
+              "outgoing_momentum": 0.5301305657345544
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 0,
+          "r": 5,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": 4,
+              "j": 5,
+              "probability": 1.0,
+              "outgoing_momentum": 0.39615549789697646
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 1,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": 0,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 0.19999999999999862
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 1,
+          "r": 1,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -1,
+              "j": -1,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999726
+            },
+            {
+              "l": 1,
+              "j": 1,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999726
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 1,
+          "r": 2,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -2,
+              "j": -2,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999896
+            },
+            {
+              "l": 2,
+              "j": 2,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999896
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 1,
+          "r": 3,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": -3,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999785
+            },
+            {
+              "l": 3,
+              "j": 3,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999785
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 1,
+          "r": 4,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -4,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999893
+            },
+            {
+              "l": 4,
+              "j": 4,
+              "probability": 0.5,
+              "outgoing_momentum": 0.19999999999999893
+            }
+          ],
+          "momentum_separation": 0.0
+        }
+      ],
+      "moments": {
+        "labels": [
+          "m",
+          "j",
+          "l",
+          "delta_j"
+        ],
+        "mean": [
+          -0.16885695605900294,
+          0.7292763164692675,
+          -0.4395806395897355,
+          1.1688569560590027
+        ],
+        "covariance": [
+          [
+            0.39217759740277724,
+            -0.1357699366490618,
+            0.25640766075371546,
+            -0.39217759740277724
+          ],
+          [
+            -0.1357699366490618,
+            1.1890609320600134,
+            1.0532909954109513,
+            0.13576993664906178
+          ],
+          [
+            0.25640766075371546,
+            1.0532909954109513,
+            1.3096986561646669,
+            -0.25640766075371546
+          ],
+          [
+            -0.39217759740277724,
+            0.13576993664906178,
+            -0.2564076607537155,
+            0.39217759740277724
+          ]
+        ],
+        "correlation_mode_transfer": -1.0
+      },
+      "mutual_information_bits": {
+        "m_and_signed_j": 0.09517089864070864,
+        "m_and_abs_j": 0.03936513834227681,
+        "loss_from_sign_coarse_graining": 0.05580576029843183
+      }
+    },
+    "mode_conversion": {
+      "condition": "mode-changing scattering event",
+      "total_rate_coefficient": 1.637428479586887e-06,
+      "event_rows": 16,
+      "m_labels": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "j_labels": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "r_labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "l_labels": [
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "signed_joint_probability": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0009222714816794525,
+          0.007989699946078585,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010737020113508143,
+          0.012523621025273914,
+          0.06620922144552774,
+          0.14529203697396031,
+          0.08239747503064626,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000934740003311171,
+          0.011677617291200176,
+          0.06927425765523691,
+          0.19050155277476075,
+          0.23803143118535514,
+          0.13428500641504165,
+          0.034542114682482854,
+          0.004116875393412363,
+          0.00022837668468180615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "abs_recoil_joint_probability": [
+        [
+          0.007989699946078585,
+          0.0009222714816794525,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.06620922144552774,
+          0.15781565799923422,
+          0.08347117704199708,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.19050155277476075,
+          0.30730568884059206,
+          0.14596262370624183,
+          0.03547685468579403,
+          0.004116875393412363,
+          0.00022837668468180615
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "marginal_m": [
+        0.008911971427758037,
+        0.30749605648675904,
+        0.6835919720854827,
+        0.0
+      ],
+      "marginal_j": [
+        0.0,
+        0.000934740003311171,
+        0.01275131930255099,
+        0.08272015016219028,
+        0.26470047416636705,
+        0.38332346815931545,
+        0.2166824814456879,
+        0.034542114682482854,
+        0.004116875393412363,
+        0.00022837668468180615
+      ],
+      "marginal_r": [
+        0.26470047416636705,
+        0.46604361832150576,
+        0.2294338007482389,
+        0.03547685468579403,
+        0.004116875393412363,
+        0.00022837668468180615
+      ],
+      "selected_initial_l": [
+        0.0029307134963414377,
+        0.032190938262552676,
+        0.13548347910076464,
+        0.3357935897487211,
+        0.3204289062160014,
+        0.13428500641504165,
+        0.034542114682482854,
+        0.004116875393412363,
+        0.00022837668468180615
+      ],
+      "conditionals": {
+        "j_given_m": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.10348680863213518,
+            0.8965131913678649,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0034917586378771935,
+            0.04072774515667061,
+            0.21531730260865556,
+            0.47250048873461464,
+            0.267962704862182,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0013673946469258454,
+            0.01708273029534627,
+            0.1013386061920783,
+            0.2786772819955508,
+            0.3482068849626418,
+            0.19644029172163743,
+            0.05053031061365856,
+            0.0060224162388167295,
+            0.00033408333334442345
+          ],
+          null
+        ],
+        "m_given_j": [
+          null,
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.08420320955620747,
+            0.9157967904437926,
+            0.0
+          ],
+          [
+            0.011149296512048696,
+            0.15139746483436883,
+            0.8374532386535825,
+            0.0
+          ],
+          [
+            0.030183927593030957,
+            0.2501288358248824,
+            0.7196872365820868,
+            0.0
+          ],
+          [
+            0.0,
+            0.3790324596394776,
+            0.6209675403605224,
+            0.0
+          ],
+          [
+            0.0,
+            0.38026828233134957,
+            0.6197317176686504,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "r_given_m": [
+          [
+            0.8965131913678649,
+            0.10348680863213518,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.21531730260865556,
+            0.5132282338912852,
+            0.2714544635000592,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.2786772819955508,
+            0.44954549115472014,
+            0.2135230220169837,
+            0.05189770526058441,
+            0.0060224162388167295,
+            0.00033408333334442345
+          ],
+          null
+        ],
+        "m_given_r": [
+          [
+            0.030183927593030957,
+            0.2501288358248824,
+            0.7196872365820868,
+            0.0
+          ],
+          [
+            0.0019789381195714872,
+            0.33862851414556483,
+            0.6593925477348637,
+            0.0
+          ],
+          [
+            0.0,
+            0.36381377447341,
+            0.63618622552659,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "signed_recoil_posteriors_given_m_r": [
+        {
+          "m": -2,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.028834673801779
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -2,
+          "r": 1,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -1,
+              "probability": 1.0,
+              "outgoing_momentum": 1.5998258251710782
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -1,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -2,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.301655389593275
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": -1,
+          "r": 1,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": -1,
+              "probability": 0.07935601057617922,
+              "outgoing_momentum": 1.6126682653055993
+            },
+            {
+              "l": -1,
+              "j": 1,
+              "probability": 0.9206439894238208,
+              "outgoing_momentum": 0.9140145095242178
+            }
+          ],
+          "momentum_separation": 0.6986537557813814
+        },
+        {
+          "m": -1,
+          "r": 2,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -2,
+              "probability": 0.01286314688974135,
+              "outgoing_momentum": 1.862506041246307
+            },
+            {
+              "l": 0,
+              "j": 2,
+              "probability": 0.9871368531102586,
+              "outgoing_momentum": 0.3536927738993467
+            }
+          ],
+          "momentum_separation": 1.5088132673469603
+        },
+        {
+          "m": 0,
+          "r": 0,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": -1,
+              "j": 0,
+              "probability": 1.0,
+              "outgoing_momentum": 1.1984220673720154
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 0,
+          "r": 1,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -2,
+              "j": -1,
+              "probability": 0.2254245859118195,
+              "outgoing_momentum": 1.3619131726416507
+            },
+            {
+              "l": 0,
+              "j": 1,
+              "probability": 0.7745754140881804,
+              "outgoing_momentum": 1.0217545760943132
+            }
+          ],
+          "momentum_separation": 0.3401585965473375
+        },
+        {
+          "m": 0,
+          "r": 2,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -3,
+              "j": -2,
+              "probability": 0.08000416130297887,
+              "outgoing_momentum": 1.5037282573384612
+            },
+            {
+              "l": 1,
+              "j": 2,
+              "probability": 0.9199958386970212,
+              "outgoing_momentum": 0.844770620821417
+            }
+          ],
+          "momentum_separation": 0.6589576365170442
+        },
+        {
+          "m": 0,
+          "r": 3,
+          "ambiguous_sign": true,
+          "signed_recoil_posterior": [
+            {
+              "l": -4,
+              "j": -3,
+              "probability": 0.026347882629106586,
+              "outgoing_momentum": 1.6214544489596
+            },
+            {
+              "l": 2,
+              "j": 3,
+              "probability": 0.9736521173708934,
+              "outgoing_momentum": 0.6790886339207945
+            }
+          ],
+          "momentum_separation": 0.9423658150388053
+        },
+        {
+          "m": 0,
+          "r": 4,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": 3,
+              "j": 4,
+              "probability": 1.0,
+              "outgoing_momentum": 0.5301305657345544
+            }
+          ],
+          "momentum_separation": 0.0
+        },
+        {
+          "m": 0,
+          "r": 5,
+          "ambiguous_sign": false,
+          "signed_recoil_posterior": [
+            {
+              "l": 4,
+              "j": 5,
+              "probability": 1.0,
+              "outgoing_momentum": 0.39615549789697646
+            }
+          ],
+          "momentum_separation": 0.0
+        }
+      ],
+      "moments": {
+        "labels": [
+          "m",
+          "j",
+          "l",
+          "delta_j"
+        ],
+        "mean": [
+          -0.3253199993422751,
+          0.8268971513179725,
+          -0.49842284802430253,
+          1.325319999342275
+        ],
+        "covariance": [
+          [
+            0.23731084022573334,
+            -0.024565238301026374,
+            0.21274560192470693,
+            -0.23731084022573334
+          ],
+          [
+            -0.024565238301026367,
+            1.0908910380404726,
+            1.0663257997394462,
+            0.024565238301026377
+          ],
+          [
+            0.21274560192470696,
+            1.0663257997394462,
+            1.2790714016641531,
+            -0.21274560192470693
+          ],
+          [
+            -0.23731084022573334,
+            0.024565238301026367,
+            -0.21274560192470693,
+            0.2373108402257333
+          ]
+        ],
+        "correlation_mode_transfer": -1.0000000000000002
+      },
+      "mutual_information_bits": {
+        "m_and_signed_j": 0.05813644833902027,
+        "m_and_abs_j": 0.03942870847247552,
+        "loss_from_sign_coarse_graining": 0.018707739866544754
+      }
+    }
+  },
+  "conversion_fraction_of_scattering_rates": 0.8819431960877968,
+  "ideal_kinematic_reconstructions": [
+    {
+      "m": -2,
+      "r": 1,
+      "outgoing_momentum": 1.5998258251710782,
+      "inferred_sqrt_s": 7.7673127101004065,
+      "inferred_incoming_X_energy": 6.406246951218787,
+      "inferred_l_squared": 16.0,
+      "inferred_j": -1.0,
+      "inferred_l": -4.0,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": -1,
+      "r": 2,
+      "outgoing_momentum": 1.862506041246307,
+      "inferred_sqrt_s": 7.767312710100407,
+      "inferred_incoming_X_energy": 6.406246951218788,
+      "inferred_l_squared": 16.000000000000014,
+      "inferred_j": -2.0000000000000036,
+      "inferred_l": -4.0000000000000036,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 0,
+      "r": 3,
+      "outgoing_momentum": 1.6214544489596,
+      "inferred_sqrt_s": 7.767312710100406,
+      "inferred_incoming_X_energy": 6.406246951218786,
+      "inferred_l_squared": 15.999999999999993,
+      "inferred_j": -2.9999999999999964,
+      "inferred_l": -3.9999999999999964,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 4,
+      "outgoing_momentum": 0.19999999999999893,
+      "inferred_sqrt_s": 7.7673127101004065,
+      "inferred_incoming_X_energy": 6.406246951218787,
+      "inferred_l_squared": 16.0,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": -2,
+      "r": 0,
+      "outgoing_momentum": 1.028834673801779,
+      "inferred_sqrt_s": 7.1954466172075495,
+      "inferred_incoming_X_energy": 5.83438085832593,
+      "inferred_l_squared": 9.000000000000014,
+      "inferred_j": -2.3684757858670005e-15,
+      "inferred_l": -3.000000000000002,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": -1,
+      "r": 1,
+      "outgoing_momentum": 1.6126682653055993,
+      "inferred_sqrt_s": 7.195446617207549,
+      "inferred_incoming_X_energy": 5.834380858325929,
+      "inferred_l_squared": 9.000000000000007,
+      "inferred_j": -1.0000000000000018,
+      "inferred_l": -3.0000000000000018,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 0,
+      "r": 2,
+      "outgoing_momentum": 1.5037282573384612,
+      "inferred_sqrt_s": 7.195446617207549,
+      "inferred_incoming_X_energy": 5.834380858325929,
+      "inferred_l_squared": 9.000000000000007,
+      "inferred_j": -2.0000000000000036,
+      "inferred_l": -3.0000000000000036,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 3,
+      "outgoing_momentum": 0.19999999999999785,
+      "inferred_sqrt_s": 7.195446617207549,
+      "inferred_incoming_X_energy": 5.834380858325929,
+      "inferred_l_squared": 9.000000000000007,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": -1,
+      "r": 0,
+      "outgoing_momentum": 1.301655389593275,
+      "inferred_sqrt_s": 6.749943193004611,
+      "inferred_incoming_X_energy": 5.388877434122992,
+      "inferred_l_squared": 3.999999999999999,
+      "inferred_j": 2.220446049250313e-16,
+      "inferred_l": -1.9999999999999998,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 0,
+      "r": 1,
+      "outgoing_momentum": 1.3619131726416507,
+      "inferred_sqrt_s": 6.749943193004611,
+      "inferred_incoming_X_energy": 5.388877434122992,
+      "inferred_l_squared": 3.999999999999999,
+      "inferred_j": -0.9999999999999996,
+      "inferred_l": -1.9999999999999996,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 2,
+      "outgoing_momentum": 0.19999999999999896,
+      "inferred_sqrt_s": 6.749943193004611,
+      "inferred_incoming_X_energy": 5.388877434122992,
+      "inferred_l_squared": 3.999999999999999,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": -1,
+      "r": 1,
+      "outgoing_momentum": 0.9140145095242178,
+      "inferred_sqrt_s": 6.464006087750849,
+      "inferred_incoming_X_energy": 5.102940328869229,
+      "inferred_l_squared": 0.9999999999999956,
+      "inferred_j": 1.000000000000001,
+      "inferred_l": -0.9999999999999989,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 0,
+      "r": 0,
+      "outgoing_momentum": 1.1984220673720154,
+      "inferred_sqrt_s": 6.464006087750848,
+      "inferred_incoming_X_energy": 5.102940328869228,
+      "inferred_l_squared": 0.9999999999999849,
+      "inferred_j": 7.549516567451064e-15,
+      "inferred_l": -0.9999999999999925,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 1,
+      "outgoing_momentum": 0.19999999999999726,
+      "inferred_sqrt_s": 6.464006087750849,
+      "inferred_incoming_X_energy": 5.102940328869229,
+      "inferred_l_squared": 0.9999999999999956,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": -1,
+      "r": 2,
+      "outgoing_momentum": 0.3536927738993467,
+      "inferred_sqrt_s": 6.365064160160341,
+      "inferred_incoming_X_energy": 5.0039984012787215,
+      "inferred_l_squared": 2.6922908347160046e-15,
+      "inferred_j": 1.9999999999999993,
+      "inferred_l": -6.661338147750939e-16,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 0,
+      "r": 1,
+      "outgoing_momentum": 1.0217545760943132,
+      "inferred_sqrt_s": 6.365064160160341,
+      "inferred_incoming_X_energy": 5.0039984012787215,
+      "inferred_l_squared": 2.6922908347160046e-15,
+      "inferred_j": 0.9999999999999987,
+      "inferred_l": -1.3322676295501878e-15,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 0,
+      "outgoing_momentum": 0.19999999999999862,
+      "inferred_sqrt_s": 6.365064160160341,
+      "inferred_incoming_X_energy": 5.0039984012787215,
+      "inferred_l_squared": 2.6922908347160046e-15,
+      "inferred_j": 0,
+      "inferred_l": 0,
+      "sign_status": "trivial j=l=0"
+    },
+    {
+      "m": 0,
+      "r": 2,
+      "outgoing_momentum": 0.844770620821417,
+      "inferred_sqrt_s": 6.464006087750848,
+      "inferred_incoming_X_energy": 5.102940328869228,
+      "inferred_l_squared": 0.9999999999999849,
+      "inferred_j": 2.0000000000000075,
+      "inferred_l": 1.0000000000000075,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 1,
+      "outgoing_momentum": 0.19999999999999726,
+      "inferred_sqrt_s": 6.464006087750849,
+      "inferred_incoming_X_energy": 5.102940328869229,
+      "inferred_l_squared": 0.9999999999999956,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": 0,
+      "r": 3,
+      "outgoing_momentum": 0.6790886339207945,
+      "inferred_sqrt_s": 6.749943193004611,
+      "inferred_incoming_X_energy": 5.388877434122992,
+      "inferred_l_squared": 3.999999999999999,
+      "inferred_j": 3.0000000000000004,
+      "inferred_l": 2.0000000000000004,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 2,
+      "outgoing_momentum": 0.19999999999999896,
+      "inferred_sqrt_s": 6.749943193004611,
+      "inferred_incoming_X_energy": 5.388877434122992,
+      "inferred_l_squared": 3.999999999999999,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": 0,
+      "r": 4,
+      "outgoing_momentum": 0.5301305657345544,
+      "inferred_sqrt_s": 7.195446617207549,
+      "inferred_incoming_X_energy": 5.834380858325929,
+      "inferred_l_squared": 9.000000000000007,
+      "inferred_j": 3.9999999999999964,
+      "inferred_l": 2.9999999999999964,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 3,
+      "outgoing_momentum": 0.19999999999999785,
+      "inferred_sqrt_s": 7.195446617207549,
+      "inferred_incoming_X_energy": 5.834380858325929,
+      "inferred_l_squared": 9.000000000000007,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    },
+    {
+      "m": 0,
+      "r": 5,
+      "outgoing_momentum": 0.39615549789697646,
+      "inferred_sqrt_s": 7.7673127101004065,
+      "inferred_incoming_X_energy": 6.406246951218787,
+      "inferred_l_squared": 16.0,
+      "inferred_j": 5.0,
+      "inferred_l": 4.0,
+      "sign_status": "unique conditional model inference"
+    },
+    {
+      "m": 1,
+      "r": 4,
+      "outgoing_momentum": 0.19999999999999893,
+      "inferred_sqrt_s": 7.7673127101004065,
+      "inferred_incoming_X_energy": 6.406246951218787,
+      "inferred_l_squared": 16.0,
+      "inferred_j": null,
+      "inferred_l": null,
+      "sign_status": "elastic sign unresolved"
+    }
+  ],
+  "example_m0_absj1": {
+    "m": 0,
+    "r": 1,
+    "ambiguous_sign": true,
+    "signed_recoil_posterior": [
+      {
+        "l": -2,
+        "j": -1,
+        "probability": 0.2254245859118195,
+        "outgoing_momentum": 1.3619131726416507
+      },
+      {
+        "l": 0,
+        "j": 1,
+        "probability": 0.7745754140881804,
+        "outgoing_momentum": 1.0217545760943132
+      }
+    ],
+    "momentum_separation": 0.3401585965473375
+  },
+  "conversion_sign_pairs": {
+    "count": 5,
+    "minimum_momentum_separation": 0.3401585965473375
+  },
+  "coherence_limit": "All inclusive joint rates are unchanged by packet phases, translation or dephasing; these observables do not certify localization or determine outgoing coherences.",
+  "verification": {
+    "angular_quadrature": "8 Gauss-Legendre points in cos(theta), 16 uniform azimuths",
+    "g2_source_sha256": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "g2_artifact_sha256": "b91fa7f59079e6cfc939a1ee8ac52d18423708530d925c982ff4ed4ec1f8dc23",
+    "source_sha256": "07ea3170a5176c4e285287af6a7eb517709d8f234c2c38abb9bfb95084b85715"
+  },
+  "checks": [
+    {
+      "name": "finite_packet:normalization",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 2e-14
+    },
+    {
+      "name": "enumeration:unique_signed_pairs",
+      "passed": true
+    },
+    {
+      "name": "enumeration:one_elastic_row_per_l",
+      "passed": true
+    },
+    {
+      "name": "angular:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "angular:first_moment",
+      "passed": true,
+      "measured": 4.748082529274802e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "angular:second_moment",
+      "passed": true,
+      "measured": 5.551115123125783e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-2:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-4:m=-2:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-2:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-2:phi_mass_shell",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-2:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-4:m=-1:energy",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-1:phi_mass_shell",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=-1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-4:m=0:energy",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-4:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-4:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-2:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-3:m=-2:energy",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-2:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-2:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-2:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-3:m=-1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-1:phi_mass_shell",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=-1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-3:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 3.885780586188048e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-3:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-3:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=-1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-2:m=-1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=-1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=-1:phi_mass_shell",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=-1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-2:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-2:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-2:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=-1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-1:m=-1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=-1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=-1:phi_mass_shell",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=-1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-1:m=0:energy",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=-1:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=-1:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=-1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=0:m=-1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=-1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=-1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=-1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=0:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 2.7755575615628914e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=0:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=0:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=1:m=0:energy",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 2.7755575615628914e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=1:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=1:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=2:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=2:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=2:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=3:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=3:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=3:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=0:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=4:m=0:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=0:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=0:phi_mass_shell",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=0:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=1:compact_transfer",
+      "passed": true
+    },
+    {
+      "name": "event:l=4:m=1:energy",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=1:back_to_back",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=1:phi_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "event:l=4:m=1:X_mass_shell",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:joint_normalization",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:nonnegative",
+      "passed": true,
+      "measured": 0.0
+    },
+    {
+      "name": "all_scattering:coarse_normalization",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:unchanged_mode_marginal",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:selected_l_normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:0:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:1:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:1:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:2:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:2:Bayes",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:3:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:j_given_m:3:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:0:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:1:Bayes",
+      "passed": true,
+      "measured": 2.168404344971009e-19,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:2:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:2:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:3:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:3:Bayes",
+      "passed": true,
+      "measured": 1.0842021724855044e-19,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:4:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:4:Bayes",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:5:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:5:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:6:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:6:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:7:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:7:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:8:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:8:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:9:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_j:9:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:0:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:1:Bayes",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:2:normalization",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:2:Bayes",
+      "passed": true,
+      "measured": 4.336808689942018e-19,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:3:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:r_given_m:3:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:0:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:0:Bayes",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:1:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:1:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:2:normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:2:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:3:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:3:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:4:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:4:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:5:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:m_given_r:5:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:mean_j_identity",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:mean_transfer",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:variance_j_identity",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:covariance_m_j_identity",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:variance_transfer",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:covariance_mode_transfer",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:transfer_anticorrelation",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:covariance_PSD",
+      "passed": true,
+      "measured": -6.708151116792415e-18,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:data_processing_abs_j",
+      "passed": true,
+      "measured": 0.05580576029843183
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=-2:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=-2:r=1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=-1:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=-1:r=1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=-1:r=2",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=1",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=3",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=0:r=5",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=1:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=1:r=1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=1:r=2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=1:r=3",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:sign_posterior:m=1:r=4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:joint_normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:nonnegative",
+      "passed": true,
+      "measured": 0.0
+    },
+    {
+      "name": "mode_conversion:coarse_normalization",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:unchanged_mode_marginal",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:selected_l_normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:0:Bayes",
+      "passed": true,
+      "measured": 1.0842021724855044e-19,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:1:Bayes",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:2:normalization",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:j_given_m:2:Bayes",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:1:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:2:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:2:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:3:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:3:Bayes",
+      "passed": true,
+      "measured": 1.734723475976807e-18,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:4:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:4:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:5:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:5:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:6:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:6:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:7:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:7:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:8:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:8:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:9:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_j:9:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:0:Bayes",
+      "passed": true,
+      "measured": 1.0842021724855044e-19,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:1:Bayes",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:2:normalization",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:r_given_m:2:Bayes",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:0:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:0:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:1:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:1:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:2:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:2:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:3:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:3:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:4:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:4:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:5:normalization",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:m_given_r:5:Bayes",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:mean_j_identity",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:mean_transfer",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:variance_j_identity",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:covariance_m_j_identity",
+      "passed": true,
+      "measured": 4.163336342344337e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:variance_transfer",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:covariance_mode_transfer",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:transfer_anticorrelation",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:covariance_PSD",
+      "passed": true,
+      "measured": -5.114414766993897e-17,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:data_processing_abs_j",
+      "passed": true,
+      "measured": 0.018707739866544754
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=-2:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=-2:r=1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=-1:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=-1:r=1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=-1:r=2",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=1",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=3",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:sign_posterior:m=0:r=5",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "frozen_G2:artifact_source_hash",
+      "passed": true
+    },
+    {
+      "name": "frozen_G2:all_rate",
+      "passed": true,
+      "measured": 2.117582368135751e-22,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "frozen_G2:conversion_rate",
+      "passed": true,
+      "measured": 2.117582368135751e-22,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "frozen_G2:target_rate",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "large_gauge:joint_support",
+      "passed": true
+    },
+    {
+      "name": "large_gauge:joint_rates",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "translated_center:joint_rates",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "arbitrary_phase:joint_rates",
+      "passed": true,
+      "measured": 1.5881867761018131e-22,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "dephasing:joint_rates",
+      "passed": true,
+      "measured": 1.0587911840678754e-22,
+      "tolerance": 1e-18
+    },
+    {
+      "name": "inference:l=-4:m=-2:l_squared",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=-2:j",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=-2:l",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=-1:l_squared",
+      "passed": true,
+      "measured": 1.4210854715202004e-14,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=-1:j",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=-1:l",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=0:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=0:j",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=0:l",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-4:m=1:l_squared",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-2:l_squared",
+      "passed": true,
+      "measured": 1.4210854715202004e-14,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-2:j",
+      "passed": true,
+      "measured": 2.3684757858670005e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-2:l",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-1:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-1:j",
+      "passed": true,
+      "measured": 1.7763568394002505e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=-1:l",
+      "passed": true,
+      "measured": 1.7763568394002505e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=0:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=0:j",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=0:l",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-3:m=1:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=-1:l_squared",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=-1:j",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=-1:l",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=0:l_squared",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=0:j",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=0:l",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-2:m=1:l_squared",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=-1:l_squared",
+      "passed": true,
+      "measured": 4.440892098500626e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=-1:j",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=-1:l",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=0:l_squared",
+      "passed": true,
+      "measured": 1.509903313490213e-14,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=0:j",
+      "passed": true,
+      "measured": 7.549516567451064e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=0:l",
+      "passed": true,
+      "measured": 7.549516567451064e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=-1:m=1:l_squared",
+      "passed": true,
+      "measured": 4.440892098500626e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=-1:l_squared",
+      "passed": true,
+      "measured": 2.6922908347160046e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=-1:j",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=-1:l",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=0:l_squared",
+      "passed": true,
+      "measured": 2.6922908347160046e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=0:j",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=0:l",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=0:m=1:l_squared",
+      "passed": true,
+      "measured": 2.6922908347160046e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=1:m=0:l_squared",
+      "passed": true,
+      "measured": 1.509903313490213e-14,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=1:m=0:j",
+      "passed": true,
+      "measured": 7.549516567451064e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=1:m=0:l",
+      "passed": true,
+      "measured": 7.549516567451064e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=1:m=1:l_squared",
+      "passed": true,
+      "measured": 4.440892098500626e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=2:m=0:l_squared",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=2:m=0:j",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=2:m=0:l",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=2:m=1:l_squared",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=3:m=0:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=3:m=0:j",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=3:m=0:l",
+      "passed": true,
+      "measured": 3.552713678800501e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=3:m=1:l_squared",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=4:m=0:l_squared",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=4:m=0:j",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=4:m=0:l",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "inference:l=4:m=1:l_squared",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:conversion_pair:m=-1:r=1:distinct_pf",
+      "passed": true,
+      "measured": 0.6986537557813814
+    },
+    {
+      "name": "all_scattering:conversion_pair:m=-1:r=2:distinct_pf",
+      "passed": true,
+      "measured": 1.5088132673469603
+    },
+    {
+      "name": "all_scattering:conversion_pair:m=0:r=1:distinct_pf",
+      "passed": true,
+      "measured": 0.3401585965473375
+    },
+    {
+      "name": "all_scattering:conversion_pair:m=0:r=2:distinct_pf",
+      "passed": true,
+      "measured": 0.6589576365170442
+    },
+    {
+      "name": "all_scattering:conversion_pair:m=0:r=3:distinct_pf",
+      "passed": true,
+      "measured": 0.9423658150388053
+    },
+    {
+      "name": "all_scattering:elastic_pair:r=1:same_pf",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:elastic_pair:r=2:same_pf",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:elastic_pair:r=3:same_pf",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "all_scattering:elastic_pair:r=4:same_pf",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 2e-12
+    },
+    {
+      "name": "mode_conversion:conversion_pair:m=-1:r=1:distinct_pf",
+      "passed": true,
+      "measured": 0.6986537557813814
+    },
+    {
+      "name": "mode_conversion:conversion_pair:m=-1:r=2:distinct_pf",
+      "passed": true,
+      "measured": 1.5088132673469603
+    },
+    {
+      "name": "mode_conversion:conversion_pair:m=0:r=1:distinct_pf",
+      "passed": true,
+      "measured": 0.3401585965473375
+    },
+    {
+      "name": "mode_conversion:conversion_pair:m=0:r=2:distinct_pf",
+      "passed": true,
+      "measured": 0.6589576365170442
+    },
+    {
+      "name": "mode_conversion:conversion_pair:m=0:r=3:distinct_pf",
+      "passed": true,
+      "measured": 0.9423658150388053
+    },
+    {
+      "name": "example:m0_r1:both_signs",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 357,
+    "passed": 357,
+    "failed": []
+  }
+}

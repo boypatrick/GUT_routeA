@@ -78,3 +78,13 @@ that the original energy-spectrum document uniquely implies this model.
 No novelty claim is made for KK scattering or standard two-body
 kinematics. The purpose is a concrete physical mechanism with an explicit
 energy/momentum ledger.
+
+## G2-R joint readout (2026-09-23)
+
+The phase-space normalization is inherited from G2 and checked against
+the same PDG review. Joint rate normalization, mass-sign coarse graining
+and kinematic sign reconstruction are derived for the unchanged G2
+action and preparation. No source is cited as experimental evidence
+for the predicted lines or as a design for measuring compact momentum.
+Reconstruction uses the assumed mass law and conservation, so it cannot
+serve as an independent verification of those assumptions.

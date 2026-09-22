@@ -154,15 +154,59 @@ Artifacts: [derivation](tex/route_g_local_conversion.tex),
 
 ### G2-R — Recoil-resolved continuation
 
-Status: open; next bounded physical option after the completed G2 result.
+Status: bounded-done at tree level (2026-09-23). The reproducible verifier
+passes 357/357 checks, independently rerun; the four-page derivation PDF
+has been compiled and visually reviewed. This closes the joint prediction
+under the declared preparation, not an experimental detector model.
 
-Prioritize one joint observable: outgoing Phi mass branch and detector
-recoil, with j-l=n-m and the predicted p_f. This distinguishes actual
-transfer from a detector-only visibility change. If an absolute
-encounter probability is requested, specify normalized four-dimensional
-wavepackets and integrate the existing first-order amplitude.
-Do not treat this optional next measurement as reopening the G2 tree
-existence calculation. No automatic large matching program is required.
+Keep the G2 action, g, all masses, alpha, common incoming momentum and
+finite detector packet unchanged. For every open channel, compute
+W(m,j)=w_l K(l,m), l=m+j-n. Normalize separately over all scattering
+events and over mode-changing events m!=n. Elastic scattering is not
+the identity/no-encounter probability.
+
+Deliver full signed joint matrices, mass-only folded matrices, marginals,
+Bayes conditionals, event-conditioned incoming l, ordinary recoil
+energies/momenta and the isotropic tree angular law. All 25 open channels
+are retained. The all-scattering output weights for m=(-2,-1,0,1) are
+(.00785985,.27119405,.60288929,.11805680); m=1 is elastic.
+Mode-changing events comprise .88194320 of scattering events under
+the common-overlap prescription, not of arbitrary incident packets.
+
+New physical insight: the X mass alone determines |j| and loses its
+sign. At this nondegenerate Phi card, a known incoming p_i and the
+outgoing ordinary p_f can reconstruct the sign for m!=n. With d=m-n,
+
+\[
+l^2=R^2[(E_{\rm out}-E_n)^2-M_D^2-p_i^2],
+\qquad j=(l^2-d^2-|j|^2)/(2d).
+\]
+
+This is MODEL-DEPENDENT reconstruction. Do not infer j from this formula
+and then claim the assumed conservation law has been independently
+verified. Independent observables are the predicted joint line positions,
+fractions and angular dependence. The m=0, |j|=1 pair has ordinary
+momenta 1.02175458 and 1.36191317 (gap .34015860). A deterministic
+momentum error below half the gap is a sufficient ideal resolution
+requirement, not an assigned experimental uncertainty.
+Elastic events cannot resolve the sign this way. At a degenerate Phi
+holonomy, even the initial output-mode assignment needs a new audit.
+
+No packet phase or localization is witnessed by this diagonal joint
+distribution: the dephased preparation gives the same prediction.
+No actual detector response, efficiency, loop-error model or absolute
+4D encounter probability has been calculated. No parameters are fitted.
+
+Artifacts: [joint report](output/g2_recoil_joint.md),
+[TeX](tex/route_g_recoil_joint.tex),
+[PDF](output/pdf/route_g_recoil_joint.pdf),
+[executable](code/verify_g2_recoil_joint.py).
+
+Next bounded option: specify a finite-resolution readout/input-spread
+card and propagate it through the existing line distribution.
+If an absolute encounter probability is needed, specify normalized
+four-dimensional wavepackets instead. These are new observable choices,
+not reasons to reopen the completed tree-level mode-conversion result.
 
 Backup: an explicitly energy-accounted time-dependent background.
 It is not needed to obtain the present allowed collision and is not

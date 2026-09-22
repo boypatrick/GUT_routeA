@@ -6,6 +6,40 @@ Route G 回到「同一內部結構，產生不同能譜與可見性」的構想
 當成額外時空，也不把轉換座標誤認為轉換粒子質量。
 Route F 的四維 P54 模型與先前計算保留不動；Route G 尚未導出或取代它。
 
+## G2-R — Joint output and recoil (2026-09-23)
+
+Bounded-done at tree level: 357/357 reproducible checks pass, including
+regression against the unchanged G2 rates. The four-page derivation PDF
+has been compiled and visually reviewed.
+
+The same action, parameter card and detector preparation now give a
+joint conditional event distribution for the output Phi mode m and
+detector recoil j. No interaction or fitted parameter is added:
+
+\[
+P(m,j\mid{\rm scattering})
+=\frac{w_{m+j-n}K_{m+j-n,m}}{\sum_{l,m'}w_lK_{lm'}}.
+\]
+
+The report separates all scattering events (including elastic collisions)
+from mode-changing events. It includes full joint matrices, marginals,
+conditional distributions, recoil momenta/energies and the ideal
+isotropic two-body angular law. It is not a probability of an arbitrary
+incoming packet having an encounter.
+
+The physically important distinction is the readout: a detector mass
+measurement gives |j|, not the sign of j. On the alpha=.25 card, adding
+outgoing COM momentum distinguishes the two signs in nonelastic
+channels, provided the incoming momentum and model parameters are known.
+For m=0, |j|=1, the two predicted momentum lines are 1.02175458 and
+1.36191317. Elastic events retain the sign ambiguity.
+
+This is model-dependent kinematic reconstruction, not an independent
+measurement of compact momentum or an entanglement/localization witness.
+Finite beam width, detector resolution and efficiencies are not assigned
+fictitious values. A calibrated readout can be applied next; absolute
+encounter probabilities still require four-dimensional packets.
+
 ## G2 — Local dynamical conversion (2026-09-23)
 
 G2 adds one neutral complex detector field X and the positive local
@@ -83,6 +117,9 @@ No measured particle masses are used to select the example parameters.
 ## Files and reproduction
 
 - [Research plan and rejection gates](ROADMAP.md)
+- [G2-R joint prediction report](output/g2_recoil_joint.md)
+- [G2-R derivation](tex/route_g_recoil_joint.tex) and [PDF](output/pdf/route_g_recoil_joint.pdf)
+- [G2-R executable](code/verify_g2_recoil_joint.py) and [full joint data](output/g2_recoil_joint.json)
 - [G2 local action, recoil and packet derivation](tex/route_g_local_conversion.tex)
 - [G2 typeset derivation](output/pdf/route_g_local_conversion.pdf)
 - [G2 numerical report](output/g2_local_conversion.md)
@@ -97,6 +134,7 @@ No measured particle masses are used to select the example parameters.
 ~~~sh
 python3 route_g/code/verify_g1_circle_spectrum.py
 python3 route_g/code/verify_g2_local_conversion.py
+python3 route_g/code/verify_g2_recoil_joint.py
 ~~~
 
 G1 uses NumPy; G2 uses NumPy and SciPy.
@@ -144,8 +182,9 @@ pictures. No full matching or physical fit is promoted by G1.
 G2 implements the dynamical-detector option. Its heavy finite recoil
 bypasses the previously closed one-body emission process by supplying
 an incoming collision partner, not by violating the old inequality.
-The most useful next physical test is recoil-resolved conversion:
-check j-l=n-m together with the predicted outgoing ordinary momentum.
+G2-R calculates recoil-resolved predictions and mass-only coarse
+graining. Next, specify a finite-resolution readout if the purpose is
+to test whether the predicted lines remain distinguishable.
 Specified finite-encounter packets are an option when an absolute
 probability is needed. An energy-accounted driven background stays a
 backup; no drive has been added.

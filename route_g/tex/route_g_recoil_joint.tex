@@ -1,0 +1,272 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cC}{\mathcal C}
+\title{Route G2-R: Joint Output Modes and Detector Recoil}
+\author{Conditional tree-level predictions from the unchanged G2 action}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We turn the existing G2 collision amplitudes into joint mode--recoil
+predictions, keeping all open channels and distinguishing scattering
+events from mode-conversion events. A mass-only detector cannot resolve
+the sign of its compact momentum. For nonelastic channels in the
+specified sharp-beam preparation, outgoing ordinary momentum can
+disambiguate that sign. This is a model-dependent reconstruction, not
+an independent proof of compact-momentum conservation. No new action,
+parameter fit, absolute encounter probability or external drive is added.
+\end{abstract}
+
+\section{Inputs and two different event ensembles}
+The G2 interaction remains the positive local potential
+$\kappa_5|\Phi|^2|X|^2$ on $\mathbb M^{3,1}\times S^1$.
+Its normalized circle overlap gives
+\begin{equation}
+ m_n^2=M_5^2+(n+\alpha)^2/R^2,\quad
+ \mu_l^2=M_D^2+l^2/R^2,\quad
+ \mathcal M=-g\,\delta_{n+l,m+j},\quad g=\kappa_5/(2\pi R).
+\end{equation}
+Keep the entire G2 engineering card:
+$R=1$, $M_5=0.5$, $\alpha=0.25$, $M_D=5$, $g=0.05$,
+incoming $\Phi$ label $n=1$, and ordinary center-of-mass momentum
+$p_i=0.2$. The detector coefficients are exactly finite,
+\begin{equation}
+ c_l=\mathcal N e^{-l^2/(4w^2)}e^{-\mathrm i l\theta_0},
+ \quad l=-4,\ldots,4,\quad w=1.2,\quad\theta_0=0.7,\quad
+ w_l=|c_l|^2,\quad\sum_l w_l=1.
+\end{equation}
+These are prepared-state inputs, not empirical fitted values.
+For each incoming $l$, set
+\begin{align}
+ \sqrt{s_l}&=\sqrt{m_n^2+p_i^2}+\sqrt{\mu_l^2+p_i^2},\quad
+ j=n+l-m,\\
+ p_{lm}&=\frac{\sqrt{[s_l-(m_m+\mu_j)^2]
+                             [s_l-(m_m-\mu_j)^2]}}{2\sqrt{s_l}},\\
+ K_{lm}&=\sigma_{lm}v_{{\rm M},l}
+ =\frac{g^2p_{lm}}{16\pi E_nE_l\sqrt{s_l}}.
+ \label{eq:rate}
+\end{align}
+Here $K_{lm}=0$ unless $\sqrt{s_l}>m_m+\mu_j$; closed channels
+must be rejected before evaluating the radical. The distinct-particle
+phase-space convention is the same as G2 and the PDG review
+\cite{pdg}. Define
+\begin{equation}
+ \cA=\{(l,m):w_l>0,\ \sqrt{s_l}>m_m+\mu_{n+l-m}\},\qquad
+ \cC=\{(l,m)\in\cA:m\ne n\}.
+\end{equation}
+$\cA$ contains all \emph{scattering events}, including elastic
+$m=n$ collisions. $\cC$ contains only mode-changing events.
+Neither includes the unscattered identity amplitude as a collision.
+This distinction is required before assigning a normalized fraction.
+
+\section{Joint distribution, not a single target fraction}
+For $B=\cA$ or $\cC$, let
+\begin{equation}
+ Z_B=\sum_{(l,m)\in B}w_lK_{lm},\qquad
+ \boxed{P_B(m,j)=
+ \frac{w_{m+j-n}K_{m+j-n,m}}{Z_B}
+ \mathbf 1_{\{(m+j-n,m)\in B\}}}.
+ \label{eq:joint}
+\end{equation}
+For $Z_B>0$ these dimensionless quantities sum to one and are nonnegative.
+They are probabilities \emph{conditional on the selected type of
+scattering event}, in the common-overlap dilute approximation of G2.
+They are not the probability that an arbitrary incident packet scatters.
+For unequal encounter overlaps $I_l$, replace $w_lK_{lm}$ by
+$w_lI_lK_{lm}$ and renormalize. No values of $I_l$ are invented here.
+The common coupling $g^2$ cancels from \eqref{eq:joint}, but not
+from the event rate.
+
+The marginal and conditional predictions are
+\begin{equation}
+ P_B^\Phi(m)=\sum_jP_B(m,j),\quad
+ P_B^X(j)=\sum_mP_B(m,j),\quad
+ P_B(j\mid m)=\frac{P_B(m,j)}{P_B^\Phi(m)}
+\end{equation}
+where the denominator is nonzero. The complete table, rather than
+only $m=0$, is saved in the numerical report. Conditional on each
+incoming $l$, support lies on $m+j=n+l$. A packet with several $l$
+therefore need not exhibit a single perfectly anticorrelated line.
+
+Event conditioning changes the incoming detector distribution to
+\begin{equation}
+ P_B^{\rm in}(l)=\frac{w_l\sum_{m:(l,m)\in B}K_{lm}}{Z_B}.
+\end{equation}
+Conservation identities must use this distribution:
+\begin{align}
+ \langle m\rangle_B+\langle j\rangle_B-\langle l\rangle_B&=n,\\
+ \operatorname{Var}_B(l)
+ &=\operatorname{Var}_B(m)+\operatorname{Var}_B(j)
+        +2\operatorname{Cov}_B(m,j),\\
+ \langle j-l\mid m\rangle_B&=n-m .
+\end{align}
+Comparing selected outgoing recoil with the \emph{unconditioned}
+incident mean would mix momentum transfer with event-selection bias.
+Perfect anticorrelation applies to the transfers
+$\Delta j=j-l=-\Delta m=n-m$, so
+$\operatorname{Cov}(\Delta m,\Delta j)=-\operatorname{Var}(\Delta m)$.
+It does not generally apply to the output labels $m,j$ themselves.
+
+For the declared card there are 25 open $(l,m)$ channels.
+The total and mode-changing rate coefficients are respectively
+$Z_{\cA}=1.85661445\,10^{-6}$ and $Z_{\cC}=1.63742848\,10^{-6}$.
+The all-scattering output marginal is
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+Output $m$ & $-2$ & $-1$ & $0$ & $1$ (elastic)\\
+\midrule
+$P_{\cA}^{\Phi}(m)$ & $0.00785985$ & $0.27119405$ & $0.60288929$ & $0.11805680$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus $Z_{\cC}/Z_{\cA}=0.88194320$ of scattering events change
+mode under this prescription. This is not an incident conversion efficiency.
+
+For fixed $(m,j)$, $l=m+j-n$ is fixed, and the ideal narrow-beam
+momentum-angle law is
+\begin{equation}\label{eq:lines}
+ \dd P_B(m,j,p,\Omega)
+ =P_B(m,j)\,\delta(p-p_{lm})\,\dd p\,\frac{\dd\Omega}{4\pi}.
+\end{equation}
+The two ordinary outgoing momenta are $p_{lm}\widehat{\boldsymbol u}$
+and $-p_{lm}\widehat{\boldsymbol u}$ in the common COM frame.
+Isotropy is a tree contact-interaction prediction. Finite beam
+widths and instrumental response would broaden these ideal lines.
+
+\section{What a mass-only detector actually resolves}
+The detector mass $\mu_j=\sqrt{M_D^2+j^2/R^2}$ measures
+$r=|j|$, not its sign. The corresponding joint distribution is
+\begin{equation}
+ \overline P_B(m,r)=
+ \begin{cases}
+ P_B(m,0),&r=0,\\
+ P_B(m,r)+P_B(m,-r),&r>0 .
+ \end{cases}
+\end{equation}
+This is an incoherent sum over orthogonal recoil states. Degeneracy
+of their measured masses does not make their amplitudes add.
+Where both signs have support,
+\begin{equation}
+ P_B(j\mid m,r)=\frac{P_B(m,j)}{\overline P_B(m,r)},\qquad |j|=r .
+\end{equation}
+For $\alpha=0.25$ the $\Phi$ masses determine their signed mode
+labels uniquely in the ideal tree spectrum: an equality for distinct
+$m,m'$ would require $m+m'=-2\alpha$, impossible for integers.
+At $2\alpha\in\mathbb Z$ this step can fail because of $\Phi$
+degeneracies. G1 already requires eigenspace, not arbitrary basis-state,
+interpretations at such degeneracies.
+
+Only diagonal recoil event rates are calculated. They are independent
+of $\theta_0$, and an incoming detector mixture diagonal in $l$ with
+the same $w_l$ gives the same rates. Thus this joint table is not an
+entanglement witness or evidence that the preparation was localized.
+It also does not construct a real measurement apparatus for signed $j$.
+
+\section{A kinematic way to resolve the sign in conversion events}
+Suppose the ideal readout provides $(m,r,p_f)$, the parameters and
+incoming $p_i$ are known, and the event is in the COM frame.
+The measured final energy and inferred incoming detector momentum are
+\begin{align}
+ E_f&=\sqrt{m_m^2+p_f^2}
+        +\sqrt{M_D^2+r^2/R^2+p_f^2},\\
+ E_n&=\sqrt{m_n^2+p_i^2},\\
+ l^2&=R^2\left[(E_f-E_n)^2-M_D^2-p_i^2\right].
+\end{align}
+Write $d=m-n$ so that $l=d+j$. If $d\ne0$,
+\begin{equation}\label{eq:reconstruct}
+ l^2=d^2+2dj+r^2
+ \quad\Longrightarrow\quad
+ \boxed{j=\frac{l^2-d^2-r^2}{2d}} .
+\end{equation}
+The result must be consistent with $j=\pm r$, integer mode labels,
+the prepared support and the open-channel condition. This is
+\emph{model-dependent kinematic reconstruction}: the dispersion law
+and momentum conservation were used to obtain it. Checking that the
+reconstructed $j$ obeys the same conservation law is not an independent
+test of that law. The independently comparable predictions are the
+joint recoil line positions, event fractions and angular distribution.
+
+The uniqueness can also be proved without inversion. For the two
+candidate signs $j=\pm r$, the initial labels are $l=d\pm r$, and
+\begin{equation}
+ \sqrt{s_+}-\sqrt{s_-}
+ =\frac{4dr/R^2}
+ {\sqrt{M_D^2+p_i^2+(d+r)^2/R^2}
+  +\sqrt{M_D^2+p_i^2+(d-r)^2/R^2}}.
+\end{equation}
+This is nonzero whenever $dr\ne0$. At fixed final masses,
+\begin{equation}
+ \frac{\dd E_f}{\dd p_f}
+ =p_f\left(\frac1{E'_\Phi}+\frac1{E'_X}\right)>0
+\end{equation}
+above threshold, so both open signs have different ordinary
+outgoing momenta. For elastic $d=0$, $l=j$ and $p_f=p_i$;
+these measurements cannot recover the sign. For $r=0$, the
+only possible value is already $j=0$.
+
+\subsection*{A concrete two-line prediction}
+For the selected output $m=0$, detector mass $\mu_1=5.09901951$
+corresponds to $r=1$. Two allowed components give
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+Incoming $l$ & Outgoing $j$ & $\sqrt{s_l}$ & $p_f$ & $P(j\mid m=0,r=1)$\\
+\midrule
+$0$ & $+1$ & $6.36506416$ & $1.02175458$ & $0.77457541$\\
+$-2$ & $-1$ & $6.74994319$ & $1.36191317$ & $0.22542459$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These conditional weights use the same prepared packet and common
+overlap, with equal ideal acceptance. The mass-only readout merges
+the lines; the ideal momentum readout
+separates them by $\Delta p_f=0.34015860$ in the common energy unit.
+For a deterministic bound $|p_{\rm meas}-p_{\rm true}|\leq\epsilon_p$,
+with all other inputs treated as exact, a sufficient disjoint-interval
+criterion is $2\epsilon_p<\Delta p_f$. This is a required resolution,
+not an assumed experimental error bar. Uncertain incoming momentum,
+parameters, mass assignment or frame must also be propagated before
+using that criterion experimentally.
+
+\section{Readout boundaries and a bounded next step}
+A calibrated classical readout response
+$\mathcal R(b\mid m,j,p,\Omega)$ would give
+\begin{equation}
+ P_B^{\rm obs}(b)=\sum_{m,j}P_B(m,j)
+ \int\frac{\dd\Omega}{4\pi}\,
+ \mathcal R(b\mid m,j,p_{m+j-n,m},\Omega).
+\end{equation}
+Include a missed-event outcome to make $\sum_b\mathcal R=1$.
+Conditioning on detected events requires renormalization and may
+change fractions. Only the ideal signed-label and mass-only readouts
+are evaluated here; no detector efficiency, angular cut or noise
+distribution is fitted or invented.
+
+The executable imports the unchanged G2 card, enumerates every open
+channel, and verifies normalization, marginals, Bayes identities,
+event-conditioned recoil, angular normalization, gauge relabeling,
+sign folding and reconstruction. Reports preserve the code/input
+hashes and the complete joint matrices. The underlying G2 tree-EFT
+and common-overlap limitations remain. In particular no interacting
+loop error or absolute four-dimensional packet encounter probability
+is supplied.
+
+The next useful choice is a specified finite-resolution readout to
+test whether these lines survive realistic input spread and response.
+If an absolute encounter probability is needed instead, specify
+normalized four-dimensional packets and use the existing G2 scattering
+amplitude. An energy-accounted driven background remains an unused
+backup. Neither option demands a new mass fit, lattice scan or action.
+
+\begin{thebibliography}{9}
+\bibitem{pdg}
+Particle Data Group, \emph{Kinematics}, Review of Particle Physics
+(2024), sections 49.5--49.5.1,
+\href{https://pdg.lbl.gov/2024/reviews/rpp2024-rev-kinematics.pdf}{official review}.
+\end{thebibliography}
+\end{document}

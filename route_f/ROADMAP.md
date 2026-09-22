@@ -17,8 +17,9 @@ not a proof of the energy-spectrum paper or a repair of P-PHYS1.
 
 G2 now supplies a tree-level local collision with a localized dynamical
 detector and explicit finite recoil (2026-09-23). The
-[Route-G roadmap](../route_g/ROADMAP.md) records its scope and next
-recoil-resolved observable. It does not become a blocker for layers P,
+[Route-G roadmap](../route_g/ROADMAP.md) now also records the G2-R
+joint output/recoil prediction and mass-sign readout limitation.
+It does not become a blocker for layers P,
 U or S, and does not overwrite their results or promote a Route-F fit.
 
 ## Governing decision (2026-08-30; current program authority)
