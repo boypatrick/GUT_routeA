@@ -1,0 +1,1691 @@
+{
+  "schema": "p54-scales-lo-physics-screen-v1",
+  "date": "2026-09-22",
+  "input_card": {
+    "alpha_em_inverse": 127.955,
+    "sin2_theta_w": 0.23122,
+    "alpha_s": 0.118
+  },
+  "MZ_GeV": 91.1876,
+  "ordering": {
+    "SM": [
+      "3",
+      "2",
+      "1_GUT"
+    ],
+    "PS": [
+      "4",
+      "L",
+      "R"
+    ]
+  },
+  "a_SM": [
+    -7.0,
+    -3.1666666666666665,
+    4.1
+  ],
+  "a_PS": [
+    0.6666666666666666,
+    8.666666666666666,
+    8.666666666666666
+  ],
+  "a_PS_exact": [
+    "2/3",
+    "26/3",
+    "26/3"
+  ],
+  "active_parent_labels": [
+    "phi10:(1,2,2)",
+    "Sigma126:(15,2,2)",
+    "Sigma126:(10-pair,3,1)",
+    "Sigma126:(10-pair,1,3)"
+  ],
+  "baseline": {
+    "id": "four_parent_degenerate_LO",
+    "declared_parent_mass_ratios": {},
+    "parent_masses_GeV": {},
+    "log10_MI": 13.706057517641387,
+    "log10_MU": 15.278605819931496,
+    "log10_MX": 15.278605819931496,
+    "MI_GeV": 50822674727974.21,
+    "MU_GeV": 1899353581071604.0,
+    "MX_GeV": 1899353581071604.0,
+    "MXprime_GeV": 1900040245004280.5,
+    "alphaU_inverse": 38.22241174251306,
+    "gU": 0.5733844208276919,
+    "alpha_PS_inverse_at_MI": [
+      38.60660395308167,
+      43.21691047990498,
+      43.21691047990499
+    ],
+    "g4I": 0.5705242803191434,
+    "sigma_GeV": 89080651746398.44,
+    "omega_GeV": 3312530846809282.0,
+    "sigma_over_omega": 0.026892021800250795,
+    "delta_alpha_inverse_from_declared_logs": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "PS_segments": [
+      {
+        "low_GeV": 50822674727974.21,
+        "high_GeV": 1899353581071604.0,
+        "b_PS": [
+          0.6666666666666666,
+          8.666666666666666,
+          8.666666666666666
+        ],
+        "alpha_inverse_low": [
+          38.60660395308167,
+          43.21691047990498,
+          43.21691047990499
+        ],
+        "alpha_inverse_high": [
+          38.22241174251306,
+          38.22241174251306,
+          38.222411742513074
+        ]
+      }
+    ],
+    "PS_upper_matching_residual": [
+      0.0,
+      0.0,
+      1.4210854715202004e-14
+    ],
+    "gauge_only_A_L": 3.0987949615036467,
+    "gauge_only_A_R": 2.941798808593258,
+    "low_QCD_A": 1.2322578694739004,
+    "alpha_s_2GeV_LO": 0.26770024051512686,
+    "MX2_over_MXprime2": 0.999277341776074,
+    "gauge_operator_k2_GeVminus2": 4.5566969063280706e-32,
+    "tau_e_pi_unit_low_energy_F_years": 8.878348165372084e+34,
+    "allowed_effective_flavor_norm": 1.923359492027349,
+    "allowed_UV_F_L_if_F_R_zero": 0.6206798177747345,
+    "allowed_UV_F_R_if_F_L_zero": 0.6538038857072902,
+    "allowed_effective_flavor_norm_hadronic_1sigma": [
+      1.5734795900770087,
+      2.4733308895487585
+    ],
+    "hierarchy_ok": true,
+    "perturbative_gauge_ok": true,
+    "action_realization_tested": false,
+    "flavor_rotations_fitted": false,
+    "scalar_mediated_amplitude_included": false,
+    "physical_candidate": false,
+    "conditions": [
+      "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+      "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+      "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+      "Other proton channels and scalar-mediated amplitudes remain untested"
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "P20_0.333333_P33_3_B15_1",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 1.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 872257939462929.5,
+        "Phi54:(1,3,3)": 7850321455166366.0,
+        "Sigma126:(15,2,2)": 50822674727974.21
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.417766185891399,
+      "log10_MX": 15.417766185891399,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 2616773818388788.5,
+      "MX_GeV": 2616773818388788.5,
+      "MXprime_GeV": 2617275775484235.0,
+      "alphaU_inverse": 37.95528044541399,
+      "gU": 0.5753986381347526,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 4547758101881302.0,
+      "sigma_over_omega": 0.019587816623216577,
+      "delta_alpha_inverse_from_declared_logs": [
+        0.23313276837737315,
+        -0.17484957628302988,
+        -0.01165663841886862
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 872257939462929.5,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            38.304979597980044,
+            39.29579386358388,
+            39.29579386358389
+          ]
+        },
+        {
+          "low_GeV": 872257939462929.5,
+          "high_GeV": 2616773818388788.5,
+          "b_PS": [
+            1.9999999999999996,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.304979597980044,
+            39.29579386358388,
+            39.29579386358389
+          ],
+          "alpha_inverse_high": [
+            37.95528044541398,
+            37.78043086913095,
+            37.78043086913096
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        -7.105427357601002e-15,
+        -7.105427357601002e-15,
+        0.0
+      ],
+      "gauge_only_A_L": 3.133374389981032,
+      "gauge_only_A_R": 2.9746263182414747,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9996164645957809,
+      "gauge_operator_k2_GeVminus2": 2.417549036431969e-32,
+      "tau_e_pi_unit_low_energy_F_years": 3.1541465804808152e+35,
+      "allowed_effective_flavor_norm": 3.6252279126518463,
+      "allowed_UV_F_L_if_F_R_zero": 1.1569724716725573,
+      "allowed_UV_F_R_if_F_L_zero": 1.2187170840319166,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        2.965759731126773,
+        4.661836861586916
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_0.333333_P33_3_B15_2",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 2.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 847426449113067.1,
+        "Phi54:(1,3,3)": 7626838042017604.0,
+        "Sigma126:(15,2,2)": 101645349455948.81
+      },
+      "log10_MI": 13.706057517641389,
+      "log10_MU": 15.4052232694054,
+      "log10_MX": 15.4052232694054,
+      "MI_GeV": 50822674727974.41,
+      "MU_GeV": 2542279347339201.5,
+      "MX_GeV": 2542279347339201.5,
+      "MXprime_GeV": 2542788083540864.0,
+      "alphaU_inverse": 38.546706429156515,
+      "gU": 0.5709673755909711,
+      "alpha_PS_inverse_at_MI": [
+        38.606603953081674,
+        43.21691047990498,
+        43.216910479904975
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.78,
+      "omega_GeV": 4452582504749687.0,
+      "sigma_over_omega": 0.020006513445034225,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.3552288320296977,
+        -0.7264385766646587,
+        -0.5779546788106743
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.41,
+          "high_GeV": 101645349455948.81,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.606603953081674,
+            43.21691047990498,
+            43.216910479904975
+          ],
+          "alpha_inverse_high": [
+            39.12142035343786,
+            42.812411879625124,
+            42.81241187962512
+          ]
+        },
+        {
+          "low_GeV": 101645349455948.81,
+          "high_GeV": 847426449113067.1,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.12142035343786,
+            42.812411879625124,
+            42.81241187962512
+          ],
+          "alpha_inverse_high": [
+            38.896405581722576,
+            39.88721984732641,
+            39.887219847326406
+          ]
+        },
+        {
+          "low_GeV": 847426449113067.1,
+          "high_GeV": 2542279347339201.5,
+          "b_PS": [
+            1.9999999999999996,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.896405581722576,
+            39.88721984732641,
+            39.887219847326406
+          ],
+          "alpha_inverse_high": [
+            38.546706429156515,
+            38.371856852873485,
+            38.37185685287348
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        0.0,
+        -7.105427357601002e-15
+      ],
+      "gauge_only_A_L": 3.124933533324011,
+      "gauge_only_A_R": 2.9666131058909935,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9995998995642066,
+      "gauge_operator_k2_GeVminus2": 2.5220056389441984e-32,
+      "tau_e_pi_unit_low_energy_F_years": 2.8982800626725306e+35,
+      "allowed_effective_flavor_norm": 3.47507797434852,
+      "allowed_UV_F_L_if_F_R_zero": 1.112048604327292,
+      "allowed_UV_F_R_if_F_L_zero": 1.1713957467011236,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        2.8429236911919946,
+        4.468752582746245
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_0.333333_P33_3_B15_3",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 3.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 833229963152200.1,
+        "Phi54:(1,3,3)": 7499069668369802.0,
+        "Sigma126:(15,2,2)": 152468024183923.22
+      },
+      "log10_MI": 13.706057517641389,
+      "log10_MU": 15.397886133611411,
+      "log10_MX": 15.397886133611411,
+      "MI_GeV": 50822674727974.41,
+      "MU_GeV": 2499689889456600.5,
+      "MX_GeV": 2499689889456600.5,
+      "MXprime_GeV": 2500202689697466.0,
+      "alphaU_inverse": 38.89266845159801,
+      "gU": 0.5684222394566772,
+      "alpha_PS_inverse_at_MI": [
+        38.606603953081674,
+        43.21691047990498,
+        43.216910479904975
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.78,
+      "omega_GeV": 4397593401422705.0,
+      "sigma_over_omega": 0.020256682147462634,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.6993983051321196,
+        -1.0490974576981793,
+        -0.9092177966717554
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.41,
+          "high_GeV": 152468024183923.22,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.606603953081674,
+            43.21691047990498,
+            43.216910479904975
+          ],
+          "alpha_inverse_high": [
+            39.42256864240248,
+            42.575795366867204,
+            42.5757953668672
+          ]
+        },
+        {
+          "low_GeV": 152468024183923.22,
+          "high_GeV": 833229963152200.1,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.42256864240248,
+            42.575795366867204,
+            42.5757953668672
+          ],
+          "alpha_inverse_high": [
+            39.24236760416407,
+            40.233181869767904,
+            40.2331818697679
+          ]
+        },
+        {
+          "low_GeV": 833229963152200.1,
+          "high_GeV": 2499689889456600.5,
+          "b_PS": [
+            1.9999999999999996,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.24236760416407,
+            40.233181869767904,
+            40.2331818697679
+          ],
+          "alpha_inverse_high": [
+            38.89266845159801,
+            38.717818875314975,
+            38.71781887531497
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        -7.105427357601002e-15,
+        -1.4210854715202004e-14
+      ],
+      "gauge_only_A_L": 3.1205613316152974,
+      "gauge_only_A_R": 2.962462415723554,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9995898351326277,
+      "gauge_operator_k2_GeVminus2": 2.5854721244213354e-32,
+      "tau_e_pi_unit_low_energy_F_years": 2.7577363040695513e+35,
+      "allowed_effective_flavor_norm": 3.3897740239761016,
+      "allowed_UV_F_L_if_F_R_zero": 1.0862705980598213,
+      "allowed_UV_F_R_if_F_L_zero": 1.144242035269224,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        2.77313745236336,
+        4.359056555388279
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_1_P33_1_B15_1",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 1.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 1899353581071604.0,
+        "Phi54:(1,3,3)": 1899353581071604.0,
+        "Sigma126:(15,2,2)": 50822674727974.21
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.278605819931496,
+      "log10_MX": 15.278605819931496,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 1899353581071604.0,
+      "MX_GeV": 1899353581071604.0,
+      "MXprime_GeV": 1900040245004280.5,
+      "alphaU_inverse": 38.22241174251306,
+      "gU": 0.5733844208276919,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 3312530846809282.0,
+      "sigma_over_omega": 0.026892021800250795,
+      "delta_alpha_inverse_from_declared_logs": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 1899353581071604.0,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            38.22241174251306,
+            38.22241174251306,
+            38.222411742513074
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        0.0,
+        1.4210854715202004e-14
+      ],
+      "gauge_only_A_L": 3.0987949615036467,
+      "gauge_only_A_R": 2.941798808593258,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.999277341776074,
+      "gauge_operator_k2_GeVminus2": 4.5566969063280706e-32,
+      "tau_e_pi_unit_low_energy_F_years": 8.878348165372084e+34,
+      "allowed_effective_flavor_norm": 1.923359492027349,
+      "allowed_UV_F_L_if_F_R_zero": 0.6206798177747345,
+      "allowed_UV_F_R_if_F_L_zero": 0.6538038857072902,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        1.5734795900770087,
+        2.4733308895487585
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_1_P33_1_B15_2",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 2.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 1845282671555548.0,
+        "Phi54:(1,3,3)": 1845282671555548.0,
+        "Sigma126:(15,2,2)": 101645349455948.42
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.266062903445496,
+      "log10_MX": 15.266062903445496,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 1845282671555548.0,
+      "MX_GeV": 1845282671555548.0,
+      "MXprime_GeV": 1845978681194561.0,
+      "alphaU_inverse": 38.813837726255585,
+      "gU": 0.568999178138189,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 3243032226502437.0,
+      "sigma_over_omega": 0.02746832147347195,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.5883616004070709,
+        -0.5515890003816288,
+        -0.5662980403918056
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 101645349455948.42,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            39.121420353437856,
+            42.812411879625124,
+            42.81241187962513
+          ]
+        },
+        {
+          "low_GeV": 101645349455948.42,
+          "high_GeV": 1845282671555548.0,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.121420353437856,
+            42.812411879625124,
+            42.81241187962513
+          ],
+          "alpha_inverse_high": [
+            38.813837726255585,
+            38.81383772625559,
+            38.8138377262556
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        7.105427357601002e-15,
+        1.4210854715202004e-14
+      ],
+      "gauge_only_A_L": 3.09097405876988,
+      "gauge_only_A_R": 2.9343741410595423,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9992460601695798,
+      "gauge_operator_k2_GeVminus2": 4.754090837628593e-32,
+      "tau_e_pi_unit_low_energy_F_years": 8.156381005235364e+34,
+      "allowed_effective_flavor_norm": 1.8434999553877767,
+      "allowed_UV_F_L_if_F_R_zero": 0.5964139201224604,
+      "allowed_UV_F_R_if_F_L_zero": 0.6282429801954725,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        1.5081473672157886,
+        2.370636068526243
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_1_P33_1_B15_3",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 1.0
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 3.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 1814369629405428.0,
+        "Phi54:(1,3,3)": 1814369629405428.0,
+        "Sigma126:(15,2,2)": 152468024183922.62
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.25872576765151,
+      "log10_MX": 15.25872576765151,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 1814369629405428.0,
+      "MX_GeV": 1814369629405428.0,
+      "MXprime_GeV": 1815071240500201.2,
+      "alphaU_inverse": 39.15979974869708,
+      "gU": 0.5664801558576262,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 3202882944166952.5,
+      "sigma_over_omega": 0.02781264669963382,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.9325310735094927,
+        -0.8742478814151494,
+        -0.8975611582528867
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 152468024183922.62,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            39.422568642402474,
+            42.575795366867204,
+            42.57579536686721
+          ]
+        },
+        {
+          "low_GeV": 152468024183922.62,
+          "high_GeV": 1814369629405428.0,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.422568642402474,
+            42.575795366867204,
+            42.57579536686721
+          ],
+          "alpha_inverse_high": [
+            39.15979974869708,
+            39.159799748697075,
+            39.15979974869708
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        -7.105427357601002e-15,
+        0.0
+      ],
+      "gauge_only_A_L": 3.08694971484253,
+      "gauge_only_A_R": 2.9305536849409792,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.999227054590317,
+      "gauge_operator_k2_GeVminus2": 4.8740263278555384e-32,
+      "tau_e_pi_unit_low_energy_F_years": 7.759910536493803e+34,
+      "allowed_effective_flavor_norm": 1.7981368292964854,
+      "allowed_UV_F_L_if_F_R_zero": 0.5824963136428062,
+      "allowed_UV_F_R_if_F_L_zero": 0.6135826272476901,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        1.4710362845801137,
+        2.3123016690168607
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_1",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 1.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 4135868374154071.0,
+        "Phi54:(1,3,3)": 459540930461563.4,
+        "Sigma126:(15,2,2)": 50822674727973.86
+      },
+      "log10_MI": 13.706057517641385,
+      "log10_MU": 15.139445453971593,
+      "log10_MX": 15.139445453971593,
+      "MI_GeV": 50822674727973.86,
+      "MU_GeV": 1378622791384690.2,
+      "MX_GeV": 1378622791384690.2,
+      "MXprime_GeV": 1379562104756122.5,
+      "alphaU_inverse": 38.48954303961213,
+      "gU": 0.5713912091642495,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.216910479905
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746397.83,
+      "omega_GeV": 2412747639924572.0,
+      "sigma_over_omega": 0.03692083261106524,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.23313276837737315,
+        0.17484957628302988,
+        0.01165663841886862
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727973.86,
+          "high_GeV": 459540930461563.4,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.216910479905
+          ],
+          "alpha_inverse_high": [
+            38.37297665542344,
+            40.17975561034809,
+            40.17975561034811
+          ]
+        },
+        {
+          "low_GeV": 459540930461563.4,
+          "high_GeV": 1378622791384690.2,
+          "b_PS": [
+            0.6666666666666666,
+            9.666666666666666,
+            9.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.37297665542344,
+            40.17975561034809,
+            40.17975561034811
+          ],
+          "alpha_inverse_high": [
+            38.256410271234756,
+            38.48954303961213,
+            38.48954303961215
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        0.0,
+        0.0,
+        2.1316282072803006e-14
+      ],
+      "gauge_only_A_L": 3.0651224021834693,
+      "gauge_only_A_R": 2.909832222832993,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9986387077619349,
+      "gauge_operator_k2_GeVminus2": 8.58907124923948e-32,
+      "tau_e_pi_unit_low_energy_F_years": 2.4988491822222744e+34,
+      "allowed_effective_flavor_norm": 1.0203857894244122,
+      "allowed_UV_F_L_if_F_R_zero": 0.3329021342500158,
+      "allowed_UV_F_R_if_F_L_zero": 0.35066825551576697,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        0.8347665739656219,
+        1.3121580768968943
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_2",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 2.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 4018128229897726.5,
+        "Phi54:(1,3,3)": 446458692210858.5,
+        "Sigma126:(15,2,2)": 101645349455948.42
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.126902537485595,
+      "log10_MX": 15.126902537485595,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 1339376076632575.5,
+      "MX_GeV": 1339376076632575.5,
+      "MXprime_GeV": 1340328268420441.5,
+      "alphaU_inverse": 39.08096902335466,
+      "gU": 0.5670511952446723,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 2362002034145539.5,
+      "sigma_over_omega": 0.03771404531352303,
+      "delta_alpha_inverse_from_declared_logs": [
+        -0.821494368784444,
+        -0.376739424098599,
+        -0.5546414019729371
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 101645349455948.42,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            39.121420353437856,
+            42.812411879625124,
+            42.81241187962513
+          ]
+        },
+        {
+          "low_GeV": 101645349455948.42,
+          "high_GeV": 446458692210858.5,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.121420353437856,
+            42.812411879625124,
+            42.81241187962513
+          ],
+          "alpha_inverse_high": [
+            38.96440263916597,
+            40.77118159409062,
+            40.77118159409063
+          ]
+        },
+        {
+          "low_GeV": 446458692210858.5,
+          "high_GeV": 1339376076632575.5,
+          "b_PS": [
+            0.6666666666666666,
+            9.666666666666666,
+            9.666666666666666
+          ],
+          "alpha_inverse_low": [
+            38.96440263916597,
+            40.77118159409062,
+            40.77118159409063
+          ],
+          "alpha_inverse_high": [
+            38.84783625497728,
+            39.08096902335466,
+            39.08096902335467
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        -7.105427357601002e-15,
+        0.0,
+        7.105427357601002e-15
+      ],
+      "gauge_only_A_L": 3.057891883044878,
+      "gauge_only_A_R": 2.902968027927661,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9985796709899404,
+      "gauge_operator_k2_GeVminus2": 8.962093484203812e-32,
+      "tau_e_pi_unit_low_energy_F_years": 2.295162906272643e+34,
+      "allowed_effective_flavor_norm": 0.977915066666631,
+      "allowed_UV_F_L_if_F_R_zero": 0.31980040631550316,
+      "allowed_UV_F_R_if_F_L_zero": 0.33686732242956674,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        0.8000217352018878,
+        1.2575431435296753
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_3",
+      "declared_parent_mass_ratios": {
+        "Phi54:(20prime,1,1)": {
+          "site": "MU",
+          "ratio": 3.0
+        },
+        "Phi54:(1,3,3)": {
+          "site": "MU",
+          "ratio": 0.3333333333333333
+        },
+        "Sigma126:(15,2,2)": {
+          "site": "MI",
+          "ratio": 3.0
+        }
+      },
+      "parent_masses_GeV": {
+        "Phi54:(20prime,1,1)": 3950814658242763.5,
+        "Phi54:(1,3,3)": 438979406471418.1,
+        "Sigma126:(15,2,2)": 152468024183922.62
+      },
+      "log10_MI": 13.706057517641387,
+      "log10_MU": 15.11956540169161,
+      "log10_MX": 15.11956540169161,
+      "MI_GeV": 50822674727974.21,
+      "MU_GeV": 1316938219414254.5,
+      "MX_GeV": 1316938219414254.5,
+      "MXprime_GeV": 1317898128310009.0,
+      "alphaU_inverse": 39.42693104579616,
+      "gU": 0.5645578432897946,
+      "alpha_PS_inverse_at_MI": [
+        38.60660395308167,
+        43.21691047990498,
+        43.21691047990499
+      ],
+      "g4I": 0.5705242803191434,
+      "sigma_GeV": 89080651746398.44,
+      "omega_GeV": 2332689617312169.0,
+      "sigma_over_omega": 0.03818795740559827,
+      "delta_alpha_inverse_from_declared_logs": [
+        -1.165663841886866,
+        -0.6993983051321195,
+        -0.885904519834018
+      ],
+      "PS_segments": [
+        {
+          "low_GeV": 50822674727974.21,
+          "high_GeV": 152468024183922.62,
+          "b_PS": [
+            -4.666666666666666,
+            3.666666666666667,
+            3.666666666666668
+          ],
+          "alpha_inverse_low": [
+            38.60660395308167,
+            43.21691047990498,
+            43.21691047990499
+          ],
+          "alpha_inverse_high": [
+            39.422568642402474,
+            42.575795366867204,
+            42.57579536686721
+          ]
+        },
+        {
+          "low_GeV": 152468024183922.62,
+          "high_GeV": 438979406471418.1,
+          "b_PS": [
+            0.6666666666666666,
+            8.666666666666666,
+            8.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.422568642402474,
+            42.575795366867204,
+            42.57579536686721
+          ],
+          "alpha_inverse_high": [
+            39.310364661607466,
+            41.117143616532104,
+            41.11714361653211
+          ]
+        },
+        {
+          "low_GeV": 438979406471418.1,
+          "high_GeV": 1316938219414254.5,
+          "b_PS": [
+            0.6666666666666666,
+            9.666666666666666,
+            9.666666666666666
+          ],
+          "alpha_inverse_low": [
+            39.310364661607466,
+            41.117143616532104,
+            41.11714361653211
+          ],
+          "alpha_inverse_high": [
+            39.19379827741878,
+            39.426931045796145,
+            39.42693104579615
+          ]
+        }
+      ],
+      "PS_upper_matching_residual": [
+        -7.105427357601002e-15,
+        -1.4210854715202004e-14,
+        -7.105427357601002e-15
+      ],
+      "gauge_only_A_L": 3.054198884444635,
+      "gauge_only_A_R": 2.8994621299843337,
+      "low_QCD_A": 1.2322578694739004,
+      "alpha_s_2GeV_LO": 0.26770024051512686,
+      "MX2_over_MXprime2": 0.9985438035097862,
+      "gauge_operator_k2_GeVminus2": 9.188742719388547e-32,
+      "tau_e_pi_unit_low_energy_F_years": 2.1833344760453707e+34,
+      "allowed_effective_flavor_norm": 0.9537938447863028,
+      "allowed_UV_F_L_if_F_R_zero": 0.3122893697735527,
+      "allowed_UV_F_R_if_F_L_zero": 0.3289554413981797,
+      "allowed_effective_flavor_norm_hadronic_1sigma": [
+        0.7802884245682064,
+        1.2265246244137353
+      ],
+      "hierarchy_ok": true,
+      "perturbative_gauge_ok": true,
+      "action_realization_tested": false,
+      "flavor_rotations_fitted": false,
+      "scalar_mediated_amplitude_included": false,
+      "physical_candidate": false,
+      "conditions": [
+        "A_L^2 |F_L|^2 + A_R^2 |F_R|^2 < allowed_effective_flavor_norm^2 in the stated gauge-only approximation",
+        "F_L,R must be calculated from the same flavor solution and both vector masses; not freely chosen nuisance counterterms",
+        "Whole-parent mass card must be realized by a stable same-action scalar point before promotion",
+        "Other proton channels and scalar-mediated amplitudes remain untested"
+      ]
+    }
+  ],
+  "actual_vector_audit": {
+    "rho": 0.026892021800250795,
+    "masses_over_gUomega": {
+      "X_Y5over6": [
+        0.9999999999999994,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "Xprime_Y1over6": [
+        1.0003615250680649,
+        1.0003615250680649,
+        1.0003615250680649,
+        1.0003615250680649,
+        1.000361525068065,
+        1.000361525068065,
+        1.000361525068065,
+        1.000361525068065,
+        1.000361525068065,
+        1.000361525068065,
+        1.000361525068065,
+        1.0003615250680653
+      ]
+    },
+    "multiplicities": {
+      "X_Y5over6": 12,
+      "Xprime_Y1over6": 12
+    },
+    "full_mass2_eigenvalues_over_gU2omega2": [
+      -3.16254970980664e-17,
+      -7.6281037881403e-18,
+      -7.6281037881403e-18,
+      -7.6281037881403e-18,
+      7.548376752564873e-20,
+      1.2145976371919854e-19,
+      1.2145976371919854e-19,
+      1.2145976371919854e-19,
+      1.2145976371919854e-19,
+      1.0388352668953366e-17,
+      1.371515733001926e-17,
+      2.5332383760123796e-16,
+      0.0007231808365051561,
+      0.0007231808365051561,
+      0.0007231808365051561,
+      0.0007231808365051561,
+      0.0007231808365051638,
+      0.0007231808365051638,
+      0.0007231808365051638,
+      0.0007231808365051638,
+      0.0036159041825258183,
+      0.999999999999999,
+      0.9999999999999996,
+      0.9999999999999996,
+      0.9999999999999998,
+      0.9999999999999998,
+      0.9999999999999998,
+      0.9999999999999998,
+      0.9999999999999998,
+      0.9999999999999998,
+      1.0,
+      1.0,
+      1.0,
+      1.0007231808365047,
+      1.0007231808365047,
+      1.0007231808365047,
+      1.0007231808365047,
+      1.000723180836505,
+      1.000723180836505,
+      1.000723180836505,
+      1.000723180836505,
+      1.000723180836505,
+      1.000723180836505,
+      1.000723180836505,
+      1.0007231808365054
+    ],
+    "intermediate_charged_vector_mass2_over_g2sigma2": 0.9999999999999944
+  },
+  "normalization": {
+    "MI": "charged PS leptoquark mass = g4(MI)*sigma",
+    "MU": "X(Y=5/6) mass = gU*omega",
+    "Xprime": "gU*sqrt(omega^2+sigma^2)",
+    "proton_coefficient": "C_L,R(2GeV)=[gU^2/(2 MX^2)] A_L,R F_L,R; F includes Fierz/Clebsch/flavor and Xprime ratio"
+  },
+  "proton_input": {
+    "mp_GeV": 0.93827208816,
+    "mpi0_GeV": 0.1349768,
+    "W_pi0_LR_GeV2": 0.11242997820866105,
+    "W_pi0_quadrature_error_GeV2": 0.025,
+    "W_plus_LR_GeV2": -0.159,
+    "W_plus_errors": [
+      0.015,
+      0.02,
+      0.025
+    ],
+    "hadronic_scheme": "MSbar 2 GeV",
+    "tau_epi_limit_years": 2.4e+34,
+    "confidence_level": 0.9,
+    "scalar_operator_coefficient_norm_bound_GeVminus2": 8.76416624707775e-32
+  },
+  "precision_contract": {
+    "one_loop_gauge_running": true,
+    "tree_gauge_matching": true,
+    "whole_parent_leading_logs": true,
+    "finite_gauge_matching_constants": false,
+    "two_loop_running": false,
+    "finite_yukawa_matching": false,
+    "dimension_six_RG": "one-loop gauge-only diagonal factors, PS/SM plus piecewise low-QCD to 2 GeV; no Yukawa anomalous mixing",
+    "hadronic_errors": "quadrature sensitivity only, no joint experimental/lattice confidence region",
+    "no_universal_proton_exclusion": true,
+    "no_accepted_action_benchmark": true
+  },
+  "falsification_conditions": [
+    "Reject a declared scale card if ln(MI/MZ)<=0, ln(MU/MI)<=0 or a gauge Landau pole occurs below MU",
+    "Reject a specified gauge-only flavor realization if A_L^2|F_L|^2+A_R^2|F_R|^2 exceeds the saved limit squared",
+    "A full-model exclusion needs every allowed flavor/threshold realization to fail, including other-channel and scalar-amplitude consistency",
+    "A scale solution alone never certifies scalar vacuum, light-doublet or flavor viability"
+  ],
+  "references": [
+    {
+      "topic": "gauge operator normalization and gauge-only anomalous exponents",
+      "url": "https://arxiv.org/html/1507.06712v2",
+      "location": "Sections 5 and 10; old beta table not imported"
+    },
+    {
+      "topic": "physical-pion lattice form factor",
+      "url": "https://arxiv.org/html/2111.01608v1",
+      "location": "Table 8 and isospin relation; continuum MSbar(2 GeV)"
+    },
+    {
+      "topic": "p to e+ pi0 experimental limit",
+      "url": "https://arxiv.org/abs/2010.16098",
+      "location": "published 90 percent CL partial lifetime, not a newly measured 2026 value"
+    }
+  ],
+  "checks": [
+    {
+      "name": "correct_four_parent_PS_beta",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "real_Phi20_parent_beta",
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "real_Phi33_parent_beta",
+      "residual": 4.0029660424867205e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "complex_Sigma15_parent_beta",
+      "residual": 2.242353728951566e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "baseline_independent_LO_reference",
+      "residual": 2.084291705383432e-13,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "independent_D_parity_MI_formula",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "D_parity_SM_beta_combination_is_44",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "actual_X_multiplicity",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "actual_Xprime_multiplicity",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "actual_X_mass_normalization",
+      "residual": 2.0014830212433607e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "actual_Xprime_mass_normalization",
+      "residual": 1.432773778012135e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "actual_intermediate_charged_vector_normalization",
+      "residual": 5.551115123125783e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_1_piecewise_threshold_reconstruction",
+      "residual": 1.0048591735576161e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_1_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_1_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_1_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_2_piecewise_threshold_reconstruction",
+      "residual": 7.105427357601002e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_2_D_parity_fixes_MI",
+      "residual": 3.843018909284084e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_2_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_2_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_3_piecewise_threshold_reconstruction",
+      "residual": 1.5888218580782548e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_3_D_parity_fixes_MI",
+      "residual": 3.843018909284084e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_3_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_3_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_1_piecewise_threshold_reconstruction",
+      "residual": 1.4210854715202004e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_1_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_1_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_1_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_2_piecewise_threshold_reconstruction",
+      "residual": 1.5888218580782548e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_2_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_2_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_2_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_3_piecewise_threshold_reconstruction",
+      "residual": 7.105427357601002e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_3_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_3_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_3_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_1_piecewise_threshold_reconstruction",
+      "residual": 2.1316282072803006e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_1_D_parity_fixes_MI",
+      "residual": 6.917434036711379e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_1_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_1_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_2_piecewise_threshold_reconstruction",
+      "residual": 1.0048591735576161e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_2_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_2_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_2_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_3_piecewise_threshold_reconstruction",
+      "residual": 1.7404671430534633e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_3_D_parity_fixes_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_3_sigma_uses_g4_at_MI",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_3_vector_mass_uses_unification_coupling",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "coefficient_limit_reproduces_unit_amplitude_lifetime",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "RG_exponent_independent_integral_beta_-7.0",
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "RG_exponent_independent_integral_beta_0.0",
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "RG_exponent_independent_integral_beta_8.666666666666666",
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 2e-08,
+      "passed": true
+    }
+  ],
+  "passed": 52,
+  "total": 52,
+  "source_hashes": {
+    "code/screen_p54_scales_lo.py": "223d595d7571326d3410cf73babc88a7f5a992ae628cb38d3e09c7a05d06d29c",
+    "code/verify_p54_ps_active_census.py": "781f089b8cbb1d20b8a260f5864b777740454ca4fadbd8557900289cb73f992b",
+    "output/p54_p2_two_site_matching.json": "bf9c8dd41ec6b85d4fb1a807e33d3d7a26a4f67801d57d168a3ceefbd2c8146b",
+    "code/verify_p54_p1_hessian_spectrum.py": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282",
+    "code/verify_p54_p2_two_site_matching.py": "5f83192a153bfa8ea6afc9a99aeca68e8b11746bf2945a0a40e198489f214f2e"
+  }
+}

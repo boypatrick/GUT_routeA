@@ -1,0 +1,2598 @@
+{
+  "schema": "p54-coordinate-and-spectral-convergence-v1",
+  "date": "2026-09-17",
+  "scope": "frozen action; coordinate invariants, linear solver and equal-mass one-loop series only",
+  "radial_metric": [
+    [
+      2.3999999999999995,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.0000000000000004,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "local_hard_scalar_plus_gauge_insertion": [
+    [
+      0.7864728962816181,
+      0.7478268051029514,
+      0.018515679025171206
+    ],
+    [
+      0.7478268051029514,
+      4.823221876624534,
+      0.04737091264710093
+    ],
+    [
+      0.018515679025171206,
+      0.04737091264710093,
+      0.009653658159573912
+    ]
+  ],
+  "baseline_generalized_eigenvalues": [
+    0.008995184178964154,
+    0.2733736138424651,
+    2.4665928385677534
+  ],
+  "coordinate_cases": [
+    {
+      "name": "identity",
+      "field_jacobian": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_metric": [
+        [
+          2.3999999999999995,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0000000000000004,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_loop": [
+        [
+          0.7864728962816181,
+          0.7478268051029514,
+          0.018515679025171206
+        ],
+        [
+          0.7478268051029514,
+          4.823221876624534,
+          0.04737091264710093
+        ],
+        [
+          0.018515679025171206,
+          0.04737091264710093,
+          0.009653658159573912
+        ]
+      ],
+      "raw_loop_operator_norm": 4.957809687397368,
+      "metric_condition_number": 2.3999999999999995,
+      "known_kinetic_condition_number": 6.907905808757913,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.2733736138424651,
+        2.4665928385677534
+      ],
+      "rho_loop": 2.4665928385677534,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.7585746034908287,
+            0.0910321030624728,
+            1.1381721941537448
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600543,
+            0.10133935649216849,
+            1.7303009768086683
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068182,
+            0.14253366141789797,
+            2.188925049052926
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.42162596019959353,
+            0.19329604416674445,
+            2.4297128457736075
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.59622190597466,
+            0.7955382302273025,
+            3.36171279882005
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.1010121601514062,
+            4.194059629310071
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 0.7470885404597227,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 0.2695337942951794
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.11375157083660226
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.05536538864021529
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.017219003586635587
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 0.001671031119045407
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 1.5737572188463923e-05
+        }
+      ]
+    },
+    {
+      "name": "u=x/pi; x=pi*u",
+      "field_jacobian": [
+        [
+          3.141592653589793,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.141592653589793,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.141592653589793
+        ]
+      ],
+      "transformed_metric": [
+        [
+          23.687050562614452,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          19.73920880217872,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.869604401089358
+        ]
+      ],
+      "transformed_loop": [
+        [
+          7.762176358478551,
+          7.380754726896682,
+          0.18274242719598763
+        ],
+        [
+          7.380754726896682,
+          47.60329186096397,
+          0.46753216794544683
+        ],
+        [
+          0.18274242719598763,
+          0.46753216794544683,
+          0.09527778705834287
+        ]
+      ],
+      "raw_loop_operator_norm": 48.93162031050052,
+      "metric_condition_number": 2.3999999999999995,
+      "known_kinetic_condition_number": 6.907905808757913,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.273373613842465,
+        2.4665928385677525
+      ],
+      "rho_loop": 2.4665928385677525,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.758574603490829,
+            0.0910321030624728,
+            1.1381721941537448
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600544,
+            0.10133935649216846,
+            1.7303009768086688
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068182,
+            0.14253366141789786,
+            2.1889250490529255
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.42162596019959375,
+            0.19329604416674456,
+            2.4297128457736066
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.5962219059746602,
+            0.7955382302273027,
+            3.36171279882005
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.101012160151407,
+            4.19405962931007
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 0.7470885404597227,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 0.2695337942951793
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.1137515708366023
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.055365388640215375
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.017219003586635737
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 0.0016710311190453226
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 1.5737572188521822e-05
+        }
+      ]
+    },
+    {
+      "name": "u=pi*x; x=u/pi",
+      "field_jacobian": [
+        [
+          0.3183098861837907,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.3183098861837907,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.3183098861837907
+        ]
+      ],
+      "transformed_metric": [
+        [
+          0.2431708407416106,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.2026423672846756,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.10132118364233779
+        ]
+      ],
+      "transformed_loop": [
+        [
+          0.0796863647538711,
+          0.07577069705249888,
+          0.0018760305147719535
+        ],
+        [
+          0.07577069705249888,
+          0.4886945495092155,
+          0.004799676939622055
+        ],
+        [
+          0.0018760305147719535,
+          0.004799676939622055,
+          0.000978120071206541
+        ]
+      ],
+      "raw_loop_operator_norm": 0.5023311458005499,
+      "metric_condition_number": 2.399999999999999,
+      "known_kinetic_condition_number": 6.9079058087579135,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.273373613842465,
+        2.4665928385677525
+      ],
+      "rho_loop": 2.4665928385677525,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.758574603490829,
+            0.09103210306247278,
+            1.1381721941537448
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600544,
+            0.10133935649216846,
+            1.7303009768086688
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068182,
+            0.14253366141789797,
+            2.188925049052926
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.4216259601995937,
+            0.19329604416674462,
+            2.429712845773606
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.59622190597466,
+            0.7955382302273025,
+            3.36171279882005
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.1010121601514062,
+            4.194059629310071
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 0.7470885404597224,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 0.26953379429517876
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.11375157083660233
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.05536538864021566
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.017219003586635796
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 0.0016710311190454605
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 1.573757218836697e-05
+        }
+      ]
+    },
+    {
+      "name": "relative-VEV or local log chart",
+      "field_jacobian": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.1265,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.25
+        ]
+      ],
+      "transformed_metric": [
+        [
+          2.3999999999999995,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.032004500000000005,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0625
+        ]
+      ],
+      "transformed_loop": [
+        [
+          0.7864728962816181,
+          0.09460009084552336,
+          0.004628919756292801
+        ],
+        [
+          0.09460009084552336,
+          0.07718240227521495,
+          0.001498105112464567
+        ],
+        [
+          0.004628919756292801,
+          0.001498105112464567,
+          0.0006033536349733695
+        ]
+      ],
+      "raw_loop_operator_norm": 0.7989018629554656,
+      "metric_condition_number": 74.98945460794573,
+      "known_kinetic_condition_number": 50.58190570451333,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.27337361384246506,
+        2.4665928385677542
+      ],
+      "rho_loop": 2.4665928385677542,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.758574603490829,
+            0.0910321030624728,
+            1.1381721941537448
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600547,
+            0.10133935649216846,
+            1.7303009768086688
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068185,
+            0.14253366141789792,
+            2.188925049052926
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.4216259601995937,
+            0.1932960441667445,
+            2.4297128457736066
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.59622190597466,
+            0.7955382302273027,
+            3.36171279882005
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.1010121601514076,
+            4.19405962931007
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 0.9612267136569752,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 0.9565791351614404
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.9152458902979766
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.8383886112252352
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.7051156613984197
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 0.502562292393699
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 0.26049713941118896
+        }
+      ]
+    },
+    {
+      "name": "tree-metric whitening",
+      "field_jacobian": [
+        [
+          0.6454972243679029,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.7071067811865475,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_metric": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "transformed_loop": [
+        [
+          0.32769704011734097,
+          0.341334675218255,
+          0.011951819418035012
+        ],
+        [
+          0.34133467521825495,
+          2.4116109383122666,
+          0.03349629356376065
+        ],
+        [
+          0.011951819418035012,
+          0.03349629356376065,
+          0.009653658159573912
+        ]
+      ],
+      "raw_loop_operator_norm": 2.4665928385677516,
+      "metric_condition_number": 1.0,
+      "known_kinetic_condition_number": 3.4356881905125998,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.273373613842465,
+        2.4665928385677525
+      ],
+      "rho_loop": 2.4665928385677525,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.7585746034908288,
+            0.0910321030624728,
+            1.1381721941537453
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600543,
+            0.10133935649216849,
+            1.7303009768086683
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068182,
+            0.14253366141789797,
+            2.188925049052926
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.42162596019959353,
+            0.19329604416674445,
+            2.4297128457736075
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.59622190597466,
+            0.7955382302273025,
+            3.361712798820051
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.1010121601514062,
+            4.194059629310071
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 0.5491116791577556,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 0.4360518855508406
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.19142760715553636
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.03820151534709121
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.0019906388510501625
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 1.3401148352735459e-05
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 9.106854675545184e-10
+        }
+      ]
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting",
+      "field_jacobian": [
+        [
+          0.5663473765549711,
+          -0.037051242725663666,
+          -0.002834777582561167
+        ],
+        [
+          -0.03705124272566366,
+          0.3861010982209105,
+          -0.004717987704150895
+        ],
+        [
+          -0.0028347775825611674,
+          -0.0047179877041508955,
+          0.9953829444865134
+        ]
+      ],
+      "transformed_metric": [
+        [
+          0.7725520673726504,
+          -0.07895897444575257,
+          -0.006325199874688575
+        ],
+        [
+          -0.07895897444575257,
+          0.30146508251280146,
+          -0.008087368083456324
+        ],
+        [
+          -0.006325199874688576,
+          -0.008087368083456324,
+          0.9908510113040567
+        ]
+      ],
+      "transformed_loop": [
+        [
+          0.2274479326273503,
+          0.07895897444575266,
+          0.0063251998746885725
+        ],
+        [
+          0.07895897444575267,
+          0.6985349174871999,
+          0.008087368083456375
+        ],
+        [
+          0.0063251998746885725,
+          0.008087368083456375,
+          0.009148988695943076
+        ]
+      ],
+      "raw_loop_operator_norm": 0.7115323181671507,
+      "metric_condition_number": 3.4356881905125936,
+      "known_kinetic_condition_number": 1.0000000000000016,
+      "generalized_loop_eigenvalues": [
+        0.008995184178964154,
+        0.27337361384246517,
+        2.4665928385677525
+      ],
+      "rho_loop": 2.4665928385677525,
+      "kernel_spectra": [
+        {
+          "pE2": 0.001,
+          "eigenvalues": [
+            -0.7585746034908283,
+            0.09103210306247278,
+            1.1381721941537448
+          ]
+        },
+        {
+          "pE2": 0.01,
+          "eigenvalues": [
+            -0.7262548182600544,
+            0.10133935649216855,
+            1.7303009768086683
+          ]
+        },
+        {
+          "pE2": 0.05,
+          "eigenvalues": [
+            -0.5891365290068181,
+            0.14253366141789792,
+            2.1889250490529255
+          ]
+        },
+        {
+          "pE2": 0.1,
+          "eigenvalues": [
+            -0.42162596019959353,
+            0.19329604416674454,
+            2.429712845773607
+          ]
+        },
+        {
+          "pE2": 0.5,
+          "eigenvalues": [
+            0.5962219059746604,
+            0.7955382302273019,
+            3.3617127988200495
+          ]
+        },
+        {
+          "pE2": 1.0,
+          "eigenvalues": [
+            1.0986015904741193,
+            2.1010121601514054,
+            4.194059629310072
+          ]
+        }
+      ],
+      "Richardson_contraction_bound": 8.881784197001246e-16,
+      "iterations": [
+        {
+          "iterations": 0,
+          "relative_energy_error": 1.0
+        },
+        {
+          "iterations": 1,
+          "relative_energy_error": 3.6158231461035195e-16
+        },
+        {
+          "iterations": 2,
+          "relative_energy_error": 0.0
+        },
+        {
+          "iterations": 4,
+          "relative_energy_error": 0.0
+        },
+        {
+          "iterations": 8,
+          "relative_energy_error": 0.0
+        },
+        {
+          "iterations": 16,
+          "relative_energy_error": 0.0
+        },
+        {
+          "iterations": 32,
+          "relative_energy_error": 0.0
+        }
+      ]
+    }
+  ],
+  "nonlinear_chart": {
+    "chart": "r_i=r0_i*exp(q_i); Gamma^i_ii=1",
+    "loop_gradient_q": [
+      -0.13519370301791062,
+      -0.08752821236274756,
+      -0.0021398571491663405
+    ],
+    "ordinary_loop_Hessian": [
+      [
+        0.3643648629831021,
+        -0.018611494323313594,
+        -0.0007035477105234784
+      ],
+      [
+        -0.018611494323313594,
+        -0.19978505726128565,
+        -0.00043066671336190927
+      ],
+      [
+        -0.0007035477105234784,
+        -0.00043066671336190927,
+        -0.004620020149971963
+      ]
+    ],
+    "covariant_loop_Hessian": [
+      [
+        0.4995585660010127,
+        -0.018611494323313594,
+        -0.0007035477105234784
+      ],
+      [
+        -0.018611494323313594,
+        -0.11225684489853809,
+        -0.00043066671336190927
+      ],
+      [
+        -0.0007035477105234784,
+        -0.00043066671336190927,
+        -0.002480163000805622
+      ]
+    ],
+    "warning": "Dropping the gradient/connection term off shell changes the calculation."
+  },
+  "quadratic_reorganization": {
+    "known_quadratic_inverse": [
+      [
+        0.7731124355571758,
+        -0.07728589891388157,
+        -0.0065877135268169965
+      ],
+      [
+        -0.07728589891388156,
+        0.3009382240857711,
+        -0.009069058401517097
+      ],
+      [
+        -0.006587713526816997,
+        -0.009069058401517097,
+        0.9908175015465608
+      ]
+    ],
+    "original_Neumann_radius": 2.4665928385677534,
+    "relative_to_resummed_metric": [
+      0.00891499218233007,
+      0.21468452846101255,
+      0.7115323181671497
+    ],
+    "original_Neumann_errors": [
+      {
+        "order": 1,
+        "matrix_inverse_error": 1.7550605204006031
+      },
+      {
+        "order": 2,
+        "matrix_inverse_error": 4.32901971087312
+      },
+      {
+        "order": 4,
+        "matrix_inverse_error": 26.338103243717423
+      },
+      {
+        "order": 8,
+        "matrix_inverse_error": 974.9320793518177
+      },
+      {
+        "order": 16,
+        "matrix_inverse_error": 1335838.9142430688
+      }
+    ],
+    "independent_two_loop_remainder_known": false,
+    "physical_convergence_proven": false
+  },
+  "equal_mass_spectral_probes": [
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 0.001,
+      "z": 0.19743085738017435,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 0.04935771434504359,
+      "inside_open_Taylor_disk": true,
+      "conformal_w": 0.01204398668710715,
+      "exact_master": 0.03227323473879626,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": 0.03225549383926455,
+          "Taylor_abs_error": 1.7740899531714286e-05,
+          "conformal_value": 0.032272025955292896,
+          "conformal_abs_error": 1.2087835033641062e-06,
+          "conformal_absolute_tail_bound": 1.2125967189234019e-06
+        },
+        {
+          "terms": 4,
+          "Taylor_value": 0.03227321388661121,
+          "Taylor_abs_error": 2.085218505033984e-08,
+          "conformal_value": 0.032273234635366674,
+          "conformal_abs_error": 1.0342958680138733e-10,
+          "conformal_absolute_tail_bound": 1.0364265309230012e-10
+        },
+        {
+          "terms": 8,
+          "Taylor_value": 0.03227323473874367,
+          "Taylor_abs_error": 5.25943573197861e-14,
+          "conformal_value": 0.03227323473879626,
+          "conformal_abs_error": 1.2016925921022185e-18,
+          "conformal_absolute_tail_bound": 1.2031638265454122e-18
+        },
+        {
+          "terms": 16,
+          "Taylor_value": 0.03227323473879626,
+          "Taylor_abs_error": 7.248541056353793e-25,
+          "conformal_value": 0.03227323473879626,
+          "conformal_abs_error": 2.8120272700316107e-34,
+          "conformal_absolute_tail_bound": 2.8139336349639947e-34
+        },
+        {
+          "terms": 32,
+          "Taylor_value": 0.03227323473879626,
+          "Taylor_abs_error": 3.3540622472578308e-46,
+          "conformal_value": 0.03227323473879626,
+          "conformal_abs_error": 1.993309581189897e-61,
+          "conformal_absolute_tail_bound": 2.8398602094624257e-65
+        }
+      ]
+    },
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 0.01,
+      "z": 1.9743085738017436,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 0.4935771434504359,
+      "inside_open_Taylor_disk": true,
+      "conformal_w": 0.0999585730815197,
+      "exact_master": 0.27795399585371305,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": 0.26408652322383935,
+          "Taylor_abs_error": 0.013867472629873688,
+          "conformal_value": 0.27721402563871234,
+          "conformal_abs_error": 0.0007399702150007259,
+          "conformal_absolute_tail_bound": 0.000760923227901403
+        },
+        {
+          "terms": 4,
+          "Taylor_value": 0.27638029188423047,
+          "Taylor_abs_error": 0.0015737039694825629,
+          "conformal_value": 0.277949597600633,
+          "conformal_abs_error": 4.398253080033402e-06,
+          "conformal_absolute_tail_bound": 4.479840345788968e-06
+        },
+        {
+          "terms": 8,
+          "Taylor_value": 0.27791542311577594,
+          "Taylor_abs_error": 3.8572737937105095e-05,
+          "conformal_value": 0.27795399560966866,
+          "conformal_abs_error": 2.440443899554315e-10,
+          "conformal_absolute_tail_bound": 2.467447413466363e-10
+        },
+        {
+          "terms": 16,
+          "Taylor_value": 0.27795394370112186,
+          "Taylor_abs_error": 5.215259117775425e-08,
+          "conformal_value": 0.27795399585371305,
+          "conformal_abs_error": 1.2911425003179842e-18,
+          "conformal_absolute_tail_bound": 1.2990780327380906e-18
+        },
+        {
+          "terms": 32,
+          "Taylor_value": 0.2779539958534744,
+          "Taylor_abs_error": 2.386273791462811e-13,
+          "conformal_value": 0.27795399585371305,
+          "conformal_abs_error": 6.622199363859436e-35,
+          "conformal_absolute_tail_bound": 6.643773970386518e-35
+        }
+      ]
+    },
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 0.05,
+      "z": 9.871542869008717,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 2.4678857172521793,
+      "inside_open_Taylor_disk": false,
+      "conformal_w": 0.30124316106163995,
+      "exact_master": 0.9243817811032773,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": 0.021134501256838457,
+          "Taylor_abs_error": 0.9032472798464388,
+          "conformal_value": 0.9001123677232096,
+          "conformal_abs_error": 0.02426941338006775,
+          "conformal_absolute_tail_bound": 0.026826790295325278
+        },
+        {
+          "terms": 4,
+          "Taylor_value": -1.4567436863458387,
+          "Taylor_abs_error": 2.3811254674491162,
+          "conformal_value": 0.9230406779540276,
+          "conformal_abs_error": 0.0013411031492497351,
+          "conformal_absolute_tail_bound": 0.0014344476591603463
+        },
+        {
+          "terms": 8,
+          "Taylor_value": -33.70234132063735,
+          "Taylor_abs_error": 34.62672310174063,
+          "conformal_value": 0.9243755262380832,
+          "conformal_abs_error": 6.2548651941341274e-06,
+          "conformal_absolute_tail_bound": 6.517164275003574e-06
+        },
+        {
+          "terms": 16,
+          "Taylor_value": -17731.325467029186,
+          "Taylor_abs_error": 17732.24984881029,
+          "conformal_value": 0.9243817808751728,
+          "conformal_abs_error": 2.2810463000418664e-10,
+          "conformal_absolute_tail_bound": 2.3346575543655e-10
+        },
+        {
+          "terms": 32,
+          "Taylor_value": -12175451345.665257,
+          "Taylor_abs_error": 12175451346.58964,
+          "conformal_value": 0.9243817811032773,
+          "conformal_abs_error": 5.459407941970084e-19,
+          "conformal_absolute_tail_bound": 5.527861709888918e-19
+        }
+      ]
+    },
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 0.1,
+      "z": 19.743085738017434,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 4.935771434504359,
+      "inside_open_Taylor_disk": false,
+      "conformal_w": 0.4179860695385971,
+      "exact_master": 1.3745284649034588,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": -3.205976284642219,
+          "Taylor_abs_error": 4.580504749545677,
+          "conformal_value": 1.3009893633864724,
+          "conformal_abs_error": 0.07353910151698644,
+          "conformal_absolute_tail_bound": 0.08603897776925316
+        },
+        {
+          "terms": 4,
+          "Taylor_value": -45.174994486979315,
+          "Taylor_abs_error": 46.54952295188277,
+          "conformal_value": 1.3665697075847776,
+          "conformal_abs_error": 0.007958757318681224,
+          "conformal_absolute_tail_bound": 0.008857281699535391
+        },
+        {
+          "terms": 8,
+          "Taylor_value": -10594.535938442215,
+          "Taylor_abs_error": 10595.910466907118,
+          "conformal_value": 1.3743888684832113,
+          "conformal_abs_error": 0.00013959642024754756,
+          "conformal_absolute_tail_bound": 0.00014916016902893217
+        },
+        {
+          "terms": 16,
+          "Taylor_value": -1373369078.7498915,
+          "Taylor_abs_error": 1373369080.12442,
+          "conformal_value": 1.3745283942228683,
+          "conformal_abs_error": 7.068059041572374e-08,
+          "conformal_absolute_tail_bound": 7.341322134247141e-08
+        },
+        {
+          "terms": 32,
+          "Taylor_value": -6.144923438357114e+19,
+          "Taylor_abs_error": 6.144923438357114e+19,
+          "conformal_value": 1.3745284649034266,
+          "conformal_abs_error": 3.2144718249338685e-14,
+          "conformal_absolute_tail_bound": 3.281119539327807e-14
+        }
+      ]
+    },
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 0.5,
+      "z": 98.71542869008718,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 24.678857172521795,
+      "inside_open_Taylor_disk": false,
+      "conformal_w": 0.6703712011838899,
+      "exact_master": 2.7047168736887053,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": -145.95969290944691,
+          "Taylor_abs_error": 148.66440978313562,
+          "conformal_value": 2.267013920358887,
+          "conformal_abs_error": 0.4377029533298187,
+          "conformal_absolute_tail_bound": 0.6267063517183227
+        },
+        {
+          "terms": 4,
+          "Taylor_value": -35538.079669717255,
+          "Taylor_abs_error": 35540.784386590945,
+          "conformal_value": 2.576176302585003,
+          "conformal_abs_error": 0.1285405711037022,
+          "conformal_absolute_tail_bound": 0.1659496701778985
+        },
+        {
+          "terms": 8,
+          "Taylor_value": -4910555345.656207,
+          "Taylor_abs_error": 4910555348.360924,
+          "conformal_value": 2.689052315448711,
+          "conformal_abs_error": 0.015664558239994353,
+          "conformal_absolute_tail_bound": 0.018490257817247956
+        },
+        {
+          "terms": 16,
+          "Taylor_value": -2.452791173022902e+20,
+          "Taylor_abs_error": 2.452791173022902e+20,
+          "conformal_value": 2.704356069455379,
+          "conformal_abs_error": 0.00036080423332632625,
+          "conformal_absolute_tail_bound": 0.00039837557961688424
+        },
+        {
+          "terms": 32,
+          "Taylor_value": -1.663861950532486e+42,
+          "Taylor_abs_error": 1.663861950532486e+42,
+          "conformal_value": 2.7047165508734334,
+          "conformal_abs_error": 3.2281527189508727e-07,
+          "conformal_absolute_tail_bound": 3.4119066072016103e-07
+        }
+      ]
+    },
+    {
+      "name": "lightest massive vector",
+      "mass2": 0.005065064363643989,
+      "pE2": 1.0,
+      "z": 197.43085738017436,
+      "pair_threshold4m2": 0.020260257454575957,
+      "derivative_expansion_ratio": 49.35771434504359,
+      "inside_open_Taylor_disk": false,
+      "conformal_w": 0.7529740978791242,
+      "exact_master": 3.3488169768007743,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": -616.7439145344833,
+          "Taylor_abs_error": 620.0927315112841,
+          "conformal_value": 2.6126989192263372,
+          "conformal_abs_error": 0.7361180575744369,
+          "conformal_absolute_tail_bound": 1.1850612947802628
+        },
+        {
+          "terms": 4,
+          "Taylor_value": -585213.6307441536,
+          "Taylor_abs_error": 585216.9795611305,
+          "conformal_value": 3.068718470531633,
+          "conformal_abs_error": 0.2800985062691416,
+          "conformal_absolute_tail_bound": 0.3958972517159332
+        },
+        {
+          "terms": 8,
+          "Taylor_value": -1287226555127.105,
+          "Taylor_abs_error": 1287226555130.4536,
+          "conformal_value": 3.2930372469320064,
+          "conformal_abs_error": 0.05577972986876768,
+          "conformal_absolute_tail_bound": 0.0702114289035678
+        },
+        {
+          "terms": 16,
+          "Taylor_value": -1.642490340831357e+25,
+          "Taylor_abs_error": 1.642490340831357e+25,
+          "conformal_value": 3.345487636221025,
+          "conformal_abs_error": 0.0033293405797492066,
+          "conformal_absolute_tail_bound": 0.003832437282306956
+        },
+        {
+          "terms": 32,
+          "Taylor_value": -7.294852087801005e+51,
+          "Taylor_abs_error": 7.294852087801005e+51,
+          "conformal_value": 3.348797533223049,
+          "conformal_abs_error": 1.944357772543563e-05,
+          "conformal_absolute_tail_bound": 2.106757211164328e-05
+        }
+      ]
+    },
+    {
+      "name": "certified P50 at unchanged tau=1",
+      "mass2": 0.192027,
+      "pE2": 0.05,
+      "z": 0.2603800507220339,
+      "pair_threshold4m2": 0.768108,
+      "derivative_expansion_ratio": 0.06509501268050848,
+      "inside_open_Taylor_disk": true,
+      "conformal_w": 0.015764696069800285,
+      "exact_master": 0.04230700189052512,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": 0.04226671227343883,
+          "Taylor_abs_error": 4.02896170862912e-05,
+          "conformal_value": 0.04230428353778548,
+          "conformal_abs_error": 2.7183527396397854e-06,
+          "conformal_absolute_tail_bound": 2.729612922276159e-06
+        },
+        {
+          "terms": 4,
+          "Taylor_value": 0.04230691964815828,
+          "Taylor_abs_error": 8.224236684438312e-08,
+          "conformal_value": 0.04230700149188543,
+          "conformal_abs_error": 3.986396911465106e-10,
+          "conformal_absolute_tail_bound": 3.9971815073654754e-10
+        },
+        {
+          "terms": 8,
+          "Taylor_value": 0.042307001889898374,
+          "Taylor_abs_error": 6.267525450128782e-13,
+          "conformal_value": 0.04230700189052511,
+          "conformal_abs_error": 1.3598895590112845e-17,
+          "conformal_absolute_tail_bound": 1.3620763623707022e-17
+        },
+        {
+          "terms": 16,
+          "Taylor_value": 0.04230700189052512,
+          "Taylor_abs_error": 7.898813843465753e-23,
+          "conformal_value": 0.04230700189052512,
+          "conformal_abs_error": 2.742373706767107e-32,
+          "conformal_absolute_tail_bound": 2.744815925695898e-32
+        },
+        {
+          "terms": 32,
+          "Taylor_value": 0.04230700189052512,
+          "Taylor_abs_error": 3.060073863453018e-42,
+          "conformal_value": 0.04230700189052512,
+          "conformal_abs_error": 6.514719119010883e-61,
+          "conformal_absolute_tail_bound": 2.0565615199774424e-61
+        }
+      ]
+    },
+    {
+      "name": "certified P50 at unchanged tau=1",
+      "mass2": 0.192027,
+      "pE2": 1.0,
+      "z": 5.2076010144406775,
+      "pair_threshold4m2": 0.768108,
+      "derivative_expansion_ratio": 1.3019002536101694,
+      "inside_open_Taylor_disk": false,
+      "conformal_w": 0.20546685033674206,
+      "exact_master": 0.5999745292010098,
+      "approximations": [
+        {
+          "terms": 2,
+          "Taylor_value": 0.41594836364672005,
+          "Taylor_abs_error": 0.18402616555428977,
+          "conformal_value": 0.5929426692577667,
+          "conformal_abs_error": 0.007031859943243113,
+          "conformal_absolute_tail_bound": 0.007486114517504463
+        },
+        {
+          "terms": 4,
+          "Taylor_value": 0.4603558794352191,
+          "Taylor_abs_error": 0.1396186497657907,
+          "conformal_value": 0.5997959019744672,
+          "conformal_abs_error": 0.0001786272265426426,
+          "conformal_absolute_tail_bound": 0.0001862179720729647
+        },
+        {
+          "terms": 8,
+          "Taylor_value": 0.4391558256707701,
+          "Taylor_abs_error": 0.1608187035302397,
+          "conformal_value": 0.5999743506470497,
+          "conformal_abs_error": 1.7855396012253e-07,
+          "conformal_absolute_tail_bound": 1.831023104457696e-07
+        },
+        {
+          "terms": 16,
+          "Taylor_value": 0.09969559625718394,
+          "Taylor_abs_error": 0.5002789329438259,
+          "conformal_value": 0.5999745292007069,
+          "conformal_abs_error": 3.0291913885108567e-13,
+          "conformal_absolute_tail_bound": 3.0722381858953253e-13
+        },
+        {
+          "terms": 32,
+          "Taylor_value": -11.841030606953682,
+          "Taylor_abs_error": 12.441005136154692,
+          "conformal_value": 0.5999745292010098,
+          "conformal_abs_error": 1.5838456503777913e-24,
+          "conformal_absolute_tail_bound": 1.5958127955976972e-24
+        }
+      ]
+    }
+  ],
+  "pilot": {
+    "name": "lightest massive vector",
+    "mass2": 0.005065064363643989,
+    "pE2": 0.05,
+    "z": 9.871542869008717,
+    "pair_threshold4m2": 0.020260257454575957,
+    "derivative_expansion_ratio": 2.4678857172521793,
+    "inside_open_Taylor_disk": false,
+    "conformal_w": 0.30124316106163995,
+    "exact_master": 0.9243817811032773,
+    "approximations": [
+      {
+        "terms": 2,
+        "Taylor_value": 0.021134501256838457,
+        "Taylor_abs_error": 0.9032472798464388,
+        "conformal_value": 0.9001123677232096,
+        "conformal_abs_error": 0.02426941338006775,
+        "conformal_absolute_tail_bound": 0.026826790295325278
+      },
+      {
+        "terms": 4,
+        "Taylor_value": -1.4567436863458387,
+        "Taylor_abs_error": 2.3811254674491162,
+        "conformal_value": 0.9230406779540276,
+        "conformal_abs_error": 0.0013411031492497351,
+        "conformal_absolute_tail_bound": 0.0014344476591603463
+      },
+      {
+        "terms": 8,
+        "Taylor_value": -33.70234132063735,
+        "Taylor_abs_error": 34.62672310174063,
+        "conformal_value": 0.9243755262380832,
+        "conformal_abs_error": 6.2548651941341274e-06,
+        "conformal_absolute_tail_bound": 6.517164275003574e-06
+      },
+      {
+        "terms": 16,
+        "Taylor_value": -17731.325467029186,
+        "Taylor_abs_error": 17732.24984881029,
+        "conformal_value": 0.9243817808751728,
+        "conformal_abs_error": 2.2810463000418664e-10,
+        "conformal_absolute_tail_bound": 2.3346575543655e-10
+      },
+      {
+        "terms": 32,
+        "Taylor_value": -12175451345.665257,
+        "Taylor_abs_error": 12175451346.58964,
+        "conformal_value": 0.9243817811032773,
+        "conformal_abs_error": 5.459407941970084e-19,
+        "conformal_absolute_tail_bound": 5.527861709888918e-19
+      }
+    ]
+  },
+  "no_new_action_or_coupling_card": true,
+  "new_Hessian_evaluations": 0,
+  "default_parameters_changed": false,
+  "physical_fit_enabled": false,
+  "all_orders_loop_convergence_proven": false,
+  "full_kernel_conformal_replacement_enabled": false,
+  "scalar_soft_log_kept_nonlocal": true,
+  "source_sha256": {
+    "code/verify_p54_coordinate_convergence.py": "d95e59b741524487cade0168dd242c2f9a14575c655a830cecca320754ee4626",
+    "output/p54_gauge_mixed_momentum.json": "51ec091647e4e1652563b6f012c150d75613265a15714f613fd56e9b5e808aba",
+    "output/p54_common_renormalization.json": "e647a78d44b73765f789bd2dd73ef96d67f887adf88e400b15bc4cd0d95a17d2"
+  },
+  "checks": [
+    {
+      "name": "identity: invariant relative-loop spectrum",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 0.001",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 0.001",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant kernel spectrum at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: invariant source response at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "identity: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant relative-loop spectrum",
+      "residual": 3.606745790310431e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 0.001",
+      "residual": 1.6197893972922087e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 0.001",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 0.01",
+      "residual": 2.4402947810582534e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 0.01",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 0.05",
+      "residual": 2.0153976232659322e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 0.05",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 0.1",
+      "residual": 3.7282708464265594e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 0.1",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 0.5",
+      "residual": 8.957536067465823e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant kernel spectrum at 1.0",
+      "residual": 2.607146009212645e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: invariant source response at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=x/pi; x=pi*u: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant relative-loop spectrum",
+      "residual": 3.606745790310431e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 0.001",
+      "residual": 1.6229499649751969e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 0.001",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 0.01",
+      "residual": 2.4402947810582534e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 0.05",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 0.1",
+      "residual": 5.469481230719965e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 0.1",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant kernel spectrum at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: invariant source response at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "u=pi*x; x=u/pi: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant relative-loop spectrum",
+      "residual": 3.5858772692069683e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 0.001",
+      "residual": 1.6197893972922087e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 0.001",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 0.01",
+      "residual": 2.9575572077935994e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 0.05",
+      "residual": 1.0076988116329661e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 0.1",
+      "residual": 3.66010658163673e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 0.5",
+      "residual": 6.333934496028162e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant kernel spectrum at 1.0",
+      "residual": 3.3234720939402074e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: invariant source response at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "relative-VEV or local log chart: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant relative-loop spectrum",
+      "residual": 3.606745790310431e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 0.001",
+      "residual": 3.339281388145673e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 0.001",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 0.01",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 0.5",
+      "residual": 2.533573798411265e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant kernel spectrum at 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: invariant source response at 1.0",
+      "residual": 2.7755575615628914e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree-metric whitening: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant relative-loop spectrum",
+      "residual": 3.5858772692069683e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 0.001",
+      "residual": 3.241160234168277e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 0.001",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 0.01",
+      "residual": 6.605047807964422e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 0.05",
+      "residual": 2.0301626384093984e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 0.05",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 0.1",
+      "residual": 1.8266101018966211e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 0.5",
+      "residual": 2.6115480952867477e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 0.5",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant kernel spectrum at 1.0",
+      "residual": 2.607146009212645e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: invariant source response at 1.0",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 0",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 1",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 2",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 4",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 8",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 16",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "known-local-kinetic whitening; not new loop counting: Richardson energy bound at 32",
+      "residual": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "tree whitening is identity",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "known kinetic whitening is identity",
+      "residual": 1.0441396568419477e-15,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "log-chart covariant Hessian congruence",
+      "residual": 1.3884562417838567e-17,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "common fixed-VEV tadpole cancellation",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "original local inverse Neumann series does not converge",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 0.001",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 0.001",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.001 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.001 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.001 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.001 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.001 N=32",
+      "residual": 1.9930255951689507e-61,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 0.01",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 0.01",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.01 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.01 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.01 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.01 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.01 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 0.05",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.05 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.05 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.05 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.05 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.05 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 0.1",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 0.1",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.1 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.1 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.1 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.1 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.1 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 0.5",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 0.5",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.5 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.5 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.5 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.5 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 0.5 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral lightest massive vector 1.0",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map lightest massive vector 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 1.0 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 1.0 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 1.0 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 1.0 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail lightest massive vector 1.0 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral certified P50 at unchanged tau=1 0.05",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map certified P50 at unchanged tau=1 0.05",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 0.05 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 0.05 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 0.05 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 0.05 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 0.05 N=32",
+      "residual": 4.4581575990334404e-61,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "equal-mass master vs independent integral certified P50 at unchanged tau=1 1.0",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "conformal inverse map certified P50 at unchanged tau=1 1.0",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 1.0 N=2",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 1.0 N=4",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 1.0 N=8",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 1.0 N=16",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "certified conformal tail certified P50 at unchanged tau=1 1.0 N=32",
+      "residual": 0.0,
+      "tolerance": 1e-13,
+      "passed": true
+    },
+    {
+      "name": "pilot conformal N=8 is more accurate than Taylor N=8",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    },
+    {
+      "name": "pilot Taylor error grows outside its disk",
+      "residual": 0.0,
+      "tolerance": 2e-11,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "passed": 183,
+    "total": 183,
+    "all_pass": true
+  }
+}

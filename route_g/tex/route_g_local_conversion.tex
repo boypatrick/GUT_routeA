@@ -1,0 +1,363 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cL}{\mathcal L}
+\title{Route G2: Local Scattering with a Recoiling Quantum Detector}
+\author{Bounded tree-level effective-theory result}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A positive local interaction between the G1 field and a dynamical
+massive detector field permits a real change of Kaluza--Klein mode.
+The detector is localized by its quantum state, not pinned by an
+external potential. It carries the compensating compact momentum
+and ordinary recoil. We derive the vertex, threshold, cross section,
+wavepacket selection rule and energy balance. One engineering example
+has a nonzero conversion cross section. This is a collision of two
+systems, not coordinate-induced mass change or an elementary-particle
+identification. No external drive or mass fit is used.
+\end{abstract}
+
+\section{One local action and its stability scope}
+Keep the G1 background $\mathbb M^{3,1}\times S^1$ with radius $R$,
+signature $(+----)$, $\theta\sim\theta+2\pi$ and
+$D_\theta\Phi=(\partial_\theta+\ii\alpha)\Phi$.
+Switch off its diagnostic external sources during scattering. Add a
+complex field $X$ neutral under that connection:
+\begin{align}
+ S={}&\int\dd^4x\,R\dd\theta\,
+ \bigg[
+ |\partial_\mu\Phi|^2-\frac{|D_\theta\Phi|^2}{R^2}
+ -M_5^2|\Phi|^2
+ +|\partial_\mu X|^2-\frac{|\partial_\theta X|^2}{R^2}
+ -M_D^2|X|^2-\kappa_5|\Phi|^2|X|^2
+ \bigg], \label{eq:action}\\
+ &M_5>0,\qquad M_D>0,\qquad \kappa_5\geq0 .
+\end{align}
+The interaction is point-local in all five coordinates. A wavepacket
+of $X$ will localize the apparatus around the circle. This is
+\emph{state localization}, not a delta-function defect in the action,
+a prescribed classical background, or an infinitely heavy momentum
+sink. The $X$ field has its own global $U(1)$ charge; net charge, not
+total particle plus antiparticle number, is exactly conserved.
+
+Both kinetic terms have positive sign. The classical potential
+\begin{equation}
+ V=M_5^2|\Phi|^2+M_D^2|X|^2+\kappa_5|\Phi|^2|X|^2\geq0
+\end{equation}
+has its minimum at $\Phi=X=0$, and spatial-gradient energies are
+nonnegative. There is no tree-level condensate, tadpole or quadratic
+mixing to alter G1's free tower. This is a classical stability statement,
+not a theorem about a renormalized quantum effective potential.
+Dimensions are $[\Phi]=[X]=3/2$ and $[\kappa_5]=-1$.
+The interacting theory is a five-dimensional effective field theory
+(EFT), not a proposed ultraviolet completion.
+
+\section{The vertex fixes the momentum transfer}
+Using the \emph{same} normalized modes for both fields,
+\begin{align}
+ \Phi(x,\theta)&=\sum_n\phi_n(x)\frac{e^{\ii n\theta}}{\sqrt{2\pi R}},
+ &m_n^2&=M_5^2+\frac{(n+\alpha)^2}{R^2},\\
+ X(x,\theta)&=\sum_l x_l(x)\frac{e^{\ii l\theta}}{\sqrt{2\pi R}},
+ &\mu_l^2&=M_D^2+\frac{l^2}{R^2}.
+\end{align}
+The four-mode overlap is exact:
+\begin{equation}
+ \kappa_5\int_0^{2\pi}R\dd\theta\,
+ u_m^*u_nu_j^*u_l
+ =\frac{\kappa_5}{2\pi R}\delta_{n+l,m+j}
+ \equiv g\,\delta_{n+l,m+j}.
+\end{equation}
+Thus one dimensionless coupling determines all tree vertices,
+\begin{equation}\label{eq:vertex}
+ \cL_{\rm int}^{(4)}
+ =-g\sum_{m,n,j,l}\delta_{n+l,m+j}
+       \phi_m^\dagger\phi_n x_j^\dagger x_l,\qquad
+ g=\frac{\kappa_5}{2\pi R}.
+\end{equation}
+No mode-specific conversion matrix is chosen.
+With covariant state normalization and
+$\langle f|S-1|i\rangle=\ii(2\pi)^4\delta^4(P_f-P_i)\cM$,
+the distinct-scalar process is
+\begin{equation}\label{eq:process}
+ \phi_n+X_l\longrightarrow\phi_m+X_j,\qquad
+ j=l+n-m,\qquad \boxed{\cM_{\rm tree}=-g}.
+\end{equation}
+There is no identical-final-particle factor $1/2$.
+The four-dimensional energy and momentum are conserved. Compact
+momentum conservation is equally explicit:
+\begin{equation}
+ \frac{n+\alpha}{R}+\frac lR
+ =\frac{m+\alpha}{R}+\frac jR,\qquad
+ \Delta p_{5,X}=\frac{n-m}{R}=-\Delta p_{5,\Phi}.
+\end{equation}
+The canonical translation generator conserves $n+l$; adding the
+unchanged charged-particle holonomy shift gives the kinetic-momentum
+version above. The detector is the momentum receiver.
+Large gauge relabeling
+$(\alpha,n,m)\mapsto(\alpha+k,n-k,m-k)$ leaves every formula invariant.
+
+\section{Why heavy recoil opens the previously closed channel}
+G1's candidate $\phi_n\to\phi_m+\chi_{n-m}$, with a massless bulk
+$\chi$, costs at least $|n-m|/R$ in the emitted mode. For $M_5>0$,
+$m_n-m_m<|n-m|/R$, so that decay is closed.
+The present process is \emph{scattering}, with an incoming detector.
+For its $l=0$ component, write
+$d=n-m\ne0$ and $\Delta=m_n-m_m>0$. The detector's rest-energy
+increase is instead
+\begin{equation}
+ \delta E_X=\sqrt{M_D^2+d^2/R^2}-M_D
+ =\frac{d^2/R^2}{\sqrt{M_D^2+d^2/R^2}+M_D}.
+\end{equation}
+It tends to $d^2/(2M_D R^2)$, not $|d|/R$, for a heavy detector.
+An exothermic channel at vanishing ordinary incoming kinetic energy
+exists precisely when
+\begin{align}
+ \Delta&>\delta E_X,\\
+ \boxed{M_D>\frac{d^2/R^2-\Delta^2}{2\Delta}} .
+ \label{eq:critical}
+\end{align}
+Squaring is legitimate because $M_D+\Delta>0$.
+For the G1 massive tower, $0<\Delta<|d|/R$, so the right side is
+positive. Equality is threshold only; nonzero incident kinetic energy
+may open a channel that fails this rest-limit condition.
+This is a finite-recoil mechanism, not an unrecorded supply of energy.
+
+\section{Cross section, thresholds and inverse process}
+For a component $l$ with center-of-mass incoming momentum $p_i>0$,
+\begin{align}
+ E_n&=\sqrt{m_n^2+p_i^2},&
+ E_l&=\sqrt{\mu_l^2+p_i^2},&
+ \sqrt{s_l}&=E_n+E_l,\\
+ p_f&=\frac{\sqrt{[s_l-(m_m+\mu_j)^2]
+                         [s_l-(m_m-\mu_j)^2]}}{2\sqrt{s_l}}.
+ \label{eq:pf}
+\end{align}
+Always test $\sqrt{s_l}>m_m+\mu_j$ \emph{before} using the square
+root; its product alone can also be positive below the pseudothreshold.
+Otherwise the physical open-channel cross section is zero.
+
+For the open channel, integrate the invariant two-body phase space
+with flux $4p_i\sqrt{s_l}$:
+\begin{align}
+ \frac{\dd\sigma_l}{\dd\Omega}
+ &=\frac{|\cM|^2}{64\pi^2s_l}\frac{p_f}{p_i},\\
+ \boxed{\sigma_l=\frac{g^2}{16\pi s_l}\frac{p_f}{p_i}},\qquad
+ v_{{\rm M},l}&=p_i\left(\frac1{E_n}+\frac1{E_l}\right),\\
+ K_l\equiv\sigma_l v_{{\rm M},l}
+ &=\boxed{\frac{g^2p_f}{16\pi E_n E_l\sqrt{s_l}}}.
+ \label{eq:rate}
+\end{align}
+This is the usual relativistic two-body normalization
+\cite{pdg,tong}; the contact amplitude is isotropic at this order.
+Both $\sigma_l$ and $K_l$ have dimension $-2$. Neither is a
+dimensionless probability.
+In an exothermic channel, $\sigma_l$ grows as $1/p_i$ as
+$p_i\to0^+$, while $K_l$ has a finite limit. No flux exists at
+exactly zero relative velocity for defining $\sigma$ by division.
+For the inverse process at the \emph{same} $s_l$,
+\begin{equation}
+ p_i^2\sigma_{n,l\to m,j}
+ =p_f^2\sigma_{m,j\to n,l}
+ =\frac{g^2p_i p_f}{16\pi s_l}.
+\end{equation}
+Preparing the inverse channel at the same small numerical
+momentum $0.2$ instead is a different experiment and can be below
+threshold; this does not violate detailed balance.
+
+\subsection*{One predeclared engineering example}
+Take $R=1$, $M_5=0.5$, $\alpha=0.25$ from the G1 quarter-holonomy
+card and add $M_D=5$, $g=0.05$, $p_i=0.2$. These are arbitrary
+common energy units, not measured particle data. Consider
+$n=1,l=0\to m=0,j=1$:
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Quantity & Value\\
+\midrule
+$(m_1,m_0)$ & $(1.34629120,\ 0.55901699)$\\
+$(\mu_0,\mu_1)$ & $(5,\ 5.09901951)$\\
+Critical $M_D$ from \eqref{eq:critical} & $0.24146563$\\
+$\sqrt s,\ p_f$ & $6.36506416,\ 1.02175458$\\
+$\sigma_{1,0\to0,1}$ & $6.27164081\,10^{-6}$\\
+$K_{1,0\to0,1}$ & $1.17224311\,10^{-6}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The energy ledger is
+\begin{align}
+ m_1-m_0&=0.78727421,& \mu_1-\mu_0&=0.09901951,\\
+ T_{\rm out}-T_{\rm in}
+ &=0.68825469,& T_{\rm in}&=0.01877296,\\
+ T_{\rm out}&=0.70702765.&
+\end{align}
+Here $T$ is the total \emph{ordinary three-dimensional} kinetic energy
+of both particles; internal kinetic energy is already in their
+four-dimensional rest masses. At the event,
+$1.25+0=0.25+1$ in compact momentum units and
+$E_n+E_l=E'_m+E'_j$. The final ordinary kinetic energy receives
+the difference. No work reservoir has been omitted.
+
+\section{A localized detector is a state, not an external drive}
+Choose the finite, exactly normalized preparation
+\begin{equation}\label{eq:packet}
+ c_l=\mathcal N e^{-l^2/(4w^2)}e^{-\ii l\theta_0},
+ \quad l=-4,\ldots,4,\qquad
+ w=1.2,\quad\theta_0=0.7,\quad \sum_l|c_l|^2=1 .
+\end{equation}
+Finite support defines this particular state; it is not an
+uncontrolled replacement of an infinite Gaussian. At a common
+narrow ordinary momentum centered on $-\boldsymbol p_i$, its
+canonical angular wavefunction is
+\begin{equation}
+ \psi_{\rm ang}(\theta,t)=\frac1{\sqrt{2\pi R}}
+ \sum_l c_l e^{\ii l\theta-\ii E_l t},\qquad
+ \int R\dd\theta\,|\psi_{\rm ang}|^2=1.
+\end{equation}
+It is localized initially and freely spreads; there is no potential
+holding it fixed. Its first angular moment is
+\begin{equation}
+ \langle e^{\ii\theta}\rangle_t
+ =\sum_l c_{l+1}^*c_l e^{\ii(E_{l+1}-E_l)t}.
+\end{equation}
+This norm is a canonical one-particle localization diagnostic, not
+an assumed Lorentz-covariant local probability density.
+For comparison, the local normally ordered field-density profile
+in this narrow-momentum limit is proportional to
+\begin{equation}
+ \langle :X^\dagger X:(\theta,t)\rangle
+ \ \propto\
+ \left|\sum_l\frac{c_l}{\sqrt{2E_l}}\,
+          \frac{e^{\ii l\theta-\ii E_l t}}{\sqrt{2\pi R}}\right|^2 .
+\end{equation}
+It is not normalized to unit probability by itself. The heavy-field
+limit suppresses the distinction between the two profile shapes.
+
+\subsection*{Exact first-order wavepacket statement}
+Let $\dd\Pi_a(p)=\dd^3p/[(2\pi)^3\,2E_a(p)]$.
+For normalized four-dimensional envelopes $f(p)$, $h_l(k)$, form
+\begin{equation}
+ |\mathrm{in}\rangle=\sum_l c_l\int\dd\Pi_n(p)\dd\Pi_l(k)
+ f(p)h_l(k)\,|\phi_n,p;X_l,k\rangle ,
+ \quad \int\dd\Pi_n|f|^2=\int\dd\Pi_l|h_l|^2=1.
+\end{equation}
+At first order, the outgoing amplitude for a specified $(m,j)$ is
+\begin{equation}\label{eq:waveamp}
+ A_{mj}(p',k')=-\ii g\,c_{j-n+m}
+ \int\dd\Pi_n(p)\dd\Pi_{j-n+m}(k)\,
+ f(p)h_{j-n+m}(k)(2\pi)^4\delta^4(p+k-p'-k').
+\end{equation}
+The coefficient is zero if its index is outside the preparation.
+Nonzero smooth envelopes around the open example shell give
+nonzero amplitude; ordinary localization is supplied by these
+envelopes, not a background force. A positive envelope choice near
+that shell avoids an accidental destructive cancellation.
+This proves existence of a genuine packet conversion at leading
+order, without treating a plane-wave cross section as a probability.
+
+For conversion $m\ne n$, when detector recoil is unobserved and only
+outgoing $m$ is selected,
+orthogonality of distinct $j=l+n-m$ gives
+\begin{equation}\label{eq:trace}
+ P_m^{\rm LO}=\sum_j\int\dd\Pi_m(p')\dd\Pi_j(k')\,|A_{mj}|^2
+ =\sum_l |c_l|^2 P_{n,l\to m,l+n-m}^{\rm LO}[f,h_l].
+\end{equation}
+It is not $|\sum_l c_l\cM_l|^2$. Absolute encounter probabilities
+require the envelopes and encounter geometry; no such probability
+is claimed from the engineering card alone.
+Translating $\theta_0$ changes phases but not \eqref{eq:trace}:
+an incident single $n$ mode is uniform around the circle.
+A dephased detector with the same $|c_l|^2$ gives the same inclusive
+conversion; that observable alone cannot certify localization.
+Coherent incoming $\Phi$ modes or coherent recoil post-selection
+would define a different experiment.
+
+\subsection*{The precisely scoped numerical packet rate}
+The kinetic approximation uses component overlap integrals
+$I_l=\int\dd t\,\dd^3x\,n_\Phi(x,t)n_{X,l}(x,t)$ with
+normalized conditional spatial profiles. It gives
+\begin{equation}
+ N_m^{\rm LO}\simeq\sum_l |c_l|^2 I_l K_{n,l\to m,l+n-m}.
+\end{equation}
+Only under a common-overlap approximation $I_l=I$ can one write
+\begin{equation}
+ N_m^{\rm LO}\simeq I K_{\rm packet}^{(m)},\qquad
+ K_{\rm packet}^{(m)}=\sum_l |c_l|^2 K_{n,l\to m,l+n-m}.
+\end{equation}
+Each component has its own $s_l$ and velocity. The recorded
+$K_{\rm packet}$ is this rate coefficient, not a universal
+wavepacket cross section or a probability. The approximation need
+not hold during substantial spreading; \eqref{eq:waveamp} is the
+appropriate starting point then.
+All open final $m$ are enumerated before defining a target rate
+fraction: a sufficient finite search interval is
+$|m+\alpha|\leq R\sqrt{s_l}$, followed by the exact threshold test.
+The elastic $m=n$ channel is included in the total collision rate.
+Its scattering cross section is not the total probability of staying
+in the original KK sector: that probability also contains the identity
+part of $S$ and its interference, omitted from the connected amplitude
+\eqref{eq:waveamp}. No G1 probe weight is reused as a scattering fraction.
+
+For the stated preparation the common-overlap coefficients are
+$K_{\rm packet}^{(0)}=1.11933296\,10^{-6}$ and
+$K_{\rm packet}^{\rm all}=1.85661445\,10^{-6}$.
+Their ratio $0.60288929$ is a target fraction of \emph{scattering
+rates under this prescription}, not a universal conversion probability.
+At $l=0$ the open final branches are $m=-1,0,1$.
+
+\section{Verification, limits and next physical decision}
+The companion verifier checks circle overlap, independent energy-shell
+roots and phase space, thresholds, conservation laws, inverse processes
+and gauge relabeling. It also checks packet spreading, trace/dephasing
+identities and full open-channel enumeration. Reports preserve the
+source hash and every assertion. G2 passes 262/262 implementation
+checks on independent rerun; G1 passes its separate 331/331 regression.
+The finite packet has $|\langle e^{\ii\theta}\rangle|=0.91640536$
+at $t=0$ and $0.48041872$ at $t=5$, with conserved norm and
+mean energy. This verifies a freely evolving localized preparation,
+not a localized vacuum.
+
+The engineering amplitude is tree level. Weak $g$ is not by itself
+a bound on the error of a five-dimensional EFT: a physical use
+requires a cutoff above all occupied and accessible momenta,
+matched higher operators, and loop/counterterm control. At
+nonzero coupling the exact interacting propagator has self-energy
+corrections and cuts. G1's free pole and probe formulae are the
+quadratic baseline, not all-orders identities of \eqref{eq:action}.
+No numerical EFT-error bar, radiative naturalness, background
+stabilization, Standard Model assignment or Route-F fit is certified.
+
+\paragraph{Physical result.}
+An incoming excitation can leave in another existing mass branch
+through a local collision. The detector takes the compensating
+compact momentum and ordinary recoil. Neither the shared bulk
+mass $M_5$ nor a coordinate convention changes.
+The simple G1 decay obstruction is bypassed by changing the
+\emph{physical process}, not violating its inequality.
+
+\paragraph{Bounded next options.}
+The most direct continuation is a recoil-resolved experiment:
+test the correlation $j-l=n-m$ together with the predicted ordinary
+outgoing momentum. A finite-encounter calculation can specify
+four-dimensional packets and evaluate \eqref{eq:waveamp} if an
+absolute probability is needed. A driven background is a backup
+only, with work included in the Hamiltonian ledger. Stabilization
+and particle-content questions remain separate G3/G4 hypotheses;
+they do not reopen this conditional tree-level calculation.
+
+\begin{thebibliography}{9}
+\bibitem{pdg}
+Particle Data Group, \emph{Kinematics}, Review of Particle Physics
+(2024), sections 49.5--49.5.1, equations (49.27)--(49.33),
+\href{https://pdg.lbl.gov/2024/reviews/rpp2024-rev-kinematics.pdf}{official review}.
+\bibitem{tong}
+D.~Tong, \emph{Quantum Field Theory}, sections 3.4 and 3.6,
+\href{https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S3.html}{author's lecture notes}.
+\end{thebibliography}
+\end{document}

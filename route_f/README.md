@@ -7,7 +7,89 @@ program with one action per physical branch, explicit claim boundaries, and
 separate evidence chains for four-dimensional physics, family UV, and soliton
 mathematics.
 
-## Latest P-layer checkpoint (2026-09-14)
+The user-requested Scheme A now lives separately in
+[Route G](../route_g/README.md): one physical compact dimension, a common
+scalar spectrum and fixed probe channels. Its G1 calculation does not
+alter P54, resolve the flavor/scale tension, or derive a Route-F embedding.
+See [its independent roadmap](../route_g/ROADMAP.md); Route-F priorities
+below remain scoped to Route F.
+
+## Current priority: physics-first feasibility (2026-09-22)
+
+**The frozen P54PQ-v2 point is regression-only, not a vacuum to rescue.**
+P-PHYS1 now screens the common two-matrix flavor structure jointly with
+unification, seesaw and proton-decay scales, using explicitly declared
+leading-order assumptions. Its deliverable is one reproducible feasibility
+figure with rejection/continuation conditions, not another long derivation.
+Full matching and physical poles are reserved for promising candidates.
+
+**This bounded screen is done, with no joint LO witness.** The gauge
+baseline requires `sigma=8.91e13` GeV; the near-fitting flavor profile
+allows only `sigma<=1.80e13` GeV under the declared norm caps. One
+fixed-scale retry gives a muon Yukawa discrepancy of +80.28%.
+This is a concrete flavor/scale tension, not a global no-go. Proton
+constraints are conditional on actual uncomputed flavor amplitudes.
+
+See [the single feasibility figure and compact report](output/p54_physics_first_screen.md)
+and **P-PHYS1** at the top of `ROADMAP.md`. Three reproducible scripts
+pass 52/52, 18/18 and 32/32 implementation checks; no full matching or
+physical-pole work starts for the failed candidates. Historical priorities
+below are superseded; their results and regression files are retained.
+
+## Latest auxiliary checkpoint: coordinate/convergence audit (2026-09-17)
+
+**P-COORD1 tests pi units, metric whitening and a threshold-derived
+conformal variable without changing the action.** The relative loop/tree
+insertion remains 2.46659 under every invertible coordinate change.
+Tree-metric whitening improves a known local linear solve; pi units do not.
+
+A separate, genuine improvement is proved for the equal-mass momentum
+bubble: mapping its physical branch cut to the unit circle yields exact
+series coefficients and a certified remainder. At the actual
+lightest-vector mass and p_E^2=.05 omega^2, eight terms give error
+6.255e-6 (bound 6.517e-6), where the original Taylor series is outside
+its radius and has error 34.63. This changes the series representation,
+not the exact P-MOM1 kernel or the unknown higher-loop physics.
+
+The new verifier passes **183/183** checks; see
+`code/verify_p54_coordinate_convergence.py`, its reports, and
+`tex/p54_coordinate_spectral_convergence.tex` / PDF. No new quartic or
+background scan. This is optional numerical infrastructure: physical
+mixing/Nielsen, full matching, finite seesaw and fit gates remain open.
+See **P-COORD1** in `ROADMAP.md`.
+
+## Latest physical-kernel checkpoint (2026-09-17)
+
+**P-MOM1 completes the declared radial bosonic background momentum kernel
+and exactly certifies the transverse action identities. It does not close
+physical pole or perturbative-control gates.** No quartic or vacuum scan
+was added, and no default parameter or matching trajectory was changed.
+
+The common DR/MSbar background fixing now includes vector, scalar-vector
+and finite-xi ghost contributions with their dimensional rational terms.
+The gauge verifier passes **99/99** checks, reproduces the old CW/tadpole
+and scalar subsets, and uses no new full Hessian evaluations. The
+finite-xi-to-Landau check is explicitly not a Nielsen certificate.
+
+The P50/P36 action identities now have a **109/109 exact-zero integer
+certificate**, independently constructed from the five-form contractions,
+including all mixed covectors. The scalar `1/tau` obstruction no longer
+depends on approximate action identities, but is not a full-model no-go.
+
+Adding gauge momentum reduces the largest local hard-scalar-plus-gauge
+insertion only from **2.61 to 2.47**. At `p_E^2=.05 omega^2`, the smallest
+bosonic radial background eigenvalue is `-.589137 omega^2`; it is not a
+physical pole or a gauge-independent stability verdict. Fitted fermions,
+full mixing/Nielsen consistency and higher-order control remain open.
+
+See `tex/p54_same_prescription_gauge_momentum.tex`, its PDF in `output/pdf/`,
+and the `p54_gauge_mixed_momentum` / `p54_exact_transverse_certificate`
+JSON/Markdown reports. Next: fixed-bare Nielsen/physical-block completion,
+or an explicitly retained-light-block EFT with controlled power counting.
+No blind quartic weakening; full Wilson/box, lower matching, finite seesaw
+and physical fit remain open. See **P-MOM1** in `ROADMAP.md`.
+
+## Previous P-layer checkpoint (2026-09-14)
 
 **P-INV1 completes invariant-resolved scalar attribution and eight
 bounded nonuniform tests; no controlled replacement point is selected.**

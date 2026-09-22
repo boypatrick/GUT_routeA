@@ -1,0 +1,1427 @@
+{
+  "schema": "p54-exact-transverse-action-certificate-v1",
+  "date": "2026-09-17",
+  "arithmetic": "Gaussian integers represented by pairs of signed int64 arrays; large contraction products and sums have conservative precomputed bounds below 2^62; fixed geometry constructors use entries 0,+/-1 and diagonal entries -2,+3 with bounded small scalar factors",
+  "runtime": {
+    "python": "3.9.6",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "jax_required": false
+  },
+  "no_floating_action_evaluation": true,
+  "no_tolerance_used": true,
+  "no_unit_Hessian_cache_used": true,
+  "new_Hessian_evaluations": 0,
+  "source_action_sha256": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282",
+  "certificate_background": {
+    "omega": "5",
+    "sigma": "sqrt(2)",
+    "vs": "sqrt(2)",
+    "singlet": "1",
+    "four_times_quint_background": "Gaussian integer",
+    "canonical_map": "2 dSigma/dx Gaussian integer",
+    "hodge_eigenvalue": "-1 i"
+  },
+  "output_covectors": "Canonical Sigma; rational invertible Phi/H/S bases, sufficient and equivalent for all mixed zero images",
+  "continuation": "Each separate invariant Hessian block is multihomogeneous. At this nonzero radial background its exact scalar/zero identities therefore extend to every nonzero real radial background with the same angular orientation.",
+  "unit_identities": [
+    {
+      "invariant": "mu2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "mu2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "c",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "c",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "a",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "a",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "b",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "b",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "nu2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": -1,
+        "denominator": 2
+      },
+      "method": "canonical quadratic norm",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "74d1f0b78eeebabb0fb7b0e82e1da44da05d140dfd91cff444ceb4182c39b153"
+    },
+    {
+      "invariant": "nu2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": -1,
+        "denominator": 2
+      },
+      "method": "canonical quadratic norm",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "74d1f0b78eeebabb0fb7b0e82e1da44da05d140dfd91cff444ceb4182c39b153"
+    },
+    {
+      "invariant": "lambda0",
+      "projector_rank": 50,
+      "action_matrix_denominator": 8,
+      "scalar_eigenvalue": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "method": "canonical quartic norm",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "680257d24ce60c186c5aa1c0336ff71d56d36aa7802d8924880c885505a8affd"
+    },
+    {
+      "invariant": "lambda0",
+      "projector_rank": 36,
+      "action_matrix_denominator": 8,
+      "scalar_eigenvalue": {
+        "numerator": 1,
+        "denominator": 1
+      },
+      "method": "canonical quartic norm",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "680257d24ce60c186c5aa1c0336ff71d56d36aa7802d8924880c885505a8affd"
+    },
+    {
+      "invariant": "lambda2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 8,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "a514b34c2c944819efa636abc4e6c612270b9e88144d4cebd7777e1c5fe3f8fc"
+    },
+    {
+      "invariant": "lambda2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 12,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "a514b34c2c944819efa636abc4e6c612270b9e88144d4cebd7777e1c5fe3f8fc"
+    },
+    {
+      "invariant": "lambda4",
+      "projector_rank": 50,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 8,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "302b0697868427197b51a301fd1678ba5b849c3bf72a867de7581198bf1a5039"
+    },
+    {
+      "invariant": "lambda4",
+      "projector_rank": 36,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 12,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "302b0697868427197b51a301fd1678ba5b849c3bf72a867de7581198bf1a5039"
+    },
+    {
+      "invariant": "lambda4p",
+      "projector_rank": 50,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 32,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "951268ffc7c29276d3461119e36b03f63bbd1878f3be317736bce8b35eba99a4"
+    },
+    {
+      "invariant": "lambda4p",
+      "projector_rank": 36,
+      "action_matrix_denominator": 32,
+      "scalar_eigenvalue": {
+        "numerator": 16,
+        "denominator": 1
+      },
+      "method": "exact compressed five-form quartic contraction",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "951268ffc7c29276d3461119e36b03f63bbd1878f3be317736bce8b35eba99a4"
+    },
+    {
+      "invariant": "alpha",
+      "projector_rank": 50,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": 30,
+        "denominator": 1
+      },
+      "method": "norm with all rational Phi mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "cfe58ea77611a5703526866858b1c6fb242c7edf8d740c1508c3b6c6caa9db8b"
+    },
+    {
+      "invariant": "alpha",
+      "projector_rank": 36,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": 30,
+        "denominator": 1
+      },
+      "method": "norm with all rational Phi mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "cfe58ea77611a5703526866858b1c6fb242c7edf8d740c1508c3b6c6caa9db8b"
+    },
+    {
+      "invariant": "beta",
+      "projector_rank": 50,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": -30,
+        "denominator": 1
+      },
+      "method": "exact contraction including all Phi mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "b19ba2faf472802a79be7fa4c161ec0e10600cf6219df3e5bc4fae2f8b639612"
+    },
+    {
+      "invariant": "beta",
+      "projector_rank": 36,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": -30,
+        "denominator": 1
+      },
+      "method": "exact contraction including all Phi mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "b19ba2faf472802a79be7fa4c161ec0e10600cf6219df3e5bc4fae2f8b639612"
+    },
+    {
+      "invariant": "xi02",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi02",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi1",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi1",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi3",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "xi3",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "gamma1",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "gamma1",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "gamma2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "gamma2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta0",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta0",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta1",
+      "projector_rank": 50,
+      "action_matrix_denominator": 96,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "exact cubic-Sigma contraction including all 20 H covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "680bc1d8ec19b8258d75c923ee6a215320f04938dd8257b5d489820a09fdb9c2"
+    },
+    {
+      "invariant": "eta1",
+      "projector_rank": 36,
+      "action_matrix_denominator": 96,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "exact cubic-Sigma contraction including all 20 H covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "680bc1d8ec19b8258d75c923ee6a215320f04938dd8257b5d489820a09fdb9c2"
+    },
+    {
+      "invariant": "eta2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta3",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "eta3",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "mus2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "mus2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi1",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi1",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi2",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 120,
+        "denominator": 1
+      },
+      "method": "norm with both rational S mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "e4bf0a1e2e3c2809ff23f2adb07b17ef99fa85dfdb7238211ef5a06180282112"
+    },
+    {
+      "invariant": "chi2",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 120,
+        "denominator": 1
+      },
+      "method": "norm with both rational S mixed covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "e4bf0a1e2e3c2809ff23f2adb07b17ef99fa85dfdb7238211ef5a06180282112"
+    },
+    {
+      "invariant": "chi3",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi3",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi4",
+      "projector_rank": 50,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "exact holomorphic contraction including Phi and S covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "60434fec00ba09cee327e2624ec9150ded8952f807b266f178aa6eecfecbbf2e"
+    },
+    {
+      "invariant": "chi4",
+      "projector_rank": 36,
+      "action_matrix_denominator": 2,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "exact holomorphic contraction including Phi and S covectors",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "60434fec00ba09cee327e2624ec9150ded8952f807b266f178aa6eecfecbbf2e"
+    },
+    {
+      "invariant": "chi5",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi5",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi6",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi6",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi7",
+      "projector_rank": 50,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    },
+    {
+      "invariant": "chi7",
+      "projector_rank": 36,
+      "action_matrix_denominator": 1,
+      "scalar_eigenvalue": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "method": "no Sigma dependence or a remaining H factor at H=0",
+      "complete_ambient_covectors": 328,
+      "integer_matrix_sha256": "64d61ccc2b5bcb0b7e3d780cd092fcc73f4857038d95b965185b132a7a57e9e8"
+    }
+  ],
+  "structural_zero_invariants": [
+    "mu2",
+    "c",
+    "a",
+    "b",
+    "xi02",
+    "xi1",
+    "xi2",
+    "xi3",
+    "gamma1",
+    "gamma2",
+    "eta0",
+    "eta2",
+    "eta3",
+    "mus2",
+    "chi1",
+    "chi3",
+    "chi5",
+    "chi6",
+    "chi7"
+  ],
+  "general_mass_formulas": {
+    "P50": "-nu2/2+(lambda0/2+4lambda2+4lambda4+16lambda4p)sigma^2+(6/5)(alpha-beta)omega^2+60chi2 vs^2",
+    "P36": "-nu2/2+(lambda0/2+6lambda2+6lambda4+8lambda4p)sigma^2+(6/5)(alpha-beta)omega^2+60chi2 vs^2"
+  },
+  "implication": "The previous 1/tau hard-scalar kinetic bound no longer needs a numerically inferred action-projector identity. Its positive-hard-spectrum, one-loop hard-scalar, fixed real transverse-ray and engineering-margin scope remains unchanged.",
+  "remaining_limits": [
+    "No complex-coupling phase directions certified",
+    "No full-spectrum positivity theorem for all tau",
+    "No complete gauged/fermionic pole or physical stability conclusion",
+    "No physical fit or default-parameter promotion"
+  ],
+  "maximum_conservative_integer_bound": 1008000,
+  "bounded_arithmetic_operations": 3345,
+  "source_sha256": {
+    "code/verify_p54_exact_transverse_certificate.py": "e6375cf628e8bc4ce6cbbd86885639fd6a1612832a23e5b0a0dc95d6df1e711a",
+    "code/verify_p54_p1_hessian_spectrum.py": "241fe7d388c649c6e11cd214785fd6bd1ee43b437824ff5e99d0fc1589f42282",
+    "output/p54_transverse_gap_obstruction.json": "c960eb1956d7f78423f0f9d3cc364fd0cea798bfc4eb4bbfab485a3fbe9908b8",
+    "tex/p54_exact_transverse_certificate_fragment.tex": "a9014afdbe065b248e23db129ac47db2510443ffd7dd12b3ed972b15ef40291f"
+  },
+  "checks": [
+    {
+      "name": "canonical_real_metric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "exact_background_reconstruction_real",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "exact_background_reconstruction_imag",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "background_canonical_norm",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "canonical_self_duality_real",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "canonical_self_duality_imag",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P50_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P50_idempotent",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P50_rank_from_trace",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P50_orthogonal_to_background",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P36_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P36_idempotent",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P36_rank_from_trace",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P36_orthogonal_to_background",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "P50_P36_orthogonal",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_crossing_bilinear_self_adjoint",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda2_Hessian_is_real",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda2_Hessian_is_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4_Hessian_is_real",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4_Hessian_is_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_Hessian_is_real",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_Hessian_is_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mu2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mu2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mu2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "c_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "c_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "c_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "a_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "a_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "a_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "b_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "b_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "b_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "nu2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "nu2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "nu2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda0_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda0_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda0_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "lambda4p_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "alpha_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "alpha_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "alpha_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "beta_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "beta_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "beta_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi02_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi02_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi02_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi1_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi1_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi1_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi3_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi3_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "xi3_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma1_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma1_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma1_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "gamma2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta0_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta0_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta0_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta1_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta1_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta1_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta3_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta3_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "eta3_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mus2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mus2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "mus2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi1_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi1_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi1_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi2_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi2_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi2_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi3_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi3_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi3_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi4_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi4_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi4_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi5_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi5_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi5_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi6_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi6_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi6_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi7_canonical_Sigma_block_symmetric",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi7_all_328_covectors_on_P50",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    },
+    {
+      "name": "chi7_all_328_covectors_on_P36",
+      "passed": true,
+      "maximum_integer_residual": 0,
+      "nonzero_integer_residuals": 0
+    }
+  ],
+  "summary": {
+    "passed": 109,
+    "total": 109,
+    "all_pass": true
+  }
+}

@@ -1,0 +1,358 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cG}{\mathcal G}
+\title{Route G, Scheme A: One Internal Spectrum and Physical Probes}
+\author{Research record: G0--G1}
+\date{22 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a bounded, falsifiable realization of the common-spectrum
+idea: a positive-energy complex scalar on a fixed circle, coupled to two
+specified probes. One action determines both the mass tower and its
+visibility. A passive basis change cannot change masses; a different
+physical background can change them. Degenerate standing waves reveal
+an important limitation: even two probes need not observe every state.
+This is a conditional field-theory prototype, not a derivation of
+elementary-particle masses, a string completion, or the full claims of
+the motivating energy-spectrum document.
+\end{abstract}
+
+\section{Declared action, parameters and scope}
+Use natural units and signature $(+----)$ on
+$\mathbb M^{3,1}\times S^1$:
+\begin{equation}
+ \dd s^2=\eta_{\mu\nu}\dd x^\mu\dd x^\nu-R^2\dd\theta^2,\qquad
+ \theta\sim\theta+2\pi,\quad R>0.
+\end{equation}
+The periodic complex scalar has an external flat connection
+$A_\theta=\alpha$, $D_\theta=\partial_\theta+\ii\alpha$.
+The gauge-invariant holonomy is $\exp(2\pi\ii\alpha)$; $\alpha$ is
+defined modulo integers. The action is
+\begin{equation}\label{eq:action}
+ S_0=\int\dd^4x\int_0^{2\pi}R\,\dd\theta
+ \left(\partial_\mu\Phi^\dagger\partial^\mu\Phi
+ -\frac{|D_\theta\Phi|^2}{R^2}-M_5^2|\Phi|^2\right),
+ \qquad M_5^2\geq0 .
+\end{equation}
+There is one common $R,M_5,\alpha$, not one parameter set per particle.
+Their dimensions are $[R]=-1$, $[M_5]=1$, $[\alpha]=0$ and
+$[\Phi]=3/2$. The connection and metric are prescribed backgrounds:
+no dynamical gauge field, gravity, radion stabilization or preferred
+holonomy is supplied. These omissions limit physical interpretation;
+they do not invalidate a calculation conditional on \eqref{eq:action}.
+
+This is an additional \emph{spatial} dimension of a specified model,
+not a reinterpretation of a Spin(10) representation dimension.
+The model does not identify its variables with the source document's
+$E_i,E_p,E_n$, its symbol $R$, or negative Hamiltonian energies.
+It retains a common-spectrum intuition from that document
+\cite{chen}, using the conventional compactification mechanism
+\cite{tong,yamada}. Route F is unchanged.
+
+\section{Canonical reduction and positive energies}
+The orthonormal eigenfunctions of the internal operator are
+\begin{equation}
+ u_n(\theta)=\frac{e^{\ii n\theta}}{\sqrt{2\pi R}},\qquad
+ \int_0^{2\pi}R\,\dd\theta\,u_m^*u_n=\delta_{mn},\qquad
+ -D_\theta^2u_n=(n+\alpha)^2u_n .
+\end{equation}
+Expanding $\Phi=\sum_{n\in\mathbb Z}\phi_n(x)u_n(\theta)$ in
+\eqref{eq:action}, orthogonality gives the canonically normalized
+four-dimensional action
+\begin{equation}\label{eq:mass}
+ S_0=\sum_n\int\dd^4x\left(
+ |\partial_\mu\phi_n|^2-m_n^2|\phi_n|^2\right),\qquad
+ \boxed{m_n^2=M_5^2+\frac{(n+\alpha)^2}{R^2}} .
+\end{equation}
+Here $[\phi_n]=1$. With sources switched off, the classical Hamiltonian is
+\begin{equation}
+ H=\sum_n\int\dd^3x\left(
+ |\dot\phi_n|^2+|\nabla\phi_n|^2+m_n^2|\phi_n|^2\right)\geq0 .
+\end{equation}
+After quantization and the usual vacuum subtraction, particle and
+antiparticle excitations have positive
+$\omega_n(\boldsymbol p)=\sqrt{\boldsymbol p^2+m_n^2}$.
+A negative Fourier label $n$ denotes compact momentum, not negative
+energy. Opposite frequency solutions do not introduce negative-norm
+states. The massless special case $M_5=0$, $n+\alpha=0$ requires the
+usual care at zero external momentum.
+
+For adjacent \emph{signed Fourier labels}, not adjacent sorted masses,
+\begin{equation}\label{eq:diff}
+ m_{n+1}^2-2m_n^2+m_{n-1}^2=\frac{2}{R^2},\qquad
+ \Delta^3m_n^2=0 .
+\end{equation}
+This is a restrictive, testable tower relation. Four or more assigned
+consecutive branches cannot have arbitrary independent masses.
+A large light-to-heavy hierarchy is possible near a massless branch;
+there is no claim that the circle forbids every hierarchy.
+
+\section{Visibility derived from a fixed interaction}
+Place probes at $0,\pi$ and choose the positive arc from $0$ to $\pi$.
+Parallel transport to the first probe is
+\begin{equation}
+ W(0,\pi)=\exp\left(\ii\int_0^\pi A_\theta\dd\theta\right)
+ =e^{\ii\pi\alpha},\qquad
+ \cO_\pm=\frac{\Phi(0)\pm W(0,\pi)\Phi(\pi)}{\sqrt2}.
+\end{equation}
+Specify one coupling, with no mode-dependent projector choices:
+\begin{equation}\label{eq:probe}
+ S_{\rm probe}=\int\dd^4x\,
+ \left[\lambda J_+^\dagger\cO_+
+       +\lambda J_-^\dagger\cO_-+\mathrm{h.c.}\right].
+\end{equation}
+We take $[\lambda]=0$, $[J_\pm]=5/2$, $\lambda\ne0$.
+The sources are external; this is linear response, not a dynamical
+detector or a particle-conversion process.
+
+Under $\Phi\mapsto e^{\ii\chi}\Phi$ and
+$A_\theta\mapsto A_\theta-\partial_\theta\chi$,
+\begin{equation}
+ W\mapsto e^{-\ii(\chi(\pi)-\chi(0))}W,\qquad
+ \cO_\pm\mapsto e^{\ii\chi(0)}\cO_\pm .
+\end{equation}
+The operators are \emph{charged and gauge-covariant}, not local
+gauge-invariant observables of a dynamical gauge theory. Transforming
+$J_\pm$ with the same charge makes \eqref{eq:probe} invariant.
+Changing the chosen path in a nontrivial holonomy changes the physical
+probe definition, not merely a gauge convention.
+
+Writing $\lambda\cO_a=\sum_n g_{an}\phi_n$ gives
+\begin{align}
+ g_{\pm n}&=\frac{\lambda}{\sqrt{4\pi R}}
+             (1\pm e^{\ii\pi(n+\alpha)}),\\
+ \rho^{(n)}_{ab}&=g_{an}g_{bn}^*,\qquad \rho^{(n)}\succeq0,\\
+ |g_{\pm n}|^2&=\frac{|\lambda|^2}{2\pi R}
+                  \left[1\pm\cos\pi(n+\alpha)\right],\\
+ \rho^{(n)}_{+-}&=\frac{\ii|\lambda|^2}{2\pi R}
+                   \sin\pi(n+\alpha),\\
+ \operatorname{tr}\rho^{(n)}&=\frac{|\lambda|^2}{\pi R}.
+ \label{eq:sum}
+\end{align}
+The normalized weights
+$p_{\pm n}=(1\pm\cos\pi(n+\alpha))/2$ sum to one, but are
+\emph{relative probe strengths}, not branching ratios.
+
+For $Q^2\geq0$, away from a massless zero-momentum singularity,
+the Euclidean source response is
+\begin{equation}\label{eq:response}
+ \cG_{ab}(Q^2)=\sum_{n\in\mathbb Z}
+ \frac{\rho^{(n)}_{ab}}{Q^2+m_n^2}.
+\end{equation}
+Its continuation has the same possible poles in every channel;
+a zero residue can hide a pole from a particular channel.
+For every source vector $v$,
+$v^\dagger\cG v=\sum_n|g_n^\dagger v|^2/(Q^2+m_n^2)\geq0$.
+The response has dimension $-1$ in these conventions.
+
+\subsection*{Degeneracy: a genuine dark subspace}
+For a mass eigenvalue $s$, let $C_s$ have columns $g_n$ for all
+$n$ with $m_n^2=s$. The invariant pole residue is
+\begin{equation}\label{eq:deg}
+ R_s=C_sC_s^\dagger,\qquad
+ \dim\ker C_s=d_s-\operatorname{rank}C_s,\qquad
+ \operatorname{tr}R_s=d_s\frac{|\lambda|^2}{\pi R}>0 .
+\end{equation}
+The branch sum \eqref{eq:sum} holds in the Fourier basis; it is
+\emph{not} a claim of equal strength for every superposition in a
+degenerate eigenspace. At $\alpha=0$, the $n=k,-k$ columns coincide
+for $k\ne0$. Their antisymmetric standing wave
+\begin{equation}
+ \frac{u_k-u_{-k}}{\sqrt2}
+  =\frac{\ii\sin(k\theta)}{\sqrt{\pi R}}
+\end{equation}
+vanishes at both probe positions. Thus $\operatorname{rank}C_s=1$
+and a massive state can be dark to \emph{both} probes.
+The orthogonal combination remains visible: the entire mass pole
+does not disappear from both channels. At $\alpha=1/2$, the
+degenerate pair $n,-n-1$ has independent (indeed orthogonal) coupling
+columns, so this two-dimensional dark subspace obstruction is absent.
+This is an apparatus-dependent result, not a universal rule of nature.
+
+\section{What does and does not change a mass}
+In any retained mode space, let $K=Q^2I+\mathsf M^2$ and let $B$ have
+columns $g_n$. Under $\phi=U\widetilde\phi$ with $U$ unitary,
+\begin{equation}
+ \widetilde K=U^\dagger K U,\qquad
+ \widetilde B=BU,\qquad
+ \widetilde B\,\widetilde K^{-1}\widetilde B^\dagger
+ =BK^{-1}B^\dagger .
+\end{equation}
+The masses and the transformed response do not change. Rotating
+only a mass matrix or only a probe is not a passive change of the
+same experiment. For a general invertible field redefinition the
+kinetic metric must also be transformed.
+
+An integer large gauge transformation is
+\begin{equation}
+ \alpha\mapsto\alpha+\ell,\quad
+ \Phi\mapsto e^{-\ii\ell\theta}\Phi,\quad
+ n\mapsto n-\ell .
+\end{equation}
+Both $n+\alpha$ and the probe coefficients remain unchanged.
+A finite cutoff comparison must relabel the retained window too.
+By contrast, physically changing $R$ or a gauge-inequivalent holonomy
+can change the spectrum. Not every distinct value of $\alpha$ gives
+a distinct mass set: $\alpha$ and $-\alpha$ have the same mass set
+after reflection of labels. A comparison of two static backgrounds
+does not describe the energy cost, vacuum selection, or time
+evolution of such a change.
+
+\section{Numerical verification and truncation control}
+No experimental masses are input. The four engineering cards have
+$M_5=0.5$ and $\lambda=1$ in common arbitrary energy units.
+For the branch $n=0$:
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+$R$ & $\alpha$ & $m_0^2$ & $p_{+0}$ & $p_{-0}$\\
+\midrule
+1 & 0 & 0.250000 & 1 & 0\\
+1 & 0.25 & 0.312500 & 0.853553 & 0.146447\\
+1 & 0.5 & 0.500000 & 0.5 & 0.5\\
+2 & 0.25 & 0.265625 & 0.853553 & 0.146447\\
+\bottomrule
+\end{tabular}
+\end{center}
+The decimals display exact formulae, not fitted coefficients.
+At $\alpha=0,n=1$, $m_1^2=1.25$ but $p_{+1}=0$:
+mass and visibility are different observables.
+
+An independent matrix discretization uses $h=2\pi/N$,
+$\theta_j=jh$, $U_j=e^{\ii\alpha h}$ and periodic indices:
+\begin{equation}
+ (L_h\psi)_j=M_5^2\psi_j+
+ \frac{2\psi_j-U_j\psi_{j+1}-U_{j-1}^*\psi_{j-1}}{R^2h^2}.
+\end{equation}
+Its quadratic form is
+$Rh\sum_j[M_5^2|\psi_j|^2+
+|U_j\psi_{j+1}-\psi_j|^2/(R^2h^2)]\geq0$.
+The matrix eigenvalues are checked against
+\begin{equation}
+ m_{n,h}^2=M_5^2+
+ \frac{4}{R^2h^2}\sin^2\left(\frac{(n+\alpha)h}{2}\right)
+ =m_n^2-\frac{(n+\alpha)^4h^2}{12R^2}+O(h^4).
+\end{equation}
+Only resolved low labels are used for continuum convergence;
+the lattice's finite Brillouin zone is not an extra prediction.
+For a small gauge change, $U_j\mapsto
+e^{\ii\chi_j}U_je^{-\ii\chi_{j+1}}$, transform both the matrix
+and the discrete Wilson-dressed probes. Degenerate comparisons use
+\eqref{eq:deg}, not individual numerical eigenvectors.
+
+For the symmetric mode truncation $|n|\leq N_{\rm mode}>|\alpha|$,
+every response matrix entry obeys the conservative bound
+\begin{align}
+ |\cG_{ab}-\cG^{(N_{\rm mode})}_{ab}|
+ &\leq \frac{|\lambda|^2 R}{\pi}
+       \sum_{|n|>N_{\rm mode}}\frac{1}{(|n|-|\alpha|)^2}\\
+ &\leq\boxed{\frac{2|\lambda|^2R}
+                   {\pi(N_{\rm mode}-|\alpha|)}} .
+\end{align}
+This follows from $|\rho^{(n)}_{ab}|\leq|\lambda|^2/(\pi R)$,
+$Q^2,M_5^2\geq0$ and the integral bound for a decreasing positive
+series. A difference between two finite cutoffs is not itself the
+exact infinite-tail error. The implementation records both successive
+differences and this a priori bound.
+
+An independent infinite-sum check follows from Poisson summation.
+For $\beta=R\sqrt{M_5^2+Q^2}>0$, Fourier transforming
+$(q^2+\beta^2)^{-1}$ yields
+\begin{equation}
+ F(x)=\sum_n\frac{e^{\ii(n+\alpha)x}}{(n+\alpha)^2+\beta^2}
+ =\frac{\pi}{\beta}\sum_{\ell\in\mathbb Z}
+ e^{2\pi\ii\ell\alpha}e^{-\beta|x-2\pi\ell|}.
+\end{equation}
+Set $a=e^{-\pi\beta}$, $t=2\pi\alpha$ and
+$D=1+a^4-2a^2\cos t$. Geometric summation at $x=0,\pi$ gives
+\begin{equation}
+ S_0=F(0)=\frac{\pi}{\beta}\frac{1-a^4}{D},\qquad
+ S_\pi=F(\pi)=\frac{\pi}{\beta}
+       \frac{a(1-a^2)(1+e^{\ii t})}{D},
+\end{equation}
+and therefore
+\begin{equation}
+ \cG=\frac{|\lambda|^2R}{2\pi}
+ \begin{pmatrix}
+ S_0+\operatorname{Re}S_\pi & \ii\operatorname{Im}S_\pi\\
+ -\ii\operatorname{Im}S_\pi & S_0-\operatorname{Re}S_\pi
+ \end{pmatrix}.
+\end{equation}
+All four cards have $\beta>0$ at the tested momenta. This formula
+provides an exact response reference, not a large-cutoff surrogate.
+
+The executable and machine-readable report are respectively
+\begin{center}\small
+\texttt{route\_g/code/verify\_g1\_circle\_spectrum.py}\\
+\texttt{route\_g/output/g1\_circle\_spectrum.json}.
+\end{center}
+They record matrix convergence, full residues, gauge/basis covariance,
+dark-subspace ranks, positivity, truncations and source hash.
+Checks establish implementation consistency, not experimental evidence.
+
+\section{Next physical gate: an actual transition}
+The free action is diagonal in $n$. It supplies no spontaneous
+$\phi_n\to\phi_m$ conversion. A prescribed external source may inject
+energy and excite a mode, but is not yet an energy-accounted dynamical
+detector.
+
+Even a natural bulk extension can fail before any lengthy calculation.
+Consider a massless periodic neutral scalar $\chi$ and the candidate
+vertex $-\lambda_5\chi|\Phi|^2$ (not a completed stable potential).
+Its Fourier overlap enforces
+$n=m+q$, and $m_{\chi_q}=|q|/R$. For $M_5>0$ and $n\ne m$,
+the strict Euclidean triangle inequality for
+$(M_5,(m+\alpha)/R)$ and $(0,(n-m)/R)$ gives
+\begin{equation}\label{eq:closed}
+ \sqrt{M_5^2+\frac{(n+\alpha)^2}{R^2}}
+ <
+ \sqrt{M_5^2+\frac{(m+\alpha)^2}{R^2}}+
+ \frac{|n-m|}{R}.
+\end{equation}
+Hence $\phi_n\to\phi_m+\chi_q$ is kinematically closed.
+For $M_5=0$ the non-strict inequality still holds; equality supplies
+only threshold kinematics, not an ordinary open two-body decay
+phase space. Other processes, scattering, extra fields or modified
+backgrounds are not excluded by this particular argument.
+
+G2 should therefore choose \emph{one} localized dynamical
+interaction/detector, or one explicitly energy-accounted driven
+background, and compute one allowed process. Localization is a new
+physical assumption: compact momentum must be exchanged with that
+structure, not silently violated. G3 may study background selection;
+G4 must derive spin, charges and chirality before a particle
+identification or a Route-F bridge is proposed.
+
+\paragraph{Bounded conclusion.}
+G1 realizes one common positive spectrum with interaction-defined
+visibility and exact correlated tower relations. It rejects
+coordinate-induced mass conversion, while allowing genuine dark
+standing waves for an incomplete apparatus. It does not repair
+Route-F flavor/seesaw tensions, derive three chiral families, or prove
+the motivating document. The next useful step is a transition
+amplitude with a stated source of energy and momentum, not another
+mass fit.
+
+\begin{thebibliography}{9}
+\bibitem{chen}
+B.~Chen, \emph{Energy spectrum for elementary particles}, final
+conference document (2022), five pages.
+\href{https://indico.cern.ch/event/1109513/contributions/4969967/attachments/2480973/4410560/Energy%20spectrum%20for%20elementary%20particles_final.pdf}{Exact final PDF}.
+Source checksum and interpretation ledger: \texttt{route\_g/SOURCES.md}.
+\bibitem{tong}
+D.~Tong, \emph{Lectures on String Theory}, section 8,
+\href{https://arxiv.org/html/0908.0333v3#S8}{arXiv:0908.0333}.
+No string oscillator or winding sector is assumed here.
+\bibitem{yamada}
+A.~Yamada, \emph{The UV sensitivity of the Higgs potential in
+Gauge--Higgs Unification}, PTEP 2021, 093B01, section 2, equation (10),
+\href{https://doi.org/10.1093/ptep/ptab085}{doi:10.1093/ptep/ptab085}.
+\end{thebibliography}
+\end{document}

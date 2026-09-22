@@ -1,10 +1,25 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-09-14
+Last updated: 2026-09-23
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
+
+## Independent Route G, not a new Route-F prerequisite (2026-09-22)
+
+The user selected Scheme A and requested a separate route. Its fixed
+M4 x S1 common-spectrum/probe prototype, short derivation and 331/331
+implementation checks are at [Route G](../route_g/README.md).
+It has no measured-particle fit, chiral family derivation or P54
+parameter map. A degenerate joint-dark state is an apparatus limitation,
+not a proof of the energy-spectrum paper or a repair of P-PHYS1.
+
+G2 now supplies a tree-level local collision with a localized dynamical
+detector and explicit finite recoil (2026-09-23). The
+[Route-G roadmap](../route_g/ROADMAP.md) records its scope and next
+recoil-resolved observable. It does not become a blocker for layers P,
+U or S, and does not overwrite their results or promote a Route-F fit.
 
 ## Governing decision (2026-08-30; current program authority)
 
@@ -54,6 +69,237 @@ layer_P_conditional_closure_independent_of_U = true
 ```
 
 ## Layer P -- four-dimensional testable mainline
+
+### P-PHYS1: physics-first low-order feasibility screen (`bounded screen done; no joint witness`; 2026-09-22)
+
+**New governing priority, explicitly adopted by the user.** The frozen
+P54PQ-v2 benchmark is now **regression-only**. Saving that point is not a
+success criterion. Its kernels and exact identities remain valid tests,
+not a physical vacuum selected by observations. This instruction supersedes
+the next-step priorities in P-MOM1/P-COORD1 and the historical requirement
+that all of P3 must close before any proton-decay screening can begin.
+
+The next deliverable is one source-backed low-order feasibility figure
+and explicit rejection/continuation conditions for the common two-matrix
+flavor structure, gauge unification, seesaw scale and proton decay. No
+new quartic scan, local-kernel rescue, coordinate-convergence certificate
+or long derivation paper is required. Use one-loop gauge running with
+the corrected actual PS parent census, tree matching, common two-matrix
+Yukawas and declared neutrino/threshold approximations.
+
+Three distinct outcomes must remain distinct: a tested leading-order
+candidate passes specified screens; a tested candidate fails a specified
+condition; or a condition has not been tested. A failed local optimizer
+is not a whole-model no-go. An allowed effective Higgs overlap is not yet
+an action-realized scalar vacuum. A proton amplitude left as a flavor
+condition is not a passed lifetime test. Scenario spread is not a
+confidence interval or a bound on omitted finite matching.
+
+Full finite matching, Nielsen/BRST physical-pole certification and
+higher-order control are **precision/promotion gates**, not prerequisites
+for clearly labelled exploratory screening. Correct fields, shared
+Yukawa structure, scale conventions, EFT applicability and explicit
+uncertainty remain mandatory. Complete vacuum viability, PQ cosmology and
+the full physical fit are not silently certified by this screen.
+
+**Bounded deliverable completed.** Three literature-initialized flavor
+starts (at most 1000 function evaluations each), one fixed-sigma refinement,
+and nine correlated whole-parent threshold cards are saved. All older
+source/benchmark files are preserved. The one figure is
+`output/figures/p54_physics_first_feasibility.png` (also SVG); the concise
+joint report `output/p54_physics_first_screen.md` includes the exact
+overlap/scale relations and rejection conditions. No new TeX was added.
+
+- Correct four-parent PS beta `(2/3,26/3,26/3)` gives LO `MI=5.08e13`,
+  `MX=MU=1.90e15` GeV, `alphaU^-1=38.22` and
+  `sigma=MI/g4(MI)=8.91e13` GeV. Nine whole-parent cards move MX through
+  `(1.32--2.62)e15` GeV but preserve MI by D parity. Analytically,
+  `log(MI/MZ)=2*pi*(alpha1^-1-.4*alpha3^-1-.6*alpha2^-1)/(44/5)`.
+  This is a restricted LO identity, not a full-threshold/all-orders result.
+- The same two complex symmetric matrices and four normalized overlaps
+  obey `MR=i*2*sqrt(6)*sigma*f_D`. The shape-first optimum narrowly misses
+  the down-Yukawa policy filter (-31.97% versus 30%); every other tested
+  shape group passes. This small boundary miss is NOT the main conclusion.
+  A 35% sensitivity is saved without changing the official gate.
+- The substantive tension: the SAME shape allows
+  `sigma=[7.04e11,1.80e13]` GeV with Dirac-unit norm caps <=1, whereas
+  gauge unification requires 4.94 times the upper endpoint. Even without
+  norm caps, overlap normalization bounds this profile at `2.06e13` GeV.
+  This rejects that profile, not every texture. The single fixed-sigma
+  retry meets the overlap/scale condition but misses charged flavor
+  badly (muon Yukawa +80.28%), CKM angles, PMNS angles and the mass-squared
+  ratio. Its 1000-evaluation budget was exhausted without more retries.
+  **No joint LO witness found; not a global no-go.**
+- Gauge-proton baseline condition:
+  `3.09879^2 |F_L|^2 + 2.94180^2 |F_R|^2 < 1.92336^2`, using the report's
+  Wilson convention and published Super-K/lattice inputs. Actual fitted
+  flavor amplitudes, scalar exchange and other channels are NOT computed;
+  ellipse interiors are conditional, not certified physical points.
+
+The scale, flavor and joining scripts pass **52/52, 18/18 and 32/32**
+algebra/numerical/provenance checks. These are implementation checks, not
+physical passes. Full matrices, residuals, seeds, norm-cap sensitivity,
+heavy-neutrino masses, omitted-log diagnostics and hashes are retained in
+the `p54_scales_lo_screen`, `p54_flavor_lo_screen` and
+`p54_physics_first_screen` JSON/Markdown reports.
+
+**Stop/continue decision:** no full matching or pole work for the failed
+LO candidates. Any further type-I exploration must target the shared
+flavor--seesaw scale with a declared budget. If tension persists, compare
+the SAME action's type-I+II option with the same f matrix, not a third
+free flavor matrix. Actual nondegenerate lower-stage spectra shifting MI
+are another sensitivity; repeating these D-parity cards cannot do that.
+Neither alternative was executed or shown to solve the tension. After
+a common LO witness exists, calculate its proton amplitudes and test a
+small corresponding parent-mass/overlap target against a stable action.
+Only still-promising cases earn full matching and physical-pole work.
+
+Scope: tree sum rules at MI are a proxy, not completed PS Yukawa running.
+Sequential sterile thresholds, neutrino RG, finite matching, fixed
+intermediate-vector splitting logs, scalar-vacuum realization, type-I
+dominance, collective perturbativity and PQ cosmology remain untested.
+The fixed-scale retry has one `MN/MI=1.34`; its common sharp seesaw
+threshold is approximate. The 10%/30% charged and 10%/0.12-rad CKM
+tolerances are screening policies, not statistical errors or freely
+adjustable finite shifts. See the report for exact rejection boundaries.
+
+### P-COORD1: coordinate invariance and threshold-aware convergence (`bounded audit done; no physical promotion`; 2026-09-17)
+
+This is an auxiliary test of the user's pi-coordinate suggestion, not a
+replacement of P-MOM1's physical mixing/Nielsen priority. It separates
+three different meanings of convergence: linear-solver conditioning,
+momentum-series convergence, and quantum loop control. No quartic,
+background, finite counterterm or matching input is changed.
+
+- For any invertible local linear map `delta r=J q`, the pair transforms
+  as `(Z,G)->(J^T Z J,J^T G J)`. Thus `det(Z-lambda G)` changes only by
+  `det(J)^2`: the generalized loop/tree eigenvalues are invariant.
+  Pi rescaling does not lower the previous **2.46659** insertion.
+  Source responses and all six saved radial kernel spectra also agree.
+  A nonlinear log chart requires its gradient/connection term off shell;
+  it cannot change the inertia of a stationary covariant Hessian.
+- Tree-metric whitening improves the condition number of the known
+  positive local matrix `M=G+Z` from **6.90791 to 3.43569**. A controlled
+  Richardson solve has 16-step energy error `1.671e-3 -> 1.340e-5`.
+  Pure pi rescaling changes neither; relative-VEV normalization actually
+  worsens the condition number to **50.58**. These are solver results,
+  not physical perturbative-control results. Exact whitening of M gives
+  condition one but leaves the relative loop/tree spectrum unchanged.
+- A genuine momentum-series improvement is proved for the equal-mass
+  master `F(z)=integral_0^1 log(1+z*x*(1-x)) dx`, `z=p_E^2/m^2`.
+  Its Taylor radius is four. The physical threshold fixes
+  `w=(sqrt(1+z/4)-1)/(sqrt(1+z/4)+1)`, with
+  `F=sum_{n>=1} [8n/(4n^2-1)] w^n` and certified positive tail
+  `R_N <= [8(N+1)/(4(N+1)^2-1)] w^(N+1)/(1-w)` for Euclidean `0<=w<1`.
+  At the actual lightest-vector mass and `p_E^2=.05 omega^2`,
+  `z=9.87154`, `w=.301243`: eight-term Taylor error is **34.63**, whereas
+  the mapped error is **6.255e-6**, below the proven **6.517e-6** bound.
+  Six original momentum probes and the unchanged P50 mass are tested.
+- This is not an all-orders loop theorem, Borel reconstruction, or a new
+  mass formula. P-MOM1 already evaluates exact masters; no old value is
+  replaced. A resummed local metric can make `lambda/(1+lambda)=.7115`
+  look smaller, but independent two-loop and vertex remainders remain
+  unknown. Doubly massless logarithms must remain nonlocal.
+
+Artifacts: `code/verify_p54_coordinate_convergence.py`, its JSON/Markdown
+reports, `tex/p54_coordinate_spectral_convergence.tex` and PDF. The bounded
+verifier passes **183/183** checks without new Hessians or parameter cards.
+All three direct input/source hashes match. The six-page PDF compiles
+without overfull or undefined-reference warnings and has been checked on
+every page; Python compilation and whitespace checks pass.
+
+**Recommended use:** adopt tree-metric whitening for numerical work and
+continue reporting invariant spectra. If an analytic series is needed,
+extend the threshold map to unequal-mass/mixed masters with an assembled
+error bound, keeping massless logs and gauge cancellations exact. This
+is optional numerical infrastructure, not a new blocker. The structural
+alternative is a retained-light-block/nonlocal EFT with controlled power
+counting. Fixed-bare Nielsen/BRST, the complete physical mixing block,
+full matching, finite seesaw and physical fit gates remain unchanged.
+
+### P-MOM1: common-prescription radial gauge kernel and exact action certificate (`two subgates done; physical pole/control open`; 2026-09-17)
+
+This supersedes the **next-step instructions** of P-INV1. The action,
+original broken background, quartics, common invariant finite mass CT and
+matching inputs are unchanged. **No new coupling or vacuum scan** was
+performed. The frozen point is still not an accepted physical benchmark.
+
+**Completed and independently checked.**
+
+1. `code/verify_p54_gauge_mixed_momentum.py` and its JSON/Markdown reports
+   implement the radial one-loop bosonic background kernel in the explicit
+   fixing `F=partial.a+xi*g*(T X).eta`, DR/MSbar. From the same kinetic
+   action, the off-diagonal quadratic vertex is `W=-2g T partial X`.
+   Vector seagull, vector bubble, scalar-vector bubble, all scalar pairs
+   and finite-xi direct ghost terms are now evaluated. Minimal wave
+   subtraction retains the dimensional rational terms `+2a`, `-2` and
+   `-1/8`; no finite Z is fitted. **99/99** checks include independent
+   convergent momentum integrals, the massless angular shell identity,
+   dimensional gamma-function limits, tree gauge Ward identity, original
+   CW/tadpole/common-CT recovery and all six prior scalar-plus-static-vector
+   kernels. Ten cached action jets are reused; **zero new full Hessians**.
+2. Finite-xi scalar gauge-fixing masses and their derivatives are included
+   together with longitudinal vectors and ghosts. At `p_E^2=.05 omega^2`,
+   `||K_xi-K_0||_F` falls from `.99037` at `xi=.1` to `9.7311e-5` at
+   `xi=1e-6`. Direct scalar ghosts vanish in this limit. The original
+   finite CT is held fixed and residual finite-xi tadpoles are saved.
+   **This is a Landau-limit check, not a fixed-bare Nielsen certificate.**
+3. `code/verify_p54_exact_transverse_certificate.py` and its JSON/Markdown
+   reports give **109/109 exact-zero checks**, including all 58
+   unit-invariant/projector identities on all 328 output covectors.
+   Gaussian-integer five-form contractions at a rationalized background
+   certify the actual action, including beta/chi4/eta1 mixed blocks;
+   no floating Hessian/cache/tolerance enters the proof. Block
+   multihomogeneity continues it to the fixed-orientation radial family.
+   The maximum conservative integer-operation bound is 1,008,000, far
+   below `2^62`. Thus the P50/P36 action identities are no longer merely
+   numerically supported. The positive-hard-spectrum and scalar-one-loop
+   qualifications of the inverse-gap theorem remain.
+
+**What this changes physically, and what it does not.**
+
+- The local gauge insertion has generalized eigenvalues
+  `(-.1475756,0,.0003448)`. Adding it to the old hard scalar insertion
+  changes the largest eigenvalue `2.61032 -> 2.46659`, not to a controlled
+  small correction. This diagnostic excludes the nonlocal scalar
+  soft-soft part and unfitted fermions; it is not a physical residue.
+- At `p_E^2=.05 omega^2`, the bosonic radial Euclidean kernel has
+  generalized eigenvalues `(-.589137,.142534,2.188925) omega^2`.
+  The smallest was `-.584214` with only scalar momentum and static vectors.
+  These are off-shell background eigenvalues, **not particle masses or
+  a gauge-independent instability proof**.
+- The exact action theorem now justifies `m50^2=12 tau sigma^2` and
+  `m36^2=(58/5) tau sigma^2`, while the fixed-action fluctuation vertex
+  retains `T_w=.36`. The previously derived scalar bound
+  `rho_Z >= .01471609503/tau` therefore has an exact action foundation.
+  It is not a bound on the signed full gauge/fermion kernel.
+
+Derivation: `tex/p54_same_prescription_gauge_momentum.tex`, incorporating
+`tex/p54_exact_transverse_certificate_fragment.tex`, and the PDF in
+`output/pdf/`. The two new verifiers total **208/208** checks; numerical
+regressions and exact integer certificates are explicitly distinguished.
+All **15/15** recorded source hashes match the current files. The ten-page
+PDF compiles without overfull/undefined-reference warnings and has been
+visually checked on every page. Python compilation and whitespace checks
+pass. No new commit/push was requested in this step.
+
+**Next bounded choices; no blind quartic weakening.**
+
+1. Prioritize the fixed-bare Nielsen/BRST insertions and the full neutral
+   physical mixing block, including the background-to-quantum map and
+   background displacement. Reapply the loop light-doublet condition in
+   the same tadpole prescription. Do not identify a zero of this radial
+   background block alone with a physical mass pole.
+2. Alternatively construct a retained-light-block EFT with explicit
+   momentum power counting from the certified vertex-to-gap criterion.
+   A large finite field renormalization or integrating out a nonzero but
+   small gap is not a proof of perturbative control. Any replacement
+   requires mixed BFB, competing-vacuum and higher-order remainder tests.
+3. The existing complete radial Majorana function can be added for three
+   specified Takagi masses; no fitted masses are invented. Nonradial
+   fermion kernels still need actual complex Yukawas. Full Wilson/box,
+   lower gauge/ghost/Yukawa finite matching and the finite `C_HN` seesaw
+   remain open. **Physical fit, determinant and portal are not promoted.**
 
 ### P-INV1: invariant attribution, inverse-gap obstruction and radial fermions (`scalar audit done; no controlled replacement`; 2026-09-14)
 

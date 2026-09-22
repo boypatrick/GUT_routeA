@@ -1,0 +1,162 @@
+% Standalone section fragment for inclusion in the same-action momentum note.
+% Requires amsmath and amssymb. No independent preamble or bibliography.
+\section{Exact tensor-action certification of the transverse projectors}
+\label{sec:exact-transverse-action-certificate}
+
+The earlier integer projectors were exact as projectors, but their
+identification with the scalar action was only tested numerically.  We now
+close that particular gap by an independent Gaussian-integer contraction
+calculation.  No floating Hessian, eigensolver, tolerance, or rational fit to
+a Hessian enters this certificate.  The claim remains a theorem about the
+declared real scalar action on its fixed-orientation radial slice, not a
+complete gauged pole or vacuum-stability theorem.
+
+\subsection{A rational background and the canonical five-form map}
+
+Let $q=(q_1<\cdots<q_5)$ label the $252$ five-element subsets of
+$\{0,\ldots,9\}$.  Pair $q$ with its complement $q^c$ in the same order
+used in the action.  If $s_q$ is the sign of $(q,q^c)$ and the chosen
+Hodge eigenvalue is $d\,i$, $d\in\{1,-1\}$, the canonical real
+$126+126$ coordinates obey
+\begin{align}
+ \Sigma_q&=\frac{x_k+i x_{k+126}}2,\\
+ \Sigma_{q^c}&=-d\,i\,s_q\frac{x_k+i x_{k+126}}2.
+\end{align}
+Thus $C_j=2\,\partial\Sigma/\partial x_j$ has Gaussian-integer
+quint coefficients.  No $\sqrt2$ remains in this canonical Sigma map.
+
+Choose
+\begin{equation}
+ (w,\sigma,v_s)=(5,\sqrt2,\sqrt2),\qquad
+ \Phi=\operatorname{diag}(-2,-2,-2,-2,-2,-2,3,3,3,3),\quad S=1.
+\end{equation}
+Writing $B=\Sigma(x_0)$, the tensor $A=4B$ has coefficient
+$i^{n_o(q)}$ when $q$ selects one index from each ordered pair
+$(0,1),(2,3),\ldots,(8,9)$, and zero otherwise; $n_o(q)$ counts odd
+indices.  Hence $A\in\mathbb Z[i]^{252}$.  Antisymmetric extension
+uses only permutation signs and zeros for repeated indices.
+The certificate also checks the Hodge identities, the real canonical
+metric, and the exact background reconstruction.
+
+The output Sigma covectors retain their canonical normalization.
+For output Phi covectors we may use $E_{ab}+E_{ba}$, $a<b$, and
+$E_{aa}-E_{99}$, $a<9$; for output $H,S$ covectors use $1,i$.
+These are invertible real changes of basis, so a vanishing mixed image in
+these rational bases is equivalent to a vanishing canonical mixed image.
+
+\subsection{Removing factorial sums before differentiating}
+
+For sorted $I$ define the compressed contractions
+\begin{align}
+ M_{mn}(U,V)&=\sum_{|I|=4}U_{Im}V_{In},\\
+ N_{ab,cd}(U,V)&=\sum_{|I|=3}U_{Iab}V_{Icd},
+ \qquad a<b,\ c<d.
+\end{align}
+An unsorted pair is extended antisymmetrically and a repeated pair is zero.
+The original normalization factors $4!$, $3!$, and the ordered-pair factors
+then give exactly
+\begin{align}
+ I_{\lambda_2}&=\langle M(\Sigma,\bar\Sigma),M(\Sigma,\bar\Sigma)\rangle,\\
+ I_{\lambda_4}&=\langle N(\Sigma,\bar\Sigma),N(\Sigma,\bar\Sigma)\rangle,\\
+ I_{\lambda'_4}&=\langle N(\Sigma,\bar\Sigma),\mathcal C N(\Sigma,\bar\Sigma)\rangle,\\
+ (\mathcal C N)_{ab,cd}
+ &=N_{ac,bd}-N_{bc,ad}-N_{ad,bc}+N_{bd,ac}.
+\end{align}
+Here $\langle X,Y\rangle=\sum X_{ij}Y_{ij}$ is a bilinear dot product,
+\emph{not} a Hermitian norm.  Confusing the two would erase the important
+holomorphic cancellations.  The finite integer permutation matrix
+$\mathcal C$ is checked to be self-adjoint for this bilinear dot product.
+
+For either $X=M$ or $X=N$, define
+\begin{align}
+ \widehat X_0&=X(A,\bar A),\\
+ G_j&=X(C_j,\bar A)+X(A,\bar C_j),\\
+ Q_{jk}&=X(C_j,\bar C_k)+X(C_k,\bar C_j).
+\end{align}
+Since $B=A/4$ and $\partial_j\Sigma=C_j/2$, differentiating the
+quadratic Gram functional gives the exact Gaussian-integer formula
+\begin{equation}
+ \boxed{32(H_\lambda)_{jk}
+ =\langle G_j,\mathcal C G_k\rangle
+  +\langle\widehat X_0,\mathcal C Q_{jk}\rangle.}
+\end{equation}
+For $\lambda_2,\lambda_4$, replace $\mathcal C$ by the identity.
+The resulting imaginary parts vanish exactly.  The matrices are at most
+$252\times252$; the compressed Gram arrays are $10\times10$ and
+$45\times45$.
+
+\subsection{The mixed covectors are part of the certificate}
+
+The other nontrivial contractions with a Sigma input are
+\begin{align}
+ I_\beta&=\sum_{ijkl}\Phi_{ij}\Phi_{kl}
+                  N_{ik,jl}(\Sigma,\bar\Sigma),\\
+ I_{\chi_4}&=S\sum_{mn}\Phi_{mn}M_{mn}(\Sigma,\Sigma)+\mathrm{c.c.},\\
+ I_{\eta_1}&=\frac16\sum_{a<b,c<d,n}
+         N_{ab,cd}(\Sigma,\bar\Sigma)\Sigma_{abcdn}H_n
+         +\mathrm{c.c.}
+\end{align}
+They are differentiated before setting the external $H$ background to zero.
+This includes all Phi--Sigma covectors for $\beta$, all Phi--Sigma and
+S--Sigma covectors for $\chi_4$, and all twenty H--Sigma covectors for
+$\eta_1$.  In particular, the fact that $I_{\eta_1}=0$ at $H=0$ does
+not justify dropping its mixed Hessian.
+The remaining active norm terms are $\nu^2,\lambda_0,\alpha,\chi_2$.
+All nineteen other invariants either have no Sigma input or retain a
+factor of $H$ after the two derivatives, and therefore give zero.
+
+\subsection{Finite exact certificates and their continuation}
+
+The stored integer matrices $K_{50},K_{36}$, each $252\times252$,
+are treated as candidate matrices, with $P_r=K_r/8$ embedded into the
+Sigma block.  The following are checked using exact integer arithmetic:
+\begin{equation}
+ K_r^T=K_r,\qquad K_r^2=8K_r,\qquad
+ \operatorname{tr}K_r=8r,\qquad K_{50}K_{36}=0.
+\end{equation}
+Symmetry and idempotency make the trace an exact rank certificate.
+For every one of the $29$ unit invariants, its independently derived
+rational $328\times252$ covector matrix $H_\alpha=N_\alpha/d_\alpha$
+is checked against
+\begin{equation}
+ N_\alpha K_r=d_\alpha c_{\alpha,r}\,\iota_\Sigma K_r,
+ \qquad r=50,36.
+\end{equation}
+All denominators are cleared; every residual entry is the integer zero.
+At the rational background the only nonzero eigenvalues are
+\begin{equation}
+\begin{array}{c|rrrrrrrr}
+ \text{invariant}&\nu^2&\lambda_0&\lambda_2&\lambda_4&\lambda'_4&\alpha&\beta&\chi_2\\ \hline
+ c_{\alpha,50}&-\frac12&1&8&8&32&30&-30&120\\
+ c_{\alpha,36}&-\frac12&1&12&12&16&30&-30&120.
+\end{array}
+\end{equation}
+Every individual invariant Hessian block has a single radial multidegree:
+the invariant degree minus the degrees of its two external legs.
+Thus each zero block and scalar Sigma block proved at this nonzero radial
+point extends exactly to every nonzero radial point of the same angular
+orientation.  Linearity in the real action parameters then proves
+\begin{align}
+ m_{50}^2={}&-\frac{\nu^2}{2}
+ +\left(\frac{\lambda_0}{2}+4\lambda_2+4\lambda_4+16\lambda'_4\right)\sigma^2
+ +\frac65(\alpha-\beta)w^2+60\chi_2v_s^2,\\
+ m_{36}^2={}&-\frac{\nu^2}{2}
+ +\left(\frac{\lambda_0}{2}+6\lambda_2+6\lambda_4+8\lambda'_4\right)\sigma^2
+ +\frac65(\alpha-\beta)w^2+60\chi_2v_s^2.
+\end{align}
+Consequently the action-to-projector assumption in the earlier
+$1/\tau$ argument has been removed.  The condition that the retained hard
+spectrum is positive, and the restriction to the scalar hard one-loop
+kinetic kernel, are not removed.
+
+\paragraph{Arithmetic audit.}
+The implementation uses pairs of signed integer arrays for Gaussian
+integers. Before each large contraction product and sum it bounds every
+resulting entry by the corresponding dimension times input entry bounds.
+The fixed geometry constructors separately use only $0,\pm1$, the
+diagonal entries $-2,3$, and explicitly small integer factors.
+The largest recorded conservative bound is $1{,}008{,}000$, safely below
+$2^{62}$ and hence below signed integer overflow.  No small residual is
+accepted: the certificate consists of exact zero-entry tests.  The source
+action is pinned by its SHA-256 digest; a changed action requires a fresh
+audit of the symbolic contraction transcription.

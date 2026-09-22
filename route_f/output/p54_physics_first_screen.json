@@ -1,0 +1,260 @@
+{
+  "schema": "p54-physics-first-join-v1",
+  "date": "2026-09-22",
+  "frozen_benchmark_regression_only": true,
+  "no_full_matching_started": true,
+  "joint_flavor_scale_witness": false,
+  "common_scale_but_not_harmonized_precision_input_card": {
+    "gauge_screen_g123_at_MI": [
+      0.5511217347888777,
+      0.5392350008204777,
+      0.5705242803191434
+    ],
+    "flavor_transport_g123_at_MI": [
+      0.5513459023882958,
+      0.5425634319064847,
+      0.5697714109335943
+    ],
+    "relative_discrepancy": [
+      0.00040674788393890715,
+      0.006172505644000514,
+      -0.0013196097195511403
+    ],
+    "new_blocker": false
+  },
+  "matched_physical_witness": false,
+  "figure_rows": [
+    {
+      "source": "p54_flavor_lo_screen.json",
+      "key": "best",
+      "figure_A_metrics": [
+        1.0657103002959627,
+        0.5533154070442325,
+        0.0705617364841815,
+        0.6385940088601333,
+        0.04131097763866641
+      ],
+      "figure_B_sigma_interval_GeV": [
+        703992701730.2725,
+        18038702229413.59
+      ]
+    },
+    {
+      "source": "p54_flavor_lo_screen.json",
+      "key": "fixed_sigma_refinement",
+      "figure_A_metrics": [
+        8.028454880215628,
+        3.957673754244453,
+        0.05240835470829246,
+        1.668574206897574,
+        1.114527241282384
+      ],
+      "figure_B_sigma_interval_GeV": [
+        13948252662004.67,
+        89151884191705.23
+      ]
+    }
+  ],
+  "figure_C_scenarios": [
+    {
+      "id": "P20_0.333333_P33_3_B15_1",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.133374389981032,
+      "A_R": 2.9746263182414747,
+      "norm_limit": 3.6252279126518463
+    },
+    {
+      "id": "P20_0.333333_P33_3_B15_2",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.124933533324011,
+      "A_R": 2.9666131058909935,
+      "norm_limit": 3.47507797434852
+    },
+    {
+      "id": "P20_0.333333_P33_3_B15_3",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.1205613316152974,
+      "A_R": 2.962462415723554,
+      "norm_limit": 3.3897740239761016
+    },
+    {
+      "id": "P20_1_P33_1_B15_1",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.0987949615036467,
+      "A_R": 2.941798808593258,
+      "norm_limit": 1.923359492027349
+    },
+    {
+      "id": "P20_1_P33_1_B15_2",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.09097405876988,
+      "A_R": 2.9343741410595423,
+      "norm_limit": 1.8434999553877767
+    },
+    {
+      "id": "P20_1_P33_1_B15_3",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.08694971484253,
+      "A_R": 2.9305536849409792,
+      "norm_limit": 1.7981368292964854
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_1",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.0651224021834693,
+      "A_R": 2.909832222832993,
+      "norm_limit": 1.0203857894244122
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_2",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.057891883044878,
+      "A_R": 2.902968027927661,
+      "norm_limit": 0.977915066666631
+    },
+    {
+      "id": "P20_3_P33_0.333333_B15_3",
+      "source": "p54_scales_lo_screen.json",
+      "A_L": 3.054198884444635,
+      "A_R": 2.8994621299843337,
+      "norm_limit": 0.9537938447863028
+    }
+  ],
+  "checks": [
+    {
+      "name": "scale_subreport_checks",
+      "passed": true
+    },
+    {
+      "name": "flavor_subreport_checks",
+      "passed": true
+    },
+    {
+      "name": "scale_source_hash_code/screen_p54_scales_lo.py",
+      "passed": true
+    },
+    {
+      "name": "scale_source_hash_code/verify_p54_ps_active_census.py",
+      "passed": true
+    },
+    {
+      "name": "scale_source_hash_output/p54_p2_two_site_matching.json",
+      "passed": true
+    },
+    {
+      "name": "scale_source_hash_code/verify_p54_p1_hessian_spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "scale_source_hash_code/verify_p54_p2_two_site_matching.py",
+      "passed": true
+    },
+    {
+      "name": "flavor_source_hash_code/screen_p54_flavor_lo.py",
+      "passed": true
+    },
+    {
+      "name": "flavor_source_hash_code/verify_p54_p3_flavor_cw_gate.py",
+      "passed": true
+    },
+    {
+      "name": "flavor_source_hash_code/verify_p54_sequential_seesaw.py",
+      "passed": true
+    },
+    {
+      "name": "flavor_source_hash_output/p54_common_yukawa_phase.json",
+      "passed": true
+    },
+    {
+      "name": "independent_D_parity_MI",
+      "passed": true
+    },
+    {
+      "name": "shared_comparison_scale",
+      "passed": true
+    },
+    {
+      "name": "shared_sigma_not_equal_MI",
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_1_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_2_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_0.333333_P33_3_B15_3_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_1_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_2_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_1_P33_1_B15_3_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_1_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_2_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "P20_3_P33_0.333333_B15_3_same_sigma",
+      "passed": true
+    },
+    {
+      "name": "best_independent_overlap_interval",
+      "passed": true
+    },
+    {
+      "name": "best_plot_decisions_equal_saved_gates",
+      "passed": true
+    },
+    {
+      "name": "best_sigma_interval_from_d",
+      "passed": true
+    },
+    {
+      "name": "fixed_sigma_refinement_independent_overlap_interval",
+      "passed": true
+    },
+    {
+      "name": "fixed_sigma_refinement_plot_decisions_equal_saved_gates",
+      "passed": true
+    },
+    {
+      "name": "fixed_sigma_refinement_sigma_interval_from_d",
+      "passed": true
+    },
+    {
+      "name": "no_scale_only_physical_promotion",
+      "passed": true
+    },
+    {
+      "name": "frozen_benchmark_not_reused",
+      "passed": true
+    },
+    {
+      "name": "no_matched_UV_claim",
+      "passed": true
+    }
+  ],
+  "passed": 32,
+  "total": 32,
+  "source_hashes": {
+    "output/p54_scales_lo_screen.json": "fd01b0b4f6b4bdb83cc636eef87f98ea097f59ad799830e0cc2f177a77b74b59",
+    "output/p54_flavor_lo_screen.json": "297688077900e21b7d79ceb39634a6a0bec450237f07914f156c2563e479ecfd",
+    "code/build_p54_physics_first_screen.py": "1a31b5f1d21db96b5b6e8d296dc662d9e4d07b39061b540c4278d0d656133143"
+  }
+}

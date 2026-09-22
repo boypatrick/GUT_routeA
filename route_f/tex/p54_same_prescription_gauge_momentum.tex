@@ -1,0 +1,503 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 same-prescription gauge momentum and exact action certificate}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\MS}{\overline{\mathrm{MS}}}
+\newcommand{\FP}{\operatorname{FP}}
+\title{Route-F P54: Same-Prescription Gauge Momentum,\\
+Mixed Loops and Exact Transverse Action Identities}
+\author{P54PQ-v2 four-dimensional mainline}
+\date{17 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We complete the one-loop Euclidean radial bosonic background kernel for
+an explicit background-field gauge fixing of the unchanged P54 action.
+Vector, scalar--vector and direct ghost contributions are reduced in
+$d=4-2\epsilon$ before subtraction; finite rational terms are retained.
+Zero-momentum vector CW and tadpole limits reproduce the existing common
+prescription, while nonzero momentum retains all scalar internal states.
+An independent Gaussian-integer calculation certifies the rank-50 and
+rank-36 transverse action identities, including all mixed covectors.
+No quartic scan, parameter replacement or physical flavor fit is made.
+The result is not a Nielsen-certified physical pole or an all-orders
+stability theorem. The large local hard-sector insertion remains.
+\end{abstract}
+
+\section{Frozen input and meaning of completion}
+The potential is precisely \texttt{potential\_factory} in
+\texttt{verify\_p54\_p1\_hessian\_spectrum.py}, with 328 canonical real
+scalar coordinates and the original real parameter card. We use
+\begin{align}
+ X&=Rr,\quad r=(w,\sigma,v_s)=(1,.1265,.25)\omega,\\
+ G&=R^TR=\diag(12/5,2,1),\quad
+ g=\mu/\omega=.5626028899853225.
+\end{align}
+All displayed numerical matrices use $\omega=1$. Define
+$H=V_0''(X)$, $T_r=\partial_r H$, $U_{rs}=\partial_r\partial_s H$,
+with the potential parameters fixed during these derivatives.
+The 38 soft scalar modes comprise 33 gauge Goldstones, one PQ mode and
+four real tuned doublet components; there are 290 positive scalar modes.
+Of the 45 gauge vectors, 33 are massive and 12 are unbroken.
+
+\emph{Completion} below means the three-by-three radial restriction of the
+one-loop \emph{bosonic background functional}, at nonzero Euclidean
+$s=p_E^2$, for the explicit fixing in the next section. It does not mean
+the full neutral physical mixing block, all nonradial amplitudes, or
+all Wilson coefficients. The three unfitted radial Majorana masses
+remain an explicit fermion input. The common invariant mass counterterms
+are unchanged; no finite kinetic counterterm is tuned to cancel a result.
+
+\section{Quadratic operator from the kinetic action}
+Let $T^{aT}=-T^a$ be the actual real scalar representation matrices and
+choose
+\begin{equation}
+ D_\mu X=\partial_\mu X+g a_\mu^aT^aX,\quad X=\bar X+\eta,\quad
+ v_a=T^a\bar X,\quad
+ F^a=\partial_\mu a_\mu^a+\xi g v_a^T\eta,\quad
+ {\cal L}_{\rm gf}=\frac{F^aF^a}{2\xi}.
+\end{equation}
+The gauge background is zero. The mixed kinetic term before gauge fixing is
+\[
+ g a_\mu^a\{v_a^T\partial_\mu\eta
+                -(\partial_\mu v_a)^T\eta\}.
+\]
+Integrating $g(\partial_\mu a_\mu^a)v_a^T\eta$ by parts cancels
+the first term and adds a second copy of the latter. Consequently
+\begin{align}
+ {\cal Q}_B&=\begin{pmatrix}Q_{SS}&W^T\\W&Q_{VV}\end{pmatrix},
+ &W^a_{\mu I}&=-2g(T^a\partial_\mu\bar X)_I,\\
+ Q_{SS}&=-\partial^2+H(\bar X)+\xi g^2vv^T,&
+ Q_c&=-\partial^2+\xi M^2,\\
+ (Q_{VV})^{ab}_{\mu\nu}
+ &=\left[-\partial^2\delta_{\mu\nu}
+ +(1-\xi^{-1})\partial_\mu\partial_\nu\right]\delta^{ab}
+ +M^2_{ab}\delta_{\mu\nu},&
+ M^2&=g^2v^Tv.
+\end{align}
+Here $v$ is the $328\times45$ orbit matrix. The constant-background
+mixed operator vanishes, but its first radial derivative at momentum
+$p$ is $W_r=-2igp_\mu T^aR_r$. This is the term that cannot be inferred
+from a constant-background vector mass spectrum.
+
+The one-loop bosonic functional and its second derivative are
+\begin{align}
+ \Gamma_1^B&=\tfrac12\Tr\log{\cal Q}_B-\Tr\log Q_c+\Gamma_{\rm CT},\\
+ \Pi^B_{rs}
+ &=\tfrac12\Tr[{\cal Q}_B^{-1}{\cal Q}_{B,rs}
+       -{\cal Q}_B^{-1}{\cal Q}_{B,r}{\cal Q}_B^{-1}{\cal Q}_{B,s}],
+\end{align}
+with the ghost expression having coefficient $-1$ instead of $1/2$.
+This fixes the combinatorial factors and signs without assigning a
+separate phenomenological projection.
+
+\subsection{Actual vertices and finite gauge parameter}
+Write $d_{ar}=T^aR_r$. Then
+\begin{align}
+ B_{r,ab}&=g^2(d_{ar}^Tv_b+v_a^Td_{br}),\\
+ C_{rs,ab}&=g^2(d_{ar}^Td_{bs}+d_{as}^Td_{br}),\\
+ H_\xi&=H+\xi g^2vv^T,\\
+ T^\xi_r&=T_r+\xi g^2(d_rv^T+vd_r^T),\\
+ U^\xi_{rs}&=U_{rs}+\xi g^2(d_rd_s^T+d_sd_r^T).
+\end{align}
+Rotate $B,C$ and $d$ by the same vector mass eigenbasis.
+The unbroken 12-dimensional vector subspace is annihilated by these
+radial vertices, as directly checked from the representation.
+Hence the following masters only need strictly positive vector masses.
+Scalar masses $b$ may vanish. At the stationary point $Hv=0$; finite
+$\xi$ gives the 33 gauge Goldstones masses $\xi m_V^2$, leaving five
+scalar zero modes. All finite-$\xi$ terms above must be retained together.
+
+\section{Dimensional reduction of the momentum masters}
+To avoid sign ambiguity, strip the overall $1/(16\pi^2)$ from every
+integral and write
+\begin{align}
+ {\cal A}(a)&=a[\log(a/\mu^2)-1],\qquad {\cal A}(0)=0,\\
+ {\cal B}(a,b;s)&=-\int_0^1 dx\,
+       \log\frac{(1-x)a+xb+x(1-x)s}{\mu^2}.
+\end{align}
+The Euclidean tadpole has UV residue $-a$ and finite part $\mathcal A$;
+the bubble has residue $+1$ and finite part $\mathcal B$.
+The previous scalar code uses $L=-{\cal B}$. Useful limits are
+\begin{align}
+ {\cal B}(a,a;0)&=-\log(a/\mu^2),\\
+ {\cal B}(a,0;0)&=1-\log(a/\mu^2),\\
+ {\cal B}(0,0;s)&=2-\log(s/\mu^2),\quad s>0.
+\end{align}
+The doubly massless bubble at $s=0$ is not a finite local quantity.
+
+\subsection{Tensor numerators}
+Let $q=k+p$, $p^2=s$, and define finite parts
+\begin{align}
+ {\cal F}(a,b;s)
+ &:=4\,\FP\!\int_k\frac{(k\cdot q)^2}{(k^2+a)(q^2+b)}
+ \nonumber\\
+ &=-(3a+b+s){\cal A}(a)-(a+3b+s){\cal A}(b)
+       +(a+b+s)^2{\cal B}(a,b;s),\\
+ {\cal J}(a,b;s)
+ &:=\FP\!\int_k\frac{(p\cdot k)^2}{(k^2+a)(q^2+b)}
+ \nonumber\\
+ &=\frac14\{(a-b-s){\cal A}(a)+(b-a+3s){\cal A}(b)
+       +(a-b-s)^2{\cal B}(a,b;s)\}.
+\end{align}
+The symbol $\int_k$ in these master definitions includes the stripped
+$16\pi^2$ normalization. To derive them, substitute
+$2k\cdot q=k^2+q^2-s$ and
+$2p\cdot k=q^2-k^2-s$ before integrating. For example
+\[
+ \int_k\frac{k^2}{q^2+b}=(-b+s)\int_k\frac1{q^2+b},
+\]
+because after $k=q-p$ the odd term and the scaleless constant vanish in
+dimensional regularization. Expanding the squared numerators gives the
+displayed identities. Their UV residues are respectively
+\begin{equation}
+ F_{\rm pole}=4a^2+4b^2+4ab+3s(a+b)+s^2,\qquad
+ J_{\rm pole}=\tfrac14s(s-a-b).
+\end{equation}
+
+\subsection{Vector and mixed masters}
+For $a>0$, the vector propagator is
+\begin{equation}
+ D_{a,\mu\nu}(k)
+ =\frac{P^T_{\mu\nu}(k)}{k^2+a}
+       +\frac{\xi P^L_{\mu\nu}(k)}{k^2+\xi a}
+ =\frac{\delta_{\mu\nu}}{k^2+a}
+ +\frac{k_\mu k_\nu}{a}
+   \left(\frac1{k^2+a}-\frac1{k^2+\xi a}\right).
+\end{equation}
+Set $c=\xi a$, $d=\xi b$. Its trace and two-propagator master are
+\begin{align}
+ {\cal A}_\xi^V(a)
+ &=3{\cal A}(a)+2a+\xi{\cal A}(\xi a),\\
+ {\cal T}_\xi(a,b;s)
+ &=2{\cal B}(a,b;s)-2
+       +\xi[{\cal B}(a,d;s)+{\cal B}(c,b;s)]\nonumber\\
+ &\quad+\frac{{\cal F}(a,b;s)-{\cal F}(a,d;s)
+                    -{\cal F}(c,b;s)+{\cal F}(c,d;s)}{4ab}.
+\end{align}
+In the trace of $D_aD_b$, the first three terms before subtraction
+combine to $(d_{\rm spacetime}-2)B_{ab}+\xi B_{ad}+\xi B_{cb}$.
+Therefore setting $d_{\rm spacetime}=4$ prematurely loses the finite
+$-2$. Similarly $(3-2\epsilon)A_{\rm bare}$ yields $3{\cal A}+2a$.
+The vector bubble UV pole is $3+\xi^2$; it has no momentum-dependent
+UV pole. The seagull pole is $-(3+\xi^2)a$.
+
+The scalar--vector master from two $W$ vertices is
+\begin{equation}
+ {\cal I}_\xi(a,b;s)
+ :=\FP\!\int_k\frac{p_\mu D_{a,\mu\nu}(k)p_\nu}{q^2+b}
+ =s{\cal B}(a,b;s)
+       +\frac{{\cal J}(a,b;s)-{\cal J}(\xi a,b;s)}{a}.
+ \label{eq:mixedmaster}
+\end{equation}
+Its UV residue is $s(3+\xi)/4$. Its value at zero momentum is zero,
+but its derivative is not:
+\begin{equation}
+ {\cal I}'_\xi(a,b;0)
+ =\frac34{\cal B}(a,b;0)
+       +\frac{\xi}{4}{\cal B}(\xi a,b;0)+\frac{\xi-1}{8}.
+ \label{eq:mixedslope}
+\end{equation}
+At zero momentum, angular averaging gives
+$(1-1/d)B_{ab}+(\xi/d)B_{\xi a,b}$ before subtraction.
+Expanding $1/d=1/4+\epsilon/8+\cdots$ proves the finite last term.
+In particular, the Landau $-1/8$ is not adjustable.
+
+Checks independent of the model include
+\begin{align}
+ {\cal T}_1(a,b;s)&=4{\cal B}(a,b;s)-2,&
+ {\cal I}_1(a,b;s)&=s{\cal B}(a,b;s),\\
+ {\cal T}_\xi(a,b;0)
+ &=3{\cal B}(a,b;0)-2+\xi^2{\cal B}(\xi a,\xi b;0).
+\end{align}
+Terms multiplied by $\xi$ or $\xi^2$ are taken as their vanishing
+limits at $\xi=0$, not as an evaluation of an undefined $0\log0$.
+
+\section{Assembly with the original tadpole prescription}
+Let $a_A$ be vector mass squares, $b_i$ the eigenvalues of $H_\xi$,
+and $u_i$ its orthonormal eigenvectors. All sums below include ordered
+internal pairs. The radial contributions are
+\begin{align}
+ \Pi^{VV}_{rs}(s)
+ &=\frac1{32\pi^2}\left[
+  \sum_A C_{rs,AA}{\cal A}^V_\xi(a_A)
+  -\sum_{AB}B_{r,AB}B_{s,BA}{\cal T}_\xi(a_A,a_B;s)\right],\\
+ \Pi^c_{rs}(s)
+ &=\frac1{16\pi^2}\left[
+  -\sum_A\xi C_{rs,AA}{\cal A}(\xi a_A)
+  +\sum_{AB}\xi^2 B_{r,AB}B_{s,BA}
+                         {\cal B}(\xi a_A,\xi a_B;s)\right],\\
+ \Pi^{SV}_{rs}(s)
+ &=-\frac{4g^2}{16\pi^2}\sum_{A i}
+ (d_{Ar}^Tu_i)(d_{As}^Tu_i){\cal I}_\xi(a_A,b_i;s),\\
+ \Pi^S_{rs}(s)
+ &=\frac1{32\pi^2}\left[
+ \sum_i (u_i^TU^\xi_{rs}u_i){\cal A}(b_i)
+ -\sum_{ij}(u_i^TT^\xi_ru_j)(u_j^TT^\xi_su_i)
+                           {\cal B}(b_i,b_j;s)\right].
+\end{align}
+The minus sign and factor four in $\Pi^{SV}$ follow from the two
+off-diagonal blocks in $\Tr\log{\cal Q}_B$, not from counting a mixed
+diagram by analogy. The two $W$ insertions supply $4g^2p_\mu p_\nu$.
+In strict Landau gauge the direct scalar-dependent ghost vertices
+vanish; this says nothing about ghost contributions to gauge-background
+correlators, Yukawa matching or boxes.
+
+With scalar and vector tadpoles $t_S,t_V$, the common finite invariant
+mass shift obeys
+\begin{equation}
+ A_r\,\delta m=-t_S-t_V,\quad
+ A_r=-\diag(12w/5,\sigma,v_s),\quad
+ H_{\rm CT}=-\diag((t_S+t_V)/r).
+\end{equation}
+It is the already fixed prescription, not a new zero-momentum
+subtraction of each diagram. The Landau radial inverse background kernel is
+\begin{equation}
+ {\cal K}_B(s)=sG+R^THR+H_{\rm CT}
+                      +\Pi^S(s)+\Pi^{VV}(s)+\Pi^{SV}(s).
+ \label{eq:total}
+\end{equation}
+At $s=0$, $\Pi^{SV}=0$ and the vector kernel exactly reproduces the
+existing vector CW Hessian with constant $5/6$. The hard scalar CW
+comparison omits only the singular soft--soft bubble at $s=0$.
+It is \emph{not} an assertion that the full scalar Hessian has a finite
+zero-momentum limit. For every $s>0$, all 328 scalar internal states
+are included.
+
+The gauge-dependent local wave UV residue is
+\begin{equation}
+ \Pi_{\rm pole}(s)\big|_{\partial^2}
+ =-\frac{g^2(3+\xi)}{16\pi^2\epsilon}
+   s\sum_{AI}d_{Ar,I}d_{As,I}.
+\end{equation}
+The minimal wave counterterm has the opposite sign. No finite wave
+shift is introduced. This residue is for the declared background
+external-field convention, not a transplanted quantum-field convention.
+
+\subsection{Fermions stay as an explicit input function}
+On the already verified radial Yukawa slice $M_F=\sigma F_M$.
+If its three Takagi masses are $M_i$, the fixed-VEV Majorana addition is
+\begin{equation}
+ \Pi^{F,\rm FV}_{\sigma\sigma}(s)
+ =\frac1{16\pi^2}\sum_{i=1}^3
+    (M_i/\sigma)^2(4M_i^2+s){\cal B}(M_i^2,M_i^2;s),
+ \qquad \Pi^{F,\rm FV}_{rs}=0\quad (rs\ne\sigma\sigma).
+\end{equation}
+This includes its own corresponding fermion tadpole counterterm; do not
+also insert that counterterm into $H_{\rm CT}$ in \eqref{eq:total}.
+The implementation of this function already exists in
+\texttt{verify\_p54\_radial\_fermion\_momentum.py}.
+No synthetic masses are promoted to fitted Yukawa data here.
+
+\section{Independent numerical checks and actual result}
+\subsection{Checks that do not reuse the master reduction}
+For UV-convergent momentum differences we integrate the original
+propagators in four dimensions. With $t=k^2$, $z=\cos\theta$,
+\begin{equation}
+ 16\pi^2\int\frac{d^4k}{(2\pi)^4}f(t,z)
+ =\int_0^\infty dt\,t\,\langle f\rangle_{S^3},\quad
+ q^2=t+s+2\sqrt{ts}\,z.
+\end{equation}
+The transverse trace is $2+(k\cdot q)^2/(k^2q^2)$, and the mixed
+numerator divided by $s$ is
+$(1-z^2)/(t+a)+\xi z^2/(t+\xi a)$.
+We subtract the $s=0$ vector value or mixed slope before integration.
+The finite rational constants cancel in these differences; they are
+separately tested with the $d$-dimensional gamma-function tadpole and
+bubble, including their poles.
+
+For a massless scalar the angular endpoint $q=0$ converges slowly in
+an unsplit angular quadrature. We use the independent exact shell identities
+\begin{equation}
+ \left\langle\frac1{q^2}\right\rangle=\frac1{\max(t,s)},\qquad
+ \left\langle\frac{z^2}{q^2}\right\rangle
+       =\frac{t+s}{4\max(t,s)^2}.
+\end{equation}
+Radial integration is then split at $t=s$. Direct angular integrations
+at 320 and 640 nodes approach the same answer. The production master
+uses 45-digit arithmetic, not this slower endpoint quadrature.
+Another independent UV-finite check is
+\begin{equation}
+ {\cal T}'_0(a,b;0)
+ =-\int_0^\infty dt\left[
+ \frac{3bt}{(t+a)(t+b)^3}
+       +\frac{3}{4(t+a)(t+b)}\right].
+\end{equation}
+Integration by parts makes its symmetry in $a,b$ explicit; for $a=b$
+it equals $-5/(4a)$. This checks the small-momentum master derivative
+without finite-differencing the model Hessian.
+
+\subsection{No new scalar-background or coupling scan}
+The radial calculation reuses ten cached polynomial action jets with
+zero new full Hessian evaluations. The massive vector squares cluster at
+\begin{equation}
+ .00506506436,\quad .02532532182,\quad
+ .31652201182,\quad .32158707618.
+\end{equation}
+Different representation sectors can share a mass, so the 35-sector
+catalogue is not replaced by the 24 numerical scalar mass clusters.
+All multiplicities and off-diagonal vertex contractions are retained.
+
+The complete bosonic radial background kernel \eqref{eq:total} has the
+following generalized eigenvalues, solving $\mathcal K_Bz=\lambda Gz$:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$s/\omega^2$&$\lambda_1/\omega^2$&$\lambda_2/\omega^2$&$\lambda_3/\omega^2$\\
+\midrule
+.001&-.758575&.091032&1.138172\\
+.01 &-.726255&.101339&1.730301\\
+.05 &-.589137&.142534&2.188925\\
+.1  &-.421626&.193296&2.429713\\
+.5  & .596222&.795538&3.361713\\
+1   &1.098602&2.101012&4.194060\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are Euclidean off-shell diagnostics, \emph{not} six particle
+mass spectra. Neither a sign change in this table nor a negative
+truncated eigenvalue alone establishes a controlled physical pole.
+For example, at $s=.05$, adding vector momentum and the mixed bubble
+changes the smallest value from $-.584214$ to $-.589137$.
+
+The local gauge insertion, including the mixed term, is
+\begin{equation}
+ \Delta Z_{\rm gauge}=
+ \begin{pmatrix}
+ .0008027232&.0027101305&0\\
+ .0027101305&-.2951305062&0\\
+ 0&0&0
+ \end{pmatrix}.
+\end{equation}
+Its generalized eigenvalues are $(-.1475756,0,.0003448)$.
+Adding it to the earlier \emph{hard scalar local} insertion gives
+\begin{equation}
+ \operatorname{eig}_G(\Delta Z_{S,\rm hard}+\Delta Z_{\rm gauge})
+       =(.0089952,.2733736,2.4665928).
+\end{equation}
+This particular diagnostic excludes the nonlocal scalar soft part and
+unfitted fermions; it is not the derivative of a finite full kernel at
+$s=0$. Nevertheless the omitted gauge contribution does not remove
+the earlier large-insertion warning in this convention.
+
+\subsection{Landau limit versus Nielsen certification}
+At $s=.05$, keeping the original finite mass CT fixed, the norms
+$\|{\cal K}_\xi-{\cal K}_0\|_F$ for
+$\xi=.1,.01,.001,.0001$ are respectively
+\[
+ .9903655,\quad .2646452,\quad .0446276,\quad .00622907.
+\]
+Smaller $\xi=10^{-5},10^{-6}$ give $.00079812,.00009731$.
+Finite-$\xi$ tadpole residuals are recorded, not silently
+subtracted by a different parameter choice. Direct ghost terms vanish
+in this limit.
+
+There is also an analytic continuity check. At fixed $s>0$, the finite
+number of scalar bubble parameter integrals is continuous as a
+nonnegative mass approaches zero; the endpoint logarithms are integrable.
+Tadpoles $a\log a$ vanish. The explicit ghost terms carry $\xi,\xi^2$,
+and the vector/mixed formulas above have the same limiting masters.
+Thus the declared functional has a continuous Landau limit, with
+mass-log endpoint terms typically of order $\xi|\log\xi|$.
+This is not the fixed-bare Nielsen identity: the background displacement,
+BRST insertions and background-to-quantum conversion have not been
+calculated. Gauge-independent complex poles require that further
+structure, not equality of off-shell matrices \cite{GambinoGrassi}.
+
+\input{p54_exact_transverse_certificate_fragment.tex}
+
+\section{What the exact identities do and do not repair}
+With only $(\lambda_2,\lambda_4,\lambda'_4)$ multiplied by $\tau>0$
+and the stationary mass relation imposed, the now-certified blocks give
+\begin{equation}
+ m_{50}^2=12\tau\sigma^2,\qquad
+ m_{36}^2=\frac{58}{5}\tau\sigma^2.
+\end{equation}
+Fluctuation derivatives must be taken \emph{before} imposing that
+stationary relation. For $c_\kappa=12,58/5$ they are
+\begin{equation}
+ b_\kappa=\left(\tfrac{12}{5}(\alpha-\beta)w,\,
+       (\lambda_0+2c_\kappa\tau)\sigma,\,
+       120\chi_2v_s\right),\quad b_0=(.36,.11385,.03).
+\end{equation}
+For a positive retained hard spectrum, the scalar pair kernel has
+positive weights. Keeping only these two diagonal blocks gives
+\begin{equation}
+ \Delta Z_{S,\rm hard}\succeq
+ \sum_{\kappa}\frac{N_\kappa b_\kappa b_\kappa^T}
+                       {192\pi^2c_\kappa\tau\sigma^2}.
+\end{equation}
+Use the fixed $G$-unit witness
+$z_0=G^{-1}b_0/\sqrt{b_0^TG^{-1}b_0}$.
+Since $b_\kappa^Tz_0\ge b_0^Tz_0>0$, one obtains the exact
+coefficient formula
+\begin{equation}
+ \lambda_{\max}(G^{-1/2}\Delta Z_{S,\rm hard}G^{-1/2})
+ \ge\frac{b_0^TG^{-1}b_0}{192\pi^2\sigma^2\,\tau}
+      \left(\frac{50}{12}+\frac{36}{58/5}\right)
+ =\frac{.01471609503\ldots}{\tau}.
+\end{equation}
+The decimal is a presentation of the preceding exact expression,
+not a fitted constant. No false matrix inequality
+$b_\kappa b_\kappa^T\succeq b_0b_0^T$ is used. The exact certificate
+removes the action-to-projector assumption in this argument. It does
+not turn a positive scalar subset into a bound on a signed full gauge
+or fermion kernel, nor into a whole-model no-go theorem.
+
+\section{Next decisions and reproducibility}
+The two requested subgates have changed status: the explicit radial
+bosonic momentum functional is evaluated, and the real-action transverse
+identities have an exact certificate. Default quartics, the old vacuum,
+matching trajectories and observed-mass targets were not altered.
+
+The next bounded options are:
+\begin{enumerate}
+ \item Derive the fixed-bare Nielsen/BRST insertions and the complete
+ neutral physical mixing block, including the background/quantum map.
+ Track the induced background displacement and light-doublet retuning
+ in the same tadpole prescription before interpreting a pole.
+ \item Use the certified vertex-to-gap criterion for an explicit
+ retained-light-block EFT and momentum power counting. Do not integrate
+ these blocks out merely because their tree masses are nonzero.
+ Any new candidate needs mixed-field boundedness and competing-vacuum
+ tests as well as perturbative remainder control.
+\end{enumerate}
+Neither route authorizes another blind quartic scan. Full Wilson/box,
+lower gauge/ghost/Yukawa finite matching and the complete finite seesaw
+including $C_{HN}$ remain open. The one-loop matrix alone cannot solve
+these other gates. Goldstone resummation methods address specific IR
+problems, not automatically this complete gauged matching problem
+\cite{BraathenGoodsell}.
+
+The new verifiers are
+\begin{quote}\small
+\path{route_f/code/verify_p54_gauge_mixed_momentum.py}\\
+\path{route_f/code/verify_p54_exact_transverse_certificate.py}.
+\end{quote}
+The gauge verifier passes 99/99 numerical/regression checks; the action
+certificate passes 109/109 exact checks. Their JSON files retain
+matrices, individual checks and source hashes, with Markdown summaries.
+The gauge verifier uses the existing P1 JAX requirements plus NumPy,
+SciPy and mpmath; the exact certificate uses only Python, NumPy and SciPy,
+not JAX or any floating Hessian cache. Run the former with the existing
+\texttt{--cache-dir}; the latter needs no arguments. Exact proof claims
+refer to zero integer residuals for the pinned action, whereas quadrature
+and floating matrix checks retain their explicit numerical tolerances.
+
+\begin{thebibliography}{9}
+\bibitem{BraathenGoodsell}
+J.~Braathen and M.~D.~Goodsell,
+\emph{Avoiding the Goldstone Boson Catastrophe in general renormalisable
+field theories at two loops},
+\href{https://arxiv.org/abs/1609.06977}{arXiv:1609.06977}.
+\bibitem{GambinoGrassi}
+P.~Gambino and P.~A.~Grassi,
+\emph{The Nielsen Identities of the SM and the definition of mass},
+\href{https://arxiv.org/abs/hep-ph/9907254}{arXiv:hep-ph/9907254}.
+\end{thebibliography}
+\end{document}

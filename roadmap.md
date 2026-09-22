@@ -1,8 +1,136 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-09-14
+Last updated: 2026-09-23
 
-## Latest Route-F checkpoint: invariant attribution and inverse-gap control (2026-09-14)
+## New independent Route G: Scheme A (2026-09-22)
+
+The user chose Scheme A and explicitly requested **Route G**.
+[Route G](route_g/README.md) is a separate common-internal-spectrum
+prototype, not a rename of historical Route A or a replacement for
+Route F. A fixed positive-energy scalar on M4 x S1 gives one correlated
+mass tower and two interaction-defined probe channels. No measured
+particle masses, P54 parameters or per-particle geometries are fitted.
+
+G0/G1 are bounded-done: a short action-to-response TeX/PDF and a
+reproducible 331/331-check report are saved. Passive coordinates do not
+change masses; physical backgrounds can. An alpha=0 degenerate sine
+state is dark to both probes, even though the mass pole remains visible
+through the other combination. This is a probe-rank effect, not negative
+energy or particle disappearance.
+
+**G2 now supplies a local dynamical collision**, adding one neutral
+massive field X and a positive local quartic. Its localized wavepacket
+can recoil: Phi_n+X_l -> Phi_m+X_(l+n-m) conserves energy and compact
+momentum. The unchanged G1 quarter-holonomy card with MD=5,g=.05 and
+p_i=.2 permits Phi_1+X_0 -> Phi_0+X_1, with p_f=1.02175458 and
+tree sigma=6.27164081e-6 in inverse-square common energy units.
+The G2 derivation and numerical report are complete within this
+tree-level scope: 262/262 checks, plus the unchanged 331/331 G1 regression.
+The old one-body bulk-emission no-go remains valid; incoming detector
+recoil changes the physical process, not that proof.
+
+Next physical option: recoil-resolved conversion. An absolute
+finite-encounter probability additionally requires specified 4D packets;
+the common-overlap averaged sigma*v is only a rate coefficient.
+Tree-level EFT success is not quantum loop control or a particle fit.
+See [the Route-G roadmap](route_g/ROADMAP.md). Background stabilization,
+spin/chirality and a Route-F bridge remain separate open hypotheses.
+G1 does not repair or promote the Route-F physical fit; the Route-F
+priority recorded below is retained within that independent program.
+
+## Current Route-F priority: physics-first feasibility (2026-09-22)
+
+The user has demoted the frozen P54PQ-v2 benchmark to **regression-only**.
+Repairing it is no longer a research success condition. Existing kernels,
+exact identities and convergence tests remain useful historical results,
+not reasons to continue rescuing the same point.
+
+**P-PHYS1 supersedes the next-step priorities recorded below:** first test
+the shared two-matrix flavor structure against unification, seesaw and
+proton-decay scales at declared low order. Deliver one reproducible
+feasibility figure and explicit candidate rejection conditions. Only
+surviving, explicitly conditional regions merit full finite matching and
+physical-pole work. Failure of a bounded optimizer is not a model no-go;
+untested proton flavor factors or scalar realizability are not passes.
+The bounded screen is complete: corrected four-parent LO running gives
+`MI=5.08e13`, `MX=1.90e15` and `sigma=8.91e13` GeV. Nine correlated
+parent cards move MX but preserve MI by D parity. The near-fitting flavor
+profile permits only `sigma<=1.80e13` GeV under the declared norm caps;
+one fixed-sigma retry instead fails flavor (muon Yukawa +80.28%).
+**No joint LO witness found; this is not a whole-model exclusion.**
+Proton decay is given as amplitude inequalities, not a passed test.
+
+The figure, concise formulae and scoped rejection conditions are in
+`route_f/output/p54_physics_first_screen.md` and
+`route_f/output/figures/p54_physics_first_feasibility.png`. The three
+new scripts pass 52/52, 18/18 and 32/32 implementation checks.
+Full matching/poles are not started for these failed candidates. Detailed
+scope and bounded alternatives are at the top of `route_f/ROADMAP.md`;
+no new scalar scan or long derivation was added.
+
+The entries below retain their historical dates and conclusions; their
+old next-step recommendations do not override this decision.
+
+## Latest auxiliary Route-F checkpoint: coordinates and convergence (2026-09-17)
+
+P-COORD1 tests the proposed pi unit change on the frozen P-MOM1 matrices.
+Congruence of both loop and tree metrics proves the relative spectrum
+unchanged: the leading insertion stays 2.46659. Tree-metric whitening
+improves the known local kinetic condition number 6.90791 -> 3.43569;
+pi rescaling does not. Nonlinear charts require the off-shell gradient
+and connection terms, not a new apparent Hessian sign.
+
+The threshold-derived map
+`w=(sqrt(1+z/4)-1)/(sqrt(1+z/4)+1)`, `z=p_E^2/m^2`, genuinely enlarges
+the convergence domain of an equal-mass one-loop momentum series.
+Its coefficients and rigorous tail bound are derived without fitting.
+At the actual lightest-vector mass and p_E^2=.05, eight terms reduce the
+master's error from 34.63 (Taylor outside its disk) to 6.255e-6, with a
+proven 6.517e-6 bound. The exact P-MOM1 calculation is not replaced.
+
+The new verifier passes 183/183 checks with no new Hessians, coupling
+cards or physical promotion. Formulae, JSON and a TeX/PDF derivation
+are saved under `route_f` as `p54_coordinate_convergence` reports and
+`p54_coordinate_spectral_convergence` documents. Numerical acceleration
+is not quantum loop convergence. Unequal-mass/mixed extensions and a
+retained-light-block EFT are options, not new blockers; physical
+Nielsen/mixing, full matching and finite seesaw gates stay unchanged.
+See **P-COORD1** in `route_f/ROADMAP.md`.
+
+## Latest Route-F checkpoint: radial gauge momentum and exact action certification (2026-09-17)
+
+P-MOM1 evaluates the unchanged action's complete one-loop radial bosonic
+background kernel for the explicit common DR/MSbar background fixing.
+Vector, scalar-vector and finite-xi direct ghost terms retain all
+dimensional rational constants; no finite wave correction is fitted.
+The new verifier passes 99/99 checks, including independent momentum
+integrals, CW/tadpole/common-counterterm recovery, the prior scalar
+kernels and the finite-xi Landau limit. No new full Hessians or quartic
+scans were performed.
+
+Separately, 109/109 exact integer checks certify both transverse action
+identities for all 29 invariants and all 328 output covectors. The
+P50/P36 inverse-gap theorem now has an exact action foundation, not only
+floating verification. Its positive-hard-spectrum and scalar-one-loop
+scope is unchanged; it is not a full physical exclusion theorem.
+
+The leading local hard-scalar-plus-gauge insertion is still 2.46659
+(previous scalar value 2.61032). At p_E^2=.05 omega^2, the bosonic radial
+background kernel has eigenvalues (-.589137,.142534,2.188925) omega^2.
+These are not particle masses; finite-xi convergence is not a Nielsen
+identity. Physical poles require the fixed-bare BRST/Nielsen and complete
+physical mixing/background-to-quantum calculation, with actual Yukawa
+inputs and a controlled remainder. No benchmark or physical fit is promoted.
+
+Full derivation: `route_f/tex/p54_same_prescription_gauge_momentum.tex`,
+its exact-certificate fragment and PDF. The two new reports retain
+208/208 checks and source hashes. Next: physical-block/Nielsen completion,
+or a retained-light-block EFT guided by the certified vertex-to-gap bound;
+no further blind quartic weakening. Wilson/box, lower gauge/ghost/Yukawa
+matching and complete finite C_HN seesaw remain open. See **P-MOM1** in
+`route_f/ROADMAP.md`; earlier checkpoints below are historical.
+
+## Previous Route-F checkpoint: invariant attribution and inverse-gap control (2026-09-14)
 
 P-INV1 decomposes the unchanged P54 action into its 29 real coefficient
 directions, retaining all loop interference (445/445). The three

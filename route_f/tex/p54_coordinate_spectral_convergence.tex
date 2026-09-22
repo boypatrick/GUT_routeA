@@ -1,0 +1,355 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype,xurl,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue,
+pdftitle={P54 coordinate choices and threshold-aware convergence}}
+\setlength{\emergencystretch}{2em}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\cond}{\operatorname{cond}}
+\newtheorem{proposition}{Proposition}
+\title{Route-F P54: What a New Coordinate Can Improve\\
+Units, Metric Whitening and Threshold-Aware Series}
+\author{Frozen-action convergence audit}
+\date{17 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We test the suggestion of absorbing $\pi$ into a coordinate unit, and
+distinguish linear-solver convergence, momentum-series convergence and
+quantum loop control. Coordinate changes leave the relative loop/tree
+spectrum invariant. Metric whitening improves the conditioning of the
+known local kinetic matrix but does not repair its large insertion.
+A threshold-derived conformal variable genuinely extends convergence of
+an equal-mass one-loop master. We derive its coefficients and a rigorous
+tail bound, then test actual masses of the unchanged P54 benchmark.
+This is a new controlled representation of a known kernel, not a new
+physical action or an all-orders convergence proof.
+\end{abstract}
+
+\section{Putting pi into the ruler}
+The proposed coordinate is $u=x/\pi$, so that $x=\pi$ becomes $u=1$.
+If $x$ is a dimensional length, a dimensionless coordinate instead reads
+$u=x/(\pi\ell_0)$ for a specified reference length $\ell_0$.
+Neither operation changes a dimensionless physical ratio.
+For example, on a circle of radius $R$, let $u=\theta/\pi$. Then
+\begin{equation}
+ u\sim u+2,\quad ds^2=\pi^2R^2du^2,\quad
+ -\Delta=-\frac1{\pi^2R^2}\partial_u^2,\quad
+ -\Delta e^{in\pi u}=\frac{n^2}{R^2}e^{in\pi u}.
+\end{equation}
+The explicit $\pi$ moves into the metric and Fourier modes; the spectrum
+does not move. Treating a noncompact radial field as a periodic angle,
+in contrast, would change the configuration space and therefore the theory.
+
+The same conclusion holds for a spacetime unit change. In four Euclidean
+dimensions take $x=\pi u$, $\psi(u)=\pi\phi(\pi u)$. Then
+\begin{align}
+ S&=\int d^4x\left[\tfrac12(\partial_x\phi)^2+
+               \tfrac12m^2\phi^2+\frac{\lambda}{4!}\phi^4\right]\\
+  &=\int d^4u\left[\tfrac12(\partial_u\psi)^2+
+               \tfrac12(\pi m)^2\psi^2+\frac{\lambda}{4!}\psi^4\right].
+\end{align}
+Momentum and subtraction scale become $p_u=\pi p_x$, $\mu_u=\pi\mu_x$.
+Thus $p^2/m^2$, $\log(m^2/\mu^2)$ and the dimensionless quartic are
+unchanged. A convention $\widehat\lambda=\lambda/(16\pi^2)$ similarly
+relocates loop factors without removing them from predictions.
+
+\section{The invariant test for field-coordinate changes}
+For radial fluctuations use the existing tree metric and known insertion
+\begin{equation}
+ G=\diag(12/5,2,1),\qquad Z=\Delta Z_{S,\mathrm{hard}}+
+                                      \Delta Z_{\mathrm{gauge}},
+\end{equation}
+from P-MOM1. This $Z$ excludes the scalar soft--soft nonlocal term and
+unfitted fermions; it is not a physical residue. Its generalized spectrum is
+\begin{equation}
+ \operatorname{eig}(Z,G)=(.0089951842,.2733736138,2.4665928386).
+ \label{eq:relative}
+\end{equation}
+For an invertible constant field map $\delta r=Jq$,
+\begin{equation}
+ G'=J^TGJ,\quad Z'=J^TZJ,\quad K'(s)=J^TK(s)J.
+\end{equation}
+Consequently
+\begin{align}
+ \det(Z'-\lambda G')&=(\det J)^2\det(Z-\lambda G),\\
+ (G')^{-1}Z'&=J^{-1}(G^{-1}Z)J.
+\end{align}
+Every generalized eigenvalue in \eqref{eq:relative}, and hence
+$\rho=\max|\lambda|$, is invariant. The same determinant identity
+applies to $K(s)$. For a source term $j^T\delta r$, $j'=J^Tj$ and
+\begin{equation}
+ j'^T(K')^{-1}j'=j^TK^{-1}j.
+\end{equation}
+These are exact finite-matrix identities, not numerical approximations.
+For $J=\pi I$, both tree and loop matrices acquire $\pi^2$.
+For $J=I/\pi$, both get smaller by $\pi^2$. Comparing the loop matrix
+with the \emph{old} tree metric after either transformation is inconsistent.
+General quantum field redefinitions must also transform interactions,
+sources, matching coefficients and the regulated measure consistently;
+higher-order truncations require particular care \cite{Criado}.
+
+\subsection{A nonlinear chart cannot evade the stationary Hessian}
+For $r=f(q)$, the ordinary potential Hessian obeys
+\begin{equation}
+ \partial_a\partial_b V(f(q))
+ =J^i{}_a H_{ij}J^j{}_b+t_i\,\partial_a\partial_b f^i,\qquad
+ t_i=\partial_iV.
+\end{equation}
+The extra term disappears at a stationary point. Off shell one must
+include it, or use the covariant Hessian associated with the transformed
+kinetic metric; the connection term removes it.
+For the local positive-radius chart $r_i=r_{0i}e^{q_i}$,
+\begin{equation}
+ J=\diag(r_i),\quad
+ H^{\mathrm{ordinary}}_{q}=J^TH_rJ+\diag(r_it_i),\quad
+ \Gamma^i{}_{ii}=1,\quad
+ \nabla_q^2V=J^TH_rJ.
+\end{equation}
+The existing loop tadpoles and common finite mass counterterms verify
+these identities and $t+H_{\rm CT}r_0=0$ numerically. A coordinate
+curvature obtained by omitting the off-shell gradient term is not a
+new stability result. Sylvester's inertia law prevents an invertible
+congruence from turning a stationary negative mode into a positive one.
+
+\section{A real numerical benefit: metric preconditioning}
+The known local matrix $M=G+Z$ is positive definite, even though the
+full momentum-dependent background kernel can be indefinite.
+For this \emph{local matrix only}, compare
+\begin{equation}
+ J_{\rm tree}=G^{-1/2},\qquad J_{\rm local}=M^{-1/2}.
+\end{equation}
+The first makes the tree metric the identity. The second makes the
+known local kinetic matrix the identity, but does not make the
+relative loop/tree eigenvalues smaller.
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Chart & $\cond_2(J^TMJ)$ & $\rho(Z',G')$\\
+\midrule
+Original & 6.907906 & 2.466593\\
+$u=x/\pi$ & 6.907906 & 2.466593\\
+$u=\pi x$ & 6.907906 & 2.466593\\
+Relative-VEV / local log chart & 50.581906 & 2.466593\\
+Tree-metric whitening & 3.435688 & 2.466593\\
+Known-local-metric whitening & 1 & 2.466593\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus setting all background coordinates to order one is not
+automatically good conditioning. No coupling or background has changed.
+
+For an SPD linear system $Ax=b$, Richardson iteration with
+$\alpha=2/(\lambda_{\min}+\lambda_{\max})$ gives
+\begin{equation}
+ e_{n+1}=(I-\alpha A)e_n,\qquad
+ \|e_n\|_A\le
+ \left(\frac{\kappa-1}{\kappa+1}\right)^n\|e_0\|_A.
+\end{equation}
+Using the same synthetic source and coordinate-invariant quadratic-norm
+error, tree whitening improves the 16-step relative error from
+$1.6710\,10^{-3}$ to $1.3401\,10^{-5}$. A $\pi$ rescaling leaves it
+unchanged. The relative-VEV chart worsens it to $.50256$.
+This is an actual solver improvement, not a claim of faster physical
+loop convergence. The full negative-curvature kernel must not be
+passed to an SPD solver just because this local $M$ is positive.
+
+\subsection{Why absorbing Z is not an all-orders repair}
+Let $A=G^{-1/2}ZG^{-1/2}$. The familiar expansion
+\begin{equation}
+ (I+A)^{-1}=\sum_{n=0}^\infty(-A)^n
+\end{equation}
+fails for the known $A$ because $\rho(A)=2.46659>1$. Directly inverting
+this finite matrix is valid as a linear-algebra operation. Declaring
+$M=G+Z$ to be a new free metric gives instead
+\begin{equation}
+ \operatorname{eig}(Z,M)=\frac{\lambda_i}{1+\lambda_i}
+       =(.0089150,.2146845,.7115323).
+\end{equation}
+The apparent improvement is a change of free/interacting split, not
+the invariance test above. It sums repeated known insertions but does
+not determine independent two-loop self-energies, vertex corrections,
+counterterms or the omitted soft nonlocal part. Any proposed resummation
+must specify subtraction against double counting and test its next
+independent remainder in the new counting. The number $.7115$ is not
+an all-orders majorant.
+
+\section{A genuine series improvement from the energy threshold}
+The equal-mass one-loop bubble contains the finite momentum difference
+\begin{equation}
+ F(z)=\int_0^1dx\,\log[1+zx(1-x)],\qquad z=s/m^2,\quad s=p_E^2.
+\end{equation}
+This is an actual master in the existing kernel. It is dimensionless
+and independent of a unit convention for $\pi$ or $\mu$.
+
+\subsection{Derivation of the ordinary series and its obstruction}
+For $|z|<4$, expand the logarithm uniformly away from its limiting
+singularity and integrate term by term:
+\begin{align}
+ F(z)&=\sum_{n=1}^\infty
+       \frac{(-1)^{n+1}z^n}{n}\int_0^1x^n(1-x)^n\,dx\\
+ &=\sum_{n=1}^\infty
+       \frac{(-1)^{n+1}(n!)^2}{n(2n+1)!}z^n.
+ \label{eq:taylor}
+\end{align}
+The closest branch point is $z=-4$, where the logarithm's argument
+vanishes at $x=1/2$. Thus the Taylor radius is four, determined by
+the two-particle threshold, not by a fitted convergence tolerance.
+Boundary convergence is a separate question; outside this radius
+the ordinary power series cannot converge.
+
+\subsection{Threshold-derived map and exact coefficients}
+Map the plane cut along $(-\infty,-4]$ to the unit disk:
+\begin{equation}
+ w=\frac{\sqrt{1+z/4}-1}{\sqrt{1+z/4}+1},
+ \qquad z=\frac{16w}{(1-w)^2}.
+ \label{eq:map}
+\end{equation}
+For every finite Euclidean $z>0$, $0<w<1$.
+The branch point fixes the factor four; this is not a free parameter.
+A direct evaluation of the integral, using $x=(1+t)/2$, gives
+\begin{equation}
+ F(z)=2\left[\sqrt{\frac{4+z}{z}}\,
+                   \operatorname{arsinh}\frac{\sqrt z}{2}-1\right].
+\end{equation}
+For positive $w$,
+\begin{equation}
+ \sqrt{\frac{4+z}{z}}=\frac{1+w}{2\sqrt w},\qquad
+ \operatorname{arsinh}\frac{\sqrt z}{2}=2\operatorname{artanh}\sqrt w.
+\end{equation}
+Substituting $\operatorname{artanh}t/t=\sum_{k\ge0}t^{2k}/(2k+1)$ yields
+\begin{equation}
+ \boxed{F(z(w))=\sum_{n=1}^\infty\frac{8n}{4n^2-1}w^n.}
+ \label{eq:mapped}
+\end{equation}
+Analytic continuation extends this identity to $|w|<1$. Unlike changing
+a ruler, the nonlinear map changes the location of the nearest complex
+singularity relative to the series variable.
+Threshold-aware conformal representations of correlators have established
+precedents \cite{Greynat}; the explicit proof here is for this master.
+
+\begin{proposition}[Certified Euclidean tail]
+For $0\le w<1$ and $N\ge1$, set $F_N=\sum_{n=1}^N8n w^n/(4n^2-1)$.
+Then
+\begin{equation}
+ 0\le F-F_N\le
+ \frac{8(N+1)}{4(N+1)^2-1}\frac{w^{N+1}}{1-w}.
+ \label{eq:tail}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The coefficients $c_n=8n/(4n^2-1)$ are positive and decrease:
+the derivative of $8t/(4t^2-1)$ is
+$-8(4t^2+1)/(4t^2-1)^2<0$ for $t\ge1$.
+Therefore $\sum_{n>N}c_nw^n\le c_{N+1}\sum_{n>N}w^n$.
+For complex $w$, replacing $w$ by $|w|$ gives an absolute bound.
+\end{proof}
+
+\subsection{Test with the actual frozen spectrum}
+For the lightest massive vector in P-MOM1,
+\begin{equation}
+ m^2=.00506506436\,\omega^2,\quad s=.05\,\omega^2,\quad
+ z=9.87154287,\quad w=.301243161,\quad F=.9243817811.
+\end{equation}
+The Taylor series is outside its disk; the mapped series is well inside.
+The independent integral and exact expression agree. Errors are
+absolute errors in this dimensionless master:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+Terms & Taylor error & Mapped error & Proven mapped bound\\
+\midrule
+4 & $2.3811$ & $1.3411\,10^{-3}$ & $1.4345\,10^{-3}$\\
+8 & $34.6267$ & $6.2549\,10^{-6}$ & $6.5172\,10^{-6}$\\
+16 & $1.7732\,10^4$ & $2.2811\,10^{-10}$ & $2.3347\,10^{-10}$\\
+32 & $1.2175\,10^{10}$ & $5.4594\,10^{-19}$ & $5.5279\,10^{-19}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+No coefficient was fitted to these values. The script also tests all six
+existing momentum probes and the certified P50 mass at unchanged $\tau=1$.
+The table measures series truncation at the fixed stored input, not
+uncertainty in that mass or the accuracy of a physical prediction.
+It does not generate another quartic or scalar-background scan.
+P-MOM1 already evaluates the exact masters; its values do not need this
+series to be repaired. The benefit is a controlled alternative expansion,
+compression and potentially analytic-continuation strategy.
+
+\section{Other structural options and the decision boundary}
+\paragraph{Retain near-threshold modes rather than a local Taylor series.}
+For unequal masses the normal two-particle threshold is
+$s_{\rm th}=(\sqrt a+\sqrt b)^2$, with $a,b$ squared masses.
+A useful expansion test is $|s|/s_{\rm th}$ rather than the numerical
+size of a mass in arbitrary units. Retain modes near this threshold, or
+their full nonlocal kernels, when the local derivative expansion is
+not controlled. The separation of hard and soft contributions must
+remain consistent with matching \cite{Dittmaier}.
+At the current certified transverse ray,
+\begin{equation}
+ 4m_{50}^2=48\tau\sigma^2,\qquad
+ 4m_{36}^2=\frac{232}{5}\tau\sigma^2.
+\end{equation}
+Weakening transverse quartics therefore shrinks the momentum Taylor disk
+at the same time that the certified vertex-to-gap loop bound grows.
+Changing units cannot fix either effect. This strengthens the reason
+not to use another blind quartic reduction.
+
+\paragraph{Keep exact massless nonanalytic pieces.}
+A doubly massless scalar bubble contains $\log(s/\mu^2)-2$ and has no
+analytic Taylor expansion about $s=0$. Do not apply \eqref{eq:map}
+with $m=0$. Separate the known log exactly and approximate only the
+remaining analytic part. Tensor reductions may contain cancellations
+and gauge-artifact thresholds; approximations must preserve common
+counterterms and Ward/Nielsen identities rather than approximate each
+large term independently without an assembled error bound.
+
+\paragraph{Distinguish a momentum map from Borel resummation.}
+The proof above concerns powers of momentum at a fixed loop order,
+not powers of a quantum coupling. Borel-plane conformal resummation
+addresses a different question and needs large-order/singularity
+information. Recent QCD work \cite{Caprini} cannot be imported as a
+convergence theorem for this P54 action. One known loop matrix does not
+determine a Borel transform or a controlled all-orders sum.
+
+\paragraph{Recommended order.}
+Use tree-metric whitening as a numerical convention while always
+reporting invariant generalized spectra. If a series representation is
+needed, extend the certified threshold map to unequal-mass and mixed
+masters, retaining massless logs exactly and certifying the assembled
+kernel error. This is a bounded auxiliary task, not a substitute for
+the fixed-bare Nielsen/BRST and complete physical mixing analysis.
+Retained-light-block EFT power counting is the structural alternative.
+Physical fit, full matching and finite seesaw gates stay unchanged.
+
+\section{Reproducibility}
+The verifier \path{route_f/code/verify_p54_coordinate_convergence.py}
+reads the saved P-MOM1 and common-renormalization JSONs, checks the former's
+source hashes, and uses NumPy/SciPy and 60-digit mpmath. It passes
+183/183 coordinate, source-response, solver and spectral tests.
+No new action Hessian is evaluated. Its JSON distinguishes proved
+matrix/series identities from numerical evidence and explicitly sets
+all-orders loop convergence and full-kernel conformal replacement to false.
+
+\clearpage
+\begin{thebibliography}{9}
+\bibitem{Criado}
+J.~C.~Criado and M.~Perez-Victoria,
+\emph{Field redefinitions in effective theories at higher orders},
+\href{https://arxiv.org/abs/1811.09413}{arXiv:1811.09413}.
+\bibitem{Greynat}
+D.~Greynat and S.~Peris,
+\emph{Resummation of Threshold, Low- and High-Energy Expansions for
+Heavy-Quark Correlators},
+\href{https://arxiv.org/abs/1006.0643}{arXiv:1006.0643}.
+\bibitem{Dittmaier}
+S.~Dittmaier, S.~Schuhmacher and M.~Stahlhofen,
+\emph{Integrating out heavy fields in the path integral using the
+background-field method: general formalism},
+\href{https://arxiv.org/abs/2102.12020}{arXiv:2102.12020}.
+\bibitem{Caprini}
+I.~Caprini, \emph{Revisiting the convergence of the perturbative QCD
+expansions based on conformal mapping of the Borel plane},
+\href{https://arxiv.org/abs/2312.07143}{arXiv:2312.07143} (2023).
+\end{thebibliography}
+\end{document}
