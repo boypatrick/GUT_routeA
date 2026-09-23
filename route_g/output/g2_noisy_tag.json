@@ -1,0 +1,1922 @@
+{
+  "status": "G2-M conditional candidate classical noisy-tag comparison; no apparatus or empirical calibration",
+  "card": {
+    "R": 1.0,
+    "M5": 0.5,
+    "alpha": 0.25,
+    "MD": 5.0,
+    "g": 0.05,
+    "incoming_phi_n": 1,
+    "target_phi_m": 0,
+    "incoming_com_momentum": 0.2
+  },
+  "drive": {
+    "epsilon": 0.5,
+    "Omega": 0.2
+  },
+  "cards": [
+    {
+      "sigma_i": 0.1,
+      "sigma_d": 0.1,
+      "role": "broader-momentum comparison",
+      "no_tag_error": 0.05944854802414509,
+      "ideal_tag_error": 0.03775888466489246,
+      "sign_priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "scans": [
+        {
+          "eta": 0.0,
+          "actual_wrong_tag_probability": 0.0,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bayes_error": 0.03775888466489246,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341059,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.04738820265851621,
+              "conditional_sign_priors": [
+                0.7620428076479466,
+                0.23795719235205345
+              ],
+              "conditional_bayes_error": 0.031563221412103104,
+              "contribution_to_total_error": 0.0014957243328323601,
+              "bayes_boundaries": [
+                1.047325755811563
+              ],
+              "false_minus_given_plus": 0.018174444220854697,
+              "false_plus_given_minus": 0.0744399307098697,
+              "pair_rate_for_label": 2.6803942527504622e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.8898393550800259,
+              "conditional_sign_priors": [
+                0.7748051572182604,
+                0.22519484278173973
+              ],
+              "conditional_bayes_error": 0.03773844658676297,
+              "contribution_to_total_error": 0.03358115497248717,
+              "bayes_boundaries": [
+                1.2339666639225275
+              ],
+              "false_minus_given_plus": 0.020807269997363598,
+              "false_plus_given_minus": 0.0959918363056124,
+              "pair_rate_for_label": 5.03315204928762e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.06277244226145783,
+              "conditional_sign_priors": [
+                0.7826930520626265,
+                0.21730694793737354
+              ],
+              "conditional_bayes_error": 0.04272584055917282,
+              "contribution_to_total_error": 0.0026820053595729286,
+              "bayes_boundaries": [
+                1.4100854604342759
+              ],
+              "false_minus_given_plus": 0.02283957546276179,
+              "false_plus_given_minus": 0.11435190530387722,
+              "pair_rate_for_label": 3.550564993595182e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 4.163336342344337e-17
+        },
+        {
+          "eta": 0.1,
+          "actual_wrong_tag_probability": 0.06666666666666667,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              0.9333333333333333,
+              0.03333333333333333,
+              0.03333333333333333
+            ],
+            [
+              0.03333333333333333,
+              0.9333333333333333,
+              0.03333333333333333
+            ],
+            [
+              0.03333333333333333,
+              0.03333333333333333,
+              0.9333333333333333
+            ]
+          ],
+          "bayes_error": 0.0465338754185455,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.774695514834106,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.0759827157259979,
+              "conditional_sign_priors": [
+                0.7675935029893215,
+                0.23240649701067856
+              ],
+              "conditional_bayes_error": 0.0966546503003959,
+              "contribution_to_total_error": 0.00734408281737072,
+              "bayes_boundaries": [
+                1.163005450488191
+              ],
+              "false_minus_given_plus": 0.054473156081689074,
+              "false_plus_given_minus": 0.2359719298305515,
+              "pair_rate_for_label": 4.29777081878281e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.8341887529053567,
+              "conditional_sign_priors": [
+                0.7748007760202094,
+                0.22519922397979084
+              ],
+              "conditional_bayes_error": 0.038642128849299184,
+              "contribution_to_total_error": 0.03223482927440499,
+              "bayes_boundaries": [
+                1.2344330476608063
+              ],
+              "false_minus_given_plus": 0.021485450048079724,
+              "false_plus_given_minus": 0.09766989907956966,
+              "pair_rate_for_label": 4.7183784434895977e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.08982853136864538,
+              "conditional_sign_priors": [
+                0.7797253471450208,
+                0.2202746528549792
+              ],
+              "conditional_bayes_error": 0.0774248807233357,
+              "contribution_to_total_error": 0.006954963326769788,
+              "bayes_boundaries": [
+                1.379693073191896
+              ],
+              "false_minus_given_plus": 0.02925823465505681,
+              "false_plus_given_minus": 0.24792454711539258,
+              "pair_rate_for_label": 5.0809244855430584e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 3.469446951953614e-17
+        },
+        {
+          "eta": 0.25,
+          "actual_wrong_tag_probability": 0.16666666666666666,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              0.8333333333333334,
+              0.08333333333333333,
+              0.08333333333333333
+            ],
+            [
+              0.08333333333333333,
+              0.8333333333333334,
+              0.08333333333333333
+            ],
+            [
+              0.08333333333333333,
+              0.08333333333333333,
+              0.8333333333333334
+            ]
+          ],
+          "bayes_error": 0.05239633477601678,
+          "passes_declared_5pct": false,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341058,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.11887448532722047,
+              "conditional_sign_priors": [
+                0.7709126022267487,
+                0.2290873977732513
+              ],
+              "conditional_bayes_error": 0.08731035243763066,
+              "contribution_to_total_error": 0.010378973209761574,
+              "bayes_boundaries": [
+                1.2137421404156548
+              ],
+              "false_minus_given_plus": 0.041811473367743324,
+              "false_plus_given_minus": 0.24042073564991273,
+              "pair_rate_for_label": 6.723835667831333e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.7507128496433527,
+              "conditional_sign_priors": [
+                0.7747929862991793,
+                0.22520701370082094
+              ],
+              "conditional_bayes_error": 0.04024212394826537,
+              "contribution_to_total_error": 0.030210279544903303,
+              "bayes_boundaries": [
+                1.23527368487518
+              ],
+              "false_minus_given_plus": 0.02267357126323212,
+              "false_plus_given_minus": 0.1006842530636329,
+              "pair_rate_for_label": 4.2462180347925635e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.1304126650294267,
+              "conditional_sign_priors": [
+                0.7775826478272736,
+                0.2224173521727265
+              ],
+              "conditional_bayes_error": 0.09053631423518353,
+              "contribution_to_total_error": 0.011807082021351906,
+              "bayes_boundaries": [
+                1.3380751739165697
+              ],
+              "false_minus_given_plus": 0.04032693187371781,
+              "false_plus_given_minus": 0.26607093013188315,
+              "pair_rate_for_label": 7.376463723464874e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 3.469446951953614e-17
+        },
+        {
+          "eta": 0.5,
+          "actual_wrong_tag_probability": 0.3333333333333333,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              0.6666666666666666,
+              0.16666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.16666666666666666,
+              0.6666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.16666666666666666,
+              0.16666666666666666,
+              0.6666666666666666
+            ]
+          ],
+          "bayes_error": 0.05709044486262169,
+          "passes_declared_5pct": false,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341058,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.19036076799592475,
+              "conditional_sign_priors": [
+                0.7731206392475317,
+                0.2268793607524683
+              ],
+              "conditional_bayes_error": 0.07225471005495814,
+              "contribution_to_total_error": 0.013754462097384696,
+              "bayes_boundaries": [
+                1.2360032796518552
+              ],
+              "false_minus_given_plus": 0.037028090990629134,
+              "false_plus_given_minus": 0.19229395099436136,
+              "pair_rate_for_label": 1.0767277082912204e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.6115863442066796,
+              "conditional_sign_priors": [
+                0.7747752779855641,
+                0.225224722014436
+              ],
+              "conditional_bayes_error": 0.043846303357697514,
+              "contribution_to_total_error": 0.02681580037751128,
+              "bayes_boundaries": [
+                1.2372400679491133
+              ],
+              "false_minus_given_plus": 0.025288033732540578,
+              "false_plus_given_minus": 0.10768693496846894,
+              "pair_rate_for_label": 3.459284020297507e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.19805288779739558,
+              "conditional_sign_priors": [
+                0.7759629160558057,
+                0.22403708394419442
+              ],
+              "conditional_bayes_error": 0.08341298413495264,
+              "contribution_to_total_error": 0.016520182387725714,
+              "bayes_boundaries": [
+                1.2909073468250667
+              ],
+              "false_minus_given_plus": 0.047025241801985085,
+              "false_plus_given_minus": 0.2094436311701997,
+              "pair_rate_for_label": 1.1202362453334565e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 4.85722573273506e-17
+        },
+        {
+          "eta": 0.75,
+          "actual_wrong_tag_probability": 0.5,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              0.5,
+              0.25,
+              0.25
+            ],
+            [
+              0.25,
+              0.5,
+              0.25
+            ],
+            [
+              0.25,
+              0.25,
+              0.5
+            ]
+          ],
+          "bayes_error": 0.05895970820070014,
+          "passes_declared_5pct": false,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341057,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.26184705066462904,
+              "conditional_sign_priors": [
+                0.7741230536866586,
+                0.22587694631334138
+              ],
+              "conditional_bayes_error": 0.06424272723859567,
+              "contribution_to_total_error": 0.016821768654078504,
+              "bayes_boundaries": [
+                1.243444469635261
+              ],
+              "false_minus_given_plus": 0.03588014590070181,
+              "false_plus_given_minus": 0.16144666254091122,
+              "pair_rate_for_label": 1.4810718497993077e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.47245983877000636,
+              "conditional_sign_priors": [
+                0.7747471404435224,
+                0.22525285955647764
+              ],
+              "conditional_bayes_error": 0.049473507378226166,
+              "contribution_to_total_error": 0.023374245319303454,
+              "bayes_boundaries": [
+                1.24052765746395
+              ],
+              "false_minus_given_plus": 0.0291833449735137,
+              "false_plus_given_minus": 0.11926061389104818,
+              "pair_rate_for_label": 2.6723500058024507e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.26569311056536443,
+              "conditional_sign_priors": [
+                0.7751678877748671,
+                0.22483211222513277
+              ],
+              "conditional_bayes_error": 0.07062168148579837,
+              "contribution_to_total_error": 0.018763694227318176,
+              "bayes_boundaries": [
+                1.2633602541803572
+              ],
+              "false_minus_given_plus": 0.04287659130456664,
+              "false_plus_given_minus": 0.16628018301858985,
+              "pair_rate_for_label": 1.5028261183204257e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 5.551115123125783e-17
+        },
+        {
+          "eta": 1.0,
+          "actual_wrong_tag_probability": 0.6666666666666666,
+          "sigma_i": 0.1,
+          "sigma_d": 0.1,
+          "response": [
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          ],
+          "bayes_error": 0.059448548024145086,
+          "passes_declared_5pct": false,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341057,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.059448548024145086,
+              "contribution_to_total_error": 0.01981618267471503,
+              "bayes_boundaries": [
+                1.2471045199122317
+              ],
+              "false_minus_given_plus": 0.035436445234522204,
+              "false_plus_given_minus": 0.1420126759382408,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.059448548024145086,
+              "contribution_to_total_error": 0.01981618267471503,
+              "bayes_boundaries": [
+                1.2471045199122317
+              ],
+              "false_minus_given_plus": 0.035436445234522204,
+              "false_plus_given_minus": 0.1420126759382408,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.059448548024145086,
+              "contribution_to_total_error": 0.01981618267471503,
+              "bayes_boundaries": [
+                1.2471045199122317
+              ],
+              "false_minus_given_plus": 0.035436445234522204,
+              "false_plus_given_minus": 0.1420126759382408,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 4.85722573273506e-17
+        }
+      ],
+      "independent_integral_at_eta_half": {
+        "bayes_error": 0.05709044486262169,
+        "adaptive_quadrature_error_estimate": 2.1158729459309552e-13,
+        "note": "Adaptive density integration independent of CDF integration; boundary roots are shared as optional break points, not integral values"
+      },
+      "threshold": {
+        "sigma_d": 0.1,
+        "status": "Numerically bracketed supremum of passing eta under the exact postulated response",
+        "exists": true,
+        "all_eta_pass": false,
+        "eta_bracket": [
+          0.17578125,
+          0.1767578125
+        ],
+        "bracket_width": 0.0009765625,
+        "actual_wrong_tag_probability_bracket": [
+          0.1171875,
+          0.11783854166666667
+        ],
+        "endpoints": [
+          {
+            "eta": 0.17578125,
+            "bayes_error": 0.0499734215504805,
+            "refined_error": 0.04997342155048048,
+            "coarse_error": 0.04997342155048046,
+            "max_refinement_change": 4.163336342344337e-17,
+            "threshold_margin": 2.6578449519504277e-05
+          },
+          {
+            "eta": 0.1767578125,
+            "bayes_error": 0.050010178375988916,
+            "refined_error": 0.05001017837598888,
+            "coarse_error": 0.05001017837598888,
+            "max_refinement_change": 3.469446951953614e-17,
+            "threshold_margin": 1.017837598891319e-05
+          }
+        ],
+        "bisection_trace": [
+          {
+            "eta": 0.5,
+            "bayes_error": 0.05709044486262169,
+            "passes": false
+          },
+          {
+            "eta": 0.25,
+            "bayes_error": 0.05239633477601678,
+            "passes": false
+          },
+          {
+            "eta": 0.125,
+            "bayes_error": 0.04781939827267465,
+            "passes": true
+          },
+          {
+            "eta": 0.1875,
+            "bayes_error": 0.05040473411971363,
+            "passes": false
+          },
+          {
+            "eta": 0.15625,
+            "bayes_error": 0.04920462505795112,
+            "passes": true
+          },
+          {
+            "eta": 0.171875,
+            "bayes_error": 0.04982485632215724,
+            "passes": true
+          },
+          {
+            "eta": 0.1796875,
+            "bayes_error": 0.050119543904458774,
+            "passes": false
+          },
+          {
+            "eta": 0.17578125,
+            "bayes_error": 0.0499734215504805,
+            "passes": true
+          },
+          {
+            "eta": 0.177734375,
+            "bayes_error": 0.050046783650760984,
+            "passes": false
+          },
+          {
+            "eta": 0.1767578125,
+            "bayes_error": 0.050010178375988916,
+            "passes": false
+          }
+        ],
+        "interpretation": "A numerical threshold bracket, not a statistical confidence interval, physical calibration uncertainty, or apparatus tolerance"
+      }
+    },
+    {
+      "sigma_i": 0.1,
+      "sigma_d": 0.05,
+      "role": "primary momentum-resolution plan",
+      "no_tag_error": 0.02202246904664059,
+      "ideal_tag_error": 0.0006405735829234625,
+      "sign_priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "scans": [
+        {
+          "eta": 0.0,
+          "actual_wrong_tag_probability": 0.0,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "bayes_error": 0.0006405735829234623,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341059,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.04738820265851621,
+              "conditional_sign_priors": [
+                0.7620428076479466,
+                0.23795719235205345
+              ],
+              "conditional_bayes_error": 0.0003829083671505343,
+              "contribution_to_total_error": 1.8145339302171053e-05,
+              "bayes_boundaries": [
+                1.0289077010716305
+              ],
+              "false_minus_given_plus": 0.0002634210997373406,
+              "false_plus_given_minus": 0.0007655587583310529,
+              "pair_rate_for_label": 2.6803942527504622e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.8898393550800259,
+              "conditional_sign_priors": [
+                0.7748051572182604,
+                0.22519484278173973
+              ],
+              "conditional_bayes_error": 0.0006346684620506157,
+              "contribution_to_total_error": 0.0005647529749607517,
+              "bayes_boundaries": [
+                1.2108029449205866
+              ],
+              "false_minus_given_plus": 0.0004182541706059188,
+              "false_plus_given_minus": 0.0013792632628720632,
+              "pair_rate_for_label": 5.03315204928762e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.06277244226145783,
+              "conditional_sign_priors": [
+                0.7826930520626265,
+                0.21730694793737354
+              ],
+              "conditional_bayes_error": 0.0009187991829330497,
+              "contribution_to_total_error": 5.7675268660539486e-05,
+              "bayes_boundaries": [
+                1.3836927140374495
+              ],
+              "false_minus_given_plus": 0.000588800025209243,
+              "false_plus_given_minus": 0.0021073854218386697,
+              "pair_rate_for_label": 3.550564993595182e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 6.505213034913027e-19
+        },
+        {
+          "eta": 0.1,
+          "actual_wrong_tag_probability": 0.06666666666666667,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              0.9333333333333333,
+              0.03333333333333333,
+              0.03333333333333333
+            ],
+            [
+              0.03333333333333333,
+              0.9333333333333333,
+              0.03333333333333333
+            ],
+            [
+              0.03333333333333333,
+              0.03333333333333333,
+              0.9333333333333333
+            ]
+          ],
+          "bayes_error": 0.0072694891157941526,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.774695514834106,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.0759827157259979,
+              "conditional_sign_priors": [
+                0.7675935029893215,
+                0.23240649701067856
+              ],
+              "conditional_bayes_error": 0.04367733390613639,
+              "contribution_to_total_error": 0.003318722445859451,
+              "bayes_boundaries": [
+                1.1251250005697269
+              ],
+              "false_minus_given_plus": 0.039540628303015454,
+              "false_plus_given_minus": 0.057340068750374604,
+              "pair_rate_for_label": 4.29777081878281e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.8341887529053567,
+              "conditional_sign_priors": [
+                0.7748007760202094,
+                0.22519922397979084
+              ],
+              "conditional_bayes_error": 0.0018064814216868254,
+              "contribution_to_total_error": 0.0015069464843036286,
+              "bayes_boundaries": [
+                1.215777696841072
+              ],
+              "false_minus_given_plus": 0.0013986260049634461,
+              "false_plus_given_minus": 0.0032097131371286065,
+              "pair_rate_for_label": 4.7183784434895977e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.08982853136864538,
+              "conditional_sign_priors": [
+                0.7797253471450208,
+                0.2202746528549792
+              ],
+              "conditional_bayes_error": 0.027205389517078175,
+              "contribution_to_total_error": 0.002443820185631073,
+              "bayes_boundaries": [
+                1.3203870140542908
+              ],
+              "false_minus_given_plus": 0.011218123323360491,
+              "false_plus_given_minus": 0.08379690615881961,
+              "pair_rate_for_label": 5.0809244855430584e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 8.673617379884035e-18
+        },
+        {
+          "eta": 0.25,
+          "actual_wrong_tag_probability": 0.16666666666666666,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              0.8333333333333334,
+              0.08333333333333333,
+              0.08333333333333333
+            ],
+            [
+              0.08333333333333333,
+              0.8333333333333334,
+              0.08333333333333333
+            ],
+            [
+              0.08333333333333333,
+              0.08333333333333333,
+              0.8333333333333334
+            ]
+          ],
+          "bayes_error": 0.013207669144178112,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341058,
+            0.22530448516589416
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.11887448532722047,
+              "conditional_sign_priors": [
+                0.7709126022267487,
+                0.2290873977732513
+              ],
+              "conditional_bayes_error": 0.05122396949970493,
+              "contribution_to_total_error": 0.006089223010694663,
+              "bayes_boundaries": [
+                1.1480729245948467
+              ],
+              "false_minus_given_plus": 0.04652735575940159,
+              "false_plus_given_minus": 0.06702876171169238,
+              "pair_rate_for_label": 6.723835667831333e-08
+            },
+            {
+              "z": 0,
+              "label_probability": 0.7507128496433527,
+              "conditional_sign_priors": [
+                0.7747929862991793,
+                0.22520701370082094
+              ],
+              "conditional_bayes_error": 0.0037558434654505627,
+              "contribution_to_total_error": 0.0028195599507627573,
+              "bayes_boundaries": [
+                1.2236554877383772
+              ],
+              "false_minus_given_plus": 0.0028143423036701694,
+              "false_plus_given_minus": 0.0069949455020729585,
+              "pair_rate_for_label": 4.2462180347925635e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.1304126650294267,
+              "conditional_sign_priors": [
+                0.7775826478272736,
+                0.2224173521727265
+              ],
+              "conditional_bayes_error": 0.032963716995973336,
+              "contribution_to_total_error": 0.00429888618272069,
+              "bayes_boundaries": [
+                1.3018608518512411
+              ],
+              "false_minus_given_plus": 0.015191305974682554,
+              "false_plus_given_minus": 0.09509699160432239,
+              "pair_rate_for_label": 7.376463723464874e-08
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 1.3877787807814457e-17
+        },
+        {
+          "eta": 0.5,
+          "actual_wrong_tag_probability": 0.3333333333333333,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              0.6666666666666666,
+              0.16666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.16666666666666666,
+              0.6666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.16666666666666666,
+              0.16666666666666666,
+              0.6666666666666666
+            ]
+          ],
+          "bayes_error": 0.019380017418638824,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341058,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.19036076799592475,
+              "conditional_sign_priors": [
+                0.7731206392475317,
+                0.2268793607524683
+              ],
+              "conditional_bayes_error": 0.04477810972753226,
+              "contribution_to_total_error": 0.00852399535713883,
+              "bayes_boundaries": [
+                1.238444422339344
+              ],
+              "false_minus_given_plus": 0.01529671003494965,
+              "false_plus_given_minus": 0.1452397757893866,
+              "pair_rate_for_label": 1.0767277082912204e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.6115863442066796,
+              "conditional_sign_priors": [
+                0.7747752779855641,
+                0.225224722014436
+              ],
+              "conditional_bayes_error": 0.007713052396499418,
+              "contribution_to_total_error": 0.004717197517849648,
+              "bayes_boundaries": [
+                1.2359258436771337
+              ],
+              "false_minus_given_plus": 0.005091562636967869,
+              "false_plus_given_minus": 0.016731003174776687,
+              "pair_rate_for_label": 3.459284020297507e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.19805288779739558,
+              "conditional_sign_priors": [
+                0.7759629160558057,
+                0.22403708394419442
+              ],
+              "conditional_bayes_error": 0.030995885048291993,
+              "contribution_to_total_error": 0.006138824543650345,
+              "bayes_boundaries": [
+                1.2853599724875386
+              ],
+              "false_minus_given_plus": 0.014932955661981773,
+              "false_plus_given_minus": 0.08663059206895869,
+              "pair_rate_for_label": 1.1202362453334565e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 2.0816681711721685e-17
+        },
+        {
+          "eta": 0.75,
+          "actual_wrong_tag_probability": 0.5,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              0.5,
+              0.25,
+              0.25
+            ],
+            [
+              0.25,
+              0.5,
+              0.25
+            ],
+            [
+              0.25,
+              0.25,
+              0.5
+            ]
+          ],
+          "bayes_error": 0.021347000548631298,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341057,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.26184705066462904,
+              "conditional_sign_priors": [
+                0.7741230536866586,
+                0.22587694631334138
+              ],
+              "conditional_bayes_error": 0.03054971010058229,
+              "contribution_to_total_error": 0.007999351488496901,
+              "bayes_boundaries": [
+                1.2547875548234133
+              ],
+              "false_minus_given_plus": 0.011055688749991077,
+              "false_plus_given_minus": 0.09735941150153159,
+              "pair_rate_for_label": 1.4810718497993077e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.47245983877000636,
+              "conditional_sign_priors": [
+                0.7747471404435224,
+                0.22525285955647764
+              ],
+              "conditional_bayes_error": 0.013213003647930703,
+              "contribution_to_total_error": 0.006242613573168846,
+              "bayes_boundaries": [
+                1.247135596237945
+              ],
+              "false_minus_given_plus": 0.007500241076650946,
+              "false_plus_given_minus": 0.03286179512097328,
+              "pair_rate_for_label": 2.6723500058024507e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.26569311056536443,
+              "conditional_sign_priors": [
+                0.7751678877748671,
+                0.22483211222513277
+              ],
+              "conditional_bayes_error": 0.026741511934001035,
+              "contribution_to_total_error": 0.0071050354869655495,
+              "bayes_boundaries": [
+                1.272571421388746
+              ],
+              "false_minus_given_plus": 0.012857388798200314,
+              "false_plus_given_minus": 0.07461068105877398,
+              "pair_rate_for_label": 1.5028261183204257e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 2.42861286636753e-17
+        },
+        {
+          "eta": 1.0,
+          "actual_wrong_tag_probability": 0.6666666666666666,
+          "sigma_i": 0.1,
+          "sigma_d": 0.05,
+          "response": [
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          ],
+          "bayes_error": 0.02202246904664059,
+          "passes_declared_5pct": true,
+          "total_pair_rate": 5.656247973922185e-07,
+          "sign_priors": [
+            0.7746955148341057,
+            0.22530448516589413
+          ],
+          "label_rows": [
+            {
+              "z": -1,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.02202246904664059,
+              "contribution_to_total_error": 0.007340823015546863,
+              "bayes_boundaries": [
+                1.2589290996065459
+              ],
+              "false_minus_given_plus": 0.01031480031589078,
+              "false_plus_given_minus": 0.06227856269784835,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            },
+            {
+              "z": 0,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.02202246904664059,
+              "contribution_to_total_error": 0.007340823015546863,
+              "bayes_boundaries": [
+                1.2589290996065459
+              ],
+              "false_minus_given_plus": 0.01031480031589078,
+              "false_plus_given_minus": 0.06227856269784835,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            },
+            {
+              "z": 1,
+              "label_probability": 0.3333333333333333,
+              "conditional_sign_priors": [
+                0.7746955148341058,
+                0.22530448516589416
+              ],
+              "conditional_bayes_error": 0.02202246904664059,
+              "contribution_to_total_error": 0.007340823015546863,
+              "bayes_boundaries": [
+                1.2589290996065459
+              ],
+              "false_minus_given_plus": 0.01031480031589078,
+              "false_plus_given_minus": 0.06227856269784835,
+              "pair_rate_for_label": 1.8854159913073948e-07
+            }
+          ],
+          "incident_tail_probability": 7.797241292394234e-24,
+          "response_tail_error_bound": 1.5239706048320948e-23,
+          "quadrature_grid_refinement_change": 2.7755575615628914e-17
+        }
+      ],
+      "independent_integral_at_eta_half": {
+        "bayes_error": 0.019380017418638824,
+        "adaptive_quadrature_error_estimate": 4.023594414786803e-12,
+        "note": "Adaptive density integration independent of CDF integration; boundary roots are shared as optional break points, not integral values"
+      },
+      "threshold": {
+        "sigma_d": 0.05,
+        "status": "Every eta in [0,1] passes; no tag is required in this model",
+        "exists": true,
+        "all_eta_pass": true,
+        "max_eta": 1.0,
+        "actual_wrong_tag_probability_at_max": 0.6666666666666666
+      }
+    }
+  ],
+  "misleading_raw_accuracy_counterexample": {
+    "response": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "q_priors": {
+      "-1": 0.04738820265851622,
+      "0": 0.8898393550800259,
+      "1": 0.06277244226145783
+    },
+    "prediction": "Always announce z=0, independently of true q and x",
+    "raw_correct_tag_probability": 0.8898393550800259,
+    "bayes_error_sigma_d_point_one": 0.05944854802414509,
+    "information": "None: z is constant, so the error equals momentum-only",
+    "lesson": "The approximately 88.2 percent threshold applies only to the full symmetric T_eta confusion matrix, not arbitrary aggregate tag accuracy"
+  },
+  "tag_model": {
+    "labels": [
+      -1,
+      0,
+      1
+    ],
+    "mixing_strengths": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "conditional_response": "T_eta(z|q)=(1-eta) delta_zq+eta/3",
+    "actual_wrong_tag_probability": "2 eta/3, not eta",
+    "joint_factorization": "P(x,z|j,q,p)=N(x;p_f(j,q,p),sigma_d^2) T_eta(z|q)",
+    "response_hypothesis": "Extra independent tag conditional on true q and p; class-independent response; postulated rather than derived from the classical pump",
+    "unnormalized_density": "h_jz(x)=sum_q T_eta(z|q) h_jq(x)",
+    "risk": "E_eta=sum_z integral min(h_+z(x),h_-z(x)) dx / Z",
+    "classifier_contract": "Bayes-optimal boundaries are recomputed separately for each known calibrated T_eta and sigma_d; this is not the risk of one frozen classifier under unknown tag-response drift",
+    "selection": "Perfect m=0 and |j|=1 event labeling, equal acceptance, known rate priors, all as in unchanged G2-S"
+  },
+  "monotonicity": {
+    "channel_family": "T_eta=(1-eta)I+eta U; U_ij=1/3; U^2=U",
+    "composition": "T_eta2=T_lambda T_eta1 for 0<=eta1<=eta2<=1 and eta1<1; lambda=(eta2-eta1)/(1-eta1)",
+    "proof": "Extra tag noise is stochastic post-processing leaving x unchanged. min(sum_z A_z,sum_z B_z)>=sum_z min(A_z,B_z) for nonnegative weighted terms; column sums one then give E_eta2>=E_eta1.",
+    "endpoints": "eta=0: exact q label; eta=1: independent uniform z gives exactly the momentum-only error",
+    "numerical_composition_checks": [
+      {
+        "eta1": 0.0,
+        "eta2": 0.0,
+        "lambda_additional_noise": 0.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.0,
+        "eta2": 0.1,
+        "lambda_additional_noise": 0.1,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.0,
+        "eta2": 0.25,
+        "lambda_additional_noise": 0.25,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.0,
+        "eta2": 0.5,
+        "lambda_additional_noise": 0.5,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.0,
+        "eta2": 0.75,
+        "lambda_additional_noise": 0.75,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.0,
+        "eta2": 1.0,
+        "lambda_additional_noise": 1.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.1,
+        "eta2": 0.1,
+        "lambda_additional_noise": 0.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.1,
+        "eta2": 0.25,
+        "lambda_additional_noise": 0.16666666666666666,
+        "max_matrix_error": 1.1102230246251565e-16
+      },
+      {
+        "eta1": 0.1,
+        "eta2": 0.5,
+        "lambda_additional_noise": 0.4444444444444445,
+        "max_matrix_error": 1.1102230246251565e-16
+      },
+      {
+        "eta1": 0.1,
+        "eta2": 0.75,
+        "lambda_additional_noise": 0.7222222222222222,
+        "max_matrix_error": 2.7755575615628914e-17
+      },
+      {
+        "eta1": 0.1,
+        "eta2": 1.0,
+        "lambda_additional_noise": 1.0,
+        "max_matrix_error": 5.551115123125783e-17
+      },
+      {
+        "eta1": 0.25,
+        "eta2": 0.25,
+        "lambda_additional_noise": 0.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.25,
+        "eta2": 0.5,
+        "lambda_additional_noise": 0.3333333333333333,
+        "max_matrix_error": 2.220446049250313e-16
+      },
+      {
+        "eta1": 0.25,
+        "eta2": 0.75,
+        "lambda_additional_noise": 0.6666666666666666,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.25,
+        "eta2": 1.0,
+        "lambda_additional_noise": 1.0,
+        "max_matrix_error": 5.551115123125783e-17
+      },
+      {
+        "eta1": 0.5,
+        "eta2": 0.5,
+        "lambda_additional_noise": 0.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.5,
+        "eta2": 0.75,
+        "lambda_additional_noise": 0.5,
+        "max_matrix_error": 5.551115123125783e-17
+      },
+      {
+        "eta1": 0.5,
+        "eta2": 1.0,
+        "lambda_additional_noise": 1.0,
+        "max_matrix_error": 5.551115123125783e-17
+      },
+      {
+        "eta1": 0.75,
+        "eta2": 0.75,
+        "lambda_additional_noise": 0.0,
+        "max_matrix_error": 0.0
+      },
+      {
+        "eta1": 0.75,
+        "eta2": 1.0,
+        "lambda_additional_noise": 1.0,
+        "max_matrix_error": 0.0
+      }
+    ]
+  },
+  "limits": [
+    "The independent tag is a candidate observation model, not a demonstrated physical sideband detector.",
+    "Aggregate tag accuracy is not sufficient: always guessing the dominant q=0 has high accuracy and zero information; the full confusion matrix matters.",
+    "A tag inferred from the same measured x cannot be counted as independent evidence; that would double-count information.",
+    "Knowing the pump phase, frequency or a clock does not by itself reveal the event's exchanged work q Omega.",
+    "The prescribed classical pump has no modeled energy-counting apparatus or quantized pump readout.",
+    "Gaussian momentum noise and ternary tag factorize only by the explicit trusted-model assumption; correlated or class-dependent errors require a new calibrated joint response.",
+    "These risks assume the true tag response is known and the classifier is optimized for it; frozen-classifier calibration robustness is a separate calculation.",
+    "Reported errors are conditional Bayes risks for selected m=0, |j|=1 scattering, not absolute probabilities for the whole beam or all channels.",
+    "No SI calibration, quantitative hardware cost, device tolerance, finite 4D collision packet, or absolute luminosity is supplied.",
+    "The five-percent boundary is a declared engineering criterion; the numerical eta bracket is not a confidence interval or physical calibration uncertainty.",
+    "The G2-S long-time, weak-scattering and common-overlap assumptions remain unchanged."
+  ],
+  "checks": [
+    {
+      "name": "response:eta=0.0:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.0:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.0:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.1:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.1:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.1:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.25:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.25:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.25:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.5:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.5:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.5:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.75:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.75:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=0.75:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "response:eta=1.0:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "response:eta=1.0:column_stochastic",
+      "passed": true
+    },
+    {
+      "name": "response:eta=1.0:wrong_tag_probability",
+      "passed": true
+    },
+    {
+      "name": "Blackwell_degradation:0.0->0.0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.0->0.1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.0->0.25",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.0->0.5",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.0->0.75",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.0->1.0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.1->0.1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.1->0.25",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.1->0.5",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.1->0.75",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.1->1.0",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.25->0.25",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.25->0.5",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.25->0.75",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.25->1.0",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.5->0.5",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.5->0.75",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.5->1.0",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.75->0.75",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "Blackwell_degradation:0.75->1.0",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:refinement",
+      "passed": true,
+      "measured": 4.163336342344337e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.0:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:refinement",
+      "passed": true,
+      "measured": 3.469446951953614e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.1:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:refinement",
+      "passed": true,
+      "measured": 3.469446951953614e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.25:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:refinement",
+      "passed": true,
+      "measured": 4.85722573273506e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.5:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:refinement",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=0.75:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:refinement",
+      "passed": true,
+      "measured": 4.85722573273506e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.1:eta=1.0:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "sd=0.1:eta_zero_ideal_limit",
+      "passed": true
+    },
+    {
+      "name": "sd=0.1:eta_one_no_tag_limit",
+      "passed": true
+    },
+    {
+      "name": "sd=0.1:eta_one_label_independent",
+      "passed": true
+    },
+    {
+      "name": "sd=0.1:independent_density_integral",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-09
+    },
+    {
+      "name": "sd=0.1:threshold_bracket_pass_fail",
+      "passed": true
+    },
+    {
+      "name": "sd=0.1:threshold_margins_exceed_refinement",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:refinement",
+      "passed": true,
+      "measured": 6.505213034913027e-19,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.0:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:refinement",
+      "passed": true,
+      "measured": 8.673617379884035e-18,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.1:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:refinement",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.25:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:refinement",
+      "passed": true,
+      "measured": 2.0816681711721685e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.5:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:refinement",
+      "passed": true,
+      "measured": 2.42861286636753e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=0.75:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:refinement",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:label_normalization",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:sign_prior_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:rate_invariance",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:data_processing",
+      "passed": true
+    },
+    {
+      "name": "si=.1:sd=0.05:eta=1.0:bounded_risk",
+      "passed": true
+    },
+    {
+      "name": "sd=0.05:eta_zero_ideal_limit",
+      "passed": true
+    },
+    {
+      "name": "sd=0.05:eta_one_no_tag_limit",
+      "passed": true
+    },
+    {
+      "name": "sd=0.05:eta_one_label_independent",
+      "passed": true
+    },
+    {
+      "name": "sd=0.05:independent_density_integral",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-09
+    },
+    {
+      "name": "narrower_momentum:all_tested_eta_improve",
+      "passed": true
+    },
+    {
+      "name": "constant_q_zero:response_stochastic",
+      "passed": true
+    },
+    {
+      "name": "constant_q_zero:no_information",
+      "passed": true
+    },
+    {
+      "name": "constant_q_zero:high_accuracy_yet_fails",
+      "passed": true
+    },
+    {
+      "name": "unchanged_imported_verifiers",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 125,
+    "passed": 125,
+    "failed": []
+  },
+  "source_sha256": {
+    "verify_g2_noisy_tag.py": "1e139b9499836b5b61aa7c66009f938e2bc7482d94da2e251efef1018ac6f4c1",
+    "verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea"
+  }
+}

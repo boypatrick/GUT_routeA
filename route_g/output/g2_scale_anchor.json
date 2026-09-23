@@ -1,0 +1,4680 @@
+{
+  "status": "Synthetic dimensional-consistency and identifiability audit, not a physical energy-scale determination.",
+  "baseline_dimensionless_card": {
+    "R": 1.0,
+    "M5": 0.5,
+    "alpha": 0.25,
+    "MD": 5.0,
+    "g": 0.05,
+    "incoming_phi_n": 1,
+    "target_phi_m": 0,
+    "incoming_com_momentum": 0.2
+  },
+  "baseline_drive": {
+    "epsilon": 0.5,
+    "omega": 0.2
+  },
+  "synthetic_scales": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "scale_convention": "Lambda=1/R_phys; the baseline R_hat=1. Natural units. 0.1,1,10 are synthetic unit-rescalings, not GeV values or recommended physical scales.",
+  "equations": {
+    "spectrum": "m_n^2=Lambda^2[0.5^2+(n+0.25)^2]; mu_j^2=Lambda^2[5^2+j^2] for the frozen baseline ratios.",
+    "scaling": "R=1/Lambda; (M5,MD,p,Omega,sigma_i,sigma_d,t_classifier) scale as Lambda; g,alpha,epsilon and normalized compact weights remain fixed.",
+    "coupling": "kappa5=2 pi R g scales as Lambda^(-1).",
+    "rate": "Kq=|gq|^2 pf/(16 pi En El Eout) scales as Lambda^(-2).",
+    "work": "q Omega scales as Lambda; sum w Kq q Omega scales as Lambda^(-1); its ratio to sum w Kq scales as Lambda.",
+    "probability": "P_i=W_i/sum W is invariant. Under x=Lambda xhat, rho_Lambda(x)=rho_hat(x/Lambda)/Lambda; Bayes error is invariant when resolution and threshold co-scale.",
+    "nonidentifiability": "Without a dimensional anchor, d P_i/d log Lambda=0 and dimensionless multinomial Fisher information for log Lambda is zero.",
+    "single_anchor": "Lambda=m_n,calibrated/sqrt(M5_hat^2+(n+alpha)^2), only if dimensionless ratios and the mode identification are fixed externally.",
+    "three_anchor": "y_n=A n^2+B n+C; for signed n=-1,0,+1: A=(y_1-2y_0+y_-1)/2, B=(y_1-y_-1)/2, C=y_0; R=A^(-1/2), alpha=B/(2A), M5^2=C-B^2/(4A).",
+    "fourth_anchor": "y_2-3 y_1+3 y_0-y_-1=0, equivalently y_2=4A+2B+C.",
+    "universal_shift": "y_n -> y_n+delta M^2 implies A,B unchanged and C,M5^2 shifted by delta M^2; second and third finite differences are unchanged."
+  },
+  "qualifications": [
+    "Dimensionful measured momenta, a calibrated drive frequency, a known mass, or an absolute rate with controlled couplings/luminosity can break scale degeneracy. None has been supplied here.",
+    "Adopting a calibrated drive frequency together with the frozen Omega*R=.2 card defines a candidate R; the arbitrary drive-frequency card is not itself a derived radius or a measured mode spacing.",
+    "Fixing a mass by hand calibrates a free scale; it is not a prediction of that mass.",
+    "Three masses require assigned consecutive signed KK labels. Sorting observed masses does not provide those labels.",
+    "Integer holonomy relabeling alpha->alpha+k,n->n-k leaves the spectrum invariant. Alpha is a class modulo integers, and orientation reversal can add ambiguity without a signed-mode reference.",
+    "The assumed positive-bulk-mass card requires A>0 and M5^2>=0; three arbitrary observations need not satisfy it.",
+    "A fourth signed-mode anchor supplies a real closure test. The displayed distorted example is synthetic, not an excluded experimental observation.",
+    "The common positive mass-squared shift is a spectral algebra test only. No Higgs portal, detector interaction or threshold dynamics is added by this script.",
+    "Neutral X masses still obey mu_j=mu_-j. A scale anchor does not solve the recoil-sign readout problem.",
+    "Scale invariance of Bayes error presumes ALL dimensional beam, drive and detector settings co-scale. Holding a real detector resolution fixed does not preserve it.",
+    "The inherited Gaussian beam, tree EFT, perfect mode labels and finite-time/absolute-rate limitations remain. Synthetic rescaling cannot establish EFT validity or calibrate hardware."
+  ],
+  "scaled_predictions": [
+    {
+      "synthetic_scale": 0.1,
+      "scale_is_physical_unit_assignment": false,
+      "card": {
+        "R": 10.0,
+        "M5": 0.05,
+        "alpha": 0.25,
+        "MD": 0.5,
+        "g": 0.05,
+        "incoming_phi_n": 1,
+        "target_phi_m": 0,
+        "incoming_com_momentum": 0.020000000000000004
+      },
+      "omega": 0.020000000000000004,
+      "sigma_i": 0.010000000000000002,
+      "sigma_d": 0.005000000000000001,
+      "kappa5": 3.141592653589793,
+      "open_channel_count": 66,
+      "total_rate_coefficient": 0.00021056349126734563,
+      "pump_work_rate_coefficient": 1.8952761216209595e-07,
+      "mean_pump_work_per_scattering": 0.0009000972154354094,
+      "classification": {
+        "bayes_error": 0.022022469046640552,
+        "majority_only_error": 0.22530448516589419,
+        "priors": [
+          0.7746955148341058,
+          0.22530448516589419
+        ],
+        "false_minus_given_plus": 0.010314800315938967,
+        "false_plus_given_minus": 0.0622785626976825,
+        "bayes_boundaries": [
+          0.125892909960638
+        ],
+        "total_pair_rate": 5.6562479739221796e-05,
+        "sign_moments": [
+          {
+            "mean_momentum": 0.10289301082261483,
+            "intrinsic_variance": 4.1286463843379807e-05,
+            "measured_standard_deviation": 0.008141649946010932
+          },
+          {
+            "mean_momentum": 0.13674791825510157,
+            "intrinsic_variance": 3.414072375080453e-05,
+            "measured_standard_deviation": 0.007690300628116208
+          }
+        ],
+        "resolved_at_declared_5pct": true,
+        "response_tail_error_bound": 1.5239706048320948e-23
+      },
+      "max_channel_rate_scaling_error": 2.375877272697835e-14,
+      "max_rescaled_momentum_error": 4.746203430272544e-15,
+      "max_conditional_share_error": 7.840950111415168e-16
+    },
+    {
+      "synthetic_scale": 1.0,
+      "scale_is_physical_unit_assignment": false,
+      "card": {
+        "R": 1.0,
+        "M5": 0.5,
+        "alpha": 0.25,
+        "MD": 5.0,
+        "g": 0.05,
+        "incoming_phi_n": 1,
+        "target_phi_m": 0,
+        "incoming_com_momentum": 0.2
+      },
+      "omega": 0.2,
+      "sigma_i": 0.1,
+      "sigma_d": 0.05,
+      "kappa5": 0.3141592653589793,
+      "open_channel_count": 66,
+      "total_rate_coefficient": 2.105634912673452e-06,
+      "pump_work_rate_coefficient": 1.8952761216209584e-08,
+      "mean_pump_work_per_scattering": 0.009000972154354107,
+      "classification": {
+        "bayes_error": 0.022022469046640587,
+        "majority_only_error": 0.2253044851658941,
+        "priors": [
+          0.7746955148341059,
+          0.2253044851658941
+        ],
+        "false_minus_given_plus": 0.010314800315890778,
+        "false_plus_given_minus": 0.06227856269784836,
+        "bayes_boundaries": [
+          1.2589290996065459
+        ],
+        "total_pair_rate": 5.656247973922184e-07,
+        "sign_moments": [
+          {
+            "mean_momentum": 1.028930108226149,
+            "intrinsic_variance": 0.004128646384337978,
+            "measured_standard_deviation": 0.0814164994601093
+          },
+          {
+            "mean_momentum": 1.3674791825510162,
+            "intrinsic_variance": 0.0034140723750804526,
+            "measured_standard_deviation": 0.07690300628116208
+          }
+        ],
+        "resolved_at_declared_5pct": true,
+        "response_tail_error_bound": 1.5239706048320948e-23
+      },
+      "max_channel_rate_scaling_error": 0.0,
+      "max_rescaled_momentum_error": 0.0,
+      "max_conditional_share_error": 0.0
+    },
+    {
+      "synthetic_scale": 10.0,
+      "scale_is_physical_unit_assignment": false,
+      "card": {
+        "R": 0.1,
+        "M5": 5.0,
+        "alpha": 0.25,
+        "MD": 50.0,
+        "g": 0.05,
+        "incoming_phi_n": 1,
+        "target_phi_m": 0,
+        "incoming_com_momentum": 2.0
+      },
+      "omega": 2.0,
+      "sigma_i": 1.0,
+      "sigma_d": 0.5,
+      "kappa5": 0.031415926535897934,
+      "open_channel_count": 66,
+      "total_rate_coefficient": 2.1056349126734504e-08,
+      "pump_work_rate_coefficient": 1.8952761216209557e-09,
+      "mean_pump_work_per_scattering": 0.09000972154354102,
+      "classification": {
+        "bayes_error": 0.02202246904664047,
+        "majority_only_error": 0.2253044851658941,
+        "priors": [
+          0.7746955148341057,
+          0.2253044851658941
+        ],
+        "false_minus_given_plus": 0.010314800315890695,
+        "false_plus_given_minus": 0.062278562697848136,
+        "bayes_boundaries": [
+          12.589290996065458
+        ],
+        "total_pair_rate": 5.656247973922184e-09,
+        "sign_moments": [
+          {
+            "mean_momentum": 10.28930108226149,
+            "intrinsic_variance": 0.412864638433797,
+            "measured_standard_deviation": 0.8141649946010926
+          },
+          {
+            "mean_momentum": 13.674791825510162,
+            "intrinsic_variance": 0.34140723750804464,
+            "measured_standard_deviation": 0.7690300628116202
+          }
+        ],
+        "resolved_at_declared_5pct": true,
+        "response_tail_error_bound": 1.5239706048320948e-23
+      },
+      "max_channel_rate_scaling_error": 1.9984014443252818e-14,
+      "max_rescaled_momentum_error": 4.163336342344337e-15,
+      "max_conditional_share_error": 2.3592239273284576e-16
+    }
+  ],
+  "synthetic_spectral_anchors": [
+    {
+      "synthetic_scale": 0.1,
+      "signed_labels": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "squared_masses": [
+        0.008125000000000002,
+        0.0031250000000000006,
+        0.018125,
+        0.053125000000000006
+      ],
+      "reconstruction": {
+        "A": 0.009999999999999998,
+        "B": 0.004999999999999998,
+        "C": 0.0031250000000000006,
+        "R": 10.0,
+        "Lambda": 0.09999999999999999,
+        "alpha": 0.24999999999999994,
+        "bulk_mass_squared": 0.002500000000000001,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "predicted_fourth_squared_mass": 0.05312499999999999,
+      "third_difference": 1.214306433183765e-17,
+      "deliberately_distorted_fourth_squared_mass": 0.053825000000000005,
+      "distorted_fourth_residual": 0.0007000000000000131,
+      "common_positive_squared_mass_shift": 0.0030000000000000005,
+      "shifted_squared_masses": [
+        0.011125000000000003,
+        0.006125000000000001,
+        0.021124999999999998,
+        0.05612500000000001
+      ],
+      "shifted_reconstruction": {
+        "A": 0.009999999999999998,
+        "B": 0.0049999999999999975,
+        "C": 0.006125000000000001,
+        "R": 10.0,
+        "Lambda": 0.09999999999999999,
+        "alpha": 0.24999999999999992,
+        "bulk_mass_squared": 0.005500000000000001,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "synthetic_single_mass_anchor": 0.05590169943749475,
+      "inferred_scale_if_baseline_ratios_frozen": 0.1
+    },
+    {
+      "synthetic_scale": 1.0,
+      "signed_labels": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "squared_masses": [
+        0.8124999999999999,
+        0.31250000000000006,
+        1.8124999999999998,
+        5.3125
+      ],
+      "reconstruction": {
+        "A": 0.9999999999999998,
+        "B": 0.49999999999999994,
+        "C": 0.31250000000000006,
+        "R": 1.0000000000000002,
+        "Lambda": 0.9999999999999999,
+        "alpha": 0.25000000000000006,
+        "bulk_mass_squared": 0.25000000000000006,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "predicted_fourth_squared_mass": 5.312499999999999,
+      "third_difference": 1.2212453270876722e-15,
+      "deliberately_distorted_fourth_squared_mass": 5.3825,
+      "distorted_fourth_residual": 0.07000000000000117,
+      "common_positive_squared_mass_shift": 0.3,
+      "shifted_squared_masses": [
+        1.1124999999999998,
+        0.6125,
+        2.1125,
+        5.6125
+      ],
+      "shifted_reconstruction": {
+        "A": 0.9999999999999998,
+        "B": 0.5,
+        "C": 0.6125,
+        "R": 1.0000000000000002,
+        "Lambda": 0.9999999999999999,
+        "alpha": 0.25000000000000006,
+        "bulk_mass_squared": 0.55,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "synthetic_single_mass_anchor": 0.5590169943749475,
+      "inferred_scale_if_baseline_ratios_frozen": 1.0
+    },
+    {
+      "synthetic_scale": 10.0,
+      "signed_labels": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "squared_masses": [
+        81.25,
+        31.250000000000004,
+        181.25,
+        531.25
+      ],
+      "reconstruction": {
+        "A": 100.0,
+        "B": 50.0,
+        "C": 31.250000000000004,
+        "R": 0.1,
+        "Lambda": 10.0,
+        "alpha": 0.25,
+        "bulk_mass_squared": 25.000000000000004,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "predicted_fourth_squared_mass": 531.25,
+      "third_difference": 1.4210854715202004e-14,
+      "deliberately_distorted_fourth_squared_mass": 538.25,
+      "distorted_fourth_residual": 7.0,
+      "common_positive_squared_mass_shift": 30.0,
+      "shifted_squared_masses": [
+        111.25,
+        61.25,
+        211.25,
+        561.25
+      ],
+      "shifted_reconstruction": {
+        "A": 100.0,
+        "B": 50.0,
+        "C": 61.25,
+        "R": 0.1,
+        "Lambda": 10.0,
+        "alpha": 0.25,
+        "bulk_mass_squared": 55.0,
+        "admissible": true,
+        "positivity_scope": "M5^2>=0 is the declared positive bulk-mass card; it is checked, not inferred from a three-point fit."
+      },
+      "synthetic_single_mass_anchor": 5.5901699437494745,
+      "inferred_scale_if_baseline_ratios_frozen": 10.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "source_hash:g2",
+      "passed": true
+    },
+    {
+      "name": "source_hash:driven",
+      "passed": true
+    },
+    {
+      "name": "source_hash:resolution",
+      "passed": true
+    },
+    {
+      "name": "baseline:resolution_artifact_recovery",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:open_channel_support",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, -1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.217248937900877e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.1934897514720433e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -3, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -3, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -3, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -3, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -2, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, -1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 0, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-4, 1, -4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.887379141862766e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 3.6637359812630166e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -2, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, -1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 0, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-3, 1, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.2212453270876722e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.4147350785597155e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -2, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 7.105427357601002e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -2, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.0539125955565396e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -2, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -2, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, -1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 0, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-2, 1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.7541523789077473e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 3.524958103184872e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, -1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 0, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(-1, 1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.375877272697835e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.746203430272544e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, -1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 0, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.4432899320127035e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(0, 1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.5543122344752192e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, -1):momentum_linear",
+      "passed": true,
+      "measured": 9.992007221626409e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.7541523789077473e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 3.524958103184872e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 0, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(1, 1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.6645352591003757e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, -1):momentum_linear",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.2212453270876722e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.4147350785597155e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 9.992007221626409e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 0, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(2, 1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.9872992140790302e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, -1):momentum_linear",
+      "passed": true,
+      "measured": 3.774758283725532e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.886579864025407e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.5543122344752192e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.887379141862766e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 3.6637359812630166e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 0, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(3, 1, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 0):K_inverse_square",
+      "passed": true,
+      "measured": 5.551115123125783e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.7755575615628914e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.217248937900877e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.1934897514720433e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 0, 5, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:channel=(4, 1, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:total_rate",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:work_coefficient",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:mean_work",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:kappa5",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:beam_error_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:beam_priors_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:threshold_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:beam_rate_inverse_square",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:stationary_K",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:three_anchor_admissible",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:three_anchor:A",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:three_anchor:alpha",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:three_anchor:M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:three_anchor:Lambda",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:fourth_anchor_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:distorted_fourth_reject",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:common_shift_A",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:common_shift_B",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:common_shift_M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:common_shift_fourth_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:single_anchor_conditional_inference",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:holonomy_relabel:k=-2",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:holonomy_relabel:k=1",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:holonomy_relabel:k=3",
+      "passed": true
+    },
+    {
+      "name": "scale=0.1:neutral_detector_degeneracy",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:open_channel_support",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -3, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -3, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -3, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -3, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -2, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, -1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 0, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-4, 1, -4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -2, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, -1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 0, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-3, 1, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -2, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -2, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -2, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -2, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, -1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 0, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-2, 1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, -1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 0, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(-1, 1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, -1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 0, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(0, 1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 0, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(1, 1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 0, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(2, 1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, -1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 0, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(3, 1, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 0, 5, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:channel=(4, 1, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:total_rate",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:work_coefficient",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:mean_work",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:kappa5",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:beam_error_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:beam_priors_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:threshold_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:beam_rate_inverse_square",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:stationary_K",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:three_anchor_admissible",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:three_anchor:A",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:three_anchor:alpha",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:three_anchor:M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:three_anchor:Lambda",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:fourth_anchor_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:distorted_fourth_reject",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:common_shift_A",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:common_shift_B",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:common_shift_M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:common_shift_fourth_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:single_anchor_conditional_inference",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:holonomy_relabel:k=-2",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:holonomy_relabel:k=1",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:holonomy_relabel:k=3",
+      "passed": true
+    },
+    {
+      "name": "scale=1.0:neutral_detector_degeneracy",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:open_channel_support",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 9.992007221626409e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, -1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.3322676295501878e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.9984014443252818e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.0245584642661925e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -3, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.4424906541753444e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -3, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -3, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -3, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.5543122344752192e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -2, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.7763568394002505e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, -1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 0, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.1094237467877974e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.4432899320127035e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-4, 1, -4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 9.547918011776346e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.942890293094024e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 7.771561172376096e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -2, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 5.551115123125783e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, -1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 0, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-3, 1, -3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, -1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -2, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.4432899320127035e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -2, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.163336342344337e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -2, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -2, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, -1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 0, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-2, 1, -2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 5.551115123125783e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, -1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, -1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 0, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(-1, 1, -1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, -1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 4.551914400963142e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.609823385706477e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.6653345369377348e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.1102230246251565e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, -1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 0, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(0, 1, 0, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, -1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, -1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 0):K_inverse_square",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 0, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(1, 1, 1, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, -1):momentum_linear",
+      "passed": true,
+      "measured": 9.992007221626409e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 8.881784197001252e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 5.551115123125783e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 0):K_inverse_square",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 0):momentum_linear",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 2.220446049250313e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 0, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 1):K_inverse_square",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(2, 1, 2, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, -1):K_inverse_square",
+      "passed": true,
+      "measured": 2.4424906541753444e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, -1):momentum_linear",
+      "passed": true,
+      "measured": 4.440892098500626e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, -1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, -1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.1102230246251565e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 0):K_inverse_square",
+      "passed": true,
+      "measured": 9.547918011776346e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.942890293094024e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 0, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 1):K_inverse_square",
+      "passed": true,
+      "measured": 6.661338147750939e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 1):momentum_linear",
+      "passed": true,
+      "measured": 3.3306690738754696e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(3, 1, 3, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 0):K_inverse_square",
+      "passed": true,
+      "measured": 3.1086244689504383e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 0):momentum_linear",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 0):K_inverse_square",
+      "passed": true,
+      "measured": 1.9984014443252818e-14,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 0):momentum_linear",
+      "passed": true,
+      "measured": 4.0245584642661925e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 0):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 0):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 1):K_inverse_square",
+      "passed": true,
+      "measured": 1.6653345369377348e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.2212453270876722e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 0, 5, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 1):K_inverse_square",
+      "passed": true,
+      "measured": 2.1094237467877974e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 1):momentum_linear",
+      "passed": true,
+      "measured": 1.4432899320127035e-15,
+      "tolerance": 1e-11
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 1):share_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:channel=(4, 1, 4, 1):work_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:total_rate",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:work_coefficient",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:mean_work",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:kappa5",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:beam_error_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:beam_priors_invariant",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:threshold_linear",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:beam_rate_inverse_square",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:stationary_K",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:three_anchor_admissible",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:three_anchor:A",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:three_anchor:alpha",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:three_anchor:M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:three_anchor:Lambda",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:fourth_anchor_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:distorted_fourth_reject",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:common_shift_A",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:common_shift_B",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:common_shift_M5sq",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:common_shift_fourth_closure",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:single_anchor_conditional_inference",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:holonomy_relabel:k=-2",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:holonomy_relabel:k=1",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:holonomy_relabel:k=3",
+      "passed": true
+    },
+    {
+      "name": "scale=10.0:neutral_detector_degeneracy",
+      "passed": true
+    },
+    {
+      "name": "admissibility:reject_nonpositive_A",
+      "passed": true
+    },
+    {
+      "name": "admissibility:reject_negative_bulk_M5sq",
+      "passed": true
+    },
+    {
+      "name": "dependencies:unchanged",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 877,
+    "passed": 877,
+    "failed": []
+  },
+  "verification": {
+    "source_sha256": "01720b6dab7e3cf79a76a98870ed7094983879d7bbb12577d602f6b27637334d",
+    "dependencies": {
+      "g2_source": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+      "driven_source": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+      "resolution_source": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+      "g2_artifact": "b91fa7f59079e6cfc939a1ee8ac52d18423708530d925c982ff4ed4ec1f8dc23",
+      "driven_artifact": "b72bb19069af67423727e880518edd7b00236b8ac197ad59493d03321a24cdde",
+      "resolution_artifact": "72aa3f6b84d5736605e46f39e7a04309c6ffcfae516ee22e4308fdeba9971c33"
+    }
+  }
+}

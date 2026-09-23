@@ -1,0 +1,5688 @@
+{
+  "status": "Conditional idealized finite-resolution feasibility forecast; no absolute collision probability or empirical calibration.",
+  "card": {
+    "R": 1.0,
+    "M5": 0.5,
+    "alpha": 0.25,
+    "MD": 5.0,
+    "g": 0.05,
+    "incoming_phi_n": 1,
+    "target_phi_m": 0,
+    "incoming_com_momentum": 0.2
+  },
+  "compact_packet": {
+    "min_l": -4,
+    "max_l": 4,
+    "width": 1.2,
+    "theta0": 0.7
+  },
+  "drive": {
+    "epsilon": 0.5,
+    "Omega": 0.2
+  },
+  "readout_card": {
+    "selected_mode": 0,
+    "selected_abs_recoil": 1,
+    "signed_labels": [
+      1,
+      -1
+    ],
+    "incoming_labels": [
+      0,
+      -2
+    ],
+    "sigma_i": [
+      0.0,
+      0.02,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "sigma_d": [
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ],
+    "error_threshold": 0.05,
+    "incoming": "Truncated normal on p>=0 centered before truncation at p0=.2. sigma_i is underlying normal width, not truncated SD; zero width means delta.",
+    "measured": "Gaussian reconstructed momentum estimator x in R, not a nonnegative exact norm; perfect m,|j| labeling and equal acceptance.",
+    "geometry": "Common fixed COM frame and direction-independent response; no angular/boost spread or coherent 4D wave packet.",
+    "drive": "Homogeneous periodic coupling g(t)=g[1+epsilon cos(Omega t)]; tree, weak scattering, long-time resolved Floquet sidebands. q is unobserved unless explicitly ideal-tagged.",
+    "truncation": "Incident standardized z<=10 retained without renormalization; explicit rate bound included. Bayes grid spans every component mean +/-10 sigma_d; omitted response mass <=2 Phi(-10).",
+    "EFT_limit": "The incident-tail rate bound assumes formal continuation of the tree kernel. No EFT validity scale, loop error, or UV cross-section bound has been specified; small numerical tails do not certify physical Gaussian support to infinite momentum."
+  },
+  "equations": {
+    "component": "A_s(x)=w_l sum_q integral_0^infty dp f_i(p) K_lmq(p) R(x|pf_lmq(p)); l=0 for s=+, -2 for s=-.",
+    "rate": "K_lmq=|g_q|^2 pf/[16*pi*E_n*E_l*(E_n+E_l+q Omega)], open channel only.",
+    "bayes": "e_B=integral dx min(A_+,A_-)/integral dx(A_++A_-)",
+    "tagged": "e_B,tag=sum_q integral dx min(A_+,q,A_-,q)/Z <= e_B,unobserved.",
+    "slope": "dp_f/dp = p(1/E_n+1/E_l)/[pf(1/E_f+1/E_r)]",
+    "work": "E_final-E_initial=q Omega; compact momentum remains n+l=m+j."
+  },
+  "slopes": [
+    {
+      "l": 0,
+      "j": 1,
+      "derivative": 0.17407224879346603,
+      "finite_difference": 0.1740722487930668,
+      "sigma_i": 0.02,
+      "exact_rate_weighted_variance": 1.2168653660314367e-05,
+      "linear_variance": 1.2120459120005734e-05,
+      "relative_linearization_error": 0.003976296593343198
+    },
+    {
+      "l": -2,
+      "j": -1,
+      "derivative": 0.15556557817879763,
+      "finite_difference": 0.1555655781748655,
+      "sigma_i": 0.02,
+      "exact_rate_weighted_variance": 9.717666103915141e-06,
+      "linear_variance": 9.680259645641439e-06,
+      "relative_linearization_error": 0.003864199891636666
+    }
+  ],
+  "scan": [
+    {
+      "bayes_error": 7.636568776272362e-18,
+      "majority_only_error": 0.22542458591181946,
+      "priors": [
+        0.7745754140881804,
+        0.22542458591181946
+      ],
+      "false_minus_given_plus": 4.88854054020378e-18,
+      "false_plus_given_minus": 1.7078995387677884e-17,
+      "bayes_boundaries": [
+        1.193285349493424
+      ],
+      "total_pair_rate": 5.031910868466516e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0217545760943132,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.02
+        },
+        {
+          "mean_momentum": 1.3619131726416507,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.02
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.0,
+      "sigma_d": 0.02,
+      "driven": false,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 3.8518598887744717e-32,
+      "analytic_gaussian_error": 7.636568776272406e-18
+    },
+    {
+      "bayes_error": 0.00027595017957929887,
+      "majority_only_error": 0.22542458591181946,
+      "priors": [
+        0.7745754140881804,
+        0.22542458591181946
+      ],
+      "false_minus_given_plus": 0.00016982206420457815,
+      "false_plus_given_minus": 0.0006406141694465301,
+      "bayes_boundaries": [
+        1.200905593901912
+      ],
+      "total_pair_rate": 5.031910868466516e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0217545760943132,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.05
+        },
+        {
+          "mean_momentum": 1.3619131726416507,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.05
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.0,
+      "sigma_d": 0.05,
+      "driven": false,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0,
+      "analytic_gaussian_error": 0.00027595017957929887
+    },
+    {
+      "bayes_error": 0.03551554368403791,
+      "majority_only_error": 0.22542458591181946,
+      "priors": [
+        0.7745754140881804,
+        0.22542458591181946
+      ],
+      "false_minus_given_plus": 0.01952489852353732,
+      "false_plus_given_minus": 0.09046057351133896,
+      "bayes_boundaries": [
+        1.2281207525037765
+      ],
+      "total_pair_rate": 5.031910868466516e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0217545760943132,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.1
+        },
+        {
+          "mean_momentum": 1.3619131726416507,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.1
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.0,
+      "sigma_d": 0.1,
+      "driven": false,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0,
+      "analytic_gaussian_error": 0.03551554368403791
+    },
+    {
+      "bayes_error": 0.14606662514228635,
+      "majority_only_error": 0.22542458591181946,
+      "priors": [
+        0.7745754140881804,
+        0.22542458591181946
+      ],
+      "false_minus_given_plus": 0.05749745620711289,
+      "false_plus_given_minus": 0.45039678693858665,
+      "bayes_boundaries": [
+        1.3369813869111606
+      ],
+      "total_pair_rate": 5.031910868466516e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0217545760943132,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.2
+        },
+        {
+          "mean_momentum": 1.3619131726416507,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.2
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.0,
+      "sigma_d": 0.2,
+      "driven": false,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0,
+      "analytic_gaussian_error": 0.14606662514228635
+    },
+    {
+      "bayes_error": 0.2145295212086374,
+      "majority_only_error": 0.22542458591181946,
+      "priors": [
+        0.7745754140881804,
+        0.22542458591181946
+      ],
+      "false_minus_given_plus": 0.030281437237998095,
+      "false_plus_given_minus": 0.8476194539648542,
+      "bayes_boundaries": [
+        1.7724239245406965
+      ],
+      "total_pair_rate": 5.031910868466516e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0217545760943132,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.4
+        },
+        {
+          "mean_momentum": 1.3619131726416507,
+          "intrinsic_variance": 0.0,
+          "measured_standard_deviation": 0.4
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.0,
+      "sigma_d": 0.4,
+      "driven": false,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17,
+      "analytic_gaussian_error": 0.2145295212086374
+    },
+    {
+      "bayes_error": 2.1165251060134756e-17,
+      "majority_only_error": 0.22541629009414615,
+      "priors": [
+        0.7745837099058539,
+        0.22541629009414615
+      ],
+      "false_minus_given_plus": 1.361878652922525e-17,
+      "false_plus_given_minus": 4.70966888039796e-17,
+      "bayes_boundaries": [
+        1.1940372541662616
+      ],
+      "total_pair_rate": 5.031955846576364e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.021925187186192,
+          "intrinsic_variance": 1.2168653660314367e-05,
+          "measured_standard_deviation": 0.02030193718984261
+        },
+        {
+          "mean_momentum": 1.3620631210360854,
+          "intrinsic_variance": 9.717666103915141e-06,
+          "measured_standard_deviation": 0.02024148379205228
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.02,
+      "sigma_d": 0.02,
+      "driven": false,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.1526497550098149e-29,
+      "normalized_incident_tail_error_bound": 4.5813190344031077e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 6.717643646022679e-31
+    },
+    {
+      "bayes_error": 0.0002838218658272845,
+      "majority_only_error": 0.22541629009414615,
+      "priors": [
+        0.7745837099058539,
+        0.22541629009414615
+      ],
+      "false_minus_given_plus": 0.00017469652337966741,
+      "false_plus_given_minus": 0.0006588023632994017,
+      "bayes_boundaries": [
+        1.2011507849508616
+      ],
+      "total_pair_rate": 5.031955846576364e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.021925187186192,
+          "intrinsic_variance": 1.2168653660314367e-05,
+          "measured_standard_deviation": 0.050121538819756076
+        },
+        {
+          "mean_momentum": 1.3620631210360854,
+          "intrinsic_variance": 9.717666103915141e-06,
+          "measured_standard_deviation": 0.05009708241109372
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.02,
+      "sigma_d": 0.05,
+      "driven": false,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.1526497550098149e-29,
+      "normalized_incident_tail_error_bound": 4.5813190344031077e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 1.4094628242311558e-18
+    },
+    {
+      "bayes_error": 0.0355927804057721,
+      "majority_only_error": 0.22541629009414615,
+      "priors": [
+        0.7745837099058539,
+        0.22541629009414615
+      ],
+      "false_minus_given_plus": 0.019565632323762315,
+      "false_plus_given_minus": 0.09066585349817688,
+      "bayes_boundaries": [
+        1.2283317134738307
+      ],
+      "total_pair_rate": 5.031955846576364e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.021925187186192,
+          "intrinsic_variance": 1.2168653660314367e-05,
+          "measured_standard_deviation": 0.10006082477003833
+        },
+        {
+          "mean_momentum": 1.3620631210360854,
+          "intrinsic_variance": 9.717666103915141e-06,
+          "measured_standard_deviation": 0.10004857653212222
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.02,
+      "sigma_d": 0.1,
+      "driven": false,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.1526497550098149e-29,
+      "normalized_incident_tail_error_bound": 4.5813190344031077e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 4.163336342344337e-17
+    },
+    {
+      "bayes_error": 0.14609537365680442,
+      "majority_only_error": 0.22541629009414615,
+      "priors": [
+        0.7745837099058539,
+        0.22541629009414615
+      ],
+      "false_minus_given_plus": 0.05749939547568529,
+      "false_plus_given_minus": 0.45053211792940245,
+      "bayes_boundaries": [
+        1.3371966517922669
+      ],
+      "total_pair_rate": 5.031955846576364e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.021925187186192,
+          "intrinsic_variance": 1.2168653660314367e-05,
+          "measured_standard_deviation": 0.2000304193208131
+        },
+        {
+          "mean_momentum": 1.3620631210360854,
+          "intrinsic_variance": 9.717666103915141e-06,
+          "measured_standard_deviation": 0.20002429268992283
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.02,
+      "sigma_d": 0.2,
+      "driven": false,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.1526497550098149e-29,
+      "normalized_incident_tail_error_bound": 4.5813190344031077e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 8.326672684688674e-17
+    },
+    {
+      "bayes_error": 0.2145276225139351,
+      "majority_only_error": 0.22541629009414615,
+      "priors": [
+        0.7745837099058539,
+        0.22541629009414615
+      ],
+      "false_minus_given_plus": 0.030270622093339253,
+      "false_plus_given_minus": 0.8476782741474124,
+      "bayes_boundaries": [
+        1.772686213901595
+      ],
+      "total_pair_rate": 5.031955846576364e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.021925187186192,
+          "intrinsic_variance": 1.2168653660314367e-05,
+          "measured_standard_deviation": 0.40001521052787525
+        },
+        {
+          "mean_momentum": 1.3620631210360854,
+          "intrinsic_variance": 9.717666103915141e-06,
+          "measured_standard_deviation": 0.40001214689819603
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.02,
+      "sigma_d": 0.4,
+      "driven": false,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.1526497550098149e-29,
+      "normalized_incident_tail_error_bound": 4.5813190344031077e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 3.1649814315388776e-08,
+      "majority_only_error": 0.22519484278173976,
+      "priors": [
+        0.7748051572182604,
+        0.22519484278173976
+      ],
+      "false_minus_given_plus": 2.982423188411976e-08,
+      "false_plus_given_minus": 3.7930911454212655e-08,
+      "bayes_boundaries": [
+        1.246295489274896
+      ],
+      "total_pair_rate": 5.03315204928762e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0264808829850187,
+          "intrinsic_variance": 0.00033010693397889324,
+          "measured_standard_deviation": 0.027020491001809966
+        },
+        {
+          "mean_momentum": 1.366072103837945,
+          "intrinsic_variance": 0.000263048836163943,
+          "measured_standard_deviation": 0.02574973468142814
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.1,
+      "sigma_d": 0.02,
+      "driven": false,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.1794831523565814e-29,
+      "normalized_incident_tail_error_bound": 4.68685682771504e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 2.9778502051908996e-22
+    },
+    {
+      "bayes_error": 0.0006346684620506158,
+      "majority_only_error": 0.22519484278173976,
+      "priors": [
+        0.7748051572182604,
+        0.22519484278173976
+      ],
+      "false_minus_given_plus": 0.0004182541706058961,
+      "false_plus_given_minus": 0.0013792632628721415,
+      "bayes_boundaries": [
+        1.2108029449205875
+      ],
+      "total_pair_rate": 5.03315204928762e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0264808829850187,
+          "intrinsic_variance": 0.00033010693397889324,
+          "measured_standard_deviation": 0.0531987493648008
+        },
+        {
+          "mean_momentum": 1.366072103837945,
+          "intrinsic_variance": 0.000263048836163943,
+          "measured_standard_deviation": 0.05256471093960228
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.1,
+      "sigma_d": 0.05,
+      "driven": false,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.1794831523565814e-29,
+      "normalized_incident_tail_error_bound": 4.68685682771504e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 6.505213034913027e-19
+    },
+    {
+      "bayes_error": 0.03773844658676297,
+      "majority_only_error": 0.22519484278173976,
+      "priors": [
+        0.7748051572182604,
+        0.22519484278173976
+      ],
+      "false_minus_given_plus": 0.020807269997364465,
+      "false_plus_given_minus": 0.0959918363056094,
+      "bayes_boundaries": [
+        1.2339666639225257
+      ],
+      "total_pair_rate": 5.03315204928762e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0264808829850187,
+          "intrinsic_variance": 0.00033010693397889324,
+          "measured_standard_deviation": 0.1016371336371648
+        },
+        {
+          "mean_momentum": 1.366072103837945,
+          "intrinsic_variance": 0.000263048836163943,
+          "measured_standard_deviation": 0.10130670676793292
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.1,
+      "sigma_d": 0.1,
+      "driven": false,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.1794831523565814e-29,
+      "normalized_incident_tail_error_bound": 4.68685682771504e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 3.469446951953614e-17
+    },
+    {
+      "bayes_error": 0.14687271125600626,
+      "majority_only_error": 0.22519484278173976,
+      "priors": [
+        0.7748051572182604,
+        0.22519484278173976
+      ],
+      "false_minus_given_plus": 0.057585371244256646,
+      "false_plus_given_minus": 0.4540746465261397,
+      "bayes_boundaries": [
+        1.3428991629928562
+      ],
+      "total_pair_rate": 5.03315204928762e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0264808829850187,
+          "intrinsic_variance": 0.00033010693397889324,
+          "measured_standard_deviation": 0.20082357165925244
+        },
+        {
+          "mean_momentum": 1.366072103837945,
+          "intrinsic_variance": 0.000263048836163943,
+          "measured_standard_deviation": 0.2006565444638274
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.1,
+      "sigma_d": 0.2,
+      "driven": false,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.1794831523565814e-29,
+      "normalized_incident_tail_error_bound": 4.68685682771504e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 8.326672684688674e-17
+    },
+    {
+      "bayes_error": 0.2144769313428118,
+      "majority_only_error": 0.22519484278173976,
+      "priors": [
+        0.7748051572182604,
+        0.22519484278173976
+      ],
+      "false_minus_given_plus": 0.029984316610738204,
+      "false_plus_given_minus": 0.849242042290029,
+      "bayes_boundaries": [
+        1.7796870830104017
+      ],
+      "total_pair_rate": 5.03315204928762e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0264808829850187,
+          "intrinsic_variance": 0.00033010693397889324,
+          "measured_standard_deviation": 0.4004124210535669
+        },
+        {
+          "mean_momentum": 1.366072103837945,
+          "intrinsic_variance": 0.000263048836163943,
+          "measured_standard_deviation": 0.40032867601030525
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.1,
+      "sigma_d": 0.4,
+      "driven": false,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.1794831523565814e-29,
+      "normalized_incident_tail_error_bound": 4.68685682771504e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 1.3877787807814457e-16
+    },
+    {
+      "bayes_error": 0.0007218375811615847,
+      "majority_only_error": 0.2243999688193305,
+      "priors": [
+        0.7756000311806696,
+        0.2243999688193305
+      ],
+      "false_minus_given_plus": 0.000791391982303294,
+      "false_plus_given_minus": 0.00048143471489516367,
+      "bayes_boundaries": [
+        1.2896728257492052
+      ],
+      "total_pair_rate": 5.036838462441851e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0433978261586614,
+          "intrinsic_variance": 0.001789385159197396,
+          "measured_standard_deviation": 0.04679086619413447
+        },
+        {
+          "mean_momentum": 1.380953555447858,
+          "intrinsic_variance": 0.0014224049417013002,
+          "measured_standard_deviation": 0.04268963506170204
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.2,
+      "sigma_d": 0.02,
+      "driven": false,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.3700088583139622e-29,
+      "normalized_incident_tail_error_bound": 5.439955513879173e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 8.673617379884035e-19
+    },
+    {
+      "bayes_error": 0.0063489825877209695,
+      "majority_only_error": 0.2243999688193305,
+      "priors": [
+        0.7756000311806696,
+        0.2243999688193305
+      ],
+      "false_minus_given_plus": 0.005394983506381622,
+      "false_plus_given_minus": 0.009646316901652425,
+      "bayes_boundaries": [
+        1.2475560411116595
+      ],
+      "total_pair_rate": 5.036838462441851e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0433978261586614,
+          "intrinsic_variance": 0.001789385159197396,
+          "measured_standard_deviation": 0.06549339782907432
+        },
+        {
+          "mean_momentum": 1.380953555447858,
+          "intrinsic_variance": 0.0014224049417013002,
+          "measured_standard_deviation": 0.06262910618635158
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.2,
+      "sigma_d": 0.05,
+      "driven": false,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.3700088583139622e-29,
+      "normalized_incident_tail_error_bound": 5.439955513879173e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 3.469446951953614e-18
+    },
+    {
+      "bayes_error": 0.04849931481989318,
+      "majority_only_error": 0.2243999688193305,
+      "priors": [
+        0.7756000311806696,
+        0.2243999688193305
+      ],
+      "false_minus_given_plus": 0.02852581862800689,
+      "false_plus_given_minus": 0.11753428104881679,
+      "bayes_boundaries": [
+        1.2550222640001696
+      ],
+      "total_pair_rate": 5.036838462441851e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0433978261586614,
+          "intrinsic_variance": 0.001789385159197396,
+          "measured_standard_deviation": 0.10857893515409606
+        },
+        {
+          "mean_momentum": 1.380953555447858,
+          "intrinsic_variance": 0.0014224049417013002,
+          "measured_standard_deviation": 0.10687565177205378
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.2,
+      "sigma_d": 0.1,
+      "driven": false,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.3700088583139622e-29,
+      "normalized_incident_tail_error_bound": 5.439955513879173e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.1505226079471701,
+      "majority_only_error": 0.2243999688193305,
+      "priors": [
+        0.7756000311806696,
+        0.2243999688193305
+      ],
+      "false_minus_given_plus": 0.058512769918755904,
+      "false_plus_given_minus": 0.46853884306181137,
+      "bayes_boundaries": [
+        1.3645102967351135
+      ],
+      "total_pair_rate": 5.036838462441851e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0433978261586614,
+          "intrinsic_variance": 0.001789385159197396,
+          "measured_standard_deviation": 0.20442452191260568
+        },
+        {
+          "mean_momentum": 1.380953555447858,
+          "intrinsic_variance": 0.0014224049417013002,
+          "measured_standard_deviation": 0.2035249491873203
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.2,
+      "sigma_d": 0.2,
+      "driven": false,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.3700088583139622e-29,
+      "normalized_incident_tail_error_bound": 5.439955513879173e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.21438032135973514,
+      "majority_only_error": 0.2243999688193305,
+      "priors": [
+        0.7756000311806696,
+        0.2243999688193305
+      ],
+      "false_minus_given_plus": 0.028873580527353362,
+      "false_plus_given_minus": 0.8555525761101801,
+      "bayes_boundaries": [
+        1.8070547172200326
+      ],
+      "total_pair_rate": 5.036838462441851e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0433978261586614,
+          "intrinsic_variance": 0.001789385159197396,
+          "measured_standard_deviation": 0.40223051246666686
+        },
+        {
+          "mean_momentum": 1.380953555447858,
+          "intrinsic_variance": 0.0014224049417013002,
+          "measured_standard_deviation": 0.4017740720127436
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.2,
+      "sigma_d": 0.4,
+      "driven": false,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.3700088583139622e-29,
+      "normalized_incident_tail_error_bound": 5.439955513879173e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.049682179753066255,
+      "majority_only_error": 0.22208196906968994,
+      "priors": [
+        0.7779180309303101,
+        0.22208196906968994
+      ],
+      "false_minus_given_plus": 0.05875054704989117,
+      "false_plus_given_minus": 0.01791712263991921,
+      "bayes_boundaries": [
+        1.3197509587990643
+      ],
+      "total_pair_rate": 5.038116153066128e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1014176637573472,
+          "intrinsic_variance": 0.012963892373428794,
+          "measured_standard_deviation": 0.11560230263030574
+        },
+        {
+          "mean_momentum": 1.4315288469881122,
+          "intrinsic_variance": 0.01031567759543679,
+          "measured_standard_deviation": 0.1035165571077245
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.4,
+      "sigma_d": 0.02,
+      "driven": false,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.6669737253502794e-29,
+      "normalized_incident_tail_error_bound": 6.617448564919576e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 2.0122792321330962e-14
+    },
+    {
+      "bayes_error": 0.07132164613410634,
+      "majority_only_error": 0.22208196906968994,
+      "priors": [
+        0.7779180309303101,
+        0.22208196906968994
+      ],
+      "false_minus_given_plus": 0.07260273181615218,
+      "false_plus_given_minus": 0.0668342055039425,
+      "bayes_boundaries": [
+        1.303521461107241
+      ],
+      "total_pair_rate": 5.038116153066128e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1014176637573472,
+          "intrinsic_variance": 0.012963892373428794,
+          "measured_standard_deviation": 0.12435389971138337
+        },
+        {
+          "mean_momentum": 1.4315288469881122,
+          "intrinsic_variance": 0.01031567759543679,
+          "measured_standard_deviation": 0.11320634962508415
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.4,
+      "sigma_d": 0.05,
+      "driven": false,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.6669737253502794e-29,
+      "normalized_incident_tail_error_bound": 6.617448564919576e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 9.71445146547012e-17
+    },
+    {
+      "bayes_error": 0.1102944178179673,
+      "majority_only_error": 0.22208196906968994,
+      "priors": [
+        0.7779180309303101,
+        0.22208196906968994
+      ],
+      "false_minus_given_plus": 0.0831165377772988,
+      "false_plus_given_minus": 0.20549423532076755,
+      "bayes_boundaries": [
+        1.3178888704258132
+      ],
+      "total_pair_rate": 5.038116153066128e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1014176637573472,
+          "intrinsic_variance": 0.012963892373428794,
+          "measured_standard_deviation": 0.15153841880338068
+        },
+        {
+          "mean_momentum": 1.4315288469881122,
+          "intrinsic_variance": 0.01031567759543679,
+          "measured_standard_deviation": 0.1425330754436906
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.4,
+      "sigma_d": 0.1,
+      "driven": false,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.6669737253502794e-29,
+      "normalized_incident_tail_error_bound": 6.617448564919576e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 1.3877787807814457e-17
+    },
+    {
+      "bayes_error": 0.17398939568199415,
+      "majority_only_error": 0.22208196906968994,
+      "priors": [
+        0.7779180309303101,
+        0.22208196906968994
+      ],
+      "false_minus_given_plus": 0.06982122440191428,
+      "false_plus_given_minus": 0.5388740327701236,
+      "bayes_boundaries": [
+        1.447043139923773
+      ],
+      "total_pair_rate": 5.038116153066128e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1014176637573472,
+          "intrinsic_variance": 0.012963892373428794,
+          "measured_standard_deviation": 0.23013885454965835
+        },
+        {
+          "mean_momentum": 1.4315288469881122,
+          "intrinsic_variance": 0.01031567759543679,
+          "measured_standard_deviation": 0.22431156366856525
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.4,
+      "sigma_d": 0.2,
+      "driven": false,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.6669737253502794e-29,
+      "normalized_incident_tail_error_bound": 6.617448564919576e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.21573591921773622,
+      "majority_only_error": 0.22208196906968994,
+      "priors": [
+        0.7779180309303101,
+        0.22208196906968994
+      ],
+      "false_minus_given_plus": 0.02378592323956112,
+      "false_plus_given_minus": 0.8881064116712025,
+      "bayes_boundaries": [
+        1.9338349664332577
+      ],
+      "total_pair_rate": 5.038116153066128e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1014176637573472,
+          "intrinsic_variance": 0.012963892373428794,
+          "measured_standard_deviation": 0.415889278983516
+        },
+        {
+          "mean_momentum": 1.4315288469881122,
+          "intrinsic_variance": 0.01031567759543679,
+          "measured_standard_deviation": 0.4126932003261464
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "sigma_i": 0.4,
+      "sigma_d": 0.4,
+      "driven": false,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.6669737253502794e-29,
+      "normalized_incident_tail_error_bound": 6.617448564919576e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.011218684672985476,
+      "majority_only_error": 0.2255359231017089,
+      "priors": [
+        0.7744640768982911,
+        0.2255359231017089
+      ],
+      "false_minus_given_plus": 0.00035546437466230454,
+      "false_plus_given_minus": 0.048521717222215266,
+      "bayes_boundaries": [
+        1.116191463568061,
+        1.1517461557978377,
+        1.2786764313055332
+      ],
+      "total_pair_rate": 5.654791036048147e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0242224187744013,
+          "intrinsic_variance": 0.003812828134674791,
+          "measured_standard_deviation": 0.0649063027345942
+        },
+        {
+          "mean_momentum": 1.3633279662815982,
+          "intrinsic_variance": 0.003157762458299478,
+          "measured_standard_deviation": 0.059646981971424824
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 1.7649366880523318e-17,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676598170081262e-08,
+          "error": 7.59455099822218e-20
+        },
+        {
+          "q": 0,
+          "rate": 5.031910868466516e-07,
+          "error": 7.636568776272362e-18
+        },
+        {
+          "q": 1,
+          "rate": 3.5522035057350496e-08,
+          "error": 1.7272833762037105e-16
+        }
+      ],
+      "sigma_i": 0.0,
+      "sigma_d": 0.02,
+      "driven": true,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.020684294678963194,
+      "majority_only_error": 0.2255359231017089,
+      "priors": [
+        0.7744640768982911,
+        0.2255359231017089
+      ],
+      "false_minus_given_plus": 0.00867411082349903,
+      "false_plus_given_minus": 0.061925866420978665,
+      "bayes_boundaries": [
+        1.257350363227908
+      ],
+      "total_pair_rate": 5.654791036048147e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0242224187744013,
+          "intrinsic_variance": 0.003812828134674791,
+          "measured_standard_deviation": 0.07945330789007335
+        },
+        {
+          "mean_momentum": 1.3633279662815982,
+          "intrinsic_variance": 0.003157762458299478,
+          "measured_standard_deviation": 0.07521809927337621
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.00028074534978135465,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676598170081262e-08,
+          "error": 0.00012884367473171436
+        },
+        {
+          "q": 0,
+          "rate": 5.031910868466516e-07,
+          "error": 0.00027595017957929887
+        },
+        {
+          "q": 1,
+          "rate": 3.5522035057350496e-08,
+          "error": 0.00046313029337562487
+        }
+      ],
+      "sigma_i": 0.0,
+      "sigma_d": 0.05,
+      "driven": true,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.05761992003470133,
+      "majority_only_error": 0.2255359231017089,
+      "priors": [
+        0.7744640768982911,
+        0.2255359231017089
+      ],
+      "false_minus_given_plus": 0.03458064649697154,
+      "false_plus_given_minus": 0.13673410046066617,
+      "bayes_boundaries": [
+        1.2414952874530276
+      ],
+      "total_pair_rate": 5.654791036048147e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0242224187744013,
+          "intrinsic_variance": 0.003812828134674791,
+          "measured_standard_deviation": 0.11752798872896104
+        },
+        {
+          "mean_momentum": 1.3633279662815982,
+          "intrinsic_variance": 0.003157762458299478,
+          "measured_standard_deviation": 0.11470729034503203
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.03553657517219558,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676598170081262e-08,
+          "error": 0.029173773812627722
+        },
+        {
+          "q": 0,
+          "rate": 5.031910868466516e-07,
+          "error": 0.03551554368403791
+        },
+        {
+          "q": 1,
+          "rate": 3.5522035057350496e-08,
+          "error": 0.04062889271110083
+        }
+      ],
+      "sigma_i": 0.0,
+      "sigma_d": 0.1,
+      "driven": true,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 6.938893903907228e-18
+    },
+    {
+      "bayes_error": 0.15320690856564345,
+      "majority_only_error": 0.2255359231017089,
+      "priors": [
+        0.7744640768982911,
+        0.2255359231017089
+      ],
+      "false_minus_given_plus": 0.059572683513609066,
+      "false_plus_given_minus": 0.47473592564514566,
+      "bayes_boundaries": [
+        1.350184112752588
+      ],
+      "total_pair_rate": 5.654791036048147e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0242224187744013,
+          "intrinsic_variance": 0.003812828134674791,
+          "measured_standard_deviation": 0.20931514072009888
+        },
+        {
+          "mean_momentum": 1.3633279662815982,
+          "intrinsic_variance": 0.003157762458299478,
+          "measured_standard_deviation": 0.2077444643264881
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.14604513810970077,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676598170081262e-08,
+          "error": 0.141307957954055
+        },
+        {
+          "q": 0,
+          "rate": 5.031910868466516e-07,
+          "error": 0.14606662514228635
+        },
+        {
+          "q": 1,
+          "rate": 3.5522035057350496e-08,
+          "error": 0.14931024366720472
+        }
+      ],
+      "sigma_i": 0.0,
+      "sigma_d": 0.2,
+      "driven": true,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.21540919815145568,
+      "majority_only_error": 0.2255359231017089,
+      "priors": [
+        0.7744640768982911,
+        0.2255359231017089
+      ],
+      "false_minus_given_plus": 0.029320718477226355,
+      "false_plus_given_minus": 0.8544153513633137,
+      "bayes_boundaries": [
+        1.7896228937506402
+      ],
+      "total_pair_rate": 5.654791036048147e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0242224187744013,
+          "intrinsic_variance": 0.003812828134674791,
+          "measured_standard_deviation": 0.4047379746634541
+        },
+        {
+          "mean_momentum": 1.3633279662815982,
+          "intrinsic_variance": 0.003157762458299478,
+          "measured_standard_deviation": 0.403927917403959
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.2145575048421557,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676598170081262e-08,
+          "error": 0.22157372911521106
+        },
+        {
+          "q": 0,
+          "rate": 5.031910868466516e-07,
+          "error": 0.2145295212086374
+        },
+        {
+          "q": 1,
+          "rate": 3.5522035057350496e-08,
+          "error": 0.20966715958865426
+        }
+      ],
+      "sigma_i": 0.0,
+      "sigma_d": 0.4,
+      "driven": true,
+      "incident_tail_probability": 0.0,
+      "omitted_pair_rate_bound": 0.0,
+      "normalized_incident_tail_error_bound": 0.0,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.0,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.011227142970840692,
+      "majority_only_error": 0.22552756629519294,
+      "priors": [
+        0.774472433704807,
+        0.22552756629519294
+      ],
+      "false_minus_given_plus": 0.0003323423637159475,
+      "false_plus_given_minus": 0.04864040858416434,
+      "bayes_boundaries": [
+        1.1169091568076377,
+        1.1507370191405404,
+        1.2788367905166325
+      ],
+      "total_pair_rate": 5.6548438163611e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0243923611294248,
+          "intrinsic_variance": 0.0038244732166664744,
+          "measured_standard_deviation": 0.06499594769419455
+        },
+        {
+          "mean_momentum": 1.3634776369214474,
+          "intrinsic_variance": 0.003167234825843837,
+          "measured_standard_deviation": 0.059726332767413716
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 4.409333994359504e-17,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676735214184135e-08,
+          "error": 2.846967105261665e-19
+        },
+        {
+          "q": 0,
+          "rate": 5.031955846576364e-07,
+          "error": 2.1165251060134756e-17
+        },
+        {
+          "q": 1,
+          "rate": 3.552144483663235e-08,
+          "error": 4.0190408017461884e-16
+        }
+      ],
+      "sigma_i": 0.02,
+      "sigma_d": 0.02,
+      "driven": true,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.2967309743860417e-29,
+      "normalized_incident_tail_error_bound": 4.586266275415861e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 6.938893903907228e-18
+    },
+    {
+      "bayes_error": 0.020742296035310793,
+      "majority_only_error": 0.22552756629519294,
+      "priors": [
+        0.774472433704807,
+        0.22552756629519294
+      ],
+      "false_minus_given_plus": 0.008736906236184875,
+      "false_plus_given_minus": 0.06196937797497032,
+      "bayes_boundaries": [
+        1.2574024405427788
+      ],
+      "total_pair_rate": 5.6548438163611e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0243923611294248,
+          "intrinsic_variance": 0.0038244732166664744,
+          "measured_standard_deviation": 0.0795265566755312
+        },
+        {
+          "mean_momentum": 1.3634776369214474,
+          "intrinsic_variance": 0.003167234825843837,
+          "measured_standard_deviation": 0.07528103895300488
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.00028866344627809075,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676735214184135e-08,
+          "error": 0.00013358625087593083
+        },
+        {
+          "q": 0,
+          "rate": 5.031955846576364e-07,
+          "error": 0.0002838218658272845
+        },
+        {
+          "q": 1,
+          "rate": 3.552144483663235e-08,
+          "error": 0.00047410826234356467
+        }
+      ],
+      "sigma_i": 0.02,
+      "sigma_d": 0.05,
+      "driven": true,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.2967309743860417e-29,
+      "normalized_incident_tail_error_bound": 4.586266275415861e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 2.42861286636753e-17
+    },
+    {
+      "bayes_error": 0.05768381958384776,
+      "majority_only_error": 0.22552756629519294,
+      "priors": [
+        0.774472433704807,
+        0.22552756629519294
+      ],
+      "false_minus_given_plus": 0.03460786796003196,
+      "false_plus_given_minus": 0.13692773955218887,
+      "bayes_boundaries": [
+        1.2416969979571821
+      ],
+      "total_pair_rate": 5.6548438163611e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0243923611294248,
+          "intrinsic_variance": 0.0038244732166664744,
+          "measured_standard_deviation": 0.11757752003111172
+        },
+        {
+          "mean_momentum": 1.3634776369214474,
+          "intrinsic_variance": 0.003167234825843837,
+          "measured_standard_deviation": 0.11474857221701645
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.03561377761950849,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676735214184135e-08,
+          "error": 0.029256075552485897
+        },
+        {
+          "q": 0,
+          "rate": 5.031955846576364e-07,
+          "error": 0.0355927804057721
+        },
+        {
+          "q": 1,
+          "rate": 3.552144483663235e-08,
+          "error": 0.040702099789804075
+        }
+      ],
+      "sigma_i": 0.02,
+      "sigma_d": 0.1,
+      "driven": true,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.2967309743860417e-29,
+      "normalized_incident_tail_error_bound": 4.586266275415861e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 4.163336342344337e-17
+    },
+    {
+      "bayes_error": 0.15323157507616078,
+      "majority_only_error": 0.22552756629519294,
+      "priors": [
+        0.774472433704807,
+        0.22552756629519294
+      ],
+      "false_minus_given_plus": 0.05957129093069703,
+      "false_plus_given_minus": 0.4748654639847877,
+      "bayes_boundaries": [
+        1.3503997338012663
+      ],
+      "total_pair_rate": 5.6548438163611e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0243923611294248,
+          "intrinsic_variance": 0.0038244732166664744,
+          "measured_standard_deviation": 0.209342955975754
+        },
+        {
+          "mean_momentum": 1.3634776369214474,
+          "intrinsic_variance": 0.003167234825843837,
+          "measured_standard_deviation": 0.20776726119830297
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.14607397908382086,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676735214184135e-08,
+          "error": 0.1413458597611943
+        },
+        {
+          "q": 0,
+          "rate": 5.031955846576364e-07,
+          "error": 0.14609537365680442
+        },
+        {
+          "q": 1,
+          "rate": 3.552144483663235e-08,
+          "error": 0.14933380088298956
+        }
+      ],
+      "sigma_i": 0.02,
+      "sigma_d": 0.2,
+      "driven": true,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.2967309743860417e-29,
+      "normalized_incident_tail_error_bound": 4.586266275415861e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.21540674845320995,
+      "majority_only_error": 0.22552756629519294,
+      "priors": [
+        0.774472433704807,
+        0.22552756629519294
+      ],
+      "false_minus_given_plus": 0.02931001963895943,
+      "false_plus_given_minus": 0.8544718030577925,
+      "bayes_boundaries": [
+        1.7898847532825717
+      ],
+      "total_pair_rate": 5.6548438163611e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0243923611294248,
+          "intrinsic_variance": 0.0038244732166664744,
+          "measured_standard_deviation": 0.4047523603595988
+        },
+        {
+          "mean_momentum": 1.3634776369214474,
+          "intrinsic_variance": 0.003167234825843837,
+          "measured_standard_deviation": 0.4039396425529981
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.2145556393687423,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.676735214184135e-08,
+          "error": 0.2215714560322147
+        },
+        {
+          "q": 0,
+          "rate": 5.031955846576364e-07,
+          "error": 0.2145276225139351
+        },
+        {
+          "q": 1,
+          "rate": 3.552144483663235e-08,
+          "error": 0.2096657234782811
+        }
+      ],
+      "sigma_i": 0.02,
+      "sigma_d": 0.4,
+      "driven": true,
+      "incident_tail_probability": 7.619853024160474e-24,
+      "omitted_pair_rate_bound": 1.2967309743860417e-29,
+      "normalized_incident_tail_error_bound": 4.586266275415861e-23,
+      "actual_incident_mean": 0.2,
+      "actual_incident_sd": 0.02,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.011532671506530798,
+      "majority_only_error": 0.22530448516589419,
+      "priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "false_minus_given_plus": 0.0002466057237807171,
+      "false_plus_given_minus": 0.05033910953896231,
+      "bayes_boundaries": [
+        1.2888412864684318
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.028930108226149,
+          "intrinsic_variance": 0.004128646384337979,
+          "measured_standard_deviation": 0.06729521813872051
+        },
+        {
+          "mean_momentum": 1.367479182551016,
+          "intrinsic_variance": 0.0034140723750804517,
+          "measured_standard_deviation": 0.06175817658480901
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 3.202579256350918e-08,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6803942527504625e-08,
+          "error": 1.9811942551006136e-08
+        },
+        {
+          "q": 0,
+          "rate": 5.03315204928762e-07,
+          "error": 3.1649814315388776e-08
+        },
+        {
+          "q": 1,
+          "rate": 3.550564993595182e-08,
+          "error": 4.657600932360472e-08
+        }
+      ],
+      "sigma_i": 0.1,
+      "sigma_d": 0.02,
+      "driven": true,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.3269185464011543e-29,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.02202246904664059,
+      "majority_only_error": 0.22530448516589419,
+      "priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "false_minus_given_plus": 0.010314800315890781,
+      "false_plus_given_minus": 0.06227856269784835,
+      "bayes_boundaries": [
+        1.2589290996065459
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.028930108226149,
+          "intrinsic_variance": 0.004128646384337979,
+          "measured_standard_deviation": 0.0814164994601093
+        },
+        {
+          "mean_momentum": 1.367479182551016,
+          "intrinsic_variance": 0.0034140723750804517,
+          "measured_standard_deviation": 0.07690300628116206
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.0006405735829234625,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6803942527504625e-08,
+          "error": 0.0003829083671505343
+        },
+        {
+          "q": 0,
+          "rate": 5.03315204928762e-07,
+          "error": 0.0006346684620506158
+        },
+        {
+          "q": 1,
+          "rate": 3.550564993595182e-08,
+          "error": 0.0009187991829330497
+        }
+      ],
+      "sigma_i": 0.1,
+      "sigma_d": 0.05,
+      "driven": true,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.3269185464011543e-29,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 1.734723475976807e-17
+    },
+    {
+      "bayes_error": 0.05944854802414509,
+      "majority_only_error": 0.22530448516589419,
+      "priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "false_minus_given_plus": 0.035436445234522204,
+      "false_plus_given_minus": 0.14201267593824082,
+      "bayes_boundaries": [
+        1.2471045199122317
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.028930108226149,
+          "intrinsic_variance": 0.004128646384337979,
+          "measured_standard_deviation": 0.11886398270434144
+        },
+        {
+          "mean_momentum": 1.367479182551016,
+          "intrinsic_variance": 0.0034140723750804517,
+          "measured_standard_deviation": 0.11581913648046446
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.03775888466489246,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6803942527504625e-08,
+          "error": 0.031563221412103104
+        },
+        {
+          "q": 0,
+          "rate": 5.03315204928762e-07,
+          "error": 0.03773844658676297
+        },
+        {
+          "q": 1,
+          "rate": 3.550564993595182e-08,
+          "error": 0.04272584055917282
+        }
+      ],
+      "sigma_i": 0.1,
+      "sigma_d": 0.1,
+      "driven": true,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.3269185464011543e-29,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 3.469446951953614e-17
+    },
+    {
+      "bayes_error": 0.15389983820651965,
+      "majority_only_error": 0.22530448516589419,
+      "priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "false_minus_given_plus": 0.05956445984904976,
+      "false_plus_given_minus": 0.4782661926974203,
+      "bayes_boundaries": [
+        1.3561171557983933
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.028930108226149,
+          "intrinsic_variance": 0.004128646384337979,
+          "measured_standard_deviation": 0.2100681946043665
+        },
+        {
+          "mean_momentum": 1.367479182551016,
+          "intrinsic_variance": 0.0034140723750804517,
+          "measured_standard_deviation": 0.20836043860359013
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.14685371572431616,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6803942527504625e-08,
+          "error": 0.14236573521380957
+        },
+        {
+          "q": 0,
+          "rate": 5.03315204928762e-07,
+          "error": 0.14687271125600626
+        },
+        {
+          "q": 1,
+          "rate": 3.550564993595182e-08,
+          "error": 0.14997251039340648
+        }
+      ],
+      "sigma_i": 0.1,
+      "sigma_d": 0.2,
+      "driven": true,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.3269185464011543e-29,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.21534139719193116,
+      "majority_only_error": 0.22530448516589419,
+      "priors": [
+        0.7746955148341059,
+        0.22530448516589419
+      ],
+      "false_minus_given_plus": 0.029026619286829432,
+      "false_plus_given_minus": 0.855973218986858,
+      "bayes_boundaries": [
+        1.796875605265195
+      ],
+      "total_pair_rate": 5.656247973922184e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.028930108226149,
+          "intrinsic_variance": 0.004128646384337979,
+          "measured_standard_deviation": 0.4051279382915205
+        },
+        {
+          "mean_momentum": 1.367479182551016,
+          "intrinsic_variance": 0.0034140723750804517,
+          "measured_standard_deviation": 0.4042450647504314
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.21450578745455878,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6803942527504625e-08,
+          "error": 0.22150940134741334
+        },
+        {
+          "q": 0,
+          "rate": 5.03315204928762e-07,
+          "error": 0.2144769313428118
+        },
+        {
+          "q": 1,
+          "rate": 3.550564993595182e-08,
+          "error": 0.20962766961179408
+        }
+      ],
+      "sigma_i": 0.1,
+      "sigma_d": 0.4,
+      "driven": true,
+      "incident_tail_probability": 7.797241292394234e-24,
+      "omitted_pair_rate_bound": 1.3269185464011543e-29,
+      "normalized_incident_tail_error_bound": 4.691868364042165e-23,
+      "actual_incident_mean": 0.20552478626789902,
+      "actual_incident_sd": 0.09415157716742846,
+      "quadrature_order_doubling_error": 5.551115123125783e-17
+    },
+    {
+      "bayes_error": 0.014707824268648088,
+      "majority_only_error": 0.22450389965653295,
+      "priors": [
+        0.7754961003434669,
+        0.22450389965653295
+      ],
+      "false_minus_given_plus": 0.004363392612111763,
+      "false_plus_given_minus": 0.05044023881550602,
+      "bayes_boundaries": [
+        1.3010710057120238
+      ],
+      "total_pair_rate": 5.660602505076829e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0457832220964045,
+          "intrinsic_variance": 0.005537419089015033,
+          "measured_standard_deviation": 0.07705465001552492
+        },
+        {
+          "mean_momentum": 1.3823339167620152,
+          "intrinsic_variance": 0.0045493060523228495,
+          "measured_standard_deviation": 0.07035130455309872
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.0007223922936166206,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6931859226426542e-08,
+          "error": 0.0006954270351041833
+        },
+        {
+          "q": 0,
+          "rate": 5.036838462441851e-07,
+          "error": 0.0007218375811615847
+        },
+        {
+          "q": 1,
+          "rate": 3.5444545037071225e-08,
+          "error": 0.0007507640571170816
+        }
+      ],
+      "sigma_i": 0.2,
+      "sigma_d": 0.02,
+      "driven": true,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.5412599656032076e-29,
+      "normalized_incident_tail_error_bound": 5.445568609422395e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 6.938893903907228e-18
+    },
+    {
+      "bayes_error": 0.02741208106481681,
+      "majority_only_error": 0.22450389965653295,
+      "priors": [
+        0.7754961003434669,
+        0.22450389965653295
+      ],
+      "false_minus_given_plus": 0.016394879354827377,
+      "false_plus_given_minus": 0.06546842207210124,
+      "bayes_boundaries": [
+        1.2690882765726554
+      ],
+      "total_pair_rate": 5.660602505076829e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0457832220964045,
+          "intrinsic_variance": 0.005537419089015033,
+          "measured_standard_deviation": 0.08965165413429377
+        },
+        {
+          "mean_momentum": 1.3823339167620152,
+          "intrinsic_variance": 0.0045493060523228495,
+          "measured_standard_deviation": 0.08396014561875682
+        }
+      ],
+      "resolved_at_declared_5pct": true,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.0063573341439793415,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6931859226426542e-08,
+          "error": 0.005661349073368625
+        },
+        {
+          "q": 0,
+          "rate": 5.036838462441851e-07,
+          "error": 0.0063489825877209695
+        },
+        {
+          "q": 1,
+          "rate": 3.5444545037071225e-08,
+          "error": 0.007004844667805233
+        }
+      ],
+      "sigma_i": 0.2,
+      "sigma_d": 0.05,
+      "driven": true,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.5412599656032076e-29,
+      "normalized_incident_tail_error_bound": 5.445568609422395e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 1.3877787807814457e-17
+    },
+    {
+      "bayes_error": 0.06838232947315509,
+      "majority_only_error": 0.22450389965653295,
+      "priors": [
+        0.7754961003434669,
+        0.22450389965653295
+      ],
+      "false_minus_given_plus": 0.040921560740757784,
+      "false_plus_given_minus": 0.16323911858456078,
+      "bayes_boundaries": [
+        1.2676466721621298
+      ],
+      "total_pair_rate": 5.660602505076829e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0457832220964045,
+          "intrinsic_variance": 0.005537419089015033,
+          "measured_standard_deviation": 0.12464918406878978
+        },
+        {
+          "mean_momentum": 1.3823339167620152,
+          "intrinsic_variance": 0.0045493060523228495,
+          "measured_standard_deviation": 0.12062050427818172
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.0485209658284433,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6931859226426542e-08,
+          "error": 0.043325052368044965
+        },
+        {
+          "q": 0,
+          "rate": 5.036838462441851e-07,
+          "error": 0.04849931481989318
+        },
+        {
+          "q": 1,
+          "rate": 3.5444545037071225e-08,
+          "error": 0.05277665236559499
+        }
+      ],
+      "sigma_i": 0.2,
+      "sigma_d": 0.1,
+      "driven": true,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.5412599656032076e-29,
+      "normalized_incident_tail_error_bound": 5.445568609422395e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 2.7755575615628914e-17
+    },
+    {
+      "bayes_error": 0.15708157002353051,
+      "majority_only_error": 0.22450389965653295,
+      "priors": [
+        0.7754961003434669,
+        0.22450389965653295
+      ],
+      "false_minus_given_plus": 0.060043091669136586,
+      "false_plus_given_minus": 0.49227824884392274,
+      "bayes_boundaries": [
+        1.377883872470447
+      ],
+      "total_pair_rate": 5.660602505076829e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0457832220964045,
+          "intrinsic_variance": 0.005537419089015033,
+          "measured_standard_deviation": 0.21339498374848234
+        },
+        {
+          "mean_momentum": 1.3823339167620152,
+          "intrinsic_variance": 0.0045493060523228495,
+          "measured_standard_deviation": 0.2110670652951873
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.15051304183695854,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6931859226426542e-08,
+          "error": 0.14704660301806458
+        },
+        {
+          "q": 0,
+          "rate": 5.036838462441851e-07,
+          "error": 0.1505226079471701
+        },
+        {
+          "q": 1,
+          "rate": 3.5444545037071225e-08,
+          "error": 0.15301101005773632
+        }
+      ],
+      "sigma_i": 0.2,
+      "sigma_d": 0.2,
+      "driven": true,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.5412599656032076e-29,
+      "normalized_incident_tail_error_bound": 5.445568609422395e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 5.551115123125783e-17
+    },
+    {
+      "bayes_error": 0.21518673926903248,
+      "majority_only_error": 0.22450389965653295,
+      "priors": [
+        0.7754961003434669,
+        0.22450389965653295
+      ],
+      "false_minus_given_plus": 0.02792363692203716,
+      "false_plus_given_minus": 0.8620432341027005,
+      "bayes_boundaries": [
+        1.8242393071180587
+      ],
+      "total_pair_rate": 5.660602505076829e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.0457832220964045,
+          "intrinsic_variance": 0.005537419089015033,
+          "measured_standard_deviation": 0.4068628996222377
+        },
+        {
+          "mean_momentum": 1.3823339167620152,
+          "intrinsic_variance": 0.0045493060523228495,
+          "measured_standard_deviation": 0.4056467749807989
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.21441260949928714,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.6931859226426542e-08,
+          "error": 0.22141258769877817
+        },
+        {
+          "q": 0,
+          "rate": 5.036838462441851e-07,
+          "error": 0.21438032135973514
+        },
+        {
+          "q": 1,
+          "rate": 3.5444545037071225e-08,
+          "error": 0.20955263984926195
+        }
+      ],
+      "sigma_i": 0.2,
+      "sigma_d": 0.4,
+      "driven": true,
+      "incident_tail_probability": 9.056754748593507e-24,
+      "omitted_pair_rate_bound": 1.5412599656032076e-29,
+      "normalized_incident_tail_error_bound": 5.445568609422395e-23,
+      "actual_incident_mean": 0.25751999418783567,
+      "actual_incident_sd": 0.1587055494652415,
+      "quadrature_order_doubling_error": 0.0
+    },
+    {
+      "bayes_error": 0.06537425913609732,
+      "majority_only_error": 0.22217126338560209,
+      "priors": [
+        0.7778287366143981,
+        0.22217126338560209
+      ],
+      "false_minus_given_plus": 0.0668315046693267,
+      "false_plus_given_minus": 0.06027239566925682,
+      "bayes_boundaries": [
+        1.322367573943765
+      ],
+      "total_pair_rate": 5.662606601887368e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1036304716420937,
+          "intrinsic_variance": 0.016533807287266604,
+          "measured_standard_deviation": 0.13012996306487837
+        },
+        {
+          "mean_momentum": 1.4328329501645547,
+          "intrinsic_variance": 0.013355681299317938,
+          "measured_standard_deviation": 0.11728461663542213
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.04970238882936403,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.725029617542233e-08,
+          "error": 0.05135254854730676
+        },
+        {
+          "q": 0,
+          "rate": 5.038116153066128e-07,
+          "error": 0.049682179753066255
+        },
+        {
+          "q": 1,
+          "rate": 3.519874870670171e-08,
+          "error": 0.0487141214915926
+        }
+      ],
+      "sigma_i": 0.4,
+      "sigma_d": 0.02,
+      "driven": true,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.8753454410190644e-29,
+      "normalized_incident_tail_error_bound": 6.623611961297133e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 3.2931990467943706e-14
+    },
+    {
+      "bayes_error": 0.08692500766204252,
+      "majority_only_error": 0.22217126338560209,
+      "priors": [
+        0.7778287366143981,
+        0.22217126338560209
+      ],
+      "false_minus_given_plus": 0.07931007727945034,
+      "false_plus_given_minus": 0.1135851237753404,
+      "bayes_boundaries": [
+        1.3113856137310616
+      ],
+      "total_pair_rate": 5.662606601887368e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1036304716420937,
+          "intrinsic_variance": 0.016533807287266604,
+          "measured_standard_deviation": 0.13796306493865163
+        },
+        {
+          "mean_momentum": 1.4328329501645547,
+          "intrinsic_variance": 0.013355681299317938,
+          "measured_standard_deviation": 0.12591934442061686
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.07134967173854173,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.725029617542233e-08,
+          "error": 0.07251990346778173
+        },
+        {
+          "q": 0,
+          "rate": 5.038116153066128e-07,
+          "error": 0.07132164613410634
+        },
+        {
+          "q": 1,
+          "rate": 3.519874870670171e-08,
+          "error": 0.07084483742402695
+        }
+      ],
+      "sigma_i": 0.4,
+      "sigma_d": 0.05,
+      "driven": true,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.8753454410190644e-29,
+      "normalized_incident_tail_error_bound": 6.623611961297133e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 6.938893903907228e-17
+    },
+    {
+      "bayes_error": 0.12271045540092533,
+      "majority_only_error": 0.22217126338560209,
+      "priors": [
+        0.7778287366143981,
+        0.22217126338560209
+      ],
+      "false_minus_given_plus": 0.08586615032240903,
+      "false_plus_given_minus": 0.2517035521405237,
+      "bayes_boundaries": [
+        1.3317268284925345
+      ],
+      "total_pair_rate": 5.662606601887368e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1036304716420937,
+          "intrinsic_variance": 0.016533807287266604,
+          "measured_standard_deviation": 0.16289201112168333
+        },
+        {
+          "mean_momentum": 1.4328329501645547,
+          "intrinsic_variance": 0.013355681299317938,
+          "measured_standard_deviation": 0.15282565654796954
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.11033127798605248,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.725029617542233e-08,
+          "error": 0.11042435835385209
+        },
+        {
+          "q": 0,
+          "rate": 5.038116153066128e-07,
+          "error": 0.1102944178179673
+        },
+        {
+          "q": 1,
+          "rate": 3.519874870670171e-08,
+          "error": 0.11078680875978597
+        }
+      ],
+      "sigma_i": 0.4,
+      "sigma_d": 0.1,
+      "driven": true,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.8753454410190644e-29,
+      "normalized_incident_tail_error_bound": 6.623611961297133e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 4.163336342344337e-17
+    },
+    {
+      "bayes_error": 0.17823538162538038,
+      "majority_only_error": 0.22217126338560209,
+      "priors": [
+        0.7778287366143981,
+        0.22217126338560209
+      ],
+      "false_minus_given_plus": 0.06857160306220104,
+      "false_plus_given_minus": 0.5621717964087459,
+      "bayes_boundaries": [
+        1.462693967646997
+      ],
+      "total_pair_rate": 5.662606601887368e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1036304716420937,
+          "intrinsic_variance": 0.016533807287266604,
+          "measured_standard_deviation": 0.23776839000856823
+        },
+        {
+          "mean_momentum": 1.4328329501645547,
+          "intrinsic_variance": 0.013355681299317938,
+          "measured_standard_deviation": 0.23098848737397704
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.17401609060160475,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.725029617542233e-08,
+          "error": 0.1754782787369525
+        },
+        {
+          "q": 0,
+          "rate": 5.038116153066128e-07,
+          "error": 0.17398939568199415
+        },
+        {
+          "q": 1,
+          "rate": 3.519874870670171e-08,
+          "error": 0.17326618186471002
+        }
+      ],
+      "sigma_i": 0.4,
+      "sigma_d": 0.2,
+      "driven": true,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.8753454410190644e-29,
+      "normalized_incident_tail_error_bound": 6.623611961297133e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 5.551115123125783e-17
+    },
+    {
+      "bayes_error": 0.21627200531903312,
+      "majority_only_error": 0.22217126338560209,
+      "priors": [
+        0.7778287366143981,
+        0.22217126338560209
+      ],
+      "false_minus_given_plus": 0.022819804166241724,
+      "false_plus_given_minus": 0.8935543816486334,
+      "bayes_boundaries": [
+        1.951827397159357
+      ],
+      "total_pair_rate": 5.662606601887368e-07,
+      "sign_moments": [
+        {
+          "mean_momentum": 1.1036304716420937,
+          "intrinsic_variance": 0.016533807287266604,
+          "measured_standard_deviation": 0.42015926419307553
+        },
+        {
+          "mean_momentum": 1.4328329501645547,
+          "intrinsic_variance": 0.013355681299317938,
+          "measured_standard_deviation": 0.4163600380671973
+        }
+      ],
+      "resolved_at_declared_5pct": false,
+      "response_tail_error_bound": 1.5239706048320948e-23,
+      "ideal_q_tagged_error": 0.21578646272529559,
+      "q_tagged_components": [
+        {
+          "q": -1,
+          "rate": 2.725029617542233e-08,
+          "error": 0.22348700064613802
+        },
+        {
+          "q": 0,
+          "rate": 5.038116153066128e-07,
+          "error": 0.21573591921773622
+        },
+        {
+          "q": 1,
+          "rate": 3.519874870670171e-08,
+          "error": 0.2105482784249776
+        }
+      ],
+      "sigma_i": 0.4,
+      "sigma_d": 0.4,
+      "driven": true,
+      "incident_tail_probability": 1.1019908456231978e-23,
+      "omitted_pair_rate_bound": 1.8753454410190644e-29,
+      "normalized_incident_tail_error_bound": 6.623611961297133e-23,
+      "actual_incident_mean": 0.4036641735348133,
+      "actual_incident_sd": 0.2789051267212899,
+      "quadrature_order_doubling_error": 5.551115123125783e-17
+    }
+  ],
+  "profiles": [
+    {
+      "sigma_i": 0.1,
+      "sigma_d": 0.1,
+      "driven": false,
+      "x": [
+        0.4,
+        0.405,
+        0.41000000000000003,
+        0.41500000000000004,
+        0.42000000000000004,
+        0.42500000000000004,
+        0.43000000000000005,
+        0.43500000000000005,
+        0.44,
+        0.445,
+        0.45,
+        0.455,
+        0.46,
+        0.465,
+        0.47000000000000003,
+        0.47500000000000003,
+        0.48000000000000004,
+        0.48500000000000004,
+        0.49,
+        0.495,
+        0.5,
+        0.505,
+        0.51,
+        0.515,
+        0.52,
+        0.525,
+        0.53,
+        0.535,
+        0.54,
+        0.545,
+        0.55,
+        0.555,
+        0.56,
+        0.5650000000000001,
+        0.5700000000000001,
+        0.5750000000000001,
+        0.5800000000000001,
+        0.585,
+        0.5900000000000001,
+        0.595,
+        0.6000000000000001,
+        0.605,
+        0.61,
+        0.615,
+        0.62,
+        0.625,
+        0.63,
+        0.635,
+        0.64,
+        0.645,
+        0.65,
+        0.655,
+        0.66,
+        0.665,
+        0.67,
+        0.675,
+        0.68,
+        0.685,
+        0.69,
+        0.6950000000000001,
+        0.7,
+        0.7050000000000001,
+        0.71,
+        0.7150000000000001,
+        0.72,
+        0.7250000000000001,
+        0.73,
+        0.7350000000000001,
+        0.74,
+        0.7450000000000001,
+        0.75,
+        0.755,
+        0.76,
+        0.765,
+        0.77,
+        0.775,
+        0.78,
+        0.785,
+        0.79,
+        0.795,
+        0.8,
+        0.805,
+        0.81,
+        0.8150000000000001,
+        0.8200000000000001,
+        0.825,
+        0.8300000000000001,
+        0.835,
+        0.8400000000000001,
+        0.845,
+        0.8500000000000001,
+        0.855,
+        0.8600000000000001,
+        0.865,
+        0.8700000000000001,
+        0.875,
+        0.88,
+        0.885,
+        0.89,
+        0.895,
+        0.9,
+        0.905,
+        0.91,
+        0.915,
+        0.92,
+        0.925,
+        0.93,
+        0.935,
+        0.9400000000000001,
+        0.9450000000000001,
+        0.9500000000000001,
+        0.9550000000000001,
+        0.9600000000000001,
+        0.9650000000000001,
+        0.9700000000000001,
+        0.9750000000000001,
+        0.98,
+        0.985,
+        0.99,
+        0.995,
+        1.0,
+        1.005,
+        1.01,
+        1.0150000000000001,
+        1.02,
+        1.025,
+        1.03,
+        1.0350000000000001,
+        1.04,
+        1.045,
+        1.05,
+        1.0550000000000002,
+        1.06,
+        1.065,
+        1.07,
+        1.0750000000000002,
+        1.08,
+        1.085,
+        1.09,
+        1.0950000000000002,
+        1.1,
+        1.105,
+        1.1099999999999999,
+        1.115,
+        1.12,
+        1.125,
+        1.13,
+        1.135,
+        1.1400000000000001,
+        1.145,
+        1.15,
+        1.155,
+        1.1600000000000001,
+        1.165,
+        1.17,
+        1.175,
+        1.1800000000000002,
+        1.185,
+        1.19,
+        1.195,
+        1.2000000000000002,
+        1.205,
+        1.21,
+        1.215,
+        1.2200000000000002,
+        1.225,
+        1.23,
+        1.2349999999999999,
+        1.24,
+        1.245,
+        1.25,
+        1.255,
+        1.26,
+        1.2650000000000001,
+        1.27,
+        1.275,
+        1.28,
+        1.2850000000000001,
+        1.29,
+        1.295,
+        1.3,
+        1.3050000000000002,
+        1.31,
+        1.315,
+        1.32,
+        1.3250000000000002,
+        1.33,
+        1.335,
+        1.34,
+        1.3450000000000002,
+        1.35,
+        1.355,
+        1.3599999999999999,
+        1.365,
+        1.37,
+        1.375,
+        1.38,
+        1.385,
+        1.3900000000000001,
+        1.395,
+        1.4,
+        1.4050000000000002,
+        1.4100000000000001,
+        1.415,
+        1.42,
+        1.4249999999999998,
+        1.4300000000000002,
+        1.435,
+        1.44,
+        1.4449999999999998,
+        1.4500000000000002,
+        1.455,
+        1.46,
+        1.4649999999999999,
+        1.4700000000000002,
+        1.475,
+        1.48,
+        1.4849999999999999,
+        1.4900000000000002,
+        1.495,
+        1.5,
+        1.505,
+        1.5100000000000002,
+        1.5150000000000001,
+        1.52,
+        1.525,
+        1.5300000000000002,
+        1.5350000000000001,
+        1.54,
+        1.545,
+        1.5500000000000003,
+        1.5550000000000002,
+        1.56,
+        1.565,
+        1.5699999999999998,
+        1.5750000000000002,
+        1.58,
+        1.585,
+        1.5899999999999999,
+        1.5950000000000002,
+        1.6,
+        1.605,
+        1.6099999999999999,
+        1.6150000000000002,
+        1.62,
+        1.625,
+        1.63,
+        1.6350000000000002,
+        1.6400000000000001,
+        1.645,
+        1.65,
+        1.6550000000000002,
+        1.6600000000000001,
+        1.665,
+        1.67,
+        1.6750000000000003,
+        1.6800000000000002,
+        1.685,
+        1.69,
+        1.6949999999999998,
+        1.7000000000000002,
+        1.705,
+        1.71,
+        1.7149999999999999,
+        1.7200000000000002,
+        1.725,
+        1.73,
+        1.7349999999999999,
+        1.7400000000000002,
+        1.745,
+        1.75,
+        1.755,
+        1.7600000000000002,
+        1.7650000000000001,
+        1.77,
+        1.775,
+        1.7800000000000002,
+        1.7850000000000001,
+        1.79,
+        1.795,
+        1.8000000000000003,
+        1.8050000000000002,
+        1.81,
+        1.815,
+        1.8199999999999998,
+        1.8250000000000002,
+        1.83,
+        1.835,
+        1.8399999999999999,
+        1.8450000000000002,
+        1.85,
+        1.855,
+        1.8599999999999999,
+        1.8650000000000002,
+        1.87,
+        1.875,
+        1.88,
+        1.8850000000000002,
+        1.8900000000000001,
+        1.895,
+        1.9,
+        1.9050000000000002,
+        1.9100000000000001,
+        1.915,
+        1.92,
+        1.9250000000000003,
+        1.9300000000000002,
+        1.935,
+        1.94,
+        1.9449999999999998,
+        1.9500000000000002,
+        1.955,
+        1.96,
+        1.9649999999999999,
+        1.9700000000000002,
+        1.975,
+        1.98,
+        1.9849999999999999,
+        1.9900000000000002,
+        1.995,
+        2.0,
+        2.005,
+        2.0100000000000002,
+        2.015,
+        2.02,
+        2.025,
+        2.0300000000000002,
+        2.035,
+        2.04,
+        2.045,
+        2.0500000000000003,
+        2.055,
+        2.06,
+        2.065,
+        2.07,
+        2.075,
+        2.08,
+        2.085,
+        2.09,
+        2.095,
+        2.1
+      ],
+      "plus_density": [
+        1.4147917094718695e-08,
+        1.9217392132655787e-08,
+        2.60388275594663e-08,
+        3.519439542802284e-08,
+        4.74515919084561e-08,
+        6.381949191220753e-08,
+        8.562119032436504e-08,
+        1.1458681008276762e-07,
+        1.529725598654932e-07,
+        2.0371268055246834e-07,
+        2.7061278194354154e-07,
+        3.5859510046812404e-07,
+        4.74008675960142e-07,
+        6.250204334444791e-07,
+        8.221067592085788e-07,
+        1.078669487754341e-06,
+        1.4118053907463163e-06,
+        1.8432644195654586e-06,
+        2.400639254533868e-06,
+        3.118837327828133e-06,
+        4.041896601470035e-06,
+        5.225218200161554e-06,
+        6.738302738863381e-06,
+        8.66809307640382e-06,
+        1.112304450674919e-05,
+        1.423806430991209e-05,
+        1.8180486362785294e-05,
+        2.3157273383190972e-05,
+        2.942366955344568e-05,
+        3.7293559914367966e-05,
+        4.7151830160097704e-05,
+        5.946906135603442e-05,
+        7.481893861907527e-05,
+        9.389880080617266e-05,
+        0.00011755380948697752,
+        0.0001468052695031031,
+        0.0001828836896269415,
+        0.00022726722939636417,
+        0.00028172623603971544,
+        0.0003483746321624701,
+        0.00042972896888135757,
+        0.0005287760083709395,
+        0.0006490497419881841,
+        0.0007947187825526435,
+        0.0009706850889042393,
+        0.0011826949840915617,
+        0.0014374634116699524,
+        0.0017428123335060013,
+        0.002107824102829604,
+        0.002543010543493506,
+        0.0030604983258471466,
+        0.003674231046682656,
+        0.0044001881909083145,
+        0.005256620871820737,
+        0.006264303911476862,
+        0.007446803429837333,
+        0.008830758659159025,
+        0.010446176187859703,
+        0.012326734266537796,
+        0.014510094180502543,
+        0.017038215012533806,
+        0.01995766739334479,
+        0.0233199410744727,
+        0.027181740370805594,
+        0.031605260722069616,
+        0.03665843883157431,
+        0.04241516807624235,
+        0.048955470167031105,
+        0.056365613398201,
+        0.06473816728458505,
+        0.07417198297666126,
+        0.08477208859359786,
+        0.09664948855451931,
+        0.10992085614771481,
+        0.1247081089845439,
+        0.14113785766530015,
+        0.15934071896062063,
+        0.17945048610201408,
+        0.20160315039077153,
+        0.22593577028119127,
+        0.2525851863690092,
+        0.2816865833077422,
+        0.3133719025631856,
+        0.34776811306831473,
+        0.38499535021544434,
+        0.4251649371673096,
+        0.4683773061209444,
+        0.5147198408453624,
+        0.5642646654549316,
+        0.6170664078861506,
+        0.6731599698223203,
+        0.7325583377600341,
+        0.795250472434888,
+        0.8611993158231526,
+        0.9303399563186124,
+        1.0025779933627301,
+        1.077788142706772,
+        1.1558131225435138,
+        1.2364628589182403,
+        1.3195140460859827,
+        1.4047100938183796,
+        1.4917614890952646,
+        1.5803465941834356,
+        1.6701128968726666,
+        1.7606787216958968,
+        1.8516354034190043,
+        1.9425499160798176,
+        2.0329679425395004,
+        2.122417361051877,
+        2.2104121169398594,
+        2.296456439283112,
+        2.3800493547611166,
+        2.4606894436525844,
+        2.537879776650386,
+        2.6111329657829434,
+        2.6799762584930518,
+        2.743956600945352,
+        2.8026455950196842,
+        2.855644273274067,
+        2.9025876174698007,
+        2.9431487490482997,
+        2.977042724204678,
+        3.0040298718505545,
+        3.0239186196963384,
+        3.0365677617771207,
+        3.0418881298316496,
+        3.0398436408308003,
+        3.030451703429398,
+        3.013782976956836,
+        2.9899604875318704,
+        2.959158116746366,
+        2.9215984888759143,
+        2.8775502925158465,
+        2.8273250816985143,
+        2.771273609731789,
+        2.7097817560452153,
+        2.6432661121045653,
+        2.5721692968558503,
+        2.4969550751189735,
+        2.4181033538381227,
+        2.336105131115345,
+        2.2514574715452533,
+        2.1646585786048007,
+        2.076203030834987,
+        1.9865772434101288,
+        1.8962552105755728,
+        1.8056945775148463,
+        1.7153330826624527,
+        1.6255854034963897,
+        1.5368404306143788,
+        1.4494589866060494,
+        1.363771998058329,
+        1.2800791211395475,
+        1.1986478137501941,
+        1.119712840337008,
+        1.0434761892532662,
+        0.9701073771003376,
+        0.8997441098689419,
+        0.832493266954631,
+        0.7684321712690486,
+        0.707610106703044,
+        0.6500500430957576,
+        0.5957505285832996,
+        0.5446877096836131,
+        0.49681744064962946,
+        0.4520774454097211,
+        0.4103894977242563,
+        0.37166158792672316,
+        0.33579004769278264,
+        0.30266160759691424,
+        0.2721553656831804,
+        0.24414464880852874,
+        0.21849875203501742,
+        0.19508454478063295,
+        0.17376793572526375,
+        0.15441519155684857,
+        0.13689410749063588,
+        0.12107503006977216,
+        0.106831735035669,
+        0.09404216502851147,
+        0.08258903353707228,
+        0.07236030286551073,
+        0.0632495449325568,
+        0.05515619448051364,
+        0.047985704767527594,
+        0.041649616069789154,
+        0.03606554735646119,
+        0.031157121346456793,
+        0.026853832840665358,
+        0.023090869773725355,
+        0.019808895873080844,
+        0.016953803175621236,
+        0.014476441957705937,
+        0.012332334904727427,
+        0.01048138160113847,
+        0.008887558678134035,
+        0.007518620228489923,
+        0.006345802398442613,
+        0.005343535404551512,
+        0.0044891656065250835,
+        0.003762689700205969,
+        0.003146502581575772,
+        0.002625159974347387,
+        0.0021851565105920523,
+        0.0018147196048081615,
+        0.0015036191647809195,
+        0.0012429929346369987,
+        0.001025187063203362,
+        0.0008436113302755215,
+        0.0006926083405883251,
+        0.0005673359059572166,
+        0.0004636617760374135,
+        0.00037806984335774456,
+        0.00030757693484361403,
+        0.0002496593063118014,
+        0.00020218797505155262,
+        0.0001633720555655002,
+        0.0001317093021227593,
+        0.00010594310659451352,
+        8.502524904235046e-05,
+        6.808374996143882e-05,
+        5.4395225484541266e-05,
+        4.3361199035069e-05,
+        3.448787392661777e-05,
+        2.7368920506533203e-05,
+        2.1670878085614058e-05,
+        1.71208157018313e-05,
+        1.349593648876055e-05,
+        1.0614847930619238e-05,
+        8.33025455135937e-06,
+        6.522860646416908e-06,
+        5.09629862218234e-06,
+        3.972923503226112e-06,
+        3.0903363748990767e-06,
+        2.398519143311449e-06,
+        1.8574802213419065e-06,
+        1.4353257977189871e-06,
+        1.106684424194524e-06,
+        8.514239652088656e-07,
+        6.536096877751937e-07,
+        5.006606076128494e-07,
+        3.82668318864116e-07,
+        2.918485732807422e-07,
+        2.2210098074342686e-07,
+        1.6865650264012706e-07,
+        1.2779601576158695e-07,
+        9.662623696434165e-08,
+        7.290180591963264e-08,
+        5.488440178093288e-08,
+        4.123148645038875e-08,
+        3.090868008998796e-08,
+        2.3120933245408405e-08,
+        1.7258606842688865e-08,
+        1.2855342432276923e-08,
+        9.555230885493883e-09,
+        7.087293963631969e-09,
+        5.245701287090303e-09,
+        3.8744731706831036e-09,
+        2.8556824601043534e-09,
+        2.100378224007953e-09,
+        1.5416210727878112e-09,
+        1.1291523112589268e-09,
+        8.253238872879597e-10,
+        6.019987054125882e-10,
+        4.3819581982540527e-10,
+        3.1830592847531916e-10,
+        2.3074237578350103e-10,
+        1.669238742317102e-10,
+        1.2050924364542426e-10,
+        8.682312951950092e-11,
+        6.242607922194859e-11,
+        4.479346145704899e-11,
+        3.2076246327730495e-11,
+        2.29231992866476e-11,
+        1.634903534346481e-11,
+        1.1636883865601732e-11,
+        8.266304482323863e-12,
+        5.8602845680527895e-12,
+        4.1463037363423995e-12,
+        2.9277980994124233e-12,
+        2.063294661371667e-12,
+        1.4511891694936632e-12,
+        1.0186664025483842e-12,
+        7.136539311405727e-13,
+        4.989920460018483e-13,
+        3.482189708755331e-13,
+        2.425306596521477e-13,
+        1.685927375837583e-13,
+        1.1696923710318102e-13,
+        8.099675565646745e-14,
+        5.597954419915306e-14,
+        3.8615304401014365e-14,
+        2.6586461755989403e-14,
+        1.826985956901224e-14,
+        1.2531009871239424e-14,
+        8.578586725077174e-15,
+        5.861743986349962e-15,
+        3.997808521916409e-15,
+        2.7214715001397003e-15,
+        1.8491615968337726e-15,
+        1.2541163439764544e-15,
+        8.489757573137608e-16,
+        5.736537782372185e-16,
+        3.869048206472456e-16,
+        2.604718159354587e-16,
+        1.7503393058489154e-16,
+        1.1740626020172022e-16,
+        7.860865206074709e-17,
+        5.253661744484167e-17,
+        3.5048472803251846e-17,
+        2.3339625608963888e-17,
+        1.5514544146133104e-17,
+        1.0294542360019055e-17,
+        6.818682910427807e-18,
+        4.508394296886584e-18,
+        2.9755944955324956e-18,
+        1.960462587668446e-18,
+        1.2893737230547286e-18,
+        8.46519543965419e-19,
+        5.547988360927966e-19,
+        3.6297516989259854e-19,
+        2.37062875721059e-19,
+        1.5456026406762788e-19,
+        1.0059635063745137e-19,
+        6.53610556225536e-20,
+        4.239461682953032e-20,
+        2.745108706359741e-20,
+        1.774466848435576e-20,
+        1.1450858790022576e-20,
+        7.376873775404347e-21,
+        4.744309901017552e-21,
+        3.04608776188161e-21,
+        1.952462406956891e-21,
+        1.249384399261323e-21,
+        7.981505345820345e-22,
+        5.090389964563617e-22,
+        3.2411339285892993e-22,
+        2.0602727603066838e-22,
+        1.3074840705795333e-22,
+        8.283886425257429e-23,
+        5.239863690952462e-23
+      ],
+      "minus_density": [
+        9.982524904224931e-21,
+        1.6064796615837744e-20,
+        2.5788756695105408e-20,
+        4.129580712387288e-20,
+        6.596323263833768e-20,
+        1.0510378556770503e-19,
+        1.6705338480148612e-19,
+        2.648577787787062e-19,
+        4.1888109065081123e-19,
+        6.608294480184783e-19,
+        1.0399409224116912e-18,
+        1.6324828841441427e-18,
+        2.556285357965022e-18,
+        3.9929217205929036e-18,
+        6.2214708144147804e-18,
+        9.669771003141935e-18,
+        1.4992021660558292e-17,
+        2.318596333079629e-17,
+        3.5769351158643343e-17,
+        5.5045015222316176e-17,
+        8.449791424950447e-17,
+        1.293883228929179e-16,
+        1.9763566698325127e-16,
+        3.011318920960367e-16,
+        4.576878835924178e-16,
+        6.939103349778384e-16,
+        1.0494424296268715e-15,
+        1.5831980647601188e-15,
+        2.3825021187148466e-15,
+        3.57645529418927e-15,
+        5.355423407520278e-15,
+        7.999380918798497e-15,
+        1.1919019873593739e-14,
+        1.7715212196208223e-14,
+        2.6264786236511562e-14,
+        3.88439268722062e-14,
+        5.730521942634706e-14,
+        8.433096616051037e-14,
+        1.2379464714005207e-13,
+        1.8127528689901922e-13,
+        2.647874099185934e-13,
+        3.858141117528398e-13,
+        5.607651096068534e-13,
+        8.130289516080742e-13,
+        1.1758535674565574e-12,
+        1.6963783775359802e-12,
+        2.441262757602651e-12,
+        3.5045211739365785e-12,
+        5.018399950307147e-12,
+        7.168434591799187e-12,
+        1.0214236610773367e-11,
+        1.4518110171832611e-11,
+        2.0584338023204492e-11,
+        2.911296397145338e-11,
+        4.107321508487637e-11,
+        5.780345436074267e-11,
+        8.114686798262537e-11,
+        1.1363514398771649e-10,
+        1.5873641452130731e-10,
+        2.2118899843591947e-10,
+        3.074493610697158e-10,
+        4.2629167001669894e-10,
+        5.896079612263304e-10,
+        8.134729864710757e-10,
+        1.1195572321347884e-09,
+        1.5369965601906037e-09,
+        2.1048588983001308e-09,
+        2.8753892291015843e-09,
+        3.9182660675427e-09,
+        5.326168466961577e-09,
+        7.222035794078086e-09,
+        9.768507258338097e-09,
+        1.3180159580569187e-08,
+        1.7739325426892924e-08,
+        2.381647977450689e-08,
+        3.18964351627148e-08,
+        4.261190049294815e-08,
+        5.6786344352845855e-08,
+        7.548857772243277e-08,
+        1.0010204995518067e-07,
+        1.324125566372126e-07,
+        1.747189121289313e-07,
+        2.2997217074101706e-07,
+        3.0195022003121584e-07,
+        3.954760533729829e-07,
+        5.166897970654456e-07,
+        6.733866649400753e-07,
+        8.754354906919272e-07,
+        1.1352953999319034e-06,
+        1.4686515898350996e-06,
+        1.8951951481699771e-06,
+        2.4395764329887686e-06,
+        3.1325668195470417e-06,
+        4.012469673569337e-06,
+        5.126828300711477e-06,
+        6.534486419007895e-06,
+        8.308065466455908e-06,
+        1.0536932842516305e-05,
+        1.3330746029442994e-05,
+        1.682366946761932e-05,
+        2.1179374064787234e-05,
+        2.6596943267677296e-05,
+        3.3317824643518e-05,
+        4.163398178970902e-05,
+        5.18974179397075e-05,
+        6.453125962578025e-05,
+        8.004260588636394e-05,
+        9.903736537776288e-05,
+        0.00012223731988752652,
+        0.0001504996675733623,
+        0.00018483931208641846,
+        0.0002264541737924447,
+        0.0002767538056797256,
+        0.000337391598230504,
+        0.00041030085342046515,
+        0.0004977349968913506,
+        0.0006023121779276449,
+        0.0007270644778124747,
+        0.0008754919070610598,
+        0.0010516213195545024,
+        0.0012600703053870402,
+        0.0015061160430528235,
+        0.0017957689943369072,
+        0.0021358512110526457,
+        0.0025340788909754995,
+        0.0029991486707029716,
+        0.0035408269758919436,
+        0.004170041565062435,
+        0.004898974203164693,
+        0.005741153187290846,
+        0.006711544221895121,
+        0.007826637908058088,
+        0.009104531874886196,
+        0.01056500534609724,
+        0.012229583707045695,
+        0.014121590423517065,
+        0.01626618347092134,
+        0.018690373269027723,
+        0.021423018991594576,
+        0.024494800040983464,
+        0.02793815945405747,
+        0.03178721604619772,
+        0.036077642213599,
+        0.04084650450792074,
+        0.046132064378657814,
+        0.05197353685272837,
+        0.058410805391524837,
+        0.06548409173482272,
+        0.07323358020793956,
+        0.08169899673021737,
+        0.09091914361325153,
+        0.10093139216726142,
+        0.1117711361314055,
+        0.12347120999331754,
+        0.13606127734621465,
+        0.14956719552721995,
+        0.16401036386401993,
+        0.17940706390234656,
+        0.19576780096600868,
+        0.21309665728514707,
+        0.2313906676874778,
+        0.25063922945229883,
+        0.27082355834997895,
+        0.29191620310467287,
+        0.3138806305022832,
+        0.33667089310031506,
+        0.36023139096711765,
+        0.38449673807656015,
+        0.4093917429081512,
+        0.4348315114563978,
+        0.4607216792484943,
+        0.4869587771250934,
+        0.5134307334811946,
+        0.5400175134263409,
+        0.566591892945125,
+        0.5930203636661001,
+        0.6191641613301698,
+        0.6448804085427338,
+        0.6700233599541223,
+        0.6944457356980973,
+        0.7180001267858247,
+        0.7405404542581508,
+        0.7619234622938379,
+        0.7820102242021252,
+        0.8006676393343547,
+        0.8177698984631623,
+        0.833199895121591,
+        0.8468505607810276,
+        0.8586261025782331,
+        0.8684431235690787,
+        0.8762316071701448,
+        0.8819357495188286,
+        0.8855146258977852,
+        0.8869426800812157,
+        0.8862100284117181,
+        0.8833225735439086,
+        0.8783019260268997,
+        0.8711851351712603,
+        0.862024233885618,
+        0.8508856053028828,
+        0.8378491819783492,
+        0.823007491168464,
+        0.8064645621329303,
+        0.7883347134948693,
+        0.7687412404038472,
+        0.7478150225442027,
+        0.7256930748965945,
+        0.702517063584886,
+        0.6784318091251876,
+        0.6535837989514482,
+        0.6281197302443778,
+        0.6021851028690525,
+        0.5759228806701451,
+        0.5494722375282005,
+        0.5229674024962484,
+        0.4965366160680506,
+        0.470301207233616,
+        0.44437479851154243,
+        0.41886264366688364,
+        0.3938611003814649,
+        0.3694572377904086,
+        0.34572857657943046,
+        0.3227429572912576,
+        0.3005585306495732,
+        0.27922386210107003,
+        0.2587781414197549,
+        0.23925148712418484,
+        0.2206653346330305,
+        0.2030328965253199,
+        0.18635968297134933,
+        0.17064407034508033,
+        0.15587790620118389,
+        0.14204713917774478,
+        0.1291324629443791,
+        0.11710996402803818,
+        0.10595176418706624,
+        0.09562664893943282,
+        0.08610067485521788,
+        0.0773377492692086,
+        0.0693001771311152,
+        0.061949170765040154,
+        0.055245319335312834,
+        0.04914901579448007,
+        0.04362084000574051,
+        0.038621897574267275,
+        0.034114114680362365,
+        0.030060489875980374,
+        0.02642530438121438,
+        0.0231742928978938,
+        0.020274777344686024,
+        0.017695766215274245,
+        0.015408022473123296,
+        0.013384103029281709,
+        0.011598372910779165,
+        0.010026997224410177,
+        0.008647913962357829,
+        0.00744079059073099,
+        0.006386967218069673,
+        0.005469388966389282,
+        0.004672529970090316,
+        0.0039823112152269835,
+        0.003386014209691674,
+        0.0028721922496019563,
+        0.0024305808235810687,
+        0.0020520084789237758,
+        0.0017283092653119735,
+        0.0014522376755160846,
+        0.0012173868204406323,
+        0.0010181104093555649,
+        0.0008494489560516477,
+        0.0007070604983156523,
+        0.0005871560014661984,
+        0.00048643951629082733,
+        0.00040205307686464234,
+        0.0003315262534707383,
+        0.00027273021908475506,
+        0.00022383614342222084,
+        0.00018327769511279661,
+        0.00014971740887387581,
+        0.00012201665933800277,
+        9.920897521669116e-05,
+        8.04764255957162e-05,
+        6.512881327171641e-05,
+        5.258541716722486e-05,
+        4.235903610884599e-05,
+        3.404209883047309e-05,
+        2.72946192796091e-05,
+        2.1833791567279933e-05,
+        1.7425034710776605e-05,
+        1.3874313259910489e-05,
+        1.1021575637355946e-05,
+        8.735167298811645e-06,
+        6.907090429214569e-06,
+        5.4489956920661845e-06,
+        4.288804442275303e-06,
+        3.3678717405835506e-06,
+        2.638611444222877e-06,
+        2.062514594973174e-06,
+        1.608501304097396e-06,
+        1.251554381392648e-06,
+        9.71590122026672e-07,
+        7.525280070064957e-07,
+        5.81526652957261e-07,
+        4.483582285828925e-07,
+        3.448978032606186e-07,
+        2.6470777095114394e-07,
+        2.0270066082120463e-07,
+        1.5486636222661453e-07,
+        1.1805210969634842e-07,
+        8.978554280285007e-08,
+        6.81328214662036e-08,
+        5.158518012601538e-08,
+        3.896848087429217e-08,
+        2.9371308550516234e-08,
+        2.208796859804949e-08,
+        1.6573426255465493e-08,
+        1.2407785236497548e-08,
+        9.268364316436654e-09,
+        6.907807421734824e-09,
+        5.136970790073346e-09,
+        3.811581330785608e-09,
+        2.8218634538162092e-09,
+        2.0844957536264552e-09,
+        1.5363910736368755e-09,
+        1.1298995083209475e-09,
+        8.291186979562346e-10,
+        6.070633635641451e-10,
+        4.4349973177065285e-10,
+        3.232930278673419e-10,
+        2.351497874706724e-10,
+        1.706631552149954e-10,
+        1.2359006223628862e-10,
+        8.930537990515614e-11,
+        6.439078119142066e-11,
+        4.632586038183753e-11,
+        3.325667058512414e-11,
+        2.3822716542446087e-11,
+        1.7027967845638118e-11,
+        1.2144934735724577e-11,
+        8.643511133922791e-12,
+        6.138322356240656e-12
+      ],
+      "note": "Plot-ready samples only; all reported integrals use CDF boundary integration, not this finite profile window."
+    },
+    {
+      "sigma_i": 0.1,
+      "sigma_d": 0.1,
+      "driven": true,
+      "x": [
+        0.4,
+        0.405,
+        0.41000000000000003,
+        0.41500000000000004,
+        0.42000000000000004,
+        0.42500000000000004,
+        0.43000000000000005,
+        0.43500000000000005,
+        0.44,
+        0.445,
+        0.45,
+        0.455,
+        0.46,
+        0.465,
+        0.47000000000000003,
+        0.47500000000000003,
+        0.48000000000000004,
+        0.48500000000000004,
+        0.49,
+        0.495,
+        0.5,
+        0.505,
+        0.51,
+        0.515,
+        0.52,
+        0.525,
+        0.53,
+        0.535,
+        0.54,
+        0.545,
+        0.55,
+        0.555,
+        0.56,
+        0.5650000000000001,
+        0.5700000000000001,
+        0.5750000000000001,
+        0.5800000000000001,
+        0.585,
+        0.5900000000000001,
+        0.595,
+        0.6000000000000001,
+        0.605,
+        0.61,
+        0.615,
+        0.62,
+        0.625,
+        0.63,
+        0.635,
+        0.64,
+        0.645,
+        0.65,
+        0.655,
+        0.66,
+        0.665,
+        0.67,
+        0.675,
+        0.68,
+        0.685,
+        0.69,
+        0.6950000000000001,
+        0.7,
+        0.7050000000000001,
+        0.71,
+        0.7150000000000001,
+        0.72,
+        0.7250000000000001,
+        0.73,
+        0.7350000000000001,
+        0.74,
+        0.7450000000000001,
+        0.75,
+        0.755,
+        0.76,
+        0.765,
+        0.77,
+        0.775,
+        0.78,
+        0.785,
+        0.79,
+        0.795,
+        0.8,
+        0.805,
+        0.81,
+        0.8150000000000001,
+        0.8200000000000001,
+        0.825,
+        0.8300000000000001,
+        0.835,
+        0.8400000000000001,
+        0.845,
+        0.8500000000000001,
+        0.855,
+        0.8600000000000001,
+        0.865,
+        0.8700000000000001,
+        0.875,
+        0.88,
+        0.885,
+        0.89,
+        0.895,
+        0.9,
+        0.905,
+        0.91,
+        0.915,
+        0.92,
+        0.925,
+        0.93,
+        0.935,
+        0.9400000000000001,
+        0.9450000000000001,
+        0.9500000000000001,
+        0.9550000000000001,
+        0.9600000000000001,
+        0.9650000000000001,
+        0.9700000000000001,
+        0.9750000000000001,
+        0.98,
+        0.985,
+        0.99,
+        0.995,
+        1.0,
+        1.005,
+        1.01,
+        1.0150000000000001,
+        1.02,
+        1.025,
+        1.03,
+        1.0350000000000001,
+        1.04,
+        1.045,
+        1.05,
+        1.0550000000000002,
+        1.06,
+        1.065,
+        1.07,
+        1.0750000000000002,
+        1.08,
+        1.085,
+        1.09,
+        1.0950000000000002,
+        1.1,
+        1.105,
+        1.1099999999999999,
+        1.115,
+        1.12,
+        1.125,
+        1.13,
+        1.135,
+        1.1400000000000001,
+        1.145,
+        1.15,
+        1.155,
+        1.1600000000000001,
+        1.165,
+        1.17,
+        1.175,
+        1.1800000000000002,
+        1.185,
+        1.19,
+        1.195,
+        1.2000000000000002,
+        1.205,
+        1.21,
+        1.215,
+        1.2200000000000002,
+        1.225,
+        1.23,
+        1.2349999999999999,
+        1.24,
+        1.245,
+        1.25,
+        1.255,
+        1.26,
+        1.2650000000000001,
+        1.27,
+        1.275,
+        1.28,
+        1.2850000000000001,
+        1.29,
+        1.295,
+        1.3,
+        1.3050000000000002,
+        1.31,
+        1.315,
+        1.32,
+        1.3250000000000002,
+        1.33,
+        1.335,
+        1.34,
+        1.3450000000000002,
+        1.35,
+        1.355,
+        1.3599999999999999,
+        1.365,
+        1.37,
+        1.375,
+        1.38,
+        1.385,
+        1.3900000000000001,
+        1.395,
+        1.4,
+        1.4050000000000002,
+        1.4100000000000001,
+        1.415,
+        1.42,
+        1.4249999999999998,
+        1.4300000000000002,
+        1.435,
+        1.44,
+        1.4449999999999998,
+        1.4500000000000002,
+        1.455,
+        1.46,
+        1.4649999999999999,
+        1.4700000000000002,
+        1.475,
+        1.48,
+        1.4849999999999999,
+        1.4900000000000002,
+        1.495,
+        1.5,
+        1.505,
+        1.5100000000000002,
+        1.5150000000000001,
+        1.52,
+        1.525,
+        1.5300000000000002,
+        1.5350000000000001,
+        1.54,
+        1.545,
+        1.5500000000000003,
+        1.5550000000000002,
+        1.56,
+        1.565,
+        1.5699999999999998,
+        1.5750000000000002,
+        1.58,
+        1.585,
+        1.5899999999999999,
+        1.5950000000000002,
+        1.6,
+        1.605,
+        1.6099999999999999,
+        1.6150000000000002,
+        1.62,
+        1.625,
+        1.63,
+        1.6350000000000002,
+        1.6400000000000001,
+        1.645,
+        1.65,
+        1.6550000000000002,
+        1.6600000000000001,
+        1.665,
+        1.67,
+        1.6750000000000003,
+        1.6800000000000002,
+        1.685,
+        1.69,
+        1.6949999999999998,
+        1.7000000000000002,
+        1.705,
+        1.71,
+        1.7149999999999999,
+        1.7200000000000002,
+        1.725,
+        1.73,
+        1.7349999999999999,
+        1.7400000000000002,
+        1.745,
+        1.75,
+        1.755,
+        1.7600000000000002,
+        1.7650000000000001,
+        1.77,
+        1.775,
+        1.7800000000000002,
+        1.7850000000000001,
+        1.79,
+        1.795,
+        1.8000000000000003,
+        1.8050000000000002,
+        1.81,
+        1.815,
+        1.8199999999999998,
+        1.8250000000000002,
+        1.83,
+        1.835,
+        1.8399999999999999,
+        1.8450000000000002,
+        1.85,
+        1.855,
+        1.8599999999999999,
+        1.8650000000000002,
+        1.87,
+        1.875,
+        1.88,
+        1.8850000000000002,
+        1.8900000000000001,
+        1.895,
+        1.9,
+        1.9050000000000002,
+        1.9100000000000001,
+        1.915,
+        1.92,
+        1.9250000000000003,
+        1.9300000000000002,
+        1.935,
+        1.94,
+        1.9449999999999998,
+        1.9500000000000002,
+        1.955,
+        1.96,
+        1.9649999999999999,
+        1.9700000000000002,
+        1.975,
+        1.98,
+        1.9849999999999999,
+        1.9900000000000002,
+        1.995,
+        2.0,
+        2.005,
+        2.0100000000000002,
+        2.015,
+        2.02,
+        2.025,
+        2.0300000000000002,
+        2.035,
+        2.04,
+        2.045,
+        2.0500000000000003,
+        2.055,
+        2.06,
+        2.065,
+        2.07,
+        2.075,
+        2.08,
+        2.085,
+        2.09,
+        2.095,
+        2.1
+      ],
+      "plus_density": [
+        1.5488345637550514e-05,
+        1.9112215161258828e-05,
+        2.3526168367864425e-05,
+        2.8888571223940672e-05,
+        3.538638163291643e-05,
+        4.3239639895485026e-05,
+        5.270653042490862e-05,
+        6.408906225427182e-05,
+        7.773941520657555e-05,
+        9.406699688997196e-05,
+        0.00011354625276893545,
+        0.00013672526729006294,
+        0.00016423518825974117,
+        0.00019680049924761028,
+        0.00023525015561672418,
+        0.0002805295887848078,
+        0.0003337135704718485,
+        0.0003960199140139496,
+        0.0004688239734158867,
+        0.0005536738828484224,
+        0.0006523064600353786,
+        0.0007666636767859519,
+        0.0008989095792873864,
+        0.0010514475202788639,
+        0.001226937545600404,
+        0.001428313759697622,
+        0.001658801479434442,
+        0.0019219339741068714,
+        0.0022215685830493867,
+        0.002561902001951022,
+        0.002947484536275854,
+        0.003383233136357519,
+        0.00387444305513336,
+        0.004426798007352343,
+        0.005046378759554057,
+        0.005739670144101666,
+        0.006513566568722685,
+        0.007375376185691126,
+        0.008332823991878733,
+        0.009394054251820598,
+        0.010567632769521778,
+        0.011862549679166234,
+        0.013288223577675399,
+        0.014854507979925685,
+        0.01657170123632927,
+        0.018450561207545645,
+        0.02050232613668313,
+        0.02273874328906799,
+        0.025172107036425848,
+        0.027815308138478777,
+        0.030681896012420645,
+        0.03378615577114319,
+        0.037143201746059056,
+        0.04076908908172784,
+        0.04468094478956532,
+        0.04889711936984309,
+        0.05343735974927085,
+        0.05832300383151006,
+        0.06357719641769445,
+        0.06922512562336829,
+        0.07529427819971624,
+        0.08181471136598722,
+        0.08881933788517551,
+        0.09634422017833984,
+        0.10442886828985246,
+        0.11311653550551379,
+        0.12245450441034038,
+        0.1324943551789428,
+        0.14329220694762518,
+        0.15490892225533648,
+        0.16741026379391685,
+        0.18086699211178908,
+        0.19535489250474003,
+        0.2109547191378852,
+        0.227752044507781,
+        0.2458370027039624,
+        0.26530391559197203,
+        0.2862507920373026,
+        0.3087786916373106,
+        0.3329909461344413,
+        0.35899223374877626,
+        0.38688750408136985,
+        0.41678075398214104,
+        0.4487736578166687,
+        0.482964058863409,
+        0.5194443320740556,
+        0.5582996320717516,
+        0.5996060439715374,
+        0.6434286583029971,
+        0.6898195949071239,
+        0.7388160040735479,
+        0.7904380762819326,
+        0.8446870946139147,
+        0.9015435661115794,
+        0.960965469982828,
+        1.0228866615071928,
+        1.0872154707034074,
+        1.1538335342200983,
+        1.2225948974583527,
+        1.293325421601917,
+        1.3658225270109898,
+        1.4398553003440935,
+        1.5151649878476752,
+        1.5914658915566706,
+        1.6684466787661647,
+        1.7457721081716422,
+        1.8230851686608343,
+        1.9000096190196365,
+        1.976152908948968,
+        2.051109453951155,
+        2.124464229013175,
+        2.195796638772379,
+        2.264684615178426,
+        2.330708887736414,
+        2.3934573663917194,
+        2.452529573141135,
+        2.507541055650469,
+        2.558127714623346,
+        2.6039499764682765,
+        2.644696743988644,
+        2.6800890603771865,
+        2.709883425703149,
+        2.7338747102728393,
+        2.7518986156263066,
+        2.7638336413773117,
+        2.769602524455583,
+        2.769173126391157,
+        2.762558753892345,
+        2.7498179078997067,
+        2.731053466327904,
+        2.706411315612586,
+        2.6760784557409907,
+        2.6402806124523757,
+        2.599279398552367,
+        2.553369073618218,
+        2.5028729576286546,
+        2.4481395591094457,
+        2.3895384821522128,
+        2.3274561790801256,
+        2.262291616575094,
+        2.1944519227556967,
+        2.124348081045278,
+        2.0523907337681564,
+        1.9789861543598617,
+        1.9045324420007503,
+        1.8294159865277513,
+        1.754008244809254,
+        1.6786628625573468,
+        1.603713167980074,
+        1.529470055925994,
+        1.4562202734222787,
+        1.384225109926092,
+        1.3137194883551304,
+        1.2449114461794824,
+        1.1779819896671704,
+        1.113085298882661,
+        1.0503492563217778,
+        0.9898762681848302,
+        0.9317443442761073,
+        0.8760084003826654,
+        0.8227017457175069,
+        0.771837717580443,
+        0.723411425744911,
+        0.6774015701558417,
+        0.6337722972448164,
+        0.5924750624468459,
+        0.5534504692439017,
+        0.5166300581657423,
+        0.4819380225494858,
+        0.4492928313984401,
+        0.41860874329438635,
+        0.38979719891871856,
+        0.3627680832471456,
+        0.3374308518300569,
+        0.3136955186964181,
+        0.29147350627439694,
+        0.27067836026921266,
+        0.2512263346515105,
+        0.23303685377223865,
+        0.21603286012700296,
+        0.20014105744794483,
+        0.18529205961633446,
+        0.17142045638341674,
+        0.1584648070855391,
+        0.1463675734717608,
+        0.13507500246083645,
+        0.12453696914462165,
+        0.11470678969241124,
+        0.1055410130212065,
+        0.09699919921507741,
+        0.0890436917354479,
+        0.08163938949356321,
+        0.07475352388384812,
+        0.06835544492620106,
+        0.06241641975675721,
+        0.056909445856812346,
+        0.051809080631306355,
+        0.04709128825078903,
+        0.042733304060072023,
+        0.03871351633566119,
+        0.035011364742671906,
+        0.03160725449797348,
+        0.028482484985521684,
+        0.02561919138634013,
+        0.023000297772328527,
+        0.02060948006203184,
+        0.018431137239289998,
+        0.016450369283630483,
+        0.014652960345798646,
+        0.013025365814687438,
+        0.011554702055330119,
+        0.010228737744446673,
+        0.009035885883877182,
+        0.007965195727537937,
+        0.007006344009555691,
+        0.00614962500612006,
+        0.005385939098289826,
+        0.004706779625258009,
+        0.0041042179258879066,
+        0.0035708865598230886,
+        0.0030999607778470803,
+        0.002685138374628635,
+        0.0023206181061299364,
+        0.002001076889705016,
+        0.0017216460284276295,
+        0.0014778867137898613,
+        0.0012657650640211476,
+        0.0010816269503561191,
+        0.0009221728520735114,
+        0.0007844329644356986,
+        0.0006657427630871053,
+        0.0005637192052233293,
+        0.000476237722994066,
+        0.0004014101390918287,
+        0.0003375636091016145,
+        0.00028322067060405535,
+        0.00023708045575957838,
+        0.00019800110255205192,
+        0.00016498338032018843,
+        0.00013715552783238703,
+        0.00011375928705561416,
+        9.413710294352824e-05,
+        7.772044897321505e-05,
+        6.401922969234644e-05,
+        5.261220506030809e-05,
+        4.3138376710765046e-05,
+        3.52892732447747e-05,
+        2.880207008866663e-05,
+        2.3453479123260317e-05,
+        1.9054344017588163e-05,
+        1.5444878796478367e-05,
+        1.2490489463916105e-05,
+        1.0078121334087294e-05,
+        8.113077946014264e-06,
+        6.516260928935291e-06,
+        5.221783833905667e-06,
+        4.174916658813907e-06,
+        3.330321491020154e-06,
+        2.650543310728773e-06,
+        2.104723488971357e-06,
+        1.6675068387536649e-06,
+        1.3181162091770347e-06,
+        1.039571532076505e-06,
+        8.180329286498874e-07,
+        6.422499559232256e-07,
+        5.03101321259484e-07,
+        3.932114232072043e-07,
+        3.066318977584286e-07,
+        2.3857797183453625e-07,
+        1.852108634452041e-07,
+        1.4345873434153308e-07,
+        1.1086981044154709e-07,
+        8.549225221417484e-08,
+        6.57761956484413e-08,
+        5.0494107949806644e-08,
+        3.867622351836366e-08,
+        2.9558357053023356e-08,
+        2.2539842853511245e-08,
+        1.7149732665447508e-08,
+        1.3019707883000786e-08,
+        9.86243380050618e-09,
+        7.454311201456667e-09,
+        5.62177035388868e-09,
+        4.230410119632706e-09,
+        3.176415330261137e-09,
+        2.3797931252220234e-09,
+        1.7790572852493867e-09,
+        1.3270618959012255e-09,
+        9.877446438243363e-10,
+        7.335879736739826e-10,
+        5.436451506173614e-10,
+        4.020096065757871e-10,
+        2.966311560857162e-10,
+        2.1840288041451318e-10,
+        1.6045863323261763e-10,
+        1.1763399080698528e-10,
+        8.605368963071238e-11,
+        6.281668457071374e-11,
+        4.5756344831447154e-11,
+        3.3258327446993676e-11,
+        2.412260700888938e-11,
+        1.7459220251915215e-11,
+        1.2609685077212967e-11,
+        9.087919688359194e-12,
+        6.535933617608852e-12,
+        4.690679769884703e-12,
+        3.359317439735079e-12,
+        2.400797542410969e-12,
+        1.7121878456100361e-12,
+        1.2185429010261097e-12,
+        8.654180760685777e-13,
+        6.133509244441296e-13,
+        4.3380267697955383e-13,
+        3.0618069720951485e-13,
+        2.156592130674642e-13,
+        1.5158810437100684e-13,
+        1.063338187238332e-13,
+        7.443705521024581e-14,
+        5.200208515865801e-14,
+        3.6255046502793584e-14,
+        2.522520221305976e-14,
+        1.7515465738371646e-14,
+        1.2137575457407133e-14,
+        8.393977593367953e-15,
+        5.793375535213272e-15,
+        3.990487778775826e-15,
+        2.7431726741173667e-15,
+        1.8819825990837856e-15,
+        1.2885931232621587e-15,
+        8.805544684243388e-16,
+        6.00536382704609e-16,
+        4.0875924344229686e-16,
+        2.7767929969093074e-16,
+        1.8826499609358334e-16,
+        1.273938073183874e-16,
+        8.603640067571136e-17,
+        5.799276962483793e-17,
+        3.9014468626361585e-17,
+        2.6196321099420698e-17,
+        1.7555783479515213e-17,
+        1.1742700168631928e-17
+      ],
+      "minus_density": [
+        1.6586971462543194e-15,
+        2.4491838224402542e-15,
+        3.607429430794427e-15,
+        5.3002522418992e-15,
+        7.76814852780153e-15,
+        1.1356927345238183e-14,
+        1.6562526095717366e-14,
+        2.4094324928630096e-14,
+        3.496435070169137e-14,
+        5.06126118313703e-14,
+        7.308271416310217e-14,
+        1.0526725157862606e-13,
+        1.512497479432447e-13,
+        2.1677982276668738e-13,
+        3.099316579263996e-13,
+        4.420139456578481e-13,
+        6.288238697868469e-13,
+        8.92370382138859e-13,
+        1.263235800325924e-12,
+        1.7838031244349744e-12,
+        2.5126540792914766e-12,
+        3.530545750468321e-12,
+        4.9485095798564384e-12,
+        6.918795457600326e-12,
+        9.649618587202726e-12,
+        1.3424974216734207e-11,
+        1.8631186272430436e-11,
+        2.5792377146051395e-11,
+        3.561772122206934e-11,
+        4.9064216856900566e-11,
+        6.741983402479933e-11,
+        9.241333474404271e-11,
+        1.2635890417769952e-10,
+        1.7234607553206097e-10,
+        2.3448840949243074e-10,
+        3.182481563148954e-10,
+        4.3085887857201906e-10,
+        5.818739799292096e-10,
+        7.838765554300304e-10,
+        1.0533952961622691e-09,
+        1.4120827601369905e-09,
+        1.8882266573731066e-09,
+        2.5186824805142463e-09,
+        3.3513375414080946e-09,
+        4.448243071705707e-09,
+        5.889583475217085e-09,
+        7.778691203295481e-09,
+        1.0248363360007346e-08,
+        1.346879352373501e-08,
+        1.765750110046648e-08,
+        2.309172273364884e-08,
+        3.012382806012516e-08,
+        3.9200437847214024e-08,
+        5.088605895521207e-08,
+        6.589221058055163e-08,
+        8.511320303037874e-08,
+        1.096699472658374e-07,
+        1.409634242241032e-07,
+        1.8073973122189353e-07,
+        2.3116895235868675e-07,
+        2.9494047455804796e-07,
+        3.753777943567834e-07,
+        4.765763361442921e-07,
+        6.03568333194421e-07,
+        7.625194108008457e-07,
+        9.60962157535553e-07,
+        1.2080726763775206e-06,
+        1.5149968710715767e-06,
+        1.8952340417149562e-06,
+        2.365086232324439e-06,
+        2.9441826847131225e-06,
+        3.656089697393508e-06,
+        4.5290171523705385e-06,
+        5.596633940231632e-06,
+        6.899005464959336e-06,
+        8.483667320770821e-06,
+        1.0406850076652669e-05,
+        1.2734870849072196e-05,
+        1.5545707955142522e-05,
+        1.8930775379856784e-05,
+        2.2996914022125542e-05,
+        2.7868616664105733e-05,
+        3.3690503295359786e-05,
+        4.063006277772262e-05,
+        4.888067582150466e-05,
+        5.866493282724027e-05,
+        7.023825830572767e-05,
+        8.389285130917137e-05,
+        9.996194858781234e-05,
+        0.0001188244140459125,
+        0.0001409096545445685,
+        0.00016670285824536181,
+        0.00019675054759313299,
+        0.00023166643481099092,
+        0.00027213756356959983,
+        0.00031893071647050986,
+        0.0003728990643569806,
+        0.00043498903047281486,
+        0.0005062473403968454,
+        0.0005878282277782029,
+        0.0006810007664946046,
+        0.0007871563022715355,
+        0.0009078159613534081,
+        0.001044638220814373,
+        0.0011994265348146322,
+        0.001374137023780676,
+        0.0015708862492839306,
+        0.001791959116395536,
+        0.0020398169674831278,
+        0.002317105956636435,
+        0.0026266658218602056,
+        0.0029715392023804024,
+        0.003354981680208681,
+        0.0037804727576299683,
+        0.004251728014432952,
+        0.004772712719185972,
+        0.00534765719614742,
+        0.0059810742717582455,
+        0.0066777791401782935,
+        0.007442911993927061,
+        0.008281963761189786,
+        0.009200805273514523,
+        0.010205720154225691,
+        0.011303441666774461,
+        0.012501193691476254,
+        0.013806735906959872,
+        0.015228413137868378,
+        0.016775208692091224,
+        0.018456801348855665,
+        0.02028362547385653,
+        0.022266933530563783,
+        0.024418860030124043,
+        0.026752485719045677,
+        0.029281900548334103,
+        0.032022263705186856,
+        0.03498985872507082,
+        0.03820214144529628,
+        0.04167777831930178,
+        0.04543667239280287,
+        0.04949997405839469,
+        0.053890073564210286,
+        0.0586305721650663,
+        0.06374622878129257,
+        0.0692628790808074,
+        0.07520732403280748,
+        0.08160718520437506,
+        0.08849072439045778,
+        0.09588662558722698,
+        0.10382373784063505,
+        0.11233077812531193,
+        0.12143599413009645,
+        0.13116678763869927,
+        0.14154930008717587,
+        0.15260796284064593,
+        0.16436501574333703,
+        0.17683999853874158,
+        0.1900492208077565,
+        0.20400521710692496,
+        0.21871619497912742,
+        0.234185484426697,
+        0.25041099825268526,
+        0.2673847133606871,
+        0.285092183629003,
+        0.3035120953145888,
+        0.3226158760725546,
+        0.3423673685779258,
+        0.3627225793924355,
+        0.3836295131200744,
+        0.40502810103670317,
+        0.4268502322633923,
+        0.44901989418942023,
+        0.47145342725509914,
+        0.4940598973999773,
+        0.5167415874984725,
+        0.5393946069788857,
+        0.5619096165950491,
+        0.5841726630393872,
+        0.6060661158024518,
+        0.6274696964500631,
+        0.64826158835923,
+        0.6683196129818837,
+        0.687522456943162,
+        0.70575093277713,
+        0.7228892549012398,
+        0.7388263115691105,
+        0.7534569130494502,
+        0.7666829961787999,
+        0.7784147657394613,
+        0.7885717538239047,
+        0.7970837794552995,
+        0.8038917922225017,
+        0.8089485855290387,
+        0.8122193672121638,
+        0.8136821777144441,
+        0.8133281486338356,
+        0.8111615972802997,
+        0.8071999557649107,
+        0.8014735360757536,
+        0.7940251354875706,
+        0.7849094894439769,
+        0.7741925816798056,
+        0.7619508237588939,
+        0.748270118337538,
+        0.7332448222814014,
+        0.7169766272278955,
+        0.6995733762701415,
+        0.6811478361258695,
+        0.6618164444382874,
+        0.6416980517395099,
+        0.620912677103953,
+        0.5995802956514351,
+        0.5778196748585464,
+        0.5557472751400122,
+        0.5334762284134781,
+        0.5111154064097695,
+        0.4887685883882214,
+        0.46653373571626605,
+        0.4445023785278246,
+        0.42275911743805045,
+        0.4013812411124166,
+        0.3804384584113858,
+        0.35999274189897823,
+        0.3400982777491822,
+        0.32080151553727987,
+        0.30214131008545064,
+        0.2841491464586241,
+        0.2668494383852322,
+        0.25025988980979075,
+        0.23439190896485462,
+        0.21925106426825045,
+        0.20483757149147952,
+        0.19114680198685,
+        0.1781698022804358,
+        0.16589381600937392,
+        0.15430279997730356,
+        0.1433779269924898,
+        0.13309806911071545,
+        0.1234402559016559,
+        0.1143801033670025,
+        0.10589221013677039,
+        0.09795051853550485,
+        0.09052863902360722,
+        0.08360013736518476,
+        0.07713878464017418,
+        0.0711187708959443,
+        0.06551488381609381,
+        0.060302654268849586,
+        0.05545847098409471,
+        0.05095966689902059,
+        0.04678457991213763,
+        0.042912590900247655,
+        0.03932414189065003,
+        0.036000737250166705,
+        0.03292493066295822,
+        0.030080300530438083,
+        0.027451416248698506,
+        0.025023797611408438,
+        0.02278386935825261,
+        0.020718912649158285,
+        0.01881701500043445,
+        0.017067019977283368,
+        0.015458477703654981,
+        0.013981597029812212,
+        0.012627199993962631,
+        0.011386679029578597,
+        0.010251957206379168,
+        0.009215451651307806,
+        0.008270040176416589,
+        0.007409031042890702,
+        0.006626135713538342,
+        0.005915444388497628,
+        0.005271404078939768,
+        0.004688798949200146,
+        0.004162732646960991,
+        0.003688612341690196,
+        0.0032621342014001174,
+        0.0028792700548872017,
+        0.0025362550090537368,
+        0.002229575816958476,
+        0.0019559598203587863,
+        0.0017123643193578879,
+        0.0014959662502453275,
+        0.00130415207981033,
+        0.001134507849620947,
+        0.0009848093264868765,
+        0.0008530122352304563,
+        0.0007372425667979622,
+        0.0006357869686062337,
+        0.0005470832349027577,
+        0.00046971092297206415,
+        0.0004023821264696694,
+        0.00034393244027425014,
+        0.0002933121523194997,
+        0.00024957769721259366,
+        0.00021188340438353732,
+        0.000179473570345481,
+        0.00015167488067066622,
+        0.0001278892027652001,
+        0.00010758676569609276,
+        9.029973839162871e-05,
+        7.561621267525172e-05,
+        6.317459294501373e-05,
+        5.265838998617039e-05,
+        4.379141248511239e-05,
+        3.633334635394517e-05,
+        3.0075709008390687e-05,
+        2.4838163279147047e-05,
+        2.0465173673094946e-05,
+        1.6822986216993662e-05,
+        1.3796912082971474e-05,
+        1.1288894574939803e-05,
+        9.21533880542609e-06,
+        7.5051834676347165e-06,
+        6.0981944610956915e-06,
+        4.943460714748425e-06,
+        3.998073324211021e-06,
+        3.2259700384147743e-06,
+        2.5969281562752062e-06,
+        2.0856899919722668e-06,
+        1.6712062071982309e-06,
+        1.335983464029542e-06,
+        1.0655240006523647e-06,
+        8.478458557154199e-07,
+        6.730735509974447e-07,
+        5.330900751290625e-07,
+        4.212419851085294e-07,
+        3.3209035176627884e-07,
+        2.6120111693591334e-07,
+        2.0496920258459493e-07,
+        1.6047141584975153e-07,
+        1.2534383040675404e-07,
+        9.767989643605107e-08,
+        7.594604198881802e-08,
+        5.891198160739153e-08,
+        4.5593347807496094e-08,
+        3.520461181019938e-08,
+        2.7120566097461317e-08,
+        2.0844907266309126e-08,
+        1.5984687438253404e-08,
+        1.222960010322347e-08,
+        9.335235456070192e-09
+      ],
+      "note": "Plot-ready samples only; all reported integrals use CDF boundary integration, not this finite profile window."
+    }
+  ],
+  "checks": [
+    {
+      "name": "G2-R:source_hash",
+      "passed": true
+    },
+    {
+      "name": "G2-R:artifact_hash",
+      "passed": true
+    },
+    {
+      "name": "incoming:quadrature_normalization:0.0",
+      "passed": true
+    },
+    {
+      "name": "incoming:nonnegative_support_weights:0.0",
+      "passed": true
+    },
+    {
+      "name": "incoming:quadrature_normalization:0.02",
+      "passed": true
+    },
+    {
+      "name": "incoming:nonnegative_support_weights:0.02",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_mean:0.02",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_variance:0.02",
+      "passed": true
+    },
+    {
+      "name": "incoming:quadrature_normalization:0.1",
+      "passed": true
+    },
+    {
+      "name": "incoming:nonnegative_support_weights:0.1",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_mean:0.1",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_variance:0.1",
+      "passed": true
+    },
+    {
+      "name": "incoming:quadrature_normalization:0.2",
+      "passed": true
+    },
+    {
+      "name": "incoming:nonnegative_support_weights:0.2",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_mean:0.2",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_variance:0.2",
+      "passed": true
+    },
+    {
+      "name": "incoming:quadrature_normalization:0.4",
+      "passed": true
+    },
+    {
+      "name": "incoming:nonnegative_support_weights:0.4",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_mean:0.4",
+      "passed": true
+    },
+    {
+      "name": "incoming:analytic_truncated_variance:0.4",
+      "passed": true
+    },
+    {
+      "name": "sharp:momentum:j=1",
+      "passed": true
+    },
+    {
+      "name": "sharp:weighted_rate:j=1",
+      "passed": true
+    },
+    {
+      "name": "sharp:momentum:j=-1",
+      "passed": true
+    },
+    {
+      "name": "sharp:weighted_rate:j=-1",
+      "passed": true
+    },
+    {
+      "name": "dp_f_dp:l=0",
+      "passed": true,
+      "measured": 3.992361996552063e-13,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "dp_f_dp:l=-2",
+      "passed": true,
+      "measured": 3.932132397466148e-12,
+      "tolerance": 2e-09
+    },
+    {
+      "name": "convergence:drive=False:si=0.0:sd=0.02",
+      "passed": true,
+      "measured": 3.8518598887744717e-32,
+      "tolerance": 3e-23
+    },
+    {
+      "name": "positive_and_bounded:False:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "sharp:analytic_gaussian:sd=0.02",
+      "passed": true,
+      "measured": 5.851001414223369e-15,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "convergence:drive=False:si=0.0:sd=0.05",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 8.278505387378966e-13
+    },
+    {
+      "name": "positive_and_bounded:False:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "sharp:analytic_gaussian:sd=0.05",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "convergence:drive=False:si=0.0:sd=0.1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1.0654663105211373e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "sharp:analytic_gaussian:sd=0.1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "convergence:drive=False:si=0.0:sd=0.2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 4.3819987542685907e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "sharp:analytic_gaussian:sd=0.2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "convergence:drive=False:si=0.0:sd=0.4",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 6.435885636259122e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "sharp:analytic_gaussian:sd=0.4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "convergence:drive=False:si=0.02:sd=0.02",
+      "passed": true,
+      "measured": 6.717643646022679e-31,
+      "tolerance": 3e-23
+    },
+    {
+      "name": "positive_and_bounded:False:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.02:sd=0.05",
+      "passed": true,
+      "measured": 1.4094628242311558e-18,
+      "tolerance": 8.514655974818535e-13
+    },
+    {
+      "name": "positive_and_bounded:False:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.02:sd=0.1",
+      "passed": true,
+      "measured": 4.163336342344337e-17,
+      "tolerance": 1.067783412173163e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.02:sd=0.2",
+      "passed": true,
+      "measured": 8.326672684688674e-17,
+      "tolerance": 4.3828612097041327e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.02:sd=0.4",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 6.435828675418053e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.1:sd=0.02",
+      "passed": true,
+      "measured": 2.9778502051908996e-22,
+      "tolerance": 9.494944294616633e-17
+    },
+    {
+      "name": "positive_and_bounded:False:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.1:sd=0.05",
+      "passed": true,
+      "measured": 6.505213034913027e-19,
+      "tolerance": 1.9040053861518473e-12
+    },
+    {
+      "name": "positive_and_bounded:False:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.1:sd=0.1",
+      "passed": true,
+      "measured": 3.469446951953614e-17,
+      "tolerance": 1.1321533976028892e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.1:sd=0.2",
+      "passed": true,
+      "measured": 8.326672684688674e-17,
+      "tolerance": 4.406181337680188e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.1:sd=0.4",
+      "passed": true,
+      "measured": 1.3877787807814457e-16,
+      "tolerance": 6.434307940284354e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.2:sd=0.02",
+      "passed": true,
+      "measured": 8.673617379884035e-19,
+      "tolerance": 2.165512743484754e-12
+    },
+    {
+      "name": "positive_and_bounded:False:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.2:sd=0.05",
+      "passed": true,
+      "measured": 3.469446951953614e-18,
+      "tolerance": 1.9046947763162908e-11
+    },
+    {
+      "name": "positive_and_bounded:False:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.2:sd=0.1",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 1.4549794445967956e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.2:sd=0.2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 4.515678238415103e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.2:sd=0.4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 6.431409640792055e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.4:sd=0.02",
+      "passed": true,
+      "measured": 2.0122792321330962e-14,
+      "tolerance": 1.4904653925919877e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.4:sd=0.05",
+      "passed": true,
+      "measured": 9.71445146547012e-17,
+      "tolerance": 2.13964938402319e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.4:sd=0.1",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 3.308832534539019e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.4:sd=0.2",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 5.219681870459824e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=False:si=0.4:sd=0.4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 6.472077576532086e-10
+    },
+    {
+      "name": "positive_and_bounded:False:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:False:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:False:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.0:sd=0.02",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 3.365605401895643e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.0:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.0:sd=0.05",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 6.205288403688959e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.0:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.0:sd=0.1",
+      "passed": true,
+      "measured": 6.938893903907228e-18,
+      "tolerance": 1.72859760104104e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.0:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.0:sd=0.2",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 4.5962072569693036e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.0:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.0:sd=0.4",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 6.46227594454367e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.02:sd=0.02",
+      "passed": true,
+      "measured": 6.938893903907228e-18,
+      "tolerance": 3.3681428912522075e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.02:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.02:sd=0.05",
+      "passed": true,
+      "measured": 2.42861286636753e-17,
+      "tolerance": 6.222688810593238e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.02:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.02:sd=0.1",
+      "passed": true,
+      "measured": 4.163336342344337e-17,
+      "tolerance": 1.7305145875154328e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.02:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.02:sd=0.2",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 4.5969472522848233e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.02:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.02:sd=0.4",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 6.462202453596298e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.02:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.1:sd=0.02",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 3.4598014519592396e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.1:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.1:sd=0.05",
+      "passed": true,
+      "measured": 1.734723475976807e-17,
+      "tolerance": 6.606740713992177e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.1:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.1:sd=0.1",
+      "passed": true,
+      "measured": 3.469446951953614e-17,
+      "tolerance": 1.7834564407243528e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.1:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.1:sd=0.2",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 4.6169951461955893e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.1:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.1:sd=0.4",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 6.460241915757935e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.1:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.2:sd=0.02",
+      "passed": true,
+      "measured": 6.938893903907228e-18,
+      "tolerance": 4.412347280594426e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.2:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.2:sd=0.05",
+      "passed": true,
+      "measured": 1.3877787807814457e-17,
+      "tolerance": 8.223624319445043e-11
+    },
+    {
+      "name": "positive_and_bounded:True:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.2:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.2:sd=0.1",
+      "passed": true,
+      "measured": 2.7755575615628914e-17,
+      "tolerance": 2.0514698841946526e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.2:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.2:sd=0.2",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 4.712447100705915e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.2:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.2:sd=0.4",
+      "passed": true,
+      "measured": 0.0,
+      "tolerance": 6.455602178070974e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.2:0.4",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.4:sd=0.02",
+      "passed": true,
+      "measured": 3.2931990467943706e-14,
+      "tolerance": 1.9612277740829194e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.4:0.02",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.4:sd=0.05",
+      "passed": true,
+      "measured": 6.938893903907228e-17,
+      "tolerance": 2.6077502298612754e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.4:0.05",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.4:sd=0.1",
+      "passed": true,
+      "measured": 4.163336342344337e-17,
+      "tolerance": 3.68131366202776e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.4:0.1",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.4:sd=0.2",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 5.347061448761412e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.4:0.2",
+      "passed": true
+    },
+    {
+      "name": "convergence:drive=True:si=0.4:sd=0.4",
+      "passed": true,
+      "measured": 5.551115123125783e-17,
+      "tolerance": 6.488160159570993e-10
+    },
+    {
+      "name": "positive_and_bounded:True:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "normalized:True:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "noise_data_processing:True:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "q_tag_data_processing:0.4:0.4",
+      "passed": true
+    },
+    {
+      "name": "linearized_width:j=1",
+      "passed": true,
+      "measured": 0.003976296593343198,
+      "tolerance": 0.03
+    },
+    {
+      "name": "linearized_width:j=-1",
+      "passed": true,
+      "measured": 0.003864199891636666,
+      "tolerance": 0.03
+    },
+    {
+      "name": "Floquet:q0_baseline:l=0",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=0:q=-1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=0:q=-1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=0:q=0",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=0:q=0",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=0:q=1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=0:q=1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:q0_baseline:l=-2",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=-2:q=-1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=-2:q=-1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=-2:q=0",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=-2:q=0",
+      "passed": true
+    },
+    {
+      "name": "Floquet:work:l=-2:q=1",
+      "passed": true
+    },
+    {
+      "name": "Floquet:nonnegative:l=-2:q=1",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 272,
+    "passed": 272,
+    "failed": []
+  },
+  "verification": {
+    "source_sha256": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "g2_source_sha256": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "g2_artifact_sha256": "b91fa7f59079e6cfc939a1ee8ac52d18423708530d925c982ff4ed4ec1f8dc23",
+    "g2r_artifact_sha256": "a37f5623644870a02a449bd64284c1d0df386097818563d144d16fd032375b5d"
+  }
+}

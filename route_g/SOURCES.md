@@ -88,3 +88,72 @@ action and preparation. No source is cited as experimental evidence
 for the predicted lines or as a design for measuring compact momentum.
 Reconstruction uses the assumed mass law and conservation, so it cannot
 serve as an independent verification of those assumptions.
+
+## G2-S/D readout and activated drive (2026-09-23)
+
+- M. Moskalets and M. Büttiker, *Floquet scattering theory of quantum
+  pumps*, Physical Review B 66, 205320 (2002), section II, equations
+  (1) and (6):
+  [primary manuscript](https://arxiv.org/abs/cond-mat/0208356),
+  [journal record](https://doi.org/10.1103/PhysRevB.66.205320).
+  Used for the established energy-sideband and incoherent incoming-flow
+  framework. Its mesoscopic model is not imported as our relativistic
+  action, nor as evidence for an extra dimension.
+- The same PDG kinematics review above supplies state/phase-space
+  normalization. The driven two-body kernel is derived directly with
+  initial energies retained in the flux and pump-shifted final energy.
+
+The user explicitly activated the time-dependent option on 2026-09-23.
+The selected local modulation g(t)=g[1+epsilon cos(Omega t)], epsilon=.5,
+Omega=.2, is a new declared engineering assumption; it is not uniquely
+implied by the energy-spectrum paper. The truncated-normal incoherent
+beam, Gaussian readout, perfect mass labels, equal acceptance and 5%
+Bayes-error decision threshold are likewise stated choices, not
+experimentally calibrated facts. The finite-width and Floquet rates are
+conditional, long-time/tree-level calculations. No quantum-pump model,
+finite-collision absolute probability or all-orders UV claim is inherited
+from a citation. No novelty claim is made for standard Floquet sidebands
+or Bayesian classification.
+
+## G2-M readout contract (2026-09-23)
+
+Particle Data Group, *Particle Detectors at Accelerators* (2024),
+section 35.13, equations (35.59)--(35.63):
+[official review](https://pdg.lbl.gov/2024/reviews/rpp2024-rev-particle-detectors-accel.pdf).
+Used only to distinguish a real momentum-measurement design, with
+charge, field, geometry and tracking/material errors, from an abstract
+Gaussian response. We import no quoted instrument resolution or
+calibration into this arbitrary-unit scalar model. Its external U(1)
+is not silently identified with electromagnetism.
+
+The affine calibration box, frozen-classifier analysis and symmetric
+ternary tag response are declared engineering choices. The continuous
+CDF bound, affine oracle identity, channel-degradation proof and
+same-data no-information identity are derived in the new TeX.
+No source establishes the existence of an instrument for X or an
+event-resolved work counter for the prescribed classical pump.
+
+## G2-P physical anchors and candidate visible probe (2026-09-23)
+
+- J. M. Cline, K. Kainulainen, P. Scott and C. Weniger,
+  *Update on scalar singlet dark matter*, Phys. Rev. D 88, 055025 (2013),
+  [primary manuscript](https://arxiv.org/abs/1306.4710),
+  [full text](https://arxiv.org/html/1306.4710v3), equations (3), (23),
+  (26). Used to cross-check Higgs-density coupling and nucleon-scattering
+  normalization. Our complex-scalar decay has distinguishable final
+  particles, unlike the identical real-scalar convention in their (3).
+  No old exclusion region or dark-matter abundance is imported.
+- ATLAS Collaboration, *Combination of searches for invisible decays of
+  the Higgs boson using 139 fb^-1*, Phys. Lett. B 842, 137963 (2023),
+  [primary experimental paper](https://arxiv.org/abs/2301.10731).
+  An example of a physical constraint on a proposed Higgs coupling, not
+  Route-G calibration. We do not claim it is the newest limit or apply
+  its single-species interpretation directly to a full KK tower.
+
+The scale-identifiability proof, signed-mode anchor reconstruction,
+common-shift closure, brane/uniform comparison and tower-width/readout
+compatibility formulas are derived in our TeX for the explicitly stated
+candidate. The Higgs extension is only a 4D EFT option, not established
+by the motivating paper or a completed 5D embedding. All new numerical
+cards are synthetic. No real energy scale, nucleon form-factor estimate,
+measured response or apparatus performance is assigned by these sources.

@@ -1,0 +1,228 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\title{Route G2-M: A Frozen Readout Contract}
+\author{Momentum first; a noisy pump tag only as a conditional alternative}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The selected design uses the existing driven model with incoming width
+$\sigma_i=.1$ and momentum resolution $\sigma_d=.05$, without requiring
+a sideband tag. We freeze its decision rule before testing calibration
+errors. A separate noisy-tag channel quantifies what additional
+information would be required to retain coarser momentum resolution.
+This is a readout requirement in model units, not a built apparatus.
+\end{abstract}
+
+\section{The physical choice and its boundary}
+All dynamics, free masses, $g=.05$, $\epsilon=.5$, $\Omega=.2$,
+finite internal preparation and the classical truncated-normal beam
+are inherited unchanged from G2-S/D. Select the same counted collisions
+with $m=0$, $r=|j|=1$. Write $s=\operatorname{sign}j$ and
+$l_+=0$, $l_-=-2$. Their unnormalized component densities are
+\begin{equation}
+ h_{sq}(x)=w_{l_s}\int_0^\infty\dd p\,f_{.1}(p)
+ K_{l_s,0,q}(p)\,
+ {\cal N}\bigl(x;p_{f,sq}(p),\sigma_d^2\bigr),\qquad
+ h_s(x)=\sum_qh_{sq}(x).
+\end{equation}
+Let $Z=\sum_s\int h_s\,\dd x$, $\pi_s=Z^{-1}\int h_s\,\dd x$.
+The same priors must be used throughout the calibration stress test:
+instrument response changes the readout, not the preselected event rate.
+Perfect mass labels, common COM frame, equal acceptance and no
+background contamination remain explicit assumptions.
+
+The main choice is \emph{momentum-only readout}, nominal
+$\sigma_d=.05$. It needs fewer new physical assumptions than an
+independent event-by-event measurement of pump work. Its nominal rule is
+\begin{equation}\label{eq:frozen}
+ \delta_0(x)=
+ \begin{cases}+1,&x<c,\\-1,&x\geq c,\end{cases}
+ \qquad c=1.25892909961 .
+\end{equation}
+The implemented mixture has one numerically resolved Bayes boundary.
+This is not a global theorem about arbitrary mixture cards.
+At the nominal card $P_{\rm wrong}=.02202246905$; the majority-only
+error is $.22530448517$. The chosen overall error limit $.05$ is an
+engineering convention, not a statistical discovery threshold.
+The nominal false-minus rate given $j=+1$ is $1.0315\%$; the
+false-plus rate given $j=-1$ is $6.2279\%$. Passing the overall
+criterion does not mean that both signs have at least 95\% recall.
+
+The field $X$, previously called a detector, is a \emph{recoil partner};
+its action does not yet specify an instrument that reads its state.
+Likewise the G1 external sources describe linear response, not a
+calibrated tracking or calorimeter system. A physical energy unit,
+apparatus couplings, mass identification, acceptance and calibration
+data are needed before claiming hardware feasibility. In particular,
+the external model $U(1)$ has not been identified with electromagnetism.
+The dependence of real momentum measurements on charge, magnetic field,
+geometry and tracking errors is illustrated by \cite{pdg}; those
+apparatus inputs are not implied by this prototype.
+
+\section{Unknown calibration: keep the classifier frozen}
+Model the true measured estimator as
+\begin{equation}
+ x=(1+a)u+b+\xi,\qquad
+ u=p_{f,sq}(p),\qquad \xi\sim{\cal N}(0,\sigma^2).
+\end{equation}
+Here $a$ is a fractional scale error, $b$ an offset in model momentum
+units, and $\sigma$ the actual noise width. Declare the stress domain
+\begin{equation}\label{eq:box}
+ |a|\leq .01,\qquad |b|\leq .02,\qquad .04\leq\sigma\leq .06 .
+\end{equation}
+These are test tolerances, not measured uncertainties. For the frozen
+rule \eqref{eq:frozen}, the conditional error is exactly
+\begin{align}
+ R_0(a,b,\sigma)=\frac1Z\sum_q\int_0^\infty\dd p\, f_{.1}(p)
+ \bigg[&
+ w_0K_{0,0,q}(p)\,
+ \Phi_{\!N}\!\left(\frac{(1+a)u_{+q}+b-c}{\sigma}\right)\nonumber\\
+ &+w_{-2}K_{-2,0,q}(p)\,
+ \Phi_{\!N}\!\left(\frac{c-(1+a)u_{-q}-b}{\sigma}\right)\bigg].
+ \label{eq:risk}
+\end{align}
+The two terms separately give the joint probabilities for false minus
+and false plus. Dividing by $\pi_+$ or $\pi_-$ gives the respective
+conditional error rates; posterior purity divides by the predicted
+class's total probability instead. Low aggregate error is not identical
+to equal performance on both signs.
+
+If $a,b$ were known, the invertible transformation
+$y=(x-b)/(1+a)$ would reduce the oracle problem to a Gaussian noise
+width $\sigma/(1+a)$:
+\begin{equation}
+ R_{\rm oracle}(a,b,\sigma)
+ =R_{\rm Bayes}\!\left(\frac{\sigma}{1+a}\right)
+ \leq R_0(a,b,\sigma).
+\end{equation}
+Thus the oracle is independent of known $b$. Reoptimizing the decision
+rule separately at each unknown calibration value would hide the
+actual robustness problem, so it is reported only as a lower bound.
+
+For a rectangular sub-box $[a_-,a_+]\times[b_-,b_+]\times
+[\sigma_-,\sigma_+]$, set
+\begin{equation}
+ z_+(u)=(1+a_+)u+b_+-c,\qquad
+ z_-(u)=c-(1+a_-)u-b_- .
+\end{equation}
+Because $u\geq0$ and $\Phi_{\!N}$ is increasing, each error term is
+bounded by
+\begin{equation}
+ B(z)=
+ \begin{cases}
+ \Phi_{\!N}(z/\sigma_-),&z\geq0,\\
+ \Phi_{\!N}(z/\sigma_+),&z<0 .
+ \end{cases}
+\end{equation}
+Replacing the two CDFs in \eqref{eq:risk} by these bounds gives a
+conservative upper bound on the risk throughout that sub-box.
+Different components are allowed different worst nuisances, so it
+may be loose. A finite cover $\{C_k\}$ yields
+$\sup_C R_0\leq\max_k U(C_k)$, not a sum of the cell bounds.
+The numerical scan maximum is only a lower bound on this supremum.
+CDF integrals are quadrature-checked; analytic inequalities do not
+turn floating-point integration into an interval-arithmetic proof.
+
+For this card the worst of the 27 declared grid points gives about
+$3.8648\%$ at $(a,b,\sigma)=(-.01,-.02,.06)$. The unsplit bound is
+$5.3902\%$: this loose bound alone cannot certify the 5\% target,
+but exceeding the target is not an actual failure. One predetermined
+$2\times2\times2$ cover of \eqref{eq:box} tightens the envelope to
+about $4.46\%$, sufficient without repeated parameter fitting or
+finer scans. The implementation splits the incident quadrature at
+CDF-envelope kinks and checks the integral separately.
+
+\section{Alternative: a noisy independent sideband tag}
+Retain $\sigma_i=.1$ and compare the coarser $\sigma_d=.1$ readout
+with a hypothetical extra label $z\in\{-1,0,1\}$. Declare
+\begin{equation}
+ T_\eta(z\mid q)=(1-\eta)\delta_{zq}+\frac{\eta}{3},\qquad
+ 0\leq\eta\leq1,\qquad P(z\ne q)=\frac{2\eta}{3}.
+\end{equation}
+The parameter $\eta$ is mixing strength, not the mistag probability.
+This assumes the tag is independent of momentum noise and incoming
+spread conditional on true $q$. It is a candidate response contract,
+not a measurement derived from the prescribed classical pump.
+The joint likelihood and optimal error are
+\begin{equation}
+ H_s(x,z)=\sum_qT_\eta(z\mid q)h_{sq}(x),\qquad
+ e_\eta=\frac1Z\sum_z\int\dd x\,\min(H_+(x,z),H_-(x,z)).
+\end{equation}
+For $\eta_2\geq\eta_1$, $\eta_1<1$, define
+$\lambda=(\eta_2-\eta_1)/(1-\eta_1)$. The uniform matrix
+$U_{zq}=1/3$ obeys $U^2=U$, giving
+\begin{equation}
+ T_{\eta_2}=T_\lambda T_{\eta_1}.
+\end{equation}
+Additional garbling cannot improve optimal inference:
+$\sum_z|\sum_{z'}T_\lambda(z\mid z')d_{z'}|
+\leq\sum_{z'}|d_{z'}|$. Apply this pointwise to
+$d_z=H_+(x,z)-H_-(x,z)$ to prove
+\begin{equation}
+e_{\rm ideal}=e_0\leq e_{\eta_1}\leq e_{\eta_2}
+\leq e_1=e_{\rm no\ tag}.
+\end{equation}
+The code verifies both limiting cases and intermediate noise levels.
+At $\sigma_d=.1$, the passing-set endpoint lies in
+$\eta\in[.1758,.1768]$, corresponding to wrong-tag probability
+$11.72$--$11.78\%$ \emph{within this specific response family}.
+The endpoints bracket a numerical crossing, not calibration uncertainty.
+At the primary $\sigma_d=.05$, no tag is required for the overall
+5\% criterion.
+
+\paragraph{Why aggregate tag accuracy is insufficient.}
+In this selected ensemble $P(q=0)=.88983936$. A useless tag that
+always emits $z=0$ therefore has $88.98\%$ raw accuracy, yet leaves
+the coarser-momentum error at $5.94485\%$. This exceeds the roughly
+88.2\% correct-label fraction at the symmetric-channel threshold.
+There is no contradiction: the constant tag has a different
+confusion matrix and no information. The requirement is the full
+conditional response $T(z\mid q)$, not a single accuracy percentage.
+These tag comparisons assume a known calibrated response and its
+optimal classifier; they are not a frozen-rule robustness guarantee.
+
+\subsection*{Do not count the same information twice}
+Suppose the proposed tag is merely a deterministic or noisy processing
+of the same measured $x$: $H_s(x,z)=h_s(x)T(z\mid x)$.
+Then, identically,
+\begin{equation}
+ \sum_z\min(h_+(x)T(z\mid x),h_-(x)T(z\mid x))
+ =\min(h_+(x),h_-(x)).
+\end{equation}
+The Bayes error cannot improve. Computing a pump label from the same
+outgoing momentum and calling it an independent tag is therefore
+invalid. A drive clock records phase, not the event's absorbed energy.
+Even a genuinely additional sensor needs its joint response and
+correlations modeled; it does not automatically satisfy $T_\eta$.
+For two distinct sensors sharing the same true momentum, the correct
+likelihood integrates that latent momentum once:
+$h_s(x,y)=\sum_qw_{l_s}\int fK_{l_s,0,q}R_1(x\mid u)R_2(y\mid u)\dd p$.
+Multiplying separately marginalized $h_s(x)h_s(y)$ is generally wrong.
+
+\section{Closure and experimental handoff}
+The accompanying reproducible reports give the nominal confusion
+matrix, frozen calibration risks, conservative box bounds and noisy-tag
+requirements. No action parameters are retuned. The primary choice
+remains the momentum-only contract; the noisy tag is an alternative
+requirement if finer momentum resolution is unavailable.
+
+The bounded mathematical step ends here. To proceed physically, choose
+the energy scale and readout interactions or supply an actual system's
+response/beam calibration. Do not replace this missing physical choice
+with indefinitely finer Gaussian scans. Absolute collision probability
+is still unnecessary for this conditional discrimination question.
+Only a request for absolute yields, finite-pulse effects or coherent
+interference calls for four-dimensional packets, timing and a pump
+envelope.
+
+\begin{thebibliography}{1}
+\bibitem{pdg} Particle Data Group, \emph{Particle Detectors at
+Accelerators}, Review of Particle Physics (2024), section 35.13,
+\href{https://pdg.lbl.gov/2024/reviews/rpp2024-rev-particle-detectors-accel.pdf}
+{Official review (PDF)}.
+\end{thebibliography}
+\end{document}

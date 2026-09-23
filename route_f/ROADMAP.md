@@ -18,7 +18,14 @@ not a proof of the energy-spectrum paper or a repair of P-PHYS1.
 G2 now supplies a tree-level local collision with a localized dynamical
 detector and explicit finite recoil (2026-09-23). The
 [Route-G roadmap](../route_g/ROADMAP.md) now also records the G2-R
-joint output/recoil prediction and mass-sign readout limitation.
+joint output/recoil prediction and mass-sign readout limitation,
+plus G2-S finite-resolution forecasts and the user-activated G2-D
+external-drive branch with an explicit work ledger.
+G2-M fixes a model-unit readout contract, and G2-P audits the missing
+physical scale and a candidate SM Higgs-density probe. The latter is
+not activated: common mass shifts, added elastic amplitudes and a
+coupling-versus-Higgs-width/stability check are recorded explicitly.
+No hardware calibration or particle mass identification is inferred.
 It does not become a blocker for layers P,
 U or S, and does not overwrite their results or promote a Route-F fit.
 

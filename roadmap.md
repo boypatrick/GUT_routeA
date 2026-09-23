@@ -42,10 +42,51 @@ sign reconstruction. For m=0, |j|=1, the two lines are
 This reconstruction is not independent verification of the conservation
 law used to derive it, nor a detector/localization model.
 
-Next physical option: a specified finite-resolution readout for these
-joint lines. An absolute finite-encounter probability additionally
-requires specified 4D packets; the common-overlap averaged sigma*v is
-only a rate coefficient.
+**G2-S/D now implements finite readout and the user-activated drive.**
+A classical truncated-Gaussian incident ensemble and Gaussian momentum
+readout are integrated with rates before conditioning. At engineering
+widths sigma_i=sigma_d=.1, optimal sign error is 3.77384% undriven,
+5.94485% with unobserved pump exchange, and 3.77589% with an ideal
+independent sideband tag (not a constructed detector).
+The 5% criterion is a declared decision rule, not empirical evidence.
+There are 272/272 readout checks and 565/565 driven checks.
+
+The powered branch explicitly changes g to g[1+.5 cos(.2 t)].
+Its 66 first-order open channels carry work q Omega and preserve spatial
+and compact momentum. Free masses remain unchanged; the background is a
+prescribed reservoir, not a derived geometry. It adds six selected
+recoil components; their closest opposite-sign gap is .01333122.
+Thus power can increase rate while worsening sign discrimination.
+G2/G2-R remain the unchanged undriven reference.
+
+**G2-M selects momentum-only readout** at sigma_i=.1, sigma_d=.05,
+with frozen threshold 1.25892910 and 2.20225% aggregate sign error.
+A predeclared scale/offset/noise box has an eight-cell CDF upper
+envelope about 4.46%, evaluated with convergence-tested quadrature.
+Minority-sign error is nevertheless 6.23%; overall <=5% is not a
+per-class guarantee. The noisy-tag alternative requires a full
+confusion matrix: always saying q=0 scores 88.98% yet adds no information.
+Frozen-readout 154/154 and noisy-tag 125/125 checks pass.
+The bounded contract is complete; hardware realization remains open.
+
+**G2-P now audits the physical anchor and probe candidate.** Dimensionless
+error cannot fix Lambda=1/R; 877/877 synthetic rescaling checks preserve
+all 66 channels and the 2.20225% error. Three calibrated signed-mode
+masses determine the quadratic tower; a fourth gives a closure test.
+A candidate uniform Higgs-density probe is derived, not activated:
+it shifts masses and, if coupled to both towers, adds elastic scattering.
+The same coupling correlates visibility with the open-tower Higgs width;
+retaining the old X mass without an X self-quartic requires
+lambda_X<=50 Lambda²/v². It is not a hardware design or a Route-F portal.
+The [physical input card](route_g/PHYSICAL_INPUT_CARD.md) distinguishes
+actual missing measurements from the synthetic tests.
+
+Next: choose a physical sector/scale and target for a bounded
+coupling-versus-constraint check, or supply a calibrated apparatus
+response. Do not substitute further Gaussian scans for that physical
+choice. Absolute probabilities, finite pulses or coherent interference
+require specified 4D packets and pump envelope; the long-time
+common-overlap rate is not an absolute encounter probability.
 Tree-level EFT success is not quantum loop control or a particle fit.
 See [the Route-G roadmap](route_g/ROADMAP.md). Background stabilization,
 spin/chirality and a Route-F bridge remain separate open hypotheses.
@@ -54,6 +95,7 @@ priority recorded below is retained within that independent program.
 
 Checkpoint 92ee811 (Route-F pending audits plus Route-G G1/G2) was
 committed and pushed before starting G2-R on 2026-09-23, as requested.
+Checkpoint 6bbd6fa saved and pushed completed G2-R before G2-S/D.
 
 ## Current Route-F priority: physics-first feasibility (2026-09-22)
 

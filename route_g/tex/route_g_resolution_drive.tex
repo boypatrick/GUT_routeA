@@ -1,0 +1,321 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\title{Route G2-S/D: Finite Readout and an Energy-Accounted Drive}
+\author{A conditional scattering prediction, not a particle-mass fit}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We broaden the G2-R recoil lines using a declared classical beam and
+instrumental response. Rate weighting precedes conditioning; optimal
+sign-classification error measures distinguishability. Separately, we
+activate a homogeneous periodic modulation of the local quartic.
+Its energy sidebands carry an explicit pump-work ledger. The drive
+does not change the free mass tower, and can worsen discrimination.
+Neither calculation is an absolute finite-encounter probability.
+\end{abstract}
+
+\section{Fixed physics and new apparatus assumptions}
+Retain the G2 fields on $\mathbb M^{3,1}\times S^1$, with
+\begin{equation}
+ m_a^2=M_5^2+(a+\alpha)^2/R^2,\qquad
+ \mu_b^2=M_D^2+b^2/R^2,\qquad j=n+l-m.
+\end{equation}
+The engineering card is $R=1$, $M_5=.5$, $\alpha=.25$, $M_D=5$,
+$g=.05$, and $n=1$. The finite internal detector preparation remains
+$w_l\propto\exp[-l^2/(2(1.2)^2)]$ for $-4\leq l\leq4$,
+normalized to sum to one. All energies and momenta use the same
+arbitrary mass unit as G2. Nothing here is an experimental calibration.
+
+For resolution, condition on $m=0$ and detector mass label $r=|j|=1$.
+Only $(l,j)=(0,+1),(-2,-1)$ contribute. We assume correct mass labels
+and COM-frame identification, with equal unit acceptance.
+Mass confusion, angular/frame uncertainty, backgrounds and efficiency
+are not included. Incoming momenta are back-to-back with magnitude
+\begin{equation}\label{eq:beam}
+ f_{\sigma_i}(p)=
+ \frac{\mathbf1_{p\geq0}e^{-(p-p_0)^2/(2\sigma_i^2)}}
+ {\sqrt{2\pi}\sigma_i\Phi_{\!N}(p_0/\sigma_i)},\qquad p_0=.2 .
+\end{equation}
+Here $\Phi_{\!N}$ is the normal CDF; $f_0=\delta(p-p_0)$.
+$p_0,\sigma_i$ are parent-Gaussian location and scale, not the
+truncated distribution's actual mean and deviation.
+For $a=p_0/\sigma_i$ and $\lambda=\varphi(a)/\Phi_{\!N}(a)$,
+\begin{equation}
+ \langle p\rangle=p_0+\sigma_i\lambda,\qquad
+ \operatorname{Var}(p)=\sigma_i^2(1-a\lambda-\lambda^2).
+\end{equation}
+This is an \emph{incoherent classical beam ensemble}, not a coherent
+four-dimensional wavepacket, duration or luminosity specification.
+The common external-overlap assumption is retained.
+
+The observed momentum estimator $x$ has response
+\begin{equation}\label{eq:response}
+ {\cal R}_{\sigma_d}(x\mid p_f)=
+ \frac{e^{-(x-p_f)^2/(2\sigma_d^2)}}{\sqrt{2\pi}\sigma_d},
+ \qquad x\in\mathbb R .
+\end{equation}
+A negative fitted estimator is allowed; true $p_f$ is nonnegative.
+Clipping would require a different normalized response.
+Scan $\sigma_i=0,.02,.1,.2,.4$ and $\sigma_d=.02,.05,.1,.2,.4$.
+These are engineering choices, not fitted detector specifications.
+
+\section{Forward model and discrimination}
+Set $E_n=\sqrt{m_n^2+p^2}$, $E_l=\sqrt{\mu_l^2+p^2}$,
+$E_i=E_n+E_l$. For an outgoing total energy $E$, define
+\begin{equation}\label{eq:pf}
+ p_f(E;m,j)=
+ \frac{\sqrt{[E^2-(m_m+\mu_j)^2][E^2-(m_m-\mu_j)^2]}}{2E}
+\end{equation}
+only for $E>m_m+\mu_j$; closed channels have zero rate.
+Undriven $E=E_i$, and the G2 rate is
+\begin{equation}\label{eq:K}
+ K_{lm}(p)=\frac{g^2p_f}{16\pi E_nE_lE_i}.
+\end{equation}
+The unnormalized readout densities are
+\begin{align}
+ h_j(x)&=w_{j+m-n}\int_0^\infty \dd p\,
+ f_{\sigma_i}(p)K_{j+m-n,m}(p)
+ {\cal R}_{\sigma_d}(x\mid p_f),\\
+ Z_j&=\int_{\mathbb R}h_j(x)\dd x,\qquad Z=Z_++Z_-,\\
+ P(j,x\mid m=0,r=1,\text{scattering})&=h_j(x)/Z,\qquad
+ \pi_j=Z_j/Z .
+\end{align}
+Rate weighting must precede normalization: averaging normalized
+fixed-$p$ probabilities first generally gives a different result.
+Where the denominator is positive,
+$P(j\mid x,m,r)=h_j(x)/(h_+(x)+h_-(x))$.
+
+For equal classification costs, deciding the larger $h_j(x)$ minimizes
+error pointwise. Thus
+\begin{equation}\label{eq:bayes}
+ \boxed{e_*=\frac1Z\int_{\mathbb R}\min(h_+,h_-)\,\dd x
+ =\frac12\left[1-\frac{\|h_+-h_-\|_1}{Z}\right].}
+\end{equation}
+The no-momentum baseline is $e_{\rm prior}=\min(\pi_+,\pi_-)$,
+not necessarily $1/2$. We call $e_*\leq .05$ \emph{resolved} solely
+as an engineering decision criterion. It is not a discovery
+significance or universal two-peak criterion. Unknown parameters need
+nuisance propagation; testing a theory also needs finite event counts.
+
+For $\sigma_i=0$, the undriven result is an exact two-Gaussian
+mixture: $u_+=1.02175457609$, $u_-=1.36191317264$.
+With $\Delta=u_--u_+>0$, its Bayes boundary and error are
+\begin{align}
+ x_*&=\frac{u_++u_-}{2}
+       +\frac{\sigma_d^2}{\Delta}\log\frac{\pi_+}{\pi_-},\\
+ e_*&=\pi_+\left[1-\Phi_{\!N}\left(\frac{x_*-u_+}{\sigma_d}\right)\right]
+       +\pi_-\Phi_{\!N}\left(\frac{x_*-u_-}{\sigma_d}\right).
+\end{align}
+This supplies an independent analytic regression.
+Differentiating $E_i(p)=E_f(p_f)$ gives
+\begin{equation}\label{eq:slope}
+ \frac{\dd p_f}{\dd p}
+ =\frac{p(1/E_n+1/E_l)}{p_f(1/E'_m+1/E'_j)},\qquad
+ \sigma_{f,j}^2\simeq\sigma_d^2+
+ \left(\frac{\dd p_f}{\dd p}\right)^2\sigma_i^2 .
+\end{equation}
+The width approximation applies only to a narrow beam far from $p=0$
+and thresholds. Our computation uses the nonlinear, rate-weighted
+integral, not a width fit. Extra Gaussian detector noise cannot improve
+$e_*$: convolution contracts the $L^1$ norm in \eqref{eq:bayes}.
+Changing $\sigma_i$ changes selected priors and kinematics, so no
+analogous monotonicity claim is made.
+
+\section{Activating a powered local time-dependent background}
+The new branch replaces only the interaction:
+\begin{equation}\label{eq:drive}
+ S_{\rm int}=-\int\dd^4x\,R\,\dd\theta\,
+ \kappa_5[1+\epsilon\cos(\Omega t)]|\Phi|^2|X|^2,\qquad
+ g(t)=g[1+\epsilon\cos(\Omega t)] .
+\end{equation}
+This is a new \emph{prescribed external pump}, not a deduction from
+the motivating paper or a stabilized vacuum.
+Choose $\epsilon=.5$, $\Omega=.2$, and inspect $\Omega=.1,.4$
+without optimizing a desired line. For $0\leq\epsilon<1$ the
+classical potential is nonnegative at all times. The quadratic action
+and free mass eigenvalues remain unchanged. This does not establish
+loop stability or a five-dimensional UV completion.
+
+Spatial and circle homogeneity preserve their momenta and both global
+charges. The pump rest frame is the incoming COM frame, a physical
+preferred frame, not Lorentz-invariant energy injection. Expand
+\begin{equation}
+ g(t)=\sum_qg_qe^{-\mathrm iq\Omega t},\qquad
+ g_0=g,\quad g_{\pm1}=g\epsilon/2 .
+\end{equation}
+At first order,
+\begin{align}
+ S_{fi}^{(1)}&\ \propto\
+ -\mathrm i(2\pi)^3\delta^3(\boldsymbol P_f-\boldsymbol P_i)
+ \delta_{n+l,m+j}
+ \sum_{q=0,\pm1}g_q\,2\pi\delta(E_f-E_i-q\Omega),\\
+ E_{lmq}&=E_n+E_l+q\Omega,\qquad
+ K_{lmq}(p)=
+ \boxed{\frac{|g_q|^2p_f(E_{lmq};m,j)}
+ {16\pi E_nE_lE_{lmq}}}.
+ \label{eq:drivenK}
+\end{align}
+Our $q>0$ means energy absorbed from the pump. The rate follows from
+initial normalization $(4E_nE_l)^{-1}$ and integrated two-body phase
+space $p_f/(4\pi E_{lmq})$. Do not replace the initial energies by
+outgoing energies. For $q=0$ it is exactly \eqref{eq:K}.
+Reference \cite{floquet} supplies the established sideband framework;
+the specific relativistic rate is derived here using \cite{pdg}'s
+state/phase-space convention.
+
+Only $q=0,\pm1$ occur at this Born order; more vertices can generate
+higher sidebands. This is a long-time weak-scattering rate, not a
+unitarized all-orders Floquet solution. A finite rectangular time
+window instead gives the energy amplitude
+\begin{equation}
+ \sum_q g_q F_T(E_f-E_i-q\Omega),\qquad
+ F_T(\omega)=\frac{2\sin(\omega T/2)}{\omega},\quad F_T(0)=T .
+\end{equation}
+Finite-$T$ cross terms cannot be discarded in general.
+The rate limit uses $|F_T(\omega)|^2/T\to2\pi\delta(\omega)$
+distributionally for distinct fixed $\Omega>0$. The
+$\Omega\to0$ and $T\to\infty$ limits do not commute:
+at exactly zero frequency the amplitude is $g(1+\epsilon)$, not
+three incoherent terms. Coherent beams or finite pulses need their
+actual amplitude-level envelopes.
+
+\subsection*{Work ledger and event labels}
+For $H(t)=H_0+g(t)V$, unitary evolution implies
+\begin{equation}
+ \frac{\dd}{\dd t}\langle H(t)\rangle
+ =\left\langle\frac{\partial H}{\partial t}\right\rangle
+ =\dot g(t)\langle V\rangle .
+\end{equation}
+Matter is not energetically closed: each Born sideband has
+$\Delta E_{\rm matter}=q\Omega=-\Delta E_{\rm pump}$.
+With $W_{lmq}=w_lK_{lmq}$,
+\begin{equation}
+ Z_D=\sum_{lmq}W_{lmq},\quad
+ {\cal K}_{\rm work}=\sum_{lmq}W_{lmq}q\Omega,\quad
+ \langle W_{\rm pump}\rangle_{\rm scattering}
+ ={\cal K}_{\rm work}/Z_D .
+\end{equation}
+The work coefficient is not a power; luminosity/overlap is missing.
+No quantum pump apparatus, depletion or backreaction is derived.
+$m=n,q\ne0$ preserves the mode but is \emph{not elastic};
+only $m=n,q=0$ is elastic. A homogeneous drive supplies no compact
+momentum and does not rotate one free particle into another mass branch.
+
+\section{Readout with an unobserved supply channel}
+In the driven prediction use
+\begin{equation}
+ h_{jq}(x)=w_{j+m-n}\int_0^\infty\dd p\,f_{\sigma_i}(p)
+ K_{j+m-n,m,q}(p){\cal R}_{\sigma_d}(x\mid p_{f,jq}),\qquad
+ h_j(x)=\sum_qh_{jq}(x).
+\end{equation}
+The classical beam is diagonal in $p$, and different $l$ give
+orthogonal recoil states. With the long-time sideband limit this
+justifies summing rates. It is not a treatment of finite coherent
+wavepacket interference. If a hypothetical independent readout also
+provided $q$, the optimal error would obey
+\begin{equation}
+ e_*^{\rm tagged}=\frac1{Z_D^{(m,r)}}\sum_q
+ \int\dd x\,\min(h_{+q},h_{-q})\ \leq\ e_*^{\rm untagged}.
+\end{equation}
+This is an information bound, not a constructed pump measurement.
+The passive inversion is invalid without accounting for $q$.
+For known $p,q$, repair it by subtracting work:
+\begin{equation}
+ l^2=R^2[(E_f-q\Omega-E_n)^2-M_D^2-p^2],\qquad
+ j=\frac{l^2-(m-n)^2-r^2}{2(m-n)} .
+\end{equation}
+At $p=.2$ the six momenta for the selected output are
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$j$ & $q=-1$ & $q=0$ & $q=+1$\\
+\midrule
+$+1$ & .82821583 & 1.02175458 & 1.20257369\\
+$-1$ & 1.18924247 & 1.36191317 & 1.52787997\\
+\bottomrule
+\end{tabular}
+\end{center}
+The closest opposite-sign pair is separated by $.01333122$,
+versus the passive carrier gap $.34015860$. All six are still
+distinct: zero-noise catalogue identification at known $p$ remains
+possible. At finite resolution use the full mixture, not just
+the smallest spacing. Exact crossing of these two sidebands occurs at
+\begin{equation}
+ 2\Omega_*=\sqrt{M_D^2+4/R^2+p^2}-\sqrt{M_D^2+p^2},
+ \qquad \Omega_*(.2)=.19243951642 .
+\end{equation}
+This diagnostic is not used to tune the chosen drive. At the crossing,
+those opposite-sign contributions have identical momentum readouts
+unless additional information is measured.
+
+\section{Completion boundary and the next physical decision}
+The sharp-beam driven ledger contains 66 open $(l,m,q)$ rows, split
+as $(14,25,27)$ across $q=(-1,0,+1)$. It gives
+$Z_D=2.10563491267\,10^{-6}$, a mode-conversion fraction $.87381701$,
+and mean pump work $.00900097215$ per counted scattering event.
+These are not absolute encounter efficiencies or a power.
+
+Selected optimal errors, in percent, illustrate the physical decision:
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$\sigma_i$ & $\sigma_d$ & No drive & Drive, $q$ unknown & Drive, ideal $q$ tag\\
+\midrule
+0 & .1 & 3.55155 & 5.76199 & 3.55366\\
+.1 & .1 & 3.77384 & 5.94485 & 3.77589\\
+.2 & .1 & 4.84993 & 6.83823 & 4.85210\\
+.4 & .1 & 11.0294 & 12.2710 & 11.0331\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus at $(.1,.1)$ the chosen 5\% criterion passes without a drive,
+fails with unobserved pump exchange, and passes with an ideal tag.
+This does not make every driven setup worse, or supply a physical tag.
+At $\sigma_i=.1$, improving $\sigma_d$ to $.05$ instead gives a
+driven untagged error of $2.20225\%$.
+
+The reports retain all 50 resolution cards, conditional false-sign
+errors, selected priors and decision boundaries. Quadrature orders
+24 and 48 and two boundary-search mesh widths are compared. Gaussian
+CDF intervals, not sampled histogram areas, give the error integrals.
+For the retained incident region $z\leq10$, the omitted probability is
+$\tau=\Phi_{\!N}(-10)/\Phi_{\!N}(p_0/\sigma_i)$. Since
+$p_f/E_{\rm out}\leq1/2$,
+\begin{equation}
+ K_{lmq}\leq\frac{|g_q|^2}{32\pi m_n\mu_l},\qquad
+ \delta Z\leq\tau\sum_{l\in\{0,-2\},q}
+ \frac{w_l|g_q|^2}{32\pi m_n\mu_l}.
+\end{equation}
+An error-change bound is $2\delta Z/Z_{\rm retained}$; the
+response-tail loss is at most $2\Phi_{\!N}(-10)$.
+Mesh agreement is a numerical convergence check, not a theorem that
+all possible mixture roots have been isolated for arbitrary cards.
+Gaussian tails are
+numerically bounded, not declared evidence that a five-dimensional
+EFT is valid at arbitrarily high energies; a UV validity scale and
+loop uncertainties remain unspecified. Results are tree-level,
+long-time conditional forward predictions, not a physical particle fit.
+
+The next bounded decision is an actual readout specification:
+resolution, beam spread, mass confusion and any independent pump-energy
+information. Absolute four-dimensional collision probabilities are
+unnecessary for relative recoil discrimination. If finite pulses,
+coherent interference or absolute probabilities are desired, specify
+spatial envelopes, timing and relative pump phase together and compute
+their common amplitude. A momentum histogram alone does not supply
+those inputs.
+
+\begin{thebibliography}{9}
+\bibitem{pdg} Particle Data Group, \emph{Kinematics}, Review of Particle
+Physics (2024), sections 49.3--49.5,
+\url{https://pdg.lbl.gov/2024/reviews/rpp2024-rev-kinematics.pdf}.
+\bibitem{floquet} M. Moskalets and M. B\"uttiker,
+\emph{Floquet scattering theory of quantum pumps},
+Phys. Rev. B \textbf{66}, 205320 (2002),
+\url{https://arxiv.org/abs/cond-mat/0208356}.
+\end{thebibliography}
+\end{document}

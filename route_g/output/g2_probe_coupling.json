@@ -1,0 +1,1402 @@
+{
+  "status": "Synthetic candidate portal normalization and compatibility tests; not activated in G2 or empirically qualified",
+  "synthetic_card": {
+    "R": 1.0,
+    "alpha": 0.25,
+    "bare_M_squared": 0.25,
+    "portal_lambda": 0.02,
+    "v": 2.0,
+    "mh": 4.0,
+    "mN": 0.8,
+    "fN": 0.3,
+    "eft_cutoff": 8.0,
+    "synthetic_tower_width_allowance": 0.0001
+  },
+  "physical_mass_base_squared": 0.29,
+  "probe_scalar_mass": 0.5937171043518958,
+  "action": {
+    "candidate": "-HdaggerH[lambdaPhi sum_n|phi_n|^2+lambdaX sum_l|x_l|^2]",
+    "higgs_expansion": "HdaggerH=(v+h)^2/2; common Delta M_S^2=lambdaS v^2/2; h Sdagger S vertex=-i lambdaS v",
+    "nucleon_matching": "L_hNN=-(fN mN/v) h Nbar N, treated as an explicit postulated low-energy matching coefficient",
+    "activation": "Candidate only. Existing G2 and powered kernels remain unchanged.",
+    "both_portals": "If both lambdaPhi and lambdaX are nonzero, tree h-mediated Phi-X diagonal elastic scattering is added and interferes with existing q=0 elastic scattering. Old total branch fractions cannot be retained.",
+    "x_only_option": "lambdaPhi=0 removes that additional tree h-exchange Phi-X amplitude, but does not prove absence of radiative corrections or a complete apparatus"
+  },
+  "overlap": {
+    "labels": [
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "uniform_real": [
+      [
+        1.0,
+        -1.0322994644109441e-17,
+        1.0676399154215838e-17,
+        5.765797074208418e-18,
+        -6.714594503244922e-17,
+        -1.8212057557505656e-16,
+        5.532897524275334e-19
+      ],
+      [
+        -1.0322994644109441e-17,
+        1.0,
+        -1.0322994644109441e-17,
+        1.0676399154215838e-17,
+        5.765797074208418e-18,
+        -6.714594503244922e-17,
+        -1.8212057557505656e-16
+      ],
+      [
+        1.0676399154215838e-17,
+        -1.0322994644109441e-17,
+        1.0,
+        -1.0322994644109441e-17,
+        1.0676399154215838e-17,
+        5.765797074208418e-18,
+        -6.714594503244922e-17
+      ],
+      [
+        5.765797074208418e-18,
+        1.0676399154215838e-17,
+        -1.0322994644109441e-17,
+        1.0,
+        -1.0322994644109441e-17,
+        1.0676399154215838e-17,
+        5.765797074208418e-18
+      ],
+      [
+        -6.714594503244922e-17,
+        5.765797074208418e-18,
+        1.0676399154215838e-17,
+        -1.0322994644109441e-17,
+        1.0,
+        -1.0322994644109441e-17,
+        1.0676399154215838e-17
+      ],
+      [
+        -1.8212057557505656e-16,
+        -6.714594503244922e-17,
+        5.765797074208418e-18,
+        1.0676399154215838e-17,
+        -1.0322994644109441e-17,
+        1.0,
+        -1.0322994644109441e-17
+      ],
+      [
+        5.532897524275334e-19,
+        -1.8212057557505656e-16,
+        -6.714594503244922e-17,
+        5.765797074208418e-18,
+        1.0676399154215838e-17,
+        -1.0322994644109441e-17,
+        1.0
+      ]
+    ],
+    "uniform_imag": [
+      [
+        0.0,
+        2.5072970921855678e-17,
+        -4.278105038752981e-17,
+        -1.5012489893364405e-16,
+        -1.740927037774838e-17,
+        -4.289197649487788e-16,
+        4.315134786575658e-17
+      ],
+      [
+        -2.5072970921855678e-17,
+        0.0,
+        2.5072970921855678e-17,
+        -4.278105038752981e-17,
+        -1.5012489893364405e-16,
+        -1.740927037774838e-17,
+        -4.289197649487788e-16
+      ],
+      [
+        4.278105038752981e-17,
+        -2.5072970921855678e-17,
+        0.0,
+        2.5072970921855678e-17,
+        -4.278105038752981e-17,
+        -1.5012489893364405e-16,
+        -1.740927037774838e-17
+      ],
+      [
+        1.5012489893364405e-16,
+        4.278105038752981e-17,
+        -2.5072970921855678e-17,
+        0.0,
+        2.5072970921855678e-17,
+        -4.278105038752981e-17,
+        -1.5012489893364405e-16
+      ],
+      [
+        1.740927037774838e-17,
+        1.5012489893364405e-16,
+        4.278105038752981e-17,
+        -2.5072970921855678e-17,
+        0.0,
+        2.5072970921855678e-17,
+        -4.278105038752981e-17
+      ],
+      [
+        4.289197649487788e-16,
+        1.740927037774838e-17,
+        1.5012489893364405e-16,
+        4.278105038752981e-17,
+        -2.5072970921855678e-17,
+        0.0,
+        2.5072970921855678e-17
+      ],
+      [
+        -4.315134786575658e-17,
+        4.289197649487788e-16,
+        1.740927037774838e-17,
+        1.5012489893364405e-16,
+        4.278105038752981e-17,
+        -2.5072970921855678e-17,
+        0.0
+      ]
+    ],
+    "normalized_brane_real": [
+      [
+        1.0,
+        0.7648421872844885,
+        0.16996714290024104,
+        -0.5048461045998571,
+        -0.9422223406686581,
+        -0.9364566872907963,
+        -0.4902608213407002
+      ],
+      [
+        0.7648421872844885,
+        1.0,
+        0.7648421872844885,
+        0.16996714290024104,
+        -0.5048461045998571,
+        -0.9422223406686581,
+        -0.9364566872907963
+      ],
+      [
+        0.16996714290024104,
+        0.7648421872844885,
+        1.0,
+        0.7648421872844885,
+        0.16996714290024104,
+        -0.5048461045998571,
+        -0.9422223406686581
+      ],
+      [
+        -0.5048461045998571,
+        0.16996714290024104,
+        0.7648421872844885,
+        1.0,
+        0.7648421872844885,
+        0.16996714290024104,
+        -0.5048461045998571
+      ],
+      [
+        -0.9422223406686581,
+        -0.5048461045998571,
+        0.16996714290024104,
+        0.7648421872844885,
+        1.0,
+        0.7648421872844885,
+        0.16996714290024104
+      ],
+      [
+        -0.9364566872907963,
+        -0.9422223406686581,
+        -0.5048461045998571,
+        0.16996714290024104,
+        0.7648421872844885,
+        1.0,
+        0.7648421872844885
+      ],
+      [
+        -0.4902608213407002,
+        -0.9364566872907963,
+        -0.9422223406686581,
+        -0.5048461045998571,
+        0.16996714290024104,
+        0.7648421872844885,
+        1.0
+      ]
+    ],
+    "normalized_brane_imag": [
+      [
+        0.0,
+        0.644217687237691,
+        0.9854497299884601,
+        0.8632093666488739,
+        0.3349881501559051,
+        -0.35078322768961984,
+        -0.8715757724135877
+      ],
+      [
+        -0.644217687237691,
+        0.0,
+        0.644217687237691,
+        0.9854497299884601,
+        0.8632093666488739,
+        0.3349881501559051,
+        -0.35078322768961984
+      ],
+      [
+        -0.9854497299884601,
+        -0.644217687237691,
+        0.0,
+        0.644217687237691,
+        0.9854497299884601,
+        0.8632093666488739,
+        0.3349881501559051
+      ],
+      [
+        -0.8632093666488739,
+        -0.9854497299884601,
+        -0.644217687237691,
+        0.0,
+        0.644217687237691,
+        0.9854497299884601,
+        0.8632093666488739
+      ],
+      [
+        -0.3349881501559051,
+        -0.8632093666488739,
+        -0.9854497299884601,
+        -0.644217687237691,
+        0.0,
+        0.644217687237691,
+        0.9854497299884601
+      ],
+      [
+        0.35078322768961984,
+        -0.3349881501559051,
+        -0.8632093666488739,
+        -0.9854497299884601,
+        -0.644217687237691,
+        0.0,
+        0.644217687237691
+      ],
+      [
+        0.8715757724135877,
+        0.35078322768961984,
+        -0.3349881501559051,
+        -0.8632093666488739,
+        -0.9854497299884601,
+        -0.644217687237691,
+        0.0
+      ]
+    ],
+    "brane_singular_values": [
+      7.000000000000001,
+      7.834203815272695e-16,
+      5.323459118159833e-16,
+      3.900855781700862e-16,
+      2.425339167238327e-16,
+      1.2980450320853037e-16,
+      1.1265858378582414e-17
+    ],
+    "normalization": "Uniform integral int R dtheta u_m* u_n=delta_mn; normalized brane matrix=(2 pi R)u_m*(theta0)u_n(theta0). The rescaling removes dimensions for rank comparison, not a physical equality of couplings."
+  },
+  "tower_width": {
+    "rigorous_candidate_interval": [
+      -2,
+      1
+    ],
+    "open_modes": [
+      {
+        "n": -2,
+        "mass": 1.8309833423600554,
+        "beta": 0.40233692348577704,
+        "width": 3.2016955080573547e-06,
+        "below_eft_cutoff": true,
+        "independent_two_body_phase_space": 0.016008477540286777,
+        "independent_partial_width": 3.2016955080573556e-06
+      },
+      {
+        "n": -1,
+        "mass": 0.9233092656309694,
+        "beta": 0.8870597499605086,
+        "width": 7.058997201203783e-06,
+        "below_eft_cutoff": true,
+        "independent_two_body_phase_space": 0.035294986006018915,
+        "independent_partial_width": 7.058997201203783e-06
+      },
+      {
+        "n": 0,
+        "mass": 0.5937171043518958,
+        "beta": 0.954921462739214,
+        "width": 7.599023552974453e-06,
+        "below_eft_cutoff": true,
+        "independent_two_body_phase_space": 0.03799511776487226,
+        "independent_partial_width": 7.599023552974452e-06
+      },
+      {
+        "n": 1,
+        "mass": 1.36106575888162,
+        "beta": 0.7327175444876423,
+        "width": 5.8307809547682e-06,
+        "below_eft_cutoff": true,
+        "independent_two_body_phase_space": 0.029153904773840996,
+        "independent_partial_width": 5.8307809547682e-06
+      }
+    ],
+    "beta_sum": 2.9770356806731417,
+    "total_width": 2.369049721700379e-05,
+    "all_open_modes_below_eft_cutoff": true,
+    "sufficient_eft_energy_condition": true,
+    "caveat": "All kinematically open signed modes are counted; this prediction is qualified only when the external Higgs energy and relevant states lie within a independently controlled EFT"
+  },
+  "neutral_width_counting_regression": {
+    "rigorous_candidate_interval": [
+      -2,
+      2
+    ],
+    "open_modes": [
+      {
+        "n": -1,
+        "mass": 1.1357816691600546,
+        "beta": 0.8231038816577164,
+        "width": 6.5500525721976014e-06,
+        "below_eft_cutoff": true
+      },
+      {
+        "n": 0,
+        "mass": 0.5385164807134504,
+        "beta": 0.9630680142129111,
+        "width": 7.663851749784026e-06,
+        "below_eft_cutoff": true
+      },
+      {
+        "n": 1,
+        "mass": 1.1357816691600546,
+        "beta": 0.8231038816577164,
+        "width": 6.5500525721976014e-06,
+        "below_eft_cutoff": true
+      }
+    ],
+    "beta_sum": 2.6092757775283437,
+    "total_width": 2.076395689417923e-05,
+    "all_open_modes_below_eft_cutoff": true,
+    "sufficient_eft_energy_condition": true,
+    "caveat": "All kinematically open signed modes are counted; this prediction is qualified only when the external Higgs energy and relevant states lie within a independently controlled EFT"
+  },
+  "neutral_sign_degeneracy": [
+    {
+      "abs_j": 1,
+      "mass_plus": 5.104899607240087,
+      "mass_minus": 5.104899607240087,
+      "sigma_plus": 2.961883024105827e-10,
+      "sigma_minus": 2.961883024105827e-10
+    },
+    {
+      "abs_j": 2,
+      "mass_plus": 5.390732788777422,
+      "mass_minus": 5.390732788777422,
+      "sigma_plus": 2.6949148503398695e-10,
+      "sigma_minus": 2.6949148503398695e-10
+    },
+    {
+      "abs_j": 3,
+      "mass_plus": 5.8360945845659495,
+      "mass_minus": 5.8360945845659495,
+      "sigma_plus": 2.3456057449294065e-10,
+      "sigma_minus": 2.3456057449294065e-10
+    }
+  ],
+  "closed_heavy_tower": {
+    "rigorous_candidate_interval": [
+      -2,
+      2
+    ],
+    "open_modes": [],
+    "beta_sum": 0,
+    "total_width": 0,
+    "all_open_modes_below_eft_cutoff": true,
+    "sufficient_eft_energy_condition": true,
+    "caveat": "All kinematically open signed modes are counted; this prediction is qualified only when the external Higgs energy and relevant states lie within a independently controlled EFT"
+  },
+  "nucleon_scattering": {
+    "amplitude_squared": "lambdaS^2 fN^2 mN^2 (4mN^2-t)/(mh^2-t)^2",
+    "differential": "d sigma/dt=|M|^2/[16 pi Kallen(s,mS^2,mN^2)], -4pCOM^2<=t<=0",
+    "nr_limit": "lambdaS^2 fN^2 mN^4/[4 pi mh^4(mS+mN)^2]",
+    "nr_value": 2.3597356813909585e-09,
+    "speed_rows": [
+      {
+        "s": 1.9883154204712599,
+        "kallen": 0.08924835164835164,
+        "com_momentum_squared": 0.011221603817164793,
+        "lab_momentum": 0.18671539133836118,
+        "lab_energy": 0.6223846377945372,
+        "speed": 0.3,
+        "total_cross_section": 2.3189851303319957e-09,
+        "direct_t_integral": 2.3189851303319952e-09,
+        "analytic_t_integral": 2.3189851303319944e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 0.017269116783004357
+      },
+      {
+        "s": 1.9472330263037683,
+        "kallen": 0.009115151515151517,
+        "com_momentum_squared": 0.0011702697355711286,
+        "lab_momentum": 0.05967081414398551,
+        "lab_energy": 0.5967081414398551,
+        "speed": 0.1,
+        "total_cross_section": 2.3553990439560143e-09,
+        "direct_t_integral": 2.3553990439560147e-09,
+        "analytic_t_integral": 2.355399043956015e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 0.0018377640636378922
+      },
+      {
+        "s": 1.94287513204126,
+        "kallen": 0.0008128916024421981,
+        "com_momentum_squared": 0.00010459905387591,
+        "lab_momentum": 0.017819533725773624,
+        "lab_energy": 0.5939844575257874,
+        "speed": 0.03,
+        "total_cross_section": 2.359347228037933e-09,
+        "direct_t_integral": 2.3593472280379334e-09,
+        "analytic_t_integral": 2.3593472280379325e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 0.00016461731544292757
+      },
+      {
+        "s": 1.9424948678939813,
+        "kallen": 9.024902490249026e-05,
+        "com_momentum_squared": 1.1615091807209851e-05,
+        "lab_momentum": 0.005937467924337381,
+        "lab_energy": 0.5937467924337382,
+        "speed": 0.01,
+        "total_cross_section": 2.3596925378045773e-09,
+        "direct_t_integral": 2.3596925378045773e-09,
+        "analytic_t_integral": 2.359692537804577e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 1.828322838082208e-05
+      },
+      {
+        "s": 1.9424516417550397,
+        "kallen": 8.121673095057857e-06,
+        "com_momentum_squared": 1.0452863948416987e-06,
+        "lab_momentum": 0.0017811593282906994,
+        "lab_energy": 0.5937197760968997,
+        "speed": 0.003,
+        "total_cross_section": 2.3597317986513033e-09,
+        "direct_t_integral": 2.359731798651303e-09,
+        "analytic_t_integral": 2.359731798651302e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 1.6454129527776473e-06
+      },
+      {
+        "s": 1.9424478419370732,
+        "kallen": 9.024009024009023e-07,
+        "com_momentum_squared": 1.1614223081287453e-07,
+        "lab_momentum": 0.0005937174012106706,
+        "lab_energy": 0.5937174012106706,
+        "speed": 0.001,
+        "total_cross_section": 2.3597352499772303e-09,
+        "direct_t_integral": 2.3597352499772303e-09,
+        "analytic_t_integral": 2.35973524997723e-09,
+        "nr_limit": 2.3597356813909585e-09,
+        "relative_departure_from_nr": 1.8282290326077089e-07
+      }
+    ],
+    "dirac_trace_checks": [
+      {
+        "speed": 0.3,
+        "cosine": -1.0,
+        "t": -0.04488641526865917,
+        "spin_averaged_trace": 2.6048864152686595,
+        "expected": 2.6048864152686595
+      },
+      {
+        "speed": 0.3,
+        "cosine": -0.3,
+        "t": -0.029176169924628462,
+        "spin_averaged_trace": 2.5891761699246287,
+        "expected": 2.589176169924629
+      },
+      {
+        "speed": 0.3,
+        "cosine": 0.7,
+        "t": -0.006732962290298876,
+        "spin_averaged_trace": 2.5667329622902995,
+        "expected": 2.5667329622902995
+      },
+      {
+        "speed": 0.3,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.560000000000001,
+        "expected": 2.5600000000000005
+      },
+      {
+        "speed": 0.1,
+        "cosine": -1.0,
+        "t": -0.004681078942284514,
+        "spin_averaged_trace": 2.5646810789422854,
+        "expected": 2.564681078942285
+      },
+      {
+        "speed": 0.1,
+        "cosine": -0.3,
+        "t": -0.0030427013124849343,
+        "spin_averaged_trace": 2.5630427013124852,
+        "expected": 2.5630427013124852
+      },
+      {
+        "speed": 0.1,
+        "cosine": 0.7,
+        "t": -0.0007021618413426773,
+        "spin_averaged_trace": 2.5607021618413435,
+        "expected": 2.560702161841343
+      },
+      {
+        "speed": 0.1,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.5600000000000005,
+        "expected": 2.5600000000000005
+      },
+      {
+        "speed": 0.03,
+        "cosine": -1.0,
+        "t": -0.00041839621550363997,
+        "spin_averaged_trace": 2.560418396215504,
+        "expected": 2.5604183962155043
+      },
+      {
+        "speed": 0.03,
+        "cosine": -0.3,
+        "t": -0.000271957540077366,
+        "spin_averaged_trace": 2.5602719575400776,
+        "expected": 2.560271957540078
+      },
+      {
+        "speed": 0.03,
+        "cosine": 0.7,
+        "t": -6.275943232554601e-05,
+        "spin_averaged_trace": 2.5600627594323258,
+        "expected": 2.560062759432326
+      },
+      {
+        "speed": 0.03,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.5600000000000005,
+        "expected": 2.5600000000000005
+      },
+      {
+        "speed": 0.01,
+        "cosine": -1.0,
+        "t": -4.646036722883941e-05,
+        "spin_averaged_trace": 2.5600464603672295,
+        "expected": 2.5600464603672295
+      },
+      {
+        "speed": 0.01,
+        "cosine": -0.3,
+        "t": -3.0199238698745618e-05,
+        "spin_averaged_trace": 2.5600301992386996,
+        "expected": 2.560030199238699
+      },
+      {
+        "speed": 0.01,
+        "cosine": 0.7,
+        "t": -6.969055084325913e-06,
+        "spin_averaged_trace": 2.560006969055085,
+        "expected": 2.5600069690550846
+      },
+      {
+        "speed": 0.01,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.560000000000001,
+        "expected": 2.5600000000000005
+      },
+      {
+        "speed": 0.003,
+        "cosine": -1.0,
+        "t": -4.181145579366795e-06,
+        "spin_averaged_trace": 2.56000418114558,
+        "expected": 2.56000418114558
+      },
+      {
+        "speed": 0.003,
+        "cosine": -0.3,
+        "t": -2.7177446265884166e-06,
+        "spin_averaged_trace": 2.5600027177446276,
+        "expected": 2.560002717744627
+      },
+      {
+        "speed": 0.003,
+        "cosine": 0.7,
+        "t": -6.271718369050194e-07,
+        "spin_averaged_trace": 2.560000627171838,
+        "expected": 2.560000627171837
+      },
+      {
+        "speed": 0.003,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.560000000000001,
+        "expected": 2.5600000000000005
+      },
+      {
+        "speed": 0.001,
+        "cosine": -1.0,
+        "t": -4.6456892325149805e-07,
+        "spin_averaged_trace": 2.560000464568924,
+        "expected": 2.560000464568924
+      },
+      {
+        "speed": 0.001,
+        "cosine": -0.3,
+        "t": -3.0196980011347373e-07,
+        "spin_averaged_trace": 2.5600003019698003,
+        "expected": 2.5600003019698008
+      },
+      {
+        "speed": 0.001,
+        "cosine": 0.7,
+        "t": -6.968533848772472e-08,
+        "spin_averaged_trace": 2.5600000696853384,
+        "expected": 2.560000069685339
+      },
+      {
+        "speed": 0.001,
+        "cosine": 1.0,
+        "t": -0.0,
+        "spin_averaged_trace": 2.56,
+        "expected": 2.5600000000000005
+      }
+    ],
+    "mediator_scan": [
+      {
+        "mh": 2.0,
+        "sigma": 3.765333588575296e-08
+      },
+      {
+        "mh": 4.0,
+        "sigma": 2.3553990439560143e-09
+      },
+      {
+        "mh": 8.0,
+        "sigma": 1.4724474989489868e-10
+      }
+    ],
+    "matching_scope": "Pointlike effective scalar nucleon coupling with fixed synthetic fN; form-factor variation, nuclear coherence, target composition and empirical matching are absent"
+  },
+  "coupling_elimination": {
+    "open_tower": {
+      "beta_sum": 2.9770356806731417,
+      "bound_available": true,
+      "synthetic_width_allowance": 0.0001,
+      "portal_lambda_squared_max": 0.0016884407124764824,
+      "nr_sigma_max": 9.960684487859817e-09,
+      "assumptions": "Fixed physical spectrum; the allowance bounds this entire tower partial width. An invisible-width interpretation additionally requires all counted final states to be experimentally invisible"
+    },
+    "closed_tower": {
+      "beta_sum": 0,
+      "bound_available": false,
+      "reason": "No kinematically open tower mode: no constraint follows from this Higgs partial-width channel"
+    },
+    "saturated_width": 9.999999999999999e-05,
+    "saturated_nr_sigma": 9.960684487859817e-09,
+    "formula": "lambdaS^2_max=16 pi mh Gamma_allow/(v^2 Bsum); sigma_SN_max=4 fN^2 mN^4 Gamma_allow/[v^2 mh^3(mS+mN)^2 Bsum]",
+    "mass_convention": "These lambda^2 scalings and elimination hold a physical spectrum fixed. If bare masses are fixed instead, lambda changes masses, beta_sum and open thresholds, so the constraint is implicit; no tuning/naturalness claim is made."
+  },
+  "per_pass": [
+    {
+      "synthetic_number_density": 0.0,
+      "synthetic_path_length": 1.0,
+      "optical_depth": 0.0,
+      "at_least_one_interaction_probability": 0.0
+    },
+    {
+      "synthetic_number_density": 0.4,
+      "synthetic_path_length": 3.0,
+      "optical_depth": 2.8264788527472174e-09,
+      "at_least_one_interaction_probability": 2.826478848752726e-09
+    },
+    {
+      "synthetic_number_density": 1000.0,
+      "synthetic_path_length": 1000.0,
+      "optical_depth": 0.0023553990439560144,
+      "at_least_one_interaction_probability": 0.002352627268267569
+    }
+  ],
+  "x_only_fixed_mass_matching": {
+    "formula": "MD_bare^2=25 Lambda^2-lambdaX v^2/2; lambdaX<=50 Lambda^2/v^2",
+    "rows": [
+      {
+        "synthetic_scale_Lambda": 0.1,
+        "frozen_physical_MD_squared": 0.25000000000000006,
+        "v": 2.0,
+        "lambda_X_max": 0.12500000000000003,
+        "factor_of_maximum": 0.0,
+        "lambda_X": 0.0,
+        "bare_MD_squared": 0.25000000000000006,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          0.25000000000000006,
+          25.000000000000007,
+          2500.0000000000005
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 0.1,
+        "frozen_physical_MD_squared": 0.25000000000000006,
+        "v": 2.0,
+        "lambda_X_max": 0.12500000000000003,
+        "factor_of_maximum": 0.5,
+        "lambda_X": 0.06250000000000001,
+        "bare_MD_squared": 0.12500000000000003,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          0.12500000000000003,
+          12.500000000000004,
+          1250.0000000000002
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 0.1,
+        "frozen_physical_MD_squared": 0.25000000000000006,
+        "v": 2.0,
+        "lambda_X_max": 0.12500000000000003,
+        "factor_of_maximum": 1.0,
+        "lambda_X": 0.12500000000000003,
+        "bare_MD_squared": 0.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 0.1,
+        "frozen_physical_MD_squared": 0.25000000000000006,
+        "v": 2.0,
+        "lambda_X_max": 0.12500000000000003,
+        "factor_of_maximum": 1.1,
+        "lambda_X": 0.13750000000000004,
+        "bare_MD_squared": -0.025000000000000022,
+        "necessary_no_runaway_gate": false,
+        "H_zero_X_constant_potential_differences": [
+          -0.025000000000000022,
+          -2.500000000000002,
+          -250.00000000000023
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 1.0,
+        "frozen_physical_MD_squared": 25.0,
+        "v": 2.0,
+        "lambda_X_max": 12.5,
+        "factor_of_maximum": 0.0,
+        "lambda_X": 0.0,
+        "bare_MD_squared": 25.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          25.0,
+          2500.0,
+          250000.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 1.0,
+        "frozen_physical_MD_squared": 25.0,
+        "v": 2.0,
+        "lambda_X_max": 12.5,
+        "factor_of_maximum": 0.5,
+        "lambda_X": 6.25,
+        "bare_MD_squared": 12.5,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          12.5,
+          1250.0,
+          125000.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 1.0,
+        "frozen_physical_MD_squared": 25.0,
+        "v": 2.0,
+        "lambda_X_max": 12.5,
+        "factor_of_maximum": 1.0,
+        "lambda_X": 12.5,
+        "bare_MD_squared": 0.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 1.0,
+        "frozen_physical_MD_squared": 25.0,
+        "v": 2.0,
+        "lambda_X_max": 12.5,
+        "factor_of_maximum": 1.1,
+        "lambda_X": 13.750000000000002,
+        "bare_MD_squared": -2.5000000000000036,
+        "necessary_no_runaway_gate": false,
+        "H_zero_X_constant_potential_differences": [
+          -2.5000000000000036,
+          -250.00000000000034,
+          -25000.000000000036
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 10.0,
+        "frozen_physical_MD_squared": 2500.0,
+        "v": 2.0,
+        "lambda_X_max": 1250.0,
+        "factor_of_maximum": 0.0,
+        "lambda_X": 0.0,
+        "bare_MD_squared": 2500.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          2500.0,
+          250000.0,
+          25000000.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 10.0,
+        "frozen_physical_MD_squared": 2500.0,
+        "v": 2.0,
+        "lambda_X_max": 1250.0,
+        "factor_of_maximum": 0.5,
+        "lambda_X": 625.0,
+        "bare_MD_squared": 1250.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          1250.0,
+          125000.0,
+          12500000.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 10.0,
+        "frozen_physical_MD_squared": 2500.0,
+        "v": 2.0,
+        "lambda_X_max": 1250.0,
+        "factor_of_maximum": 1.0,
+        "lambda_X": 1250.0,
+        "bare_MD_squared": 0.0,
+        "necessary_no_runaway_gate": true,
+        "H_zero_X_constant_potential_differences": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "synthetic_scale_Lambda": 10.0,
+        "frozen_physical_MD_squared": 2500.0,
+        "v": 2.0,
+        "lambda_X_max": 1250.0,
+        "factor_of_maximum": 1.1,
+        "lambda_X": 1375.0,
+        "bare_MD_squared": -250.0,
+        "necessary_no_runaway_gate": false,
+        "H_zero_X_constant_potential_differences": [
+          -250.0,
+          -25000.0,
+          -2500000.0
+        ]
+      }
+    ],
+    "assumptions": "No X self-quartic or other stabilizing X interactions; X is circle-neutral and admits a constant j=0 mode. Set H=Phi=0.",
+    "proof": "Along constant X, gradients and all portal terms vanish. V(X)-V(0)=MD_bare^2 |X|^2; negative MD_bare^2 is unbounded below. Equality is a flat direction of this restricted configuration, not strict isolation.",
+    "scope": "A necessary tree-level consistency gate for matching a fixed physical mass, not a sufficient vacuum/perturbativity/EFT certificate. Large synthetic lambda values are not recommendations.",
+    "charged_phi_qualification": "Do not transfer this argument to Phi: nontrivial holonomy can enforce a positive minimum covariant-gradient contribution, so a negative Phi bare mass coefficient alone need not imply the same constant-mode runaway."
+  },
+  "limits": [
+    "All cards are synthetic in one arbitrary mass unit: no GeV map, measured Higgs/nucleon inputs, target performance, or empirical exclusion is supplied.",
+    "Each open signed Fourier label represents one complex scalar field; its particle-antiparticle final state has no extra factor two. Distinct plus/minus labels must each be counted when open.",
+    "Finite tower enumeration is exact kinematics for the declared spectrum, not a UV completion. The relevant energies and states must lie below an independently controlled EFT cutoff.",
+    "Uniform coupling is KK diagonal and cannot directly distinguish neutral +j from -j. Brane-local rank-one off-diagonal couplings are a different, unadopted physical assumption.",
+    "A partial-width allowance is not automatically an invisible-width bound: invisibility and applicable experimental selection must be established separately.",
+    "Nonnegative positive-lambda mass shifts preserve tower curvature; maintaining the original physical G2 masses requires an explicit matching prescription, not silently adding shifts.",
+    "With no X self-quartic, X-only matching at fixed MD^2=25 Lambda^2 requires lambdaX<=50 Lambda^2/v^2 to avoid the H=Phi=0 constant-X runaway. This is necessary, not a full stability or weak-coupling guarantee.",
+    "Nonzero portals for both species modify the elastic amplitude and hence total rates and conditional fractions; this test does not activate them in the old kernels.",
+    "P=1-exp(-nT d sigma) is only an independent dilute-target first-interaction model. It supplies neither momentum resolution, recoil-sign inference, exposure, timing, nor a real detector efficiency.",
+    "Dark-matter abundance, cosmology, nuclear many-body matching, physical momentum calibration, loops and UV completion are not inferred."
+  ],
+  "checks": [
+    {
+      "name": "uniform_circle_overlap:identity",
+      "passed": true
+    },
+    {
+      "name": "normalized_brane_overlap:rank_one",
+      "passed": true
+    },
+    {
+      "name": "normalized_brane_overlap:nonzero_off_diagonal",
+      "passed": true
+    },
+    {
+      "name": "uniform_probe:no_mode_conversion",
+      "passed": true
+    },
+    {
+      "name": "common_mass_shift",
+      "passed": true
+    },
+    {
+      "name": "shift_preserves_second_difference",
+      "passed": true
+    },
+    {
+      "name": "width:complete_signed_mode_enumeration",
+      "passed": true
+    },
+    {
+      "name": "width:sum_once_per_complex_field",
+      "passed": true
+    },
+    {
+      "name": "width:n=-2:independent_distinct_pair_phase_space",
+      "passed": true
+    },
+    {
+      "name": "width:n=-1:independent_distinct_pair_phase_space",
+      "passed": true
+    },
+    {
+      "name": "width:n=0:independent_distinct_pair_phase_space",
+      "passed": true
+    },
+    {
+      "name": "width:n=1:independent_distinct_pair_phase_space",
+      "passed": true
+    },
+    {
+      "name": "width:neutral_signed_labels_are_distinct_channels",
+      "passed": true
+    },
+    {
+      "name": "width:synthetic_EFT_energy_condition",
+      "passed": true
+    },
+    {
+      "name": "width:threshold_closed",
+      "passed": true
+    },
+    {
+      "name": "width:zero_coupling",
+      "passed": true
+    },
+    {
+      "name": "width:lambda_squared_scaling_fixed_physical_masses",
+      "passed": true
+    },
+    {
+      "name": "width:low_cutoff_not_qualified",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.3:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.3:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.3:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.3:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.3:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.3:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.3:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.1:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.1:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.1:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.1:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.1:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.1:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.1:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.03:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.03:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.03:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.03:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.03:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.03:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.03:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.01:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.01:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.01:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.01:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.01:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.01:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.01:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.003:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.003:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.003:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.003:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.003:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.003:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.003:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.001:independent_t_integral",
+      "passed": true
+    },
+    {
+      "name": "sigma:v=0.001:analytic_integral",
+      "passed": true
+    },
+    {
+      "name": "kinematics:v=0.001:independent_COM_momentum",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.001:cos=-1.0",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.001:cos=-0.3",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.001:cos=0.7",
+      "passed": true
+    },
+    {
+      "name": "Dirac_trace:v=0.001:cos=1.0",
+      "passed": true
+    },
+    {
+      "name": "sigma:NR_convergence",
+      "passed": true,
+      "measured": 1.8282290326077089e-07,
+      "tolerance": 1e-06
+    },
+    {
+      "name": "sigma:monotonic_low_speed_closure",
+      "passed": true
+    },
+    {
+      "name": "sigma:zero_coupling",
+      "passed": true
+    },
+    {
+      "name": "sigma:lambda_squared_scaling",
+      "passed": true
+    },
+    {
+      "name": "sigma:heavier_mediator_suppression",
+      "passed": true
+    },
+    {
+      "name": "uniform_neutral_portal:j=1:sign_blind",
+      "passed": true
+    },
+    {
+      "name": "uniform_neutral_portal:j=2:sign_blind",
+      "passed": true
+    },
+    {
+      "name": "uniform_neutral_portal:j=3:sign_blind",
+      "passed": true
+    },
+    {
+      "name": "closed_tower:no_width_constraint",
+      "passed": true
+    },
+    {
+      "name": "compatibility:width_saturation",
+      "passed": true
+    },
+    {
+      "name": "compatibility:eliminated_lambda_sigma",
+      "passed": true
+    },
+    {
+      "name": "compatibility:sigma_over_tower_width",
+      "passed": true
+    },
+    {
+      "name": "attenuation:n=0.0:d=1.0",
+      "passed": true
+    },
+    {
+      "name": "attenuation:n=0.4:d=3.0",
+      "passed": true
+    },
+    {
+      "name": "attenuation:n=1000.0:d=1000.0",
+      "passed": true
+    },
+    {
+      "name": "attenuation:dilute_linear_limit",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.5:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.5:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=0.5:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.1:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.1:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=0.1:factor=1.1:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.5:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.5:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=0.5:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.1:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.1:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=1.0:factor=1.1:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.5:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.5:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=0.5:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.0:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.0:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.0:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.1:mass_matching",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.1:bare_sign",
+      "passed": true
+    },
+    {
+      "name": "X_only_fixed_mass:Lambda=10.0:factor=1.1:necessary_gate",
+      "passed": true
+    },
+    {
+      "name": "existing_G2_kernels_unchanged",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 113,
+    "passed": 113,
+    "failed": []
+  },
+  "source_sha256": {
+    "verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "verify_g2_driven.py": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+    "verify_g2_probe_coupling.py": "ad3db19ff58020daa13400b20931cd343aff61c18ec3e427c30c415f87d339d4"
+  }
+}

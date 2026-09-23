@@ -1,0 +1,262 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\title{Route G2-P: Physical Anchors and a Visible Probe Candidate}
+\author{Scale identification, a conditional Higgs coupling, and calibration inputs}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The existing readout forecast cannot select an absolute energy scale.
+We derive a spectral anchor test and a symmetry-compatible visible-sector
+probe, retaining all missing experimental inputs explicitly. The probe
+is a candidate four-dimensional effective interaction, not an activated
+hardware design, a Standard Model particle identification, or a Route-F
+portal. Existing G2 results remain the zero-probe regression baseline.
+\end{abstract}
+
+\section{What the dimensionless forecast cannot determine}
+Use $\hbar=c=1$, $\Lambda=R^{-1}$, and hats for the frozen $R=1$ card.
+The existing engineering ratios specify
+\begin{align}
+ (M_5,M_D,p_0,\Omega,\sigma_i,\sigma_d,c)
+ &=\Lambda(.5,5,.2,.2,.1,.05,1.25892910),\\
+ \alpha&=.25,\quad g=.05,\quad\epsilon=.5,\quad
+ \kappa_5=2\pi g/\Lambda .
+\end{align}
+These are relations, not a choice of eV or GeV. They give
+$m_n=\Lambda\sqrt{.25+(n+.25)^2}$ and
+$\mu_j=\Lambda\sqrt{25+j^2}$. Restore physical lengths and times as
+$\hbar c/\Lambda$ and $\hbar/\Lambda$ if conventional units are used.
+For a long-time sideband $q$, the unchanged tree kernel is
+\begin{equation}
+ K_{lmq}=\frac{|g_q|^2p_f}{16\pi E_nE_l(E_n+E_l+q\Omega)}
+          =\Lambda^{-2}\widehat K_{lmq},
+ \qquad g_{\pm1}=g\epsilon/2,\quad g_0=g.
+\end{equation}
+Thus $K$ and cross sections scale as $\Lambda^{-2}$; mean work per
+scattered event scales as $\Lambda$, and $\sum w_l K_{lmq}q\Omega$
+as $\Lambda^{-1}$. The last quantity is not power without luminosity.
+
+In the rate-weighted beam mixture, $f_\Lambda(p)=\Lambda^{-1}\hat f(p/\Lambda)$
+and ${\cal R}_\Lambda(x|u)=\Lambda^{-1}\hat{\cal R}(x/\Lambda|u/\Lambda)$.
+Consequently $h_{s,\Lambda}(x)=\Lambda^{-3}\hat h_s(x/\Lambda)$,
+$Z_\Lambda=\Lambda^{-2}\hat Z$, and
+\begin{equation}
+ \frac{\int\min(h_{+,\Lambda},h_{-,\Lambda})\dd x}{Z_\Lambda}
+ =\frac{\int\min(\hat h_+,\hat h_-)\dd\hat x}{\hat Z}
+ =.022022469\ldots .
+\end{equation}
+Scaling the frozen classifier and its offset/noise tolerances gives the
+same result. This is a scale-identifiability limitation of these inputs,
+not a symmetry of the full SM with its measured masses held fixed.
+Merely specifying a pump frequency could set a scale only after an
+actual frequency and the imposed $\Omega/\Lambda=.2$ relation are supplied;
+that is an external anchor, not a predicted radius.
+
+\section{A correlated spectrum, not one fitted scale per particle}
+For calibrated masses at assigned consecutive \emph{signed} labels
+$n=-1,0,1$, put $y_n=m_n^2$ and fit $y_n=An^2+Bn+C$:
+\begin{equation}
+ A=\frac{y_1+y_{-1}-2y_0}{2},\qquad
+ B=\frac{y_1-y_{-1}}{2},\qquad C=y_0.
+\end{equation}
+Then $\Lambda=\sqrt A$, $\alpha=B/(2A)$, and
+$M_{\rm eff}^2=C-B^2/(4A)$. The original nonnegative-bulk-mass
+model requires $A>0$, $M_{\rm eff}^2\geq0$. Large gauge transformations
+relabel $\alpha\mapsto\alpha+k$, $n\mapsto n-k$; sorted masses are
+not automatically adjacent signed labels. Under the fully frozen ratios,
+one externally identified mass suffices to set $\Lambda=m_n/\hat m_n$,
+but does not test the other assumed ratios. Without freezing them, a
+fourth signed mass supplies an out-of-fit condition:
+\begin{equation}\label{eq:closure}
+ r=y_2-3y_1+3y_0-y_{-1}=0,\qquad
+ \operatorname{Var}(r)=d^T V_y d,\quad d=(-1,3,-3,1)^T .
+\end{equation}
+$V_y$ is the calibrated squared-mass covariance; to first order
+$V_y=\operatorname{diag}(2m)V_m\operatorname{diag}(2m)$.
+An experimental rejection requires these errors and a declared theory
+error, not floating-point equality. Loops can modify this tree identity.
+The supplied numerical tests use synthetic anchors only, recover the
+input scale, and reject a deliberately distorted fourth mass.
+
+\section{A visible-sector coupling: declare the extension first}
+Treat the towers as SM gauge singlets below an explicit EFT cutoff.
+One circle-uniform candidate is
+\begin{equation}\label{eq:portal}
+ \Delta{\cal L}_4=-H^\dagger H
+ \left(\lambda_\Phi\sum_n|\phi_n|^2+
+       \lambda_X\sum_j|x_j|^2\right),\qquad \lambda_\Phi,\lambda_X\geq0.
+\end{equation}
+This preserves both original scalar charges, the external flat-$U(1)$
+covariance, and compact momentum. It follows from
+$-\int R\dd\theta\,H^\dagger H(\lambda_\Phi|\Phi|^2+\lambda_X|X|^2)$
+with $H(x)$ independent of $\theta$, because normalized Fourier overlaps
+give $\delta_{nm}$. As written it is local in four dimensions, with a
+circle-smeared Higgs degree of freedom; it is \emph{not} a demonstrated
+strictly five-dimensional local SM completion. A bulk Higgs zero mode
+would instead give $\lambda_4=\lambda_5/(2\pi R)$ and require its other
+modes, gauge sector and profiles to be specified. No such completion is
+silently assumed. Scalar Higgs-density couplings are standard
+\cite{cline}; the particular tower and readout here are our hypothesis.
+
+With $H=(0,(v+h)/\sqrt2)^T$, the tree masses and vertices become
+\begin{align}
+ m_n^2&=M_{5,0}^2+\lambda_\Phi v^2/2+(n+\alpha)^2\Lambda^2,\\
+ \mu_j^2&=M_{D,0}^2+\lambda_X v^2/2+j^2\Lambda^2,\\
+ \Delta{\cal L}_4&\supset-\sum_{S,k}
+   (\lambda_S v h+\lambda_S h^2/2)|S_k|^2.
+\end{align}
+The common shifts preserve \eqref{eq:closure}, but spectral intercepts
+cannot separate a pre-EWSB mass from $\lambda_Sv^2/2$. The SM value of
+$v$ does not fix $R$ when these parameters remain independent. Keeping
+the old physical masses would require an explicit mass matching
+condition, not an unnoticed subtraction. Nonnegative pre-EWSB masses
+and couplings give a simple classically safe sufficient choice; negative
+matched masses require a new vacuum analysis and are not accepted here.
+In particular, retaining $M_{D,\mathrm{eff}}^2=25\Lambda^2$ gives
+\begin{equation}\label{eq:stability}
+ M_{D,0}^2=25\Lambda^2-\lambda_Xv^2/2\geq0
+ \quad\Longrightarrow\quad \lambda_X\leq50\Lambda^2/v^2.
+\end{equation}
+This is substantive: with no $|X|^4$ in the retained polynomial action,
+a negative $M_{D,0}^2$ runs away along $H=\Phi=0$ and a constant $X$.
+Adding a stabilizing self-quartic would be a new parameter and vacuum
+problem. The analogous nonnegative $M_{5,0}^2$ condition is sufficient,
+not necessary, because a noninteger holonomy supplies a gradient gap.
+
+If both couplings are nonzero, Higgs exchange also adds the diagonal
+tree amplitude
+\begin{equation}
+ {\cal M}(\phi_n x_l\to\phi_n x_l)
+ =-g+\frac{\lambda_\Phi\lambda_Xv^2}{m_h^2-t}
+ \quad\hbox{(undriven elastic component)}.
+\end{equation}
+The zero-mode Higgs supplies no direct $n\ne m$ conversion, but elastic
+rates and hence total branching fractions change. The minimal
+detector-facing matching choice is $\lambda_X\ne0$, $\lambda_\Phi=0$
+at a declared scale; mixed $g\lambda_X$ loops allow a $\lambda_\Phi$
+counterterm, so this zero is not protected to all orders. Neither choice
+has been activated in the existing numerical collision forecasts.
+
+\section{From a coupling to measurable transfers}
+For one complex mode $S$ of physical mass $m_S$, define
+${\cal L}_{hNN}=-(f_Nm_N/v)h\bar NN$. At small nucleon momentum
+transfer, treating $f_N$ as constant, a single-Higgs exchange gives
+\begin{align}
+ \overline{|{\cal M}|^2}
+ &=\frac{\lambda_S^2 f_N^2m_N^2}{(m_h^2-t)^2}(4m_N^2-t),\\
+ \frac{\dd\sigma}{\dd t}
+ &=\frac{\overline{|{\cal M}|^2}}{16\pi{\cal K}(s,m_S^2,m_N^2)},
+ \quad {\cal K}(a,b,c)=a^2+b^2+c^2-2ab-2ac-2bc .
+\end{align}
+The trace identity is
+$\tfrac12\operatorname{Tr}[(\not k'+m_N)(\not k+m_N)]
+=4m_N^2-t$. In the nonrelativistic contact limit, the allowed interval
+has width $4p_*^2={\cal K}/s$, yielding
+\begin{equation}\label{eq:sigma}
+ \sigma_{SN}^{\rm NR}=
+ \frac{\lambda_S^2 f_N^2m_N^4}{4\pi m_h^4(m_S+m_N)^2}.
+\end{equation}
+This agrees with the standard scalar normalization \cite{cline}.
+It is a cross section per specified incident mode, not a cosmological
+dark-matter event rate or a momentum resolution. Nuclear form factors,
+coherence, target excitations and nonconstant hadronic response have
+not been replaced by a nucleon formula.
+
+For a stationary free nucleon and incident momentum $p$,
+$s=m_S^2+m_N^2+2m_N\sqrt{m_S^2+p^2}$,
+$t=-2m_NE_R$ and
+\begin{equation}
+ \frac{\dd\sigma}{\dd E_R}=2m_N\frac{\dd\sigma}{\dd t},\qquad
+ 0\leq E_R\leq\frac{{\cal K}(s,m_S^2,m_N^2)}{2m_Ns}.
+\end{equation}
+A single recoil deposit does not uniquely determine incident $p$;
+the scattering angle is unobserved. A real response must integrate this
+kernel with target response, efficiency and geometry. Even a nonzero
+coupling therefore does not establish the old Gaussian $\sigma_d=.05\Lambda$.
+For dilute independent targets, column density ${\cal C}=n_Td$ gives
+the ideal first-interaction probability $1-e^{-{\cal C}\sigma}$.
+This is only an opacity estimate, not accepted-event efficiency,
+spectrometer performance, or a multiple-scattering transport model.
+
+The same coupling yields an independent consistency test. For a complex
+tower with all kinematically open modes inside EFT control,
+\begin{equation}
+ \Gamma_{h\to S\bar S}=\frac{\lambda_S^2v^2}{16\pi m_h}
+ B_S,\qquad B_S=\sum_{k:2m_{S,k}<m_h}
+ \sqrt{1-4m_{S,k}^2/m_h^2}.
+\end{equation}
+Each signed mode is a separate complex field; particle/antiparticle
+are already counted once in its distinct two-body final state. There
+is no identical-real-scalar factor $1/2$. An invisible-width limit is
+applicable only if these states actually escape the relevant detector.
+If $B_S>0$ and an applicable width budget is $\Gamma_{\max}$, eliminate
+the same $\lambda_S$ between decay and scattering to obtain
+\begin{equation}\label{eq:bound}
+ \sigma_{SN}^{\rm NR}\leq
+ \frac{4 f_N^2m_N^4\Gamma_{\max}}
+ {v^2m_h^3(m_S+m_N)^2B_S}.
+\end{equation}
+Other open invisible sectors consume the budget and tighten this
+necessary bound. If $B_S=0$, this decay gives no bound, not infinite
+evidence for detectability. ATLAS provides a real example of a Higgs
+invisible search \cite{atlas}; no published single-species exclusion
+is applied without checking the tower, lifetime, production and
+acceptance assumptions. No local dark-matter abundance is assumed.
+Equation~\eqref{eq:bound} is evaluated at specified physical masses.
+When bare masses instead are fixed and $\lambda_S$ varied, those masses
+and $B_S$ vary too; the bound is implicit. For the frozen physical
+$X$ intercept one must also impose \eqref{eq:stability}. Detectability
+cannot be rescued by arbitrarily increasing $\lambda_X$ while ignoring
+the vacuum or the summed tower width.
+
+\section{Alternatives, calibration, and a finite next decision}
+A brane-localized Higgs-density coupling is different physics:
+\begin{equation}
+ -\beta_S H^\dagger H |S(x,\theta_b)|^2
+ =-H^\dagger H\sum_{m,n}\frac{\beta_S}{2\pi R}
+ e^{i(n-m)\theta_b}S_m^*S_n,\qquad [\beta_S]=-1.
+\end{equation}
+It is off diagonal (rank one in a finite retained tower), mixes the
+vacuum masses after EWSB, and lets the fixed brane absorb compact
+momentum. The old selection rule then applies only to the isolated
+conversion vertex, not the whole apparatus. It cannot be appended as
+an innocent resolution model. A uniform density probe instead preserves
+the $j\leftrightarrow-j$ mass and direct-response degeneracy of $X$;
+sign inference still needs the collision correlations, not merely mass.
+
+The accompanying calibration card requests one physical energy anchor
+with units and covariance, a specified interaction/target, beam and
+frame definitions, efficiencies, and a joint mass/momentum response.
+For a finite event rate the measured target column or luminosity is
+also necessary. A sideband tag requires an independent calibrated
+response matrix, not the drive clock phase. Synthetic scale rescalings
+and synthetic portal tests are explicitly separated from measured data.
+
+The bounded next decision is physical: (i) choose this neutral
+Higgs-coupled sector and an externally justified scale, then test
+\eqref{eq:bound} against a specified target requirement; or (ii) supply
+an existing apparatus response and compare it with the frozen contract;
+or (iii) choose an analogue-mode platform, explicitly giving up a claim
+of new elementary-particle masses. No additional precision scan is a
+substitute. If a required scattering strength violates a justified
+width/production constraint, reject that candidate rather than fit
+each mode separately. A dimensional radius-stabilization theory is a
+separate hypothesis, not needed to perform this empirical test.
+
+\begin{thebibliography}{9}
+\bibitem{cline} J.~M.~Cline, K.~Kainulainen, P.~Scott and C.~Weniger,
+\emph{Update on scalar singlet dark matter}, Phys. Rev. D 88, 055025 (2013),
+\href{https://arxiv.org/abs/1306.4710}{arXiv:1306.4710},
+Eqs.~(3), (23), (26). Used for normalization, not old exclusion values.
+\bibitem{atlas} ATLAS Collaboration, \emph{Combination of searches for
+invisible decays of the Higgs boson using 139 fb$^{-1}$},
+Phys. Lett. B 842, 137963 (2023),
+\href{https://arxiv.org/abs/2301.10731}{arXiv:2301.10731}.
+An example of a conditional experimental constraint, not calibration
+data for the Route-G recoil field.
+\end{thebibliography}
+\end{document}
