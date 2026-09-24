@@ -1,0 +1,293 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\id}{\mathbb I}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\title{Route G-R1: A Finite Relational Quantum Clock}
+\author{Conditional evolution and the limits of energy-density-only time}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The user-selected mainline now concerns relational time, rather than
+motion in the spacetime assumed by the earlier KK model. We give a
+finite Page--Wootters-type construction: both local Hamiltonians are
+nonnegative, a stationary joint state encodes exact conditional
+Schr\"odinger evolution, and the clock is a specified covariant
+measurement. An exact coherent/dephased pair has the same complete
+energy statistics but different conditional histories. Thus an ordinary
+energy density alone cannot specify this relational evolution.
+Neither the construction nor the cited optical experiment proves the
+source document's density--time law. Quantum mechanics, the subsystem
+split, spectra, constraint and joint state remain declared inputs.
+\end{abstract}
+
+\section{What changes, and what is assumed}
+Chen's sections 1.2, 1.8 and 1.9 associate time with energy information,
+its density and event quantities \cite{chen}. We no longer identify that
+proposal with the pre-existing Minkowski time of G1 or the flight time
+of G2-T. Those calculations remain comparison models, with their
+conditional results intact. In particular, no KK radius, negative mode
+label or detector source is imported into this construction.
+
+Take $\mathcal H_C\otimes\mathcal H_S$, each of dimension $d\geq2$,
+with fixed energy bases $\ket n_C,\ket n_S$, $0\leq n<d$.
+Choose one positive energy gap $\epsilon$, not a fitted particle mass:
+\begin{align}
+ H_C&=\epsilon\sum_{n=0}^{d-1}(d-1-n)\ket n\bra n,&
+ H_S&=\epsilon\sum_{n=0}^{d-1}n\ket n\bra n,\\
+ E_*&=(d-1)\epsilon,&
+ K&=H_C\otimes\id+\id\otimes H_S-E_*\id .
+\end{align}
+Both local energies are nonnegative. For any $\sum_n|a_n|^2=1$,
+\begin{equation}\label{eq:global}
+ \ket\Psi=\sum_n a_n\ket n_C\ket n_S,\qquad K\ket\Psi=0 .
+\end{equation}
+The constraint, not a negative physical energy, subtracts the common
+total energy. The dimensionless transformation
+$U(\alpha)=\exp(-i\alpha K/\epsilon)$ leaves this state invariant.
+$\alpha$ labels a symmetry orbit, not an assumed external physical
+elapsed time. This is a conditional quantum construction in the
+Page--Wootters tradition \cite{moreva,quantumtime}, not a derivation
+of the Born rule, the tensor split or the Hamiltonians from nothing.
+
+\newpage
+\section{Clock events and exact conditional evolution}
+Specify the clock dial before predicting any system outcome:
+\begin{equation}\label{eq:clock}
+ \ket\varphi_C=\frac1{\sqrt d}\sum_{n=0}^{d-1}
+                  e^{in\varphi}\ket n_C,\qquad
+ \varphi_k=\frac{2\pi k}{d},\quad 0\leq k<d.
+\end{equation}
+The finite geometric sum gives
+$\langle\varphi_k|\varphi_l\rangle=\delta_{kl}$ and
+$\sum_k\ket{\varphi_k}\bra{\varphi_k}=\id_C$.
+For continuously labeled readings, instead use the POVM
+\begin{equation}
+ F_C(\dd\varphi)=\frac d{2\pi}\ket\varphi\bra\varphi\,\dd\varphi,
+ \qquad \int_0^{2\pi}F_C(\dd\varphi)=\id_C .
+\end{equation}
+Continuous dial states are \emph{not} mutually orthogonal. A POVM with
+continuous labels is not infinite clock precision. Its covariance is
+\begin{equation}
+ e^{-iH_C\alpha/\epsilon}\ket\varphi
+       =e^{-i(d-1)\alpha}\ket{\varphi+\alpha}.
+\end{equation}
+Here phase is a clock-readout label, not a spatial rotation or an extra
+geometrical circle. The grid outcome probability is $p(k)=1/d$;
+the continuous outcome density is $p(\varphi)=1/(2\pi)$.
+
+For a system effect $0\leq B\leq\id_S$, the joint Born rule gives
+\begin{align}
+ \ket{\psi(\varphi)}
+    &=\sqrt d\,{}_C\bra\varphi\Psi\rangle
+      =\sum_n a_n e^{-in\varphi}\ket n_S,\\
+ P(B|\varphi)&=\bra{\psi(\varphi)}B\ket{\psi(\varphi)},\\
+ i\epsilon\,\partial_\varphi\ket{\psi(\varphi)}
+    &=H_S\ket{\psi(\varphi)}.\label{eq:conditional}
+\end{align}
+This follows by differentiating the finite sum; no external evolution
+of $\ket\Psi$ was used. Once the clock is calibrated in time units,
+\begin{equation}
+ \tau=\frac{\hbar}{\epsilon}\varphi
+ \quad\Longrightarrow\quad
+ i\hbar\,\partial_\tau\ket{\psi(\tau)}=H_S\ket{\psi(\tau)} .
+\end{equation}
+This $\tau$ is a calibrated dial reading within one period, not yet
+spacetime proper time. Calibration has not derived seconds from $E_d$.
+Equivalently, the exact finite history identity is
+\begin{equation}
+ \ket\Psi=\frac1{\sqrt d}\sum_{k=0}^{d-1}
+         \ket{\varphi_k}_C\ket{\psi(\varphi_k)}_S .
+\end{equation}
+On the grid $\psi_{k+1}=e^{-2\pi iH_S/(d\epsilon)}\psi_k$ and
+$\psi_d=\psi_0$. Thus $k$ is cyclic: an ever-increasing event count
+requires additional records. Conditioning different ensemble members
+on different dial outcomes is not a proof of sequential measurement
+statistics on one repeatedly measured clock.
+
+\newpage
+\section{Invariant probabilities and finite-clock limitations}
+The fixed total-energy subspace is $\ker K$. We can express the same
+joint probabilities with effects that preserve the constraint. For
+$E_{kB}=\ket{\varphi_k}\bra{\varphi_k}\otimes B$, define
+\begin{equation}
+ \overline E_{kB}=\frac1{2\pi}\int_0^{2\pi}
+        U(\alpha)E_{kB}U(\alpha)^\dagger\,\dd\alpha .
+\end{equation}
+Since $K/\epsilon$ has integer eigenvalues, the average removes matrix
+elements between unequal eigenvalues. Consequently
+\begin{equation}
+ [K,\overline E_{kB}]=0,\qquad
+ \overline E_{kB}\succeq0,\qquad
+ \tr(\rho\,\overline E_{kB})=\tr(\rho E_{kB})
+       \quad(\rho\text{ supported in }\ker K).
+\end{equation}
+Twirling the denominator effect in the same way preserves the
+conditional probability too. This finite algebraic averaging is a
+projection onto invariant effects, not a distribution of an unobserved
+physical time. It is consistent with the relational-observable viewpoint
+\cite{trinity}. We certify probabilities, not a measurement instrument
+or a history of collapse; different instruments can share one effect.
+
+One must not secretly impose an ideal canonical time operator on this
+finite clock. For every finite matrix $T$,
+\begin{equation}
+ \tr[T,H_C]=0\ne i\hbar d .
+\end{equation}
+Thus $[T,H_C]=i\hbar\id$ is impossible here. A cyclic covariant POVM
+avoids that assertion. Neither an irreversible arrow nor unlimited
+duration follows. The local generators and covariance also supply the
+chosen ordering structure; we have not deduced all notions of order
+from correlations alone.
+
+\subsection*{An interaction is a new constraint problem}
+Do not insert an arbitrary density-dependent clock speed into
+\eqref{eq:conditional}. If $K$ is replaced by $K+V$ and a new physical
+state satisfies $(K+V)\ket\Psi=0$, set
+$\widetilde\psi(\varphi)=\sqrt d\,{}_C\bra\varphi\Psi\rangle$.
+Clock completeness gives the exact projected equation
+\begin{align}
+ i\epsilon\partial_\varphi\widetilde\psi(\varphi)
+ &=H_S\widetilde\psi(\varphi)
+ +\frac d{2\pi}\int_0^{2\pi}
+ V(\varphi,\varphi')\widetilde\psi(\varphi')\,\dd\varphi',\\
+ V(\varphi,\varphi')&={}_C\bra\varphi V\ket{\varphi'}_C .
+\end{align}
+The projected vector need not have constant norm, and its normalized
+conditional equation need not be the same linear equation. A general
+$V$ gives a nonlocal kernel in clock labels, not automatically a local
+slowdown law. The old $\ket\Psi$ generally fails the new constraint.
+Our code checks the projection identity for a test matrix $V$ but
+explicitly does \emph{not} claim an interacting stationary completion.
+
+\newpage
+\section{Exact counterexample: energy statistics do not fix a history}
+For $d=3$, $a_n=1/\sqrt3$, compare
+\begin{equation}
+ \rho_{\rm coh}=\ket\Psi\bra\Psi,\qquad
+ \rho_{\rm diag}=\frac13\sum_{n=0}^2\ket{n,n}\bra{n,n}.
+\end{equation}
+Both are supported in $\ker K$. They have identical local reductions
+$\rho_C=\rho_S=\id/3$ and identical joint energy probabilities
+$P(n_C,n_S)=\delta_{n_Cn_S}/3$. In particular,
+\begin{equation}
+ \langle H_C\rangle=\langle H_S\rangle=\epsilon,\qquad
+ \langle H_C+H_S\rangle=2\epsilon,\qquad
+ \operatorname{Var}(H_C+H_S)=0
+\end{equation}
+for both. All functions of the jointly measured local energies have
+the same statistics, not merely the same mean. Even if an external
+reference volume $V_0$ were supplied, an ordinary mean energy density
+$2\epsilon/V_0$ would be identical.
+
+Yet the specified clock measurement yields
+\begin{align}
+ \rho_{\rm coh}(S|\varphi)&=\ket{\psi(\varphi)}\bra{\psi(\varphi)},\\
+ \rho_{\rm diag}(S|\varphi)&=\id/3 .
+\end{align}
+For the fixed system projector onto
+$\ket+=(\ket0+\ket1+\ket2)/\sqrt3$,
+\begin{equation}\label{eq:counter}
+ P_{\rm coh}(+|\varphi)=
+   \frac{|1+e^{-i\varphi}+e^{-2i\varphi}|^2}{9}
+   =\frac{(1+2\cos\varphi)^2}{9},\qquad
+ P_{\rm diag}(+|\varphi)=\frac13 .
+\end{equation}
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+Clock label $\varphi$ & Coherent probability & Dephased probability\\
+\midrule
+$0$       & $1$   & $1/3$\\
+$\pi/3$   & $4/9$ & $1/3$\\
+$2\pi/3$  & $0$   & $1/3$\\
+$\pi$     & $1/9$ & $1/3$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The missing datum is joint coherence. The diagonal state is still a
+legitimate stationary quantum state; we do not claim it has \emph{no time}.
+It lacks the changing conditional probabilities of this coherent
+example. Partial dephasing gives
+$P_\eta=\eta P_{\rm coh}+(1-\eta)/3$, $0\leq\eta\leq1$,
+without changing the energy statistics.
+
+This refutes a \emph{density-only identification} of the complete
+relational history. It does not refute every possible meaning of the
+source's unspecified $E_i,E_d$: those could include more than energy
+statistics, but then their additional content and dynamics must be
+defined. In particular it does not prove $E_d$ causes time dilation.
+
+\newpage
+\section{Interpretation, calibration and the next bounded step}
+The closest proposed analogue of $E_i$ is not an energy eigenvalue alone
+but the joint state \emph{together with} a specified algebra of events.
+This is a candidate dictionary, not an identification derived from
+Chen's document. The original event quantity $T$ should be denoted
+$N_{\rm evt}$ to avoid confusing it with $\tau$ or flight time.
+A dial label modulo $d$ is not yet such a count. $E_d$ has no assigned
+operator or measure in G-R1; Hilbert dimension $d$ is neither spatial
+dimension nor the source's $R$.
+
+There are two simple guards against artificial slowdown:
+\begin{itemize}
+\item Replacing $(H_C,H_S,E_*,\epsilon)$ by
+$a(H_C,H_S,E_*,\epsilon)$, $a>0$, leaves the physical subspace and
+$P(B|\varphi)$ unchanged. It rescales $\tau=\hbar\varphi/\epsilon$.
+Without an independent reference this is not an observed relative
+clock dilation.
+\item Shifting $H_C\mapsto H_C+b\id$ and $E_*\mapsto E_*+b$
+leaves $K$ unchanged. Clock projectors and correlations are unchanged
+although the clock's mean energy shifts. This is a freedom of this
+\emph{nongravitational} model, not a claim about energy offsets in a
+specified gravity theory.
+\end{itemize}
+Therefore a physical density--time proposal must choose a density
+operator/measure and an interaction, solve the common constraint, and
+predict a comparison between calibrated physical clocks. It must
+distinguish changes of labels from changes of correlations.
+
+G-R1 is complete within its finite noninteracting scope. The next
+bounded task, G-R2, is one explicit initial measurement record and one
+final readout. Check sequential conditional probabilities and what
+information survives measurement backreaction; do not treat
+single-event conditioning as a ready-made accumulating clock.
+G-R3 can then test one specified $E_i/E_d$ candidate with a clock-matter
+or clock-clock constraint. No freely fitted slowdown function is
+authorized. Space, a Lorentzian metric, universal proper time, mass
+generation and the source's more expansive claims remain open.
+
+The optical experiment of Moreva et al.\ demonstrates a conditional-clock
+mechanism using prepared photons and laboratory apparatus, not that
+laboratory spacetime has been derived from information \cite{moreva}.
+Work on sequential measurements and invariant relational observables
+guides the next step \cite{quantumtime,trinity}; it is not silently
+claimed as already implemented here.
+
+\texttt{code/verify\_gr1\_relational\_clock.py} passes 109 algebra checks,
+including a nonuniform four-level case, direct projection, numerical
+differentiation, invariant effects, the exact counterexample, and
+unchanged comparison-file hashes. These are implementation checks,
+not new experimental data or a novelty claim for Page--Wootters.
+
+\begin{thebibliography}{9}\small\raggedright
+\bibitem{chen} B. Chen, \emph{Energy spectrum for elementary particles},
+\href{https://indico.cern.ch/event/1109513/contributions/4969967/attachments/2480973/4410560/Energy\%20spectrum\%20for\%20elementary\%20particles_final.pdf}
+{final five-page document}, dated 23 April 2022, Secs.\ 1.2, 1.8, 1.9.
+\bibitem{moreva} E. Moreva et al., \emph{Time from quantum entanglement:
+an experimental illustration}, Phys.\ Rev.\ A 89, 052122 (2014),
+\href{https://arxiv.org/abs/1310.4691}{arXiv:1310.4691}.
+\bibitem{quantumtime} V. Giovannetti, S. Lloyd and L. Maccone,
+\emph{Quantum Time}, Phys.\ Rev.\ D 92, 045033 (2015),
+\href{https://arxiv.org/abs/1504.04215v3}{arXiv:1504.04215v3}.
+\bibitem{trinity} P. A. H\"ohn, A. R. H. Smith and M. P. E. Lock,
+\emph{The Trinity of Relational Quantum Dynamics},
+Phys.\ Rev.\ D 104, 066001 (2021),
+\href{https://arxiv.org/abs/1912.00033v3}{arXiv:1912.00033v3}.
+\end{thebibliography}
+\end{document}

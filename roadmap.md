@@ -1,8 +1,69 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-09-23
+Last updated: 2026-09-24
+
+## Current Route-G priority: relational/emergent time (2026-09-23)
+
+After the source-concept audit, the user chose one subsystem's events
+as the clock for another subsystem. The prior Minkowski/KK/TOF models
+assumed physical spacetime and did not derive the original paper's time
+concept. Preserve them as comparison/regression work; do not let their
+detector/source gates block this new line.
+
+**G-R1 is bounded-done:** a positive-local-energy finite Page-Wootters
+model yields exact clock-conditioned Schrödinger evolution from a
+stationary joint state. The state, quantum mechanics, tensor split,
+spectra and clock POVM remain assumptions, not unconditional first
+principles.109 new checks pass.
+
+An exact coherent/dephased pair has identical full joint energy
+statistics but different clock-conditioned probabilities: at the same
+dial reading a specified outcome has probability1 versus1/3.
+Energy density alone therefore does not specify the relational history.
+No universal Ed-dependent slowdown, spacetime, mass spectrum or gravity is proved.
+
+**G-R2 is bounded-done (2026-09-24):** two unitary record interactions,
+exact sequential probabilities and saved outcomes. The cyclic dial is
+not the event count. A finite epoch label and blank-input boundary are
+explicit assumptions; the new positive history constraint replaces,
+rather than silently reuses, the noninteracting G-R1 constraint.
+Initial recording changes terminal P(+) from 0 to 2/9 in the exact
+test.139 new checks pass; all4363 Route-G checks pass. The five-page
+derivation includes preservation, periodic-closure obstruction and
+the absent physical apparatus energy completion.
+**G-R3 is bounded-done for one candidate (2026-09-24):**
+Ed is ground-subtracted excitation energy per declared matter cell,
+not assumed spatial volume or complete Ei. V=kappa H_B Ed/E0 and
+a shielded reference give a normalized stationary two-clock model
+with relative rate 1+kappa d. Common rescaling cancels. An unread
+source distribution is not replaceable by mean Ed; the exact example
+gives P0=5/9 rather than (3+2sqrt(2))/9.
+A microscopic dispersive exchange audit permits both rate directions
+and transition-dependent corrections. Thus this is an environmental
+clock shift, not a universal slowing of time.273 new checks pass,
+complete Route-G regression4636/4636; a six-page derivation is saved.
+The G-R2 record apparatus is not silently treated as energy-complete.
+**G-R4 is bounded-done as a physical-source audit (2026-09-24):**
+one isotropic blackbody bath, -d.E interaction and independent Yb+
+E2/E3 differential-polarizability inputs fix both shift signs negative.
+Their static 300 K fractional shifts are -5.235e-16 and -7.223e-17,
+about7.25-fold apart. This channel is not solely one universal rate
+factor. An additional exactly common factor cancels from their ratio
+and is not excluded. Conventional J/m^3 radiation density is explicitly
+not identified with Chen Ed or G-R3 energy per operational cell.
+91 new checks pass; complete Route-G regression4728/4728, with a
+five-page derivation and source-pinned input card. These are predictions,
+not new observations or full finite-temperature apparatus calculations.
+Next use actual raw interleaved ratios plus bath radiometry; for a
+common-factor claim, specify an independently responding reference or
+non-clock observable first. No fitted clock-speed function or new scan.
+See [Route-G roadmap](route_g/ROADMAP.md) and
+[interpretation card](route_g/RELATIONAL_TIME_CARD.md).
+Route-F P/U/S priorities and all fit/portal gates remain independent.
 
 ## New independent Route G: Scheme A (2026-09-22)
+
+Historical comparison program; its next steps do not override G-R above.
 
 The user chose Scheme A and explicitly requested **Route G**.
 [Route G](route_g/README.md) is a separate common-internal-spectrum
@@ -81,10 +142,62 @@ lambda_X<=50 Lambda²/v². It is not a hardware design or a Route-F portal.
 The [physical input card](route_g/PHYSICAL_INPUT_CARD.md) distinguishes
 actual missing measurements from the synthetic tests.
 
-Next: choose a physical sector/scale and target for a bounded
-coupling-versus-constraint check, or supply a calibrated apparatus
-response. Do not substitute further Gaussian scans for that physical
-choice. Absolute probabilities, finite pulses or coherent interference
+**G2-X now selects a conditional physical branch:** an X-only Higgs
+portal, Lambda=1–30 GeV spanning the Higgs threshold, and natural xenon
+with the actual published XENON1T S2-only NR response. Full-tower Higgs
+width and vacuum constraints are compared with required at-detector
+flux for three expected accepted-window recoils; no unknown flux is
+invented and no halo-WIMP exclusion is imported.
+
+The physical readout changes the conclusion: over the admitted .7–50keV
+window the nuclear scalar kernel factorizes in incident momentum, making
+the normalized S2 shapes identical for both signs. This channel does
+not realize the old2.20% direct-momentum classifier: its best S2-only
+error is14.057%, merely guessing the majority sign. At Lambda=1, 5,
+30 GeV, three accepted events require at least5.07e9,2.15e10,4.32e6
+cm⁻²s⁻¹ within the declared coupling bounds. This is a required flux,
+not a source prediction or discovery threshold. The G2-X calculation
+is bounded-done, with573/573 new checks and3629/3629 total regression.
+The GeV-scale drive
+also remains an unrealized source, not an ordinary laboratory oscillator.
+
+**G2-H now tests an actual accelerator source budget:** one LHC Run-2
+interaction point,139 fb^-1, with SM Higgs production55.6 pb and the
+same conditional invisible allowance. Even granting every produced
+particle the longest xenon chord and efficiency one, the retained
+elastic-window count is below3.96e-6 (generous stress5.35e-6).
+This on-shell-source/readout chain is rejected; no detailed beam
+simulation is warranted. The source closes where the old high-scale
+coupling map became less restrictive.
+
+Direct Higgs production is not the old Phi-X collision preparation.
+It has equal, kinematically identical j=+-1 distributions; timing,
+direction and independent momentum alone all give50% optimal sign
+error in this tree channel. Source choice therefore changes the
+identifiability question, not just its event normalization.
+G2-H is bounded-done:389 new checks,4018 total, all passing.
+Next consider production/missing-momentum inference without a second
+tiny scattering probability; if signed conversion is essential,
+first require a genuinely sign-sensitive preparation or coupling.
+Off-shell/other sources and other response channels remain untested.
+Do not substitute further Gaussian scans for this physical decision.
+
+**G2-T separates mass metrology from signed-mode readout.** TOF plus
+independent momentum reconstructs mass, with source-time/path correlations
+and exact error boxes included. Neutral X has no specified momentum
+sensor; S2 is neither a recoil-vector measurement nor tagged X TOF.
+TOF plus directional elastic recoil can close the kinematic inversion,
+but an illustrative10 keV Xe recoil requires about0.896 arcsec for an
+angular-only1% mass budget. This is not hardware performance.
+The existing Phi-source correlation remains conditional; an odd
+amplitude alone is not sign-sensitive without a surviving interference
+term or other signed response. No new interaction was activated.
+The previous event ceiling survives any additional time gate.
+The bounded mathematical audit is complete; real source tags and
+momentum/energy sensing remain the next physical input gate, not more
+Gaussian scans. See the [G2-T report](route_g/output/g2_tof_mode_audit.md).
+
+Absolute probabilities, finite pulses or coherent interference
 require specified 4D packets and pump envelope; the long-time
 common-overlap rate is not an absolute encounter probability.
 Tree-level EFT success is not quantum loop control or a particle fit.

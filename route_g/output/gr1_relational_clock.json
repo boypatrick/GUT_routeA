@@ -1,0 +1,560 @@
+{
+  "status": "G-R1 bounded-done: finite, noninteracting relational-clock theorem and density-only counterexample.",
+  "assumptions": [
+    "Finite clock/system factorization is given, not derived.",
+    "Local Hamiltonians have complementary equally spaced nonnegative energies.",
+    "The matched joint state, Born rule and covariant clock measurement are specified.",
+    "Clock phase is a readout label, not a physical extra dimension or external elapsed time.",
+    "Seconds require calibration tau=hbar*phi/epsilon; no numerical physical epsilon is chosen.",
+    "No memory register, repeated-measurement experiment, time arrow, spacetime metric or Ed dynamics is supplied."
+  ],
+  "example": {
+    "d": 3,
+    "gap_model_units": 1,
+    "energy_clock": [
+      2,
+      1,
+      0
+    ],
+    "energy_system": [
+      0,
+      1,
+      2
+    ],
+    "total_energy": 2.0000000000000004,
+    "total_energy_variance": 1.97215226305253e-31,
+    "rows": [
+      {
+        "phi_over_pi": 0.0,
+        "coherent_probability": 1.0000000000000002,
+        "dephased_probability": 0.33333333333333337,
+        "exact_coherent_probability": 1.0
+      },
+      {
+        "phi_over_pi": 0.3333333333333333,
+        "coherent_probability": 0.44444444444444464,
+        "dephased_probability": 0.3333333333333334,
+        "exact_coherent_probability": 0.4444444444444444
+      },
+      {
+        "phi_over_pi": 0.6666666666666666,
+        "coherent_probability": -4.625929269271494e-18,
+        "dephased_probability": 0.3333333333333335,
+        "exact_coherent_probability": 1.232595164407831e-32
+      },
+      {
+        "phi_over_pi": 1.0,
+        "coherent_probability": 0.11111111111111113,
+        "dephased_probability": 0.33333333333333337,
+        "exact_coherent_probability": 0.1111111111111111
+      },
+      {
+        "phi_over_pi": 0.22695494884904274,
+        "coherent_probability": 0.7015770712989452,
+        "dephased_probability": 0.3333333333333335,
+        "exact_coherent_probability": 0.7015770712989448
+      }
+    ],
+    "coherent_conditional_purity": 1.0,
+    "dephased_conditional_purity": 0.3333333333333333
+  },
+  "counterexample_scope": "Same local reduced density matrices and complete joint energy statistics, different clock-conditioned phase-sensitive probabilities. Refutes identifying an energy density alone with the full relational history, not every possible definition of Chen's unspecified Ei/Ed.",
+  "not_proved": [
+    "Ed increases imply clock slowdown",
+    "mass spectrum or negative mass",
+    "emergent space or general relativity",
+    "unbounded event count or time arrow",
+    "an actual sensor/source",
+    "sequential measurement statistics"
+  ],
+  "error_maxima": {
+    "constraint_norm": 0.0,
+    "conditional_state_error": 3.3306690738754696e-16,
+    "conditional_equation_error": 3.009933788424194e-10,
+    "invariant_effect_error": 1.5381029955953107e-15
+  },
+  "summary": {
+    "checks": 109,
+    "passed": 109,
+    "failed": []
+  },
+  "checks": [
+    {
+      "name": "three_level_uniform:positive_local_hamiltonians",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:normalized",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:constraint",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "three_level_uniform:mixture_constraint",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:identical_marginals",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:identical_joint_energy_statistics",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:orthonormal_clock_grid",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:continuous_clock_POVM",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:clock_covariance",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:global_stationary",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:finite_commutator_trace_zero",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:not_canonical_time_operator",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:history_identity",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:arbitrary_product_fails_constraint",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0:conditional_state",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "three_level_uniform:phi=0:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0:conditional_Schrodinger",
+      "passed": true,
+      "value": 3.103278480115609e-12
+    },
+    {
+      "name": "three_level_uniform:phi=0:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0:analytic_fringe",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:conditional_state",
+      "passed": true,
+      "value": 2.0595777971499126e-16
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:conditional_Schrodinger",
+      "passed": true,
+      "value": 6.019943371260296e-11
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=1.0472:analytic_fringe",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:conditional_state",
+      "passed": true,
+      "value": 2.0230178278559179e-16
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:conditional_Schrodinger",
+      "passed": true,
+      "value": 1.0555843247633239e-10
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=2.0944:analytic_fringe",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:conditional_state",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:conditional_Schrodinger",
+      "passed": true,
+      "value": 1.0913683948393681e-10
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=3.14159:analytic_fringe",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:conditional_state",
+      "passed": true,
+      "value": 2.0653133294948543e-16
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:conditional_Schrodinger",
+      "passed": true,
+      "value": 5.132153989200114e-11
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:phi=0.713:analytic_fringe",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:common_energy_scaling_same_state",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:constraint_scaling_same_kernel",
+      "passed": true
+    },
+    {
+      "name": "three_level_uniform:energy_zero_shift_same_constraint",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:positive_local_hamiltonians",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:normalized",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:constraint",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "four_level_nonuniform:mixture_constraint",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:identical_marginals",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:identical_joint_energy_statistics",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:orthonormal_clock_grid",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:continuous_clock_POVM",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:clock_covariance",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:global_stationary",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:finite_commutator_trace_zero",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:not_canonical_time_operator",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:history_identity",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:arbitrary_product_fails_constraint",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:conditional_state",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:conditional_Schrodinger",
+      "passed": true,
+      "value": 1.7640936821300367e-11
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:conditional_state",
+      "passed": true,
+      "value": 1.3383049970753515e-16
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:conditional_Schrodinger",
+      "passed": true,
+      "value": 6.749532140571837e-11
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=1.0472:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:conditional_state",
+      "passed": true,
+      "value": 1.5608426940096721e-16
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:conditional_Schrodinger",
+      "passed": true,
+      "value": 2.0556193838164891e-10
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=2.0944:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:conditional_state",
+      "passed": true,
+      "value": 7.442819498693406e-17
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:conditional_Schrodinger",
+      "passed": true,
+      "value": 3.009933788424194e-10
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=3.14159:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:conditional_state",
+      "passed": true,
+      "value": 8.987968927486557e-17
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:clock_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:dephased_state_constant",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:conditional_Schrodinger",
+      "passed": true,
+      "value": 1.1486860814920346e-10
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:invariant_joint_effect",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:phi=0.713:twirl_preserves_probability",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:common_energy_scaling_same_state",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:constraint_scaling_same_kernel",
+      "passed": true
+    },
+    {
+      "name": "four_level_nonuniform:energy_zero_shift_same_constraint",
+      "passed": true
+    },
+    {
+      "name": "counterexample:coherent_purity",
+      "passed": true
+    },
+    {
+      "name": "counterexample:dephased_purity",
+      "passed": true
+    },
+    {
+      "name": "counterexample:fixed_total_energy",
+      "passed": true
+    },
+    {
+      "name": "counterexample:nonzero_probability_difference",
+      "passed": true
+    },
+    {
+      "name": "coherence_fraction:0.0",
+      "passed": true
+    },
+    {
+      "name": "coherence_fraction:0.5",
+      "passed": true
+    },
+    {
+      "name": "coherence_fraction:1.0",
+      "passed": true
+    },
+    {
+      "name": "interaction:projection_identity_only",
+      "passed": true
+    },
+    {
+      "name": "interaction:not_a_stationary_completion",
+      "passed": true
+    },
+    {
+      "name": "prior:all_files_unchanged",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "source_sha256": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
+    "unchanged_comparison_files": {
+      "code/verify_g1_circle_spectrum.py": "0cf6e91af89352ae4a91e7002891453258f23a79798f0711059b2132226798bf",
+      "code/verify_g2_driven.py": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+      "code/verify_g2_higgs_source.py": "f2f2b01ce80ee9028306759c112fa69a2bc2dc5b06a2ba9cab8f87a0740baf08",
+      "code/verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+      "code/verify_g2_noisy_tag.py": "1e139b9499836b5b61aa7c66009f938e2bc7482d94da2e251efef1018ac6f4c1",
+      "code/verify_g2_probe_coupling.py": "ad3db19ff58020daa13400b20931cd343aff61c18ec3e427c30c415f87d339d4",
+      "code/verify_g2_readout_contract.py": "b66b44f540adbab472cc4b87766363a812732a1965c02f1d73a0853788aeac76",
+      "code/verify_g2_recoil_joint.py": "07ea3170a5176c4e285287af6a7eb517709d8f234c2c38abb9bfb95084b85715",
+      "code/verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+      "code/verify_g2_scale_anchor.py": "01720b6dab7e3cf79a76a98870ed7094983879d7bbb12577d602f6b27637334d",
+      "code/verify_g2_tof_mode_audit.py": "c1368206dd3b6c090fbe21e2fffd983d65b876d86598d45767e074456e497652",
+      "code/verify_g2_xenon_feasibility.py": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+      "output/g2_higgs_source.json": "1964b02c92a55a5f87de3b871fa49e43bcbdef32748781f399fd6e0b0eeba2db",
+      "output/g2_tof_mode_audit.json": "62ef1659820f6872131178364a489903895f1059244e9fa4c94ce1e7fc788819"
+    }
+  }
+}

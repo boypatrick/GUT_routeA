@@ -1,0 +1,285 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\title{Route G2-T: Mass Metrology Is Not Signed-Mode Readout}
+\author{A bounded measurement audit of the unchanged Route-G action}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Time of flight and an independent momentum determine mass, but neither
+an independent momentum sensor for neutral $X$ nor a tagged flight time
+is supplied by the existing S2-only readout. We derive the joint-data
+requirements, their conditioning, and a same-action alternative using
+directional elastic recoil. Opposite compact-mode signs require different
+information: source correlations or a genuinely signed response.
+An odd amplitude alone need not distinguish signs. No coupling,
+production budget or previous exclusion is changed. This closes a
+mathematical measurement audit, not a hardware design or particle discovery.
+\end{abstract}
+
+\section{Which clock and which unknown?}
+Keep the conditional tree spectrum
+\begin{equation}
+ m_j=\Lambda\sqrt{25+j^2},\qquad
+ \Delta{\cal L}=-\lambda_X H^\dagger H\sum_j|x_j|^2.
+\end{equation}
+$X$ is electrically neutral. Work in one laboratory inertial frame,
+with a freely propagating massive particle between a known production
+event and its first target interaction. This is an on-shell event
+description, not an unspecified coherent finite-pulse calculation.
+In particle-energy units $c=1$, except in flight lengths and times,
+standard relativistic kinematics gives \cite{pdgkin}
+\begin{equation}
+ E^2=p^2+m^2,\quad \beta=p/E,\quad
+ T=t_{\rm hit}-t_0=\frac{L}{c\beta},\quad
+ \Delta\tau=\frac{T}{\gamma}=\frac{Lm}{cp}.
+\end{equation}
+Mass alone does not set a clock rate: equal velocities have equal
+$\gamma$. At a common energy or a common momentum, different masses
+generally have different velocities. Those are distinct preparation
+conditions; they must not be interchanged during inference.
+
+Eliminating $\beta$ yields
+\begin{equation}\label{eq:mass}
+ \boxed{m^2=p^2\left[\left(\frac{cT}{L}\right)^2-1\right].}
+\end{equation}
+Time alone fixes $m/p$: $(m,p)\mapsto (am,ap)$ leaves $T$ unchanged.
+Measuring $p$ from an assumed $m$ and inserting it back into
+\eqref{eq:mass} is circular. A measured energy is an alternative
+independent constraint, $m=E\sqrt{1-\beta^2}$; an assumed monochromatic
+source is not an energy measurement. Unknown $t_0$ adds another
+degeneracy. Two timed positions may remove $t_0$ and determine velocity,
+but still do not determine $m$ or $p$ separately.
+
+\newpage
+\section{Errors, exact boxes and an illustrative scale}
+Let $V$ be the covariance of $(\ln p,\ln T,\ln L)$. Differentiating
+$\ln m=\ln p+\tfrac12\ln[(cT/L)^2-1]$ gives
+\begin{align}
+ \dd\ln m&=\dd\ln p+\gamma^2(\dd\ln T-\dd\ln L),\\
+ \frac{\sigma_m^2}{m^2}&\simeq
+ V_{pp}+\gamma^4(V_{TT}+V_{LL}-2V_{TL})
+       +2\gamma^2(V_{pT}-V_{pL}).\label{eq:cov}
+\end{align}
+This is a small-error expansion, not a Gaussian assumption or a
+confidence interval. In particular,
+$\sigma_T^2=\sigma_{\rm hit}^2+\sigma_{t_0}^2
+-2\operatorname{Cov}(t_{\rm hit},t_0)$.
+Source jitter, path uncertainty and correlations cannot be omitted.
+Large $\gamma^2$ makes time-to-mass inversion poorly conditioned.
+
+A distribution-free, finite-error check is possible. For
+$|\delta p|/p\leq a$, $|\delta T|\leq b$,
+$|\delta L|\leq d$, monotonicity gives
+\begin{align}
+ m_{\min}^2&=p^2(1-a)^2
+       \left[\frac{c^2(T-b)^2}{(L+d)^2}-1\right],\\
+ m_{\max}^2&=p^2(1+a)^2
+       \left[\frac{c^2(T+b)^2}{(L-d)^2}-1\right].\label{eq:box}
+\end{align}
+Here $p(1-a)>0$, $L>d$, and $c(T-b)>L+d$ are required.
+Outside this domain the data can produce negative estimates of $m^2$;
+do not silently clip them to a physical mass. Actual inference should
+use the response likelihood including such observations.
+
+Take only for illustration a Higgs \emph{at rest},
+$E=m_h/2=62.54$ GeV, $\Lambda=5$ GeV and $L=10$ m.
+It is not an LHC boost distribution or an attainable beam.
+\begin{center}\small
+\begin{tabular}{rrrrr}
+\toprule
+$j$ & $m$ [GeV] & $p$ [GeV] & $T$ [ns] & mass box [GeV]\\
+\midrule
+$0$ &25.000000&57.325837&36.390395&[24.873,25.127]\\
+$+1$&25.495098&57.107369&36.529609&[25.370,25.620]\\
+$-1$&25.495098&57.107369&36.529609&[25.370,25.620]\\
+$5$ &35.355339&51.587320&40.438423&[35.254,35.457]\\
+\bottomrule
+\end{tabular}
+\end{center}
+The boxes use $a=0.001$, $b=20$ ps and $d=1$ mm, as
+\emph{uncalibrated requirements}, not measured resolutions or standard
+deviations. Numerical full-precision endpoints are in the report.
+The $j=0$ and $|j|=1$ times differ by $139.214$ ps.
+With $a,d$ fixed, their reconstructed-mass boxes first touch at
+$b=48.672$ ps. This number is not half the time gap: the momenta
+differ, and the momentum/path errors also enter. It is a two-point
+requirement test, not a new Gaussian scan or a collider classifier.
+The two signed rows remain identical even with perfect resolution.
+
+\newpage
+\section{Neutral-particle readout: a missing measurement, not missing algebra}
+Ordinary curvature tracking measures momentum through electric charge;
+its magnetic bending relation does not supply $p$ for the neutral $X$
+of this action \cite{pdgdet}. Published charged-track resolutions cannot
+be assigned to $X$. A missing-momentum measurement of an invisible pair
+also gives their sum, not the individual $p$ needed in \eqref{eq:mass}.
+
+There is an exact same-action alternative if a \emph{directional}
+elastic target readout is available. Let the target of known mass $M$
+start at rest, recoil energy be $E_R>0$, recoil momentum magnitude
+$q=\sqrt{E_R(E_R+2M)}$, and angle to the incident trajectory be $\theta$.
+Set $Q=(E_R,\mathbf q)$ and $P=(E,\mathbf p)$, using signature $+---$.
+The target shell gives $Q^2=-2ME_R$. The unchanged outgoing $X$ shell
+$(P-Q)^2=P^2$ then gives
+\begin{equation}
+ 2P\cdot Q=Q^2
+ \quad\Longrightarrow\quad p q\cos\theta=(E+M)E_R .
+\end{equation}
+A timed trajectory determines $\beta=p/E$, hence
+\begin{equation}\label{eq:direction}
+ D=\beta q\cos\theta-E_R,\qquad
+ \boxed{E=\frac{ME_R}{D},\quad p=\beta E,\quad
+ m=\frac{ME_R\sqrt{1-\beta^2}}{D}.}
+\end{equation}
+Require $0<\beta<1$, $D>0$ and $E-E_R>0$. These conditions and the
+outgoing shell are checked explicitly. $E_R$ alone is insufficient;
+with $\beta,E_R,\theta$ all observed, the inversion is algebraically
+unique. Its reconstructed $p$ is correlated with the same data, not
+an additional independent measurement.
+
+The conditioning is decisive. With $\beta,E_R,M$ fixed,
+\begin{equation}
+ \frac{\partial\ln m}{\partial\theta}
+       =\frac{\beta q\sin\theta}{D}.
+\end{equation}
+For the $|j|=1$ row, $M=132(0.93149410242)$ GeV and $E_R=10$ keV,
+$\theta\simeq89.9625^\circ$. Allowing a local 1\% mass error from angle
+alone requires about $0.896$ arcsec angular error, even before timing,
+energy and incident-direction errors. Small low-energy recoils are
+nearly transverse here; this particular inversion is very sensitive
+to angle. This is a requirement, not a claim about a directional sensor.
+
+The actual retained XENON1T response is an energy-to-S2 response
+\cite{xenon}; it supplies no nuclear recoil vector or tagged
+source-to-$X$-interaction time. Electron drift time is not $X$ flight
+time. Natural xenon further has an unobserved isotope mixture: use a
+mixture likelihood, not the $A=132$ illustration as an event label.
+Target-at-rest elastic kinematics is the declared approximation;
+initial target motion, binding and joint instrument response would
+need evaluation before applying this precision budget to data.
+The rejected Higgs/xenon chain is not revived by this inversion.
+
+\newpage
+\section{Equal mass, opposite sign: a different information problem}
+\subsection*{Retain the source-specific no-go}
+For direct tree-level scalar Higgs production followed by the diagonal
+portal, $m_{+j}=m_{-j}$ and the signed source measures are equal.
+Every common time, direction or momentum response preserves that
+equality. If $z$ denotes the complete measured record,
+\begin{equation}
+ {\cal P}(z|+j)={\cal P}(z|-j),\quad
+ P(+j)=P(-j)=\tfrac12
+ \quad\Longrightarrow\quad P_{\rm error}^{\rm opt}=\tfrac12 .
+\end{equation}
+A time gate cannot create information absent from the full record.
+This is the G2-H source/channel theorem, not an all-orders theorem
+for the full $\Phi$-holonomy action.
+
+\subsection*{Existing source correlations can supply a signed reference}
+The undriven G2 process obeys
+$\Phi_n+X_l\longrightarrow\Phi_m+X_j$ with $n+l=m+j$.
+If $n,l,m$ are actually tagged, $j=n+l-m$ is determined.
+This uses a fixed orientation convention and a physically calibrated
+source; an absolute sign without a reference is not an observable.
+At $\alpha=1/4$, ideal $\Phi$ masses
+$m_{\Phi,n}^2=M_5^2+(n+\alpha)^2/R^2$ identify $n$ uniquely:
+equality for distinct $n,n'$ would require $n+n'=-2\alpha$.
+At $2\alpha\in\mathbb Z$, this uniqueness can fail.
+
+For unobserved $l$ one cannot just assume its value. G2-R already
+derived the stronger undriven COM inversion. With observed
+$r=|j|$, $p_f$, $\Phi_m$, known $n,p_i$ and $d=m-n\ne0$,
+\begin{align}
+ E_f&=\sqrt{m_{\Phi,m}^2+p_f^2}+\sqrt{M_D^2+r^2/R^2+p_f^2},\\
+ E_n&=\sqrt{m_{\Phi,n}^2+p_i^2},\qquad
+ l^2=R^2[(E_f-E_n)^2-M_D^2-p_i^2],\\
+ j&=\frac{l^2-d^2-r^2}{2d}.
+\end{align}
+We revalidate it, not claim a newly built source. It fails to determine
+a nonzero sign in elastic $d=0$ channels. Unknown incident momenta
+need a source likelihood; driven events need their work exchange
+$q_{\rm pump}\Omega$ included as well. This inference uses conservation
+and is not independent verification of that law.
+
+\subsection*{An odd amplitude alone is not a sign measurement}
+For coherent contributions to the \emph{same} observed channel, write
+$\mathcal M_{\pm}=\mathcal M_{\rm e}\pm j\mathcal M_{\rm o}$. Then
+\begin{equation}\label{eq:odd}
+ |{\cal M}_{+}|^2-|{\cal M}_{-}|^2
+ =4j\,\operatorname{Re}({\cal M}_{\rm e}^*{\cal M}_{\rm o}).
+\end{equation}
+Purely odd amplitudes, or a relative phase of $\pi/2$, remain rate-blind.
+Orthogonal unobserved final states do not interfere merely because
+their masses coincide. A proposed new coupling must produce a surviving
+interference observable, or a signed displacement in a calibrated
+oriented field. Neither is activated here; gauge completion, visible
+reference, constraints and source preparation would be separate work.
+
+\newpage
+\section{Time selection changes the sample, not the source budget}
+Let $\xi=(\mathbf p,t_0,L,\ldots)$ have a general, possibly correlated,
+incoherent production measure $\dd F_j(\xi)$ counting particles.
+Let $0\leq A_j(\xi)\leq1$ include transport, scattering and preselection,
+and $R_j(z|\xi)$ be a normalized joint response for such events.
+For an additional gate $0\leq G(z)\leq1$,
+\begin{equation}\label{eq:measure}
+ \dd N_G(z)=\sum_j\int\dd F_j(\xi)\,
+       A_j(\xi)R_j(z|\xi)G(z)\,\dd z .
+\end{equation}
+The ideal arrival component has $t=t_0+L/[c\beta_j(p)]$.
+There is no assumption that $t_0$ is independent of momentum.
+Marginalizing \eqref{eq:measure} over accepted arrival times can
+reweight the measured momentum spectrum although free propagation
+has not changed the individual momenta. A four-point, non-Gaussian
+correlated-source example verifies this in the numerical report.
+This is not an actual collider distribution. Finite coherent packets
+would require a separately specified production/detection amplitude.
+
+Positivity gives the distribution-independent inequality
+\begin{equation}
+ N_G\leq N_{G=1}\leq N_{\rm G2-H}^{\max}
+                =3.9596863\times10^{-6}.
+\end{equation}
+The last step retains exactly G2-H's assumptions: Run-2 on-shell Higgs
+budget, same portal/coupling bounds, single-pass nonmultiplying xenon
+target, and the admitted $0.7$--$50$ keV elastic nuclear-recoil component.
+That bound allowed \emph{every} momentum and efficiency one.
+Time cuts can improve background rejection or conditional
+classification, not the total signal ceiling. Changing source,
+interaction, target or channel is a new physical hypothesis.
+
+\section{Decision and reproducibility}
+The bounded audit is complete. It does not establish an actual momentum
+sensor, source timestamp, directional calibration or signed preparation.
+Before any new instrument forecast, supply those inputs and an event
+budget that survives detection. For the rejected source, production
+observables avoiding a second rare scattering remain the better lead.
+If signed conversion is indispensable, first test a calibrated
+$\Phi$-source correlation; only then assess an explicitly proposed
+new interaction. Do not add an unmeasured mode-sign coupling silently.
+
+\texttt{code/verify\_g2\_tof\_mode\_audit.py} runs 97 checks: mass shells,
+Jacobian/correlated non-Gaussian variance, finite boxes, gate monotonicity,
+directional inversion and conditioning, the old source-sign inversion,
+interference counterexamples, and unchanged dependency hashes.
+These are algebra/implementation checks, not empirical validation.
+The action and previous result files are not modified by the verifier.
+
+\begin{thebibliography}{9}\small\raggedright
+\bibitem{pdgkin} Particle Data Group, \emph{Kinematics}, 2025 update,
+\href{https://pdg.lbl.gov/2025/reviews/rpp2025-rev-kinematics.pdf}
+{Secs.\ 49.1, 49.4}.
+\bibitem{pdgdet} Particle Data Group, \emph{Particle Detectors at
+Accelerators}, 2025 update,
+\href{https://pdg.lbl.gov/2025/reviews/rpp2025-rev-particle-detectors-accel.pdf}
+{Sec.\ 35.12, Eq.\ (35.66)}.
+\bibitem{xenon} XENON Collaboration, \emph{Light Dark Matter Search with
+Ionization Signals in XENON1T},
+\href{https://arxiv.org/abs/1907.11485v2}{arXiv:1907.11485v2}.
+The pinned response/provenance and source budget are recorded in G2-X/H.
+\end{thebibliography}
+\end{document}

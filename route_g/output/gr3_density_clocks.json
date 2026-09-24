@@ -1,0 +1,1458 @@
+{
+  "stage": "G-R3",
+  "status": "bounded-done",
+  "density": {
+    "operator": "Ed=epsilon_D N_D/nu(D), nu(D)=1 addressed cell",
+    "reference": "excitation energy above the same source ground",
+    "dimension": "energy per declared cell, not energy per spatial volume",
+    "not_identified_with": "Chen Ed or complete Ei"
+  },
+  "interaction": "V=kappa H_B (Ed/E0), E0=epsilon_D per cell",
+  "constraint": "K=H_A+H_B+H_D+V-E*, exact 15x3x2 finite completion",
+  "synthetic_card": {
+    "epsilon": 1.0,
+    "epsilon_D": 1.0,
+    "delta": 0.25,
+    "reference_levels": 15,
+    "kappa": 0.25,
+    "fitted": false
+  },
+  "rates": [
+    {
+      "kappa": -0.25,
+      "source_occupation": 0,
+      "calibrated_relative_rate": 1.0000000000000004
+    },
+    {
+      "kappa": -0.25,
+      "source_occupation": 1,
+      "calibrated_relative_rate": 0.75
+    },
+    {
+      "kappa": 0.0,
+      "source_occupation": 0,
+      "calibrated_relative_rate": 1.0000000000000004
+    },
+    {
+      "kappa": 0.0,
+      "source_occupation": 1,
+      "calibrated_relative_rate": 0.9999999999999991
+    },
+    {
+      "kappa": 0.25,
+      "source_occupation": 0,
+      "calibrated_relative_rate": 1.0000000000000004
+    },
+    {
+      "kappa": 0.25,
+      "source_occupation": 1,
+      "calibrated_relative_rate": 1.2499999999999987
+    }
+  ],
+  "diagnostics": {
+    "ground_probabilities": [
+      0.9999999999999997,
+      -2.959850731221594e-32,
+      6.060166723829919e-33
+    ],
+    "excited_probabilities": [
+      0.11111111111111126,
+      0.829344623904195,
+      0.059544264984693965
+    ],
+    "unobserved_source_plus": 0.5555555555555556,
+    "mean_density_substitution_plus": 0.6476030138606883,
+    "halfcycle_B_purity": 0.5555555555555556
+  },
+  "microscopic_JC": [
+    {
+      "detuning": -0.5,
+      "coupling": 0.03,
+      "chi": -0.0018,
+      "effective_kappa": -0.0035935316430425234,
+      "effective_rate": 0.9964064683569575,
+      "exact_transition_rate_ratios": [
+        0.9964319528667627,
+        0.9964569692582914
+      ],
+      "ground_gaps": [
+        1.0017935662402835,
+        1.0017808804218358
+      ],
+      "excited_gaps": [
+        0.9982191195781642,
+        0.9982315399660453
+      ],
+      "max_second_order_energy_error": 5.7093303925892513e-05
+    },
+    {
+      "detuning": 0.5,
+      "coupling": 0.03,
+      "chi": 0.0018,
+      "effective_kappa": 0.0036064916850330597,
+      "effective_rate": 1.0036064916850331,
+      "exact_transition_rate_ratios": [
+        1.003580869188206,
+        1.0035556726836592
+      ],
+      "ground_gaps": [
+        0.9982064337597165,
+        0.9982191195781642
+      ],
+      "excited_gaps": [
+        1.0017808804218358,
+        1.0017684600339547
+      ],
+      "max_second_order_energy_error": 5.7093303925892513e-05
+    }
+  ],
+  "boundaries": [
+    "commensurate finite reference spectrum; no arbitrary-spectrum completion",
+    "one addressed cell does not empirically distinguish density from total excitation energy",
+    "matched stationary state is prepared input, not dynamically derived",
+    "finite cyclic readings require fixed calibration and branch/epoch labels",
+    "density candidate is a source observable, not sufficient full-state information",
+    "phase likelihoods are finite-width; rate is inferred across calibrated runs",
+    "JC result is dispersive and uses dressed sectors; bare source occupation fluctuates",
+    "no universal slowdown or spacetime proper time",
+    "G-R2 recording apparatus is not yet jointly energy-completed"
+  ],
+  "previous_file_hashes": {
+    "code/verify_g1_circle_spectrum.py": "0cf6e91af89352ae4a91e7002891453258f23a79798f0711059b2132226798bf",
+    "code/verify_g2_driven.py": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+    "code/verify_g2_higgs_source.py": "f2f2b01ce80ee9028306759c112fa69a2bc2dc5b06a2ba9cab8f87a0740baf08",
+    "code/verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "code/verify_g2_noisy_tag.py": "1e139b9499836b5b61aa7c66009f938e2bc7482d94da2e251efef1018ac6f4c1",
+    "code/verify_g2_probe_coupling.py": "ad3db19ff58020daa13400b20931cd343aff61c18ec3e427c30c415f87d339d4",
+    "code/verify_g2_readout_contract.py": "b66b44f540adbab472cc4b87766363a812732a1965c02f1d73a0853788aeac76",
+    "code/verify_g2_recoil_joint.py": "07ea3170a5176c4e285287af6a7eb517709d8f234c2c38abb9bfb95084b85715",
+    "code/verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "code/verify_g2_scale_anchor.py": "01720b6dab7e3cf79a76a98870ed7094983879d7bbb12577d602f6b27637334d",
+    "code/verify_g2_tof_mode_audit.py": "c1368206dd3b6c090fbe21e2fffd983d65b876d86598d45767e074456e497652",
+    "code/verify_g2_xenon_feasibility.py": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+    "code/verify_gr1_relational_clock.py": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
+    "code/verify_gr2_two_event_records.py": "969a04810b1d6b6beaebeb24dd88b79ff4ac79ae15e5249d1015e0295e09b0de",
+    "code/verify_gr4_bbr_universality.py": "9b3b773b95372c2db2f8e0620eda76654a5810506552c23aa6b77287353ee733",
+    "output/gr1_relational_clock.json": "f03775c6271a87016b8bfe15e768c444b3f400078ccfc5f0a5e1237563d13942",
+    "output/gr2_two_event_records.json": "d35199443504a08d09516bc98b891f412a9c7760118baa6a6ea807e10585c06b"
+  },
+  "checks": [
+    {
+      "name": "kappa=-0.25:stationary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:positive_local_energies",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:positive_clock_gaps",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:source_nondemolition",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:POVM:15",
+      "passed": true,
+      "value": 8.483534557400214e-15
+    },
+    {
+      "name": "kappa=-0.25:POVM:3",
+      "passed": true,
+      "value": 4.0648157924971953e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:conditioned_state",
+      "passed": true,
+      "value": 2.2030305172320775e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:reference_likelihood",
+      "passed": true,
+      "value": 2.7755575615628914e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=0:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:phi=0:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:phi=0:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:branch1:rigid_translation",
+      "passed": true,
+      "value": 1.6704818822389304e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:unobserved_source_mixture",
+      "passed": true,
+      "value": 1.6653345369377348e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:conditioned_state",
+      "passed": true,
+      "value": 2.105814259841454e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:B_grid_normalized",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:branch0:rigid_translation",
+      "passed": true,
+      "value": 6.574698144829347e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:branch0:grid_probabilities",
+      "passed": true,
+      "value": 2.2291027918243403e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.484292328220803e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.7755575615628914e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.8043390179632724e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.13:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:conditioned_state",
+      "passed": true,
+      "value": 2.403703357979455e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.2487068343022356e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:branch1:rigid_translation",
+      "passed": true,
+      "value": 3.0033950995539727e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:branch1:grid_probabilities",
+      "passed": true,
+      "value": 1.119400808498433e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.363427232463497e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=0.7853982:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:conditioned_state",
+      "passed": true,
+      "value": 2.1854762094519229e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.101442975451308e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:branch1:grid_probabilities",
+      "passed": true,
+      "value": 4.462523459318059e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.484252768821774e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=1.570796:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:conditioned_state",
+      "passed": true,
+      "value": 2.761644904721361e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.3448993347282297e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:branch1:grid_probabilities",
+      "passed": true,
+      "value": 3.2398021848425308e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:unobserved_source_mixture",
+      "passed": true,
+      "value": 3.4057737205059485e-16
+    },
+    {
+      "name": "kappa=-0.25:phi=3.141593:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=-0.25:rate0:coherence_difference",
+      "passed": true,
+      "value": 5.551115123125783e-16
+    },
+    {
+      "name": "kappa=-0.25:rate1:coherence_difference",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=-0.25:common_rescaling_state",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:common_rescaling_constraint",
+      "passed": true,
+      "value": 6.933340566559918e-15
+    },
+    {
+      "name": "kappa=-0.25:common_rescaling_rate",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=-0.25:energy_zero_constraint",
+      "passed": true,
+      "value": 7.447602459741819e-16
+    },
+    {
+      "name": "kappa=-0.25:density_ground_subtraction",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:stationary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:normalized",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=0:positive_local_energies",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:positive_clock_gaps",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:source_nondemolition",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:POVM:15",
+      "passed": true,
+      "value": 8.483534557400214e-15
+    },
+    {
+      "name": "kappa=0:POVM:3",
+      "passed": true,
+      "value": 4.0648157924971953e-16
+    },
+    {
+      "name": "kappa=0:phi=0:conditioned_state",
+      "passed": true,
+      "value": 2.2030305172320775e-16
+    },
+    {
+      "name": "kappa=0:phi=0:reference_likelihood",
+      "passed": true,
+      "value": 2.7755575615628914e-17
+    },
+    {
+      "name": "kappa=0:phi=0:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=0:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:phi=0:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=0:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0:phi=0:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0:phi=0:branch1:rigid_translation",
+      "passed": true,
+      "value": 1.6704818822389304e-16
+    },
+    {
+      "name": "kappa=0:phi=0:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=0:unobserved_source_mixture",
+      "passed": true,
+      "value": 1.6653345369377348e-16
+    },
+    {
+      "name": "kappa=0:phi=0:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:conditioned_state",
+      "passed": true,
+      "value": 2.264462072310114e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0:phi=0.13:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=0.13:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:phi=0.13:B_grid_normalized",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:branch0:rigid_translation",
+      "passed": true,
+      "value": 6.574698144829347e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:branch0:grid_probabilities",
+      "passed": true,
+      "value": 2.2291027918243403e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:branch1:rigid_translation",
+      "passed": true,
+      "value": 3.935511401337709e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:branch1:grid_probabilities",
+      "passed": true,
+      "value": 1.4898437035160061e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.733749813053855e-16
+    },
+    {
+      "name": "kappa=0:phi=0.13:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:conditioned_state",
+      "passed": true,
+      "value": 2.403703357979455e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:B_grid_normalized",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.2487068343022356e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:branch1:rigid_translation",
+      "passed": true,
+      "value": 3.9926819768846524e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:branch1:grid_probabilities",
+      "passed": true,
+      "value": 1.3092278833360675e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:unobserved_source_mixture",
+      "passed": true,
+      "value": 3.332663647489756e-16
+    },
+    {
+      "name": "kappa=0:phi=0.7853982:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:conditioned_state",
+      "passed": true,
+      "value": 2.403703357979455e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0:phi=1.570796:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=1.570796:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:phi=1.570796:B_grid_normalized",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=1.570796:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.37213648484274e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.2636895155120167e-17
+    },
+    {
+      "name": "kappa=0:phi=1.570796:unobserved_source_mixture",
+      "passed": true,
+      "value": 3.77124201888703e-16
+    },
+    {
+      "name": "kappa=0:phi=1.570796:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:conditioned_state",
+      "passed": true,
+      "value": 2.5739461938222585e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0:phi=3.141593:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=3.141593:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0:phi=3.141593:B_grid_normalized",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:phi=3.141593:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.784440198636003e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.840083392347491e-18
+    },
+    {
+      "name": "kappa=0:phi=3.141593:unobserved_source_mixture",
+      "passed": true,
+      "value": 3.3314932673653556e-16
+    },
+    {
+      "name": "kappa=0:phi=3.141593:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0:rate0:coherence_difference",
+      "passed": true,
+      "value": 5.551115123125783e-16
+    },
+    {
+      "name": "kappa=0:rate1:coherence_difference",
+      "passed": true,
+      "value": 9.930136612989092e-16
+    },
+    {
+      "name": "kappa=0:common_rescaling_state",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:common_rescaling_constraint",
+      "passed": true,
+      "value": 6.933340566559918e-15
+    },
+    {
+      "name": "kappa=0:common_rescaling_rate",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0:energy_zero_constraint",
+      "passed": true,
+      "value": 7.28021923224409e-16
+    },
+    {
+      "name": "kappa=0:density_ground_subtraction",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:stationary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:normalized",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=0.25:positive_local_energies",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:positive_clock_gaps",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:source_nondemolition",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:POVM:15",
+      "passed": true,
+      "value": 8.483534557400214e-15
+    },
+    {
+      "name": "kappa=0.25:POVM:3",
+      "passed": true,
+      "value": 4.0648157924971953e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:conditioned_state",
+      "passed": true,
+      "value": 2.2030305172320775e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:reference_likelihood",
+      "passed": true,
+      "value": 2.7755575615628914e-17
+    },
+    {
+      "name": "kappa=0.25:phi=0:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:phi=0:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:phi=0:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:branch1:rigid_translation",
+      "passed": true,
+      "value": 1.6704818822389304e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:unobserved_source_mixture",
+      "passed": true,
+      "value": 1.6653345369377348e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:conditioned_state",
+      "passed": true,
+      "value": 1.0031442548020353e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:reference_likelihood",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:B_normalization",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:B_grid_normalized",
+      "passed": true,
+      "value": 1.1102230246251565e-15
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:branch0:rigid_translation",
+      "passed": true,
+      "value": 1.0812606514719674e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.472221400179444e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:branch1:rigid_translation",
+      "passed": true,
+      "value": 2.914275880957587e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:branch1:grid_probabilities",
+      "passed": true,
+      "value": 5.907440274120147e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.720357388367928e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.13:continuous_B_normalization",
+      "passed": true,
+      "value": 6.661338147750939e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:conditioned_state",
+      "passed": true,
+      "value": 2.633125101432526e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:B_normalization",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.2487068343022356e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:branch1:rigid_translation",
+      "passed": true,
+      "value": 5.400753070982459e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:branch1:grid_probabilities",
+      "passed": true,
+      "value": 2.225860458774576e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:unobserved_source_mixture",
+      "passed": true,
+      "value": 4.1215786236108536e-16
+    },
+    {
+      "name": "kappa=0.25:phi=0.7853982:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:conditioned_state",
+      "passed": true,
+      "value": 2.5888677460363984e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:B_normalization",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:branch1:rigid_translation",
+      "passed": true,
+      "value": 4.419483633705735e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:branch1:grid_probabilities",
+      "passed": true,
+      "value": 1.1857187100668868e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:unobserved_source_mixture",
+      "passed": true,
+      "value": 3.043826964094623e-16
+    },
+    {
+      "name": "kappa=0.25:phi=1.570796:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:conditioned_state",
+      "passed": true,
+      "value": 2.618455766672135e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:reference_likelihood",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:B_normalization",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:B_positive",
+      "passed": true
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:B_grid_normalized",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:branch0:rigid_translation",
+      "passed": true,
+      "value": 8.326672684688674e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:branch0:grid_probabilities",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:branch1:rigid_translation",
+      "passed": true,
+      "value": 5.04305626514692e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:branch1:grid_probabilities",
+      "passed": true,
+      "value": 7.023038222575547e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:unobserved_source_mixture",
+      "passed": true,
+      "value": 2.6169287140292704e-16
+    },
+    {
+      "name": "kappa=0.25:phi=3.141593:continuous_B_normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "kappa=0.25:rate0:coherence_difference",
+      "passed": true,
+      "value": 5.551115123125783e-16
+    },
+    {
+      "name": "kappa=0.25:rate1:coherence_difference",
+      "passed": true,
+      "value": 2.9790409838967277e-15
+    },
+    {
+      "name": "kappa=0.25:common_rescaling_state",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:common_rescaling_constraint",
+      "passed": true,
+      "value": 1.0014187065170149e-14
+    },
+    {
+      "name": "kappa=0.25:common_rescaling_rate",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "kappa=0.25:energy_zero_constraint",
+      "passed": true,
+      "value": 7.108895957933346e-16
+    },
+    {
+      "name": "kappa=0.25:density_ground_subtraction",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:reference:commutes",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:reference:preserves_probability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:reference:positive",
+      "passed": true
+    },
+    {
+      "name": "invariant:joint0:commutes",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:joint0:preserves_probability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:joint0:positive",
+      "passed": true
+    },
+    {
+      "name": "invariant:joint1:commutes",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:joint1:preserves_probability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "invariant:joint1:positive",
+      "passed": true
+    },
+    {
+      "name": "diagnostic:ground_return",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "diagnostic:excited_probabilities",
+      "passed": true,
+      "value": 1.9329521701561158e-16
+    },
+    {
+      "name": "diagnostic:mixture_plus",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "diagnostic:mean_field_plus",
+      "passed": true,
+      "value": 5.551115123125783e-16
+    },
+    {
+      "name": "diagnostic:mean_field_fails",
+      "passed": true
+    },
+    {
+      "name": "fluctuation:adjacent_coherence_zero",
+      "passed": true,
+      "value": 4.718958039861916e-17
+    },
+    {
+      "name": "fluctuation:not_fully_dephased",
+      "passed": true,
+      "value": 3.608224830031759e-16
+    },
+    {
+      "name": "fluctuation:B_purity",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "fluctuation:source_phase_blind_B",
+      "passed": true,
+      "value": 8.886119947416683e-17
+    },
+    {
+      "name": "density:one_cell_expectation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "common_mode:0:ratio_one",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "common_mode:0.5:ratio_one",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "common_mode:1:ratio_one",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=-0.5:dispersive_regime",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:positive_bare_frequencies",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:block1:spectrum",
+      "passed": true,
+      "value": 5.551115123125783e-17
+    },
+    {
+      "name": "JC:detuning=-0.5:block1:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:block1:remainder_bound",
+      "passed": true,
+      "value": 6.433759716595322e-06
+    },
+    {
+      "name": "JC:detuning=-0.5:block2:spectrum",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=-0.5:block2:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:block2:remainder_bound",
+      "passed": true,
+      "value": 2.5553337880790394e-05
+    },
+    {
+      "name": "JC:detuning=-0.5:block3:spectrum",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=-0.5:block3:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:block3:remainder_bound",
+      "passed": true,
+      "value": 5.7093303925892513e-05
+    },
+    {
+      "name": "JC:detuning=-0.5:rate_sign",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:nonuniform_higher_order_gaps",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=-0.5:effective_rate_control",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:dispersive_regime",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:positive_bare_frequencies",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:block1:spectrum",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=0.5:block1:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:block1:remainder_bound",
+      "passed": true,
+      "value": 6.433759716539811e-06
+    },
+    {
+      "name": "JC:detuning=0.5:block2:spectrum",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=0.5:block2:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:block2:remainder_bound",
+      "passed": true,
+      "value": 2.5553337880790394e-05
+    },
+    {
+      "name": "JC:detuning=0.5:block3:spectrum",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "JC:detuning=0.5:block3:positive",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:block3:remainder_bound",
+      "passed": true,
+      "value": 5.7093303925892513e-05
+    },
+    {
+      "name": "JC:detuning=0.5:rate_sign",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:nonuniform_higher_order_gaps",
+      "passed": true
+    },
+    {
+      "name": "JC:detuning=0.5:effective_rate_control",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g1_circle_spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_driven.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_higgs_source.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_local_conversion.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_noisy_tag.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_probe_coupling.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_readout_contract.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_recoil_joint.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_resolution.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_scale_anchor.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_tof_mode_audit.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_xenon_feasibility.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr1_relational_clock.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr2_two_event_records.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr4_bbr_universality.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr1_relational_clock.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr2_two_event_records.json",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 274,
+    "passed": 274,
+    "failed": []
+  }
+}

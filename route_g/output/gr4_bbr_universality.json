@@ -1,0 +1,476 @@
+{
+  "stage": "G-R4",
+  "status": "bounded-source-audit-done",
+  "input_sha256": "dd5aacde37c2e86ba0bd32f9e53539970999e2aae017856a0fc88c579b3b7a65",
+  "response_units": "fractional clock shift / (J m^-3)",
+  "beta": [
+    -8.542782343676435e-11,
+    -1.1785861630900714e-11
+  ],
+  "beta_sigma": [
+    1.7333181566879725e-11,
+    2.1235786722343628e-13
+  ],
+  "coefficient_magnitude_ratio": 7.248330763767475,
+  "predictions": [
+    {
+      "temperature_K": 300.0,
+      "thermal_density_J_m3": 6.128243932726806e-06,
+      "rms_field_V_m": 831.9431636056078,
+      "shifts_Hz": [
+        -0.3603714525678345,
+        -0.04637823911307783
+      ],
+      "fractional_shifts": [
+        -5.23522540662408e-16,
+        -7.222663503152495e-17
+      ],
+      "ratio_offset": 4.512959056308833e-16
+    },
+    {
+      "temperature_K": 310.0,
+      "thermal_density_J_m3": 6.987113537031842e-06,
+      "rms_field_V_m": 888.3304224722101,
+      "shifts_Hz": [
+        -0.41087728919370253,
+        -0.05287812069623303
+      ],
+      "fractional_shifts": [
+        -5.968939015741823e-16,
+        -8.234915334685057e-17
+      ],
+      "ratio_offset": 5.14544748227332e-16
+    }
+  ],
+  "modulation_300_to_310": 6.324884259644876e-17,
+  "E3_dynamic_corrected_shift_300K_Hz": -0.04630867175440821,
+  "covariance_free_sigma_difference_bounds": [
+    1.712082369965629e-11,
+    1.754553943410316e-11
+  ],
+  "conditional_stress": {
+    "min_beta_difference": 1.6420222106684533e-11,
+    "min_ratio_offset_at_300K_leading": 1.0062712649931606e-16,
+    "status": "3 published sigma box plus assumed +/-10% dynamics; not confidence or certified dynamic bound"
+  },
+  "conclusions": [
+    "selected thermal electric-dipole response is not one universal fractional shift",
+    "both shift signs are fixed by independently measured polarizabilities",
+    "same-bath ratio is blind to an additional exactly common multiplicative factor",
+    "no new experimental observations, no universal-time exclusion, no hardware forecast",
+    "ordinary spatial radiation density is not silently identified with GR3 or Chen Ed"
+  ],
+  "previous_file_hashes": {
+    "code/verify_g1_circle_spectrum.py": "0cf6e91af89352ae4a91e7002891453258f23a79798f0711059b2132226798bf",
+    "code/verify_g2_driven.py": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+    "code/verify_g2_higgs_source.py": "f2f2b01ce80ee9028306759c112fa69a2bc2dc5b06a2ba9cab8f87a0740baf08",
+    "code/verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "code/verify_g2_noisy_tag.py": "1e139b9499836b5b61aa7c66009f938e2bc7482d94da2e251efef1018ac6f4c1",
+    "code/verify_g2_probe_coupling.py": "ad3db19ff58020daa13400b20931cd343aff61c18ec3e427c30c415f87d339d4",
+    "code/verify_g2_readout_contract.py": "b66b44f540adbab472cc4b87766363a812732a1965c02f1d73a0853788aeac76",
+    "code/verify_g2_recoil_joint.py": "07ea3170a5176c4e285287af6a7eb517709d8f234c2c38abb9bfb95084b85715",
+    "code/verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "code/verify_g2_scale_anchor.py": "01720b6dab7e3cf79a76a98870ed7094983879d7bbb12577d602f6b27637334d",
+    "code/verify_g2_tof_mode_audit.py": "c1368206dd3b6c090fbe21e2fffd983d65b876d86598d45767e074456e497652",
+    "code/verify_g2_xenon_feasibility.py": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+    "code/verify_gr1_relational_clock.py": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
+    "code/verify_gr2_two_event_records.py": "969a04810b1d6b6beaebeb24dd88b79ff4ac79ae15e5249d1015e0295e09b0de",
+    "code/verify_gr3_density_clocks.py": "b986a7f28ed1b6d51128c8009a4cda69ea053028a36e7ca0e4716878c51ebdf3",
+    "output/gr1_relational_clock.json": "f03775c6271a87016b8bfe15e768c444b3f400078ccfc5f0a5e1237563d13942",
+    "output/gr2_two_event_records.json": "d35199443504a08d09516bc98b891f412a9c7760118baa6a6ea807e10585c06b",
+    "output/gr3_density_clocks.json": "497dd3562b36ac48239d6a42dd295d9fd5289932198200b26dfd461ce4fbde1c"
+  },
+  "checks": [
+    {
+      "name": "Planck:third_moment",
+      "passed": true,
+      "value": 4.1031107530357784e-16
+    },
+    {
+      "name": "Planck:fifth_moment",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "Planck:energy_density_coefficient",
+      "passed": true,
+      "value": 2.606690188263695e-16
+    },
+    {
+      "name": "Planck:published_rounded_rms",
+      "passed": true,
+      "value": 5.1885569909589805e-05
+    },
+    {
+      "name": "Planck:E_and_B_equal_energy",
+      "passed": true,
+      "value": 1.382178902394649e-16
+    },
+    {
+      "name": "convention:E2_sign_reversal",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "source:both_measured_delta_alpha_positive",
+      "passed": true
+    },
+    {
+      "name": "source:both_positive_in_three_sigma_box",
+      "passed": true
+    },
+    {
+      "name": "coupling:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "universality:fractional_coefficients_differ",
+      "passed": true
+    },
+    {
+      "name": "universality:ratio_vs_atomic_inputs",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "operator:response_not_proportional",
+      "passed": true
+    },
+    {
+      "name": "operator:universal_gap_condition",
+      "passed": true,
+      "value": 3.96508223080413e-16
+    },
+    {
+      "name": "operator:common_level_shift_cancels",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "T=300.0:energy_shift_route",
+      "passed": true,
+      "value": 2.354426158706061e-17
+    },
+    {
+      "name": "T=300.0:positive_frequencies",
+      "passed": true
+    },
+    {
+      "name": "T=300.0:ratio_positive",
+      "passed": true
+    },
+    {
+      "name": "T=300.0:transition0:spectral_integral",
+      "passed": true,
+      "value": 1.8835409269648489e-16
+    },
+    {
+      "name": "T=300.0:transition1:spectral_integral",
+      "passed": true,
+      "value": 1.706565955716803e-16
+    },
+    {
+      "name": "T=310.0:energy_shift_route",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "T=310.0:positive_frequencies",
+      "passed": true
+    },
+    {
+      "name": "T=310.0:ratio_positive",
+      "passed": true
+    },
+    {
+      "name": "T=310.0:transition0:spectral_integral",
+      "passed": true,
+      "value": 1.6520124077758143e-16
+    },
+    {
+      "name": "T=310.0:transition1:spectral_integral",
+      "passed": true,
+      "value": 1.4967915446758767e-16
+    },
+    {
+      "name": "static:fourth_power_scaling",
+      "passed": true,
+      "value": 3.895008992524811e-16
+    },
+    {
+      "name": "ratio:stable_formula",
+      "passed": true,
+      "value": 7.795210876962599e-16
+    },
+    {
+      "name": "ratio:common_factor_cancels:0.9",
+      "passed": true
+    },
+    {
+      "name": "ratio:common_factor_cancels:1.1",
+      "passed": true
+    },
+    {
+      "name": "relational:phase_ratio:0.2",
+      "passed": true,
+      "value": 1.1901682253157084e-16
+    },
+    {
+      "name": "relational:phase_ratio:1.0",
+      "passed": true,
+      "value": 1.1901682253157084e-16
+    },
+    {
+      "name": "relational:phase_ratio:7.0",
+      "passed": true,
+      "value": 2.380336450631417e-16
+    },
+    {
+      "name": "stress:0:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:0:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:1:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:1:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:2:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:2:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:3:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:3:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:4:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:4:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:5:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:5:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:6:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:6:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:7:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:7:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:8:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:8:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:9:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:9:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:10:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:10:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:11:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:11:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:12:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:12:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:13:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:13:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:14:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:14:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:15:both_redshift",
+      "passed": true
+    },
+    {
+      "name": "stress:15:nonuniversal_positive_ratio",
+      "passed": true
+    },
+    {
+      "name": "stress:analytic_corner_bound",
+      "passed": true,
+      "value": 1.9678018036490993e-16
+    },
+    {
+      "name": "uncertainty:ordered_covariance_bounds",
+      "passed": true
+    },
+    {
+      "name": "uncertainty:correlation=-1.0",
+      "passed": true
+    },
+    {
+      "name": "uncertainty:correlation=0.0",
+      "passed": true
+    },
+    {
+      "name": "uncertainty:correlation=1.0",
+      "passed": true
+    },
+    {
+      "name": "dynamic:E3_known_correction_small",
+      "passed": true
+    },
+    {
+      "name": "dynamic:E3_does_not_reverse_sign",
+      "passed": true
+    },
+    {
+      "name": "dynamic:equality_outside_stress",
+      "passed": true
+    },
+    {
+      "name": "perturbation:Stark_factor_and_sign",
+      "passed": true,
+      "value": 8.999998394462195e-08
+    },
+    {
+      "name": "perturbation:ground_shift_negative",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g1_circle_spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_driven.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_higgs_source.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_local_conversion.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_noisy_tag.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_probe_coupling.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_readout_contract.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_recoil_joint.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_resolution.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_scale_anchor.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_tof_mode_audit.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_xenon_feasibility.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr1_relational_clock.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr2_two_event_records.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr3_density_clocks.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr1_relational_clock.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr2_two_event_records.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr3_density_clocks.json",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 91,
+    "passed": 91,
+    "failed": []
+  }
+}

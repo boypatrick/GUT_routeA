@@ -1,0 +1,72 @@
+{
+  "stage": "G-R4",
+  "date": "2026-09-24",
+  "status": "pinned literature inputs, not new experimental data",
+  "source": "homogeneous isotropic thermal electromagnetic radiation at the same ion",
+  "density": "u_gamma = thermal electromagnetic energy / physical volume; vacuum contribution excluded",
+  "density_is_not": "G-R3 energy per operational cell, Chen Ed, or an emergent-space derivation",
+  "polarizability_convention": "Delta_alpha = alpha_excited - alpha_ground",
+  "constants": {
+    "h_J_s": 6.62607015e-34,
+    "kB_J_K": 1.380649e-23,
+    "c_m_s": 299792458.0,
+    "epsilon0_F_m": 8.8541878e-12,
+    "note": "h, kB, c are exact SI definitions; epsilon0 is rounded for this non-metrological calculation"
+  },
+  "transitions": [
+    {
+      "name": "E2",
+      "states": "171Yb+ 2S1/2(F=0) -> 2D3/2(F=2)",
+      "frequency_Hz": 688359000000000.0,
+      "frequency_note": "rounded 688.359 THz, not a new recommended absolute frequency",
+      "frequency_source_doi": "10.1103/PhysRevA.89.023820",
+      "delta_alpha_SI": 6.9e-40,
+      "published_sigma_alpha_SI": 1.4e-40,
+      "original_convention": "alpha_ground - alpha_excited = -6.9(1.4)e-40 J m^2/V^2",
+      "source_doi": "10.1103/PhysRevLett.94.230801",
+      "source_url": "https://www.ptb.de/cms/fileadmin/internet/fachabteilungen/abteilung_4/4.4_zeit_und_frequenz/pdf/PRL_94_230801.pdf",
+      "source_sha256": "d898824ed3913ec1f28cc541bb2a94a476f4a13a5829bcbc9c8376ab0194e1db",
+      "method": "independent applied-field quadratic Stark response, not a fit to the proposed temperature cycle"
+    },
+    {
+      "name": "E3",
+      "states": "171Yb+ 2S1/2(F=0) -> 2F7/2(F=3)",
+      "frequency_Hz": 642121000000000.0,
+      "frequency_note": "rounded 642.121 THz, not a new recommended absolute frequency",
+      "frequency_source_url": "https://arxiv.org/html/2010.06620v2",
+      "delta_alpha_SI": 8.88e-41,
+      "published_sigma_alpha_SI": 1.6e-42,
+      "eta_300K": -0.0015,
+      "published_sigma_eta_300K": 0.0007,
+      "source_doi": "10.1103/PhysRevLett.116.063001",
+      "source_url": "https://www.ptb.de/cms/fileadmin/internet/fachabteilungen/abteilung_4/4.4_zeit_und_frequenz/pdf/2016_Huntemann_PhysRevLett.116.063001.pdf",
+      "source_sha256": "429b0955ecb2311c69a3db63fd63bdcfcc55a001f5b650e222b384ee70a7bf7b",
+      "method": "independent near-infrared Stark-response measurements, extrapolated to static response"
+    }
+  ],
+  "recent_context": {
+    "source_doi": "10.1088/1681-7575/ad53cd",
+    "source_url": "https://eprintspublications.npl.co.uk/10218/1/eid10218.pdf",
+    "source_sha256": "3436a8f2fc686ed97fe4387fbebe3e820cbff33857d27336c44697a734a15171",
+    "year": 2024,
+    "use": "section 3.6 checks the BBR sign/formula and distinguishes thermal shifts from corrected clock outputs; no apparatus performance imported"
+  },
+  "calculation": {
+    "nominal": "leading scalar electric-dipole static term; eta=0 for both transitions",
+    "temperatures_K": [300.0, 310.0],
+    "temperature_status": "two illustrative ideal bath setpoints, not measurements or a scan",
+    "stress": {
+      "alpha_radius_in_published_sigma": 3.0,
+      "independent_relative_dynamic_envelope": 0.1,
+      "status": "conditional deterministic box, not a measured dynamic bound or confidence level"
+    },
+    "unknowns": [
+      "full frequency-dependent E2/E3 response covariance and E2 dynamic correction",
+      "actual local radiation spectrum, emissivity and thermal gradients",
+      "temperature-correlated Zeeman, quadrupole, Doppler and probe shifts",
+      "new temperature-modulated clock-ratio observations"
+    ]
+  },
+  "excluded_precision_claim": "Do not pool the tighter mid-IR uncertainty in arXiv:1801.10134 without resolving its explicit applicability warning.",
+  "no_fitted_parameters": true
+}

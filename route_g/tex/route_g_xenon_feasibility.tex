@@ -1,0 +1,340 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype,graphicx}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\title{Route G2-X: An Externally Anchored Xenon Feasibility Test}
+\author{A real response matrix; conditional event yield, not a built source}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We conditionally select the uniform $X$-only Higgs portal and fold the
+existing driven recoil population through the published XENON1T S2-only
+nuclear-recoil response. A Higgs-threshold-motivated scale interval is
+tested against a direct invisible-width constraint and the retained
+action's vacuum condition. Unknown incident flux remains an explicit
+axis of feasibility, not an invented experimental capability. A useful
+negative result follows: throughout the retained recoil-energy window,
+the scalar scattering kernel factorizes, so this energy-only channel
+cannot reproduce the old two-line momentum classifier.
+\end{abstract}
+
+\section{Physical choices and provenance}
+This is a conditional phenomenological branch, not a prediction of the
+radius. Retain $\alpha=.25$, $g=.05$, the selected $m=0,|j|=1$ source
+population, $\sigma_i=.1\Lambda$, and the activated drive
+$\epsilon=.5$, $\Omega=.2\Lambda$. Choose
+\begin{equation}
+ 1\leq\Lambda=R^{-1}\leq30\ {\rm GeV},\qquad
+ \mu_j=\Lambda\sqrt{25+j^2},\qquad m_X=\mu_{\pm1}=\sqrt{26}\Lambda.
+\end{equation}
+The range spans the physical Higgs pair threshold
+$\Lambda_h=m_h/10=12.508$ GeV and $X_0$ masses 5--150 GeV.
+These boundaries are a coverage choice, not a measured dark mass or a
+fit to known particles. Use $m_h=125.08$ GeV, $v=246$ GeV, and
+$\Gamma_h^{\rm SM}=4.10$ MeV from the currently served PDG review
+\cite{pdg}; $\Gamma_h^{\rm SM}$ is a theoretical SM prediction.
+The coupling domain $10^{-5}\leq\lambda_X\leq1$ is a declared scan
+range, not a confidence interval or a perturbativity theorem.
+
+The target is natural liquid xenon, using the \emph{actual} official
+XENON1T 2019 S2-only analysis/2020 response release \cite{xenon,release}.
+We choose the older, directly usable response product instead of calling
+a newer halo-WIMP exclusion a constraint on this boosted source.
+Its source commit is
+\texttt{5a364bc8709f2561e5a013ddea6993a5a7c8e313}.
+Both CSV files and their hashes, original documentation and attribution
+are retained locally. The response includes event-selection losses
+averaged over the full target. The raw search exposure is
+\begin{equation}
+ {\cal E}=356770\ {\rm kg\,day}.
+\end{equation}
+No separate fiducial-efficiency factor is multiplied in. This reuse
+assumes approximately uniform, thin-target illumination, the source
+COM frame at rest with respect to the target, and the released
+energy-only response appropriate to these recoils. It is not a
+calibration of a new narrow-beam installation.
+
+The released NR matrix extends to hypothetical response below the
+analysis threshold. We explicitly retain true recoil energy
+$0.7\leq E_R\leq50$ keV and only full S2 bins inside 150--3000 PE.
+The actual lower retained edge is approximately 150.027 PE; the bin
+straddling 150 PE is dropped without assuming a sub-bin shape.
+The response is used as supplied, not replaced by a Gaussian. Energies
+outside this interval are unmodeled, not asserted to produce zero
+physical response. No response covariance or new background likelihood
+is invented.
+
+\section{Constraints from the same candidate interaction}
+At a declared common tree matching prescription, select
+\begin{equation}
+ \Delta{\cal L}=-\lambda_X H^\dagger H\sum_j|x_j|^2,
+ \quad \lambda_X\geq0,\quad \lambda_\Phi=0.
+\end{equation}
+This is a four-dimensional EFT option. The $X$ physical intercept is
+held fixed by explicit matching,
+\begin{equation}\label{eq:vacuum}
+ M_{D,0}^2=25\Lambda^2-\lambda_Xv^2/2\geq0,
+ \qquad\lambda_X\leq\lambda_{\rm vac}=50\Lambda^2/v^2 .
+\end{equation}
+With no $|X|^4$ term in the retained action, violating this condition
+gives a runaway along $H=\Phi=0$, constant $X$. Its exclusion is a
+theory failure, distinct from an experimental exclusion. The analogous
+claim for a negative $\Phi$ bare mass needs its holonomy gradient gap;
+we do not import the $X_0$ argument into that sector.
+
+The published ATLAS combination gives $B_{\mathrm{inv}}<.107$ at 95\% CL,
+assuming SM Higgs production \cite{atlas}. With unchanged visible
+couplings and all produced dark modes invisible, the permitted new
+width is
+\begin{align}
+ \Gamma_{\max}&=\frac{.107}{1-.107}\Gamma_h^{\rm SM},\\
+ \Gamma_X&=\frac{\lambda_X^2v^2}{16\pi m_h}B_X(\Lambda),\qquad
+ B_X=\sum_{j:2\mu_j<m_h}\sqrt{1-4\mu_j^2/m_h^2},\\
+ \lambda_X&\leq\lambda_h(\Lambda)
+ =\sqrt{\frac{16\pi m_h\Gamma_{\max}}{v^2B_X(\Lambda)}}
+ \quad(B_X>0).
+\end{align}
+Every signed label is one complex field with a distinct
+particle--antiparticle final state. Above $\Lambda_h$ this particular
+on-shell decay supplies no bound, not a declaration that all collider
+constraints disappear. The map labels this a conditional tree recast
+of a verified 2023 input, not the latest exhaustive global exclusion.
+
+At the matched static tree spectrum, spontaneous contact decay is
+closed. For $X_j\to X_l+\Phi_n+\bar\Phi_m$ with $j=l+n-m$,
+the triangle inequality gives
+\begin{equation}
+ \mu_l+m_n+m_m
+ \geq\sqrt{(M_D+2M_\Phi)^2+j^2\Lambda^2}>\mu_j.
+\end{equation}
+The particle/antiparticle holonomies cancel. A uniform Higgs cannot
+change $j$. Collider escape additionally requires negligible material
+scattering; it is an explicit recast assumption. The collider is not
+placed in the hypothetical pump: this constraint uses the drive-off
+vacuum, while the source forecast retains the drive.
+
+Mixed $g\lambda_X$ loops permit a $\Phi$ portal counterterm. Setting it
+to zero at matching is not an all-orders protection. The cutoff must
+control the Higgs energy and the modes retained in each application;
+neither a KK species-count heuristic nor small four-dimensional
+couplings proves that control. We keep this bounded tree feasibility
+test conditional, rather than initiate another full matching program.
+
+\section{Finite-speed nuclear recoil and the measured response}
+Use natural xenon number fractions from CIAAW \cite{xe}, molar mass
+$\bar M=131.293$ g/mol, and the explicit approximation
+$m_A=A\times.93149410242$ GeV. Let $m_N=.939$ GeV and
+$f_N=.308\pm.018$ \cite{fn}; its effective two-nucleon contribution is
+not added a second time. We approximate the coherent nuclear scalar
+current by its static normalization and the Helm form factor
+\cite{helm},
+\begin{equation}
+ F_A(q)=\frac{3j_1(qr_A)}{qr_A}e^{-(qs_0)^2/2},\quad
+ r_A^2=c_A^2+7\pi^2a^2/3-5s_0^2,
+\end{equation}
+with $c_A=1.23A^{1/3}-.60$ fm, $a=.52$ fm and $s_0=.9$ fm.
+Arguments use $\hbar c=.1973269804$ GeV fm. This is not a complete
+finite-$q$ nuclear many-body calculation. The admitted window has
+$q\lesssim.113$ GeV; no coherent formula is extrapolated to the much
+larger full recoil endpoints.
+
+For incident momentum $p_X$ in the target rest frame,
+\begin{align}
+ s&=m_X^2+m_A^2+2m_A\sqrt{m_X^2+p_X^2},\qquad
+ {\cal K}(s,m_X^2,m_A^2)=4m_A^2p_X^2,\\
+ \overline{|{\cal M}_A|^2}
+ &\simeq\frac{4\lambda_X^2 f_N^2m_N^2A^2m_A^2}
+ {(m_h^2+2m_AE_R)^2}F_A^2(\sqrt{2m_AE_R}),\\
+ \frac{\dd\sigma_A}{\dd E_R}
+ &=\frac{\lambda_X^2f_N^2m_N^2A^2m_A}
+ {8\pi p_X^2(m_h^2+2m_AE_R)^2}
+ F_A^2(\sqrt{2m_AE_R})\,\mathbf1_{0<E_R<E_R^{\max}},\\
+ E_R^{\max}&=\frac{2m_Ap_X^2}{s}.
+\end{align}
+The incident kinematics are not replaced by a halo-speed distribution.
+In the NR, zero-form-factor limit, integrating gives
+$\sigma_A=\lambda_X^2f_N^2m_N^2A^2\mu_{XA}^2/
+(4\pi m_h^4m_X^2)$, which supplies a normalization check.
+
+Let $r=(s_j,q,p_i)$ label the existing selected source mixture. Here
+$p_i$ is the dimensionless G2 variable and $p_X=\Lambda\hat p_f(p_i)$;
+the corresponding physical incoming width is $.1\Lambda$. Then
+\begin{equation}
+ \dd P_r=Z_{\rm pair}^{-1}w_{l_{s_j}}f_{.1}(p_i)
+ K_{l_{s_j},0,q}(p_i)\dd p_i,\qquad l_+=0,\ l_-=-2.
+\end{equation}
+These are event-weighted incident \emph{flux fractions} at the sensor
+only if transmission is common; unknown source luminosity and transport
+are not thereby computed. With $R_b(E_R)$ the released probability
+of an S2 bin $b$, including losses, define
+\begin{equation}
+ \bar\sigma_b=\sum_A\xi_A\int\dd P_r
+ \int_{.7\,\mathrm{keV}}^{50\,\mathrm{keV}}
+ R_b(E_R)\frac{\dd\sigma_A(p_X(r))}{\dd E_R}\dd E_R.
+\end{equation}
+Use the supplied energy-bin edges with piecewise-constant response and
+integrate the smooth cross section within each clipped bin. No
+independent efficiency correction or repeated velocity factor is used.
+The unit conversion is $1\ {\rm GeV}^{-2}=3.893793721\,10^{-28}$ cm$^2$.
+
+For stationary, spatially uniform incident selected-particle flux
+$\varphi_X$ at the detector in cm$^{-2}$s$^{-1}$,
+\begin{equation}\label{eq:flux}
+ N_b=\varphi_X\,86400\,{\cal E}\frac{1000N_A}{\bar M}\bar\sigma_b,
+ \qquad
+ \varphi_3=\frac3{86400\,{\cal E}(1000N_A/\bar M)
+                      \sum_{b\in\mathrm{ROI}}\bar\sigma_b}.
+\end{equation}
+Here $N_A$ is Avogadro's constant, not a nuclear mass number.
+Three expected signal events is a transparent normalization target,
+\emph{not} a discovery threshold, a 95\% sensitivity, or a fit to
+observed events. The source flux is missing, so data cannot yet yield
+a two-parameter xenon exclusion in $(\Lambda,\lambda_X)$.
+
+\section{Why this channel loses the old sign information}
+The exact kinematic lower bound over the entire source support is
+$p_X\geq .8091444644\Lambda$, attained as $p_i\to0$ in the
+$j=+1,q=-1$ branch. It follows from monotonicity of outgoing two-body
+momentum with available energy. At fixed dimensionless $\hat p,\hat m$
+and nuclear mass, write $\hat E=\sqrt{\hat m^2+\hat p^2}$ and
+$D=m_A^2+2m_A\hat E\Lambda+\hat m^2\Lambda^2$. Then
+\begin{equation}
+ \frac{\dd E_R^{\max}}{\dd\Lambda}
+ =\frac{4m_A\hat p^2\Lambda(m_A^2+m_A\hat E\Lambda)}{D^2}>0.
+\end{equation}
+Checking $\Lambda=1$ for every isotope therefore bounds the whole
+continuous interval, not just sampled scales. The minimum endpoint
+is 9.543 MeV, above 50 keV throughout the range.
+Consequently the endpoint indicator is always one in the retained
+window, and the cross section factorizes:
+\begin{align}
+ \frac{\dd\sigma_A}{\dd E_R}=
+ \frac{\lambda_X^2}{p_X^2}H_A(E_R),&\qquad
+ \bar\sigma_{s_jb}=\lambda_X^2 C_{s_j}D_b,\\
+ C_{s_j}=\int_{s_j}\frac{\dd P_r}{p_X(r)^2},&\qquad
+ D_b=\sum_A\xi_A\int_{.7\,\mathrm{keV}}^{50\,\mathrm{keV}}
+ R_b(E_R)H_A(E_R)\dd E_R.
+\end{align}
+Any common response $R_b(E_R)$ preserves this factorization. Thus
+\begin{equation}
+ P(b|j=+,\mathrm{accepted})=P(b|j=-,\mathrm{accepted}),\qquad
+ P(j|b,\mathrm{accepted})=\frac{C_j}{C_++C_-}.
+\end{equation}
+The optimal energy-only classifier is the majority guess, with error
+$\min(C_+,C_-)/(C_++C_-)$. Better S2 resolution cannot restore the
+missing momentum dependence within this approximation and window.
+The original 2.20\% error was for a directly measured momentum
+estimator, not a nuclear recoil deposit. The negative result is about
+this specific readout, not about the existence of the mode conversion.
+Response leakage from unmodeled energies, a direction-sensitive response,
+or additional observations require a different calculation.
+
+\section{Numerical feasibility, with the source left unknown}
+Independent source integration gives, with $\Lambda$ in GeV,
+\begin{equation}
+ (C_+,C_-)=\frac{(.74075482,.12115857)}{\Lambda^2},\qquad
+ P(j=\pm\mid\mathrm{accepted})=(.85943069,.14056931).
+\end{equation}
+Hence the best S2-only sign error is $14.0569\%$, exactly the minority
+prior within this model; the conditional mutual information is zero.
+The source quadrature retains its existing $z\leq10$ tail convention;
+the kinematic endpoint proof does not rely on that numerical truncation.
+The accepted-window normalization is
+\begin{align}
+ \bar\sigma_{\rm acc}&=7.99989\,10^{-39}\,
+       \frac{\lambda_X^2}{(\Lambda/{\rm GeV})^2}\ {\rm cm}^2,\\
+ N_{\rm acc}&=.00113108535\,
+       \frac{\varphi_X}{1\ {\rm cm}^{-2}{\rm s}^{-1}}\,
+       \frac{\lambda_X^2}{(\Lambda/{\rm GeV})^2}.
+\end{align}
+The unit-coupling, unit-scale point is a normalization convention,
+not itself an allowed benchmark. For each scale use
+$\lambda_{\max}=\min(1,\lambda_{\rm vac},\lambda_h)$, omitting
+$\lambda_h$ when no Higgs channel is open. Table~\ref{tab:flux}
+reports the smallest required flux within that conditional domain.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{rrrrl}
+\toprule
+$\Lambda$ [GeV]&$m_X$ [GeV]&$\lambda_{\max}$&
+$\varphi_3$ [cm$^{-2}$s$^{-1}$]&Active condition\\
+\midrule
+1&5.099&.000723&$5.07\,10^9$&Higgs width\\
+5&25.495&.00176&$2.15\,10^{10}$&Higgs width\\
+10&50.990&.00382&$1.82\,10^{10}$&Higgs width\\
+12&61.188&.00857&$5.21\,10^9$&Higgs width\\
+12.508&63.779&.129&$2.48\,10^7$&Bare-mass condition\\
+30&152.971&.744&$4.32\,10^6$&Bare-mass condition\\
+\bottomrule
+\end{tabular}
+\caption{Three expected recoils, not discovery sensitivity. The narrow
+turn near $m_h/10$ is the closing on-shell decay threshold, not a
+measured preferred radius or an optimized viable point.}
+\label{tab:flux}
+\end{table}
+
+The quoted $f_N$ uncertainty alone multiplies yields by .8865--1.1203,
+or required flux by .8926--1.1280. This is not a total error band:
+nuclear, response, source and EFT uncertainties remain unquantified.
+The new verifier passes 573/573 checks; all 3056 preceding Route-G
+checks also pass unchanged (3629 total). These test implementation
+and declared mathematical identities, not empirical validation of $X$.
+The dense mesh in Fig.~\ref{fig:map} only renders these analytic
+formulas; it is not another source or Gaussian-resolution scan.
+
+\section{Decision and remaining physical inputs}
+The accompanying figure separates the conditional ATLAS exclusion,
+the retained-action vacuum failure, and the flux needed for three
+accepted recoils. No white or unhatched region is called experimentally
+viable: other constraints, production, transport and theory errors are
+not closed. The response-derived result concerns a calibrated component
+of an instrument, not the source, full sensor system, or sign classifier.
+
+The energy choice also exposes the drive requirement:
+$\Omega=.2$--6 GeV corresponds to ordinary frequency
+$\nu=\Omega/h\simeq4.84\,10^{22}$--$1.45\,10^{24}$ Hz.
+No physical apparatus that modulates the quartic this way has been
+specified. It remains a prescribed reservoir, not an ordinary laboratory
+oscillator; an actual source or a justified quantum energy-exchange
+process is needed before hardware feasibility can be claimed.
+
+Two productive next choices remain. If only an excess of accepted
+recoils is required, specify production and at-detector flux, then
+compare with \eqref{eq:flux} and an actual background likelihood.
+If the purpose is to distinguish $j=\pm1$, change the observable:
+independent timing/momentum information or a recoil endpoint/directional
+measurement must be developed. Do not try to recover the missing
+information by fitting a narrower Gaussian to this S2-only dataset.
+
+\begin{thebibliography}{9}
+\bibitem{pdg} PDG, \emph{Electroweak Model and Constraints on New Physics},
+Sec.~10.4.2, currently served April 2026 revision,
+\href{https://pdg.lbl.gov/2025/reviews/rpp2025-rev-standard-model.pdf}{review};
+\href{https://pdg.lbl.gov/2025/reviews/rpp2025-rev-phys-constants.pdf}{physical constants}.
+\bibitem{xenon} XENON Collaboration, \emph{Light Dark Matter Search with
+Ionization Signals in XENON1T}, Phys. Rev. Lett. 123, 251801 (2019),
+\href{https://arxiv.org/abs/1907.11485}{arXiv:1907.11485}.
+\bibitem{release} XENON Collaboration, \emph{XENON1T S2-only data release}
+(2020), \href{https://github.com/XENON1T/s2only_data_release}{official repository}.
+\bibitem{atlas} ATLAS Collaboration, Phys. Lett. B 842, 137963 (2023),
+\href{https://arxiv.org/abs/2301.10731}{arXiv:2301.10731}.
+\bibitem{fn} M.~Hoferichter et al., Phys. Rev. Lett. 119, 181803 (2017),
+\href{https://arxiv.org/abs/1708.02245}{arXiv:1708.02245}.
+\bibitem{helm} J.~D.~Lewin and P.~F.~Smith, Astropart. Phys. 6, 87 (1996),
+\href{https://hepwww.pp.rl.ac.uk/groups/ukdmc/pub/papers/journal/app6-87.pdf}{Eqs.~(4.7), (4.10--11)}.
+\bibitem{xe} CIAAW, \href{https://ciaaw.org/xenon.htm}{Xenon isotope
+abundances and standard atomic weight}.
+\end{thebibliography}
+\clearpage
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{route_g/output/figures/g2_xenon_feasibility.pdf}
+\caption{Conditional feasibility and the sign-readout obstruction.
+Color encodes a required, not a supplied, flux. Panel B uses the
+unchanged public response matrix and retains its bin structure.}
+\label{fig:map}
+\end{figure}
+\end{document}

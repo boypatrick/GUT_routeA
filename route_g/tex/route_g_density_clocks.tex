@@ -1,0 +1,373 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\id}{\mathbb I}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\pr}[1]{\ket{#1}\bra{#1}}
+\title{Route G-R3: A Density Candidate and Two Relational Clocks}
+\author{An explicit interaction, not a fitted slowdown law}
+\date{24 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We define an excitation-energy density relative to a declared counting
+measure, couple it to one clock, and compute its readings relative to
+another in an exact finite stationary state. The resulting relative
+rate is observable under fixed calibration, but its sign is determined
+by the interaction, not by the word density. A separate dispersive
+exchange calculation admits both signs. Unobserved source fluctuations
+produce a distribution of conditional phases, not generally a single
+rate evaluated at the mean density. This closes one bounded candidate
+test, not Chen's density--time claim, emergent gravity, or a universal
+time-dilation principle.
+\end{abstract}
+
+\section{Define the object before assigning it dynamics}
+Retain the G-R1 warning: energy statistics alone do not determine a
+relational history. A candidate full information object would include
+the joint state, event algebra, recording instruments and reference
+measure. We do not identify any one scalar with all of that information.
+
+Take an addressed matter subsystem $D$ with ground state $\ket0$,
+excited state $\ket1$, and positive excitation energy $\epsilon_D$.
+Fix the measure of this one operational cell to $\nu(D)=1$. Define
+\begin{equation}\label{eq:density}
+ N_D=\pr1,\qquad H_D-E_{D,g}\id=\epsilon_DN_D,\qquad
+ \widehat E_d=\frac{\epsilon_DN_D}{\nu(D)},\qquad
+ E_0=\frac{\epsilon_D}{\nu(D)} .
+\end{equation}
+Units are energy per declared cell, \emph{not} energy per spatial volume.
+For several declared cells, an additive operator measure can be
+$\mu_E(S)=\sum_{j\in S}\epsilon_jN_j$ with counting measure
+$\nu(S)=|S|$; its average is $\mu_E(S)/\nu(S)$. The addressed set,
+weights and coupling must be fixed together, not changed to fit a rate.
+This one-cell test cannot empirically distinguish density from total
+excitation energy. Ground subtraction prevents an arbitrary source
+energy zero from changing the interaction.
+
+Let $B$ be a three-level clock, $H_B=\epsilon N_B$ with
+$N_B=\operatorname{diag}(0,1,2)$. Choose the single interaction
+\begin{equation}\label{eq:interaction}
+ V=\kappa H_B\frac{\widehat E_d}{E_0}
+   =\kappa\epsilon N_BN_D,\qquad
+ H_{BD}=\epsilon N_B(1+\kappa N_D)+\epsilon_DN_D .
+\end{equation}
+Tensor identities are suppressed. We impose $\kappa>-1$ for positive
+clock gaps. $[N_D,H_{BD}]=0$: this is a dispersive, excitation-preserving
+coupling. $\kappa$ is a declared coupling, not a fitted time function.
+A reference clock $A$ is shielded from $D$. This asymmetry is an input.
+
+\newpage
+\section{One common constraint and an exact finite solution}
+We explicitly extend the G-R1 stationary model to $A\otimes B\otimes D$.
+We do not equate it with G-R2's recording-history constraint.
+For an exactly reproducible card fix
+\begin{equation}
+ \epsilon_D=\epsilon,\quad \delta=\epsilon/4,\quad
+ \kappa=1/4,\quad D_A=15,\quad E_*=14\delta,\quad
+ H_A=\sum_{j=0}^{14}(14-j)\delta\,\pr j_A .
+\end{equation}
+The alternative audit cards $\kappa=0,-1/4$ use the \emph{same}
+$A$ spectrum, calibration and readout. These rational choices make the
+finite recurrence exact; they are not measurements or fits.
+For $n=0,1,2$ and $d=0,1$, define
+\begin{equation}
+ e_{nd}=\epsilon n(1+\kappa d)+\epsilon_Dd,\qquad
+ j_{nd}=e_{nd}/\delta=4n(1+\kappa d)+4d .
+\end{equation}
+All $j_{nd}$ are integers between $0$ and $14$ on these cards.
+For normalized $a_n,c_d$, put
+\begin{align}
+ K&=H_A+H_{BD}-E_*\id,\\
+ \ket\Psi&=\sum_{n,d}a_nc_d\ket{j_{nd}}_A\ket n_B\ket d_D,
+ &K\ket\Psi&=0 .\label{eq:stationary}
+\end{align}
+Each term has total energy $E_*$; coincident $j_{nd}$ cause no
+normalization problem because the $BD$ labels remain orthogonal.
+Both local energies and the combined $H_{BD}$ are nonnegative.
+The matched state is an assumed preparation, not a dynamically
+derived attractor. No arbitrary incommensurate-spectrum extension is claimed.
+
+Use the reference phase POVM
+\begin{equation}
+ \ket\phi_A=D_A^{-1/2}\sum_{j=0}^{14}e^{ij\phi}\ket j,\qquad
+ F_A(d\phi)=\frac{D_A}{2\pi}\pr\phi_A\,d\phi .
+\end{equation}
+Its integral is $\id_A$; phase density is uniformly $1/(2\pi)$.
+Normalized conditioning of \eqref{eq:stationary} gives
+\begin{equation}\label{eq:conditional}
+ \ket{\psi_{BD}(\phi)}
+ =\sum_{n,d}a_nc_de^{-ie_{nd}\phi/\delta}\ket{n,d},
+ \qquad i\delta\,\partial_\phi\ket{\psi_{BD}}=H_{BD}\ket{\psi_{BD}} .
+\end{equation}
+This comes directly from the constraint, without inserting an external
+physical time. Only after calibration write $\tau_A=\hbar\phi/\delta$.
+For a generic interaction involving the reference itself the simple
+conditional equation need not hold \cite{smith}. Here $A$ is decoupled
+from $BD$ except through the stationary correlation, so it holds exactly.
+
+For completeness, if an event effect $F$ fails to commute with $K$,
+the energy-sector pinching
+\begin{equation}
+ {\cal P}_K(F)=\sum_\ell P_\ell F P_\ell,\qquad
+ K=\sum_\ell k_\ell P_\ell
+\end{equation}
+is positive, preserves POVM completeness, commutes with $K$, and gives
+the same expectation in $\Psi$. The joint probabilities thus admit
+constraint-invariant effects. This is not a microscopic implementation
+of a nonlocal measurement apparatus.
+
+\newpage
+\section{Compare two readings, not two coordinate labels}
+Set $a_n=1/\sqrt3$. Clock $B$ has phase states and POVM
+\begin{equation}
+ \ket\theta_B=\frac1{\sqrt3}\sum_{n=0}^2e^{-in\theta}\ket n,\qquad
+ F_B(d\theta)=\frac3{2\pi}\pr\theta_B\,d\theta .
+\end{equation}
+The Fourier sign is opposite to that of $A$, whose Hamiltonian has the
+complementary spectrum. Neither phase is a geometric rotation.
+Conditional on source outcome $d$, \eqref{eq:conditional} becomes,
+up to a source-only phase, $\ket{\theta_d(\phi)}_B$ with
+\begin{equation}
+ \theta_d(\phi)=\frac{\epsilon}{\delta}(1+\kappa d)\phi
+ \pmod{2\pi}.
+\end{equation}
+The actual likelihood, rather than a zero-width clock reading, is
+\begin{equation}\label{eq:likelihood}
+ p(\theta\mid\phi,d)
+ =\frac{1}{6\pi}\left|\sum_{n=0}^2
+      e^{in[\theta-\theta_d(\phi)]}\right|^2
+ =\frac{[1+2\cos(\theta-\theta_d)]^2}{6\pi}.
+\end{equation}
+It integrates to one. The complete joint density is
+$p(\phi,\theta,d)=|c_d|^2p(\theta\mid\phi,d)/(2\pi)$.
+On a fixed three-outcome grid $\theta_j=2\pi j/3$, the corresponding
+projective probabilities are $[1+2\cos(\theta_j-\theta_d)]^2/9$.
+
+Calibrate the uncoupled $B$ dial by $\tau_B=\hbar\theta/\epsilon$,
+keeping that calibration when $D$ is excited. On a specified unwrapped
+phase branch, the shift of the likelihood peak gives
+\begin{equation}\label{eq:rate}
+ r_{B/A}(d)=\frac{d\tau_B}{d\tau_A}
+  =\frac{\delta}{\epsilon}\frac{d\theta_d}{d\phi}
+  =1+\kappa d
+  =1+\kappa\frac{E_d(d)}{E_0}.
+\end{equation}
+This is a result of \eqref{eq:interaction}, not an independent
+phenomenological slowdown fit. At $d=1$ the three audit cards give
+$r=3/4,1,5/4$: either direction is possible.
+Finite POVM width requires repeated calibrated comparisons.
+One event does not reveal an exact rate or a unique cycle count.
+Use a predeclared short branch, or the event/epoch distinction of G-R2,
+to avoid unwrapping ambiguity.
+
+Two invariance checks matter. A common energy rescaling
+$(\epsilon,\epsilon_D,\delta,E_*)\mapsto s(\epsilon,\epsilon_D,\delta,E_*)$
+rescales $K$ but leaves $\Psi$, all phase probabilities and $r$ unchanged.
+A passive relabeling of a dial, with its POVM and calibration transformed
+consistently, also cannot change these probabilities. Recalibrating $B$
+separately in every density sector would instead remove the comparison
+one set out to measure.
+
+For the same commuting conditional-generator structure, if both clocks
+receive factors $1+\kappa_A d$ and $1+\kappa_B d$, then
+\begin{equation}
+ r_{B/A}=\frac{1+\kappa_Bd}{1+\kappa_Ad}.
+\end{equation}
+Equal factors cancel. This elementary common-mode diagnostic is not a
+claim to have solved an arbitrary interaction with the finite reference.
+Only a differential response is observable by the two-clock comparison.
+
+\newpage
+\section{Fluctuating density: why the mean is not one effective clock}
+Let $w_d=|c_d|^2$. When $D$ is not read, the reduced clock state is
+\begin{align}
+ \rho_B(\phi)
+  &=\sum_d w_d\pr{\theta_d(\phi)},\\
+ [\rho_B(\phi)]_{nm}
+  &=\frac13 e^{-i(n-m)x}
+       \sum_d w_d e^{-i(n-m)\kappa d x},
+ &x&=\epsilon\phi/\delta .\label{eq:characteristic}
+\end{align}
+The last factor is a characteristic function of the density distribution.
+It is not generally $\exp[-i(n-m)\kappa\langle d\rangle x]$.
+For small $\kappa x$,
+\begin{equation}
+ \log\langle e^{-iyd}\rangle
+ =-iy\langle d\rangle-\tfrac12y^2\operatorname{Var}(d)+O(y^3),
+ \qquad y=(n-m)\kappa x .
+\end{equation}
+The mean shifts phase, while the variance first changes visibility.
+Replacing the operator by its mean drops precisely that information.
+This respects, rather than overturns, the G-R1 density-only warning.
+
+For $w_0=w_1=1/2$, the adjacent coherence is
+\begin{equation}
+ [\rho_B]_{10}=\tfrac13e^{-ix}
+    \tfrac12(1+e^{-i\kappa x}).
+\end{equation}
+With $\kappa=1/4$ at $\phi=\pi$, $x=4\pi$; adjacent coherences vanish,
+but $[\rho_B]_{20}=1/3$ and $\tr\rho_B^2=5/9$.
+This is neither a pure clock with an average rate nor a fully dephased
+state. A coherent pure source entangles with $B$; a classical source
+mixture yields the same reduced $B$ statistics. These data alone do
+not witness quantum source coherence.
+
+An exact probability test uses $\phi=\pi/2$ on the same card.
+Then $\theta_0=2\pi$ and $\theta_1=5\pi/2$. In the fixed $B$ grid:
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+source & $p_0$ & $p_1$ & $p_2$\\
+\midrule
+$d=0$ & $1$ & $0$ & $0$\\
+$d=1$ & $1/9$ & $(1+\sqrt3)^2/9$ & $(1-\sqrt3)^2/9$\\
+unread equal weights & $5/9$ & $(1+\sqrt3)^2/18$ & $(1-\sqrt3)^2/18$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In contrast, replacing $d$ by $1/2$ in the Hamiltonian predicts
+\begin{equation}
+ p_0^{\rm mean\ substitution}
+ =\frac{(1+\sqrt2)^2}{9}
+ =\frac{3+2\sqrt2}{9}\neq\frac59 .
+\end{equation}
+This tests the approximation without fitting any data. The source
+projector measurement itself commutes with $H_{BD}$, although
+conditioning on its result selects a branch. A phase measurement on
+the clock is a separate instrument with backreaction; it cannot be
+silently replaced by nondisturbing, continuously available readings.
+
+\newpage
+\section{A microscopic sign check, separate from the exact rational card}
+Use the Jaynes--Cummings exchange model, in frequency units
+($\hbar=1$ in this section):
+\begin{equation}
+ H_{\rm JC}=\omega b^\dagger b+\Omega N_D
+       +g(b\sigma_++b^\dagger\sigma_-),\qquad \Delta=\Omega-\omega .
+\end{equation}
+This is an established idealized model \cite{blais}, not a hardware
+calibration. For $g\sqrt{n+1}/|\Delta|\ll1$, put
+$X=b\sigma_+$ and $S=(g/\Delta)(X-X^\dagger)$. Direct algebra gives
+\begin{equation}
+ [S,H_0]=-V,\qquad
+ [X,X^\dagger]=(2N_D-1)n+N_D,\qquad n=b^\dagger b .
+\end{equation}
+Hence the second-order transformed Hamiltonian is
+\begin{align}
+ H_{\rm eff}
+ &=H_0+\tfrac12[S,V]+O(g^3/\Delta^2)\nonumber\\
+ &=(\omega-\chi)n+(\Omega+\chi)N_D+2\chi nN_D
+     +O(g^3/\Delta^2),\qquad \chi=\frac{g^2}{\Delta}.
+\end{align}
+Energy eigenvalue errors start at fourth order. With ground-sector
+calibration $\omega_g=\omega-\chi>0$, the excited-sector rate is
+\begin{equation}
+ r_{e/g}^{(2)}=\frac{\omega+\chi}{\omega-\chi}
+ =1+\kappa_{\rm eff},\qquad
+ \kappa_{\rm eff}=\frac{2g^2/\Delta}{\omega-g^2/\Delta}.
+\end{equation}
+Positive and negative detuning yield opposite signs. The interaction
+does not force denser matter to slow the clock.
+
+The exact fixed-excitation block in
+$\{\ket{N,g},\ket{N-1,e}\}$ is
+\begin{equation}
+ H_N=\begin{pmatrix}
+ N\omega&g\sqrt N\\g\sqrt N&(N-1)\omega+\Omega
+ \end{pmatrix},\quad
+ E_{N,\pm}=N\omega+\frac{\Delta}{2}
+       \pm\frac12\sqrt{\Delta^2+4g^2N}.
+\end{equation}
+The branches connected to the bare states are
+\begin{align}
+ E_g(n)&=n\omega+\frac\Delta2
+    -\frac{\operatorname{sgn}\Delta}{2}\sqrt{\Delta^2+4g^2n},\\
+ E_e(n)&=(n+1)\omega+\frac\Delta2
+    +\frac{\operatorname{sgn}\Delta}{2}\sqrt{\Delta^2+4g^2(n+1)} .
+\end{align}
+The first formula also gives $E_g(0)=0$.
+From $0\leq1+u/2-\sqrt{1+u}\leq u^2/8$ for $u\geq0$,
+\begin{equation}
+ |E_{\rm exact}-E_{\rm second\ order}|
+ \leq g^4N^2/|\Delta|^3 .
+\end{equation}
+For $\omega=1,g=.03,\Delta=\pm.5$, exact $N=1,2,3$ blocks verify
+this bound and both rate directions: the second-order ratios are
+$1.00360649$ and $0.99640647$. These do not realize $\kappa=1/4$.
+
+Beyond second order the clock gaps depend on $n$; the spectrum is not
+an exact rigid rescaling. Bare $N_D$ is not conserved by $H_{\rm JC}$:
+the effective conserved sectors are dressed, with correspondingly
+transformed density and readout operators. Thus the microscopic check
+supports the possible sign and dispersive structure, not an exact
+identification of the bare two-level density with a universal clock rate.
+
+\newpage
+\section{Closure, physical interpretation and the next useful decision}
+The requested sequence is complete for one declared candidate:
+\begin{enumerate}
+ \item A positive, ground-subtracted density operator and its reference
+ measure are specified without assuming a spatial volume.
+ \item One interaction is given. A common stationary constraint and
+ matched finite state yield normalized joint clock probabilities.
+ \item Relative rate follows from those probabilities under fixed
+ calibration; common rescaling cannot create a differential effect.
+\end{enumerate}
+What has been obtained is an \emph{environment-dependent clock-frequency
+shift}. Calling it universal slowing of time would require additional
+physics. In particular, the coupling's sign and dependence on the clock
+transition are not fixed by the density definition. Source fluctuations
+can reduce visibility rather than define one deterministic time map.
+
+\subsection*{What remains an assumption, not a hidden theorem}
+Ordinary quantum mechanics, a subsystem split, the operational cell,
+the phase POVMs, reference shielding, preparation and commensurate
+spectra are inputs. No energy-information identity, negative energy,
+mass conversion, emergent space, metric or universal proper time follows.
+The finite reference cannot supply an exact canonical time operator.
+Conditional phase arcs or record/epoch labels remain necessary at
+recurrences, as established by G-R2.
+
+The G-R2 finite-history recording gates and the present energy constraint
+are \emph{not yet one autonomous energy-complete recording model}.
+No detector design or physical memory lifetime is claimed. The exact
+stationary test does not silently extend to arbitrary reference
+interactions, irrational spectra, or an actual multilevel transmon.
+
+\subsection*{Two physically useful follow-ups, not further fits}
+First, select a source and clock realization that fixes the interaction
+and its sign independently of a desired slowdown. If an intensive density
+rather than total excitation energy is essential, compare differently
+sized sources at fixed density with the same specified coupling profile.
+Second, test whether independent clock transitions acquire the same
+fractional shift. Transition-dependent distortions support ordinary
+clock perturbation; a universal time interpretation needs a principle
+explaining why these distortions disappear across different clocks.
+Neither task is replaced by fitting a free function of $E_d$.
+
+\subsection*{Executable verification}
+The companion \texttt{verify\_gr3\_density\_clocks.py} passes 273 checks:
+stationarity, positivity, conditional states, both POVMs, invariant
+effects, two-clock likelihoods, relative slopes, energy-unit and
+zero-shift invariance, the failed mean-density substitution, and
+exact versus dispersive exchange spectra. Previous files are hashed.
+All 4636 Route-G regression checks pass. These are algebra/implementation
+checks, not experimental confirmation.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{smith}
+A.~R.~H.~Smith and M.~Ahmadi, \emph{Quantizing time: Interacting clocks
+and systems}, Quantum \textbf{3}, 160 (2019),
+\href{https://arxiv.org/abs/1712.00081v3}{arXiv:1712.00081v3}.
+\bibitem{blais}
+A.~Blais, A.~L.~Grimsmo, S.~M.~Girvin and A.~Wallraff,
+\emph{Circuit quantum electrodynamics}, Rev.\ Mod.\ Phys.\
+\textbf{93}, 025005 (2021), Sec.~III.B and Appendix~B.2.b,
+\href{https://doi.org/10.1103/RevModPhys.93.025005}{doi:10.1103/RevModPhys.93.025005}.
+\end{thebibliography}
+\end{document}

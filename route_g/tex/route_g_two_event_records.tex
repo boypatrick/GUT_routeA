@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\id}{\mathbb I}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\pr}[1]{\ket{#1}\bra{#1}}
+\title{Route G-R2: Two Events, Two Durable Records}
+\author{A finite relational protocol, not a density--time law}
+\date{24 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A cyclic clock reading is not itself a saved event. We construct one
+initial record and one terminal readout, including their quantum
+backreaction, inside an exact finite history constraint. Orthogonal
+memory sectors retain the outcomes and two fixed protocol stamps.
+A one-bit epoch label separates repeated clock phases. The construction
+is conditional on an ordered protocol and a blank-memory boundary; it
+does not derive an arrow of time, apparatus energetics, or an $E_d$
+law. In an exact three-level example the terminal probability is $0$
+without the initial record, $2/9$ with it, and $4/9$ for a different
+instrument having the same initial measurement effects.
+\end{abstract}
+
+\section{Declared system, clock and recording gates}
+G-R1 supplied a noninteracting finite Page--Wootters constraint and
+single-reading statistics. Recording requires an additional coupling.
+Here we retain its three-level free conditional propagator,
+\begin{equation}
+ H_S=\epsilon\operatorname{diag}(0,1,2),\qquad
+ U=\operatorname{diag}(1,z,z^2),\qquad z=e^{-2\pi i/3},\quad U^3=\id ,
+\end{equation}
+but \emph{replace} its constraint by the explicit protocol constraint
+below. No claim is made that the old $H_C+H_S-E_*$ implements these gates.
+All phases are clock labels, not spatial rotations.
+
+The work space is $W=S\otimes A\otimes F$, of dimension $27$.
+Each memory has orthogonal states $\ket{\emptyset},\ket0,\ket1$.
+Let $S_a$ exchange $\ket{\emptyset}$ and $\ket a$, leaving the third
+state fixed. With $\ket+=(\ket0+\ket1+\ket2)/\sqrt3$, set
+\begin{align}
+ P_0&=\pr0,& P_1&=\id-P_0,&
+ Q_+&=\pr+,& Q_-&=\id-Q_+ ,\\
+ W_i&=\sum_{a=0,1}P_a\otimes S_a\otimes\id,&
+ W_f&=\sum_{b=+,-}Q_b\otimes\id\otimes S_b .
+\end{align}
+For $F$, $S_+$ denotes $S_0$, and $S_-$ denotes $S_1$.
+Orthogonality and completeness of $P_a,Q_b$ prove
+$W_i^\dagger W_i=W_f^\dagger W_f=\id$. These are unitary
+premeasurements; a later pointer read gives the outcome.
+For a blank memory,
+\begin{equation}
+ W_i\ket\psi\ket\emptyset_A\ket\emptyset_F
+ =\sum_a P_a\ket\psi\ket a_A\ket\emptyset_F .
+\end{equation}
+This is standard instrument physics, not a new measurement law.
+Explicit memories in conditional-time models are discussed in
+\cite{quantumtime}; our finite boundary/epoch choice is declared here.
+
+\newpage
+\section{An exact finite stationary history, with an explicit boundary}
+Take the orthonormal G-R1 clock grid
+$\ket{\varphi_k}=3^{-1/2}\sum_{n=0}^2e^{2\pi i nk/3}\ket n$.
+Add an epoch bit $R$, and use
+\begin{equation}
+ \ket q=\ket{\varphi_{q\bmod3}}_C
+       \ket{\lfloor q/3\rfloor}_R,\qquad 0\leq q\leq5.
+\end{equation}
+This is six distinct subsystem configurations, not six externally
+calibrated times. The bit is not an unlimited cycle counter.
+For $\chi_0=\ket+\ket\emptyset_A\ket\emptyset_F$ define
+$U_W=U\otimes\id_A\otimes\id_F$ and
+\begin{equation}\label{eq:links}
+ (V_0,V_1,V_2,V_3,V_4)=(W_i,U_W,W_fU_W,U_W,U_W),
+ \qquad \chi_{q+1}=V_q\chi_q .
+\end{equation}
+Only one initial gate and one final gate are applied. Two free
+propagators separate the recorded initial state $\chi_1$ from
+the terminal measurement in $\chi_3$; hence $U_\Delta=U^2$.
+Recording links are not asserted to have the duration of a free tick.
+
+The memory labels may be read as $\ket{(r_i,k_i),a}_A$ and
+$\ket{(r_f,k_f),b}_F$, with fixed stamps $(r_i,k_i)=(0,1)$ and
+$(r_f,k_f)=(1,0)$, using the post-gate configuration convention.
+Because each event has a predeclared stamp, three memory states per
+event suffice. This is \emph{not} an autonomous recorder that measures
+an arbitrary unknown clock reading. The gate position supplies the
+stamp; a general timestamp recorder would require additional states.
+
+Define row maps and a positive operator of dimension $162$:
+\begin{align}
+ A_q&=\bra{q+1}\otimes\id-\bra q\otimes V_q,\\
+ K_{\rm prop}&=\frac12\sum_{q=0}^4 A_q^\dagger A_q,\qquad
+ K_{\rm in}=\pr0\otimes(\id-\pr{\chi_0}),\\
+ K_{\rm hist}&=K_{\rm prop}+K_{\rm in},\qquad
+ \ket\Omega=\frac1{\sqrt6}\sum_{q=0}^5\ket q\chi_q .
+\end{align}
+This is a finite history-state construction in the tradition of
+\cite{history}, with all terms specified rather than a continuum ideal
+clock. For any $\ket X=\sum_q\ket q x_q$,
+\begin{equation}\label{eq:squares}
+ \bra X K_{\rm hist}\ket X
+ =\frac12\sum_{q=0}^4\|x_{q+1}-V_qx_q\|^2
+  +\|(\id-\pr{\chi_0})x_0\|^2\geq0 .
+\end{equation}
+Thus $K_{\rm hist}\Omega=0$. Conversely, zero energy in
+\eqref{eq:squares} implies $x_0=c\chi_0$ and $x_{q+1}=V_qx_q$,
+so the kernel is exactly one-dimensional.
+Conditioning on $q$ gives $\chi_q$ and $p(q)=1/6$.
+
+The ordered links and blank-input boundary are assumptions, not an
+emergent causal order. Positivity of this protocol constraint is not
+an apparatus energy budget, and its eigenvalues have no assigned
+physical energy scale. We have not retained G-R1's separate proof
+of a noninteracting, fixed-total-local-energy realization.
+
+\newpage
+\section{Sequential probabilities and an exact backreaction test}
+For initial density matrix $\rho$, instruments with Kraus operators
+$M_a,N_b$ satisfying $\sum_aM_a^\dagger M_a=\sum_bN_b^\dagger N_b=\id$
+give the joint memory statistics
+\begin{equation}\label{eq:joint}
+ p(a,b)=\tr\!\left[
+ N_bU_\Delta M_a\rho M_a^\dagger U_\Delta^\dagger N_b^\dagger
+ \right] .
+\end{equation}
+Indeed, for pure input the completed record state is
+$\sum_{a,b}N_bU_\Delta M_a\ket\psi\ket a_A\ket b_F$.
+The squared norm in the orthogonal pointer sector $(a,b)$ yields
+\eqref{eq:joint}; linearity gives mixed inputs. Completeness gives
+\begin{equation}
+ \sum_bp(a,b)=\tr(M_a\rho M_a^\dagger)=p(a),\quad
+ \sum_{a,b}p(a,b)=1,\quad
+ p(b\mid a)=p(a,b)/p(a)
+\end{equation}
+when $p(a)>0$. These are standard sequential Born probabilities
+\cite{quantumtime}, not a product of separate unperturbed readings.
+Here they also follow directly by projecting $\Omega$ onto $q=3$
+and the two pointer sectors.
+
+For our projective instrument $M_a=P_a,N_b=Q_b$ and $\rho=\pr+$,
+\begin{align}
+ \langle+|U^2P_0|+\rangle&=1/3,\\
+ \langle+|U^2P_1|+\rangle&=(z^2+z^4)/3=-1/3 .
+\end{align}
+Consequently
+\begin{equation}\label{eq:table}
+ [p(a,b)]_{\substack{a=0,1\\b=+,-}}
+ =\frac19\begin{pmatrix}1&2\\1&5\end{pmatrix},\qquad
+ p(a)=(1/3,2/3),\quad
+ p(+\mid a)=(1/3,1/6).
+\end{equation}
+The minus entries are the corresponding branch norms
+$\|P_a\ket+\|^2$ minus the plus entries. Ignoring the first
+pointer, but actually creating its record, gives
+\begin{equation}
+ \rho\longmapsto\sum_aP_a\rho P_a,\qquad p(+)=2/9 .
+\end{equation}
+By contrast, omitting the initial interaction altogether gives
+\begin{equation}
+ p_{\rm no\ record}(+)=|\langle+|U^2|+\rangle|^2
+ =|1+z^2+z^4|^2/9=0 .
+\end{equation}
+The difference is measurement backreaction, not a changed mass or a
+slower clock. The rank-two branch retains coherence internally;
+the initial instrument removes only coherence between the two
+$P_a$ sectors.
+
+\subsection*{Why the effects alone do not specify the protocol}
+Take $R_0=\id$, $R_1=\operatorname{diag}(1,1,-1)$ and
+$M'_a=R_aP_a$. Then $M_a'{}^\dagger M'_a=P_a$:
+the initial outcome probabilities are unchanged. But the plus
+amplitude in branch $1$ is $(z^2-z^4)/3$, of squared norm $1/3$.
+Thus
+\begin{equation}
+ [p'(a,b)]=\frac19\begin{pmatrix}1&2\\3&3\end{pmatrix},
+ \qquad p'(+)=4/9 .
+\end{equation}
+A controlled $R_a$ on the already written pointer implements this
+alternative unitarily. It is an audit of instrument dependence, not
+an activated $E_d$ interaction.
+
+\newpage
+\section{Saved records, recurrent readings and the cycle obstruction}
+Let $\Pi_a^A=\id_S\otimes\pr a_A\otimes\id_F$ and define $\Pi_b^F$
+similarly, including the blank sector. Every link after writing $A$
+commutes with $\Pi_a^A$; every link after writing $F$ commutes with
+both pointers. Hence
+\begin{equation}
+ \langle\chi_q|\Pi_a^A\Pi_b^F|\chi_q\rangle=p(a,b),
+ \qquad q=3,4,5.
+\end{equation}
+In fact the entire reduced state of $A$ is unchanged by any subsequent
+unitary acting only on $S,F$. Conditioning on a terminal outcome can
+update our inferred distribution of $a$ but does not overwrite $A$.
+Repeated projective pointer reads are nondemolition since
+$\Pi_a\Pi_{a'}=\delta_{aa'}\Pi_a$.
+The nonselective read map
+$\rho_W\mapsto\sum_{a,b}\Pi_a^A\Pi_b^F\rho_W\Pi_a^A\Pi_b^F$
+preserves all pointer probabilities.
+
+This does not assert that the joint memory density matrix has already
+lost every off-diagonal entry: premeasurement can retain coherences.
+Nor is an arbitrary quantum state cloned. The records are distinguishable
+pointer sectors with a repeatable classical readout.
+
+With $\Pi_{\rm filled}=\id-\pr\emptyset$, define the two-event counter
+\begin{equation}
+ N_{\rm evt}=\id_S\otimes\Pi_{\rm filled}^A\otimes\id_F
+            +\id_S\otimes\id_A\otimes\Pi_{\rm filled}^F .
+\end{equation}
+Each slice is an exact eigenstate, $N_{\rm evt}\chi_q=n_q\chi_q$:
+\begin{center}
+\begin{tabular}{c*{6}{c}}
+\toprule
+configuration $q$&0&1&2&3&4&5\\
+clock reading $k$&0&1&2&0&1&2\\
+epoch $r$&0&0&0&1&1&1\\
+stored-event count $n_q$&0&1&1&2&2&2\\
+\bottomrule
+\end{tabular}
+\end{center}
+Only the two declared recording events are counted, not every phase
+tick. This is not a universal identification with the source's $T$
+or energy information.
+
+Ignoring the epoch and conditioning only on $k=0$ leaves
+\begin{equation}
+ \rho_{W\mid k=0}=\tfrac12
+     (\pr{\chi_0}+\pr{\chi_3}),\qquad
+ \Pr(F\ {\rm filled}\mid k=0)=\tfrac12 .
+\end{equation}
+Reading $r=1$ as well, or selecting the completed terminal-memory
+sector, instead singles out $\chi_3$ at this phase. A cyclic phase
+without a record or a cycle tag does not identify a unique event.
+
+Suppose instead we forced the entire work state to be periodic after
+this episode while starting both memories blank. Closure would require
+\begin{equation}
+ W_{\rm cyc}\chi_0=\chi_0,\qquad W_{\rm cyc}=W_fU_W^2W_i .
+\end{equation}
+But the left side has both pointers filled, whereas the right side has
+both blank. They are orthogonal, so
+\begin{equation}
+ \langle\chi_0|W_{\rm cyc}\chi_0\rangle=0,\qquad
+ \|(W_{\rm cyc}-\id)\chi_0\|=\sqrt2 .
+\end{equation}
+The incompatible requirements are full-state recurrence and a fresh,
+retained record, not cyclic clocks in general. Resetting, unwriting,
+a longer recurrence, or an explicit epoch/memory extension changes
+the requirements. Our open history uses the last option.
+
+\newpage
+\section{What this closes, and what it deliberately leaves open}
+The bounded G-R2 question is answered: specified record interactions
+convert two scheduled cyclic-clock events into orthogonal, readable
+memory sectors. One static joint history yields the complete
+two-event Born statistics, including backreaction and retained records.
+The physical information added to a recurrent phase is
+\emph{which episode, which event, and which instrument outcome},
+not a fitted function of energy density.
+
+There are three important qualifications.
+\begin{enumerate}
+ \item \emph{Finite protocol, not an autonomous universal clock.}
+ The epoch bit, two fixed stamps, ordered gates and input boundary
+ are explicit inputs. No general unknown timestamp recorder, infinite
+ counter or uniquely derived event algebra is claimed. We do not
+ claim the separate epoch register is dimension-minimal; in other
+ protocols memory occupancy can also distinguish stages.
+ \item \emph{Preservation, not thermodynamic irreversibility.}
+ The records persist under the specified future links and could
+ persist under further isolated-pointer links. Real memory lifetime,
+ environmental errors, redundant records and erasure costs are not
+ supplied. In this model $W_{\rm cyc}^\dagger$ restores the blank
+ state exactly. The stationary history and its oriented boundary
+ therefore do not derive a thermodynamic arrow.
+ \item \emph{Constraint consistency, not physical energy completion.}
+ $[W_i,H_S\otimes\id_{AF}]=0$, but
+ $[W_f,H_S\otimes\id_{AF}]\neq0$ because
+ $[Q_+,H_S]\neq0$. Work/clock/apparatus degrees of freedom are needed
+ for a physical energy-conserving realization of that readout.
+ $K_{\rm hist}\Omega=0$ does not by itself supply this realization.
+ A microscopic clock speed or gate duration cannot be extracted
+ from its arbitrary overall normalization.
+\end{enumerate}
+
+\subsection*{Verification and reproducibility}
+The executable companion
+\texttt{route\_g/code/verify\_gr2\_two\_event\_records.py}
+constructs the gates and the full $162\times162$ constraint independently
+of the analytic probabilities. Its 139 checks cover unitarity,
+projector completeness, sum-of-squares assembly, the unique zero mode,
+all conditioned slices, both exact probability tables, the no-record
+test, memory preservation, phase aliasing, failed periodic closure,
+reversal, mixed inputs and unchanged prior source files.
+These certify finite algebra, not empirical physics.
+The JSON report retains individual residuals and source hashes.
+
+\subsection*{Next decision, not executed in G-R2}
+For G-R3, choose an explicit $E_i/E_d$ object and reference measure,
+then one clock interaction and a reference-clock comparison.
+In particular, distinguish a state-dependent interaction from a common
+energy rescaling or a relabeling of one clock. No slowdown law is
+selected, fitted or inferred here. The original density--time proposal,
+emergent spacetime, gravity, and all Route-F promotion gates remain open.
+
+\begin{thebibliography}{9}
+\bibitem{quantumtime}
+V.~Giovannetti, S.~Lloyd and L.~Maccone,
+\emph{Quantum Time}, Phys.\ Rev.\ D \textbf{92}, 045033 (2015),
+\href{https://arxiv.org/abs/1504.04215v3}{arXiv:1504.04215v3},
+especially the Measurements section, Eqs.~(31)--(46).
+\bibitem{history}
+D.~Aharonov et al.,
+\emph{Adiabatic Quantum Computation is Equivalent to Standard
+Quantum Computation}, SIAM J.\ Comput.\ \textbf{37}, 166--194 (2007),
+\href{https://arxiv.org/abs/quant-ph/0405098}{arXiv:quant-ph/0405098}.
+\end{thebibliography}
+\end{document}

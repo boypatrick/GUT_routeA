@@ -1,12 +1,42 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-09-23
+Last updated: 2026-09-24
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
 ## Independent Route G, not a new Route-F prerequisite (2026-09-22)
+
+Latest decision (2026-09-23): the user moved Route G's priority to
+relational/emergent time. Its finite Page-Wootters G-R1 stage is complete:
+stationary positive-local-energy state, conditional Schrödinger evolution,
+and a same-energy/different-coherence counterexample to density-only
+history reconstruction. The earlier KK/TOF work described below is now
+a comparison program, not a derivation of time from Ei/Ed.
+G-R2 is now bounded-done (2026-09-24): one initial record/final readout,
+exact backreaction and preserved records under specified future links.
+Its finite history constraint, epoch label and blank-input boundary
+are explicit additions, not an unchanged G-R1 energy realization or a
+derived time arrow.139 new checks pass and the five-page derivation
+is saved; it did not assign Ei/Ed dynamics or apparatus energy completion.
+G-R3 now completes a bounded excitation-density/two-clock candidate:
+a fixed interaction gives a relative clock shift, but its sign is
+dynamical and unread source fluctuations cannot be replaced by mean Ed.
+A dispersive microscopic check permits both signs; no universal time
+dilation is derived.273 new tests pass, all4636 Route-G checks pass.
+The G-R2/G-R3 common recording-apparatus completion remains absent.
+G-R4 then completes a physical-source control: independently calibrated
+Yb+ E2/E3 responses to one isotropic blackbody bath have negative but
+unequal fractional shifts. The static coefficients differ by about7.25,
+excluding a sole common rescaling of that thermal channel. An additional
+exactly common factor cancels from their ratio and remains unidentifiable.
+Spatial radiation density is not equated to the earlier Ed candidate.
+91 new checks pass, total4728; no new experiment or universal-time
+exclusion is claimed. Next needs real clock/radiometry data or an
+independently specified observable for a common factor, not another fit.
+This change neither imports a new prerequisite into P/U/S nor promotes
+any Route-F physical fit, determinant or portal.
 
 The user selected Scheme A and requested a separate route. Its fixed
 M4 x S1 common-spectrum/probe prototype, short derivation and 331/331
@@ -26,8 +56,27 @@ physical scale and a candidate SM Higgs-density probe. The latter is
 not activated: common mass shifts, added elastic amplitudes and a
 coupling-versus-Higgs-width/stability check are recorded explicitly.
 No hardware calibration or particle mass identification is inferred.
+G2-X subsequently selects a conditional X-only Higgs/xenon branch,
+uses real XENON1T response matrices and records a readout-specific
+loss of sign information (14.057% optimal error = majority guess).
+The bounded test and feasibility figure are complete; actual source
+flux remains unknown although the required flux is computed;
+the data fold does not establish hardware or promote a Route-F fit.
 It does not become a blocker for layers P,
 U or S, and does not overwrite their results or promote a Route-F fit.
+G2-H then tests a published LHC on-shell Higgs source budget and rejects
+its single-pass xenon retained-elastic-channel realization: even perfect
+interception gives fewer than3.96e-6 events. Direct Higgs production also
+has an exact tree-level kinematic sign degeneracy, unlike the older
+asymmetric collision preparation. Neither result changes Route-F gates.
+G2-T then separates TOF-plus-momentum mass inference from opposite-sign
+readout. It identifies the absent neutral-X momentum sensor, derives a
+conditional directional-recoil alternative and its severe angular
+conditioning, and preserves both the Higgs-source sign degeneracy and
+event ceiling. Source correlations or a genuinely signed interaction
+remain required for sign information; an odd amplitude alone is not
+enough. No coupling is added, and these measurement requirements are
+not new prerequisites for Route-F layers P, U or S.
 
 ## Governing decision (2026-08-30; current program authority)
 

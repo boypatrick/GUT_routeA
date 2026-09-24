@@ -1,0 +1,786 @@
+{
+  "stage": "G-R2",
+  "status": "bounded-done",
+  "scope": "Finite two-event protocol constraint; not an Ed/rate/energy-complete apparatus",
+  "assumptions": [
+    "ordinary quantum mechanics and Born rule",
+    "three-reading clock plus one epoch bit",
+    "two blank-or-binary memories with fixed protocol stamps",
+    "declared ordered gates and pure input boundary",
+    "isolated pointers after writing, no noise or reset",
+    "K_hist replaces, rather than preserves, the G-R1 noninteracting constraint"
+  ],
+  "dimensions": {
+    "clock": 3,
+    "epoch": 2,
+    "system": 3,
+    "initial_memory": 3,
+    "final_memory": 3,
+    "total": 162
+  },
+  "event_stamps": {
+    "initial": {
+      "q": 1,
+      "epoch": 0,
+      "phase_index": 1
+    },
+    "final": {
+      "q": 3,
+      "epoch": 1,
+      "phase_index": 0
+    }
+  },
+  "clock_labels": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    2
+  ],
+  "event_counts": [
+    0.0,
+    1.0000000000000002,
+    1.0000000000000002,
+    2.0000000000000004,
+    2.0000000000000004,
+    2.0000000000000004
+  ],
+  "joint_probabilities": [
+    [
+      0.11111111111111122,
+      0.22222222222222224
+    ],
+    [
+      0.11111111111111106,
+      0.5555555555555558
+    ]
+  ],
+  "exact_joint_fractions": [
+    [
+      "1/9",
+      "2/9"
+    ],
+    [
+      "1/9",
+      "5/9"
+    ]
+  ],
+  "no_initial_record_plus": 1.1709654061874394e-31,
+  "alternate_instrument_probabilities": [
+    [
+      0.11111111111111122,
+      0.22222222222222224
+    ],
+    [
+      0.3333333333333337,
+      0.3333333333333332
+    ]
+  ],
+  "phase_only_final_valid_probability": 0.5000000000000001,
+  "periodic_closure_residual": 1.4142135623730954,
+  "constraint_residual": 1.4707348708413171e-16,
+  "constraint_first_nonzero_eigenvalue": 0.034074173710930265,
+  "final_gate_bare_energy_commutator": 4.898979485566358,
+  "previous_file_hashes": {
+    "code/verify_g1_circle_spectrum.py": "0cf6e91af89352ae4a91e7002891453258f23a79798f0711059b2132226798bf",
+    "code/verify_g2_driven.py": "83fd4d00d1f67c86e7e1cc85a57dd4f7c6ffbfa19f9b4aff2010a9af78f581e8",
+    "code/verify_g2_higgs_source.py": "f2f2b01ce80ee9028306759c112fa69a2bc2dc5b06a2ba9cab8f87a0740baf08",
+    "code/verify_g2_local_conversion.py": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+    "code/verify_g2_noisy_tag.py": "1e139b9499836b5b61aa7c66009f938e2bc7482d94da2e251efef1018ac6f4c1",
+    "code/verify_g2_probe_coupling.py": "ad3db19ff58020daa13400b20931cd343aff61c18ec3e427c30c415f87d339d4",
+    "code/verify_g2_readout_contract.py": "b66b44f540adbab472cc4b87766363a812732a1965c02f1d73a0853788aeac76",
+    "code/verify_g2_recoil_joint.py": "07ea3170a5176c4e285287af6a7eb517709d8f234c2c38abb9bfb95084b85715",
+    "code/verify_g2_resolution.py": "f986c63d000ae0066a1bf571d506e58142a6b5b13d45a235e3911ad911532bbe",
+    "code/verify_g2_scale_anchor.py": "01720b6dab7e3cf79a76a98870ed7094983879d7bbb12577d602f6b27637334d",
+    "code/verify_g2_tof_mode_audit.py": "c1368206dd3b6c090fbe21e2fffd983d65b876d86598d45767e074456e497652",
+    "code/verify_g2_xenon_feasibility.py": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+    "code/verify_gr1_relational_clock.py": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
+    "output/gr1_relational_clock.json": "f03775c6271a87016b8bfe15e768c444b3f400078ccfc5f0a5e1237563d13942"
+  },
+  "checks": [
+    {
+      "name": "wi:unitary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "wf:unitary",
+      "passed": true,
+      "value": 2.4361831858599857e-15
+    },
+    {
+      "name": "uw:unitary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "feedback:unitary",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "initial:complete",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "initial:orthogonal",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "initial:0:idempotent",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "initial:1:idempotent",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "final:complete",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "final:orthogonal",
+      "passed": true,
+      "value": 3.331311502095134e-16
+    },
+    {
+      "name": "final:0:idempotent",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "final:1:idempotent",
+      "passed": true,
+      "value": 3.3306690738754696e-16
+    },
+    {
+      "name": "initial:rank_two_second_effect",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "free:three_tick_recurrence",
+      "passed": true,
+      "value": 1.6476622377199301e-15
+    },
+    {
+      "name": "clock:GR1_phase_grid",
+      "passed": true,
+      "value": 7.115118128917456e-16
+    },
+    {
+      "name": "slice:0:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:0:history_conditioning",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:0:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "link:0:propagation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:1:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:1:history_conditioning",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:1:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "link:1:propagation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:2:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:2:history_conditioning",
+      "passed": true,
+      "value": 5.551115123125783e-17
+    },
+    {
+      "name": "slice:2:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "link:2:propagation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:3:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:3:history_conditioning",
+      "passed": true,
+      "value": 1.0007415106216802e-16
+    },
+    {
+      "name": "slice:3:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "link:3:propagation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:4:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:4:history_conditioning",
+      "passed": true,
+      "value": 8.666675708199898e-17
+    },
+    {
+      "name": "slice:4:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "link:4:propagation",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "slice:5:normalization",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "slice:5:history_conditioning",
+      "passed": true,
+      "value": 9.412373634839028e-17
+    },
+    {
+      "name": "slice:5:clock_probability",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "constraint:hermitian",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "constraint:zero_residual",
+      "passed": true,
+      "value": 1.4707348708413171e-16
+    },
+    {
+      "name": "constraint:positive",
+      "passed": true,
+      "value": 1.7051688414455275e-16
+    },
+    {
+      "name": "constraint:unique_kernel",
+      "passed": true
+    },
+    {
+      "name": "constraint:ground_state",
+      "passed": true,
+      "value": 8.881784197001252e-16
+    },
+    {
+      "name": "constraint:sum_of_squares",
+      "passed": true,
+      "value": 9.862161251842787e-16
+    },
+    {
+      "name": "joint:analytic_table",
+      "passed": true,
+      "value": 2.5324586304240974e-16
+    },
+    {
+      "name": "joint:pointer_matches_Kraus",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "joint:normalization",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "joint:initial_marginal",
+      "passed": true,
+      "value": 2.7755575615628914e-16
+    },
+    {
+      "name": "joint:conditional_plus",
+      "passed": true,
+      "value": 2.0014830212433605e-16
+    },
+    {
+      "name": "backreaction:no_initial_record",
+      "passed": true,
+      "value": 1.1709654061874394e-31
+    },
+    {
+      "name": "backreaction:recorded_plus",
+      "passed": true,
+      "value": 5.551115123125783e-17
+    },
+    {
+      "name": "backreaction:unread_initial_instrument",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "alternative:0:same_effect",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "alternative:1:same_effect",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "alternative:analytic_table",
+      "passed": true,
+      "value": 4.2001807449902774e-16
+    },
+    {
+      "name": "alternative:explicit_pointer",
+      "passed": true,
+      "value": 5.551115123125783e-17
+    },
+    {
+      "name": "alternative:plus",
+      "passed": true,
+      "value": 4.996003610813204e-16
+    },
+    {
+      "name": "count:0:mean",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "count:0:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "count:1:mean",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "count:1:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:1:initial_reduced_state",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "count:2:mean",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "count:2:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:2:initial_reduced_state",
+      "passed": true,
+      "value": 8.587604981527664e-18
+    },
+    {
+      "name": "count:3:mean",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "count:3:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:3:initial_reduced_state",
+      "passed": true,
+      "value": 1.462949026267931e-16
+    },
+    {
+      "name": "memory:3:joint_preserved",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "count:4:mean",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "count:4:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:4:initial_reduced_state",
+      "passed": true,
+      "value": 1.522475127895949e-16
+    },
+    {
+      "name": "memory:4:joint_preserved",
+      "passed": true,
+      "value": 2.242025235105681e-16
+    },
+    {
+      "name": "count:5:mean",
+      "passed": true,
+      "value": 4.440892098500626e-16
+    },
+    {
+      "name": "count:5:sharp",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:5:initial_reduced_state",
+      "passed": true,
+      "value": 1.498478472900222e-16
+    },
+    {
+      "name": "memory:5:joint_preserved",
+      "passed": true,
+      "value": 1.3877787807814457e-17
+    },
+    {
+      "name": "memory:link1:commutes_A0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link1:commutes_A1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link1:commutes_A2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link2:commutes_A0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link2:commutes_A1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link2:commutes_A2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_A0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_A1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_A2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_A0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_A1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_A2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_F0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_F1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link3:commutes_F2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_F0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_F1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "memory:link4:commutes_F2",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:0:0:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:0:1:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:0:2:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:1:0:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:1:1:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:1:2:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:2:0:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:2:1:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:2:2:repeatability",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:statistics_unchanged",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "pointer_read:trace",
+      "passed": true,
+      "value": 2.220452850296375e-16
+    },
+    {
+      "name": "alias:terminal_record_given_phase_zero",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "alias:terminal_record_given_phase_zero_epoch_one",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "cycle:blank_to_filled_orthogonal",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "cycle:periodic_closure_fails",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "cycle:reversal_restores_blank",
+      "passed": true,
+      "value": 3.3572700262957975e-16
+    },
+    {
+      "name": "energy:initial_gate_commutes_Hs",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "energy:final_gate_requires_apparatus_completion",
+      "passed": true,
+      "value": 4.898979485566358
+    },
+    {
+      "name": "nonuniform_pure:normalized",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "nonuniform_pure:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "nonuniform_pure:pointer:0:0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "nonuniform_pure:pointer:0:1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "nonuniform_pure:pointer:1:0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "nonuniform_pure:pointer:1:1",
+      "passed": true,
+      "value": 1.1107649934270853e-16
+    },
+    {
+      "name": "mixed:normalized",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "mixed:nonnegative",
+      "passed": true
+    },
+    {
+      "name": "mixed:pointer:0:0",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "mixed:pointer:0:1",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "mixed:pointer:1:0",
+      "passed": true,
+      "value": 5.76648802964689e-17
+    },
+    {
+      "name": "mixed:pointer:1:1",
+      "passed": true,
+      "value": 1.734723475976807e-18
+    },
+    {
+      "name": "preserved:code/verify_g1_circle_spectrum.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_driven.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_higgs_source.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_local_conversion.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_noisy_tag.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_probe_coupling.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_readout_contract.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_recoil_joint.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_resolution.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_scale_anchor.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_tof_mode_audit.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_g2_xenon_feasibility.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr1_relational_clock.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr1_relational_clock.json",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "total": 139,
+    "passed": 139,
+    "failed": []
+  }
+}

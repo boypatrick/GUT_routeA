@@ -1,0 +1,293 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\id}{\mathbb I}
+\newcommand{\dd}{\mathrm d}
+\title{Route G-R4: A Physical Source and the\protect\\Cross-Transition Universality Test}
+\author{Thermal electric-dipole response, without a fitted time law}
+\date{24 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We select one physical source whose coupling is known: an isotropic
+blackbody radiation bath acting on two clock transitions of the same
+$^{171}\mathrm{Yb}^+$ ion. Independently measured polarizabilities fix
+both frequency-shift signs. The leading fractional responses differ
+by a factor of about $7.25$, excluding a sole common rescaling as a
+description of this selected thermal channel. An additional exactly
+common multiplicative factor is invisible to the same-bath frequency
+ratio and is not excluded. This is a conventional electromagnetic
+control, not a derivation of emergent time or an identification of
+radiation density with the source document's $E_d$.
+\end{abstract}
+
+\section{One declared source, two independently calibrated responses}
+Retain the G-R3 lesson: a density observable does not fix a coupling
+or its sign. Here the source is thermal electromagnetic radiation,
+the clock is one ion, and the microscopic interaction is
+\begin{equation}\label{eq:interaction}
+ H_{\rm int}=-\mathbf d\cdot\mathbf E(\mathbf x_{\rm ion}).
+\end{equation}
+The two transitions share the $^2S_{1/2}(F=0)$ ground level $g$:
+E2 ends at $^2D_{3/2}(F=2)$ and E3 at $^2F_{7/2}(F=3)$.
+The labels E2/E3 describe the \emph{clock interrogation} multipoles;
+the selected thermal shift is an electric-\emph{dipole} response of
+their levels. An isotropic bath removes the tensor contribution.
+
+Use the single sign convention $\Delta\alpha_i=\alpha_{e_i}-\alpha_g$.
+The independent applied-field determinations used here are
+\begin{equation}\label{eq:inputs}
+ \Delta\alpha_2(0)=6.9(1.4)\,10^{-40},\qquad
+ \Delta\alpha_3(0)=0.888(0.016)\,10^{-40}
+ \quad [\mathrm{J\,m^2/V^2}].
+\end{equation}
+The E2 source~\cite{schneider} reports the \emph{opposite} convention,
+$\alpha_g-\alpha_{e_2}=-6.9(1.4)\,10^{-40}$; E3~\cite{huntemann}
+uses excited minus ground. These are not coefficients adjusted to
+our proposed temperature comparison, nor claimed to be the latest
+possible calibration. Their uncertainties and provenance are retained.
+
+\textbf{Scope boundary.} This realization assumes ordinary space,
+QED and weak-field atomic spectroscopy. Its $u_\gamma$ is thermal
+energy per \emph{physical volume}, not G-R3 excitation energy per
+addressed cell and not an operational definition of Chen's $E_d$.
+It does not complete G-R2's recording apparatus or replace the finite
+G-R3 stationary model. It tests a proposed physical interpretation.
+
+\newpage
+\section{Derive the thermal response and its sign}
+For a monochromatic field with peak amplitude $E_0$ and polarization
+$\boldsymbol\epsilon$, second-order perturbation theory gives
+\begin{align}
+ \delta E_a(\omega)
+ &=\frac{E_0^2}{4}\sum_b |\langle b|\mathbf d\cdot
+ \boldsymbol\epsilon|a\rangle|^2
+ \left[\frac{1}{E_a-E_b+\hbar\omega}
+       +\frac{1}{E_a-E_b-\hbar\omega}\right]\\
+ &=-\frac14\alpha_a(\omega)E_0^2
+  =-\frac12\alpha_a(\omega)\langle E^2\rangle .\label{eq:stark}
+\end{align}
+Principal values select the dispersive real shift; resonant excitation,
+linewidths and scattering are not included in this expression.
+After isotropic polarization averaging, a fixed-state scalar response is
+\begin{equation}\label{eq:alpha}
+ \alpha_a^{\rm sc}(\omega)=\frac23\sum_b
+ \frac{(E_b-E_a)\sum_{j=x,y,z}|\langle b|d_j|a\rangle|^2}
+ {(E_b-E_a)^2-(\hbar\omega)^2} .
+\end{equation}
+The sum includes the relevant substates. Upward and downward virtual
+transitions contribute with different signs. Even if each individual
+level polarizability were positive, its \emph{difference} need not be.
+Thus positivity of energy density alone cannot fix a clock-shift sign.
+Equation~\eqref{eq:inputs} supplies the independently measured sign.
+
+For the two-polarization Planck distribution, excluding vacuum energy,
+\begin{align}
+ u_\omega(T)&=\frac{\hbar\omega^3}{\pi^2c^3}
+       \frac{1}{e^{\hbar\omega/(k_BT)}-1},\qquad
+ u_\gamma=\int_0^\infty u_\omega\dd\omega=a_{\rm rad}T^4,\\
+ a_{\rm rad}&=\frac{8\pi^5k_B^4}{15h^3c^3},\qquad
+ \langle E^2\rangle=\frac{u_\gamma}{\epsilon_0}.\label{eq:planck}
+\end{align}
+The integral follows from $\int_0^\infty x^3/(e^x-1)\dd x=\pi^4/15$.
+Electric and magnetic fields each carry half the thermal energy;
+using $2u_\gamma/\epsilon_0$ for the mean squared electric field would
+double-count it. Combining the level shifts yields
+\begin{align}
+ \delta\nu_i(T)&=-\frac{1}{2h\epsilon_0}\,\mathcal P
+       \int_0^\infty\Delta\alpha_i(\omega)u_\omega(T)\dd\omega,
+       \label{eq:full}\\
+ s_i(T):=\frac{\delta\nu_i}{\nu_i^0}
+       &=\beta_i u_\gamma[1+\eta_i(T)],\qquad
+ \beta_i=-\frac{\Delta\alpha_i(0)}{2h\epsilon_0\nu_i^0}.\label{eq:beta}
+\end{align}
+Here $1+\eta_i$ is the spectral integral divided by
+$\Delta\alpha_i(0)u_\gamma$, not a fitted slowdown function.
+The leading static approximation sets $\eta_i=0$. Positive differential
+polarizabilities give negative shifts for both chosen transitions.
+This is the conventional BBR shift formula, also used in the 2024
+clock analysis~\cite{tofful}.
+
+\newpage
+\section{What equal fractional shifts would actually require}
+\textbf{Diagonal-level criterion.} Let $H_0$ have level energies $E_a$
+and let $\delta E_a$ be their secular first-order shifts. On a connected
+graph of measured transitions, every edge has the same fractional
+shift $f$ if and only if
+\begin{equation}\label{eq:lemma}
+ \delta E_a=fE_a+C\quad\hbox{on those levels},\qquad
+ \delta H_{\rm sec}=fH_0+C\id .
+\end{equation}
+\emph{Proof.} On an edge $(a,b)$, the hypothesis is
+$\delta E_a-\delta E_b=f(E_a-E_b)$, so
+$\delta E_a-fE_a=\delta E_b-fE_b$. Connectivity makes this value one
+constant $C$. Conversely that form gives the stated shift on every
+edge. This is a statement about diagonal energy shifts, not an
+operator identity for arbitrary off-diagonal perturbations or a proof
+of universality for untested transitions.
+
+For the three levels $g,e_2,e_3$, the selected leading thermal response
+would therefore require
+\begin{equation}\label{eq:necessary}
+ \frac{\Delta\alpha_2(0)}{\nu_2^0}
+ =\frac{\Delta\alpha_3(0)}{\nu_3^0},\qquad \beta_2=\beta_3 .
+\end{equation}
+The independent inputs violate this condition. In the off-resonant
+low-temperature expansion, analytic $\Delta\alpha_i(\omega)$ gives
+$s_i=\beta_i a_{\rm rad}T^4+O(T^6)$. Different leading coefficients
+cannot be made identical on a low-temperature interval by $T^6$
+terms. This asymptotic observation is not a full finite-temperature
+error bound or an exclusion of accidental equality at one temperature.
+
+Define $R(u)=\nu_3(u)/\nu_2(u)$ and $R_0=\nu_3^0/\nu_2^0$.
+Within the retained static-response model, exact quotient algebra gives
+\begin{align}
+ \frac{R(u)}{R_0}-1
+ &=\frac{(\beta_3-\beta_2)u}{1+\beta_2u},\label{eq:ratio}\\
+ \frac{R(u_h)}{R(u_l)}-1
+ &=\frac{(\beta_3-\beta_2)(u_h-u_l)}
+ {(1+\beta_2u_h)(1+\beta_3u_l)}.\label{eq:modulation}
+\end{align}
+Keeping these denominators is convenient algebra, not control of all
+higher orders in the microscopic interaction. The expressions avoid
+subtracting nearly equal floating-point numbers.
+
+\textbf{Identifiability limit.} Suppose an additional common physical
+factor exists:
+\begin{equation}\label{eq:blind}
+ \nu_i(u)=F(u)\nu_i^0[1+s_i(u)],\qquad
+ R(u)=R_0\frac{1+s_3(u)}{1+s_2(u)} .
+\end{equation}
+$F$ cancels exactly, even when it changes between setpoints. A
+nonconstant ratio rejects a \emph{sole} common factor as the explanation
+of this thermal response; it does not exclude a common factor in
+addition to it. Equal fractions would be necessary, not sufficient,
+evidence for a universal time effect. Relative phases obey
+$\dd\Phi_3/\dd\Phi_2=\nu_3/\nu_2$ in a quasistatic environment,
+without needing a preferred external time unit for that comparison.
+
+\newpage
+\section{Pinned numerical prediction and its uncertainty boundary}
+Use rounded frequencies $\nu_2^0=688.359\,\mathrm{THz}$ and
+$\nu_3^0=642.121\,\mathrm{THz}$, exact SI $h,k_B,c$, and rounded
+$\epsilon_0=8.8541878\,10^{-12}\,\mathrm{F/m}$.
+These suffice for a response-structure test, not a metrological
+absolute-frequency recommendation. At $T=300\,\mathrm K$,
+\begin{equation}
+ u_\gamma=6.12824\,10^{-6}\,\mathrm{J/m^3},\qquad
+ E_{\rm rms}=831.943\,\mathrm{V/m}.
+\end{equation}
+The static electric-dipole predictions ($\eta_2=\eta_3=0$) are:
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Transition & $\delta\nu\ [\mathrm{Hz}]$ & $s=\delta\nu/\nu^0$\\
+\midrule
+E2 & $-0.3604$ & $-5.235\,10^{-16}$\\
+E3 & $-0.04638$ & $-7.223\,10^{-17}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus $|\beta_2/\beta_3|\simeq7.25$, and
+\begin{equation}
+ \frac{R(300\,\mathrm K)}{R(0)}-1\simeq4.513\,10^{-16},\qquad
+ \frac{R(310\,\mathrm K)}{R(300\,\mathrm K)}-1\simeq6.325\,10^{-17}.
+\end{equation}
+Both shifts are downward, but E2 falls by a larger fraction, so E3/E2
+increases. The second number is a two-setpoint \emph{prediction}, not
+an observed temperature-cycle signal. Digits document reproducibility;
+the polarizability uncertainty, especially E2's, sets physical precision.
+
+The independently published E3 correction
+$\eta_3(300\,\mathrm K)=-0.0015(7)$~\cite{huntemann} changes its
+shift to about $-0.04631\,\mathrm{Hz}$. We do not supply a complete
+E2 spectral response, full covariance or apparatus radiation model,
+and do not label the table as a full finite-temperature prediction.
+
+For a transparent robustness check, allow each polarizability to vary
+over its separate $\pm3\sigma$ input interval and each dynamic factor
+over $[0.9,1.1]$. Monotonicity gives the exact box lower bound
+\begin{equation}
+ (\beta_3-\beta_2)_{\min}
+ =\frac{1}{2h\epsilon_0}
+ \left[\frac{0.9(\alpha_2-3\sigma_2)}{\nu_2^0}
+       -\frac{1.1(\alpha_3+3\sigma_3)}{\nu_3^0}\right]
+ =1.642\,10^{-11}\,\mathrm{m^3/J}>0,
+\end{equation}
+where $\alpha_i$ denotes $\Delta\alpha_i(0)$ in this bound.
+The corresponding leading ratio offset at 300 K exceeds
+$1.006\,10^{-16}$. This is a \emph{conditional deterministic stress box},
+not a statistical confidence level or a derived bound on all missing
+dynamic corrections. The unknown cross-paper correlation $\rho$ gives
+\begin{equation}
+ \sigma_{\beta_3-\beta_2}^2=\sigma_{\beta_3}^2+\sigma_{\beta_2}^2
+              -2\rho\sigma_{\beta_3}\sigma_{\beta_2},\quad
+ \sigma_{\beta_3-\beta_2}\in
+ [|\sigma_{\beta_2}-\sigma_{\beta_3}|,\sigma_{\beta_2}+\sigma_{\beta_3}].
+\end{equation}
+No independence-based significance or new combined best value is claimed.
+
+\newpage
+\section{The next physical discriminator, not another time-law fit}
+\textbf{A: test the differential prediction.} Specify a real common
+radiation environment and infer its spectrum at the ion, not merely
+a remote wall temperature. Interleave E2/E3 interrogation at two
+stable setpoints and retain the raw ratio before subtracting the
+deliberately modulated BBR response. Same-ion interleaved comparisons
+are an established protocol~\cite{filzinger}, but no new data are
+analyzed here. Published BBR-corrected clock outputs are not independent
+temperature-response observations. Returning a flat ratio after
+subtracting an assumed BBR law would not validate that same law.
+
+The temperature change may also alter tensor shifts, magnetic fields,
+trap motion, probe shifts and thermal gradients. These must be measured
+or bounded. Magnetic-dipole/quadrupole thermal contributions and
+linewidth effects are outside our selected scalar electric-dipole
+calculation; they are not asserted to vanish in a real apparatus.
+The sign and leading unequal responses are a completed source audit;
+experimental closure requires those controls, not more Gaussian scans.
+
+\textbf{B: make a common factor observable.} If the goal is specifically
+$F(u)$ in Eq.~\eqref{eq:blind}, provide an independently specified
+reference outside the changed bath, with a physical signal-comparison
+protocol and its own response model, or an independently predicted
+non-clock observable. Do not assume by definition that the reference
+is unaffected. A factor that changes all physical standards identically
+may remain a units/reparametrization freedom rather than an observable.
+
+\textbf{C: density versus spectral content.} As a separate optional test,
+compare two nonthermal radiation spectra with the same integrated
+$u_\gamma$ but different spectral weights. Equation~\eqref{eq:full}
+predicts different shifts when $\Delta\alpha_i(\omega)$ varies.
+This directly tests whether scalar density is sufficient; it requires
+spectral calibration and is not a new free per-clock parameter.
+
+\textbf{Completed deliverable.} G-R4 supplies a source, an independently
+fixed sign, the cross-transition criterion and a reproducible numerical
+prediction. The preferred theoretical revision is an interaction-derived
+\emph{spectral response}, with a universal component treated separately
+and only when observable. No additional $F(u)$ is fitted. The code's
+91 checks validate the displayed algebra and implementation, not a
+new empirical time effect. Input conventions, hashes, limitations and
+roadmap are stored alongside the TeX; earlier Route-G results are preserved.
+
+\begin{thebibliography}{9}\small
+\bibitem{schneider} T. Schneider, E. Peik and Chr. Tamm,
+\emph{Sub-Hertz Optical Frequency Comparisons between Two Trapped
+$^{171}$Yb$^+$ Ions}, Phys. Rev. Lett. \textbf{94}, 230801 (2005),
+\href{https://doi.org/10.1103/PhysRevLett.94.230801}{doi:10.1103/PhysRevLett.94.230801}.
+\bibitem{huntemann} N. Huntemann et al., \emph{Single-Ion Atomic Clock
+with $3\times10^{-18}$ Systematic Uncertainty}, Phys. Rev. Lett.
+\textbf{116}, 063001 (2016),
+\href{https://doi.org/10.1103/PhysRevLett.116.063001}{doi:10.1103/PhysRevLett.116.063001}.
+\bibitem{tofful} A. Tofful et al., \emph{$^{171}$Yb$^+$ optical clock
+with $2.2\times10^{-18}$ systematic uncertainty and absolute frequency
+measurements}, Metrologia \textbf{61}, 045001 (2024),
+\href{https://doi.org/10.1088/1681-7575/ad53cd}{doi:10.1088/1681-7575/ad53cd}.
+\bibitem{filzinger} M. Filzinger et al., \emph{Improved limits on the
+coupling of ultralight bosonic dark matter to photons from optical
+atomic clock comparisons} (2023),
+\href{https://arxiv.org/abs/2301.03433}{arXiv:2301.03433}.
+\end{thebibliography}
+\end{document}

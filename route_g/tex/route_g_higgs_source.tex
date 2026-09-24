@@ -1,0 +1,286 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\cN}{\mathcal N}
+\title{Route G2-H: A Physical Source Budget and a Decisive Yield Bound}
+\author{On-shell LHC Higgs production, not an invented dark beam}
+\date{23 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We select an existing accelerator process, Higgs production at the LHC,
+and the same conditional $X$-only portal as G2-X. Production and detection
+are tied to one coupling. A boost-independent, single-pass bound shows
+that even perfect interception of the Run-2 dark-particle budget cannot
+give a useful elastic xenon recoil sample in the retained energy window.
+This closes one physical realization without a detailed beam simulation.
+The direct Higgs source also erases the old sign preparation: opposite
+compact labels have identical timing, direction and momentum likelihoods.
+Neither result rules out the entire theory or constructs the original
+driven mode-conversion source.
+\end{abstract}
+
+\section{Actual inputs and a different source preparation}
+Keep G2-X's tree EFT and mass matching:
+\begin{equation}
+ \Delta\mathcal L=-\lambda_X H^\dagger H\sum_j|x_j|^2,\qquad
+ \mu_j=\Lambda\sqrt{25+j^2},\qquad
+ 0\leq\lambda_X\leq\min(1,50\Lambda^2/v^2).
+\end{equation}
+The scale domain remains $1\leq\Lambda\leq30$ GeV. Use $m_h=125.08$ GeV,
+$v=246$ GeV, and $\Gamma_{\rm SM}=.00410$ GeV as in G2-X. This branch
+uses the \emph{drive-off} vacuum and ordinary Higgs decay, not a hidden
+implementation of $g(t)$. It neither supplies a prepared $\Phi$ beam
+nor performs the original $\Phi X$ conversion. The driven G2 population
+and its priors remain a separate, unrealized source hypothesis.
+
+Choose one LHC interaction point's published 13 TeV Run-2 luminosity
+$\mathcal L_{\rm int}=139$ fb$^{-1}$. The ATLAS production paper quotes
+the SM expectation $\sigma_h=55.6\pm2.5$ pb and an agreeing measurement
+\cite{production}. We use the \emph{SM expectation}, consistent with the
+SM-production premise of the invisible-Higgs bound; the visible-channel
+measurement itself assumes SM branching fractions and is not an
+independent production input after changing those fractions.
+The small Higgs-mass convention difference in that production calculation
+is not resolved beyond its quoted precision.
+\begin{equation}\label{eq:budget}
+ N_h=\mathcal L_{\rm int}\sigma_h=7.7284\,10^6,\qquad
+ N_{X+\bar X}\leq2N_h B_{\rm inv}^{\max}=1.6538776\,10^6,
+ \quad B_{\rm inv}^{\max}=.107 .
+\end{equation}
+The latter is the conditional observed ATLAS allowance at 95\% CL
+\cite{invisible}, not a detected dark-particle sample. It assumes escaping
+invisible modes and SM production/visible widths. No combined confidence
+level is assigned to our subsequent theory/geometry bound.
+
+The target column is based on XENON1T's approximately 2 tonne active
+cylinder, radius 47.9 cm, height 97 cm \cite{xenon}. The detector is at
+Gran Sasso, not at the LHC; no installation, transport link or concurrent
+data collection is asserted. Perfect interception below is a deliberately
+generous mathematical envelope. Rounded geometry is sufficient to test
+an orders-of-magnitude shortfall.
+
+\section{The source spectrum and flux functional}
+For the diagonal vertex $-i\lambda_Xv$, two-body phase space gives
+\begin{align}
+ \beta_j&=\sqrt{[1-4\mu_j^2/m_h^2]_+},\qquad
+ \Gamma_j=\frac{\lambda_X^2v^2}{16\pi m_h}\beta_j,\\
+ B_j&=\frac{\Gamma_j}{\Gamma_{\rm SM}+\sum_k\Gamma_k},\qquad
+ p_j^*=\frac{m_h\beta_j}{2},\quad E_j^*=\frac{m_h}{2}.
+\end{align}
+Kinematic statements below concern open modes only.
+Each signed label is a distinct complex field and its decay creates
+one particle and one antiparticle. Their compact momenta are $j\Lambda$
+and $-j\Lambda$; a uniform Higgs conserves their sum. Do not put another
+factor of two in $\Gamma_j$ or reuse the old selected-collision weights.
+The twofold particle yield is already explicit in \eqref{eq:budget}.
+
+Let $\dd F_h(P)$ be a normalized physical Higgs four-momentum distribution,
+and let $L_P$ boost its rest frame to the laboratory. The single-particle
+production measure is
+\begin{equation}\label{eq:source}
+ \frac{\dd N_{X+\bar X}}{\dd^3p}=
+ N_h\sum_j B_j\int\dd F_h(P)\int\frac{\dd\Omega_*}{4\pi}
+ \sum_{\epsilon=\pm1}
+ \delta^3\!\left(\mathbf p-
+    [L_P(E_j^*,\epsilon p_j^*\hat{\mathbf n}_*)]_{\rm spatial}\right).
+\end{equation}
+It integrates to $2N_h\sum_jB_j$. A real LHC source is boosted;
+setting every Higgs at rest is not a physical flux prediction. Published
+marginals alone are not silently promoted to a full correlated
+source, transport and timing sample.
+
+For a point source at distance $d$, a surface element subtending
+$\dd\Omega=(\cos\theta/d^2)\dd A$ has fluence
+\begin{equation}
+ \frac{\dd\mathcal F_j}{\dd E\,\dd A}
+ =\frac{\cos\theta}{d^2}\,
+   \frac{\dd N_j}{\dd E\,\dd\Omega}\,T_j(E,\Omega),
+ \qquad 0\leq T_j\leq1,
+\end{equation}
+under straight, nonmultiplying transport. Fluence is cm$^{-2}$,
+not cm$^{-2}$s$^{-1}$. A flux additionally needs the actual
+luminosity time profile, travel time and detector live time.
+There is no reason to divide the Run-2 total by XENON's 180.7-day
+search interval or to multiply by its kg-day exposure again.
+
+More generally an incident particle with momentum $p$ on path $\gamma$
+contributes, in the dilute elastic approximation,
+\begin{equation}\label{eq:path}
+ P_{\rm acc}=\int_\gamma \dd\ell\, n_{\rm Xe}
+ \sum_A\xi_A\int_{E_0}^{E_1}\dd E_R\,
+ \frac{\dd\sigma_A}{\dd E_R}
+ \mathcal R_{\rm ROI}(E_R,\mathbf x,t),
+ \quad (E_0,E_1)=(.7,50)\ {\rm keV}.
+\end{equation}
+The released S2 matrix supplies a \emph{volume-averaged} response, not
+an arbitrary narrow beam's spatial response. Our decisive bound uses
+$\mathcal R_{\rm ROI}\leq1$ everywhere, so it does not rely on applying
+that average where invalid. The code separately checks the actual
+response fold, including moving recoil endpoints, as a unit-column
+kernel validation. No Gaussian replacement is introduced.
+
+\section{A bound independent of boosts, geometry acceptance and fine tuning}
+The retained G2-X scalar-current kernel is
+\begin{align}
+ \frac{\dd\sigma_A}{\dd E_R}
+ &=\frac{\lambda_X^2 f_N^2m_N^2 A^2m_A}
+ {8\pi p^2(m_h^2+2m_AE_R)^2}\,
+ F_A^2(\sqrt{2m_AE_R})\,
+ \mathbf1_{0<E_R<E_{\max}},\\
+ E_{\max}&=\frac{2m_Ap^2}{s},\qquad
+ s=\mu_j^2+m_A^2+2m_A\sqrt{\mu_j^2+p^2}.
+\end{align}
+Here $f_N=.308$, $m_N=.939$ GeV; natural isotope fractions and the
+Helm conventions are unchanged from G2-X. Since $F_A^2\leq1$,
+$\mathcal R\leq1$, the propagator denominator is at least $m_h^4$,
+and $s\geq(\mu_j+m_A)^2$, integration over the \emph{admitted window}
+gives
+\begin{align}
+ \sigma_{A,\rm acc}
+ &\leq \frac{\lambda_X^2 f_N^2m_N^2 A^2m_A}
+ {8\pi p^2m_h^4}\,E_{\max}\\
+ &\leq\frac{\lambda_X^2 f_N^2m_N^2 A^2m_A^2}
+ {4\pi m_h^4(\mu_j+m_A)^2}
+ \equiv U_A(\mu_j,\lambda_X). \label{eq:majorant}
+\end{align}
+Using $E_{\max}$ in this inequality extends a mathematical \emph{constant
+majorant}, not a nuclear model or calibration outside $[E_0,E_1]$.
+In particular it does not claim a total coherent cross section at
+MeV/GeV recoils. The $p=0$ accepted count is zero because $E_0>0$.
+
+With uniform xenon density inferred from the rounded active volume,
+\begin{equation}
+ \ell_{\max}=\sqrt{(2r)^2+h^2}=136.333\ {\rm cm},\qquad
+ \mathcal C_{\max}=\frac{M}{\pi r^2h}\ell_{\max}
+                  \frac{N_A}{\bar M}
+ =1.78874\,10^{24}\ {\rm nuclei\,cm^{-2}}.
+\end{equation}
+Any single straight traversal has at most this column. Thus even if
+every produced particle is assigned the maximum chord,
+\begin{equation}\label{eq:bound}
+ N_{\rm acc}\leq
+ 2N_h\mathcal C_{\max}\sum_jB_j\sum_A\xi_A U_A(\mu_j,\lambda_X).
+\end{equation}
+This is an upper bound for the retained elastic recoil component,
+not a simulated yield or a background likelihood. The inferred opacity
+is tiny, consistent with the single-scattering approximation.
+
+For a uniform bound across \emph{all} scales, any on-shell source has
+$\Lambda<m_h/10$ and $\mu_j\geq5\Lambda$. The retained vacuum rule gives
+$\lambda_X^2\leq2500\Lambda^4/v^4$. Every term is bounded using
+\begin{equation}
+ \frac{\dd}{\dd\Lambda}
+ \log\frac{\Lambda^4}{(5\Lambda+m_A)^2}
+ =\frac4\Lambda-\frac{10}{5\Lambda+m_A}>0.
+\end{equation}
+Taking the upper endpoint yields
+\begin{align}
+ \lambda_{\rm sup}&=\frac{m_h^2}{2v^2}=.1292634,\\
+ U_{\rm sup}&=\sum_A\xi_A U_A(m_h/2,\lambda_{\rm sup})
+             =1.33848\,10^{-36}\ {\rm cm}^2 .
+\end{align}
+\begin{equation}
+ \boxed{N_{\rm acc}\leq2N_h B_{\rm inv}^{\max}
+       \mathcal C_{\max}U_{\rm sup}=3.95969\,10^{-6}.}
+ \label{eq:global}
+\end{equation}
+At $\Lambda\geq m_h/10$ the on-shell source is closed. Hence the bound
+covers the full 1--30 GeV domain. This envelope does not require its
+separate factors to be simultaneously attainable: exactly at the
+threshold the actual production is zero. No search for a specially
+tuned threshold point is needed.
+
+An explicitly generous stress card, $\sigma_h=60$ pb, $f_N=.326$ and
+$\mathcal C_{\max}=2\,10^{24}$ cm$^{-2}$, gives $5.35247\,10^{-6}$.
+Even replacing $B_{\rm inv}^{\max}$ by one gives only
+$3.70064\,10^{-5}$ under the other nominal premises. These are stress
+envelopes, not confidence intervals. At least $7.58\,10^5$ times the
+nominal source exposure would be needed for three events even under
+\eqref{eq:global}'s impossible perfect interception; no extrapolated
+accelerator performance is claimed.
+
+At fixed masses, $\Gamma_j=\lambda_X^2u_j$ and
+$\sigma_{\rm acc}=\lambda_X^2s_j$, so with $x=\lambda_X^2$ a
+source-linked yield obeys
+\begin{equation}
+ N_{\rm acc}=\frac{A\lambda_X^4}{\Gamma_{\rm SM}+U\lambda_X^2},
+ \quad A,U\geq0,\qquad
+ \frac{\dd}{\dd x}\frac{x^2}{\Gamma_{\rm SM}+Ux}
+ =\frac{x(2\Gamma_{\rm SM}+Ux)}{(\Gamma_{\rm SM}+Ux)^2}\geq0 .
+\end{equation}
+Thus choosing the allowed coupling ceiling is already optimistic;
+the old independent-flux feasibility map must not be optimized by
+choosing an unrelated large source luminosity.
+
+\section{Mode information changes with the source}
+For direct tree-level Higgs production, $\mu_j=\mu_{-j}$,
+$\Gamma_j=\Gamma_{-j}$, and both scalar decays are isotropic. For any
+common Higgs momentum distribution, the conditional laboratory
+four-momentum measures in \eqref{eq:source} are identical for $j$ and
+$-j$. The uniform, diagonal probe has identical matrix elements too.
+For any measurement $z$ constructed from four-dimensional momentum,
+direction, flight time and the same scattering response,
+\begin{equation}
+ P(z\mid j=+1)=P(z\mid j=-1),\qquad
+ P(j=\pm1)=\tfrac12,\qquad I(j;z)=0,\qquad e_{\rm Bayes}=\tfrac12 .
+\end{equation}
+For example $t=d/(c\beta)$, $\beta=p/\sqrt{p^2+\mu_j^2}$, has the
+same distribution for both signs. An independent clock or better
+momentum instrument cannot distinguish equal likelihoods. This is
+a statement about this production/probe channel, not an assertion of
+an exact symmetry of the full $\Phi$-holonomy theory at all loops.
+Different $|j|$ can have different speeds and thresholds; they are
+not the same problem as resolving the sign of a degenerate pair.
+The old asymmetric collision sample's 14.057\% S2 error is therefore
+not transferred to this new source.
+
+The selected $|j|=1$ source closes already at
+$\Lambda=m_h/(2\sqrt{26})=12.2651$ GeV, before the last $j=0$ threshold.
+This exposes a misleading intuition from a coupling-only map:
+the high-scale region with less restrictive on-shell Higgs width
+also lacks this on-shell source.
+
+\section{Decision, next choices, and boundaries}
+This stage rejects the Run-2 on-shell-Higgs plus single-pass xenon
+\emph{retained-window elastic} chain as a useful event-count realization.
+The verdict does not depend on a fitted Gaussian, a chosen boost
+distribution or an achievable dark-particle focusing system.
+The verifier checks source normalization, every open signed mode,
+recoil-bin clipping using the unchanged public response, the continuous
+bound, and Lorentz/sign identities. Its checks validate implementation,
+not empirical existence of $X$.
+
+Do not now build a detailed transport simulation for this already
+insufficient chain. Two distinct next questions are more productive:
+\begin{enumerate}
+ \item Use a collider production/missing-momentum channel to avoid
+ a second tiny scattering probability. On-shell Higgs invisibility
+ constrains an inclusive width, not a resolved tower or its signs.
+ Off-shell thresholds or a tagged missing invariant mass could test
+ masses, but need a separately specified source and analysis.
+ \item If signed-mode conversion is the indispensable claim, supply
+ a genuinely mode-sensitive preparation or coupling. The original
+ $\Phi$ collision correlations could provide it only after a physical
+ $\Phi$ source is built; changing the detector resolution does not.
+\end{enumerate}
+Off-shell Higgs production, astrophysical populations, other targets,
+electronic/inelastic channels, energies outside the admitted response,
+trapping/recirculation and additional interactions are not ruled out
+by the on-shell budget. None is silently added. The GeV-scale
+classical pump remains unimplemented, and Route F remains independent.
+
+\begin{thebibliography}{9}
+\bibitem{production} ATLAS Collaboration, JHEP 05 (2023) 028,
+\href{https://arxiv.org/html/2207.08615v2}{arXiv:2207.08615v2},
+Secs.~1--2 and 5.
+\bibitem{invisible} ATLAS Collaboration, Phys. Lett. B 842 (2023) 137963,
+\href{https://arxiv.org/abs/2301.10731v2}{arXiv:2301.10731v2}.
+\bibitem{xenon} XENON Collaboration, Phys. Rev. Lett. 123 (2019) 251801,
+\href{https://arxiv.org/html/1907.11485v2}{arXiv:1907.11485v2};
+\href{https://github.com/XENON1T/s2only_data_release}{official response release},
+pinned locally in the G2-X provenance card.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,10 @@
+{
+  "input": "output/g2_xenon_feasibility.json",
+  "input_sha256": "591cc170d4fa11546f056e6dc2269496bea7787d1ccfd38aea7cd8f32070e543",
+  "source_sha256": "133e671352c17a83f291ff9a43a4755fb83e8c5c899ec3726a0d2b36df5214f2",
+  "kernel_sha256": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+  "note": "Dense analytic rendering only; no assumed beam flux, added Gaussian scan, or observed-event fit.",
+  "display_scale_points": 1015,
+  "accepted_probabilities_normalized": true,
+  "sign_shapes_identical": true
+}

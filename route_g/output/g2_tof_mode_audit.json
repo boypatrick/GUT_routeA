@@ -1,0 +1,730 @@
+{
+  "status": "Bounded mathematical measurement audit complete; no feasible instrument, new interaction, or revived Higgs-xenon chain.",
+  "card": {
+    "Lambda_GeV": 5.0,
+    "baseline_m": 10.0,
+    "energy_GeV": 62.54,
+    "signed_examples": [
+      0,
+      1,
+      -1,
+      5
+    ],
+    "target_A": 132,
+    "recoil_keV": 10.0,
+    "bounded_relative_p_error": 0.001,
+    "bounded_path_error_m": 0.001,
+    "bounded_time_error_ns": 0.02,
+    "example_scope": "Higgs at rest for illustration only, not an LHC boost distribution, flux or calibrated instrument.",
+    "action_changed": false,
+    "Gaussian_scan": false,
+    "new_source_or_sensor_claimed": false
+  },
+  "mass_examples": [
+    {
+      "j": 0,
+      "mass_GeV": 25.0,
+      "p_GeV": 57.325837106840396,
+      "beta": 0.9166267525877901,
+      "gamma_squared": 6.25800256,
+      "time_ns": 36.39039491880909,
+      "proper_time_ns": 14.546847984813356,
+      "reconstructed_mass_interval_GeV": [
+        24.873308450724842,
+        25.126568006071864
+      ]
+    },
+    {
+      "j": 1,
+      "mass_GeV": 25.495097567963924,
+      "p_GeV": 57.10736905163816,
+      "beta": 0.9131334993866032,
+      "gamma_squared": 6.017310153846154,
+      "time_ns": 36.52960880552773,
+      "proper_time_ns": 14.891684371865743,
+      "reconstructed_mass_interval_GeV": [
+        25.370215559652166,
+        25.619875398596513
+      ]
+    },
+    {
+      "j": -1,
+      "mass_GeV": 25.495097567963924,
+      "p_GeV": 57.10736905163816,
+      "beta": 0.9131334993866032,
+      "gamma_squared": 6.017310153846154,
+      "time_ns": 36.52960880552773,
+      "proper_time_ns": 14.891684371865743,
+      "reconstructed_mass_interval_GeV": [
+        25.370215559652166,
+        25.619875398596513
+      ]
+    },
+    {
+      "j": 5,
+      "mass_GeV": 35.35533905932738,
+      "p_GeV": 51.58732014749361,
+      "beta": 0.8248692060680142,
+      "gamma_squared": 3.12900128,
+      "time_ns": 40.43842256982596,
+      "proper_time_ns": 22.860795346666986,
+      "reconstructed_mass_interval_GeV": [
+        35.25423796061931,
+        35.45650160230949
+      ]
+    }
+  ],
+  "adjacent_mass_tof_separation_ns": 0.1392138867186361,
+  "exact_box_touching_time_halfwidth_ns": 0.04867214757047884,
+  "time_gate_example": {
+    "scope": "Synthetic four-atom joint source; no Gaussian or physical flux claim.",
+    "p_GeV": [
+      20.0,
+      40.0,
+      60.0,
+      80.0
+    ],
+    "emission_ns": [
+      0.0,
+      8.0,
+      -4.0,
+      0.0
+    ],
+    "production_weights": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "efficiency": [
+      0.8,
+      0.6,
+      0.7,
+      0.5
+    ],
+    "arrival_ns": [
+      54.04356018195645,
+      47.5558357429773,
+      32.24286419508396,
+      35.0093355745516
+    ],
+    "gate": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "fraction_before": 0.6100000000000001,
+    "fraction_after": 0.41000000000000003,
+    "conditional_mean_p_before_GeV": 57.37704918032786,
+    "conditional_mean_p_after_GeV": 69.7560975609756
+  },
+  "directional_reconstruction": {
+    "target_mass_GeV": 122.95722151944,
+    "recoil_keV": 10.0,
+    "theta_degrees": 89.96247023087697,
+    "denominator_GeV": 1.9660572676601065e-05,
+    "abs_dlogm_dtheta_per_radian": 2303.191481925715,
+    "angular_budget_for_one_percent_mass_rad": 4.3418013996990505e-06,
+    "angular_budget_for_one_percent_mass_arcsec": 0.8955608244722966,
+    "scope": "Local angular-error budget alone with beta and ER exact; not an attainable resolution or joint error forecast.",
+    "other_missing_inputs": [
+      "known target isotope per event or mixture likelihood",
+      "source timestamp",
+      "flight length and incoming direction",
+      "recoil direction",
+      "joint energy/timing/direction response"
+    ]
+  },
+  "recoil_algebra_checks": [
+    {
+      "mass_GeV": 5.0,
+      "p_GeV": 2.0,
+      "recoil_GeV": 5.973230643702308e-08,
+      "theta_rad": 1.5697962051862986,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 5.0,
+      "p_GeV": 2.0,
+      "recoil_GeV": 0.00597323064370231,
+      "theta_rad": 1.2490093402431075,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 5.0,
+      "p_GeV": 2.0,
+      "recoil_GeV": 0.04778584514961848,
+      "theta_rad": 0.4635990369229927,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 25.495097567963924,
+      "p_GeV": 57.10736905163816,
+      "recoil_GeV": 2.574771109766589e-05,
+      "theta_rad": 1.569745278652359,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 25.495097567963924,
+      "p_GeV": 57.10736905163816,
+      "recoil_GeV": 2.5747711097665893,
+      "theta_rad": 1.2338103300151195,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 25.495097567963924,
+      "p_GeV": 57.10736905163816,
+      "recoil_GeV": 20.598168878132714,
+      "theta_rad": 0.44403209270255545,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 40.0,
+      "p_GeV": 100.0,
+      "recoil_GeV": 5.6919007761978216e-05,
+      "theta_rad": 1.5696866156611493,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 40.0,
+      "p_GeV": 100.0,
+      "recoil_GeV": 5.691900776197823,
+      "theta_rad": 1.2165011335767977,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    },
+    {
+      "mass_GeV": 40.0,
+      "p_GeV": 100.0,
+      "recoil_GeV": 45.53520620958258,
+      "theta_rad": 0.4233259642380265,
+      "scope": "Algebra validation; not a nuclear response extrapolation."
+    }
+  ],
+  "existing_source_sign_recovery": [
+    {
+      "l": -4,
+      "m": -2,
+      "j": -1,
+      "reconstructed_j": -1.0
+    },
+    {
+      "l": -4,
+      "m": -1,
+      "j": -2,
+      "reconstructed_j": -2.0000000000000036
+    },
+    {
+      "l": -4,
+      "m": 0,
+      "j": -3,
+      "reconstructed_j": -2.9999999999999964
+    },
+    {
+      "l": -3,
+      "m": -2,
+      "j": 0,
+      "reconstructed_j": -2.3684757858670005e-15
+    },
+    {
+      "l": -3,
+      "m": -1,
+      "j": -1,
+      "reconstructed_j": -1.0000000000000018
+    },
+    {
+      "l": -3,
+      "m": 0,
+      "j": -2,
+      "reconstructed_j": -2.0000000000000036
+    },
+    {
+      "l": -2,
+      "m": -1,
+      "j": 0,
+      "reconstructed_j": 2.220446049250313e-16
+    },
+    {
+      "l": -2,
+      "m": 0,
+      "j": -1,
+      "reconstructed_j": -0.9999999999999996
+    },
+    {
+      "l": -1,
+      "m": -1,
+      "j": 1,
+      "reconstructed_j": 1.000000000000001
+    },
+    {
+      "l": -1,
+      "m": 0,
+      "j": 0,
+      "reconstructed_j": 7.549516567451064e-15
+    },
+    {
+      "l": 0,
+      "m": -1,
+      "j": 2,
+      "reconstructed_j": 1.9999999999999993
+    },
+    {
+      "l": 0,
+      "m": 0,
+      "j": 1,
+      "reconstructed_j": 0.9999999999999987
+    },
+    {
+      "l": 1,
+      "m": 0,
+      "j": 2,
+      "reconstructed_j": 2.0000000000000075
+    },
+    {
+      "l": 2,
+      "m": 0,
+      "j": 3,
+      "reconstructed_j": 3.0000000000000004
+    },
+    {
+      "l": 3,
+      "m": 0,
+      "j": 4,
+      "reconstructed_j": 3.9999999999999964
+    },
+    {
+      "l": 4,
+      "m": 0,
+      "j": 5,
+      "reconstructed_j": 5.0
+    }
+  ],
+  "interference_examples": [
+    {
+      "case": "pure_odd_is_blind",
+      "plus_rate": 1.0,
+      "minus_rate": 1.0,
+      "difference": 0.0,
+      "synthetic_amplitudes": true
+    },
+    {
+      "case": "quadrature_is_blind",
+      "plus_rate": 2.0000000000000004,
+      "minus_rate": 2.0000000000000004,
+      "difference": 0.0,
+      "synthetic_amplitudes": true
+    },
+    {
+      "case": "aligned_interferes",
+      "plus_rate": 1.44,
+      "minus_rate": 0.6400000000000001,
+      "difference": 0.7999999999999998,
+      "synthetic_amplitudes": true
+    }
+  ],
+  "retained_event_ceiling": 3.9596862781545614e-06,
+  "summary": {
+    "checks": 97,
+    "passed": 97,
+    "failed": []
+  },
+  "checks": [
+    {
+      "name": "prior:no_failed_checks",
+      "passed": true
+    },
+    {
+      "name": "prior:code_hash",
+      "passed": true
+    },
+    {
+      "name": "prior:xenon_dependency_hash",
+      "passed": true
+    },
+    {
+      "name": "j=0:mass_shell_reconstruction",
+      "passed": true
+    },
+    {
+      "name": "j=0:proper_time",
+      "passed": true
+    },
+    {
+      "name": "j=0:log_jacobian",
+      "passed": true
+    },
+    {
+      "name": "j=0:correlated_nongaussian_variance",
+      "passed": true
+    },
+    {
+      "name": "j=0:exact_box",
+      "passed": true
+    },
+    {
+      "name": "j=1:mass_shell_reconstruction",
+      "passed": true
+    },
+    {
+      "name": "j=1:proper_time",
+      "passed": true
+    },
+    {
+      "name": "j=1:log_jacobian",
+      "passed": true
+    },
+    {
+      "name": "j=1:correlated_nongaussian_variance",
+      "passed": true
+    },
+    {
+      "name": "j=1:exact_box",
+      "passed": true
+    },
+    {
+      "name": "j=-1:mass_shell_reconstruction",
+      "passed": true
+    },
+    {
+      "name": "j=-1:proper_time",
+      "passed": true
+    },
+    {
+      "name": "j=-1:log_jacobian",
+      "passed": true
+    },
+    {
+      "name": "j=-1:correlated_nongaussian_variance",
+      "passed": true
+    },
+    {
+      "name": "j=-1:exact_box",
+      "passed": true
+    },
+    {
+      "name": "j=5:mass_shell_reconstruction",
+      "passed": true
+    },
+    {
+      "name": "j=5:proper_time",
+      "passed": true
+    },
+    {
+      "name": "j=5:log_jacobian",
+      "passed": true
+    },
+    {
+      "name": "j=5:correlated_nongaussian_variance",
+      "passed": true
+    },
+    {
+      "name": "j=5:exact_box",
+      "passed": true
+    },
+    {
+      "name": "signed_pair:identical_kinematics",
+      "passed": true
+    },
+    {
+      "name": "mass_box:adjacent_modes_disjoint",
+      "passed": true
+    },
+    {
+      "name": "mass_estimator:negative_not_clipped",
+      "passed": true
+    },
+    {
+      "name": "tof_only:scale_degeneracy:0.25",
+      "passed": true
+    },
+    {
+      "name": "tof_only:scale_degeneracy:2.0",
+      "passed": true
+    },
+    {
+      "name": "tof_only:scale_degeneracy:7.0",
+      "passed": true
+    },
+    {
+      "name": "box:touching_threshold",
+      "passed": true
+    },
+    {
+      "name": "box:20ps_is_below_touching_threshold",
+      "passed": true
+    },
+    {
+      "name": "gate:source_normalized",
+      "passed": true
+    },
+    {
+      "name": "gate:acceptance_reduces_count",
+      "passed": true
+    },
+    {
+      "name": "gate:observed_momentum_changes",
+      "passed": true
+    },
+    {
+      "name": "gate:old_event_ceiling:0.0",
+      "passed": true
+    },
+    {
+      "name": "gate:old_event_ceiling:0.2",
+      "passed": true
+    },
+    {
+      "name": "gate:old_event_ceiling:0.75",
+      "passed": true
+    },
+    {
+      "name": "gate:old_event_ceiling:1.0",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=1e-06:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=1e-06:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=1e-06:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.1:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.1:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.1:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.8:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.8:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=5:fraction=0.8:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=1e-06:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=1e-06:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=1e-06:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.1:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.1:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.1:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.8:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.8:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=25.5:fraction=0.8:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=1e-06:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=1e-06:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=1e-06:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.1:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.1:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.1:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.8:physical",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.8:inverse",
+      "passed": true
+    },
+    {
+      "name": "recoil:m=40:fraction=0.8:outgoing_shell",
+      "passed": true
+    },
+    {
+      "name": "directional:angular_jacobian",
+      "passed": true
+    },
+    {
+      "name": "directional:reject_negative_denominator",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-4:m=-2",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-4:m=-1",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-4:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-3:m=-2",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-3:m=-1",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-3:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-2:m=-1",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-2:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-1:m=-1",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=-1:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=0:m=-1",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=0:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=1:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=2:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=3:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:l=4:m=0",
+      "passed": true
+    },
+    {
+      "name": "source_sign:old_channel_count",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:quarter_holonomy:-2:-1",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:quarter_holonomy:-1:0",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:quarter_holonomy:-1:1",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:quarter_holonomy:0:1",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:quarter_holonomy:1:2",
+      "passed": true
+    },
+    {
+      "name": "phi_labels:half_holonomy_counterexample",
+      "passed": true
+    },
+    {
+      "name": "interference:pure_odd_is_blind",
+      "passed": true
+    },
+    {
+      "name": "interference:blind:pure_odd_is_blind",
+      "passed": true
+    },
+    {
+      "name": "interference:quadrature_is_blind",
+      "passed": true
+    },
+    {
+      "name": "interference:blind:quadrature_is_blind",
+      "passed": true
+    },
+    {
+      "name": "interference:aligned_interferes",
+      "passed": true
+    },
+    {
+      "name": "sign:no_change_to_higgs_theorem",
+      "passed": true
+    },
+    {
+      "name": "dependencies:unchanged",
+      "passed": true
+    }
+  ],
+  "verification": {
+    "source_sha256": "c1368206dd3b6c090fbe21e2fffd983d65b876d86598d45767e074456e497652",
+    "dependencies": {
+      "local_action": "64af465720e42351390afa3f326d67f45136d2f2a76293dfd23137923c7b7aea",
+      "xenon_kernel": "0eae945f426e34d07896e574ff07c5b0d086a57c12afdaadd9970b11f1b7f4fd",
+      "higgs_source_code": "f2f2b01ce80ee9028306759c112fa69a2bc2dc5b06a2ba9cab8f87a0740baf08",
+      "higgs_source_result": "1964b02c92a55a5f87de3b871fa49e43bcbdef32748781f399fd6e0b0eeba2db"
+    }
+  }
+}
