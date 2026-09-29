@@ -1,0 +1,226 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\one}{\mathbf 1}
+\title{Route G-R5: Acquired Clock Data and\protect\\an External-Reference Observation Model}
+\author{An empirical eligibility boundary and two measurable contrasts}
+\date{24 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Public E2/E3 comparison data were acquired and audited, including
+2,324,201 records from the 2025 ROCIT release. They do not include the
+paired bath-state, independent radiometry and correction ledger needed
+for the requested two-temperature test. That empirical task remains
+open. Separately, we specify a second Yb$^+$ E3 clock outside the changed
+environment and derive both differential and common target-reference
+observables. A thermal-response-cancelling composite is useful, but
+reference drift and common instrumental shifts remain exactly degenerate
+with an unexplained common signal unless independently constrained.
+No universal time law is fitted and no new experimental effect is claimed.
+\end{abstract}
+
+\section{What the acquired data can and cannot establish}
+Two primary releases were obtained with checksums and source attribution:
+\begin{itemize}
+\item PTB's 2021 release~\cite{ptb} contains 11 published E3/E2 ratio
+points, their times and uncertainty components. Its ratio column is
+an \emph{absolute ratio offset}, not a fractional offset. The associated
+campaign used two clock systems. No paired thermal calibration is supplied.
+\item ROCIT's September 2025 release~\cite{rocit} contains 34 selected
+same-package E2/E3 comparator files from the 2022 campaign: 2,324,201
+rows, all marked valid, no nonfinite values or duplicate timestamps.
+Its columns are time, comparator output, validity and two systematic
+uncertainties. It supplies neither two-temperature assignments nor
+independent ion-site radiometry and a per-run BBR correction ledger.
+\end{itemize}
+Original release bytes are not the same as uncorrected atom/servo data.
+The complete small PTB archive and one exact ROCIT day plus metadata
+are preserved; every selected ROCIT member is hashed in the full audit.
+No thermal slope is extracted from these unsuitable records. This is
+a limitation of the audited releases, not a claim that qualifying data
+exist nowhere. The later public ROCIT deposit also supersedes the
+paper's earlier generic ``on request'' access statement~\cite{network}.
+
+The ROCIT format~\cite{format} defines
+$\Delta_{A\to B}=(\widehat\nu_B-\rho^0_{BA}\widehat\nu_A)/s_B$.
+For this pair $A$ is E3 and $B$ E2, opposite to our preferred E3/E2
+ratio. Exact conversion requires its reference convention, not merely
+negating a column. Valid records need not be independent samples.
+
+\newpage
+\section{Specify the outside reference, including its response}
+Let $S$ be one target Yb$^+$ ion, interleaved on E2 and E3 inside a
+separately controlled radiation enclosure. Let $R$ be a second,
+independent Yb$^+$ E3 clock in a separate monitored enclosure outside
+the changed bath. Compare both target outputs to $R$ using a frequency
+comb and phase-stabilized optical paths. This is a specified arrangement,
+not hardware constructed here. Existing separate-clock and external-clock
+comparisons support the architecture~\cite{network,steinel}, not our
+proposed thermal experiment's performance.
+
+Retain G-R4's ordinary electric-dipole response at \emph{both} sites:
+\begin{equation}\label{eq:b}
+ b_i^X=-\frac{1}{2h\epsilon_0\nu_i^0}\,\mathcal P
+ \int_0^\infty\Delta\alpha_i(\omega)u_\omega^X\dd\omega,
+ \qquad B_i^X=\log(1+b_i^X),\quad X=S,R.
+\end{equation}
+For ideal thermal radiation $u^X=a_{\rm rad}T_X^4$; at leading static
+order $b_i^X=\beta_i u^X$. A real multi-surface bath generally needs its
+spectrum and geometry, not one unexamined wall temperature. Motional
+sideband thermometry does not measure radiation temperature.
+
+Allow a candidate common local factor $F_X>0$ without choosing a law
+for it. Write the measured logarithmic ratio as
+\begin{align}
+ q_i&=\log\left(\frac{\nu_i^S/\nu_3^R}{\nu_i^0/\nu_3^0}\right),\\
+ q_i&=\chi_S-\chi_R+B_i^S-B_3^R
+       +g_{SR}+\ell_i+A_i^S-A_3^R+n_i,\qquad \chi_X=\log F_X.
+       \label{eq:observation}
+\end{align}
+$A$ denotes the remaining ordinary \emph{log-frequency} corrections,
+$\ell_i$ the path/comb contribution and $n_i$ measurement noise.
+Using logs makes multiplicative factors additive; at first order $A$
+is the usual fractional nuisance shift. No reference term is set to
+zero simply because the reference is outside the enclosure. In a
+weak-field, slow-motion convention one ordinary contribution is
+\begin{equation}
+ g_{SR}=\frac{\Phi_S-\Phi_R}{c^2}
+       -\frac{v_S^2-v_R^2}{2c^2},
+\end{equation}
+with additional transfer effects assigned to $\ell_i$ to avoid double
+counting. Fixed heights remove a static offset, not an unknown changing
+one. Conventional spacetime is assumed; no identification with Chen's
+$E_d$ or completion of the finite G-R1--G-R3 constraints is implied.
+
+For hot-minus-cold contrast $\Delta$, independently correcting the
+ordinary terms yields
+\begin{equation}\label{eq:residual}
+ z_i=\Delta q_i-\Delta B_i^S+\Delta B_3^R
+       -\Delta g_{SR}-\Delta\ell_i-\Delta A_i^S+\Delta A_3^R
+     =\Delta(\chi_S-\chi_R)+\Delta n_i .
+\end{equation}
+Real measurements average with sensitivity functions $W_i(t)$.
+Reference noise cancels in $q_3-q_2$ only for matched effective windows:
+otherwise it leaves $-\int(W_3-W_2)q_R(t)\dd t$. Interleaving alone
+does not guarantee cancellation; dead times and servo response matter.
+
+\newpage
+\section{Two contrasts and an exact identifiability obstruction}
+Suppress already evaluated ordinary terms for clarity. To first order,
+the two external comparisons have the structure
+\begin{equation}\label{eq:design}
+ \begin{pmatrix}y_2\\y_3\end{pmatrix}
+ =\begin{pmatrix}1&\beta_2\\1&\beta_3\end{pmatrix}
+   \begin{pmatrix}\chi\\\Delta u_S\end{pmatrix}
+   -\beta_3\Delta u_R\one+c\one+\boldsymbol\epsilon,
+ \qquad \chi=\Delta(\chi_S-\chi_R).
+\end{equation}
+Here $c$ represents an unevaluated common path, gravity or reference
+drift term. The differential observable is
+\begin{equation}
+ D=y_3-y_2=(\beta_3-\beta_2)\Delta u_S+\epsilon_3-\epsilon_2.
+\end{equation}
+Both $\chi$ and a shared reference term cancel. The composite
+\begin{align}
+ C&=w_2y_2+w_3y_3,\\
+ w_2&=\frac{\beta_3}{\beta_3-\beta_2},\qquad
+ w_3=-\frac{\beta_2}{\beta_3-\beta_2},\qquad
+ w_2+w_3=1,\quad w_2\beta_2+w_3\beta_3=0
+\end{align}
+instead gives $C=\chi-\beta_3\Delta u_R+c+w^T\boldsymbol\epsilon$.
+With G-R4's independently pinned inputs,
+\begin{equation}
+ (w_2,w_3)\simeq(-0.16004,1.16004).
+\end{equation}
+This cancels the leading target $T^4$ response, not all dynamic or
+other shifts. Negative weighting can increase noise. The design matrix
+has determinant $\beta_3-\beta_2\ne0$: with reference effects controlled,
+two external channels can distinguish a common change from the selected
+thermal response. But solving two channels for two unknowns leaves
+\emph{no residual test}. Independent radiometry is needed to test the
+thermal law, rather than infer the bath from that law and call it verified.
+
+\textbf{Obstruction.} If $c$ is unconstrained, the transformation
+$(\chi,c)\mapsto(\chi+\lambda,c-\lambda)$ leaves all observations
+unchanged. Thus even this external comparison measures an unexplained
+common residual, not uniquely a time effect. A factor common to both
+environments cancels as before. A third ratio constructed from the same
+two channels supplies only a closure identity, not another independent
+equation; an independently measured link can diagnose instrumental closure.
+
+For independently calibrated corrections in Eq.~\eqref{eq:residual},
+the generalized least-squares common estimate and its variance are
+\begin{equation}
+ \widehat\chi=\frac{\one^TV^{-1}z}{\one^TV^{-1}\one},\qquad
+ \operatorname{Var}\widehat\chi=(\one^TV^{-1}\one)^{-1}.
+\end{equation}
+This is an estimator specification, not a fit performed here. Shared
+reference error contributes $\sigma_R^2\one\one^T$ to $V$; it cancels
+from the differential variance but remains a floor in the common estimate.
+Correction covariance and sensitivity to the same calibration inputs
+must also be propagated, rather than counted as independent noise.
+
+\newpage
+\section{Numerical control requirements and the empirical handoff}
+For the illustrative target change $300\to310\,\mathrm K$, G-R4's
+static coefficients predict
+\begin{equation}
+ (\Delta b_2^S,\Delta b_3^S)\simeq
+ (-7.337\,10^{-17},-1.012\,10^{-17}),\qquad
+ D\simeq6.325\,10^{-17}.
+\end{equation}
+These are calculations, not observations. With fixed nominal composite
+weights, the uncertainty from independently calibrated polarizabilities is
+\begin{equation}
+ \delta C=\Delta u_S(w_2\delta\beta_2+w_3\delta\beta_3),\quad
+ \sigma_C\in[|a_2-a_3|,a_2+a_3],\quad
+ a_i=|w_i|\sigma_{\beta_i}|\Delta u_S|.
+\end{equation}
+Unknown correlation gives $\sigma_C$ between $2.17\,10^{-18}$ and
+$2.59\,10^{-18}$ from these inputs alone. This is not a confidence
+interval or an achieved total uncertainty. The retained historical
+calibrations do not support a sub-$10^{-18}$ common-mode claim.
+For scale, a reference bath change $300\to300.1\,\mathrm K$ contributes
+about $-9.64\,10^{-20}$ to its E3 frequency, while a $1\,\mathrm{cm}$
+height change gives $g\Delta h/c^2\simeq1.09\,10^{-18}$. These are
+conditional sensitivities, not asserted apparatus fluctuations.
+
+Use settled low--high--high--low blocks with matched effective centers
+$t=(-3,-1,1,3)\tau$ and contrast weights $(-1,1,1,-1)/2$.
+Then $\sum w=\sum wt=0$ and the hot-minus-cold response has unit gain.
+However $\sum wt^2=-8\tau^2$: nonlinear drift survives, as does
+heater-correlated bias. Reversed ordering, monitored reference
+cross-talk and a dummy-heater/electrical-pickup control are useful
+discriminators, not proofs of cancellation. No particular dwell time
+or hardware precision is asserted without the thermal/servo response.
+
+The next empirical input must supply uncorrected comparator/servo
+records, bath-state assignments, independent radiation calibration at
+both sites, every applied correction and its covariance, synchronized
+validity/averaging windows, and reference/path/gravity controls. The
+machine-readable contract is \texttt{EXTERNAL\_REFERENCE\_CARD.json}.
+No researcher has been contacted or new experiment performed. Obtaining
+those records remains open; the acquisition audit and reference-model
+derivation are bounded-done. The 46 new checks verify algebra and source
+eligibility, not evidence for a common time effect.
+
+\begin{thebibliography}{9}\small
+\bibitem{ptb} R. Lange et al., PTB comparison data (2021),
+\href{https://doi.org/10.7795/720.20211028}{doi:10.7795/720.20211028};
+associated paper: \href{https://doi.org/10.1103/PhysRevLett.126.011102}{Phys. Rev. Lett. 126, 011102}.
+\bibitem{rocit} T. Lindvall et al., ROCIT campaign dataset (2025),
+\href{https://doi.org/10.5281/zenodo.17107693}{doi:10.5281/zenodo.17107693}.
+\bibitem{network} T. Lindvall et al., \emph{Coordinated international
+comparisons between optical clocks connected via fiber and satellite
+links}, \href{https://doi.org/10.1364/OPTICA.561754}{Optica 12, 843 (2025)}.
+\bibitem{format} INRIM, \emph{Optical link data format},
+\href{https://github.com/INRIM/optical-link-data-format}{source specification}, accessed 24 September 2026.
+\bibitem{steinel} M. Steinel et al., \emph{Evaluation of a $^{88}$Sr$^+$
+Optical Clock with a Direct Measurement of the Blackbody Radiation
+Shift and Determination of the Clock Frequency},
+\href{https://doi.org/10.1103/PhysRevLett.131.083002}{Phys. Rev. Lett. 131, 083002 (2023)}.
+\end{thebibliography}
+\end{document}

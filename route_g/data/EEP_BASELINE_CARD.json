@@ -1,0 +1,55 @@
+{
+  "stage": "G-R6",
+  "date": "2026-09-29",
+  "status": "declared two-factor theory baseline; no new experiment or fit",
+  "preserved_sha256": {
+    "data/BBR_CLOCK_INPUTS.json": "dd5aacde37c2e86ba0bd32f9e53539970999e2aae017856a0fc88c579b3b7a65",
+    "code/verify_gr4_bbr_universality.py": "9b3b773b95372c2db2f8e0620eda76654a5810506552c23aa6b77287353ee733",
+    "code/verify_gr5_external_reference.py": "3557142e6f6229478a1f1e47df2d5d1a820bfb5b2f9b7633d50b988572c7831e"
+  },
+  "target": "same 171Yb+ ion with interleaved E2/E3, in one independently thermostatted enclosure, compared only after settling at each height",
+  "reference": "G-R5 independent Yb+ E3 reference held at fixed site; its full thermal, systematic and link response remains monitored",
+  "geometry": "static metric ds^2=-N(x)^2 c^2 dt^2+h_ab dx^a dx^b; same ideal transfer convention at both settings",
+  "sign": "q=log[(received target frequency / reference frequency)/(nu_i0/nu_30)]; increasing target height gives positive gravity contrast",
+  "factorial_order": ["T0_Phi0", "T1_Phi0", "T0_Phi1", "T1_Phi1"],
+  "illustrative_inputs": {
+    "local_radiation_temperatures_K": [300.0, 310.0],
+    "target_height_settings_m": [0.0, 1.0],
+    "g_scale_m_s2": 9.80665,
+    "g_status": "conventional standard-gravity scale, NOT a measured laboratory gravity",
+    "gamma_model": "DeltaPhi/c^2 = g_scale*Delta_h/c^2, only a local weak-field illustration"
+  },
+  "published_independent_potential_anchor": {
+    "source_doi": "10.1103/PhysRevApplied.21.L061001",
+    "source_url": "https://arxiv.org/abs/2309.14953v3",
+    "authors": "J. Grotti et al.",
+    "publication_year": 2024,
+    "potential_difference_magnitude_m2_s2": 3915.88,
+    "published_uncertainty_m2_s2": 0.30,
+    "method": "independent geodetic determination, NOT the clock-inferred 3918.1(2.6) m^2/s^2",
+    "actual_clocks": "87Sr; not the proposed 171Yb+ E2/E3 thermal experiment",
+    "scope": "Use only the measured potential magnitude as an external redshift scale. Define positive sign by comparing the higher-lapse site to the lower. Do not transplant source clock performance or treat its measurements as our four-setting data."
+  },
+  "contrasts": {
+    "temperature": [-0.5, 0.5, -0.5, 0.5],
+    "potential": [-0.5, -0.5, 0.5, 0.5],
+    "interaction": [1.0, -1.0, -1.0, 1.0]
+  },
+  "independent_calibration_required": [
+    "local radiation spectrum/thermometry, emissivity, gradients and view factors at every plateau; not inferred from the clock shift under test",
+    "potential difference and covariance from independent leveling/gravimetry/geodesy at ion positions; not derived from these clock ratios",
+    "declare gravitational-potential sign, rotation and velocity convention; do not count centrifugal/kinematic terms twice",
+    "fixed reference site and radiation calibration, matched E2/E3 sensitivity windows and optical-transfer diagnostics",
+    "runwise reversible correction ledger, height/temperature labels, settling intervals and full correlated uncertainty"
+  ],
+  "protocol": {
+    "suggested_cell_order": [0, 1, 3, 2, 2, 3, 1, 0],
+    "timing_condition": "paired plateau centers symmetric with matched weighting; ideal equal spacing cancels linear drift but not quadratic drift",
+    "controls": ["return-to-start comparison", "reverse thermal and height orders", "monitor trap/probe/magnetic/geometry changes after transport", "repeat complete blocks to estimate variance; do not call four means independent raw data"]
+  },
+  "thermal_equilibrium_boundary": "Local setpoints may be independently imposed with thermostats. Do not simultaneously assume one global passive equilibrium bath: that instead obeys T_local*N=constant in a static spacetime.",
+  "nuisance_boundary": "Unknown height-correlated common reference/link bias is exactly degenerate with a common anomalous redshift. Two transitions can test differential response only after differential controls.",
+  "empirical_data_ready": false,
+  "new_time_law": false,
+  "not_claimed": ["verification of all EEP components", "quantum off-diagonal mass-operator test", "quantum gravity", "derivation of Chen Ed or emergent spacetime", "hardware performance or new exclusion limit"]
+}

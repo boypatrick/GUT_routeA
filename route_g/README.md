@@ -6,7 +6,121 @@ Route G 回到「同一內部結構，產生不同能譜與可見性」的構想
 當成額外時空，也不把轉換座標誤認為轉換粒子質量。
 Route F 的四維 P54 模型與先前計算保留不動；Route G 尚未導出或取代它。
 
-## Current mainline — G-R4 physical source and universality (2026-09-24)
+## Current mainline — G-R7 clock-path quantum kernel (2026-09-29)
+
+**Conservative kernel bounded-done; physical interferometer remains OPEN.**
+The same G-R4/G-R6 thermal gaps and proper-time action now generate
+frequency, relative internal phase and ideal interference visibility.
+One atom has a shared-ground three-level clock, not a tensor product
+of two independent E2/E3 qubits. Separate two-level preparations are
+also calculated. No new time-rate function is fitted.
+
+For a balanced pure two-level clock, kappa=exp(-i delta/2) cos(delta/2).
+It gives the internal fringe-phase contribution and |kappa| visibility.
+The full scalar path/ground/guide/laser phase is not determined by the
+existing differential polarizabilities and remains explicit.
+The static E2/E3 weighted combination of normalized, unwrapped phases
+rejects the thermal integral and recovers the proper-time difference,
+subject to matched trajectories and phase/calibration controls.
+
+**Key limitation:** an initial energy-dephased mixture can have the same
+path visibility as a pure clock but no path-clock entanglement. An exact
+counterexample and a joint witness are derived and matrix-checked.
+Common final clock operations cannot change the unconditioned path
+signal; clock Ramsey decay is not automatically a multiplicative
+path-visibility decay. Actual radiation and guide noise are not fitted.
+
+The illustrative 1 m/10 ms hold gives gravity-only phases 0.004719 rad
+(E2) and 0.004402 rad (E3), but ideal visibility losses only 2.78e-6 and
+2.42e-6. These are hold contributions, not a complete interferometer.
+E2's tens-of-ms lifetime prevents blindly extending the unperturbed
+model to its seconds-long ideal visibility zero.
+Prioritize state-resolved differential phase and specified closed
+paths/pulses; use joint measurements for an entanglement claim.
+
+[Derivation PDF](output/pdf/route_g_clock_path.pdf) ·
+[TeX](tex/route_g_clock_path.tex) ·
+[kernel/control card](data/CLOCK_PATH_CARD.json) ·
+[numerical report](output/gr7_clock_path.md).
+All 66 new checks and all 4895 checks across the 19 Route-G verifiers
+pass. The five-page PDF was compiled locally and visually reviewed on
+every page. These are implementation checks, not empirical evidence.
+G-R5/G-R6 data gaps and all Route-F gates remain unchanged.
+
+## G-R6 equivalence-principle baseline (2026-09-29)
+
+**Theory baseline bounded-done; empirical validation remains OPEN.**
+The existing E2/E3 thermal model, polarizabilities and G-R5 outside E3
+reference are preserved. Add an independently calibrated potential
+contrast, with two local temperatures at each of two potential settings.
+Temperature and potential are not inferred from the clock law under test.
+
+The static metric supplies a common lapse ratio; local thermal shifts
+remain transition-dependent. Their logarithms separate. Three factorial
+contrasts isolate temperature, potential and a separability check.
+For the illustrative 300/310 K and 1 m card, both clock channels predict
+a +1.091e-16 height response, while thermal changes remain -7.337e-17
+(E2) and -1.012e-17 (E3). The conventional gravity scale is NOT a measured
+laboratory potential. No observations, anomaly fit or experimental bound
+have been manufactured.
+
+A separate source-backed anchor is Grotti et al.'s independently
+geodetic potential magnitude 3915.88(0.30) m^2/s^2: the EEP redshift
+prediction is 4.3570e-14 with 3.34e-18 propagated potential uncertainty.
+Their actual clocks were Sr; this does not supply our E2/E3 thermal data
+or transfer their apparatus performance.
+
+**Useful change in the blocker:** at matched local radiation states,
+even uncertain fixed BBR shifts cancel in the height contrast. The old
+polarizability error therefore need not set that test's floor. Radiation
+mismatch, transport-induced changes, reference and optical-link biases
+still require independent control. Unknown common height-locked bias
+remains exactly degenerate with a common anomalous redshift.
+
+[Four-page derivation](output/pdf/route_g_equivalence_baseline.pdf) ·
+[TeX](tex/route_g_equivalence_baseline.tex) ·
+[input/acquisition card](data/EEP_BASELINE_CARD.json) ·
+[numerical report](output/gr6_equivalence_baseline.md).
+The 49 new checks test algebra and preservation, not experimental EEP.
+At the G-R6 checkpoint all 18 verifiers passed, 4827/4827 checks in total.
+The four-page PDF
+was compiled locally and visually reviewed on every page.
+This is not a quantum off-diagonal test, a new Ed law, or a derivation
+of spacetime. The G-R5 missing records remain missing; no lab contact
+or Route-F promotion is implied.
+
+## G-R5 data audit and outside reference (2026-09-24)
+
+Two primary data releases have now been obtained and audited. ROCIT's
+2025 release includes2,324,201 E2/E3 comparator records across34 files;
+the older PTB2021 release has11 published ratio points. These are real
+comparison data, but they lack the paired bath states, independent
+radiometry and correction ledger needed for the requested thermal test.
+**The two-temperature empirical test remains open. No thermal fit was run.**
+
+The outside reference is specified: a second independent Yb+ E3 clock,
+in a separately monitored enclosure, linked to both target transitions.
+Its own BBR response, drift and optical/gravity terms are modeled rather
+than assumed absent. A leading-order combination of E2/E3 with weights
+(-0.16004,1.16004) cancels the target's T^4 term and retains a common
+target-reference change. That residual is still degenerate with unknown
+common instrumental/reference bias; it is not uniquely a time effect.
+
+The current polarizability uncertainties alone give a2.17--2.59e-18
+composite error scale for300->310 K, so no sub-1e-18 claim is supported.
+Independent radiometry and correction records are the next useful inputs,
+not more fitting. No researcher has been contacted or apparatus built.
+
+[Four-page derivation](output/pdf/route_g_external_reference.pdf) ·
+[TeX](tex/route_g_external_reference.tex) ·
+[source audit](data/clock_comparison_audit/PROVENANCE.md) ·
+[reference/data contract](data/EXTERNAL_REFERENCE_CARD.json) ·
+[numerical report](output/gr5_external_reference.md).
+New checks46/46; full regression4776/4776. PDF compiled twice and each
+page visually checked. Source audit and reference model are bounded-done;
+the missing experimental records are not falsely marked complete.
+
+## G-R4 foundation — physical source and universality (2026-09-24)
 
 G-R4 is **bounded-done as a physical-source audit**. Select one isotropic
 blackbody bath and the E2/E3 clock transitions of the same 171Yb+ ion.
@@ -37,10 +151,8 @@ Run: python3 route_g/code/verify_gr4_bbr_universality.py.
 New checks91/91; complete Route-G regression4728/4728.
 PDF compiled twice and visually reviewed page by page.
 
-Next useful work is raw interleaved E2/E3 data plus local radiation
-calibration, not more time-law fitting. To study a common factor itself,
-first specify an independent reference or non-clock observable; ratio
-data alone cannot identify it. No Route-F gate is changed.
+G-R5 above now specifies the outside reference and audits public data.
+Paired raw thermal/clock records remain missing. No Route-F gate changes.
 
 ## G-R3 foundation — density and relative clocks (2026-09-24)
 

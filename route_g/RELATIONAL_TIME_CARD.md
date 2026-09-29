@@ -117,9 +117,33 @@ Its radiation density assumes physical space and is not the previous Ed.
 An additional exactly common rate factor cancels from the ratio and is
 unidentifiable with that observable alone. See the
 [G-R4 derivation](tex/route_g_bbr_universality.tex).
-Next requires raw clock/radiometry data, or an independently specified
-reference/non-clock observable for a common-factor test. Do not turn
-these bounded controls into proof or universal refutation of Chen's law.
+G-R5 now specifies an outside Yb+ E3 reference with its own response
+and transfer/gravity terms retained. Public PTB/ROCIT comparison records
+were acquired and audited; the required paired radiation states,
+independent calibration and per-run correction ledger are not present
+in the audited releases. The empirical test therefore remains open.
+See the [G-R5 derivation](tex/route_g_external_reference.tex) and
+[missing-record checklist](data/clock_comparison_audit/DATA_REQUEST.md).
+A thermal-canceling composite still retains common reference/link biases;
+these must be constrained before interpreting a relative common residual.
+Do not turn these bounded controls into proof or universal refutation of
+Chen's law. No new time law is fitted or laboratory contact sent.
+
+G-R6 (2026-09-29) supplies a [metric EEP baseline](tex/route_g_equivalence_baseline.tex)
+with independent temperature and potential controls. It assumes an
+ordinary static metric and proper-time clock evolution for comparison;
+it does not derive that metric from G-R1--G-R3 or from the source paper.
+Matched-temperature redshift and mixed contrasts are now defined,
+but the empirical gate remains open. No quantum off-diagonal test is
+claimed by comparing two transition frequencies.
+
+G-R7 (2026-09-29) supplies the [clock-path quantum kernel](tex/route_g_clock_path.tex)
+in the same assumed metric and conservative thermal response. Phase
+derivatives and clock-state overlaps give linked frequency, phase and
+ideal visibility predictions. A pure/mixed counterexample shows that
+visibility alone is not an entanglement witness; joint correlations
+are needed. This does not derive the background from relational
+G-R1--G-R3, complete their recording apparatus, or establish quantum gravity.
 
 Emergent space, a Lorentzian metric, universal proper time, gravity,
 mass generation and superluminal/negative-mass claims remain unproved.

@@ -1,0 +1,394 @@
+{
+  "stage": "G-R7",
+  "status": "conservative-kernel-bounded-done; full-interferometer-open",
+  "measurement_claim": false,
+  "physical_total_fringe_phase_available": false,
+  "physical_open_system_visibility_available": false,
+  "card_sha256": "f83c7809181a89a80cc3dea005fd8478c999edcb598f47248e8a8650554c38a6",
+  "hold_s": 0.01,
+  "illustrative_gamma": 1.0911369672198217e-16,
+  "physical_hold_cases": [
+    {
+      "case": "identical",
+      "differential_frequency_Hz": [
+        0.0,
+        0.0
+      ],
+      "relative_clock_phase_rad": [
+        0.0,
+        0.0
+      ],
+      "ideal_two_level_visibility": [
+        1.0,
+        1.0
+      ],
+      "ideal_two_level_visibility_loss": [
+        0.0,
+        0.0
+      ],
+      "ideal_pure_state_negativity": [
+        0.0,
+        0.0
+      ],
+      "reconstructed_proper_time_difference_s": 0.0,
+      "ideal_equal_qutrit_visibility": 1.0
+    },
+    {
+      "case": "gravity_only",
+      "differential_frequency_Hz": [
+        0.07510939516184688,
+        0.0700641960528159
+      ],
+      "relative_clock_phase_rad": [
+        0.004719262481120618,
+        0.004402263271984028
+      ],
+      "ideal_two_level_visibility": [
+        0.9999972160714959,
+        0.9999975775107386
+      ],
+      "ideal_two_level_visibility_loss": [
+        2.7839285040034802e-06,
+        2.4224892614061044e-06
+      ],
+      "ideal_pure_state_negativity": [
+        0.001179814525439173,
+        0.001100564929292905
+      ],
+      "reconstructed_proper_time_difference_s": 1.0911369672198214e-18,
+      "ideal_equal_qutrit_visibility": 0.9999976804541906
+    },
+    {
+      "case": "thermal_only",
+      "differential_frequency_Hz": [
+        -0.05050583662586805,
+        -0.006499881583155193
+      ],
+      "relative_clock_phase_rad": [
+        -0.0031733753061446673,
+        -0.00040839960461687896
+      ],
+      "ideal_two_level_visibility": [
+        0.9999987412114099,
+        0.9999999791512204
+      ],
+      "ideal_two_level_visibility_loss": [
+        1.258788590114554e-06,
+        2.084877955895761e-08
+      ],
+      "ideal_pure_state_negativity": [
+        0.0007933434936520866,
+        0.00010209990044466696
+      ],
+      "reconstructed_proper_time_difference_s": 2.407412430484045e-35,
+      "ideal_equal_qutrit_visibility": 0.9999990065451522
+    },
+    {
+      "case": "gravity_and_thermal",
+      "differential_frequency_Hz": [
+        0.02460355853597883,
+        0.06356431446966071
+      ],
+      "relative_clock_phase_rad": [
+        0.0015458871749759507,
+        0.00399386366736715
+      ],
+      "ideal_two_level_visibility": [
+        0.9999997012791202,
+        0.9999980061322884
+      ],
+      "ideal_two_level_visibility_loss": [
+        2.9872087984702885e-07,
+        1.9938677116043283e-06
+      ],
+      "ideal_pure_state_negativity": [
+        0.00038647175526158883,
+        0.000998465253238715
+      ],
+      "reconstructed_proper_time_difference_s": 1.0911369672198218e-18,
+      "ideal_equal_qutrit_visibility": 0.9999986481502869
+    }
+  ],
+  "gravity_first_visibility_zero_hold_s": [
+    6.65695681509074,
+    7.136312527201329
+  ],
+  "pure_mixed_counterexample": {
+    "path_visibility": 0,
+    "pure_negativity": 0.5,
+    "mixed_negativity": 0,
+    "pure_witness": -0.4999999999999999,
+    "mixed_witness": 0.0
+  },
+  "summary": {
+    "checks": 66,
+    "passed": 66,
+    "failed": []
+  },
+  "checks": [
+    {
+      "name": "preserved:data/BBR_CLOCK_INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/EEP_BASELINE_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr6_equivalence_baseline.py",
+      "passed": true
+    },
+    {
+      "name": "scope:no_measurement_or_new_law",
+      "passed": true
+    },
+    {
+      "name": "overlap:0.0:analytic",
+      "passed": true
+    },
+    {
+      "name": "partial_trace:0.0",
+      "passed": true
+    },
+    {
+      "name": "entanglement:0.0:negativity",
+      "passed": true
+    },
+    {
+      "name": "probability:0.0:trace",
+      "passed": true
+    },
+    {
+      "name": "fringe:0.0:projection",
+      "passed": true
+    },
+    {
+      "name": "overlap:0.37:analytic",
+      "passed": true
+    },
+    {
+      "name": "partial_trace:0.37",
+      "passed": true
+    },
+    {
+      "name": "entanglement:0.37:negativity",
+      "passed": true
+    },
+    {
+      "name": "probability:0.37:trace",
+      "passed": true
+    },
+    {
+      "name": "fringe:0.37:projection",
+      "passed": true
+    },
+    {
+      "name": "overlap:3.141592653589793:analytic",
+      "passed": true
+    },
+    {
+      "name": "partial_trace:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "entanglement:3.141592653589793:negativity",
+      "passed": true
+    },
+    {
+      "name": "probability:3.141592653589793:trace",
+      "passed": true
+    },
+    {
+      "name": "fringe:3.141592653589793:projection",
+      "passed": true
+    },
+    {
+      "name": "overlap:6.283185307179586:analytic",
+      "passed": true
+    },
+    {
+      "name": "partial_trace:6.283185307179586",
+      "passed": true
+    },
+    {
+      "name": "entanglement:6.283185307179586:negativity",
+      "passed": true
+    },
+    {
+      "name": "probability:6.283185307179586:trace",
+      "passed": true
+    },
+    {
+      "name": "fringe:6.283185307179586:projection",
+      "passed": true
+    },
+    {
+      "name": "derivation:common_final_clock_unitary_preserves_overlap",
+      "passed": true
+    },
+    {
+      "name": "derivation:controlled_inverse_restores_overlap",
+      "passed": true
+    },
+    {
+      "name": "population:0.0:visibility_squared",
+      "passed": true
+    },
+    {
+      "name": "population:0.2:visibility_squared",
+      "passed": true
+    },
+    {
+      "name": "population:1.0:visibility_squared",
+      "passed": true
+    },
+    {
+      "name": "qutrit:population_overlap",
+      "passed": true
+    },
+    {
+      "name": "qutrit:partial_trace",
+      "passed": true
+    },
+    {
+      "name": "qutrit:Schmidt_negativity",
+      "passed": true
+    },
+    {
+      "name": "qutrit:not_product_of_E2_E3_qubits",
+      "passed": true
+    },
+    {
+      "name": "counterexample:same_path_signal",
+      "passed": true
+    },
+    {
+      "name": "counterexample:pure_entangled",
+      "passed": true
+    },
+    {
+      "name": "counterexample:mixed_separable",
+      "passed": true
+    },
+    {
+      "name": "witness:pure_negative",
+      "passed": true
+    },
+    {
+      "name": "witness:mixed_not_negative",
+      "passed": true
+    },
+    {
+      "name": "witness:product_fixture:38",
+      "passed": true
+    },
+    {
+      "name": "witness:product_fixture:39",
+      "passed": true
+    },
+    {
+      "name": "witness:product_fixture:40",
+      "passed": true
+    },
+    {
+      "name": "no_signalling:local_clock_dephasing_keeps_path",
+      "passed": true
+    },
+    {
+      "name": "no_signalling:local_dephasing_removes_entanglement",
+      "passed": true
+    },
+    {
+      "name": "action:scalar_phase_redistribution",
+      "passed": true
+    },
+    {
+      "name": "action:piecewise_phase_integral",
+      "passed": true
+    },
+    {
+      "name": "small_phase:quadratic_with_bounded_remainder",
+      "passed": true
+    },
+    {
+      "name": "phase:frequency_integral:identical",
+      "passed": true
+    },
+    {
+      "name": "phase:thermal_rejected_proper_time:identical",
+      "passed": true
+    },
+    {
+      "name": "physical:identical:0:visibility",
+      "passed": true
+    },
+    {
+      "name": "physical:identical:1:visibility",
+      "passed": true
+    },
+    {
+      "name": "phase:frequency_integral:gravity_only",
+      "passed": true
+    },
+    {
+      "name": "phase:thermal_rejected_proper_time:gravity_only",
+      "passed": true
+    },
+    {
+      "name": "physical:gravity_only:0:visibility",
+      "passed": true
+    },
+    {
+      "name": "physical:gravity_only:1:visibility",
+      "passed": true
+    },
+    {
+      "name": "phase:frequency_integral:thermal_only",
+      "passed": true
+    },
+    {
+      "name": "phase:thermal_rejected_proper_time:thermal_only",
+      "passed": true
+    },
+    {
+      "name": "physical:thermal_only:0:visibility",
+      "passed": true
+    },
+    {
+      "name": "physical:thermal_only:1:visibility",
+      "passed": true
+    },
+    {
+      "name": "phase:frequency_integral:gravity_and_thermal",
+      "passed": true
+    },
+    {
+      "name": "phase:thermal_rejected_proper_time:gravity_and_thermal",
+      "passed": true
+    },
+    {
+      "name": "physical:gravity_and_thermal:0:visibility",
+      "passed": true
+    },
+    {
+      "name": "physical:gravity_and_thermal:1:visibility",
+      "passed": true
+    },
+    {
+      "name": "regression:gravity_differential_frequency",
+      "passed": true
+    },
+    {
+      "name": "regression:GR6_thermal_frequency",
+      "passed": true
+    },
+    {
+      "name": "feasibility:first_zero_seconds_not_ms",
+      "passed": true
+    },
+    {
+      "name": "scope:real_radiative_visibility_not_assigned",
+      "passed": true
+    }
+  ]
+}

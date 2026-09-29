@@ -1,0 +1,275 @@
+{
+  "stage": "G-R6",
+  "status": "theory-baseline-bounded-done; empirical-test-open",
+  "measurement_claim": false,
+  "fitted_parameters": false,
+  "input_card_sha256": "55056a4ad3f4d99005c9a8cf26031a77e114b27fca5bd5e755cd733e3cb1f9c7",
+  "delta_phi_illustrative_m2_s2": 9.80665,
+  "gamma_illustrative": 1.0911369672198217e-16,
+  "published_geodetic_anchor_redshift_magnitude": 4.357004101499244e-14,
+  "published_geodetic_anchor_propagated_uncertainty": 3.337950168160855e-18,
+  "log_thermal_contrast_E2_E3": [
+    -7.337136091177441e-17,
+    -1.0122518315325606e-17
+  ],
+  "relative_log_four_cells_E2_E3": [
+    [
+      0.0,
+      -7.337136091177441e-17,
+      1.0911369672198217e-16,
+      3.5742335810207766e-17
+    ],
+    [
+      0.0,
+      -1.0122518315325606e-17,
+      1.0911369672198217e-16,
+      9.899117840665657e-17
+    ]
+  ],
+  "contrast_order": [
+    "temperature",
+    "potential",
+    "interaction"
+  ],
+  "contrasts_E2_E3": [
+    [
+      -7.337136091177441e-17,
+      1.0911369672198217e-16,
+      0.0
+    ],
+    [
+      -1.0122518315325606e-17,
+      1.0911369672198217e-16,
+      0.0
+    ]
+  ],
+  "E3_over_E2_temperature_contrast": 6.32488425964488e-17,
+  "common_weights_E2_E3": [
+    -0.16004274386348954,
+    1.1600427438634895
+  ],
+  "raw_fractional_interaction_E2_E3": [
+    -8.00582042260645e-33,
+    -1.1045053935211481e-33
+  ],
+  "higher_site_plus_0p1K_BBR_leakage_E2_E3": [
+    -7.3446878845031125e-19,
+    -1.0132936980769797e-19
+  ],
+  "local_temperature_derivatives_per_K": [
+    [
+      -6.980300542165445e-18,
+      -7.701856794505583e-18
+    ],
+    [
+      -9.63021800420333e-19,
+      -1.0625697206045235e-18
+    ]
+  ],
+  "tolman_300K_deltaT_over_1m_K": -3.273410901659465e-14,
+  "potential_sigma_for_1e18_m2_s2": 0.08987551787368177,
+  "height_sigma_for_1e18_m": 0.009164752272558087,
+  "summary": {
+    "checks": 49,
+    "passed": 49,
+    "failed": []
+  },
+  "checks": [
+    {
+      "name": "preserved:data/BBR_CLOCK_INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr4_bbr_universality.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr5_external_reference.py",
+      "passed": true
+    },
+    {
+      "name": "scope:no_observational_fit",
+      "passed": true
+    },
+    {
+      "name": "factorial:three_contrasts",
+      "passed": true
+    },
+    {
+      "name": "factorial:constant_offset_cancels",
+      "passed": true
+    },
+    {
+      "name": "factorial:contrast_orthogonality",
+      "passed": true
+    },
+    {
+      "name": "factorial:additive_rank_three",
+      "passed": true
+    },
+    {
+      "name": "factorial:interaction_annihilates_additive_model",
+      "passed": true
+    },
+    {
+      "name": "factorial:interaction_fit_saturates_four_cells",
+      "passed": true
+    },
+    {
+      "name": "ratio:gravity_cancels",
+      "passed": true
+    },
+    {
+      "name": "ratio:retains_differential_thermal",
+      "passed": true
+    },
+    {
+      "name": "composite:retains_gravity",
+      "passed": true
+    },
+    {
+      "name": "composite:leading_thermal_null",
+      "passed": true
+    },
+    {
+      "name": "sign:raised_target_faster",
+      "passed": true
+    },
+    {
+      "name": "sign:both_heated_transitions_lower",
+      "passed": true
+    },
+    {
+      "name": "anchor:independent_geodetic_not_clock_inferred",
+      "passed": true
+    },
+    {
+      "name": "anchor:universal_redshift_for_both_transitions",
+      "passed": true
+    },
+    {
+      "name": "anchor:potential_uncertainty_propagation",
+      "passed": true
+    },
+    {
+      "name": "regression:GR5_thermal_shifts",
+      "passed": true
+    },
+    {
+      "name": "regression:GR5_composite_weights",
+      "passed": true
+    },
+    {
+      "name": "finite:log_interaction_zero",
+      "passed": true
+    },
+    {
+      "name": "finite:raw_cross_is_product",
+      "passed": true
+    },
+    {
+      "name": "finite:raw_cross_not_zero",
+      "passed": true
+    },
+    {
+      "name": "metric:time_coordinate_rescaling_cancels",
+      "passed": true
+    },
+    {
+      "name": "matched_bath:height_independent_of_B:[2.0, 5.0]",
+      "passed": true
+    },
+    {
+      "name": "matched_bath:height_independent_of_B:[-9.0, 4.0]",
+      "passed": true
+    },
+    {
+      "name": "matched_bath:height_independent_of_B:[0.0, 0.0]",
+      "passed": true
+    },
+    {
+      "name": "mismatched_bath:height_leakage",
+      "passed": true
+    },
+    {
+      "name": "mismatched_bath:not_universal",
+      "passed": true
+    },
+    {
+      "name": "radiometry:analytic_derivative",
+      "passed": true
+    },
+    {
+      "name": "identifiability:common_gravity_and_bias_rank_one",
+      "passed": true
+    },
+    {
+      "name": "identifiability:exact_null_direction",
+      "passed": true
+    },
+    {
+      "name": "anomaly:differential_rejects_shared_bias",
+      "passed": true
+    },
+    {
+      "name": "anomaly:composite_retains_shared_bias",
+      "passed": true
+    },
+    {
+      "name": "protocol:each_cell_visited_twice",
+      "passed": true
+    },
+    {
+      "name": "protocol:symmetric_time_centers",
+      "passed": true
+    },
+    {
+      "name": "protocol:constant_and_linear_drift_cancel",
+      "passed": true
+    },
+    {
+      "name": "protocol:quadratic_drift_survives",
+      "passed": true
+    },
+    {
+      "name": "protocol:height_locked_bias_survives",
+      "passed": true
+    },
+    {
+      "name": "covariance:matched_reference_removed_in_difference",
+      "passed": true
+    },
+    {
+      "name": "covariance:changing_reference_remains_in_common",
+      "passed": true
+    },
+    {
+      "name": "covariance:constant_reference_offset_cancels",
+      "passed": true
+    },
+    {
+      "name": "covariance:unmatched_windows_leak_reference",
+      "passed": true
+    },
+    {
+      "name": "equilibrium:T_times_lapse_constant",
+      "passed": true
+    },
+    {
+      "name": "equilibrium:equal_local_T_not_global_equilibrium",
+      "passed": true
+    },
+    {
+      "name": "units:one_cm_redshift",
+      "passed": true
+    },
+    {
+      "name": "units:potential_uncertainty",
+      "passed": true
+    },
+    {
+      "name": "scope:G-R5_empirical_gate_remains_open",
+      "passed": true
+    }
+  ]
+}

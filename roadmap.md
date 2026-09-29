@@ -1,6 +1,6 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-09-24
+Last updated: 2026-09-29
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
 
@@ -54,9 +54,44 @@ not identified with Chen Ed or G-R3 energy per operational cell.
 91 new checks pass; complete Route-G regression4728/4728, with a
 five-page derivation and source-pinned input card. These are predictions,
 not new observations or full finite-temperature apparatus calculations.
-Next use actual raw interleaved ratios plus bath radiometry; for a
-common-factor claim, specify an independently responding reference or
-non-clock observable first. No fitted clock-speed function or new scan.
+**G-R5 (2026-09-24):** acquired and audited the PTB2021 archive and
+ROCIT2025 comparison release, including2,324,201 same-package E2/E3
+records. They lack the paired bath labels, independent radiometry and
+correction ledger for our two-temperature test, which remains OPEN.
+An outside second Yb+ E3 clock and full target/reference observation
+model are now specified. A thermal-cancelling composite retains a common
+target-reference residual, but unknown reference/link/gravity bias is
+exactly degenerate with it. This is not a universal-time observation.
+46 new checks pass, current total4776; the four-page derivation and
+data request checklist are saved. Its missing-record gate remains open.
+**G-R6 (2026-09-29):** user-approved EEP baseline preserves E2/E3 thermal
+inputs and the outside E3 reference. A two-temperature/two-potential
+logarithmic comparison separates thermal response, common gravitational
+redshift and a mixed separability check. Potential and radiometry must be
+independently measured, not inferred from the tested clock law.
+At matched radiation states, uncertain fixed BBR shifts cancel in the
+height contrast; radiation mismatch and transport/reference/link biases
+remain. An unknown height-locked common bias is exactly degenerate with
+a common redshift anomaly. The 1 m/300-310 K numerical card is illustrative,
+not a new experiment. A separate published geodetic potential magnitude
+3915.88(0.30) m^2/s^2 provides a real external redshift scale, not E2/E3
+data or calibration of our apparatus.49 new checks pass. Four-page TeX/PDF and an explicit
+acquisition card are saved; no Ed time law or quantum-gravity claim.
+Next obtain independently calibrated four-setting records or user-authorized
+experimental coordination, not another fit or detector scan.
+**G-R7 (2026-09-29):** the approved quantum extension now derives
+frequency, relative internal phase and ideal visibility from the same
+conservative proper-time action. The E2/E3 clock is a shared-ground
+qutrit, not two independent qubits. An exact pure/mixed counterexample
+gives identical path visibility with different joint entanglement;
+a joint witness and full density-matrix checks distinguish them.
+The full scalar guide/ground/laser phase and physical radiative
+visibility remain unspecified, rather than invented from BBR shifts.
+66 new checks pass. The small-phase signal is linear but visibility
+loss quadratic; prioritize a closed-path/state-resolved phase protocol,
+with joint readout for any entanglement claim. E2's tens-of-ms lifetime
+rules out assuming its ideal seconds-long contrast-zero hold without
+additional dynamics. All G-R6 empirical gaps and Route-F gates remain.
 See [Route-G roadmap](route_g/ROADMAP.md) and
 [interpretation card](route_g/RELATIONAL_TIME_CARD.md).
 Route-F P/U/S priorities and all fit/portal gates remain independent.

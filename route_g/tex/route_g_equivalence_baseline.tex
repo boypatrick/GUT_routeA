@@ -1,0 +1,256 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\one}{\mathbf 1}
+\title{Route G-R6: Separating Thermal Response\\from a Gravitational Clock Baseline}
+\author{A fixed-input two-temperature, two-potential control}
+\date{29 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Retain G-R4's E2/E3 thermal action and inputs and G-R5's external E3
+reference. Add an independently calibrated gravitational-potential
+contrast. A four-setting logarithmic comparison separates thermal,
+gravitational and interaction responses without fitting a time law.
+Matched local radiation states cancel even uncertain fixed thermal
+shifts in the height contrast. Uncontrolled height-correlated biases
+remain degenerate with anomalous redshift. This is a theory baseline,
+not a new experiment, an empirical limit, or a derivation of spacetime.
+\end{abstract}
+
+\section{Geometry acts on clock rate; radiation acts on local spectrum}
+Use the test-clock approximation: tidal effects across the ion and
+heater-induced changes in the background are negligible or independently
+bounded. Assume a static background with
+\begin{equation}
+ \dd s^2=-N(\mathbf x)^2c^2\dd t^2+h_{ab}\dd x^a\dd x^b .
+\end{equation}
+For a clock held at rest, $\dd\tau=N\dd t$. A local transition with
+proper frequency $\nu_i^{\rm loc}$ accumulates phase
+$\dd\varphi_i=2\pi\nu_i^{\rm loc}\dd\tau$. Stationary phase transfer
+to a reference at $R$ therefore gives
+\begin{equation}\label{eq:ratio}
+ \frac{\nu_{i,\mathrm{received}}^S}{\nu_3^R}
+ =\frac{\nu_i^0}{\nu_3^0}\frac{N_S}{N_R}
+   \frac{1+b_i^S}{1+b_3^R}\exp(A_i^S-A_3^R+\ell_i).
+\end{equation}
+Here $A$ denotes other local log-frequency shifts and $\ell_i$
+nonideal transfer corrections. They are not silently zero in data.
+G-R4's local dipole response is unchanged:
+\begin{equation}
+ b_i^X=-\frac{1}{2h\epsilon_0\nu_i^0}\mathcal P
+ \int_0^\infty\Delta\alpha_i(\omega)u_\omega^X\dd\omega,
+ \qquad B_i^X=\ln(1+b_i^X).
+\end{equation}
+For the retained ideal static approximation,
+$b_i(T)=\beta_i a_{\rm rad}T^4$ and
+$\beta_i=-\Delta\alpha_i/(2h\epsilon_0\nu_i^0)$.
+All temperatures and spectra are local proper quantities.
+
+Normalize Eq.~\eqref{eq:ratio} by $\nu_i^0/\nu_3^0$ and take its log:
+\begin{equation}\label{eq:q}
+ q_i=G+B_i^S-B_3^R+A_i^S-A_3^R+\ell_i+n_i,\quad
+ G=\ln(N_S/N_R).
+\end{equation}
+The universal gravitational factor is now specified by geometry,
+not a fitted replacement for G-R5's unidentified common factor.
+To first weak-field order,
+$\Delta G=\Delta\Phi/c^2$ for stationary nonrotating coordinates.
+For moving clocks an additional $-\Delta(v^2)/(2c^2)$ appears.
+This is a restricted redshift/local-position-invariance baseline,
+not a test of every classical or quantum EEP component~\cite{zych}.
+
+\newpage
+\section{Four settings, three contrasts}
+Use the same target ion and enclosure, with E2/E3 interleaved at each
+settled plateau. Keep the independent E3 reference at its fixed site.
+Let $a=0,1$ label local temperature and $b=0,1$ label potential.
+The column order is $(00,10,01,11)$. After evaluating reference,
+transfer and non-BBR shifts, the ideal model is
+\begin{equation}\label{eq:separable}
+ q_{i,ab}=q_{i,00}+a\theta_i+b\gamma,\qquad
+ \theta_i=B_i(T_1)-B_i(T_0),\quad
+ \gamma=\ln\frac{N_1}{N_0}.
+\end{equation}
+This holds for any fixed local $B_i(T)$, not only its static $T^4$
+approximation, provided the same local spectrum and apparatus
+conditions are reproduced at both potential settings.
+Define
+\begin{align}
+ \mathcal T_i&=\tfrac12(q_{i,10}-q_{i,00}+q_{i,11}-q_{i,01})
+                =\theta_i,\\
+ \mathcal G_i&=\tfrac12(q_{i,01}-q_{i,00}+q_{i,11}-q_{i,10})
+                =\gamma,\\
+ \mathcal I_i&=q_{i,11}-q_{i,10}-q_{i,01}+q_{i,00}=0.
+\end{align}
+Thus the null predictions are
+\begin{equation}\label{eq:null}
+ \mathcal G_2=\mathcal G_3=\gamma,\qquad
+ \mathcal G_3-\mathcal G_2=0,\qquad \mathcal I_2=\mathcal I_3=0.
+\end{equation}
+The internal E3/E2 ratio cancels gravity: it cannot by itself measure
+the common redshift. The outside reference is essential.
+
+\paragraph{One illustrative calculation, not observations.}
+Retain the pinned G-R4 polarizabilities, $T_0=300$ K and $T_1=310$ K.
+Take $\Delta h=1$ m and conventional $g_*=9.80665$ m\,s$^{-2}$ merely
+as a scale illustration, not measured laboratory geodesy. Then
+$\gamma\simeq g_*\Delta h/c^2=1.0911\,10^{-16}$:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Setting & $(q_2-q_{2,00})/10^{-16}$ & $(q_3-q_{3,00})/10^{-16}$\\
+\midrule
+$T_0,\Phi_0$ & $0$ & $0$\\
+$T_1,\Phi_0$ & $-0.7337$ & $-0.1012$\\
+$T_0,\Phi_1$ & $1.0911$ & $1.0911$\\
+$T_1,\Phi_1$ & $0.3574$ & $0.9899$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The thermal E3/E2 contrast is $6.325\,10^{-17}$; the gravitational
+E3/E2 contrast is zero. All entries are model predictions.
+
+\paragraph{Why use logarithms?}
+For the baseline-normalized raw ratio $r_{ab}=\exp(a\theta_i+b\gamma)$,
+the raw cross contrast is
+\begin{equation}
+ r_{11}-r_{10}-r_{01}+r_{00}
+ =(e^{\theta_i}-1)(e^\gamma-1),
+\end{equation}
+not zero. This ordinary multiplicative product is not new physics.
+Logarithms make the separability null exact within the stated model.
+
+\newpage
+\section{What cancels, what does not, and identifiability}
+An arbitrary but height-independent $B_i(T_a)$ cancels in
+$\mathcal G_i$. Consequently the old polarizability uncertainty need
+not impose its full G-R5 thermal-composite floor on the matched-bath
+height test. This is not permission to neglect radiation matching.
+If the higher site instead has $T_a+\delta T_a$, then
+\begin{equation}\label{eq:leak}
+ \delta\mathcal G_i^{\rm BBR}
+ \simeq\frac12\sum_{a=0}^1 B_i'(T_a)\delta T_a,\qquad
+ B_i'(T)=\frac{4b_i(T)}{T[1+b_i(T)]}
+\end{equation}
+in the retained static model. The exact formula is one half the sum
+of $B_i(T_a+\delta T_a)-B_i(T_a)$.
+An illustrative $+0.1$ K mismatch at both upper-site setpoints leaks
+$-7.345\,10^{-19}$ for E2 and $-1.013\,10^{-19}$ for E3.
+Dynamic, anisotropic and geometry changes require their own responses;
+matching a wall thermometer alone does not establish matching spectra.
+
+G-R5's composite weights
+\begin{equation}
+ w_2=\frac{\beta_3}{\beta_3-\beta_2},\quad
+ w_3=-\frac{\beta_2}{\beta_3-\beta_2},\quad
+ (w_2,w_3)\simeq(-0.16004,1.16004)
+\end{equation}
+remain a leading thermal-rejection diagnostic. They obey
+$w_2+w_3=1$ and $w_2\beta_2+w_3\beta_3=0$, so the common height
+contrast is retained. Their use is not necessary for the exact
+matched-bath cancellation above.
+
+For interpretation only, parametrize a possible anomalous height
+response by $\alpha_i$:
+\begin{equation}
+ \mathcal G_i=(1+\alpha_i)\gamma+c_h+\varepsilon_i .
+\end{equation}
+The baseline is $\alpha_i=0$, not a fit. A shared height-correlated
+reference/link bias $c_h$ then gives
+\begin{align}
+ D_h&=\mathcal G_3-\mathcal G_2
+       =(\alpha_3-\alpha_2)\gamma+\varepsilon_3-\varepsilon_2,\\
+ C_h-\gamma&=(w_2\alpha_2+w_3\alpha_3)\gamma
+              +c_h+w_2\varepsilon_2+w_3\varepsilon_3.
+\end{align}
+For $\gamma\ne0$, shifting both $\alpha_i$ by $\lambda$ and $c_h$
+by $-\lambda\gamma$ leaves the observations unchanged. A common
+anomaly is therefore unidentifiable without independent bias bounds.
+Differential biases can also mimic $D_h$; a nonzero interaction
+contrast only falsifies the controlled separability model, not EEP
+by itself.
+
+Order the eight channel means as E2's four cells followed by E3's.
+For any contrast vector $a$, its variance is $a^TVa$. A shared,
+cell-varying reference contribution has covariance
+$V_R=\one_2\one_2^T\otimes K_R$. It cancels for
+$a_D=(-1,1)\otimes(-1,-1,1,1)/2$, but not generally for
+$a_C=w\otimes(-1,-1,1,1)/2$. A constant reference offset cancels
+from both. Matched effective sampling windows are required.
+
+\newpage
+\section{Independent controls and a bounded empirical handoff}
+\paragraph{Potential.}
+Measure $\Delta\Phi$ independently at the ion positions using
+leveling/gravimetry/geodesy with covariance. A portable-clock campaign
+with independent geodetic comparison~\cite{grotti} reports the magnitude
+$3915.88(0.30)$ m$^2$\,s$^{-2}$. This gives a source-backed baseline
+$|\Delta G|\simeq4.3570\,10^{-14}$ with propagated potential uncertainty
+$3.34\,10^{-18}$. We use the geodetic value, not the clock-inferred
+potential. The published clocks were Sr: these are not our E2/E3
+four-setting data or a calibration of our apparatus.
+For this upward-positive convention,
+$\Delta\Phi=\int_{h_0}^{h_1}g(h)\dd h$ locally.
+If a terrestrial geopotential already includes centrifugal effects,
+do not add the corresponding rotational kinetic term again.
+Specify sign and transfer convention; stationary-plateau frequency
+comparisons are not transported-clock accumulated-phase measurements.
+A $10^{-18}$ absolute redshift error corresponds to
+$\sigma_{\Delta\Phi}\simeq0.0899$ m$^2$\,s$^{-2}$, or about
+$0.92$ cm at $g_*$, for this contribution alone. No such accuracy
+is claimed. In a residual $r=\mathcal G-\gamma_{\rm cal}$, propagate
+$\operatorname{Var}r=\operatorname{Var}\mathcal G+
+\operatorname{Var}\gamma_{\rm cal}-2\operatorname{Cov}(\mathcal G,\gamma_{\rm cal})$.
+
+\paragraph{Temperature and reference.}
+Use independent local radiometry, with sensor calibration, gradients,
+emissivity/view factors and reference monitoring at every plateau.
+Do not infer the bath from the tested frequency law, or infer potential
+from the same clock ratios and then call the prediction verified.
+Radiometry/correction covariance enters $V$ through its response
+Jacobian. Actual measured settings, not ideal labels, enter the model.
+
+\paragraph{Equilibrium is a different boundary condition.}
+Independently thermostatted local setpoints need not form one global
+passive equilibrium bath. In a static globally equilibrated radiation
+field, conservation of Killing energy gives $E_\infty=NE_{\rm loc}$;
+the Bose factor written locally therefore has
+\begin{equation}
+ e^{E_\infty/(k_BT_\infty)}
+ =e^{E_{\rm loc}/(k_BT_{\rm loc})},\qquad
+ T_{\rm loc}N=T_\infty .
+\end{equation}
+This is the Tolman--Ehrenfest relation~\cite{tolman,thermal}.
+Do not impose it simultaneously with freely chosen local temperatures.
+At 300 K across the illustrative 1 m separation it predicts only
+$\Delta T\simeq-300\gamma=-3.27\,10^{-14}$ K.
+This observation neither changes the imposed 10 K control nor requires
+resolving that tiny equilibrium gradient.
+
+\paragraph{Acquisition and stopping rule.}
+One optional symmetric order is $(00,10,11,01,01,11,10,00)$ at
+centers $(-7,-5,-3,-1,1,3,5,7)\tau$. Pair averaging cancels ideal
+linear drift in all three contrasts, but quadratic drift survives:
+its $(\mathcal T,\mathcal G,\mathcal I)$ moments are
+$(-8,-32,32)\tau^2$. State-locked bias also survives.
+Actual settling/windows, return comparisons, reversed orders,
+transport-systematic monitoring and repeated blocks remain necessary.
+Four means do not determine statistical significance.
+The input card records the missing acquisition fields. No paired data,
+new experiment or lab contact is supplied; no time law or Route-F gate
+is promoted. The baseline is complete within its assumptions.
+
+\begin{thebibliography}{9}\small
+\bibitem{zych} M. Zych and C. Brukner,
+\href{https://doi.org/10.1038/s41567-018-0197-6}{Nature Physics 14, 1027 (2018)}.
+\bibitem{grotti} J. Grotti et al.,
+\href{https://doi.org/10.1103/PhysRevApplied.21.L061001}{Physical Review Applied 21, L061001 (2024)}.
+\bibitem{tolman} R. C. Tolman and P. Ehrenfest,
+\href{https://doi.org/10.1103/PhysRev.36.1791}{Physical Review 36, 1791 (1930)}.
+\bibitem{thermal} N. Karolinski and V. Faraoni,
+\href{https://doi.org/10.1140/epjc/s10052-024-13632-6}{European Physical Journal C 84, 1248 (2024)}, section 1.
+\end{thebibliography}
+\end{document}

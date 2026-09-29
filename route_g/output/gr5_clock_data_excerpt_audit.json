@@ -1,0 +1,96 @@
+{
+  "stage": "G-R5 data acquisition audit",
+  "date": "2026-09-24",
+  "ptb_2021": {
+    "archive_sha256": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+    "archive_members": [
+      "Data/E3_E2_frequency_ratio_measurement.txt",
+      "Data/E3_frequency_measurement.txt",
+      "Data/README.txt"
+    ],
+    "ratio_sha256": "ec9355e4f44c6035a49639e57a49273a8efef72c66c87ad9a2f89c2b8256d219",
+    "rows": 11,
+    "columns": 5,
+    "fields": [
+      "MJD",
+      "E3/E2 minus 0.932829404530965 (absolute ratio difference)",
+      "statistical uncertainty",
+      "reproducibility",
+      "combined uncertainty"
+    ],
+    "nonfinite_values": 0,
+    "duplicate_timestamps": 0,
+    "time_range_mjd": [
+      57527.0,
+      59081.0
+    ],
+    "uncertainty_quadrature_max_relative_error": 2.2016343890223193e-06,
+    "ratio_is_fractional": false,
+    "eligibility": "ineligible: published comparison points, no paired bath/radiometry or correction ledger; paper uses two clock systems"
+  },
+  "rocit_2025": {
+    "doi": "10.5281/zenodo.17107693",
+    "license": "CC-BY-4.0",
+    "full_archive_sha256": "6168e24a0c29ce0929e9651460f11ea77f151176e1ba3d0fe3428e1e08bd56bd",
+    "scope": "bundled_first_day_only",
+    "all_archive_members": [
+      "2022-02-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.yml"
+    ],
+    "all_yaml_metadata": {
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.yml": "- name: PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten\n  numrhoBA: '688358979309308.2399999999998'\n  denrhoBA: '642121496772645'\n  sB: 688358979309308.2\n  nu0A: '642121496772645'\n  nu0B: '688358979309308.24'\n"
+    },
+    "selected_pair": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
+    "selected_files": 1,
+    "rows": 51990,
+    "valid_rows": 51990,
+    "invalid_rows": 0,
+    "nonfinite_values": 0,
+    "duplicate_timestamps": 0,
+    "time_range_mjd": [
+      59632.371875,
+      59632.999988
+    ],
+    "metadata_for_pair": "- name: PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten\n  numrhoBA: '688358979309308.2399999999998'\n  denrhoBA: '642121496772645'\n  sB: 688358979309308.2\n  nu0A: '642121496772645'\n  nu0B: '688358979309308.24'\n",
+    "files": {
+      "2022-02-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "2b66e09e2b9bcb68eb8eea7a624bc0f3b3afa5b036b853515be4be142514d36f",
+        "bytes": 2522474,
+        "rows": 51990,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59632.371875,
+          59632.999988
+        ],
+        "flags": {
+          "1": 51990
+        },
+        "valid_rows": 51990,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 95,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      }
+    },
+    "direction": "A=E3, B=E2; released Delta_A_to_B is a scaled transfer beat, not exactly E3/E2 fractional shift",
+    "eligibility": "ineligible for requested thermal test: no two-temperature assignment, independent radiation calibration, or per-run BBR correction ledger in selected files/metadata"
+  },
+  "empirical_differential_test_ready": false,
+  "common_time_effect_measured": false,
+  "conclusion": "Public comparison data obtained; paired uncorrected two-bath-state clock/radiometry data not located in audited releases. No thermal slope fit."
+}

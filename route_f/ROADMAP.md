@@ -35,6 +35,24 @@ Spatial radiation density is not equated to the earlier Ed candidate.
 91 new checks pass, total4728; no new experiment or universal-time
 exclusion is claimed. Next needs real clock/radiometry data or an
 independently specified observable for a common factor, not another fit.
+G-R5 now acquires/audits public clock data and specifies that outside
+reference. Paired temperature/radiometry/correction records are missing,
+so empirical validation remains open. The common target-reference channel
+is modeled with explicit ordinary/reference biases; none is silently
+treated as universal time.46 new checks pass, total4776 at that checkpoint.
+G-R6 (2026-09-29) adds the user-approved independent EEP baseline:
+two local temperatures crossed with two independently calibrated potentials,
+retaining the same thermal action and reference. Matched-bath height
+contrasts cancel uncertain fixed BBR shifts; unmatched radiation and
+height-locked reference/link bias remain controls, not new time physics.
+49 new checks pass; the theory baseline is bounded-done but four-setting
+empirical validation remains open. No site potential or data are invented.
+G-R7 adds the approved conservative quantum-clock/path kernel: same
+thermal/proper-time action, linked frequency/phase/visibility predictions,
+and an exact pure/mixed ambiguity resolved by joint observables.
+66 new checks pass. Full path/control phase, radiative environment and
+hardware feasibility remain open; priority is state-resolved phase and
+closed-path control, not another slowdown law or visibility-only claim.
 This change neither imports a new prerequisite into P/U/S nor promotes
 any Route-F physical fit, determinant or portal.
 

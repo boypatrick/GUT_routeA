@@ -1,0 +1,212 @@
+{
+  "stage": "G-R5",
+  "status": "reference-model-bounded-done; empirical-thermal-test-open",
+  "measurement_claim": false,
+  "fitted_parameters": false,
+  "composite_weights_E2_E3": [
+    -0.16004274386348952,
+    1.1600427438634895
+  ],
+  "static_target_300_to_310_fractional_shifts": [
+    -7.337136091177457e-17,
+    -1.0122518315325641e-17
+  ],
+  "reference_300_to_300p1_fractional_shift": -9.635034183323973e-20,
+  "gravity_1cm_fractional_shift": 1.0911369672198218e-18,
+  "composite_coefficient_sigma_bounds_unknown_correlation": [
+    2.170969624309622e-18,
+    2.594124720573362e-18
+  ],
+  "dataset_audit": "gr5_clock_data_full_audit.json",
+  "checks": [
+    {
+      "name": "composite:retains_common_factor",
+      "passed": true
+    },
+    {
+      "name": "composite:cancels_leading_target_BBR",
+      "passed": true
+    },
+    {
+      "name": "composite:requires_negative_weight",
+      "passed": true
+    },
+    {
+      "name": "differential:common_factor_null",
+      "passed": true
+    },
+    {
+      "name": "design:external_two_channels_rank_two",
+      "passed": true
+    },
+    {
+      "name": "design:internal_ratio_has_no_common_column",
+      "passed": true
+    },
+    {
+      "name": "design:unknown_common_bias_not_identifiable",
+      "passed": true
+    },
+    {
+      "name": "design:common_bias_exact_null_vector",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.0:0.14:recover_two_parameters",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.0:0.14:common_composite",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.0:0.14:differential",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.3:0.0:recover_two_parameters",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.3:0.0:common_composite",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.3:0.0:differential",
+      "passed": true
+    },
+    {
+      "name": "fixture:-0.2:0.09:recover_two_parameters",
+      "passed": true
+    },
+    {
+      "name": "fixture:-0.2:0.09:common_composite",
+      "passed": true
+    },
+    {
+      "name": "fixture:-0.2:0.09:differential",
+      "passed": true
+    },
+    {
+      "name": "design:independent_radiometry_adds_overconstraint",
+      "passed": true
+    },
+    {
+      "name": "static:linear_vs_log_at_retained_order",
+      "passed": true
+    },
+    {
+      "name": "observation:reference_response_retained",
+      "passed": true
+    },
+    {
+      "name": "observation:ratio_cancels_reference",
+      "passed": true
+    },
+    {
+      "name": "observation:globally_common_factor_cancels",
+      "passed": true
+    },
+    {
+      "name": "observation:derived_triangle_rank_two",
+      "passed": true
+    },
+    {
+      "name": "observation:derived_triangle_closure",
+      "passed": true
+    },
+    {
+      "name": "ABBA:offset_cancels",
+      "passed": true
+    },
+    {
+      "name": "ABBA:linear_drift_cancels",
+      "passed": true
+    },
+    {
+      "name": "ABBA:unit_state_contrast",
+      "passed": true
+    },
+    {
+      "name": "ABBA:quadratic_drift_survives",
+      "passed": true
+    },
+    {
+      "name": "sampling:matched_reference_cancels",
+      "passed": true
+    },
+    {
+      "name": "sampling:interleaved_reference_leakage",
+      "passed": true
+    },
+    {
+      "name": "covariance:difference_removes_common",
+      "passed": true
+    },
+    {
+      "name": "covariance:composite_keeps_common",
+      "passed": true
+    },
+    {
+      "name": "covariance:GLS_normalization",
+      "passed": true
+    },
+    {
+      "name": "covariance:GLS_common_floor",
+      "passed": true
+    },
+    {
+      "name": "budget:reference_thermal_leak_is_not_zero",
+      "passed": true
+    },
+    {
+      "name": "budget:centimeter_gravity_is_relevant",
+      "passed": true
+    },
+    {
+      "name": "budget:old_polarizabilities_not_sub_1e18_common_calibration",
+      "passed": true
+    },
+    {
+      "name": "data:PTB_archive_hash",
+      "passed": true
+    },
+    {
+      "name": "data:PTB_eleven_published_points",
+      "passed": true
+    },
+    {
+      "name": "data:PTB_absolute_not_fractional_offset",
+      "passed": true
+    },
+    {
+      "name": "data:bundled_ROCIT_day_hash",
+      "passed": true
+    },
+    {
+      "name": "data:full_audit_34_files",
+      "passed": true
+    },
+    {
+      "name": "data:full_audit_has_2324201_rows",
+      "passed": true
+    },
+    {
+      "name": "data:thermal_test_remains_open",
+      "passed": true
+    },
+    {
+      "name": "data:no_common_time_measurement",
+      "passed": true
+    },
+    {
+      "name": "card:no_fitted_time_law",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "checks": 46,
+    "passed": 46,
+    "failed": []
+  }
+}

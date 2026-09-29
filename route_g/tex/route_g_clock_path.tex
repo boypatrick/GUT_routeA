@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ii}{\mathrm i}
+\title{Route G-R7: One Clock Action,\\Frequency, Phase and Path Correlations}
+\author{A conservative quantum extension of the G-R6 baseline}
+\date{29 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Preserve the E2/E3 energy gaps, thermal response and metric of G-R4--G-R6.
+Promote the path label to a coherent two-branch degree of freedom.
+The same proper-time action gives frequency, relative internal phase,
+and ideal interferometric visibility. An explicit pure/mixed counterexample
+shows why these three observations alone need not certify entanglement.
+Joint observables distinguish the cases. The full scalar interferometer
+phase, radiative environment and apparatus closure remain independent
+missing inputs; no time law, experimental signal or hardware is invented.
+\end{abstract}
+
+\section{One conservative effective action}
+The retained local Hamiltonian, in the basis $(g,e_2,e_3)$, is
+\begin{equation}
+ H_C(T)=\sum_{i=2,3}h\nu_i^0[1+b_i(T)]|e_i\rangle\langle e_i|,
+ \qquad b_i(T)=\beta_i u(T),\quad u(T)=a_{\rm rad}T^4 .
+\end{equation}
+Here $\beta_i=-\Delta\alpha_i/(2h\epsilon_0\nu_i^0)$ and all pinned
+G-R4 inputs are unchanged. The static scalar dipole approximation is
+retained, not promoted to a complete radiative model.
+For a prescribed branch $r=A,B$, use the effective action
+\begin{equation}\label{eq:action}
+ S_r=S_{{\rm guide},r}+\int_r
+ \left[\ii\hbar\chi^\dagger\partial_\tau\chi
+       -E_0(x)-\chi^\dagger H_C(T(x))\chi\right]\dd\tau .
+\end{equation}
+$E_0$ includes ground-state rest energy and any physical common
+ground-level shift. G-R4's differential polarizabilities do not determine
+that ground shift separately. Guide and pulse phases are explicit inputs,
+not derived from the thermal gap data. We assume state-independent
+guides and coincident final wave packets at the retained order; otherwise
+the branch evolution must include the external motion as well.
+
+Variation of the internal state gives $\ii\hbar\partial_\tau\chi=H_C\chi$.
+For diagonal adiabatic evolution during the analyzed hold,
+\begin{equation}
+ U_r=\operatorname{diag}(1,e^{-\ii\theta_{2r}},e^{-\ii\theta_{3r}}),
+ \quad \theta_{ir}=2\pi\nu_i^0\int_r[1+b_i(T_r)]\dd\tau_r .
+ \label{eq:phase}
+\end{equation}
+Writing $\lambda_r=\dd\tau_r/\dd t$, the received frequency against
+reference $R$ is $\nu_{i,r}^{(R)}=(\lambda_r/\lambda_R)\nu_i^0(1+b_i)$,
+recovering G-R6. Thus frequency is the phase derivative, not a second
+adjustable law. General paths require all segments, kinematic terms,
+preparation phases and pulses. The fixed reference is not a third
+entangled quantum system here. This extension uses the established
+clock-interferometry framework~\cite{zych,roura}, not a new quantization rule.
+
+\newpage
+\section{Joint evolution fixes phase and visibility}
+For a balanced path state and initial internal state $\rho_C$, the joint
+evolution is controlled by the path. Define
+\begin{equation}
+ \mathcal U=|A\rangle\langle A|\otimes e^{\ii\zeta_A}U_A
+            +|B\rangle\langle B|\otimes e^{\ii\zeta_B}U_B,
+ \quad \zeta=\zeta_A-\zeta_B .
+\end{equation}
+$\zeta_r$ includes the scalar propagation, ground-energy, guide and
+beam-splitter contributions. Tracing the clock gives
+\begin{equation}\label{eq:reduced}
+ \rho_P=\frac12
+ \begin{pmatrix}1&e^{\ii\zeta}\kappa\\e^{-\ii\zeta}\kappa^*&1\end{pmatrix},
+ \qquad \kappa=\tr(\rho_C U_B^\dagger U_A).
+\end{equation}
+Projection onto $(|A\rangle+e^{\ii\varphi}|B\rangle)/\sqrt2$ yields
+\begin{equation}\label{eq:port}
+ P_+(\varphi)=\tfrac12[1+\Re(e^{\ii(\varphi+\zeta)}\kappa)],
+ \quad \mathcal V=|\kappa|,\quad
+ \phi_{\rm fringe}=\zeta+\arg\kappa .
+\end{equation}
+The fringe phase is undefined at $\kappa=0$. Unequal path populations
+$p_A,1-p_A$ instead give $\mathcal V=2\sqrt{p_A(1-p_A)}|\kappa|$.
+Only the internal contribution $\arg\kappa$ is fixed without $\zeta$.
+Moving a scalar term $s_r(\tau)I$ into $H_C$ and out of $E_0$ changes
+$U_r$ and $\zeta_r$ oppositely; the product in Eq.~\eqref{eq:port}
+is invariant. One cannot simply discard physical branch-dependent
+ground energies as an unobservable overall phase.
+
+\paragraph{Separate two-level preparations.}
+Let $\delta_i=\theta_{iA}-\theta_{iB}$ and
+$|\chi_0\rangle=\sqrt{1-p}|g\rangle+\sqrt p\,e^{\ii\eta}|e_i\rangle$.
+Then
+\begin{align}
+ \kappa_i&=(1-p)+pe^{-\ii\delta_i},\\
+ |\kappa_i|^2&=1-4p(1-p)\sin^2(\delta_i/2).
+\end{align}
+For $p=1/2$ this becomes
+\begin{equation}
+ \kappa_i=e^{-\ii\delta_i/2}\cos(\delta_i/2),\quad
+ \mathcal V_i=|\cos(\delta_i/2)|,\quad
+ 1-\mathcal V_i=\delta_i^2/8+O(\delta_i^4).
+\end{equation}
+An energy eigenstate has visibility one: a different scalar phase is
+not itself a which-path record in the internal state.
+For a pure initial clock the joint state has Schmidt eigenvalues
+$(1\pm|\kappa|)/2$, hence negativity
+\begin{equation}
+ \mathcal N=\frac{\sqrt{1-|\kappa|^2}}2 .
+\end{equation}
+This inference requires purity and the declared closed unitary model.
+
+\paragraph{One shared ground is not two clock qubits.}
+For a coherent equal three-level preparation,
+\begin{equation}
+ \kappa_{023}=\frac{1+e^{-\ii\delta_2}+e^{-\ii\delta_3}}3,
+\end{equation}
+not $\kappa_2\kappa_3$. E2/E3 runs or a genuine qutrit preparation must
+be specified. No independent tensor factor is invented for each gap.
+
+\newpage
+\section{A counterexample and an actual entanglement discriminator}
+Since $U_B^\dagger U_A$ is diagonal in this model,
+\begin{equation}
+ \kappa=\sum_j(\rho_C)_{jj}e^{-\ii\delta_j},\qquad\delta_g=0.
+\end{equation}
+Erasing initial energy coherences leaves the entire reduced path signal
+unchanged, but can remove joint entanglement. A sharp two-level fixture is
+$U_A=I$, $U_B=Z$, with
+\begin{align}
+ |\Psi_{\rm pure}\rangle
+ &=\tfrac12(|00\rangle+|01\rangle+|10\rangle-|11\rangle),\\
+ \rho_{\rm mixed}
+ &=\tfrac12|+\rangle\langle+|\otimes|0\rangle\langle0|
+   +\tfrac12|-\rangle\langle-|\otimes|1\rangle\langle1| .
+\end{align}
+The inputs are respectively $|+\rangle$ and $I/2$ for the clock.
+Both output path states equal $I/2$, so both have zero visibility.
+The pure state has negativity $1/2$; the explicitly separable mixture
+has negativity zero. Frequencies and the diagonal conditional phase
+map are the same. Visibility alone therefore does not certify entanglement.
+
+One joint witness for this calibrated fixture is
+\begin{equation}
+ W=\tfrac12(I-X_P\otimes Z_C-Z_P\otimes X_C).
+\end{equation}
+For product Bloch vectors $a,b$,
+$a_xb_z+a_zb_x\leq\sqrt{a_x^2+a_z^2}\sqrt{b_z^2+b_x^2}\leq1$;
+convexity extends $\langle W\rangle\geq0$ to separable states.
+The pure fixture gives $-1/2$ and the mixed fixture gives zero.
+This is a joint-measurement specification, not a realized $\pi$-phase
+experiment or a witness automatically optimal for a small phase.
+
+\paragraph{State-resolved fringes and their limitation.}
+With populations $p_j$ unchanged in both arms, joint port/energy
+probabilities are
+\begin{equation}
+ P(+,j)=\frac{p_j}{2}
+       [1+\cos(\varphi+\zeta-\delta_j)].
+\end{equation}
+Differences between excited and ground fringe phases isolate $-\delta_i$
+if external phases are state-independent and pulses calibrated. This is
+linear phase information, but still does not distinguish the pure/mixed
+counterexample. Clock-coherence measurements and joint noncommuting
+observables, or tomography, are needed for an entanglement claim.
+
+\paragraph{Reversibility is not an arbitrary contrast correction.}
+A common final clock unitary $V$ preserves $\kappa$ because
+$(VU_B)^\dagger VU_A=U_B^\dagger U_A$.
+More generally a local trace-preserving clock channel cannot change
+$\rho_P$, by the defining property of the partial trace. Dephasing the
+clock after the pure fixture makes it separable without changing the
+path signal. Thus a clock's Ramsey decay cannot automatically be
+multiplied into path visibility. A path-controlled inverse can undo the
+ideal correlations; implementing it requires controls. Conditional
+eraser signals must retain their selection probabilities.
+
+\newpage
+\section{Numerical hold kernel and a cross-transition consistency relation}
+Use G-R6's illustrative 1 m height contrast and 300/310 K baths.
+Let $t_H=10$ ms be a constant-setting hold, in reference proper-time
+units, with $\lambda_B=1$, $\lambda_A=1+\gamma$ and
+$\gamma=g_*\Delta h/c^2$. This is a prescribed hold contribution, not a
+complete closed interferometer. To avoid subtracting nearly equal
+optical frequencies, evaluate the algebraically equivalent expression
+\begin{equation}
+ \Delta\nu_i=\nu_i^0[\gamma+(b_{iA}-b_{iB})+\gamma b_{iA}],
+ \qquad \delta_i=2\pi\Delta\nu_i t_H.
+\end{equation}
+The $\gamma b_{iA}$ product is retained as ordinary multiplication;
+the weak-field background itself is not an all-orders metric.
+\begin{center}
+\begin{tabular}{llrrr}
+\toprule
+Hold contrast & Clock & $\Delta\nu$ (Hz) & $\delta$ (rad) & $1-\mathcal V$\\
+\midrule
+Gravity only & E2 & $0.07511$ & $0.004719$ & $2.784\,10^{-6}$\\
+ & E3 & $0.07006$ & $0.004402$ & $2.422\,10^{-6}$\\
+Thermal only & E2 & $-0.05051$ & $-0.003173$ & $1.259\,10^{-6}$\\
+ & E3 & $-0.006500$ & $-0.0004084$ & $2.085\,10^{-8}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are ideal two-level-preparation predictions, not observations
+or achieved precision. The executable also includes identical paths,
+both controls together, and a genuine shared-ground qutrit.
+Frequency and phase retain the effect's sign; visibility alone is even
+in $\delta$ and cannot determine that sign.
+
+\paragraph{The same phase data must obey a thermal-rejection identity.}
+Within the retained static response, define
+\begin{equation}
+ x_i=\frac{\delta_i}{2\pi\nu_i^0},\qquad
+ J=\int[\lambda_Au_A-\lambda_Bu_B]\dd t .
+\end{equation}
+Equation~\eqref{eq:phase} gives, without a new slowdown function,
+\begin{equation}
+ x_i=\Delta\tau+\beta_iJ,\qquad
+ \Delta\tau=\int(\lambda_A-\lambda_B)\dd t.
+\end{equation}
+The same G-R5 weights $w_2=\beta_3/(\beta_3-\beta_2)$ and
+$w_3=-\beta_2/(\beta_3-\beta_2)$ therefore give
+\begin{equation}\label{eq:phasecombination}
+ w_2x_2+w_3x_3=\Delta\tau,\qquad
+ x_3-x_2=(\beta_3-\beta_2)J.
+\end{equation}
+This is a combination of calibrated, unwrapped relative phases, not
+visibilities. It needs matched trajectories and pulse conventions in
+the E2/E3 preparations, independent radiometry, and propagated
+polarizability uncertainty. Two channels cannot independently fit two
+unknowns and simultaneously validate the law. At matched 300 K and
+the illustrative hold, the reconstructed $\Delta\tau$ is
+$1.0911\,10^{-18}$ s.
+
+The frequency, phase and visibility predictions are distinct
+observations constrained by one evolution operator, not independent
+fit functions. In particular a thermally produced gap shift can also
+produce path-clock correlation. Its mere observation would not
+uniquely identify gravitational proper time or quantum gravity.
+
+\newpage
+\section{What remains physical input, and the next useful test}
+\paragraph{A hold is not automatically a closed interferometer.}
+The full paths, guiding potentials, launch/recombination dynamics,
+initialization surfaces and laser phases must be specified.
+State-dependent guiding and final packet mismatch change the simple
+two-branch reduction. A standard freely falling light-pulse geometry
+can cancel the putative uniform-field redshift sensitivity; one cannot
+substitute $g\Delta h\,t/c^2$ without checking the whole sequence.
+Adjustable clock initialization and differential phase protocols offer
+established alternatives~\cite{roura}; their neutral-atom pulse design
+is not assumed to work unchanged for this charged-ion E2/E3 system.
+The prior G-R6 comparison of two sites is not preparation of one
+ion in a coherent spatial superposition.
+
+\paragraph{The conservative shift does not determine an open-system visibility.}
+For full branch unitaries $W_A,W_B$ on clock and environment,
+the cross amplitude is
+\begin{equation}
+ K=\tr_{C,E}(W_A\rho_{CE}W_B^\dagger).
+\end{equation}
+Only with initially factorized states and branch factorizations
+$W_r=U_r\otimes V_r$ does this reduce to $\kappa$ times a separate
+environment overlap. Photon which-path records, recoil, thermal
+correlations and emission generally require the fuller model.
+Real static polarizabilities constrain a conservative dispersive
+shift; they do not specify the necessary dissipative correlation
+functions. No fitted dephasing factor or decay rate is inserted here.
+
+\paragraph{Do not extend the E2 idealization to seconds.}
+The gravity-only first ideal zeros at 1 m would require
+$t_{\pi,i}=[2\nu_i^0\gamma(1+b_i)]^{-1}$, approximately
+6.66 s for E2 and 7.14 s for E3. Yet the E2 upper state has a
+tens-of-milliseconds lifetime: a same-isotope study reports
+61.8 ms with substantial systematic variation~\cite{schacht}.
+A newer $^{174}$Yb$^+$ study~\cite{shao} concerns another isotope.
+We do not pool these values or assign a precise $^{171}$Yb$^+$
+environmental rate. Even 10 ms is only a conservative hold illustration,
+not a decay-free experimental claim. E3's long-lived level would not
+by itself establish coherent spatial splitting, guide closure or
+laser coherence.
+
+\paragraph{Bounded conclusion and priority.}
+The unified conservative kernel, pure/mixed counterexample and
+joint witness are complete under their stated assumptions, with
+executable density-matrix checks. The missing physical controls are
+recorded in \texttt{CLOCK\_PATH\_CARD.json}.
+Next specify a closed path and calibrated state-resolved readout,
+prioritizing the linear differential phase. Use coherent/dephased
+preparations and joint measurements to substantiate entanglement.
+The small-phase visibility loss is quadratic, so it is a consistency
+check rather than a uniquely diagnostic discovery channel. No data,
+lab contact, quantum-gravity detection, Ed law or Route-F promotion
+is supplied by this mathematical extension.
+
+\begin{thebibliography}{9}\small
+\bibitem{zych} M. Zych, F. Costa, I. Pikovski and C. Brukner,
+\href{https://doi.org/10.1038/ncomms1498}{Nature Communications 2, 505 (2011)}.
+\bibitem{roura} A. Roura,
+\href{https://doi.org/10.1103/PhysRevX.10.021014}{Physical Review X 10, 021014 (2020)}.
+\bibitem{schacht} M. Schacht and M. Schauer,
+\href{https://arxiv.org/abs/1310.2530}{arXiv:1310.2530 (2013)}, same-isotope lifetime study.
+\bibitem{shao} H. Shao et al.,
+\href{https://doi.org/10.1103/PhysRevResearch.5.023193}{Physical Review Research 5, 023193 (2023)}.
+\end{thebibliography}
+\end{document}

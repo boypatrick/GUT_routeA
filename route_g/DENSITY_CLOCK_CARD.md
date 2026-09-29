@@ -89,9 +89,30 @@ The selected thermal response is not solely a common clock rescaling.
 u_gamma is energy per physical volume in conventional QED, NOT a
 redefinition of this card's Ed or a derivation of emergent space.
 An additional exactly common multiplicative factor cancels from the
-frequency ratio, so this comparison cannot exclude it. Raw ratio data
-and source calibration are absent; the result is a literature-pinned
-prediction, not a new measurement. Next use such data or specify an
-independently responding reference for the common-factor question.
+frequency ratio, so this comparison cannot exclude it. G-R4 is a
+literature-pinned prediction, not a new measurement.
 Do not infer gravity, fit an Ed slowdown function, revive detector
 scans, or promote Route-F gates.
+
+## Subsequent G-R5 data and reference audit (2026-09-24)
+
+[G-R5](tex/route_g_external_reference.tex) now specifies a second Yb+ E3
+clock outside the altered enclosure, retaining its radiation response,
+drift and transfer/gravity terms. Public PTB and ROCIT comparison records
+were acquired and audited, but the required paired thermal states,
+independent radiometry and per-run BBR correction ledger are missing
+from the audited releases. The two-temperature empirical test stays open.
+
+A weighted E2/E3 composite cancels the leading target thermal shift,
+not reference drift or other common biases. Only a relative common
+factor is observable; an unconstrained common bias is exactly degenerate
+with it. The next step is the [missing-record checklist](data/clock_comparison_audit/DATA_REQUEST.md),
+not a new fitted time law. No laboratory has been contacted.
+
+G-R6 (2026-09-29) now adds a conventional-spacetime EEP control:
+[two-temperature/two-potential baseline](tex/route_g_equivalence_baseline.tex).
+Its gravitational factor is the metric lapse ratio, with independently
+calibrated potential required. This does not identify Phi, radiation
+density or proper time with the Ed candidate on this card. Matched-bath
+height contrasts cancel fixed thermal shifts; real four-setting records
+and apparatus controls are still missing.

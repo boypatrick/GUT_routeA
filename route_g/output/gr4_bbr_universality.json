@@ -76,9 +76,12 @@
     "code/verify_gr1_relational_clock.py": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
     "code/verify_gr2_two_event_records.py": "969a04810b1d6b6beaebeb24dd88b79ff4ac79ae15e5249d1015e0295e09b0de",
     "code/verify_gr3_density_clocks.py": "b986a7f28ed1b6d51128c8009a4cda69ea053028a36e7ca0e4716878c51ebdf3",
+    "code/verify_gr5_external_reference.py": "3557142e6f6229478a1f1e47df2d5d1a820bfb5b2f9b7633d50b988572c7831e",
+    "code/verify_gr6_equivalence_baseline.py": "fd0c3980e4e267ede0370a9168daaabf093e803ac5271f31d0e9d3b6fe200ed8",
+    "code/verify_gr7_clock_path.py": "33d0eb4a0d68e1ed1466f9dd043433544a3a94b72ddefcbd4a7b534d20fda337",
     "output/gr1_relational_clock.json": "f03775c6271a87016b8bfe15e768c444b3f400078ccfc5f0a5e1237563d13942",
     "output/gr2_two_event_records.json": "d35199443504a08d09516bc98b891f412a9c7760118baa6a6ea807e10585c06b",
-    "output/gr3_density_clocks.json": "497dd3562b36ac48239d6a42dd295d9fd5289932198200b26dfd461ce4fbde1c"
+    "output/gr3_density_clocks.json": "7a5eb5e4cc451e8bd06e19cc9d25712faebc0412a3f74bf831ed85d80f4ff059"
   },
   "checks": [
     {
@@ -456,6 +459,18 @@
       "passed": true
     },
     {
+      "name": "preserved:code/verify_gr5_external_reference.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr6_equivalence_baseline.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr7_clock_path.py",
+      "passed": true
+    },
+    {
       "name": "preserved:output/gr1_relational_clock.json",
       "passed": true
     },
@@ -469,8 +484,8 @@
     }
   ],
   "summary": {
-    "checks": 91,
-    "passed": 91,
+    "checks": 94,
+    "passed": 94,
     "failed": []
   }
 }

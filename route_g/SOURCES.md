@@ -1,7 +1,100 @@
 # Route G sources and interpretation ledger
 
-Reviewed: 2026-09-24.
+Reviewed: 2026-09-29.
 Current mainline: relational quantum clocks; old KK/scattering sources retained below.
+
+## G-R7 proper-time phases and clock-path correlations
+
+- M. Zych, F. Costa, I. Pikovski and C. Brukner,
+  *Quantum interferometric visibility as a witness of general relativistic
+  proper time*, [Nature Communications2,505(2011)](https://doi.org/10.1038/ncomms1498),
+  [primary text](https://arxiv.org/html/1105.4531v2).
+  The clock-state overlap and proper-time mechanism are established
+  research, not claimed as our invention. We explicitly retain
+  mixed-state and environmental alternatives; visibility alone is not
+  promoted to a unique origin or entanglement witness.
+- A. Roura, *Gravitational Redshift in Quantum-Clock Interferometry*,
+  [Physical Review X10,021014(2020)](https://doi.org/10.1103/PhysRevX.10.021014).
+  Full paths, guides, pulses and initialization surfaces matter;
+  ordinary freely falling light-pulse geometries can lack the desired
+  uniform-field sensitivity. State-resolved/doubly differential phase
+  is an established alternative to tiny contrast changes. We do not
+  transplant its neutral-atom pulse scheme into a Yb+ ion apparatus.
+- M. Schacht and M. Schauer,
+  [same-isotope D3/2 lifetime study](https://arxiv.org/abs/1310.2530).
+  The primary abstract reports61.8 ms with0.6 ms statistical and6.4 ms
+  systematic uncertainty and unexplained systematic variation.
+  Used only to flag the tens-of-ms E2 lifetime scale, not assign a
+  precision decay rate or predict the full interferometric visibility.
+- H. Shao et al.,
+  [Physical Review Research5,023193(2023)](https://doi.org/10.1103/PhysRevResearch.5.023193).
+  A newer lifetime determination uses174Yb+, not our171Yb+ transition.
+  No isotope pooling or numerical rate is imported.
+
+The shared-ground qutrit calculation, explicit pure/mixed fixture,
+joint-witness separable bound, scalar-action rephasing check and
+two-transition thermal-rejected phase identity are derived and
+matrix-verified here within the declared conservative action.
+No full environmental correlator, closed ion path or calibrated laser
+sequence has been supplied. The numerical hold is not an experiment.
+
+## G-R6 equivalence-principle control and independent calibration
+
+- M. Zych and C. Brukner, *Quantum formulation of the Einstein
+  equivalence principle*, [Nature Physics 14,1027(2018)](https://doi.org/10.1038/s41567-018-0197-6);
+  [primary manuscript](https://arxiv.org/html/1502.00971v1).
+  Distinguishes classical redshift/LPI tests from operator-level quantum
+  EEP tests. Our four-setting protocol does not test off-diagonal mass
+  operators, all EEP components, or quantum gravity.
+- J. Grotti et al., *Long-distance chronometric leveling with a portable
+  optical clock*, [Physical Review Applied 21,L061001(2024)](https://doi.org/10.1103/PhysRevApplied.21.L061001);
+  [primary manuscript, v3](https://arxiv.org/abs/2309.14953v3).
+  Independent geodetic determination and before/after side-by-side
+  comparisons support the control method. The independent geodetic
+  magnitude 3915.88(0.30) m^2/s^2 is also a separate source-backed
+  numerical anchor, not a measurement at our apparatus. We do not use
+  the clock-inferred 3918.1(2.6) m^2/s^2 as input, transfer their clock
+  performance, or relabel Sr observations as E2/E3 thermal data.
+- R. C. Tolman and P. Ehrenfest, *Temperature Equilibrium in a Static
+  Gravitational Field*, [Physical Review 36,1791(1930)](https://doi.org/10.1103/PhysRev.36.1791).
+- N. Karolinski and V. Faraoni, *The Tolman-Ehrenfest criterion of thermal
+  equilibrium in scalar-tensor gravity*, [EPJC84,1248(2024)](https://doi.org/10.1140/epjc/s10052-024-13632-6),
+  section 1, equations (2)-(3). We use only the GR equilibrium condition
+  T_local*sqrt(-g00)=constant, not the scalar-tensor extension. Independently
+  thermostatted local setpoints are a different boundary condition.
+
+Our metric-to-phase observation equation, four-cell contrasts, raw-product
+warning, matched-BBR cancellation, bias null direction and covariance
+calculations are explicit baseline derivations, not claims of a new EEP.
+All G-R4 thermal inputs stay pinned; g=9.80665 m/s^2 and 1 m are an
+illustrative scale, not independently measured site geodesy.
+
+## G-R5 acquired primary data and outside-reference model
+
+See the detailed [source receipt and audit](data/clock_comparison_audit/PROVENANCE.md)
+for acquisition URLs, author attribution, licenses, checksums, exact columns
+and the missing thermal channels. No thermal-response fit was performed.
+
+- [PTB2021 release](https://oar.ptb.de/resources/show/10.7795/720.20211028):
+  complete primary ZIP acquired;11 published ratio points, no paired bath data.
+- [ROCIT2025 release](https://zenodo.org/records/17107693): all34 selected
+  E2/E3 files audited;2,324,201 comparator records. One exact day and YAML
+  preserved locally. Source metadata and integrity do not make this a
+  two-temperature radiometry experiment.
+- [Lindvall et al., Optica12,843(2025)](https://doi.org/10.1364/OPTICA.561754):
+  same-package E2/E3 comparison and network/covariance context. The later
+  public release supersedes the paper's initial on-request data statement.
+- [INRIM optical-link format](https://github.com/INRIM/optical-link-data-format):
+  comparator scaling, direction and validity semantics are retained; no
+  direct E3/E2 ratio is invented by simply negating the data column.
+- [Steinel et al., PRL131,083002(2023)](https://doi.org/10.1103/PhysRevLett.131.083002):
+  external Yb+ E3 reference and spectroscopic thermal-inference precedent,
+  not the requested E2/E3 observations or independent radiation calibration.
+
+The chosen second E3 reference, contrast/combination and bias-identifiability
+proof are our declared observation model. All numerical model fixtures are
+algebra tests, not simulated replacements for missing experimental data.
+No source claims discovery of the proposed universal-time effect.
 
 ## G-R4 physical-source and cross-transition audit
 

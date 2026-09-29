@@ -1,0 +1,33 @@
+{
+  "stage": "G-R5",
+  "date": "2026-09-24",
+  "status": "specified measurement model; no apparatus or paired thermal dataset supplied",
+  "target_S": "one 171Yb+ ion with interleaved E2/E3 interrogation in a separately controlled radiation enclosure",
+  "reference_R": "second independent 171Yb+ E3 ion clock outside that enclosure, in a monitored separate thermal enclosure",
+  "comparison": "both target transitions against R through a frequency comb and phase-stabilized optical paths; retain independent servo outputs and common-reference covariance",
+  "ordinary_source_model": "same pinned GR4 electric-dipole polarizabilities; both target and reference retain thermal shifts, not zeroed by assumption",
+  "reference_temperature_nominal_K": 300.0,
+  "target_temperatures_illustrative_K": [300.0, 310.0],
+  "physical_unknown": "Delta log(F_S/F_R), not F_S alone or a globally observable absolute time",
+  "no_new_time_law": true,
+  "empirical_data_ready": false,
+  "required_observation_fields": [
+    "run_id, clock_id, transition_id, bath_state and stable-setpoint interval",
+    "timestamps, durations, averaging/sensitivity functions and validity masks",
+    "uncorrected comparator/servo readings, nominal ratios and scaling conventions",
+    "separate ledger of every applied BBR, probe, Zeeman, Doppler, quadrupole and gravity correction",
+    "independent target and reference radiometry/spectra or effective-temperature calibration with covariance",
+    "emissivities, view factors, gradients, sensor calibration and heater-state record",
+    "reference drift and thermal cross-talk bounds; optical path/comb residuals",
+    "joint covariance, including shared reference and calibration errors"
+  ],
+  "false_positive_channels": [
+    "reference clock drift or reference BBR variation",
+    "common optical-link/comb bias correlated with heater state",
+    "changing gravitational potential or target-reference velocity difference",
+    "ordinary unmodeled shifts common in fractional units",
+    "time-window mismatch between interleaved measurements"
+  ],
+  "control_protocol": "low-high-high-low blocks with matched effective time weights; also reverse ordering and monitor thermal settling; linear drift cancellation is not cancellation of nonlinear or heater-correlated systematics",
+  "scope_boundary": "conventional spacetime control, not a physical implementation of GR1-GR3 constraints or an identification of u_gamma with Chen Ed"
+}

@@ -1,0 +1,50 @@
+{
+  "stage": "G-R7",
+  "date": "2026-09-29",
+  "status": "conservative quantum-clock/path kernel; not a completed interferometer or experiment",
+  "preserved_sha256": {
+    "data/BBR_CLOCK_INPUTS.json": "dd5aacde37c2e86ba0bd32f9e53539970999e2aae017856a0fc88c579b3b7a65",
+    "data/EEP_BASELINE_CARD.json": "55056a4ad3f4d99005c9a8cf26031a77e114b27fca5bd5e755cd733e3cb1f9c7",
+    "code/verify_gr6_equivalence_baseline.py": "fd0c3980e4e267ede0370a9168daaabf093e803ac5271f31d0e9d3b6fe200ed8"
+  },
+  "space": "C^2 path tensor C^3 internal; internal basis [g,e2,e3] shares one ground state, not two independent clock qubits",
+  "action": "same conservative G-R4/G-R6 local spectral response integrated over each path's proper time, plus scalar center-of-mass/ground-energy and guide/pulse action",
+  "clock_hamiltonian": "diag(0,h*nu2*(1+b2(T)),h*nu3*(1+b3(T))); b_i from unchanged BBR_CLOCK_INPUTS.json",
+  "phase_convention": "theta_ir=2*pi*nu_i*integral[(1+b_i(T_r))*d_tau_r]; delta_i=theta_iA-theta_iB; kappa=Tr(rho_clock U_B^dagger U_A)",
+  "port_convention": "P_plus(phi)=0.5*(1+Re[exp(i*(phi+zeta))*kappa]) for balanced closed paths; zeta is the unresolved scalar external phase",
+  "same_action_boundary": "Preserve the conservative effective action, not claim a complete microscopic radiative/open-system action. Static real polarizabilities do not specify scattering, lifetime, guide forces or pulse phases.",
+  "assumptions": [
+    "coherent balanced path preparation and independently characterized internal preparation",
+    "prescribed paths with internal-state-independent guides and matched final external wave packets at the retained order",
+    "diagonal adiabatic clock Hamiltonian during the analyzed hold, no transitions or decoherence in the ideal kernel",
+    "all actual splitting, transport, recombination and laser phases must be added for a full experiment",
+    "reference R fixes the time convention; it is not included as a third entangled clock"
+  ],
+  "illustration": {
+    "hold_s": 0.01,
+    "height_separation_m": 1.0,
+    "cold_K": 300.0,
+    "hot_K": 310.0,
+    "g_scale_m_s2": 9.80665,
+    "cases": ["identical", "gravity_only", "thermal_only", "gravity_and_thermal"],
+    "status": "hold-segment predictions only; not experimental data, full trajectory phase or achievable Yb+ hardware"
+  },
+  "lifetime_caution": {
+    "same_isotope_source": "https://arxiv.org/abs/1310.2530",
+    "same_isotope_report": "171Yb+ D3/2 F=2 lifetime 61.8 ms with 0.6 ms statistical and 6.4 ms systematic uncertainty; authors report unexplained variation",
+    "modern_other_isotope_source": "https://doi.org/10.1103/PhysRevResearch.5.023193",
+    "use": "tens-of-ms E2 lifetime warning only; do not pool isotope values, fit a dissipator, or assume seconds of unperturbed E2 coherence"
+  },
+  "required_next_inputs": [
+    "closed space-time trajectories and guide/control Hamiltonians, including internal-state dependence and wave-packet overlap",
+    "preparation and readout pulse phases at both paths and common-reference timing",
+    "state-resolved fringe phases and independent internal coherence characterization",
+    "joint path-clock observables or tomography for an entanglement claim",
+    "emission, thermal field correlation, laser noise and survival records; no automatic scalar visibility damping inferred from static BBR shifts"
+  ],
+  "phase_and_visibility_are": "linked predictions of one evolution operator, not independently fitted laws",
+  "visibility_alone_is_not": "an entanglement witness, a proper-time-origin identifier, or a proof of quantum gravity",
+  "empirical_data_ready": false,
+  "new_time_law": false,
+  "hardware_claim": false
+}

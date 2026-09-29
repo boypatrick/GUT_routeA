@@ -2,7 +2,11 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-09-24): relational/emergent time; G-R4 physical-source audit bounded-done.
+Current priority (2026-09-29): G-R7 unified frequency/phase/clock-path
+kernel bounded-done. Specify closed trajectories and calibrated
+state-resolved phase readout before an apparatus prediction.
+G-R6's independent four-setting empirical test and G-R5's missing
+thermal records remain open. No new time law or hardware claim.
 Earlier G0–G2-T: preserved comparison/regression models, not the current mainline.
 Status labels: open, in-progress, bounded-done, rejected-for-this-model.
 
@@ -246,23 +250,230 @@ snapshot above is historical. No earlier verifier code was changed.
 The five-page PDF is compiled twice and visually checked page by page.
 These validate the calculation, not an empirical discovery.
 
-### Next physical decision — requires observations or a new observable
+### G-R5 — Acquired data, independent reference, and empirical eligibility
 
-Priority A: actual common-bath radiometry plus interleaved raw E2/E3
-readings at two setpoints, retaining the intentional BBR modulation
-while bounding temperature-correlated non-BBR systematics. No data
-are fabricated and no additional temperature/Gaussian scan is needed.
+Status (2026-09-24): **data acquisition/audit and reference model bounded-done;
+requested two-temperature empirical validation OPEN**.
+Checkpoint before this work: commit9b66092 pushed to
+origin/codex/route-f-invariant-control, preserving milestones through G-R4.
 
-Priority B, if the target is a universal factor: specify an independent
-reference outside the modified bath or a predicted non-clock observable,
-including its response and comparison protocol. Assuming an unaffected
-reference by definition cannot establish a universal time effect.
-Optional C: equal total radiation density with different spectral content,
-to test scalar-density sufficiency via the same spectral response kernel.
+Downloaded and checksum-verified two primary releases. The PTB2021
+archive has11 published E3/E2 points. The ROCIT2025 release supplies
+34 selected same-package E2/E3 files:2,324,201 rows, all flagged valid,
+zero nonfinite values and duplicate timestamps. All selected days and
+release metadata were audited. The small PTB archive and exact first
+ROCIT day (51,990 rows) plus YAML are preserved; every selected full-
+release member hash is recorded. No physical frequency slope was fitted.
 
-Use interaction-derived spectral response as the current explanation;
-do not fit an arbitrary Ed slowdown law or add per-species free factors.
-No conventional-spacetime control is promoted to an emergent-space proof.
+**Missing:** paired bath-state labels, independent ion-site radiation
+calibration and a per-run BBR correction ledger. The released processed
+comparator is not certified as an uncorrected servo record. Its direction
+is E2 versus E3 and its scaled-transfer-beat convention must be respected.
+The older PTB ratio offset is absolute, not fractional. Validity does not
+imply sample independence. This is a scope mismatch for our experiment,
+not bad-data discovery or proof that suitable data do not exist anywhere.
+The September2025 deposit supersedes the paper's earlier on-request
+availability statement. Motional temperature is not radiation temperature.
+
+**Reference selected:** a second independent Yb+ E3 clock outside the
+target enclosure, in its own monitored enclosure, with a comb and
+phase-stabilized optical paths. Both target transitions are compared
+to it. Its BBR response, other clock shifts, possible common-factor
+response, drift, gravity and optical-transfer terms remain explicit.
+This specifies a measurement model, not a constructed apparatus or
+physical implementation of G-R1--G-R3. The observable is a change in
+log(F_target/F_reference), never an unreferenced absolute time factor.
+
+Derived differential and common-response channels. At static leading
+order, E2/E3 weights(-0.16004,1.16004) cancel the target T^4 term while
+retaining the common target-reference response. They do NOT remove
+reference drift or a common path/gravity bias. An unconstrained common
+bias is exactly degenerate with the desired common signal. A derived
+third ratio adds no independent equation. Radiometry must remain
+independent of the frequency law under test; two channels fitted to
+two unknowns cannot validate that law by themselves.
+
+For an illustrative300->310 K change, the pinned polarizability errors
+alone give a2.17e-18 to2.59e-18 composite standard-error range over
+unknown correlation, not a confidence interval or achieved total error.
+Thus the retained inputs do not support a sub-1e-18 common-effect claim.
+An ABBA sequence cancels offset/linear drift but not quadratic drift
+or heater-correlated bias; matched effective windows and covariance
+are required. No new stochastic scan or free time-rate law is introduced.
+
+Artifacts: [source provenance](data/clock_comparison_audit/PROVENANCE.md),
+[full archive audit](output/gr5_clock_data_full_audit.json),
+[reference/data contract](data/EXTERNAL_REFERENCE_CARD.json),
+[request checklist](data/clock_comparison_audit/DATA_REQUEST.md),
+[report](output/gr5_external_reference.md),
+[TeX](tex/route_g_external_reference.tex),
+[PDF](output/pdf/route_g_external_reference.pdf).
+New model checks46/46. Current full Route-G regression4776/4776;
+G-R3/G-R4 each automatically add one preservation check for the new script.
+The four-page PDF is compiled twice and visually checked page by page.
+
+### G-R6 — Independent thermal and gravitational controls (2026-09-29)
+
+Status: **theory baseline bounded-done; empirical validation OPEN**.
+User-approved scope: retain E2/E3 thermal response and add a known
+gravitational-potential comparison, independently controlled.
+G-R4 inputs and G-R4/G-R5 verifier files are pinned by hash and unchanged.
+The independent E3 reference remains fixed and fully modeled.
+
+In a static metric, d tau=N dt and received clock ratios contain N_S/N_R.
+Taking logarithms gives q_i=G+B_i(T_S)-B_3(T_R)+ordinary/link terms.
+G is specified by the metric, not a freely fitted slowdown factor.
+Two local temperatures crossed with two potential settings give
+temperature, height and mixed contrasts. After controlled corrections:
+thermal_i=Delta B_i, height_i=Delta ln N, mixed_i=0.
+The E3/E2 internal ratio rejects common gravity but retains the
+differential thermal response. A raw fractional mixed product is
+ordinary multiplication, not a log-interaction anomaly.
+
+The illustrative 300/310 K, 1 m example uses conventional g=9.80665
+m/s^2 only as a scale: gravity +1.091e-16 in both channels; heating
+-7.337e-17 in E2 and -1.012e-17 in E3. No site geodesy or new clock
+observations exist for this card. One cannot derive DeltaPhi from the
+same clocks and then call the gravitational prediction independently tested.
+
+As a distinct real external scale, Grotti et al. (2024) report an
+independent geodetic potential magnitude of3915.88(0.30) m^2/s^2.
+Its universal redshift prediction is4.3570e-14 with3.34e-18 propagated
+potential uncertainty. Their clocks were Sr, not the proposed E2/E3
+experiment; no published performance or clock-inferred potential is
+used as our calibration. This anchor does not fill the four-setting gate.
+
+**New useful insight:** matching the local radiation conditions between
+heights cancels even uncertain fixed BBR shifts. The older polarizability
+error is not automatically a floor on this height test. Upper-site +0.1 K
+mismatch at both setpoints would instead leak about -7.34e-19 (E2) and
+-1.01e-19 (E3). Those are conditional sensitivities, not achieved errors.
+Nonthermal transport, geometry, reference and link systematics remain.
+
+A common height-locked nuisance has the same design column as a common
+redshift anomaly. Only independently bounded nuisances permit a physical
+interpretation. Nonzero mixed contrast rejects controlled separability,
+not automatically EEP. Four means with a fully fitted interaction model
+are saturated; repeat blocks and retain covariance before significance.
+Matched sampling windows, reversals and return-to-start controls matter.
+An ideal symmetric eight-plateau sequence rejects linear drift but not
+quadratic or state-locked drift. No hardware timing precision is assigned.
+
+Independent thermostats do not imply one global passive thermal bath.
+The latter obeys Tolman-Ehrenfest T_local*N=constant; it must not be
+imposed simultaneously with independent local setpoints. This remains
+a classical-background redshift/LPI baseline, not a test of every EEP
+component or a quantum mass-operator/off-diagonal experiment.
+
+Artifacts: [input/acquisition card](data/EEP_BASELINE_CARD.json),
+[numerical report](output/gr6_equivalence_baseline.md),
+[verifier](code/verify_gr6_equivalence_baseline.py),
+[TeX](tex/route_g_equivalence_baseline.tex),
+[PDF](output/pdf/route_g_equivalence_baseline.pdf).
+Completion audit (2026-09-29): 49/49 new implementation checks and
+4827/4827 checks across all 18 Route-G verifiers pass. G-R3/G-R4 each
+automatically add one preservation check for the new verifier; no old
+physics formula or pinned thermal input changed. The four-page PDF was
+compiled locally and visually reviewed page by page without layout or
+reference warnings. The built-in compiler did not return a confirmed
+result, so PDF validation used the local compiler. No empirical gate
+is promoted by software tests.
+
+### G-R7 — Same-action phase and clock-path correlations (2026-09-29)
+
+Status: **conservative quantum kernel bounded-done; complete physical
+interferometer and empirical validation OPEN**.
+This is the user's approved quantum extension, not another fitted
+time-rate formula. The G-R4 input card and G-R6 card/verifier are
+hash-pinned and preserved. The proper-time conservative action gives
+theta_ir=2*pi*nu_i*integral[(1+b_i)*d_tau_r]; its derivative recovers
+the G-R6 frequency. The joint controlled unitary gives
+kappa=Tr(rho_clock U_B^dagger U_A), the internal fringe phase and
+ideal visibility |kappa|. A full scalar path/ground/guide/laser phase
+is not fixed by differential polarizabilities and remains explicit.
+
+For pure (g+e_i)/sqrt(2), kappa=exp(-i delta_i/2)*cos(delta_i/2),
+and joint-state negativity is |sin(delta_i/2)|/2. A common-ground
+(g+e2+e3)/sqrt(3) instead has kappa=(1+exp(-i delta2)+exp(-i delta3))/3;
+it is not a product of independently invented qubits.
+Frequency, phase and visibility are linked consistency predictions,
+not three freely adjustable fits.
+
+**Exact diagnostic counterexample:** with Ua=I and Ub=Z, pure and
+energy-dephased clock preparations have identical zero path visibility.
+The pure joint state has negativity1/2; the dephased one is explicitly
+separable. The joint witness (I-X_path Z_clock-Z_path X_clock)/2
+distinguishes this calibrated fixture. State-resolved energy fringes
+alone still do not certify entanglement; joint noncommuting measurements
+or tomography and preparation characterization are required.
+
+A common final unitary, or unconditioned trace-preserving channel acting
+only on the clock, leaves the path marginal unchanged. It can change
+entanglement without changing path visibility. Thus an assumed Ramsey
+decay factor cannot simply be multiplied into the path signal.
+Reversing the ideal controlled unitary can undo its correlations,
+but needs actual controls; postselection is not unconditional recovery.
+The conservative real BBR response supplies no physical radiative
+correlation function, emission which-path overlap or full dissipator.
+
+**Same-weight phase check:** x_i=delta_i/(2*pi*nu_i)=Delta_tau+beta_i*J,
+where J=integral(lambda_A*u_A-lambda_B*u_B)dt. The unchanged G-R5
+weights yield sum w_i*x_i=Delta_tau within the static response.
+This requires calibrated unwrapped phases, matched histories and
+independent radiometry; it is not a weighted sum of visibilities or
+an empirical determination of proper time from missing data.
+
+Illustrative 1 m/10 ms hold: gravity-only Delta_nu=(0.07511,0.07006) Hz,
+delta=(0.004719,0.004402) rad, ideal visibility loss=(2.784,2.422)e-6.
+Thermal-only and combined controls are also computed, without scans.
+Complete launch/transport/recombination phases and wave-packet closure
+are not supplied by this hold. Standard freely falling geometries may
+cancel uniform-field sensitivity; paths and initialization matter.
+At 1 m the ideal E2/E3 first contrast zeros need6.66/7.14 s.
+E2's tens-of-ms upper-state lifetime makes such unperturbed E2
+extrapolation inappropriate. Isotope lifetime values are not pooled
+into a made-up environmental rate. E3 longevity alone does not establish
+charged-ion path coherence or hardware feasibility.
+
+Artifacts: [control card](data/CLOCK_PATH_CARD.json),
+[numerical report](output/gr7_clock_path.md),
+[verifier](code/verify_gr7_clock_path.py),
+[TeX](tex/route_g_clock_path.tex),
+[PDF](output/pdf/route_g_clock_path.pdf).
+All 66 new checks and all 4895 checks across the 19 Route-G verifiers
+pass. The total includes two automatically added preservation checks
+in G-R3/G-R4. The five-page PDF was compiled locally and every rendered
+page was visually reviewed; the final compiler log has no layout warnings.
+These are algebra/numerical/preservation checks, not experimental evidence.
+
+Next quantum step: specify one closed-path/guide/pulse sequence and
+state-resolved differential phase readout, with coherent/dephased
+preparation controls. The phase is first order in small delta while
+visibility loss is second order. Joint measurements follow if
+entanglement is claimed. Do not prioritize forcing full visibility
+collapse, treating all noise as time dilation, or fitting another Ed law.
+This does not require relabeling the G-R6 ordinary two-site comparison
+as a coherent spatial-superposition experiment.
+
+### Separate empirical action — not another mathematical prerequisite
+
+Obtain the specific missing thermal/clock/correction records using the
+saved G-R5 checklist, supplemented by the G-R6 independent potential
+and four-setting acquisition fields, or conduct a genuinely controlled
+acquisition with independent radiometry and geodesy. No lab contact
+has been sent. Existing public
+frequency comparisons must not be relabeled as the requested experiment.
+Without those records, empirical validation stays open; no slope,
+significance, common-time bound or physical-fit promotion is authorized
+by the present data. If external coordination is desired, obtain user
+direction before contacting researchers.
+
+With qualifying records, first test the differential thermal prediction
+and matched-temperature gravitational prediction with matching windows
+and known corrections, then test mixed residuals and common residuals
+against reference, link, transport and heater controls.
+Keep source-only versus common-factor claims separate. No new detector
+scan, emergent-space proof, or arbitrary Ed slowdown fit is a substitute.
 
 ### Beyond the bounded clock program
 

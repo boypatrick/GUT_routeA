@@ -1,0 +1,1470 @@
+{
+  "stage": "G-R5 data acquisition audit",
+  "date": "2026-09-24",
+  "ptb_2021": {
+    "archive_sha256": "3f38135ebfab1375391195c282aa1980a76657ba9125b59e6e1cb85695a400e6",
+    "archive_members": [
+      "Data/E3_E2_frequency_ratio_measurement.txt",
+      "Data/E3_frequency_measurement.txt",
+      "Data/README.txt"
+    ],
+    "ratio_sha256": "ec9355e4f44c6035a49639e57a49273a8efef72c66c87ad9a2f89c2b8256d219",
+    "rows": 11,
+    "columns": 5,
+    "fields": [
+      "MJD",
+      "E3/E2 minus 0.932829404530965 (absolute ratio difference)",
+      "statistical uncertainty",
+      "reproducibility",
+      "combined uncertainty"
+    ],
+    "nonfinite_values": 0,
+    "duplicate_timestamps": 0,
+    "time_range_mjd": [
+      57527.0,
+      59081.0
+    ],
+    "uncertainty_quadrature_max_relative_error": 2.2016343890223193e-06,
+    "ratio_is_fractional": false,
+    "eligibility": "ineligible: published comparison points, no paired bath/radiometry or correction ledger; paper uses two clock systems"
+  },
+  "rocit_2025": {
+    "doi": "10.5281/zenodo.17107693",
+    "license": "CC-BY-4.0",
+    "full_archive_sha256": "6168e24a0c29ce0929e9651460f11ea77f151176e1ba3d0fe3428e1e08bd56bd",
+    "scope": "full_selected_pair",
+    "all_archive_members": [
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-02-28_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-01_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-02_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-03_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-04_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-05_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-07_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-08_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-09_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-10_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-11_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-12_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-14_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-15_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-17_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-03-31_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/2022-04-01_INRIM_ITYb1-PTB_Sr3_CombKnoten.dat",
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/INRIM_ITYb1-PTB_Sr3_CombKnoten.yml",
+      "INRIM_ITYb1-SYRTE_Sr2/",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-02-28_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-01_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-02_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-03_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-04_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-05_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-07_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-08_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-09_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-10_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-11_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-12_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-14_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-15_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-16_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-17_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-21_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-22_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-23_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-24_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-25_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-29_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-30_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-03-31_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/2022-04-01_INRIM_ITYb1-SYRTE_Sr2.dat",
+      "INRIM_ITYb1-SYRTE_Sr2/INRIM_ITYb1-SYRTE_Sr2.yml",
+      "NPL-Yb+(E3)-NPL-Sr1/",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-09_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-10_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-11_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-12_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-13_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-14_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-19_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-20_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-21_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-22_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-23_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-24_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-25_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-26_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-27_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-28_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-29_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-30_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-03-31_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/2022-04-01_NPL-Yb+(E3)-NPL-Sr1.dat",
+      "NPL-Yb+(E3)-NPL-Sr1/NPL-Yb+(E3)-NPL-Sr1.yml",
+      "PTB_In_CombKnoten-INRIM_ITYb1/",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-01_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-02_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-04_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-05_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-07_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-10_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-11_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/2022-03-12_PTB_In_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_In_CombKnoten-INRIM_ITYb1/PTB_In_CombKnoten-INRIM_ITYb1.yml",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-01_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-02_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-03_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-04_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-05_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-06_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-07_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-08_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-09_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-10_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-11_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-12_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-13_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/2022-03-14_PTB_In_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/PTB_In_CombKnoten-PTB_Sr3_CombKnoten.yml",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-02-23_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-02-24_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-01_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-02_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-03_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-04_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-05_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-06_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-07_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-08_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-09_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-10_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-11_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-12_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-13_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/2022-03-14_PTB_In_CombKnoten-PTB_Yb_CombKnoten.dat",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/PTB_In_CombKnoten-PTB_Yb_CombKnoten.yml",
+      "PTB_In_CombKnoten-SYRTE_Sr2/",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-01_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-02_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-04_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-05_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-06_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-07_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-08_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-09_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-10_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-11_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-12_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-13_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/2022-03-14_PTB_In_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_In_CombKnoten-SYRTE_Sr2/PTB_In_CombKnoten-SYRTE_Sr2.yml",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-02-28_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-01_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-02_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-03_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-04_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-05_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-06_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-07_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-08_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-09_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-10_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-11_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-12_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-13_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-14_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-15_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-16_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-17_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-30_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-03-31_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/2022-04-01_PTB_Sr3_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/PTB_Sr3_CombKnoten-SYRTE_Sr2.yml",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-23_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-24_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-25_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-26_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-27_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-28_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-01_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-02_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-03_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-04_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-05_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-08_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-09_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-10_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-11_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-12_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-13_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-14_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-15_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-16_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-23_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-24_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-25_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-26_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-27_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-28_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-29_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-01_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-02_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-03_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-04_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-05_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.yml",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-02-21_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-02-22_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-02-23_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-02-28_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-01_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-02_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-03_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-04_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-05_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-07_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-08_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-09_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-10_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-11_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-12_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-14_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-15_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-16_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-17_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-21_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-22_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-23_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-24_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-25_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-28_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-29_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-30_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-03-31_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/2022-04-01_PTB_Yb_CombKnoten-INRIM_ITYb1.dat",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/PTB_Yb_CombKnoten-INRIM_ITYb1.yml",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-02-28_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-01_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-02_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-03_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-04_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-05_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-06_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-07_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-08_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-09_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-10_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-11_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-12_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-13_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-14_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-15_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-16_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-17_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-30_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-03-31_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-04-01_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-04-02_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-04-04_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/2022-04-05_PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.dat",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.yml",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-02-28_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-01_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-02_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-03_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-04_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-05_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-06_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-07_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-08_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-09_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-10_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-11_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-12_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-13_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-14_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-15_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-16_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-17_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-18_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-19_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-20_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-21_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-22_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-23_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-24_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-25_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-26_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-29_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-30_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-03-31_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/2022-04-01_PTB_Yb_CombKnoten-SYRTE_Sr2.dat",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/PTB_Yb_CombKnoten-SYRTE_Sr2.yml"
+    ],
+    "all_yaml_metadata": {
+      "INRIM_ITYb1-PTB_Sr3_CombKnoten/INRIM_ITYb1-PTB_Sr3_CombKnoten.yml": "- name: INRIM_ITYb1-PTB_Sr3_CombKnoten\n  numrhoBA: '518295836590863.6000000000002'\n  denrhoBA: '429228004229873'\n  sB: 518295836590863.6\n  nu0A: '429228004229873'\n  nu0B: '518295836590863.6'\n  grsB: 0.0\n  uB_sys: 2.2e-17\n",
+      "INRIM_ITYb1-SYRTE_Sr2/INRIM_ITYb1-SYRTE_Sr2.yml": "- name: INRIM_ITYb1-SYRTE_Sr2\n  numrhoBA: '518295836590863.6000000000002'\n  denrhoBA: '429228004229873'\n  sB: 518295836590863.6\n  nu0A: '429228004229873'\n  grsA: 6.086e-15\n  uA_sys: 1.7e-17\n  nu0B: '518295836590863.6'\n  grsB: 0.0\n  uB_sys: 2.2e-17\n",
+      "NPL-Yb+(E3)-NPL-Sr1/NPL-Yb+(E3)-NPL-Sr1.yml": "- name: NPL-Yb+(E3)-NPL-Sr1\n  numrhoBA: '642121496772645.1199999999999'\n  denrhoBA: '429228004229872.99'\n  sB: 642121496772645.1\n  nu0A: '429228004229872.99'\n  grsA: 1.215e-15\n  uA_sys: 2.23e-17\n  nu0B: '642121496772645.12'\n  grsB: 1.1869e-15\n  uB_sys: 3.2e-18\n",
+      "PTB_In_CombKnoten-INRIM_ITYb1/PTB_In_CombKnoten-INRIM_ITYb1.yml": "- name: PTB_In_CombKnoten-INRIM_ITYb1\n  numrhoBA: '1267402452901050'\n  denrhoBA: '518295836590863.6'\n  sB: 1267402452901050.0\n  nu0A: '518295836590863.6'\n  grsA: 0.0\n  uA_sys: 2.2e-17\n  nu0B: '1267402452901050'\n",
+      "PTB_In_CombKnoten-PTB_Sr3_CombKnoten/PTB_In_CombKnoten-PTB_Sr3_CombKnoten.yml": "- name: PTB_In_CombKnoten-PTB_Sr3_CombKnoten\n  numrhoBA: '1267402452901050'\n  denrhoBA: '429228004229873'\n  sB: 1267402452901050.0\n  nu0A: '429228004229873'\n  nu0B: '1267402452901050'\n",
+      "PTB_In_CombKnoten-PTB_Yb_CombKnoten/PTB_In_CombKnoten-PTB_Yb_CombKnoten.yml": "- name: PTB_In_CombKnoten-PTB_Yb_CombKnoten\n  numrhoBA: '1267402452901050'\n  denrhoBA: '642121496772645'\n  sB: 1267402452901050.0\n  nu0A: '642121496772645'\n  nu0B: '1267402452901050'\n",
+      "PTB_In_CombKnoten-SYRTE_Sr2/PTB_In_CombKnoten-SYRTE_Sr2.yml": "- name: PTB_In_CombKnoten-SYRTE_Sr2\n  numrhoBA: '1267402452901050'\n  denrhoBA: '429228004229873'\n  sB: 1267402452901050.0\n  nu0A: '429228004229873'\n  grsA: 6.086e-15\n  uA_sys: 1.7e-17\n  nu0B: '1267402452901050'\n",
+      "PTB_Sr3_CombKnoten-SYRTE_Sr2/PTB_Sr3_CombKnoten-SYRTE_Sr2.yml": "- name: PTB_Sr3_CombKnoten-SYRTE_Sr2\n  numrhoBA: '429228004229873'\n  denrhoBA: '429228004229873'\n  sB: 429228004229873.0\n  nu0A: '429228004229873'\n  grsA: 6.086e-15\n  uA_sys: 1.7e-17\n  nu0B: '429228004229873'\n",
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.yml": "- name: PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten\n  numrhoBA: '688358979309308.2399999999998'\n  denrhoBA: '642121496772645'\n  sB: 688358979309308.2\n  nu0A: '642121496772645'\n  nu0B: '688358979309308.24'\n",
+      "PTB_Yb_CombKnoten-INRIM_ITYb1/PTB_Yb_CombKnoten-INRIM_ITYb1.yml": "- name: PTB_Yb_CombKnoten-INRIM_ITYb1\n  numrhoBA: '642121496772644.9999999999999'\n  denrhoBA: '518295836590863.6'\n  sB: 642121496772645.0\n  nu0A: '518295836590863.6'\n  grsA: 0.0\n  uA_sys: 2.2e-17\n  nu0B: '642121496772645'\n",
+      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten/PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten.yml": "- name: PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten\n  numrhoBA: '642121496772645.0000000000002'\n  denrhoBA: '429228004229873'\n  sB: 642121496772645.0\n  nu0A: '429228004229873'\n  nu0B: '642121496772645'\n",
+      "PTB_Yb_CombKnoten-SYRTE_Sr2/PTB_Yb_CombKnoten-SYRTE_Sr2.yml": "- name: PTB_Yb_CombKnoten-SYRTE_Sr2\n  numrhoBA: '642121496772645.0000000000002'\n  denrhoBA: '429228004229873'\n  sB: 642121496772645.0\n  nu0A: '429228004229873'\n  grsA: 6.086e-15\n  uA_sys: 1.7e-17\n  nu0B: '642121496772645'\n"
+    },
+    "selected_pair": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
+    "selected_files": 34,
+    "rows": 2324201,
+    "valid_rows": 2324201,
+    "invalid_rows": 0,
+    "nonfinite_values": 0,
+    "duplicate_timestamps": 0,
+    "time_range_mjd": [
+      59632.371875,
+      59674.958218
+    ],
+    "metadata_for_pair": "- name: PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten\n  numrhoBA: '688358979309308.2399999999998'\n  denrhoBA: '642121496772645'\n  sB: 688358979309308.2\n  nu0A: '642121496772645'\n  nu0B: '688358979309308.24'\n",
+    "files": {
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "2b66e09e2b9bcb68eb8eea7a624bc0f3b3afa5b036b853515be4be142514d36f",
+        "bytes": 2522474,
+        "rows": 51990,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59632.371875,
+          59632.999988
+        ],
+        "flags": {
+          "1": 51990
+        },
+        "valid_rows": 51990,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 95,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-23_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "cd8d531a352c2b6b086766ec86ecdafcbc9e8a39332a5e62aeb281f24ebb43e0",
+        "bytes": 2589726,
+        "rows": 53331,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59633.0,
+          59633.999988
+        ],
+        "flags": {
+          "1": 53331
+        },
+        "valid_rows": 53331,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 95,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-24_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "8073569804e62e7599ca2914c830f3965afef0738c28c7e56d97bd93b4c72a4f",
+        "bytes": 2395443,
+        "rows": 49324,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59634.0,
+          59634.999988
+        ],
+        "flags": {
+          "1": 49324
+        },
+        "valid_rows": 49324,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 87,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-25_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "75906465b5e017e94f585601bcd4db779957d91d48db99cd6c322cfb192f9a0e",
+        "bytes": 2855565,
+        "rows": 58831,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59635.0,
+          59635.999988
+        ],
+        "flags": {
+          "1": 58831
+        },
+        "valid_rows": 58831,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 120,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-26_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "1b007b1d601ed186787e3b734602d9f92ce50572196dbe24cf84a43605ed4992",
+        "bytes": 4061154,
+        "rows": 83667,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59636.0,
+          59636.999988
+        ],
+        "flags": {
+          "1": 83667
+        },
+        "valid_rows": 83667,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 589,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-27_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "957eaad609d7f6c3fc325b1aa0a60ed24b54778150254bc52cb08df7c7de02a5",
+        "bytes": 1203227,
+        "rows": 24778,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59637.0,
+          59637.291551
+        ],
+        "flags": {
+          "1": 24778
+        },
+        "valid_rows": 24778,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 84,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-02-28_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "6a161a8fac7578118b432a8f6d63fbd06d1ab4660da9cba7ab00c0f2dc1f7fcd",
+        "bytes": 2450727,
+        "rows": 50474,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59638.352315,
+          59638.999988
+        ],
+        "flags": {
+          "1": 50474
+        },
+        "valid_rows": 50474,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 189,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-01_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "a98a6d224ce33c2a48aacb634afbf490c20a17c3de1a499bb3bc6e76a18db6c9",
+        "bytes": 3600433,
+        "rows": 74128,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59639.0,
+          59639.999988
+        ],
+        "flags": {
+          "1": 74128
+        },
+        "valid_rows": 74128,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 666,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-02_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "36b98215c8b22d71fabaafe7ffaa0dcd0ea7c691214adca2dfdd087619a4ea5e",
+        "bytes": 4176981,
+        "rows": 86036,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59640.0,
+          59640.999988
+        ],
+        "flags": {
+          "1": 86036
+        },
+        "valid_rows": 86036,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 30,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-03_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "4d4e969240422efa0b46af9dffaafd2f0715c6e92b265ca9cd11669c5a20fd61",
+        "bytes": 3978356,
+        "rows": 81926,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59641.0,
+          59641.999988
+        ],
+        "flags": {
+          "1": 81926
+        },
+        "valid_rows": 81926,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 55,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-04_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "1a896e1a75d775e0b3ef8c6d515b1f4b510f51c004ec825f0cc6dbbe496ca172",
+        "bytes": 4039456,
+        "rows": 83204,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59642.0,
+          59642.999988
+        ],
+        "flags": {
+          "1": 83204
+        },
+        "valid_rows": 83204,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 33,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-05_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "881f1cfd84debfa7491085a1f0340dac5730cb62fb30f47789920fb72c65ec4f",
+        "bytes": 1772970,
+        "rows": 36508,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59643.0,
+          59643.436296
+        ],
+        "flags": {
+          "1": 36508
+        },
+        "valid_rows": 36508,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 29,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-08_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "42f2b36a83bbf0a9eaf6852422658f9f4e52acb2d6082d61c02a9d6d0dbd2c9a",
+        "bytes": 2683424,
+        "rows": 55270,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59646.305671,
+          59646.999988
+        ],
+        "flags": {
+          "1": 55270
+        },
+        "valid_rows": 55270,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 33,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-09_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "521b4cd6db740102b29a3e25d306dda29dabf944c90269d40cbabf5781dfc2a8",
+        "bytes": 4152541,
+        "rows": 85523,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59647.0,
+          59647.999988
+        ],
+        "flags": {
+          "1": 85523
+        },
+        "valid_rows": 85523,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 63,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-10_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "e079f661ad5e624154b91531c722b2dbe622716483205e503d766a17a72f9c33",
+        "bytes": 4151757,
+        "rows": 85545,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59648.0,
+          59648.999988
+        ],
+        "flags": {
+          "1": 85545
+        },
+        "valid_rows": 85545,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 35,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-11_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "e1525ee6e0930c1a42ebfb07b6dde47512119f03c1bad0e69e28c92a36101a82",
+        "bytes": 3965757,
+        "rows": 81679,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59649.0,
+          59649.999988
+        ],
+        "flags": {
+          "1": 81679
+        },
+        "valid_rows": 81679,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 50,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-12_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "324ea81c0c161aee26bcc6781ae40375b66abab5cd80cac129692cf4b743c462",
+        "bytes": 4166356,
+        "rows": 85785,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59650.0,
+          59650.999988
+        ],
+        "flags": {
+          "1": 85785
+        },
+        "valid_rows": 85785,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 45,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-13_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "5f1fe37b57a5dd4524968a044b4d1dc6999b585d1c68f89055cf4943c09dc55f",
+        "bytes": 4117676,
+        "rows": 84787,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59651.0,
+          59651.999988
+        ],
+        "flags": {
+          "1": 84787
+        },
+        "valid_rows": 84787,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 35,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-14_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "463ed315de0bc2b45d9747d0e9e1ae7cd0ba84f85b94efb36475258f35c4429a",
+        "bytes": 4013425,
+        "rows": 82653,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59652.0,
+          59652.999988
+        ],
+        "flags": {
+          "1": 82653
+        },
+        "valid_rows": 82653,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 37,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-15_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "deb68cce5b270c3686394711fc66bdc123999a17c24f1994ae2e5cb4798ea64c",
+        "bytes": 4142859,
+        "rows": 85315,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59653.0,
+          59653.999988
+        ],
+        "flags": {
+          "1": 85315
+        },
+        "valid_rows": 85315,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 28,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-16_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "b381a3c916c576e4980f6b65f62d0c665c7801f05818ca5b8caa187652ee0f58",
+        "bytes": 1796525,
+        "rows": 36999,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59654.0,
+          59654.429988
+        ],
+        "flags": {
+          "1": 36999
+        },
+        "valid_rows": 36999,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 9,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-22_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "989ff14a275921a6f1da849b268b9d008dd048e52707586e610fd77d91bf50e8",
+        "bytes": 758272,
+        "rows": 15624,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59660.816088,
+          59660.999988
+        ],
+        "flags": {
+          "1": 15624
+        },
+        "valid_rows": 15624,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 4,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-23_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "2050839c2cb7f8315e7e592f69dd439dae07331f4f9755a3f2d4d8c3006308ea",
+        "bytes": 3759540,
+        "rows": 77424,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59661.0,
+          59661.999988
+        ],
+        "flags": {
+          "1": 77424
+        },
+        "valid_rows": 77424,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 114,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-24_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "b7d82d146d73b2e4660b468a2ff59b78ab3bc5d1ac1f0fe50f269e385b69bec7",
+        "bytes": 3386630,
+        "rows": 69744,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59662.0,
+          59662.999965
+        ],
+        "flags": {
+          "1": 69744
+        },
+        "valid_rows": 69744,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 16,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-25_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "a7038e7135af9694c1f67b7775849577c09d7607713556ec91b588a3cb5f2fdb",
+        "bytes": 4134437,
+        "rows": 85166,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59663.000012,
+          59663.999988
+        ],
+        "flags": {
+          "1": 85166
+        },
+        "valid_rows": 85166,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 19,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-26_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "ff1c689656547c6ca726e9b568e53c69e3eba689435fae6f56b4a33a2d2eaaaf",
+        "bytes": 4175352,
+        "rows": 86007,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59664.0,
+          59664.999988
+        ],
+        "flags": {
+          "1": 86007
+        },
+        "valid_rows": 86007,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 13,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-27_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "a64b1429ceb50a20e14caad4e0014893e9f3d09de73cc4ab926e86775c12f440",
+        "bytes": 4168544,
+        "rows": 85859,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59665.0,
+          59665.999988
+        ],
+        "flags": {
+          "1": 85859
+        },
+        "valid_rows": 85859,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 11,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-28_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "e26e8b001647045a47fed52359e596ea7ad7ecbc5c4f810d41c874731d99bdb4",
+        "bytes": 4085808,
+        "rows": 84114,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59666.0,
+          59666.999988
+        ],
+        "flags": {
+          "1": 84114
+        },
+        "valid_rows": 84114,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 16,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-03-29_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "b7da5f2a31ec6ad5d4cf59f085cb09ec3d6399dbb604f986332a04e62ee3eca9",
+        "bytes": 2681083,
+        "rows": 55217,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59667.0,
+          59667.645718
+        ],
+        "flags": {
+          "1": 55217
+        },
+        "valid_rows": 55217,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 17,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-01_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "756d4b7a640ff5d201224f9d0233cfc41e024a6458086b71f8761540f20bced6",
+        "bytes": 2941716,
+        "rows": 60607,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59670.291782,
+          59670.999988
+        ],
+        "flags": {
+          "1": 60607
+        },
+        "valid_rows": 60607,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 23,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-02_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "2eaced4993981d477d2614ef49d359b8dfda9ed1af788a65246cf8253fccca0a",
+        "bytes": 4060346,
+        "rows": 83618,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59671.0,
+          59671.975787
+        ],
+        "flags": {
+          "1": 83618
+        },
+        "valid_rows": 83618,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 18,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-03_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "8e8dd2f356d79c9700a3d2a9251473cf968efe826c7db8a51a233902b0be4621",
+        "bytes": 1957120,
+        "rows": 40323,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59672.53125,
+          59672.999988
+        ],
+        "flags": {
+          "1": 40323
+        },
+        "valid_rows": 40323,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 3,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-04_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "ad65184aee931134dfed4fa05f5d4897e416e149971a9bbf4c5312dd31a53b3c",
+        "bytes": 3889448,
+        "rows": 80116,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59673.0,
+          59673.999988
+        ],
+        "flags": {
+          "1": 80116
+        },
+        "valid_rows": 80116,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 44,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      },
+      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten/2022-04-05_PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten.dat": {
+        "sha256": "f1eb3bb68d2e14682fbe0bd2636cb69ff591e9c93699f24dbee3895ecf6ab28c",
+        "bytes": 4010853,
+        "rows": 82629,
+        "columns": 5,
+        "headers": [
+          "# Data for PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten ",
+          "# File generated on: 2025-01-20T17:02:39+01:00",
+          "# With the script: 06-procclocks-v3.py ",
+          "# ",
+          "# t           \t\u0394A\u2192B            \tflag\tuA_sys \tuB_sys "
+        ],
+        "nonfinite_values": 0,
+        "duplicate_timestamps": 0,
+        "nonincreasing_steps": 0,
+        "time_range_mjd": [
+          59674.0,
+          59674.958218
+        ],
+        "flags": {
+          "1": 82629
+        },
+        "valid_rows": 82629,
+        "uncertainty_A_values": [
+          2.7e-18
+        ],
+        "uncertainty_B_values": [
+          2.6e-17
+        ],
+        "nominal_second_steps_outside_rounding": 11,
+        "thermal_columns_present": false,
+        "note": "Five released fields are time, comparator, validity, uA_sys, uB_sys; not raw clock servo plus radiometry."
+      }
+    },
+    "direction": "A=E3, B=E2; released Delta_A_to_B is a scaled transfer beat, not exactly E3/E2 fractional shift",
+    "eligibility": "ineligible for requested thermal test: no two-temperature assignment, independent radiation calibration, or per-run BBR correction ledger in selected files/metadata"
+  },
+  "empirical_differential_test_ready": false,
+  "common_time_effect_measured": false,
+  "conclusion": "Public comparison data obtained; paired uncorrected two-bath-state clock/radiometry data not located in audited releases. No thermal slope fit."
+}
