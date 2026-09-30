@@ -2,9 +2,9 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-09-29): G-R7 unified frequency/phase/clock-path
-kernel bounded-done. Specify closed trajectories and calibrated
-state-resolved phase readout before an apparatus prediction.
+Current priority (2026-09-29): G-R8 specifies the closed guided sequence,
+full effective phase and joint readout. Choose/calibrate a real guide
+and assess differential phase noise before promoting an apparatus.
 G-R6's independent four-setting empirical test and G-R5's missing
 thermal records remain open. No new time law or hardware claim.
 Earlier G0–G2-T: preserved comparison/regression models, not the current mainline.
@@ -454,6 +454,74 @@ entanglement is claimed. Do not prioritize forcing full visibility
 collapse, treating all noise as time dilation, or fitting another Ed law.
 This does not require relabeling the G-R6 ordinary two-site comparison
 as a coherent spatial-superposition experiment.
+
+### G-R8 — Closed guided protocol, total phase and joint controls (2026-09-29)
+
+Status: **specified conservative effective sequence bounded-done;
+real controls, environmental dynamics and empirical gates OPEN**.
+Prior G-R5--G-R7 work was committed and pushed as `2aab1f1` before this step.
+The G-R4 input card and G-R7 card/verifier remain hash-pinned.
+
+Choose two orthogonal guide modes at common initial/final height.
+A quintic 5 ms outward ramp reaches symmetric +/-0.5 mm, followed by
+10 ms hold and 5 ms return. The actual guide potential is
+V_r=m*omega^2*(z-q_r)^2/2-m*(qddot_r+g)*z, with explicitly zero scalar
+arm offsets. The 1 kHz compensated harmonic dynamics closes the ground
+wave packets. Preparation and both path couplers occur at common height;
+their ideal pulse matrices and phase conventions are included.
+
+The full scalar action cancels the ground arm phase. The enclosed area
+is d*(hold+ramp)=1.5e-5 m s, not d*hold. The E2/E3 phases are
+(7.07889,6.60339)e-6 rad, and total port phases are
+Phi_g=alpha_f-alpha_s, Phi_e=Phi_g-delta. Static matched BBR factors
+are retained. No temperature mismatch or new clock law is introduced.
+
+**New physical insight:** specifying the same paths and forces does
+not determine the scalar fringe. Replacing z by z-q_r in the linear
+guide potential leaves forces unchanged but adds a different arm
+offset and about -3.96e5 rad of ground phase. This is not an arbitrary
+phase convention unless coupler phases are transformed consistently.
+The chosen cancellation is conditional on the declared actual potential.
+
+The same guide is audited with m_e=m*(1+eta). Commensurate ramp/hold
+oscillator periods cancel the first-order mass-closure residual.
+Exact finite-mass harmonic Gaussian residuals, endpoint phase and
+overlap are calculated and checked against an independent ODE.
+They are tiny for the card, but nonzero and not an all-orders GR result.
+This addresses the ideal closure question without claiming physical
+trap precision at the many decimal places of the diagnostic.
+
+Pure and energy-dephased preparations again have identical path signals.
+After explicit local phase calibration, W=(I-XX+ZY+YZ)/4 is a partial
+transpose of a positive projector, hence nonnegative on separable states.
+Its ideal pure value is -sin(delta/2)/2; the dephased value is
+(1-sin(delta/2))/4. XX, ZY, YZ commute globally but need incompatible
+local settings. Added ZZ genuinely fails to commute with ZY. Population
+readout following declared local rotations implements each setting.
+
+**Feasibility decision, not another mathematical gate:** for this card
+the ideal witness requires about (3.59,4.13)e11 independent shots per
+setting for a three-standard-error separation, before systematic errors,
+lifetime, loss and rate constraints. This is not a confidence bound or
+experiment. The phase itself is also small. An unknown state-dependent
+guide term is degenerate with the desired shift; averaged differential
+frequency bias must be below roughly (5.6,5.3)e-5 Hz just to be smaller
+than the signal. Calibrate or reject a specific guide/coupler candidate.
+Do not force an entanglement claim or cure poor feasibility by another
+time law. G-R5/G-R6 empirical gaps and Route-F promotion gates are unchanged.
+
+Artifacts: [control card](data/CLOSED_PATH_CARD.json),
+[numerical report](output/gr8_closed_path.md),
+[verifier](code/verify_gr8_closed_path.py),
+[TeX](tex/route_g_closed_path.tex),
+[PDF](output/pdf/route_g_closed_path.pdf).
+All 80 new checks and all 4977 checks across the 20 Route-G verifiers
+pass (including two new automatic G-R3/G-R4 preservation checks).
+The six-page TeX compiled successfully with the desktop editor; a local
+PDF export was also compiled and all six rendered pages visually reviewed.
+No final compiler layout warnings. Numerical agreement is not empirical
+verification. The G-R8 checkpoint includes the protocol, derivation,
+numerical results and synchronized roadmaps.
 
 ### Separate empirical action — not another mathematical prerequisite
 

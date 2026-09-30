@@ -1,0 +1,403 @@
+{
+  "stage": "G-R8",
+  "status": "specified effective guided protocol; not an implemented Yb+ interferometer",
+  "summary": {
+    "checks": 80,
+    "passed": 80,
+    "failed": []
+  },
+  "protocol": {
+    "total_s": 0.02,
+    "area_m_s": 1.5e-05,
+    "delta_tau_s": 1.6367054508297325e-21,
+    "ground_phase_rad": 0.0,
+    "each_ground_action_over_hbar": -192327.33377473144,
+    "different_centered_guide_ground_phase_rad": -396078.2380300129,
+    "max_arm_speed_m_s": 0.1875,
+    "max_arm_acceleration_m_s2": 115.47005383792516,
+    "ground_wavepacket_sigma_m": 1.7191372261788318e-07
+  },
+  "clocks": [
+    {
+      "clock": "E2",
+      "thermal_fraction": -5.23522540662408e-16,
+      "eta": 1.7872463170128833e-11,
+      "hold_dnu_Hz": 7.510939516184689e-05,
+      "total_clock_delta_rad": 7.078893721680928e-06,
+      "port_phase_excited_minus_ground_rad": -7.078893721680928e-06,
+      "internal_fringe_phase_rad": -3.539446860840464e-06,
+      "ideal_visibility_loss": 6.263842040350168e-12,
+      "ideal_negativity": 1.769723430416537e-06,
+      "ideal_witness_pure": -1.769723430416537e-06,
+      "ideal_witness_dephased": 0.2499991151382848,
+      "finite_mass_residual_position_m": -6.24708251136644e-36,
+      "finite_mass_residual_velocity_m_s": 6.990734799034778e-23,
+      "motional_overlap_loss": 5.235701050056025e-40,
+      "finite_mass_phase_correction_rad": -8.35674640857372e-31,
+      "witness_three_sigma_shots_per_setting_ideal": 359204460376
+    },
+    {
+      "clock": "E3",
+      "thermal_fraction": -7.222663503152495e-17,
+      "eta": 1.6671945777227147e-11,
+      "hold_dnu_Hz": 7.006419605281592e-05,
+      "total_clock_delta_rad": 6.603394907976043e-06,
+      "port_phase_excited_minus_ground_rad": -6.603394907976043e-06,
+      "internal_fringe_phase_rad": -3.3016974539880216e-06,
+      "ideal_visibility_loss": 5.450603038830541e-12,
+      "ideal_negativity": 1.6508487269910115e-06,
+      "ideal_witness_pure": -1.6508487269910115e-06,
+      "ideal_witness_dephased": 0.2499991745756365,
+      "finite_mass_residual_position_m": -5.070874675185649e-36,
+      "finite_mass_residual_velocity_m_s": 6.083122801578791e-23,
+      "motional_overlap_loss": 3.964444611637955e-40,
+      "finite_mass_phase_correction_rad": -6.7833286422932955e-31,
+      "witness_three_sigma_shots_per_setting_ideal": 412798360834
+    }
+  ],
+  "witness_fixtures": [
+    {
+      "delta_rad": 0.0,
+      "pure_W": 0.0,
+      "dephased_W": 0.24999999999999994
+    },
+    {
+      "delta_rad": 0.21,
+      "pure_W": -0.05240358441444122,
+      "dephased_W": 0.22379820779277934
+    },
+    {
+      "delta_rad": 1.3,
+      "pure_W": -0.30259320286801966,
+      "dephased_W": 0.09870339856599009
+    },
+    {
+      "delta_rad": 3.141592653589793,
+      "pure_W": -0.4999999999999998,
+      "dephased_W": 0.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:data/BBR_CLOCK_INPUTS.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/CLOCK_PATH_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr7_clock_path.py",
+      "passed": true
+    },
+    {
+      "name": "scope:no_empirical_hardware_or_new_law",
+      "passed": true
+    },
+    {
+      "name": "trajectory:endpoint:0",
+      "passed": true
+    },
+    {
+      "name": "trajectory:endpoint:0.005",
+      "passed": true
+    },
+    {
+      "name": "trajectory:endpoint:0.015",
+      "passed": true
+    },
+    {
+      "name": "trajectory:endpoint:0.02",
+      "passed": true
+    },
+    {
+      "name": "area:includes_both_ramps",
+      "passed": true
+    },
+    {
+      "name": "kinetic:exact_integral",
+      "passed": true
+    },
+    {
+      "name": "symmetry:kinetic_difference_zero",
+      "passed": true
+    },
+    {
+      "name": "ground:action_difference",
+      "passed": true
+    },
+    {
+      "name": "ground:each_action",
+      "passed": true
+    },
+    {
+      "name": "guide:force_does_not_determine_phase",
+      "passed": true
+    },
+    {
+      "name": "commensurate:ramp",
+      "passed": true
+    },
+    {
+      "name": "commensurate:hold",
+      "passed": true
+    },
+    {
+      "name": "closure:first_order_sin",
+      "passed": true
+    },
+    {
+      "name": "closure:first_order_cos",
+      "passed": true
+    },
+    {
+      "name": "ODE:success:0.0",
+      "passed": true
+    },
+    {
+      "name": "ODE:success:1.0",
+      "passed": true
+    },
+    {
+      "name": "ODE:success:3.0",
+      "passed": true
+    },
+    {
+      "name": "ODE:finite_mass_separation",
+      "passed": true
+    },
+    {
+      "name": "ODE:finite_mass_velocity",
+      "passed": true
+    },
+    {
+      "name": "ODE:common_center",
+      "passed": true
+    },
+    {
+      "name": "ODE:area",
+      "passed": true
+    },
+    {
+      "name": "phase:Gaussian_boundary_term_identity",
+      "passed": true
+    },
+    {
+      "name": "phase:independent_action_ODE",
+      "passed": true
+    },
+    {
+      "name": "readout:noncommuting_joint_control",
+      "passed": true
+    },
+    {
+      "name": "readout:rotate_then_Z:28",
+      "passed": true
+    },
+    {
+      "name": "readout:rotate_then_Z:29",
+      "passed": true
+    },
+    {
+      "name": "readout:rotate_then_Z:30",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.0:0.0",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.0:0.4",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.0:1.7",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_pure:0.0",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_mixed:0.0",
+      "passed": true
+    },
+    {
+      "name": "pure_mixed:path_identity:0.0",
+      "passed": true
+    },
+    {
+      "name": "pure:negativity:0.0",
+      "passed": true
+    },
+    {
+      "name": "mixed:separable:0.0",
+      "passed": true
+    },
+    {
+      "name": "witness:pure:0.0",
+      "passed": true
+    },
+    {
+      "name": "witness:mixed:0.0",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.21:0.0",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.21:0.4",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:0.21:1.7",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_pure:0.21",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_mixed:0.21",
+      "passed": true
+    },
+    {
+      "name": "pure_mixed:path_identity:0.21",
+      "passed": true
+    },
+    {
+      "name": "pure:negativity:0.21",
+      "passed": true
+    },
+    {
+      "name": "mixed:separable:0.21",
+      "passed": true
+    },
+    {
+      "name": "witness:pure:0.21",
+      "passed": true
+    },
+    {
+      "name": "witness:mixed:0.21",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:1.3:0.0",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:1.3:0.4",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:1.3:1.7",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_pure:1.3",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_mixed:1.3",
+      "passed": true
+    },
+    {
+      "name": "pure_mixed:path_identity:1.3",
+      "passed": true
+    },
+    {
+      "name": "pure:negativity:1.3",
+      "passed": true
+    },
+    {
+      "name": "mixed:separable:1.3",
+      "passed": true
+    },
+    {
+      "name": "witness:pure:1.3",
+      "passed": true
+    },
+    {
+      "name": "witness:mixed:1.3",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:3.141592653589793:0.0",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:3.141592653589793:0.4",
+      "passed": true
+    },
+    {
+      "name": "pulses:energy_resolved:3.141592653589793:1.7",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_pure:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "canonical:full_pulse_mixed:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "pure_mixed:path_identity:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "pure:negativity:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "mixed:separable:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "witness:pure:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "witness:mixed:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "witness:partial_transpose_separable_proof",
+      "passed": true
+    },
+    {
+      "name": "E2:finite_mass_closure_not_overclaimed",
+      "passed": true
+    },
+    {
+      "name": "E2:closure_negligible_in_declared_model",
+      "passed": true
+    },
+    {
+      "name": "E2:phase_mass_correction_bounded",
+      "passed": true
+    },
+    {
+      "name": "E2:frequency_phase_area",
+      "passed": true
+    },
+    {
+      "name": "E3:finite_mass_closure_not_overclaimed",
+      "passed": true
+    },
+    {
+      "name": "E3:closure_negligible_in_declared_model",
+      "passed": true
+    },
+    {
+      "name": "E3:phase_mass_correction_bounded",
+      "passed": true
+    },
+    {
+      "name": "E3:frequency_phase_area",
+      "passed": true
+    }
+  ],
+  "boundary": "Impulse-limit conservative effective model; no guide field calibration, finite pulse, environment, lifetime, count-rate or apparatus claim."
+}

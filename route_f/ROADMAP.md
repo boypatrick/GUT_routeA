@@ -47,6 +47,12 @@ contrasts cancel uncertain fixed BBR shifts; unmatched radiation and
 height-locked reference/link bias remain controls, not new time physics.
 49 new checks pass; the theory baseline is bounded-done but four-setting
 empirical validation remains open. No site potential or data are invented.
+G-R8 specifies an ideal closed guided sequence, its full scalar/pulse
+phase and joint witness controls. Its small ideal signal and very high
+shot requirement motivate a real guide/noise feasibility decision, not
+a Route-F promotion. Ground/excited mass closure is explicitly audited;
+no hardware or empirical gate is claimed closed. See Route-G roadmap.
+
 G-R7 adds the approved conservative quantum-clock/path kernel: same
 thermal/proper-time action, linked frequency/phase/visibility predictions,
 and an exact pure/mixed ambiguity resolved by joint observables.

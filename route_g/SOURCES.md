@@ -3,6 +3,26 @@
 Reviewed: 2026-09-29.
 Current mainline: relational quantum clocks; old KK/scattering sources retained below.
 
+## G-R8 specified guides and complete effective phase
+
+- A. Roura, [Phys. Rev. X10,021014(2020)](https://doi.org/10.1103/PhysRevX.10.021014):
+  relativistic clock interferometry with guides/external forces, pulse
+  accounting and state-resolved phase readout. Its neutral-atom hardware
+  proposals are not evidence that our ion guide exists.
+- E. Torrontegui et al., *Fast atomic transport without vibrational heating*,
+  [Phys. Rev. A83,013415(2011)](https://doi.org/10.1103/PhysRevA.83.013415),
+  [primary manuscript](https://arxiv.org/abs/1010.3271): invariant-based
+  transport and compensating forces. The ideal harmonic control method
+  is established, not a new fundamental law or claimed ion calibration.
+
+The explicit global-z guide potential, scalar-offset comparison, two-ramp
+area, finite-mass convolution/endpoint phase, pulse sequence, witness
+identity and shot-noise calculation are derived here under the declared
+control assumptions. No paper supplies the 1 mm/20 ms card, a measured
+guide Stark shift, controller overlap or achieved sensitivity. The small
+mass residual is a diagnostic, not a metrological precision claim.
+The earlier same-isotope lifetime caution remains applicable.
+
 ## G-R7 proper-time phases and clock-path correlations
 
 - M. Zych, F. Costa, I. Pikovski and C. Brukner,

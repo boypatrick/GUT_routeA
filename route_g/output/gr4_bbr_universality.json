@@ -79,9 +79,10 @@
     "code/verify_gr5_external_reference.py": "3557142e6f6229478a1f1e47df2d5d1a820bfb5b2f9b7633d50b988572c7831e",
     "code/verify_gr6_equivalence_baseline.py": "fd0c3980e4e267ede0370a9168daaabf093e803ac5271f31d0e9d3b6fe200ed8",
     "code/verify_gr7_clock_path.py": "33d0eb4a0d68e1ed1466f9dd043433544a3a94b72ddefcbd4a7b534d20fda337",
+    "code/verify_gr8_closed_path.py": "757b88c6f6e4fea09cc4513e69683cf4b2a0769735391fe573b375be30fcc46c",
     "output/gr1_relational_clock.json": "f03775c6271a87016b8bfe15e768c444b3f400078ccfc5f0a5e1237563d13942",
     "output/gr2_two_event_records.json": "d35199443504a08d09516bc98b891f412a9c7760118baa6a6ea807e10585c06b",
-    "output/gr3_density_clocks.json": "7a5eb5e4cc451e8bd06e19cc9d25712faebc0412a3f74bf831ed85d80f4ff059"
+    "output/gr3_density_clocks.json": "378bbbca2868d8b8868960c39fb95d61c41405b7010758e5fb990d188c00ab93"
   },
   "checks": [
     {
@@ -471,6 +472,10 @@
       "passed": true
     },
     {
+      "name": "preserved:code/verify_gr8_closed_path.py",
+      "passed": true
+    },
+    {
       "name": "preserved:output/gr1_relational_clock.json",
       "passed": true
     },
@@ -484,8 +489,8 @@
     }
   ],
   "summary": {
-    "checks": 94,
-    "passed": 94,
+    "checks": 95,
+    "passed": 95,
     "failed": []
   }
 }

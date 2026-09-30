@@ -1,0 +1,350 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\tr}{\operatorname{tr}}
+\title{Route G-R8: A Closed Guided Clock Protocol\\and Its Complete Effective Phase}
+\author{Same spectral action, explicit controls, no fitted time law}
+\date{29 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Specify a symmetric guided interferometer, its full scalar potential,
+preparation and analysis pulses. The ground propagation phase cancels
+for this particular potential, whereas the internal-energy gravitational
+phase survives. Both transport ramps are included. A finite-mass harmonic
+diagnostic quantifies, rather than assumes away, the excited packet's
+closure error. Pure/dephased controls and a partial-transpose witness
+separate entanglement from visibility. The result is a closed conservative
+effective protocol, not a demonstrated trapped-ion apparatus or an
+all-orders relativistic/open-system prediction.
+\end{abstract}
+
+\section{Action and declared approximation}
+Keep the G-R4--G-R7 scalar thermal gaps at common local temperature $T_0$:
+\begin{equation}
+ E_i=h\nu_i(T_0),\quad \nu_i(T_0)=\nu_i^0[1+b_i(T_0)],\quad
+ H_C=\sum_{i=2,3}E_i|e_i\rangle\langle e_i| .
+\end{equation}
+Each run prepares $g$ and one selected $e_i$. These are not two independent
+qubits in one ion. The ground mass $m$ absorbs any uniform ground-level
+shift; no missing ground polarizability is assigned a numerical value.
+Expand the same proper-time action in a weak uniform potential $gz$:
+\begin{align}
+ S_r&=\int\left[-mc^2+\tfrac12m\dot z^2-mgz-V_r
+       +\ii\hbar\chi^\dagger\dot\chi
+       -\chi^\dagger H_C\chi
+          (1+gz/c^2-\dot z^2/(2c^2))\right]\dd t,\label{action}\\
+ H_r&=mc^2+\frac{p^2}{2m}+mgz+V_r+
+       H_C\left(1+\frac{gz}{c^2}-\frac{p^2}{2m^2c^2}\right).
+       \label{ham}
+\end{align}
+The expansion keeps leading internal mass-energy coupling and Newtonian
+external dynamics. It does not retain all post-Newtonian center-of-mass
+terms. Metric, quantum mechanics and classical controls remain assumed.
+Guided-clock formalism and compensated transport have established
+precedents~\cite{roura,transport}; the following control card is our
+explicit idealization, not an implementation imported from those papers.
+
+There are two orthogonal guide modes $A,B$, initially/finally at the
+same height. A unitary coupler mixes them into two output ports; two
+orthogonal modes are never mapped into the same state. Other spatial
+degrees of freedom are matched and factorized. Temperatures are locally
+matched, not inferred from a global Tolman-equilibrium condition.
+The time-dependent guide can supply work: a closed path does not mean
+an energetically isolated atom. Controller backreaction and records are
+excluded only by the stated classical-control approximation.
+
+\newpage
+\section{Full path and full potential, not just a force}
+Let $t_r$ be one ramp duration, $t_h$ the hold and $t_f=2t_r+t_h$.
+For $s(u)=10u^3-15u^4+6u^5$, define the arm separation
+\begin{equation}
+ q(t)=\begin{cases}
+ d\,s(t/t_r),&0\leq t\leq t_r,\\
+ d,&t_r<t<t_r+t_h,\\
+ d[1-s((t-t_r-t_h)/t_r)],&t_r+t_h\leq t\leq t_f,
+ \end{cases}\quad q_A=q/2,\quad q_B=-q/2 .\label{paths}
+\end{equation}
+Position, velocity and acceleration close. Specify the scalar potential
+\begin{equation}
+ V_r(z,t)=\frac{m\omega^2}{2}(z-q_r)^2-m(\ddot q_r+g)z+w_r(t),
+ \qquad w_A=w_B=0 .\label{guide}
+\end{equation}
+Its uniform support field cancels the ground $mgz$ term.
+At zeroth order in $H_C/(mc^2)$,
+\begin{equation}
+ \ddot z+\omega^2(z-q_r)=\ddot q_r .
+\end{equation}
+Thus the packet center follows $q_r$. The accelerating-frame wave
+function is a rigid translated/boosted harmonic packet. For initial
+oscillator eigenstate $n$, its phase is
+\begin{equation}
+ \psi_r(z,t)=
+ e^{\ii[m\dot q_r(z-q_r)+S_r^c]/\hbar}
+ e^{-\ii(\epsilon_n+mc^2)t/\hbar}\phi_n(z-q_r),\quad
+ \dot S_r^c=\tfrac12m\dot q_r^2+m\ddot q_r q_r .\label{exactpacket}
+\end{equation}
+Direct substitution into the Schr\"odinger equation verifies this result.
+Since $[q_r\dot q_r]_0^{t_f}=0$,
+\begin{equation}
+ S_r^c=-\frac m2\int_0^{t_f}\dot q_r^2\dd t,
+ \qquad S_A^c-S_B^c=0 .\label{groundphase}
+\end{equation}
+The rest-energy and oscillator phases are common. At closure both
+packets agree, up to the explicitly computed equal phases.
+
+\paragraph{A physically important nonuniqueness.}
+Replacing the last $z$ in Eq.~\eqref{guide} by $z-q_r$ changes no force
+but adds $m(\ddot q_r+g)q_r$ to the scalar potential. Its arm difference
+integrates to $mg\mathcal A$, where
+\begin{equation}
+ \mathcal A=\int_0^{t_f}q(t)\dd t=d(t_h+t_r),\qquad
+ \int_0^{t_f}\dot q_r^2\dd t=\frac{5d^2}{7t_r}.\label{area}
+\end{equation}
+The resulting ground fringe changes by $-mg\mathcal A/\hbar$.
+This is a different physical potential, not permission to discard a
+branch phase. A compensating transformation of coupler phases would be
+needed to interpret it as a mere basis convention. The specified
+$w_A-w_B=0$ is a control requirement, not a consequence of force closure.
+
+\newpage
+\section{Pulses and the total observable phase}
+At common height prepare the clock with $R_y(\pi/2)$, with its optical
+phase defined by the local oscillator. Alternatively prepare its
+energy-dephased mixture with the same populations. Apply the path pulse
+\begin{equation}
+ B(\alpha)=\exp[-\ii\pi(\cos\alpha\,X_P+\sin\alpha\,Y_P)/4]
+           =\frac{I-\ii(\cos\alpha\,X_P+\sin\alpha\,Y_P)}{\sqrt2} .
+\end{equation}
+Use $B(\alpha_s)$ at $t=0$ and $B(\alpha_f)^\dagger$ after the full
+return. The card sets $\alpha_s=0$ and scans $\alpha_f$. These are
+impulse-limit operations, state-independent for the path coupler and
+with negligible differential vertical clock recoil. Finite pulses and
+real guide Stark shifts are not asserted to vanish in an apparatus.
+
+Internal evolution follows directly from Eq.~\eqref{action}:
+\begin{align}
+ \theta_{ir}&=2\pi\nu_i(T_0)\int_0^{t_f}
+      [1+gq_r/c^2-\dot q_r^2/(2c^2)]\dd t,\\
+ \delta_i&=\theta_{iA}-\theta_{iB}
+      =2\pi\nu_i(T_0)\frac{g\mathcal A}{c^2}.\label{delta}
+\end{align}
+A finite packet's common momentum variance also cancels from this
+difference. The symmetric kinetic terms cancel; both ramps contribute
+$dt_r$ to $\mathcal A$. During the stationary hold,
+$\Delta\nu_i=\nu_i(T_0)gd/c^2$, consistent with the phase derivative.
+For unequal baths one must instead integrate
+$2\pi\nu_i^0[(1+b_{iA})\lambda_A-(1+b_{iB})\lambda_B]$ and account for
+their forces and ground shifts. No such extra bath is silently introduced.
+
+For $\rho_{gg}=\rho_{ee}=1/2$, direct multiplication of both path
+pulses and the branch propagators gives
+\begin{align}
+ P(0,g)&=\tfrac14[1+\cos\Phi_g],&
+ \Phi_g&=\alpha_f-\alpha_s,\\
+ P(0,e_i)&=\tfrac14[1+\cos\Phi_{e_i}],&
+ \Phi_{e_i}&=\alpha_f-\alpha_s-\delta_i .\label{port}
+\end{align}
+The other port uses the minus signs. Consequently
+\begin{equation}
+ P(0)=\tfrac12\{1+\cos(\delta_i/2)
+             \cos[\alpha_f-\alpha_s-\delta_i/2]\},\quad
+ \mathcal V=|\cos(\delta_i/2)|.\label{visibility}
+\end{equation}
+For this declared guide, the previously unresolved scalar phase is now
+calculated, not simply omitted. Adding actual scalar offsets changes
+both $\Phi_j$ by $-\int(w_A-w_B)\dd t/\hbar$. State-resolved phase
+differences cancel a stable common offset; uncontrolled shot-to-shot
+phase fluctuations can still destroy the signal.
+
+All preparation/readout events occur at common height. Common clock
+pulse and free-precession phases do not enter Eq.~\eqref{port}, but
+must be calibrated for non-energy-basis joint measurements. There are
+no unspecified laser kicks at the separated positions in this protocol.
+
+\newpage
+\section{Mass-dependent closure: a finite Gaussian diagnostic}
+The same guide should not be declared exactly closing for every internal
+mass. Test it with $m_i=m(1+\eta)$, $\eta=E_i/(mc^2)$ and
+\begin{equation}
+ H_{r,i}^{\rm diag}=m_i c^2+p^2/(2m_i)+m_i gz+V_r .\label{massdiag}
+\end{equation}
+This mass-only harmonic completion agrees with Eq.~\eqref{ham} to first
+order in $\eta$, but does not supply omitted relativistic terms.
+Write the actual center as $z_{A/B}=z_c\pm z_d/2$, with zero initial
+position and velocity. Then $\Omega=\omega/\sqrt{1+\eta}$ and
+\begin{align}
+ \ddot z_c+\Omega^2z_c&=-\frac{\eta}{1+\eta}g,&
+ z_c&=-\frac{\eta g}{\omega^2}(1-\cos\Omega t),\\
+ z_d&=q+y,&
+ \ddot y+\Omega^2y&=-\frac{\eta}{1+\eta}\ddot q .
+\end{align}
+Define $F(\Omega)=\int_0^{t_f}\ddot q(t)e^{\ii\Omega t}\dd t$.
+The return acceleration is minus the outbound one, shifted by $t_r+t_h$:
+\begin{equation}
+ F(\Omega)=\frac d{t_r}
+ \int_0^1s''(u)e^{\ii\Omega t_ru}\dd u\,
+ [1-e^{\ii\Omega(t_r+t_h)}].\label{fourier}
+\end{equation}
+Let $I_c+\ii I_s=e^{\ii\Omega t_f}F(\Omega)^*$. At final closure of $q$,
+\begin{equation}
+ z_d(t_f)=-\frac{\eta I_s}{(1+\eta)\Omega},\quad
+ \dot z_d(t_f)=-\frac{\eta I_c}{1+\eta},\quad
+ \int_0^{t_f}z_d\dd t=\mathcal A+\frac{\eta I_c}{\omega^2}.
+\end{equation}
+Choose both $\omega t_r$ and $\omega t_h$ to be integer multiples of
+$2\pi$. Then $F(\omega)=0$: first-order mass-dependent displacement
+closes. Finite $\eta$ residuals are nonzero, not an exact all-mass theorem.
+
+The exact phase of the two Gaussian packets' overlap includes the
+endpoint term $-m_i\dot z_cz_d/\hbar$. The classical action difference is
+$m_i z_c\dot z_d-\eta mg\int z_d\dd t$. Combining them yields
+\begin{equation}
+ \arg\langle\psi_{B,i}|\psi_{A,i}\rangle
+ =-\delta_i-\frac{m\eta^2g}{\hbar\omega^2}\Re F(\Omega).
+ \label{exactphase}
+\end{equation}
+Thus closing central positions alone would have missed a phase term.
+For the initial ground Gaussian with covariance
+$V_0=\operatorname{diag}(\hbar/(2m\omega),\hbar m\omega/2)$, set
+\begin{equation}
+ V=S_iV_0S_i^T,\quad
+ S_i=\begin{pmatrix}\cos\Omega t_f&\sin\Omega t_f/(m_i\Omega)\\
+ -m_i\Omega\sin\Omega t_f&\cos\Omega t_f\end{pmatrix}.
+\end{equation}
+Its overlap modulus is $r_i=e^{-D_i}$, where
+\begin{equation}
+ D_i=\frac{\Delta p^2V_{zz}+\Delta z^2V_{pp}
+                  -2\Delta z\Delta pV_{zp}}{2\hbar^2},\quad
+ \Delta z=z_d(t_f),\quad\Delta p=m_i\dot z_d(t_f).
+\end{equation}
+The energy-resolved excited fringe gets factor $r_i$, and the unconditioned
+clock overlap becomes $(1+r_ie^{-\ii\delta_i^{\rm eff}})/2$.
+This is a computed motional correction, not an invented environmental rate.
+
+\newpage
+\section{Pure/dephased comparison and a small-phase witness}
+After known local phase changes, the ideal pure joint state is
+\begin{equation}
+ |\Psi_\delta\rangle=e^{\ii\delta Z_PZ_C/4}|++\rangle
+ =\cos(\delta/4)|++\rangle+\ii\sin(\delta/4)|--\rangle .
+\end{equation}
+For example the diagonal internal evolution factors as
+$e^{-\ii\bar\theta P_e}e^{-\ii\delta Z_P/4}
+e^{\ii\delta Z_PZ_C/4}$, where $\bar\theta=(\theta_A+\theta_B)/2$.
+The initial splitter's $-\ii$ phase is another local path rotation.
+These phase changes require calibrated controls, not a claim that a
+large optical phase is known from arbitrary decimal precision.
+
+Replacing $|+\rangle\langle+|_C$ by $I_C/2$ leaves all energy-resolved
+fringes and the reduced path state unchanged. The resulting joint state
+is a convex sum of product states conditioned on $g,e$ and is separable.
+For the pure state, $\mathcal N=|\sin(\delta/2)|/2$.
+For the positive small phase in our card, use
+\begin{equation}
+ W=\tfrac14(I-X_PX_C+Z_PY_C+Y_PZ_C).\label{witness}
+\end{equation}
+Indeed $W=(|v_-\rangle\langle v_-|)^{T_C}$ with
+$|v_-\rangle=(|+-\rangle-\ii|-+\rangle)/\sqrt2$ in the $X$ basis.
+For any separable $\rho$, $\rho^{T_C}\geq0$, proving
+$\tr(W\rho)\geq0$. Direct evaluation gives
+\begin{equation}
+ \langle W\rangle_{\rm pure}=-\tfrac12\sin(\delta/2),\qquad
+ \langle W\rangle_{\rm dephased}=\tfrac14[1-\sin(\delta/2)] .
+\end{equation}
+For the opposite phase sign, reverse the signs of the two $Y$ terms.
+This is an operational witness, not an inference from visibility.
+
+\paragraph{Actual measurement settings.}
+Measure $XX,ZY,YZ$ in separate runs. For either subsystem, analysis
+$R_y(-\pi/2)$ followed by population ($Z$) detection measures $X$;
+$R_x(\pi/2)$ followed by $Z$ measures $Y$; no pulse measures $Z$.
+The three witness operators commute globally, despite requiring
+incompatible local axes. To explicitly include noncommuting joint
+controls, also measure $ZZ$:
+\begin{equation}
+ [Z_PY_C,Z_PZ_C]=2\ii I_PX_C\ne0 .
+\end{equation}
+Together with independently characterized coherent/dephased preparation,
+these settings go beyond energy-basis populations. Finite-mass Gaussian
+corrections, noise and pulse errors must be included in a measured state;
+the ideal witness values are not observed violations.
+
+\paragraph{Statistical cost should not be hidden.}
+For the ideal pure state $\langle XX\rangle=1$ and
+$\langle ZY\rangle=\langle YZ\rangle=-\sin(\delta/2)$.
+With $N$ independent shots for each setting,
+\begin{equation}
+ \sigma_W^2=\frac{\cos^2(\delta/2)}{8N},\qquad
+ N>\frac{9\cos^2(\delta/2)}{8\mathcal N^2}
+\end{equation}
+is the ideal three-standard-error separation criterion. This is not a
+rigorous finite-sample confidence bound or an experimental sensitivity:
+it excludes state-preparation/readout errors, drift, losses and count rate.
+
+\newpage
+\section{Numerical result, rejection criteria and next decision}
+The single illustrative card fixes $d=1$ mm, $t_r=5$ ms, $t_h=10$ ms,
+$\omega/(2\pi)=1$ kHz, $g=9.80665$ m/s$^2$, $T_0=300$ K and a rounded
+$m=171\,u$. The latter is not a precision ionic-mass determination.
+It gives $t_f=20$ ms, $\mathcal A=1.5\,10^{-5}$ m s and
+$\Delta\tau=1.63670545\,10^{-21}$ s. Each arm reaches speed 0.1875 m/s
+and acceleration 115.47 m/s$^2$; neither establishes hardware feasibility.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Quantity & E2 & E3\\
+\midrule
+Hold $\Delta\nu$ (Hz) & $7.51094\,10^{-5}$ & $7.00642\,10^{-5}$\\
+Full $\delta$ (rad) & $7.07889\,10^{-6}$ & $6.60339\,10^{-6}$\\
+Ideal $1-\mathcal V$ & $6.26384\,10^{-12}$ & $5.45060\,10^{-12}$\\
+Ideal $\mathcal N=-\langle W\rangle$ & $1.76972\,10^{-6}$ & $1.65085\,10^{-6}$\\
+Ideal shots per witness setting & $3.59205\,10^{11}$ & $4.12798\,10^{11}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The effective total phases are $\Phi_g=\alpha_f-\alpha_s$ and
+$\Phi_e=\Phi_g-\delta$, not just a hold-only clock phase. Both pure
+and dephased initial clocks have the same path visibility. The latter
+has $\langle W\rangle\simeq0.25$, not a negative witness.
+
+The harmonic diagnostic gives $|\Delta v|\simeq7.0\,10^{-23}$ m/s
+(E2), $1-r\simeq5.2\,10^{-40}$ and a phase correction of order
+$10^{-30}$ rad. These tiny numbers are cancellation checks in a perfect
+model, not metrological claims. High precision evaluates the known
+small-$\eta$ cancellation; it does not fit any parameter. Ordinary trap
+errors will dominate. The modified centered potential of section2 would
+instead add roughly $-3.96\,10^5$ rad of common ground phase while
+leaving its forces unchanged.
+
+\paragraph{Useful physical gates.}
+An actual state-dependent guide energy $u_{i,r}(t)P_{e_i}$ adds
+$\int(u_{i,A}-u_{i,B})\dd t/\hbar$ to $\delta_i$ and is degenerate
+with the desired effect unless independently calibrated. For this card,
+keeping that bias below the signal requires a time-averaged differential
+frequency bias below roughly $5.6\,10^{-5}$ Hz (E2) or
+$5.3\,10^{-5}$ Hz (E3), before demanding any precision margin.
+Uncalibrated guide scalar offsets, controller which-path records, finite
+pulse recoil, lifetime and radiation noise remain physical limitations.
+The existing tens-of-ms E2 lifetime caution still applies to a 20 ms
+sequence; no survival rate or complete dissipator is imported.
+
+\textbf{Next decision:} choose and calibrate one real guide/coupler and
+its state-resolved phase noise, or reject this implementation if the
+requirements are not credible. Prioritize differential phase; pursue the
+joint witness only with an adequate statistics/control budget. Do not
+respond to poor feasibility by fitting a new time law, claiming exact
+all-mass closure, or enlarging the derivation indefinitely.
+
+\begin{thebibliography}{9}
+\bibitem{roura} A. Roura, Phys. Rev. X10,021014(2020),
+\href{https://doi.org/10.1103/PhysRevX.10.021014}{doi:10.1103/PhysRevX.10.021014}.
+\bibitem{transport} E. Torrontegui et al., Phys. Rev. A83,013415(2011),
+\href{https://doi.org/10.1103/PhysRevA.83.013415}{doi:10.1103/PhysRevA.83.013415}.
+\bibitem{zych} M. Zych et al., Nat. Commun.2,505(2011),
+\href{https://doi.org/10.1038/ncomms1498}{doi:10.1038/ncomms1498}.
+\end{thebibliography}
+\end{document}

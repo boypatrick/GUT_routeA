@@ -6,7 +6,45 @@ Route G 回到「同一內部結構，產生不同能譜與可見性」的構想
 當成額外時空，也不把轉換座標誤認為轉換粒子質量。
 Route F 的四維 P54 模型與先前計算保留不動；Route G 尚未導出或取代它。
 
-## Current mainline — G-R7 clock-path quantum kernel (2026-09-29)
+## Current mainline — G-R8 explicit closed guided protocol (2026-09-29)
+
+**Effective sequence and phase bounded-done; real controls and data OPEN.**
+A 1 mm symmetric guide separation, 5 ms outward ramp, 10 ms hold and
+5 ms return is now specified together with the scalar guide potential,
+clock preparation, splitter and final analyzer. The 1 kHz compensated
+harmonic guide closes ground packets; integer-period timing also cancels
+the first-order excited-mass residual. Finite-mass residuals are reported,
+not mislabeled as exact all-mass closure.
+
+The complete chosen guide cancels the ground arm phase. Both ramps
+contribute to the clock phase: delta=(7.07889,6.60339)e-6 rad for E2/E3.
+The total port phases are alpha_f-alpha_s and alpha_f-alpha_s-delta.
+Same force and trajectory do not suffice: a different scalar guide
+offset changes the common fringe by about -3.96e5 rad in this example.
+
+Pure/dephased controls have the same path visibility. The derived
+partial-transpose witness distinguishes them using joint readout;
+XX, ZY and YZ need incompatible local axes, and added ZZ provides an
+actually noncommuting joint control. Ideal negative witness values are
+only about -1.7e-6. Even an ideal three-standard-error estimate needs
+roughly 4e11 shots per witness setting, before noise or count-rate costs.
+This is not an observed violation or feasible Yb+ hardware design.
+
+Next select/calibrate one real guide/coupler and its differential phase
+noise, or reject this implementation. Do not add a time law or require
+more formal precision before this physical feasibility decision.
+
+[Derivation PDF](output/pdf/route_g_closed_path.pdf) ·
+[TeX](tex/route_g_closed_path.tex) ·
+[protocol card](data/CLOSED_PATH_CARD.json) ·
+[verification](output/gr8_closed_path.md).
+The previous G-R7 checkpoint was committed and pushed as `2aab1f1`.
+G-R8 adds 80 passing checks; all 4977 checks across 20 verifiers pass.
+The six-page TeX compiled in the desktop editor, and every page of the
+exported PDF was visually checked. This checkpoint includes the G-R8
+protocol, derivation, numerical results and synchronized roadmaps.
+
+## G-R7 clock-path quantum kernel (2026-09-29)
 
 **Conservative kernel bounded-done; physical interferometer remains OPEN.**
 The same G-R4/G-R6 thermal gaps and proper-time action now generate

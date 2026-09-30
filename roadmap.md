@@ -92,6 +92,19 @@ loss quadratic; prioritize a closed-path/state-resolved phase protocol,
 with joint readout for any entanglement claim. E2's tens-of-ms lifetime
 rules out assuming its ideal seconds-long contrast-zero hold without
 additional dynamics. All G-R6 empirical gaps and Route-F gates remain.
+
+**G-R8 (2026-09-29):** after commit/push `2aab1f1`, an explicit symmetric
+guided 1 mm/20 ms closed sequence now fixes the full effective port phase,
+including ramps, the scalar guide potential and common-height pulses.
+Ground phase cancellation is derived for that potential, not inferred
+from forces alone. A finite-mass harmonic diagnostic checks excited
+wave-packet closure and its endpoint phase. Pure/dephased controls and
+W=(I-XX+ZY+YZ)/4 give a joint entanglement test, with added noncommuting ZZ
+control. Tiny ideal witness values need about 4e11 shots per setting;
+this is not an experiment or hardware claim. Next calibrate or reject
+one actual guide/coupler based on differential phase noise and unwanted
+clock shifts, rather than adding mathematical precision or time laws.
+The full protocol and conditional limits are in `route_g/ROADMAP.md`.
 See [Route-G roadmap](route_g/ROADMAP.md) and
 [interpretation card](route_g/RELATIONAL_TIME_CARD.md).
 Route-F P/U/S priorities and all fit/portal gates remain independent.

@@ -1,0 +1,50 @@
+{
+  "stage": "G-R8",
+  "date": "2026-09-29",
+  "status": "specified effective guided protocol; not an implemented Yb+ interferometer",
+  "preserved_sha256": {
+    "data/BBR_CLOCK_INPUTS.json": "dd5aacde37c2e86ba0bd32f9e53539970999e2aae017856a0fc88c579b3b7a65",
+    "data/CLOCK_PATH_CARD.json": "f83c7809181a89a80cc3dea005fd8478c999edcb598f47248e8a8650554c38a6",
+    "code/verify_gr7_clock_path.py": "33d0eb4a0d68e1ed1466f9dd043433544a3a94b72ddefcbd4a7b534d20fda337"
+  },
+  "geometry": {
+    "height_separation_m": 0.001,
+    "ramp_s": 0.005,
+    "hold_s": 0.010,
+    "trap_frequency_Hz": 1000.0,
+    "g_m_s2": 9.80665,
+    "temperature_K": 300.0,
+    "mass_kg": 2.839521803466e-25,
+    "mass_note": "rounded 171 times 1.66053906660e-27 kg, illustrative inertial parameter, not precision ionic mass; uniform ground shift absorbed in measured ground mass in physical use",
+    "shape": "qA=+q/2, qB=-q/2; q=d*s(t/t_r) outbound, d during hold, d*(1-s(u)) return; s(u)=10u^3-15u^4+6u^5",
+    "closure": "position, velocity, acceleration return to zero; omega*t_r and omega*t_hold are integer multiples of 2*pi",
+    "mode_note": "two orthogonal guide modes at common initial/final height, mixed by a unitary coupler; never identify two orthogonal input rails with one output state"
+  },
+  "guide_potential": "V_r(z,t)=m*omega^2*(z-q_r)^2/2-m*(qddot_r+g)*z+w_r(t), wA=wB=0 in the declared protocol",
+  "guide_boundary": "The global-z linear potential and zero scalar offsets are physical specifications. Replacing z by z-q_r adds a branch-dependent scalar potential and changes the ground phase. Same force does not imply same phase.",
+  "hamiltonian": "m*c^2+p^2/(2*m)+m*g*z+V_r+H_C(T)*(1+g*z/c^2-p^2/(2*m^2*c^2)); leading clock mass-energy coupling from G-R7 proper-time action",
+  "pulse_sequence": [
+    "at common height: clock R_y(pi/2), or prepared energy-dephased mixture with identical populations",
+    "at common height t=0: path B(alpha_s)=exp[-i*pi*(cos(alpha_s)X+sin(alpha_s)Y)/4], alpha_s=0",
+    "0--5 ms: symmetric outward transport; 5--15 ms: hold; 15--20 ms: symmetric return",
+    "at common height t=20 ms: B(alpha_f)^dagger then port and clock-energy readout; alpha_f is the scanned analyzer phase",
+    "joint witness runs: replace analyzer by calibrated local rotations for XX, ZY, YZ, and ZZ; common clock phase referenced to the local oscillator"
+  ],
+  "pulse_assumptions": [
+    "ideal instantaneous pulses, with free evolution during finite pulses excluded only in this stated impulse limit",
+    "path coupler acts identically on g and the selected excited state",
+    "clock pulse has negligible differential vertical recoil; transverse motion is common and factorized",
+    "common-temperature scalar BBR response only; no branch-specific uncalibrated radiation bath",
+    "classical guides and lasers leave no unmodeled distinguishable controller record in this ideal unitary calculation"
+  ],
+  "closure_audit": "The same state-independent guide is tested with m_e=m*(1+eta), eta=h*nu(T)/(m*c^2). Finite-eta harmonic mass model is a diagnostic completion, not all-orders general relativity. At commensurate times the first-order residual closes; the nonzero finite-eta residual and overlap are reported.",
+  "sources": [
+    "https://doi.org/10.1103/PhysRevX.10.021014",
+    "https://doi.org/10.1103/PhysRevA.83.013415",
+    "https://arxiv.org/abs/1105.4531"
+  ],
+  "next_decision": "calibrate a specific guide/coupler implementation or reject it if its state-dependent shifts, controller records, or phase noise overwhelm the differential signal; do not add a new time law",
+  "empirical_data_ready": false,
+  "hardware_claim": false,
+  "new_time_law": false
+}

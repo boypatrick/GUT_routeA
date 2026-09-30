@@ -1,6 +1,6 @@
 # G-R4: physical thermal source and cross-transition test
 
-Status: bounded-source-audit-done. Checks: 94/94.
+Status: bounded-source-audit-done. Checks: 95/95.
 No fitted parameters or new experimental data.
 
 ## Selected source and independently fixed sign
