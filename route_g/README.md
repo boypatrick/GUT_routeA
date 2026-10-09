@@ -6,7 +6,113 @@ Route G 回到「同一內部結構，產生不同能譜與可見性」的構想
 當成額外時空，也不把轉換座標誤認為轉換粒子質量。
 Route F 的四維 P54 模型與先前計算保留不動；Route G 尚未導出或取代它。
 
-## Current mainline — G-R8 explicit closed guided protocol (2026-09-29)
+## Current mainline — G-R11 一次製備與一次相對相位紀錄（2026-10-09）
+
+**能量相容的有限量測模型已完成；自主觸發與保存機制仍未導出。**
+保留 G-R10 的完整系統作用量，明列新增的集體系統—記憶體耦合。
+已構造 72 維幺正矩陣，與完整系統 Hamiltonian 對易；八態記憶體
+分別保存「空白、失敗、六個可能的相對相位」。空白不冒充失敗，也不丟掉未成功分支。
+原 49 個能量不變聯合效果，在暗子空間可精確壓縮成相對相位讀出；
+共同相位原點不攜帶暗態資訊。這不是 A、B 各自的相位量測或絕對時間戳。
+
+成功機率 2/3、失敗 1/3；全體結果保持完整能量分布，而非只守住平均值。
+但成功讀出不是無損：忽略相對結果後，暗態變成
+(57/82)|Dplus><Dplus|+(25/82)|Dminus><Dminus|。係數由七次 Chebyshev
+多項式的精確根和導出，沒有小數 fitting。
+
+**重要物理界線：能量守恆不會自動讓紀錄留下。** 脈衝面積 pi/2 寫入；
+若同一交互作用繼續至 pi，記憶體回到空白。保存需要明列的停止耦合與隔離。
+此相對讀出不需要外部能量—時間相位非對稱資源，但集體控制、純空白與脈衝控制
+仍是輸入，不是從舊頂點接觸自然導出。尚未證明不可逆性、時間箭頭或硬體壽命。
+
+120 項新檢查通過；包含既有 G-R9b 側支的 24 個驗證程式共 **6,184/6,184** 項通過。
+五頁推導已在內建編輯器編譯，匯出 PDF 並逐頁視覺檢查；G-R10 程式／卡／結果雜湊不變。
+使用既有文件編輯與 PDF 檢查流程保存這一階段，沒有新增抽象前置關卡。
+
+下一步有兩個清楚選擇：保留為含外加控制的有效關係式時鐘，於此收尾；
+若仍要自主事件生成，選一個實際觸發／自動脫離機制，連同其能量、回返與紀錄一起算。
+可優先測試單次通過接觸區的觸發子，但不能把它的運動次序或不回返條件說成已導出的時間。
+Route-F、質量、度規與普遍 Ed 時間律均不 promotion。
+
+[五頁 PDF](output/pdf/route_g_preparation_record.pdf) ·
+[完整 TeX](tex/route_g_preparation_record.tex) ·
+[固定假設卡](data/PREPARATION_RECORD_CARD.json) ·
+[驗證結果](output/gr11_preparation_record.md).
+
+## G-R10 all-channel relational readout — preceding checkpoint (2026-10-09)
+
+**完整接觸作用下的條件式時鐘已證明；自然製備與事件紀錄未完成。**
+沒有刪掉第三通道，也沒有改動 G-R9 的接觸作用。三通道相消形成
+Dplus=(|0,2>−2|1,1>+|2,0>)/sqrt(6)，它是完整九態模型的精確定常暗態。
+對固定的七結果相位 POVM，A 的各讀數機率均為 1/7；以其相位 phi 作條件，
+B 滿足 rho(B|phi)=exp(i N_B phi) rho(B|0) exp(−i N_B phi)。
+這個關係不含更新編號 n，但仍是假設量子運動學、張量分解與讀出規則的
+有限條件式模型，不是物理秒、時間箭頭或粒子質量的推導。
+
+**關鍵限制：存在不等於自然產生。** 原始 |1,1> 的暗態權重只有 2/3，
+且受同一作用嚴格守恆，所以不能靠既有幺正演化純化成 Dplus。
+把未知更新數以明列的均勻長時間平均處理，會得到定常混態，但在有限耦合下
+不嚴格服從自由能隙的剛性時鐘軌道；完整條件式方程保留跨相位接觸項。
+忽略 A 的讀出必須加總全部結果，不能只留下看似符合預期的出口。
+
+151 項新檢查通過；22 個驗證程式共 5,474 項檢查全部通過。
+五頁推導已編譯並逐頁檢查。當時提出的下一個物理問題是「一次製備＋一次記錄」能否在交代
+能量、相位參考與未成功結果後仍實現上述關係；保留未篩選定常混態作備選。
+G-R11 現已完成含新增量測耦合的有限構造；其控制尚非自主機制。
+不先加入浴、丟棄結果或替換系統作用量。G-R4–G-R8 與 Route-F 的界線不變。
+
+[推導 PDF](output/pdf/route_g_relational_readout.pdf) ·
+[TeX](tex/route_g_relational_readout.tex) ·
+[固定讀出卡](data/RELATIONAL_READOUT_CARD.json) ·
+[全通道數值報告](output/gr10_relational_readout.md).
+
+## G-R9b 側支：成對通道與單一出口的兩種方式（2026-10-09）
+
+與 G-R10 平行撰寫，作為獨立側支保留；不改變 G-R11 的主線與下一步。
+
+**證明 G-R9 的額外出口是結構性的。** 把每條連線變號會讓 L 變成 4−L，所以三節點環的能譜有鏡像
+spec L(π−θ)=4−spec L(θ)。任意兩個帶通量的三節點環，只要 |1,1>↔|0,2> 共振，就必然 θ_B=π−θ_A，
+而且 |2,0> 也一起簡併。任何實數的節點密度接觸，對兩個出口的耦合大小都相同。
+
+G-R9 的頂點接觸是秩一的。兩個暗態使單一出口機率對所有 γ、所有更新次數都**嚴格不超過 4/9**；
+G-R9 原本只把 4/9 當弱耦合包絡。這與 G-R10 守恆的 2/3 暗態權重是同一個結構。
+
+**到達單一出口有兩種方式。** (A) 三節點環配四節點環、接觸不變，只剩目標通道簡併；γ=0.01 時 P=0.999995。
+(B) 兩個相同的環改用有方向的接觸，形成封閉的手性三角形，在 t*=2π/(3γ) 完全轉移。
+兩者都要求兩個副本可以區分：能譜不同，或接觸有方向。B 仍無法把 |1,1> 製備成 G-R10 的 D+，保真度上限是 2/3。
+共振通量和接觸方向仍是人為給定。586 項檢查通過（只用 numpy）。
+
+[推導 PDF](output/pdf/route_g_paired_channels.pdf) ·
+[TeX](tex/route_g_paired_channels.tex) ·
+[假設卡](data/PAIRED_CHANNEL_CARD.json) ·
+[驗證結果](output/gr9b_paired_channels.md).
+
+## G-R9 event network and exchange channels (2026-10-09)
+
+回到原文的「事件關係 → 譜 → 可比較的讀數」方向。G-R4–G-R8 的熱浴、
+度規與干涉儀保留為對照，不再讓硬體校準阻塞這條主線。
+
+**有限候選及反例檢查已完成；時間、空間與粒子質量的湧現仍未完成。**
+同一三節點關聯矩陣的局部強度與 trace 固定，但改變迴路相位會改變能譜。
+以兩個獨立副本的相鄰躍遷作時鐘，得到一快一慢的響應，而非普遍時間變慢。
+節點數不是空間維度，無量綱譜不是實測質量，更新次序仍是明列的假設。
+
+最重要的物理檢查：理想的選模交互作用可給接近 100% 的單通道交換；
+但固定節點接觸作用會同時打開另一個**簡併出口**。交換對稱性嚴格給出
+每個出口的機率不超過 1/2；弱耦合共振模型的單出口上界為 4/9。
+不能把額外出口當成小修正刪掉，也不能宣稱已導出自然選模機制。
+
+342 項新檢查通過；21 個程式的完整回歸共 5,321 項全部通過。
+六頁推導已編譯並逐頁檢查。當時建議優先保留三通道接觸模型，
+建立包含未讀出通道的聯合觀測與條件式時鐘，現已由 G-R10 完成；備選是先找到能排除額外通道的
+獨立對稱性或物理來源。沒有 fitting，也未變更 Route-F 的門檻。
+
+[六頁推導 PDF](output/pdf/route_g_event_network.pdf) ·
+[TeX](tex/route_g_event_network.tex) ·
+[固定假設卡](data/EVENT_NETWORK_CARD.json) ·
+[驗證與數值結果](output/gr9_event_network.md).
+
+## G-R8 explicit closed guided protocol — comparison model (2026-09-29)
 
 **Effective sequence and phase bounded-done; real controls and data OPEN.**
 A 1 mm symmetric guide separation, 5 ms outward ramp, 10 ms hold and
@@ -30,7 +136,7 @@ only about -1.7e-6. Even an ideal three-standard-error estimate needs
 roughly 4e11 shots per witness setting, before noise or count-rate costs.
 This is not an observed violation or feasible Yb+ hardware design.
 
-Next select/calibrate one real guide/coupler and its differential phase
+If this comparison program is resumed, select/calibrate one real guide/coupler and its differential phase
 noise, or reject this implementation. Do not add a time law or require
 more formal precision before this physical feasibility decision.
 

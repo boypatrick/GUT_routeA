@@ -6,6 +6,33 @@ Authority: user-selected on 2026-09-23 after rereading the original
 
 ## Current direction
 
+G-R11 completion (2026-10-09): a relative-phase record now has an explicit
+energy-commuting instrument with a distinct blank and all failed outcomes.
+The 72-dimensional unitary ADDS a collective apparatus coupling to the
+unchanged G-R10 system. It is not a local A/B phase measurement or an
+autonomous trigger. The successful unread state is disturbed by exactly
+25/82 weight transfer from Dplus to Dminus. Continued coupling returns the
+memory to blank; saving it requires declared decoupling. The bounded
+instrument task is closed, but fundamental time/arrow emergence is not.
+See [five-page derivation](tex/route_g_preparation_record.tex).
+
+G-R10 completion (2026-10-09): retaining the full G-R9 contact reveals
+an exact stationary dark subspace. Its fixed phase-POVM conditional
+orbit contains no update n. This closes the bounded stationary readout
+existence question, not autonomous preparation: |1,1> has conserved
+dark weight 2/3. The full contact equation, unread-outcome marginal and
+uniform unread-update mixture are retained, not replaced by a pure
+selected branch. See [derivation](tex/route_g_relational_readout.tex).
+The cyclic phase is not an unbounded record or physical second.
+
+Updated 2026-10-09: the user approved an event/relationship-first candidate.
+G-R9 starts from one dimensionless connection graph, not a metric or
+particle mass list. Its spectrum, two-copy dials and exchange audit are
+explicitly derived in [the six-page note](tex/route_g_event_network.tex).
+It still postulates a common ordered update count and the update rule;
+it must not be called a derivation of time or a stationary G-R1 completion.
+G-R4–G-R8 remain comparison controls rather than the governing mainline.
+
 Use events/readings of one quantum subsystem to describe another.
 Do not assume that the source document's time is the laboratory
 coordinate already used in G0/G1 or the time of flight in G2-T.
@@ -29,6 +56,11 @@ not prerequisites or inputs for the relational-time line.
 | Ep / En | Positive/negative energy information | Not assigned to negative Hamiltonians or signed clock levels |
 | Phase phi | New mathematical symbol | An outcome label of a clock POVM, not a geometric rotation or a fifth spatial coordinate |
 | tau=hbar phi/epsilon | New calibrated clock reading | Optional time units within one cycle; not a derived spacetime proper time or global external clock |
+| theta in G-R9 | New link/loop phase | Gauge-invariant relational phase; not the G-R1 dial outcome phi and not spatial rotation |
+| lambda_k in G-R9 | New graph spectrum | Dimensionless positive eigenvalues; no physical mass or energy calibration supplied |
+| n and s=alpha n in G-R9 | New update index and interpolation | Ordered update count is assumed, not derived time or a saved G-R2 record |
+| d in G-R11 | Relative outcome (s−r) mod 7 | Joint invariant phase record, not separate local timestamps, elapsed seconds or an event counter |
+| a in G-R11 | Integrated apparatus coupling | Supplied pulse area; pi/2 writes and pi restores blank, not a derived time variable |
 
 The source PDF's full hash remains
 d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e.
@@ -67,6 +99,28 @@ Its five pages were reread and visually inspected during the concept audit.
   additional dynamics, and does not prove that density slows time.
 
 ## Completion and next decision
+
+**Current G-R11 decision:** the finite invariant instrument exists, with
+failure, energy conservation and measurement disturbance explicit. Keep
+it as a controlled effective model, or next select a physical trigger and
+self-decoupling mechanism. Do not hide an external time parameter inside
+the pulse or claim indefinite persistence in a closed finite apparatus.
+No further abstract instrument-existence proof is needed.
+
+**Preceding G-R10 decision, addressed within G-R11's scope:** the third channel supports a stationary
+conditional clock, rather than needing to be deleted. A preparation
+plus one-record instrument must still account for energy, phase
+reference and every outcome; keeping the unfiltered stationary mixture
+is the alternative. Neither a pure initial dark state nor uniform
+unread-update averaging is a first-principles preparation law.
+
+**Preserved G-R9 decision:** the ideal selected-mode interaction is not
+derived from a simple fixed vertex contact. The contact opens a third
+degenerate state; symmetry bounds either outgoing probability by 1/2,
+instead of the ideal model's nearly unit transfer. Keep this channel
+when defining relative readout, or independently justify its exclusion.
+No negative result is promoted to a no-go theorem for all event theories.
+Earlier G-R1–G-R8 completion statements below retain their original scope.
 
 G-R1 is bounded-done, with TeX/PDF and executable checks.
 No claim of a novel Page-Wootters mechanism or unconditional

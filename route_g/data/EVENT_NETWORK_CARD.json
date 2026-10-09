@@ -1,0 +1,37 @@
+{
+  "stage": "G-R9",
+  "date": "2026-10-09",
+  "status": "bounded candidate; no emergent-time or particle-mass claim",
+  "source_inspiration": "Chen 2022 sections 1.2, 1.8, 1.9; not a unique reconstruction",
+  "source_sha256": "d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e",
+  "rule": "L=2I-exp(i theta/3)S-exp(-i theta/3)S^dagger; S|j>=|j+1 mod 3>; U=exp(-i alpha H)",
+  "alpha_per_assumed_update": 0.25,
+  "exchange_g": 0.1,
+  "local_contact_gamma_fixtures": [0.09, 0.03, 0.01],
+  "local_contact_audit": "V=gamma |vertex0><vertex0| tensor |vertex0><vertex0|; retain full nine-dimensional dynamics",
+  "theta_domain_over_pi": [0.16666666666666666, 0.8333333333333334],
+  "fixtures_theta_over_pi": [0.3333333333333333, 0.5, 0.6666666666666666],
+  "clock_A_modes": [0, 1],
+  "clock_B_modes": [1, 2],
+  "interaction": "g (|1,1><0,2| + |0,2><1,1|), in the fixed Fourier basis of two independent copies",
+  "preparations": ["product plus states for dial coherences", "|1,1> for exchange probability"],
+  "assumptions": [
+    "Complex finite-dimensional quantum mechanics and Born measurements",
+    "Two independent tensor factors, each a three-node connection graph",
+    "Fixed edge magnitudes and a loop phase, not rotation in physical space",
+    "Ordered update count n, common alpha, initial preparation and probes are supplied",
+    "Mode-selective exchange is postulated, not derived from nearest-edge microscopic interactions"
+  ],
+  "not_claimed": [
+    "Physical seconds, energy scale, Ed law, spatial dimension or mass spectrum",
+    "Clock records, autonomous preparation, an arrow or emergent event ordering",
+    "Dissipative synchronization, attraction, irreversible relaxation or universal slowdown",
+    "Common fractional clock rate under finite interaction away from resonance",
+    "Hardware realization or any Route-F gate promotion"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr1_relational_clock.py": "74d40ad9504a7e5d642d6a1d6d312fe59d96c2e3850772678a7ae2519e443aa0",
+    "code/verify_gr2_two_event_records.py": "969a04810b1d6b6beaebeb24dd88b79ff4ac79ae15e5249d1015e0295e09b0de",
+    "data/CLOSED_PATH_CARD.json": "07dcf214e461a16230e8f91cef0c68147faa9b2097e45e29972401362cc3d434"
+  }
+}

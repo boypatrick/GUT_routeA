@@ -2,11 +2,16 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-09-29): G-R8 specifies the closed guided sequence,
-full effective phase and joint readout. Choose/calibrate a real guide
-and assess differential phase noise before promoting an apparatus.
-G-R6's independent four-setting empirical test and G-R5's missing
-thermal records remain open. No new time law or hardware claim.
+Current priority (2026-10-09): G-R11 closes the finite energy-compatible
+preparation/relative-record instrument, with all failed outcomes and
+backreaction retained. The system action is unchanged; a new collective
+apparatus coupling and its controlled pulse are explicit additions.
+Next choose a physical trigger/self-decoupling mechanism if autonomous
+events remain the goal, or close this as an effective controlled model.
+Do not create another abstract prerequisite or a new parameter scan.
+G-R4–G-R8 are retained physical comparison models. Their missing data and
+apparatus calibration are not prerequisites for this event-network line.
+No physical time, mass spectrum or universal density law is claimed.
 Earlier G0–G2-T: preserved comparison/regression models, not the current mainline.
 Status labels: open, in-progress, bounded-done, rejected-for-this-model.
 
@@ -18,6 +23,231 @@ Keep all input assumptions and claimed interpretations visible.
 Do not import arbitrary particle-specific radii, projectors or mass shifts.
 Do not turn every unfinished UV detail into another prerequisite paper.
 No existing P54 parameters, fits or regression results are changed.
+
+## Governing update — event-first candidate and a missing channel (2026-10-09)
+
+The user approved returning to the original paper's events, relational
+structure and compatible exchange, without initially assuming physical
+space, seconds or a fitted density/slowdown function. G-R6–G-R8 assumed
+a metric: their successful algebra does not derive that metric or the
+source's Ei/Ed concept. Preserve, but demote, the apparatus mainline.
+
+### G-R11 — One preparation and one relative-phase record
+
+Status: **bounded-done for the finite energy-compatible instrument**;
+**autonomous apparatus, isolation and arrow remain open**.
+
+1. **Readout compression — proved.** In the unchanged two-dimensional
+   dark subspace P, the 49 energy-invariant joint effects satisfy
+   P Fbar(r,r+d) P=C_d/7. The common-origin r is uniformly redundant for
+   every dark state, not merely Dplus. Summing r retains the reduced
+   joint Lüders instrument. C_0=0; the six other C_d sum to P. This is
+   a relative joint observable, not separate local clock measurements.
+2. **Complete instrument and energy ledger — done.** K_failure=I−P and
+   K_d=sqrt(C_d) form a complete instrument commuting with H. An explicit
+   72×72 unitary writes a degenerate eight-level memory (distinct blank,
+   failure, d=1,...,6). It conserves all energy spectral probabilities.
+   From |1,1>, success is 2/3 and failure 1/3; their energies are 4 and
+   4+gamma/3, averaging to 4+gamma/9. The initial input and pure blank
+   are supplied. This collective coupling is NOT derived from the old
+   vertex contact or G-R9b's oriented interaction.
+3. **Backreaction and resources — calculated.** Unread successful output
+   is (57/82)|Dplus><Dplus|+(25/82)|Dminus><Dminus|, analytically derived
+   from a seven-root Chebyshev sum. The conditional orbit survives with
+   a changed seed. A classicalized record has entropy 2.27003421247 bits;
+   a reset bound is stated only for a thermal, degenerate, no-accessible-
+   side-information, cyclic-controller setting. No write-energy or
+   actual heat cost is inferred from this entropy alone.
+4. **Reference boundary — proved.** Stationary ancilla + invariant pointer
+   + conserving unitary imply invariant effects. Bare local phase effects
+   fail this condition; the relative effects pass and have an explicit
+   implementation. No external energy-phase asymmetry resource is needed
+   for this abstract instrument. Internal calibration and pulse control
+   are still supplied. Interaction-picture formulas do not remove the
+   physical free-evolution factor or derive the pulse parameter as time.
+5. **Continuous-gate countercheck — decisive.** A pulse area a yields
+   P_blank=cos²(a). Area pi/2 writes; area pi restores blank. Only after
+   declared decoupling does isolated-memory evolution preserve records.
+   Pointer coherence, reversible erasure and nonrepeatability of the
+   system POVM remain explicit. No actual lifetime or arrow is proved.
+
+120 new checks pass; all **6,184 checks across 24 verifiers pass**, including
+the independently retained G-R9b side branch and predecessor hash checks.
+G-R10's code, card and JSON hashes are unchanged. The five-page TeX compiled
+in the built-in editor; exported PDF was visually checked on every page.
+
+**Next physical decision, not another mathematical gate:**
+
+- Effective-model option: stop here with a controlled relational-clock
+  measurement, and clearly retain its apparatus assumptions.
+- Autonomous-event option: specify a realizable recorder interaction and
+  a trigger that leaves its contact region after writing. A single-pass
+  trigger is a concrete candidate, not yet selected or validated. Include
+  its energy, reflected/returning branches and finite-memory recurrence;
+  do not silently impose a one-way trajectory or a free external clock.
+  A successful finite control model would still not prove fundamental
+  time emergence or the source's Ed identification.
+
+Do not automatically add a bath, replace the contact, fit a time law, or
+promote any Route-F gate. The invariant-instrument existence task is closed.
+
+Artifacts: [card](data/PREPARATION_RECORD_CARD.json),
+[report](output/gr11_preparation_record.md),
+[code](code/verify_gr11_preparation_record.py),
+[TeX](tex/route_g_preparation_record.tex),
+[PDF](output/pdf/route_g_preparation_record.pdf).
+
+### G-R10 — Full observation algebra and stationary conditional clock
+
+Status: **bounded-done for the all-channel readout and its limits**.
+No new interaction, bath, selected outlet or empirical fit is introduced.
+The G-R9 contact, its three gamma fixtures and all predecessor files are
+preserved. The retained graph resonance is an input, not dynamically selected.
+
+- **Full measurement accounting — done.** Number projectors and pair
+  quadratures span the 9-dimensional local / 81-dimensional joint
+  observation algebra. A fixed seven-outcome phase POVM is positive
+  and complete but not tomographically complete. Its joint table and
+  remote conditional states retain all nine modes and all outcomes.
+  Ignoring A exactly gives the B partial trace, not a selected branch.
+- **Exact stationary dark clock — done for this candidate.** The triple
+  |0,2>, |1,1>, |2,0> has a two-dimensional contact-null subspace at
+  theta=pi/2. Dplus=(|0,2>−2|1,1>+|2,0>)/sqrt(6) has H Dplus=4 Dplus
+  for every gamma. It gives p_A=1/7 and the exact conditional orbit
+  rho(B|phi)=exp(i N_B phi) rho(B|0) exp(−i N_B phi), without n.
+  Its continuous relative-phase density is (1−cos delta)^2/(3 pi),
+  a broad cyclic reading rather than a sharp/unbounded timestamp.
+  This realizes established conditional-time reasoning in the unchanged
+  contact model; it is not a new general Page–Wootters mechanism.
+- **Different states kept separate — done.** The actual exchange state,
+  the uniform Cesaro unread-update mixture and a prepared pure dark
+  state are not identified. At gamma=0.09 the first two give seven-reading
+  bare-gap rigidity residuals 0.0277141 and 0.0108673; the dark state
+  gives exactly zero. These do not refute general interacting clocks.
+  An exact conditional eigenstate equation retains the contact term
+  coupling chi(phi) to chi(0), together with the reading likelihood.
+  Averaged joint effects commute with H and preserve stationary-state
+  statistics, but their autonomous/local apparatus implementation is open.
+- **Autonomous pure-state preparation — impossible under this fixed
+  unitary contact from |1,1>.** Its conserved dark weight is 2/3.
+  A hypothetical energy filter gives Dplus with probability 2/3 but adds
+  a measurement instrument and a rejected outcome. Dminus is robust
+  against equal-copy flux detuning but inaccessible from this symmetric
+  input, and its continuous phase has a twofold ambiguity. Dplus itself
+  needs the equal-gap resonance. No dissipation or state selector is hidden.
+
+151 new checks pass, including full site/mode matrices, conditional
+orbits, all-outcome sums, stationary effects, the exact contact kernel,
+dephased controls and the order-of-limits distinction for weak coupling
+versus infinite uniform averaging. The latter prior remains an assumption.
+All 5,474 checks across 22 verifiers pass, including two added predecessor
+hash-preservation checks. G-R9's code, card and result hashes are unchanged.
+The five-page PDF is compiled and visually reviewed on every page.
+
+**Historical next test, now addressed by G-R11:** one preparation plus one-record instrument,
+with explicit energy/reference costs and all outcomes. Do not assume a
+fresh external clock, filtered success or bath is free. Alternatively
+retain the unfiltered stationary mixed state and test its interacting
+conditional equation. If an operational completion requires an external
+time reference, retain this result as a relational-clock representation,
+not a claim that time itself has been generated. No metric/mass/Route-F
+gate is promoted; do not start new parameter scans to bypass this decision.
+
+Artifacts: [card](data/RELATIONAL_READOUT_CARD.json),
+[report](output/gr10_relational_readout.md),
+[code](code/verify_gr10_relational_readout.py),
+[TeX](tex/route_g_relational_readout.tex),
+[PDF](output/pdf/route_g_relational_readout.pdf).
+
+### G-R9b — Paired channels and two ways to one outlet (side branch, 2026-10-09)
+
+Status: **bounded-done for the declared finite constructions**. Written in
+parallel with G-R10 by a separate session. It does not change the current
+G-R11 priority or its next choice.
+
+1. **The extra outlet is structural — proved.** Flipping every link sign
+   maps L to 4−L; on a 3-ring this adds pi to the loop phase, so
+   spec L(pi−theta)=4−spec L(theta). The sorted gaps are
+   2 sqrt3 sin((pi−theta)/3) and 2 sqrt3 sin(theta/3). For ANY two flux
+   3-rings, |1,1>↔|0,2> resonance forces theta_B=pi−theta_A and makes
+   |2,0> degenerate as well. Every real density-density contact couples
+   the two outlets with equal magnitude; the resonant block is circulant.
+2. **Exact 4/9 for the G-R9 vertex contact — proved.** The contact is rank
+   one. Its two dark states give P(0,2)=P(2,0)=|G−exp(−i E0 s)|²/9 ≤ 4/9
+   at every gamma and every update, also for mirror pairs without swap
+   symmetry. This promotes G-R9's weak-contact envelope to an exact bound.
+   It is the same structure as G-R10's conserved 2/3 dark weight.
+3. **Exit A, distinguishable spectra — done.** A 3-ring at theta=pi/2 and
+   a 4-ring at theta_B=4 arcsin(sqrt3/4), with the unchanged vertex
+   contact: only the target shares the input energy (reverse outlet
+   detuned by (3 sqrt3−sqrt13)/2). Full 12×12 evolution at integer
+   updates gives P(0,2)=0.999994927 at gamma=0.01.
+4. **Exit B, oriented contact — done.** h=(2,0,1) on identical rings gives
+   a closed chiral triangle with loop phase −pi/2 and unit transfer at
+   t*=2pi/(3 gamma). Any translation-covariant contact conserves the |T>
+   weight 1/3 of |1,1>, so it cannot prepare G-R10's D+ beyond fidelity 2/3.
+
+586 checks pass (numpy only). A resonant flux (A) or an orientation and
+weight ratio (B) is supplied, not derived. No time, record or mass claim.
+Artifacts: [input card](data/PAIRED_CHANNEL_CARD.json),
+[report](output/gr9b_paired_channels.md), [code](code/verify_gr9b_paired_channels.py),
+[TeX](tex/route_g_paired_channels.tex), [PDF](output/pdf/route_g_paired_channels.pdf).
+
+### G-R9 — Fixed spectrum, two dials and local-contact countercheck
+
+Status: **bounded-done for the declared finite candidate and audit**.
+Emergent time and microscopic selection remain **open**; this is not a
+new claim that all preceding conceptual gaps have closed.
+
+1. **Graph and persistence — done.** For S|j>=|j+1 mod 3>,
+   L=2I−exp(i theta/3)S−exp(−i theta/3)S† is positive with
+   lambda_k=2−2 cos((theta−2 pi k)/3). Local magnitudes and trace are
+   fixed while the gauge-invariant loop phase changes the spectrum.
+   Mode/gap perturbation bounds are proved. Persistence is not attraction.
+2. **Two-copy dials and selected exchange — done under explicit inputs.**
+   A uses modes (0,1), B uses (1,2) on independent tensor factors.
+   U=exp(−i alpha H), alpha=1/4, presupposes ordered updates n, not seconds.
+   Fixed Fourier-mode exchange g=0.1 has an exact invariant four-state
+   sector and P<=4g²/(delta²+4g²). One-for-one resonance is theta=pi/2,
+   not selected dynamically. At n=63 P=0.99998233 in this idealization.
+   For plus-state input the interacting dial coherences both equal
+   exp(−i sqrt(3) s) cos(g s): equal phase is not permanent visibility.
+3. **Universal slowdown and uniqueness — not established.** With fixed
+   trace, one free gap increases while the other decreases. Trace is
+   not identified as Ed. Replacing the update generator by the equally
+   positive fixed rule L+0.2 L² changes B/A from 1 to 1.4766271 at the
+   same graph. The graph alone does not determine event dynamics.
+4. **Vertex-contact completion of selected exchange — rejected for this
+   contact.** gamma P_vertex0 tensor P_vertex0 has all mode-basis entries
+   gamma/9. At resonance, |0,2>, |1,1>, |2,0> are degenerate; the selected
+   four-state sector is not closed. Exact swap symmetry gives equal
+   outgoing probabilities, each <=1/2. The weak-contact resonant block
+   gives 4/9 per target (8/9 combined); this sharper bound is not claimed
+   for the full nine-state generator. At gamma=0.09, n=419 the full model
+   gives 0.44430738 to each target with 0.000205484 outside the triple.
+
+342 new checks pass; all 5,321 checks across 21 verifiers pass.
+The earlier G-R3/G-R4 preservation audits each add one check for the
+new verifier; their physical predictions and source code are unchanged.
+The six-page PDF is compiled and visually reviewed page by page.
+Full site-basis propagation, analytic sector
+formulae and contact leakage are checked independently. The six-page
+derivation and fixed input card avoid arbitrary particle masses,
+dimensional identifications or nonlinear time-law fits.
+
+**Historical next choice, now addressed by G-R10:** retain the honest three-channel contact and
+derive its full observation algebra/conditional readout, including
+unread channels. An alternative is an independently motivated symmetry
+or interaction that forbids the second outlet before reinstating the
+selected-mode idealization. Do not launch a precision/parameter scan
+to hide this structural difference. Neither choice yet derives event
+ordering, permanent records, a spatial metric or a particle spectrum.
+
+Artifacts: [input card](data/EVENT_NETWORK_CARD.json),
+[report](output/gr9_event_network.md), [code](code/verify_gr9_event_network.py),
+[TeX](tex/route_g_event_network.tex), [PDF](output/pdf/route_g_event_network.pdf).
+Older milestone instructions below describe their historical scope;
+they do not override this current priority. All Route-F gates stay unchanged.
 
 ## New governing decision — G-R relational time (2026-09-23)
 

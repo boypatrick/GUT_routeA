@@ -1,7 +1,86 @@
 # Route G sources and interpretation ledger
 
-Reviewed: 2026-09-29.
-Current mainline: relational quantum clocks; old KK/scattering sources retained below.
+Reviewed: 2026-10-09.
+Current mainline: event-network candidate; metric clocks and KK/scattering retained as controls.
+
+## G-R11 conserved readout, phase resources and memory accounting
+
+- I. Marvian and R. W. Spekkens,
+  [An information-theoretic account of the Wigner-Araki-Yanase theorem](https://arxiv.org/abs/1212.3378)
+  (2012). Primary abstract checked for the asymmetric-measurement versus
+  symmetric-processing distinction. G-R11 directly proves its elementary
+  invariant-effect condition; no new general WAY theorem or universal
+  quantitative apparatus bound is claimed.
+- D. Reeb and M. M. Wolf,
+  [An improved Landauer Principle with finite-size corrections](https://arxiv.org/abs/1306.4352),
+  [New J. Phys. 16, 103011 (2014)](https://doi.org/10.1088/1367-2630/16/10/103011).
+  Primary abstract checked for the reset assumptions and finite-bath
+  distinction. The entropy ledger is restricted to a classicalized,
+  degenerate memory with no accessible side information and cyclic
+  thermal resetting. It is not a universal writing cost or measured heat.
+
+The relative-effect compression, explicit 72-dimensional unitary,
+all-outcome energy ledger, exact 57/82 disturbance and continued-pulse
+return-to-blank identity are finite derivations in the G-R11 TeX, tested
+by direct matrices. They are not attributed to these source authors or
+claimed as novel general measurement theory. The system contact stays
+fixed, but the collective recorder interaction, pure blank, pulse area
+and isolation are new declared apparatus inputs. No paper provides a
+physical implementation, lifetime, time-emergence proof or Ed calibration.
+
+## G-R10 stationary conditional readout and interaction boundary
+
+- D. N. Page and W. K. Wootters, [Evolution without evolution](https://doi.org/10.1103/PhysRevD.27.2885),
+  Phys. Rev. D 27, 2885 (1983). The publisher's abstract supports the
+  established interpretation of dynamics as dependence on internal
+  clock readings in a stationary description, not our particular contact.
+- A. R. H. Smith and M. Ahmadi, [Quantizing time: Interacting clocks and systems](https://arxiv.org/abs/1712.00081),
+  Quantum 3, 160 (2019), [published paper](https://doi.org/10.22331/q-2019-07-08-160).
+  Its primary abstract explicitly distinguishes interacting conditional
+  equations with nonlocal clock-label terms from a free rigid clock.
+  No gravity correction or empirical calibration is imported here.
+
+The contact's exact two-dimensional dark subspace, phase probabilities,
+conserved 2/3 preparation bound, finite seven-effect readout and projected
+contact kernel are derived and directly matrix-checked in G-R10.
+They do not establish new general quantum-time formalism or experimental
+time emergence. The uniform Cesaro prior, phase measurement and optional
+dark-state preparation are assumptions. The exact stationary dark state
+is distinguished from both the exchange state and the unfiltered
+stationary mixture. No hidden outcome selection is used in the joint table.
+
+## G-R9b paired-channel side branch
+
+- Z. Zimborás, M. Faccin, Z. Kádár, J. D. Whitfield, B. P. Lanyon and J. Biamonte,
+  [Quantum transport enhancement by time-reversal symmetry breaking](https://arxiv.org/abs/1208.4049),
+  Sci. Rep. 3, 2361 (2013). Cited for the known directional (chiral) transfer on a
+  triangle with loop phase ±pi/2, which Exit B uses.
+- The link-sign-flip mirror, channel pairing, equal-coupling lemma, rank-one
+  dark-state bound and 3-ring + 4-ring census are elementary finite derivations
+  in the companion note, checked by direct matrices. They are not claimed as new
+  theorems. Chen 2022 section 1.9 motivates the exchange question only.
+
+## G-R9 event-network candidate and source boundary
+
+- BoYu Chen, [Energy spectrum for elementary particles, final version](https://indico.cern.ch/event/1109513/contributions/4969967/attachments/2480973/4410560/Energy%20spectrum%20for%20elementary%20particles_final.pdf),
+  23 April 2022, especially sections 1.2 (time and Ei/Ed), 1.8 (visible
+  spectrum), 1.9 (exchange and common event periods). These motivate
+  questions, not the graph, quantum assumptions or update law supplied here.
+- The public web tool returned 403 during this run. The previously
+  acquired five-page PDF was rechecked against SHA256
+  `d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e`;
+  its text was reread. No claim of newly acquired external measurements.
+
+G-R9's Fourier graph spectrum, perturbation bounds, exact selected-mode
+exchange, dial coherences and contact-channel countercheck are derived
+in the companion note and checked by direct finite matrices. They are
+standard elementary spectral/unitary methods, not claimed new theorems
+or proof of Chen's time, negative-mass, force or superluminal proposals.
+The chosen loop, g, alpha, contact strengths, input states and probes
+are toy assumptions, not quantities inferred from Chen or experiments.
+The interaction's exact swap bound is distinct from the weak-contact
+4/9 prediction; the full matrix retains other channels. No new literature
+claim is needed to establish these explicitly derived finite identities.
 
 ## G-R8 specified guides and complete effective phase
 

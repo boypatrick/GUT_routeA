@@ -1,0 +1,326 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\spec}{\operatorname{spec}}
+\title{Route G-R9b: Paired Exchange Channels, an Exact $4/9$ Bound,\\and Two Ways to One Outlet}
+\author{A side branch of G-R9, alongside G-R10; no mass, time-law or flux fit}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+G-R9 found that a fixed vertex contact between two identical three-node
+rings opens a second, degenerate exchange outlet. Here we show that this
+is structural. Flipping the sign of every link maps $L$ to $4-L$; on a
+three-node ring this pairs the lower gap of one ring with the upper gap of
+its mirror partner. Hence \emph{every} resonant pair of flux 3-rings has
+the reverse outlet degenerate, and every real density--density contact
+couples the two outlets with equal strength. For the rank-one vertex
+contact, two exact dark states make the single-outlet probability at most
+$4/9$ at every update and every contact strength, which G-R9 had stated
+only as a weak-contact envelope. One outlet is reached in two ways. A
+3-ring paired with a 4-ring, joined by the same vertex contact, leaves only
+the target degenerate and transfers with probability $1-O(\gamma^2)$. Two
+identical rings joined by an \emph{oriented} contact form an exactly closed
+chiral triangle that transfers with unit probability. In both, the two
+copies must be distinguishable. Ordered updates, quantum mechanics, the
+resonant flux and the contact orientation remain inputs.
+\end{abstract}
+
+\section{What G-R9 left open}
+G-R9 used $L_\theta=2I-e^{\ii\theta/3}S-e^{-\ii\theta/3}S^\dagger$ on two
+copies, read clock A on modes $(0,1)$ and clock B on modes $(1,2)$, and
+asked for the exchange $\ket{1,1}\to\ket{0,2}$. At $\theta=\pi/2$ the free
+gaps are both $\sqrt3$. The contact $\gamma P_0\otimes P_0$ then also
+reaches $\ket{2,0}$, which has the same energy. Swap symmetry gave an exact
+bound $P_{11\to02}\le\tfrac12$; a weak-contact block gave the envelope
+$4/9$, which was explicitly \emph{not} asserted for the full generator.
+Its next bounded choice was either to keep all three channels or to find
+an independent reason that removes the extra outlet. G-R10 took the first
+branch: with the contact unchanged it built the all-channel readout,
+found two exact dark states and a conserved $2/3$ dark weight of
+$\ket{1,1}$. This side note, written in parallel and not replacing G-R10,
+asks whether the extra outlet is an accident of identical copies at
+$\theta=\pi/2$, and gives one construction for one-outlet exchange in each
+direction of that choice.
+
+\paragraph{Notation.} On an $N$-node ring, $S\ket j=\ket{j+1\bmod N}$ and
+\begin{equation}
+ L_N(\theta)=2I-e^{\ii\theta/N}S-e^{-\ii\theta/N}S^\dagger,\qquad
+ \lambda^{(N)}_k(\theta)=2-2\cos\frac{\theta-2\pi k}{N},
+\end{equation}
+with flux-independent Fourier eigenvectors $f_k(j)=e^{2\pi\ii jk/N}/\sqrt N$.
+Labels $a,b$ below are energy-sorted modes of each copy. For a 3-ring with
+$0<\theta<\pi$ the sorted order is $k=0,1,2$. The input is $\ket{1,1}$, the
+\emph{target} outlet $\ket{0,2}$ and the \emph{reverse} outlet $\ket{2,0}$.
+
+\section{A link sign flip pairs the channels}
+\paragraph{Lemma 1 (link sign flip).}
+$4I-L_N(\theta)=L_N(\theta+N\pi)$; $L_N(\theta+2\pi)=DL_N(\theta)D^\dagger$
+with $D={\rm diag}(e^{2\pi\ii j/N})$; and $L_N(\theta)^*=L_N(-\theta)$.
+\emph{Proof.} Replacing every link amplitude by its negative adds $\pi$ to
+each of the $N$ link phases, so the loop phase grows by $N\pi$. The other
+two identities follow from $DSD^\dagger=e^{2\pi\ii/N}S$ and $S^*=S$.
+\hfill$\square$
+
+For even $N$ the shift $N\pi$ is a multiple of $2\pi$, so the spectrum is
+symmetric about 2 at every flux (the ring is bipartite). For $N=3$ the
+shift is $\pi$ modulo $2\pi$, and with conjugation
+\begin{equation}
+ \spec L_3(\pi-\theta)=4-\spec L_3(\theta).\label{mirror}
+\end{equation}
+The sorted gaps follow in closed form:
+\begin{equation}
+ \Delta_-(\theta)=\lambda_1-\lambda_0=2\sqrt3\,\sin\frac{\pi-\theta}{3},\qquad
+ \Delta_+(\theta)=\lambda_2-\lambda_1=2\sqrt3\,\sin\frac{\theta}{3}.\label{gaps}
+\end{equation}
+
+\paragraph{Theorem 1 (channel pairing).}
+Let A and B be 3-rings with fluxes $\theta_A,\theta_B\in(0,\pi)$. Then
+$E_{02}=E_{11}$ holds if and only if $\theta_B=\pi-\theta_A$, and in that
+case also $E_{20}=E_{11}$.
+\emph{Proof.} $E_{02}=E_{11}$ means $\Delta_-(\theta_A)=\Delta_+(\theta_B)$.
+By Eq.~\eqref{gaps} this is $\sin\frac{\pi-\theta_A}{3}=\sin\frac{\theta_B}{3}$
+with both arguments in $(0,\pi/3)$, so $\theta_B=\pi-\theta_A$. Then
+$E_{20}-E_{11}=\Delta_+(\theta_A)-\Delta_-(\pi-\theta_A)=0$.\hfill$\square$
+
+So no choice of the two fluxes separates the outlets. G-R9's identical
+copies at $\pi/2$ are the self-mirror case of this family. Any flux is
+gauge- or conjugation-equivalent to one in $[0,\pi]$, and at the ends a
+ring level is itself degenerate. The pairing is special to three levels:
+for $N>3$ the flip pairs gap $(0,1)$ with gap $(N-2,N-1)$, not with the
+middle dial. The verifier finds the resonant partner by bisection on 49
+values of $\theta_A$ and confirms $\theta_B=\pi-\theta_A$ and
+$E_{20}=E_{11}$ to $10^{-10}$.
+
+\section{What a local contact can and cannot see}
+Take a real density--density contact
+$V=\sum_{j,l}c_{jl}\,P_j\otimes P_l$ between two 3-rings. In the mode basis
+\begin{equation}
+ \bra{a,b}V\ket{a',b'}=\hat c(a'-a,\,b'-b),\qquad
+ \hat c(p,q)=\frac19\sum_{j,l}c_{jl}\,\omega^{jp+lq},\quad \omega=e^{2\pi\ii/3}.
+\end{equation}
+\paragraph{Lemma 2 (equal coupling).}
+On the resonant triple $(\ket{0,2},\ket{1,1},\ket{2,0})$ every diagonal
+entry is $c_0=\hat c(0,0)$, and
+$V_{02,11}=V_{11,20}=V_{20,02}=z\equiv\hat c(1,-1)$. The block is
+therefore circulant, $c_0I+zC+z^*C^\dagger$: a three-site ring whose loop
+phase is $\Phi=3\arg z$. Both outlets couple to the input with the same
+magnitude $|z|$. If $c$ is symmetric, $z$ is real and $\Phi\in\{0,\pi\}$.
+\emph{Proof.} The three elements $V_{02,11}$, $V_{11,20}$ and $V_{20,02}$
+all carry momentum transfer $(1,-1)$ modulo 3. Reality of $c$ gives
+$\hat c(-p,-q)=\hat c(p,q)^*$, so $V_{20,11}=z^*$.\hfill$\square$
+
+With real $z$ the block is $c_0-z+3z\ket T\bra T$, with
+$\ket T=(\ket{0,2}+\ket{1,1}+\ket{2,0})/\sqrt3$. In the weak-contact block this is G-R9's $4/9$
+structure, now for every symmetric contact and every mirror pair. For
+identical rings a symmetric $c$ also makes the full generator
+swap-symmetric, so G-R9's exact bound $P\le\frac12$ covers all of them.
+
+\paragraph{Lemma 3 (rank-one dark states).}
+Let $H=H_0+\gamma\ket v\bra v$ and let $\mathcal D_0$ be the eigenspace of
+$H_0$ at $E_0$, containing $\ket i\neq\ket t$. Put
+$\ket b=P_{\mathcal D_0}\ket v/\|P_{\mathcal D_0}v\|$,
+$w_x=|\langle x|b\rangle|^2$ and $G(s)=\bra b e^{-\ii Hs}\ket b$. Then for
+every $s$
+\begin{equation}
+ \bra t e^{-\ii Hs}\ket i=\langle t|b\rangle\langle b|i\rangle
+ \big[G(s)-e^{-\ii E_0s}\big],\qquad P_{i\to t}(s)\le4w_iw_t.\label{dark}
+\end{equation}
+\emph{Proof.} Vectors of $\mathcal D_0$ orthogonal to $\ket b$ are also
+orthogonal to $\ket v$, so they are exact eigenvectors at $E_0$; their
+orthogonal complement is invariant and contains $\ket b$. Write
+$\ket i=\langle b|i\rangle\ket b+\ket{d_i}$ and use
+$\langle t|d_i\rangle=-\langle t|b\rangle\langle b|i\rangle$. The bound
+follows from $|G|\le1$.\hfill$\square$
+
+The vertex contact is rank one with all $|v_{ab}|^2=1/9$. For identical
+rings or any mirror pair, $w=1/3$ on the triple, so
+\begin{equation}
+ P_{11\to02}(s)=P_{11\to20}(s)=\tfrac19\big|G(s)-e^{-\ii E_0s}\big|^2\le\tfrac49
+\end{equation}
+\emph{exactly}, for every $\gamma$ and every update. The two outlets have
+identical amplitudes even for mirror pairs, which lack swap symmetry.
+Here $\ket{1,1}$ has bright weight $1/3$, the complement of G-R10's
+conserved dark weight $2/3$. For weak contact
+$G\simeq e^{-\ii(E_0+\gamma/3)s}$, which reproduces G-R9's
+$\frac49\sin^2(\gamma s/6)$ and G-R10's weak-contact amplitude; Eq.~\eqref{dark}
+makes that amplitude exact once the exact $G$ is used. The verifier checks Eq.~\eqref{dark} against
+full $9\times9$ evolution, and computes $G$ independently from the roots of
+the secular equation $1=\gamma\sum_{ab}|v_{ab}|^2/(E-\varepsilon_{ab})$.
+
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+$\theta_A$ & $\gamma$ & max sampled $P_{02}$ & bound\\\midrule
+$\pi/2$ & 0.01 & 0.444444088 & 4/9\\
+$\pi/2$ & 0.5 & 0.439608352 & 4/9\\
+$\pi/2$ & 10 & 0.417446514 & 4/9\\
+$\pi/3$ (B at $2\pi/3$) & 2 & 0.386793114 & 4/9\\\bottomrule
+\end{tabular}
+\end{center}
+Equation~\eqref{dark} also says what unit transfer through a rank-one
+contact requires: $w_i=w_t=\tfrac12$. The input's energy shell must contain
+exactly one other state that the contact touches.
+
+\section{Exit A: distinguishable spectra}
+Keep the G-R9 vertex contact and replace copy B by a 4-ring. For
+$0<\theta<\pi$ its sorted spectrum is
+$2\mp2\cos(\theta/4)$, $2\mp2\sin(\theta/4)$, so its middle gap is
+$4\sin(\theta/4)$. With A at $\theta_A=\pi/2$ ($\Delta_-=\sqrt3$),
+resonance fixes
+\begin{equation}
+ \theta_B=4\arcsin\frac{\sqrt3}{4}=1.791329588,\qquad
+ \spec L_4(\theta_B)=\Big\{2\mp\frac{\sqrt{13}}2,\;2\mp\frac{\sqrt3}2\Big\}.
+\end{equation}
+Among the twelve product levels, the shell of $\ket{1,1}$
+($E_0=4-\sqrt3/2$) contains only $\ket{1,1}$ and $\ket{0,2}$. The nearest
+other level is the reverse outlet, detuned by $(3\sqrt3-\sqrt{13})/2=0.7953$.
+
+This holds across the whole resonant domain. A level $\ket{a,b}$ is
+degenerate with $\ket{1,1}$ iff $\lambda_a-\lambda_1=\mu_1-\mu_b$. Since B
+is non-degenerate, $a=1$ forces $b=1$ and $a=0$ forces $b=2$; only $a=2$,
+$b=0$ could add a state. On a 2001-point grid of
+$\theta_A\in(0.2756,\pi)$, where the lower end is the flux at which
+$\Delta_-^A$ equals the largest possible 4-ring middle gap $2\sqrt2$, the
+reverse detuning never falls below $0.318$.
+
+Now Lemma~3 has $w_i=w_t=\tfrac12$ and no bound below one:
+$P_{11\to02}=\tfrac14|G-e^{-\ii E_0s}|^2$. The bright pair
+$(\ket{1,1}+\ket{0,2})/\sqrt2$ is shifted by $\gamma/6$ while
+$(\ket{1,1}-\ket{0,2})/\sqrt2$ is an exact eigenstate, so for weak contact
+$P\simeq\sin^2(\gamma s/12)$. With $\alpha=1/4$ and integer updates, the
+full $12\times12$ evolution gives:
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$\gamma$ & best $n$ & $P_{02}$ & $P_{20}$ & $(1-P_{02})/\gamma^2$\\\midrule
+0.09 & 856 & 0.999543095 & $9.7\times10^{-5}$ & 0.056\\
+0.03 & 2535 & 0.999936858 & $4.3\times10^{-7}$ & 0.070\\
+0.01 & 7558 & 0.999994927 & $3.1\times10^{-7}$ & 0.051\\\bottomrule
+\end{tabular}
+\end{center}
+The best update is later than the weak estimate $6\pi/(\gamma\alpha)$
+by about 2\%, 0.9\% and 0.2\%: the exact bright root is
+$E_0+\tfrac\gamma6(1-0.196\gamma+\dots)$, so the exchange slows slightly. The deficit is $O(\gamma^2)$ and comes from dressing by
+off-shell levels. The reverse outlet is not removed by selecting an
+operator: the partner's spectrum detunes it, and the contact is unchanged.
+What is still supplied is one tuned flux, as at G-R9's $\theta=\pi/2$.
+
+\section{Exit B: an oriented contact on identical rings}
+Keep two identical rings and orient the contact:
+\begin{equation}
+ V_h=\gamma\sum_{j,l}h\big((j-l)\bmod3\big)\,P_j\otimes P_l .
+\end{equation}
+It commutes with the joint translation $S\otimes S$, which conserves
+$a+b\bmod3$. The class $a+b\equiv2$ is exactly the resonant triple, so the
+triple is a closed sector for every $\gamma$. Unlike the vertex contact,
+there is no leakage. Here $c_0=\gamma(h_0+h_1+h_2)/3$ and
+$z=\tfrac\gamma3(h_0+h_1\omega+h_2\omega^2)$. Swapping the copies sends
+$h(d)\to h(-d)$, so a swap-symmetric profile ($h_1=h_2$) has real $z$,
+$\Phi=0$, and stays at $4/9$.
+
+The profile $h=(2,0,1)$ links node $j$ of A to node $j$ of B with weight
+$2\gamma$ and to node $j+1$ with weight $\gamma$. It gives
+$z=(\gamma/\sqrt3)e^{-\ii\pi/6}$ and $\Phi=-\pi/2$. The circulant then has
+equally spaced eigenvalues $c_0+\{\sqrt3,0,-\sqrt3\}|z|$, and
+\begin{equation}
+ e^{-\ii Ht_*}\ket{1,1}=e^{\ii\varphi}\ket{0,2},\qquad t_*=\frac{2\pi}{3\gamma},
+\end{equation}
+for some phase $\varphi$. This is the chiral quantum walk on a triangle: a loop phase of
+$\pm\pi/2$ makes transport directional~\cite{zimboras}.
+The reversed orientation $h=(2,1,0)$ sends the quantum to $\ket{2,0}$
+instead. The same holds for any mirror pair. Sampled at integer updates
+($\alpha=1/4$):
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$\gamma$ & $t_*$ & $n$ & $P_{02}$ at $n$ & $P_{20}$ at $n$\\\midrule
+0.09 & 23.271 & 93 & 0.9999976057 & $1.2\times10^{-6}$\\
+0.03 & 69.813 & 279 & 0.9999976057 & $1.2\times10^{-6}$\\
+0.01 & 209.440 & 838 & 0.9999997561 & $1.2\times10^{-7}$\\\bottomrule
+\end{tabular}
+\end{center}
+The deficit is only the offset between $t_*$ and the nearest update; at
+$t_*$ itself the full $9\times9$ value is one to $10^{-10}$. Here the
+third channel is not removed. The oriented contact routes the quantum
+around the resonant triangle, and all three channels stay in the model.
+What is supplied is an orientation and the weight ratio that sets
+$\Phi=\pm\pi/2$. That value gives exact transfer at $t_*$; it is not
+claimed to be the only value that can give high transfer at later times.
+
+Exit B does \emph{not} remove G-R10's preparation obstruction. Any
+translation-covariant contact makes the closed triple circulant, so
+$\ket T$ is an exact eigenvector and the $\ket T$ weight $1/3$ of
+$\ket{1,1}$ is conserved. G-R10's dark clock state
+$\ket{D_+}=(\ket{0,2}-2\ket{1,1}+\ket{2,0})/\sqrt6$ is orthogonal to
+$\ket T$, so its fidelity from $\ket{1,1}$ never exceeds $2/3$, for every
+profile $h$ and every time. The verifier checks this for the oriented,
+reversed, symmetric and four random profiles.
+
+\section{What changed, and the next bounded step}
+\begin{center}
+\begin{tabular}{lccl}\toprule
+copies and contact & states at $E_{11}$ & best single outlet & status\\\midrule
+identical, vertex (G-R9) & 3 & $\le4/9$ & exact, all $\gamma$\\
+mirror pair, vertex & 3 & $\le4/9$ & exact, all $\gamma$\\
+identical, any symmetric $c$ & 3 & $\le1/2$ & exact (swap)\\
+3-ring + 4-ring, vertex (A) & 2 & $1-O(\gamma^2)$ & full $12\times12$\\
+identical, oriented (B) & 3 & $1$ at $t_*$ & exact closed sector\\\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Physical reading.}
+A one-for-one exchange between two dials needs the copies to be
+distinguishable, either in their spectra (Exit A) or in how their contact
+is oriented (Exit B). Identical 3-rings, or any mirror pair, joined by an
+unoriented local contact split the quantum between two outlets: exactly
+for identical copies and for the vertex contact, and in the weak-contact
+block otherwise. In the
+language of Chen's Sec.~1.9~\cite{chen}, exchange between compatible event
+rhythms becomes one-to-one only when the partners differ in some
+respect. This is our inference for this toy model, not a statement of the
+source.
+
+\paragraph{Still assumed.}
+Quantum kinematics, the update order $n$, the common $\alpha$, the
+preparation and the readout are inputs, as in G-R9. Exit A tunes one flux;
+Exit B chooses an orientation and a ratio. No dynamical principle selects
+either. No physical seconds, records, metric or particle spectrum follow.
+
+\paragraph{Relation to G-R10 and next step.}
+The two notes agree: the dark states behind the exact $4/9$ bound are the
+same exact dark states that G-R10 uses as a stationary conditional clock.
+Exits A and B are declared alternatives for one-outlet \emph{exchange}
+only. Neither prepares G-R10's $\ket{D_+}$, so G-R10's own next choice
+(a declared preparation and record instrument, or the unfiltered
+stationary mixture) is unchanged. Exit B is an exactly closed, solvable
+three-channel exchange on which G-R10's readout could be repeated.
+Separately, a spatial carrier would need a gapless network rather than
+another internal ring; that is not attempted here.
+
+\paragraph{Executable verification.}
+The companion program is
+\texttt{verify\_gr9b\_paired\_channels.py}.
+Its inputs are fixed in \texttt{PAIRED\_CHANNEL\_CARD.json}, and it uses
+numpy only. Its 586 checks
+cover: Lemma~1 as matrix identities for $N=3,4$; the mirror~\eqref{mirror}
+and gaps~\eqref{gaps}; Theorem~1 by independent bisection; Lemma~2 on 12
+random real contacts; Lemma~3 against full evolution and against the
+secular-equation roots, with the $4/9$ bound at strong contact; the Exit-A
+census, domain scan, second-order bright root and $12\times12$ fixtures;
+and the Exit-B closure,
+transfer, orientation reversal and the $2/3$ bound on $\ket{D_+}$. Propagators use eigendecomposition and
+are cross-checked by an independent Taylor scaling-and-squaring
+exponential. The G-R9 code, card and TeX are preserved by SHA-256. These
+are checks of finite algebra, not experiments.
+
+\begin{thebibliography}{9}
+\bibitem{chen} BoYu Chen, \emph{Energy spectrum for elementary particles},
+final version, 23 April 2022, section 1.9. Conceptual source only.
+\bibitem{zimboras} Z. Zimbor\'as, M. Faccin, Z. K\'ad\'ar, J. D. Whitfield,
+B. P. Lanyon and J. Biamonte, Quantum transport enhancement by
+time-reversal symmetry breaking, Sci.\ Rep.\ 3, 2361 (2013);
+\href{https://arxiv.org/abs/1208.4049}{arXiv:1208.4049}.
+\end{thebibliography}
+\end{document}

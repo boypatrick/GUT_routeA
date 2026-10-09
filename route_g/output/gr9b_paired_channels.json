@@ -1,0 +1,2844 @@
+{
+  "stage": "G-R9b",
+  "status": "bounded side branch of G-R9, alongside G-R10; no emergent-time or particle-mass claim",
+  "summary": {
+    "checks": 586,
+    "passed": 586,
+    "failed": []
+  },
+  "exitA": {
+    "theta_A": 1.5707963267948966,
+    "theta_B": 1.7913295877157291,
+    "B_spectrum": [
+      0.19722436226800522,
+      1.1339745962155614,
+      2.866025403784439,
+      3.802775637731995
+    ],
+    "reverse_detuning": 0.7953005736213217,
+    "domain_theta_A": [
+      0.27564279921626467,
+      3.141592653589793
+    ],
+    "domain_min_reverse_detuning": 0.31852940845331457,
+    "fixtures": [
+      {
+        "gamma": 0.09,
+        "weak_peak_update": 837.7580409572782,
+        "best_update_n": 856,
+        "bright_root_kappa": -0.1958866984750515,
+        "P_0_2": 0.9995430952756236,
+        "P_2_0": 9.700340083117613e-05,
+        "one_minus_P_over_gamma2": 0.05640799066375654
+      },
+      {
+        "gamma": 0.03,
+        "weak_peak_update": 2513.2741228718346,
+        "best_update_n": 2535,
+        "bright_root_kappa": -0.1958866984750515,
+        "P_0_2": 0.9999368580051979,
+        "P_2_0": 4.333971322707469e-07,
+        "one_minus_P_over_gamma2": 0.07015777200229205
+      },
+      {
+        "gamma": 0.01,
+        "weak_peak_update": 7539.822368615503,
+        "best_update_n": 7558,
+        "bright_root_kappa": -0.1958866984750515,
+        "P_0_2": 0.9999949268829345,
+        "P_2_0": 3.082447258679976e-07,
+        "one_minus_P_over_gamma2": 0.05073117065546029
+      }
+    ]
+  },
+  "exitB": {
+    "profile_h": [
+      2,
+      0,
+      1
+    ],
+    "loop_phase_over_pi": -0.5,
+    "fixtures": [
+      {
+        "gamma": 0.09,
+        "t_star": 23.271056693257737,
+        "update_n": 93,
+        "P_0_2_at_n": 0.9999976057270202,
+        "P_2_0_at_n": 1.1958267864239307e-06
+      },
+      {
+        "gamma": 0.03,
+        "t_star": 69.8131700797732,
+        "update_n": 279,
+        "P_0_2_at_n": 0.999997605724772,
+        "P_2_0_at_n": 1.1958267869102655e-06
+      },
+      {
+        "gamma": 0.01,
+        "t_star": 209.43951023931962,
+        "update_n": 838,
+        "P_0_2_at_n": 0.9999997560588478,
+        "P_2_0_at_n": 1.2200962198921772e-07
+      }
+    ]
+  },
+  "vertex_rank_one_fixtures": [
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 0.09,
+      "max_P_0_2_sampled": 0.44441801861602,
+      "max_P_2_0_sampled": 0.4444180186157091
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 0.03,
+      "max_P_0_2_sampled": 0.4444319992643396,
+      "max_P_2_0_sampled": 0.4444319992634806
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 0.01,
+      "max_P_0_2_sampled": 0.4444440878348285,
+      "max_P_2_0_sampled": 0.44444408783305067
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 0.5,
+      "max_P_0_2_sampled": 0.43960835214904986,
+      "max_P_2_0_sampled": 0.4396083521490429
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 2.0,
+      "max_P_0_2_sampled": 0.4371576530207034,
+      "max_P_2_0_sampled": 0.4371576530206955
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "gamma": 10.0,
+      "max_P_0_2_sampled": 0.41744651433069496,
+      "max_P_2_0_sampled": 0.41744651433066826
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 0.09,
+      "max_P_0_2_sampled": 0.444298571704341,
+      "max_P_2_0_sampled": 0.44429857170361786
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 0.03,
+      "max_P_0_2_sampled": 0.44442591047177077,
+      "max_P_2_0_sampled": 0.44442591046946334
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 0.01,
+      "max_P_0_2_sampled": 0.4444432432734818,
+      "max_P_2_0_sampled": 0.44444324326682416
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 0.5,
+      "max_P_0_2_sampled": 0.4399382916971217,
+      "max_P_2_0_sampled": 0.43993829169696747
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 2.0,
+      "max_P_0_2_sampled": 0.3867931138196932,
+      "max_P_2_0_sampled": 0.38679311381961834
+    },
+    {
+      "theta_A": 1.0471975511965976,
+      "gamma": 10.0,
+      "max_P_0_2_sampled": 0.39490140124067846,
+      "max_P_2_0_sampled": 0.39490140124056644
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 0.09,
+      "max_P_0_2_sampled": 0.44410143882919656,
+      "max_P_2_0_sampled": 0.44410143882942604
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 0.03,
+      "max_P_0_2_sampled": 0.4444097242458142,
+      "max_P_2_0_sampled": 0.444409724247847
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 0.01,
+      "max_P_0_2_sampled": 0.444439017789416,
+      "max_P_2_0_sampled": 0.44443901779487405
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 0.5,
+      "max_P_0_2_sampled": 0.4305555841028483,
+      "max_P_2_0_sampled": 0.4305555841028949
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 2.0,
+      "max_P_0_2_sampled": 0.39135344707815833,
+      "max_P_2_0_sampled": 0.3913534470781746
+    },
+    {
+      "theta_A": 0.6,
+      "gamma": 10.0,
+      "max_P_0_2_sampled": 0.4122161154579427,
+      "max_P_2_0_sampled": 0.4122161154579736
+    }
+  ],
+  "pairing_rows": [
+    {
+      "theta_A": 0.06283185307179587,
+      "theta_B": 3.0787608005179976,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.12566370614359174,
+      "theta_B": 3.0159289474462003,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": -1.3322676295501878e-15
+    },
+    {
+      "theta_A": 0.18849555921538758,
+      "theta_B": 2.9530970943744066,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 1.3322676295501878e-15
+    },
+    {
+      "theta_A": 0.25132741228718347,
+      "theta_B": 2.8902652413026093,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 1.3322676295501878e-15
+    },
+    {
+      "theta_A": 0.3141592653589793,
+      "theta_B": 2.827433388230814,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.3769911184307752,
+      "theta_B": 2.7646015351590183,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.439822971502571,
+      "theta_B": 2.701769682087221,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": -4.440892098500626e-16
+    },
+    {
+      "theta_A": 0.5026548245743669,
+      "theta_B": 2.6389378290154264,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 8.881784197001252e-16
+    },
+    {
+      "theta_A": 0.5654866776461628,
+      "theta_B": 2.57610597594363,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.6283185307179586,
+      "theta_B": 2.5132741228718345,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.6911503837897545,
+      "theta_B": 2.45044226980004,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 1.3322676295501878e-15
+    },
+    {
+      "theta_A": 0.7539822368615503,
+      "theta_B": 2.3876104167282435,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 4.440892098500626e-16
+    },
+    {
+      "theta_A": 0.8168140899333463,
+      "theta_B": 2.324778563656447,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 0.8796459430051422,
+      "theta_B": 2.2619467105846516,
+      "E02_minus_E11": 1.7763568394002505e-15,
+      "E20_minus_E11": 1.7763568394002505e-15
+    },
+    {
+      "theta_A": 0.942477796076938,
+      "theta_B": 2.1991148575128543,
+      "E02_minus_E11": -8.881784197001252e-16,
+      "E20_minus_E11": -1.3322676295501878e-15
+    },
+    {
+      "theta_A": 1.0053096491487339,
+      "theta_B": 2.136283004441059,
+      "E02_minus_E11": -4.440892098500626e-16,
+      "E20_minus_E11": -4.440892098500626e-16
+    },
+    {
+      "theta_A": 1.0681415022205298,
+      "theta_B": 2.0734511513692633,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.1309733552923256,
+      "theta_B": 2.0106192982974678,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 8.881784197001252e-16
+    },
+    {
+      "theta_A": 1.1938052083641213,
+      "theta_B": 1.9477874452256718,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.2566370614359172,
+      "theta_B": 1.8849555921538763,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.3194689145077132,
+      "theta_B": 1.82212373908208,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.382300767579509,
+      "theta_B": 1.759291886010284,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": -8.881784197001252e-16
+    },
+    {
+      "theta_A": 1.4451326206513049,
+      "theta_B": 1.696460032938488,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.5079644737231008,
+      "theta_B": 1.6336281798666925,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.5707963267948966,
+      "theta_B": 1.5707963267948961,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 4.440892098500626e-16
+    },
+    {
+      "theta_A": 1.6336281798666925,
+      "theta_B": 1.5079644737231006,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.6964600329384885,
+      "theta_B": 1.4451326206513047,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 4.440892098500626e-16
+    },
+    {
+      "theta_A": 1.7592918860102844,
+      "theta_B": 1.3823007675795087,
+      "E02_minus_E11": -4.440892098500626e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.8221237390820801,
+      "theta_B": 1.3194689145077119,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 1.8849555921538759,
+      "theta_B": 1.2566370614359168,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": -4.440892098500626e-16
+    },
+    {
+      "theta_A": 1.9477874452256718,
+      "theta_B": 1.1938052083641222,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.0106192982974678,
+      "theta_B": 1.1309733552923253,
+      "E02_minus_E11": 8.881784197001252e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.0734511513692637,
+      "theta_B": 1.068141502220528,
+      "E02_minus_E11": -8.881784197001252e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.1362830044410597,
+      "theta_B": 1.005309649148733,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.199114857512855,
+      "theta_B": 0.9424777960769384,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.261946710584651,
+      "theta_B": 0.8796459430051415,
+      "E02_minus_E11": -4.440892098500626e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.324778563656447,
+      "theta_B": 0.8168140899333456,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.3876104167282426,
+      "theta_B": 0.7539822368615505,
+      "E02_minus_E11": -8.881784197001252e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.4504422698000385,
+      "theta_B": 0.6911503837897546,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.5132741228718345,
+      "theta_B": 0.6283185307179577,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.5761059759436304,
+      "theta_B": 0.5654866776461627,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 4.440892098500626e-16
+    },
+    {
+      "theta_A": 2.6389378290154264,
+      "theta_B": 0.5026548245743667,
+      "E02_minus_E11": 8.881784197001252e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.701769682087222,
+      "theta_B": 0.43982297150257077,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.764601535159018,
+      "theta_B": 0.3769911184307757,
+      "E02_minus_E11": 8.881784197001252e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.827433388230814,
+      "theta_B": 0.31415926535897887,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.8902652413026098,
+      "theta_B": 0.2513274122871829,
+      "E02_minus_E11": -4.440892098500626e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 2.9530970943744057,
+      "theta_B": 0.18849555921538785,
+      "E02_minus_E11": 4.440892098500626e-16,
+      "E20_minus_E11": 4.440892098500626e-16
+    },
+    {
+      "theta_A": 3.0159289474462017,
+      "theta_B": 0.12566370614359146,
+      "E02_minus_E11": -4.440892098500626e-16,
+      "E20_minus_E11": 0.0
+    },
+    {
+      "theta_A": 3.078760800517997,
+      "theta_B": 0.06283185307179595,
+      "E02_minus_E11": 0.0,
+      "E20_minus_E11": 0.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr9_event_network.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/EVENT_NETWORK_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:tex/route_g_event_network.tex",
+      "passed": true
+    },
+    {
+      "name": "N=3:Fourier_unitary",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.062832:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.062832:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.062832:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.062832:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.565487:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.565487:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.565487:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.565487:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.068142:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.068142:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.068142:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.068142:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.570796:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.570796:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.570796:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.570796:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.073451:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.073451:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.073451:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.073451:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.576106:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.576106:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.576106:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.576106:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.078761:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.078761:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.078761:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.078761:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:Fourier_unitary",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.062832:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.062832:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.062832:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.062832:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.565487:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.565487:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.565487:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=0.565487:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.068142:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.068142:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.068142:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.068142:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.570796:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.570796:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.570796:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=1.570796:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.073451:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.073451:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.073451:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.073451:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.576106:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.576106:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.576106:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=2.576106:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=3.078761:Fourier_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=3.078761:link_sign_flip",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=3.078761:flux_period_is_gauge",
+      "passed": true
+    },
+    {
+      "name": "N=4:theta=3.078761:conjugation",
+      "passed": true
+    },
+    {
+      "name": "N=4:bipartite_self_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.062832:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.125664:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.188496:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.251327:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.314159:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.376991:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.439823:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.502655:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.565487:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.628319:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.691150:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.753982:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.816814:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.879646:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=0.942478:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.005310:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.068142:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.130973:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.193805:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.256637:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.319469:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.382301:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.445133:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.507964:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.570796:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.633628:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.696460:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.759292:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.822124:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.884956:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=1.947787:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.010619:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.073451:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.136283:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.199115:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.261947:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.324779:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.387610:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.450442:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.513274:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.576106:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.638938:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.701770:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.764602:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.827433:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.890265:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=2.953097:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.015929:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "N=3:theta=3.078761:spectral_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:lower_gap_closed_form",
+      "passed": true
+    },
+    {
+      "name": "pairing:upper_gap_closed_form",
+      "passed": true
+    },
+    {
+      "name": "pairing:lower_gap_strictly_decreasing",
+      "passed": true
+    },
+    {
+      "name": "pairing:upper_gap_strictly_increasing",
+      "passed": true
+    },
+    {
+      "name": "pairing:gap_exchange_under_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.062832:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.062832:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.062832:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.125664:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.125664:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.125664:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.188496:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.188496:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.188496:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.251327:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.251327:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.251327:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.314159:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.314159:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.314159:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.376991:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.376991:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.376991:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.439823:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.439823:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.439823:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.502655:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.502655:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.502655:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.565487:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.565487:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.565487:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.628319:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.628319:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.628319:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.691150:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.691150:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.691150:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.753982:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.753982:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.753982:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.816814:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.816814:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.816814:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.879646:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.879646:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.879646:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.942478:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.942478:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=0.942478:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.005310:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.005310:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.005310:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.068142:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.068142:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.068142:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.130973:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.130973:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.130973:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.193805:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.193805:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.193805:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.256637:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.256637:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.256637:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.319469:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.319469:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.319469:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.382301:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.382301:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.382301:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.445133:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.445133:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.445133:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.507964:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.507964:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.507964:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.570796:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.570796:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.570796:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.633628:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.633628:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.633628:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.696460:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.696460:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.696460:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.759292:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.759292:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.759292:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.822124:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.822124:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.822124:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.884956:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.884956:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.884956:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.947787:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.947787:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=1.947787:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.010619:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.010619:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.010619:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.073451:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.073451:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.073451:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.136283:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.136283:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.136283:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.199115:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.199115:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.199115:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.261947:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.261947:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.261947:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.324779:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.324779:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.324779:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.387610:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.387610:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.387610:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.450442:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.450442:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.450442:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.513274:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.513274:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.513274:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.576106:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.576106:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.576106:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.638938:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.638938:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.638938:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.701770:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.701770:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.701770:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.764602:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.764602:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.764602:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.827433:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.827433:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.827433:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.890265:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.890265:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.890265:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.953097:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.953097:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=2.953097:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.015929:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.015929:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.015929:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.078761:resonant_partner_is_mirror",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.078761:target_resonant",
+      "passed": true
+    },
+    {
+      "name": "pairing:theta_A=3.078761:reverse_channel_degenerate",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=0:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=1:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=2:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=3:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=4:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=5:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=6:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=7:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=8:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=9:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=10:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:target_coupling_formula",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:equal_magnitudes",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:resonant_block_circulant",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:equal_diagonal_shift",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:symmetric_contact_real_loop",
+      "passed": true
+    },
+    {
+      "name": "equal_coupling:sample=11:identical_rings_symmetric_contact_swap",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.09:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.03:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.01:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=0.5:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=2.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.570796:gamma=10.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.09:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.03:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.01:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=0.5:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=2.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=1.047198:gamma=10.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.09:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.03:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.01:bound_nearly_reached",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=0.5:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=2.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:return_amplitude_from_secular_roots",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:outlets_identical_amplitudes",
+      "passed": true
+    },
+    {
+      "name": "vertex33:theta_A=0.600000:gamma=10.0:exact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "exitA:resonant_flux_closed_form",
+      "passed": true
+    },
+    {
+      "name": "exitA:B_spectrum_closed_form",
+      "passed": true
+    },
+    {
+      "name": "exitA:initial_shell_is_exactly_initial_and_target",
+      "passed": true
+    },
+    {
+      "name": "exitA:reverse_detuning_closed_form",
+      "passed": true
+    },
+    {
+      "name": "exitA:min_other_detuning_is_reverse",
+      "passed": true
+    },
+    {
+      "name": "exitA:domain_initial_shell_always_two",
+      "passed": true
+    },
+    {
+      "name": "exitA:domain_reverse_detuning_above_0.3",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:bright_root_second_order",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:near_unit_transfer",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:reverse_channel_suppressed",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.09:beats_identical_ring_bound",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:bright_root_second_order",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:near_unit_transfer",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:reverse_channel_suppressed",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.03:beats_identical_ring_bound",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:dark_state_exact",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:secular_equation_spectrum",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:bright_weights_sum_to_one",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:bright_root_second_order",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:dark_state_formula",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:near_unit_transfer",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:reverse_channel_suppressed",
+      "passed": true
+    },
+    {
+      "name": "exitA:gamma=0.01:beats_identical_ring_bound",
+      "passed": true
+    },
+    {
+      "name": "exitA:deficit_decreases_in_weak_limit",
+      "passed": true
+    },
+    {
+      "name": "exitB:loop_phase_minus_pi_over_2",
+      "passed": true
+    },
+    {
+      "name": "exitB:coupling_magnitude",
+      "passed": true
+    },
+    {
+      "name": "exitB:secular_perfect_transfer",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.570796:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.09:theta_A=1.047198:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.570796:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.03:theta_A=1.047198:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.570796:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:joint_translation_symmetry",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:momentum_sector_is_resonant_triple",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:triple_closed_exactly",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:not_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:unit_transfer_at_t_star",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:independent_propagator",
+      "passed": true
+    },
+    {
+      "name": "exitB:gamma=0.01:theta_A=1.047198:integer_update_near_unit",
+      "passed": true
+    },
+    {
+      "name": "exitB:reversed_orientation_reverse_outlet",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=0:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=0:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=1:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=1:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=2:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=2:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=3:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=3:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=4:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=4:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=5:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=5:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=6:T_weight_conserved",
+      "passed": true
+    },
+    {
+      "name": "exitB:Dplus_obstruction:profile=6:Dplus_fidelity_at_most_2_over_3",
+      "passed": true
+    },
+    {
+      "name": "exitB:symmetric_contact_swap_symmetric",
+      "passed": true
+    },
+    {
+      "name": "exitB:symmetric_contact_bound_4_over_9",
+      "passed": true
+    },
+    {
+      "name": "exitB:symmetric_contact_bound_reached",
+      "passed": true
+    }
+  ],
+  "boundary": [
+    "Physical seconds, energy scale, Ed law, spatial dimension or mass spectrum",
+    "A dynamical mechanism that selects the resonant flux or the contact orientation",
+    "A no-go theorem for all microscopic interactions or for graphs other than rings",
+    "Clock records, autonomous preparation, an arrow or emergent event ordering",
+    "Hardware realization or any Route-F gate promotion"
+  ]
+}

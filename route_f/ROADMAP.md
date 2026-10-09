@@ -1,14 +1,42 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-09-24
+Last updated: 2026-10-09 (independent Route-G status only)
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
 ## Independent Route G, not a new Route-F prerequisite (2026-09-22)
 
-Latest decision (2026-09-23): the user moved Route G's priority to
+G-R11 update (2026-10-09): the finite energy-compatible relative-record
+instrument is complete with an explicitly added collective coupling.
+Success/failure and exact readout backreaction are retained; the 72×72
+unitary preserves the full energy distribution. Continuing the gate
+erases the record, so autonomous triggering/decoupling is not derived.
+120 new checks and all 6,184 checks across 24 verifiers pass. Next is a
+physical recorder/control choice, or closure as an effective controlled
+model, not another abstract prerequisite. All Route-F gates remain unchanged.
+
+G-R10 update (2026-10-09): the same full contact admits an exact
+stationary dark state with conditional phase evolution, without an
+update index in that relation. The initial state's conserved dark
+weight is only 2/3, so existence does not establish autonomous
+preparation. Full joint outcomes, the stationary mixed alternative
+and its retained interaction term are computed; 151 new checks pass.
+Its next bounded preparation/record test is now addressed by G-R11,
+not another metric calculation. All Route-F gates remain unchanged.
+
+Preceding governing decision (2026-10-09): G-R9 returns to an event-network candidate;
+G-R4–G-R8 metric/thermal apparatus work is a comparison program, not a
+gate. One graph gives modes and two-copy dials, but event ordering is
+still assumed. A fixed local contact opens a missing degenerate exchange
+channel, invalidating the ideal selected-mode closure for that contact.
+342 checks and a six-page derivation are saved. Next retain all channels
+in relational readout or independently justify a selection rule.
+No Route-F action, fit, determinant, Hessian or portal status changes.
+Details are maintained in the [Route-G roadmap](../route_g/ROADMAP.md).
+
+Earlier decision (2026-09-23): the user moved Route G's priority to
 relational/emergent time. Its finite Page-Wootters G-R1 stage is complete:
 stationary positive-local-energy state, conditional Schrödinger evolution,
 and a same-energy/different-coherence counterexample to density-only

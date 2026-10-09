@@ -1,0 +1,1352 @@
+{
+  "stage": "G-R10",
+  "status": "bounded full-contact readout audit; no autonomous clock preparation claim",
+  "summary": {
+    "checks": 151,
+    "passed": 151,
+    "failed": []
+  },
+  "dark_states": {
+    "symmetric": {
+      "seven_reading_rigidity_residual": 8.12787056892168e-17,
+      "scaled_A_likelihood_range": 0.0,
+      "relative_first_harmonic_real": -0.6666666666666669,
+      "relative_second_harmonic_real": 0.16666666666666669
+    },
+    "antisymmetric": {
+      "seven_reading_rigidity_residual": 1.7006009971325192e-16,
+      "scaled_A_likelihood_range": 2.220446049250313e-16,
+      "relative_first_harmonic_real": -1.3877787807814457e-17,
+      "relative_second_harmonic_real": -0.4999999999999998
+    }
+  },
+  "secular_fixtures": [
+    {
+      "exchange_phase_x": 0.0,
+      "each_outlet_probability": 0.0,
+      "seven_reading_rigidity_residual": 1.1121884792928356e-16,
+      "scaled_A_likelihood_range": 4.440892098500626e-16,
+      "relative_first_harmonic_real": 3.469446951953614e-18,
+      "relative_second_harmonic_real": 3.122502256758253e-17
+    },
+    {
+      "exchange_phase_x": 0.7,
+      "each_outlet_probability": 0.05225729171455811,
+      "seven_reading_rigidity_residual": 1.05658629459189e-16,
+      "scaled_A_likelihood_range": 2.220446049250313e-16,
+      "relative_first_harmonic_real": -0.05225729171455798,
+      "relative_second_harmonic_real": 0.05225729171455812
+    },
+    {
+      "exchange_phase_x": 3.141592653589793,
+      "each_outlet_probability": 0.4444444444444444,
+      "seven_reading_rigidity_residual": 1.5998617730241545e-16,
+      "scaled_A_likelihood_range": 0.0,
+      "relative_first_harmonic_real": -0.4444444444444443,
+      "relative_second_harmonic_real": 0.4444444444444444
+    },
+    {
+      "exchange_phase_x": 6.283185307179586,
+      "each_outlet_probability": 6.6655990340527e-33,
+      "seven_reading_rigidity_residual": 1.1121884792928356e-16,
+      "scaled_A_likelihood_range": 4.440892098500626e-16,
+      "relative_first_harmonic_real": -5.204170427930421e-17,
+      "relative_second_harmonic_real": 3.122502256758253e-17
+    }
+  ],
+  "weak_limit_trace_distances_in_gamma_card_order": [
+    0.007112674912359285,
+    0.0023618905587026308,
+    0.0007862241103462539
+  ],
+  "full_contact_readout": [
+    {
+      "gamma": 0.09,
+      "state": "exchange",
+      "exchange_update_n": 419,
+      "stationarity_commutator_norm": 0.04000000000000023,
+      "joint_phase_probabilities": [
+        [
+          0.01963459561456697,
+          0.004889402984536721,
+          0.008030332017594087,
+          0.047614020005358734,
+          0.04801540168684272,
+          0.008401220522099356,
+          0.0046558245249806555
+        ],
+        [
+          0.004889402984535715,
+          0.02057584319214768,
+          0.005369664043308205,
+          0.007711725810079268,
+          0.04771110733716981,
+          0.04852289439790202,
+          0.0084574829372834
+        ],
+        [
+          0.008030332017595574,
+          0.00536966404330714,
+          0.02130611298407016,
+          0.005453638116174556,
+          0.007885999461106531,
+          0.04818479945947572,
+          0.04833791716127462
+        ],
+        [
+          0.0476140200053604,
+          0.007711725810080758,
+          0.005453638116173532,
+          0.021036938061612342,
+          0.005207877889913477,
+          0.008086884817281984,
+          0.048024247760315546
+        ],
+        [
+          0.048015401686841035,
+          0.04771110733717149,
+          0.007885999461108083,
+          0.005207877889912504,
+          0.02051528987306206,
+          0.005027916488954257,
+          0.008165577265748852
+        ],
+        [
+          0.008401220522097746,
+          0.04852289439790033,
+          0.04818479945947741,
+          0.008086884817283549,
+          0.005027916488953297,
+          0.020125174862581884,
+          0.00483463742641243
+        ],
+        [
+          0.004655824524981583,
+          0.008457482937281826,
+          0.048337917161272954,
+          0.048024247760317225,
+          0.00816557726575042,
+          0.0048346374264114965,
+          0.019628901184347878
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.02771408557210029,
+      "scaled_A_likelihood_range": 0.02329366120917542,
+      "relative_first_harmonic_real": -0.44442738431355133,
+      "relative_second_harmonic_real": 0.44430737951690497
+    },
+    {
+      "gamma": 0.09,
+      "state": "unread_updates",
+      "exchange_update_n": 419,
+      "stationarity_commutator_norm": 2.1550349816617285e-15,
+      "joint_phase_probabilities": [
+        [
+          0.020377258709823504,
+          0.012721934602927802,
+          0.014260989264945807,
+          0.034235627065943686,
+          0.03423562706594369,
+          0.014260989264945814,
+          0.012721934602927797
+        ],
+        [
+          0.012721934602927807,
+          0.020397313395401035,
+          0.012738567762314933,
+          0.014259735990416293,
+          0.03423407911044101,
+          0.03423689090398218,
+          0.01425401153254779
+        ],
+        [
+          0.014260989264945864,
+          0.012738567762314947,
+          0.020409212444812325,
+          0.012738561592629503,
+          0.0142577888822664,
+          0.03423432714211088,
+          0.03423689090398224
+        ],
+        [
+          0.03423562706594384,
+          0.014259735990416368,
+          0.012738561592629517,
+          0.02040962452905975,
+          0.01273853124942052,
+          0.014257788882266434,
+          0.03423407911044112
+        ],
+        [
+          0.034235627065943845,
+          0.03423407911044113,
+          0.014257788882266432,
+          0.012738531249420516,
+          0.02040962452905975,
+          0.012738561592629517,
+          0.01425973599041636
+        ],
+        [
+          0.014260989264945869,
+          0.03423689090398225,
+          0.03423432714211088,
+          0.0142577888822664,
+          0.012738561592629503,
+          0.020409212444812332,
+          0.01273856776231495
+        ],
+        [
+          0.012721934602927802,
+          0.014254011532547793,
+          0.03423689090398217,
+          0.03423407911044101,
+          0.014259735990416288,
+          0.012738567762314936,
+          0.02039731339540103
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.010867330317519752,
+      "scaled_A_likelihood_range": 0.0004338419092282386,
+      "relative_first_harmonic_real": -0.2222888481512113,
+      "relative_second_harmonic_real": 0.22212230622050555
+    },
+    {
+      "gamma": 0.09,
+      "state": "dark",
+      "exchange_update_n": 419,
+      "stationarity_commutator_norm": 9.8130778667736e-19,
+      "joint_phase_probabilities": [
+        [
+          0.0,
+          0.00192870652114797,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426,
+          0.0019287065211479714
+        ],
+        [
+          0.00192870652114797,
+          2.829937877466959e-34,
+          0.0019287065211479695,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426
+        ],
+        [
+          0.020334114747774416,
+          0.001928706521147969,
+          6.288750838815464e-35,
+          0.0019287065211479688,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.04916575015964906
+        ],
+        [
+          0.04916575015964906,
+          0.020334114747774416,
+          0.0019287065211479688,
+          2.5155003355261854e-34,
+          0.0019287065211479677,
+          0.020334114747774412,
+          0.04916575015964906
+        ],
+        [
+          0.049165750159649066,
+          0.04916575015964906,
+          0.020334114747774412,
+          0.0019287065211479677,
+          0.0,
+          0.0019287065211479703,
+          0.02033411474777441
+        ],
+        [
+          0.020334114747774426,
+          0.049165750159649066,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.001928706521147969,
+          5.031000671052371e-34,
+          0.0019287065211479695
+        ],
+        [
+          0.0019287065211479716,
+          0.020334114747774423,
+          0.04916575015964906,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.0019287065211479697,
+          3.930469274259665e-36
+        ]
+      ],
+      "seven_reading_rigidity_residual": 8.12787056892168e-17,
+      "scaled_A_likelihood_range": 0.0,
+      "relative_first_harmonic_real": -0.6666666666666669,
+      "relative_second_harmonic_real": 0.16666666666666669
+    },
+    {
+      "gamma": 0.03,
+      "state": "exchange",
+      "exchange_update_n": 1257,
+      "stationarity_commutator_norm": 0.013333333333334214,
+      "joint_phase_probabilities": [
+        [
+          0.02027360730992038,
+          0.004964592670684976,
+          0.008220040283585627,
+          0.04823484950954804,
+          0.04810722994737461,
+          0.00810149326354487,
+          0.0050377368750453445
+        ],
+        [
+          0.004964592670684758,
+          0.020120679234708085,
+          0.004930079676068383,
+          0.008193227107829203,
+          0.04808782242692947,
+          0.048027417628316284,
+          0.008137056823016929
+        ],
+        [
+          0.008220040283585788,
+          0.00493007967606815,
+          0.02021003059886992,
+          0.005044748795153433,
+          0.008034014992809424,
+          0.047889217357897834,
+          0.04808943061733509
+        ],
+        [
+          0.048234849509548344,
+          0.008193227107829408,
+          0.005044748795153255,
+          0.020549826477584673,
+          0.005184513475598561,
+          0.007973741572922846,
+          0.04799663464218989
+        ],
+        [
+          0.048107229947374444,
+          0.048087822426929785,
+          0.008034014992809651,
+          0.005184513475598445,
+          0.02070860094075101,
+          0.005174349364405843,
+          0.008052575118801092
+        ],
+        [
+          0.00810149326354461,
+          0.04802741762831608,
+          0.04788921735789806,
+          0.007973741572923075,
+          0.005174349364405788,
+          0.020572192425301183,
+          0.0050940167676920885
+        ],
+        [
+          0.005037736875045446,
+          0.008137056823016742,
+          0.04808943061733484,
+          0.04799663464219004,
+          0.008052575118801352,
+          0.0050940167676920625,
+          0.020415485179530287
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.011666795148870451,
+      "scaled_A_likelihood_range": 0.006520807614654345,
+      "relative_first_harmonic_real": -0.4444389256854048,
+      "relative_second_harmonic_real": 0.4444154032686515
+    },
+    {
+      "gamma": 0.03,
+      "state": "unread_updates",
+      "exchange_update_n": 1257,
+      "stationarity_commutator_norm": 2.1841880988541204e-15,
+      "joint_phase_probabilities": [
+        [
+          0.020404724702936458,
+          0.012733187525618755,
+          0.014255168906173638,
+          0.034235472155580995,
+          0.034235472155580995,
+          0.014255168906173645,
+          0.012733187525618752
+        ],
+        [
+          0.012733187525618776,
+          0.020406956488282807,
+          0.012735038559484244,
+          0.014255029417456318,
+          0.03423529985015211,
+          0.03423561279733716,
+          0.014254392409916702
+        ],
+        [
+          0.014255168906173718,
+          0.01273503855948428,
+          0.020408280719327262,
+          0.012735037864591929,
+          0.01425481268259054,
+          0.034235327437459676,
+          0.03423561279733722
+        ],
+        [
+          0.03423547215558113,
+          0.014255029417456405,
+          0.012735037864591951,
+          0.02040832658693032,
+          0.012735034488642934,
+          0.014254812682590576,
+          0.03423529985015221
+        ],
+        [
+          0.03423547215558113,
+          0.03423529985015221,
+          0.014254812682590576,
+          0.012735034488642933,
+          0.02040832658693032,
+          0.012735037864591951,
+          0.0142550294174564
+        ],
+        [
+          0.014255168906173723,
+          0.03423561279733722,
+          0.03423532743745967,
+          0.01425481268259054,
+          0.012735037864591929,
+          0.020408280719327262,
+          0.01273503855948428
+        ],
+        [
+          0.012733187525618774,
+          0.014254392409916702,
+          0.03423561279733716,
+          0.03423529985015211,
+          0.014255029417456317,
+          0.012735038559484244,
+          0.020406956488282807
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.0035959534821440086,
+      "scaled_A_likelihood_range": 4.827962496967153e-05,
+      "relative_first_harmonic_real": -0.22222962912637537,
+      "relative_second_harmonic_real": 0.2222111121484358
+    },
+    {
+      "gamma": 0.03,
+      "state": "dark",
+      "exchange_update_n": 1257,
+      "stationarity_commutator_norm": 3.5108335638141527e-16,
+      "joint_phase_probabilities": [
+        [
+          0.0,
+          0.00192870652114797,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426,
+          0.0019287065211479714
+        ],
+        [
+          0.00192870652114797,
+          2.829937877466959e-34,
+          0.0019287065211479695,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426
+        ],
+        [
+          0.020334114747774416,
+          0.001928706521147969,
+          6.288750838815464e-35,
+          0.0019287065211479688,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.04916575015964906
+        ],
+        [
+          0.04916575015964906,
+          0.020334114747774416,
+          0.0019287065211479688,
+          2.5155003355261854e-34,
+          0.0019287065211479677,
+          0.020334114747774412,
+          0.04916575015964906
+        ],
+        [
+          0.049165750159649066,
+          0.04916575015964906,
+          0.020334114747774412,
+          0.0019287065211479677,
+          0.0,
+          0.0019287065211479703,
+          0.02033411474777441
+        ],
+        [
+          0.020334114747774426,
+          0.049165750159649066,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.001928706521147969,
+          5.031000671052371e-34,
+          0.0019287065211479695
+        ],
+        [
+          0.0019287065211479716,
+          0.020334114747774423,
+          0.04916575015964906,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.0019287065211479697,
+          3.930469274259665e-36
+        ]
+      ],
+      "seven_reading_rigidity_residual": 8.12787056892168e-17,
+      "scaled_A_likelihood_range": 0.0,
+      "relative_first_harmonic_real": -0.6666666666666669,
+      "relative_second_harmonic_real": 0.16666666666666669
+    },
+    {
+      "gamma": 0.01,
+      "state": "exchange",
+      "exchange_update_n": 3770,
+      "stationarity_commutator_norm": 0.004444444444443158,
+      "joint_phase_probabilities": [
+        [
+          0.020308265904629714,
+          0.005023082619800818,
+          0.00811771130024715,
+          0.048045060337391705,
+          0.048047809975711134,
+          0.008120206782987183,
+          0.005021400943097753
+        ],
+        [
+          0.005023082619805609,
+          0.02037226371247224,
+          0.0050723010743647995,
+          0.008066218781857211,
+          0.04800614825336446,
+          0.04809034993696927,
+          0.008143902382304669
+        ],
+        [
+          0.008117711300239696,
+          0.005072301074369619,
+          0.020483120373375678,
+          0.0051064490646037545,
+          0.008063774997795765,
+          0.04805922785241551,
+          0.048117678694034355
+        ],
+        [
+          0.04804506033738362,
+          0.008066218781849753,
+          0.005106449064608549,
+          0.020501018333009574,
+          0.005090377389309031,
+          0.008091496282281646,
+          0.04807248388724255
+        ],
+        [
+          0.04804780997571936,
+          0.04800614825335635,
+          0.008063774997788249,
+          0.005090377389313787,
+          0.020445271449340725,
+          0.005065989810679758,
+          0.008102192230745778
+        ],
+        [
+          0.00812020678299476,
+          0.048090349936977445,
+          0.04805922785240732,
+          0.00809149628227407,
+          0.005065989810684502,
+          0.020399666357514612,
+          0.005047793656092746
+        ],
+        [
+          0.005021400943093009,
+          0.008143902382312196,
+          0.04811767869404245,
+          0.04807248388723434,
+          0.008102192230738195,
+          0.005047793656097485,
+          0.020347081362448227
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.003320058680457651,
+      "scaled_A_likelihood_range": 0.0023570784507823683,
+      "relative_first_harmonic_real": -0.4444440924651715,
+      "relative_second_harmonic_real": 0.4444424986902501
+    },
+    {
+      "gamma": 0.01,
+      "state": "unread_updates",
+      "exchange_update_n": 3770,
+      "stationarity_commutator_norm": 1.4749024381851193e-15,
+      "joint_phase_probabilities": [
+        [
+          0.02040778114443919,
+          0.012734439921844917,
+          0.014254521450878127,
+          0.03423545493907677,
+          0.03423545493907678,
+          0.014254521450878133,
+          0.012734439921844911
+        ],
+        [
+          0.01273443992184491,
+          0.020408029163692595,
+          0.012734645628184969,
+          0.01425450594921464,
+          0.034235435790192656,
+          0.0342354705686001,
+          0.014254435158773131
+        ],
+        [
+          0.014254521450878103,
+          0.012734645628184955,
+          0.02040817632661271,
+          0.012734645550858896,
+          0.014254481862748141,
+          0.034235438855798106,
+          0.03423547056860008
+        ],
+        [
+          0.034235454939076725,
+          0.014254505949214609,
+          0.012734645550858889,
+          0.020408181424007653,
+          0.012734645175698047,
+          0.014254481862748131,
+          0.03423543579019261
+        ],
+        [
+          0.03423545493907673,
+          0.03423543579019261,
+          0.014254481862748131,
+          0.012734645175698047,
+          0.02040818142400765,
+          0.01273464555085889,
+          0.014254505949214607
+        ],
+        [
+          0.014254521450878105,
+          0.03423547056860008,
+          0.034235438855798106,
+          0.014254481862748141,
+          0.012734645550858896,
+          0.02040817632661271,
+          0.012734645628184955
+        ],
+        [
+          0.012734439921844906,
+          0.014254435158773133,
+          0.034235470568600095,
+          0.03423543579019265,
+          0.014254505949214636,
+          0.012734645628184967,
+          0.020408029163692592
+        ]
+      ],
+      "seven_reading_rigidity_residual": 0.001195501139168858,
+      "scaled_A_likelihood_range": 5.365329495021776e-06,
+      "relative_first_harmonic_real": -0.22222304526137274,
+      "relative_second_harmonic_real": 0.2222209876671005
+    },
+    {
+      "gamma": 0.01,
+      "state": "dark",
+      "exchange_update_n": 3770,
+      "stationarity_commutator_norm": 8.881784212703389e-16,
+      "joint_phase_probabilities": [
+        [
+          0.0,
+          0.00192870652114797,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426,
+          0.0019287065211479714
+        ],
+        [
+          0.00192870652114797,
+          2.829937877466959e-34,
+          0.0019287065211479695,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.049165750159649066,
+          0.020334114747774426
+        ],
+        [
+          0.020334114747774416,
+          0.001928706521147969,
+          6.288750838815464e-35,
+          0.0019287065211479688,
+          0.020334114747774412,
+          0.04916575015964906,
+          0.04916575015964906
+        ],
+        [
+          0.04916575015964906,
+          0.020334114747774416,
+          0.0019287065211479688,
+          2.5155003355261854e-34,
+          0.0019287065211479677,
+          0.020334114747774412,
+          0.04916575015964906
+        ],
+        [
+          0.049165750159649066,
+          0.04916575015964906,
+          0.020334114747774412,
+          0.0019287065211479677,
+          0.0,
+          0.0019287065211479703,
+          0.02033411474777441
+        ],
+        [
+          0.020334114747774426,
+          0.049165750159649066,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.001928706521147969,
+          5.031000671052371e-34,
+          0.0019287065211479695
+        ],
+        [
+          0.0019287065211479716,
+          0.020334114747774423,
+          0.04916575015964906,
+          0.04916575015964905,
+          0.020334114747774412,
+          0.0019287065211479697,
+          3.930469274259665e-36
+        ]
+      ],
+      "seven_reading_rigidity_residual": 8.12787056892168e-17,
+      "scaled_A_likelihood_range": 0.0,
+      "relative_first_harmonic_real": -0.6666666666666669,
+      "relative_second_harmonic_real": 0.16666666666666669
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr9_event_network.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/EVENT_NETWORK_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr9_event_network.json",
+      "passed": true
+    },
+    {
+      "name": "seven_outcome_POVM_completeness",
+      "passed": true
+    },
+    {
+      "name": "phase_effect_positivity",
+      "passed": true
+    },
+    {
+      "name": "joint_POVM_completeness",
+      "passed": true
+    },
+    {
+      "name": "full_local_observation_algebra_rank9",
+      "passed": true
+    },
+    {
+      "name": "full_joint_observation_algebra_rank81",
+      "passed": true
+    },
+    {
+      "name": "phase_POVM_not_tomographically_complete",
+      "passed": true
+    },
+    {
+      "name": "dark_projector_idempotent",
+      "passed": true
+    },
+    {
+      "name": "dark_projector_rank2",
+      "passed": true
+    },
+    {
+      "name": "dark_contact_annihilation",
+      "passed": true
+    },
+    {
+      "name": "initial_dark_weight_two_thirds",
+      "passed": true
+    },
+    {
+      "name": "hypothetical_dark_filter_normalized_output",
+      "passed": true
+    },
+    {
+      "name": "symmetric:joint_analytic",
+      "passed": true
+    },
+    {
+      "name": "symmetric:both_phase_marginals_uniform",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:0",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:1",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:2",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:3",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:4",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:5",
+      "passed": true
+    },
+    {
+      "name": "symmetric:conditional_unitary:6",
+      "passed": true
+    },
+    {
+      "name": "symmetric:unread_A_is_partial_trace",
+      "passed": true
+    },
+    {
+      "name": "symmetric:same_populations_dephased_joint_is_flat",
+      "passed": true
+    },
+    {
+      "name": "symmetric:dephasing_preserves_local_states",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:joint_analytic",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:both_phase_marginals_uniform",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:0",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:1",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:2",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:3",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:4",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:5",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:conditional_unitary:6",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:unread_A_is_partial_trace",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:same_populations_dephased_joint_is_flat",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:dephasing_preserves_local_states",
+      "passed": true
+    },
+    {
+      "name": "symmetric:two_harmonics",
+      "passed": true
+    },
+    {
+      "name": "antisymmetric:twofold_ambiguity",
+      "passed": true
+    },
+    {
+      "name": "mixed_dark:0:rigidity",
+      "passed": true
+    },
+    {
+      "name": "mixed_dark:1:rigidity",
+      "passed": true
+    },
+    {
+      "name": "secular:0.0:all_three_channels_joint",
+      "passed": true
+    },
+    {
+      "name": "secular:0.0:harmonics",
+      "passed": true
+    },
+    {
+      "name": "secular:0.7:all_three_channels_joint",
+      "passed": true
+    },
+    {
+      "name": "secular:0.7:harmonics",
+      "passed": true
+    },
+    {
+      "name": "secular:3.141592653589793:all_three_channels_joint",
+      "passed": true
+    },
+    {
+      "name": "secular:3.141592653589793:harmonics",
+      "passed": true
+    },
+    {
+      "name": "secular:6.283185307179586:all_three_channels_joint",
+      "passed": true
+    },
+    {
+      "name": "secular:6.283185307179586:harmonics",
+      "passed": true
+    },
+    {
+      "name": "weak_average:harmonics",
+      "passed": true
+    },
+    {
+      "name": "zero_coupling_before_averaging_leaves_input",
+      "passed": true
+    },
+    {
+      "name": "weak_limit_and_infinite_average_do_not_commute",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:site_contact_equivalence",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark_full_eigenstates",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark_weight_is_conserved",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:no_integer_update_spectral_alias",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_update_stationarity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:averaged_trace",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:averaged_positivity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:initial_dark_overlap_cannot_purify",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:antisymmetric_state_inaccessible",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:invariant_POVM_completeness",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:invariant_effect_commutators",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:invariant_effects_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:exchange:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:exchange:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:exchange:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:exchange:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:exchange:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unread_updates:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:dark:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:conditional_stationary_equation:0.0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:conditional_stationary_equation:0.37",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:conditional_stationary_equation:1.4",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:site_contact_equivalence",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark_full_eigenstates",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark_weight_is_conserved",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:no_integer_update_spectral_alias",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_update_stationarity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:averaged_trace",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:averaged_positivity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:initial_dark_overlap_cannot_purify",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:antisymmetric_state_inaccessible",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:invariant_POVM_completeness",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:invariant_effect_commutators",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:invariant_effects_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:exchange:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:exchange:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:exchange:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:exchange:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:exchange:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unread_updates:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:dark:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:conditional_stationary_equation:0.0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:conditional_stationary_equation:0.37",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:conditional_stationary_equation:1.4",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:site_contact_equivalence",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark_full_eigenstates",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark_weight_is_conserved",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:no_integer_update_spectral_alias",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_update_stationarity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:averaged_trace",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:averaged_positivity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:initial_dark_overlap_cannot_purify",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:antisymmetric_state_inaccessible",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:invariant_POVM_completeness",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:invariant_effect_commutators",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:invariant_effects_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:exchange:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:exchange:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:exchange:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:exchange:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:exchange:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:not_exact_free_rigidity",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unread_updates:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark:probability_sum",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark:probability_positive",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark:marginal_likelihood",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark:all_outcomes_retained",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:dark:invariant_readout_same_statistics",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:conditional_stationary_equation:0.0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:conditional_stationary_equation:0.37",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:conditional_stationary_equation:1.4",
+      "passed": true
+    },
+    {
+      "name": "full_average_approaches_weak_limit_on_fixed_fixtures",
+      "passed": true
+    },
+    {
+      "name": "detuned:1.0471975511965976:antisymmetric_exact",
+      "passed": true
+    },
+    {
+      "name": "detuned:1.0471975511965976:symmetric_not_stationary",
+      "passed": true
+    },
+    {
+      "name": "detuned:2.0943951023931953:antisymmetric_exact",
+      "passed": true
+    },
+    {
+      "name": "detuned:2.0943951023931953:symmetric_not_stationary",
+      "passed": true
+    }
+  ],
+  "boundary": [
+    "Phase-POVM implementation or energy-complete recording apparatus",
+    "Pure dark state produced autonomously from |1,1>",
+    "Failure of all interacting-clock notions when the fixed free-gap rigidity test fails",
+    "Physical seconds, unbounded clock records, time arrow, emergent space or particle mass",
+    "Experimental evidence or any Route-F gate promotion"
+  ]
+}

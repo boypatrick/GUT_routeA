@@ -1,0 +1,335 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\title{Route G-R9: One Relational Spectrum, Two Dials,\\and a Missing Exchange Channel}
+\author{A finite candidate and its failure boundary; no mass or time-law fit}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Test the event/spectrum interpretation before importing laboratory
+spacetime. A three-node connection graph supplies one dimensionless
+spectrum. Two independent copies supply two transition dials. A fixed
+selected-mode interaction gives exact resonant exchange, but a fixed
+vertex contact opens an additional degenerate channel and invalidates
+the ideal two-channel closure. This is a useful rejection of a hidden
+selection assumption, not a universal no-go result. Ordered updates,
+quantum mechanics, preparation and readout remain inputs: neither
+physical time nor particle masses are derived.
+\end{abstract}
+
+\section{Starting point: relations before coordinates}
+Chen's sections 1.2, 1.8 and 1.9 motivate event accumulation, a visible
+spectrum and exchange between compatible event rhythms~\cite{chen}.
+They do not specify the matrices below. We supply complex amplitudes,
+Born probabilities and a three-node graph; nodes are not three physical
+dimensions. The phase below is a link phase, not a rotation of matter.
+
+Let $S\ket j=\ket{j+1\pmod3}$ and define
+\begin{align}
+ B_\theta&=I-e^{\ii\theta/3}S,&
+ L_\theta&=B_\theta^\dagger B_\theta
+ =2I-e^{\ii\theta/3}S-e^{-\ii\theta/3}S^\dagger,\label{L}\\
+ Q_\theta(z)&=\|B_\theta z\|^2
+ =\sum_{j=0}^2|z_{j+1}-e^{\ii\theta/3}z_j|^2\geq0.
+\end{align}
+The normalized vectors $u_k(j)=3^{-1/2}e^{2\pi\ii kj/3}$ obey
+$Su_k=e^{-2\pi\ii k/3}u_k$. Thus, without a fitted eigenvalue,
+\begin{equation}
+ L_\theta u_k=\lambda_k(\theta)u_k,\qquad
+ \lambda_k=2-2\cos\left(\frac{\theta-2\pi k}{3}\right).\label{spec}
+\end{equation}
+For $0<\theta<\pi$, $\lambda_0<\lambda_1<\lambda_2$; endpoints can
+be degenerate. In particular,
+\begin{equation}
+ \operatorname{spec}L_0=\{0,3,3\},\qquad
+ \operatorname{spec}L_{\pi/2}=\{2-\sqrt3,2,2+\sqrt3\}.
+\end{equation}
+All diagonal entries remain 2, all edge magnitudes remain 1 and
+$\tr L_\theta=6$. Scalar averages do not determine the full spectrum.
+We do \emph{not} identify $\tr L/3$ with the source's undefined $E_d$.
+
+\newpage
+\section{What is invariant, stable, and still assumed}
+A local basis rephasing $D=\operatorname{diag}(e^{\ii\chi_j})$ sends
+$L\mapsto DLD^\dagger$ without changing eigenvalues. With oriented
+hopping amplitudes $a_{j+1,j}=-L_{j+1,j}$,
+\begin{equation}
+ a_{10}a_{21}a_{02}=e^{\ii\theta}
+\end{equation}
+is unchanged by $D$. Changing this loop product is not a coordinate
+change. Reversing loop orientation changes the sign convention for
+$\theta$, not the unordered spectrum.
+
+The normalized lowest mode minimizes $Q$ on $\|z\|=1$ and is isolated
+by $d=\lambda_1-\lambda_0>0$. For Hermitian $E$ with
+$\|E\|=\varepsilon<d/2$, the min--max principle gives
+\begin{equation}
+ |\lambda'_j-\lambda_j|\leq\varepsilon,\qquad
+ \lambda'_1-\lambda'_0\geq d-2\varepsilon.
+\end{equation}
+Writing $P_\perp=I-u_0u_0^\dagger$, project the perturbed eigen-equation:
+$(P_\perp LP_\perp-\lambda'_0)P_\perp u'_0=-P_\perp Eu'_0$.
+Its left operator has inverse norm at most $(d-\varepsilon)^{-1}$, so
+\begin{equation}
+ \|P_\perp u'_0\|\leq\frac{\varepsilon}{d-\varepsilon}.
+\end{equation}
+This is spectral stability, not dynamical attraction or a stable particle.
+
+\paragraph{The extra dynamical postulate.}
+Choose one update rule $U=e^{-\ii\alpha H}$, with $\alpha=1/4$ fixed
+before varying $\theta$, and $\Psi_{n+1}=U\Psi_n$. The ordered integer
+$n$ counts \emph{assumed} updates; it is neither measured seconds nor
+an order derived from the graph. For a free copy $H=L$, every $u_k$
+persists as a ray under these updates. A compatible finite history
+minimizes $\sum_n\|\Psi_{n+1}-U\Psi_n\|^2$ at zero for a given input.
+This positive history functional supplies no event-ordering principle.
+We use $s=\alpha n$ as an interpolation variable only.
+
+\paragraph{Two copies, not two qubits inside one qutrit.}
+Take $\mathcal H_A\otimes\mathcal H_B=\mathbb C^3\otimes\mathbb C^3$.
+Use levels $(u_0,u_1)$ for A and $(u_1,u_2)$ for B. The gap pair is
+\begin{equation}
+ \Delta_A=\lambda_1-\lambda_0,\qquad
+ \Delta_B=\lambda_2-\lambda_1.\label{gaps}
+\end{equation}
+For each free plus-state dial, $c=2\rho_{10}=e^{-\ii\Delta s}$.
+Two fixed quadratures determine its real and imaginary parts in
+separate preparations. With conventional Pauli $Y$, $\langle X\rangle
+=\Re c$ and $\langle Y\rangle=\Im c$. Where phases can be unwrapped,
+$\phi_B=(\Delta_B/\Delta_A)\phi_A$ eliminates $s$. This alone does
+not produce saved records, an epoch counter or an autonomous clock.
+
+\newpage
+\section{An exactly solvable, but selected, exchange rule}
+In the fixed Fourier basis (independent of $\theta$), postulate
+\begin{equation}
+ H=L\otimes I+I\otimes L+
+ g\big(\ket{1,1}\bra{0,2}+\ket{0,2}\bra{1,1}\big),\quad g=0.1.
+ \label{selected}
+\end{equation}
+This selection is a physical assumption, not a consequence of $L$ or
+nearest-edge locality. For this rule only, the four-dimensional sector
+$(\ket{0,1},\ket{0,2},\ket{1,1},\ket{1,2})$ is exactly invariant.
+Subtract the common scalar $\lambda_0+\lambda_1$ and use logical labels
+$(\ket{00},\ket{01},\ket{10},\ket{11})$:
+\begin{equation}
+ H_4=\begin{pmatrix}
+ 0&0&0&0\\0&\Delta_B&g&0\\0&g&\Delta_A&0\\
+ 0&0&0&\Delta_A+\Delta_B
+ \end{pmatrix}.\label{H4}
+\end{equation}
+No rotating-wave truncation was made in this particular model. Its
+one-excitation block has average $\bar\Delta=(\Delta_A+\Delta_B)/2$
+and splitting $\Omega=\sqrt{(\delta/2)^2+g^2}$, where
+$\delta=\Delta_A-\Delta_B$. Exponentiating its traceless square
+$[(H_4-\bar\Delta I)_{1\rm exc}]^2=\Omega^2 I$ yields
+\begin{equation}
+ P_{10\to01}(n)=\frac{g^2}{\Omega^2}\sin^2(\Omega\alpha n),\qquad
+ P\leq\frac{4g^2}{\delta^2+4g^2}.\label{exchange}
+\end{equation}
+The upper envelope is over continuous interpolation; an integer
+update need not attain it. Conservation here is of total $H$ and of
+the selected total excitation number, not of the separate free clocks.
+
+Using $\lambda_0+\lambda_1+\lambda_2=6$,
+\begin{equation}
+ \delta=3\lambda_1-6=-6\cos\left(\frac{\theta-2\pi}{3}\right).
+\end{equation}
+Thus exact one-for-one resonance in $0<\theta<\pi$ occurs only at
+$\theta=\pi/2$; both gaps are $\sqrt3$. Near it
+$\delta=-2(\theta-\pi/2)+O((\theta-\pi/2)^3)$.
+Nothing makes this phase an attractor. Rational frequency ratios alone
+do not imply exchange through this operator; higher-order common-multiple
+processes require additional channels. Finite coupling also permits
+off-resonant exchange, not a strict event-coincidence rule.
+
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$\theta/\pi$&$\Delta_A$&$\Delta_B$&free B/A&exchange envelope\\\midrule
+$1/3$&2.226682&1.184793&0.532089&0.035539\\
+$1/2$&1.732051&1.732051&1&1\\
+$2/3$&1.184793&2.226682&1.879385&0.035539\\\bottomrule
+\end{tabular}
+\end{center}
+At the resonant integer update $n=63$, $P=0.99998233$, not exactly 1.
+These are model-unit predictions, not observed probabilities or a fit.
+
+\newpage
+\section{Clock visibility and the underdetermined update law}
+The free gap ratio is not automatically an interacting clock rate.
+For a product plus-state input at resonance, Eq.~\eqref{H4} gives
+\begin{equation}
+ \Psi(s)=\frac12\left[\ket{00}
+ +e^{-\ii(\Delta+g)s}(\ket{01}+\ket{10})
+ +e^{-2\ii\Delta s}\ket{11}\right],\quad \Delta=\sqrt3.
+\end{equation}
+Tracing either other copy gives
+\begin{equation}
+ c_A(s)=c_B(s)=e^{-\ii\Delta s}\cos(gs).\label{dials}
+\end{equation}
+The phases agree when readable, but visibility $|\cos(gs)|$ changes.
+At its zeros neither reduced dial has a phase; crossings can give
+$\pi$ phase jumps. A negative cosine is not reversed physical time.
+The continuous zeros need not be sampled at integer $n$. Away from
+resonance, exponentiating Eq.~\eqref{H4} and taking the partial traces
+is required: the free formula is no longer exact. No unique rigid
+relative clock rate is claimed in that case.
+
+Exchange probabilities in Eq.~\eqref{exchange} use the different input
+$\ket{10}$; dial coherences use $\ket{+,+}$. These are separate runs of
+the same generator, not simultaneously sharp phase and excitation
+readings. Unitary recurrences are not dissipative synchronization.
+Neither protocol includes an autonomous preparation/measurement memory.
+
+\paragraph{A scalar average is insufficient; $E_d$ remains undefined.}
+Across the table, A slows per update while B speeds up, despite constant
+edge magnitudes and trace. This rejects a sole common fractional factor
+for these two transitions in this candidate. It does not refute an
+$E_d$ containing relational phases or additional fields, and it does
+not prove anything about an external clock's seconds.
+
+\paragraph{The graph does not select the dynamical generator.}
+Both $L$ and $f(L)=L+\eta L^2$, $\eta>0$, are positive with identical
+eigenvectors. Keeping $\eta=0.2$ fixed, at the \emph{same} $\theta=\pi/2$,
+\begin{equation}
+ \frac{f(\lambda_2)-f(\lambda_1)}{f(\lambda_1)-f(\lambda_0)}
+ =\frac{1+\eta(4+\sqrt3)}{1+\eta(4-\sqrt3)}=1.4766271\ldots,
+\end{equation}
+instead of 1. This is a different dynamical postulate, not a harmless
+change of units. Stability and positivity alone cannot decide between
+the two. A first-principles completion must supply an independent
+principle for the rule, rather than choose it to obtain desired clocks.
+
+\paragraph{Visibility is not mass conversion.}
+A fixed normalized probe $q$ has the spectral measure
+\[
+ \sum_k|q^\dagger u_k|^2\delta(x-\lambda_k).
+\]
+A vertex probe gives weights $1/3$; the $u_0$ probe sees only its mode.
+Changing the probe changes these weights, not the eigenvalues.
+No Lorentzian dispersion, calibrated energy or propagator mass pole
+has been supplied, so neither these eigenvalues nor their gaps are
+identified with elementary-particle masses.
+
+\newpage
+\section{Fixed vertex contact: the missing-channel countercheck}
+The selected rule in Eq.~\eqref{selected} is not the natural contact
+\begin{equation}
+ V_{\rm loc}=\gamma P_0\otimes P_0,\qquad
+ P_0=\ket{j=0}\bra{j=0},\quad\gamma>0.\label{contact}
+\end{equation}
+``Local'' here means one node of each graph, not locality in derived
+spacetime. Since every $u_k(0)=1/\sqrt3$, every matrix element of
+$V_{\rm loc}$ in the two-copy Fourier basis is $v=\gamma/9$.
+Let $E$ embed the selected four states and $P=EE^\dagger$. Then
+\begin{equation}
+ \|(I-P)V_{\rm loc}E\|=\sqrt{20}\,\gamma/9>0.
+\end{equation}
+Consequently that sector is not invariant. At $\theta=\pi/2$ the
+three states $\ket{0,2},\ket{1,1},\ket{2,0}$ all have free total
+eigenvalue 4. The third is not a high-energy state that can be dropped.
+
+There is an exact bound independent of perturbation theory. The full
+nine-dimensional generator commutes with copy swap. The input
+$\ket{1,1}$ is symmetric, hence at every update
+\begin{equation}
+ P_{11\to02}=P_{11\to20},\qquad P_{11\to02}\leq\frac12.\label{half}
+\end{equation}
+This contradicts nearly unit single-channel transfer for this contact,
+without tiny-error arguments. It does not exclude other interactions.
+
+In the weak-contact resonant block, $H_{\rm res}=4I+v\mathbf1\mathbf1^T$,
+where $\mathbf1=(1,1,1)^T$. Its symmetric vector has shift $3v$ and the
+orthogonal two-dimensional subspace has shift zero. Therefore
+\begin{equation}
+ e^{-\ii s v\mathbf1\mathbf1^T}
+ =I+\frac{e^{-3\ii vs}-1}{3}\mathbf1\mathbf1^T,
+ \qquad P_{11\to02}^{\rm res}=P_{11\to20}^{\rm res}
+ =\frac49\sin^2(3vs/2).\label{49}
+\end{equation}
+The single-target envelope is $4/9$; both targets together reach $8/9$.
+Unlike Eq.~\eqref{half}, $4/9$ is not asserted as an exact bound on the
+full generator. Other free multiplets are at distance $d=\sqrt3$.
+Finite-dimensional degenerate perturbation gives block corrections
+$O(\gamma^2/d)$ and spectral-projector changes $O(\gamma/d)$.
+For bounded $\gamma s$, probabilities approach Eq.~\eqref{49} with
+errors $O(\gamma/d)$. No long-time uniform claim is made.
+
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$\gamma$&update $n$&exact $P_{02}$&exact $P_{20}$&outside triple\\\midrule
+0.09&419&0.444307380&0.444307380&$2.055\,10^{-4}$\\
+0.03&1257&0.444415403&0.444415403&$4.346\,10^{-5}$\\
+0.01&3770&0.444442499&0.444442499&$2.918\,10^{-6}$\\\bottomrule
+\end{tabular}
+\end{center}
+These full-matrix fixtures use $n$ nearest the first secular peak;
+off-resonant leakage is retained, not fitted away.
+
+\newpage
+\section{Decision, verification, and a bounded next step}
+\paragraph{What this stage closes.}
+A single positive graph rule supplies an explicit spectral structure,
+phase invariants and persistent modes. Fixed transition choices on
+two independent copies supply comparable dials. One selected interaction
+has an exact resonance formula, while a vertex contact supplies a
+counterexample to treating that selection as automatic. The latter is
+the material new constraint: an omitted \emph{degenerate} channel, not
+insufficient decimal accuracy, changes the interpretation.
+
+\paragraph{What remains open.}
+This is not a coordinate-free derivation of time: the update order,
+quantum kinematics, preparation, reference quadratures and interaction
+are assumed. No physical seconds, density-time equation, three-dimensional
+space, Lorentzian propagation or particle mass is generated. The modes
+are persistent rays, not self-organized attractors. G-R1's stationary
+constraint and G-R2's recording apparatus are not silently appended to
+this new generator. Their compatibility would require a separate test.
+
+\paragraph{Research choice.}
+Retain the full three-channel local-contact model as the economical
+candidate. Next derive its two-copy observation algebra and conditional
+readout, retaining unobserved channels, and test whether an operational
+relative clock still exists. Alternatively, justify a symmetry or a
+microscopic source that forbids the unwanted channel \emph{before}
+using the selected-mode model. Do not rescue the ideal transfer by
+deleting its degenerate partner or by selecting particle-specific rules.
+Neither path needs more gravitational-interferometer calibration first.
+
+G-R4--G-R8 remain useful thermal/metric controls, not derivations of
+the original event concept and not blockers of this mainline. No
+Route-F fitting, determinant, or portal gate is promoted.
+
+\paragraph{Executable verification.}
+The companion program is
+\texttt{verify\_gr9\_event\_network.py}.
+Its inputs are fixed in \texttt{EVENT\_NETWORK\_CARD.json}.
+The 342 checks cover the Fourier
+diagonalization, positive factorization, gauge and permutation invariance,
+gap and eigenvector bounds, exact site/sector equivalence, repeated
+integer updates, exchange and readout identities, the alternative
+generator and the contact countercheck. The gap-bound checks use
+$\pi/6\leq\theta\leq5\pi/6$ away from degeneracy. Deterministic fixtures are
+not data fitting. Full $9\times9$ contact evolution is compared with,
+not replaced by, the weak-coupling block. The report records all inputs
+and preserves selected G-R1, G-R2 and G-R8 hashes. Numerical checks
+support the finite algebra; they are not experiments or proofs of
+the stated emergence claims.
+
+\begin{thebibliography}{9}
+\bibitem{chen} BoYu Chen, \emph{Energy spectrum for elementary particles},
+final version, 23 April 2022, sections 1.2, 1.8 and 1.9.
+\href{https://indico.cern.ch/event/1109513/contributions/4969967/attachments/2480973/4410560/Energy\%20spectrum\%20for\%20elementary\%20particles_final.pdf}{Author's five-page contribution on CERN Indico}.
+Conceptual source, not evidence for the matrix dynamics in this note.
+The locally audited PDF hash is recorded in the input card. The public
+web fetch returned 403 in this run; the previously acquired, hash-pinned
+copy was used. These elementary spectral/exchange identities are not
+claimed as new mathematical theorems.
+\end{thebibliography}
+\end{document}

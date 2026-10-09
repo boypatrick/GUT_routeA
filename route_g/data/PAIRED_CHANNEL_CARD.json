@@ -1,0 +1,76 @@
+{
+  "stage": "G-R9b",
+  "date": "2026-10-09",
+  "status": "bounded side branch of G-R9, alongside G-R10; no emergent-time or particle-mass claim",
+  "follows": "G-R9 local-contact countercheck; written in parallel with G-R10 (relational readout), which it does not replace",
+  "source_inspiration": "Chen 2022 section 1.9 (exchange between compatible event rhythms); not a unique reconstruction",
+  "source_sha256": "d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e",
+  "rule": "L_N(theta)=2I-exp(i theta/N)S-exp(-i theta/N)S^dagger on an N-node ring, N in {3,4}; S|j>=|j+1 mod N>",
+  "alpha_per_assumed_update": 0.25,
+  "theta_A_over_pi": 0.5,
+  "pairing_grid_over_pi": [
+    0.02,
+    0.98,
+    49
+  ],
+  "mirror_pair_fixtures_theta_A_over_pi": [
+    0.3333333333333333,
+    0.1909859317102744
+  ],
+  "clock_A_modes_sorted": [
+    0,
+    1
+  ],
+  "clock_B_modes_sorted": [
+    1,
+    2
+  ],
+  "vertex_contact": "gamma |site0><site0| tensor |site0><site0| (the G-R9 contact), rank one",
+  "vertex_gamma_fixtures": [
+    0.09,
+    0.03,
+    0.01
+  ],
+  "vertex_gamma_strong_fixtures": [
+    0.5,
+    2.0,
+    10.0
+  ],
+  "oriented_contact": "gamma sum_{j,l} h((j-l) mod 3) |j><j| tensor |l><l|",
+  "oriented_profile_h": [
+    2,
+    0,
+    1
+  ],
+  "symmetric_profile_h": [
+    1,
+    0,
+    0
+  ],
+  "oriented_gamma_fixtures": [
+    0.09,
+    0.03,
+    0.01
+  ],
+  "random_contact_samples": 12,
+  "seed": 20261009,
+  "assumptions": [
+    "Complex finite-dimensional quantum mechanics and Born probabilities, as in G-R9",
+    "Two independent tensor factors; each a ring graph with fixed edge magnitudes and a loop phase",
+    "Ordered update count n and common alpha are supplied, not derived",
+    "Contacts are fixed real density-density couplings between ring nodes; no fit",
+    "Exit A tunes one flux to resonance; Exit B chooses an oriented contact; neither choice is derived"
+  ],
+  "not_claimed": [
+    "Physical seconds, energy scale, Ed law, spatial dimension or mass spectrum",
+    "A dynamical mechanism that selects the resonant flux or the contact orientation",
+    "A no-go theorem for all microscopic interactions or for graphs other than rings",
+    "Clock records, autonomous preparation, an arrow or emergent event ordering",
+    "Hardware realization or any Route-F gate promotion"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr9_event_network.py": "926817552e894df97a71fe7ae6dee7e60be156976940e2ed8fcccd70ee32c1aa",
+    "data/EVENT_NETWORK_CARD.json": "af2ac8cd33f14b53b41d47107e27e0a495bc3cd158a793352365c25b1af9e198",
+    "tex/route_g_event_network.tex": "7d190c8a52a8b6d31801e52a2aac6163f9f1aeb4ee8dd33ac966af005b7c4929"
+  }
+}

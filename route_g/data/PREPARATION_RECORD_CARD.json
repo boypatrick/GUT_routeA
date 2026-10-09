@@ -1,0 +1,30 @@
+{
+  "stage": "G-R11",
+  "date": "2026-10-09",
+  "status": "bounded energy-compatible preparation/record construction; autonomous switching open",
+  "parent_card": "data/RELATIONAL_READOUT_CARD.json",
+  "system_action": "Unchanged G-R10 full two-qutrit vertex contact at theta=pi/2",
+  "apparatus_extension": "New collective energy-commuting instrument G, explicitly not derived from the vertex contact",
+  "input": "|1,1> tensor |blank>",
+  "record": "One orthogonal-label register: blank, failure, relative phase d=1,...,6; d=0 has zero dark-sector effect",
+  "memory_dimension": 8,
+  "memory_hamiltonian": "H_M=0, all labels degenerate; pure blank supplied",
+  "instrument": "K_failure=I-P_D; K_d=sqrt(C_d), C_d=|g_d><g_d|/7 in (Dplus,Dminus), embedded in full nine-state system",
+  "g_d": "(sqrt(2/3)*(cos(delta_d)-1), i*sqrt(2)*sin(delta_d)), delta_d=2*pi*d/7",
+  "gate": "J=I tensor |blank>; W=sum K_label tensor |label>; G=i(W J^dagger-J W^dagger); U=exp(-i*pi*G/2)",
+  "picture": "U is the interaction-picture instrument; H_total=H tensor I+kappa(tau)*G also gives free exp(-i*H*tau) on the system. This leaves record and energy probabilities unchanged, not every failure-state amplitude.",
+  "switching_assumption": "An applied pulse with integrated coefficient pi/2 followed by decoupling; no autonomous trigger supplied",
+  "reset_assumption": "Optional thermal reset of a classicalized degenerate register, no accessible side information, cyclic controls; no temperature or joule scale supplied",
+  "not_claimed": [
+    "Local A phase readout or preservation of the original pure Dplus state",
+    "Microscopic/local implementation of the collective apparatus coupling",
+    "Autonomous pulse area, switching, memory isolation or hardware lifetime",
+    "Zero total apparatus cost merely because the bare energy transfer is zero",
+    "Autonomous creation of time, a time arrow, spacetime, particle masses or Route-F promotion"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr10_relational_readout.py": "1063011dcbe235b3b915a4568a7bc33a4833fe408e7599dab80dc5a7c20f07a7",
+    "data/RELATIONAL_READOUT_CARD.json": "a40dcee1489f6aa1c4b90bf260ba7ae8db2af35ff02abed124bc9daab63eada4",
+    "output/gr10_relational_readout.json": "e58db9cf618b50a8315d402ad07fdb00955d2a4b2e2e4b5c2edefd29787dd862"
+  }
+}

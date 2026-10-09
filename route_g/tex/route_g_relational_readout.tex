@@ -1,0 +1,284 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\title{Route G-R10: All-Channel Readout\\and an Exact Stationary Conditional Clock}
+\author{Unchanged vertex contact; explicit preparation and measurement limits}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The extra resonant channel found in G-R9 supports, rather than prevents,
+an exact stationary dark subspace. Within it a subsystem's phase reading
+labels another subsystem's state without the auxiliary update index.
+All nine states and all readout outcomes are retained. However, the
+original exchange input has only $2/3$ dark weight, conserved by this
+contact: existence is not autonomous preparation. Generic stationary
+interacting states also need not follow the bare-gap rigid clock orbit.
+This is a finite conditional quantum construction, not a derivation of
+physical seconds, records, an arrow, spacetime or particle masses.
+\end{abstract}
+
+\section{Same contact and a complete observation algebra}
+Keep G-R9's two independent three-level copies. At its already declared
+resonance $\theta=\pi/2$, in the fixed Fourier-mode basis,
+\begin{equation}
+ L=\lambda_0 I+\Delta N,\quad N=\operatorname{diag}(0,1,2),\quad
+ \lambda_0=2-\sqrt3,\quad\Delta=\sqrt3.
+\end{equation}
+The full dimensionless generator is unchanged:
+\begin{equation}
+ H=L\otimes I+I\otimes L+\gamma P_v\otimes P_v,
+ \quad v=\frac{(1,1,1)^T}{\sqrt3},\quad P_v=vv^\dagger.\label{H}
+\end{equation}
+Here $P_v$ is one vertex projector expressed in mode coordinates; no
+outlet is removed. $\gamma=0.09,0.03,0.01$ are inherited fixtures, not fits.
+
+The Hermitian local basis consists of $Z_k=\ket k\bra k$ and, for $k<l$,
+\begin{equation}
+ X_{kl}=\ket k\bra l+\ket l\bra k,\qquad
+ Y_{kl}=-\ii\ket k\bra l+\ii\ket l\bra k.
+\end{equation}
+These nine matrices span the local algebra; their 81 products span the
+joint algebra. Incompatible settings require separate runs. For the
+clock readout fix seven effects before choosing a state:
+\begin{equation}
+ \phi_r=2\pi r/7,\quad w(\phi)=(1,e^{\ii\phi},e^{2\ii\phi})^T,
+ \quad E_r=\frac{w(\phi_r)w(\phi_r)^\dagger}{7},\quad
+ \sum_{r=0}^6 E_r=I.\label{POVM}
+\end{equation}
+Completeness follows from the finite Fourier sum for differences
+$k-l\in\{-2,\ldots,2\}$. Positivity is immediate. The phase effects
+alone span only five local dimensions: this readout is not tomography.
+
+\newpage
+\section{Joint probabilities, unobserved outcomes and a clock criterion}
+For any full nine-state density matrix, define
+\begin{align}
+ p_{rs}&=\tr[\rho(E_r\otimes E_s)],&
+ R_B(r)&=\tr_A[(E_r\otimes I)\rho],\label{prob}\\
+ p_r&=\tr R_B(r),&\rho_{B|r}&=R_B(r)/p_r.
+\end{align}
+For $p_r>0$ this is the remote conditional state for any local instrument
+on A with effect $E_r$; cyclicity of the partial trace removes its
+particular Kraus representation. It says nothing about a later A
+measurement or the apparatus energy. Without an A record,
+\begin{equation}
+ \sum_r p_r\rho_{B|r}=\tr_A\rho.\label{unread}
+\end{equation}
+No preferred exit is postselected. The continuous extension has effects
+$w(\phi)w(\phi)^\dagger\,d\phi/(2\pi)$; it is a POVM, not an infinity
+of orthogonal timestamps.
+
+For the resonant triple, write
+\begin{equation}
+ \ket\psi=c_0\ket{0,2}+c_1\ket{1,1}+c_2\ket{2,0},\quad
+ \sum_k|c_k|^2=1.
+\end{equation}
+All phase marginals are uniform, $p_r=1/7$, and the normalized B vector is
+\begin{equation}
+ \ket{\psi_B(\phi)}=\sum_{k=0}^2c_k e^{-\ii k\phi}\ket{2-k}
+ =e^{-2\ii\phi}e^{\ii N_B\phi}\ket{\psi_B(0)}.\label{orbit}
+\end{equation}
+Thus $\rho_{B|\phi}=e^{\ii N_B\phi}\rho_{B|0}e^{-\ii N_B\phi}$.
+The same conclusion holds for mixed states supported on this triple.
+This is an exact conditional orbit, but a generic triple state is not
+stationary under the full contact. The next section identifies states
+that satisfy both requirements.
+
+For the weak-contact exchange approximation from $\ket{1,1}$,
+$c_0=c_2=a=(z-1)/3$, $c_1=b=(z+2)/3$, $z=e^{-\ii x}$,
+$x=\gamma s/3$, $s=\alpha n$, $\alpha=1/4$. All three amplitudes give
+\begin{equation}
+ p_{rs}=\frac{|b+2a\cos(\phi_r-\phi_s)|^2}{49}.\label{tripleprob}
+\end{equation}
+The relative-phase harmonics are $C_1=-|a|^2$ and $C_2=|a|^2$.
+Correlations change with the assumed exchange index through $a,b$;
+Eq.~\eqref{orbit} alone has not eliminated this preparation dependence.
+
+We test the full contact against this \emph{specified bare-gap} orbit:
+\begin{equation}
+ D_7(\rho)=\max_{r=0,\ldots,6}\frac12
+ \left\|\rho_{B|r}-e^{\ii N_B\phi_r}\rho_{B|0}e^{-\ii N_B\phi_r}\right\|_1.
+ \label{D7}
+\end{equation}
+A nonzero value rejects that rigid description on the actual seven
+readings, not every possible interacting-clock interpretation.
+
+\newpage
+\section{An exact dark clock, and an exact preparation obstruction}
+The triple's free total eigenvalue is 4. The contact has every
+mode-basis element $\gamma/9$, so a triple vector is annihilated iff
+$c_0+c_1+c_2=0$. An orthonormal basis is
+\begin{equation}
+ \ket{D_+}=\frac{\ket{0,2}-2\ket{1,1}+\ket{2,0}}{\sqrt6},\qquad
+ \ket{D_-}=\frac{\ket{0,2}-\ket{2,0}}{\sqrt2}.\label{dark}
+\end{equation}
+For every $\gamma$ in Eq.~\eqref{H}, not just a weak-coupling limit,
+\begin{equation}
+ V\ket{D_\pm}=0,\qquad H\ket{D_\pm}=4\ket{D_\pm}.
+\end{equation}
+Consequently every density matrix supported on this dark subspace is
+stationary and has the conditional orbit in Eq.~\eqref{orbit}.
+No update number occurs in that readout relation. Defining a formal
+dial orientation $\xi=-\phi$ gives
+$\ii\partial_\xi\rho_{B|\xi}=[N_B,\rho_{B|\xi}]$.
+Its unit slope follows from the chosen equal-gap spectrum; it is not
+a prediction of a universal physical time rate.
+
+For $D_+$ the continuous relative-phase density, $\delta=\phi_A-\phi_B$, is
+\begin{equation}
+ p(\delta)=\frac{(1-\cos\delta)^2}{3\pi},\qquad
+ C_1=-\frac23,\quad C_2=\frac16.\label{darkread}
+\end{equation}
+It is broad and peaks at a fixed offset $\delta=\pi$; equal phase
+outcomes have zero joint probability. Ignoring A gives diagonal
+$\rho_B=\operatorname{diag}(1,4,1)/6$ and a uniform B phase distribution.
+Local mode dephasing preserves all energy populations and both reduced
+states but makes the joint phase table flat. This is a coherence
+control, not a unique experimental entanglement witness. The dephased
+control need not itself remain stationary under $H$.
+
+$D_-$ instead gives $p(\delta)=\sin^2\delta/\pi$, with a twofold
+ambiguity in the continuous dial. Identical copies keep $D_-$ an exact
+eigenstate even off the equal-gap resonance: the two exchanged levels
+always have equal total energy. $D_+$ loses stationarity off resonance.
+This robustness tradeoff must not be concealed by retuning a clock.
+
+Let $P_D=\ket{D_+}\bra{D_+}+\ket{D_-}\bra{D_-}$. The full contact obeys
+\begin{equation}
+ [H,P_D]=0,\qquad\bra{1,1}P_D\ket{1,1}=\frac23,\qquad
+ |\bra{D_+}e^{-\ii\alpha nH}\ket{1,1}|^2=\frac23.\label{prep}
+\end{equation}
+The antisymmetric overlap remains zero. Thus the original unitary
+exchange cannot prepare a pure dark clock. A hypothetical dark-energy
+filter would succeed with probability $2/3$ and reject $1/3$; its
+instrument, energy accounting and records would be new inputs.
+The dark clock also has zero contact action: persistent correlations
+are not proof of ongoing energy exchange or clock synchronization.
+
+\newpage
+\section{Full stationary readout and the retained interaction term}
+For a normalized full eigenstate $H\ket\Psi=E\ket\Psi$, set
+$q_\phi=w(\phi)/\sqrt3$ and the unnormalized conditional amplitude
+$\chi(\phi)=(\bra{q_\phi}\otimes I)\ket\Psi$. Since
+$\bra{q_\phi}N_A\ket\Psi=\ii\partial_\phi\chi$ and $q_0=v$,
+\begin{equation}
+ \ii\Delta\partial_\phi\chi(\phi)
+ =(E-2\lambda_0-\Delta N_B)\chi(\phi)
+ -\gamma f(\phi)P_v\chi(0),\quad
+ f(\phi)=\frac{1+e^{-\ii\phi}+e^{-2\ii\phi}}3.\label{kernel}
+\end{equation}
+This is exact on all nine states. The contact couples different dial
+readings, rather than merely rescaling time. For a dark state
+$P_v\chi(0)=0$ and $E-2\lambda_0=2\Delta$, yielding Eq.~\eqref{orbit}.
+For generic eigenstates the term survives and $\|\chi(\phi)\|$ can vary.
+Normalizing it without retaining that likelihood would give a wrong
+conditional equation. Conditional dynamics from stationary correlations
+is established Page--Wootters reasoning~\cite{pw}; interactions can
+produce nonlocal clock-label equations~\cite{smith}. The specific
+finite contact kernel above is derived here, not a new general mechanism.
+
+\paragraph{An unread update is a specified prior, not an automatic law.}
+Let $U=e^{-\ii\alpha H}$ and assume the uniform Cesaro average
+\begin{equation}
+ \bar\rho=\lim_{T\to\infty}\frac1T\sum_{n=0}^{T-1}U^n\rho_0U^{-n}
+ =\sum_E\Pi_E\rho_0\Pi_E,\qquad\rho_0=\ket{1,1}\bra{1,1}.\label{avg}
+\end{equation}
+For the declared fixtures $\alpha(E_{\max}-E_{\min})<2\pi$, so there
+are no distinct-energy update-phase aliases. The equality follows
+by summing each off-diagonal geometric series. This prior, not an
+arbitrary unknown distribution of $n$, gives $[H,\bar\rho]=0$.
+It need not give $[N_A+N_B,\bar\rho]=0$ or $D_7=0$.
+
+Stationary effects can also be defined without deleting outcomes:
+\begin{equation}
+ \bar F_{rs}=\sum_E\Pi_E(E_r\otimes E_s)\Pi_E,\qquad
+ \sum_{rs}\bar F_{rs}=I,\quad[H,\bar F_{rs}]=0.\label{effects}
+\end{equation}
+They are positive and give the same probabilities as $E_r\otimes E_s$
+on stationary $\rho$. They are generally \emph{joint}, not local
+product effects. This logical POVM does not establish an autonomous,
+energy-conserving, locally implemented recording apparatus.
+
+\paragraph{Order of limits matters.}
+Writing $\ket B=(\ket{0,2}+\ket{1,1}+\ket{2,0})/\sqrt3$, the
+positive weak-coupling limit after Eq.~\eqref{avg} is
+\begin{equation}
+ \bar\rho_{0^+}=\frac23\ket{D_+}\bra{D_+}+\frac13\ket B\bra B.
+\end{equation}
+The bright eigenvector tends to $B$, the dark weight stays $2/3$,
+and other multiplet overlaps vanish. This mixed state has
+$(C_1,C_2)=(-2/9,2/9)$ and a rigid conditional orbit. Setting $\gamma=0$
+\emph{before} averaging instead leaves $\rho_0$, with flat phase
+statistics. Weak coupling is not instantaneous dark-state preparation.
+
+\newpage
+\section{Numerical checks and physical interpretation}
+Use the same seven effects for every state. No reference phase, graph
+or channel is refitted. At each inherited $\gamma$, the exchange state
+is evaluated at the integer $n$ nearest G-R9's first secular transfer
+peak. The mixed state uses Eq.~\eqref{avg}, retaining all energy blocks.
+Define $A_7=\max_r(7p_r)-\min_r(7p_r)$ to expose conditional likelihoods.
+
+\begin{center}
+\begin{tabular}{rlrr}\toprule
+$\gamma$&full nine-state input&$D_7$&$A_7$\\\midrule
+0.09&exchange, $n=419$&0.0277141&0.0232937\\
+0.09&uniform unread updates&0.0108673&0.000433842\\
+0.03&exchange, $n=1257$&0.0116668&0.00652081\\
+0.03&uniform unread updates&0.00359595&0.0000482796\\
+0.01&exchange, $n=3770$&0.00332006&0.00235708\\
+0.01&uniform unread updates&0.00119550&0.00000536533\\
+any declared $\gamma$&exact $D_+$&0&0\\\bottomrule
+\end{tabular}
+\end{center}
+Zeros in the last row are analytic identities, not fitted numerical
+thresholds. Nonzero $D_7$ rejects only the fixed bare-gap orbit. A more
+general interacting conditional description retains Eq.~\eqref{kernel};
+no universal impossibility of relational time is inferred.
+
+\paragraph{Verification scope.}
+The program is \texttt{verify\_gr10\_relational\_readout.py}.\\
+Fixed inputs are in \texttt{RELATIONAL\_READOUT\_CARD.json}.
+Its 151 checks cover
+observation-algebra ranks, positive complete effects, exact dark
+eigenvectors, all-outcome marginalization, pure and mixed conditional
+orbits, dephased controls, full site/mode equivalence, invariant effects,
+the contact kernel, the preparation obstruction and flux-detuning
+controls. The finite contact matrices and spectral projectors are
+calculated independently of the analytic triple formulae. Earlier
+G-R9 files are hash-pinned and unchanged. These checks are not data.
+
+\paragraph{What is now possible.}
+The missing channel supports an exact stationary conditional clock in
+the \emph{same} local-contact model. Unlike the previous ordered-update
+example, its conditional readout contains no $n$. But quantum kinematics,
+the tensor split, phase effects, resonance and state preparation remain
+assumptions. The phase has finite resolution and is cyclic; no
+successive records or arrow have been derived. No statement about
+physical $E_d$, time dilation, a spatial metric or masses follows.
+
+\paragraph{Next bounded decision.}
+Either specify one preparation plus one-record instrument, including
+its energy, reference and discarded-outcome costs, or keep the
+unfiltered mixed stationary state and its genuinely interacting
+conditional equation. Do not silently add a dissipative bath to purify
+the conserved $2/3$ dark weight. The former tests operational realization;
+the latter avoids a pure-state preparation claim. Neither requires
+more gravitational-guide calibration or a new mass fit.
+
+\begin{thebibliography}{9}
+\bibitem{pw} D. N. Page and W. K. Wootters,
+\emph{Evolution without evolution: Dynamics described by stationary observables},
+\href{https://doi.org/10.1103/PhysRevD.27.2885}{Phys. Rev. D 27, 2885 (1983)}.
+\bibitem{smith} A. R. H. Smith and M. Ahmadi,
+\emph{Quantizing time: Interacting clocks and systems},
+\href{https://doi.org/10.22331/q-2019-07-08-160}{Quantum 3, 160 (2019)},
+\href{https://arxiv.org/abs/1712.00081}{arXiv:1712.00081}.
+\end{thebibliography}
+\end{document}

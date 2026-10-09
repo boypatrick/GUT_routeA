@@ -1,0 +1,1464 @@
+{
+  "stage": "G-R9",
+  "status": "bounded candidate; no emergent-time or particle-mass claim",
+  "summary": {
+    "checks": 342,
+    "passed": 342,
+    "failed": []
+  },
+  "fixtures": [
+    {
+      "theta_over_pi": 0.3333333333333333,
+      "eigenvalues": [
+        0.12061475842818314,
+        2.34729635533386,
+        3.5320888862379567
+      ],
+      "gap_A": 2.226681596905677,
+      "gap_B": 1.1847925309040965,
+      "free_ratio_B_over_A": 0.5320888862379567,
+      "detuning": 1.0418890660015805,
+      "continuous_exchange_envelope": 0.035538723599342854,
+      "near_first_peak_update_n": 12,
+      "sampled_exchange_probability": 0.03552368744962136
+    },
+    {
+      "theta_over_pi": 0.5,
+      "eigenvalues": [
+        0.2679491924311226,
+        1.9999999999999998,
+        3.7320508075688776
+      ],
+      "gap_A": 1.7320508075688772,
+      "gap_B": 1.7320508075688779,
+      "free_ratio_B_over_A": 1.0000000000000004,
+      "detuning": -6.661338147750939e-16,
+      "continuous_exchange_envelope": 1.0,
+      "near_first_peak_update_n": 63,
+      "sampled_exchange_probability": 0.999982329235664
+    },
+    {
+      "theta_over_pi": 0.6666666666666666,
+      "eigenvalues": [
+        0.467911113762044,
+        1.6527036446661387,
+        3.879385241571817
+      ],
+      "gap_A": 1.1847925309040948,
+      "gap_B": 2.226681596905678,
+      "free_ratio_B_over_A": 1.8793852415718182,
+      "detuning": -1.0418890660015832,
+      "continuous_exchange_envelope": 0.03553872359934268,
+      "near_first_peak_update_n": 12,
+      "sampled_exchange_probability": 0.03552368744962123
+    }
+  ],
+  "local_contact_fixtures": [
+    {
+      "gamma": 0.09,
+      "update_n": 419,
+      "P_0_2": 0.44430737951687715,
+      "P_2_0": 0.4443073795169322,
+      "P_1_1": 0.11117975667721663,
+      "off_resonant_leakage": 0.0002054842889739339,
+      "secular_single_target_probability": 0.44444435296917195
+    },
+    {
+      "gamma": 0.03,
+      "update_n": 1257,
+      "P_0_2": 0.44441540326855605,
+      "P_2_0": 0.4444154032687473,
+      "P_1_1": 0.1111257329469213,
+      "off_resonant_leakage": 4.346051577530652e-05,
+      "secular_single_target_probability": 0.44444435296917195
+    },
+    {
+      "gamma": 0.01,
+      "update_n": 3770,
+      "P_0_2": 0.44444249869049196,
+      "P_2_0": 0.4444424986900085,
+      "P_1_1": 0.11111208449982327,
+      "off_resonant_leakage": 2.9181196762317896e-06,
+      "secular_single_target_probability": 0.4444444438357849
+    }
+  ],
+  "alternative_rule_ratio_at_pi_over_2": 1.4766271094389722,
+  "detuned_readout_deviation_at_s8": 0.0986041232909096,
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr1_relational_clock.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr2_two_event_records.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/CLOSED_PATH_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "Fourier_unitary",
+      "passed": true
+    },
+    {
+      "name": "zero_flux_spectrum",
+      "passed": true
+    },
+    {
+      "name": "quarter_flux_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=0.523599:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=0.785398:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.047198:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.308997:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.570796:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=1.832596:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.094395:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.356194:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:positive_edge_factorization",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:analytic_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:fixed_eigenvectors",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:trace",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:local_diagonals",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:ordered_simple_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:gauge_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:loop_phase",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:loop_gauge",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:permutation",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:unitary_update",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:persistent_modes",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:Weyl_gap",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:mode_angle_bound",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exact_sector_not_RWA",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:coupled_spectrum",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:positive_sector_in_domain",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:selected_total_excitation_conserved",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:full_vs_reduced:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exchange_probability:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:free_clock_readout:n=0",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:full_vs_reduced:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exchange_probability:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:free_clock_readout:n=1",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:full_vs_reduced:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exchange_probability:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:free_clock_readout:n=7",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:full_vs_reduced:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exchange_probability:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:free_clock_readout:n=31",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:full_vs_reduced:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:exchange_probability:n=63",
+      "passed": true
+    },
+    {
+      "name": "theta=2.617994:free_clock_readout:n=63",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.3333333333333333:sample_below_envelope",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.3333333333333333:detuning_identity",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.5:sample_below_envelope",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.5:detuning_identity",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.6666666666666666:sample_below_envelope",
+      "passed": true
+    },
+    {
+      "name": "fixture:0.6666666666666666:detuning_identity",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:0",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:1",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:11",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:31",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:63",
+      "passed": true
+    },
+    {
+      "name": "resonance:interacting_two_dials:89",
+      "passed": true
+    },
+    {
+      "name": "resonance:visibility_can_vanish",
+      "passed": true
+    },
+    {
+      "name": "detuned:free_clock_formula_is_not_exact",
+      "passed": true
+    },
+    {
+      "name": "rule_nonuniqueness:same_eigenvectors_different_ratio",
+      "passed": true
+    },
+    {
+      "name": "rule_nonuniqueness:functional_calculus",
+      "passed": true
+    },
+    {
+      "name": "site_probe:equal_weights",
+      "passed": true
+    },
+    {
+      "name": "mode_probe:one_visible_mode",
+      "passed": true
+    },
+    {
+      "name": "opposite_fractional_response_not_universal_time",
+      "passed": true
+    },
+    {
+      "name": "contact:fixed_vertex_all_channels",
+      "passed": true
+    },
+    {
+      "name": "contact:three_degenerate_states",
+      "passed": true
+    },
+    {
+      "name": "contact:rank_one_secular_block",
+      "passed": true
+    },
+    {
+      "name": "contact:nonclosed_two_clock_sector_norm",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.09:exchange_symmetry",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.09:equal_outputs_exact",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.09:single_target_exact_half_bound",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.09:weak_contact_secular_prediction",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.09:secular_analytic",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.03:exchange_symmetry",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.03:equal_outputs_exact",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.03:single_target_exact_half_bound",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.03:weak_contact_secular_prediction",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.03:secular_analytic",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.01:exchange_symmetry",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.01:equal_outputs_exact",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.01:single_target_exact_half_bound",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.01:weak_contact_secular_prediction",
+      "passed": true
+    },
+    {
+      "name": "contact:gamma=0.01:secular_analytic",
+      "passed": true
+    },
+    {
+      "name": "contact:fixture_error_decreases_in_weak_limit",
+      "passed": true
+    }
+  ],
+  "boundary": [
+    "Physical seconds, energy scale, Ed law, spatial dimension or mass spectrum",
+    "Clock records, autonomous preparation, an arrow or emergent event ordering",
+    "Dissipative synchronization, attraction, irreversible relaxation or universal slowdown",
+    "Common fractional clock rate under finite interaction away from resonance",
+    "Hardware realization or any Route-F gate promotion"
+  ]
+}

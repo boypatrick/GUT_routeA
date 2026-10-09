@@ -1,8 +1,59 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-09-29
+Last updated: 2026-10-09
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
+
+**G-R11 (2026-10-09):** the finite preparation/relative-record instrument
+is now bounded-done. An explicit new collective apparatus coupling gives
+a 72-dimensional energy-conserving unitary, distinct blank/failure labels,
+success 2/3 and failure 1/3. Unread successful output is disturbed by the
+exact 57/82 versus 25/82 dark-state mixture. No separate local phase
+measurement or free autonomous preparation is substituted. Keeping the
+same gate active restores blank: durable records require declared
+decoupling. All 6,184 checks across 24 Route-G verifiers pass, including
+the independent G-R9b side branch; the five-page PDF is visually reviewed.
+Next choose a physical trigger/self-decoupling mechanism if autonomous
+events remain the aim, or close this as a controlled effective model.
+No new abstract prerequisite, metric/mass fit or Route-F gate is added.
+See [G-R11 derivation](route_g/tex/route_g_preparation_record.tex) and
+[current Route-G roadmap](route_g/ROADMAP.md).
+
+**G-R10 (2026-10-09):** full-channel observation algebra and conditional
+readout are now complete for the unchanged G-R9 vertex contact. The
+extra degenerate outlet supports Dplus=(|0,2>−2|1,1>+|2,0>)/sqrt(6), an
+exact stationary dark state with a nontrivial conditional clock orbit
+that contains no update n. All phase outcomes are retained. This is
+finite conditional quantum evolution, not physical seconds or a new
+general Page–Wootters mechanism. The original input has only conserved
+dark weight 2/3, so the same unitary contact cannot autonomously prepare
+the pure clock. The unfiltered stationary mixture and full interaction
+kernel are also computed rather than replaced by that state.
+151 new checks pass. Its then-next test was one preparation/record instrument with
+its energy/reference/outcome accounting, or keep the unfiltered mixed
+state; G-R11 now addresses the instrument within explicit apparatus assumptions.
+No metric, mass, fit or Route-F gate is promoted.
+See [G-R10 derivation](route_g/tex/route_g_relational_readout.tex).
+
+**G-R9 governing update (2026-10-09):** return to event relations and a
+common spectrum before assuming physical time/space. G-R4–G-R8 remain
+comparison models; their data/guide gates no longer block this mainline.
+A positive three-node graph now gives analytic modes and two independent
+copy dials. A loop-phase change can speed one gap and slow the other
+at fixed trace: no universal slowdown is obtained. Ordered updates are
+still postulated, so this is not yet emergent time or particle masses.
+
+The important countercheck is structural: a fixed vertex contact opens
+the extra degenerate |2,0> channel alongside |0,2> from |1,1>. Exact
+swap symmetry bounds either probability by 1/2, unlike the ideal
+selected-mode interaction's near-unit transfer. Weak-contact reduction
+gives 4/9 per target; the full nine-state calculation retains leakage.
+342 new checks and a six-page derivation are saved. Next retain the
+three-channel observation model, or independently justify a selection
+rule; do not fit away the extra channel. See [current roadmap](route_g/ROADMAP.md)
+and [derivation](route_g/tex/route_g_event_network.tex).
+The following G-R1–G-R8 milestones retain their historical scopes and
+do not override this priority. All Route-F gates are unchanged.
 
 After the source-concept audit, the user chose one subsystem's events
 as the clock for another subsystem. The prior Minkowski/KK/TOF models

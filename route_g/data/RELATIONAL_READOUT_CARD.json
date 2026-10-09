@@ -1,0 +1,29 @@
+{
+  "stage": "G-R10",
+  "date": "2026-10-09",
+  "status": "bounded full-contact readout audit; no autonomous clock preparation claim",
+  "parent_card": "data/EVENT_NETWORK_CARD.json",
+  "theta_over_pi": 0.5,
+  "phase_outcomes": 7,
+  "phase_convention": "phi_r=2*pi*r/7; w(phi)=(1,exp(i phi),exp(2i phi)); E_r=w w^dagger/7",
+  "interaction": "unchanged G-R9 local contact gamma P_vertex0 tensor P_vertex0 on all nine states",
+  "exchange_input": "|1,1>",
+  "stationary_candidates": [
+    "Dplus=(|0,2>-2|1,1>+|2,0>)/sqrt(6)",
+    "Dminus=(|0,2>-|2,0>)/sqrt(2)"
+  ],
+  "unread_update_prior": "Uniform Cesaro average over assumed integer updates; not a derived prior or preparation",
+  "rigidity_test": "max over the seven fixed readings of trace distance from exp(i N_B phi) rho_B_given_0 exp(-i N_B phi)",
+  "not_claimed": [
+    "Phase-POVM implementation or energy-complete recording apparatus",
+    "Pure dark state produced autonomously from |1,1>",
+    "Failure of all interacting-clock notions when the fixed free-gap rigidity test fails",
+    "Physical seconds, unbounded clock records, time arrow, emergent space or particle mass",
+    "Experimental evidence or any Route-F gate promotion"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr9_event_network.py": "926817552e894df97a71fe7ae6dee7e60be156976940e2ed8fcccd70ee32c1aa",
+    "data/EVENT_NETWORK_CARD.json": "af2ac8cd33f14b53b41d47107e27e0a495bc3cd158a793352365c25b1af9e198",
+    "output/gr9_event_network.json": "00acc816bf7b2c3f8feafd97d7d1447911e1e1ac86dd35ef1fc89f74bf70e229"
+  }
+}

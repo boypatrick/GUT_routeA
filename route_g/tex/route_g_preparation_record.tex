@@ -1,0 +1,285 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\title{Route G-R11: One Preparation and One Record}
+\author{Energy-compatible relative readout; explicit apparatus boundary}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A relative-phase record can be written without changing the full system
+energy distribution. We construct an explicit 72-dimensional unitary,
+retain failed preparations, and calculate the measurement disturbance.
+This adds a collective apparatus coupling to the unchanged G-R10 system;
+it does not derive that coupling from the vertex contact. The same gate
+erases its record if left active. Energy compatibility therefore closes
+one finite instrument-existence question, not autonomous time generation.
+\end{abstract}
+
+\section{Unchanged system; only the relative reading is recorded}
+In dimensionless units, keep the two-qutrit Hamiltonian at $\theta=\pi/2$:
+\begin{align}
+ L&=(2-\sqrt3)I+\sqrt3 N,\qquad N=\operatorname{diag}(0,1,2),\\
+ H&=L\otimes I+I\otimes L+\gamma P_v\otimes P_v,
+ \quad v=(1,1,1)^T/\sqrt3,\quad P_v=vv^\dagger.\label{H}
+\end{align}
+The inherited fixtures are $\gamma=0.09,0.03,0.01$, not physical fits.
+Put $D=(\ket{D_+},\ket{D_-})$, $P=DD^\dagger$, $Q=I-P$, where
+\begin{equation}
+ \ket{D_+}=\frac{\ket{02}-2\ket{11}+\ket{20}}{\sqrt6},\qquad
+ \ket{D_-}=\frac{\ket{02}-\ket{20}}{\sqrt2},\qquad HP=4P.
+\end{equation}
+These states are annihilated by the contact. For G-R10's fixed effects
+$E_r=w_rw_r^\dagger/7$, $w_r=(1,e^{\ii\phi_r},e^{2\ii\phi_r})^T$,
+$\phi_r=2\pi r/7$, define $\bar F_{rs}=\sum_E\Pi_E(E_r\otimes E_s)\Pi_E$.
+This energy averaging is an operator definition, not a supplied clock.
+For $d=(s-r)\bmod7$, $\delta_d=2\pi d/7$, direct projection gives
+\begin{align}
+ D^\dagger(w_r\otimes w_s)&=e^{\ii(\phi_r+\phi_s)}g_d,
+ &g_d&=\begin{pmatrix}\sqrt{2/3}(\cos\delta_d-1)\\
+                  \ii\sqrt2\sin\delta_d\end{pmatrix},\\
+ C_d&=D\frac{g_dg_d^\dagger}{7}D^\dagger,
+ &P\bar F_{r,r+d}P&=\frac{C_d}{7},\quad
+ \sum_{d=0}^6C_d=P,\quad C_0=0.\label{compress}
+\end{align}
+Thus $r$ is uniformly redundant for \emph{every} state in $P$.
+The reduced joint L\"uders instrument is also preserved by discarding $r$,
+since $\sqrt{C_d/7}=\sqrt{C_d}/\sqrt7$. This is not the instrument of
+separate local A/B phase measurements, nor a pair of absolute timestamps.
+
+\newpage
+\section{A complete instrument and an explicit conserving unitary}
+Include failure rather than presuming a free successful preparation:
+\begin{equation}
+ K_\perp=Q,\qquad K_d=\sqrt{C_d}\quad(d=1,\ldots,6),\qquad
+ \sum_\ell K_\ell^\dagger K_\ell=I,\qquad [H,K_\ell]=0.\label{K}
+\end{equation}
+For $d\ne0$ the rank-one square root is elementary:
+\begin{equation}
+ K_d=D\frac{g_dg_d^\dagger/7}{\sqrt{g_d^\dagger g_d/7}}D^\dagger.
+\end{equation}
+The dark projection and relative readout can therefore be one operation.
+It prepares a dark state on success, but not an undisturbed $D_+$.
+
+Use one memory with eight orthogonal, energetically degenerate labels:
+$\ket b,\ket\perp,\ket1,\ldots,\ket6$ and $H_M=0$.
+The initially pure blank $b$ is distinct from failure; no hidden epoch
+bit supplies that distinction. Eight is a minimum only for these seven
+distinguishable outputs plus a separate blank in this register scheme.
+Define the $72\times9$ embeddings
+\begin{equation}
+ J=I\otimes\ket b,\qquad
+ W=Q\otimes\ket\perp+\sum_{d=1}^6 K_d\otimes\ket d.
+\end{equation}
+Equation~\eqref{K} gives $J^\dagger J=W^\dagger W=I$ and $J^\dagger W=0$.
+With $P_J=JJ^\dagger$, $P_W=WW^\dagger$, construct
+\begin{align}
+ A&=WJ^\dagger-JW^\dagger,\quad G=\ii A=G^\dagger,\quad
+ A^2=-(P_J+P_W),\\
+ U&=I-P_J-P_W+A=\exp[-\ii(\pi/2)G].\label{U}
+\end{align}
+Indeed, $UJ=W$, $UW=-J$, and $U$ is the identity on the orthogonal
+complement. These relations prove unitarity without an unspecified
+extension. Since $H_{SM}J=JH$ and $H_{SM}W=WH$, where
+$H_{SM}=H\otimes I_M$, they also prove
+\begin{equation}
+ [G,H_{SM}]=[U,H_{SM}]=0.\label{conserve}
+\end{equation}
+Thus the instrument preserves the entire distribution of $H$, not just
+its mean. Measuring a memory projector produces the corresponding Kraus
+branch. Before that measurement the joint state need not be classical.
+
+\paragraph{What has been added.}
+$G$ is a new \emph{collective} system--memory interaction, not a consequence
+of $\gamma P_v\otimes P_v$ or a demonstrated local hardware coupling.
+For a controlled Hamiltonian $H_{SM}+\kappa(\tau)G$ and pulse area
+$a=\int\kappa(\tau)d\tau$, the interaction-picture gate is $e^{-\ii aG}$.
+The physical propagator also contains $e^{-\ii H_{SM}\tau}$.
+This factor leaves all record probabilities and energy statistics below
+unchanged, but must be retained for subsequent coherent experiments.
+Here $\tau$ and pulse control are assumed, not a newly derived time.
+
+\newpage
+\section{All outcomes, their energies, and the measurement disturbance}
+For the declared input $\ket{11}$,
+\begin{equation}
+ P\ket{11}=-\sqrt{2/3}\ket{D_+},\quad
+ Q\ket{11}=\ket B/\sqrt3,\quad
+ \ket B=(\ket{02}+\ket{11}+\ket{20})/\sqrt3.
+\end{equation}
+The failure probability is $1/3$; success totals $2/3$. Conditional on
+success the relative record has the normalized distribution
+\begin{equation}
+ q_d=\bra{D_+}C_d\ket{D_+}
+ =\frac{2}{21}(1-\cos\delta_d)^2,\qquad
+ p_\perp=\frac13,\quad p_d=\frac23q_d.\label{probs}
+\end{equation}
+The finite Fourier sums give $\sum_d\cos\delta_d=0$ and
+$\sum_d\cos^2\delta_d=7/2$, proving normalization. Numerically:
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+Record & failure & $d=1,6$ (each) & $d=2,5$ / $d=3,4$ (each)\\
+\midrule
+Probability & $0.333333333$ & $0.009000630$ & $0.094892536$ / $0.229440167$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The complete energy ledger, including rejected preparations, is
+\begin{equation}
+ E_{\rm in}=4+\frac\gamma9,\quad E_S=4,\quad
+ E_\perp=4+\frac\gamma3,\quad
+ \frac23E_S+\frac13E_\perp=E_{\rm in}.\label{ledger}
+\end{equation}
+At $\gamma=0.09$ these are $4.01$, $4$, and $4.03$. $B$ is the failure
+state for $U$ in the interaction picture, not generally an eigenstate
+of $H$; its free evolution changes neither the failure probability nor
+its energy distribution. Success lies in the stationary eigenspace $P$.
+
+\paragraph{Non-negligible backreaction.}
+Each successful record yields a pure dark state proportional to
+$Dg_d$. If $d$ is unread after success, the system becomes exactly
+\begin{equation}
+ \rho'_S=\sum_{d=1}^6K_d\ket{D_+}\bra{D_+}K_d
+ =\frac{57}{82}\ket{D_+}\bra{D_+}
+  +\frac{25}{82}\ket{D_-}\bra{D_-}.\label{backreaction}
+\end{equation}
+This is an analytic ratio, not a decimal fit. To verify it, put
+$c_d=\cos(2\pi d/7)$. Pairing $d$ with $7-d$ cancels the off-diagonal
+term. The $D_+$ weight is
+\begin{align}
+ F&=\frac1{21}\sum_{d=0}^6\frac{(1-c_d)^3}{2+c_d}
+   =-\frac92+\frac97\sum_{d=0}^6\frac1{2+c_d},\\
+ \sum_d\frac1{2+c_d}
+ &=-\frac{T'_7(-2)}{T_7(-2)-1}=\frac{497}{123},\qquad F=\frac{57}{82}.
+\end{align}
+Here $T_7(z)-1$ has roots $c_d$ counted with multiplicity;
+$T_7(-2)=-5042$, $T'_7(-2)=20377$. Every successful branch and their
+mixture retain G-R10's conditional orbit
+$\rho_{B|\phi}=e^{\ii N_B\phi}\rho_{B|0}e^{-\ii N_B\phi}$,
+but with a changed seed state. This does not mean $D_+$ survives unchanged.
+
+\newpage
+\section{Which phase reference is avoided, and why a record can disappear}
+An elementary covariance argument makes the resource boundary precise.
+Let an apparatus have Hamiltonian $H_R$, state $\sigma_R$, pointer $Z_\ell$,
+and joint unitary $V$. Suppose
+\begin{equation}
+ [\sigma_R,H_R]=[Z_\ell,H_R]=0,\qquad
+ [V,H\otimes I+I\otimes H_R]=0.
+\end{equation}
+Its outcome probability and induced effect are
+\begin{equation}
+ p_\ell(\rho)=\tr[V(\rho\otimes\sigma_R)V^\dagger(I\otimes Z_\ell)]
+             =\tr(\rho F_\ell).
+\end{equation}
+Write $T_t=e^{-\ii Ht}$ and $R_t=e^{-\ii H_Rt}$. Invariance of
+$\sigma_R$ gives
+$(T_t\rho T_t^\dagger)\otimes\sigma_R
+ =(T_t\otimes R_t)(\rho\otimes\sigma_R)(T_t\otimes R_t)^\dagger$.
+Commuting this joint translation through $V$ and the pointer, then
+using trace cyclicity, proves
+\begin{equation}
+ p_\ell(T_t\rho T_t^\dagger)=p_\ell(\rho)\quad\hbox{for every }\rho,
+ \qquad [F_\ell,H]=0.\label{reference}
+\end{equation}
+The relative effects $C_d$ meet this condition, while the bare local
+phase effects $E_r\otimes I$ generally do not. For example, the inherited
+fixtures all give $\|[H,E_0\otimes I]\|_{\rm F}\simeq1.484615$.
+Thus our explicit $U$ needs no external \emph{energy-time phase asymmetry}
+resource, but does not implement the separate local phase POVM using
+such invariant resources. Internal relative calibration, pure blank
+memory, and collective control are still inputs. This is a direct finite
+covariance proof, consistent with the broader WAY literature~\cite{way};
+it is not a new general measurement theorem.
+
+\paragraph{Record versus autonomous event.}
+Using $AJ=W$, $AW=-J$, the continuously active gate obeys
+\begin{equation}
+ e^{-\ii aG}J=\cos a\,J+\sin a\,W,
+ \qquad P_{\rm blank}(a)=\cos^2a.\label{blank}
+\end{equation}
+At $a=\pi/2$ a record exists. At $a=\pi$ the entire input is blank again,
+up to sign: $U^2J=-J$. Including free system evolution changes that
+system vector but not its blank-memory status. Therefore a static
+energy-conserving gate is not, by itself, a durable autonomous recorder.
+
+If the coupling is explicitly turned off after writing, subsequent
+$e^{-\ii Ht}\otimes I_M$ preserves every memory label. Its value can
+be reread without rerunning the system POVM; the latter is nonprojective
+and need not yield the same $d$ again. Actual isolation, noise and
+lifetime are not modeled. The premeasurement may also retain coherence
+between labels, so neither irreversible classicalization nor a universal
+arrow follows from the unitary. The missing physical choice is a
+trigger and decoupling mechanism, not a smaller numerical error.
+
+\newpage
+\section{Information ledger, verification and bounded conclusion}
+For a \emph{classicalized} record the Shannon entropy, in bits, is
+\begin{align}
+ H_{\rm rec}&=h_2(2/3)+\frac23H(q)
+       =2.27003421247,\qquad H(q)=2.02760756762,\\
+ H_{\rm redundant}&=\frac23\log_2 7=1.87156994804.
+\end{align}
+The second number is the per-attempt information cost of also saving
+the uniformly redundant common-origin label $r$. Removing it loses no
+dark-sector relative instrument, by Eq.~\eqref{compress}; it does not
+remove failure or selectively discard unfavorable records.
+
+For ideal thermal resetting of a degenerate classical register at
+temperature $T$, no accessible side information, and cyclic controls,
+the free-energy bound is~\cite{landauer}
+\begin{equation}
+ W_{\rm reset}\ge k_BT\ln2\,H_{\rm rec}.
+\end{equation}
+This is a conditional reset bound, not a universal writing cost or an
+actual heat prediction. A coherent register, accessible system--memory
+correlations, a finite bath, or a noncyclic controller require their own
+ledger. No kelvin/joule calibration is supplied. $H_M=0$ and conservation
+of bare energy do not make pure blank preparation, control, fabrication
+or resetting free. The apparatus pulse has not been embedded into an
+autonomous energy source.
+
+\paragraph{Reproducibility and scope.}
+The fixed card, executable verifier and machine-readable results are,
+respectively, under the repository's Route-G data, code and output paths:
+\begin{quote}\small\ttfamily
+data/PREPARATION\_RECORD\_CARD.json\\
+code/verify\_gr11\_preparation\_record.py\\
+output/gr11\_preparation\_record.json
+\end{quote}
+There are 120 passing stage checks: all 49 invariant effects compress
+exactly, the 72-dimensional unitary and pulse exponent agree, every
+energy spectral weight is conserved, failure and backreaction are
+retained, and continued coupling returns the memory to blank. G-R10's
+code, card and result hashes are pinned and unchanged. Numerical checks
+corroborate the identities; they do not substitute for the derivations
+or test real apparatus data. The independent G-R9b paired-channel side
+branch is retained, not imported into this interaction.
+
+\paragraph{Decision.}
+The bounded energy-compatible instrument-existence task closes here.
+One may keep this as an effective relational-clock measurement with
+explicit control assumptions. If the aim remains autonomous event/time
+generation, next choose a concrete physical trigger and self-decoupling
+mechanism and account for its energy and records. Do not add another
+abstract measurement prerequisite, bath, fitted time law or parameter
+scan as a substitute for that choice. This construction proves neither
+the source paper's $E_d$ law nor emergent seconds, spacetime, particle
+masses, or any Route-F promotion.
+
+\begin{thebibliography}{9}\small
+\bibitem{way} I. Marvian and R. W. Spekkens,
+\emph{An information-theoretic account of the Wigner--Araki--Yanase theorem},
+\href{https://arxiv.org/abs/1212.3378}{arXiv:1212.3378} (2012).
+\bibitem{landauer} D. Reeb and M. M. Wolf,
+\emph{An improved Landauer Principle with finite-size corrections},
+New J. Phys. \textbf{16}, 103011 (2014),
+\href{https://arxiv.org/abs/1306.4352}{arXiv:1306.4352}.
+\end{thebibliography}
+\end{document}

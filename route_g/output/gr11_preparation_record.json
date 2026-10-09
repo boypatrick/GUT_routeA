@@ -1,0 +1,546 @@
+{
+  "stage": "G-R11",
+  "status": "bounded energy-compatible preparation/record construction; autonomous switching open",
+  "summary": {
+    "checks": 120,
+    "passed": 120,
+    "failed": []
+  },
+  "record_probabilities_failure_then_d1_to_d6": [
+    0.33333333333333337,
+    0.009000630432023853,
+    0.09489253548961393,
+    0.2294401674116957,
+    0.22944016741169565,
+    0.09489253548961396,
+    0.009000630432023865
+  ],
+  "conditional_success_phase_probabilities": [
+    0.01350094564803578,
+    0.14233880323442086,
+    0.3441602511175433,
+    0.3441602511175433,
+    0.1423388032344209,
+    0.013500945648035795
+  ],
+  "unread_success_fidelity_exact": "57/82",
+  "unread_success_fidelity": 0.6951219512195121,
+  "classical_record_entropy_bits": 2.2700342124699104,
+  "redundant_origin_bits_saved_per_attempt": 1.871569948038402,
+  "conditional_reset_bound_in_kBT": 1.5734678141481342,
+  "energy_ledger": [
+    {
+      "gamma": 0.09,
+      "initial_energy": 4.01,
+      "success_energy": 4.000000000000002,
+      "failure_energy": 4.029999999999999,
+      "all_branch_energy": 4.010000000000002,
+      "local_phase_commutator_norm": 1.4846149779161806
+    },
+    {
+      "gamma": 0.03,
+      "initial_energy": 4.003333333333333,
+      "success_energy": 4.000000000000002,
+      "failure_energy": 4.009999999999999,
+      "all_branch_energy": 4.003333333333334,
+      "local_phase_commutator_norm": 1.4846149779161806
+    },
+    {
+      "gamma": 0.01,
+      "initial_energy": 4.00111111111111,
+      "success_energy": 4.000000000000002,
+      "failure_energy": 4.003333333333332,
+      "all_branch_energy": 4.001111111111112,
+      "local_phase_commutator_norm": 1.484614977916181
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr10_relational_readout.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/RELATIONAL_READOUT_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr10_relational_readout.json",
+      "passed": true
+    },
+    {
+      "name": "one_distinct_blank_plus_seven_records",
+      "passed": true
+    },
+    {
+      "name": "relative_effects_sum_dark_projector",
+      "passed": true
+    },
+    {
+      "name": "relative_effects_positive",
+      "passed": true
+    },
+    {
+      "name": "all_outcomes_instrument_complete",
+      "passed": true
+    },
+    {
+      "name": "success_effect_square_roots",
+      "passed": true
+    },
+    {
+      "name": "isometry",
+      "passed": true
+    },
+    {
+      "name": "blank_orthogonal_to_every_record",
+      "passed": true
+    },
+    {
+      "name": "explicit_unitary",
+      "passed": true
+    },
+    {
+      "name": "unitary_implements_isometry",
+      "passed": true
+    },
+    {
+      "name": "Hermitian_apparatus_generator",
+      "passed": true
+    },
+    {
+      "name": "pulse_exponential",
+      "passed": true
+    },
+    {
+      "name": "failure_probability_not_discarded",
+      "passed": true
+    },
+    {
+      "name": "success_probability",
+      "passed": true
+    },
+    {
+      "name": "record_probabilities_exact",
+      "passed": true
+    },
+    {
+      "name": "record_probability_normalization",
+      "passed": true
+    },
+    {
+      "name": "failure_conditional_state",
+      "passed": true
+    },
+    {
+      "name": "Chebyshev_reciprocal_sum",
+      "passed": true
+    },
+    {
+      "name": "unread_success_state_backaction",
+      "passed": true
+    },
+    {
+      "name": "unread_success_fidelity",
+      "passed": true
+    },
+    {
+      "name": "unread_success_retains_conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:1:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:1:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:1:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:2:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:2:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:2:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:3:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:3:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:3:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:4:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:4:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:4:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:5:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:5:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:5:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "outcome:6:stays_dark",
+      "passed": true
+    },
+    {
+      "name": "outcome:6:pure_branch",
+      "passed": true
+    },
+    {
+      "name": "outcome:6:conditional_orbit",
+      "passed": true
+    },
+    {
+      "name": "dark_input_dependence_is_nontrivial",
+      "passed": true
+    },
+    {
+      "name": "record_diagonals",
+      "passed": true
+    },
+    {
+      "name": "premeasurement_not_assumed_classical",
+      "passed": true
+    },
+    {
+      "name": "unswitched:blank_probability:0.0",
+      "passed": true
+    },
+    {
+      "name": "unswitched:blank_probability:0.31",
+      "passed": true
+    },
+    {
+      "name": "unswitched:blank_probability:1.5707963267948966",
+      "passed": true
+    },
+    {
+      "name": "unswitched:blank_probability:3.141592653589793",
+      "passed": true
+    },
+    {
+      "name": "same_pulse_twice_returns_blank_ray",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:all_Kraus_commute_energy",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:energy_intertwiner",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:unitary_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:generator_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:all_49_effects_compress_exactly",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:common_origin_label_carries_no_dark_state_information",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:1",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:3",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:4",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:5",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:6",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:full_energy_distribution:7",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:energy_initial",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:energy_success",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:energy_failure",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:energy_all_branches",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:waiting_has_no_phase_alignment_requirement:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:record_preserved_after_decoupling:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:waiting_has_no_phase_alignment_requirement:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:record_preserved_after_decoupling:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.09:separate_local_phase_is_not_invariant",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:all_Kraus_commute_energy",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:energy_intertwiner",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:unitary_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:generator_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:all_49_effects_compress_exactly",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:common_origin_label_carries_no_dark_state_information",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:1",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:3",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:4",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:5",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:6",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:full_energy_distribution:7",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:energy_initial",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:energy_success",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:energy_failure",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:energy_all_branches",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:waiting_has_no_phase_alignment_requirement:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:record_preserved_after_decoupling:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:waiting_has_no_phase_alignment_requirement:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:record_preserved_after_decoupling:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.03:separate_local_phase_is_not_invariant",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:all_Kraus_commute_energy",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:energy_intertwiner",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:unitary_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:generator_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:all_49_effects_compress_exactly",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:common_origin_label_carries_no_dark_state_information",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:0",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:1",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:3",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:4",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:5",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:6",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:full_energy_distribution:7",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:energy_initial",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:energy_success",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:energy_failure",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:energy_all_branches",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:waiting_has_no_phase_alignment_requirement:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:record_preserved_after_decoupling:0.73",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:waiting_has_no_phase_alignment_requirement:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:record_preserved_after_decoupling:5.2",
+      "passed": true
+    },
+    {
+      "name": "gamma=0.01:separate_local_phase_is_not_invariant",
+      "passed": true
+    },
+    {
+      "name": "classical_record_entropy_chain_rule",
+      "passed": true
+    },
+    {
+      "name": "redundant_common_origin_entropy",
+      "passed": true
+    }
+  ],
+  "boundary": [
+    "Local A phase readout or preservation of the original pure Dplus state",
+    "Microscopic/local implementation of the collective apparatus coupling",
+    "Autonomous pulse area, switching, memory isolation or hardware lifetime",
+    "Zero total apparatus cost merely because the bare energy transfer is zero",
+    "Autonomous creation of time, a time arrow, spacetime, particle masses or Route-F promotion"
+  ]
+}
