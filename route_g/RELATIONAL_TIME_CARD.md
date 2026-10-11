@@ -6,6 +6,17 @@ Authority: user-selected on 2026-09-23 after rereading the original
 
 ## Current direction
 
+G-R12 completion (2026-10-09): a new local occupation-dependent hopping
+C=i[K,D]/sqrt(2) realizes the desired preparation block while preserving
+joint translation and swap. The original density-contact obstruction is
+not a theorem about every interaction with these symmetries. The old
+Hamiltonian remains present during the full pulse tests, with controller
+work included. A finite 21-state mediator exposes leading Stark shifts
+and a high-energy switching residue even at high target fidelity.
+The new hopping quadrature, phase, compensation and timing are inputs;
+they are not derived Ei/Ed dynamics. See the
+[six-page derivation](tex/route_g_correlated_preparation.tex).
+
 G-R11 completion (2026-10-09): a relative-phase record now has an explicit
 energy-commuting instrument with a distinct blank and all failed outcomes.
 The 72-dimensional unitary ADDS a collective apparatus coupling to the
@@ -61,6 +72,8 @@ not prerequisites or inputs for the relational-time line.
 | n and s=alpha n in G-R9 | New update index and interpolation | Ordered update count is assumed, not derived time or a saved G-R2 record |
 | d in G-R11 | Relative outcome (s−r) mod 7 | Joint invariant phase record, not separate local timestamps, elapsed seconds or an event counter |
 | a in G-R11 | Integrated apparatus coupling | Supplied pulse area; pi/2 writes and pi restores blank, not a derived time variable |
+| D and C in G-R12 | Coincidence projector and local correlated hopping | New preparation controls, not Ed or a coordinate transformation |
+| Delta in G-R12 | Auxiliary configuration detuning | Fixed model-energy input; small auxiliary probability need not imply negligible energy |
 
 The source PDF's full hash remains
 d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e.
@@ -100,7 +113,12 @@ Its five pages were reread and visually inspected during the concept audit.
 
 ## Completion and next decision
 
-**Current G-R11 decision:** the finite invariant instrument exists, with
+**Current G-R12 decision:** local controlled preparation is possible;
+retaining all mediator branches changes the energy cost. Choose one physical
+controller/mediator or passing trigger, or close this as an effective
+controlled model. Do not infer autonomous event storage from high fidelity.
+
+**Preceding G-R11 decision:** the finite invariant instrument exists, with
 failure, energy conservation and measurement disturbance explicit. Keep
 it as a controlled effective model, or next select a physical trigger and
 self-decoupling mechanism. Do not hide an external time parameter inside

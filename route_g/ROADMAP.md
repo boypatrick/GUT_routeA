@@ -2,13 +2,13 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-10-09): G-R11 closes the finite energy-compatible
-preparation/relative-record instrument, with all failed outcomes and
-backreaction retained. The system action is unchanged; a new collective
-apparatus coupling and its controlled pulse are explicit additions.
-Next choose a physical trigger/self-decoupling mechanism if autonomous
-events remain the goal, or close this as an effective controlled model.
-Do not create another abstract prerequisite or a new parameter scan.
+Current priority (2026-10-09): G-R12 closes a local correlated-hopping
+preparation construction and an explicit finite mediator audit. The
+original contact is retained, but the new hopping, Stark compensation
+and imposed pulse are declared controls. High fidelity does not certify
+small switching energy: auxiliary branches remain in the energy ledger.
+Next choose one physical control implementation, or a passing trigger if
+autonomous events remain the aim. No new abstract prerequisite or broad scan.
 G-R4–G-R8 are retained physical comparison models. Their missing data and
 apparatus calibration are not prerequisites for this event-network line.
 No physical time, mass spectrum or universal density law is claimed.
@@ -31,6 +31,68 @@ structure and compatible exchange, without initially assuming physical
 space, seconds or a fitted density/slowdown function. G-R6–G-R8 assumed
 a metric: their successful algebra does not derive that metric or the
 source's Ei/Ed concept. Preserve, but demote, the apparatus mainline.
+
+### G-R12 — Local correlated preparation and finite mediator energy
+
+Status: **bounded-done for local-operator existence, full-contact pulse
+tests and finite-mediator accounting**. Autonomous control and a physical
+hardware/energy calibration remain **open**. Preceding G-R9–G-R11 and
+the retained G-R9b side branch were committed/pushed as `bcdbfb1` before
+this stage began; the new stage is not included in that checkpoint.
+
+1. **Correct the symmetry scope — proved.** Joint translation acts as a
+   scalar on the resonant triple. The density-contact family h(j−l) is
+   circulant, but translation symmetry alone does not imply this form.
+   The original rank-one 4/9 theorem is unchanged. G-R9b files are kept
+   intact; this clarification supersedes any broader reading of its prose.
+2. **A local added generator — constructed.** D=sum P_j tensor P_j,
+   K=L3(0) tensor I+I tensor L3(0), C=i[K,D]/sqrt(2). It is Hermitian,
+   swap and joint-translation invariant, and supported on 12 undirected
+   nearest-hop configuration edges. On the resonant triple it is the
+   required i(|11><A|−|A><11|), A=(|02>+|20>)/sqrt(2).
+   K is a NEW hopping quadrature: the old resonant H0 commutator gives
+   zero within this triple. Its phase/sign is not derived from symmetry.
+3. **Original contact retained — tested.** Use inherited g=0.1 and
+   alpha=0.25; fix n=25 before evaluating any gamma. Full nine-state
+   fidelities at gamma=0.09/0.03/0.01 are 0.997141/0.999601/0.999875.
+   All leakage and sudden on/off work are retained. This pulse does not
+   commute with the old full H; there is no free violation of the 2/3
+   energy-invariant preparation bound. Continued control loses the target.
+4. **Mediator and Stark term — explicit.** One auxiliary configuration
+   per allowed edge gives a 21-state model with E_aux=4+Delta. Eliminating
+   it gives -B†B/Delta=gC−sqrt(2)g(I+D), with a bounded low-energy Schur
+   remainder. Compensation +sqrt(2)gD is a separately declared term.
+   The three detunings 20/40/80 are fixed diagnostics, not pulse fits.
+5. **Small probability is not small energy — verified.** With compensation,
+   gamma=0.03 and Delta=80, unconditional F=0.996311, P_aux=0.00333585,
+   E_aux=0.280212 and net controller work=+0.263537. Without compensation
+   the effective F is only 0.951831. A suddenly switched effective model's
+   negative work cannot replace the full relay's positive work ledger.
+   No auxiliary exit is discarded or normalized away.
+6. **Existing readout reused — verified.** Swap symmetry leaves Dminus
+   unoccupied before readout. The G-R11 instrument therefore succeeds with
+   the unconditional preparation fidelity; auxiliary population counts
+   as failure. Its exact unread-success 57/82 versus 25/82 mixture remains.
+   Preparation, single-outlet transport and saved records stay distinct.
+
+189 new checks pass; **6,375/6,375 checks across 25 verifiers** pass.
+G-R9b and G-R11 code/card/result hashes remain unchanged. The six-page
+standalone TeX compiled in the built-in editor; exported PDF was visually
+reviewed on all pages. The cited cold-atom experiment supports the operator
+class, not these particular relays, coefficients or autonomous controls.
+
+**Next bounded physical choice:** a single smooth on/off protocol for a
+chosen mediator/control implementation, retaining compensation and high-energy
+work; or a passing trigger with explicit energy, reflection and return.
+Do not optimize hundreds of pulse shapes or add another prerequisite proof.
+The local-generator existence task is closed. No density-only time law,
+emergent seconds, irreversible arrow or Route-F gate is promoted.
+
+Artifacts: [card](data/CORRELATED_PREPARATION_CARD.json),
+[report](output/gr12_correlated_preparation.md),
+[code](code/verify_gr12_correlated_preparation.py),
+[TeX](tex/route_g_correlated_preparation.tex),
+[PDF](output/pdf/route_g_correlated_preparation.pdf).
 
 ### G-R11 — One preparation and one relative-phase record
 
@@ -76,7 +138,7 @@ the independently retained G-R9b side branch and predecessor hash checks.
 G-R10's code, card and JSON hashes are unchanged. The five-page TeX compiled
 in the built-in editor; exported PDF was visually checked on every page.
 
-**Next physical decision, not another mathematical gate:**
+**Historical next decision; G-R12 now supplies a controlled local preparation audit:**
 
 - Effective-model option: stop here with a controlled relational-clock
   measurement, and clearly retain its apparatus assumptions.
@@ -162,8 +224,8 @@ Artifacts: [card](data/RELATIONAL_READOUT_CARD.json),
 ### G-R9b — Paired channels and two ways to one outlet (side branch, 2026-10-09)
 
 Status: **bounded-done for the declared finite constructions**. Written in
-parallel with G-R10 by a separate session. It does not change the current
-G-R11 priority or its next choice.
+parallel with G-R10 by a separate session. Its density-contact scope is
+clarified by G-R12 without changing the original files or restricted results.
 
 1. **The extra outlet is structural — proved.** Flipping every link sign
    maps L to 4−L; on a 3-ring this adds pi to the loop phase, so

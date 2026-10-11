@@ -1,0 +1,31 @@
+{
+  "stage": "G-R12",
+  "date": "2026-10-09",
+  "status": "bounded local-operator and finite-mediator preparation audit; autonomous controller open",
+  "parent_card": "data/EVENT_NETWORK_CARD.json",
+  "system_action": "Retain full H_gamma=H0+gamma P_vertex0 tensor P_vertex0 at theta=pi/2",
+  "new_operator": "C=i[K,D]/sqrt(2), K=L3(0) tensor I+I tensor L3(0), D=sum_j P_j tensor P_j; add g*C during preparation only",
+  "locality": "Only one-ring nearest-neighbour hops across coincident/noncoincident configurations; graph locality, not derived physical space",
+  "control": "g inherited from G-R9 exchange_g; beta=asin(1/sqrt(3)); n=round(beta/(g*alpha)), same n for every gamma and mediator fixture",
+  "mediator_gamma": 0.03,
+  "mediator_detunings": [20.0, 40.0, 80.0],
+  "mediator_completion": "One auxiliary configuration state per 12 undirected allowed configuration edges; E_aux=4+Delta; Omega=sqrt(g*Delta/sqrt(2)); B_ex=Omega, B_ey=-g*Delta*C_xy/Omega for x<y",
+  "stark_term": "-B^dagger B/Delta=g*C-sqrt(2)*g*(I+D); optional explicit compensation +sqrt(2)*g*D, not silently omitted",
+  "switching": "Sudden on/hold/off at declared update boundary; initial auxiliary population zero; all auxiliary exits and controller work counted",
+  "source_scope": "Gorg et al. 2019 supports existence of density-assisted hopping with controllable phase in driven cold atoms, not this 21-state hardware, g sign, scales or autonomous timing",
+  "not_claimed": [
+    "A unique first-principles derivation of g, its phase, resonance or pulse duration",
+    "Density-density contacts alone implement C, or joint translation alone imposes the G-R9b 2/3 bound",
+    "Bare-system energy conservation during the added controlled pulse",
+    "Negligible auxiliary energy merely because its probability is small",
+    "An autonomous controller, physical clock scale, irreversible record, Ed law or Route-F promotion"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr9b_paired_channels.py": "4b19ed2ac375c9c36885cf3a4ac4f4f1fc8f9ec37e3b6e72c27757f2362a29d7",
+    "data/PAIRED_CHANNEL_CARD.json": "a4f23da7d4df344ce8f7c5b89a0ca2d21ec2938364535e9203cd9ffa382f1cad",
+    "output/gr9b_paired_channels.json": "e572bc5ca437b8fd20ce04c7d0416399ff2c62eb0a7e07a00681d5030019337a",
+    "code/verify_gr11_preparation_record.py": "c9dbd38bf180377e7efc0dc04778ae5796b30c5e634c6ae33596449317ece59b",
+    "data/PREPARATION_RECORD_CARD.json": "f0884b1c8169073649b76ae0249187e7fb02a144d6fe2dbda6534a4c18e0679f",
+    "output/gr11_preparation_record.json": "f32d2c661913c4b2c914dac4bf7fd98b27442534ed9ee06ab79c6cae3e26c722"
+  }
+}

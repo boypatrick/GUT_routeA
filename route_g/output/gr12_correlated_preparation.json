@@ -1,0 +1,900 @@
+{
+  "stage": "G-R12",
+  "summary": {
+    "checks": 189,
+    "passed": 189,
+    "failed": []
+  },
+  "g": 0.1,
+  "beta": 0.6154797086703875,
+  "updates": 25,
+  "duration": 6.25,
+  "ideal_duration": 6.154797086703875,
+  "direct": [
+    {
+      "gamma": 0.0,
+      "fidelity_unconditional": 0.9999093667912531,
+      "outside_triple_probability": 8.26931217583127e-31,
+      "initial_energy": 4.000000000000003,
+      "final_energy": 3.9999999999999782,
+      "work_on": 1.987587322874462e-18,
+      "work_off": 1.1862375382870407e-16,
+      "net_work_on_system": 1.2061134115157854e-16
+    },
+    {
+      "gamma": 0.09,
+      "fidelity_unconditional": 0.9971409471135643,
+      "outside_triple_probability": 0.00017868484086402476,
+      "initial_energy": 4.0100000000000025,
+      "final_energy": 4.000073920499066,
+      "work_on": 1.987587322874462e-18,
+      "work_off": -0.009926079500932418,
+      "net_work_on_system": -0.009926079500932416
+    },
+    {
+      "gamma": 0.03,
+      "fidelity_unconditional": 0.9996009156006764,
+      "outside_triple_probability": 1.9763619234917802e-05,
+      "initial_energy": 4.003333333333336,
+      "final_energy": 4.000002353689133,
+      "work_on": 1.987587322874462e-18,
+      "work_off": -0.0033309796442076594,
+      "net_work_on_system": -0.0033309796442076572
+    },
+    {
+      "gamma": 0.01,
+      "fidelity_unconditional": 0.999875084230211,
+      "outside_triple_probability": 2.1951762388098314e-06,
+      "initial_energy": 4.001111111111113,
+      "final_energy": 4.000000222512083,
+      "work_on": 1.987587322874462e-18,
+      "work_off": -0.0011108885990477194,
+      "net_work_on_system": -0.0011108885990477174
+    }
+  ],
+  "mediator": [
+    {
+      "compensated": false,
+      "delta": 20.0,
+      "effective_reference_fidelity": 0.9518314536425491,
+      "fidelity_unconditional": 0.935618134655661,
+      "auxiliary_probability": 0.02498814406322506,
+      "system_probability": 0.9750118559367713,
+      "auxiliary_energy": 0.5997154575174015,
+      "system_energy_unnormalized": 3.900436353380253,
+      "work_on": 0.0,
+      "work_off": 0.49681847756434117,
+      "net_work_on_full_model": 0.49681847756434117
+    },
+    {
+      "compensated": false,
+      "delta": 40.0,
+      "effective_reference_fidelity": 0.9518314536425491,
+      "fidelity_unconditional": 0.9443823069538385,
+      "auxiliary_probability": 0.012561670915535353,
+      "system_probability": 0.9874383290844702,
+      "auxiliary_energy": 0.5527135202835556,
+      "system_energy_unnormalized": 3.9501791620248135,
+      "work_on": 0.0,
+      "work_off": 0.49955934897501175,
+      "net_work_on_full_model": 0.49955934897501175
+    },
+    {
+      "compensated": false,
+      "delta": 80.0,
+      "effective_reference_fidelity": 0.9518314536425491,
+      "fidelity_unconditional": 0.9493559899821928,
+      "auxiliary_probability": 0.004289696529764924,
+      "system_probability": 0.9957103034702421,
+      "auxiliary_energy": 0.3603345085002536,
+      "system_energy_unnormalized": 3.983300493013905,
+      "work_on": 0.0,
+      "work_off": 0.3403016681807973,
+      "net_work_on_full_model": 0.3403016681807973
+    },
+    {
+      "compensated": true,
+      "delta": 20.0,
+      "effective_reference_fidelity": 0.9996009156006767,
+      "fidelity_unconditional": 0.9800350408757235,
+      "auxiliary_probability": 0.018830058262568734,
+      "system_probability": 0.9811699417374272,
+      "auxiliary_energy": 0.4519213983016496,
+      "system_energy_unnormalized": 3.9246889196066492,
+      "work_on": 0.0471404520791031,
+      "work_off": 0.3261365324958787,
+      "net_work_on_full_model": 0.3732769845749818
+    },
+    {
+      "compensated": true,
+      "delta": 40.0,
+      "effective_reference_fidelity": 0.9996009156006767,
+      "fidelity_unconditional": 0.990511387315002,
+      "auxiliary_probability": 0.008863025391759866,
+      "system_probability": 0.9911369746082537,
+      "auxiliary_energy": 0.3899731172374341,
+      "system_energy_unnormalized": 3.9645522584737276,
+      "work_on": 0.0471404520791031,
+      "work_off": 0.3040515902986788,
+      "net_work_on_full_model": 0.3511920423777819
+    },
+    {
+      "compensated": true,
+      "delta": 80.0,
+      "effective_reference_fidelity": 0.9996009156006767,
+      "fidelity_unconditional": 0.9963111170749308,
+      "auxiliary_probability": 0.0033358521337474947,
+      "system_probability": 0.9966641478662515,
+      "auxiliary_energy": 0.28021157923478957,
+      "system_energy_unnormalized": 3.986658622458453,
+      "work_on": 0.0471404520791031,
+      "work_off": 0.2163964162808158,
+      "net_work_on_full_model": 0.2635368683599189
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr9b_paired_channels.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/PAIRED_CHANNEL_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr9b_paired_channels.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr11_preparation_record.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/PREPARATION_RECORD_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr11_preparation_record.json",
+      "passed": true
+    },
+    {
+      "name": "density_is_projector",
+      "passed": true
+    },
+    {
+      "name": "current_Hermitian",
+      "passed": true
+    },
+    {
+      "name": "joint_translation",
+      "passed": true
+    },
+    {
+      "name": "swap_symmetry",
+      "passed": true
+    },
+    {
+      "name": "triple_closed_for_added_current",
+      "passed": true
+    },
+    {
+      "name": "exact_preparation_block",
+      "passed": true
+    },
+    {
+      "name": "old_resonant_kinetic_commutator_cannot_replace_K",
+      "passed": true
+    },
+    {
+      "name": "not_density_only",
+      "passed": true
+    },
+    {
+      "name": "translation_does_not_imply_circulant",
+      "passed": true
+    },
+    {
+      "name": "odd_dark_annihilated",
+      "passed": true
+    },
+    {
+      "name": "local_support:0:1",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:0:1",
+      "passed": true
+    },
+    {
+      "name": "local_support:0:2",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:0:2",
+      "passed": true
+    },
+    {
+      "name": "local_support:0:3",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:0:3",
+      "passed": true
+    },
+    {
+      "name": "local_support:0:6",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:0:6",
+      "passed": true
+    },
+    {
+      "name": "local_support:1:4",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:1:4",
+      "passed": true
+    },
+    {
+      "name": "local_support:2:8",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:2:8",
+      "passed": true
+    },
+    {
+      "name": "local_support:3:4",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:3:4",
+      "passed": true
+    },
+    {
+      "name": "local_support:4:5",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:4:5",
+      "passed": true
+    },
+    {
+      "name": "local_support:4:7",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:4:7",
+      "passed": true
+    },
+    {
+      "name": "local_support:5:8",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:5:8",
+      "passed": true
+    },
+    {
+      "name": "local_support:6:8",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:6:8",
+      "passed": true
+    },
+    {
+      "name": "local_support:7:8",
+      "passed": true
+    },
+    {
+      "name": "occupation_condition:7:8",
+      "passed": true
+    },
+    {
+      "name": "finite_Peierls_identity:0.37",
+      "passed": true
+    },
+    {
+      "name": "finite_Peierls_identity:1.5707963267948966",
+      "passed": true
+    },
+    {
+      "name": "ideal_exact_state",
+      "passed": true
+    },
+    {
+      "name": "ideal_area_response:0",
+      "passed": true
+    },
+    {
+      "name": "ideal_area_response:0.3",
+      "passed": true
+    },
+    {
+      "name": "ideal_area_response:0.6154797086703875",
+      "passed": true
+    },
+    {
+      "name": "ideal_area_response:0.7154797086703875",
+      "passed": true
+    },
+    {
+      "name": "ideal_area_response:2.186276035465284",
+      "passed": true
+    },
+    {
+      "name": "wrong_phase_is_not_a_coordinate_change",
+      "passed": true
+    },
+    {
+      "name": "integer_update_rounding",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:norm",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:improved_unconditional_preparation",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:hold_energy_conserved",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:on_work_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:complete_work_ledger",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:odd_dark_remains_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:dark_weight_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:GR11_success_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:GR11_backreaction_retained",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:fidelity_preserved_after_switch_off:1.7",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:fidelity_preserved_after_switch_off:13.0",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.0:continued_control_not_storage",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:norm",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:improved_unconditional_preparation",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:hold_energy_conserved",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:on_work_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:complete_work_ledger",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:odd_dark_remains_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:dark_weight_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:GR11_success_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:GR11_backreaction_retained",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:fidelity_preserved_after_switch_off:1.7",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:fidelity_preserved_after_switch_off:13.0",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:continued_control_not_storage",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:not_full_bare_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.09:old_invariant_unitary_bound",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:norm",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:improved_unconditional_preparation",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:hold_energy_conserved",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:on_work_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:complete_work_ledger",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:odd_dark_remains_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:dark_weight_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:GR11_success_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:GR11_backreaction_retained",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:fidelity_preserved_after_switch_off:1.7",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:fidelity_preserved_after_switch_off:13.0",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:continued_control_not_storage",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:not_full_bare_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.03:old_invariant_unitary_bound",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:norm",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:improved_unconditional_preparation",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:hold_energy_conserved",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:on_work_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:complete_work_ledger",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:odd_dark_remains_zero",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:dark_weight_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:GR11_success_is_fidelity",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:GR11_backreaction_retained",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:fidelity_preserved_after_switch_off:1.7",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:fidelity_preserved_after_switch_off:13.0",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:continued_control_not_storage",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:not_full_bare_energy_conserving",
+      "passed": true
+    },
+    {
+      "name": "direct:gamma=0.01:old_invariant_unitary_bound",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=20.0:aux_energy_not_neglected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=40.0:aux_energy_not_neglected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=False:Delta=80.0:aux_energy_not_neglected",
+      "passed": true
+    },
+    {
+      "name": "compensated_effective_matches_direct",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=20.0:aux_energy_not_neglected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=40.0:aux_energy_not_neglected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:twelve_auxiliary_edges",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:SW_hopping_AND_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:degree_controls_Stark",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:exponential_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:hold_energy",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:all_probabilities",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:odd_sector_zero",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:unconditional_not_postselected",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:work_ledger_including_aux",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:on_work_analytic",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:record_complete_with_aux_failure",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:readout_success_unconditional",
+      "passed": true
+    },
+    {
+      "name": "mediator:comp=True:Delta=80.0:aux_energy_not_neglected",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "A unique first-principles derivation of g, its phase, resonance or pulse duration",
+    "Density-density contacts alone implement C, or joint translation alone imposes the G-R9b 2/3 bound",
+    "Bare-system energy conservation during the added controlled pulse",
+    "Negligible auxiliary energy merely because its probability is small",
+    "An autonomous controller, physical clock scale, irreversible record, Ed law or Route-F promotion"
+  ]
+}

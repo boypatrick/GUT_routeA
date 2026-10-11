@@ -8,6 +8,15 @@ All items start `open` unless marked otherwise.
 
 ## Independent Route G, not a new Route-F prerequisite (2026-09-22)
 
+G-R12 update (2026-10-09): an added local conditional-hopping interaction
+improves dark-clock preparation while retaining the old contact. The
+density-only obstruction is not a general translation-symmetry bound.
+The explicit mediator exposes leading Stark compensation and high-energy
+switching residue; neither the control nor its energy cost is free.
+189 new checks and all 6,375 checks across 25 verifiers pass. This closes
+the bounded operator/mediator audit, not autonomous event generation.
+No Route-F action, fit, Hessian, determinant or portal status changes.
+
 G-R11 update (2026-10-09): the finite energy-compatible relative-record
 instrument is complete with an explicitly added collective coupling.
 Success/failure and exact readout backreaction are retained; the 72×72

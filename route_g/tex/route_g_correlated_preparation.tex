@@ -1,0 +1,338 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\tr}{\operatorname{tr}}
+\title{Route G-R12: Local Correlated Preparation\\and the Energy Cost of Its Mediator}
+\author{An added controlled interaction; unchanged background contact}
+\date{9 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The G-R9b density-contact obstruction does not follow from translation
+symmetry alone. A local occupation-dependent hopping realizes the desired
+dark-clock preparation block without inserting a momentum projector.
+Keeping the old contact, one fixed pulse gives unconditional fidelities
+above $0.997$ in the inherited fixtures. A finite, 21-state mediator model
+then exposes a leading Stark term and high-energy switching residue.
+This is a controlled preparation construction, not autonomous event or
+time generation; its drive phase, pulse and compensation are explicit.
+\end{abstract}
+
+\section{A local interaction outside the density-only family}
+Use two distinguishable three-node rings, with $S\ket j=\ket{j+1\bmod3}$,
+and retain the full G-R10 system Hamiltonian
+\begin{align}
+ L_\theta&=2I-e^{\ii\theta/3}S-e^{-\ii\theta/3}S^\dagger,\\
+ H_\gamma&=H_0+\gamma P_0\otimes P_0,\quad
+ H_0=L_{\pi/2}\otimes I+I\otimes L_{\pi/2}.\label{original}
+\end{align}
+All nine product states remain present. In the site basis define
+\begin{equation}
+ D=\sum_{j=0}^2 P_j\otimes P_j,\quad
+ K=L_0\otimes I+I\otimes L_0,\qquad C=\frac{\ii}{\sqrt2}[K,D].\label{local}
+\end{equation}
+$D$ detects coincidence, not an external density or Chen's $E_d$.
+For configurations $x=(j,l)$ and $y=(j',l')$, put $d_x=\delta_{jl}$.
+Then
+\begin{equation}
+ C_{xy}=\frac{\ii}{\sqrt2}K_{xy}(d_y-d_x).\label{edges}
+\end{equation}
+Thus $C$ contains only single-ring nearest-neighbour hops which change
+coincidence. There are 12 undirected edges (24 directed entries), not
+an arbitrary projector onto selected Fourier modes. Graph locality is
+not a derivation of physical space. $C=C^\dagger$ because $[K,D]$ is
+anti-Hermitian. Both $K$ and $D$ commute with joint translation
+$\mathsf T=S\otimes S$ and the swap $\mathsf X$, so $C$ does too.
+
+$K$ is a \emph{new zero-flux hopping quadrature}, not the existing
+$H_0$. It is not generated merely by retiming the original contact.
+We add $gC$ during preparation and account for its switching separately.
+
+\newpage
+\section{Exact preparation block and the precise symmetry correction}
+Let $F_{jk}=e^{2\pi\ii jk/3}/\sqrt3$ and use the fixed Fourier basis.
+The joint-translation sector $a+b=2\bmod3$ is exactly
+$\mathcal T=\operatorname{span}(\ket{02},\ket{11},\ket{20})$.
+Writing $\Pi$ for its projector, direct Fourier transformation gives
+\begin{equation}
+ K_{\mathcal T}=\operatorname{diag}(3,6,3),\quad
+ D_{\mathcal T}=\frac13\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix},\quad
+ C_{\mathcal T}=\frac1{\sqrt2}
+ \begin{pmatrix}0&-\ii&0\\\ii&0&\ii\\0&-\ii&0\end{pmatrix}.\label{block}
+\end{equation}
+No coupling leaves this sector under $C$. Set
+\begin{equation}
+ \ket M=\ket{11},\quad \ket A=\frac{\ket{02}+\ket{20}}{\sqrt2},\quad
+ \ket{D_+}=\frac1{\sqrt3}\ket A-\sqrt{\frac23}\ket M.
+\end{equation}
+Then $C_{\mathcal T}=\ii(\ket M\bra A-\ket A\bra M)$ and
+$H_{0,\mathcal T}=4I$. Hence, for $\gamma=0$ and up to an overall phase,
+\begin{equation}
+ e^{-\ii s(H_0+gC)}\ket M
+ =\cos(gs)\ket M-\sin(gs)\ket A,\quad
+ \beta=\arcsin(1/\sqrt3),\quad gs_* =\beta,\label{prep}
+\end{equation}
+which equals $-\ket{D_+}$ at $s_*$. For any area $a=gs$,
+\begin{equation}
+ F_0(a)=\cos^2(a-\beta),\qquad F_0(-\beta)=1/9.\label{area}
+\end{equation}
+The coupling sign is therefore physical with the original state and
+readout held fixed. At $a=\beta+\pi/2$ the target fidelity vanishes:
+continued control is not storage.
+
+\paragraph{What G-R9b does and does not rule out.}
+Its $h(j-l)$ density contacts give circulant blocks and conserve their
+common bright component. Equation~\eqref{block} is not circulant, even
+though it commutes with $\mathsf T$ and $\mathsf X$. Joint translation
+acts as a scalar throughout $\mathcal T$, so it cannot force a particular
+matrix within that sector. The $2/3$ obstruction therefore applies to
+the specified contact family, not to every translation-invariant
+interaction. The old rank-one $4/9$ bound remains valid and unchanged.
+Also $\Pi[H_0,D]\Pi=0$: replacing the new $K$ by the old resonant kinetic
+term would remove precisely the desired block.
+
+An exact occupation-dependent Peierls identity further characterizes
+the new operator. For $K_\chi=e^{\ii\chi D}K e^{-\ii\chi D}$,
+\begin{equation}
+ C=-\frac{K_\chi-K_{-\chi}}{2\sqrt2\sin\chi},\qquad\sin\chi\ne0.\label{peierls}
+\end{equation}
+It follows entry by entry since $d_x-d_y\in\{0,\pm1\}$. Adding this
+difference while retaining $H_0$ is a new interaction. Conjugating every
+state, operator and probe together would instead be only a basis change.
+
+\newpage
+\section{Keep the original contact and count the controlled pulse}
+The actual direct-pulse test uses $H_{\rm on}=H_\gamma+gC$, not the
+isolated two-state block. Inherited parameters are $g=0.1$ and
+$\alpha=0.25$ per assumed update. Before evaluating any $\gamma$, fix
+\begin{equation}
+ n=\operatorname{round}\frac{\beta}{g\alpha}=25,\qquad
+ s_f=n\alpha=6.25\quad(s_*=6.15479709\ldots).
+\end{equation}
+There is no pulse optimization for individual fixtures. $s$ remains
+the declared evolution parameter, not physical seconds. Exact $9\times9$
+exponentials give the following \emph{unconditional} results:
+\begin{center}
+\begin{tabular}{rrrr}\toprule
+$\gamma$ & $F_D$ & probability outside $\mathcal T$ & net work on system\\\midrule
+0 & 0.999909367 & 0 & 0\\
+0.09 & 0.997140947 & $1.78685\,10^{-4}$ & $-0.00992608$\\
+0.03 & 0.999600916 & $1.97636\,10^{-5}$ & $-0.00333098$\\
+0.01 & 0.999875084 & $2.19518\,10^{-6}$ & $-0.00111089$\\\bottomrule
+\end{tabular}
+\end{center}
+The original vertex contact breaks the sector closure, so leakage is
+retained rather than projected away. During the hold, the expectation
+of $H_{\rm on}$ is constant. Sudden switching gives the exact ledger
+\begin{align}
+ W_{\rm on}&=g\bra M C\ket M=0,\quad
+ W_{\rm off}=-g\bra{\psi_f}C\ket{\psi_f},\\
+ \langle H_\gamma\rangle_f-\langle H_\gamma\rangle_i
+ &=W_{\rm on}+W_{\rm off},\qquad
+ \langle H_\gamma\rangle_i=4+\gamma/9.\label{work-direct}
+\end{align}
+Negative work means energy is delivered to the controller. It does not
+mean that the pulse apparatus, switching precision or resetting is free.
+The Hamiltonian before and after the pulse is the same $H_\gamma$.
+
+\paragraph{Why this does not contradict the old energy bound.}
+For the inherited positive $\gamma$ fixtures, the $E=4$ eigenspace is
+$P_D=\ket{D_+}\bra{D_+}+\ket{D_-}\bra{D_-}$. Any system-only unitary
+commuting with $H_\gamma$ preserves its weight, so
+\begin{equation}
+ [U,H_\gamma]=0\quad\Longrightarrow\quad
+ |\bra{D_+}U\ket M|^2\le\bra M P_D\ket M=2/3.
+\end{equation}
+Our pulse is not such a unitary; the full work ledger is essential.
+An autonomous energy receiver would have to match the full energy
+distribution, not merely its mean.
+
+\paragraph{Connection to the existing record.}
+Swap symmetry leaves the antisymmetric $D_-$ amplitude zero. Thus the
+unchanged G-R11 reader now succeeds with probability exactly $F_D$,
+not $2/3$. Conditional on success its unread output is still
+$(57/82)\ket{D_+}\bra{D_+}+(25/82)\ket{D_-}\bra{D_-}$.
+The measurement disturbance has not disappeared. After pulse removal,
+$F_D$ stays constant because $D_+$ is an eigenstate of $H_\gamma$;
+this does not make the entire imperfect output state stationary.
+
+\newpage
+\section{A finite local mediator, including its leading Stark term}
+To check more than a prescribed effective operator, introduce one
+auxiliary configuration state for each of the 12 undirected edges in
+Eq.~\eqref{edges}. These are explicit additional degrees of freedom,
+initially empty, with common energy $4+\Delta$. For edge $e=(x,y)$,
+$x<y$, choose
+\begin{equation}
+ B_{ex}=\Omega,\quad B_{ey}=-\frac{g\Delta C_{xy}}{\Omega},\quad
+ \Omega=\sqrt{\frac{g\Delta}{\sqrt2}},\qquad B_{ez}=0\ (z\ne x,y).
+\end{equation}
+Both nonzero amplitudes have modulus $\Omega$. Their relative phase
+is supplied; the construction does not derive its sign from symmetry.
+The full $21\times21$ hold Hamiltonian is
+\begin{equation}
+ \mathcal H_{\rm on}=
+ \begin{pmatrix}H_\gamma+V_c&B^\dagger\\B&(4+\Delta)I_{12}\end{pmatrix},
+ \quad
+ \mathcal H_{\rm off}=H_\gamma\oplus(4+\Delta)I_{12}.\label{relay}
+\end{equation}
+Every auxiliary exit is retained in the exact propagation.
+
+Eliminating auxiliaries from the eigenvalue equation gives the exact
+energy-dependent Schur operator
+\begin{align}
+ H_{\rm low}(E)&=H_\gamma+V_c-
+       \frac{B^\dagger B}{\Delta-(E-4)},\\
+ H_{\rm low}(E)&=H_\gamma+V_c-\frac{B^\dagger B}{\Delta}+R(E),\quad
+ \|R(E)\|\le\frac{\|B^\dagger B\||E-4|}
+ {\Delta(\Delta-|E-4|)}\quad(|E-4|<\Delta).
+\end{align}
+This controlled low-energy expansion alone does not certify a suddenly
+switched initial state. The diagonal terms already matter at leading
+order. A coincident configuration has four mediator edges, a
+noncoincident one two. Consequently,
+\begin{equation}
+ -\frac{B^\dagger B}{\Delta}
+       =gC-\sqrt2g(I+D).\label{stark}
+\end{equation}
+The off-diagonal equality follows from
+$-B_{ex}^*B_{ey}/\Delta=gC_{xy}$; the degree count gives the diagonal.
+Thus $-\sqrt2gD$ is not a higher-order nuisance that can be omitted.
+An explicitly additional compensation
+\begin{equation}
+ V_c=+\sqrt2gD\label{compensation}
+\end{equation}
+cancels it to this order, leaving the irrelevant low-sector identity
+shift $-\sqrt2gI$. The compensation coefficient is derived from the
+balanced mediator couplings, not fitted to a desired final fidelity.
+
+Density-assisted hopping with controllable Peierls phases has been
+realized using driven cold atoms~\cite{gorg}. This supports the physical
+operator class, not our particular 12 auxiliary states, compensation,
+numerical scales, or autonomous implementation. The construction here
+is a finite mediator candidate with local edge support, not a completed
+laboratory device or unique first-principles action.
+
+\newpage
+\section{High-energy residue changes the physical cost}
+Fix $\gamma=0.03$, the same $g=0.1$ and the same 25-update pulse.
+The three declared detunings test the mediator, not a fit of masses or
+pulse durations. Without compensation, the effective target fidelity
+is $0.95183145$; with compensation it is $0.99960092$. The full model gives
+\begin{center}\small
+\begin{tabular}{crrrrr}\toprule
+$V_c$ present & $\Delta$ & full $F_D$ & $P_{\rm aux}$ & $E_{\rm aux}$ & $W_{\rm net}$\\\midrule
+no & 20 & 0.93561813 & 0.0249881 & 0.599715 & 0.496818\\
+no & 40 & 0.94438231 & 0.0125617 & 0.552714 & 0.499559\\
+no & 80 & 0.94935599 & 0.0042897 & 0.360335 & 0.340302\\
+yes & 20 & 0.98003504 & 0.0188301 & 0.451921 & 0.373277\\
+yes & 40 & 0.99051139 & 0.00886303 & 0.389973 & 0.351192\\
+yes & 80 & 0.99631112 & 0.00333585 & 0.280212 & 0.263537\\\bottomrule
+\end{tabular}
+\end{center}
+Here $F_D=|(\bra{D_+},0_{12})\Psi_f|^2$, not a fidelity
+renormalized after rejecting auxiliaries, and
+\begin{equation}
+ E_{\rm aux}=(4+\Delta)P_{\rm aux},\qquad
+ P_{\rm sys}+P_{\rm aux}=1.
+\end{equation}
+With $\mathcal V=\mathcal H_{\rm on}-\mathcal H_{\rm off}$, the complete
+switching ledger is
+\begin{align}
+ W_{\rm on}&=\langle\Psi_i|\mathcal V|\Psi_i\rangle
+ =\begin{cases}\sqrt2g/3&\text{with compensation},\\0&\text{without},\end{cases}\\
+ W_{\rm off}&=-\langle\Psi_f|\mathcal V|\Psi_f\rangle,\\
+ W_{\rm net}&=W_{\rm on}+W_{\rm off}
+ =\langle\mathcal H_{\rm off}\rangle_f
+  -\langle\mathcal H_{\rm off}\rangle_i.\label{relay-work}
+\end{align}
+The expectation of $\mathcal H_{\rm on}$ is conserved throughout the
+hold. Thus there is no missing energy: the controller supplies the
+positive net work displayed here. In the compensated $\Delta=80$ case,
+only about $0.334\%$ remains auxiliary, yet it carries energy $0.2802$
+(excess above the common energy 4 is $\Delta P_{\rm aux}=0.2669$).
+The direct effective-pulse work $-0.003331$ cannot replace this ledger.
+
+The origin is the sudden boundary. In the frame shifted by energy 4,
+writing the system and auxiliary amplitudes as $a(s),b(s)$ gives exactly
+\begin{equation}
+ b(s)=-\ii\int_0^s e^{-\ii\Delta(s-u)}B a(u)\,du.
+\end{equation}
+The dressed low-energy component and a rapidly oscillating boundary
+component are both present. Since $\|B\|$ scales as $\sqrt{g\Delta}$,
+an auxiliary probability of order $g/\Delta$ can carry energy of order
+$g$. Small population alone supplies no small-energy bound. This is
+not a claim of a monotonic or universal asymptotic coefficient.
+
+Extending the existing readout by assigning every auxiliary branch to
+failure retains total probability one. Its success probability remains
+the unconditional $F_D$ in the table. No bath, unreported sink or
+postselected energy accounting has been introduced.
+
+\newpage
+\section{Physical interpretation and the next decision}
+\paragraph{Three tasks must remain separate.}
+Transport to a single outlet, coherent clock preparation and durable
+event recording have different criteria. G-R9b's chiral transfer reaches
+$\ket{02}$, a product state whose remote conditional density matrix
+$\rho_{B|\phi}=\ket2\bra2$ does not vary with A's phase reading. Its full
+cycle returns to the input after $3t_*$; direction is not irreversibility.
+The prepared $D_+$ instead supports G-R10's nontrivial conditional orbit.
+Neither construction alone generates an autonomous saved event.
+
+The other scope correction concerns carriers: propagation does not
+require a gapless band. For example,
+$E(k)=\Delta_c+2J(1-\cos k)$ has $v_g=2J\sin k/\hbar\ne0$ despite
+$\Delta_c>0$ (unit lattice spacing). This example does not derive a
+spatial network or a passing trigger; it only rejects a needless
+gaplessness prerequisite.
+
+\paragraph{What is established.}
+Equations~\eqref{local}--\eqref{block} realize the preparation generator
+by local conditional hopping rather than a hand-inserted mode projector.
+The original contact is retained in all actual nine-state fixtures.
+Equations~\eqref{relay}--\eqref{relay-work} give an explicit finite relay,
+its Stark compensation and an all-channel energy ledger. The high
+fidelity is a model prediction, not measured hardware performance.
+The inherited ring flux, new hopping quadrature and phase, balanced
+relay amplitudes, auxiliary detuning, pulse and controller remain
+physical inputs. Locality and symmetry permit them but do not select
+them uniquely. This is not an unconditional first-principles derivation.
+
+\paragraph{A bounded next choice.}
+The local-operator existence and finite-mediator audit can close here.
+For a controlled realization, choose one physical mediator/control
+implementation and test a single smooth on/off protocol, counting
+auxiliary energy and the compensation work together. For autonomous
+events, replace the imposed pulse by a specified passing trigger and
+include reflection, return and its energy. These are alternatives, not
+new mandatory papers before using the bounded result. No new mass fit,
+universal $E_d$ law, time arrow or Route-F promotion follows.
+
+\paragraph{Reproducibility.}
+The new verifier has 189 passing checks: local support, exact block,
+symmetries, finite Peierls identity, original-contact dynamics, full
+work ledgers, Stark terms, and all auxiliary/readout branches.
+Matrix exponentiation and spectral propagation agree independently.
+The G-R9b and G-R11 code, cards and result hashes are pinned unchanged;
+their valid restricted statements are preserved, not rewritten as new
+claims. The source files are under Route G:
+\begin{quote}\small\ttfamily
+data/CORRELATED\_PREPARATION\_CARD.json\\
+code/verify\_gr12\_correlated\_preparation.py\\
+output/gr12\_correlated\_preparation.json
+\end{quote}
+
+\begin{thebibliography}{9}\small
+\bibitem{gorg} F. G\"org et al.,
+\emph{Realization of density-dependent Peierls phases to engineer
+quantized gauge fields coupled to ultracold matter},
+Nature Physics \textbf{15}, 1161--1167 (2019),
+\href{https://arxiv.org/abs/1812.05895}{arXiv:1812.05895},
+\href{https://doi.org/10.1038/s41567-019-0615-4}{doi:10.1038/s41567-019-0615-4}.
+\end{thebibliography}
+\end{document}

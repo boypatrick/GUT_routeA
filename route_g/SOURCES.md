@@ -3,6 +3,25 @@
 Reviewed: 2026-10-09.
 Current mainline: event-network candidate; metric clocks and KK/scattering retained as controls.
 
+## G-R12 local occupation-dependent hopping and mediator audit
+
+- F. Görg, K. Sandholzer, J. Minguzzi, R. Desbuquois, M. Messer and T. Esslinger,
+  [Realization of density-dependent Peierls phases to engineer quantized gauge fields coupled to ultracold matter](https://arxiv.org/abs/1812.05895),
+  [Nature Physics 15, 1161–1167 (2019)](https://doi.org/10.1038/s41567-019-0615-4).
+  The primary abstract describes driven cold-atom density-assisted tunnelling
+  with controllable amplitude/phase and measured hopping phases. It supports
+  the physical operator class, not our ring flux, g sign, twelve relays,
+  compensation, pulse timing, physical scale or autonomous implementation.
+
+The exact C=i[K,D]/sqrt(2) local construction, finite Peierls identity,
+symmetry-scope counterexample, fixed-pulse full-contact tests, 21-state
+auxiliary model, derived Stark compensation and complete switching ledger
+are calculations in G-R12, not attributed to the experimental paper.
+K is a new zero-flux hopping quadrature. The old resonant H0 commutator
+cannot replace it. High fidelity is not an observation or a bound on the
+energy of rare auxiliary branches. No first-principles coefficient selection
+or time-emergence claim is made. The G-R9b source files remain unchanged.
+
 ## G-R11 conserved readout, phase resources and memory accounting
 
 - I. Marvian and R. W. Spekkens,

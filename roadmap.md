@@ -4,6 +4,20 @@ Last updated: 2026-10-09
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
 
+**G-R12 (2026-10-09):** local correlated-hopping preparation and finite
+mediator audit are bounded-done. C=i[K,D]/sqrt(2) shows that G-R9b's
+density-contact restriction does not follow from translation symmetry
+alone. Keep the original contact and fix the same 25-update pulse: full
+nine-state target fidelities exceed 0.997. A 21-state relay completion
+requires a leading Stark compensation and an all-channel energy ledger;
+at Delta=80, 0.334% auxiliary probability still carries energy 0.2802.
+High fidelity does not establish negligible control cost or autonomy.
+189 new checks and all 6,375 checks across 25 verifiers pass; six-page
+PDF compiled and visually reviewed. Next select one physical smooth
+control protocol or a passing trigger; no mass fit or Route-F promotion.
+The preceding work was committed/pushed as `bcdbfb1` before G-R12.
+See [G-R12 derivation](route_g/tex/route_g_correlated_preparation.tex).
+
 **G-R11 (2026-10-09):** the finite preparation/relative-record instrument
 is now bounded-done. An explicit new collective apparatus coupling gives
 a 72-dimensional energy-conserving unitary, distinct blank/failure labels,
