@@ -2,13 +2,13 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-10-09): G-R12 closes a local correlated-hopping
-preparation construction and an explicit finite mediator audit. The
-original contact is retained, but the new hopping, Stark compensation
-and imposed pulse are declared controls. High fidelity does not certify
-small switching energy: auxiliary branches remain in the energy ledger.
-Next choose one physical control implementation, or a passing trigger if
-autonomous events remain the aim. No new abstract prerequisite or broad scan.
+Current priority (2026-10-11): G-R13 completes ONE smooth pulse on the
+unchanged G-R12 21-state mediator. At the same peak and leading effective
+area it improves fidelity and terminal residue while lowering net and
+positive supplied work. Duration and absolute exchanged work INCREASE.
+The bounded test is closed; hardware cost and autonomy remain unproved.
+Next choose controller calibration or a passing trigger if needed;
+no new abstract prerequisite, pulse optimization or broad scan.
 G-R4–G-R8 are retained physical comparison models. Their missing data and
 apparatus calibration are not prerequisites for this event-network line.
 No physical time, mass spectrum or universal density law is claimed.
@@ -32,13 +32,77 @@ space, seconds or a fitted density/slowdown function. G-R6–G-R8 assumed
 a metric: their successful algebra does not derive that metric or the
 source's Ei/Ed concept. Preserve, but demote, the apparatus mainline.
 
+### G-R13 — One smooth pulse, compensated full-model energy ledger (2026-10-11)
+
+Status: **bounded-done for the requested single-pulse comparison**.
+G-R12 was committed and pushed first as `7d6d425` on
+`codex/route-f-invariant-control`. G-R13 is subsequent local work and is
+not included in that checkpoint. No physical implementation is invented.
+
+1. **One pulse, fixed model.** Keep gamma=.03, Delta=80 and g_peak=.1,
+   all 21 states, old contact, relay edges and phases. Choose only
+   f(s)=sin²(pi*s/T), B(s)=f B0, compensation=f² Vc0. Its compact extension
+   is C1, with f=f'=0 at both boundaries; not C-infinity. Set T=50/3 from
+   g integral(f²)=g tau=.625, tau=6.25. Same peak and effective area,
+   but 8/3 longer. No pulse, amplitude, detuning or timing optimization.
+   The continuous evolution parameter is supplied, not rounded to updates
+   or promoted to emergent seconds.
+2. **Why this can work.** The exact leading identity
+   -f² B0†B0/Delta+f² Vc0=g f² C−sqrt(2)g f² I fixes the compensation.
+   Two integrations by parts remove terminal boundary terms for the
+   exact auxiliary amplitude. This explains suppression without claiming
+   a uniform detuning theorem; actual dynamics remain the full 21 states.
+3. **Simultaneous improvement — computed, not postselected.**
+   F: .996311117 → .998120722; terminal P_aux: .003335852 → 5.02e-13;
+   E_aux: .280211579 → 4.22e-11. The mediator is active during the pulse:
+   sampled peak P_aux=.00184626. G-R11 still retains all failures and the
+   exact 57/82 versus 25/82 unread-success backreaction.
+4. **Full work, including compensation.** Integrate
+   P_B=f' <V_B> and P_c=2 f f' <Vc0>. W_B=−.0381709643,
+   W_c=+.0348565906; their sum −.00331437377 equals endpoint energy change.
+   The square reference is +.263536868. Separate-port positive input
+   decreases .263585530 → .171251419, so this is not just netting against
+   returned energy. First-law equality also holds throughout the pulse.
+5. **Tradeoff, not free control.** Returned work rises to .174565792;
+   absolute separate-port exchange rises .263634192 → .345817211.
+   Duration rises 6.25 → 16.6667. For the explicitly conditional cost
+   C=Wplus−eta Wminus+p0 T, smooth wins only if
+   p0 < .008864075 + .016753645 eta (model power, common 0≤eta≤1).
+   Actual overhead, waveform losses, initial-state preparation and reset
+   have not been calibrated. Negative net work is not zero apparatus cost.
+
+70/70 new checks pass; **6,447/6,447 checks across 26 verifiers** pass.
+G-R3/G-R4 reports gain only the two new verifier-preservation checks.
+The combined nine-page PDF compiled successfully and was visually
+reviewed on every page. Independent DOP853 tolerance refinement and a
+unitary two-exponential method resolve the tiny terminal residue; the
+1024/2048/4096-step refinements are NUMERICAL, not three physical pulses.
+The coarse ODE tolerance was tightened after its initial error exceeded
+1e-10; no physical parameter was changed. Parent G-R12 code/card/result
+hashes stay unchanged. Derivation is appended as Sections 7–9 to the SAME
+TeX, preserving the original six sections instead of opening another paper.
+
+**Next bounded choices:** calibrate a specific controller's supplied,
+returned and overhead energy against the criterion above; or, if autonomous
+events are the objective, specify a passing trigger with energy, reflection
+and return channels. Either choice needs a physical input. Do not launch
+more Gaussian/pulse scans, claim irreversible records, identify Ed or
+promote any Route-F gate. The requested one-pulse test is finished.
+
+Artifacts: [fixed pulse card](data/SMOOTH_SWITCHING_CARD.json),
+[results and work ledger](output/gr13_smooth_switching.md),
+[code](code/verify_gr13_smooth_switching.py),
+[same TeX, G-R13 addendum](tex/route_g_correlated_preparation.tex),
+[combined PDF](output/pdf/route_g_correlated_preparation.pdf).
+
 ### G-R12 — Local correlated preparation and finite mediator energy
 
 Status: **bounded-done for local-operator existence, full-contact pulse
 tests and finite-mediator accounting**. Autonomous control and a physical
 hardware/energy calibration remain **open**. Preceding G-R9–G-R11 and
 the retained G-R9b side branch were committed/pushed as `bcdbfb1` before
-this stage began; the new stage is not included in that checkpoint.
+this stage began. G-R12 itself was subsequently committed/pushed as
+`7d6d425` on 2026-10-11, before G-R13.
 
 1. **Correct the symmetry scope — proved.** Joint translation acts as a
    scalar on the resonant triple. The density-contact family h(j−l) is
@@ -81,7 +145,7 @@ standalone TeX compiled in the built-in editor; exported PDF was visually
 reviewed on all pages. The cited cold-atom experiment supports the operator
 class, not these particular relays, coefficients or autonomous controls.
 
-**Next bounded physical choice:** a single smooth on/off protocol for a
+**Historical next choice, now tested in G-R13 for the fixed mediator:** a single smooth on/off protocol for a
 chosen mediator/control implementation, retaining compensation and high-energy
 work; or a passing trigger with explicit energy, reflection and return.
 Do not optimize hundreds of pulse shapes or add another prerequisite proof.

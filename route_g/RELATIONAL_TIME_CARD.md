@@ -6,6 +6,18 @@ Authority: user-selected on 2026-09-23 after rereading the original
 
 ## Current direction
 
+G-R13 completion (2026-10-11): one sin² relay pulse with its square-law
+Stark compensation is tested on the unchanged 21-state model, fixing
+gamma=.03, Delta=80 and g_peak=.1. Same effective area and peak give an
+8/3 longer duration. Fidelity improves and endpoint residue, net work
+and positive input fall, but absolute energy exchange increases.
+Compensation work is explicitly positive, not free. A conditional
+controller-overhead threshold is stated; no apparatus is calibrated.
+The pulse is an imposed C1 function of the assumed continuous parameter,
+not autonomous Ei/Ed dynamics or a derivation of time. The bounded test
+is closed; the [G-R13 addendum](tex/route_g_correlated_preparation.tex)
+is saved in the same document as G-R12, committed first as `7d6d425`.
+
 G-R12 completion (2026-10-09): a new local occupation-dependent hopping
 C=i[K,D]/sqrt(2) realizes the desired preparation block while preserving
 joint translation and swap. The original density-contact obstruction is
@@ -15,7 +27,7 @@ work included. A finite 21-state mediator exposes leading Stark shifts
 and a high-energy switching residue even at high target fidelity.
 The new hopping quadrature, phase, compensation and timing are inputs;
 they are not derived Ei/Ed dynamics. See the
-[six-page derivation](tex/route_g_correlated_preparation.tex).
+[derivation, original Sections 1–6](tex/route_g_correlated_preparation.tex).
 
 G-R11 completion (2026-10-09): a relative-phase record now has an explicit
 energy-commuting instrument with a distinct blank and all failed outcomes.
@@ -74,6 +86,8 @@ not prerequisites or inputs for the relational-time line.
 | a in G-R11 | Integrated apparatus coupling | Supplied pulse area; pi/2 writes and pi restores blank, not a derived time variable |
 | D and C in G-R12 | Coincidence projector and local correlated hopping | New preparation controls, not Ed or a coordinate transformation |
 | Delta in G-R12 | Auxiliary configuration detuning | Fixed model-energy input; small auxiliary probability need not imply negligible energy |
+| f(s) and T in G-R13 | Prescribed smooth relay envelope and duration | Added continuous control, same effective area but longer time; not emergent seconds |
+| Wplus, Wminus in G-R13 | Positive supplied and returned control work | Model energy ledger, not actual dissipation, reset cost or calibrated hardware power |
 
 The source PDF's full hash remains
 d86c71cee1d61c1af2ec33b3084ff4ed626e8d05551bd5685327f9e821f47e7e.
@@ -113,7 +127,13 @@ Its five pages were reread and visually inspected during the concept audit.
 
 ## Completion and next decision
 
-**Current G-R12 decision:** local controlled preparation is possible;
+**Current G-R13 decision:** the requested one-pulse test is complete.
+If extending it, choose physical controller calibration (including
+duration overhead and recovery) or an autonomous trigger with all energy
+and return channels. Do not keep searching pulses by default or infer
+free control, a permanent record or an Ed law from small final residue.
+
+**Preceding G-R12 decision:** local controlled preparation is possible;
 retaining all mediator branches changes the energy cost. Choose one physical
 controller/mediator or passing trigger, or close this as an effective
 controlled model. Do not infer autonomous event storage from high fidelity.

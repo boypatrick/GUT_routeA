@@ -1,12 +1,23 @@
 # Route F Roadmap: Three-Layer Theory Program
 
 Created: 2026-07-13
-Last updated: 2026-10-09 (independent Route-G status only)
+Last updated: 2026-10-11 (independent Route-G status only)
 
 Status values: `open`, `in-progress`, `done`, `failed`, `permanently-open`.
 All items start `open` unless marked otherwise.
 
 ## Independent Route G, not a new Route-F prerequisite (2026-09-22)
+
+G-R13 update (2026-10-11): after checkpoint `7d6d425` was pushed, one
+smooth relay pulse on the fixed 21-state mediator improves preparation
+fidelity and lowers endpoint high-energy residue, net work and positive
+input, with compensation fully counted. Time and absolute energy
+throughput increase; actual hardware cost is conditional on an unmeasured
+overhead/recovery criterion. 70 new checks and all 6,447 checks across
+26 verifiers pass; no physical pulse scan.
+This closes only the requested controlled-model test. Controller calibration
+or a specified autonomous trigger is a next physical choice, not a Route-F
+prerequisite. No action, fit, Hessian, determinant or portal gate changes.
 
 G-R12 update (2026-10-09): an added local conditional-hopping interaction
 improves dark-clock preparation while retaining the old contact. The

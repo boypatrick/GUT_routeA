@@ -1,0 +1,37 @@
+{
+  "stage": "G-R13",
+  "date": "2026-10-11",
+  "status": "one fixed smooth pulse on the unchanged 21-state mediator; no pulse optimization",
+  "parent_card": "data/CORRELATED_PREPARATION_CARD.json",
+  "parent_result": "output/gr12_correlated_preparation.json",
+  "checkpoint_commit": "7d6d425d18d8a691aee434c6be6c5487e7e93d1f",
+  "gamma": 0.03,
+  "delta": 80.0,
+  "g_peak": 0.1,
+  "compensated": true,
+  "envelope": "f(s)=sin^2(pi*s/T) on [0,T], zero otherwise; B(s)=f(s) B0; Vc(s)=f(s)^2 Vc0",
+  "duration_rule": "T=(8/3)*tau_square, tau_square from G-R12; same peak and integral of effective g(s)=g_peak*f(s)^2, not same duration or integral of B(s)",
+  "regularity": "Compact C1 envelope: f and f' vanish at both boundaries; not C-infinity",
+  "comparison": "Only the compensated G-R12 gamma=.03, Delta=80 square pulse; all other detunings, amplitudes and shapes held outside this task",
+  "controller_ledger": "Integrate relay and compensation powers separately; report signed net work, common-bus positive work and separate-port positive/returned work. No heat or hardware overhead inferred.",
+  "continuous_control": "Use the already declared continuous evolution parameter; T is not an integer number of alpha=.25 updates and is not rounded or fitted",
+  "solver_checks": {
+    "dop853_rtol": 2e-12,
+    "dop853_atol": 2e-14,
+    "refined_rtol": 2e-13,
+    "refined_atol": 2e-15,
+    "cf4_steps": [1024, 2048, 4096],
+    "quadrature_points": [10001, 20001]
+  },
+  "not_claimed": [
+    "A scan, optimized pulse, uniform detuning theorem or robustness certification",
+    "Zero apparatus cost from negative net work or vanishing endpoint auxiliary population",
+    "Equal duration, equal total absolute work or equal physical controller dissipation",
+    "Autonomous switching, a physical energy/time calibration, irreversible records or an Ed law"
+  ],
+  "preserved_sha256": {
+    "code/verify_gr12_correlated_preparation.py": "359fce84cef83826e5dae800a98727a15d6f2687f30cf60e0200bb81a0193299",
+    "data/CORRELATED_PREPARATION_CARD.json": "5e28fdd226d9d069f71b7bcfd8a9ac08d4bedad74137ff39e12b0512d83380f2",
+    "output/gr12_correlated_preparation.json": "757969a51395c7998379c7cce99af57566e681997fcf4d76597b22d8152a98b6"
+  }
+}

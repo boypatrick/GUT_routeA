@@ -1,8 +1,26 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-10-09
+Last updated: 2026-10-11
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
+
+**G-R13 (2026-10-11):** G-R12 was committed/pushed first as `7d6d425`.
+On its unchanged gamma=.03, Delta=80, g=.1 21-state mediator, one sin²
+relay envelope with square-law compensation improves unconditional
+fidelity .996311117 → .998120722 and lowers terminal auxiliary probability
+.003335852 → 5.02e-13. Complete net work changes +.263536868 → −.003314374;
+separate-port positive input falls .263585530 → .171251419. Compensation
+work is included. Duration grows by 8/3 and absolute exchanged work rises:
+this is not a universal reduction of hardware cost or free preparation.
+70 new checks and all 6,447 checks across 26 verifiers pass. The combined
+nine-page PDF compiled and was visually reviewed; same-pulse solver
+refinements are not new pulse scans.
+The bounded test is closed. Next choose controller calibration against
+the explicit overhead criterion, or an autonomous passing trigger;
+no new abstract prerequisite, pulse optimization or Route-F promotion.
+Full derivation is appended to the original document, not a new paper.
+See [G-R13 addendum](route_g/tex/route_g_correlated_preparation.tex) and
+[current Route-G roadmap](route_g/ROADMAP.md).
 
 **G-R12 (2026-10-09):** local correlated-hopping preparation and finite
 mediator audit are bounded-done. C=i[K,D]/sqrt(2) shows that G-R9b's
@@ -13,8 +31,8 @@ requires a leading Stark compensation and an all-channel energy ledger;
 at Delta=80, 0.334% auxiliary probability still carries energy 0.2802.
 High fidelity does not establish negligible control cost or autonomy.
 189 new checks and all 6,375 checks across 25 verifiers pass; six-page
-PDF compiled and visually reviewed. Next select one physical smooth
-control protocol or a passing trigger; no mass fit or Route-F promotion.
+PDF compiled and visually reviewed. Its proposed smooth-protocol test is
+now addressed by G-R13; hardware choice and autonomous triggers remain open.
 The preceding work was committed/pushed as `bcdbfb1` before G-R12.
 See [G-R12 derivation](route_g/tex/route_g_correlated_preparation.tex).
 

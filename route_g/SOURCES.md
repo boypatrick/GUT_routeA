@@ -1,7 +1,20 @@
 # Route G sources and interpretation ledger
 
-Reviewed: 2026-10-09.
+Ledger updated: 2026-10-11. Last external-source review: 2026-10-09.
 Current mainline: event-network candidate; metric clocks and KK/scattering retained as controls.
+
+## G-R13 fixed smooth-pulse calculation, no new empirical input
+
+The model, coupling, detuning, input and target are inherited from G-R12.
+Only one prescribed sin² relay envelope and its derived f² compensation
+are tested, with duration fixed by equal leading effective area.
+The full work identity, boundary-term cancellation, terminal populations
+and conditional overhead criterion are calculations in the G-R13 addendum,
+not results attributed to the cold-atom experiment or new measurements.
+No new literature, calibrated controller, physical seconds, universal
+detuning law or optimized pulse is claimed. Numerical tolerance/grid
+refinements leave the physical waveform unchanged. The original six
+sections remain in the same TeX for provenance.
 
 ## G-R12 local occupation-dependent hopping and mediator audit
 

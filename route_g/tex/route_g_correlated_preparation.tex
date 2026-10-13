@@ -335,4 +335,184 @@ Nature Physics \textbf{15}, 1161--1167 (2019),
 \href{https://arxiv.org/abs/1812.05895}{arXiv:1812.05895},
 \href{https://doi.org/10.1038/s41567-019-0615-4}{doi:10.1038/s41567-019-0615-4}.
 \end{thebibliography}
+
+\newpage
+\section{G-R13 addendum: one fixed smooth switching pulse}
+\noindent\textit{11 October 2026. Sections 1--6 retain the G-R12 checkpoint;
+this addendum completes its single-pulse test, not a pulse search.}
+
+Fix the same 21-state model, $\gamma=0.03$, $\Delta=80$ and
+$g=0.1$. Write $B_0=B$ from Eq.~\eqref{relay} and define
+\begin{equation}
+ V_B=\begin{pmatrix}0&B_0^\dagger\\B_0&0\end{pmatrix},\qquad
+ V_{c,0}=(\sqrt2gD)\oplus0_{12}.
+\end{equation}
+Choose just one envelope, without changing the peak or optimizing its area:
+\begin{align}
+ f(s)&=\begin{cases}\sin^2(\pi s/T),&0<s<T,\\0,&\text{otherwise},\end{cases}
+ &\mathcal H(s)&=\mathcal H_{\rm off}+f(s)V_B+f(s)^2V_{c,0},\label{smooth-H}\\
+ \int_0^T gf(s)^2\,ds&=\frac{3gT}{8}=g\tau=0.625,
+ &\tau&=6.25,\qquad T=\frac83\tau=\frac{50}{3}.\label{smooth-area}
+\end{align}
+The initial state is $(F\otimes F)\ket{11}\oplus0_{12}$ as before.
+The envelope is compact $C^1$, not $C^\infty$: $f=f'=0$ at both ends.
+The continuously prescribed $s$ is an input, not derived physical time;
+$T/\alpha$ is not an integer and is not rounded to an update count.
+Equal area means equal \emph{leading effective preparation area}:
+$\int f\,ds=T/2$ is not the old relay-envelope area $\tau$.
+The duration therefore increases by $8/3$; equal duration is not claimed.
+
+\paragraph{Compensation must follow the square of the relay envelope.}
+Equation~\eqref{stark} gives the instantaneous leading low-energy identity
+\begin{equation}
+ -\frac{f^2 B_0^\dagger B_0}{\Delta}+f^2\sqrt2gD
+ =gf^2C-\sqrt2gf^2 I.\label{smooth-stark}
+\end{equation}
+A compensation proportional to $f$ would not cancel the Stark term.
+Equation~\eqref{smooth-stark} explains the chosen area but does not replace
+time-ordered full-model propagation. In particular, finite-gap and
+time-dependent corrections are not discarded from the calculation.
+The low-sector identity shift cannot be removed from the physical work
+ledger. Only a \emph{constant common} $4I_{21}$ is subtracted for numerical
+propagation; all reported work uses the full Hamiltonian.
+
+\paragraph{Why the terminal residue can decrease.}
+In that common rotating frame let $a,b$ be the nine low and twelve
+auxiliary amplitudes. With $A(u)=f(u)B_0a(u)$ and $b(0)=0$,
+\begin{align}
+ b(T)&=-\ii\int_0^T e^{-\ii\Delta(T-u)}A(u)\,du
+      =\frac{\ii}{\Delta^2}\int_0^T e^{-\ii\Delta(T-u)}A''(u)\,du,\\
+ \|b(T)\|&\le\frac1{\Delta^2}\int_0^T\|A''(u)\|\,du.\label{boundary-bound}
+\end{align}
+Two integrations by parts have no boundary terms because $A=A'=0$
+at the endpoints. The abrupt pulse does not have this cancellation.
+This is an exact identity for the fixed full solution, not a uniform
+large-$\Delta$ theorem: a uniform derivative bound would also be needed
+for such a claim. The mediator can be occupied during the pulse and
+return almost entirely before switch-off; it has not been projected out.
+
+\newpage
+\section{Full compensation and switching-work ledger}
+For the normalized solution $\ii\dot\Psi=\mathcal H(s)\Psi$,
+the commutator contribution cancels in the energy derivative:
+\begin{align}
+ \frac{d}{ds}\langle\mathcal H\rangle
+ &=\langle\dot{\mathcal H}\rangle=P_B+P_c,\\
+ P_B&=\dot f\langle V_B\rangle,\qquad
+ P_c=2f\dot f\langle V_{c,0}\rangle,\qquad
+ W_j=\int_0^T P_j\,ds,\\
+ W_{\rm net}&=W_B+W_c
+ =\langle\mathcal H_{\rm off}\rangle_f-
+   \langle\mathcal H_{\rm off}\rangle_i.\label{smooth-work}
+\end{align}
+There are no additional endpoint quenches and no heat term. Both
+control channels are counted, including energy delivered back to them.
+To distinguish signed work from supplied energy, with $[x]_+=\max(x,0)$,
+define separate-port and common-bus quantities
+\begin{align}
+ W_+^{\rm sep}&=\int_0^T([P_B]_++[P_c]_+)\,ds,&
+ W_-^{\rm sep}&=\int_0^T([-P_B]_++[-P_c]_+)\,ds,\\
+ W_+^{\rm bus}&=\int_0^T[P_B+P_c]_+\,ds,&
+ W_-^{\rm bus}&=\int_0^T[-P_B-P_c]_+\,ds.
+\end{align}
+Either convention obeys $W_+-W_-=W_{\rm net}$. The common-bus convention
+allows instantaneous transfer between controllers; the separate-port
+positive input does not assume that saving. The square reference is
+computed per port at each of its two quenches, with the state unchanged
+across the quench. There is no work during its constant hold.
+
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+Quantity (model units) & Compensated square & One smooth pulse\\\midrule
+Unconditional $F_D$ & 0.996311117 & 0.998120722\\
+Endpoint $P_{\rm aux}$ & $3.335852\,10^{-3}$ & $5.02\,10^{-13}$\\
+Endpoint $(4+\Delta)P_{\rm aux}$ & 0.280211579 & $4.22\,10^{-11}$\\
+$W_{\rm net}$ & $+0.263536868$ & $-0.003314374$\\
+$W_+^{\rm sep}$ & 0.263585530 & 0.171251419\\
+$W_-^{\rm sep}$ & 0.000048662 & 0.174565792\\
+$W_+^{\rm sep}+W_-^{\rm sep}$ & 0.263634192 & 0.345817211\\
+Duration & 6.25 & 16.666666667\\\bottomrule
+\end{tabular}
+\end{center}
+For the smooth pulse, the explicit components are
+\begin{equation}
+ W_B=-0.0381709643,\qquad W_c=+0.0348565906.
+\end{equation}
+Thus compensation is not free. The common-bus positive/returned work is
+$0.132890641/0.136205015$. The sampled maximum auxiliary probability
+during the pulse is $0.00184626$, not its terminal value. Energy above
+the common level 4 at the endpoint is $\Delta P_{\rm aux}=4.02\,10^{-11}$;
+the net work is independent of that energy-origin convention.
+
+All 21 amplitudes contribute to normalization and energy. The fixed
+G-R11 reader assigns auxiliaries to failure; success remains the
+unconditional $F_D$. Its unread-success state still has the exact
+$57/82$ versus $25/82$ dark-state mixture. After control removal the
+fidelity and auxiliary probability stay constant, not the entire state.
+
+\newpage
+\section{What this test closes, and what it does not}
+\paragraph{Answer for this fixed model.}
+Yes: one prescribed smooth pulse simultaneously improves preparation
+fidelity, lowers terminal high-energy residue, and lowers both signed
+net work and separate-port positive input. This is not solely an
+apparent gain from subtracting recovered work. However, the longer
+duration and larger absolute energy throughput prevent a claim that
+every resource cost has improved. Negative net work draws energy from
+the supplied input state; its preparation, controller, memory reset
+and any dissipation are not free. There is no bath or hidden energy sink.
+
+For a transparent \emph{conditional} hardware diagnostic, assume the
+same recovery fraction $0\le\eta\le1$ and constant overhead power $p_0$
+for both protocols. Their cost in these assumptions is
+\begin{equation}
+ \mathcal C=W_+^{\rm sep}-\eta W_-^{\rm sep}+p_0T.
+\end{equation}
+The smooth pulse wins only when
+\begin{align}
+ p_0&<\frac{W_{+,\square}^{\rm sep}-W_{+,\rm sm}^{\rm sep}
+       +\eta(W_{-,\rm sm}^{\rm sep}-W_{-,\square}^{\rm sep})}{T-\tau}
+       \nonumber\\
+    &=0.008864075+0.016753645\,\eta.\label{overhead-gate}
+\end{align}
+No $\eta$ or $p_0$ has been measured or fitted. Extra waveform-dependent
+losses could invalidate this simple cost model. This inequality is a
+decision criterion in model energy per model time, not a hardware
+efficiency prediction or a new scan.
+
+\paragraph{Numerical checks are refinements of the same physical pulse.}
+The augmented full $21$-component Schr\"odinger equation and two work
+integrals are integrated with DOP853 at tolerances
+$(2\,10^{-12},2\,10^{-14})$ and $(2\,10^{-13},2\,10^{-15})$.
+An independent unitary two-exponential propagator uses
+\begin{align}
+ c_{1,2}&=\frac12\mp\frac{\sqrt3}{6},\quad
+ a_{1,2}=\frac{3\mp2\sqrt3}{12},\quad H_j=\mathcal H(s+c_jh)-4I,\\
+ U_h&=e^{-\ii h(a_1H_1+a_2H_2)}
+       e^{-\ii h(a_2H_1+a_1H_2)}.
+\end{align}
+At $1024,2048,4096$ steps its final-state errors relative to the
+refined ODE solution are approximately
+$6.35\,10^{-9},3.85\,10^{-10},2.39\,10^{-11}$, consistent with fourth
+order. The two finest terminal auxiliary probabilities agree within
+$0.04\%$; only a few significant figures of the tiny residue are reported.
+Independent $10001$/$20001$-point power quadratures agree with integrated
+work; the first law is checked along the entire path, not just its ends.
+The coarse ODE tolerance was tightened after an initial state-difference
+check missed $10^{-10}$; no physical parameter or pulse was changed.
+
+All 70 G-R13 checks pass. G-R12 code, card and numerical-result hashes
+remain pinned to checkpoint \texttt{7d6d425}; its historical derivation
+is retained in Sections 1--6 of this same document. The new artifacts are
+\begin{quote}\small\ttfamily
+data/SMOOTH\_SWITCHING\_CARD.json\\
+code/verify\_gr13\_smooth\_switching.py\\
+output/gr13\_smooth\_switching.json
+\end{quote}
+\noindent The bounded single-pulse question is closed. A next physical
+choice is to calibrate an actual controller against Eq.~\eqref{overhead-gate},
+or, if autonomy is the goal, replace the imposed pulse by a specified
+passing trigger with its energy and return channels. Neither is a new
+mandatory mathematical prerequisite. No pulse optimization, emergent
+seconds, universal $E_d$ law, mass fit or Route-F gate is promoted.
 \end{document}

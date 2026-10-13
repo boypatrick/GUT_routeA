@@ -1,0 +1,434 @@
+{
+  "stage": "G-R13",
+  "summary": {
+    "checks": 70,
+    "passed": 70,
+    "failed": []
+  },
+  "fixed_parameters": {
+    "gamma": 0.03,
+    "delta": 80.0,
+    "g": 0.1
+  },
+  "square_duration": 6.25,
+  "smooth_duration": 16.666666666666668,
+  "effective_area": 0.625,
+  "square": {
+    "compensated": true,
+    "delta": 80.0,
+    "effective_reference_fidelity": 0.9996009156006767,
+    "fidelity_unconditional": 0.9963111170749308,
+    "auxiliary_probability": 0.0033358521337474947,
+    "system_probability": 0.9966641478662515,
+    "auxiliary_energy": 0.28021157923478957,
+    "system_energy_unnormalized": 3.986658622458453,
+    "work_on": 0.0471404520791031,
+    "work_off": 0.2163964162808158,
+    "net_work_on_full_model": 0.2635368683599189,
+    "positive_work_separate_ports": 0.26358553025564646,
+    "returned_work_separate_ports": 4.866189573075256e-05,
+    "component_quenches": [
+      [
+        0.0,
+        0.047140452079103196
+      ],
+      [
+        0.2164450781765433,
+        -4.866189573075256e-05
+      ]
+    ]
+  },
+  "smooth": {
+    "fidelity_unconditional": 0.9981207221166309,
+    "auxiliary_probability": 5.020910281031069e-13,
+    "auxiliary_energy": 4.217564636066098e-11,
+    "auxiliary_excess_energy": 4.016728224824855e-11,
+    "work_relay": -0.03817096432292233,
+    "work_compensation": 0.03485659055371386,
+    "net_work": -0.003314373769208498,
+    "energy_change": -0.0033143737691974096,
+    "points": 20001,
+    "positive_common_bus": 0.13289064122907526,
+    "returned_common_bus": 0.13620501499828372,
+    "positive_separate_ports": 0.17125141853411552,
+    "returned_separate_ports": 0.17456579230332397,
+    "max_sampled_transient_aux_probability": 0.0018462595774730722
+  },
+  "overhead_threshold_model_power": {
+    "eta_zero_intercept": 0.00886407472526697,
+    "eta_coefficient": 0.01675364451912895
+  },
+  "solver_validation": {
+    "ODE_state_difference": 1.2153025610628463e-11,
+    "CF4": [
+      {
+        "steps": 1024,
+        "state_error_against_refined_ODE": 6.346054352478071e-09,
+        "auxiliary_probability": 4.988204604927868e-13,
+        "fidelity": 0.9981207220767591
+      },
+      {
+        "steps": 2048,
+        "state_error_against_refined_ODE": 3.853416235270588e-10,
+        "auxiliary_probability": 5.018993424716379e-13,
+        "fidelity": 0.9981207221141641
+      },
+      {
+        "steps": 4096,
+        "state_error_against_refined_ODE": 2.394225136589745e-11,
+        "auxiliary_probability": 5.020794441347905e-13,
+        "fidelity": 0.998120722116416
+      }
+    ],
+    "quadratures": [
+      {
+        "points": 10001,
+        "work_relay": -0.038170964322922385,
+        "work_compensation": 0.03485659055371381,
+        "positive_common_bus": 0.13289064122912383,
+        "returned_common_bus": 0.13620501499833243,
+        "positive_separate_ports": 0.17125141853413844,
+        "returned_separate_ports": 0.174565792303347
+      },
+      {
+        "points": 20001,
+        "work_relay": -0.03817096432292233,
+        "work_compensation": 0.03485659055371386,
+        "positive_common_bus": 0.13289064122907526,
+        "returned_common_bus": 0.13620501499828372,
+        "positive_separate_ports": 0.17125141853411552,
+        "returned_separate_ports": 0.17456579230332397
+      }
+    ]
+  },
+  "snapshots": [
+    {
+      "fraction": 0.0,
+      "f": 0.0,
+      "fidelity": 0.6666666666666676,
+      "auxiliary_probability": 0.0,
+      "work_relay": 0.0,
+      "work_compensation": 0.0
+    },
+    {
+      "fraction": 0.25,
+      "f": 0.4999999999999999,
+      "fidelity": 0.6884179858121983,
+      "auxiliary_probability": 0.0005662498699256504,
+      "work_relay": -0.046020644347798845,
+      "work_compensation": 0.011449039427645632
+    },
+    {
+      "fraction": 0.5,
+      "f": 1.0,
+      "fidelity": 0.9082566699986603,
+      "auxiliary_probability": 0.001822157206689884,
+      "work_relay": -0.1728136989006427,
+      "work_compensation": 0.03660868393197436
+    },
+    {
+      "fraction": 0.75,
+      "f": 0.5000000000000001,
+      "fidelity": 0.9976255682055485,
+      "auxiliary_probability": 0.00041591098650952996,
+      "work_relay": -0.07147973615095664,
+      "work_compensation": 0.034920874370345294
+    },
+    {
+      "fraction": 1.0,
+      "f": 0.0,
+      "fidelity": 0.9981207221166309,
+      "auxiliary_probability": 5.020910281031069e-13,
+      "work_relay": -0.03817096432292243,
+      "work_compensation": 0.03485659055371393
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr12_correlated_preparation.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/CORRELATED_PREPARATION_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr12_correlated_preparation.json",
+      "passed": true
+    },
+    {
+      "name": "fixed_gamma",
+      "passed": true
+    },
+    {
+      "name": "fixed_g",
+      "passed": true
+    },
+    {
+      "name": "fixed_Delta",
+      "passed": true
+    },
+    {
+      "name": "three_numerical_CF4_refinements",
+      "passed": true
+    },
+    {
+      "name": "same_full_mediator_identity",
+      "passed": true
+    },
+    {
+      "name": "compensated_leading_operator",
+      "passed": true
+    },
+    {
+      "name": "relay_Hermitian",
+      "passed": true
+    },
+    {
+      "name": "compensation_Hermitian",
+      "passed": true
+    },
+    {
+      "name": "off_and_zero_slope:-1.0",
+      "passed": true
+    },
+    {
+      "name": "off_and_zero_slope:0.0",
+      "passed": true
+    },
+    {
+      "name": "off_and_zero_slope:16.666666666666668",
+      "passed": true
+    },
+    {
+      "name": "off_and_zero_slope:17.666666666666668",
+      "passed": true
+    },
+    {
+      "name": "same_peak",
+      "passed": true
+    },
+    {
+      "name": "same_effective_area_analytic",
+      "passed": true
+    },
+    {
+      "name": "duration_tradeoff",
+      "passed": true
+    },
+    {
+      "name": "not_rounded_to_an_update",
+      "passed": true
+    },
+    {
+      "name": "primary:solver_completed",
+      "passed": true
+    },
+    {
+      "name": "primary:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "refined:solver_completed",
+      "passed": true
+    },
+    {
+      "name": "refined:unit_norm",
+      "passed": true
+    },
+    {
+      "name": "tolerance_refinement_state",
+      "passed": true
+    },
+    {
+      "name": "tolerance_refinement_work",
+      "passed": true
+    },
+    {
+      "name": "net_work_equals_endpoint_energy",
+      "passed": true
+    },
+    {
+      "name": "all_probabilities_retained",
+      "passed": true
+    },
+    {
+      "name": "odd_clock_not_populated",
+      "passed": true
+    },
+    {
+      "name": "CF4:1024:norm",
+      "passed": true
+    },
+    {
+      "name": "CF4:1024:residual_resolved",
+      "passed": true
+    },
+    {
+      "name": "CF4:2048:norm",
+      "passed": true
+    },
+    {
+      "name": "CF4:2048:residual_resolved",
+      "passed": true
+    },
+    {
+      "name": "CF4:4096:norm",
+      "passed": true
+    },
+    {
+      "name": "CF4:4096:residual_resolved",
+      "passed": true
+    },
+    {
+      "name": "CF4_fourth_order_convergence",
+      "passed": true
+    },
+    {
+      "name": "CF4_final_state_agreement",
+      "passed": true
+    },
+    {
+      "name": "quad:10001:relay_work",
+      "passed": true
+    },
+    {
+      "name": "quad:10001:compensation_work",
+      "passed": true
+    },
+    {
+      "name": "quad:10001:same_area",
+      "passed": true
+    },
+    {
+      "name": "quad:10001:first_law_along_whole_path",
+      "passed": true
+    },
+    {
+      "name": "quad:20001:relay_work",
+      "passed": true
+    },
+    {
+      "name": "quad:20001:compensation_work",
+      "passed": true
+    },
+    {
+      "name": "quad:20001:same_area",
+      "passed": true
+    },
+    {
+      "name": "quad:20001:first_law_along_whole_path",
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement:positive_common_bus",
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement:returned_common_bus",
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement:positive_separate_ports",
+      "passed": true
+    },
+    {
+      "name": "quadrature_refinement:returned_separate_ports",
+      "passed": true
+    },
+    {
+      "name": "positive_returned_net",
+      "passed": true
+    },
+    {
+      "name": "common_bus_net",
+      "passed": true
+    },
+    {
+      "name": "transient_mediator_active_not_removed",
+      "passed": true
+    },
+    {
+      "name": "square_reference_fidelity",
+      "passed": true
+    },
+    {
+      "name": "square_reference_auxiliary",
+      "passed": true
+    },
+    {
+      "name": "square_reference_work",
+      "passed": true
+    },
+    {
+      "name": "square_complete_work",
+      "passed": true
+    },
+    {
+      "name": "fidelity_maintained_and_improved",
+      "passed": true
+    },
+    {
+      "name": "endpoint_residue_lower",
+      "passed": true
+    },
+    {
+      "name": "auxiliary_energy_lower",
+      "passed": true
+    },
+    {
+      "name": "net_work_lower",
+      "passed": true
+    },
+    {
+      "name": "positive_input_separate_ports_lower",
+      "passed": true
+    },
+    {
+      "name": "absolute_work_not_claimed_lower",
+      "passed": true
+    },
+    {
+      "name": "duration_not_claimed_equal",
+      "passed": true
+    },
+    {
+      "name": "GR11_record_all_outcomes",
+      "passed": true
+    },
+    {
+      "name": "GR11_success_is_unconditional_fidelity",
+      "passed": true
+    },
+    {
+      "name": "GR11_backreaction_not_removed",
+      "passed": true
+    },
+    {
+      "name": "post_pulse:1.7:fidelity_preserved",
+      "passed": true
+    },
+    {
+      "name": "post_pulse:1.7:aux_population_preserved",
+      "passed": true
+    },
+    {
+      "name": "post_pulse:13.0:fidelity_preserved",
+      "passed": true
+    },
+    {
+      "name": "post_pulse:13.0:aux_population_preserved",
+      "passed": true
+    },
+    {
+      "name": "nonrecovering_ideal_input_improves",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "A scan, optimized pulse, uniform detuning theorem or robustness certification",
+    "Zero apparatus cost from negative net work or vanishing endpoint auxiliary population",
+    "Equal duration, equal total absolute work or equal physical controller dissipation",
+    "Autonomous switching, a physical energy/time calibration, irreversible records or an Ed law"
+  ]
+}
