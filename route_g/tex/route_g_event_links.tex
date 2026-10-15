@@ -1,0 +1,319 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\title{Route G-R14: One Event Rule for Clock Rate,\\Loop Phase and Coherence}
+\author{A finite candidate with a common-rate test and an explicit memory rule}
+\date{15 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+One binary event register couples to the sum of all probe charges.
+A single occupation probability determines clock drift, phase noise,
+and a three-link interference amplitude. They cannot be fitted independently.
+The common mean event rate is not generally a common fractional clock rate;
+the nontrivial exact common-rate case is balanced occupation, within a
+readable phase band. A rank-two Gram identity locks loop phase to visibility.
+Keeping the same register around the loop instead of using fresh registers
+changes the answer from a nontrivial complex amplitude to exactly one.
+This identifies inter-event memory as physical information missing from a
+single scalar density. It does not derive physical time or the original
+paper's full theory.
+\end{abstract}
+
+\section{Inputs and one microscopic rule}
+Chen's event accumulation and compatible comparisons motivate this
+construction~\cite{chen}; its Hilbert spaces, probabilities and dynamics
+are additional postulates. Three links label comparisons, not spatial
+dimensions or rotations of matter. We retain the G-R9--G-R13 results
+unchanged; this is a new bounded candidate, not a new control pulse.
+
+Each ordered event has a two-state register $R$ and a probe $S$:
+\begin{equation}
+ \ket{r_p}=\sqrt{1-p}\ket0+\sqrt p\ket1,\quad
+ P=\ket1\bra1,\quad
+ U(Q)=\exp(-\ii a Q\otimes P),\quad a=2\pi/3.\label{rule}
+\end{equation}
+The primitive three-cycle phase $a$ is chosen, not measured or derived.
+$p\in[0,1]$ is the only varying response parameter. $Q$ is a specified
+dimensionless probe generator: $Q=q\ket1\bra1$ for a clock, or
+$Q=\ket{\mathrm{loop}}\bra{\mathrm{loop}}$ for an interferometer.
+For simultaneous probes use their \emph{sum}, with identities on other
+factors. Coupling all probes this way is an explicit universality
+postulate; it is not a consequence of naming the register an event.
+Fix two clock charges $q_A=1/4,q_B=1/2$, not particle masses.
+
+Fresh registers start in a product state and are retained but unread.
+Tracing one gives the exact completely positive trace-preserving map
+\begin{align}
+ \mathcal E_p(\rho)&=(1-p)\rho+p e^{-\ii aQ}\rho e^{\ii aQ},\label{channel}\\
+ F_p(x)&=1-p+p e^{-\ii x},&
+ (\mathcal E_p^n\rho)_{jk}&=F_p\big(a(q_j-q_k)\big)^n\rho_{jk}.\label{F}
+\end{align}
+Indeed $U=I\otimes\ket0\bra0+e^{-\ii aQ}\otimes\ket1\bra1$;
+its two Kraus operators have $\sum K_\ell^\dagger K_\ell=I$.
+No loss branch is discarded. Ordered $n$, register supply, quantum
+probabilities and the measurement reference remain inputs, not seconds
+or a derived arrow of time. This is a repeated-interaction model of a
+standard kind~\cite{collision}; no new general quantum formalism is claimed.
+
+\newpage
+\section{Mean event progress is not automatically clock frequency}
+Reading all $P_\ell$ would give $K_n=\sum_{\ell=1}^n P_\ell$ with
+\begin{equation}
+ \mathbb E K_n=np,\qquad \Var K_n=np(1-p),\qquad
+ N:=\mathbb E K_n/n=p.\label{mean}
+\end{equation}
+The probe interaction preserves these register probabilities.
+The same $K_n$ acts on every probe present at an event. Thus $N$ is a
+genuine common \emph{mean active-event fraction}, not a frequency defined
+from a trace or arbitrarily inserted into three unrelated formulas.
+
+Start a clock in $(\ket0+\ket1)/\sqrt2$. Its two quadratures measure
+\begin{equation}
+ C_q(n):=2\rho_{10}(n)=F_p(aq)^n,
+ \qquad V_q(n)=|F_p(aq)|^n.\label{clock}
+\end{equation}
+On the continuous phase branch connected to $x=aq=0$, define
+\begin{equation}
+ \vartheta_q=-\arg F_p(aq),\quad
+ R_q=\frac{\vartheta_q}{aq},\quad
+ d_q=-\log|F_p(aq)|.\label{rates}
+\end{equation}
+$\vartheta_q$ is phase advance per update, $R_q$ its fraction of the
+bare advance $aq$, and $d_q$ visibility loss per update. These are not
+rates per laboratory second. If $F_p=0$, phase is undefined. From
+Eq.~\eqref{F},
+\begin{align}
+ |F_p(x)|^2&=1-4p(1-p)\sin^2(x/2),\label{modulus}\\
+ \log F_p(x)&=-\ii px-\tfrac12p(1-p)x^2
+ +\tfrac{\ii}{6}p(1-p)(1-2p)x^3+O(x^4),\\
+ R_q&=p-\frac{p(1-p)(1-2p)}6(aq)^2+O((aq)^4),\label{rateexp}\\
+ d_q&=\tfrac12p(1-p)(aq)^2+O((aq)^4).
+\end{align}
+The cumulants follow by differentiating $\log(1-p+pe^t)$ at $t=0$;
+substitute $t=-\ii x$. Reality gives odd phase and even log modulus,
+which fixes the remainder orders. The mean, phase drift and noise all
+come from the same Bernoulli distribution, without an extra damping law.
+
+\paragraph{Exact common-rate proposition.}
+If $R_q$ is constant for all $q$ in an open neighborhood of zero, its
+constant must be $p$ by the limit in Eq.~\eqref{rateexp}. Its quadratic
+coefficient must vanish, so $p=0,1/2,1$. Conversely $p=0,1$ are
+deterministic, while
+\begin{equation}
+ F_{1/2}(x)=e^{-\ii x/2}\cos(x/2),\qquad
+ R_q=\tfrac12\quad (|aq|<\pi).\label{balanced}
+\end{equation}
+This proves necessity and sufficiency on a connected readable band.
+The $p=0$ clock does not advance. At $p=1/2$, visibility remains
+$|\cos(aq/2)|^n$, not one; zeros and subsequent phase jumps are not
+time reversal. Equal occupation is not selected by dynamics here.
+For generic $p$, common mean progress yields only approximate low-charge
+universality. With resolved phase winding and $\vartheta_A\ne0$, one
+can eliminate the unobserved count:
+$\phi_B=(\vartheta_B/\vartheta_A)\phi_A$ and
+$\log V_B=(d_B/d_A)\log V_A$ when $d_A\ne0$.
+
+\newpage
+\section{The same rule fixes a closed-loop phase and its visibility}
+Set $V=e^{-\ii aP}$, so $V^3=I$. Define three record rays
+\begin{equation}
+ \ket{e_j}=V^j\ket{r_p},\quad j=0,1,2,\qquad
+ z=\langle e_0|e_1\rangle=\langle e_1|e_2\rangle
+   =\langle e_2|e_0\rangle=F_p(a).
+\end{equation}
+Writing $z=r e^{\ii\theta}$, the oriented product is
+\begin{equation}
+ W=z^3=r^3e^{\ii\Phi},\qquad \Phi=3\theta\pmod{2\pi}.
+ \label{loop}
+\end{equation}
+Rephase each ray by $e^{\ii\chi_j}$. Each overlap gains
+$e^{\ii(\chi_{j+1}-\chi_j)}$ and their closed product is unchanged.
+Reversing orientation conjugates $W$. This is a three-state Bargmann
+product~\cite{bargmann}, not by itself a magnetic field.
+
+The Gram matrix is
+\begin{equation}
+ G=\begin{pmatrix}1&z&z^*\\z^*&1&z\\z&z^*&1\end{pmatrix}\succeq0.
+\end{equation}
+There are three vectors in a two-dimensional space, hence
+\begin{equation}
+ \boxed{\det G=1-3r^2+2r^3\cos\Phi=0},\qquad
+ r^2=1-3p(1-p).\label{constraint}
+\end{equation}
+The determinant follows directly by expanding its six permutation
+terms. The second identity follows from
+$\cos a=-1/2$ in Eq.~\eqref{modulus}. Thus $1/2\le r\le1$;
+unit link visibility forces $W=1$ in this family. In higher record
+dimension the general Gram positivity condition is $\det G\ge0$,
+not the equality above. The equality is therefore a falsifiable
+rank-two model restriction, not a universal law of phases.
+
+\paragraph{Operational loop protocol with all outputs.}
+Prepare a path qubit $(\ket{\mathrm{ref}}+\ket{\mathrm{loop}})/\sqrt2$
+and three fresh registers. On each oriented link apply Eq.~\eqref{rule}
+with $Q=\ket{\mathrm{loop}}\bra{\mathrm{loop}}$. The reference sees
+identity; the loop sees $V$ on each successive register. Its final state is
+\begin{equation}
+ \ket\Psi=\frac{1}{\sqrt2}\left(
+ \ket{\mathrm{ref}}\ket{r_p}^{\otimes3}
+ +\ket{\mathrm{loop}}(V\ket{r_p})^{\otimes3}\right).
+\end{equation}
+Tracing registers gives $2\rho_{\mathrm{loop,ref}}=W$ and equal
+path populations $1/2$. At analysis phase $\varphi$ the two output
+probabilities are
+\begin{equation}
+ P_\pm(\varphi)=\tfrac12\left[1\pm
+       \Re(e^{-\ii\varphi}W)\right],\quad
+ P_++P_-=1,\quad \mathcal V_{\rm loop}=r^3.\label{fringe}
+\end{equation}
+This realizes Eq.~\eqref{loop} without filtering, heralding or assigning
+a separate coherence factor. Spatial transport and beam-splitter
+hardware are not derived by naming the controlled comparisons links.
+
+\newpage
+\section{Memory composition and a joint prediction}
+One-event data do not fix multi-event data without a memory rule.
+Reuse a single register on all three links, without reading or resetting
+it, while keeping the identical gate and initial register state. Then
+\begin{equation}
+ W_{\rm reused}=\langle r_p|V^3|r_p\rangle=F_p(3a)=1,
+ \qquad W_{\rm fresh}=F_p(a)^3.\label{memory}
+\end{equation}
+For $p=1/2$, fresh records give $(\Phi,\mathcal V)=(\pi,1/8)$;
+reuse gives $(0,1)$. The elementary marginals and mean progress $N$
+are identical. For a general sequence the relevant object is
+\begin{equation}
+ \mathcal F(x_1,\ldots,x_n)=
+ \left\langle e^{-\ii\sum_\ell x_\ell P_\ell}\right\rangle.
+\end{equation}
+Independent registers factorize this into $\prod F_p(x_\ell)$;
+the reused register gives $F_p(\sum x_\ell)$. Replacing the latter
+by the former silently changes the physics. In a classical diagonal
+description this is exactly the distinction between independent and
+perfectly correlated binary variables. Nontrivial phase of an averaged
+loop is not proof that each microscopic branch has the same holonomy.
+
+\paragraph{Two clocks share noise, not independent damping constants.}
+Take $Q=q_A P_A+q_B P_B$ on two clocks. In the basis
+$00,01,10,11$, its charges are $0,q_B,q_A,q_A+q_B$. From an initial
+product plus state, Eq.~\eqref{F} gives
+\begin{equation}
+ C_A=F_p(aq_A)^n,\quad C_B=F_p(aq_B)^n,\quad
+ 4\rho_{10,01}=F_p(a(q_A-q_B))^n.\label{relative}
+\end{equation}
+For $q_A=q_B$ the relative channel has unit normalized coherence even
+when each local dial fades. A comparison of identical clocks alone
+can therefore miss a common fluctuation. The state of two clocks is a
+mixture of product phase shifts, so this example does not create
+clock--clock entanglement from the product input.
+
+\paragraph{Clock and loop measured together.}
+Now use $Q=qP_C+P_{\rm loop}$ at each of three events. The four-charge
+list is $0,1,q,q+1$. The joint double-off-diagonal element is
+\begin{equation}
+ J:=4\rho_{11,00}=F_p(a(q+1))^3
+ \ne C_q(3)W_{\rm fresh}\quad\hbox{in general}.\label{joint}
+\end{equation}
+It is measurable from joint quadratures, since
+\begin{equation}
+ \langle XX-YY\rangle=\Re J,\qquad
+ \langle YX+XY\rangle=\Im J.
+\end{equation}
+Both identities follow by expanding the Pauli matrices; the
+$\rho_{10,01}$ terms cancel. At $p=1/4,q=1/4$,
+$J=0.126833033-0.104777678\ii$, whereas the incorrect product of
+marginals is $0.049144099-0.263300461\ii$.
+This discrepancy is not an adjustable loop or noise parameter.
+All probes in an event use one shared register; separate experiments
+use identically prepared ones.
+
+\paragraph{What loss of visibility means.}
+The global state remains pure and the inverse global unitary restores
+the initial state. Tracing unread registers is loss of access, not a
+proof of irreversible decoherence. Reset, isolation, a persistent record
+and controller work remain implementation questions. The gate commutes
+with bare $Q$ and with every $P_\ell$; its phase effects alone are not
+evidence of an energy transfer or changed particle rest mass.
+
+\newpage
+\section{Numerical checks and the research boundary}
+The verifier constructs full system--register unitaries (up to
+$4\times2^3=32$ states), takes partial traces, and compares them
+with iterated Kraus maps and the analytic characteristic function.
+It checks all probabilities, complete positivity, register count
+moments, conserved bare charge, loop rephasing, rank-two Gram identity,
+memory reuse, joint quadratures, relative-clock protection and the
+small-argument expansion. The fixtures below are chosen rational
+occupations, not a parameter search or a fit to observed time dilation.
+All 223 new checks and 6672 checks across 27 verifiers pass;
+G-R9/G-R13 code, cards and results keep their hashes.
+
+\begin{center}
+\begin{tabular}{rrrrr}\toprule
+$p=N$&$R_A$&$R_B$&$\Phi$ (rad)&$\mathcal V_{\rm loop}$\\\midrule
+$1/4$&0.245641993&0.231631437&$-1.000419517$&0.289379050\\
+$1/2$&0.500000000&0.500000000&$\pi$&0.125000000\\
+$3/4$&0.754358007&0.768368563&$+1.000419517$&0.289379050\\\bottomrule
+\end{tabular}
+\end{center}
+At $p=1/2$ the two clock visibilities after three events are
+0.901221065 and 0.649519053 despite their identical fractional rate.
+For generic $p$, identifying $N=p$ with both measured $R_A,R_B$ is
+rejected, not repaired by fitting the charges. The endpoint fixtures
+$p=0,1$ are deterministic controls. Numerical tolerances test the exact
+identities; they are not the scientific result.
+
+\paragraph{What has been completed.}
+A single specified rule and register state give three distinct,
+jointly constrained outputs: mean progress and actual clock phase,
+closed-loop phase, and coherence. A nontrivial exact common-rate
+case exists, but its occupation balance and finite phase band are
+essential. The proposed arbitrary-$p$ universal clock interpretation
+fails inside the same model. The model supplies a stronger statement
+than three independently chosen response functions, not an unconditional
+proof of Chen's claims.
+
+\paragraph{What remains an input.}
+No law selects $p$, $a$, event ordering or the sum-of-charges coupling.
+No physical $E_i/E_d$, seconds, particle spectrum, Maxwell field,
+gravity, or new Bell bound follows. A relation $p(E_d)$ inserted later
+would be a new hypothesis, not a result of these calculations. The
+reduced commuting-probe predictions also admit a classical correlated
+binary-noise realization. Distinguishing that from a genuinely quantum
+event mechanism requires additional noncommuting record probes.
+
+\paragraph{Next bounded choices.}
+First constrain the memory rule with a three-link comparison and the
+joint observable in Eq.~\eqref{joint}, retaining the same $p$ inferred
+from register occupations. A failure of the Gram equality, the joint
+response, or the predicted rate pair falsifies this candidate with its
+stated preparation, not quantum theory. Alternatively, if exact common
+fractional time across a varying environment is indispensable, require
+a physical principle selecting or protecting the balanced rule; do not
+silently equate mean rate and phase rate. Controller calibration from
+G-R13 remains a side branch and does not block either question. No new
+pulse scan, Route-F promotion or long prerequisite proof is introduced.
+
+\begingroup\small
+\begin{thebibliography}{9}
+\bibitem{chen} B. Chen, \emph{Energy spectrum for elementary particles},
+final version (2022), \href{https://indico.cern.ch/event/1109513/contributions/4969967/attachments/2480973/4410560/Energy\%20spectrum\%20for\%20elementary\%20particles_final.pdf}{CERN Indico source}.
+Conceptual inspiration only; source receipt and prior section audit are in
+\texttt{route\_g/SOURCES.md}.
+\bibitem{collision} F. Ciccarello, S. Lorenzo, V. Giovannetti and G. M. Palma,
+\emph{Quantum collision models: Open system dynamics from repeated interactions},
+Phys. Rep. 954, 1 (2022), \href{https://arxiv.org/abs/2106.11974}{arXiv:2106.11974}.
+\bibitem{bargmann} E. M. Rabei, Arvind, R. Simon and N. Mukunda,
+\emph{Bargmann invariants and geometric phases: A generalized connection},
+Phys. Rev. A 60, 3397 (1999),
+\href{https://arxiv.org/abs/quant-ph/9907080}{arXiv:quant-ph/9907080}.
+\end{thebibliography}
+\endgroup
+\end{document}

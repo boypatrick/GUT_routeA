@@ -1,0 +1,1113 @@
+{
+  "id": "G-R14",
+  "summary": {
+    "total": 223,
+    "passed": 223,
+    "failed": []
+  },
+  "max_exact_matrix_or_identity_error": 6.955527313080394e-16,
+  "fixtures": [
+    {
+      "p": 0.0,
+      "r_link": 1.0,
+      "loop_W": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "loop_phase_principal": 0.0,
+      "loop_visibility": 1.0,
+      "clocks": [
+        {
+          "q": 0.25,
+          "mean_event_fraction": 0.0,
+          "fractional_phase_rate": -0.0,
+          "visibility_after_three": 1.0
+        },
+        {
+          "q": 0.5,
+          "mean_event_fraction": 0.0,
+          "fractional_phase_rate": -0.0,
+          "visibility_after_three": 1.0
+        }
+      ],
+      "joint_clock_loop": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "incorrect_product_of_marginals": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "reuse_loop_W": {
+        "real": 0.9999999999999998,
+        "imag": 0.0
+      }
+    },
+    {
+      "p": 0.25,
+      "r_link": 0.6614378277661477,
+      "loop_W": {
+        "real": 0.15625,
+        "imag": -0.2435696448143734
+      },
+      "loop_phase_principal": -1.0004195167554963,
+      "loop_visibility": 0.2893790496476896,
+      "clocks": [
+        {
+          "q": 0.25,
+          "mean_event_fraction": 0.25,
+          "fractional_phase_rate": 0.24564199291899808,
+          "visibility_after_three": 0.9255939080258037
+        },
+        {
+          "q": 0.5,
+          "mean_event_fraction": 0.25,
+          "fractional_phase_rate": 0.23163143746689976,
+          "visibility_after_three": 0.7323776028286227
+        }
+      ],
+      "joint_clock_loop": {
+        "real": 0.12683303277843996,
+        "imag": -0.10477767759281341
+      },
+      "incorrect_product_of_marginals": {
+        "real": 0.04914409878761229,
+        "imag": -0.26330046149569736
+      },
+      "reuse_loop_W": {
+        "real": 0.9999999999999998,
+        "imag": 1.2490009027033009e-16
+      }
+    },
+    {
+      "p": 0.5,
+      "r_link": 0.5000000000000001,
+      "loop_W": {
+        "real": -0.12500000000000006,
+        "imag": -5.873150309933071e-17
+      },
+      "loop_phase_principal": -3.1415926535897927,
+      "loop_visibility": 0.12500000000000006,
+      "clocks": [
+        {
+          "q": 0.25,
+          "mean_event_fraction": 0.5,
+          "fractional_phase_rate": 0.5,
+          "visibility_after_three": 0.9012210650134385
+        },
+        {
+          "q": 0.5,
+          "mean_event_fraction": 0.5,
+          "fractional_phase_rate": 0.5,
+          "visibility_after_three": 0.6495190528383289
+        }
+      ],
+      "joint_clock_loop": {
+        "real": -0.012259526419164522,
+        "imag": 0.012259526419164514
+      },
+      "incorrect_product_of_marginals": {
+        "real": -0.07965744080239566,
+        "imag": 0.07965744080239556
+      },
+      "reuse_loop_W": {
+        "real": 0.9999999999999999,
+        "imag": 2.498001805406602e-16
+      }
+    },
+    {
+      "p": 0.75,
+      "r_link": 0.6614378277661477,
+      "loop_W": {
+        "real": 0.15624999999999986,
+        "imag": 0.2435696448143734
+      },
+      "loop_phase_principal": 1.0004195167554968,
+      "loop_visibility": 0.28937904964768957,
+      "clocks": [
+        {
+          "q": 0.25,
+          "mean_event_fraction": 0.75,
+          "fractional_phase_rate": 0.7543580070810019,
+          "visibility_after_three": 0.9255939080258037
+        },
+        {
+          "q": 0.5,
+          "mean_event_fraction": 0.75,
+          "fractional_phase_rate": 0.7683685625331002,
+          "visibility_after_three": 0.732377602828623
+        }
+      ],
+      "joint_clock_loop": {
+        "real": 0.10477767759281353,
+        "imag": -0.12683303277843988
+      },
+      "incorrect_product_of_marginals": {
+        "real": 0.2633004614956973,
+        "imag": -0.049144098787612125
+      },
+      "reuse_loop_W": {
+        "real": 0.9999999999999997,
+        "imag": 3.747002708109903e-16
+      }
+    },
+    {
+      "p": 1.0,
+      "r_link": 1.0,
+      "loop_W": {
+        "real": 0.9999999999999998,
+        "imag": 4.772891088663143e-16
+      },
+      "loop_phase_principal": 4.772891088663144e-16,
+      "loop_visibility": 0.9999999999999998,
+      "clocks": [
+        {
+          "q": 0.25,
+          "mean_event_fraction": 1.0,
+          "fractional_phase_rate": 1.0,
+          "visibility_after_three": 1.0
+        },
+        {
+          "q": 0.5,
+          "mean_event_fraction": 1.0,
+          "fractional_phase_rate": 1.0,
+          "visibility_after_three": 1.0
+        }
+      ],
+      "joint_clock_loop": {
+        "real": 1.0839262510680582e-15,
+        "imag": -1.0
+      },
+      "incorrect_product_of_marginals": {
+        "real": 6.844595456480081e-16,
+        "imag": -0.9999999999999998
+      },
+      "reuse_loop_W": {
+        "real": 0.9999999999999997,
+        "imag": 4.996003610813203e-16
+      }
+    }
+  ],
+  "small_argument_checks": [
+    {
+      "x": 0.08,
+      "rate": 0.24989995998826584,
+      "quadratic_residual": 4.001173417589321e-08
+    },
+    {
+      "x": 0.04,
+      "rate": 0.24997499749981666,
+      "quadratic_residual": 2.5001833381388394e-09
+    },
+    {
+      "x": 0.02,
+      "rate": 0.24999374984374712,
+      "quadratic_residual": 1.5625287175247138e-10
+    }
+  ],
+  "checks": [
+    {
+      "name": "preserved:code/verify_gr9_event_network.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/EVENT_NETWORK_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr9_event_network.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:code/verify_gr13_smooth_switching.py",
+      "passed": true
+    },
+    {
+      "name": "preserved:data/SMOOTH_SWITCHING_CARD.json",
+      "passed": true
+    },
+    {
+      "name": "preserved:output/gr13_smooth_switching.json",
+      "passed": true
+    },
+    {
+      "name": "primitive_three_cycle",
+      "passed": true
+    },
+    {
+      "name": "p=0:Gram_diagonal",
+      "passed": true
+    },
+    {
+      "name": "p=0:three_equal_oriented_links",
+      "passed": true
+    },
+    {
+      "name": "p=0:Gram_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0:rank_two_Gram_determinant",
+      "passed": true
+    },
+    {
+      "name": "p=0:one_parameter_visibility",
+      "passed": true
+    },
+    {
+      "name": "p=0:loop_Gram_constraint",
+      "passed": true
+    },
+    {
+      "name": "p=0:closed_loop_rephasing",
+      "passed": true
+    },
+    {
+      "name": "p=0:orientation_reversal",
+      "passed": true
+    },
+    {
+      "name": "p=0:Kraus_trace_preserving",
+      "passed": true
+    },
+    {
+      "name": "p=0:Choi_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0:full_unitarity",
+      "passed": true
+    },
+    {
+      "name": "p=0:joint_normalized",
+      "passed": true
+    },
+    {
+      "name": "p=0:mean_active_events",
+      "passed": true
+    },
+    {
+      "name": "p=0:active_event_variance",
+      "passed": true
+    },
+    {
+      "name": "p=0:bare_charge_conservation",
+      "passed": true
+    },
+    {
+      "name": "p=0:all_branches_trace",
+      "passed": true
+    },
+    {
+      "name": "p=0:full_vs_characteristic_matrix",
+      "passed": true
+    },
+    {
+      "name": "p=0:full_vs_iterated_Kraus",
+      "passed": true
+    },
+    {
+      "name": "p=0:clock_A_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0:clock_B_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0:relative_clock_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0:global_reversibility",
+      "passed": true
+    },
+    {
+      "name": "p=0:two_clock_PPT",
+      "passed": true
+    },
+    {
+      "name": "p=0:loop_full_unitary_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0:loop_equal_populations_no_postselection",
+      "passed": true
+    },
+    {
+      "name": "p=0:fringe:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0:both_outputs_physical:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0:fringe:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0:both_outputs_physical:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0:fringe:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0:both_outputs_physical:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0:fringe:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0:both_outputs_physical:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0:reuse_same_register_loop_is_identity",
+      "passed": true
+    },
+    {
+      "name": "p=0:joint_clock_loop_prediction",
+      "passed": true
+    },
+    {
+      "name": "p=0:joint_real_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0:joint_imaginary_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0:equal_clock_relative_channel_protected",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:Gram_diagonal",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:three_equal_oriented_links",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:Gram_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:rank_two_Gram_determinant",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:one_parameter_visibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:loop_Gram_constraint",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:closed_loop_rephasing",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:orientation_reversal",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:Kraus_trace_preserving",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:Choi_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:full_unitarity",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:joint_normalized",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:mean_active_events",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:active_event_variance",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:bare_charge_conservation",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:all_branches_trace",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:full_vs_characteristic_matrix",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:full_vs_iterated_Kraus",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:clock_A_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:clock_B_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:relative_clock_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:global_reversibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:two_clock_PPT",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:loop_full_unitary_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:loop_equal_populations_no_postselection",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:fringe:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:both_outputs_physical:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:fringe:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:both_outputs_physical:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:fringe:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:both_outputs_physical:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:fringe:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:both_outputs_physical:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:reuse_same_register_loop_is_identity",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:joint_clock_loop_prediction",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:joint_real_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:joint_imaginary_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:joint_is_not_independent_noise",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:fresh_and_reused_loop_differ",
+      "passed": true
+    },
+    {
+      "name": "p=0.25:equal_clock_relative_channel_protected",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:Gram_diagonal",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:three_equal_oriented_links",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:Gram_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:rank_two_Gram_determinant",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:one_parameter_visibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:loop_Gram_constraint",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:closed_loop_rephasing",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:orientation_reversal",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:Kraus_trace_preserving",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:Choi_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:full_unitarity",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:joint_normalized",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:mean_active_events",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:active_event_variance",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:bare_charge_conservation",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:all_branches_trace",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:full_vs_characteristic_matrix",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:full_vs_iterated_Kraus",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:clock_A_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:clock_B_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:relative_clock_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:global_reversibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:two_clock_PPT",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:loop_full_unitary_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:loop_equal_populations_no_postselection",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:fringe:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:both_outputs_physical:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:fringe:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:both_outputs_physical:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:fringe:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:both_outputs_physical:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:fringe:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:both_outputs_physical:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:reuse_same_register_loop_is_identity",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:joint_clock_loop_prediction",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:joint_real_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:joint_imaginary_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:joint_is_not_independent_noise",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:fresh_and_reused_loop_differ",
+      "passed": true
+    },
+    {
+      "name": "p=0.5:equal_clock_relative_channel_protected",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:Gram_diagonal",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:three_equal_oriented_links",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:Gram_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:rank_two_Gram_determinant",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:one_parameter_visibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:loop_Gram_constraint",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:closed_loop_rephasing",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:orientation_reversal",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:Kraus_trace_preserving",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:Choi_positive",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:full_unitarity",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:joint_normalized",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:mean_active_events",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:active_event_variance",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:bare_charge_conservation",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:all_branches_trace",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:full_vs_characteristic_matrix",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:full_vs_iterated_Kraus",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:clock_A_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:clock_B_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:relative_clock_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:global_reversibility",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:two_clock_PPT",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:loop_full_unitary_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:loop_equal_populations_no_postselection",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:fringe:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:both_outputs_physical:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:fringe:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:both_outputs_physical:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:fringe:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:both_outputs_physical:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:fringe:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:both_outputs_physical:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:reuse_same_register_loop_is_identity",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:joint_clock_loop_prediction",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:joint_real_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:joint_imaginary_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:joint_is_not_independent_noise",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:fresh_and_reused_loop_differ",
+      "passed": true
+    },
+    {
+      "name": "p=0.75:equal_clock_relative_channel_protected",
+      "passed": true
+    },
+    {
+      "name": "p=1:Gram_diagonal",
+      "passed": true
+    },
+    {
+      "name": "p=1:three_equal_oriented_links",
+      "passed": true
+    },
+    {
+      "name": "p=1:Gram_positive",
+      "passed": true
+    },
+    {
+      "name": "p=1:rank_two_Gram_determinant",
+      "passed": true
+    },
+    {
+      "name": "p=1:one_parameter_visibility",
+      "passed": true
+    },
+    {
+      "name": "p=1:loop_Gram_constraint",
+      "passed": true
+    },
+    {
+      "name": "p=1:closed_loop_rephasing",
+      "passed": true
+    },
+    {
+      "name": "p=1:orientation_reversal",
+      "passed": true
+    },
+    {
+      "name": "p=1:Kraus_trace_preserving",
+      "passed": true
+    },
+    {
+      "name": "p=1:Choi_positive",
+      "passed": true
+    },
+    {
+      "name": "p=1:full_unitarity",
+      "passed": true
+    },
+    {
+      "name": "p=1:joint_normalized",
+      "passed": true
+    },
+    {
+      "name": "p=1:mean_active_events",
+      "passed": true
+    },
+    {
+      "name": "p=1:active_event_variance",
+      "passed": true
+    },
+    {
+      "name": "p=1:bare_charge_conservation",
+      "passed": true
+    },
+    {
+      "name": "p=1:all_branches_trace",
+      "passed": true
+    },
+    {
+      "name": "p=1:full_vs_characteristic_matrix",
+      "passed": true
+    },
+    {
+      "name": "p=1:full_vs_iterated_Kraus",
+      "passed": true
+    },
+    {
+      "name": "p=1:clock_A_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=1:clock_B_marginal",
+      "passed": true
+    },
+    {
+      "name": "p=1:relative_clock_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=1:global_reversibility",
+      "passed": true
+    },
+    {
+      "name": "p=1:two_clock_PPT",
+      "passed": true
+    },
+    {
+      "name": "p=1:loop_full_unitary_coherence",
+      "passed": true
+    },
+    {
+      "name": "p=1:loop_equal_populations_no_postselection",
+      "passed": true
+    },
+    {
+      "name": "p=1:fringe:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=1:both_outputs_physical:0.000",
+      "passed": true
+    },
+    {
+      "name": "p=1:fringe:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=1:both_outputs_physical:1.571",
+      "passed": true
+    },
+    {
+      "name": "p=1:fringe:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=1:both_outputs_physical:3.142",
+      "passed": true
+    },
+    {
+      "name": "p=1:fringe:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=1:both_outputs_physical:4.712",
+      "passed": true
+    },
+    {
+      "name": "p=1:reuse_same_register_loop_is_identity",
+      "passed": true
+    },
+    {
+      "name": "p=1:joint_clock_loop_prediction",
+      "passed": true
+    },
+    {
+      "name": "p=1:joint_real_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=1:joint_imaginary_quadrature",
+      "passed": true
+    },
+    {
+      "name": "p=1:equal_clock_relative_channel_protected",
+      "passed": true
+    },
+    {
+      "name": "balanced:factorization:0.1",
+      "passed": true
+    },
+    {
+      "name": "balanced:exact_common_rate:0.1",
+      "passed": true
+    },
+    {
+      "name": "balanced:factorization:0.5",
+      "passed": true
+    },
+    {
+      "name": "balanced:exact_common_rate:0.5",
+      "passed": true
+    },
+    {
+      "name": "balanced:factorization:1.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:exact_common_rate:1.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:factorization:2.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:exact_common_rate:2.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:factorization:3.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:exact_common_rate:3.0",
+      "passed": true
+    },
+    {
+      "name": "balanced:unreadable_phase_zero",
+      "passed": true
+    },
+    {
+      "name": "balanced:loop_minus_one_eighth",
+      "passed": true
+    },
+    {
+      "name": "generic_rate_not_universal",
+      "passed": true
+    },
+    {
+      "name": "small_x:quadratic_rate_coefficient:0.08",
+      "passed": true
+    },
+    {
+      "name": "small_x:dephasing_coefficient:0.08",
+      "passed": true
+    },
+    {
+      "name": "small_x:quadratic_rate_coefficient:0.04",
+      "passed": true
+    },
+    {
+      "name": "small_x:dephasing_coefficient:0.04",
+      "passed": true
+    },
+    {
+      "name": "small_x:quadratic_rate_coefficient:0.02",
+      "passed": true
+    },
+    {
+      "name": "small_x:dephasing_coefficient:0.02",
+      "passed": true
+    },
+    {
+      "name": "small_x:fourth_order_rate_remainder",
+      "passed": true
+    }
+  ],
+  "scope": "bounded finite candidate, not a derived law of time",
+  "not_claimed": [
+    "physical seconds or event ordering derived",
+    "Ei or Ed identified with an energy density",
+    "particle mass spectrum",
+    "Maxwell or gravity equations",
+    "irreversible decoherence",
+    "Bell nonlocality",
+    "autonomous preparation or free record reset",
+    "a unique reconstruction of Chen 2022"
+  ]
+}

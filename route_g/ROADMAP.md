@@ -2,12 +2,15 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-10-13): calibrate the actual controller cost while
-keeping the G-R13 model and single pulse fixed. The model calculation is
-complete and pushed as `5e1d8f9`; empirical calibration is OPEN pending a
-specified hardware implementation and measurements. Its lower model work
-does not establish lower electrical consumption. No pulse scan or autonomous
-trigger study starts by default; there is no new mathematical prerequisite.
+Current priority (2026-10-15): G-R14 event links, with one rule determining
+clock response, loop interference and coherence. The finite model is
+bounded-done; arbitrary-p universal fractional clock rate is rejected
+for this model, while the balanced p=1/2 case works on a readable phase band.
+Next constrain inter-event memory and joint responses without independent
+rate/phase/noise fits. G-R13 controller calibration is an OPEN implementation
+side branch, not a prerequisite. Keep its pulse fixed; no hardware result
+or autonomous trigger is claimed. Calibration intake was committed/pushed
+first as `f51f18e` before starting G-R14.
 G-R4–G-R8 are retained physical comparison models. Their missing data and
 apparatus calibration are not prerequisites for this event-network line.
 No physical time, mass spectrum or universal density law is claimed.
@@ -23,7 +26,67 @@ Do not import arbitrary particle-specific radii, projectors or mass shifts.
 Do not turn every unfinished UV detail into another prerequisite paper.
 No existing P54 parameters, fits or regression results are changed.
 
-## Governing update — event-first candidate and a missing channel (2026-10-09)
+## G-R14 One event rule and its common-rate boundary (2026-10-15)
+
+Status: **bounded-done for the finite model and its verification**.
+This is a new event-link candidate, not a modification of G-R9's Hamiltonian
+or the G-R12/G-R13 21-state controller. Quantum mechanics, ordered events,
+register supply, common coupling and readout remain declared inputs.
+
+1. **One rule, one response parameter.** Each fresh binary register starts
+   in sqrt(1-p)|0>+sqrt(p)|1>. Apply U(Q)=exp(-i a Q tensor P),
+   P=|1><1|, a=2pi/3. Simultaneous probes use the sum of their fixed charges.
+   The fixed three-cycle phase is an assumption, not a spatial rotation.
+   All reduced responses follow from F_p(x)=1-p+p exp(-i x); no separate
+   slowdown, loop phase or noise parameter is added.
+2. **Distinguish average progress from measured clock phase.** The common
+   mean active-event fraction is N=p, but a clock's fractional phase rate
+   is R_q=-arg F_p(aq)/(aq). At p=1/4, fixed q_A=1/4 and q_B=1/2 give
+   R_A=.245641993 and R_B=.231631437, not p. Exact common rate over an open
+   charge band requires p=0,1/2,1; the nontrivial balanced case gives R=1/2
+   on |aq|<pi. Visibility remains |cos(aq/2)|^n. No dynamical selection
+   of the balanced occupation or universal time law has been established.
+3. **Loop phase and coherence are constrained together.** For z=F_p(a),
+   r=|z|, W=z^3=r^3 exp(i Phi), a rank-two Gram matrix gives exactly
+   1-3r²+2r³ cos(Phi)=0 and r²=1-3p(1-p). A balanced two-path unitary
+   measures W without postselection. At p=1/2, Phi=pi and visibility=1/8.
+   This operational phase is not a derived Maxwell field or physical curvature.
+4. **Memory is an essential part of the rule.** Reusing the same register
+   around the loop instead gives F_p(3a)=1: phase zero, visibility one,
+   despite identical single-event marginals and mean progress. Products of
+   average links cannot silently replace the average of correlated links.
+   Equal-frequency clocks sharing registers also retain their relative
+   coherence while their separate dials fade. This is not irreversible decay.
+5. **A joint prediction prevents separate tuning.** Clock/loop coherence is
+   J=F_p(a(q+1))^3, not the product of marginal coherences. At p=q=1/4,
+   J=.126833033−.104777678i; the incorrect product is
+   .049144099−.263300461i. Joint XX−YY and YX+XY quadratures test its real
+   and imaginary parts. The reduced commuting model also admits a classical
+   correlated-noise realization; it does not demonstrate quantum time or Bell
+   nonlocality. Noncommuting record probes would be a separate physical test.
+
+**Verification:** 223/223 new checks; 6,672/6,672 across 27 verifiers.
+Full system-register unitaries up to 32 states agree with exact channels,
+including every register outcome, conserved bare charge and joint readouts.
+G-R9/G-R13 code/card/result hashes are unchanged. G-R3/G-R4 reports gain
+only the new verifier-preservation check. Five-page TeX compiles; final
+PDF is reviewed on every page. No new measurements or pulse scan are used.
+
+**Next bounded choices:** prioritize an independently specified event-memory
+mechanism and its joint clock/loop test using the same measured occupation p.
+Failure of the rank-two loop relation, joint coherence or rate pair rejects
+this candidate under its stated preparation; do not refit separate responses.
+Alternatively, if exact universal fractional time across changing environments
+is essential, identify a mechanism protecting the balanced rule or replace
+the binary rule explicitly. Do not invent p(Ed), infer physical seconds from
+n, or promote Route-F gates. The finite calculation itself is finished.
+
+Artifacts: [input card](data/EVENT_LINK_CARD.json),
+[derivation](tex/route_g_event_links.tex), [PDF](output/pdf/route_g_event_links.pdf),
+[verifier](code/verify_gr14_event_links.py),
+[results](output/gr14_event_links.md), [numeric record](output/gr14_event_links.json).
+
+## Historical governing update — event-first candidate and a missing channel (2026-10-09)
 
 The user approved returning to the original paper's events, relational
 structure and compatible exchange, without initially assuming physical
@@ -33,8 +96,9 @@ source's Ei/Ed concept. Preserve, but demote, the apparatus mainline.
 
 ### Controller cost calibration requires a physical implementation
 
-Decision date: 2026-10-13. **Selected next task: actual controller cost.
-Status: open, awaiting hardware identification and measurement inputs.**
+Decision date: 2026-10-13; moved to an implementation side branch on
+2026-10-15. **Status: open, awaiting hardware identification and measurement
+inputs; no longer the mainline prerequisite.**
 The G-R12/G-R13 cards specify no physical energy/time scale or controller.
 The existing cold-atom citation supports the operator class, not our
 21-state realization or its measured power. The stored xenon and optical-clock

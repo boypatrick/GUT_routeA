@@ -1,6 +1,6 @@
 # G-R3: density candidate, interaction and relative clocks
 
-Status: bounded-done; 284/284 checks.
+Status: bounded-done; 285/285 checks.
 This is a declared model, not a derivation of Chen's undefined Ed.
 
 ## Definition and observable

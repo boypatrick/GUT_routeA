@@ -1,0 +1,26 @@
+{
+  "id": "G-R14",
+  "date": "2026-10-15",
+  "status": "bounded finite candidate, not a derived law of time",
+  "rule": "Each fresh event register is sqrt(1-p)|0>+sqrt(p)|1>. Apply U(Q)=exp(-i*a*Q tensor |1><1|), then retain but do not read the register. All probes share this rule.",
+  "a_over_pi": 0.6666666666666666,
+  "a_reason": "Chosen primitive three-cycle phase, not a fitted physical constant or spatial rotation",
+  "p_fixtures": [0.0, 0.25, 0.5, 0.75, 1.0],
+  "clock_charges": [0.25, 0.5],
+  "events_in_joint_test": 3,
+  "main_memory_rule": "independent fresh registers; two clocks and a path probe at the same event share that register",
+  "memory_counterprotocol": "reuse one register for all three links, with no reset or intermediate measurement",
+  "independent_free_response_parameters": ["p"],
+  "fixed_inputs": ["complex Hilbert spaces and Born rule", "ordered update count", "primitive three-cycle phase", "clock and path charges", "universal coupling to the sum of probe charges", "fresh product registers", "initial plus states and two-quadrature readout"],
+  "derived": ["mean active-event fraction N=p", "exact clock phase rate and visibility from F_p(x)=1-p+p exp(-i*x)", "fresh-record loop W=F_p(a)^3", "rank-two Gram constraint 1-3*r^2+2*r^3*cos(Phi)=0", "cross-probe coherence F_p(a*(q+1))^3", "reused-register loop W=1"],
+  "universal_clock_boundary": "For all sufficiently small clock charges, exact fractional phase rate is common only at p=0, 1/2, 1. At p=1/2, the connected readable band is |a*q|<pi. Generic p gives only a low-charge approximation.",
+  "not_claimed": ["physical seconds or event ordering derived", "Ei or Ed identified with an energy density", "particle mass spectrum", "Maxwell or gravity equations", "irreversible decoherence", "Bell nonlocality", "autonomous preparation or free record reset", "a unique reconstruction of Chen 2022"],
+  "preserved_sha256": {
+    "code/verify_gr9_event_network.py": "926817552e894df97a71fe7ae6dee7e60be156976940e2ed8fcccd70ee32c1aa",
+    "data/EVENT_NETWORK_CARD.json": "af2ac8cd33f14b53b41d47107e27e0a495bc3cd158a793352365c25b1af9e198",
+    "output/gr9_event_network.json": "00acc816bf7b2c3f8feafd97d7d1447911e1e1ac86dd35ef1fc89f74bf70e229",
+    "code/verify_gr13_smooth_switching.py": "d486d2d26dbb553c0cda8c422d9ee8fe2d75314c6c942a78c6694e80017b5d7f",
+    "data/SMOOTH_SWITCHING_CARD.json": "c26e9c660f9414c1c4620ec1f2bebf71121dc942c840e3eff873dfaae12a1b45",
+    "output/gr13_smooth_switching.json": "1005e04b5eba12a348bf33dbfaa5cf7c400bb32cdba1358e2060ee55eb890644"
+  }
+}

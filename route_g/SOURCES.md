@@ -1,7 +1,38 @@
 # Route G sources and interpretation ledger
 
-Ledger updated: 2026-10-11. Last external-source review: 2026-10-09.
-Current mainline: event-network candidate; metric clocks and KK/scattering retained as controls.
+Ledger updated: 2026-10-15. Last external-source review: 2026-10-15.
+Current mainline: event-link rule and memory; controller calibration is an implementation side branch.
+
+## G-R14 Event links and the memory rule
+
+- F. Ciccarello, S. Lorenzo, V. Giovannetti and G. M. Palma,
+  [Quantum collision models: Open system dynamics from repeated interactions](https://arxiv.org/abs/2106.11974),
+  Phys. Rep. 954, 1 (2022). Primary abstract and bibliographic record checked.
+  Supports the established repeated-interaction framework and distinction
+  between memoryless and memory-bearing constructions, not our specific
+  binary gate, phase, clock charges or interpretation of Chen.
+- E. M. Rabei, Arvind, R. Simon and N. Mukunda,
+  [Bargmann invariants and geometric phases: A generalized connection](https://arxiv.org/abs/quant-ph/9907080),
+  Phys. Rev. A 60, 3397 (1999). Primary abstract and bibliographic record checked.
+  Supports the established overlap-product/geometric-phase connection.
+  The finite Gram determinant, gate realization and memory counterprotocol
+  below are derived directly, not quoted as new general theorems.
+
+Chen remains conceptual inspiration through the existing source receipt
+and section audit below. Direct fetching of the final PDF again returned
+403 on 2026-10-15; no new source-text or empirical-data validation is claimed.
+The user-supplied Opus analysis motivates testing common rate versus
+coherence and loop composition; its scripts and empirical fits are not
+accepted as independently verified inputs.
+
+G-R14 postulates quantum probabilities, a binary register, a fixed primitive
+three-cycle phase, ordered updates, sum-of-probe-charge coupling, fresh
+product registers and specified readout. Its only varying response parameter
+is p. The exact channel, rate universality boundary, loop/visibility constraint,
+memory dependence and joint response are calculations in the five-page TeX
+and finite-matrix verifier. The reduced commuting model also has a classical
+correlated-noise realization. None of these references identifies physical
+Ei/Ed, derives seconds, selects p=1/2 or supplies a controller implementation.
 
 ## G-R13 fixed smooth-pulse calculation, no new empirical input
 

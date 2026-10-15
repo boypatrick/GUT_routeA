@@ -1,16 +1,36 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-10-13
+Last updated: 2026-10-15
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
 
-**Controller calibration selected (2026-10-13):** G-R13 is committed/pushed
+**G-R14 event links (2026-10-15):** calibration intake was committed/pushed
+first as `f51f18e`. One binary-register gate now gives mean event progress,
+actual clock phase rates, a three-link loop and their coherence from the
+same F_p(x)=1-p+p exp(-ix). No independent phase or damping fit is allowed.
+Exact common fractional clock rate on an open charge band requires
+p=0,1/2,1; the nontrivial p=1/2 case works on |aq|<pi, while generic p
+fails despite common mean progress. Loop phase and visibility satisfy a
+rank-two Gram equality. Reusing one register gives W=1 instead of the
+fresh-register W=F_p(2pi/3)^3, exposing memory as indispensable information.
+Joint clock/loop coherence supplies an additional prediction, not a product
+of separately fitted marginals. All 223 new checks and 6,672/6,672 checks
+across 27 verifiers pass; five-page TeX/PDF complete. Old G-R9/G-R13 hashes
+are unchanged. The finite model is bounded-done, not emergent seconds or
+a proof of Chen's theory. Next constrain event memory and shared-probe
+responses; alternatively justify a protected balanced event rule if exact
+clock universality is essential. Controller costs are an implementation
+side branch. See [G-R14 derivation](route_g/tex/route_g_event_links.tex)
+and [current Route-G roadmap](route_g/ROADMAP.md).
+
+**Controller calibration selected (2026-10-13; side branch from 2026-10-15):** G-R13 is committed/pushed
 as `5e1d8f9`; its 70 checks were rerun successfully. The next empirical task
 is open: no matching hardware/controller, physical unit mapping or raw power
 records have been supplied. Record the control-system energy boundary,
 return/reset accounting and matched preparation quality before claiming a
-hardware cost advantage. Keep the pulse fixed. No new scan, TeX chapter or
-autonomous-trigger branch is started; the latter remains conditional on
+hardware cost advantage. Keep the pulse fixed. For this implementation
+branch, no new scan, TeX chapter or autonomous-trigger study is started;
+the latter remains conditional on
 choosing autonomous events. Required inputs are in the
 [Route-G roadmap](route_g/ROADMAP.md#controller-cost-calibration-requires-a-physical-implementation).
 
@@ -25,9 +45,9 @@ this is not a universal reduction of hardware cost or free preparation.
 70 new checks and all 6,447 checks across 26 verifiers pass. The combined
 nine-page PDF compiled and was visually reviewed; same-pulse solver
 refinements are not new pulse scans.
-The bounded test is closed. Next choose controller calibration against
-the explicit overhead criterion, or an autonomous passing trigger;
-no new abstract prerequisite, pulse optimization or Route-F promotion.
+The bounded test is closed. Its proposed controller calibration or an
+autonomous passing trigger now belongs to the implementation side branch;
+neither blocks G-R14. No pulse optimization or Route-F promotion.
 Full derivation is appended to the original document, not a new paper.
 See [G-R13 addendum](route_g/tex/route_g_correlated_preparation.tex) and
 [current Route-G roadmap](route_g/ROADMAP.md).
