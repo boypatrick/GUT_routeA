@@ -2,13 +2,12 @@
 
 Created: 2026-09-22
 G1 verified and PDF visually reviewed: 2026-09-23
-Current priority (2026-10-11): G-R13 completes ONE smooth pulse on the
-unchanged G-R12 21-state mediator. At the same peak and leading effective
-area it improves fidelity and terminal residue while lowering net and
-positive supplied work. Duration and absolute exchanged work INCREASE.
-The bounded test is closed; hardware cost and autonomy remain unproved.
-Next choose controller calibration or a passing trigger if needed;
-no new abstract prerequisite, pulse optimization or broad scan.
+Current priority (2026-10-13): calibrate the actual controller cost while
+keeping the G-R13 model and single pulse fixed. The model calculation is
+complete and pushed as `5e1d8f9`; empirical calibration is OPEN pending a
+specified hardware implementation and measurements. Its lower model work
+does not establish lower electrical consumption. No pulse scan or autonomous
+trigger study starts by default; there is no new mathematical prerequisite.
 G-R4–G-R8 are retained physical comparison models. Their missing data and
 apparatus calibration are not prerequisites for this event-network line.
 No physical time, mass spectrum or universal density law is claimed.
@@ -32,12 +31,55 @@ space, seconds or a fitted density/slowdown function. G-R6–G-R8 assumed
 a metric: their successful algebra does not derive that metric or the
 source's Ei/Ed concept. Preserve, but demote, the apparatus mainline.
 
+### Controller cost calibration requires a physical implementation
+
+Decision date: 2026-10-13. **Selected next task: actual controller cost.
+Status: open, awaiting hardware identification and measurement inputs.**
+The G-R12/G-R13 cards specify no physical energy/time scale or controller.
+The existing cold-atom citation supports the operator class, not our
+21-state realization or its measured power. The stored xenon and optical-clock
+datasets belong to different comparison models and cannot fill this gap.
+
+To start a defensible calibration, supply one existing platform/controller
+and any available raw records. Missing fields can then be requested for
+that apparatus; do not invent them or select a new platform silently.
+
+1. **Implementation and units:** identify the system and controller,
+   the physical energy/frequency and time mapping, the number of controlled
+   systems per attempt, and how the relay and compensation controls implement
+   B=f B0 and Vc=f² Vc0. A pulse-generator model alone is not this mapping.
+2. **Energy boundary:** provide synchronized, calibrated signed input-power
+   records (or voltage/current records with measurement configuration and
+   bandwidth) for both control channels and shared equipment. Include idle
+   baselines, the complete attempt duration, and controller/storage state
+   before and after. Count shared supply inputs once, not again as outputs.
+3. **Return and reset:** identify whether returned energy reaches a reusable
+   supply/storage device or is dissipated. Match initial/final stored energy
+   or account for its change. Report pulse-only incremental energy separately
+   from whole-cycle consumption including initialization and reset; do not
+   identify G-R13 negative work with recoverable wall-supply energy.
+4. **Matched performance:** retain the fixed G-R13 pulse and the G-R12
+   reference, all attempts, measured preparation fidelity/residue and
+   repeated-run uncertainty. The square reference is an ideal limit; any
+   actual finite-rise waveform must be recorded and its implementation error
+   reported, not silently treated as identical to that limit.
+
+The supplied model criterion p0 < .008864075 + .016753645 eta remains
+conditional, in model power units. Neither p0 nor eta is a measured fit,
+and this two-parameter diagnostic is not a substitute for the physical
+energy boundary above. No additional TeX derivation, numerical pulse scan
+or hardware-success claim is needed before receiving the missing input.
+If no apparatus exists, platform selection is a separate user decision;
+a literature feasibility estimate would not be actual calibration.
+The autonomous trigger with energy/reflection/return channels remains a
+conditional alternative only if autonomous events become the chosen aim.
+
 ### G-R13 — One smooth pulse, compensated full-model energy ledger (2026-10-11)
 
 Status: **bounded-done for the requested single-pulse comparison**.
 G-R12 was committed and pushed first as `7d6d425` on
-`codex/route-f-invariant-control`. G-R13 is subsequent local work and is
-not included in that checkpoint. No physical implementation is invented.
+`codex/route-f-invariant-control`. G-R13 was subsequently committed/pushed
+as `5e1d8f9` on 2026-10-13. No physical implementation is invented.
 
 1. **One pulse, fixed model.** Keep gamma=.03, Delta=80 and g_peak=.1,
    all 21 states, old contact, relay edges and phases. Choose only
@@ -82,7 +124,7 @@ The coarse ODE tolerance was tightened after its initial error exceeded
 hashes stay unchanged. Derivation is appended as Sections 7–9 to the SAME
 TeX, preserving the original six sections instead of opening another paper.
 
-**Next bounded choices:** calibrate a specific controller's supplied,
+**Historical next choices; controller calibration selected on 2026-10-13:** calibrate a specific controller's supplied,
 returned and overhead energy against the criterion above; or, if autonomous
 events are the objective, specify a passing trigger with energy, reflection
 and return channels. Either choice needs a physical input. Do not launch

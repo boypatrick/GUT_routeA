@@ -1,8 +1,18 @@
 # Roadmap: Another Physics First-Principles Audit
 
-Last updated: 2026-10-11
+Last updated: 2026-10-13
 
 ## Current Route-G priority: relational/emergent time (2026-09-23)
+
+**Controller calibration selected (2026-10-13):** G-R13 is committed/pushed
+as `5e1d8f9`; its 70 checks were rerun successfully. The next empirical task
+is open: no matching hardware/controller, physical unit mapping or raw power
+records have been supplied. Record the control-system energy boundary,
+return/reset accounting and matched preparation quality before claiming a
+hardware cost advantage. Keep the pulse fixed. No new scan, TeX chapter or
+autonomous-trigger branch is started; the latter remains conditional on
+choosing autonomous events. Required inputs are in the
+[Route-G roadmap](route_g/ROADMAP.md#controller-cost-calibration-requires-a-physical-implementation).
 
 **G-R13 (2026-10-11):** G-R12 was committed/pushed first as `7d6d425`.
 On its unchanged gamma=.03, Delta=80, g=.1 21-state mediator, one sin²
